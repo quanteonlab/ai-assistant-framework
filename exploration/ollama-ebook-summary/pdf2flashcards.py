@@ -22,6 +22,7 @@ License: Same as parent project
 
 import os
 import sys
+import re
 import argparse
 import subprocess
 import shutil
@@ -125,8 +126,10 @@ def run_book2text(input_file: str, output_dir: str) -> Optional[str]:
         print(result.stdout)
 
         # Determine the expected output CSV filename (in processed subfolder)
+        # Must match the sanitization logic in book2text.py
         input_path = Path(input_file)
-        base_name = input_path.stem
+        base_name = input_path.stem.replace(" ", "-")
+        base_name = re.sub(r'[^\w\-_]', '', base_name)
         expected_csv = script_dir / "out" / "processed" / f"{base_name}_processed.csv"
 
         if not expected_csv.exists():
@@ -258,7 +261,7 @@ def run_flashcard_rating(output_dir: str, args: argparse.Namespace) -> bool:
         sys.executable,
         str(rating_script),
         str(training_csv),
-        "--threshold", str(args.post_rating_threshold)
+        "--threshold", str(args.rating_threshold)
     ]
 
     # Add optional arguments
@@ -337,18 +340,17 @@ Examples:
   # Keep intermediate CSV for debugging
   python pdf2flashcards.py mybook.pdf --keep-csv
 
-  # Adjust post-processing rating threshold only (rating still enabled)
-  python pdf2flashcards.py mybook.pdf --post-rating-threshold 7
+  # Custom rating threshold for all rating stages
+  python pdf2flashcards.py mybook.pdf --rating-threshold 9
 
 Output Structure:
   flashcards/
   |-- mybook_part01_Chapter_One.md
   |-- mybook_part02_Chapter_Four.md
-  |-- high_quality/                    # Created by default (rating enabled)
-  |   |-- mybook_hq_part01_Chapter_One.md      # From --enable-rating
-  |   |-- mybook_0001_Chapter_Title.md         # From --enable-post-rating
-  |   +-- mybook_0002_Another_Chapter.md
-  +-- flashcards_training_data.csv     # Includes usefulness_rating column
+  |-- high_quality/                    # Flashcards rated >= threshold (default 8/10)
+  |   |-- mybook_part01.md             # Consolidated high-quality flashcards
+  |   +-- mybook_part02.md             # Split every 2000 lines
+  +-- flashcards_training_data.csv     # All flashcards with ratings (1-10)
         """
     )
 
@@ -375,15 +377,13 @@ Output Structure:
     parser.add_argument('--disable-rating', action='store_false', dest='enable_rating', default=True,
                        help='Disable flashcard usefulness rating during generation (enabled by default)')
     parser.add_argument('--rating-threshold', type=int, default=8,
-                       help='Minimum rating for high-quality folder during generation (default: 8)')
+                       help='Minimum rating for high-quality folder (default: 8)')
     parser.add_argument('--rating-model',
                        help='Model to use for rating (default: same as generation model)')
 
     # Post-processing rating options (enabled by default)
     parser.add_argument('--disable-post-rating', action='store_false', dest='enable_post_rating', default=True,
                        help='Disable post-processing rating of unrated flashcards (enabled by default)')
-    parser.add_argument('--post-rating-threshold', type=int, default=6,
-                       help='Minimum rating for high-quality folder in post-rating (default: 6)')
 
     # Content filtering options
     parser.add_argument('--min-length', type=int, default=200,
@@ -450,10 +450,8 @@ Output Structure:
     print_header("Pipeline Complete!")
     print(f"[OK] Input: {args.input_file}")
     print(f"[OK] Output: {args.output}/")
-    if args.enable_rating:
+    if args.enable_rating or args.enable_post_rating:
         print(f"[OK] High-quality flashcards (>={args.rating_threshold}/10): {args.output}/high_quality/")
-    if args.enable_post_rating:
-        print(f"[OK] Post-rated flashcards (>={args.post_rating_threshold}/10): {args.output}/high_quality/")
     print(f"[OK] Training data: {args.output}/flashcards_training_data.csv")
     print()
 

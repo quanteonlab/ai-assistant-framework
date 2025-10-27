@@ -2,6 +2,12 @@
 
 _Built With: Python 3.11.9_
 
+
+```bash
+python add_book.py --scan
+python orchestrate.py
+```
+
 ## Introduction
 This project creates bulleted notes summaries of books and other long texts, particularly epub and pdf which have ToC metadata available.
 
@@ -23,25 +29,40 @@ Similar to Retrieval Augmented Generation (RAG), we split the document into many
 Its very important towards unlocking the full capabilities of LLM without relying on a multitude of 3rd party apps.
 
 ## Contents
-- [Setup](#setup)
-  - [Python Environment](#python-environment)
-  - [Install Dependencies](#install-dependencies)
-  - [Configure Environment Variables](#configure-environment-variables)
-  - [Download Models](#download-models)
-  - [Update Config File](#update-config-file-_configyaml)
-- [Usage](#usage)
-  - [Convert E-book to chunked CSV or TXT](#convert-e-book-to-chunked-csv-or-txt)
-  - [Generate Summary](#generate-summary)
-- [Semi-Manual with Prototypes](#semi-manual-with-prototypes)
-- [Models](#models)
-  - [Ollama](#ollama)
-  - [HuggingFace](#huggingface)
-- [Check your Document Outline](#check-your-ebook-for-document-outline)
-  - [Firefox](#firefox)
-  - [Brave](#brave)
-- [Disclaimer](#disclaimer)
-- [Inspiration](#inspiration)
-- [Resources](#resources)
+- [Bulleted Notes Book Summaries](#bulleted-notes-book-summaries)
+  - [Introduction](#introduction)
+    - [Why 2000 tokens?](#why-2000-tokens)
+    - [Comparison with RAG](#comparison-with-rag)
+  - [Contents](#contents)
+  - [Setup](#setup)
+    - [Python Environment](#python-environment)
+    - [Install Dependencies](#install-dependencies)
+    - [Configure Environment Variables](#configure-environment-variables)
+    - [Download Models](#download-models)
+      - [1. **Download a copy of Mistral Instruct v0.2 Bulleted Notes Fine-Tune**](#1-download-a-copy-of-mistral-instruct-v02-bulleted-notes-fine-tune)
+      - [2. **Download up a title model**](#2-download-up-a-title-model)
+        - [a) *Download a preconfigured model*](#a-download-a-preconfigured-model)
+        - [b) *Append this* message history *to the Modelfile of your choice*](#b-append-this-message-history-to-the-modelfile-of-your-choice)
+      - [3. **Download a general-purpose model**](#3-download-a-general-purpose-model)
+    - [Update Config File `_config.yaml`](#update-config-file-_configyaml)
+  - [Usage](#usage)
+    - [Convert E-book to chunked CSV or TXT](#convert-e-book-to-chunked-csv-or-txt)
+      - [1. Use automated script to split your `pdf` or `epub`.](#1-use-automated-script-to-split-your-pdf-or-epub)
+      - [2. Remove or escape all newlines within each chunk, so they may be placed line by line in a text file, with each line surrounded by double quotes.](#2-remove-or-escape-all-newlines-within-each-chunk-so-they-may-be-placed-line-by-line-in-a-text-file-with-each-line-surrounded-by-double-quotes)
+    - [Generate Summary](#generate-summary)
+    - [Generate Flashcards (Unified Pipeline)](#generate-flashcards-unified-pipeline)
+    - [Generate Flashcards (Manual - from CSV)](#generate-flashcards-manual---from-csv)
+  - [Semi-Manual with Prototypes](#semi-manual-with-prototypes)
+  - [Models](#models)
+    - [Ollama](#ollama)
+    - [HuggingFace](#huggingface)
+  - [Check your eBook for Document Outline](#check-your-ebook-for-document-outline)
+    - [Firefox](#firefox)
+    - [Brave](#brave)
+  - [Disclaimer](#disclaimer)
+  - [Inspiration](#inspiration)
+  - [Resources](#resources)
+    - [Leaderboards](#leaderboards)
 
 ## Setup
 ### Python Environment

@@ -1,2 +1,18 @@
 book_filename,pipeline_type,status,started_at,completed_at,output_folder,error_message
 2A014.pdF,ONLYFLASHCARDS,COMPLETED,2025-01-26 10:30:00,2025-01-26 11:45:00,flashcards,
+001.pdf,ONLYFLASHCARDS,COMPLETED,2025-10-27 00:13:29,2025-10-27 00:13:44,flashcards,
+002.pdf,ONLYFLASHCARDS,COMPLETED,2025-10-27 00:13:44,,flashcards,
+1B001 - Proofs - Jay Cumming.pdf,ONLYFLASHCARDS,COMPLETED,2025-10-27 00:21:20,2025-10-27 01:13:05,flashcards,Pipeline execution failed
+"1B004 -Abstract Algebra_ Third Edition -- David S_ Dummit; Richard M_ Foote, David S_ Dummit, Richard -- 3rd ed_, Hoboken, NJ, New Jersey, 2004 -- Wiley; -- 9780471433347 -- 04c9a91190.pdf",ONLYFLASHCARDS,ERROR,2025-10-27 01:13:05,2025-10-27 01:13:05,flashcards,Pipeline execution failed
+1C001 - A COMPUTATIONAL INTRODUCTION TO NUMBER THEORY AND ALGEBRA.pdf,ONLYFLASHCARDS,COMPLETED,2025-10-27 01:13:05,2025-10-27 01:13:21,flashcards,Pipeline execution failed
+2A004 - Hands-On Large Language Models.pdf,ONLYFLASHCARDS,COMPLETED,2025-10-27 01:13:21,2025-10-27 01:55:36,flashcards,Pipeline execution failed
+"2A006 -  Machine Learning Design Patterns_ Solutions to Common Challenges in Data Preparation, Model Building, and MLOps-O'Reilly Media (2020) Valliappa Lakshmanan, Sara Robinson, Michael Munn -.pdf",ONLYFLASHCARDS,ERROR,2025-10-27 00:17:34,2025-10-27 00:17:34,flashcards,Pipeline execution failed
+2A007 - Build a Large Language Model.pdf,ONLYFLASHCARDS,COMPLETED,2025-10-27 01:55:36,2025-10-27 02:19:59,flashcards,Reset from stuck PROCESSING state
+2A012 - Reinforcement Learning.pdf,ONLYFLASHCARDS,PROCESSING,2025-10-27 02:19:59,,flashcards,
+2A014.pdf,ONLYFLASHCARDS,COMPLETED,2025-10-27 08:37:38,,flashcards,
+2B001  Financial Data Engineering.pdf,ONLYFLASHCARDS,ERROR,2025-10-27 09:37:29,2025-10-27 10:39:05,flashcards,Pipeline execution failed
+2B002 - Fundamentals of Data Engineering.pdf,ONLYFLASHCARDS,COMPLETED,2025-10-27 08:40:54,2025-10-27 09:37:29,flashcards,
+2B004 Data Governance.pdf,ONLYFLASHCARDS,COMPLETED,2025-10-27 10:39:05,2025-10-27 11:06:05,flashcards,
+029 - Understanding Distributed Systems (2021) Roberto Vitillo -.pdf,ONLYFLASHCARDS,PROCESSING,2025-10-27 11:09:32,,flashcards,
+"7A003- Performance modeling and design of computer systems_ queueing theory in action -Harchol-Balter, Mor.pdf",ONLYFLASHCARDS,PENDING,,,flashcards,
+Sam Newman - Building Microservices-O'Reilly Media (2015).pdf,ONLYFLASHCARDS,PENDING,,,flashcards,

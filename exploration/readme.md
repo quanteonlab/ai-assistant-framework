@@ -1,4 +1,10 @@
 
+```bash
+python add_book.py --scan
+```
+
+
+---
 
 Explorations Report
 

@@ -273,13 +273,38 @@ class BookOrchestrator:
         """
         print_header("Book Processing Orchestrator")
 
+        # Show initial status summary
+        rows = self.read_orchestration()
+        total_count = len(rows)
+
+        status_counts = {
+            'PENDING': 0,
+            'COMPLETED': 0,
+            'ERROR': 0,
+            'PROCESSING': 0
+        }
+
+        for row in rows:
+            status = row.get('status', '').strip().upper()
+            if not status:
+                status = 'PENDING'
+            if status in status_counts:
+                status_counts[status] += 1
+            else:
+                status_counts[status] = 1
+
+        print(f"Total books: {total_count}")
+        print(f"  PENDING: {status_counts.get('PENDING', 0)}")
+        print(f"  COMPLETED: {status_counts.get('COMPLETED', 0)} (will skip)")
+        print(f"  ERROR: {status_counts.get('ERROR', 0)} (will skip)")
+        print(f"  PROCESSING: {status_counts.get('PROCESSING', 0)} (use --reset-processing if stuck)")
+        print()
+
         processed_count = 0
-        total_count = 0
 
         while True:
             # Read current state
             rows = self.read_orchestration()
-            total_count = len(rows)
 
             # Find next pending row
             next_idx = self.find_next_pending_row(rows)

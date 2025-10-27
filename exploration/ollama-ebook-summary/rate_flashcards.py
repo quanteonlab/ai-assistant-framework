@@ -187,7 +187,7 @@ def process_training_data(csv_file: str, config: Config, api_base: str, model: s
         config: Configuration object
         api_base: API base URL
         model: Model name to use for rating
-        threshold: Minimum rating for high-quality folder (default: 6)
+        threshold: Minimum rating for high-quality folder (default: 8)
         output_dir: Output directory for high-quality flashcards (default: same as CSV)
         verbose: Print detailed information
     """
@@ -350,11 +350,11 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Rate with default threshold (6/10)
+  # Rate with default threshold (8/10)
   python rate_flashcards.py flashcards/flashcards_training_data.csv
 
-  # Custom threshold - only save 8-10 rated flashcards
-  python rate_flashcards.py flashcards/flashcards_training_data.csv --threshold 8
+  # Custom threshold - only save 9-10 rated flashcards
+  python rate_flashcards.py flashcards/flashcards_training_data.csv --threshold 9
 
   # Use specific model for rating
   python rate_flashcards.py flashcards/flashcards_training_data.csv --model qwen2.5:latest
@@ -375,7 +375,7 @@ Output:
 
     # Optional arguments
     parser.add_argument('-t', '--threshold', type=int, default=8,
-                       help='Minimum rating for high-quality folder (default: 6)')
+                       help='Minimum rating for high-quality folder (default: 8)')
     parser.add_argument('-m', '--model',
                        help='Model to use for rating (default from config)')
     parser.add_argument('-o', '--output',

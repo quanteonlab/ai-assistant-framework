@@ -1,0 +1,286 @@
+# Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 4)
+
+**Starting Chapter:** The Year of Generative AI
+
+---
+
+#### GPT-4 Technical Report
+Background context: The provided text references an "OpenAI, ‘Gpt-4 technical report. ’" which discusses various aspects of Large Language Models (LLMs), including their context length and impact on the field of generative AI.
+
+:p What is the context length in LLMs as discussed in the GPT-4 Technical Report?
+??x
+The context length refers to the maximum amount of input text that an LLM can process before generating a response. This parameter defines how much historical information or context the model takes into account when producing its output.
+
+In the case of GPT-4, this value is crucial because it determines the range and complexity of tasks the model can handle effectively.
+x??
+
+---
+
+#### Year of Generative AI
+Background context: The text mentions that 2023 was declared as "The Year of Generative AI" due to significant advancements in LLMs like ChatGPT, GPT-3.5, and newer versions such as GPT-4.
+
+:p Which model is often confused with the product ChatGPT when it was first released?
+??x
+When referring to ChatGPT, people are usually talking about the product rather than the underlying model. Specifically, ChatGPT was initially powered by the GPT-3.5 LLM and has since evolved into more advanced versions like GPT-4.
+x??
+
+---
+
+#### Open Source and Proprietary LLMs
+Background context: The text highlights that both open-source and proprietary models have made their way to people at an incredible pace, often referred to as foundation models due to their ability to be fine-tuned for specific tasks.
+
+:p What are the characteristics of "foundation models" in generative AI?
+??x
+Foundation models are large pre-trained language models that can be fine-tuned for specific tasks. They are characterized by their ability to handle a wide range of natural language processing tasks and provide a robust starting point for developing specialized applications.
+x??
+
+---
+
+#### Mamba: Linear-time sequence modeling with selective state spaces
+Background context: The text introduces "Mamba," a new architecture that aims to achieve Transformer-level performance while offering faster inference times.
+
+:p What is the main advantage of Mamba over traditional Transformers?
+??x
+The main advantage of Mamba is its ability to provide linear-time sequence modeling, which means it can handle sequences much more efficiently compared to traditional Transformers. This is achieved through selective state spaces that allow for faster inference without sacrificing performance.
+x??
+
+---
+
+#### RWKV: Reinventing RNNs for the transformer era
+Background context: The text mentions "RWKV" as another promising architecture that attempts to achieve similar performance to Transformers but with additional advantages like larger context windows or faster inference.
+
+:p What are the key features of the RWKV model?
+??x
+The key features of the RWKV model include reinventing RNNs for use in the transformer era. It is designed to offer larger context windows and faster inference, aiming to match Transformer-level performance while providing these additional benefits.
+x??
+
+---
+
+#### Evolution of Language AI Models
+Background context: The text explains that 2023 was a busy year for AI with various new architectures emerging, such as Mamba and RWKV.
+
+:p How do Mamba and RWKV differ from the widely popular Transformer architecture?
+??x
+Mamba and RWKV are novel architectures that attempt to reach Transformer-level performance but offer additional advantages. Specifically, they provide larger context windows or faster inference compared to the traditional Transformers.
+x??
+
+---
+
+#### Embedding Models, Encoder-only Models, and Bag-of-Words
+Background context: The text suggests exploring other models like embedding models, encoder-only models, and even bag-of-words in addition to LLMs.
+
+:p Why is it important to explore different types of models such as embedding models, encoder-only models, and bag-of-words?
+??x
+Exploring different types of models is crucial because each model has unique strengths and can be used to empower LLMs. Embedding models, encoder-only models, and bag-of-words offer distinct approaches to natural language processing that can complement or enhance the capabilities of LLMs.
+x??
+
+---
+
+#### Definition of "Large Language Models"
+Background context explaining the evolving definition of large language models. The term tends to be constrained by current technology, but it's arbitrary and may evolve with new releases.
+
+:p How is a "large language model" traditionally defined?
+??x
+A "large language model" is commonly referred to as a primarily generative decoder-only (Transformer) model that is considered to be large in size. However, this definition can be constrained because models with similar capabilities but smaller sizes or different primary functions might still fall under the same category.
+x??
+
+---
+
+#### Training Paradigm of Large Language Models
+Explanation on how traditional machine learning and LLM training differ in their approach.
+
+:p What are the two main steps involved in creating large language models?
+??x
+The two main steps involved in creating large language models are pretraining and fine-tuning. Pretraining involves training the model on a vast corpus of internet text, allowing it to learn grammar, context, and language patterns without specific task direction. Fine-tuning involves further training the previously trained model for specific tasks.
+x??
+
+---
+
+#### Pretraining Step
+Explanation on what happens during the pretraining step.
+
+:p What is the purpose of the pretraining step in LLMs?
+??x
+The purpose of the pretraining step is to train the language model on a vast corpus of internet text, enabling it to learn general grammar, context, and language patterns without specific task direction. This broad training phase lays the foundation for more specialized tasks.
+x??
+
+---
+
+#### Fine-tuning Step
+Explanation on what happens during the fine-tuning step.
+
+:p What is the purpose of the fine-tuning step in LLMs?
+??x
+The purpose of the fine-tuning step is to adapt a pre-trained model for specific tasks or behaviors. This involves further training the model on narrower datasets, allowing it to exhibit desired behavior such as following instructions or performing classification tasks.
+x??
+
+---
+
+#### Pretrained Models
+Explanation on what pretrained models are and their characteristics.
+
+:p What characterizes a pretrained model in the context of LLMs?
+??x
+A pretrained model is any model that has gone through the pretraining step. This includes both foundation/base models and fine-tuned models, as they have all been trained extensively but not yet directed toward specific tasks.
+x??
+
+---
+
+#### Multistep Training Approach
+Explanation on why the training approach of LLMs differs from traditional machine learning.
+
+:p Why does the training paradigm for large language models differ from traditional machine learning?
+??x
+The training paradigm for large language models differs because it involves a multistep process: pretraining, where the model is trained broadly to learn general language patterns, followed by fine-tuning on specific tasks. This approach saves resources as the pretraining phase is costly and requires extensive data and computing power.
+x??
+
+---
+
+#### Example of LLM Training
+Example scenario illustrating the training steps for an LLM.
+
+:p Provide an example of how a model might be trained as an LLM.
+??x
+Let's consider a hypothetical large language model (LLM) named "GPT-5". Initially, it undergoes pretraining on a vast corpus of internet text to learn general grammar, context, and language patterns. This step is computationally intensive and requires significant resources.
+
+Afterwards, the model can be fine-tuned for specific tasks such as classification or following instructions. For instance, if we want "GPT-5" to perform well in classifying text into different categories, we would provide it with a dataset containing labeled examples of texts. The model is then trained on this dataset to improve its performance on the specific task.
+
+This multistep approach allows the LLM to leverage the broad knowledge gained during pretraining while also adapting to specific needs.
+x??
+
+---
+
+#### Detecting Customer Reviews Sentiment
+Background context: This task involves determining whether a customer review is positive or negative. It's a supervised classification problem where labeled data is used for training and validation.
+
+:p What technique can be used to detect the sentiment of customer reviews?
+??x
+Encoder-decoder models, both pretrained and fine-tuned, can be utilized for this task.
+???x
+This involves using pre-trained language models that have been trained on large datasets to understand text patterns. Fine-tuning these models with specific data related to customer reviews allows them to adapt to the nuances of sentiment analysis.
+
+```python
+# Pseudocode for fine-tuning a model for sentiment analysis
+
+def fine_tune_model(pretrained_model, training_data):
+    # Load and preprocess the training data
+    processed_data = preprocess_data(training_data)
+    
+    # Fine-tune the model on the preprocessed data
+    trained_model = pretrained_model.train(processed_data)
+    
+    return trained_model
+```
+x??
+
+---
+
+#### Finding Common Topics in Ticket Issues (Unsupervised Classification)
+Background context: This task involves identifying common topics or themes in ticket issues without predefined labels. It's an unsupervised classification problem where the model must discover patterns on its own.
+
+:p How can you develop a system to find common topics in ticket issues?
+??x
+Encoder-only models can be used for this purpose, as they focus on understanding the text and extracting meaningful features without relying on labeled data. Decoder-only models could then label these extracted topics based on their learned representations.
+
+???x
+The process involves using an encoder model to extract semantic embeddings of the texts in ticket issues. These embeddings are then analyzed or clustered to identify common topics.
+
+```python
+# Pseudocode for extracting topics from ticket issues
+
+def extract_topics(ticket_issues):
+    # Use an encoder model to create embeddings
+    embeddings = encoder_model.encode_ticket_issues(ticket_issues)
+    
+    # Cluster the embeddings to find common topics
+    clusters = cluster_embeddings(embeddings)
+    
+    return clusters
+```
+x??
+
+---
+
+#### Retrieval and Inspection of Relevant Documents
+Background context: This task involves building a system that can retrieve relevant documents based on user queries. Semantic search is employed here, where the language model understands the query and retrieves appropriate documents.
+
+:p How can you build a document retrieval system using LLMs?
+??x
+By leveraging semantic search techniques, an LLM can be trained to understand natural language queries and retrieve relevant documents from external resources.
+
+???x
+The process involves creating or fine-tuning an embedding model that can generate vector representations of both the query and the documents. These vectors are then compared to find similarities.
+
+```python
+# Pseudocode for retrieving relevant documents
+
+def retrieve_documents(query, document_collection):
+    # Create embeddings for the query and documents
+    query_embedding = embedding_model.encode_query(query)
+    doc_embeddings = [embedding_model.encode_document(doc) for doc in document_collection]
+    
+    # Calculate similarity scores between the query and documents
+    similarities = calculate_similarity_scores(query_embedding, doc_embeddings)
+    
+    # Retrieve top N relevant documents based on highest similarity scores
+    retrieved_docs = retrieve_top_n(similarities, n=5)
+    
+    return retrieved_docs
+```
+x??
+
+---
+
+#### Constructing an LLM Chatbot with External Resources
+Background context: This task involves building a chatbot that can leverage external resources like tools and documents. It combines techniques such as prompt engineering, retrieval-augmented generation (RAG), and fine-tuning.
+
+:p How can you build a chatbot using LLMs?
+??x
+By integrating various methods including prompt engineering, retrieval-augmented generation, and fine-tuning the model to leverage external resources effectively.
+
+???x
+The approach involves creating prompts that guide the model's responses, leveraging an LLM’s ability to retrieve relevant information from documents or other sources. Fine-tuning can enhance its performance with specific domains or tasks.
+
+```python
+# Pseudocode for constructing a chatbot
+
+def construct_chatbot(model, knowledge_base):
+    # Define and fine-tune prompts for the model
+    prompts = define_prompts()
+    
+    # Integrate retrieval-augmented generation (RAG) techniques
+    retrieved_info = retrieve_relevant_information(knowledge_base)
+    
+    # Combine prompts and retrieved information to form responses
+    response = generate_response(model, prompts, retrieved_info)
+    
+    return response
+```
+x??
+
+---
+
+#### Writing Recipes Based on a Picture of Ingredients in the Fridge
+Background context: This task involves using an LLM that can understand images (multimodal) to reason about ingredients and write recipes. It leverages image processing techniques alongside natural language generation.
+
+:p How can you build an LLM capable of writing recipes based on an image?
+??x
+By adapting the LLM to handle multimodal inputs, combining vision capabilities with natural language generation to create recipe instructions from images of fridge contents.
+
+???x
+The approach involves using a multimodal model that processes both text and visual data. The model is trained on paired datasets where ingredients are described in text alongside corresponding images.
+
+```python
+# Pseudocode for creating recipes based on image
+
+def generate_recipe_from_image(image, ingredient_descriptions):
+    # Use a vision model to recognize ingredients in the image
+    recognized_ingredients = vision_model.recognize_objects_in_image(image)
+    
+    # Combine recognized ingredients with descriptions to form recipe instructions
+    recipe_instructions = generate_recipe(recognized_ingredients, ingredient_descriptions)
+    
+    return recipe_instructions
+```
+x??
+

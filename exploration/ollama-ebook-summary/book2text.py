@@ -71,6 +71,24 @@ def split_epub_by_sections(input_file, output_dir):
     return True
 
 
+def clean_unicode_text(text):
+    """
+    Clean problematic Unicode characters from text.
+    Removes surrogate pairs and other characters that can't be encoded in UTF-8.
+
+    Args:
+        text: Input text string
+
+    Returns:
+        Cleaned text string
+    """
+    if not isinstance(text, str):
+        return text
+
+    # Remove surrogate pairs and other problematic Unicode characters
+    cleaned = text.encode('utf-8', errors='ignore').decode('utf-8', errors='ignore')
+    return cleaned
+
 def get_title_from_html(filepath):
     try:
         with open(filepath, 'r', encoding='utf-8') as file:
@@ -100,19 +118,22 @@ def epub_to_text(epub_path):
             soup = BeautifulSoup(item.get_content(), 'html.parser')
             # Extract just the text, removing HTML tags
             chapter_text = soup.get_text(separator=' ', strip=True)
-            text_content.append(chapter_text)
+            text_content.append(clean_unicode_text(chapter_text))
     return '\n'.join(text_content)
 
 def html_to_text(html_path):
     with open(html_path, 'r', encoding='utf-8') as file:
         soup = BeautifulSoup(file, 'html.parser')
-        return soup.get_text()
+        text = soup.get_text()
+        return clean_unicode_text(text)
 
 def pdf_to_text(pdf_path):
     reader = PdfReader(pdf_path)
     text = []
     for page in reader.pages:
-        text.append(page.extract_text())
+        page_text = page.extract_text()
+        if page_text:
+            text.append(clean_unicode_text(page_text))
     return '\n'.join(text)
 
 def natural_sort_key(s):
@@ -152,10 +173,23 @@ def process_files(directory, file_type):
     return data
 
 def save_to_csv(data, output_file):
-    with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
+    # Clean data to remove problematic Unicode characters
+    cleaned_data = []
+    for row in data:
+        cleaned_row = []
+        for item in row:
+            if isinstance(item, str):
+                # Remove surrogate pairs and other problematic Unicode characters
+                cleaned_item = item.encode('utf-8', errors='ignore').decode('utf-8', errors='ignore')
+                cleaned_row.append(cleaned_item)
+            else:
+                cleaned_row.append(item)
+        cleaned_data.append(cleaned_row)
+
+    with open(output_file, 'w', newline='', encoding='utf-8', errors='ignore') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(['filename', 'title', 'text', 'len'])
-        writer.writerows(data)
+        writer.writerows(cleaned_data)
 
 def main(input_file, output_dir, output_csv):
     if os.path.exists(output_dir):

@@ -85,8 +85,9 @@ book3.pdf,SUMMARIZEDFLASHCARDS,ERROR,2025-01-26 11:00:00,2025-01-26 11:05:00,fla
 Direct PDF/EPUB to flashcards conversion:
 - Splits PDF/EPUB by chapters
 - Generates flashcards for each chapter
-- Rates flashcards for technical usefulness
-- Creates high-quality consolidated markdown files
+- Rates flashcards for technical usefulness (1-10 scale)
+- Saves all flashcards to CSV with ratings
+- Creates consolidated markdown files for high-quality flashcards (≥8/10 by default)
 
 ### SUMMARIZEDFLASHCARDS (Future)
 Book summary + flashcard generation:
@@ -139,7 +140,30 @@ python orchestrate.py --input-folder my_pdfs/
 
 ## Adding Books to Queue
 
-### Method 1: Using add_book.py (Recommended)
+### Method 1: Auto-Scan (Easiest)
+
+Automatically scan the `in/` folder and add all PDF/EPUB files:
+
+```bash
+# Scan and add all new books from in/ folder
+python add_book.py --scan
+
+# Scan custom folder
+python add_book.py --scan --input-folder my_pdfs/
+
+# Scan and set pipeline type
+python add_book.py --scan --pipeline ONLYFLASHCARDS
+```
+
+This will:
+- Find all `.pdf` and `.epub` files in the folder
+- Check which ones are already in orchestration.csv
+- Add only the new ones with PENDING status
+- Skip books already tracked
+
+### Method 2: Manual Add
+
+Add specific books:
 
 ```bash
 # Add single book
@@ -152,10 +176,13 @@ python add_book.py mybook.pdf --pipeline ONLYFLASHCARDS
 python add_book.py mybook.pdf --output flashcards/mybook
 
 # Add multiple books
-python add_book.py *.pdf
+python add_book.py book1.pdf book2.pdf book3.epub
+
+# Force update existing book
+python add_book.py mybook.pdf --force
 ```
 
-### Method 2: Manually Edit CSV
+### Method 3: Manually Edit CSV
 
 Edit `orchestration.csv` and add a row:
 ```csv
@@ -203,12 +230,14 @@ ollama-ebook-summary/
 
 ## Example Workflow
 
+### Simple Workflow (Recommended)
+
 ```bash
 # 1. Place books in input folder
 cp ~/Downloads/*.pdf in/
 
-# 2. Add them to orchestration
-python add_book.py in/*.pdf
+# 2. Auto-scan and add all new books
+python add_book.py --scan
 
 # 3. Check what will be processed
 cat orchestration.csv
@@ -221,6 +250,29 @@ python orchestrate.py
 
 # 6. Check results
 ls flashcards/high_quality/
+```
+
+### Alternative Workflow (Manual Selection)
+
+```bash
+# 1. Place books in input folder
+cp ~/Downloads/*.pdf in/
+
+# 2. Manually add specific books
+python add_book.py book1.pdf book2.pdf
+
+# 3. Check what will be processed
+cat orchestration.csv
+
+# 4. Run orchestration
+python orchestrate.py
+
+# 5. Add more books later
+cp ~/Downloads/book3.pdf in/
+python add_book.py --scan  # Only adds new books
+
+# 6. Continue processing
+python orchestrate.py
 ```
 
 ## Monitoring Progress
