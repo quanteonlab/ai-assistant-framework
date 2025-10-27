@@ -120,7 +120,7 @@ def natural_sort_key(s):
     This function constructs a tuple of either integers (if the pattern matches digits)
     or the original elements (if not). This tuple can be used as a key for sorting.
     """
-    return [int(text) if text.isdigit() else text.lower() for text in re.split('(\d+)', s)]
+    return [int(text) if text.isdigit() else text.lower() for text in re.split(r'(\d+)', s)]
 
 def process_files(directory, file_type):
     data = []
@@ -162,7 +162,7 @@ def main(input_file, output_dir, output_csv):
         shutil.rmtree(output_dir)
     os.makedirs(output_dir, exist_ok=True)
 
-    file_type = os.path.splitext(input_file)[1][1:]  # Remove the dot
+    file_type = os.path.splitext(input_file)[1][1:].lower()  # Remove the dot and convert to lowercase
 
 
     if file_type == 'epub':

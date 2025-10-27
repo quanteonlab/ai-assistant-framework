@@ -10,3 +10,4 @@ bs4
 ebooklib
 sentence_transformers
 PyCryptodome
+python-dotenv

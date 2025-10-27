@@ -3,6 +3,10 @@ import requests, argparse, traceback
 from typing import Dict, Any, Tuple, Optional, List
 from urllib.parse import urljoin
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 class Config:
     """Centralized access to configuration parameters."""
@@ -591,7 +595,7 @@ def main():
     model = args.model
     input_file = args.input_file
     prompt_alias = args.prompt
-    api_base = "http://localhost:11434/api"
+    api_base = os.getenv('OLLAMA_API_BASE', 'http://localhost:11434/api')
     ptitle = config.title_prompt
     should_continue = getattr(args, 'continue', False)
 

@@ -26,6 +26,7 @@ Its very important towards unlocking the full capabilities of LLM without relyin
 - [Setup](#setup)
   - [Python Environment](#python-environment)
   - [Install Dependencies](#install-dependencies)
+  - [Configure Environment Variables](#configure-environment-variables)
   - [Download Models](#download-models)
   - [Update Config File](#update-config-file-_configyaml)
 - [Usage](#usage)
@@ -62,6 +63,26 @@ Before starting, ensure you have Python 3.11.9 installed. If not, you can use co
 pip install -r requirements.txt
 ```
 - [Install Ollama](https://github.com/ollama/ollama?tab=readme-ov-file#ollama)
+
+### Configure Environment Variables
+
+Create a `.env` file in the project directory to configure the Ollama API endpoint:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` to configure your Ollama API base URL:
+
+```env
+# For local Ollama installation (default)
+OLLAMA_API_BASE=http://localhost:11434/api
+
+# For remote Ollama server
+# OLLAMA_API_BASE=http://your-server-ip:11434/api
+```
+
+**Note:** If the `.env` file is not present, the application will default to `http://localhost:11434/api`.
 
 ### Download Models
 
@@ -174,12 +195,119 @@ The output CSV will include:
 - model_name: Generated output
 - Time: Processing time in seconds
 - Len: Length of the output
-```    
+```
 
-If you have your defaults set, then all you need is to specify which type of input, manual `text`, or automated `csv`. 
+If you have your defaults set, then all you need is to specify which type of input, manual `text`, or automated `csv`.
 ```
 python3 sum.py -c ebook-name_processed.csv
 ```
+
+### Generate Flashcards (Unified Pipeline)
+
+**NEW: Single Command to Process PDF/EPUB to Flashcards**
+
+```bash
+# Simplest usage - PDF to flashcards in one command
+python pdf2flashcards.py mybook.pdf
+
+# With quality rating enabled
+python pdf2flashcards.py mybook.pdf --enable-rating
+
+# See all options
+python pdf2flashcards.py --help
+```
+
+For detailed usage, see [QUICKSTART_PDF2FLASHCARDS.md](QUICKSTART_PDF2FLASHCARDS.md)
+
+This unified script:
+1. Converts PDF/EPUB to chunked CSV
+2. Generates flashcards from CSV
+3. Optionally rates flashcards and saves high-quality ones
+4. Automatically handles file splitting and organization
+
+---
+
+### Generate Flashcards (Manual - from CSV)
+
+`python3 flashcard.py --help`
+
+```bash
+Usage: python flashcard.py [OPTIONS] input_file
+
+Options:
+-c, --csv           Process a CSV file. Expected columns: Title, Text
+-m, --model         Model name to use for generation (default from config)
+-o, --output        Output directory for flashcards (default: flashcards/)
+-v, --verbose       Print flashcards to terminal as they're generated
+--min-length        Minimum text length to process (default: 200)
+--no-training-data  Disable saving training data to CSV
+--help              Show this help message and exit.
+
+For CSV input:
+- Ensure your CSV has 'Title' and 'Text' columns.
+- The script will generate flashcards for each row.
+- Non-relevant sections (dedication, copyright, TOC, etc.) are automatically skipped.
+
+Output:
+- Flashcards will be saved in markdown format
+- Each flashcard follows the format: #### Header, :p prompt, ??x answer x??
+- Flashcards are separated by ---
+- Training data is saved to flashcards_training_data.csv (aggregable across runs)
+
+Training Data Export:
+- By default, inputs and outputs are saved to flashcards_training_data.csv
+- This CSV is aggregable - multiple runs append to the same file
+- Useful for fine-tuning models in the future
+- Columns: source_file, title, input_text, input_length, flashcards_output,
+           output_length, model, timestamp, elapsed_time_seconds
+
+Filtering:
+- The script automatically filters out non-technical sections like:
+  * Front matter: dedications, copyright, table of contents, preface
+  * Back matter: index, bibliography, references
+  * Very short sections (< min-length characters)
+```
+
+Example usage:
+```bash
+# Basic usage
+python3 flashcard.py -c out/ebook-name_processed.csv -o flashcards/ebook-name
+
+# With custom minimum length threshold
+python3 flashcard.py -c out/ebook-name_processed.csv -o flashcards/ebook-name --min-length 300
+
+# Without saving training data
+python3 flashcard.py -c out/ebook-name_processed.csv -o flashcards/ebook-name --no-training-data
+```
+
+**Flashcard Format:**
+The flashcards are generated in a format optimized for spaced repetition learning:
+- Level 4 headers (`####`) for concept titles
+- Background context and explanations before each question
+- `:p` denotes the question prompt
+- `??x` and `x??` wrap the answer
+- `---` separates flashcards
+- Includes code examples (Java/C) when relevant
+- Focus on understanding and familiarity, not pure memorization
+
+**Smart Filtering:**
+The flashcard generator intelligently skips non-relevant sections to focus only on technical and substantive content:
+- Automatically detects and skips front matter (dedications, copyright, table of contents, etc.)
+- Filters out back matter (index, bibliography, references)
+- Excludes very short sections that likely don't contain meaningful content
+- Provides a summary of processed vs. skipped sections at the end
+
+**Training Data Export:**
+The flashcard generator automatically saves inputs and outputs for future model fine-tuning:
+- Creates an aggregable CSV file: `flashcards_training_data.csv` in the output directory
+- Multiple runs append to the same file, allowing you to build a training dataset over time
+- Each row contains:
+  - Source file and section title
+  - Input text and its length
+  - Generated flashcards and their length
+  - Model used, timestamp, and processing time
+- Perfect for creating custom fine-tuning datasets from your ebook processing pipeline
+- Disable with `--no-training-data` flag if not needed
 
 ## Semi-Manual with Prototypes
 
