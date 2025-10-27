@@ -293,6 +293,40 @@ def sanitize_filename(text: str, max_length: int = 50) -> str:
 
     return text
 
+def extract_individual_flashcards(flashcards_output: str) -> List[Tuple[str, str]]:
+    """
+    Extract individual flashcards from the combined output.
+
+    Flashcards are separated by --- and have the format:
+    #### Title
+    Background context: ...
+
+    :p Question
+    ??x
+    Answer
+    x??
+
+    Args:
+        flashcards_output: Combined flashcard output string
+
+    Returns:
+        List of tuples (flashcard_title, flashcard_content)
+    """
+    # Split by --- separator
+    flashcards = flashcards_output.split('\n---\n')
+
+    # Extract title and content for each flashcard
+    individual_flashcards = []
+    for fc in flashcards:
+        fc = fc.strip()
+        if fc and '####' in fc:  # Valid flashcard should have a title
+            # Extract title
+            match = re.search(r'####\s+(.+?)(?:\n|$)', fc)
+            title = match.group(1).strip() if match else "Untitled"
+            individual_flashcards.append((title, fc))
+
+    return individual_flashcards
+
 def process_csv_for_flashcards(input_file: str, config: Config, api_base: str,
                                model: str, output_dir: str, verbose: bool = False,
                                min_length: int = 200, save_training_data: bool = True,
@@ -355,13 +389,12 @@ def process_csv_for_flashcards(input_file: str, config: Config, api_base: str,
             training_writer = csv.writer(training_csv_out)
             # Write header only if file is new
             if not training_csv_exists:
+                # New structure: one row per flashcard
                 header = [
-                    "source_file", "title", "input_text", "input_length",
-                    "flashcards_output", "output_length", "model",
-                    "timestamp", "elapsed_time_seconds"
+                    "source_file", "chapter_title", "flashcard_title",
+                    "flashcard_content", "flashcard_length", "input_text_excerpt",
+                    "model", "timestamp", "usefulness_rating"
                 ]
-                if enable_rating:
-                    header.append("usefulness_rating")
                 training_writer.writerow(header)
 
         try:
@@ -530,23 +563,30 @@ def process_csv_for_flashcards(input_file: str, config: Config, api_base: str,
                             hq_md_out.write("\n\n")
                             hq_current_file_text_size += len(clean)
 
-                    # Save to training data CSV
+                    # Save to training data CSV (one row per flashcard)
                     if save_training_data and training_writer:
                         timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-                        row_data = [
-                            base_name,
-                            title,
-                            clean,
-                            len(clean),
-                            flashcards,
-                            len(flashcards),
-                            model,
-                            timestamp,
-                            f"{elapsed_time:.2f}"
-                        ]
-                        if enable_rating:
-                            row_data.append(usefulness_rating)
-                        training_writer.writerow(row_data)
+
+                        # Extract individual flashcards
+                        individual_flashcards = extract_individual_flashcards(flashcards)
+
+                        # Create input excerpt (first 200 chars)
+                        input_excerpt = clean[:200] + '...' if len(clean) > 200 else clean
+
+                        # Write one row per flashcard
+                        for flashcard_title, flashcard_content in individual_flashcards:
+                            row_data = [
+                                base_name,
+                                title,  # chapter_title
+                                flashcard_title,
+                                flashcard_content,
+                                len(flashcard_content),
+                                input_excerpt,
+                                model,
+                                timestamp,
+                                str(usefulness_rating) if enable_rating else ''
+                            ]
+                            training_writer.writerow(row_data)
                 else:
                     print(f"  Failed to generate flashcards")
 

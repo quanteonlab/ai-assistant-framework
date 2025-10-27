@@ -226,6 +226,81 @@ def run_flashcard_generation(csv_file: str, output_dir: str, args: argparse.Name
         print_error(f"Error running flashcard.py: {e}")
         return False
 
+def run_flashcard_rating(output_dir: str, args: argparse.Namespace) -> bool:
+    """
+    Run rate_flashcards.py to rate unrated flashcards in the training data.
+
+    Args:
+        output_dir: Directory containing flashcards_training_data.csv
+        args: Command-line arguments
+
+    Returns:
+        True if successful, False otherwise
+    """
+    print_step(3, "Rating unrated flashcards...")
+
+    script_dir = Path(__file__).parent.absolute()
+    rating_script = script_dir / "rate_flashcards.py"
+
+    # Check if rating script exists
+    if not rating_script.exists():
+        print_warning(f"Rating script not found: {rating_script}")
+        return False
+
+    # Check if training data exists
+    training_csv = Path(output_dir) / "flashcards_training_data.csv"
+    if not training_csv.exists():
+        print_warning(f"Training data not found: {training_csv}")
+        return False
+
+    # Build command
+    cmd = [
+        sys.executable,
+        str(rating_script),
+        str(training_csv),
+        "--threshold", str(args.post_rating_threshold)
+    ]
+
+    # Add optional arguments
+    if args.rating_model:
+        cmd.extend(["--model", args.rating_model])
+    elif args.model:
+        cmd.extend(["--model", args.model])
+
+    if args.verbose:
+        cmd.append("-v")
+
+    cmd.extend(["--output", output_dir])
+
+    try:
+        # Run rate_flashcards.py
+        result = subprocess.run(
+            cmd,
+            cwd=script_dir,
+            capture_output=True,
+            text=True,
+            timeout=3600  # 1 hour timeout
+        )
+
+        if result.returncode != 0:
+            print_error(f"rate_flashcards.py failed with return code {result.returncode}")
+            print(f"STDOUT:\n{result.stdout}")
+            print(f"STDERR:\n{result.stderr}")
+            return False
+
+        # Print output
+        print(result.stdout)
+
+        print_success("Flashcard rating completed!")
+        return True
+
+    except subprocess.TimeoutExpired:
+        print_error("rate_flashcards.py timed out after 1 hour")
+        return False
+    except Exception as e:
+        print_error(f"Error running rate_flashcards.py: {e}")
+        return False
+
 def cleanup_intermediate_files(csv_file: str, keep_csv: bool):
     """
     Optionally clean up intermediate CSV files.
@@ -243,15 +318,15 @@ def cleanup_intermediate_files(csv_file: str, keep_csv: bool):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Convert PDF/EPUB to flashcards with optional quality rating",
+        description="Convert PDF/EPUB to flashcards with automatic quality rating (enabled by default)",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Basic usage - PDF to flashcards
+  # Basic usage - PDF to flashcards (rating enabled by default)
   python pdf2flashcards.py mybook.pdf
 
-  # EPUB with rating enabled
-  python pdf2flashcards.py mybook.epub --enable-rating
+  # Disable rating if you don't want it
+  python pdf2flashcards.py mybook.epub --disable-rating --disable-post-rating
 
   # Custom output directory and rating threshold
   python pdf2flashcards.py mybook.pdf -o flashcards/mybook --rating-threshold 9
@@ -262,14 +337,18 @@ Examples:
   # Keep intermediate CSV for debugging
   python pdf2flashcards.py mybook.pdf --keep-csv
 
+  # Adjust post-processing rating threshold only (rating still enabled)
+  python pdf2flashcards.py mybook.pdf --post-rating-threshold 7
+
 Output Structure:
   flashcards/
   |-- mybook_part01_Chapter_One.md
   |-- mybook_part02_Chapter_Four.md
-  |-- high_quality/                    # Only if --enable-rating is used
-  |   |-- mybook_hq_part01_Chapter_One.md
-  |   +-- mybook_hq_part02_Chapter_Four.md
-  +-- flashcards_training_data.csv
+  |-- high_quality/                    # Created by default (rating enabled)
+  |   |-- mybook_hq_part01_Chapter_One.md      # From --enable-rating
+  |   |-- mybook_0001_Chapter_Title.md         # From --enable-post-rating
+  |   +-- mybook_0002_Another_Chapter.md
+  +-- flashcards_training_data.csv     # Includes usefulness_rating column
         """
     )
 
@@ -292,13 +371,19 @@ Output Structure:
     parser.add_argument('--max-text-size', type=int, default=50000,
                        help='Maximum text size per file in characters (default: 50000)')
 
-    # Rating options
-    parser.add_argument('--enable-rating', action='store_true',
-                       help='Enable flashcard usefulness rating (1-10 scale)')
+    # Rating options (enabled by default)
+    parser.add_argument('--disable-rating', action='store_false', dest='enable_rating', default=True,
+                       help='Disable flashcard usefulness rating during generation (enabled by default)')
     parser.add_argument('--rating-threshold', type=int, default=8,
-                       help='Minimum rating for high-quality folder (default: 8)')
+                       help='Minimum rating for high-quality folder during generation (default: 8)')
     parser.add_argument('--rating-model',
                        help='Model to use for rating (default: same as generation model)')
+
+    # Post-processing rating options (enabled by default)
+    parser.add_argument('--disable-post-rating', action='store_false', dest='enable_post_rating', default=True,
+                       help='Disable post-processing rating of unrated flashcards (enabled by default)')
+    parser.add_argument('--post-rating-threshold', type=int, default=6,
+                       help='Minimum rating for high-quality folder in post-rating (default: 6)')
 
     # Content filtering options
     parser.add_argument('--min-length', type=int, default=200,
@@ -349,7 +434,13 @@ Output Structure:
         print_error("Failed to generate flashcards")
         sys.exit(1)
 
-    # Step 3: Cleanup (optional)
+    # Step 3: Rate unrated flashcards (optional)
+    if args.enable_post_rating:
+        rating_success = run_flashcard_rating(args.output, args)
+        if not rating_success:
+            print_warning("Flashcard rating step had issues, but continuing...")
+
+    # Step 4: Cleanup (optional)
     if not args.keep_csv:
         cleanup_intermediate_files(csv_file, args.keep_csv)
     else:
@@ -361,6 +452,8 @@ Output Structure:
     print(f"[OK] Output: {args.output}/")
     if args.enable_rating:
         print(f"[OK] High-quality flashcards (>={args.rating_threshold}/10): {args.output}/high_quality/")
+    if args.enable_post_rating:
+        print(f"[OK] Post-rated flashcards (>={args.post_rating_threshold}/10): {args.output}/high_quality/")
     print(f"[OK] Training data: {args.output}/flashcards_training_data.csv")
     print()
 

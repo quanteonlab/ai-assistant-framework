@@ -14,20 +14,6 @@
           "comments": []
         },
         {
-          "id": "d4f4f9df-3f42-4991-91f1-cda462b95343",
-          "listId": "17d897d3-c0e0-4b20-903d-f55876465ae0",
-          "title": "Create an Orchestration Csv",
-          "description": "On the orchestration the idea is to have the different books, and keep track of what had been analyzed and what not. the program should go one by one completing all the books listed on the csv, and keeping track and updating it statuses\n\nThe target pipeline should be marked e.g. SUMMARIZEDFLASHCARDS means book summary  + flashcard process. or ONLYFLASHCARDS means straight flashcards from the book support\nKeep track as well as the csv of the row is doing the prcessing, so that it doesnt do a double job on that csv row. and when broken and started again, continues from last row",
-          "labels": [],
-          "checkboxes": [],
-          "comments": [
-            {
-              "id": "b141e405-3dee-4826-a948-388c5dbc151f",
-              "comment": "On the orchestration the idea is to have the different books, and keep track of what had been analyzed and what not.\n"
-            }
-          ]
-        },
-        {
           "id": "76bb8763-29f2-4179-bc49-72aa1dce22e4",
           "listId": "17d897d3-c0e0-4b20-903d-f55876465ae0",
           "title": "Different mdels",
@@ -52,8 +38,28 @@
       "title": "Doing",
       "cards": [
         {
-          "id": "9260a0a1-a77b-4503-b449-0ce8464b0ea0",
+          "id": "d4f4f9df-3f42-4991-91f1-cda462b95343",
           "listId": "0a9895c8-1a30-4fc3-b2c3-63e119d8c8e3",
+          "title": "Create an Orchestration Csv",
+          "description": "On the orchestration the idea is to have the different books, and keep track of what had been analyzed and what not. the program should go one by one completing all the books listed on the csv, and keeping track and updating it statuses\n\nThe target pipeline should be marked e.g. SUMMARIZEDFLASHCARDS means book summary  + flashcard process. or ONLYFLASHCARDS means straight flashcards from the book support\nKeep track as well as the csv of the row is doing the prcessing, so that it doesnt do a double job on that csv row. and when broken and started again, continues from last row",
+          "labels": [],
+          "checkboxes": [],
+          "comments": [
+            {
+              "id": "b141e405-3dee-4826-a948-388c5dbc151f",
+              "comment": "On the orchestration the idea is to have the different books, and keep track of what had been analyzed and what not.\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11ee3eed-919c-4888-b219-3be98d9e930c",
+      "title": "Done",
+      "cards": [
+        {
+          "id": "9260a0a1-a77b-4503-b449-0ce8464b0ea0",
+          "listId": "11ee3eed-919c-4888-b219-3be98d9e930c",
           "title": "qwen2.5 Depending Size Create Flashcards",
           "description": "every 2- 3 chapters of flascards proceessed, depending on the text size, create the flashcards      on a different makrdown, with a proper title for the filename",
           "labels": [],
@@ -67,19 +73,14 @@
         },
         {
           "id": "0d26e1ad-c29a-49e7-9027-74fa1a64c253",
-          "listId": "0a9895c8-1a30-4fc3-b2c3-63e119d8c8e3",
+          "listId": "11ee3eed-919c-4888-b219-3be98d9e930c",
           "title": "usefullness filter",
-          "description": "Make it revise in a csv in terms of 1-10 how technical/ usefull to remember long term, this flashcards is. Create a folder for only those who are 6 to 10 of useful this should be configurable",
+          "description": "at the end of the pdf2flashcards.py cann a python scrpt to review the flashcards training data      \n  (create column if doesnt exist) to rate 1-10 how technical/ usefull to remember long term, this     \n  flashcards is. Create a folder for only those who are 6 to 10 of useful this should be\n  configurable this flashcard is, of the flascards that dont have any rating yet (it call ai to do    \n  that rating) ",
           "labels": [],
           "checkboxes": [],
           "comments": []
         }
       ]
-    },
-    {
-      "id": "11ee3eed-919c-4888-b219-3be98d9e930c",
-      "title": "Done",
-      "cards": []
     }
   ],
   "archive": {
