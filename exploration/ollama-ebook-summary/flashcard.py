@@ -84,7 +84,8 @@ def make_api_request(api_base: str, endpoint: str, payload: Dict[str, Any]) -> O
     full_url = urljoin(api_base + "/", endpoint)
 
     try:
-        response = requests.post(full_url, json=payload)
+        # Add 5 minute timeout per request to prevent hanging
+        response = requests.post(full_url, json=payload, timeout=300)
         response.raise_for_status()
         return response.json()
 

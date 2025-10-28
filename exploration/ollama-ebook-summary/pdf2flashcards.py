@@ -207,7 +207,7 @@ def run_flashcard_generation(csv_file: str, output_dir: str, args: argparse.Name
             cwd=script_dir,
             capture_output=True,
             text=True,
-            timeout=3600  # 1 hour timeout for flashcard generation
+            timeout=10000  # Aprox 3 hours timeout for flashcard generation
         )
 
         if result.returncode != 0:

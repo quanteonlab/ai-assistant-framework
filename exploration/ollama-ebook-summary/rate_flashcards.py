@@ -111,9 +111,10 @@ def consolidate_high_quality_flashcards(rows: list, threshold: int, high_quality
     by_source = {}
 
     for row in rows:
-        rating = row.get('usefulness_rating', '').strip()
+        rating = row.get('usefulness_rating', '') or ''
+        rating = rating.strip() if rating else ''
         try:
-            rating_int = int(rating)
+            rating_int = int(rating) if rating else 0
         except (ValueError, TypeError):
             continue
 
@@ -236,7 +237,8 @@ def process_training_data(csv_file: str, config: Config, api_base: str, model: s
     # Count how many need rating
     unrated_count = 0
     for row in rows:
-        rating = row.get('usefulness_rating', '').strip()
+        rating = row.get('usefulness_rating', '') or ''
+        rating = rating.strip() if rating else ''
         if not rating or rating == '0':
             unrated_count += 1
 
@@ -253,7 +255,8 @@ def process_training_data(csv_file: str, config: Config, api_base: str, model: s
     error_count = 0
 
     for idx, row in enumerate(rows):
-        rating = row.get('usefulness_rating', '').strip()
+        rating = row.get('usefulness_rating', '') or ''
+        rating = rating.strip() if rating else ''
 
         # Skip if already rated (and rating is not 0 or empty)
         if rating and rating != '0':
