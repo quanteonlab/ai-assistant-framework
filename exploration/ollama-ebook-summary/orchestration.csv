@@ -15,7 +15,7 @@ book_filename,pipeline_type,status,started_at,completed_at,output_folder,error_m
 2B004 Data Governance.pdf,ONLYFLASHCARDS,COMPLETED,2025-10-27 10:39:05,2025-10-27 11:06:05,flashcards,,Data governance principles and best practices
 029 - Understanding Distributed Systems (2021) Roberto Vitillo -.pdf,ONLYFLASHCARDS,COMPLETED,2025-10-27 11:09:32,2025-10-27 11:42:24,flashcards,,Distributed systems concepts and design patterns
 "7A003- Performance modeling and design of computer systems_ queueing theory in action -Harchol-Balter, Mor.pdf",ONLYFLASHCARDS,ERROR,2025-10-27 11:46:02,2025-10-27 11:46:02,flashcards,Pipeline execution failed,Performance modeling techniques and queueing theory
-Sam Newman - Building Microservices-O'Reilly Media (2015).pdf,ONLYFLASHCARDS,TIMEOUTCOMPLETED,2025-11-02 04:23:16,2025-11-02 10:39:02,flashcards,Pipeline timed out - partial results may exist,Microservices architecture patterns and practices
+Sam Newman - Building Microservices-O'Reilly Media (2015).pdf,ONLYFLASHCARDS,PROCESSING,2025-11-02 23:37:02,2025-11-02 10:39:02,flashcards,Pipeline timed out - partial results may exist,Microservices architecture patterns and practices
 10A000 - Fluent.Python.pdf,ONLYFLASHCARDS,COMPLETED,2025-10-27 11:47:35,2025-10-27 12:50:05,flashcards,Pipeline execution failed,Python programming techniques and idioms
 10A005 - C++ Software Design - Klaus Iglberger.pdf,ONLYFLASHCARDS,COMPLETED,2025-10-27 12:50:05,,flashcards,,C++ design patterns and best practices
 10A006 - Java Cookbook - Ian F. Darwin.pdf,ONLYFLASHCARDS,COMPLETED,2025-10-27 14:41:53,2025-10-27 16:41:53,flashcards,Pipeline execution failed,Java programming techniques and practical solutions
