@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** A Unifying Algorithm n-step Q
 
 ---
 
-**Rating: 8/10**
 
 #### n-step Bootstrapping Overview
 Background context: This section introduces the idea of using bootstrapping methods for estimating action values, specifically focusing on the \(n\)-step version. The goal is to combine different types of backup algorithms into a unified framework.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-step Q(α) Algorithm
 Background context: The \(n\)-step Q(\(\alpha\)) algorithm is a unified method that allows for flexible sampling or expectation on each step. This is achieved by setting \(\alpha_t\) between 0 and 1, where \(\alpha = 1\) means full sampling (like Sarsa), \(\alpha = 0\) means pure expectation (like tree backup), and values in-between mix the two.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-step Q(α) Update Equation
 Background context: The update equation for \(n\)-step Q(\(\alpha\)) combines elements of Sarsa and tree backup by smoothly transitioning between sampling and expectation based on \(\alpha_t\).
@@ -50,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-step Q(α) Algorithm Steps
 Background context: The algorithm describes the process of updating action values using \(n\)-step Q(\(\alpha\)), where \(\alpha_t\) is set on a step-by-step basis. This allows for different behaviors depending on whether to sample or take expectations.
@@ -119,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ongoing \(n\)-step Q(α) Algorithm
 Background context: The ongoing version of the \(n\)-step Q(\(\alpha\)) algorithm continues to update the action-value function using a sliding window approach, ensuring that the most recent data is given more weight.
@@ -139,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detailed Example
 Background context: The example demonstrates how to implement and use the ongoing \(n\)-step Q(\(\alpha\)) algorithm in practice, including setting up the environment, initializing the action-value function, and performing updates.
@@ -214,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-step TD Methods Overview
 Background context: This section introduces a range of temporal-difference (TD) learning methods that lie between one-step TD and Monte Carlo methods. These methods involve an intermediate amount of bootstrapping, which typically leads to better performance than either extreme.
@@ -226,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State-Value Update for n-step TD
 Background context: The state-value update is for \(n\)-step TD with importance sampling, which involves bootstrapping over \(n\) steps to estimate the value function.
@@ -249,7 +240,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action-Value Update for n-step Q()
 Background context: The action-value update is for \(n\)-step Q-learning, which generalizes Expected Sarsa and Q-learning by considering the next \(n\) rewards.
@@ -272,7 +262,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of n-step Return
 Background context: The idea of \(n\)-step returns was introduced by Watkins (1989), who also discussed their error reduction properties. These methods were initially considered impractical in the first edition but are now recognized as completely practical.
@@ -289,7 +278,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance Sampling in n-step Methods
 Background context: Importance sampling is used to correct for differences between behavior and target policies, but it can introduce high variance if the policies are very different.
@@ -313,7 +301,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tree-backup Updates for n-step Methods
 Background context: The tree-backup algorithm, introduced by Precup, Sutton, and Singh (2000), is a natural extension of Q-learning to the multi-step case with stochastic target policies. It involves no importance sampling but may span only a few steps even if \(n\) is large.
@@ -340,7 +327,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conceptual Clarity of n-step Methods
 Background context: Despite their complexity, \(n\)-step methods are conceptually clear and can be effectively used for off-policy learning. However, they require more memory and computation compared to one-step methods.
@@ -356,7 +342,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Models and Planning
 Background context: In reinforcement learning, a model of the environment is anything that can predict how it will respond to actions taken by an agent. This can be done through distribution models or sample models.
@@ -385,7 +370,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simulation of Experience
 Background context: Models can be used to simulate experience by generating possible transitions or entire episodes. This is crucial for both model-based and model-free methods.
@@ -411,7 +395,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State-Space Planning vs. Plan-Space Planning
 Background context: In state-space planning, actions cause transitions between states, while in plan-space planning, operators transform plans into other plans. State-space planning is more common in reinforcement learning.
@@ -440,7 +423,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Common Structure of State-Space Planning Methods
 Background context: All state-space planning methods involve computing value functions as a key intermediate step toward improving the policy. Value functions are computed by updates or backup operations applied to simulated experience.

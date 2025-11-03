@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.6 Avoiding NPEs with Optional. Problem. Solution. Discusssion
 
 ---
 
-**Rating: 8/10**
 
 #### EnumList.java Class
 Background context: The provided Java program `EnumList` demonstrates the usage of enums. Enums provide a way to define a set of named values, which can be used as a type and passed around like other variables.
@@ -133,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Optional to Handle Nullable Values
 Background context: The `Optional` class is used to avoid null pointer exceptions and make it explicit when a value might be absent. It encapsulates an object that may or may not be present, providing utilities for dealing with optional values.
@@ -235,7 +232,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Singleton Pattern Overview

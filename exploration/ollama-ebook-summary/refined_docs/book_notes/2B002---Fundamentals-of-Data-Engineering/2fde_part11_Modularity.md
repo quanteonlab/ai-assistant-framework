@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Modularity
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Avoiding Sunk Costs
 Background context: It's crucial to avoid treating internal operational overhead as a sunk cost when making technology decisions. Managed platforms offer significant advantages over babysitting on-premises servers. By upskilling your existing data team, you can build sophisticated systems more effectively and efficiently.
@@ -103,7 +101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ephemeral Resources
 In cloud computing, treating servers as ephemeral resources means you should create and delete them as needed based on demand. This approach allows for dynamic scaling of compute resources on demand without the overhead of managing physical or virtual machines continuously.
@@ -361,7 +358,6 @@ def lambda_handler(event, context):
 ```
 x??
 
-**Rating: 8/10**
 
 #### Benchmark Comparison Issues
 Background context: The passage discusses common issues and pitfalls in benchmark comparisons within the database space. It highlights problems such as comparing databases optimized for different use cases, using small datasets to achieve misleading performance results, nonsensical cost comparisons, and asymmetric optimization.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 35)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 25.2 Getting Moments from Transforms Peeling the Onion
 
 ---
 
-**Rating: 8/10**
 
 #### Z-Transform of a Discrete Random Variable AS
 Background context: The z-transform provides a way to analyze discrete random variables. It is defined as:
@@ -208,7 +206,6 @@ public class GeometricVariance {
 ```
 x??
 
-**Rating: 8/10**
 
 #### First Moment of AS Using Transforms
 
@@ -367,7 +364,6 @@ public class ZTransformSum {
 ```
 x??
 
-**Rating: 9/10**
 
 #### M/M/1 Response Time Distribution
 Background context: The M/M/1 model is a queueing system with a single server, where both arrivals and service times follow Poisson and exponential distributions, respectively. We are interested in finding the distribution of response time \( T \), which is the total time spent by a customer from arrival to departure.

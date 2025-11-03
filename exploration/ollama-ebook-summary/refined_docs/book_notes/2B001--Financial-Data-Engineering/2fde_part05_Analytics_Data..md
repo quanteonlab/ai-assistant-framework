@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Analytics Data. Reference Data
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges in Alternative Data
 
@@ -166,7 +164,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Uniqueness in Financial Identifiers
 
@@ -416,7 +413,6 @@ public class ImmutableIdentifierSystem {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Named Entity Recognition (NER)
 Background context explaining the concept. NER is a task of detecting and recognizing named entities in text, such as persons, companies, locations, events, symbols, time, and more. It's crucial for financial data analysis due to the large volumes of finance-related text.
@@ -620,7 +616,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Survivorship Bias
 Survivorship bias occurs when only entities that "survive" to the present are considered, which can lead to skewed data and analysis. This is a common issue in financial datasets where incomplete or missing historical records might not be available for some entities.

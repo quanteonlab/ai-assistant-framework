@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 27)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 13.12 Network Logging with java.util.logging. Problem. Discussion
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Expensive String Operations in Loggers
@@ -72,7 +70,6 @@ Here, `t` is the `Throwable` instance representing the caught exception. The mes
 x?
 ---
 
-**Rating: 8/10**
 
 #### JSON Parsing and Writing with Jackson
 Jackson is a full-featured API for working with JSON, widely used in Java applications. It simplifies the process of reading from and writing to JSON by providing an `ObjectMapper` that can automatically convert between JSON strings and POJOs (Plain Old Java Objects).
@@ -140,7 +137,6 @@ x??
 ---
 These flashcards cover the core concepts of using Jackson's `ObjectMapper` for reading and writing JSON in Java applications.
 
-**Rating: 8/10**
 
 #### Jackson ObjectMapper for JSON Parsing and Writing
 Background context: The `ObjectMapper` class from the Jackson library is a powerful tool for reading and writing JSON data. It simplifies the process of converting between Java objects and JSON strings, making it easy to parse JSON input into Java objects and serialize Java objects back into JSON.

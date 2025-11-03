@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Book Structure. Part III Training and Fine-Tuning Language Models
 
 ---
 
-**Rating: 8/10**
 
 #### Overview of Language Models
 This part provides an introduction to language models, distinguishing between representation and generative models. Representation models are used for task-specific tasks like classification, while generative models generate text similar to GPT models. Both types play important roles in machine learning applications.
@@ -89,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training and Fine-Tuning Language Models
 Training language models involves creating a model from scratch or fine-tuning an existing one to improve its performance on specific tasks. Fine-tuning is particularly useful for adapting pre-trained models to new datasets without starting from scratch.
@@ -210,7 +207,6 @@ pip install -r requirements.txt
 ```
 x??
 
-**Rating: 8/10**
 
 #### Bag-of-Words Flaw
 Bag-of-words, although an elegant approach, has a flaw. It considers language to be nothing more than an almost literal bag of words and ignores the semantic nature or meaning of text.

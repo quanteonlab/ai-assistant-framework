@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 1.7 Why use F and C for functional concurrent programming
 
 ---
 
-**Rating: 8/10**
 
 #### Immutability
 Background context explaining the concept. Immutability is a property that prevents modification of an object state after creation. In functional programming, variable assignment is not a concept; once a value has been associated with an identifier, it cannot change. This ensures that objects are safe to be shared between threads and can lead to great optimization opportunities.
@@ -30,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pure Function
 Background context explaining the concept. A pure function has no side effects, meaning it doesn’t change any input or data outside its body. Its return value depends only on the input arguments, making each call with the same inputs produce the same outputs.
@@ -52,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Referential Transparency
 Background context explaining the concept. Referential transparency means that functions whose output depends solely on their input can be replaced with their value without changing the program's behavior.
@@ -74,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lazy Evaluation
 Background context explaining the concept. Lazy evaluation is an optimization technique used in functional programming where expressions are not evaluated until their results are needed.
@@ -96,7 +91,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Composability
 Background context explaining the concept. Composability refers to the ability to combine simple functions into more complex ones to solve larger problems.
@@ -128,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Functional Programming (FP)
 Functional programming (FP) is a paradigm that emphasizes the evaluation of functions and avoids changing state and mutable data. This approach simplifies coding by focusing on what computations should be performed rather than how they are executed, which aligns with declarative programming.
@@ -142,7 +135,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transitioning to Functional Programming
 Transitioning from an imperative paradigm (where programs change state) to a functional paradigm involves significant changes in thinking. Instead of focusing on how data is modified through statements, you focus on what transformations are applied to the data.
@@ -156,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Functional Programming
 Learning functional programming (FP) can significantly improve your ability to write correct concurrent code. FP provides several benefits such as simplifying complex problems through abstraction and making programs more modular.
@@ -179,7 +170,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### FP in Concurrency
 Functional programming provides powerful tools for writing concurrent and distributed systems. By avoiding mutable states and side effects, you can write more reliable and predictable code that is easier to reason about.
@@ -202,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Embracing Change
 Embracing a new programming paradigm requires dedication, engagement, and time. While the transition may seem challenging initially, the benefits of functional programming are substantial.
@@ -229,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### F# and C# for Functional Concurrent Programming
 F# and C# support the adoption of functional programming concepts, making them suitable for developing highly scalable and performant systems. These languages offer powerful constructs for concurrent programming.
@@ -261,7 +249,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Computation in F#
 F# offers a simpler model for asynchronous computation called asynchronous workflows, which can be used to handle non-blocking I/O operations more efficiently than traditional threads or delegates.
@@ -272,7 +259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrent Programming Models Support
 Both C# and F# support concurrent programming, but they offer different models that can be mixed. For instance, F# has a simpler model for asynchronous computation through its asynchronous workflows, whereas C# supports concurrency using tasks and other constructs.
@@ -283,7 +269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional-First Programming Language in F#
 F# is a functional-first language that provides productivity benefits by combining a declarative style with support from imperative and object-oriented paradigms.
@@ -294,7 +279,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Data Structures in F#
 F# supports default immutability, which means that objects are created without a state, and changes involve creating new copies with updated values. This approach reduces bugs related to null references and improves data integrity.
@@ -305,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Discriminated Unions in F#
 Discriminated unions in F# are a powerful feature that allow defining types with constructors that can be either functions or values, providing structural equality and preventing `null` references. These data structures are used to create rich, strongly-typed records.
@@ -316,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency Tools in C#
 C# provides robust concurrency tools that enable the easy writing of parallel programs and solving real-world problems efficiently. The language supports features like tasks and parallel loops (`Parallel.ForEach`, `Parallel.For`) for handling multiple threads.
@@ -327,7 +309,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multicore Development Support in C#
 C# offers exceptional multicore development support, making it versatile for rapid development and prototyping of highly parallel symmetric multiprocessing (SMP) applications.
@@ -340,7 +321,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrent Programming Languages and Interoperability
 Background context explaining that F# and C# can interoperate, allowing an F# function to call a method in a C# library, and vice versa. This interoperability is crucial for building robust concurrent software solutions.
@@ -371,7 +351,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Alternative Concurrent Approaches
 Background context mentioning that the text will discuss various concurrent approaches, such as data parallelism, asynchronous programming, and message-passing models. These methods aim to provide flexible solutions for building complex concurrent software.
@@ -388,7 +367,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TPL and Reactive Extensions (Rx)
 Background context highlighting that these libraries are designed to simplify concurrent programming using functional paradigms. Intel’s Threading Building Blocks (TBB) and Microsoft’s Task Parallel Library (TPL) are examples of such libraries.
@@ -419,7 +397,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Programming and Concurrency
 Background context emphasizing that functional programming offers tools and principles suited for handling concurrency due to its immutability. The text highlights the benefits of using functional languages like F# in concurrent environments.
@@ -445,7 +422,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evolution of Moore's Law and Multi-Core Processing
 Background context explaining that while traditional Moore’s Law focused on increasing CPU speed, it has shifted towards an increased number of cores per processor.
@@ -473,7 +449,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency vs. Parallelism, Multithreading, and Multitasking
 Background context explaining the distinction between these concepts: concurrency refers to running multiple tasks simultaneously, multithreading is a form of concurrency within a single program, multitasking involves managing multiple programs or processes, and parallelism means executing tasks in parallel on different hardware.
@@ -490,7 +465,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Managing Mutable States and Side Effects
 Background context explaining that mutable states and side effects can lead to unpredictable behaviors in concurrent environments, making them a primary concern. The text suggests using higher-level abstractions to avoid these issues.
@@ -518,7 +492,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving Complex Problems by Composing Simple Solutions
 Background context: Functional programming (FP) emphasizes breaking down problems into smaller, manageable parts and solving each part independently. This approach aligns well with the composition of functions, making it easier to reason about the overall program structure.
@@ -530,7 +503,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simplifying Functional Programming with Closures
 Background context: Closures are an advanced feature in functional programming that allow you to capture the environment (variables) in which a function was created. This can be particularly useful for implementing stateful functions without changing the original design.
@@ -557,7 +529,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Improving Program Performance with Functional Techniques
 Background context: In functional programming, immutable data structures and referential transparency help in optimizing the performance of programs. Immutable data ensures that once a piece of data is created, it cannot be changed, which simplifies reasoning about program behavior.
@@ -585,7 +556,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Lazy Evaluation
 Background context: Lazy evaluation defers the computation of values until they are needed. This technique can significantly reduce unnecessary computations, especially in scenarios where some parts of a computation might not be necessary or could lead to expensive operations.
@@ -621,7 +591,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Function Composition Overview
 Background context explaining function composition as a technique to combine simple functions into more complex ones. The main motivation is to build maintainable, reusable, and easy-to-understand code that can be used in concurrent applications.
@@ -633,7 +602,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Function Composition in C#
 Background context about using lambda expressions to define functions and then compose them.
@@ -653,7 +621,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Function Composition vs. Pipelining
 Background context about the differences between function composition and pipelining.
@@ -670,7 +637,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Function Composition
 Background context about why function composition is important for building maintainable, reusable, and clear code in concurrent applications.
@@ -682,7 +648,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Use Case: Solving Problems through Function Composition
 Background context about how function composition can be used to solve problems in a top-down manner.

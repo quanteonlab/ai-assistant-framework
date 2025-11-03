@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Breaking down combined figures
 
 ---
 
-**Rating: 8/10**
 
 #### Breaking Down Combined Figures (Part 2)
 Background context: In this example, a combined figure is presented as two rectangles stuck together with one segment removed. You can either subtract the area of the missing part from the larger rectangle or sum the areas of the individual rectangles.
@@ -47,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coordinate Grids and Slope-Intercept Form
 Background context explaining the concept. A coordinate grid includes a horizontal x-axis and a vertical y-axis, with every point having coordinates (x, y). The slope-intercept form of a linear equation is \(y = mx + b\), where \(m\) is the slope and \(b\) is the y-intercept.
@@ -68,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pythagorean Theorem Application
 Background context explaining the concept. The Pythagorean theorem states that in a right triangle, the square of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the other two sides (\(a^2 + b^2 = c^2\)).
@@ -92,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Problem Structure
 Background context: Problems often present a real-world scenario that requires you to perform arithmetic operations. For instance, "How many miles per gallon does your brand-new SUV get?"
@@ -104,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sample Question
 Background context: Solving life's little math problems requires understanding the problem, identifying what is being asked, and performing the necessary calculations.
@@ -123,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Practice with Pseudocode
 Background context: Using pseudocode can help clarify the problem and ensure accurate calculations.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Packages for Functional Programming
 
 ---
 
-**Rating: 8/10**
 
 #### Variable Positional Arguments (*args)
 Background context: In Python, `*args` allows a function to accept a variable number of positional arguments. This is useful when you're not sure how many arguments will be passed to your function or if you want to pass multiple values as a single argument.
@@ -68,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Default Values and Type Annotations
 Background context: The text discusses the use of default values, particularly `None`, for mutable types and how to annotate these defaults using Python's `typing` module. It emphasizes the importance of explicitly providing a default value when using optional parameters.
@@ -162,7 +159,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Duck Typing
 Background context explaining duck typing. Duck typing is a programming concept derived from Smalltalk and adopted by Python, JavaScript, and Ruby. In this paradigm, an object's methods and attributes determine the type, not its inheritance or implementation of a specific interface.
@@ -246,7 +242,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Duck Typing vs Static Typing
 Background context explaining the concept of duck typing and static typing. Duck typing allows objects to be used based on their attribute and method presence, not their type or class. In contrast, static typing checks types at compile-time, enforcing specific types for functions and variables.
@@ -351,7 +346,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Any Type
 Background context explaining the concept of `Any` type. It is a crucial part of gradual type systems, acting as both the most general and specialized type.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 42)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 32.1 Motivation. 32.2 Preemptive Priority Queueing
 
 ---
 
-**Rating: 8/10**
 
 #### Non-Preemptive vs. Preemptive Policies
 Background context: The chapter discusses differences between non-preemptive and preemptive scheduling policies, focusing on how they handle job sizes and variability. Non-preemptive policies do not interrupt jobs once started, whereas preemptive policies can pause a job to start another with higher priority or smaller size.
@@ -64,7 +62,6 @@ The three main components are:
 These components help in accurately estimating the mean time in system for a given priority class.
 x??
 
-**Rating: 8/10**
 
 #### Component (2) of E[T(k)] Calculation
 Background context: In a preemptive priority queue, we need to determine the expected time required to complete service on all jobs of priority 1 through k already in the system when our arrival walks in. This is component (2) of \(E[T(k)]\). The key difference from non-preemptive systems is that jobs may have been partially worked on.
@@ -157,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### First Term Explanation
 Background context: The first term \( E[S_k] \left(1 - \sum_{i=1}^{k-1} \rho_i\right) \) represents the mean residence time of a job of class \( k \), denoted as \( E[\text{Res}(k)] \). It calculates the expected length of a busy period started by a job of size \( E[S_k] \), where only jobs of classes 1 through \( k-1 \) are allowed in this busy period.
@@ -273,7 +269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SRPT Overview
 SRPT stands for Shortest-Remaining-Processing-Time scheduling. Under this policy, at all times the server is working on that job with the shortest remaining processing time. This policy is preemptive, meaning a new arrival will preempt the current job serving if the new arrival has a shorter remaining processing time.
@@ -340,7 +335,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SRPT Waiting Time Derivation Overview
 Background context: The text discusses the precise derivation of the SRPT (Shortest Remaining Processing Time) waiting time, focusing on how work found by an arrival affects its waiting time. This involves understanding the work seen by an arrival before it starts running and the busy periods associated with this work.

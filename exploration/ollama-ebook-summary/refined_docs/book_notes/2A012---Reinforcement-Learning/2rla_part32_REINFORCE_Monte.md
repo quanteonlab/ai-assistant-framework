@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 32)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** REINFORCE Monte Carlo Policy Gradient
 
 ---
 
-**Rating: 10/10**
 
 #### Policy Gradient Theorem
 
@@ -24,7 +22,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### REINFORCE Algorithm
 
@@ -42,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### REINFORCE Pseudocode
 
@@ -64,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance on Short-Corridor Gridworld
 
@@ -82,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### REINFORCE as a Stochastic Gradient Method
 REINFORCE is described as a stochastic gradient method for policy learning, which has good theoretical convergence properties. The expected update over an episode is aligned with the performance gradient, ensuring improvement when the step size is sufficiently small and under standard stochastic approximation conditions.
@@ -114,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Gradient Theorem with Baseline
 The policy gradient theorem can be extended to include a baseline \(b(s)\), which is any function that does not vary with the action. This extended form of the policy gradient theorem helps in reducing the variance of the updates, potentially leading to faster learning.
@@ -156,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### REINFORCE with Baseline Algorithm
 The provided pseudocode for REINFORCE with baseline outlines an algorithm that includes a learned state-value function as the baseline. This approach helps in reducing the variance of the updates, potentially speeding up learning.
@@ -195,7 +187,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Learned State-Value Function as Baseline
 In REINFORCE with baseline, the state-value function can be used to provide a more accurate estimate of the expected return, thereby reducing the variance in updates. This is especially useful when the values of actions vary widely.
@@ -226,7 +217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor–Critic Methods Overview
 Actor–Critic methods combine elements of policy gradients and value-based learning. They learn a policy (actor) and an approximate state-value function (critic). The critic provides feedback to improve the actor through bootstrapping, which is not just as a baseline for REINFORCE.
@@ -237,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### REINFORCE with Baseline
 REINFORCE with a baseline learns both a policy and an approximate state-value function. However, it is not considered an Actor–Critic method because its state-value function is only used as a baseline, not for bootstrapping.
@@ -248,7 +237,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### One-Step Actor–Critic Method
 The one-step actor–critic method replaces the full return of REINFORCE with a one-step return and uses a learned state-value function as the baseline. This method is fully online and incremental, avoiding eligibility traces.
@@ -259,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pseudocode for One-Step Actor–Critic Method
 The following pseudocode outlines how one-step Actor–Critic methods work:
@@ -289,7 +276,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generalization of One-Step Actor–Critic Method
 Generalizations to n-step methods and @return algorithms involve replacing the one-step return with a longer horizon or a more complex return calculation. This can provide better performance but requires more computational resources.
@@ -300,7 +286,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor–Critic with Eligibility Traces
 The actor–critic method using eligibility traces maintains the online nature of learning by updating parameters based on past actions and states. It uses separate eligibility traces for the policy and state-value function, making it more flexible.
@@ -311,7 +296,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pseudocode for Actor–Critic with Eligibility Traces
 The following pseudocode outlines how actor–critic methods with eligibility traces work:

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 28)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Sequence Number Ordering
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Consistency and Partial Order
 Causal consistency ensures that operations are processed in an order consistent with their causality. If operation A happened before B, it must be processed before B on every replica. This is a partial order where concurrent operations can be processed in any order but causally preceding operations must come first.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Version Vectors for Tracking Causality
 Version vectors are used to track the causal dependencies across the entire database by associating each read with the latest known version number. When writing, this version number is passed back to the database to ensure that all causally preceding operations have been processed.
@@ -34,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequence Number Ordering
 Sequence numbers or timestamps are used to provide a total order that is consistent with causality. They help in ordering events without explicitly tracking all causal dependencies, making it more practical for many applications.
@@ -53,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single-Leader Replication and Total Order of Operations
 In a single-leader replication setup, the leader generates sequence numbers for each write operation in the replication log. This ensures that the total order of operations is consistent with causality when followers apply these writes.
@@ -74,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lamport Timestamps
 Lamport timestamps are a method for generating unique and consistent sequence numbers that respect the causal ordering of events in distributed systems. They were proposed by Leslie Lamport in 1978 and are widely used due to their simplicity and effectiveness.
@@ -112,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lamport Timestamps Overview
 Lamport timestamps are a method to provide a total ordering of operations that is consistent with causality. Each node keeps a counter and its unique identifier, making each timestamp unique as (counter, node ID). If two nodes have the same counter value, the one with the greater node ID has the higher timestamp.
@@ -123,7 +116,6 @@ Lamport timestamps are used to provide a total ordering of operations in distrib
 
 ---
 
-**Rating: 8/10**
 
 #### Incrementing Timestamps in Lamport Algorithm
 In the Lamport algorithm, every node and client track the maximum counter value seen so far and include this value with each request. When a node receives a timestamp greater than its own, it updates its counter to match the received maximum.
@@ -151,7 +143,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Total Ordering with Lamport Timestamps
 Lamport timestamps provide a total ordering of operations. If two operations have the same counter value, the one from the node with the greater ID has the higher timestamp.
@@ -176,7 +167,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations of Lamport Timestamps
 While Lamport timestamps provide a total ordering consistent with causality, they do not solve all problems in distributed systems. For instance, ensuring unique usernames requires knowing when the final order is known, which is not provided by just a timestamp.
@@ -187,7 +177,6 @@ Lamport timestamps alone are insufficient for scenarios like ensuring uniqueness
 
 ---
 
-**Rating: 8/10**
 
 #### Checking Concurrent Operations
 In systems needing to enforce constraints like unique usernames, checking whether another node is concurrently creating a user account and assigning a lower timestamp requires communicating with all other nodes. This communication can introduce latency and make the system vulnerable to network failures.
@@ -198,7 +187,6 @@ To ensure that two users cannot simultaneously create an account with the same u
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Atomic Broadcast vs. Total Order Multicast
@@ -211,7 +199,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Total Order Broadcast in Distributed Systems
 In distributed systems, obtaining a total ordering across all operations can be challenging due to the lack of a single-leader model when dealing with multiple CPU cores or nodes.
@@ -239,7 +226,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Safety Properties of Total Order Broadcast
 The two key safety properties that must be satisfied by any correct algorithm for total order broadcast are reliable delivery and totally ordered delivery. Reliable delivery ensures no messages are lost, while totally ordered delivery ensures all nodes receive messages in the same order.
@@ -256,7 +242,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application of Total Order Broadcast
 Total order broadcast is particularly useful for database replication, where each message represents a write operation. By ensuring that all replicas process the writes in the same total order, consistency across replicas can be maintained.
@@ -287,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Node Outages and Failover
 In distributed systems, handling node outages is crucial. If the single leader fails, other nodes need to take over its role to ensure the system remains operational.
@@ -330,7 +314,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Machine Replication
 State machine replication is a technique used to ensure that all nodes in a distributed system execute the same sequence of operations on their local state machines. It's crucial for maintaining consistency across different nodes and replicas.
@@ -345,7 +328,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Total Order Broadcast
 Total order broadcast is a method for ensuring that messages are delivered to all nodes in a specific and deterministic order. This order cannot be changed once the message has been sent.
@@ -360,7 +342,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fencing Tokens
 Fencing tokens are used in distributed systems to prevent concurrent updates from different clients or processes.
@@ -375,7 +356,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizable Read-Write Register
 A linearizable read-write register is a consistency model that ensures operations appear to be executed atomically and in a globally ordered sequence.
@@ -404,7 +384,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consensus and Linearizability Relationship
 Consensus and a linearizable register are closely related problems in distributed systems.
@@ -448,7 +427,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Linearizable Username Registration
@@ -473,7 +451,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequential Consistency via Total Order Broadcast
 Background context: To ensure linearizable reads in a distributed system, messages are often sequenced through the log. This approach ensures that all nodes agree on which operation came first and can deliver operations consecutively.
@@ -495,7 +472,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Building Total Order Broadcast with Linearizable Storage
 Background context: Given a system where you have linearizable storage (like registers), you can build total order broadcast. This is done by using an atomic increment-and-get operation or compare-and-set operation on a register storing an integer, which serves as the sequence number.
@@ -520,7 +496,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lamport Timestamps and Total Order Broadcast
 Background context: Lamport timestamps are a mechanism to order operations in a distributed system. They ensure that all processes agree on the sequence of events, which is crucial for maintaining consistency. Total order broadcast ensures that all nodes receive messages in the same order, making it a key component in achieving consensus.
@@ -537,7 +512,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizable Increment-and-Get Operation
 Background context: A linearizable increment-and-get operation ensures that the operations appear to be executed atomically and sequentially from the perspective of any process. This is a critical requirement for maintaining consistency in distributed systems, especially when performing arithmetic or other complex operations across nodes.
@@ -564,7 +538,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consensus Problem and Its Importance
 Background context: The consensus problem involves getting multiple nodes in a distributed system to agree on a single value. This is crucial for leader election, atomic commit, and maintaining consistency across the network. Despite its apparent simplicity, solving this problem reliably has been challenging due to various theoretical limitations.
@@ -581,7 +554,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### FLP Impossibility Result
 Background context: The Fischer-Lynch-Paterson (FLP) result states that there is no deterministic algorithm that can always reach consensus if a node may crash. This result highlights the inherent challenges in achieving reliable distributed consensus under certain conditions, specifically in an asynchronous system model.
@@ -598,7 +570,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Commit Problem
 Background context: The atomic commit problem deals with ensuring that a transaction succeeds or fails as a whole across multiple nodes. It is essential for maintaining transactional integrity, especially in databases where transactions span multiple nodes or partitions.
@@ -615,7 +586,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two-Phase Commit (2PC)
 Background context: The two-phase commit algorithm is a common solution for the atomic commit problem. It involves two phases:
@@ -638,7 +608,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Better Consensus Algorithms: ZooKeeper (Zab) and etcd (Raft)
 Background context: While 2PC is a common solution, more advanced algorithms like those used in ZooKeeper (ZAB) and etcd (Raft) provide better fault tolerance and performance. These algorithms address the limitations of 2PC by using more sophisticated consensus mechanisms.

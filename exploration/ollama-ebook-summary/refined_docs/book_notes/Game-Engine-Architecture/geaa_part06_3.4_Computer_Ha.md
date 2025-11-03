@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3.4 Computer Hardware Fundamentals
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Triangle Class Definition
@@ -33,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtual Functions and Polymorphism
 Virtual functions in C++ are essential for achieving polymorphic behavior, allowing derived classes to override base class methods with their own implementations.
@@ -52,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Polymorphism in Action
 This part demonstrates how polymorphic behavior works with a pointer to `Shape` pointing to an instance of `Triangle`.
@@ -70,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Central Processing Unit (CPU)
 The CPU is the "brains" of the computer, consisting of several components such as the arithmetic/logic unit (ALU), floating-point unit (FPU), memory controller (MC) or memory management unit (MMU), registers, and control unit (CU).
@@ -107,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Processing Unit (VPU)
 A vector processing unit, or VPU, can handle both integer and floating-point arithmetic operations. However, its primary feature is its ability to process vectors of data simultaneously rather than scalar values.
@@ -120,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Instruction Pointer (IP)
 Instruction pointers are essential for tracking the current instruction being executed. The IP holds the memory address of the next instruction to be fetched and decoded by the CPU.
@@ -138,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stack Pointer (SP)
 The stack pointer is crucial for managing function calls and local variables on the call stack. It keeps track of the top of the stack, allowing functions to allocate space for their local variables.
@@ -158,7 +150,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Status Register (SR)
 The status register contains flags that reflect the results of recent arithmetic and logical operations. These flags are used for conditional branching or further calculations.
@@ -182,7 +173,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Clock in CPUs
 Background context explaining the role of a clock in digital electronic circuits and how it drives state changes within a CPU. The text describes the system clock as an periodic square wave signal that dictates when the CPU can perform operations.
@@ -210,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pipelined CPUs
 Background context: The text explains that modern CPUs use pipelining to break down instructions into multiple stages, each taking one clock cycle. This allows for more efficient instruction processing but complicates the relationship between clock speed and overall performance.
@@ -241,7 +230,6 @@ void execute(Instruction instr) { /* ... */ }
 
 ---
 
-**Rating: 8/10**
 
 #### Move Instructions
 These instructions move data between registers or between memory and a register. Some ISAs separate "move" into "load" and "store" instructions.
@@ -253,7 +241,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bitwise Operators
 Bitwise operators include AND, OR, exclusive OR (XOR), and bitwise complement.
@@ -271,7 +258,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Push and Pop Instructions
 These instructions manage the stack by pushing data onto or popping it off.
@@ -291,7 +277,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interrupts
 Background context: An "interrupt" is a digital signal within the CPU that causes it to temporarily jump to an interrupt service routine (ISR) which is often not part of the program being run. Inter- rupts are used to notify the operating system or a user program of events such as input availability on a peripheral device, and can also be triggered by programs themselves.
@@ -303,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Instruction Word
 Background context: An instruction word contains the opcode, operands, and option fields packed into a contiguous sequence of bits. The width of these words varies across different ISAs.
@@ -315,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Mapping
 In computer architecture, memory mapping involves dividing the CPU's theoretical address space into various contiguous segments, each of which can map to either ROM or RAM modules. Address ranges that do not contain physical memory are left unassigned, allowing for efficient use of available resources.
@@ -326,7 +309,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtual Memory in Modern Systems
 Virtual memory systems allow programs to use addresses that are different from the physical addresses of the memory modules installed on the computer. This is facilitated by a look-up table maintained by the operating system.
@@ -354,7 +336,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtual Memory Overview
 Virtual memory allows programs to use more memory than is physically available, by storing some data on disk. This concept improves stability and security as each program gets its own private view of memory.
@@ -365,7 +346,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtual Memory Addressing
 The addressable space is divided into pages, which are chunks of memory that can be individually mapped between virtual and physical addresses. Page sizes vary but are typically powers of two (e.g., 4KiB or 8KiB).
@@ -376,7 +356,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Page Table and Translation
 A page table is used to map virtual addresses to physical addresses. The CPU's MMU handles this mapping at the granularity of pages. Each address in a program is split into an offset within a page (the lower 12 bits for a 4 KiB page) and a page index (upper 20 bits).
@@ -396,7 +375,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtual to Physical Address Translation Process
 The page index is looked up in a page table managed by the OS. If the virtual page index maps to a physical page, the CPU combines the physical page index with the offset to form the physical address.
@@ -424,7 +402,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Page Table Structure
 Each entry in the page table maps a virtual page index to its corresponding physical memory location. This is managed by the operating system and stored in RAM.
@@ -457,7 +434,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Access Latency Factors
 Memory access latency is a critical factor in overall system performance and is influenced by multiple factors including the technology used for memory cells, the number of read/write ports supported, and physical distance between memory and CPU.
@@ -474,7 +450,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Gap Problem
 The memory gap refers to the increasing discrepancy between CPU speeds and memory access latencies over time.
@@ -497,7 +472,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Gap Mitigation Techniques
 Techniques include reducing average latency, hiding memory latency by utilizing CPU in other tasks while waiting for memory operations, and minimizing main memory accesses.
@@ -530,7 +504,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Cache Hierarchies
 Background context: Memory cache hierarchies are designed to mitigate high memory access latencies by providing multiple levels of caching. The closer a level is to the CPU, the faster it can be accessed. L1 cache is the closest and fastest, while larger but slower caches like L2, L3, or even L4 may exist further away.
@@ -560,7 +533,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spatial Locality of Reference
 Background context: Memory access patterns in real software exhibit two types of locality: spatial and temporal. Spatial locality refers to the tendency for a program to access nearby memory addresses consecutively.
@@ -585,7 +557,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Access Patterns: Spatial Locality
 Background context explaining spatial locality and how sequential access through arrays exemplifies this pattern. The cache controller reads contiguous blocks of memory to reduce future read costs.
@@ -596,7 +567,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Access Patterns: Temporal Locality
 Explanation on temporal locality and how it applies when a program re-accesses a memory location shortly after its first access. Cache lines are used to store data in contiguous blocks for efficient repeated access.
@@ -607,7 +577,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Line Alignment and Indexing
 Background context explaining that caches can only deal with memory addresses aligned to a multiple of the cache line size. To access data efficiently, we need to convert byte addresses into cache line indices by stripping off the n least-significant bits representing the offset within the cache line.
@@ -625,7 +594,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multilevel Caches
 Multilevel caches provide a trade-off between hit rate and latency. Level 1 (L1) caches are small but fast, while larger level 2 (L2), level 3 (L3), and possibly level 4 (L4) caches offer better performance but higher latency.
@@ -646,7 +614,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Coherency: MESI, MOESI and MESIF
 Background context: In systems with multiple CPU cores sharing the same main memory, maintaining cache coherency is crucial. MESI (Modified, Exclusive, Shared, Invalid), MOESI (Modified, Owned, Exclusive, Shared, Invalid), and MESIF (Modified, Exclusive, Shared, Invalid, Forward) are common cache coherency protocols used to ensure that data in the caches matches main RAM.
@@ -684,7 +651,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avoiding Cache Misses
 Background context: Cache misses cannot be totally avoided as data needs to move between main RAM and cache. To write high-performance software, it's essential to organize data and algorithms in a way that minimizes cache misses.
@@ -738,7 +704,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scratchpad and Game Engine Data Throughput
 Background context: The scratchpad provides flexibility for game engines by allowing direct access to a small, fast memory area that can be used for temporary data storage during calculations. This minimizes bus contention and improves overall performance.
@@ -759,7 +724,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Parallelism and Concurrent Programming
 Explanation of how parallelism has become a significant approach for improving computing performance, especially with the advent of multicore CPUs.
@@ -792,7 +756,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrent Programming and Software Design
 Explanation of concurrent programming, its importance in modern software design, especially for games and supercomputers.
@@ -837,7 +800,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differences Between Concurrency and Parallelism
 Explanation of the difference between concurrency and parallelism, emphasizing that concurrent programs involve multiple flows of control.
@@ -868,7 +830,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallelism in Supercomputers
 Explanation of how supercomputers use parallelism to achieve their high processing power.
@@ -921,7 +882,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple Flows of Control in Concurrent Programs
 Explanation of multiple flows of control operating independently and the challenges they pose, such as data races.
@@ -966,7 +926,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency vs. Sequential Programming
 Concurrency involves coordinating multiple readers and writers of a shared data file to ensure predictable, correct results. The central problem is avoiding race conditions where two or more flows of control compete to read, modify, and write shared data.
@@ -977,7 +936,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Race
 A data race occurs when two or more flows of control simultaneously read and/or write a shared variable without proper synchronization mechanisms, leading to unpredictable results.
@@ -988,7 +946,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency Techniques
 To avoid data races, programmers use various techniques such as locks, semaphores, monitors, and atomic operations to coordinate access to shared resources.
@@ -999,7 +956,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallelism
 Parallelism refers to hardware capable of executing more than one task at a time, in contrast to serial hardware which executes tasks sequentially. Modern computers often have multicore CPUs and can also use clusters for parallel processing.
@@ -1010,7 +966,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implicit Parallelism
 Implicit parallelism refers to built-in hardware support within a CPU for improving the performance of single instruction streams through techniques like pipelining and superscalar architectures.
@@ -1021,7 +976,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Explicit Parallelism
 Explicit parallelism requires programmers to write code to utilize multiple cores or hardware components directly, using constructs like threads and synchronization primitives.
@@ -1032,7 +986,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Explicit Parallelism (Java)
 Using Java's concurrency utilities to perform explicit parallel processing:
@@ -1064,7 +1017,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Implicit Parallelism on GPUs
@@ -1079,7 +1031,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Explicit Parallelism Examples
 Background context on explicitly parallel architectures that use duplicated hardware components for running more than one instruction stream simultaneously. Common examples include hyperthreaded CPUs, multicore CPUs, multiprocessor computers, computer clusters, grid computing, and cloud computing.
@@ -1111,7 +1062,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task vs. Data Parallelism
 Background context on classifying parallelism into two broad categories based on the kind of work being done in parallel: task parallelism and data parallelism.
@@ -1127,7 +1077,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MIMD Architecture
 Background context: Multiple Instruction, Multiple Data (MIMD) architecture allows multiple processors to execute different instructions concurrently and operate independently on their own data sets.
@@ -1139,7 +1088,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SIMD Architecture
 Background context: Single Instruction, Multiple Data (SIMD) architecture is used when the same operation needs to be performed on several data elements at once.
@@ -1157,7 +1105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GPU Parallelism: SIMT Architecture
 Background context: Single Instruction, Multiple Threads (SIMT) architecture is a hybrid of SIMD and MIMD. It's used primarily in the design of GPUs.

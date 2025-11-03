@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 35 Prefer More Precise Alternatives to String Types
 
 ---
 
-**Rating: 8/10**
 
 #### Prefer More Precise Alternatives to String Types
 String types are often used broadly, but they can mask errors and hide relationships between types. By using more precise alternatives, you improve type safety and code readability.
@@ -119,7 +117,6 @@ type HttpUrl = `http://${string}`;
 x??
 ---
 
-**Rating: 8/10**
 
 #### Special Values and Type Safety in TypeScript
 
@@ -233,7 +230,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avoiding Optional Properties
 When your application evolves, you might be tempted to add optional properties to existing interfaces. However, this can introduce bugs and make debugging more challenging.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Query Optimizer
 
 ---
 
-**Rating: 8/10**
 
 #### What Is a Query?
 Background context explaining the concept. Queries allow you to retrieve and act on data, which is essential for data engineering, data science, and analysis. They involve CRUD operations: read (SELECT), create (INSERT), update (UPDATE), delete (DELETE).
@@ -129,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SQL Compilation and Bytecode Conversion
 Background context: The database engine compiles the SQL, parsing the code to check for proper semantics and ensuring that the database objects referenced exist and that the current user has the appropriate access. After validation, the SQL code is converted into bytecode, which expresses the steps that must be executed on the database in an efficient, machine-readable format.
@@ -184,7 +181,6 @@ GROUP BY product_id;
 This view can be refreshed periodically or on-demand to ensure its data remains current.
 ??x
 
-**Rating: 8/10**
 
 #### Complex Join Logic and Performance Optimization
 Background context: In complex join operations, especially when dealing with many-to-many relationships, the number of rows can significantly increase, leading to performance degradation. Databases may struggle to handle such large result sets efficiently. PostgreSQL allows creating indexes on computed fields, which can optimize certain types of queries.
@@ -284,7 +280,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avoid Full Table Scans
 Background context: When querying a database, it's essential to be mindful of the data being scanned. Full table scans are inefficient and can be costly in terms of performance and financial expense. Selecting only necessary columns and rows is crucial for optimal query performance.
@@ -395,7 +390,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### PostgreSQL Row Locking Mechanism
 Background context explaining how PostgreSQL handles row locking during read and write operations. The approach can degrade performance due to blocking reads and writes on certain rows, making it less suitable for large-scale analytics applications.
@@ -517,7 +511,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Vacuuming Dead Records
 Background context explaining the concept. Transactions can create new records while retaining old ones as pointers, leading to accumulated dead records over time. These records should be removed through a process called vacuuming to free up space and improve query performance.
@@ -570,7 +563,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Query Caching for Cost Efficiency
 
@@ -707,7 +699,6 @@ public class ContinuousCDC {
 ```
 x??
 
-**Rating: 8/10**
 
 ---
 #### Session Windows

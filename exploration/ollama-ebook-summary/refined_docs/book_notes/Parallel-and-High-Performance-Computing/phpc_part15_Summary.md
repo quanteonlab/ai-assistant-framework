@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Spatial Hash Implementation
 
@@ -56,7 +54,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adaptive Mesh Refinement (AMR) and Wave Simulation
 
@@ -111,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison-Based Algorithms vs. Hashing
 
@@ -128,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reproducibility in Production Applications
 
@@ -145,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prefix Scan Algorithm
 
@@ -184,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-core and Threading: Spreading Work Across Processing Cores
 Background context explaining multi-core processing and threading. The text discusses that with the explosion in processing cores on each CPU, the need to exploit on-node parallelism is growing rapidly. Two common resources for this include threading and shared memory.
@@ -220,7 +213,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Memory: Harnessing Multiple Nodes
 Background context explaining distributed memory. The text mentions the Message Passing Interface (MPI) as a dominant language for parallelism across nodes and even within nodes, with MPI being an open source standard that has adapted well to new features and improvements.
@@ -251,7 +243,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CPU’s Role in Parallelism
 Background context explaining the role of CPUs in parallel computing. The text emphasizes that CPUs provide the most general parallelism for a wide variety of applications and control memory allocations, movement, and communication.
@@ -279,7 +270,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimization and Performance Gains
 Background context explaining the importance of CPU optimization. The text highlights that optimizing CPUs is critical for parallel and high-performance computing applications, with common tools like vectorization, threading, and MPI being essential.
@@ -306,7 +296,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Vectorization and SIMD Overview
@@ -319,7 +308,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Instruction Sets
 Background context: Different instruction sets extend scalar processor instructions to utilize vector processors, providing different levels of functionality and performance.
@@ -331,7 +319,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vectorization Methods
 Background context: There are several methods to achieve vectorization, ranging from optimized libraries to manual intrinsics or assembler coding. Each method varies in the amount of programmer effort required.
@@ -343,7 +330,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Benefits of Vectorization
 Background context: The performance benefits of vectorization come from reducing the overhead associated with issuing multiple scalar instructions. Each vector instruction can replace several scalar operations, leading to more efficient use of resources.
@@ -355,7 +341,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real-World Examples
 Background context: Practical examples can demonstrate how vectorization is applied in real-world scenarios, highlighting the differences between scalar and vector operations.

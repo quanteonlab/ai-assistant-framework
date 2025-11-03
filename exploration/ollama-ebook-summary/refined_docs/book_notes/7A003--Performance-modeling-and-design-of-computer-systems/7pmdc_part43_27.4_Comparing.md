@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 43)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 27.4 Comparing ONIDLE versus ONOFF
 
 ---
 
-**Rating: 8/10**
 
 #### π0 and Delay Formulas
 Background context: The document introduces \(\pi_0\), which represents the probability that the server is idle. It provides the formula for \(\pi_0\) as derived from the equations (27.9) to (27.14). This concept is crucial for understanding delay and power consumption in queueing systems with setup costs.
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Setup Cost with Exponential Distribution
 Background context: When the setup time \(I\) follows an exponential distribution, the formulas for \(\pi_0\) and the delay change due to the properties of the exponential distribution.
@@ -66,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ON/IDLE vs. ON/OFF Policies
 Background context: The document compares two power management policies for systems with setup costs, specifically the ON/IDLE and ON/OFF policies. It provides formulas for both policies' performance metrics.
@@ -116,7 +112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Response Time Decomposition in M/G/1/Vac
 
@@ -161,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shorts-Only Busy Period
 
@@ -203,7 +197,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ON/OFF for M/M/∞ with Setup Time
 
@@ -265,7 +258,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Response Time Decomposition in M/G/1 with Vacations
 
@@ -308,7 +300,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ON/OFF Policy Analysis in M/M/1
 
@@ -357,7 +348,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ON/OFF Policy Analysis in M/M/1
 
@@ -411,7 +401,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ON/OFF Policy Analysis in M/M/1
 
@@ -469,7 +458,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Metrics in Scheduling
 Scheduling policies are crucial for optimizing performance metrics such as mean response time, fairness, and others. Different policies can impact these metrics significantly.
@@ -481,7 +469,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preemptive Scheduling Policies with Job Size Information
 Preemptive policies that use information about job sizes can prioritize shorter jobs to reduce mean response time and ensure more flexible scheduling.
@@ -517,7 +504,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preemptive Priority Queues
 Preemptive priority queues prioritize jobs based on a predefined set of priorities, often with additional rules for tie-breaking.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Practical considerations
 
 ---
 
-**Rating: 8/10**
 
 #### Leader Election Overview
 Raft's leader election algorithm is a modern approach optimized for simplicity and understandability. It ensures that there is always one leader among the followers, but it can face challenges like split votes or race conditions if no process manages to win an election.
@@ -101,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Machine Replication
 State machine replication is a core technique used in distributed systems to ensure that replicated state machines operate consistently. This approach involves having one leader process and multiple follower processes. The leader executes operations, logs them in its local log, and then sends these entries to followers for execution.
@@ -241,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consensus Problem Overview
 Background context explaining the consensus problem, including its fundamental aspects and importance in distributed systems. The problem requires a set of processes to agree on a value in a fault-tolerant manner.

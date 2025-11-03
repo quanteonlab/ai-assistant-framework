@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 16 Time-Reversibility and Burkes Theorem. 16.1 More Examples of Finite-State CTMCs
 
 ---
 
-**Rating: 8/10**
 
 #### Finite-State CTMCs and Their Solvability
 Finite-state continuous-time Markov chains (CTMCs) can be solved given enough computational power, as they translate to a finite set of linear simultaneous equations. When transition rates are arbitrary parameters, symbolic manipulation might still solve them if the number of equations is not too large.
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Space for Hair Salon CTMC
 The state space needs to accurately represent the number of customers in each chair without ambiguity. In this hair salon example, there are two chairs (sink and mirror), each with a finite capacity of 1 customer.
@@ -45,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Reversibility and Burke’s Theorem
 Time-reversibility is a property of some CTMCs that simplifies their analysis. Burke’s theorem provides conditions under which the output process from one server in an M/M/1 queue is itself an M/M/1 queue.
@@ -65,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/2 Batch System with I/O Queues
 In the batch system example, there is one CPU queue and one I/O queue served by two disks. The goal is to determine the exact throughput of this system using an M/M/2 model for the I/O queue.
@@ -84,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Applying Little's Law in Queueing Systems
 Little’s Law relates the average number of items in a system (L), the arrival rate (λ), and the average time an item spends in the system (W). It is expressed as L = λW.
@@ -105,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throughput Calculation
 
@@ -132,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reverse Chain Definition
 
@@ -149,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relationship Between Forward and Reverse Probabilities
 
@@ -172,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transition Rates in Reverse Chain
 
@@ -191,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Embedded DTMC and Time-Reversibility
 
@@ -212,7 +201,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Reversibility of CTMCs
 Background context: A Continuous-Time Markov Chain (CTMC) is said to be time-reversible if for every pair of states \(i, j\), the rate of transitions from state \(i\) to state \(j\) equals the rate of transitions from state \(j\) to state \(i\). This can be mathematically expressed as \(\pi_i q_{ij} = \pi_j q_{ji}\) for all \(i, j\).
@@ -223,7 +211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Statistical Identity Between Forward and Reverse Chains
 Background context: If a CTMC is time-reversible, its reverse chain can be described by the same CTMC as the forward process. This means that the transition rates \(q_{ij}\) are equal to their reverse counterparts \(q_{ji}\).
@@ -234,7 +221,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Burke's Theorem for M/M/1 System
 Background context: Burke’s Theorem applies to an M/M/1 queue where arrivals follow a Poisson process with rate \(\lambda\) and service times are exponentially distributed with rate \(\mu\). Part (2) of the theorem states that the number of jobs in the system at any time is independent of the sequence of departure times prior to that time.

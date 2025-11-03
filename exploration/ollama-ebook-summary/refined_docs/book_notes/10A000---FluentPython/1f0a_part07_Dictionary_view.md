@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Dictionary views
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Mappings
 Background context explaining that mutable mapping types are provided by the standard library, but sometimes you need to prevent users from accidentally changing a mapping. A concrete use case involves hardware programming libraries like Pingo, where a board's pin representation should not be altered via software.
@@ -112,7 +110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unicode Character Search
 Background context: The provided Python script demonstrates how to search for characters that have a specific word, such as "SIGN", in their Unicode names. This involves understanding character encoding and using Python's `unicodedata` module.
@@ -234,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### BOM (Byte Order Mark)
 Background context explaining the BOM and its role in UTF-16 encoding. The BOM is a special invisible character used to denote the byte ordering of the encoded text, typically U+FEFF but also can be b'\xff\xfe' for little-endian systems.

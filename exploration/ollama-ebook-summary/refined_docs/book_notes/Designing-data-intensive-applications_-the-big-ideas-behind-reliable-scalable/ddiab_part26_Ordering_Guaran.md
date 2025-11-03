@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 26)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Ordering Guarantees. Ordering and Causality
 
 ---
 
-**Rating: 8/10**
 
 #### Ordering and Causality
 
@@ -140,7 +138,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Causality and Transactional Consistency
 Causality is a fundamental concept that underpins transactional consistency, particularly in database management systems. It dictates that if an event B happens after an event A, then any snapshot taken at time B must include all effects of A up to the point when the snapshot is created.
@@ -218,7 +215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Incomparability and Partial Ordering
 Background context: Mathematical sets are partially ordered when neither set is a subset of the other. This concept is important for understanding consistency models in distributed systems, particularly linearizability and causality.
@@ -351,7 +347,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Consistency and Version Vectors
 Causal consistency is a type of consistency model where operations are processed based on their causal dependencies. A replica must ensure that all causally preceding operations have been processed before processing a subsequent operation.
@@ -494,7 +489,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Noncausal Sequence Number Generators Overview
 Background context: In a distributed system without a single leader, generating sequence numbers for operations can be challenging. Various methods are used to generate unique sequence numbers, but they often face issues with causality.
@@ -607,7 +601,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lamport Timestamps Overview
 Lamport timestamps are a method for generating consistent total orderings of operations that can be used to enforce causality among distributed processes. Unlike physical time-of-day clocks, Lamport timestamps provide a way to ensure operations are ordered based on their causal relationships.
@@ -725,7 +718,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Atomic Broadcast vs Total Order Multicast
@@ -788,7 +780,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### State Machine Replication
 State machine replication is a technique used to ensure that all nodes in a distributed system process the same sequence of operations. This ensures consistency across the replicas and partitions of data.
@@ -854,7 +845,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Username Registration Using Linearizable Compare-and-Set Operation

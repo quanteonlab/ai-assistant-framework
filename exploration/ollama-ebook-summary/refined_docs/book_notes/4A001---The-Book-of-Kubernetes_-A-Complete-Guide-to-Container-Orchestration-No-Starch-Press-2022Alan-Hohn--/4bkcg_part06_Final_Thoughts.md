@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A001---The-Book-of-Kubernetes_-A-Complete-Guide-to-Container-Orchestration-No-Starch-Press-2022Alan-Hohn--_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Final Thoughts
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Token Bucket Filter (TBF) Concept
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Control Groups (cgroups)
 Control groups, or cgroups for short, are a Linux kernel feature used to aggregate and control resources such as CPU time, memory, and network bandwidth.
@@ -41,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Isolation Using Linux Namespaces
 Linux network namespaces provide a way to create isolated network environments for processes. Each namespace has its own set of network interfaces, IP addresses, and routing tables, making it appear as if each container is running on an independent system.
@@ -64,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Container Networking Basics
 
@@ -77,7 +72,6 @@ Network isolation benefits containerized applications by ensuring that processes
 
 ---
 
-**Rating: 8/10**
 
 #### Network Isolation vs. Host System
 
@@ -90,7 +84,6 @@ Network isolation prevents processes in containers from affecting each other by 
 
 ---
 
-**Rating: 8/10**
 
 #### Pseudo-Code for Network Device Management
 
@@ -111,7 +104,6 @@ This pseudo-code outlines the basic steps for configuring a route in a container
 
 ---
 
-**Rating: 8/10**
 
 #### Network Namespaces Overview
 Background context explaining network namespaces. Network namespaces allow different processes to have their own isolated view of the networking stack, including IP addresses, routing tables, and sockets. This isolation is crucial for containerization and virtualization environments.
@@ -125,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Running Commands with `ip netns exec`
 Background context explaining how the `ip netns exec` command can be used to run specific commands within a network namespace, providing detailed information about processes and network interfaces.
@@ -143,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Network Namespaces
 Background context: Network namespaces allow for the creation of isolated network environments on a single host. Each namespace can have its own network stack, interfaces, routing tables, and iptables rules.
@@ -158,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring the Loopback Interface
 Background context: The loopback interface is crucial for basic network stack testing, ensuring that a namespace can send and receive packets locally.

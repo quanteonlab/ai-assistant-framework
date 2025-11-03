@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Classic Strategy
 
 ---
 
-**Rating: 8/10**
 
 #### Strategy Pattern Overview
 Background context: The Strategy pattern is a behavioral design pattern that allows an object to alter its behavior when its internal state changes. It provides a way to define a family of algorithms, encapsulate each one, and make them interchangeable. This is particularly useful in scenarios where you need different ways to compute something based on certain conditions.
@@ -135,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Refactoring Strategies to Functions
 
@@ -231,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Choosing the Best Strategy: Simple Approach
 Background context explaining how to select the best available discount for a given order. The implementation leverages functions as objects and iterates over them to find the maximum discount.

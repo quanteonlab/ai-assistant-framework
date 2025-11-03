@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** A Streams and Tables Analysis of MapReduce
 
 ---
 
-**Rating: 8/10**
 
 #### Streams and Tables Introduction
 Background context explaining that this chapter introduces the relationship between Beam Model (as described previously) and the theory of "streams and tables." The latter is popularized by Martin Kleppmann and Jay Kreps, among others. It provides a lower-level understanding of how data processing works.
@@ -53,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Table-to-Stream Conversion: Materialized Views
 
@@ -170,7 +167,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce Job Analysis
 
@@ -257,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MapRead Phase
 Background context: The MapRead phase iterates over the data stored in a table and converts it into a stream of records. This is a crucial step where data at rest (in tables) are transformed into a form that can be processed by the Map phase.
@@ -379,7 +374,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Processing and Stream/Tables Theory
 Background context explaining how batch processing fits into stream/table theory. Discuss the basic pattern of tables becoming streams, and then being processed until a grouping operation is hit, which turns them back into tables.
@@ -497,7 +491,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Window Assignment
 Background context explaining the concept. Window assignment involves placing a record into one or more windows, which effectively combines the window definition with the user-assigned key for that record to create an implicit composite key used at grouping time. This process is crucial for stream-to-table conversion because it drives how data are grouped and aggregated.

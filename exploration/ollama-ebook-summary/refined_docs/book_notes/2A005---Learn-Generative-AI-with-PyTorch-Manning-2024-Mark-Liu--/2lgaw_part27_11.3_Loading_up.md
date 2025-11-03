@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 27)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11.3 Loading up pretrained weights and generating text. 11.3.1 Loading up pretrained parameters in GPT-2XL
 
 ---
 
-**Rating: 8/10**
 
 #### Loading Pretrained Parameters in GPT-2XL
 Background context: To use a pre-trained model for generating text, we need to load the pretrained weights of the GPT-2XL model. The Hugging Face library provides an interface to access these weights and integrate them into our own model structure.
@@ -24,7 +22,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Dictionary of the Custom Model
 Background context: After creating a custom GPT-2XL model and extracting pretrained weights from another source, it is necessary to name the parameters appropriately so that they can be loaded into our custom model structure. The `state_dict()` method provides access to these named parameters.
@@ -41,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Initializing and Using Pretrained Weights
 Background context: After transposing the necessary weights, these are copied into our custom model to leverage pre-trained capabilities. This process involves handling different weight matrices appropriately.
@@ -56,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defining the `sample()` Function
 Background context: The `sample()` function is crucial for generating text by predicting the next token at each step. It uses temperature and top_k parameters to control the creativity of generated outputs.
@@ -83,7 +78,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generate Function for Text Generation
 The `generate()` function is used to produce new tokens of text based on a given prompt. It transforms the prompt into indexes, feeds them into the GPT-2XL model, and generates additional indexes that are then converted back into text.
@@ -95,7 +89,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Effect of Temperature and Top-K Sampling
 Temperature and top-K sampling influence the randomness and diversity of the generated text. A lower temperature leads to more deterministic output, while higher temperatures introduce more variability.

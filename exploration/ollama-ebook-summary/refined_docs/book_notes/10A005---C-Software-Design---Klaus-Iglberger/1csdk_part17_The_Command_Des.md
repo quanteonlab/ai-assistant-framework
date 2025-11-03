@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Command Design Pattern Versus the Strategy Design Pattern
 
 ---
 
-**Rating: 8/10**
 
 #### Algorithms in C++ Standard Library
 Background context: The C++ Standard Library includes a variety of algorithms that can operate on ranges of elements, such as vectors or arrays. These algorithms are implemented using design patterns like Strategy and Command to provide flexibility in how operations are performed and what is done.
@@ -63,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Command vs Strategy Patterns
 
@@ -196,7 +193,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The GoF Style and Its Limitations
 Background context: The Gang of Four (GoF) design patterns, including Strategy and Command, were introduced as object-oriented design patterns. They are built on inheritance hierarchies, which can lead to several performance and maintenance issues.
@@ -301,7 +297,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### std::span Overview and Const Qualifier Behavior
 std::span is a template class provided by C++17 that represents an abstraction for an array. It can be used with various types of arrays, including built-in arrays, `std::array`, and `std::vector`, without coupling to any specific type. The primary use case of std::span is to provide a range-based access mechanism.
@@ -429,7 +424,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Undefined Behavior Due to Reallocation
 

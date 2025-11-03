@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 7.4 More Modification Analysis Examples
 
 ---
 
-**Rating: 8/10**
 
 #### N* and Dmax Concept
 Background context explaining the concept of \(N^*\) and \(D_{\text{max}}\) in the context of system performance analysis. The knee of the \(X \text{ vs } N\) and \(E[R] \text{ vs } N\) curves occurs at some point denoted by \(N^*\), where \(N^* = \frac{D + E[Z]}{D_{\text{max}}}\). This represents the multiprogramming level beyond which there must be some queueing in the system.
@@ -22,7 +20,6 @@ To improve system performance in the high \(N\) regime, focus on decreasing \(D_
 
 ---
 
-**Rating: 8/10**
 
 #### Example with Simple System and Improvement
 Background context explaining the example where a simple closed network has two servers both with service rate \(\mu = \frac{1}{3}\). The system was modified by replacing one server with a faster one of service rate \(\mu = \frac{1}{2}\).
@@ -38,7 +35,6 @@ Both systems remain in the high \(N\) regime where \(D_{\text{max}}\) is dominan
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Case and E[Z] = 0
 Background context explaining what happens when \(E[Z]\) goes to zero (the batch case). In this scenario, \(N^*\) decreases because the domination of \(D_{\text{max}}\) occurs with fewer jobs in the system.
@@ -54,7 +50,6 @@ In a batch environment where each job arrives all at once and leaves after compl
 
 ---
 
-**Rating: 8/10**
 
 #### Simple Closed System Analysis
 Background context explaining the simple closed system with \(N = 20\), \(\mathbb{E}[Z] = 5\). Considering two systems: 
@@ -83,7 +78,6 @@ System A wins because it has a lower \(D_{\text{max}}\). The throughput is deter
 
 ---
 
-**Rating: 8/10**
 
 #### Balancing among Three Disks
 Background context explaining how balancing among three disks can impact the system. The goal is to further reduce \(D_{\text{max}}\) by spreading the load across multiple disks.
@@ -97,7 +91,6 @@ By balancing among three fast disks, we achieve a lower \(D_{\text{max}}\), whic
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Improvement Analysis
 Background context explaining the analysis of four possible improvements on a harder example, labeled 1, 2, 3, and 4. The performance is evaluated for \(N\) values from 1 to 4.
@@ -1714,7 +1707,6 @@ The code simulates the analysis of different system improvements and their effec
 
 ---
 
-**Rating: 8/10**
 
 #### Outside Arrival Rates - Open Networks
 Background context: The text discusses how the asymptotic bounds for closed networks do not directly apply to open networks. In an open network, jobs arrive from outside and can leave at any time after service completion. The main difference is that the utilization \(X\) (the fraction of time a device is busy) in an open network is constrained by both its processing capacity and the arrival rate.
@@ -1733,7 +1725,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Open versus Closed Systems - Server Speed Increase
 Background context: The text presents a scenario where a server’s speed is doubled and asks whether this change results in significant improvement for both closed and open networks. It involves understanding how load balancing and throughput are affected differently by such modifications.
@@ -1774,7 +1765,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modifying a Closed Interactive System
 Background context: Marty is running his database as a closed system and wants to improve throughput by purchasing additional CPU or disk capacity. The goal is to determine which modification will provide the most significant performance improvement.
@@ -1814,7 +1804,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proportional Power - Machine Speed and Power
 Background context: In power distribution systems, the speed of a machine is proportional to the power allocated. The goal is to maximize system throughput by optimally dividing the total power budget between two machines based on their processing probabilities.
@@ -1852,7 +1841,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Discrete-Time Markov Chains (DTMCs)
 Background context: Discrete-time Markov chains are used to model systems where the state changes at discrete time points. They are particularly useful for analyzing processes that have memoryless properties, meaning the future behavior depends only on the current state and not on the sequence of events that preceded it.

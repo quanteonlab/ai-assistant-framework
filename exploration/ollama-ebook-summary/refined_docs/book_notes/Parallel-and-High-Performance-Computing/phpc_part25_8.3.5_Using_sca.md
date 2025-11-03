@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.3.5 Using scatter and gather to send data out to processes for work
 
 ---
 
-**Rating: 8/10**
 
 #### MPI_Allreduce and Kahan Summation
 Background context explaining how MPI_Allreduce is used with the Kahan summation method to compute a global sum across all processes. The Kahan summation algorithm helps reduce numerical error when adding a sequence of finite precision floating point numbers.
@@ -33,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### DebugPrintout Using Gather
 Explanation of how gather operations can be used in debugging by collecting data from all processes and printing it out in an ordered manner. The gather operation stacks data from all processors into a single array, allowing for controlled output.
@@ -79,7 +76,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scatter and Gather for Data Distribution
 Explanation of how scatter and gather operations can be used to distribute data arrays among processes for work, followed by gathering them back together at the end. Scatter distributes data from one process to all others, while gather collects data from all processes back to a single process.
@@ -164,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MPI Scatter Operation
 MPI scatter operations distribute data from a single process to all other processes. For this operation, we need to know the sizes and offsets of the data chunks each process will receive.
@@ -185,7 +180,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream Triad for Bandwidth Testing
 The Stream Triad is a benchmark to measure memory bandwidth and latency.
@@ -209,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ghost Cells and Halos
 
@@ -222,7 +215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ghost Cell Updates and Exchanges
 
@@ -244,7 +236,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Communication Buffer with MPI_Pack
 
@@ -274,7 +265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimizing MPI Communication
 
@@ -300,7 +290,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Grid Setup and Memory Allocation
 Background context: The code snippet describes setting up a 2D grid for parallel processing. This involves determining process coordinates, exchanging ghost cells between processes, and allocating memory to handle both real data and halo regions.
@@ -324,7 +313,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stencil Iteration Loop
 Background context: The stencil iteration loop performs a simple blur operation on the grid. This is a common pattern in image processing and partial differential equations where each cell's value is updated based on its neighbors' values.
@@ -358,7 +346,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ghost Cell Update
 Background context: After the stencil operation, the code updates boundary conditions and exchanges ghost cells with neighboring processes. This ensures that each process has the correct values at its boundaries for subsequent iterations.
@@ -386,7 +373,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Boundary Condition Update
 Background context: The `boundarycondition_update` function handles the boundary conditions of the computational domain. This ensures that values at the edges are correctly set, often based on specific physical or mathematical constraints.
@@ -414,7 +400,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Ghost Cell Region and Halo Communication
@@ -434,7 +419,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -457,7 +441,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MPI_Type_indexed
 
@@ -478,7 +461,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Commit and Free Routines
 
@@ -502,7 +484,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Custom Data Types for MPI Communication
 Custom data types are used to optimize MPI communication by defining specific patterns of data access. This is particularly useful for handling ghost cells in parallel computations, where each process needs to exchange boundary values with its neighbors.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Upper-Confidence-Bound Action Selection
 
 ---
 
-**Rating: 8/10**
 
 #### Optimistic Initial Values
 Background context: The initial action-value estimates, \(Q_1(a)\), can significantly influence the performance of action-value methods. These methods may be biased initially but this bias diminishes over time. Setting optimistic initial values can encourage exploration.
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance of Optimistic Initial Values vs. Traditional Methods
 Background context: The optimistic method tends to perform worse initially due to increased exploration but eventually performs better as it explores less over time.
@@ -52,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Upper-Conﬁdence-Bound Action Selection (UCB)
 Background context: UCB action selection addresses the issue of exploration by selecting actions that maximize an upper bound on their possible true values. This approach takes into account both the accuracy of current estimates and the uncertainty in those estimates.
@@ -84,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient Bandit Algorithms Overview
 Gradient bandit algorithms aim to learn a numerical preference for each action without directly estimating action values. Instead, they update preferences based on rewards received and use a soft-max distribution to determine action probabilities.
@@ -110,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Soft-Max Distribution Explanation
 The soft-max distribution is used to determine the probability of taking an action based on its preference. It ensures that higher preferences lead to a higher probability of being selected, but only relative preferences matter.
@@ -141,7 +135,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stochastic Gradient Ascent Insight
 The gradient bandit algorithm can be viewed as a stochastic approximation to gradient ascent. It updates action preferences based on the difference between actual rewards and average baseline rewards, aiming to maximize expected reward.
@@ -171,7 +164,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Baseline Term Importance
 The baseline term in the gradient bandit algorithm adjusts for differences between actual rewards and a constant or varying reference point. Without this baseline, performance can significantly degrade.
@@ -192,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Derivation of Update Rule
 The update rule for the gradient bandit algorithm can be derived from principles of stochastic gradient ascent, showing that it effectively maximizes expected reward by adjusting action preferences.
@@ -224,7 +215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Associative Search (Contextual Bandits)
 Background context explaining that nonassociative tasks involve finding a single best action, whereas associative search involves learning a policy to map situations to actions. The example provided is of several k-armed bandit tasks where the task changes randomly from step to step.
@@ -235,7 +225,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nonstationary k-armed Bandit
 Background context explaining that nonstationary bandits have changing true action values over time. The methods described in the chapter can handle such environments but may not perform well if changes are too rapid.
@@ -246,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Learning in Associative Search
 Background context explaining that associative search requires learning a policy associating actions with situations based on clues or distinctive features of each situation.
@@ -257,7 +245,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Case Certainty with Feedback
 Background context explaining the situation where you know whether you are facing case A or case B but still don't know the true action values. This scenario involves an associative search task, where your goal is to find the best action given that information.
@@ -301,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Bandit Algorithms
 Background context explaining the various simple ways of balancing exploration and exploitation in bandit algorithms. The text mentions -greedy methods, UCB methods, gradient bandit algorithms, and optimistic initialization.
@@ -322,7 +308,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parameter Study
 Background context explaining how algorithms perform differently based on their parameters and how this is visualized in learning curves.
@@ -358,7 +343,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gittins Index Approach
 Background context: The Gittins index is a well-studied approach to balancing exploration and exploitation in k-armed bandit problems. It computes special action values known as Gittins indices, which can lead to optimal solutions in certain cases if complete knowledge of the prior distribution is available.
@@ -370,7 +354,6 @@ Gittins indices are used to balance exploration and exploitation in k-armed band
 
 ---
 
-**Rating: 8/10**
 
 #### Bayesian Methods and Posterior Sampling (Thompson Sampling)
 Background context: Bayesian methods assume a known initial distribution over action values and update this distribution after each step based on new observations. Thompson sampling, as one specific application, selects actions at each step according to their posterior probability of being the best action.
@@ -381,7 +364,6 @@ Thompson sampling is a method that involves selecting actions based on their pos
 
 ---
 
-**Rating: 8/10**
 
 #### Complexity of Computing Optimal Solutions
 Background context: In certain scenarios, computing the optimal balance between exploration and exploitation can be extremely complex due to the vast number of possible actions and reward sequences over a long horizon. The complexity grows exponentially with the length of the horizon.
@@ -392,7 +374,6 @@ Computing the optimal solution for balancing exploration and exploitation is dif
 
 ---
 
-**Rating: 8/10**
 
 #### Approximate Methods for Reinforcement Learning
 Background context: Given the computational complexity, it may be impractical to compute exact solutions for balancing exploration and exploitation. Instead, approximate methods such as those presented in Part II of this book can be used.
@@ -403,7 +384,6 @@ Approximate reinforcement learning methods can help by providing a practical way
 
 ---
 
-**Rating: 8/10**
 
 #### Nonstationary Case and Constant-Step-Size \(\epsilon\)-Greedy Algorithm
 
@@ -415,7 +395,6 @@ In the nonstationary case, the reward distributions (or means) of the bandits ch
 
 ---
 
-**Rating: 8/10**
 
 #### Action-Value Methods for k-Armed Bandits
 
@@ -438,7 +417,6 @@ Here, `epsilon_greedy_policy` is a function that selects an action using \(\epsi
 
 ---
 
-**Rating: 8/10**
 
 #### Optimistic Initialization in Reinforcement Learning
 
@@ -462,7 +440,6 @@ Here, `initialize_action_values_to_high_value` sets all action values to a high 
 
 ---
 
-**Rating: 8/10**
 
 #### Upper Confidence Bound (UCB) Algorithm
 
@@ -486,7 +463,6 @@ Here, `ucb_policy` computes the UCB for each action and selects the one with the
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient Bandit Algorithms
 
@@ -512,7 +488,6 @@ Here, `gradient_policy` selects an action based on the estimated gradient of the
 
 ---
 
-**Rating: 8/10**
 
 #### Soft-Max Action Selection Rule
 Background context explaining the soft-max action selection rule. The term "soft-max" is due to Bridle (1990) and this rule appears to have been first proposed by Luce (1959). It is a method used in reinforcement learning for selecting actions based on their values, where the probability of choosing an action \(a\) is proportional to the exponentiated value function \(Q(s, a)\).
@@ -532,7 +507,6 @@ This rule provides a way to balance exploration and exploitation by assigning hi
 
 ---
 
-**Rating: 9/10**
 
 #### Dynamic Programming and Exploration-Exploitation Balance
 Background context explaining Bellman's (1956) work showing how dynamic programming can be used to compute the optimal balance between exploration and exploitation within a Bayesian formulation of the problem.
@@ -546,7 +520,6 @@ This means he provided a method to optimize policies by considering both the imm
 
 ---
 
-**Rating: 8/10**
 
 #### Gittins Index Approach
 Background context explaining the Gittins index approach, which provides a way to compute optimal exploration-exploitation trade-offs in multi-armed bandit problems. Duﬀ (1995) showed that this can be learned through reinforcement learning.
@@ -560,7 +533,6 @@ This approach ensures that at any point in time, the algorithm selects arms base
 
 ---
 
-**Rating: 8/10**
 
 #### Information State
 Background context explaining the term "information state," which comes from the literature on partially observable Markov decision processes (POMDPs).
@@ -574,7 +546,6 @@ This concept helps in managing uncertainty by summarizing the state of the world
 
 ---
 
-**Rating: 8/10**
 
 #### Sample Complexity for Exploration Efficiency
 Background context explaining how sample complexity, borrowed from supervised learning, can be adapted to measure exploration efficiency in reinforcement learning. Kakade (2003) defined it as the number of time steps an algorithm needs to avoid selecting near-optimal actions.
@@ -588,7 +559,6 @@ This metric helps evaluate algorithms based on their ability to balance explorat
 
 ---
 
-**Rating: 8/10**
 
 #### Thompson Sampling
 Background context explaining the theoretical treatment of Thompson sampling provided by Russo, Van Roy, Kazerouni, Osband, and Wen (2018).

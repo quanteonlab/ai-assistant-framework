@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B004-Data-Governance_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Graphic Visualization. Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Notifications and Automated Actions
 Notifications can trigger additional processes automatically when certain systems take an action. This feature is essential for robust monitoring as it allows immediate responses to critical events.
@@ -109,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Analytics and the Bottom Line
 Background context explaining how analytics based on higher-quality data or from a synthesis of data from multiple sources can improve decision-making. This, in turn, impacts the company's profitability by increasing revenue or decreasing waste.
@@ -233,7 +230,6 @@ public class DataLiteracyTraining {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Importance of Defining Tenets and Requirements
 Background context: In establishing a data culture, it is crucial to first define what tenets are important for the company. These can range from legal requirements and compliance standards to internal values such as data quality or ethical handling. Companies must collectively agree on these tenets as they form the foundation of their data culture.

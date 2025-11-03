@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 45)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 23.3.1 Implementation and Assessment
 
 ---
 
-**Rating: 8/10**
 
 #### Initial Condition Extrapolation for Wave Equation
 Background context: The text discusses extrapolating the initial condition of a wave equation to negative time using the central-difference approximation. This method is used when combining the wave equation with this approximation to propagate solutions forward in time.
@@ -40,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Leapfrog Propagation
 Background context: The text explains how to propagate the solution forward in time using a leapfrog scheme. This involves taking the solution from one time step and using it to calculate the next.
@@ -70,7 +67,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Von Neumann Stability Analysis
 Background context: The text discusses the stability analysis for difference equations derived from partial differential equations (PDEs). It uses eigenmodes to analyze whether the solution will grow or decay over time. The key condition is that \( |𝜉(k)| < 1 \).
@@ -97,7 +93,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Courant Condition
 Background context: The text states that for stability of the numerical solution of transport equations (wave equations), the condition:
@@ -127,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stability Analysis of PDEs
 
@@ -142,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation and Assessment of Wave Equation
 
@@ -164,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Including Friction
 
@@ -186,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variable Tension and Density
 
@@ -208,7 +199,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wave Motion with Variable Density and Tension
 
@@ -234,7 +224,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simplified Wave Equation with Proportional Density and Tension
 
@@ -268,7 +257,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Catenary Shape Derivation
 
@@ -296,7 +284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wave Equation with Catenary Shape
 
@@ -320,7 +307,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Surface Plots of Catenary Wave Solutions
 Background context: The problem asks for creating surface plots to visualize the solutions of waves on a catenary with friction at different times.
@@ -355,7 +341,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Verification of High-Frequency Filter Behavior
 Background context: The problem asks to verify that the string acts like a high-frequency filter by observing the presence or absence of waves at different frequencies.
@@ -386,7 +371,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Plotting Disturbance and Height of Catenary Wave Equation
 Background context: The task involves plotting both the disturbance \(u(x,t)\) about the catenary and the actual height \(y(x,t)\) above the horizontal for a plucked string initial condition.
@@ -424,7 +408,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Including Nonlinear Terms in Wave Equation
 Background context: The problem asks to extend the wave equation by including nonlinear terms of order \(y/L\).
@@ -460,7 +443,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nonlinear Wave Equation Solutions
 Background context: The task involves solving the nonlinear wave equation \[ c^2 \frac{\partial^2 y(x,t)}{\partial x^2} = [1 + (\frac{\partial^2 y(x,t)}{\partial x^2})^2] \frac{\partial^2 y(x,t)}{\partial t^2}. \]
@@ -498,7 +480,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Small Segment of Oscillating Membrane
 The tension in a small segment of an oscillating membrane is constant over a small area, but if the angle of inclination varies with position, there will be net vertical forces. The net force in the z-direction due to the change in y is given by:
@@ -519,7 +500,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mass and Newton's Second Law
 The membrane section has a mass given by:
@@ -543,7 +523,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Boundary Conditions and Initial Conditions
 The boundary conditions for the membrane, which hold for all times, are given by:
@@ -574,7 +553,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Separation of Variables
 The analytic solution to the wave equation is sought by assuming that the full solution \(u(x,y,t)\) can be written as a product of separate functions of \(x\), \(y\), and \(t\):
@@ -619,7 +597,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Boundary Conditions Application
 
@@ -639,7 +616,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eigenvalues and Eigenfunctions
 
@@ -658,7 +634,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Full Space-Time Solution
 
@@ -680,7 +655,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Solution
 
@@ -704,7 +678,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Stepping Algorithm
 
@@ -732,7 +705,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Algorithm Initialization
 
@@ -760,7 +732,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Example
 
@@ -807,7 +778,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vibrating String using Leapfrog Method
 This section introduces solving the wave equation for a gently plucked string using the leapfrog method. The equation to be solved is:
@@ -832,7 +802,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vibrating Membrane using Leapfrog Method
 This part deals with solving the wave equation for a vibrating membrane. The main goal is to simulate and visualize the vibration of the membrane over time.

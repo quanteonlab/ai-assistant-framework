@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 1.12 Getting Readable Stack Traces. Solution
 
 ---
 
-**Rating: 8/10**
 
 #### Accessing Jenkins Job Console Output
 Background context: When a project fails to build, understanding the root cause is crucial. Jenkins provides detailed information through console output that can help diagnose issues.
@@ -77,7 +75,6 @@ This aspect can be used to automatically log the entry of methods, including the
 ??
 ---
 
-**Rating: 8/10**
 
 #### Debugging and Exception Handling in Java
 Background context: When a Java program encounters an exception, it can propagate up the call stack until a matching `catch` clause is found. If no such clause exists, the Java interpreter catches the exception and prints a stack traceback to help with debugging.
@@ -150,7 +147,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Environment Variables and Java

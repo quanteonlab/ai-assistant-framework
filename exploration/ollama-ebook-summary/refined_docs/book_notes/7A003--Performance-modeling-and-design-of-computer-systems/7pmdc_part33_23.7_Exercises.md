@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 33)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 23.7 Exercises
 
 ---
 
-**Rating: 8/10**
 
 #### M/H 2/1 Queue - Excess and Expected Time in Queue
 
@@ -121,7 +119,6 @@ Where \(\lambda\) is the arrival rate, and \(p\) is the probability of a job hav
 ---
 ---
 
-**Rating: 8/10**
 
 #### Task Assignment Policies for Server Farms
 
@@ -258,7 +255,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Random Policy
@@ -332,7 +328,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Random vs. Round-Robin Policy Comparison
@@ -401,7 +396,6 @@ public void simulateJSQ() {
 x??
 ---
 
-**Rating: 8/10**
 
 #### JSQ vs. ROUND-ROBIN
 Background context: In this section, we compare two dynamic policies for task assignment—JSQ (Join-the-Shortest-Queue) and Round-Robin. Both are designed to keep servers busy but differ in how they handle job assignments.

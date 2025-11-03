@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Part 5 The Whole Ball of Facts Technical Skills
 
 ---
 
-**Rating: 8/10**
 
 #### Calculations Involving Mechanical Principles
 Background context: Applying mathematical concepts to understand how forces work in simple machines is crucial for the Mechanical Comprehension subtest. Understanding basic physics principles helps in solving practical problems.
@@ -28,7 +26,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Principles of Electricity
 Background context: Knowledge of basic electrical principles such as voltage (V), current (I), and resistance (R) is essential for the Electronics Information subtest. Ohm's Law provides a fundamental relationship between these parameters.
@@ -50,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Electric Vehicles (EVs)
 Background context: Electric vehicles have one or more electric motors that take power from a large battery. Some EVs use smaller motors at each wheel, eliminating the need for a transmission, drive shaft, and axles. On-board computers control motor performance to achieve precise torque output.
@@ -61,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Force and Motion
 

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 14.5 Readings
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/1 vs M/M/k Comparison
 Background context: This concept compares the \(M/M/1\) and \(M/M/k\) systems in terms of their mean response time. The objective is to understand how the load \(\rho = \frac{\lambda}{k\mu}\) affects the performance in both configurations.
@@ -38,7 +36,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/k vs. M/M/1 Server Farms
 
@@ -71,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/k vs. M/M/1 Server Farms - High Load
 
@@ -98,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Insensitivity Property in M/M/k Loss System
 
@@ -123,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scherr’s CTSS Model (Problem)
 Background context: Scherr’s model involves a computing system where jobs arrive according to an exponential distribution, and service times are also exponentially distributed. The objective is to find the expected response time \(E[R]\) using both time-reversibility equations and operational analysis.
@@ -170,7 +164,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/2/3 Queueing Model
 Background context: This model describes a system with two servers and a maximum of three jobs in the waiting room. Jobs arrive according to a Poisson process, and service times are exponentially distributed.
@@ -234,7 +227,6 @@ Yes, the process of non-dropped arrivals is still a Poisson process because:
 
 ---
 
-**Rating: 8/10**
 
 #### Inﬁnite Help Desk (M/M/∞)
 Background context: This model represents an infinite number of servers, where interarrival times are Exponential with rate \(\lambda\) and service times are Exponential with rate \(\mu\).
@@ -268,7 +260,6 @@ Which makes sense as it represents the average service time.
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/2 with Heterogeneous Servers
 Background context: This model considers two servers with different service rates, where the faster server is scheduled first when both are idle. The objective is to analyze system behavior and performance metrics.
@@ -296,7 +287,6 @@ Using Little's Law:
 
 ---
 
-**Rating: 8/10**
 
 #### Utilization and Mean Number of Jobs in a System
 
@@ -331,7 +321,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load Balancing in Server Farms
 
@@ -353,7 +342,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throwing Away Servers
 
@@ -377,7 +365,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison of Multi-Server Architectures
 
@@ -410,7 +397,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load and Utilization in M/M/k Systems
 Background context explaining how load is understood differently in single-server (M/M/1) versus multi-server (M/M/k) systems. The common rule of thumb for a single server system suggests that utilization, ρ, should be kept below 0.8 to avoid delays.
@@ -422,7 +408,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Waiting Time and PQ Factor
 Explanation on how to understand expected waiting time (E[TQ]) without considering the queueing probability factor (PQ). The formula \( \frac{E[TQ]}{PQ} = E[TQ|delayed] \) is used to derive a simplified metric.
@@ -434,7 +419,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relationship Between Utilization and Delay in M/M/k Systems
 Explanation on how increasing the number of servers \( k \) can reduce the expected waiting time for delayed customers, even if each server has a high average utilization.
@@ -446,7 +430,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Square-Root Staffing Rule
 Explanation on why the square-root staffing rule is effective and provides a good approximation for determining the number of servers needed to achieve a certain QoS goal.
@@ -458,7 +441,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single-Server vs Multi-Server Systems
 Comparison between single-server (M/M/1) and multi-server (M/M/k) systems regarding delay. Explanation on why high utilization does not necessarily mean high delay in a multi-server system.

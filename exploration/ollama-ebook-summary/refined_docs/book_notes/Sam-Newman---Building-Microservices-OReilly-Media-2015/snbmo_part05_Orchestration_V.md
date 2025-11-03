@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Orchestration Versus Choreography
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronous Communication
 Background context explaining synchronous communication. Synchronous communication involves a call to a remote server, which blocks until the operation completes. This method is straightforward and easy to reason about since we know when things have completed successfully or not.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Communication
 Background context explaining asynchronous communication. In contrast to synchronous calls, with asynchronous communication, the caller doesn’t wait for the operation to complete before returning. This model is particularly useful for long-running jobs and maintaining low latency in applications where blocking a call would degrade performance.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Request/Response Collaboration
 Background context explaining the request/response model in collaboration. This model is closely aligned with synchronous communication where a client initiates a request and waits for a response before proceeding. It can also work for asynchronous communication, using callbacks or event-driven mechanisms to handle responses.
@@ -39,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event-Based Collaboration
 Background context explaining event-based collaboration. This approach inverts the traditional model by having services emit events and allowing other parties to react to them. Events are typically used for handling long-running processes or low-latency scenarios where immediate responses from a central authority are not practical.
@@ -50,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Orchestration vs. Choreography
 Background context explaining the differences between orchestration and choreography in managing complex logic spanning service boundaries. Orchestration relies on a central authority to guide and drive processes, while choreography distributes responsibility among collaborating services, allowing them to handle their parts independently.
@@ -61,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Orchestration Example: Customer Creation
 Background context providing an example of orchestration for handling complex processes like customer creation. In this scenario, the customer service acts as the central brain, initiating requests to other services (loyalty points bank, email service, and postal system) through request/response calls.
@@ -85,7 +78,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Choreography Example: Customer Creation
 Background context providing an example of choreography for handling complex processes like customer creation. In this scenario, services emit events (e.g., "Customer created") and other services subscribe to these events to react accordingly.
@@ -105,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Remote Procedure Calls (RPC)
 Background context: Remote procedure call (RPC) is a protocol that allows a program to execute a function on a different machine. It enables a local call to appear as if it were remote, making communication between systems seamless and transparent. RPC technologies can vary in how they handle interface definitions, networking protocols, and the coupling between client and server.
@@ -117,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interface Definition for Remote Services
 Background context: For some RPC technologies like SOAP, Thrift, or Protocol Buffers, the use of an interface definition is crucial. This helps in generating client and server stubs that can be implemented across different technology stacks.
@@ -135,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Technology Coupling in RPC
 Background context: Some RPC mechanisms are tightly coupled to a specific platform or technology stack. For instance, Java RMI is closely tied to the JVM environment.
@@ -162,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Considerations for RPC
 Background context: While RPC can make remote calls appear local, there are significant performance differences between making a local call and a networked one. The overhead of marshalling/unmarshalling payloads and sending data over the network can be substantial.
@@ -187,7 +175,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Brittleness in RPC Implementation
 Background context: Some popular RPC implementations can lead to brittle systems due to the tight coupling of interfaces. Changes in the interface can require updates across multiple clients and servers.
@@ -213,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Reliability and Resiliency
 Background context: The first fallacy of distributed computing is that "the network is reliable." However, networks can fail or behave unpredictably. Developers must design systems to handle these failures gracefully.
@@ -242,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RPC (Remote Procedure Call)
 Background context explaining RPC and its common implementations. Highlight the challenges associated with RMI (Remote Method Invocation) and how modern mechanisms like Protocol Buffers or Thrift mitigate some of these issues by avoiding lock-step releases.
@@ -266,7 +251,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Potential Pitfalls of RPC
 Background context on common issues that arise with RPC, including how to avoid making remote calls opaque to clients and ensuring the ability to evolve server interfaces without requiring simultaneous client upgrades.
@@ -294,7 +278,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### REST (REpresentational State Transfer)
 Background context on REST and its architectural principles. Emphasize the concept of resources, representations, and how HTTP verbs can be used to interact with these resources.
@@ -326,7 +309,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison of REST and HTTP
 Background context on the relationship between REST and HTTP. Explain how HTTP verbs provide a natural fit for implementing RESTful services.
@@ -360,7 +342,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hypermedia as the Engine of Application State (HATEOAS)
 HATEOAS suggests that clients should navigate and interact with resources via hyperlinks, rather than hardcoding URIs.
@@ -388,7 +369,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hypermedia Controls Overview
 Hypermedia controls are a way to provide instructions and navigation within web APIs, similar to how humans interact with shopping carts on websites. This allows clients to discover available actions by following links provided in API responses.
@@ -400,7 +380,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Hypermedia Controls
 In Example 4-2, hypermedia controls are represented within an XML document for an album listing. The `link` elements with specific relations like `/artist` and `/instantpurchase` indicate where to navigate.
@@ -421,7 +400,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decoupling Client from Server
 Hypermedia controls enable decoupling between the client and server by abstracting the underlying details of API implementations. Changes in how hypermedia controls are displayed or structured should not affect clients as long as the semantics remain consistent.
@@ -435,7 +413,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits and Trade-offs
 Using hypermedia controls provides significant benefits like progressive discovery of API endpoints and reduced coupling. However, it can be chatty as clients need to follow multiple links to find specific operations.
@@ -461,7 +438,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Initial Upfront Work and Long-term Benefits
 While hypermedia controls require some initial work to set up, they offer long-term benefits such as flexibility in API changes without breaking existing clients.

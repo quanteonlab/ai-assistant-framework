@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 52)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 17.1 Version control systems It all begins here. 17.1.2 Centralized version control for simplicity and code security
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed vs Centralized Version Control Systems
 Background context explaining the differences between distributed and centralized version control systems. This is crucial for understanding how to manage software development, especially in a parallel application environment.
@@ -31,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Git as a Distributed Version Control System
 Background context explaining how Git works, focusing on its distributed nature. Git allows developers to work offline and synchronize later, making it very flexible for teams that are mobile or geographically dispersed.
@@ -52,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Timer Routines for Tracking Code Performance
 
@@ -66,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Timer Routines Implementation
 
@@ -103,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Alternative Timer Implementations
 
@@ -124,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Portability Considerations
 
@@ -146,7 +139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Centralized Version Control Systems
 
@@ -166,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Version Control Systems
 
@@ -194,7 +185,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Profilers: Importance and Use Cases
 Background context explaining that profilers are crucial tools for measuring application performance. They help identify bottlenecks, especially in parallel applications, to improve overall efficiency.
@@ -206,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simple Text-Based Profilers for Everyday Use
 Background context highlighting simple text-based profilers like LIKWID, gprof, gperftools, timemory, and Open|SpeedShop. These tools are easy to integrate into daily development workflows.
@@ -220,7 +209,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### gperftools Profiler
 The gperftools suite, originally developed by Google, offers a more modern profiling experience compared to the classic gprof. It includes tools like TCMalloc and heap profiler in addition to CPU profiling.
@@ -236,7 +224,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cachegrind Overview
 Cachegrind is a powerful tool used for performance analysis, particularly to identify and optimize high-cost paths in your code. It operates by profiling cache behavior and branch prediction mechanisms within applications. The tool provides detailed information about how instructions are fetched from different levels of the memory hierarchy, allowing developers to focus on critical sections of their code.
@@ -260,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Intel Advisor Overview
 Intel Advisor is a proprietary tool designed to assist in optimizing vectorization with Intel compilers. It analyzes loops and suggests changes to improve vectorization, making it particularly useful for achieving better performance through parallelism.

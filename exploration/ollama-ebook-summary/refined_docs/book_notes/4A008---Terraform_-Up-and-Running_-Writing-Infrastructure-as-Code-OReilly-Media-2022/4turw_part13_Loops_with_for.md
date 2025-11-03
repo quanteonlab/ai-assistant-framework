@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Loops with for_each Expressions
 
 ---
 
-**Rating: 8/10**
 
 #### Introducing for_each
 Background context: To address the limitations of `count`, Terraform 0.12 introduced `for_each`. This allows you to loop over sets or maps, making it more flexible and avoiding unintended deletions and recreations.
@@ -28,7 +26,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Output Changes with for_each
 Background context: When using `for_each`, Terraform’s output representation changes from an array or map to a map of resources. This impacts how you access and utilize outputs.
@@ -51,7 +48,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### For_each vs Count in Terraform
 Background context explaining the concept. The `for_each` and `count` blocks are both used to create multiple resources, but they have different behaviors and use cases. Here’s a brief comparison:
@@ -90,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Output Variables for Dynamic Resources
 Background context explaining how Terraform handles dynamic resource outputs.
@@ -121,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Module Usage with for_each
 Background context explaining how modules can be used in Terraform and the `for_each` block.
@@ -157,7 +151,6 @@ This output variable collects all `user_arn` outputs from each module and create
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Custom Tags Using for_each
 Background context: The passage discusses how to use `for_each` to dynamically generate tag inline blocks within a resource, specifically an Auto Scaling Group (ASG), by iterating over custom tags specified as input variables. This allows for flexible and automated tagging of infrastructure resources.
@@ -191,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dynamic Tag Generation with for_each
 Background context: The passage describes how to use `for_each` in a dynamic block to generate multiple tag blocks based on input variables. This is particularly useful for applying consistent tagging across multiple resources.
@@ -233,7 +225,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dynamic Tag Generation Using `for_each` in Terraform
 
@@ -300,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### For Expressions in Terraform
 Background context: In Chapter 5, you'll learn about loops and conditionals to manage resources more efficiently. One of the advanced features is the `for` expression, which allows for transforming lists and maps into output values or resource instances.
@@ -342,7 +332,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### For Expressions with Maps
 Background context: In addition to lists, Terraform's `for` expression can also be used on maps. This allows you to loop over the key-value pairs in a map and apply transformations or conditions based on each pair.
@@ -395,7 +384,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### For Expressions - Filtering and Transforming
 Background context: Terraform's `for` expression allows for both transforming elements in a list or map and filtering them based on specific conditions. This is particularly useful when you need to process complex data structures.
@@ -428,7 +416,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### List Comprehensions in Python
 Background context: Python offers a concise and readable way to create lists using list comprehensions. This can be seen as an analogy for how Terraform's `for` expressions work, but with some differences. In Python, the syntax is:
@@ -457,7 +444,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### For Expressions for Lists
 
@@ -496,7 +482,6 @@ The resulting list will be:
 
 ---
 
-**Rating: 8/10**
 
 #### For Expressions for Maps
 

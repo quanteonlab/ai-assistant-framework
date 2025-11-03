@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** about this book
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Introduction to Concurrent Programming and Functional Paradigm
@@ -23,7 +21,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Improvements with Functional Techniques
 This chapter explores various functional techniques to enhance the performance of multithreaded applications. It covers concepts like higher-order functions, currying, and lazy evaluation, which are crucial for optimizing performance in concurrent scenarios.
@@ -36,7 +33,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutability in Functional Programming
 Chapter 3 delves into the concept of immutability, explaining how it is used to write predictable and correct concurrent programs. It also discusses functional data structures that are intrinsically thread-safe.
@@ -68,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task Parallel Library (TPL) and Parallel Patterns
 Chapter 4 focuses on parallel processing using the Task Parallel Library (TPL). It covers patterns like Fork/Join for efficiently dividing work among multiple threads.
@@ -111,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Parallel Processing Techniques (Chapter 5)
@@ -141,7 +135,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real-Time Stream Processing (Chapter 6)
 Background context: Chapter 6 focuses on processing real-time streams of events using functional techniques. It leverages .NET Reactive Extensions for handling asynchronous event combinators and implements a reactive publisher-subscriber pattern.
@@ -173,7 +166,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task-Based Programming Model (Chapter 7)
 Background context: Chapter 7 delves into the task-based programming model within a functional programming context. It introduces the use of monads based on a continuation-passing style for implementing concurrent operations and then uses these techniques to build pipelines.
@@ -215,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Programming with Pure Functions :p What are pure functions, and why are they important in functional programming for concurrent programs?
@@ -236,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutability :p What does immutability mean in functional programming, and how does it benefit concurrent programs?
 ??x
@@ -264,7 +254,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Laziness :p What is laziness in functional programming, and how does it benefit the performance of concurrent programs?
 ??x
@@ -294,7 +283,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Composition :p How does composition work in functional programming, and what benefits does it offer for concurrent programs?
 ??x
@@ -325,7 +313,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Moore's Law and CPU Speed Limits
 Background context explaining the concept. Moore predicted that the density and speed of transistors would double every 18 months before reaching a maximum speed beyond which technology couldn't advance. Progress continued for almost 50 years, but now single-core CPUs have nearly reached the limit due to physical constraints like the speed of light.
@@ -345,7 +332,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CPU Performance Limitations
 Background context explaining the concept. The single-processor CPU has nearly reached its maximum speed due to physical limitations like the speed of light and heat generation from energy dissipation.
@@ -365,7 +351,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Concurrency and Multicore Processing
 Background context explaining the concept. With single-core CPU performance improvement stagnating, developers are adapting by moving into multicore architecture and developing software that supports concurrency.
@@ -394,7 +379,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency vs. Parallelism vs. Multithreading
 Background context explaining the concept. This section differentiates between concurrency, parallelism, and multithreading.
@@ -429,7 +413,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avoiding Common Pitfalls in Concurrency
 Background context explaining the concept. This section covers common pitfalls when writing concurrent applications such as race conditions and deadlocks.
@@ -452,7 +435,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sharing Variables Between Threads
 Background context explaining the concept. This section discusses the challenges of sharing variables between threads and how to address them using synchronization mechanisms like locks or atomic operations.
@@ -475,7 +457,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Paradigm for Concurrency
 Background context explaining the concept. This section introduces the functional paradigm as a way to develop concurrent programs by avoiding shared mutable state and side effects.

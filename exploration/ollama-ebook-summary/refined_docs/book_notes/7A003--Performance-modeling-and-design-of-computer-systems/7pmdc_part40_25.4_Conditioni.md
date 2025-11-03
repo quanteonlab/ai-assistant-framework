@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 40)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 25.4 Conditioning
 
 ---
 
-**Rating: 8/10**
 
 #### Sum of Independent Binomial Random Variables
 Background context: If \(X \sim \text{Binomial}(n, p)\) and \(Y \sim \text{Binomial}(m, p)\) are independent random variables, then their sum \(X + Y\) follows a binomial distribution with parameters \(n + m\) and \(p\).
@@ -76,7 +74,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distribution of Response Time in M/M/1
 Background context: We are deriving the distribution of response time \( T \) for an M/M/1 queue by leveraging the known distribution of the number of jobs in the system, denoted as \( N \). The key steps involve understanding that the response time given \( k \) jobs in the system is a sum of job service times. By using the Laplace transform and properties of i.i.d. random variables, we can find the Laplace transform of \( T \).
@@ -87,7 +84,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Combining Laplace and Z-Transforms
 Background context: We are deriving the Laplace transform of a sum of a random number of i.i.d. continuous random variables using Theorem 25.12, which involves z-transforms for discrete random variables \( X \) and Laplace transforms for the i.i.d. random variables \( Y_i \).
@@ -109,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### More Results on Transforms
 Background context: This section covers more results on transforms, particularly focusing on the Laplace transform of cumulative distribution functions (c.d.f.) and relating it to the Laplace transform of probability density functions (p.d.f.). Theorem 25.13 provides a relationship between these two types of transforms.
@@ -146,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sum of Geometric Number of Exponentials
 In this problem, we have a geometric random variable \(N \sim \text{Geometric}(p)\) and independent exponential random variables \(X_i \sim \text{Exp}(\mu)\), for \(i = 1, 2, \ldots, N\). The sum is denoted by \(S_N = \sum_{i=1}^{N} X_i\). We need to prove that \(S_N\) is exponentially distributed and derive its rate.
@@ -158,7 +152,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/1 Queue: Distribution and Moments
 We need to determine the distribution of:
@@ -172,7 +165,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Downloading Files: Transform Analysis
 You need to download two files from three different sources. File 1 is available via sources A or B, while file 2 is only available via source C. The time to download file 1 from source A and B are exponentially distributed with rates 1 and 2 respectively, and the time for file 2 from source C is exponentially distributed with rate 3. We need to derive the z-transform of \(T\), the time until both files are downloaded.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 51)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 16.5 Other parallel file software packages. 16.6 Parallel filesystem The hardware interface. 16.6.1 Everything you wanted to know about your parallel file setup but didnt know how to ask
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Filesystem Introduction
 Parallel filesystems are crucial for handling the increasing demands of data-intensive applications. They distribute file operations across multiple hard disks using parallelism to enhance performance. However, managing parallel operations can be complex due to mismatches between application parallelism and filesystem parallelism.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Books on High Performance Parallel I/O
 Background context explaining the availability of books that cover topics related to writing high-performance parallel file operations. These resources offer valuable insights into best practices.
@@ -35,7 +32,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Best Practices for Parallel I/O
 Philippe Wautelet’s presentation, "Best practices for parallel IO and MPI-IO hints," offers valuable insights on optimizing file operations in parallel applications. This presentation is available at: http://www.idris.fr/media/docs/docu/idris/idris_patc_hints_proj.pdf.
@@ -46,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of File Operations Techniques
 Proper techniques for handling standard file operations in parallel applications are crucial. Simple methods, like performing all I/O from the first processor, suffice for modestly parallel applications but may not be scalable.
@@ -57,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Version Control Systems Overview
 Version control systems like Subversion (CVS), Git, and Mercurial are essential tools in high-performance computing development. They help manage changes to code over time.
@@ -68,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Profilers for Performance Analysis
 Profilers like Likwid, gprof, gperftools, timemory, Open|SpeedShop, Kcachegrind, Arm MAP, Intel® Advisor, Intel® Vtune, CrayPat, AMD µProf, NVIDIA Visual Profiler, CodeXL, HPCToolkit, and Open|SpeedShop TAU are useful for analyzing performance bottlenecks.
@@ -79,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Error Tools
 Memory error detection tools like Valgrind, Dr. Memory, Purify, Intel® Inspector, TotalView memory checker, MemorySanitizer (LLVM), AddressSanitizer (LLVM), ThreadSanitizer (LLVM), mtrace (GCC), Dmalloc, Electric Fence, Memwatch, and CUDA-MEMCHECK are essential for identifying and fixing memory-related errors.

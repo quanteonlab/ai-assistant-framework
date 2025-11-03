@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 29)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 10.6.6 Asynchronous combinators in action
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional Asynchronous Combinators
 Background context: The `ifAsync` combinator allows for conditional logic within asynchronous operations. It provides a way to run one set of asynchronous functions based on whether another set succeeds or fails, akin to traditional if-else statements but in the realm of asynchronous programming.
@@ -40,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AsyncResult Handler
 Background context: The `AsyncResult.handler` function is used to handle errors that might occur during asynchronous operations by wrapping them in a custom error message or propagating an existing error.
@@ -62,7 +59,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Internet of Things (IoT)
 Background context: The Internet of Things (IoT) is a network where physical devices are interconnected and can exchange data over the internet. IoT devices range from household appliances like refrigerators to complex systems that monitor industrial processes, all capable of sending and receiving data.
@@ -73,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message-Passing Concurrent Programming Model
 Background context: The message-passing model of concurrent programming involves communication between processes through messages. This approach is widely supported in modern languages like Java, C#, and C++ due to its effectiveness in handling high concurrency scenarios.
@@ -93,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agent-Based Concurrent Programming Style
 Background context: In agent-based programming, small units of computation (agents) communicate with each other through messages. Each agent has its own internal state and can handle multiple messages concurrently.
@@ -121,7 +115,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reactive Systems and Event-Driven Paradigms
 Background context: Reactive systems are designed to handle high volumes of data and system notifications in real-time. They rely on events to drive execution, ensuring responsiveness even under heavy load.
@@ -148,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Programming and Scalability
 Background context: Asynchronous programming allows tasks to run without blocking the main thread, making applications more scalable and efficient in handling high concurrency.
@@ -170,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Microservices and Message-Passing Architecture
 Background context: The microservices architecture promotes building applications as a collection of loosely coupled services, each responsible for a specific business function. This approach is closely related to the message-passing model.
@@ -190,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scalability and High-Performance Computing
 Background context: As web applications handle more traffic, traditional architectures can no longer meet the demands. High-performance computing through concurrent connections and distributed systems is essential.
@@ -210,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Responsive Applications and Asynchronous Logic
 Background context: Responsive applications need to handle a high volume of system notifications without blocking. Event-driven architecture and asynchronous programming are key to achieving this.
@@ -238,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reactive Programming Overview
 Reactive programming is a design principle used for asynchronous programming, focusing on creating systems that can respond to user commands and requests efficiently. It ensures timely responses even under varying workloads and high concurrency demands.
@@ -250,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Design Principles for Reactive Systems
 The Reactive Manifesto outlines four key properties: responsiveness (reacting to users), resilience (reacting to failure), message-driven architecture (reacting to events), and scalability (reacting to load).
@@ -262,7 +249,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Properties of Reactive Systems: Responsiveness
 Responsiveness means that the system should react quickly to user requests or changes in environment.
@@ -274,7 +260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Properties of Reactive Systems: Resilience
 Resilience involves the ability of a system to recover and continue functioning when components fail.
@@ -286,7 +271,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Properties of Reactive Systems: Message-Driven Architecture
 Message-driven architecture involves the use of asynchronous message passing to decouple components and ensure loose coupling.
@@ -298,7 +282,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Properties of Reactive Systems: Scalability
 Scalability is the ability to handle increasing workloads efficiently without significant performance degradation.
@@ -310,7 +293,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison Between Past and Present Application Requirements
 
@@ -321,7 +303,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Message-Passing Programming Model
 
@@ -332,7 +313,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reactive Manifesto Properties in Context
 
@@ -345,7 +325,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronous vs. Asynchronous Communication
 Background context: In synchronous communication, operations are performed sequentially with a request/response model, often leading to blocking behavior. This can be inefficient and create bottlenecks, especially in scalable systems.
@@ -378,7 +357,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message-Driven Architecture in Reactive Programming
 Background context: A message-driven architecture is a cornerstone of reactive applications. It emphasizes asynchronous communication, where components communicate through messages, leading to loose coupling and improved scalability.
@@ -400,7 +378,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Message-Passing Programming Model
 Background context: The asynchronous message-passing model is crucial in reactive programming. It allows for the efficient handling of tasks by queuing messages and processing them asynchronously, which can significantly improve performance.
@@ -430,7 +407,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Reactive Programming
 Background context: Reactive programming offers several benefits, including improved scalability and performance. By removing the need for explicit coordination between components and utilizing asynchronous communication, reactive systems can handle high volumes of data more efficiently.
@@ -462,7 +438,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous vs. Synchronous Communication Performance
 Background context: Comparing synchronous and asynchronous communication reveals that the latter is more efficient in terms of resource usage and performance, particularly in scenarios requiring high concurrency.
@@ -499,7 +474,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Message-Passing Architecture Overview
@@ -512,7 +486,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Message-Passing Model
 Asynchronous message passing allows senders to send messages non-blocking, meaning they do not wait for acknowledgment or receipt from the receiver. This decouples communication and enables independent execution of sender and receiver threads.
@@ -524,7 +497,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison of Programming Models: Sequential vs. Message-Passing
 Sequential programming involves linear, step-by-step execution where each task depends on the previous one. In contrast, message-passing programs allow for non-linear task dependencies through independent blocks that communicate via messages.
@@ -536,7 +508,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message-Passing Concurrent Model Representation
 The model is represented by blocks (units of computation) that communicate through messages. These blocks can run concurrently and are interconnected non-linearly.
@@ -548,7 +519,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task-Based Programming vs. Message-Passing
 Task-based programming involves breaking down work into tasks that may run concurrently but follow a specific flow, similar to sequential programming but potentially utilizing techniques like MapReduce or Fork/Join.
@@ -560,7 +530,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agent-Based Programming
 Agent-based programming is highlighted as the primary tool for building message-passing concurrent models, where each agent (block) runs independently and communicates via messages.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 10. Creating Text Embedding Models. Embedding Models
 
 ---
 
-**Rating: 8/10**
 
 #### Embedding Models Overview
 Background context: Embedding models are crucial for converting unstructured textual data into numerical vectors (embeddings) that can be processed by machine learning algorithms. This process helps in various applications like classification, search, and generating text.
@@ -114,7 +112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Contrastive Learning Overview
 Contrastive learning is a technique used to train embedding models such that similar documents are closer in vector space while dissimilar documents are further apart. This method emphasizes the importance of presenting examples of both similar and dissimilar pairs to help the model learn what makes certain documents similar or different.
@@ -165,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generating Contrastive Examples
 Background context: To perform contrastive learning, we need data that consists of similar/dissimilar pairs. Natural Language Inference (NLI) datasets are commonly used to generate these examples since they provide a structure where entailment, contradiction, and neutral relationships between sentences can be leveraged.

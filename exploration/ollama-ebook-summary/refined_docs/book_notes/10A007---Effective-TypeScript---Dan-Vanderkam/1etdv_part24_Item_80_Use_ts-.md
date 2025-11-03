@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 80 Use ts-check and JSDoc to Experiment with TypeScript
 
 ---
 
-**Rating: 8/10**
 
 #### Use @ts-check and JSDoc to Experiment with TypeScript
 
@@ -141,7 +139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Enable Type Checking Without Converting to TypeScript
 Background context: To enable type checking without converting a JavaScript file to TypeScript, you can add `// @ts-check` at the top of your JavaScript file. This allows for basic type checking using JSDoc annotations and third-party type definitions.
@@ -313,7 +310,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Migrating to TypeScript
 Background context: When migrating from JavaScript (or another language) to TypeScript, developers often encounter issues that were previously implicit. This process can reveal bad design decisions and enforce type safety, making it harder to justify poor designs.

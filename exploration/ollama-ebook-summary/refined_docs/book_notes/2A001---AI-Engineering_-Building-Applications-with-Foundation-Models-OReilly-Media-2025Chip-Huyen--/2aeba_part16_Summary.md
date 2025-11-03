@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A001---AI-Engineering_-Building-Applications-with-Foundation-Models-OReilly-Media-2025Chip-Huyen--_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Correlation Between Metrics
 Metrics used to evaluate models should be analyzed for their correlation. Perfectly correlated metrics are redundant, while non-correlated ones might indicate an interesting insight or suggest that the metrics are not trustworthy.
@@ -33,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cost and Latency of Evaluation Pipeline
 Evaluation pipelines can add significant latency and cost to the application if not managed properly. Careful design is necessary to ensure that these costs do not overshadow the benefits.
@@ -57,7 +54,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Iteration of Evaluation Criteria
 As the application evolves, so will its evaluation criteria. It is essential to adapt these criteria over time to reflect changes in needs and user behavior.
@@ -81,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Reliability in Evaluation Pipeline
 A reliable evaluation pipeline is crucial for effective AI adoption. It enables risk reduction, performance improvements, and benchmarking progress.
@@ -105,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decision Between Hosting Models or Using APIs
 The choice between hosting models in-house and using model APIs depends on various factors including data privacy, performance, control, and cost.
@@ -151,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Public Benchmarks for Model Selection
 Public benchmarks can help identify poor models but may also include data that has been used in training many other models, making them less useful for finding the best models tailored to specific applications.
@@ -194,7 +187,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creation of Evaluation Pipeline
 Creating an evaluation pipeline involves defining criteria, tracking variables, and ensuring consistency over time. This process is critical for guiding the development of AI applications.
@@ -236,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prompt Engineering vs. Finetuning
 Unlike finetuning, which involves changing a model’s weights through training, prompt engineering modifies how the model responds by guiding it with instructions.
@@ -247,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Best Practices for Prompt Engineering
 Best practices include systematic experimentation and evaluation, clear task descriptions, and understanding the model's capabilities and limitations.
@@ -266,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conclusion on Prompt Engineering
 Prompt engineering is a fundamental skill for building AI applications, but it should be part of a broader set of skills including statistics, ML knowledge, and dataset curation.
@@ -286,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prompt Engineering for NER
 Background context explaining Named Entity Recognition (NER) and how prompting can be used to improve model performance. Mention that NER is a common task where models need to identify named entities such as persons, organizations, locations, etc., within unstructured text.
@@ -303,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Robustness of Models
 Background context on how models can be tested for their robustness by perturbing prompts and observing changes in output. Discuss the correlation between model strength and robustness.
@@ -320,7 +307,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### In-Context Learning for NER
 Background context on in-context learning and its application in tasks like Named Entity Recognition. Explain how models can learn from examples within prompts without explicit training.
@@ -337,7 +323,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stronger Models and Prompt Engineering
 Background on how stronger models are more robust to prompt changes and require less tweaking. Discuss the correlation between model capability and robustness.
@@ -356,7 +341,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continual Learning via In-Context Updates
 Background on continual learning and how in-context updates can keep models relevant over time. Explain the benefits of this approach.
@@ -373,7 +357,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Few-Shot Learning
 Background context explaining few-shot learning. Few-shot learning involves teaching a model using only a few examples.
@@ -402,7 +385,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Power and Few-Shot Learning
 Background context explaining how the power of a model affects its ability to perform with fewer examples.
@@ -430,7 +412,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Length and Model Capabilities
 Context length plays a critical role in how much information can be included in a prompt. The model's context limit has expanded rapidly, from 1K for GPT-2 to 2M for Gemini-1.5 Pro within five years.

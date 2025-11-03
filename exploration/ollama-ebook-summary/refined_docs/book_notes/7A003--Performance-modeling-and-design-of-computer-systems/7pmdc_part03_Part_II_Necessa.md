@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Part II Necessary Probability Background
 
 ---
 
-**Rating: 8/10**
 
 #### Quick Review of Undergraduate Probability
 Background context: This chapter provides a rapid review of fundamental probability concepts necessary for understanding more advanced topics throughout the book. Key concepts include basic definitions, axioms, and common distributions.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Averages vs Ensemble Averages
 Background context: Chapter 5 also discusses the distinction between time averages and ensemble averages, which are different ways to compute expected values over stochastic processes.
@@ -59,7 +56,6 @@ Time averages are specific to individual realizations, while ensemble averages c
 
 ---
 
-**Rating: 8/10**
 
 #### Probability of Events
 Background context: The probability of an event E is defined as the sum of the probabilities of all sample points in E. If each sample point has equal probability, then P{E} = (number of outcomes in E) / total number of outcomes.
@@ -73,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Probability on Discrete and Continuous Sample Spaces
 Background context: The sample space can be either discrete, with a finite or countably infinite number of outcomes, or continuous, with uncountably many outcomes.
@@ -87,7 +82,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Probability of Sample Space
 
@@ -100,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Law of Total Probability
 
@@ -126,7 +119,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Discrete Random Variables
 
@@ -149,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Number of Website Arrivals
 
@@ -169,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Until Next Arrival
 
@@ -189,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Geometric Distribution
 Background context: The geometric distribution models the number of trials needed to get the first success in a sequence of independent Bernoulli trials. Each trial has two possible outcomes, success or failure, and is characterized by its own probability of success.
@@ -205,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Poisson Distribution
 Background context: The Poisson distribution is used to model the number of events occurring in a fixed interval of time or space, given that these events occur with a known constant mean rate \( \lambda \).
@@ -221,7 +209,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cumulative Distribution Function (c.d.f.)
 Background context: The cumulative distribution function (c.d.f.) of a random variable \( X \), denoted by \( F_X(a) \), is defined as:
@@ -238,7 +225,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Poisson Distribution
 The Poisson distribution models the number of events occurring within a fixed interval, given that these events occur independently and at a constant average rate. The probability mass function (pmf) for a Poisson random variable \( X \sim \text{Poisson}(\lambda) \) is:
@@ -253,7 +239,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Binomial Distribution Approximation to Poisson
 When \( n \) is large and \( p \) is small, the binomial distribution can be approximated by the Poisson distribution with parameter \( \lambda = np \). This approximation becomes more accurate as both \( n \) increases and \( p \) decreases.
@@ -265,7 +250,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuous Random Variables and Probability Density Functions (p.d.f.)
 Continuous random variables take on an uncountable number of values. The cumulative distribution function (c.d.f.) \( F_X(a) \) for a continuous r.v. is defined as:
@@ -282,7 +266,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exponential Distribution
 The exponential distribution \( Exp(\lambda) \) models the time between events in a Poisson process. The p.d.f. is:
@@ -308,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expectation of a Geometric Random Variable
 Background context: A geometric random variable represents the number of trials needed to get the first success in repeated independent Bernoulli trials. The expected value (mean) can be calculated as:
@@ -326,7 +308,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expectation and Variance of the Poisson Distribution
 Background context: The Poisson distribution is used for modeling the number of events occurring in a fixed interval of time or space. For a random variable \(X \sim \text{Poisson}(\lambda)\), the expectation (mean) is equal to the parameter \(\lambda\).
@@ -344,7 +325,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expectation and Variance of the Exponential Distribution
 Background context: The exponential distribution models the time between events in a Poisson process. For a random variable \(X \sim \text{Exponential}(\lambda)\), the expectation (mean) is given by:

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Multi-leader replication
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronous and Asynchronous Replication
 Synchronous replication ensures that a write operation is acknowledged only after it has been successfully written to all replicas. Conversely, asynchronous replication allows a write to be acknowledged immediately, with the replica catching up later. This can lead to performance penalties but offers flexibility in handling high write throughput.
@@ -58,7 +56,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conflict Resolution Procedure
 Conflict resolution procedures can be executed by a data store whenever a conflict is detected. This ensures that inconsistencies are resolved systematically.
@@ -135,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Memory Leaks and Scaling Out Applications

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 5.1 Convergence
 
 ---
 
-**Rating: 9/10**
 
 #### Definition of Convergence of a Sequence of Numbers
 
@@ -127,7 +125,6 @@ x??
 
 These flashcards cover key concepts in the provided text, explaining them in detail and providing examples where appropriate. Each card is designed to help with understanding rather than pure memorization.
 
-**Rating: 8/10**
 
 #### Limit of a Sequence of Constants
 Background context: The limit of a sequence of constants is defined as the value that each term of the sequence approaches. This concept is fundamental to understanding convergence in various forms, including convergence in probability and almost sure convergence.
@@ -198,7 +195,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Average versus Ensemble Average
 
@@ -285,7 +281,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Average vs Ensemble Average
 
@@ -445,7 +440,6 @@ public class ServerSimulation {
 ??
 ---
 
-**Rating: 8/10**
 
 #### Time Average vs Ensemble Average
 
@@ -546,7 +540,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Aperiodicity Condition
 Aperiodicity is crucial for ensuring that the ensemble average of a system exists. It means the state of the system (number of jobs) should not be tied to time steps in any particular way; e.g., it shouldn't consistently cycle between states like 0 and 1.
@@ -595,7 +588,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Markov's Inequality
 Markov's Inequality is a fundamental result in probability theory that provides an upper bound for the probability that a non-negative random variable exceeds a certain value. It states that if \(X\) is a non-negative random variable, then:

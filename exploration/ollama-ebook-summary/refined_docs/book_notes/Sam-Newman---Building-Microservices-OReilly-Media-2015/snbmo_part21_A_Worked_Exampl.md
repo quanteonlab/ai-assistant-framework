@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** A Worked Example
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Use Well-Known Implementations for Encryption
@@ -41,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Avoid Implementing Your Own Encryption
@@ -54,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pick Your Targets
 Background context: Encrypting all data might simplify some aspects of security management but can significantly increase computational overhead. Instead, it's important to carefully assess which parts of the system need encryption based on sensitivity.
@@ -66,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decrypt on Demand
 Background context: Encrypting data at the point of access (on demand) helps minimize storage overhead while maintaining security. Storing decrypted data increases the risk of exposure if a breach occurs.
@@ -78,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Encrypt Backups
 Background context: Encryption should be applied to backups to ensure that even if backup files are compromised, the sensitive information remains protected.
@@ -90,7 +84,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logging
 Background context: Logging helps in detecting and responding to security incidents after they occur.
@@ -102,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Segregation with Microservices
 Background context: In a monolithic architecture, network segmentation might be limited, but microservices allow for finer-grained control over how services interact by placing them in different network segments. AWS provides VPCs that can further enhance security by isolating networks and allowing controlled communication between them.
@@ -114,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Secure Communication with Third-Party Royalty Payment System
 For secure communication with a third-party system handling royalty payments, ensure all data is transmitted over an encrypted channel.
@@ -125,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Internal Collaboration Services Security
 For internal services used only within the network perimeter, ensure that they are not exposed to external threats by limiting their access to trusted environments.
@@ -138,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### API Key Usage
 Background context: The company wants to share catalog data widely but prevent abuse. Using API keys can help track usage and control access.
@@ -164,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Final Architecture Overview
 Background context: The final architecture balances sharing of catalog data with strong protection for customer data. Different technologies are used based on the sensitivity and usage needs.
@@ -194,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Minimization
 In today's world, storing large amounts of data has become easier due to advancements in technology and databases. However, this abundance of data can pose significant risks related to privacy and security. To mitigate these issues, it is essential to store only necessary information that is absolutely required for business operations or legal compliance.
@@ -205,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Use of Established Security Protocols
 Security is a critical aspect of data protection, and it is often advisable to use well-established cryptographic tools and protocols rather than developing custom solutions. Using established technologies ensures greater security and reduces the risk of errors.
@@ -245,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Integrating Security Testing into CI Builds
 Background context: The text suggests integrating security testing tools like ZAP or Brakeman directly into Continuous Integration (CI) builds to ensure regular and automated checks for vulnerabilities.
@@ -275,7 +260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Microservices and Security Considerations
 Background context: The text discusses how microservices can help reduce the impact of security breaches by decomposing systems into smaller, more manageable components. It also mentions trading off security complexity for performance based on data sensitivity.
@@ -304,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defense in Depth and Security Best Practices
 Background context explaining the concept of defense in depth, its importance for security. Mention the need to regularly patch operating systems and use established cryptographic tools rather than creating custom ones.
@@ -316,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conway’s Law
 Background context on Conway’s law as stated by Melvin Conway in his 1968 paper and its application in system design.
@@ -328,7 +310,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evidence for Conway’s Law
 Background context on evidence supporting Conway’s law, including its widespread acceptance and applicability.
@@ -342,7 +323,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Amazon and Netflix Example
 Background context: Amazon and Netflix are often cited as examples where organizational structure is closely aligned with architecture design. Both companies prioritize small, independent teams to ensure rapid changes and innovation in their systems.
@@ -353,7 +333,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Impact on System Design
 Background context: The alignment between organizational structure and system design is crucial for achieving desired qualities in software systems. Studies show that loosely coupled organizations tend to produce more modular, less coupled systems compared to tightly coupled organizations.
@@ -364,7 +343,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conclusion on Organizational Structure and System Design
 Background context: The text concludes by emphasizing the importance of aligning organizational structures with desired architectural qualities to ensure higher quality systems and better software development processes.
@@ -377,7 +355,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single Team Ownership
 
@@ -408,7 +385,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Service Ownership
@@ -422,7 +398,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges with Large Monolithic Systems
 One of the main challenges in large monolithic systems is the difficulty or high cost associated with splitting them into smaller, more manageable services. This can make it harder for organizations to adopt microservices architectures effectively.
@@ -439,7 +414,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Microservices and Business Domain Alignment
 In a microservices architecture, services are modeled after business domains rather than technical ones. This approach aims to align teams with these business domains, enhancing their ability to retain customer focus and see features through to completion due to holistic understanding and ownership of technology associated with the service.
@@ -450,7 +424,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Delivery Bottlenecks and Shared Services
 A common reason for adopting microservices is to avoid delivery bottlenecks where one team holds up progress due to high workloads or production issues. In such scenarios, other teams might have to wait while changes are made, which can lead to delays in feature development.
@@ -465,7 +438,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Standardization vs. Flexibility
 Standardizing a technology stack can improve cross-team collaboration by making it easier for team members to understand and modify each other’s code. However, this standardization comes with trade-offs such as reduced flexibility in adopting the best solution for specific tasks.
@@ -476,7 +448,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Internal Open Source Model
 When internal open source is implemented, a small group of people are considered core committers who have full control over a project and can merge changes. This model encourages collaboration and sharing of knowledge across teams.
@@ -487,7 +458,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Splitting Services to Avoid Bottlenecks
 Splitting large services into smaller ones can help manage workloads and avoid bottlenecks. For example, if a service handles both music catalogs and ringtones, splitting it could allow specific teams to own certain functionalities, reducing the risk of delays.
@@ -500,7 +470,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Maturity of Services
 Explanation that allowing contributions from outside the core team depends on the maturity of the service. Less mature services have a higher risk of accepting subpar changes, so they may limit external contributions until the core structure is stable.
@@ -511,7 +480,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tooling for Internal Open Source Model
 Explanation that proper tooling, such as distributed version control systems with pull request features, is essential for managing contributions in an internal open source model. Inline commenting tools can facilitate discussions and improve the patch review process.
@@ -524,7 +492,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bounded Contexts and Team Structures
 
@@ -546,7 +513,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Orphaned Services
 
@@ -561,7 +527,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RealEstate.com.au Case Study
 
@@ -576,7 +541,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Build and Deployment Pipelines
 
@@ -600,7 +564,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Team Rotation and Domain Awareness
 People rotate between teams within a line of business (LOB) periodically, but tend to stay for extended periods. This ensures team members build strong domain awareness, improving communication with stakeholders. Each squad owns the entire lifecycle of services it creates, from building to decommissioning.
@@ -630,7 +593,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Squad Ownership and Lifecycle Management
 Each squad is responsible for the entire lifecycle of the services it creates. This includes building, testing, releasing, supporting, and even decommissioning them. A core delivery services team provides advice and guidance to these squads.
@@ -673,7 +635,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Autonomous Communication within LOBs
 Within a line of business, services can communicate freely in any way they see fit. This autonomy is balanced by mandated asynchronous batch communication between different LOBs. This coarse-grained approach aligns with the overall business structure.
@@ -701,7 +662,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Architecture and Organizational Alignment
 The architecture of REA is aligned with the way the business operates. Each LOB has its own set of services, and all integration methods are decided by the squads who act as custodians of those services. Between LOBs, communication is mandated to be asynchronous batch.
@@ -730,7 +690,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Autonomous Service Delivery
 REA uses a structure that allows for significant autonomy in service delivery. This includes the ability to take services down whenever needed, as long as they can satisfy batch integration with other parts of the business and stakeholders.
@@ -758,7 +717,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rapid Growth and Adaptability
 From a few services a few years ago, REA now has hundreds of services with more than people. The ability to deliver change at this pace has helped the company achieve significant success locally and is now expanding overseas. The architecture and organizational structure are continuously evolving.

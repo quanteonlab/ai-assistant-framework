@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Processing-Time Windowing via Ingress Time
 
 ---
 
-**Rating: 8/10**
 
 #### Windowing via Event-Time Panes
 Background context: In this approach, we emulate processing-time windows using event-time panes. This method allows for a more flexible handling of time-based computations on streaming data.
@@ -69,7 +67,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Session Windows Overview
 Session windows are a type of event-time window that captures periods of activity terminated by a gap of inactivity. They are particularly useful for analyzing user activities over specific time frames where correlation within sessions is needed.
@@ -159,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Custom Windowing Overview
 Background context explaining the concept. Custom windowing allows users to define their own windowing strategies beyond fixed, sliding, and session windows. This flexibility can be crucial for handling specific business requirements that don't fit into predefined window types.
@@ -293,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Aligned Fixed Windows
@@ -366,7 +361,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unaligned Fixed Windows Implementation
 Background context: The system aims to make load more predictable by allowing unaligned fixed windows. This can reduce provisioning requirements for handling peak loads, but it comes at a cost of reduced ability to compare across keys.
@@ -441,7 +435,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Custom Window Sizes per Customer
 

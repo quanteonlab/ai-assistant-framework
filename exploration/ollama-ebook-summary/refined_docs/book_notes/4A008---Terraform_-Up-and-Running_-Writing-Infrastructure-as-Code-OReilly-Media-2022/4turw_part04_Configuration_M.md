@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Configuration Management Versus Provisioning
 
 ---
 
-**Rating: 8/10**
 
 #### Overview of IaC Tools Comparison
 Background context: The provided text discusses the challenges and considerations when choosing an Infrastructure as Code (IaC) tool. It mentions that many tools overlap, making it difficult to determine which one is best suited for a specific use case without practical experience.
@@ -31,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-offs and Priorities
 Background context: The text outlines various trade-offs that need to be considered when choosing an IaC tool, including the nature of configuration management versus provisioning, mutable infrastructure versus immutable infrastructure, and more. These considerations are crucial for making a decision based on specific needs.
@@ -59,7 +56,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detailed Comparison of Tools
 Background context: The text mentions a detailed comparison between multiple IaC tools, including Terraform, Chef, Puppet, Ansible, Pulumi, CloudFormation, and OpenStack Heat. This comparison helps in making an informed decision by understanding the strengths and weaknesses of each tool.
@@ -93,7 +89,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Server Templating and Infrastructure Management
 If you use server templating tools such as Docker or Packer, the majority of your configuration needs are already handled during the image creation phase. Once you have an image created from these templates, you can then focus on provisioning infrastructure to run those images.
@@ -104,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mutable vs. Immutable Infrastructure
 Configuration management tools like Chef, Puppet, and Ansible default to mutable infrastructure, meaning that they apply changes directly to existing servers over time. This can lead to subtle configuration drift as each server accumulates a unique history of changes.
@@ -117,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Configuration Management and Provisioning Together
 For environments not using server templating tools, combining a provisioning tool with a configuration management tool is common. For example, Terraform can be used to provision servers while Ansible can manage the configurations on each server.
@@ -133,7 +126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Immutable Infrastructure
 Immutable infrastructure, often deployed via provisioning tools like Terraform, uses completely new instances for changes. This reduces the likelihood of configuration drift bugs and allows easy rollback to previous versions by deploying old images again.
@@ -150,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutability Trade-offs
 Background context explaining the downsides of using an immutable approach. Immutable changes can be slow when redeploying servers for trivial updates, and there's a risk of configuration drift after deployment.
@@ -162,7 +153,6 @@ The main drawbacks include long rebuild times for minor updates as you need to r
 
 ---
 
-**Rating: 8/10**
 
 #### Managing Server Deployment with Terraform
 Explanation of how Terraform handles server deployment in a declarative manner.
@@ -187,7 +177,6 @@ Terraform will recognize existing resources and only apply necessary updates.
 
 ---
 
-**Rating: 8/10**
 
 #### Procedural vs Declarative Infrastructure as Code (IaC)
 Background context explaining the concept. IaC tools are used to manage infrastructure using configuration files instead of manual processes. The two main approaches are procedural and declarative.
@@ -222,7 +211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations of Reusability in Procedural IaC Tools
 Background context explaining the concept. Procedural code must account for the current state of infrastructure, making reusability limited as this state changes frequently.
@@ -248,7 +236,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Declarative vs. Procedural Approach
 
@@ -298,7 +285,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### General-Purpose Language (GPL) vs. Domain-Specific Language (DSL)
 

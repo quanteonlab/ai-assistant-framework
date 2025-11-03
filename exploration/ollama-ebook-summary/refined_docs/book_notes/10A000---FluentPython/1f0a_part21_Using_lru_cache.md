@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Using lru_cache
 
 ---
 
-**Rating: 8/10**
 
 #### lru_cache Decorator Overview
 Background context: The `functools.lru_cache` decorator is a powerful tool for caching function results to improve performance. It uses a least recently used (LRU) algorithm to manage memory usage efficiently by storing only the most recent calls.
@@ -111,7 +109,6 @@ def costly_function(a, b):
 
 x??
 
-**Rating: 8/10**
 
 #### Parameterized Decorator Implementation as Class
 
@@ -251,7 +248,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Import Time vs Runtime
 Import time refers to when a module is loaded and its contents are evaluated, while runtime means when the code within that module is executed. Understanding this difference helps in grasping how decorators behave at various stages of program execution.
@@ -590,7 +586,6 @@ print(mc.method(10))  # Output: Calling method; 20
 ```
 x??
 
-**Rating: 8/10**
 
 #### Dynamic Scope vs Lexical Scope
 In 1960, McCarthy was not fully aware of the implications of dynamic scope. Dynamic scope remained in Lisp implementations for a surprisingly long time—until Sussman and Steele developed Scheme in 1975. Lexical scope does not complicate the definition of `eval` very much, but it may make compilers harder to write.
@@ -721,7 +716,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Design Patterns and First-Class Functions
 

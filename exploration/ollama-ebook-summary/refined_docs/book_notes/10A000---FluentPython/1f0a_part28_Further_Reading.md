@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 28)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Further Reading
 
 ---
 
-**Rating: 8/10**
 
 #### Generators and Custom Formats
 Background context explaining how generators support custom formats. Emphasize that this is to fulfill the promise of a Vector class that can do everything a Vector2d did, and more. This involves understanding standard Python objects' behaviors.
@@ -84,7 +82,6 @@ Protocols are useful in dynamically typed languages because they allow objects t
 
 ---
 
-**Rating: 8/10**
 
 #### Duck Typing
 Duck typing is Python's default approach to typing, which has been present since its early days. It is based on the idea that "if it looks like a duck and quacks like a duck, then it probably is a duck." In programming terms, if an object implements all the necessary methods of another type, it can be treated as that type.
@@ -185,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequence Protocol in Python
 Python has a robust data model that cooperates with essential dynamic protocols, such as sequences. The sequence protocol is formalized via Abstract Base Classes (ABCs) to ensure proper behavior when dealing with iterable objects.

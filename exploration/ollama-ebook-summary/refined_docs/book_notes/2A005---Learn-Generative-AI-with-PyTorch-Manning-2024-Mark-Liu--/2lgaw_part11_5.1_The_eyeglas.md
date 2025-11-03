@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 5.1 The eyeglasses dataset
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Conditional GAN Overview
@@ -40,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing Wasserstein Distance and Gradient Penalty
 Background context explaining how implementing Wasserstein distance and gradient penalty can improve image quality in GANs. The Wasserstein distance measures the earth-mover's distance between two probability distributions, making training more stable.
@@ -75,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Selection for Attributes
 Background context explaining how to select vectors associated with different features (e.g., male or female faces) so that the trained GAN model generates images with certain characteristics.
@@ -99,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training a cGAN Model
 To improve the quality of generated images, especially those from anime faces, the chapter discusses using an improved technique involving Wasserstein distance with gradient penalty. This method addresses convergence issues and improves image quality.
@@ -111,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient Penalty in WGAN
 Background context: To enforce the Lipschitz constraint, which ensures the critic’s score changes smoothly with input images, a gradient penalty is added to the loss function. This involves sampling points along the line between real and generated data and computing gradients of the critic's output.
@@ -122,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### cGAN Training Process
 Background context: In cGANs, both the generator and discriminator (referred to as the critic in WGAN) are conditioned on additional information like labels. The training involves feeding random noise along with these conditions into the generator and evaluating the generated data against real samples with similar conditions.
@@ -133,7 +126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### cGAN and WGAN Combined
 Background context: This section combines concepts from both cGAN and WGAN to improve training stability and sample quality by conditioning on additional information while using the Wasserstein distance loss function. It involves computing the Wasserstein loss and adding a gradient penalty for better convergence.

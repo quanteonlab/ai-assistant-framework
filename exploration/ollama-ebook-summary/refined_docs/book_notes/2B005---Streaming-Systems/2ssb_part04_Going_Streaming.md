@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Going Streaming When and How
 
 ---
 
-**Rating: 8/10**
 
 #### Windowing Strategies Overview
 Background context: The text introduces different windowing strategies used in data processing, such as fixed windows, sliding windows, and session windows. These techniques are essential for breaking down streaming data into manageable chunks to process it effectively.
@@ -64,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Windowed Summation on a Batch Engine
 Windowing is a technique where data is grouped into windows based on time or value. In this context, windowed summation involves accumulating inputs over a fixed time interval (e.g., two minutes) before producing output.
@@ -145,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Watermarks Overview
 Background context explaining watermarks. Watermarks are temporal notions of input completeness in the event-time domain, used to measure progress and completeness relative to the event times of records being processed. They represent a function \( F(P) \rightarrow E \), where \( P \) is processing time and \( E \) is event time.
@@ -245,7 +241,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Watermarks and Their Importance in Event-Time Processing
 

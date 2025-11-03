@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** II Coordination
 
 ---
 
-**Rating: 8/10**
 
 #### Formal Models for Distributed Systems
 Background context: To understand and reason about distributed systems, we use formal models that abstract away the complexities of implementation. These models help us define assumptions about node behavior, communication links, and timing. 
@@ -68,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fair-Loss Link Model
 Background context: The fair-loss link model assumes that messages may be lost and duplicated. If the sender keeps retransmitting a message, eventually it will be delivered to the destination. This model is often used as an abstraction for communication links where reliability can vary.
@@ -151,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Timeout Mechanism for Server Unavailability
 Background context explaining the concept. In scenarios where a client sends a request to a server, it may not receive a response due to various issues like network delays or server crashes. To handle such situations, clients can set up timeouts that trigger if no response is received after a certain amount of time.

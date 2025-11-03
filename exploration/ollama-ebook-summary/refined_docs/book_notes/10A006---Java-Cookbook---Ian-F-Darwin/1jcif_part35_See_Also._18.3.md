@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 35)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** See Also. 18.3 Calling Other Languages via javax.script. Problem. Solution. Discussion
 
 ---
 
-**Rating: 8/10**
 
 #### Running Java Programs from Within Another Program
 Background context: In many cases, you might want to run a Java program from within another Java program. However, this is generally not recommended due to performance overheads associated with starting a new JVM process.
@@ -112,7 +110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Background on Java Script Engines Before Oracle Dismantled java.net
 Background context explaining the historical availability of script engines before Oracle dismantled java.net. The site used to list many languages and allowed downloading of script engines directly.
@@ -205,7 +202,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Java Native Interface (JNI) Overview

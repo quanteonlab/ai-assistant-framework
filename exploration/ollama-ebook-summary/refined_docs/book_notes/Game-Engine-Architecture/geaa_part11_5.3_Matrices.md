@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 5.3 Matrices
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Interpolation (LERP)
 Background context: Linear interpolation is used in game programming for smooth transitions between two points or vectors. It helps in animations and interpolating positions over time.
@@ -35,7 +33,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrices in 3D Transformations
 Background context: Matrices are essential for representing linear transformations such as translation, rotation, and scaling in 3D space. They allow us to manipulate points and vectors efficiently using matrix multiplication.
@@ -75,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Affine Transformation Matrix
 Affine matrices are 4×4 transformation matrices used to preserve parallelism and relative distance ratios but not necessarily absolute lengths and angles. They can perform combinations of rotation, translation, scaling, and shear.
@@ -87,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix Multiplication
 Matrix multiplication involves combining two matrices to produce another matrix that performs both transformations. If A and B are transformation matrices, their product P = AB is also a transformation matrix.
@@ -99,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix Product Calculation
 To calculate the matrix product P = AB, we take dot products between the rows of A and the columns of B. Each dot product becomes one component of the resulting matrix.
@@ -122,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix Multiplication Order
 Matrix multiplication is not commutative, meaning \( AB \neq BA \). The order in which matrices are multiplied affects the resulting transformation.
@@ -134,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concatenation and Transformation Order
 Concatenating transformation matrices means applying them sequentially. The product of multiple matrices represents the combined effect of all individual transformations.
@@ -146,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transformations with Column Vectors
 When using column vectors for transformations, they "read" from right to left. The last matrix in the sequence (farthest from the vector) is applied first.
@@ -162,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Column Vector vs. Row Vector
@@ -189,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Identity Matrix
 Explanation of what an identity matrix is, including its properties and representation.
@@ -220,7 +209,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix Inversion
 Explanation of what a matrix inverse is and how it works.
@@ -248,7 +236,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Homogeneous Coordinates
 Explanation of homogeneous coordinates and their application in 2D rotation using matrices.
@@ -291,7 +278,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### 3D Rotations and Translations Using Matrices
 
@@ -315,7 +301,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### 4×4 Matrix for Combining Transformations
 
@@ -350,7 +335,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transforming Direction Vectors
 
@@ -380,7 +364,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Converting Homogeneous Coordinates to Non-Homogeneous
 
@@ -406,7 +389,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Homogeneous Coordinates and W-Component
 Background context explaining the concept of homogeneous coordinates and why points and vectors are treated differently. Specifically, the w-component for a point is set to 1, while it is set to 0 for a vector.
@@ -423,7 +405,6 @@ This treatment helps distinguish between points and vectors mathematically. The 
 
 ---
 
-**Rating: 8/10**
 
 #### Affine Transformation Matrices
 Background context explaining affine transformation matrices and how they are composed of translation, rotation, scale, and shear operations.
@@ -464,7 +445,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Translation Matrix in Affine Transformations
 Background context explaining the specific case of translation within affine transformations, including how it affects homogeneous coordinates.
@@ -504,7 +484,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rotation Matrices in Affine Transformations
 Background context explaining the specific forms of rotation matrices around different axes and their application.
@@ -587,7 +566,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scaling Matrices
 Scaling matrices are used to scale a point \( \mathbf{r} = [x, y, z]^T \) by factors along each axis. The matrix for scaling is given as:
@@ -634,7 +612,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Uniform vs. Nonuniform Scaling
 Uniform scaling occurs when the same scale factor is applied to all three axes (i.e., \( s_x = s_y = s_z \)). This means that shapes remain similar in form under uniform scaling, such as spheres remaining spherical.
@@ -675,7 +652,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concatenating Uniform Scale and Rotation Matrices
 When the uniform scale matrix \( S_u \) is concatenated with a rotation matrix \( R \), the order of multiplication does not matter (i.e., \( S_uR = RS_u \)). This property only holds for uniform scaling.
@@ -709,7 +685,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coordinate Spaces
 Coordinate spaces are used to describe the position and orientation of objects relative to a particular reference frame. In games, common coordinate spaces include model space (object space), world space, and view space.
@@ -743,7 +718,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model-Space Axes Directions
 Background context explaining the intuitive directions given to the axes, like front, up, and left/right. These names help in defining rotations and orientations.
@@ -760,7 +734,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Euler Angles in Model-Space
 Background context explaining how Euler angles (pitch, yaw, roll) are defined using the model-space basis vectors for clarity.
@@ -802,7 +775,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### World Space in Game Engines
 Background context explaining the role of world space as a fixed coordinate system that ties all objects together into one cohesive virtual world.
@@ -825,7 +797,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### View Space (Camera Space) Definition
 
@@ -865,7 +836,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coordinate Space Hierarchies in 3D Graphics
 
@@ -914,7 +884,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Change of Basis Matrix Concept
 Background context: A change of basis matrix transforms points and directions from a child coordinate system (C) to its parent coordinate system (P). This transformation is crucial for understanding how positions and orientations are represented across different coordinate systems. The matrix \( M_{C.P} \) indicates the transformation from child space to parent space.
@@ -926,7 +895,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scaling of Child Axes
 Background context: Scaling the child coordinate system is achieved by scaling the unit basis vectors appropriately. If a child space is scaled up or down, this affects the lengths of the \( i_C \), \( j_C \), and \( k_C \) vectors.
@@ -985,7 +953,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Extracting Unit Basis Vectors from a Matrix
 Background context: Given an affine transformation matrix, we can extract the unit basis vectors \( i_C \), \( j_C \), and \( k_C \) by isolating specific rows of the matrix. This is useful for extracting information like orientation without needing to explicitly calculate it.
@@ -1025,7 +992,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transforming Coordinate Systems vs Vectors
 
@@ -1050,7 +1016,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transformation Conventions
 
@@ -1075,7 +1040,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transforming Normal Vectors
 
@@ -1098,7 +1062,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Angle Preservation and Transformation Matrices
 Background context: The text discusses how transformation matrices (specifically, MA.B) preserve angles between surfaces and vectors when they only contain uniform scaling. However, non-uniform scaling or shear can distort these angles, necessitating the use of the inverse transpose matrix to maintain perpendicularity.
@@ -1109,7 +1072,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Storing Matrices in Memory - Approach 1
 Background context: The text explains two methods for storing matrices in memory within C/C++: contiguous storage of vectors (each row as a single vector) and strided storage of vectors (each column as a single vector). Approach 1, which stores vectors contiguously, is described.
@@ -1129,7 +1091,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Storing Matrices in Memory - Approach 2
 Background context: The text provides an alternative approach (2) for storing matrices, where each column contains one vector. This method is sometimes necessary when performing fast matrix-vector multiplies using SIMD microprocessors.
@@ -1149,7 +1110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix Storage in Game Engines
 Background context: The text mentions that most game engines store matrices using approach 1, where vectors are stored contiguously within the rows of a two-dimensional C/C++ array. This method is chosen because it matches row vector matrix equations.
@@ -1170,7 +1130,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determining Matrix Layout
 
@@ -1185,7 +1144,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix Representation of Rotations
 
@@ -1203,7 +1161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quaternions as Rotational Representations
 
@@ -1221,7 +1178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quaternion Representation Details
 
@@ -1238,7 +1194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quaternion for Smooth Interpolation
 
@@ -1256,7 +1211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Quaternion Representation
 Background context: A unit quaternion can be visualized as a three-dimensional vector plus a fourth scalar coordinate. The vector part \( \mathbf{q}_V \) is the unit axis of rotation scaled by the sine of the half-angle of the rotation, while the scalar part \( q_S \) is the cosine of the half-angle. This representation allows us to describe 3D rotations compactly.
@@ -1277,7 +1231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quaternion Operations
 Background context: Quaternions support operations such as magnitude and vector addition. However, the sum of two unit quaternions does not represent a 3D rotation because it would not be of unit length.
@@ -1290,7 +1243,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quaternion Multiplication
 Background context: The multiplication of quaternions is crucial for combining rotations. This operation follows a specific definition known as the Grassman product, which combines vector and scalar parts in a unique way.
@@ -1312,7 +1264,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quaternion Conjugate and Inverse of a Product
 Background context explaining how to find the conjugate and inverse of a product of quaternions. Include the relevant formulas.
@@ -1352,7 +1303,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rotating Vectors with Quaternions
 Background context explaining how to rotate vectors using quaternions. Include the formula and explanation.
@@ -1414,7 +1364,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quaternion Concatenation
 Background context explaining how to concatenate rotations using quaternions. Include relevant formulas and examples.
@@ -1477,7 +1426,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quaternion-Matrix Equivalence
 Background context: In 3D graphics and game engines, it is often necessary to convert between a quaternion representation of rotations and a matrix representation. This allows for flexible manipulation and interpolation of orientations.
@@ -1510,7 +1458,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rotational Linear Interpolation (LERP)
 Background context: Rotational linear interpolation is used to smoothly transition between two rotations in the game engine's animation or camera systems. It allows for natural-looking transitions between orientations.
@@ -1558,7 +1505,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spherical Linear Interpolation (SLERP)
 Background context explaining the problem with LERP and how SLERP addresses it. SLERP uses sines and cosines to interpolate along a great circle of the 4D hypersphere, ensuring constant angular speed.

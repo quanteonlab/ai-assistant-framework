@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Secret Management Tools with Terraform
 
 ---
 
-**Rating: 8/10**
 
 #### Encryption Key Management
 Background context: An encryption key is used to encrypt and decrypt data. Typically, it is managed by the service itself or relies on a cloud provider’s Key Management Service (KMS). The key can be stored in various secret management tools, which are designed to handle secure storage, retrieval, and usage of these keys.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Using API to Retrieve Secrets
 Background context: APIs are often used by applications to retrieve secrets securely during boot-up or runtime. This ensures that sensitive information like database passwords can be fetched without being hardcoded in the application code.
@@ -49,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Storing Secrets Directly in Code
 Background context: The provided text emphasizes the importance of not storing secrets directly in the code, especially for providers like AWS. This method is insecure and impractical as it hardcodes credentials across all users and environments.
@@ -77,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Secure Secrets for Machine Users
 Background context: The text highlights the need for secure storage of credentials in environments where no human interaction is present, such as CI servers. This often involves more robust and centralized solutions.
@@ -109,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Storing AWS Credentials Securely Using Environment Variables
@@ -144,7 +138,6 @@ This setup ensures that credentials are only stored in memory, providing an addi
 
 ---
 
-**Rating: 8/10**
 
 #### Machine Users and Authentication in CI/CD Pipelines
 Background context explaining that machine users, as opposed to human users, require secure authentication mechanisms for automation tasks. This is particularly important in CI/CD pipelines where automated processes need to authenticate to cloud services without storing secrets in plain text.
@@ -162,7 +155,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GitHub Actions as a CI/CD Server with OIDC (OpenID Connect)
 Background context explaining the integration of OpenID Connect for authentication between GitHub and AWS. This approach leverages OAuth 2.0 to securely authenticate users or services.
@@ -184,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### EC2 Instance with IAM Roles for CI/CD Authentication
 Background context: In this approach, you use an EC2 instance running Jenkins (a CI/CD server) and leverage AWS Identity and Access Management (IAM) roles to authenticate Terraform code. IAM roles provide temporary credentials, which are more secure than permanent access keys.
@@ -222,7 +213,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Attaching IAM Policies to EC2 Instances via Instance Profiles
 Background context: Once you have the policy defined, you need to attach it to an instance profile and then assign that instance profile to your EC2 instances. This ensures that only specific OS users can access metadata endpoints.
@@ -241,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### IAM Role with OIDC for Terraform
 Once you have set up the IAM OIDC identity provider, you can create an IAM role that allows specific GitHub repositories and branches to assume this role. The assumption policy is crucial for defining who can use these credentials.
@@ -273,7 +262,6 @@ This policy ensures that only specific GitHub repositories and branches are allo
 
 ---
 
-**Rating: 8/10**
 
 #### IAM Role and GitHub Actions Authentication
 
@@ -305,7 +293,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Environment Variables in Terraform
 
@@ -343,7 +330,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a CMK with AWS KMS
 Creating a CMK involves defining its key policy, which is then used to create the CMK.
@@ -378,7 +364,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Key Concepts in AWS KMS and Terraform for Secret Management
 
@@ -414,7 +399,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decrypting Secrets with Terraform
 
@@ -449,7 +433,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Decrypted Secrets in Resources
 
@@ -482,7 +465,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Secret Management Practices
 Background context: This section highlights the challenges in standardizing secret management practices across different teams using various methods.
@@ -494,7 +476,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using AWS Secrets Manager for Secret Storage
 Background context: This section describes the steps to use AWS Secrets Manager to store and retrieve database credentials securely.
@@ -537,7 +518,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advantages of Using Secret Stores
 Background context: This section lists the benefits of using centralized secret stores like AWS Secrets Manager, Google Secret Manager, Azure Key Vault, or HashiCorp Vault.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 7.4.2 Waiting for a task to complete the continuation model
 
 ---
 
-**Rating: 8/10**
 
 #### Continuation-Passing Style (CPS) Overview
 Continuation-passing style is a programming paradigm where function calls are replaced with callbacks. This allows for more flexible control flow, particularly useful in concurrent and functional programming.
@@ -29,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Unit Type for CPS
 The `Unit` type is used in functional programming languages to denote a function that has no return value and only performs side effects.
@@ -52,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuation-Passing Style (CPS)
 Background context explaining the concept. CPS is a programming technique where functions take an additional argument that specifies what to do with the result of the function, typically called a continuation. This can help manage asynchronous operations more effectively by composing functions as chains and handling cancellations easily.
@@ -75,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task in .NET Framework
 Background context explaining the concept. A task in the .NET Framework is an abstraction of a classic thread, representing an independent asynchronous unit of work that can be run concurrently and managed with high-level abstractions to simplify code implementation.
@@ -98,7 +93,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task Continuations
 Background context explaining the concept. Tasks in .NET support continuations, allowing you to define what should happen after a task completes. This can help in composing operations and managing asynchronous workflows.
@@ -120,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task Properties and Operations
 Background context explaining the concept. The `Task` class provides properties and methods like `IsCompleted`, `Result`, `Wait()`, etc., allowing you to inspect or control a task's state.
@@ -158,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task Composition and Data Isolation
 Tasks are used to encapsulate units of work, promoting a natural way to isolate data that depends on functions to communicate with their related input and output values. This is illustrated through a conceptual example where the task "grind coffee beans" produces coffee powder as its output, which serves as the input for the next task "brew coffee."
@@ -169,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task Creation Options
 Tasks can be instantiated with various options such as `TaskCreationOptions.LongRunning`, which informs the underlying scheduler about long-running tasks. This might bypass the thread pool to create dedicated threads for the task.
@@ -180,7 +171,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuation Model
 The continuation model allows tasks to wait for others to complete before executing their own logic, enabling sophisticated coordination between concurrent operations.
@@ -196,7 +186,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task-based Functional Parallelism
 Task-based functional parallelism allows the parallel execution of independent units of work, improving performance and efficiency in complex programs. The example uses a sequential implementation to start with, which will be refactored incrementally for better performance.
@@ -207,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequential Implementation vs Incremental Refactoring
 In the provided example, a face-detection program processes images sequentially. The objective is to refactor this implementation incrementally to improve performance and code compositionality through task-based parallelism.
@@ -220,7 +208,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Materialization and Execution of Tasks
 Background context: The issue with running tasks sequentially despite using `Task.Run` is due to the lazy evaluation nature of LINQ expressions. When an `IEnumerable<Task<Bitmap>>` is created, no actual work is done until the tasks are accessed.
@@ -242,7 +229,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Using Task.WhenAll for Parallel Execution
 Background context: The `Task.WhenAll` method is used to wait for multiple tasks to complete. This method ensures that all tasks are executed in parallel and only waits until they all finish, improving the overall performance of the program.
@@ -263,7 +249,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Sequential vs. Parallel Execution
 Background context: The original implementation uses a for-each loop to process images sequentially, which limits the program's ability to utilize multiple cores and threads effectively. By using `Task.Run` and `Task.WhenAll`, the tasks are scheduled but not started immediately; thus, they run sequentially.
@@ -287,7 +272,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Task Continuations and Non-blocking Operations
 To avoid blocking threads, it's essential to use continuations with tasks. This ensures that work is scheduled after a task completes without waiting for its result immediately.
@@ -315,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Materializing LINQ Queries for Parallel Execution
 Materializing a LINQ query ensures that the computation is executed immediately, allowing parallel execution. Simply running a LINQ expression does not guarantee parallelism.
@@ -333,7 +316,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuation Passing Style and UI Updates
 Continuation passing style is used to ensure that UI updates are performed on the correct thread, typically the UI thread. This prevents cross-thread operation exceptions and ensures a responsive user interface.
@@ -354,7 +336,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task Continuation and Synchronization Context
 Background context on how `TaskContinuationOptions` can be used to control the behavior of a continuation task. Specifically, you can use `OnlyOnCanceled` or `OnlyOnFaulted` to start a new task only if certain conditions are met.
@@ -375,7 +356,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task Continuation for Task Composition
 In software development, especially when dealing with asynchronous operations using tasks, it's essential to handle the continuation of tasks effectively. The provided example uses C# and Emgu.CV for face detection, where tasks are used to run different parts of the pipeline.
@@ -398,7 +378,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monad Pattern for Task Composition
 The concept of a monad is a powerful tool in functional programming that allows for handling side effects and composing asynchronous operations while maintaining purity. The example provided uses the `Compose` function to demonstrate how tasks can be composed, but it runs into issues due to type mismatches.
@@ -440,7 +419,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Monad Bind and Return
 Monads provide a framework for handling side effects in a functional way. The `Bind` operation is fundamental to monads, as it allows chaining of operations while managing the context (like tasks).
@@ -473,7 +451,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monadic Operations and Task Combinators
 Background context: In functional programming, monads are a powerful abstraction used to handle side effects or transformations of values. The provided text explains how to define `Bind` and `Return` operations for the `Task` type, which is an elevated type in .NET that represents asynchronous operations.
@@ -499,7 +476,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Return Method for Task
 Background context: The `Return` method is used to wrap a value into an instance of the elevated type, in this case, `Task<T>`. It serves as the starting point when you need to begin working with asynchronous operations.
@@ -520,7 +496,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monad Laws for Bind and Return
 Background context: To define a correct monad, `Bind` and `Return` need to satisfy certain laws. These laws ensure that the operations are consistent and predictable.
@@ -539,7 +514,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Monad Laws with Task
 Background context: The provided text shows how `Bind` and `Return` operations are implemented for the `Task` type to satisfy the monad laws. These implementations ensure that asynchronous operation composition works as expected.
@@ -574,7 +548,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TaskCompletionSource and Its Role
 Background context: The `TaskCompletionSource<T>` is a powerful mechanism for controlling asynchronous operations. It allows you to create a `Task` that can be manually controlled, which means you can manage its completion state (whether it has completed successfully, failed with an exception, or was canceled). This is particularly useful in scenarios where the underlying operation does not return immediately but finishes asynchronously.
@@ -586,7 +559,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bind Operator in Task Computation
 Background context: The `Bind` operator (also known as `SelectMany`) allows you to sequence asynchronous operations, where the output of one operation is used as input for the next. It unwraps the result from a task and passes it into a continuation function.
@@ -598,7 +570,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monadic Pattern for Task Operations
 Background context: The monad pattern is applied to task operations by using the `Bind` operator (`SelectMany`) to sequence asynchronous tasks. This approach helps in composing complex workflows and making them more readable.
@@ -612,7 +583,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monad and Monadic Operations
 
@@ -634,7 +604,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monadic Composition and Interoperability
 
@@ -659,7 +628,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functors and Mapping
 
@@ -679,7 +647,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monad Composition and Interoperation
 
@@ -698,7 +665,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monads and Concurrent Programming
 
@@ -717,7 +683,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functor Pattern in Functional Programming
 
@@ -737,7 +702,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Return Values for Tasks
 Background context explaining why immutable return values are important. This helps ensure thread safety and makes reasoning about program correctness easier.
@@ -755,7 +719,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avoiding Side Effects in Tasks
 Explanation on why tasks should not produce side effects, and how they can communicate with the rest of the program only through return values.
@@ -772,7 +735,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pipeline Pattern Overview
 Explanation of the traditional pipeline pattern and its limitations in terms of speedup and scalability.
@@ -793,7 +755,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### IPipeline Interface Definition
@@ -819,7 +780,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pipeline Implementation Details
 The `Pipeline` class implements the `IPipeline` interface and manages the execution of work items in a parallel, functional pipeline. It uses a combination of function composition and asynchronous task management to handle concurrent processing.
@@ -846,7 +806,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Enqueue Method and Work Item Management
 The `Enqueue` method is responsible for adding work items to the pipeline for processing. It takes an input value and a callback function, which will be invoked when the computation completes.
@@ -863,7 +822,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Execute Method and Pipeline Start
 The `Execute` method initiates the execution of the pipeline with specified buffer size and a cancellation token. It uses asynchronous tasks to process items from the buffer until completion or cancellation.
@@ -893,7 +851,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Pipeline Pattern Overview
 Parallel pipeline pattern is used to process a collection of items in parallel, ensuring efficient and concurrent processing. It leverages `BlockingCollection` for thread-safe access and task distribution among threads.
@@ -940,7 +897,6 @@ The `Enqueue` method adds items to the `BlockingCollection`, which are then proc
 
 ---
 
-**Rating: 8/10**
 
 #### Serial vs. Parallel Processing Performance Comparison
 Background context explaining the performance difference between serial and parallel processing, including the benchmarks provided.
@@ -977,7 +933,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Pipeline Implementation and Execution
 Background context explaining the implementation of a functional pipeline using F# functions and the `ToFunc` helper extension method for interoperability.
@@ -1017,7 +972,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task-based Parallelism and Functional Programming
 Background context explaining the use of task-based parallelism with functional programming paradigms.
@@ -1049,7 +1003,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuation Passing Style and Non-blocking Operations
 Background context explaining the use of continuation passing style for non-blocking operations.
@@ -1088,7 +1041,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Image Processing Pipeline Example
 Background context explaining how an image processing pipeline is constructed and executed.
@@ -1128,7 +1080,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task Dependency and Parallelism Limitations
 Background context explaining the limitations of parallelism due to task dependencies.

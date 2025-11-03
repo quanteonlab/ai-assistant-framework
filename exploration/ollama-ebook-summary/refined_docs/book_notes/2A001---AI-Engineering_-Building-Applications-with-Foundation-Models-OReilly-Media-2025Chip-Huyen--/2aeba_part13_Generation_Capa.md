@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A001---AI-Engineering_-Building-Applications-with-Foundation-Models-OReilly-Media-2025Chip-Huyen--_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Generation Capability
 
 ---
 
-**Rating: 8/10**
 
 #### F1 Score, Precision, Recall
 Explanation of additional metrics used in classification tasks beyond accuracy, including the definitions of F1 score, precision, and recall.
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sensitivity to Prompts
 Explanation of how small changes in prompts can affect the answers provided by models.
@@ -32,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fluency and Coherence
 Explanation of the two main metrics (fluency and coherence) used in evaluating text generation quality before generative AI.
@@ -46,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fluency and Coherence Metrics
 Background context explaining that fluency refers to how naturally a generated text sounds, while coherence ensures that sentences flow logically. These metrics were crucial in early NLG systems due to frequent grammatical errors and awkward sentence structures.
@@ -58,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Factual Consistency Metrics
 Background context explaining that factual consistency is a critical metric to prevent the generation of false information. Given the potential for catastrophic consequences, various techniques are being developed to detect and measure this.
@@ -70,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Safety Metrics
 Background context explaining that safety metrics evaluate whether AI-generated outputs can cause harm to users and society. This includes various types of toxicity and biases.
@@ -82,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hallucinations in Generative Models
 Background context explaining that hallucinations are undesirable outputs that do not align with reality. They can be problematic for tasks requiring factual accuracy.
@@ -94,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Self-Verification Technique: SelfCheckGPT
 Background context: SelfCheckGPT uses the principle that if multiple outputs from a model disagree with each other, the original output might be hallucinated.
@@ -106,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Safety Evaluation Criteria for AI Models
 Background context: Besides factual consistency, there are multiple ways in which a model's outputs can be harmful. Different safety solutions categorize harms differently—such as OpenAI’s content moderation endpoint or Meta’s Llama Guard paper. This section discusses various categories of unsafe content.
@@ -123,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Structured Outputs and Toxic Prompts
 Background context explaining how structured outputs are discussed in Chapter 2, and providing examples of prompts that may generate toxic content.
@@ -141,7 +130,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Automatically Verifiable Instructions
 Background context: Zhou et al. (2023) proposed a set of automatically verifiable instructions to evaluate models' instruction-following capability, which include various types such as keyword inclusion, length constraints, and JSON format.
@@ -173,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detectable Content Instructions
 Background context: The concept of detectable content instructions involves explicitly requiring certain elements to be present in the response. This includes using placeholders, bullet points, and sections.
@@ -200,7 +187,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Instruction Group: JSON Format
 Background context: JSON format instructions require models to wrap their entire output in a JSON structure. This ensures that the response is structured and can be easily parsed by other systems.
@@ -226,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Verification of Instruction Outputs
 Background context: The provided text discusses methods for verifying whether models have followed given instructions. Specifically, it mentions using a set of criteria to evaluate outputs against instructions, with each criterion framed as a yes/no question.
@@ -262,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Criteria-Based Evaluation of Model Outputs
 Background context: The provided text explains how model outputs can be evaluated using a set of yes/no criteria. Each instruction has corresponding criteria, and the model's performance on these criteria is scored.
@@ -305,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cost and Latency Optimization
 
@@ -324,7 +307,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Latency Metrics
 
@@ -343,7 +325,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cost Considerations
 
@@ -360,7 +341,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Evaluation Criteria
 

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.2.3 Creating the Add to Cart buttons
 
 ---
 
-**Rating: 8/10**
 
 #### Razor Pages Configuration and Layout Setup
 Background context: In this section, we explore how to set up Razor Pages for a web application called SportsStore. This involves creating necessary files like `_ViewImports.cshtml`, `_ViewStart.cshtml`, and `_CartLayout.cshtml`. These files help in defining namespaces, adding tag helpers, and setting the default layout for Razor Pages.
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Razor Page Creation Using Visual Studio
 Background context: This topic explains how to create a Razor Page in Visual Studio by utilizing the built-in template. The goal is to generate a basic structure for handling shopping cart operations.
@@ -48,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Cart Layout
 Background context: A layout file is essential for maintaining consistency across multiple Razor Pages. The `_CartLayout.cshtml` file defines the overall structure of pages using this layout.
@@ -80,7 +76,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HTTP Method POST vs. GET
 Background context explaining why different HTTP methods are used and their implications on web development. The difference between `POST` and `GET` is significant, especially concerning state changes.
@@ -101,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Enabling Sessions in ASP.NET Core
 Explanation on why session state is used and the benefits/drawbacks of different storage methods. The example uses an in-memory approach, which simplifies implementation but can lose data when the application restarts.
@@ -126,7 +120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing the Cart Feature in SportsStore
 Explanation of how to define a cart model, including its purpose and methods. The `Cart` class uses `CartLine` objects to represent each product in the cart.
@@ -156,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Calculating Cart Total Value
 Explanation of how to compute the total value of items in a shopping cart. The `ComputeTotalValue` method iterates over each line and calculates the sum of products' prices multiplied by their quantities.
@@ -180,7 +172,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Adding New Lines to Cart
@@ -216,7 +207,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Quantity for Existing Lines
 Background context: The `Cart` class should handle adding more of the same product to an existing line. Instead of creating a new `CartLine`, it should increment the quantity of the corresponding `CartLine`.
@@ -252,7 +242,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Removing Lines from Cart
 Background context: The `Cart` class should allow users to remove products from their cart. This is implemented using the `RemoveLine` method, which should remove a specific line and update the total quantity of items in the cart.
@@ -291,7 +280,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Testing Cart Total Calculation
@@ -327,7 +315,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Clearing Cart Contents
 Background context: This section explains how to test whether the contents of a cart can be properly cleared when the cart is reset. The test involves adding items to the cart and then verifying that all items are removed after calling the `Clear` method.
@@ -363,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defining Session State Extensions for Carts
 Background context: This section explains how to extend the `ISession` interface in ASP.NET Core to support storing and retrieving `Cart` objects as session data. The extension methods convert `Cart` objects into JSON format and back.
@@ -400,7 +386,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Razor Pages Overview and Implementation
 Razor Pages is a feature of ASP.NET Core that allows you to create pages with HTML content, Razor expressions, and server-side logic combined in a single file. It supports both rendering views and handling HTTP requests through page model classes.
@@ -434,7 +419,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### `Cart.cshtml.cs` Page Model Class
 The `Cart.cshtml.cs` file contains a page model class that handles HTTP requests, updates session state with the cart data, and renders the cart view. It provides methods to initialize the cart and handle POST requests.
@@ -479,7 +463,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Session State Management
 Session state in Razor Pages is managed using `HttpContext.Session`. The cart data is stored as JSON in the session, allowing it to persist across multiple requests.
@@ -502,7 +485,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Razor Pages Overview
 Razor Pages are a way to build web applications using ASP.NET Core, providing an alternative to MVC (Model-View-Controller) for simpler scenarios. They allow you to handle both GET and POST requests within a single page lifecycle.
@@ -513,7 +495,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Product Retrieval and Cart Management
 Razor Pages retrieve products from a database and handle cart management using session data. When a product is added to the cart, the cart's content is updated, stored back in the session, and the browser is redirected via a GET request to refresh the page without triggering duplicate POST requests.
@@ -530,7 +511,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing Razor Pages with Mocks
 Testing Razor Pages often requires setting up mocks for dependencies like repositories and session stores. This helps simulate the environment in which the page model operates.
@@ -587,7 +567,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Displaying Cart Contents and Navigation
 After adding a product to the cart, the Razor Page displays an updated summary of the cart contents. A button is provided for users to continue shopping or return to the previous page.
@@ -633,7 +612,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Navigation Controls and URL Composition
@@ -651,7 +629,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Razor Pages and Shopping Cart Display
 Background context: Razor Pages are a simplified approach to creating web pages in ASP.NET Core. They are well-suited for self-contained features like displaying the contents of a shopping cart, where the page handles both presentation and logic.
@@ -674,7 +651,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sessions for Data Persistence
 Background context: In web applications, sessions are used to associate data with a series of related requests. This is particularly useful for maintaining state across multiple user interactions.

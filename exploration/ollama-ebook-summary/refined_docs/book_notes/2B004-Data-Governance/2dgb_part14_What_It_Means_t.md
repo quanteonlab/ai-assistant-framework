@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B004-Data-Governance_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** What It Means to Be Transparent. Setting an Example
 
 ---
 
-**Rating: 8/10**
 
 #### Enforcing Access Controls and Responsibility
 Background context explaining the importance of having someone responsible for access controls, similar to a privacy tsar role. Emphasizes that this person should handle responsibility enforcement and accept consequences when things go wrong.

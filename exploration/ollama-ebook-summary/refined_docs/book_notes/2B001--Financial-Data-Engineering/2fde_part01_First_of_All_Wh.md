@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** First of All What Is Finance
 
 ---
 
-**Rating: 8/10**
 
 #### Market Equilibrium and Interest Rates
 Background context: Financial economists often investigate market equilibrium, a state where demand and supply intersect to stabilize market prices. In financial markets, this price is commonly represented by the interest rate, with supply and demand reflecting the quantity of money in circulation. When demand exceeds supply, interest rates typically rise; if supply surpasses demand, interest rates tend to decrease.
@@ -165,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Risk Management
 Risk management focuses on measuring and managing the uncertainty around the future value of a financial asset or portfolio. This involves identifying, assessing, and prioritizing risks to minimize potential losses and maximize returns.
@@ -330,7 +327,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Management vs. Data Engineering
 

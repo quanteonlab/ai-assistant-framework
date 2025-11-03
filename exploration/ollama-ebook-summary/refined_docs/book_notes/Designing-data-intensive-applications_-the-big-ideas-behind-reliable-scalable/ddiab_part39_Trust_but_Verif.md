@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 39)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Trust but Verify
 
 ---
 
-**Rating: 8/10**
 
 #### Data Management Services without Coordination
 Background context: This section discusses how dataflow systems can provide robust data management services for various applications while avoiding explicit coordination. This approach offers better performance and fault tolerance compared to systems that require synchronous coordination.
@@ -149,7 +147,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Corruption and Random Bit-Flips
 Background context: The text discusses various sources of data corruption, including random bit-flips that can occur even when data is not actively being modified. These bit-flips are rare but can still happen, especially with large numbers of devices running software. It highlights the importance of considering these issues in practice.
@@ -231,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Corruption and Auditing
 Background context: The text discusses the inevitability of data corruption due to hardware and software limitations. It emphasizes the importance of auditing to detect and fix such issues, highlighting that checking data integrity is crucial for both financial applications and other systems. Large-scale storage systems like HDFS and Amazon S3 employ background processes to ensure data reliability.
@@ -288,7 +284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event-Based Systems for Auditability
 
@@ -370,7 +365,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cryptocurrencies and Distributed Ledger Technologies
 Cryptocurrencies, blockchains, and distributed ledger technologies (DLTs) like Bitcoin, Ethereum, Ripple, Stellar, etc., have emerged to explore robust data integrity mechanisms. These systems involve a consensus protocol among different replicas hosted by potentially untrusting organizations.
@@ -521,7 +515,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cryptographic Auditing and Scalability
 In data systems, integrity-checking and auditing algorithms like those used in certificate transparency or distributed ledgers are becoming more prevalent. However, making these systems scalable while maintaining low performance penalties is a challenge that needs to be addressed.
@@ -635,7 +628,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Algorithmic Decision-Making and Its Impact on Individuals
 
@@ -685,7 +677,6 @@ For example, an algorithm designed to predict criminal recidivism might use hist
 ??x
 ---
 
-**Rating: 9/10**
 
 #### Automated Decision Making and Responsibility
 Background context explaining the concept. In automated decision making, when a human makes an error, accountability is clear due to legal and social frameworks. However, if an algorithm makes an error, determining responsibility becomes complex. The issue arises because algorithms can perpetuate biases and make decisions based on data that may be flawed or discriminatory.
@@ -752,7 +743,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Privacy Concerns in Tracking Services
 Background context: The text discusses the growing use of tracking devices and algorithms to analyze user data, which can lead to significant privacy concerns. Users often have little understanding or control over how their data is collected, analyzed, and used by companies providing services such as car insurance, health insurance, social networks, search engines, etc.
@@ -871,7 +861,6 @@ public class PrivacyChoiceExample {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Industrial Revolution Analogy
 Background context: The passage draws an analogy between the industrial revolution and our current transition to the information age, highlighting both the positive and negative aspects of technological advancements. It emphasizes how data collection and its misuse pose significant challenges that need addressing.

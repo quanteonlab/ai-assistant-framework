@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Load Balancing
 
 ---
 
-**Rating: 8/10**
 
 #### Splitting Workloads
 Background context: In microservice architectures, it is often beneficial to move multiple services from a single host onto separate hosts to improve throughput and scaling. This can also increase system resiliency by reducing the impact of a single host failure.
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spreading Your Risk
 Background context: To enhance system resilience, it is important to distribute resources across multiple hosts rather than relying on a single point of failure. This can be achieved by deploying microservices across different servers.
@@ -51,7 +48,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtualization and Host Distribution
 In modern computing, a host is often a virtual concept running on physical hardware. Ensuring services are distributed across different hosts can mitigate the risk of outages if one physical box goes down. This practice is crucial for maintaining service reliability.
@@ -62,7 +58,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Availability Zones in AWS
 AWS uses availability zones (AZs) as its equivalent of data centers. Services should be distributed across multiple AZs within a region to ensure high availability and resilience against failures at the data center level.
@@ -73,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Region Services
 For critical applications, distributing services across multiple regions provides an additional layer of resilience against regional failures or disasters.
@@ -84,7 +78,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load Balancing for Resilience
 Load balancing is essential for achieving resilience by distributing traffic across multiple instances, thereby avoiding single points of failure.
@@ -97,7 +90,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load Balancing Overview
 Background context: Load balancing is a technique used to distribute network traffic across multiple instances of a service, thereby improving performance and reliability. Different types of load balancers exist—hardware appliances and software-based solutions like mod_proxy—which share common capabilities such as distributing incoming requests and managing instance health.
@@ -109,7 +101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AWS Elastic Load Balancers (ELBs)
 Background context: AWS offers elastic load balancers (ELBs) as a service for managing traffic distribution across multiple instances. These can be used with security groups or VPCs to implement VLAN-like isolation.
@@ -121,7 +112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuration Management for Load Balancers
 Background context: Properly managing configurations for load balancers ensures that they are stored in version control and can be applied automatically, maintaining consistency across environments.
@@ -133,7 +123,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Single Point of Failure
 Background context: Even with load balancing, microservices may still have single points of failure if they rely on external services or persistent data stores. Ensuring that critical components are redundant is crucial.
@@ -147,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Worker-Based Systems
 Worker-based systems involve a collection of instances that work on a shared backlog of tasks. This model is particularly effective for batch processing, asynchronous jobs, and peak load scenarios where additional instances can be spun up on demand.
@@ -161,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scaling Challenges
 As systems grow, they may need to be rearchitected to handle increased load. Jeff Dean’s advice suggests designing for 10 times growth but planning to rewrite before reaching 100 times the original load.
@@ -175,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gilt’s Scaling Experience
 Gilt started with a simple monolithic Rails application that served well for two years but eventually faced scaling issues when the business grew. To handle increased load, they had to redesign their application.
@@ -189,7 +175,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Redesign Scenarios
 Redesigns can involve various actions: splitting apart an existing monolith, using different data stores, or adopting new technologies and platforms. The goal is often to improve performance, scalability, and maintainability.
@@ -203,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rearchitecting for Massive Scale
 There's a risk that seeing the need to rearchitect at certain scaling thresholds might lead people to build systems with massive scale from the beginning. However, this approach is often unnecessary unless absolutely required.
@@ -217,7 +201,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Experimentation and Scaling Priorities
 Background context: When starting a new project, it is crucial to prioritize rapid experimentation over upfront scaling efforts. Eric Ries emphasizes this by sharing an anecdote where he spent six months building a product with no demand, whereas he could have tested market interest before investing significant resources.
@@ -228,7 +211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scaling Databases
 Background context: Scaling databases is a critical aspect of building microservices. Different types of databases offer various scaling capabilities, and choosing the right one based on specific use cases ensures efficient resource utilization.
@@ -239,7 +221,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Availability vs Durability
 Background context: Separating the concepts of service availability from data durability is essential for designing robust systems. Ensuring that data remains safe even when services fail requires different strategies than ensuring services remain available at all times.
@@ -250,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scaling for Reads
 Background context: Many services primarily handle read operations, making it essential to efficiently scale these operations without overcomplicating the system architecture. Caching and read replicas are common strategies to achieve this.
@@ -283,7 +263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eventually Consistent Systems
 
@@ -296,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Read Replicas for Scaling Reads
 
@@ -309,7 +287,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sharding for Scaling Writes
 
@@ -322,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Queries in Sharded Systems
 
@@ -335,7 +311,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Shards to an Existing Cluster
 
@@ -348,7 +323,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Replication in Cassandra
 
@@ -361,7 +335,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scaling Databases for Writes
 
@@ -376,7 +349,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CQRS Pattern (Command-Query Responsibility Segregation)
 CQRS is an architectural pattern where commands (modifications) and queries (read operations) are handled by separate models. This separation can help in scaling different aspects of the application independently.
@@ -388,7 +360,6 @@ The key idea is that commands are used to modify state, while queries are used t
 
 ---
 
-**Rating: 8/10**
 
 #### Event Sourcing in CQRS
 Event sourcing is a technique where commands are stored as events, capturing changes to the state of an application. This approach allows for reconstructing the current state by replaying these events.
@@ -416,7 +387,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Query Projections in CQRS
 Query projections involve creating a view of data based on stored events. These projections can be used for read operations and may differ from the command model.
@@ -428,7 +398,6 @@ They can be implemented in various ways, such as event sourcing or directly quer
 
 ---
 
-**Rating: 8/10**
 
 #### Caching Strategy
 Caching is used to store previous results of some operation so that subsequent requests can reuse this stored value without recalculating it. This technique often eliminates unnecessary round-trips to databases or other services for faster responses.
@@ -447,7 +416,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Caching in CQRS
 In a CQRS setup, caching can provide similar benefits to read replicas but without requiring the backing store for the cache to be identical to the data store used for modifications. Different types of queries and reads can benefit from different caching strategies.
@@ -459,7 +427,6 @@ For example, you might use different types of caches for different queries to im
 
 ---
 
-**Rating: 8/10**
 
 #### Scalability with Caching
 Different caching strategies can be used based on the nature of the data being accessed, allowing for efficient handling of varying query loads without overloading the primary data store.
@@ -486,7 +453,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Client-Side Caching
 Client-side caching allows the client to store cached results, deciding when and if it needs a fresh copy. The downstream service can provide hints for optimal behavior.
@@ -508,7 +474,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proxy Caching
 Proxy caching uses a proxy server to cache responses between the client and the server. Examples include reverse proxies and CDNs like Varnish.
@@ -530,7 +495,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Server-Side Caching
 Server-side caching involves storing data within the server, often using specialized caching systems like Redis or Memcached. This method can simplify caching management but may introduce additional complexity in handling invalidation.
@@ -560,7 +524,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expires Header
 The Expires header is an alternative way to control caching. Instead of specifying a time-to-live, it sets an absolute expiration date and time.
@@ -573,7 +536,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Client Caching
 HTTP client libraries and caches handle much of the caching work for us, ensuring that requests are optimized for speed and efficiency.
@@ -602,7 +564,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Write-Behind Caching for Performance Optimization
 Write-behind caching can be used to buffer and batch writes, reducing write operations to a canonical source. This is useful during bursts of writes or when there's a high chance of writing the same data multiple times.
@@ -655,7 +616,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Caching for Resilience in Case of Failure
 Client-side caching can be utilized to serve stale data if the downstream service is unavailable, ensuring availability even when fresh content isn't immediately available. This approach is particularly useful for systems where serving stale data is better than no data at all.
@@ -696,7 +656,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hiding the Origin with Asynchronous Cache Repopulation
 In a scenario where an entire cache region fails, ensuring that requests do not hit the origin can be achieved by having the origin populate the cache asynchronously. This prevents overwhelming the origin and ensures stability.
@@ -770,7 +729,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hiding Origin from Client and Populating Cache Asynchronously
 Background context: This approach involves hiding the origin of data from the client and populating caches asynchronously to ensure system resilience. By handling failures quickly, it minimizes resource usage and latency, preventing cascading failures that can occur in a cache.
@@ -793,7 +751,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Caching in Microservices
 Background context: When implementing caching in a microservice architecture, it is important to consider the complexity introduced by multiple services. The more caches there are between you and the source of fresh data, the harder it can be to ensure that data freshness is maintained.
@@ -812,7 +769,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Autoscaling Overview
 Autoscaling involves automatically adjusting the number of active instances in a system based on real-time monitoring data. This is particularly useful for managing load variations and ensuring that resources are used efficiently, both in terms of cost and performance.
@@ -824,7 +780,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Predictive Scaling
 Predictive scaling uses historical data to anticipate when the system will experience increased load and scale resources accordingly. This approach helps in managing peak loads more efficiently by adjusting resources before the actual demand surges.
@@ -882,7 +837,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reactive Scaling
 Reactive scaling responds to real-time changes in load conditions, such as spikes or failures. This approach is useful for handling unexpected events and ensuring that the system can quickly adapt to varying demands.
@@ -916,7 +870,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cost Optimization with Autoscaling
 Cost optimization is a key benefit of using autoscaling. By scaling resources based on actual demand, you can reduce unnecessary costs associated with maintaining idle capacity during periods of low load.

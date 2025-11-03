@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 6.4.1 SelectMany the monadic bind operator
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Cold and Hot Observables
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Publish/Subscribe Pattern Overview
@@ -31,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Role of Subject in Rx
 In the context of reactive extensions (Rx), a `Subject` acts as both an observer and an observable. This duality makes it ideal for implementing Pub/Sub patterns since it can both consume notifications from publishers and broadcast these to subscribers.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing Custom Subjects
 While Rx provides built-in implementations of subjects, you can also create custom ones by implementing the `ISubject` interface. The key requirement is to satisfy the methods defined in this interface.
@@ -72,7 +67,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Subject as a Publisher-Subscriber Hub
 A `Subject` can act as a hub in the Pub/Sub pattern, intercepting and broadcasting notifications. It allows for complex logic such as merging or filtering of events before they are published.
@@ -83,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Subjects with IObservable and IObserver Interfaces
 The `ISubject` interface combines the functionalities of `IObserver` and `IObservable`. It provides methods like `OnNext`, `OnError`, and `OnCompleted` for handling notifications, making it a versatile component in event-driven architectures.
@@ -102,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### ReplaySubject Behavior
@@ -114,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hot vs Cold Observables
 Hot observables continue emitting events even when there are no active subscribers. They are "always on," similar to a mouse movement event where continuous notifications occur regardless of listener presence.
@@ -125,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rx Framework Concurrency Model
 The Rx framework operates on a push model and supports multithreading but is single-threaded by default. To enable parallel execution, you must use specific Rx schedulers to control thread usage.
@@ -136,7 +126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Constructs in Rx
 Parallel constructs in Rx programming allow you to combine multiple asynchronous sources, making it easier to handle and coordinate events from different independent tasks or computations.
@@ -147,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Observables and Concurrent Tasks
 Observables and observers handle asynchronous operations within a sequence using a push model. They can manage high-concurrency computations by directing incoming messages to specific threads.
@@ -158,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Subject Type Handling
 The Subject type is hot, which means it can lose messages when there are no subscribers. Careful consideration must be given to choosing between types like ReplaySubject, BehaviorSubject, and AsyncSubject based on whether historical data or the latest value is needed.
@@ -171,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rx Framework and Schedulers
 Background context: The Reactive Extensions (Rx) framework in .NET provides a powerful set of operators for working with asynchronous data streams. One key feature is its ability to handle concurrency through schedulers, which can run operations on different threads.
@@ -183,7 +169,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SubscribeOn Method
 Background context: The `SubscribeOn` method in Rx is used to specify which scheduler should be used for queuing messages that run on a different thread.
@@ -195,7 +180,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ObserveOn Method
 Background context: The `ObserveOn` method determines which thread or synchronization context the callback function will be run in.
@@ -207,7 +191,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RxPubSub Class Implementation
 Background context: The `RxPubSub` class provides a reusable generic publisher-subscriber hub using Rx.
@@ -219,7 +202,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Subject Class Usage
 Background context: The `Subject<T>` class is a concrete subject that can be subscribed to and also emits notifications.
@@ -239,7 +221,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Observable Pipeline Control
 Background context: The `RxPubSub` class provides methods to manage subscriptions and ensure proper threading for both subscription and observation.
@@ -253,7 +234,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### RxPubSub Class Overview
@@ -284,7 +264,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Subject State Management
 In the `RxPubSub` class, the state of observers is managed through a private `observers` collection. Each observer has its own `Subscription`, which can be unsubscribed from by calling `Dispose`. This ensures that when an observer no longer needs to receive updates, it can be removed without affecting other observers.
@@ -308,7 +287,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tweet Emotion Observable Implementation
 In Listing 6.7, the `tweetEmotionObservable` function is implemented using the `Observable.Create` factory operator in F#. It creates an observable that processes a stream of tweet emotions by filtering, grouping, and mapping operations.

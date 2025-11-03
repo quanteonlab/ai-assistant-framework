@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Security Exchanges. Commercial Data Vendors Providers and Distributors
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Formalizing Financial Data Needs
@@ -141,7 +139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Predictable Delivery Performance
 Background context: When choosing a data provider, it is crucial to consider their guarantees on latency, throughput, and uptime. These factors are essential for applications that require timely and reliable data delivery. For instance, real-time trading systems or live market analysis tools depend heavily on low latency and high throughput.
@@ -280,7 +277,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Alternative Data Overview

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 32)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 23.2 The MG1 Queue and Its Analysis
 
 ---
 
-**Rating: 8/10**
 
 #### The Inspection Paradox
 Background context: We introduce the Inspection Paradox by asking two questions. One pertains to a bus arrival scenario where you arrive at a random time and want to know how long you expect to wait for a bus. This question is followed by considering different distributions of inter-arrival times between buses, while maintaining an average mean.
@@ -120,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Renewal Process Definition
 A renewal process is defined as a sequence of events where the times between events are independent and identically distributed (i.i.d.) random variables with a common distribution \( F \). The interarrival times, denoted by \( X_n \) for \( n \geq 1 \), follow this common distribution.
@@ -220,7 +217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Average Reward and Cycle Length
 Background context: The time-average reward can be calculated using Renewal-Reward theory. For a cycle with a reward earned during a cycle \( \int_0^S (S-t) dt = \frac{S^2}{2} \), the expected reward is derived as follows:

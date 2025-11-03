@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Single Machine Versus Distributed Storage
 
 ---
 
-**Rating: 8/10**
 
 #### Compression Disadvantages
 Background context explaining that while compression saves space, it incurs extra time and resource consumption for reading or writing data. The trade-offs of different compression algorithms are discussed further in Appendix A.
@@ -138,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single Machine Versus Distributed Storage
 Background context: As data storage and access patterns become more complex, a single machine may not suffice to manage large volumes of data. This leads to the need for distributed storage, where data is spread across multiple servers for faster retrieval, scalability, and redundancy.
@@ -217,7 +214,6 @@ DynamoDB supports:
 ---
 These flashcards cover various aspects of distributed storage and consistency in databases, providing context and explanations for each key concept.
 
-**Rating: 8/10**
 
 #### File Storage Overview
 File storage involves organizing data into files and directories. A file has characteristics such as being finite, allowing append operations, and supporting random access.
@@ -307,7 +303,6 @@ public String readFromFile(String filename) {
 ??x
 ---
 
-**Rating: 8/10**
 
 ---
 #### Network-attached Storage (NAS)
@@ -375,7 +370,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Block Storage Overview
 Block storage provides fine control over storage size, scalability, and data durability beyond raw disks. Blocks are the smallest addressable units of data on a disk, often 4,096 bytes for current disks. Each block can contain metadata for error detection/correction.

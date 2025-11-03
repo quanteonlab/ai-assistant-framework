@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 29)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.3.1 Calculating theoretical peak memory bandwidth
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Bandwidth Calculation
 
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Roofline Performance Model for GPUs (Babel STREAM)
 Background context: The Roofline model is used to analyze and predict the performance limits of a system based on memory bandwidth and flop performance. This concept applies similarly to both CPUs and GPUs, helping understand their operational efficiency.
@@ -69,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Identifying Application Boundaries
 Background context: The plot helps identify if applications are memory-bound or compute-bound based on their arithmetic intensity and memory bandwidth requirements.

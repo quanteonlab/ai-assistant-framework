@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Single Sign-On Gateway
 
 ---
 
-**Rating: 8/10**
 
 #### Authentication Process
 Background context: The process of confirming that a user is who they claim to be is known as authentication. In traditional scenarios, this usually involves providing a username and password, but modern systems can use alternative methods like biometric data (fingerprint).
@@ -17,7 +15,6 @@ Authentication is about verifying identity, while authorization determines what 
 
 ---
 
-**Rating: 8/10**
 
 #### Authorization Mechanism
 Background context: Once authenticated, users are granted permissions to specific actions or resources. This mapping from an authenticated user (principal) to the allowed actions is known as authorization.
@@ -28,7 +25,6 @@ Django provides built-in mechanisms for managing users and handling authenticati
 
 ---
 
-**Rating: 8/10**
 
 #### Security Considerations
 Background context: Ensuring data security involves protecting it both in transit (using secure protocols) and at rest (using encryption). Additionally, securing underlying systems and networks is crucial. The human element, including user authentication and authorization, also plays a significant role.
@@ -39,7 +35,6 @@ The text mentions network perimeter protection, subnet isolation, firewalls, mac
 
 ---
 
-**Rating: 8/10**
 
 #### Fine-Grained Authorization for Microservices
 Fine-grained authorization goes beyond coarse-grained authentication by providing nuanced access control based on user attributes. For instance, a helpdesk application might allow only staff members with specific roles to view customer details or issue refunds, but limit the amount of refund in certain scenarios.
@@ -50,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Group-Based Access Control
 In fine-grained authorization, groups or roles are often used to grant permissions. For example, a CALL_CENTER group might have limited access to view customer details but can issue refunds of up to $50. A CALL_CENTER_TEAM_LEADER would have similar permissions but could issue higher amounts.
@@ -78,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service-to-Service Authentication and Authorization
 Service-to-service authentication involves programs or services authenticating with each other, which is different from human-computer interactions. One common approach is to assume that all internal service calls are implicitly trusted.
@@ -89,7 +82,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Centralized Service Access Control via Directory Server
 Background context: This approach leverages an existing infrastructure and a centralized directory server for managing service access controls. It ensures that all service interactions are authenticated through this central point, making it easier to manage permissions and access across multiple services.
@@ -101,7 +93,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Accounts for Authentication
 Background context: In this approach, clients have a set of credentials they use to authenticate themselves with an identity provider, which then grants the service necessary information for authentication decisions.
@@ -113,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Secure Storage of Credentials
 Background context: Storing credentials securely is crucial to prevent unauthorized access. The challenge lies in ensuring that the client has a secure way to store these credentials.
@@ -125,7 +115,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Flashcards
 
@@ -138,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### API Keys for Microservices Communication
 Background context explaining the use of API keys in microservice-to-microservice communication. Unlike traditional authentication mechanisms, API keys are designed to be simple and easy to implement but come with their own set of challenges.
@@ -167,7 +155,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### JSON Web Tokens (JWT)
 Background context explaining JWTs and their use in microservices communication. JWT is a compact, URL-safe means of representing claims to be transferred between two parties.
@@ -200,7 +187,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gateway Models for API Management
 Background context explaining the role of gateway models in managing and securing microservices. A gateway model acts as a central point of control over all external requests to a system, providing features like authentication, rate limiting, logging, and more.
@@ -231,7 +217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Verifying Caller Identity
 Background context explaining the concept. To mitigate the confused deputy problem, one approach is to verify the identity of the caller before performing any operations.
@@ -263,7 +248,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Complexity of Validation
 Background context explaining the concept. In scenarios where multiple services make downstream calls, the validation process can become increasingly complex. Each service might need to validate not only its own identity but also ensure that subsequent calls are valid.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 2.2 An end-to-end deep learning project with PyTorch
 
 ---
 
-**Rating: 8/10**
 
 #### Indexing and Slicing PyTorch Tensors
 Indexing and slicing allow you to access specific elements or groups of elements within a tensor. This is particularly useful when working with large datasets, as it enables efficient data manipulation without having to operate on every element individually.
@@ -46,7 +44,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### PyTorch Tensor Shapes
 Understanding the shape of a tensor is crucial because it dictates how you can perform operations on that tensor and ensures compatibility between tensors.
@@ -84,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mathematical Operations on PyTorch Tensors
 PyTorch tensors support a variety of mathematical operations, which are useful for data analysis and machine learning tasks. These include functions like `mean()`, `median()`, `sum()`, and `max()`.
@@ -132,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Obtaining Training Data for PyTorch Project
 Background context: In a deep learning project using PyTorch, we start by gathering and preparing training data. This involves collecting grayscale images of clothing items along with their labels.
@@ -159,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Deep Neural Network
 Background context: After preprocessing the data, you need to create a deep neural network using PyTorch.
@@ -190,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Adam Optimizer and Cross-Entropy Loss
 Background context: After defining the model, you need to choose an optimizer and loss function. For this task, we will use cross-entropy loss for multiclass classification and the Adam optimizer.
@@ -213,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training the Model
 Background context: During training, you iterate through the dataset multiple times (epochs), feed images through the model, compute the loss, and backpropagate gradients to update weights.
@@ -255,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluating the Model
 Background context: After training, you evaluate the model on unseen data (test set) to assess its performance.
@@ -300,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importing Libraries and Defining Transformations
 Background context: In this section, we import necessary libraries for our project using PyTorch and TorchVision. The `transforms` package from TorchVision helps us preprocess images by converting raw data into a suitable format for training deep learning models.

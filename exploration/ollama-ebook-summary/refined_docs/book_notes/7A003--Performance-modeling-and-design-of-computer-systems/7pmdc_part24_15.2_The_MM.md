@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 15.2 The MM
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/∞ Queueing System Overview
 In an M/M/∞ queue, there are an infinite number of servers to handle incoming jobs with interarrival times following an Exponential distribution and service times also following an Exponential distribution. The goal is to derive the probability distribution for the number of jobs in this system.
@@ -25,7 +23,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limiting Probabilities in M/M/∞
 The limiting probabilities π_i can be derived using time-reversibility equations. For an infinite server system, we have:
@@ -45,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Number of Jobs in M/M/∞
 Using the derived probabilities, the expected number of jobs N in the system can be calculated as:
@@ -60,7 +56,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Little's Law and Expected Response Time
 Applying Little's Law, which states that the expected number of jobs in a system equals the arrival rate multiplied by the average time spent in the system (E[N] = λ E[T]), we can derive:
@@ -75,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relation to Closed Systems and Think Time
 The M/M/∞ concept is similar to a think station in closed interactive systems, where the "service time" is actually the think time. Despite the non-exponential nature of think times, the M/M/∞ system remains insensitive due to its infinite capacity.
@@ -86,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Capacity Provisioning Rule for M/M/k
 To maintain a probability of queueing (PQ) below 20%, we need to determine the number of servers k. For an M/M/k system with arrival rate λ and service rate μ:
@@ -104,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Approximating M/M/∞ for M/M/k
 For an M/M/k system, if \( R \) (the resource requirement) is large:
@@ -119,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Square-Root Stafﬁng Rule Overview
 The square-root stafﬁng rule is a method for determining the minimal number of servers needed to ensure that the probability of queueing, \(P_{\text{Q}}\), does not exceed a given threshold \(\alpha\). This approach builds on the understanding that in an M/M/k system with large load factors (R), using approximately \(k = R + c\sqrt{R}\) servers can achieve this goal.
@@ -162,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blocking Probability in M/M/k
 The blocking probability \(P_{\text{block}}\) for an M/M/k/k queueing model can be used as a proxy for the probability of queueing, \(P_{\text{Q}}\), in the original M/M/k system. The relationship between these probabilities is:
@@ -256,7 +246,6 @@ This robustness is surprising because the proof assumes large \(R\). However, em
 
 ---
 
-**Rating: 8/10**
 
 #### Fraction of Delayed Customers (PQin)
 Background context: The text discusses how to calculate the fraction of delayed customers \( P_{\text{Qin}} \) in a system. This is derived using the block probability \( P_{\text{block}} \), which represents the probability that the number of requests \( XR \) exceeds a certain threshold \( k \).
@@ -286,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Effect of Increased Number of Servers
 Background context: The problem involves analyzing the effect of increasing the number of servers in an M/M/k system on customer delay and waiting time.
@@ -298,7 +286,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Capacity Provisioning to Avoid Loss
 Background context: The goal here is to determine the minimum number of operators needed in a call center such that fewer than 1% of calls are dropped.
@@ -313,7 +300,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Accuracy of Square-Root Stafﬁng Rule
 Background context: This problem tests the accuracy of the square-root stafﬁng approximation given in Theorem 15.2 for determining the minimum number of servers needed to ensure fewer than 20% of customers are delayed.
@@ -327,7 +313,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### 95th Percentile of Response Time - M/M/1
 Background context: This problem focuses on understanding the distribution and growth of response time \( T \) in an M/M/1 system, specifically the 95th percentile \( T_{95} \).
@@ -346,7 +331,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/k 95th Percentile of Time in Queue
 Background context: In Exercise 15.4, we derived the 95th percentile response time for an M/M/1 queue. Now, we aim to extend this to an M/M/k system where \( k \) servers handle jobs with arrival rate \( \lambda \), service rate \( \mu \) at each server, and utilization factor \( \rho = \frac{\lambda}{k\mu} < 1 \). We need to find the 95th percentile of queueing time for jobs that queue.
@@ -366,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Splitting Capacity in Server Farms
 Background context: In Exercise 15.6, we consider a server farm with two servers where jobs arrive according to a Poisson process with rate \( \lambda \). Jobs are split probabilistically between the two servers with fraction \( p \) going to server 1 and \( q = 1 - p \) going to server 2. The total service capacity is \( \mu \), which needs to be optimally allocated between the two servers, \( \mu_1 \) and \( \mu_2 \).
@@ -400,7 +383,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/G/∞ Insensitivity
 Background context: The M/G/∞ system consists of a single FCFS queue served by an infinite number of servers. Jobs arrive according to a Poisson process with rate \( \lambda \) and have generally distributed i.i.d. service requirements with mean \( \frac{1}{\mu} \). Surprisingly, the probability distribution of jobs in the system is insensitive to the specific form of the service time distribution.
@@ -425,7 +407,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Mean Response Time
 
@@ -477,7 +458,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/1 with Setup Times
 

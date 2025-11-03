@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Byzantine Faults
 
 ---
 
-**Rating: 8/10**
 
 #### Byzantine Faults
 Background context explaining the concept. In distributed systems, nodes may be unreliable and sometimes malicious. A Byzantine fault is a situation where a node might send arbitrary faulty or corrupted responses. This can happen due to various reasons including network delays, outdated state, etc.
@@ -20,7 +18,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Byzantine Generals Problem
 Background context explaining the concept. The Byzantine Generals Problem is a generalization of the Two Generals Problem, where generals need to agree on a battle plan despite unreliable communication. In the Byzantine version, some traitors might send false messages to confuse others.
@@ -32,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Byzantine Fault-Tolerant Systems
 Background context explaining the concept. A system is Byzantine fault-tolerant if it can operate correctly even when some nodes are malfunctioning or being attacked by malicious entities.
@@ -44,7 +40,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Practical Considerations in Distributed Systems
 Background context explaining the concept. In many server-side data systems, assuming Byzantine faults is impractical due to low memory corruption rates and controlled hardware.
@@ -56,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Peer-to-Peer Networks and Byzantine Fault Tolerance
 Background context explaining the concept. In peer-to-peer networks, there is no central authority to rely on, making Byzantine fault tolerance more relevant.
@@ -68,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Supermajority Requirement for Byzantine Fault Tolerance
 Background context explaining the concept. Most Byzantine fault-tolerant algorithms require more than two-thirds of nodes to function correctly.
@@ -82,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### System Model: Synchronous Model
 Background context explaining the concept. The synchronous model in distributed systems assumes bounded network delay, process pauses, and clock errors, meaning you know these values will never exceed some fixed upper bound.
@@ -94,7 +86,6 @@ The synchronous system model is used to design algorithms that can tolerate vari
 
 ---
 
-**Rating: 8/10**
 
 #### System Model: Partially Synchronous Model
 Background context explaining the concept. The partially synchronous model acknowledges that systems behave like synchronous ones most of the time, but occasionally exceed the bounds for network delay, process pauses, and clock drift.
@@ -106,7 +97,6 @@ The partially synchronous system model differs because it allows for occasional 
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Asynchronous Model
@@ -128,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Correctness of Distributed Algorithms
 To define the correctness of a distributed algorithm, one must specify its properties. For example:
@@ -147,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Safety vs. Liveness Properties
 Safety properties ensure "nothing bad happens," while liveness properties guarantee "something good eventually happens." Key safety and liveness examples include:
@@ -166,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Safety Properties Violation
 Background context: In distributed systems, safety properties define behaviors that should never occur. If a safety property is violated, we can pinpoint exactly when and where it happened. The violation cannot be undone; once it occurs, the damage is done.
@@ -180,7 +167,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Liveness Properties
 Background context: Liveness properties ensure that the system eventually reaches a desired state or behavior. Unlike safety properties, liveness violations can be resolved over time if certain conditions are met. For example, a request may not receive a response immediately, but it might in the future.
@@ -203,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### System Models and Reality Mismatch
 Background context: While system models help in reasoning about the correctness of distributed algorithms, they often simplify real-world complexities. Assumptions such as data surviving crashes or nodes remembering stored data can break down in practice.
@@ -228,7 +213,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quorum Algorithms and Node Amnesia
 Background context: Quorum algorithms rely on nodes remembering the data they store. If a node suffers from amnesia, it can break the quorum condition, leading to incorrect algorithm behavior.
@@ -251,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Packet Loss and Delay
 In distributed systems, network packet loss and arbitrary delays are common issues. These problems can occur during message transmission over a network. The reliability of communication between nodes cannot be guaranteed due to these uncertainties.
@@ -263,7 +246,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Clock Synchronization Issues
 Even with Network Time Protocol (NTP) setup, clock synchronization between nodes in a distributed system can be problematic. Nodes may experience significant time discrepancies, unexpected jumps, or have unreliable measures of their own clock errors.
@@ -275,7 +257,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partial Failures in Distributed Systems
 Partial failures, where a process may pause for a substantial amount of time or be declared dead by other nodes before coming back to life, are critical challenges in distributed systems. These partial failures can manifest due to various reasons such as garbage collection pauses.
@@ -287,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detecting Node Failures Using Timeouts
 To handle partial failures, distributed systems often rely on timeouts to determine if a remote node is still available. However, this approach can lead to false positives or negatives due to network variability.
@@ -299,7 +279,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Degraded Node States
 Degraded states, where a node functions at reduced capacity but continues to operate, pose additional challenges in distributed systems. Examples include network interfaces dropping to lower throughput rates unexpectedly.

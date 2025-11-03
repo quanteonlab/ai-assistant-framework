@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A001---AI-Engineering_-Building-Applications-with-Foundation-Models-OReilly-Media-2025Chip-Huyen--_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Tools
 
 ---
 
-**Rating: 8/10**
 
 #### Compound Mistakes and Higher Stakes
 Background context: The passage discusses how agents, when performing tasks involving multiple steps or complex actions, can face significant accuracy drops due to the cumulative effect of individual mistakes. Additionally, having access to powerful tools increases both the potential impact and risk if something goes wrong.
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Knowledge Augmentation
 Background context: Knowledge augmentation involves providing agents with additional context and information to improve their responses. This can include text, image, or SQL retrieval tools.
@@ -48,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Capability Extension
 Background context: Capability extension tools are designed to address inherent limitations of AI models, such as difficulty in performing certain tasks like arithmetic or programming. These tools can significantly enhance an agent's performance by providing necessary utilities directly.
@@ -76,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Autonomous AI Agents
 Background context: Autonomous AI agents can perform complex tasks like researching potential customers, drafting emails, sending first emails, and following up with responses. However, there is a risk associated with giving AI the authority to perform potentially harmful actions.
@@ -88,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Function Calling with Models
 Background context: Model providers support function calling, which allows models to use external tools for various tasks. This feature is expected to become more common in the future.
@@ -100,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Planning in Foundation Model Agents
 Background context: Complex tasks require planning, which involves understanding the task, considering different options, and choosing the most promising approach.
@@ -112,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Planning as an Important Computational Problem
 Background context: Planning is a well-studied computational problem that requires understanding and considering various steps to achieve a task.
@@ -126,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decoupling Planning and Execution
 
@@ -158,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Validation Heuristics
 
@@ -189,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Agent System Components
 
@@ -238,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Plan Generation and Evaluation
 
@@ -275,7 +263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Intent Classification Mechanism
 Intent classification helps agents understand the user's query to determine appropriate actions. This mechanism can be considered another agent within a multi-agent system, assisting with task decomposition and tool selection based on the intent.
@@ -300,7 +287,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Planning Processes
 Solving a task typically involves several stages: plan generation, reflection and error correction, execution, and further reflection and error correction upon receiving outcomes. These steps are essential for ensuring the goal is achieved accurately.
@@ -331,7 +317,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decomposition of Tasks
 Decomposing a task involves breaking it down into manageable actions, which is crucial for effective planning. This process helps in understanding the complexity and identifying the steps needed to achieve the goal.
@@ -367,7 +352,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Backtracking in Search
 Backtracking is a fundamental technique used to find solutions by incrementally building candidates and abandoning a candidate ("backtracking") as soon as it is determined that the candidate cannot possibly be completed to a valid solution. In search problems, if an action does not lead to a promising state, backtracking allows revisiting previous decisions.
@@ -378,7 +362,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Planning with World Knowledge
 Reasoning capabilities in models like LLMs allow them to predict outcomes of actions based on their vast world knowledge. This capability enables coherent planning by incorporating predicted outcomes into the sequence of actions, potentially leading to more effective plans.
@@ -389,7 +372,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agent Concept in Reinforcement Learning (RL)
 Agents in RL are defined as entities that take actions in dynamic environments to maximize cumulative rewards. The primary difference between RL agents and foundation model (FM) agents lies in their planners: RL agents use an RL algorithm for training, while FM agents rely on the model itself.
@@ -400,7 +382,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Plan Generation Challenges
 This section highlights the complexities in generating plans due to uncertain parameters and potential hallucinations (mistaken predictions) from AI models.
@@ -431,7 +412,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Planning Granularity
 Explanation of planning granularity and the trade-off between detailed and high-level plans, as well as how hierarchical planning can address this issue.
@@ -454,7 +434,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Translator Role
 Background context explaining the role of a translator in converting natural language plans to executable commands. It notes that translating is simpler and less prone to hallucinations compared to planning.
@@ -465,7 +444,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Complex Plans Overview
 Background context explaining different types of control flows (sequential, parallel, if statement, for loop) in the context of planning. These control flows determine the order in which actions can be executed.
@@ -482,7 +460,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Execution Support
 Background context: The ability to execute tasks simultaneously can significantly reduce latency and enhance user experience, especially when dealing with tasks that do not rely on sequential execution. For example, browsing ten websites at once is more efficient than sequentially opening them one by one.
@@ -526,7 +503,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reflection Mechanism in Agents
 Background context: Reflection is a critical component for agents to evaluate and adjust their plans during task execution. It helps in identifying errors, understanding the feasibility of user queries, and ensuring successful task completion.
@@ -566,7 +542,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interleaving Reasoning and Action (ReAct Framework)
 Background context: The ReAct framework proposes interleaving reasoning with action in an agent's workflow. This approach, where the agent reflects on its actions after each step or after a series of steps, allows for dynamic adjustments based on outcomes.
@@ -618,7 +593,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tool Selection for Agents
 The selection of tools is critical in task success but depends on the environment, task, and AI model used. The more tools an agent has, the more complex it becomes to use them effectively. Experimentation and analysis are necessary to determine which set of tools works best.
@@ -629,7 +603,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Different Tools for Different Tasks
 
@@ -658,7 +631,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluating Agent Frameworks
 
@@ -699,7 +671,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tool Transition
 
@@ -731,7 +702,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Planning Failures Overview
 Planning failures occur when an agent fails to execute a task correctly, often due to errors in generating or following a plan. Common issues include tool use failure, invalid parameters for valid tools, and incorrect parameter values.
@@ -758,7 +728,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Planning Dataset Metrics for Evaluation
 To evaluate planning failures, one can create a dataset where each example consists of (task, tool inventory). The agent is asked to generate multiple plans, and metrics are computed based on validity and other factors.

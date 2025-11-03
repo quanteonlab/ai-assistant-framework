@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 64 Consider Brands for Nominal Typing
 
 ---
 
-**Rating: 8/10**
 
 #### Nominal Typing vs Structural Typing
 In TypeScript, nominal typing differs from structural typing. In structural typing, a type is determined by its shape (properties and methods). For example:
@@ -118,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding npm Dependencies in TypeScript
 Background context: In JavaScript, npm is a package manager that handles both the libraries and dependencies required for projects. It categorizes these into different types based on their usage—dependencies, devDependencies, and peerDependencies.
@@ -197,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Dependencies and DevDependencies
 When managing dependencies in a Node.js project, it's crucial to understand the difference between `dependencies` and `devDependencies`. These terms are found in your `package.json` file.
@@ -325,7 +321,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Version Matching Issues: Library and Type Declarations Mismatch
 Background context explaining how version mismatches between libraries and their type declarations can occur. This often happens as a result of automatic dependency updating tools like Dependabot or when using `any` types for library imports without proper typing.

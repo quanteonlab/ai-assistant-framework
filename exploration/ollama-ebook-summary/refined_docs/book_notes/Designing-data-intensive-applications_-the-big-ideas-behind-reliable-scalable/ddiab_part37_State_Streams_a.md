@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 37)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** State Streams and Immutability
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Event vs Command Distinction
@@ -42,7 +40,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault-Tolerant Consensus Example
 The text mentions that a validation process needs to happen synchronously before an event is generated, often using a serializable transaction.
@@ -78,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Splitting Commands into Events
 The text also discusses splitting user requests into multiple events, such as a tentative reservation and a confirmation event.
@@ -116,7 +112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutability and State in Event Sourcing
 The text explains that databases traditionally store current state but that this can be contrasted with the immutable nature of event sourcing.
@@ -150,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mutable State and Immutability
 Background context: The text discusses how mutable state and an append-only log of immutable events can coexist without contradiction. This concept is particularly useful in stream processing, where understanding the evolution of state over time through a changelog is crucial.
@@ -182,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transaction Logs and Database State
 Background context: The text explains the role of transaction logs in databases, emphasizing that high-speed appends are the only way to change the log. The database is seen as a cache of the latest record values from the logs.
@@ -220,7 +213,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Events and Auditability
 Background context: The text highlights the importance of immutable events, especially in financial systems where auditability is critical. Incorrect transactions are not erased but corrected by adding compensating transactions.
@@ -250,7 +242,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Log Compaction and State Management
 Background context: The text introduces log compaction as a technique that retains only the latest version of each record in the log, discarding older versions.
@@ -282,7 +273,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Event Logs
 Background context explaining why immutable event logs are useful. This includes discussing how they make recovery easier and capture more information than a database that deletes items when they are removed from a cart.
@@ -317,7 +307,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Command Query Responsibility Segregation (CQRS)
 Background context explaining CQRS and how it allows for separating data write and read operations, providing flexibility in handling different query needs over time without modifying existing systems extensively.
@@ -364,7 +353,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Append-Only Log
 Background context explaining why an append-only log is useful, including how it simplifies recovery from bugs that overwrite data. Discuss the example of a shopping website where items are added and removed.
@@ -405,7 +393,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple Read Views from Event Logs
 Background context explaining how separating mutable state from immutable event logs allows for deriving multiple different read-oriented representations from the same log of events, using examples like Druid, Pista-chio, and Kafka Connect.
@@ -444,7 +431,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Event Sourcing and Read-Optimized State
@@ -459,7 +445,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency Control in Event Sourcing
 Event sourcing's asynchronous nature introduces challenges for ensuring consistency between the event log and read views, particularly when users perform writes that affect multiple parts of the system.
@@ -473,7 +458,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simplified Concurrency Control with Event Sourcing
 Event sourcing simplifies concurrency control by allowing each user action to be represented as a single, self-contained event. This reduces the need for multi-object transactions since an entire user action can often be captured in one write operation.
@@ -487,7 +471,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single-Threaded Log Consumer and Serial Execution
 In systems using event sourcing, a single-threaded log consumer can process events without requiring concurrency control because it only processes one event at a time within a partition.
@@ -501,7 +484,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Immutability and Data Churn
@@ -515,7 +497,6 @@ The higher the churn rate (frequent updates and deletions), the more impractical
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Considerations in Immutability
 Immutability can lead to significant storage overhead if not managed properly. Frequent updates and deletions on a small dataset increase the size of the immutable history, causing potential performance degradation.
@@ -530,7 +511,6 @@ Example: In a database that frequently updates and deletes small amounts of data
 
 ---
 
-**Rating: 8/10**
 
 #### Processing Streams - Writing Data to Storage
 One approach for processing streams involves writing the event data directly into a database, cache, search index, or similar storage system from which it can be queried by other clients.
@@ -552,7 +532,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream Processing with Operators and Jobs
 Processing streams often involves creating derived streams through a pipeline of operations. These operators are akin to Unix processes or MapReduce jobs, handling input streams in a read-only manner and producing output in an append-only fashion.
@@ -585,7 +564,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Complex Event Processing (CEP)
 Background context explaining CEP, which searches for certain patterns of events in event streams using high-level declarative query languages.
@@ -597,7 +575,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CEP Implementation Example: Esper
 Background context explaining an implementation of CEP using Esper, including its key features.
@@ -623,7 +600,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Stream Processors
 Background context explaining distributed stream processors, which support SQL for declarative queries on streams.
@@ -652,7 +628,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream Analytics
 Background context explaining stream analytics, which focuses on aggregations and statistical metrics over large event streams.
@@ -666,7 +641,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Averaging Over Time Windows
 Averaging over a few minutes helps smooth out short-term fluctuations and provides timely insights into traffic patterns or other metrics. This technique involves calculating an average value within a specified time interval, known as a window.
@@ -678,7 +652,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Windows in Stream Processing
 Time windows are used for aggregating data points within certain intervals, such as minutes, hours, or days. These windows help in filtering out noise and providing meaningful insights over time.
@@ -690,7 +663,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Probabilistic Algorithms in Stream Processing
 Probabilistic algorithms, such as Bloom filters, HyperLogLog, and percentile estimation algorithms, are used to process large volumes of data efficiently while providing approximate but useful results. These algorithms require less memory compared to exact methods.
@@ -702,7 +674,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Maintaining Materialized Views in Stream Processing
 Maintaining materialized views involves keeping derived data systems up to date with changes from a source database. This approach allows efficient querying of the updated dataset.
@@ -714,7 +685,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Search on Streams Using Percolator
 Percolator is a feature in Elasticsearch used for stream searching, where predefined queries are run against incoming documents to match events based on complex criteria.
@@ -728,7 +698,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Message Passing vs RPC
@@ -741,7 +710,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault Tolerance in Stream Processing
 Many actor frameworks do not guarantee message delivery if a node crashes, which means processing is not fault-tolerant without additional retry mechanisms.
@@ -753,7 +721,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event Time vs Processing Time
 Background context: The text discusses the differences between event time and processing time, highlighting issues that arise when processing events with a delay. Understanding these concepts is crucial for designing reliable stream processing systems.
@@ -768,7 +735,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Impact on Rate Measurement
 Background context: The text explains how redeploying a stream processor and processing backlog events can lead to misleading rate measurements based on processing time.
@@ -781,7 +747,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Windowing by Processing Time
 Background context: The text discusses challenges in defining windows for stream processors based on event timestamps, especially when processing is delayed.
@@ -794,7 +759,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defining Windows with Event Time
 Background context: The text explains the difficulty in defining when a window is complete if based on event time due to potential delays.
@@ -809,7 +773,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Straggler Events in Stream Processing
 
@@ -842,7 +805,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Windowing Strategies in Stream Processing
 
@@ -870,7 +832,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Timestamp Assignment in Distributed Systems
 
@@ -910,7 +871,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Clock Synchronization and Accuracy
 

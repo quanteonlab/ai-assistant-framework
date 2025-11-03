@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 29)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Atomic Commit and Two-Phase Commit 2PC
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Commit Overview
 Background context explaining atomic commit and its importance. Atomicity ensures that a transaction's writes are either all committed or all rolled back, preventing half-finished results.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Node Atomic Commit Challenges
 Explanation of challenges when atomic commit involves multiple nodes, including potential inconsistencies.
@@ -35,7 +32,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two-Phase Commit (2PC) Protocol
 Explanation of how 2PC works to achieve distributed atomic commit and its steps.
@@ -110,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Read Committed Isolation
@@ -123,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two-Phase Commit (2PC)
 Two-phase commit (2PC) is an algorithm used in distributed databases to ensure atomicity across multiple nodes, ensuring either all nodes commit or all abort.
@@ -135,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coordinator in 2PC
 In two-phase commit, the coordinator plays a crucial role as it manages the communication between the application and the participants (database nodes).
@@ -147,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Phase 1: Prepare Request in 2PC
 During the first phase of two-phase commit (prepare), the coordinator sends a request to all participants to confirm that they can commit.
@@ -159,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Phase 2: Commit or Abort in 2PC
 After receiving prepare responses, the coordinator decides whether all nodes can commit. If yes, a commit request is sent; if not, an abort request is issued.
@@ -171,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two-Phase Locking (2PL)
 Two-phase locking is not the same as two-phase commit; it provides serializable isolation by ensuring that once a transaction releases a lock, it never reacquires it.
@@ -185,7 +175,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overview of Two-Phase Commit (2PC)
 Background context: The two-phase commit protocol is used to ensure atomicity and consistency in distributed transactions, where a transaction spans multiple nodes or databases. It involves a coordinator node coordinating with participant nodes to either commit or abort the transaction based on their responses.
@@ -196,7 +185,6 @@ The two-phase commit (2PC) protocol ensures that a distributed transaction invol
 
 ---
 
-**Rating: 8/10**
 
 #### Transaction ID Assignment in 2PC
 Background context: In the two-phase commit process, each distributed transaction requires a unique transaction identifier (ID) assigned globally for coordination purposes. This ensures that transactions can be tracked and managed across different nodes.
@@ -207,7 +195,6 @@ In 2PC, each transaction begins with an application requesting a globally unique
 
 ---
 
-**Rating: 8/10**
 
 #### Single-Node Transactions and Preparation Phase
 Background context: Before the actual commit can occur, each participant node needs to perform single-node transactions independently. The preparation phase involves the coordinator sending a prepare request to all participants with the global transaction ID attached.
@@ -218,7 +205,6 @@ The purpose of single-node transactions in 2PC is to ensure that each participan
 
 ---
 
-**Rating: 8/10**
 
 #### Coordinator's Decision Making
 Background context: After receiving responses from all participants, the coordinator makes a final decision on whether to commit or abort the transaction based on the collective response. This decision must be written to disk as the commit point.
@@ -229,7 +215,6 @@ The coordinator collects "yes" and "no" responses from all participants after th
 
 ---
 
-**Rating: 8/10**
 
 #### Final Commit or Abort Request
 Background context: Once the coordinator has decided whether to commit or abort the transaction, it sends the final request to all participants. If any of these requests fail, the coordinator must retry until successful to enforce its decision irrevocably.
@@ -240,7 +225,6 @@ After deciding on the outcome (commit or abort), the coordinator sends this deci
 
 ---
 
-**Rating: 8/10**
 
 #### Two Points of No Return
 Background context: The two-phase commit protocol includes critical points where a participant's "yes" response or the coordinator’s final decision cannot be revoked. These ensure that once a transaction is prepared for commitment, it will either proceed to commit or be aborted irreversibly.
@@ -254,7 +238,6 @@ These points ensure atomicity by preventing any future changes to the transactio
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### 2PC Atomicity and Commit Records
@@ -277,7 +260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coordinator Failure in 2PC
 When the coordinator fails during a two-phase commit, it leaves participants in an uncertain state. If the coordinator crashes before sending the commit request, participants can safely abort the transaction. However, if they have already voted "yes" to prepare, they must wait for recovery instructions from the coordinator.
@@ -298,7 +280,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Three-Phase Commit (3PC)
 Three-phase commit is an alternative to 2PC designed to avoid the blocking nature of 2PC. It attempts to ensure atomicity by allowing participants to communicate among themselves and reach a consensus, but it requires assumptions about bounded network delay and process response times.
@@ -318,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Distributed Transactions Overview
@@ -330,7 +310,6 @@ Distributed transactions refer to operations that span multiple systems or nodes
 
 ---
 
-**Rating: 8/10**
 
 #### Database-Internal Distributed Transactions
 In this type of transaction, all participating nodes run the same database software, supporting internal transactions among them.
@@ -341,7 +320,6 @@ Database-internal distributed transactions involve nodes running the same databa
 
 ---
 
-**Rating: 8/10**
 
 #### Heterogeneous Distributed Transactions
 These transactions span different technologies (e.g., databases from various vendors or non-database systems like message brokers).
@@ -352,7 +330,6 @@ Heterogeneous distributed transactions use protocols like two-phase commit to en
 
 ---
 
-**Rating: 9/10**
 
 #### Exactly-once Message Processing
 This technique ensures that messages are processed exactly once, even if retries are needed, by combining message acknowledgment with database transactions.
@@ -363,7 +340,6 @@ Exactly-once message processing combines the atomic commit of a message's acknow
 
 ---
 
-**Rating: 8/10**
 
 #### Example Code for Exactly-once Message Processing
 Here is an example of how exactly-once message processing might be implemented using pseudocode:
@@ -394,7 +370,6 @@ The steps involve starting a distributed transaction, processing the message (e.
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Impact of Distributed Transactions
 Distributed transactions often suffer from significant performance penalties due to additional disk forcing and network round-trips required for crash recovery.
@@ -405,7 +380,6 @@ The primary reasons are additional disk forcing (fsync) for crash recovery and i
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Distributed Transactions in Practice
 Distributed transactions, while offering crucial safety guarantees, come with substantial operational and performance challenges. Understanding their different types and the techniques like exactly-once message processing can help mitigate some of these issues.
@@ -418,7 +392,6 @@ Key takeaways include recognizing the differences between database-internal and 
 
 ---
 
-**Rating: 8/10**
 
 #### Heterogeneous Technologies Support in XA
 Background context explaining how XA supports various databases and message brokers through its API.
@@ -429,7 +402,6 @@ XA is suitable because it provides a standard way to handle transactions across 
 
 ---
 
-**Rating: 8/10**
 
 #### Application Integration with XA in Java EE
 Background context explaining how XA transactions are integrated into Java EE applications through JTA, JDBC, and JMS APIs.
@@ -440,7 +412,6 @@ In Java EE, XA transactions are managed via the Java Transaction API (JTA). The 
 
 ---
 
-**Rating: 8/10**
 
 #### Coordinator Role in XA Transactions
 Background context explaining the role of the transaction coordinator and how it manages transactions involving multiple participants.
@@ -451,7 +422,6 @@ The transaction coordinator orchestrates the two-phase commit process. It keeps 
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Prepared but Uncommitted Transactions
 Background context explaining what happens when an application crashes during a distributed transaction using XA.
@@ -462,7 +432,6 @@ If the coordinator fails before committing, any participants with prepared but u
 
 ---
 
-**Rating: 8/10**
 
 #### Example XA Transaction Flow
 Background context explaining the flow of an XA transaction, including preparation and commitment phases.
@@ -497,7 +466,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### In-Doubt Transactions and Locking Issues
 Background context: In a database system, transactions may enter an "in-doubt" state where their outcome is uncertain. This typically happens during distributed transactions using two-phase locking (2PL) or two-phase commit (2PC). When a transaction coordinator fails, it leaves behind locks that prevent other transactions from accessing the affected rows.
@@ -536,7 +504,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coordinator Failure and State Recovery
 Background context: A transaction coordinator in a distributed system can fail during an ongoing transaction. When this happens, the state of the coordinator must be recovered from its logs to resolve any in-doubt transactions.
@@ -592,7 +559,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Orphaned In-Doubt Transactions and Heuristic Decisions
 Background context: Even after a database attempts to recover its state, there may be transactions that cannot be resolved automatically due to missing or corrupted logs. These are called "orphaned in-doubt transactions" and require manual intervention.
@@ -652,7 +618,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Replication of the Coordinator and Single Point of Failure
 Background context: To avoid single points of failure, the transaction coordinator should be replicated across multiple nodes. However, many implementations do not provide this by default.
@@ -684,7 +649,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations of Distributed Transactions with XA
 Background context: While two-phase commit (XA transactions) ensures consistency between distributed systems, it introduces operational challenges such as single points of failure and the need for manual intervention in case of coordinator failures.
@@ -748,7 +712,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Scalability and Coordination Challenges in Application Servers
@@ -760,7 +723,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations of XA Transactions
 Background context: The text highlights that XA transactions have limitations due to their need to be compatible with a wide range of data systems, making them a lowest common denominator. These include not being able to detect deadlocks across different systems and compatibility issues with Serializable Snapshot Isolation (SSI).
@@ -774,7 +736,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Impact on Fault-Tolerance in Distributed Transactions
 Background context: The text discusses the challenges that distributed transactions pose to fault-tolerant systems. Specifically, it mentions that if any part of the system fails, all participants must respond for the transaction to commit successfully, which can amplify failures.
@@ -785,7 +746,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consensus Algorithms: Uniform Agreement
 Background context: The text introduces the concept of consensus in distributed systems, formalizing it as a mechanism for multiple nodes to agree on a value. It specifies that uniform agreement means no two nodes decide differently, and every non-crashing node eventually decides some value.
@@ -796,7 +756,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Validity in Consensus Algorithms
 Background context: The text details another property of consensus algorithms called validity, which states that if a node decides a value v, then v must have been proposed by some node.
@@ -808,7 +767,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Uniform Agreement and Integrity Properties
@@ -821,7 +779,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Validity Property
 Background context: The validity property ensures that trivial solutions such as always deciding null are ruled out. For example, an algorithm should not decide null regardless of the input.
@@ -833,7 +790,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hardcoding a Dictator Node
 Background context: If you do not care about fault tolerance, achieving agreement, integrity, and validity is straightforward—hardcoding one node as a dictator can make all decisions. However, this approach fails if that node fails.
@@ -845,7 +801,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two-Phase Commit (2PC)
 Background context: The two-phase commit protocol (2PC) is a common method used in distributed transactions. However, it fails the termination property if the coordinator node crashes because in-doubt participants cannot decide whether to commit or abort.
@@ -857,7 +812,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Termination Property
 Background context: The termination property ensures that a consensus algorithm must make progress and not sit idle indefinitely. In other words, it guarantees that decisions will be made even if some nodes fail.
@@ -869,7 +823,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### System Model for Consensus
 Background context: The system model for consensus assumes nodes crash by suddenly disappearing, never to return. This assumption is made to ensure algorithms can tolerate failures without getting stuck.
@@ -881,7 +834,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Majority Requirement for Termination
 Background context: It has been proven that no consensus algorithm can guarantee termination if more than half of the nodes are faulty or unreachable. At least a majority of correctly functioning nodes is required.
@@ -893,7 +845,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Safety vs Liveness Properties
 Background context: Safety properties (agreement, integrity, and validity) guarantee correctness in decisions, while liveness properties like termination ensure that progress is made.
@@ -905,7 +856,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Byzantine Faults
 Background context: Most consensus algorithms assume nodes do not exhibit Byzantine faults—where nodes send contradictory messages or fail to follow the protocol correctly.
@@ -919,7 +869,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consensus and Byzantine Faults
 Background context: Consensus algorithms are designed to ensure that a group of nodes agrees on a single value. In the presence of Byzantine faults, consensus is possible if fewer than one-third of the nodes are faulty.
@@ -931,7 +880,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault-Tolerant Consensus Algorithms
 Background context: Several well-known algorithms like Viewstamped Replication (VSR), Paxos, Raft, and Zab are used for fault-tolerant consensus.
@@ -943,7 +891,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Total Order Broadcast
 Background context: Many consensus algorithms can be seen as a form of total order broadcast, where messages are delivered in the same order to all nodes. This is equivalent to performing several rounds of consensus.
@@ -955,7 +902,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Viewstamped Replication (VSR), Raft, and Zab
 Background context: These algorithms implement total order broadcast directly, making them more efficient than doing repeated rounds of one-value-at-a-time consensus.
@@ -967,7 +913,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Paxos Optimization
 Background context: Paxos can be optimized by performing multiple rounds of consensus decisions for a sequence of values.
@@ -979,7 +924,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single-Leader Replication and Consensus
 Background context: Single-leader replication, discussed in Chapter 5, can be seen as a form of total order broadcast if the leader is chosen by humans.
@@ -993,7 +937,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Epoch Numbering and Quorums
 Epoch numbering is a mechanism used to ensure uniqueness of leaders within consensus protocols. Each epoch has an incremented number, and nodes rely on these numbers to resolve leader conflicts. The protocol guarantees that only one leader exists per epoch, which helps prevent split brain scenarios where multiple nodes believe they are the leader.
@@ -1007,7 +950,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Leader Election with Epoch Numbers
 Epoch numbers play a critical role in ensuring consistency by providing a mechanism for resolving conflicts between leaders across different epochs. A higher epoch number always prevails when there is a conflict.
@@ -1019,7 +961,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Role of Quorums in Decision Making
 Quorums ensure that decisions made by leaders are accepted by a majority of nodes. A quorum typically consists of more than half of all nodes in the system.
@@ -1031,7 +972,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overlapping Quorums for Consistency
 To ensure consistency, both the election and proposal quorums must overlap. This ensures that any decision made by a leader has been validated during its leadership election.
@@ -1043,7 +983,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Overlapping Quorums in Code
 
@@ -1087,7 +1026,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two-Phase Commit (2PC) vs. Consensus Algorithms
 
@@ -1124,7 +1062,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Majority Requirement in Consensus Algorithms
 
@@ -1158,7 +1095,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recovery Process in Consensus Algorithms
 
@@ -1195,7 +1131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronous vs. Asynchronous Replication
 
@@ -1236,7 +1171,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations of Consensus Algorithms
 
@@ -1281,7 +1215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Transactions and Consensus
 

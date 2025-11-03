@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 47 Prefer Type-Safe Approaches to Monkey Patching
 
 ---
 
-**Rating: 8/10**
 
 #### Monkey Patching in JavaScript
 Monkey patching is a technique where you modify or add properties to objects, prototypes, and functions at runtime. This feature is common in dynamic languages like JavaScript but can lead to issues related to type safety and maintainability.
@@ -103,7 +101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Structured Code vs. Global Data
 Background context explaining why structured code is preferred over storing data in globals or on the DOM.
@@ -219,7 +216,6 @@ const xs = [0, 1, 2]; // Unsound due to possibility of undefined at runtime.
 ```
 x??
 
-**Rating: 8/10**
 
 ---
 
@@ -279,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Avoiding Mutations of Function Parameters
@@ -386,7 +381,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Any Types and Their Impact on Type Safety
 

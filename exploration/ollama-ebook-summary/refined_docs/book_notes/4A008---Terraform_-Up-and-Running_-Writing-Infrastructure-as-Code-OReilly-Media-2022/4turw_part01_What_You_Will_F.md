@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** What You Will Find in This Book
 
 ---
 
-**Rating: 8/10**
 
 #### DevOps and Infrastructure as Code (IaC)
 Background context: The text introduces DevOps practices, specifically focusing on Terraform. It highlights how traditional manual infrastructure deployment methods have been replaced by more automated and code-driven approaches to manage cloud and virtualized environments. The primary benefit is reducing the fear of downtime, misconfiguration, slow deployments, and other issues associated with human error.
@@ -24,7 +22,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform Overview
 Background context: The text introduces Terraform as an open-source tool created by HashiCorp. It is used to define infrastructure as code using a simple declarative language, which can then be deployed across various cloud providers like AWS, Azure, Google Cloud Platform, and private clouds.
@@ -49,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### DevOps Principles
 Background context: The text emphasizes the importance of DevOps principles in modern infrastructure management. It discusses how these practices help build upon solid automated foundations for other DevOps tools and methodologies.
@@ -67,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Target Audience
 Background context: The text specifies the target audience of the book, which includes various roles within an organization like sysadmins, DevOps engineers, release engineers, etc. Anyone who is responsible for infrastructure management or code deployment falls into this category.
@@ -83,7 +78,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Why Use IaC at All?
 Background context explaining the concept of Infrastructure as Code (IaC) and its importance. Discuss how it improves maintainability, consistency, and reproducibility compared to manual infrastructure setup.
@@ -111,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### When to Use Terraform, Chef, Ansible, Puppet, Pulumi, CloudFormation, Docker, Packer, or Kubernetes?
 Background context explaining the strengths and use cases of each tool mentioned.
@@ -278,7 +271,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### DevOps and Infrastructure-as-Code (IaC)
@@ -299,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Installing and Using Terraform (Getting Started)
 Background context: Chapter 2 covers the basics of setting up and using Terraform. It provides an overview of the Terraform CLI tool, how to deploy servers, clusters, and load balancers, and how to clean up resources.
@@ -318,7 +309,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Managing Terraform State
 Background context: Chapter 3 explains the importance of state management in Terraform. It covers how to store and manage state files, lock them to prevent race conditions, use workspaces, and adopt best practices for project layout.
@@ -336,7 +326,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Reusable Infrastructure with Modules
 Background context: Chapter 4 introduces the concept of modules in Terraform, which allow you to encapsulate infrastructure configurations and share them across projects. It covers creating basic modules, making them configurable, and handling versioning.
@@ -360,7 +349,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform Tips and Tricks
 Background context: Chapter 5 provides various tips for using Terraform effectively, including handling loops and conditionals, zero-downtime deployments, and common pitfalls.
@@ -382,7 +370,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Managing Secrets with Terraform
 Background context: Chapter 6 focuses on secrets management, explaining how to securely handle sensitive information in Terraform configurations and use secret management tools.
@@ -405,7 +392,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Working with Multiple Providers
 Background context: Chapter 7 discusses how to use multiple Terraform providers, including deploying to different AWS regions and accounts or using different providers altogether.
@@ -437,7 +423,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Production-Grade Terraform Code
 Background context: Chapter 8 covers best practices for building production-grade infrastructure code, including small, composable, testable modules and versioning.
@@ -460,7 +445,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing Terraform Code
 Background context: Chapter 9 provides guidance on how to test Terraform code, including manual and automated testing strategies.
@@ -480,7 +464,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Terraform as a Team
 Background context: Chapter 10 covers how teams can adopt Terraform effectively, including workflows, version control practices, and continuous integration/continuous delivery (CI/CD) strategies.
@@ -499,7 +482,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Better Secrets Management
 Background context: Chapter 6 of the third edition focuses on managing secrets securely, comparing various tools and techniques.
@@ -525,7 +507,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### New Module Functionality
 Background context: Terraform 0.13 introduced new features like `count`, `for_each`, and `depends_on` for modules, enhancing their flexibility and reusability.
@@ -552,7 +533,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Improved Stability with Terraform 1.0
 Background context: The third edition highlights improvements in stability and backward compatibility introduced by Terraform 1.0.
@@ -579,7 +559,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Automated Testing Improvements in the Second Edition
 Background context: The second edition added a new chapter dedicated to automated testing, covering topics such as unit tests, integration tests, end-to-end tests, dependency injection, test parallelism, and static analysis. This reflects significant advancements in how developers write and manage tests for Terraform code.
@@ -600,7 +579,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Module Improvements in the Second Edition
 Background context: The second edition introduced a new chapter dedicated to creating reusable, battle-tested, production-grade Terraform modules. This section covers best practices for developing high-quality Terraform modules that can be used across different projects and environments.
@@ -616,7 +594,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Workflow Improvements in the Second Edition
 Background context: The second edition significantly revised Chapter 10 to reflect changes in how teams integrate Terraform into their workflows. It provides detailed guides on taking application code and infrastructure code through development, testing, and production stages.
@@ -632,7 +609,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HCL2 Language Overhaul in Terraform 0.12
 Background context: The text mentions that Terraform version 0.12 introduced a major overhaul of the underlying language from HCL to HCL2, which included support for first-class expressions, rich type constraints, and more advanced features.
@@ -652,7 +628,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform State Revamp
 Background context: The text discusses changes in how Terraform manages its state. Version 0.9 introduced backends for storing and sharing state data, while version 0.10 replaced state environments with workspaces.
@@ -671,7 +646,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Provider Split in Terraform 0.10
 Background context: The text states that starting from Terraform 0.10, the core code was split into individual provider repositories, allowing for independent development and versioning of each provider.
@@ -689,7 +663,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Massive Provider Growth
 Background context: The text notes a significant increase in the number of available Terraform providers from a few major cloud providers to over 100 official and many more community providers. This growth allows for managing diverse infrastructure components.

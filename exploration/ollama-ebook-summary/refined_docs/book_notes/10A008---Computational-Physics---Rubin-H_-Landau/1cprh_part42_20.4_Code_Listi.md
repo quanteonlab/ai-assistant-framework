@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 42)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 20.4 Code Listings
 
 ---
 
-**Rating: 8/10**
 
 #### Wave Function Calculation from Scattering Integral Equation
 Background context: The wave function \( u(r) \) can be calculated using the inverse wave matrix \( F^{-1} \). This involves solving an integral equation of the form:
@@ -41,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gaussian Quadrature Implementation in Bound.py
 Background context: The `gauss` function is used to compute the Gauss quadrature points and weights for numerical integration. This function is essential for solving quantum mechanics problems where integrals over momentum space need accurate evaluation.
@@ -89,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hamiltonian Construction in Bound.py and Scatt.py
 Background context: In both `Bound.py` and `Scatt.py`, the Hamiltonian is constructed to solve for bound states or scattering states using the Lippmann-Schwinger equation. The Hamiltonian \( H \) is set up based on the potential \( V \).
@@ -133,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Types of Partial Differential Equations (PDEs)
 Background context explaining the concept. The general form for a PDE with two independent variables is given by:
@@ -152,7 +147,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Boundary Conditions for PDEs
 Background context explaining the concept. Table 21.1 provides examples of different types of PDEs and their discriminants. Table 21.2 lists the necessary boundary conditions for unique solutions in each type of PDE.
@@ -169,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Solution of PDEs vs ODEs
 Background context explaining the concept. Solving partial differential equations numerically is more complex than solving ordinary differential equations (ODEs) due to multiple independent variables and additional boundary conditions.
@@ -185,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Uniqueness and Stability in PDE Solutions
 Background context explaining the concept. The uniqueness and stability of solutions are crucial for numerical methods. Having adequate boundary conditions ensures a unique solution, but over-specification can lead to no solution existing.
@@ -200,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finite Difference Method (FDM)
 Background context explaining the concept. The finite difference method is a powerful technique for solving Poisson's and Laplace's equations, which are fundamental in electrostatics and relaxation problems.
@@ -226,7 +217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finite Element Method (FEM)
 Background context explaining the concept. The finite element method (FEM) is a more advanced technique compared to FDM, offering computational efficiency for solving Poisson’s and Laplace’s equations.
@@ -242,7 +232,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Physical Intuition for PDE Solutions
 Background context explaining the concept. Developing physical intuition helps in understanding whether one has sufficient boundary conditions to ensure a unique solution.
@@ -260,7 +249,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Boundary Conditions for Laplace's Equation
 Background context: In solving Laplace's equation, we often encounter boundary conditions that specify the potential on the boundaries of a region. For the square wire problem described, the bottom and sides are grounded at 0V, while the top is at 100V.
@@ -271,7 +259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Neumann Boundary Conditions for Laplace's Equation
 Background context: In this problem, we have Neumann conditions on the boundary since the values of the potential are not directly specified but rather the derivatives (gradients) are. This means that there is no electric field across these boundaries.
@@ -282,7 +269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving Laplace's Equation Using Fourier Series
 Background context: For simple geometries like the square wire problem, solving Laplace's equation can be done using a Fourier series. The solution is sought as a product of functions dependent on \( x \) and \( y \).
@@ -295,7 +281,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deriving the Ordinary Differential Equations
 Background context: By assuming that the solution is separable into a product of independent functions of \( x \) and \( y \), we can derive ordinary differential equations for each function. This leads to eigenvalue problems.
@@ -312,7 +297,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solution for X(x)
 Background context: Solving the separated ODEs for \( X(x) \) and \( Y(y) \) gives us different forms of solutions depending on the sign of \( k \). For the boundary condition at \( x = 0 \), we need to ensure that \( U(0, y) = 0 \).
@@ -325,7 +309,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determining the Eigenvalues
 Background context: The value of \( k \) is determined by the boundary condition at \( x = L \), which gives periodic behavior in \( x \).
@@ -341,7 +324,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Boundary Condition for Electrostatic Potential
 
@@ -365,7 +347,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### General Solution for Laplace’s Equation
 
@@ -384,7 +365,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determining Constants Using Fourier Series Projection
 
@@ -420,7 +400,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finite-Difference Algorithm for Numerical Solution
 
@@ -445,7 +424,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finite-Difference Approximation for Laplace’s Equation
 Background context: The finite-difference method is used to approximate solutions to partial differential equations (PDEs) such as Laplace's and Poisson's equations. For a given point \((i, j)\) on the grid, the potential at that point can be approximated by averaging the potentials of its nearest neighbors.
@@ -484,7 +462,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Boundary Conditions and Relaxation Method
 Background context: In the finite-difference method, boundary conditions are fixed values of the potential along the boundaries. The relaxation method iteratively updates the potential until convergence is achieved.
@@ -528,7 +505,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence and Initialization of the Relaxation Method
 Background context: The relaxation method may converge slowly, but it is still faster than some other methods. To accelerate convergence, two clever tricks are often used.
@@ -561,7 +537,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Boundary and Initial Guess Setup
 Background context: The boundary conditions are fixed values of the potential along the edges of the grid. An initial guess is made for the interior points, which will be iteratively updated until convergence.

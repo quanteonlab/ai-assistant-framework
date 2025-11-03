@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 35)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 16.3.2 Chaotic Bifurcations
 
 ---
 
-**Rating: 8/10**
 
 #### Pendulum Limit Cycles and Chaotic Motion
 
@@ -41,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Phase Space Without Velocities
 
@@ -75,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bifurcation Diagram for Chaotic Pendulum
 
@@ -151,7 +147,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Chaotic Frequencies in Pendulum
 
@@ -200,7 +195,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Pendulum Analysis Using Fourier Components
 Background context: The behavior of a nonlinear pendulum, driven by external sinusoidal torque, can exhibit complex periodic behaviors. These behaviors include three-cycle and five-cycle structures in phase space. The objective is to analyze these structures using Fourier components.
@@ -234,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pendulum Analysis Using Wavelets
 Background context: Wavelet analysis is more appropriate for signals that occur over finite periods of time, such as chaotic oscillations. The objective is to compare the Fourier and wavelet analyses of the pendulum's behavior.
@@ -262,7 +255,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Double Pendulum Analysis
 Background context: The double pendulum has two coupled motions, making its equations nonlinear and complex. Even without external driving forces, the system can exhibit chaotic behavior due to the coupling between the two pendulums.
@@ -295,7 +287,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Chaotic Billiards Analysis
 Background context: Chaotic billiards involve a particle moving freely in a straight line until it hits a boundary wall, which causes specular reflection. The objective is to explore the behavior of four types of billiard systems (square, circular, Sinai, and stadium).

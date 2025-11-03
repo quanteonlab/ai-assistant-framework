@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 1B001---Proofs---Jay-Cumming_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Quantifiers and Negations
 
 ---
 
-**Rating: 8/10**
 
 #### Truth Table for Implication
 Background context: The truth table for implication (P)Q and its dual (P,Q) is crucial to understand how logical statements can be evaluated. These tables show when a statement P implies Q, and vice versa.
@@ -123,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quantifiers: 8 and 9
 Background context explaining the concept. The symbols @ (means “there does not exist”) and 9 (means “there exists a unique”) were mentioned, but the focus is on the quantifiers 8 (for all) and 9 (there exists). These are used to express mathematical statements in formal logic.
@@ -197,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### De Morgan's Law and Negation of Quantifiers
 Background context explaining the concept. In logic, De Morgan’s Laws describe how to negate compound statements involving conjunctions and disjunctions. Specifically, the negation of a conjunction can be expressed as a disjunction with each term negated, and vice versa.
@@ -254,7 +250,6 @@ The answer with detailed explanations. The context and background are crucial fo
 
 ---
 
-**Rating: 9/10**
 
 #### Logical Negation of a Statement
 Background context explaining the logical negation process, including how to negate quantified statements and implications.
@@ -314,7 +309,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Social Mobility and Income Changes (2000 - 2015)
 Background context: The provided data shows changes in median income based on highest education attained from 2000 to 2015. High school dropouts saw a significant decrease, while those with at least one college degree experienced the smallest decrease or even an increase.
@@ -356,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proof by Epsilon-Delta for Sequence Limits
 Background context explaining the concept. The text discusses proving that a sequence converges to a limit using the epsilon-delta method. Specifically, it shows how to prove that the sequence \(a_n = \frac{3n+1}{n+2}\) converges to 3.
@@ -473,7 +466,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implication and Converse
 Background context: In logic, an implication (P → Q) states that if P is true, then Q must also be true. The converse of this implication is (Q → P). An implication can be true while its converse is false.
@@ -758,7 +750,6 @@ Background context: The motto of Oceania in George Orwell's novel "1984" consist
 ??x
 ---
 
-**Rating: 8/10**
 
 #### Logical Equivalence A
 Logical equivalence refers to statements that are always true under the same conditions. We will check each pair of logical expressions to see if they are equivalent by converting them into simpler forms or using truth tables.

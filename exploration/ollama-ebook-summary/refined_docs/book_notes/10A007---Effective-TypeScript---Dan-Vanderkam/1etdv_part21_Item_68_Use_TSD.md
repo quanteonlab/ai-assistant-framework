@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 68 Use TSDoc for API Comments
 
 ---
 
-**Rating: 8/10**
 
 #### Version Mismatch and Dependency Management
 Background context: When working with TypeScript, it's crucial to manage dependencies between libraries and their type declarations. Different versions of a library may require corresponding @types versions, which can lead to version mismatches if not managed properly.
@@ -114,7 +112,6 @@ In an editor, you would see:
 
 x??
 
-**Rating: 8/10**
 
 #### Marking Methods as Deprecated
 
@@ -242,7 +239,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avoid Transitive Type Dependencies in Published npm Modules
 Background context: This concept is about ensuring that when you publish an npm module, it does not depend on transitive @types dependencies. This helps maintain a good experience for all TypeScript developers and can improve compiler performance by severing unnecessary dependencies.

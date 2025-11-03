@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 13 MM1 and PASTA. 13.1 The MM1 Queue
 
 ---
 
-**Rating: 8/10**
 
 #### Rate of Transitions Leaving State 1 to Go to State 2
 Background context: In an M/M/1 queue, the rate of transitions leaving state 1 (which means having one customer) is determined by the arrival rate λ. The system moves from one state to a higher state with this rate.
@@ -86,7 +84,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### PASTA Principle
 The PASTA (Poisson Arrivals See Time-Average) principle states that for a queueing system with a Poisson arrival process, the number of customers present at any given time is statistically independent of when those arrivals occur. This means you can compute the fraction of time the system has \(n\) jobs by averaging over what arrivals see at the moment they enter the system.
@@ -250,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/1 Finite Capacity System Analysis
 
@@ -514,7 +510,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Response Time Distribution for M/M/1 Queue
@@ -660,7 +655,6 @@ public class ThresholdQueue {
 
 The exact formula for \(E[N]\) when \(T > 0\) involves solving the balance equations, which can be complex and typically requires numerical methods or specific analytical techniques.
 
-**Rating: 8/10**
 
 #### M/M/k Server Farm Model
 In Chapter 14, we analyze the M/M/k server farm model where \(k\) servers work cooperatively to handle incoming requests from a single queue. The arrival of jobs follows a Poisson process with rate \(\lambda\), and each job is served by an exponentially distributed service time with mean \(1/\mu\). A simple closed-form formula for the distribution of the number of jobs in the system can be derived using these assumptions.

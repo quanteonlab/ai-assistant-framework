@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 36)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Looking Ahead
 
 ---
 
-**Rating: 8/10**
 
 #### Improved Garbage Collection and AppCDS in Java 13
 

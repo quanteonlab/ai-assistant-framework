@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Finding characters by name
 
 ---
 
-**Rating: 8/10**
 
 #### Unicode Database Overview
 Background context: The Unicode standard provides a comprehensive database that maps code points to character names and includes metadata about individual characters. This information is crucial for various string methods like `isalpha`, `isprintable`, `isdecimal`, and `isnumeric`. The higher-level string methods simplify access to this detailed information.
@@ -90,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unicode Character Information Retrieval
 This section explains how to retrieve and process information about Unicode characters using Python's `unicodedata` module. The primary functions include determining the character name, checking if a character is numeric, and finding its numeric value.
@@ -165,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dual-Mode str and bytes APIs
 Background context: Python's standard library offers functions that can accept either `str` or `bytes` arguments, treating them differently based on their type. This dual-mode design allows for flexibility in handling both string and byte data.

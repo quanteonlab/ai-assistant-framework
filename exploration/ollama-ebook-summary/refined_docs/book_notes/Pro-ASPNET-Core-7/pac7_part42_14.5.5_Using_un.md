@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 42)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 14.5.5 Using unbound types in services
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Unbound Types in Services
@@ -33,7 +31,6 @@ Each request to one of these service types will create a new instance of `List<T
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple Service Implementations Selection
 Background context explaining how multiple implementations of the same interface can be available in an ASP.NET Core application, and how they can be selectively chosen using `GetServices<T>()` method.
@@ -54,7 +51,6 @@ This line of code retrieves all instances of `IResponseFormatter` from the servi
 
 ---
 
-**Rating: 8/10**
 
 #### Service Consumer Awareness of Multiple Implementations
 Background context explaining how consumers can explicitly request specific implementations by leveraging the `IServiceProvider` interface, particularly through methods like `GetServices<T>()`.
@@ -72,7 +68,6 @@ The consumer can then use this selected service for its specific needs.
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Dependency Injection Overview
@@ -85,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scope of Services
 Background context: The scope of a service in ASP.NET Core defines when the service is instantiated and how it is shared among components. Common scopes include Singleton, Scoped, and Transient.
@@ -97,7 +91,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ASP.NET Core Platform Features Overview
 Background context: ASP.NET Core includes a set of built-in services and middleware components that provide common web application requirements such as configuration, logging, static files, sessions, authentication, and database access.
@@ -109,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuration Data Access
 Background context: The IConfiguration service is used to access configuration data in ASP.NET Core.
@@ -125,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application Environment Determination
 Background context: The IWebHostEnvironment service can be used to determine the application environment.
@@ -146,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Keeping Sensitive Data Secure
 Background context: User secrets can be used to keep sensitive data outside of the project folder.
@@ -165,7 +155,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logging Messages
 Background context: The ILogger<T> service is used for logging messages.
@@ -193,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Serving Static Content
 Background context: The static content middleware can be enabled to deliver static files.
@@ -223,7 +211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Delivering Client-Side Packages
 Background context: The LibMan package manager can be used to install and deliver client-side packages.
@@ -241,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Configuring ASP.NET Core Using JSON Files
@@ -266,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple JSON Configuration Files in ASP.NET Core
 Explanation on how different environments (Development, Staging, Production) each have their own configuration files (`appsettings.Development.json`, `appsettings.Staging.json`, `appsettings.Production.json`). The default environment is Development unless otherwise specified.
@@ -291,7 +276,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Accessing Configuration Data Through the Service
 Explanation of how configuration data is accessed via an `IConfiguration` interface, allowing developers to read settings from different sections and paths within the JSON files.

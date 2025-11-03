@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 1.1.2 Parallel computing cautions. 1.2 The fundamental laws of parallel computing. 1.2.2 Breaking through the parallel limit Gustafson-Barsiss Law
 
 ---
 
-**Rating: 8/10**
 
 #### Amdahl's Law
 Background context: Amdahl's Law is a formula used to determine the theoretical speedup of an application when parallel computing resources are added. It highlights that no matter how much we optimize the parallel part, the overall speedup will always be limited by the serial fraction.
@@ -20,7 +18,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Strong Scaling
 Background context: Strong scaling refers to the time to solution with respect to the number of processors for a fixed total problem size. This means that as the number of processors increases, each processor works on a smaller portion of the same-sized problem.
@@ -36,7 +33,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Weak Scaling
 Background context: Weak scaling refers to the time to solution with respect to the number of processors for a fixed-sized problem per processor. This means that as more processors are added, the size of the problem also grows proportionally.
@@ -52,7 +48,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Replicated Array
 Background context: A replicated array is a dataset that is duplicated across all processors. This approach can lead to high memory requirements as the number of processors increases.
@@ -66,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Array
 Background context: A distributed array is partitioned and split across multiple processors. This approach allows for efficient use of resources while managing memory constraints.
@@ -82,7 +76,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Computing Overview
 Background context: The provided text discusses how parallel computing works, emphasizing the importance of understanding hardware, software, and parallelism to develop efficient applications. It highlights that parallel computing involves more than just message passing or threading and requires an application's memory to be distributed for better run-time scaling.
@@ -94,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limited Run-Time and Memory Scaling
 Background context: The text explains that as the size of a problem grows, there may not be enough memory on a processor for the job to run. It also states that limited runtime scaling means the job runs slowly, while limited memory scaling means the job can’t run at all.
@@ -106,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory and Run-Time Relationship
 Background context: The text mentions that in computationally intensive jobs, every byte of memory gets touched in every cycle of processing, making run time a function of memory size. Reducing memory size will necessarily reduce the run time.
@@ -118,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallelism and Application Development
 Background context: The text emphasizes that developing a parallel application requires understanding hardware, software, and parallelism. It also mentions that developers must recognize how different hardware components allow for exposing parallelization.
@@ -130,7 +120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread-Based Parallelization
 Background context: The text categorizes parallel approaches and notes thread-based parallelization as one of them. Threads allow for concurrent execution within a single process.
@@ -142,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vectorization
 Background context: The text mentions vectorization as another parallel approach where operations on vectors are performed in bulk, utilizing SIMD (Single Instruction Multiple Data) instructions.
@@ -154,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream Processing
 Background context: The text categorizes stream processing as a parallel approach where data is processed in streams, often used in real-time data processing applications.
@@ -166,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hardware Considerations for Parallel Strategies
 Background context: The text explains how different hardware components influence the choices made in parallel strategies. It aims to demonstrate how hardware features impact the selection of parallel approaches.
@@ -180,7 +166,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Discretization of Problem Domain
 Background context: In parallel computing, especially for spatial problems like modeling volcanic plumes or tsunamis, the domain of the problem is broken into smaller pieces. This process is called discretization and it involves dividing the space into cells or elements.
@@ -204,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Computational Kernel Definition
 Background context: After discretizing the problem, a computational kernel is defined to perform specific calculations on each element of the mesh. This operation could be something like stencil operations used in image processing or simulations.
@@ -235,7 +219,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallelization Layers on CPUs and GPUs
 Background context: To perform calculations in parallel, multiple layers can be applied based on CPU and GPU architectures. These include vectorization (processing multiple data at once), threads (multiple compute pathways), processes (separate memory spaces), and off-loading to GPUs (sending data for specialized calculation).
@@ -279,7 +262,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream Processing with GPUs
 Background context: Stream processing is generally associated with GPUs, where data can be off-loaded to perform specialized calculations. This is particularly useful for tasks that benefit from parallelism at the hardware level.
@@ -313,7 +295,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Parallelism Approach
 Background context: The data parallel approach involves performing computations on a spatial mesh composed of a regular two-dimensional grid of rectangular elements or cells. This approach is common in applications like modeling natural phenomena, machine learning, and image processing.
@@ -345,7 +326,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blur Operation
 Background context: The text explains that a blur operation is one of several types of operations performed on images or physical systems. It involves taking a weighted average of neighboring pixels or points to make an image fuzzier, which can be used for smoothing operations or wave propagation numerical simulations.
@@ -370,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient (Edge-Detection)
 Background context: The text mentions that gradient operations are used to detect edges in images. These operations are crucial for enhancing the clarity of boundaries between different parts of an image.
@@ -395,7 +374,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stencil Operations
 Background context: The text describes stencil operations, which are a type of numerical computation used in simulations involving partial differential equations. These operations apply local rules to each cell or pixel based on its neighbors.
@@ -419,7 +397,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vectorization in Parallel Computing
 Background context: The text explains vectorization as a technique that allows processors to operate on multiple data elements simultaneously. This is useful for parallel computing, where tasks are divided among processing cores.
@@ -447,7 +424,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Threading for Parallel Computing
 Background context: The text discusses how threading is used to deploy multiple compute pathways across processing cores. This is essential in modern parallel computing, where tasks are divided among available cores.
@@ -475,7 +451,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Scheduling and Parallelism
 
@@ -512,7 +487,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Unit Operations
 
@@ -549,7 +523,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallelization with Multiple Nodes
 
@@ -568,7 +541,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Memory Architecture
 Background context explaining the concept of distributed memory architecture, where each CPU has its own local memory and is connected to other CPUs through a communication network. This approach allows for good scalability but requires explicit management of different memory regions.
@@ -586,7 +558,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shared Memory Architecture
 Background context explaining the concept of shared memory architecture, where processors share the same address space to simplify programming but introduces potential memory conflicts and limits scalability.
@@ -603,7 +574,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Units: Multiple Operations with One Instruction
 Background context explaining the need for vectorization due to power limitations and the concept of performing multiple operations per cycle using vector units.
@@ -627,7 +597,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### General Heterogeneous Parallel Architecture Model
 Background context explaining how different hardware architectures can be combined into one model to create a general heterogeneous parallel system.

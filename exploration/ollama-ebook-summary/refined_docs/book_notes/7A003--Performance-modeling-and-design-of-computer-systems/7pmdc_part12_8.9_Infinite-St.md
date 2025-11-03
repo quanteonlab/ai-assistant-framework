@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.9 Infinite-State Stationarity Result
 
 ---
 
-**Rating: 8/10**
 
 #### Finding Limiting Probabilities in Finite-State DTMCs
 Background context: To find the limiting probabilities of a finite-state discrete-time Markov chain (DTMC), we use Theorem 8.6, which states that if the limit distribution exists, it can be obtained by solving the stationary equations and the normalization condition.
@@ -97,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Limiting Probability Distribution in DTMCs
 Background context: In discrete-time Markov chains (DTMCs), the limiting probability distribution \(\pi\) represents the long-term behavior of the system. It is defined such that as \(n\) approaches infinity, the probability that the chain is in state \(j\), denoted by \(P(X_n = j)\), converges to \(\pi_j\).
@@ -169,7 +166,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Average Number of Jobs at the Server
 Background context: This concept is related to queuing theory, specifically M/M/1 or similar queue models. The formula provided calculates the average number of jobs (or customers) at a server using the stationary distribution of states.

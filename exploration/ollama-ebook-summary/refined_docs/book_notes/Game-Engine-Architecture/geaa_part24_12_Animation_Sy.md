@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12 Animation Systems. 12.1 Types of Character Animation
 
 ---
 
-**Rating: 8/10**
 
 #### Run Cycle Animation
 Background context: In modern game engines, characters often have multiple looping animations such as idle cycles, walk cycles, and run cycles. A run cycle is an example of a character moving in a repetitive manner to simulate running.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Looping Animations
 Background context: Looping animations are sequences of frames that repeat indefinitely to create the illusion of continuous motion. They are commonly used in idle cycles (standing still), walk cycles (walking), and run cycles (running).
@@ -48,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Rigid Hierarchical Animation
@@ -90,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Per-Vertex Animation and Morph Targets
 Per-vertex animation allows for more natural movement by moving individual vertices of the mesh. This technique involves animating each vertex independently, producing any possible deformation but requiring significant data storage due to the need to store motion information for every vertex.
@@ -129,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cracking in Rigid Hierarchical Animation
 Cracking is a problem that arises from rigid hierarchical animations. Due to the rigidity of the parts, joints can look unnatural or "crack" when certain movements are made.
@@ -166,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Interpolation (LERP) for Vertex Position Calculation
 Background context: The position of each vertex is calculated using a simple linear interpolation between the vertex’s positions in each of the extreme poses. This technique is commonly used for morph target animation, especially in facial animation due to the complexity of the human face.
@@ -195,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Morph Target Animation for Facial Expression
 Background context: Morph target animation is widely used in facial animation due to the complex nature of human faces driven by approximately 50 muscles. It provides animators full control over every vertex of a facial mesh.
@@ -235,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Skinned Animation and Rigid Hierarchical Animation Comparison
 Background context: As game hardware capabilities improved, skinned animation was developed as a more efficient alternative or supplement to morph targets. It combines the benefits of vertex and morph target animations while offering better performance.
@@ -292,7 +283,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Skinned Animation as Data Compression
 Background context: Skinned animation compresses vertex data by constraining vertices to move along with a small number of skeletal joints. This method balances realism and performance.
@@ -331,7 +321,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Crank the Weasel Character Example
 Background context: The example character, Crank the Weasel, illustrates how skinned animation combines a smooth skin with hidden skeletal structure. This showcases both the internal rigging and the external mesh.
@@ -365,7 +354,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hierarchical Structure of Joints
 Background context: The text explains that joints form a hierarchical structure within a skeleton. Each joint has one parent (except for the root), creating a tree-like structure.
@@ -397,7 +385,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Representing a Skeleton in Memory
 Background context: The text discusses how skeletons are represented in memory using data structures that store information about each joint. This includes the inverse bind pose transform for joints.
@@ -431,7 +418,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inverse Bind Pose Transform
 Background context: The text explains that each joint stores its inverse bind pose transform, which is used to describe the position and orientation of a joint at the time it was bound to the vertices of the skin mesh.
@@ -460,7 +446,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Bind Pose Definition
@@ -474,7 +459,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Local Poses in Skeletal Animation
 Background context: A joint’s pose is typically defined relative to its parent joint, allowing natural movement. Local poses are usually stored as SRT (scale, rotation, translation) data structures for easier animation blending and manipulation.
@@ -495,7 +479,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Representing Non-Uniform Scale in Local Poses
 Background context: While some game engines use uniform scale, non-uniform scale can be represented more compactly using a vector. The scale is applied to each axis independently.
@@ -516,7 +499,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Global Pose Calculation
 Background context: A global pose represents a joint's transformation in model or world space, derived by multiplying local poses along the skeletal hierarchy.

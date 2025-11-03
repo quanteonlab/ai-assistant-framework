@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4.9 Lock-Free Concurrency
 
 ---
 
-**Rating: 8/10**
 
 #### Lock-Free Concurrency Overview
 Background context: The provided text discusses alternative approaches to concurrent programming, particularly focusing on lock-free concurrency. It contrasts the traditional use of mutex locks with more efficient and modern techniques that avoid blocking threads while waiting for resources.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blocking Algorithms vs Obstruction-Free Algorithms
 Background context: The text explains the difference between blocking algorithms and obstruction-free (or solo-terminating) algorithms in the context of concurrent programming.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Obstruction-Free Algorithms
 Background context: The text introduces obstruction-free algorithms, which are designed to ensure that a single thread will always complete its work in a bounded number of steps when other threads are suspended.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Non-Blocking Concurrency Techniques
 Background context: The text discusses non-blocking techniques as part of lock-free concurrency, aiming to provide guarantees about thread progress without blocking.
@@ -56,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Lock Freedom
@@ -68,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wait Freedom
 Wait freedom extends the guarantee of lock-freedom by also ensuring no thread starves indefinitely. It means all threads can make progress, and none are allowed to be blocked for an infinite time. This approach avoids deadlock but may lead to some threads getting stuck in retry loops.
@@ -79,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Non-Blocking Algorithms
 Non-blocking algorithms cover a spectrum including lock-free, wait-free, and obstruction-free techniques. These are all part of the broader category of "non-blocking" algorithms which aim to prevent threads from blocking indefinitely on each other.
@@ -90,7 +82,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causes of Data Race Bugs
 Data race bugs occur when a critical operation is interrupted by another on the same shared data object. This can happen due to thread interruptions, compiler and CPU optimizations, and hardware-specific memory ordering semantics.
@@ -104,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mutex Implementation
 Mutexes work as a mutual exclusion mechanism, allowing only one thread to access the shared resource at any given time. Under the hood, mutexes are often implemented using operating system calls or low-level locking primitives.
@@ -138,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simple Lock-Free Linked List Implementation
 Implementing a lock-free linked list requires atomic operations to ensure that updates are performed atomically, even when multiple threads are involved. This prevents race conditions where other threads might interfere with the operation.
@@ -185,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Instruction Reordering and Concurrency Bugs
 Instruction reordering by optimizing compilers, out-of-order execution (OOO) within CPUs, and memory controller optimizations can cause bugs in concurrent programs. These optimizations aim to improve performance but may disrupt expected data sharing between threads.
@@ -212,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Instructions
 Some machine instructions are naturally atomic, meaning they cannot be interrupted and always complete as a single indivisible unit. This property is crucial for implementing higher-level synchronization primitives like mutexes.
@@ -238,7 +225,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Atomic Reads and Writes
@@ -251,7 +237,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Reads and Writes (Aligned vs. Misaligned)
 Background context: Aligned integer reads and writes can often be performed atomically because they fit within the width of a register or cache line, allowing them to occur in one memory access cycle. Misaligned operations may require composing two aligned accesses, leading to potential interruptions.
@@ -263,7 +248,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Read-Modify-Write (RMW)
 Background context: RMWs are essential for implementing locking mechanisms such as mutexes or spin locks. They allow reading a variable’s contents, performing an operation on that variable, and writing the result back to memory in one indivisible step.
@@ -275,7 +259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Test and Set (TAS) Instruction
 Background context: The test-and-set instruction atomically sets a Boolean variable to 1 and returns its previous value. It is used to create simple lock implementations such as spin locks.
@@ -287,7 +270,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pseudocode for Test and Set Instruction
 Background context: The provided pseudocode illustrates how a hypothetical `TAS` function might be implemented.
@@ -307,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spin Lock Example
 Background context: The provided example demonstrates how the `TAS` instruction might be used to create a simple spin lock.
@@ -334,7 +315,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Spin Lock Using Test-and-Set (TAS)
@@ -357,7 +337,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compare and Swap (CAS)
 The compare-and-swap instruction is a fundamental atomic operation that checks whether the value of a memory location matches an expected value. If it does, the new value replaces the old one, and CAS returns true; otherwise, it leaves the original value unchanged and returns false.
@@ -379,7 +358,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Atomic Read-Modify-Write Operation Using CAS
@@ -402,7 +380,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spin Lock Implementation Using CAS
 Background context: A spin lock is a synchronization mechanism where a thread repeatedly checks if it can acquire the lock and blocks only when it cannot. The `SpinLockCAS` function uses CAS to implement a spin lock.
@@ -424,7 +401,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Increment Using CAS
 Background context: The `AtomicIncrementCAS` function demonstrates how to use CAS for an atomic increment operation. This ensures that the increment is performed atomically without interference from other threads.
@@ -451,7 +427,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load Linked/Store Conditional Instructions
 Background context: Some CPUs implement CAS as a pair of instructions called "load linked" and "store conditional." The `Load Linked` instruction reads the value atomically and stores the address in a special register. The `Store Conditional` writes to memory only if the address matches the stored link register.
@@ -480,7 +455,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### LL/SC Instruction Pair for Atomic Operations
@@ -531,7 +505,6 @@ In this example, a spurious failure could occur if another process writes to `pV
 
 ---
 
-**Rating: 8/10**
 
 #### Instruction Reordering and Concurrency Bugs
 Background context: Compilers and CPUs can introduce subtle bugs in concurrent programs through instruction reordering optimizations. These optimizations are designed to have no visible effects on the behavior of a single thread but may cause issues when multiple threads interact.
@@ -596,7 +569,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compiler Optimizations and Critical Sections
 Background context explaining that compiler optimizations can lead to unexpected reordering of instructions, even if the operations themselves are atomic. This can result in race conditions or other synchronization issues.
@@ -633,7 +605,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compiler Barriers (Fences)
 Background context explaining how to explicitly prevent instruction reordering using compiler barriers. Different compilers use different syntax for these barriers.
@@ -676,7 +647,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Barriers and Compiler Optimizations
 Background context explaining the concept. Memory barriers are used to prevent compiler optimizations from reordering instructions, ensuring that operations appear to occur in the correct order to other parts of the program or threads. However, the CPU's out-of-order execution can still reorder instructions at runtime.
@@ -693,7 +663,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Fences and Instruction Reordering
 Background context explaining the concept. Memory fences are machine language instructions that serve as barriers for both the compiler and the CPU, preventing memory reordering bugs.
@@ -711,7 +680,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Ordering Semantics and Multicore Disagreements
 Background context explaining the concept. In a multicore machine with multilevel memory caches, different cores might disagree on the order of read and write instructions due to cache coherence protocols like MESI (Modified, Exclusive, Shared, Invalid).
@@ -738,7 +706,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Caching Revisited
 Background context explaining how memory caching works. The cache avoids high main RAM access latency by keeping frequently used data locally, reducing the number of times it needs to read from slower main memory.
@@ -774,7 +741,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multicore Cache Coherency Protocols
 Background context explaining how cache coherency works in a multicore environment, where each core has its own L1 cache and shares an L2 cache or main memory.
@@ -796,7 +762,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Coherence and MESI Protocol
 Cache coherence is crucial for ensuring that both cores have a consistent view of memory. In a dual-core machine, without proper cache coherence protocols, one core might read stale data from its local cache.
@@ -811,7 +776,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modified State and Invalidations
 Explains what happens when a core modifies data stored in its L1 cache.
@@ -823,7 +787,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Race Bug Due to Optimization
 Explains how optimizations can cause data races in concurrent programs.
@@ -835,7 +798,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example: Data Race Scenario
 Provides a code snippet that demonstrates how optimizations might affect the visibility of memory writes.
@@ -868,7 +830,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Fences Overview
 Memory fences are special instructions that help manage the order of memory operations in a multi-core environment. They ensure that certain reads or writes do not get reordered with other instructions, thus preventing potential race conditions and memory ordering issues.
@@ -898,7 +859,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Fences and CPU Design
 In theory, CPUs could provide individual fence instructions for each case, but in practice, CPUs typically offer fewer fence instructions as combinations of these theoretical types. The strongest kind of fence is called a full fence.
@@ -926,7 +886,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Acquire and Release Semantics
 Acquire semantics guarantee that a write to shared memory can never be passed by any other read or write that precedes it in program order. When applied to a shared write, we call it a write-release.
@@ -956,7 +915,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Acquire Semantics
 Acquire semantics guarantee that a read from shared memory can never be passed by any other read or write that occurs after it in program order. This is typically used in consumer scenarios to ensure that subsequent reads see the correct state of variables.
@@ -974,7 +932,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Write-Release Semantics
 Write-release semantics are used to ensure that a write operation is ordered with all subsequent operations. This means that once the release fence is encountered, any prior writes will have been fully committed before the release operation.
@@ -994,7 +951,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Full Fence Semantics
 Full fence semantics ensure that all memory operations appear to occur in the correct order across the boundary created by a fence instruction. Both reads and writes are ordered before and after the fence.
@@ -1013,7 +969,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Acquire and Release Semantics in Practice
 Acquire semantics are typically used in consumer scenarios to ensure that the first of two consecutive reads is properly ordered, while release semantics are often used in producer scenarios to enforce ordering between a pair of writes.
@@ -1039,7 +994,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Using Acquire and Release Fences
 In this example, a producer thread sets `g_data` to 42 and then signals that it is ready by setting `g_ready` to 1. The consumer thread waits for `g_ready` to be set before reading `g_data`.
@@ -1067,7 +1021,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ARM Atomic Variables
 Explanation of how C++11's `std::atomic<T>` class template allows for atomic variables, providing full fence memory ordering by default. It mentions that `std::atomic_flag` is a specialized class for an atomic Boolean variable.
@@ -1096,7 +1049,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Variables and std::atomic<T>
 Background context: In C++, `std::atomic<T>` is a type that ensures memory operations involving variables of type T are performed atomically. This means an atomic operation will not be interrupted by other threads, thus preventing data races. The implementation can vary based on the target hardware but typically uses CPU's built-in atomic instructions for simple types.
@@ -1107,7 +1059,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Flags and std::atomic_flag
 Background context: `std::atomic_flag` is a special type in C++ that allows for basic synchronization primitives such as locks and condition variables without using full atomic operations. It provides a way to atomically set, clear, and test flags.
@@ -1118,7 +1069,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Producer-Consumer Example with std::atomic
 Background context: The producer-consumer problem is a classic example in concurrent programming where one or more threads produce data while another thread consumes it. In this case, we use `std::atomic` to ensure that operations on shared variables are performed atomically, thus preventing data races.
@@ -1156,7 +1106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lock-Free Concurrency with std::atomic
 Background context: By wrapping shared variables in `std::atomic`, you can write lock-free code that is immune to data race bugs. The implementation of `std::atomic<T>` uses atomic instructions or mutex locks depending on the type's size.
@@ -1167,7 +1116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Order Semantics in C++
 Background context: When using `std::atomic`, you can specify memory order semantics to control how atomic operations interact with the memory model of the CPU. Different settings like `memory_order_relaxed`, `memory_order_consume`, etc., provide different levels of ordering guarantees.
@@ -1180,7 +1128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Acquire Semantics
 Acquire semantics guarantee consume semantics, ensuring that writes to the same address by other threads will be visible to this thread. This is achieved through an acquire fence within the CPU’s cache coherency domain.
@@ -1192,7 +1139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Acquire/Release Semantics
 The acquire/release semantic is the default and provides full memory fences, ensuring both acquire and release properties. It ensures that operations are ordered correctly across threads.
@@ -1204,7 +1150,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Producer-Consumer Example Using Memory Order Specifiers
 
@@ -1232,7 +1177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Using Memory Ordering Semantics
 
@@ -1243,7 +1187,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency in Interpreted Languages
 
@@ -1258,7 +1201,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Volatile Type Qualifier in Java and C#
 Explanation about how volatile variables in Java and C# ensure atomicity, preventing optimization and interruption by other threads. It also mentions that reads and writes are performed directly from main memory.
@@ -1287,7 +1229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spin Lock Implementation with std::atomic_flag
 Explanation of spin locks using a `std::atomic_flag` in C++11. It involves acquiring the lock by setting the flag to true and retrying until successful, and releasing it by setting the flag back to false.
@@ -1319,7 +1260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spin Locks and Atomicity Guarantees
 Explanation of the importance of using read-acquire memory ordering when acquiring a spin lock to correctly interact with the atomic flag.
@@ -1340,7 +1280,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spin Lock Variants
 Introduction to different types of spin locks that can be used in various scenarios, such as timed spin locks or spin locks with backoff.
@@ -1378,7 +1317,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Acquiring a Spin Lock Using `test_and_set` with Memory Order Semantics
 In C++11, acquiring a spin lock involves using the `test_and_set` function from the atomic flag. To ensure correct memory ordering semantics, we use `std::memory_order_acquire` to guarantee that subsequent reads are valid and synchronized correctly.
@@ -1392,7 +1330,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing a Spin Lock with Correct Memory Ordering Semantics
 To ensure correct behavior in C++11, it is necessary to use the appropriate memory ordering semantics when working with atomic flags. This includes using `std::memory_order_acquire` for acquiring and `std::memory_order_release` for releasing.
@@ -1428,7 +1365,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using a Scoped Lock to Automatically Manage Spin Locks
 A scoped lock is a wrapper class that automatically manages the acquisition and release of spin locks. This helps prevent manual errors in managing resources, especially when multiple return points exist within a function.
@@ -1470,7 +1406,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing a Reentrant Lock for Spin Locks
 A vanilla spin lock can cause a thread to deadlock if it reacquires the same lock while already holding it. This is problematic in functions that call each other recursively within the same thread.
@@ -1509,7 +1444,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reentrant Lock Implementation
 Background context: The provided text describes a reentrant lock implementation that aims to allow recursive locking by caching the thread ID. This is achieved using atomic variables and appropriate memory fences to ensure correct behavior.
@@ -1595,7 +1529,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Readers-Writer Lock Overview
 Background context: The readers-writer lock is a specialized type of lock designed to allow multiple readers concurrently while ensuring mutual exclusivity when writing. This concept is crucial in scenarios where read operations are more frequent than write operations, optimizing performance by avoiding unnecessary waits.
@@ -1681,7 +1614,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Readers-Writer Lock Starvation Problem
 Background context explaining that readers-writer locks can suffer from starvation issues where a writer holding the lock for too long can prevent all readers, or many readers can prevent writers. This is important because it affects concurrency and performance in scenarios with varying read/write patterns.
@@ -1692,7 +1624,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequential Lock (Seqlock) as an Alternative
 Background context explaining that sequential locks can address the starvation issue by allowing multiple readers but only one writer at a time. This is particularly useful in scenarios where the order of operations is predictable or known.
@@ -1703,7 +1634,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Read-Copy-Update (RCU)
 Background context explaining RCU is a locking technique used in Linux kernel to support multiple concurrent readers and writers efficiently. It's particularly useful for scenarios where you need frequent reads with occasional writes.
@@ -1714,7 +1644,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lock-Free Concurrency Assertions
 Background context explaining that lock-free concurrency can be achieved through assertions that verify the absence of contention before performing operations, thus avoiding unnecessary locking. These assertions can help detect potential race conditions if assumptions about thread behavior are incorrect.
@@ -1725,7 +1654,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Boolean Variables for Lock Detection
 Background context explaining that atomic Boolean variables can be used as an alternative to mutexes in low-contention scenarios, where the programmer has knowledge of non-overlapping threads. This method is more efficient than traditional spin locks but still incurs some overhead.
@@ -1757,7 +1685,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Volatile Keyword and Atomic Boolean
@@ -1789,7 +1716,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lock-Free Transactions
 Background context explaining the concept of lock-free programming and how it contrasts with traditional locking mechanisms. This section introduces an example beyond spin locks, emphasizing the importance of understanding non-blocking algorithms.
@@ -1824,7 +1750,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lock-Free Programming Overview
 Lock-free programming aims to avoid locks that could cause threads to be put to sleep or get stuck in busy-wait loops. The approach ensures that transactions can either succeed completely or fail entirely, with failures leading to retries until successful.
@@ -1836,7 +1761,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lock-Free Transaction Concept
 In lock-free programming, each transaction must be atomic and can either succeed fully or fail entirely. If a transaction fails, it should retry until successful.
@@ -1856,7 +1780,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lock-Free Singly-Linked List Insertion
 Inserting a node at the head of a singly-linked list lock-free requires preparing the transaction, attempting to commit it with an atomic operation (CAS), and retrying if the CAS fails.
@@ -1879,7 +1802,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lock-Free Transaction Retry Mechanism
 The retry mechanism in lock-free programming involves reinitializing the node's state when a transaction fails due to concurrent modifications.
@@ -1899,7 +1821,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Instruction for Transaction Commit
 In lock-free programming, committing a transaction typically involves executing an atomic instruction such as CAS or LL/SC.
@@ -1920,7 +1841,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fail-and-Retry Approach in Lock-Free Programming
 The fail-and-retry approach ensures that a lock-free program makes forward progress even if some transactions fail due to concurrent modifications.
@@ -1942,7 +1862,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Compare-Exchange Operation
 Background context explaining the concept. The `compare_exchange_weak()` function is an atomic operation that compares a current value with an expected value and replaces it with a new one if they match. This operation ensures thread safety without acquiring locks, making concurrent programming more efficient.
@@ -1959,7 +1878,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lock-Free Singly-Linked List Implementation
 Background context explaining the concept. A lock-free singly-linked list is designed to avoid deadlocks and ensure that multiple threads can manipulate the list without waiting for each other, making it a suitable choice in concurrent programming scenarios.

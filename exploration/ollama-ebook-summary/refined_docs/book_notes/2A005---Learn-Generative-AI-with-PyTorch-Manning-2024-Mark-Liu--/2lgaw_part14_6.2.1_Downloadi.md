@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 6.2.1 Downloading the celebrity faces dataset
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Generators and Loss Functions in CycleGAN
 
@@ -31,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of CycleGAN and Loss Components
 
@@ -56,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Using Pandas for Data Processing
 
@@ -108,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defining the Discriminator Class
 Background context: This section provides a detailed implementation of the `Discriminator` class within CycleGAN.
@@ -143,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Padding Mode: Reflect
 Explanation of how reflect padding works and its benefits. Reflect padding helps preserve edge information without introducing artificial zero values at the borders.
@@ -159,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Discriminators
 Explanation of how to create and initialize discriminator instances. Uses the `Discriminator` class from a local module and initializes weights using `weights_init()`.
@@ -182,7 +175,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generator Network Architecture
 Explanation of the architecture and components of the generator network, including initial convolutional layers, residual blocks, and upsampling blocks.
@@ -212,7 +204,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Residual Connection in Deep Learning
 Explanation of what residual connections are and why they help in very deep networks.
@@ -231,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loss Functions Used in Training
 Explanation of the loss functions used for training the model and their purposes.
@@ -251,7 +241,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training the Discriminators in CycleGAN
 Background context: The code snippet shows how to train the two discriminators in a CycleGAN model. Each discriminator evaluates whether input images belong to their domain or not.
@@ -286,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training the CycleGAN Model
 Background context: The code snippet shows how to train a CycleGAN model using black and blond hair images. It includes training both discriminators and generators in one epoch.

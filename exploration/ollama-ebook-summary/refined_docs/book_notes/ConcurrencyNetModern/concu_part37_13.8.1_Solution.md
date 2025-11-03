@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 37)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 13.8.1 Solution combining Rx and asynchronous programming
 
 ---
 
-**Rating: 8/10**
 
 #### Custom ParallelAgentScheduler for Concurrent Programming
 Background context: The `ParallelAgentScheduler` is designed to provide a scheduler for concurrent programming that ensures no downtime and minimal delay when creating new threads. It also allows fine control over the degree of parallelism, which can be crucial when processing event streams without losing any data.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrent Reactive Scalable Client/Server Scenario
 Background context: You need to implement a server that listens asynchronously on a given port for incoming requests from multiple TCP clients while ensuring reactivity and scalability. The client program should also handle asynchronous, non-blocking operations to maintain application responsiveness.
@@ -40,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Rx and Asynchronous Programming for Server Implementation
 Background context: The `TcpListener` and `TcpClient` classes from the .NET Framework can be used to create a socket server asynchronously. This setup helps in managing multiple concurrent connections efficiently while ensuring data integrity.
@@ -77,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Long-Running Asynchronous Client Program
 Background context: The client program needs to connect asynchronously to a TCP server, handle data transfers in chunks, and maintain responsiveness even under high load. The program should reconnect properly after closing.
@@ -119,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Reactive Programming and Schedulers
@@ -132,7 +126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TcpListener Server Implementation
 Explanation of how the TcpListener server asynchronously accepts client connections, processes them through an Observable pipeline, and handles multiple concurrent connections.
@@ -172,7 +165,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Schedulers in Rx
 Explanation of how schedulers are used to manage concurrency in asynchronous operations within the Observable pipeline.
@@ -190,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Client Connections and Task-Scheduling for Concurrency
 Background context: When a remote client becomes available and a connection is established, a `TcpClient` object is created to handle the new communication. This process involves using a `Task` object to manage long-running operations on separate threads.
@@ -225,7 +216,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Establishing Secure or Regular Network Streams Based on SSL Configuration
 Background context: The `GetServerStream` method determines whether an SSL stream should be used based on a provided SSL name. If an SSL name is given, it creates an SslStream; otherwise, it uses the regular network stream.
@@ -250,7 +240,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Cancellation Token and Asynchronous Handling
 Background context explaining how a cancellation token is used to manage asynchronous operations gracefully. The provided code demonstrates its usage within the `ToAcceptTcpClientObservable` method.
@@ -299,7 +288,6 @@ Stops the listener when no more clients need to be accepted and resources can be
 
 ---
 
-**Rating: 8/10**
 
 #### Resource Cleanup with Disposable.Create
 Background context explaining how resources are managed in the observable sequence. The provided code uses `Disposable.Create` to ensure proper cleanup of resources like the `TcpListener` and its server.
@@ -339,7 +327,6 @@ Creates a disposable object that stops the `TcpListener` and disposes of its ser
 
 ---
 
-**Rating: 8/10**
 
 #### Observable Pipeline for Data Processing
 Background context: The observable pipeline processes the incoming data from the network stream, deserializes it into `StockData` objects, and then filters and updates a live chart. This involves using operators like `Subscribe`, `ReadObservable`, `Select`, `GroupBy`, `SelectMany`, and `Throttle`.
@@ -355,7 +342,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Grouping and Filtering Observables
 Background context: The data is grouped by symbol using the `GroupBy` operator. Each group represents a unique stock ticker, which can then be processed independently.
@@ -370,7 +356,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Updating a Live Chart with Observable Data
 Background context: The final step is to update the live chart based on the processed data. This involves subscribing to each observable in the pipeline and updating the chart accordingly.
@@ -392,7 +377,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Throttling and Grouping Concepts
@@ -407,7 +391,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reading Observable Stream
 The `ReadObservable` method is designed to read chunks of data from a stream asynchronously and continuously. In this context, it reads from the `NetworkStream` produced as a result of the server-client communication.
@@ -467,7 +450,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convert Asynchronous Operation to Observable
 Background context: The provided text discusses converting an asynchronous operation into an observable sequence using Rx (Reactive Extensions) for reading data from a stream. This approach helps manage large or potentially infinite streams of data, ensuring that operations are performed reactively and efficiently.
@@ -479,7 +461,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reading Data in Chunks
 Background context: The text explains that reading data in chunks is crucial to manage large or potentially infinite streams. This method ensures that memory usage remains efficient by processing small segments at a time.
@@ -491,7 +472,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### `Observable.While` and `Observable.Defer`
 Background context: The code uses `Observable.While` to continuously read from a stream as long as it has not been canceled and can still be read. It also utilizes `Observable.Defer` to lazily create an observable sequence based on the current state.
@@ -503,7 +483,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating `ArraySegment<byte>`
 Background context: The code creates an instance of `ArraySegment<byte>` to wrap the buffer after reading a chunk from the stream.
@@ -515,7 +494,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Iterating Over Stream Bytes
 Background context: The provided code demonstrates an extension method that iterates over bytes from a stream using Rx operators.
@@ -527,7 +505,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conclusion on Rx Usage
 Background context: The text concludes by emphasizing the benefits of using Rx for handling streams, including cleaner code and better composability.
@@ -541,7 +518,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Custom Parallel Filter-Map Operator
 
@@ -569,7 +545,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing `ParallelFilterMap` Operator
 
@@ -599,7 +574,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atom Object for Thread Safety
 
@@ -637,7 +611,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Filter-Map Operation
 Background context: The text describes a high-performance parallel filter-map operation that processes elements of an input collection by partitioning them into smaller portions. Each portion is processed independently by a thread to perform filtering and mapping operations, ensuring efficient use of threads in a thread pool.
@@ -656,7 +629,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Local Values in Parallel Loops
 Background context: The text explains the use of local values within parallel loops to avoid contention issues. Each iteration of the loop operates with its own isolated instance of a variable, reducing the risk of race conditions.
@@ -671,7 +643,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Intermediate Results Aggregation
 Background context: The text discusses how each thread computes an intermediate result based on its own partition of data, which is then combined into a single final value. This involves using synchronization mechanisms to ensure thread-safe merging of results.
@@ -686,7 +657,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Pool and Worker Threads
 Background context: The text describes how the parallel for-each loop uses a thread pool to manage worker threads, where each thread processes its own partition of data independently.
@@ -704,7 +674,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### LocalFinally Delegate for Final Aggregation
 Background context: The text explains that after processing each partition of data, the localFinally delegate is used to aggregate final results. This requires synchronization access to ensure thread safety during result merging.
@@ -722,7 +691,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Collections and Atom Objects
 Background context: In concurrent programming, immutable collections are often preferred because they avoid issues like race conditions. However, creating new instances for every write operation can be inefficient without proper memory sharing mechanisms.
@@ -752,7 +720,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequential vs. Parallel Execution
 Background context: The benchmark results show significant performance improvements when using parallel execution compared to sequential execution. PLINQ and custom parallel filter-map operators were tested for their efficiency.
@@ -782,7 +749,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Non-blocking Synchronous Message-Passing Model Overview
 This model is used to build scalable programs that handle a large number of operations without blocking threads. It optimizes resource usage by collaborating through few threads, allowing for efficient processing and saving large numbers of images or similar tasks.
@@ -829,7 +795,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### ChannelAgent Implementation
@@ -848,7 +813,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Recv Messages
 Background context: When a `Recv` message is received by the `ChannelAgent`, it checks if there are any pending writes. If no write operations are pending, the read function is queued up and immediately replies to indicate that it can proceed once a writer becomes available.
@@ -875,7 +839,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Send Messages
 Background context: Similarly to `Recv` messages, when a `Send` message is received by the agent:
@@ -905,7 +868,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TaskPool Agent Initialization and Execution
 The `TaskPool` agent initializes a parallel worker using `MailboxProcessor`, which can handle multiple consumers and producers concurrently. The `Add` method enqueues the given continuation function to be executed when threads are available.

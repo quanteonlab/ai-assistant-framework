@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 29)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Setup Costs of an Owning Type Erasure Wrapper
 
 ---
 
-**Rating: 8/10**
 
 #### Type Erasure Performance Considerations
 Type erasure can offer significant performance benefits by reducing indirections and enabling optimizations. However, it comes with its own set of challenges that need to be addressed.
@@ -141,7 +139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nonowning Type Erasure Implementation
 Background context explaining the concept of type erasure and its importance in modern C++. Discuss how value semantics-based implementations provide beautiful abstractions but come with performance penalties. Mention that for some scenarios, a nonowning implementation is preferred to balance between abstraction and performance.
@@ -250,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nonowning Type Erasure Implementation
 Background context explaining the concept of nonowning type erasure. This is a technique used to wrap polymorphic behavior around a set of pointers, allowing for flexible and efficient handling of different shape types without memory allocation or expensive copy operations.
@@ -418,7 +414,6 @@ int main() {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Template Constructor for `ShapeConstRef`
 Background context: This section explains how to create a template constructor for the `ShapeConstRef` class that takes references to non-const and const types, ensuring proper handling of lvalues and rvalues.
@@ -569,7 +564,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nonowning Type Erasure Implementation
 
@@ -743,7 +737,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nested Classes
 Nested classes are defined within another class. They can access members of the enclosing class and provide a way to encapsulate related functionality.

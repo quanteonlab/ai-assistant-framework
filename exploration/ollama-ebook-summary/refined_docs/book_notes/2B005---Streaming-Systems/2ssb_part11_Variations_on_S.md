@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Variations on Session Windows
 
 ---
 
-**Rating: 8/10**
 
 #### Session Windows and Custom Windowing
 
@@ -230,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Processing-Time Windows
 
@@ -419,7 +416,6 @@ public class BoundedSessionWindowExample {
 x??
 ---
 
-**Rating: 8/10**
 
 #### Lambda Architecture Limitations
 

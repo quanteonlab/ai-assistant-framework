@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Streams and Tables Relativity
 
@@ -117,7 +115,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Motivation for Persistent State
 Background context: The text explains that people write books to capture ephemeral ideas so they can be revisited. Similarly, persistent state is required in data processing pipelines to store and revisit data over time.
@@ -194,7 +191,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inevitability of Failure
 Background context explaining why long-running pipelines need some form of persistent state. This is critical for unbounded data processing, where pipelines are expected to run indefinitely but face interruptions due to various reasons like machine failures or code changes.

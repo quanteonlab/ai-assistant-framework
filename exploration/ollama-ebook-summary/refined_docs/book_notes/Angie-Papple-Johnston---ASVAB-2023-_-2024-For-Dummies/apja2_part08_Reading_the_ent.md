@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Reading the entire problem. Setting up the problem and working your way to the answer
 
 ---
 
-**Rating: 8/10**
 
 #### Reading the Entire Problem
 Background context explaining the importance of reading the entire problem thoroughly and understanding its context. This step helps form a mental picture or draw sketches to visualize the problem, making it easier to identify relevant information.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Figuring Out What the Question is Asking
 Background context explaining that determining exactly what the question is asking is crucial, as sometimes the question might be indirectly stated. Clue words can help identify the nature of the required calculation (e.g., addition: sum, total; division: share, ratio).
@@ -37,7 +34,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Digging for the Facts
 Background context explaining that after identifying what the question is, you need to determine which data are relevant and which are not. List all facts provided in the problem with their units of measurement.
@@ -64,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Isolating Unknowns in Equations
 
@@ -114,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reviewing Your Answer
 Background context: When answering math word problems, it is crucial to review your solution before finalizing your answer. This process helps ensure accuracy and relevance to the question asked.
@@ -126,7 +120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Probable Solution Check
 Background context: To ensure the solution makes sense, one should check if it seems probable and reasonable in a real-world scenario. This step helps verify whether the answer is logical and feasible.
@@ -138,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Double-Checking Your Answer
 Background context: Double-checking your answer can help catch simple errors and ensure that you have arrived at the correct solution. Test-makers often include answers close to the right one as distractors.
@@ -150,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Backtracking Steps
 Background context: If your initial solution does not fit the facts presented in the problem, it is essential to backtrack through your steps until you arrive at a probable and correct answer.

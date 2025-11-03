@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 39)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 14.1 Preparing for this chapter. 14.2.1 Understanding the service location problem
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring the Request Pipeline
 The `Program.cs` file is used to configure the request pipeline by adding middleware and endpoints. This setup allows for flexible application of features using either middleware or endpoints.
@@ -62,7 +60,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Injection Introduction
 Background context: Dependency injection is a design pattern that addresses two main problems encountered when developing applications. It allows for better testability and flexibility by separating class dependencies from their implementation details.
@@ -92,7 +89,6 @@ It enables easy replacement of components with new implementations, making the a
 
 ---
 
-**Rating: 8/10**
 
 #### Service Location
 Background context: Service location is another term for dependency injection, which involves providing services or dependencies to classes that need them. It helps in managing dependencies without tightly coupling the classes.
@@ -105,7 +101,6 @@ It helps manage dependencies and avoid tight coupling between components.
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Dependency Injection
 Background context: Dependency injection provides several benefits such as better testability, flexibility, and easier maintenance. It promotes loose coupling by injecting dependencies into classes rather than hardcoding them.
@@ -120,7 +115,6 @@ The main benefits of dependency injection include:
 
 ---
 
-**Rating: 8/10**
 
 #### Using Dependency Injection in ASP.NET Core
 Background context: Dependency injection is used extensively in ASP.NET Core applications, enabling better testability and flexibility by injecting dependencies through constructors.
@@ -139,7 +133,6 @@ The service is provided by the framework during runtime.
 
 ---
 
-**Rating: 8/10**
 
 #### Alternative Ways of Creating Shared Features
 Background context: Dependency injection is just one way to create shared features in applications. There are alternative methods that can be used if DI is not preferred.
@@ -154,7 +147,6 @@ Using these alternatives can be acceptable if you prefer not to use DI, but it m
 
 ---
 
-**Rating: 8/10**
 
 #### Singleton Pattern Implementation
 Singleton pattern allows a class to create only one instance and provide a global point of access to it. This is particularly useful when exactly one object is needed to coordinate actions across the system.
@@ -182,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Singleton in Program.cs
 
@@ -202,7 +193,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Singleton Pattern and Service Location
 Background context: The singleton pattern is a design pattern that ensures a class has only one instance, while providing a global point of access to it. It can be used for creating shared services, but spreading knowledge about how services are located throughout an application can lead to issues such as tight coupling and difficulty in maintaining or refactoring code.
@@ -214,7 +204,6 @@ The issue with using the singleton pattern for service location leads to difficu
 
 ---
 
-**Rating: 8/10**
 
 #### Type Broker Pattern
 Background context: The type broker pattern provides a way to manage shared services through interfaces rather than concrete classes. This allows for easier refactoring and changing implementations without altering every consumer's code.
@@ -225,7 +214,6 @@ The type broker pattern differs from using a singleton directly because it abstr
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing Type Broker
 Background context: Listing 14.10 in the provided text demonstrates how to implement a type broker using C# for managing shared services through interfaces. This approach enhances flexibility and maintainability by decoupling consumers from specific implementations.
@@ -236,7 +224,6 @@ The `TypeBroker` class manages service instances by maintaining a static instanc
 
 ---
 
-**Rating: 8/10**
 
 #### Adding a Different Implementation
 Background context: Listing 14.13 provides an example of adding a new implementation (`HtmlResponseFormatter`) to the application while maintaining consistency and flexibility through the type broker pattern. This shows how easily new implementations can be added without affecting existing consumers.
@@ -247,7 +234,6 @@ The `HtmlResponseFormatter` class fits into the design by providing a different 
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Injection Introduction
 Dependency injection (DI) is a design pattern that provides services to components without coupling them. It promotes loose coupling and better testability by decoupling the creation of an object from its usage, allowing for flexible service implementations.
@@ -262,7 +248,6 @@ For example, in the given text, DI replaces the Type Broker singleton approach b
 
 ---
 
-**Rating: 8/10**
 
 #### Using Dependency Injection in Program.cs
 In ASP.NET Core, services can be registered for dependency injection using extension methods defined on the `IServiceCollection`. The `AddSingleton<TService, TImplementation>()` method is used to register an implementation of a service.
@@ -282,7 +267,6 @@ The `AddSingleton<TService, TImplementation>()` method tells ASP.NET Core to use
 
 ---
 
-**Rating: 8/10**
 
 #### Consuming Services with Dependency Injection
 When a function depends on a service registered through dependency injection, it can be injected as a parameter. This allows the function to use the service without needing to create or manage its lifecycle.
@@ -302,7 +286,6 @@ In this example, `IResponseFormatter` is injected as a parameter to the function
 
 ---
 
-**Rating: 8/10**
 
 #### Type Broker vs Dependency Injection
 The previous implementation used a Type Broker singleton for service resolution, but this approach can lead to tightly coupled components. Using dependency injection (DI) decouples the creation of objects from their usage, making the application more modular and easier to test.
@@ -331,7 +314,6 @@ DI provides more flexibility and better testability because it allows for easy r
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Dependency Injection in ASP.NET Core
 Dependency injection (DI) in ASP.NET Core involves registering services using `IServiceCollection` and injecting them into functions or classes that need them. This approach promotes loose coupling, better testability, and easier maintenance compared to manual service management.

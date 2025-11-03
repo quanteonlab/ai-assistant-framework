@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 33)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.4.1 Defining middleware using a class
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Custom Middleware Explanation
@@ -70,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Class-Based Middleware
 To add class-based middleware, use the `UseMiddleware<T>` method in `Program.cs`, where `T` is the type of your middleware class. This method allows you to integrate custom logic outside the main entry point of the application.
@@ -88,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread-Safety Considerations for Middleware
 Since a single middleware object handles all requests in ASP.NET Core, any code within its `Invoke` method must be thread-safe. This is crucial because multiple requests can be processed concurrently.
@@ -115,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Class-Based Middleware Component
@@ -136,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modifying Response in Return Path
 Middleware components can modify the HTTP response after it has passed through other middleware or route handlers. This is achieved by calling `await context.Response.WriteAsync()` to add content to the response body.
@@ -159,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Short-Circuiting the Request Pipeline
 Components can choose not to pass the request further along the pipeline by not calling the `next()` function. This is known as short-circuiting and can be used to handle complete responses without further processing.
@@ -184,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Map Method for Creating Pipeline Branches
@@ -212,7 +204,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Branching the Request Pipeline with `MapWhen`
 Background context: The `MapWhen` method allows for more flexible matching of requests based on a predicate function. This is useful when you need to route requests to different parts of the pipeline not just by URL but by other criteria as well.
@@ -239,7 +230,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Requests in Different Pipeline Paths
 Background context: The `Map` method can be used to create branches within the request pipeline for specific URL patterns. These branches can have their own sequence of middleware, allowing for custom handling based on different paths.

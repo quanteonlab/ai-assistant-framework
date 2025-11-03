@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4.6 Thread Synchronization Primitives
 
 ---
 
-**Rating: 8/10**
 
 #### Mutexes
 
@@ -47,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mutex Locking Mechanism
 
@@ -81,7 +78,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mutex and Context Switches
 
@@ -119,7 +115,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### POSIX Mutexes
@@ -147,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### C++11 std::mutex
 Background context: The C++11 standard library introduced `std::mutex`, a high-level abstraction for managing kernel-level mutexes. This class simplifies the management of thread synchronization by handling the initialization and destruction of underlying kernel mutex objects.
@@ -173,7 +167,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### IncrementCount Function Implementation
 Background context explaining how to use Windows critical section API for atomic operations. The function `IncrementCount` demonstrates a simple increment operation in a thread-safe manner.
@@ -203,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Low Cost of Critical Section Achieved
 Background context explaining that a critical section uses an inexpensive spinlock mechanism when attempting to acquire it. This avoids expensive kernel mode switches, making it faster than regular mutexes.
@@ -217,7 +209,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Producer-Consumer Problem
 Background context explaining the producer-consumer problem and how threads can communicate using global variables as signaling mechanisms.
@@ -231,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Signalling Mechanism in Producer-Consumer Problem
 Background context explaining how global Boolean variables can be used as signaling mechanisms between threads.
@@ -278,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Alternative Synchronization Primitives
 Background context explaining that some operating systems provide alternative synchronization primitives like "cheap" mutex variants or futexes.
@@ -294,7 +283,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Condition Variable Overview
 A condition variable (CV) is a synchronization primitive that allows threads to wait until a certain condition becomes true. Unlike busy-waiting, CVs can put a thread into a waiting state until it's signaled by another thread, which helps save CPU cycles and prevent unnecessary checks.
@@ -343,7 +331,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mutex Locking in Condition Variables
 When using condition variables, it is essential to lock a mutex before entering the wait loop. This ensures that the thread waits while holding the lock and can be woken up by another thread without causing a deadlock.
@@ -374,7 +361,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Difference Between `wait()` and `notify()`
 The `pthread_cond_wait` function puts a thread into a waiting state until it is notified by another thread using `pthread_cond_signal`. The `g_ready = true;` statement in the producer code sets the condition, but actual waking up of the consumer happens via `pthread_cond_signal`.
@@ -407,7 +393,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mutex and Condition Variables
 Background context explaining how mutexes and condition variables work together. Mutexes ensure mutual exclusion, while condition variables allow threads to wait until a certain condition is met. The kernel performs some "slight of hand" by unlocking the mutex after a thread has gone to sleep and locking it again when the thread wakes up.
@@ -447,7 +432,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Slight of Hand Mechanism with Mutexes and Condition Variables
 Background context explaining the "slight of hand" technique used by the kernel. The kernel unlocks a mutex before putting a thread to sleep and reacquires it when the thread wakes up.
@@ -468,7 +452,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consumer Thread Behavior with Condition Variables and Loops
 Background context explaining why a consumer thread uses a loop even when using condition variables. Threads can sometimes be awoken spuriously, so polling is necessary to ensure that the condition is actually true.
@@ -496,7 +479,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semaphores and Mutexes Comparison
 Background context explaining how semaphores function as a special kind of mutex that allows multiple threads to acquire it simultaneously. Semaphores are used for managing shared resources.
@@ -519,7 +501,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semaphores as Specialized Mutexes
 Background context explaining semaphores and their role in managing shared resources. A semaphore's initial value determines how many threads can access a resource at once.
@@ -542,7 +523,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mutex versus Binary Semaphore
 Background context explaining the difference between a mutex and a binary semaphore. A binary semaphore has an initial value of 1, allowing for mutual exclusion but not sharing.
@@ -559,7 +539,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Mutex vs Binary Semaphore
@@ -588,7 +567,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Producer-Consumer Example with Binary Semaphores
 This example illustrates how binary semaphores can be used to manage producer-consumer interactions, where one thread produces data and another consumes it.
@@ -628,7 +606,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing Semaphores Using Mutex and Condition Variable
 A semaphore can be implemented using a combination of a mutex, condition variable, and an integer counter. This approach leverages the lower-level synchronization primitives to create a higher-level construct.
@@ -689,7 +666,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deadlock Scenario
 Background context explaining deadlock and its causes. In concurrent systems, when threads wait for resources that are held by other waiting threads, a deadlock can occur.
@@ -715,7 +691,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deadlock Analysis through Graphs
 Background context explaining how to analyze deadlock situations using dependency graphs. Nodes represent threads and resources, and edges represent dependencies.
@@ -769,7 +744,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coffman Conditions for Deadlock
 Background context explaining the four necessary and sufficient conditions for a deadlock: Mutual Exclusion, Hold and Wait, No Preemption, Circular Wait.
@@ -801,7 +775,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hold and Wait Condition
 
@@ -844,7 +817,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Circular Wait Condition
 
@@ -889,7 +861,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### No Preemption
 
@@ -930,7 +901,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deadlock Prevention Strategies
 
@@ -970,7 +940,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Priority Inversion
 
@@ -1011,7 +980,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Priority Inversion
 Background context explaining the concept. Priority inversion occurs when a lower-priority thread holds a lock that a higher-priority thread needs, effectively blocking the high-priority thread and causing its priority to be inverted with respect to the low-priority thread.
@@ -1049,7 +1017,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solutions to Priority Inversion
 Background context explaining the concept. Several solutions can be employed to mitigate priority inversion, including avoiding locks that both high and low-priority threads might take, assigning a very high priority to the mutex itself, or using random priority boosting.
@@ -1083,7 +1050,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dining Philosophers Problem
 Background context explaining the concept. The dining philosophers problem is a classic scenario used to illustrate problems of deadlock, livelock, and starvation. Five philosophers sit around a table with a single chopstick between each pair, trying to alternate between thinking (no need for chopsticks) and eating (requires two chopsticks).
@@ -1120,7 +1086,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Central Arbiter in Dining Philosophers Problem
 Background context explaining the concept. The central arbiter or "waiter" solution involves a central entity that grants philosophers two chopsticks or none, ensuring no philosopher ever holds only one chopstick and thus avoiding deadlock.
@@ -1163,7 +1128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Chandy-Misra Algorithm in Dining Philosophers Problem
 Background context explaining the concept. The Chandy-Misra algorithm uses a more complex messaging system where chopsticks are marked as either dirty or clean. Philosophers communicate with each other to request and release chopsticks, ensuring mutual exclusion without creating dependency cycles.
@@ -1219,7 +1183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Global Ordering Rules
 
@@ -1267,7 +1230,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transaction-Based Algorithms
 
@@ -1312,7 +1274,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Minimizing Contention
 
@@ -1356,7 +1317,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Safety
 

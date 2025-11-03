@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11.2 The Rendering Pipeline
 
 ---
 
-**Rating: 8/10**
 
 #### Rendering Pipeline Overview
 Background context explaining the rendering pipeline in real-time game engines. The high-level steps for triangle rasterization are implemented using a software/hardware architecture known as a pipeline, which consists of ordered computational stages that process input data and produce output.
@@ -55,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pipeline Throughput and Latency
 Background context explaining the concepts of throughput and latency in rendering pipelines. Throughput measures how many data items are processed per second overall, while latency measures the time it takes for a single data element to go through the entire pipeline.
@@ -97,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallelization in Pipelines
 Background context explaining how parallelization can be achieved both between stages and within a single stage of the pipeline. Parallelization is crucial for efficient use of hardware resources, allowing multiple data elements to be processed simultaneously.
@@ -127,7 +123,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asset Conditioning Stage Overview
 In this phase, the geometry and material data created in the tools stage go through processing by an asset conditioning pipeline (ACP). The ACP converts the high-level geometry and materials into a format compatible with the game engine. This process ensures that the assets are optimized for performance and can be efficiently rendered.
@@ -138,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application Stage Overview
 During the application stage, potentially visible mesh instances are identified and submitted to the graphics hardware along with their materials for rendering. This process involves determining which objects in the scene will be visible from the current camera position and submitting these to the rendering pipeline.
@@ -149,7 +143,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Geometry Processing Stage Overview
 In the geometry processing stage, vertices undergo transformations and lighting calculations before being projected into homogeneous clip space. Triangles are optionally processed by a geometry shader and then clipped against the frustum (viewing volume) before further processing.
@@ -160,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rasterization Stage Overview
 The rasterization stage converts triangles into fragments, which are then shaded, tested by various depth and alpha tests, and blended into the frame buffer to produce the final image. This process involves breaking down each triangle into smaller parts (fragments) that can be individually processed and written to the screen.
@@ -171,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transformation Logic Example
 Consider a simple transformation and lighting calculation using matrices:
@@ -214,7 +205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Skinning Information and Vertex Weights
 Skinning involves associating each vertex of a mesh with one or more joints in an articulated skeletal structure, along with weights describing each joint's relative influence over the vertex. This process allows for realistic character animations.
@@ -226,7 +216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Animation System and Skeleton Usage
 The animation system uses skinning information and the articulated skeletal structure to drive the movements of a 3D model during rendering.
@@ -238,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Materials and Shader Selection
 Materials are defined by selecting a shader and specifying textures and configuration parameters required by the shader.
@@ -250,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Texture Mapping and Vertex Attributes
 Textures are applied to the surface of 3D models, often using intuitive tools within DCC applications.
@@ -262,7 +249,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asset Conditioning Pipeline (ACP)
 The asset conditioning pipeline ensures that all assets referenced by a 3D model are available and ready to be loaded.
@@ -274,7 +260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unreal Engine Material Editor
 Unreal Engine provides a graphical shader editor called the Material Editor.
@@ -286,7 +271,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reducing Data Duplication in Materials
 Game teams build material libraries to avoid duplicating data across multiple meshes.
@@ -298,7 +282,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asset Conditioning Process
 Asset data, such as geometric and material information, is initially extracted from a DCC (Digital Content Creation) application. This data is stored in an intermediate platform-independent format before being processed into one or more platform-specific formats.
@@ -325,7 +308,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Platform-Specific Assets
 Platform-specific assets are optimized for specific hardware characteristics. For example, a shader might require tangent and bitangent vectors along with vertex normals; the asset conditioning process can generate these automatically.
@@ -351,7 +333,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scene Graph Data Structures
 Scene graphs help determine which objects need to be rendered based on camera position and orientation. This data structure is often computed during the asset conditioning stage.
@@ -377,7 +358,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Static Lighting
 Static lighting calculations are done offline as part of the asset conditioning. This includes calculating vertex lighting and constructing light maps.
@@ -401,7 +381,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Graphics Processing Unit (GPU)
 A GPU is designed to maximize throughput in the graphics pipeline through massive parallelization. Modern GPUs like AMD Radeon 7970 can achieve peak performance of 4 TFLOPS.
@@ -429,7 +408,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Vertex Shader Functionality
@@ -462,7 +440,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Geometry Shader Capabilities
 Background context: The geometry shader is an optional, fully programmable stage that operates on entire primitives in homogeneous clip space. It can perform various operations such as culling or modifying input primitives and generating new ones.
@@ -490,7 +467,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream Output Feature
 Background context: The stream output feature allows data processed by earlier stages of the graphics pipeline to be written back to memory and looped back into the top of the pipeline for further processing. This is particularly useful for tasks like rendering complex structures such as hair or procedural animations.
@@ -521,7 +497,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Clipping Stage
 Background context: The clipping stage removes parts of triangles that fall outside the viewing frustum. It identifies vertices lying outside the frustum and computes their intersection with the frustum planes, resulting in new vertices that define clipped triangles.
@@ -550,7 +525,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### User-Defined Clipping Planes
@@ -572,7 +546,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Frustum Culling
 Background context: This stage of the rendering pipeline can be configured to cull triangles that lie entirely outside the frustum. This optimization technique reduces the number of triangles processed, leading to better performance.
@@ -595,7 +568,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Screen Mapping
 Background context: The screen mapping stage scales and shifts the vertices from homogeneous clip space into screen space. This transformation ensures that the final image correctly maps to the output device, such as a monitor.
@@ -618,7 +590,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Triangle Traversal
 Background context: The triangle traversal stage breaks down triangles into fragments. Each fragment is generated for each pixel and interpolated with vertex attributes to prepare it for further processing by the pixel shader.
@@ -645,7 +616,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Early Z-Test
 Background context: The early z-test checks if a fragment is occluded by a previously rendered pixel in the frame buffer. If it passes, further stages of the pipeline can be skipped, improving performance.
@@ -666,7 +636,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pixel Shader
 Background context: The fully programmable pixel shader stage processes each fragment to generate its final color. It can handle complex operations like lighting, texturing, and transparency.
@@ -694,7 +663,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Merging / Raster Operations Stage
 Background context: The final stage of the rendering pipeline merges fragments with the frame buffer, applying tests like depth, alpha, and stencil testing to determine if a fragment should be kept or discarded.
@@ -716,7 +684,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Alpha Blending Function
 Background context explaining the concept. The alpha blending function is used to render semitransparent geometry, where each pixel's color is a weighted average of the existing frame buffer contents and the incoming fragment’s color. This process ensures that the final rendered image accurately reflects overlapping translucent surfaces.
@@ -738,7 +705,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sorting and Rendering Order
 Background context explaining the concept. To achieve correct blending results, semitransparent surfaces must be sorted and rendered from back to front after opaque geometry has been rendered. This is because alpha blending overwrites the depth of blended fragments with that of the pixel being replaced.
@@ -757,7 +723,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Programmable Shaders - Vertex Shader
 Background context explaining the concept. The vertex shader processes individual vertices to transform them into a form suitable for rendering. It takes input data expressed in model or world space and outputs transformed and lit vertices.
@@ -782,7 +747,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pixel Shader Input and Output
 Background context: The pixel shader processes fragments, which are interpolated attributes from vertices of a triangle. Its output is the color written into the framebuffer, subject to depth test and other rendering engine tests.
@@ -801,7 +765,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Geometry Shader Output Variety
 Background context: The geometry shader can output a variety of primitive types and quantities, such as converting points to quads or transforming triangles in various ways.
@@ -833,7 +796,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Access in Shaders
 Background context: GPU shader programs generally cannot read from or write to RAM directly but can access registers and texture maps. This restriction is lifted on heterogeneous systems where CPU and GPU share a unified memory.
@@ -857,7 +819,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Constant Registers in Shader Programs
 Background context: Constant registers provide a secondary form of input to the shader. Their values are set by the application and can change from primitive to primitive, but they remain constant within the scope of a single shader program execution.
@@ -873,7 +834,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vertex Shader Output Registers
 Background context: In a vertex shader, output registers contain transformed vertex attributes such as position and normal vectors.
@@ -889,7 +849,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GPU Caching and Post-Transform Vertex Cache
 Background context: GPUs cache output data to reuse it without recalculating, such as storing recently processed vertices in a post-transform vertex cache.
@@ -909,7 +868,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Render-to-Texture Technique
 Background context: Shaders can render scenes to off-screen frame buffers, which are then interpreted as texture maps for further rendering passes. This is known as the "render-to-texture" technique.
@@ -927,7 +885,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Texture Access in Shaders
 Background context: Textures are accessed through special intrinsic functions. These functions allow shaders to read values from different types of textures based on their dimensions and formats.
@@ -950,7 +907,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Effect Files and Shader Programs
 Background context: A shader program alone is not particularly useful. Additional information is required to map application-specified parameters and effects that require multiple rendering passes.
@@ -983,7 +939,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fallback Versions of Advanced Rendering Effects
 In game development, especially for PC platforms, it's crucial to ensure that advanced rendering effects can still be utilized on older graphics hardware. This often involves defining fallback versions of these effects to maintain compatibility and performance across a wide range of hardware.
@@ -996,7 +951,6 @@ For instance, if a game uses advanced anti-aliasing techniques, it might fall ba
 
 ---
 
-**Rating: 8/10**
 
 #### Hierarchical Structure of Effects Files
 Effects files generally follow a hierarchical structure where structs, shader programs, global variables, techniques, passes, and other elements are defined in an organized manner. This structure helps ensure that effects can be efficiently implemented across different hardware capabilities.
@@ -1027,7 +981,6 @@ This example shows the basic structure, including global definitions and a techn
 
 ---
 
-**Rating: 8/10**
 
 #### MSAA Process Breakdown
 Background context explaining the steps involved in rasterizing a triangle with Multisampled Antialiasing (MSAA).
@@ -1059,7 +1012,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CSAA Overview
 Background context explaining Coverage Sample Antialiasing (CSAA) and its relationship to MSAA.
@@ -1073,7 +1025,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Visibility Determination in the Application Stage
 Background context: The visibility determination stage ensures that only visible objects are submitted to the GPU for rendering, avoiding unnecessary processing. This is crucial for optimizing performance by reducing wasted resources.
@@ -1102,7 +1053,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Submitting Geometry to the GPU for Rendering
 Background context: The application stage submits geometric data to the GPU, including submesh-material pairs, which are then rendered using appropriate commands. This process may include sorting geometry for optimal rendering performance.
@@ -1131,7 +1081,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Controlling Shader Parameters and Render State
 Background context: The application stage configures uniform parameters passed to shaders via constant registers and sets all configurable parameters of non-programmable pipeline stages. This ensures that each primitive is rendered appropriately.
@@ -1157,7 +1106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bounding Volume Culling with Spheres
 
@@ -1192,7 +1140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scene Graph Data Structure
 
@@ -1225,7 +1172,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Potentially Visible Sets (PVS)
 
@@ -1254,7 +1200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Portal-Based Visibility
 
@@ -1282,7 +1227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Portals and Occlusion Volumes
@@ -1298,7 +1242,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rendering with Portals
 
@@ -1311,7 +1254,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Occlusion Volumes or Antiportals
 
@@ -1324,7 +1266,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Render State Configuration
 
@@ -1339,7 +1280,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### State Leaks and Render State Management
@@ -1352,7 +1292,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GPU Command List and API Calls
 The application communicates with the GPU through a command list that interleaves state settings with geometry references. Using low-level APIs like Vulkan for manual command list construction can optimize performance.
@@ -1384,7 +1323,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Geometry Sorting and Overdraw
 Sorting geometry by material minimizes the frequency of state changes but can increase overdraw. Overdraw is a situation where the same pixel is drawn multiple times.
@@ -1408,7 +1346,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Z-Buffer Prepass for Optimal Drawing Order
 A z-prepass can help manage rendering order between material sorting and front-to-back drawing of opaque surfaces. This ensures that z-buffer values are correctly set before complex overdraw occurs.
@@ -1434,7 +1371,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Z-Prepass Overview
@@ -1459,7 +1395,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Order-Independent Transparency (OIT)
 Order-independent transparency (OIT) is a rendering technique that allows transparent geometry to be rendered in an arbitrary order, ensuring proper alpha-blended results. OIT works by storing multiple fragments per pixel and sorting each pixel's fragments after the entire scene has been rendered.
@@ -1480,7 +1415,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scene Graphs in Game Development
 Scene graphs are data structures used to manage and organize the geometry in a game scene. They help quickly discard large portions of the world that are far from the camera frustum, reducing unnecessary computations.
@@ -1501,7 +1435,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quadtree and Octree Data Structures
 Quadtrees and octrees are examples of spatial partitioning data structures that divide three-dimensional space into quadrants or octants recursively. These data structures help in quickly discarding regions that do not intersect the camera frustum.
@@ -1532,7 +1465,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quadtree Subdivision and Frustum Culling
 
@@ -1565,7 +1497,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Octree Subdivision
 
@@ -1598,7 +1529,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bounding Sphere Trees
 
@@ -1629,7 +1559,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Binary Space Partitioning (BSP) Trees
 
@@ -1660,7 +1589,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### k-dimensional Trees (kd-trees)
 
@@ -1693,7 +1621,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### BSP Tree Overview
@@ -1705,7 +1632,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Back-to-Front Traversal
 The traversal algorithm for a BSP tree ensures that triangles are rendered in a back-to-front order. This is critical for scenes where z-buffering (or depth buffering) isn't available, forcing the use of painter’s algorithm to ensure correct occlusion handling.
@@ -1716,7 +1642,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Frustum Culling
 In addition to back-to-front sorting, frustum culling can be used to further optimize rendering by excluding triangles that are outside the view frustum. This step would involve checking if a triangle intersects with the view frustum before performing the full traversal.
@@ -1727,7 +1652,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example for Traversal
 Here’s a pseudocode example demonstrating how back-to-front traversal could be implemented:

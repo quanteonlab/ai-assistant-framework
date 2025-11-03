@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 27)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Reducing Variance in Off-Policy Methods
 
@@ -31,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance Sampling and Variance
 
@@ -55,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Polyak-Ruppert Averaging
 
@@ -83,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Weighted Importance Sampling
 
@@ -105,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Target Policy Determined by Behavior Policy
 
@@ -130,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Off-Policy Learning Challenges
@@ -143,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exploring Exploration-Exploitation Trade-off
 Off-policy learning provides flexibility in managing the exploration-exploitation trade-off, allowing an agent to balance between gathering new information (exploration) and utilizing known information (exploitation).
@@ -155,7 +147,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Target Policy and Behavior Policy
 In off-policy learning, there is a distinction between the target policy (the one we want to learn about) and the behavior policy (the one that generates experience).
@@ -167,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variance in Off-Policy Learning
 Increasing variance due to the difference between the target and behavior policies can slow down learning.
@@ -179,7 +169,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stability of Semi-Gradient TD Methods
 Semi-gradient TD methods, especially those involving bootstrapping, can become unstable when dealing with significant function approximation.
@@ -191,7 +180,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### True Stochastic Gradient Descent (SGD) in Bellman Error
 Attempting to perform true SGD in the Bellman error is challenging due to the nature of available experience.
@@ -203,7 +191,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient-TD Methods
 Gradient-TD methods perform SGD in the projected Bellman error (PBE), addressing some of the issues but introducing additional complexity.
@@ -215,7 +202,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Emphatic-TD Methods
 Emphatic-TD methods emphasize certain updates while de-emphasizing others, restoring stability in semi-gradient TD algorithms.
@@ -227,7 +213,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ongoing Research in Off-Policy Learning
 The field of off-policy learning remains relatively new and unsettled, with ongoing efforts to find the best or even adequate methods.
@@ -241,7 +226,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear TD(0) Method
 Background context: The first semi-gradient method was linear TD(0), introduced by Sutton (1988). It is a fundamental oﬀ-policy learning algorithm that uses general importance-sampling ratios. The name "semi-gradient" became more common later in 2015.
@@ -264,7 +248,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance-Sampling in TD(0)
 Background context: The use of general importance-sampling ratios with oﬀ-policy TD(0) was introduced by Sutton, Mahmood, and White (2016). These methods allow for more flexible learning strategies compared to on-policy methods.
@@ -287,7 +270,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deadly Triad
 Background context: The deadly triad was first identified by Sutton (1995b) and thoroughly analyzed by Tsitsiklis and Van Roy (1997). It consists of a combination of function approximation, large state spaces, and off-policy learning. This combination can lead to instability in algorithms.
@@ -307,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Equation (BE) Minimization
 Background context: The BE was first proposed as an objective function for dynamic programming by Schweitzer and Seidmann (1985). Baird extended it to TD learning based on stochastic gradient descent. In the literature, BE minimization is often referred to as Bellman residual minimization.
@@ -330,7 +311,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient-TD Methods
 Background context: Gradient-TD methods were introduced by Sutton, Szepesvári, and Maei (2009b) to address some of the issues associated with standard TD learning. They involve using gradient descent to optimize a certain objective function.
@@ -353,7 +333,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Emphatic-TD Methods
 Background context: Emphatic-TD methods were introduced by Sutton, Mahmood, and White (2016) to handle the deadly triad issue. They use a form of importance-sampling that emphasizes recent experiences more heavily.
@@ -376,7 +355,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eligibility Traces Overview
 Background context explaining the concept. Eligibility traces are a fundamental mechanism used in reinforcement learning to improve the efficiency of learning algorithms like Q-learning or Sarsa by using eligibility traces. The  parameter is crucial here as it determines how quickly the trace decays.
@@ -401,7 +379,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eligibility Trace Mechanism
 Continuing from the previous card, eligibility traces work by maintaining a short-term memory vector \( z_t \in \mathbb{R}^d \) that mirrors the long-term weight vector \( w_t \in \mathbb{R}^d \). When a component of \( w_t \) participates in producing an estimated value, the corresponding component of \( z_t \) is incremented by the TD error. This trace then decays over time.
@@ -426,7 +403,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparing Eligibility Traces and n-Step TD Methods
 This card covers how eligibility traces compare to n-step TD methods. The primary advantage of eligibility traces is that they require only a single trace vector, whereas n-step methods require storing the last \( n \) feature vectors. Additionally, learning in eligibility traces occurs continuously rather than being delayed until the end of an episode.
@@ -454,7 +430,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of Monte Carlo Methods Using Eligibility Traces
 This card explains how eligibility traces can implement Monte Carlo methods online and on continuing problems without episodes. The key is that learning occurs immediately after a state is encountered rather than being delayed.
@@ -479,7 +454,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advantages of Eligibility Traces Over n-Step Methods
 This card highlights the computational advantages of eligibility traces over n-step methods, such as reduced storage requirements and continuous learning.
@@ -507,7 +481,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Forward Views vs. Backward Look Using Eligibility Traces
 This card explains that forward views, which update based on future events, can be implemented using backward look with eligibility traces.
@@ -534,7 +507,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The -return Concept
 Background context: In Chapter 7, we defined an n-step return as the sum of the first \(n\) rewards plus the estimated value of the state reached in \(n\) steps, each appropriately discounted. This concept is generalized for any parameterized function approximator.
@@ -556,7 +528,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Averaging n-step Returns
 Background context: The concept extends from Chapter 7 by noting that any set of n-step returns, even infinite sets, can be averaged with positive weights summing to 1. This averaging produces a substantial new range of algorithms.
@@ -572,7 +543,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Backup Diagram for Compound Updates
 Background context: A compound update is defined as an update that averages simpler component updates. The backup diagram for such an update consists of the backup diagrams for each of the component updates, with a horizontal line above them and weighting fractions below.
@@ -601,7 +571,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application of Compound Updates
 Background context: Averaging n-step returns can lead to various algorithms, such as combining TD and Monte Carlo methods by averaging one-step and infinite-step returns. In theory, it is even possible to average experience-based updates with DP updates.
@@ -619,7 +588,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD(λ) Algorithm Overview
 
@@ -639,7 +607,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Weighting in TD(λ)
 
@@ -661,7 +628,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD(λ) Update Equation
 
@@ -682,7 +648,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### λ = 0 and λ = 1 in TD(λ)
 
@@ -703,7 +668,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exercise 12.1: Recursive Relationship
 
@@ -724,7 +688,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exercise 12.2: λ and Half-Life
 
@@ -746,7 +709,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Offline λ-return Algorithm
 
@@ -764,7 +726,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Comparison with n-step Methods
 
@@ -781,7 +742,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bootstrapping Parameter Tuning
 
@@ -798,7 +758,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Theoretical View vs. Forward Approach
 
@@ -815,7 +774,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Visual Representation
 
@@ -833,7 +791,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD(0) and its Update Rule
 Background context: In reinforcement learning, TD(0) is an algorithm that updates the weight vector based on a scalar error (TD error). The update rule for TD(0) involves using eligibility traces to distribute this error backward through time. It was one of the first algorithms to establish a connection between forward and backward views in reinforcement learning.
@@ -856,7 +813,6 @@ where:
 
 ---
 
-**Rating: 8/10**
 
 #### Eligibility Trace Concept and Initialization
 Background context: The concept of an eligibility trace is crucial in TD(0). It acts as a short-term memory that keeps track of components of the weight vector's contributions to recent state evaluations. This trace decays over time, allowing for distributed updates rather than updates only at the end of episodes.
@@ -875,7 +831,6 @@ An eligibility trace \(z_t\) is a vector that keeps track of which components of
 
 ---
 
-**Rating: 8/10**
 
 #### TD(1) Algorithm Overview
 Background context: TD(1) is a specific case of the TD(\(\lambda\)) algorithm where \(\lambda = 1\). This means that the credit for past states does not decay over time, making it behave like Monte Carlo methods but with incremental updates. It can handle both episodic and continuing tasks.
@@ -894,7 +849,6 @@ The key difference between TD(0) and TD(1) lies in how they handle the credit fo
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo vs. TD Learning Comparison
 Background context: Monte Carlo learning and TD learning are two fundamental approaches in reinforcement learning, each with its own strengths. Monte Carlo methods are sample-efficient but learn only at the end of episodes, while TD methods provide incremental updates but require bootstrapping from a model.

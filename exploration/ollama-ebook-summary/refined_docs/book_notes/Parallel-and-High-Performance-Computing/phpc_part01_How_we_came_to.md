@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** How we came to write this book
 
 ---
 
-**Rating: 8/10**
 
 #### Topics Covered in the Book
 Background context about the breadth of topics covered in the book, including its goal of providing an introduction with depth on parallel and high-performance computing.
@@ -16,7 +14,6 @@ The book covers fundamental concepts of parallel and high-performance computing,
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to High Performance Computing (HPC)
 High performance computing is a rapidly evolving field, where languages and technologies are constantly changing. The focus of this book is on fundamental principles that remain stable over time. 
@@ -40,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data-Oriented Design in HPC
 Data-oriented design is a programming methodology that emphasizes the importance of memory management and usage. In high performance computing, floating-point operations are secondary to memory loads.
@@ -64,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Code Quality in HPC
 Code quality is crucial for high performance computing, especially when dealing with parallelization. Parallelized code can expose flaws more easily and make debugging harder.
@@ -95,7 +90,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Key Themes in HPC
 Key themes include memory usage, data alignment, and the importance of cache optimization.
@@ -109,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Examples Availability and Access
 Background context: The book provides a large set of examples that are available for download from GitHub. These examples can be downloaded as a complete set or individually by chapter.
@@ -121,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Contributing to Examples
 Background context: The authors encourage readers to contribute corrections and source code discussions if they find errors in the provided examples. This community involvement helps improve the quality of the book.

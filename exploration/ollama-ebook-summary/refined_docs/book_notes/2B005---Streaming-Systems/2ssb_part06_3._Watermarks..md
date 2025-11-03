@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3. Watermarks. Definition
 
 ---
 
-**Rating: 10/10**
 
 #### Watermark Introduction
 Background context: In event-time processing, we need to determine when it is safe to consider an event-time window closed. This involves understanding where in event time data are processed and when results are materialized.
@@ -99,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Watermark Concept
 Watermarks are a critical mechanism used in stream processing to determine when to close windows and ensure correctness. The watermark is a monotonically increasing timestamp of the oldest work not yet completed.
@@ -197,7 +194,6 @@ public class WatermarkCreator {
 This ensures that the watermark always reflects the most recent processing point, helping to manage windows correctly.
 x??
 
-**Rating: 8/10**
 
 #### Perfect Watermark Creation
 Background context: Perfect watermark creation ensures that no data with event times less than the watermark will ever be seen again from this source. This method provides a strict guarantee, making pipelines using perfect watermarks free from late data. However, it requires perfect knowledge of the input, which is impractical for many real-world distributed inputs.

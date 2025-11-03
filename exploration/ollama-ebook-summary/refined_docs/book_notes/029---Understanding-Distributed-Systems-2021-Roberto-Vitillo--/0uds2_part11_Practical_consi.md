@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Practical considerations
 
 ---
 
-**Rating: 8/10**
 
 #### Service Operations Challenges
 Background context: In a microservices architecture, individual services are developed and maintained by separate teams. However, these teams usually handle both development and operations for their respective services, which can create conflicts between adding new features and maintaining the service.
@@ -105,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### API Gateway Overview
 The internal APIs of a microservices application can be hidden by a public API that acts as a facade or proxy for the internal services. This public API is called the API gateway and it provides a transparent interface to its clients, who are unaware they are communicating through an intermediary.
@@ -235,7 +232,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Decomposition: Gateway Discrepancy Handling
 Background context explaining how API gateways handle discrepancies between expected and actual service states. It involves resolving inconsistencies that might arise when functional updates or changes do not propagate uniformly across all services.

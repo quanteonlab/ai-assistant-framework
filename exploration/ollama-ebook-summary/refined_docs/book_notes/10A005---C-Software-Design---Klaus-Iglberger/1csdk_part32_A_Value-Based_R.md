@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 32)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** A Value-Based Runtime Decorator
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Considerations of Type Erasure Solution
 Performance can sometimes appear marginally better, but this is based on averages from many runs. Don’t over-emphasize these results, as there are other optimizations available for improving performance. 
@@ -142,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Singleton Pattern Overview
@@ -261,7 +258,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Singleton Pattern and Design Patterns
 

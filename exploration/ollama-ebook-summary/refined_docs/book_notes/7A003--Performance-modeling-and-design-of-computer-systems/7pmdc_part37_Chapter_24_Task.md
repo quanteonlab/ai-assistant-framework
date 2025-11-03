@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 37)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 24 Task Assignment Policies for Server Farms
 
 ---
 
-**Rating: 8/10**
 
 #### Central Queue vs Immediate Dispatching
 Background context: Traditionally, job scheduling was handled through a central queue (e.g., M/M/k systems). However, modern server farms often employ immediate dispatching where jobs are assigned to available servers without going through a central queue.
@@ -44,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Designing Optimal Server Farms for Preemptible Jobs
 Background context: The chapter delves into designing optimal server farms where jobs are preemptible, and all design decisions can be open. This involves finding task assignment policies that minimize mean response time.
@@ -91,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Join-the-Shortest-Queue (JSQ) Policy
 Background context explaining the JSQ policy. The JSQ policy assigns each incoming job to the host with the shortest queue, ensuring that no single server becomes overloaded while others remain idle.
@@ -129,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/G/k Model
 Background context explaining the M/G/k model. The M/G/k model is a queueing system with k servers where jobs are non-preemptible and processed in FCFS order, similar to the server farm model described but without explicit queues at each host.
@@ -168,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### JSQ vs ROUND-ROBIN
 BACKGROUND: The policy JSQ stands for Join-the-Shortest-Queue, where jobs are dispatched to the queue with the fewest number of jobs. This is compared against ROUND-ROBIN in terms of mean response time.
@@ -224,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dynamic vs Static Policies
 BACKGROUND: The text differentiates between dynamic and static policies based on their adaptability to changes in system state.
@@ -282,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### JSQ vs M/G/k under High Job Size Variability
 Background context explaining that both JSQ and M/G/k are dynamic policies, but M/G/k holds off on assigning jobs as long as possible. Under JSQ, unutilized servers can occur when all queues have similar job sizes.
@@ -309,7 +301,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/G/k and LWL Equivalence
 Background context explaining that both policies are equivalent when fed the same arrival sequence, resolving ties in the same way. The analysis of M/G/k remains a challenging problem in queueing theory.
@@ -340,7 +331,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges in Analyzing M/G/k
 Background context explaining that the analysis of M/G/k is challenging due to its complexity, despite M/M/k being simple. Matrix-analytic methods can provide numerical solutions but lack insight and may become unstable with highly skewed distributions.
@@ -368,7 +358,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lee and Longton's Approximation for M/G/k Waiting Time
 Background context: In 1970, Lee and Longton proposed a simple approximation to estimate the waiting time in an \(M/G/k\) queue by scaling up the mean delay of an \(M/M/k\) queue using the coefficient of variation \(C_2\). The formula is given as:
@@ -385,7 +374,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inaccuracy of 2-Moment Approximations
 Background context: The accuracy of approximating mean delay using only two moments (mean and variance) can vary significantly depending on the job size distribution. Specifically, the inaccuracy can be proportional to \(C_2\), where \(C_2\) is related to the coefficient of variation squared.
@@ -404,7 +392,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Analyzing SITA with Known Cutoffs
 Explanation on how to analyze the SITA policy given known cutoffs, using probabilistic Poisson splitting of the arrival process.
@@ -436,7 +423,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Queueing Delay and Variability
 Background context: The P-K formula states that queueing delay is directly proportional to the variability of the job size distribution. High variability in job sizes leads to higher queueing delays across all queues.
@@ -447,7 +433,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SITA's Effect on Mean Response Time
 Background context: By isolating short jobs from long jobs, SITA significantly reduces mean response time. This is particularly beneficial when most jobs are short in computing-based systems.
@@ -458,7 +443,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example with Bounded Pareto Distribution
 Background context: A server farm with 2 servers uses a Bounded Pareto job size distribution with \(\alpha = 1.4\) and resource requirement \(R = 0.95\). SITA computes the optimal splitting cutoff analytically, while LWL's performance is estimated using an upper bound.
@@ -469,7 +453,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example with Hyperexponential Distribution
 Background context: For a server farm with 2 servers and an unbalanced Hyperexponential job size distribution (70% of the load is in one branch), SITA's performance can be compared to LWL using exact analytical methods due to the nature of the Hyperexponential distribution.
@@ -482,7 +465,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bounded Pareto Job Size Distribution Impact
 Background context: The text describes a scenario using a Bounded Pareto job size distribution with parameter \( \alpha = 1.6 \). This distribution is used to illustrate the impact on SITA and LWL performance.
@@ -499,7 +481,6 @@ This example highlights the need to carefully consider different job size distri
 
 ---
 
-**Rating: 8/10**
 
 #### Bounded Pareto Distribution Impact on Response Time
 Background context explaining how different values of α affect the response time, specifically focusing on the number and size of jobs. The Bounded Pareto distribution with a parameter α is used to model job sizes where a higher α value results in a smaller proportion of large jobs.
@@ -513,7 +494,6 @@ The theorem states that for an M/G/2 system with a job size distribution S, the 
 
 ---
 
-**Rating: 8/10**
 
 #### Theoretical Stability Result for M/G/2 Systems
 Background context explaining the theoretical stability conditions for an M/G/2 system under the Light Weight Load Balancing (LWL) scheme, as described by Theorem 24.2.
@@ -554,7 +534,6 @@ This example demonstrates how to calculate the 3/2-moment of a Bounded Pareto di
 
 ---
 
-**Rating: 8/10**
 
 #### Response Time for High Job Size Variability
 Background context: In cases where job size variability is high, task assignment policies such as RANDOM, ROUND-ROBIN (RR), and JSQ are often inadequate. The mean response time can be infinite under certain conditions, specifically if \(E[S^2]\) is not finite.
@@ -565,7 +544,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimal Policy for Deterministic Job Sizes and RR
 Background context: When job sizes are deterministic (e.g., all jobs have the same size), the ROUND-ROBIN policy becomes optimal. This is because each server will receive a fair share of work, leading to minimal delays. Additionally, if both job sizes and interarrival times are deterministic, no job will be delayed under RR.
@@ -576,7 +554,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison of Policies with Low Job Size Variability
 Background context: When job size variability is low (i.e., Deterministic), the performance of various task assignment policies changes significantly compared to high variability cases. In particular, ROUND-ROBIN becomes optimal as it maximally spaces out arrivals; JSQ and LWL end up doing the same thing as RR. RANDOM may sometimes make mistakes but still performs well due to Deterministic job sizes.
@@ -587,7 +564,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Processor-Sharing (PS) Model for Server Farms
 Background context: In web server farms handling HTTP requests, it is crucial that requests are immediately dispatched and not queued due to their preemptive nature. The PS model ensures each request receives "constant" service by time-sharing among all the requests in its queue.
@@ -598,7 +574,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Poisson Splitting and M/D/1 Queues
 Background context: When job sizes are deterministic and arrivals follow a Poisson process, the PS model can be transformed into an M/D/1 queueing system. This transformation helps in analyzing the performance of such systems using known results for M/D/1 queues.
@@ -609,7 +584,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Response Time Comparison for Random and SITA Policies
 
@@ -655,7 +629,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance of SITA vs. Random Policies
 
@@ -698,7 +671,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load Balancing in PS Server Farms
 
@@ -721,7 +693,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### JSQ Analysis for PS Server Farms
 
@@ -736,7 +707,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Near Insensitivity of JSQ for PS Servers
 
@@ -751,7 +721,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simulation Results for Server Farms
 
@@ -768,7 +737,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Job Size Distributions and Server Farm Load
 Background context: The text discusses various job size distributions, each with a mean of 2 but different variances. These distributions range from deterministic to highly variable (Bimodal-2). Additionally, the server farm load is set at \(\rho = 0.9\).
@@ -788,7 +756,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task Assignment Policies and Their Performance
 Background context: The text evaluates various task assignment policies (ROUND-ROBIN, LWL, SITA, RANDOM, JSQ) under a server farm with preemptive scheduling (PS). Each policy's performance is assessed across different job size distributions.

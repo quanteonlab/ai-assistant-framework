@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** On Your Own Terms
 
 ---
 
-**Rating: 8/10**
 
 #### Fragment-Based Assembly for Websites vs Backends-for-Frontends for Mobile Apps
 This concept involves leveraging different architectural approaches depending on the use case. The key is to maintain cohesion and ensure that logic associated with core operations lives within dedicated services, rather than being scattered throughout the system.
@@ -40,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Integration Spaghetti and Proprietary Protocols
 The integration process can become overly complex when tools use different protocols or allow direct access to their data stores, leading to coupling issues.
@@ -82,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multirole CRM System
 The text discusses the challenges of using Customer Relationship Management (CRM) tools in an enterprise environment. These tools often try to do everything and can become a single point of failure due to their extensive feature sets.
@@ -130,7 +126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Strangler Application Pattern
 The Strangler Application Pattern is a useful approach when dealing with legacy or third-party systems that are not fully under our control. This pattern allows us to gradually replace existing functionality without requiring a full rewrite, making it easier to manage and transition away from older, less maintainable systems.
@@ -169,7 +164,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Microservices Interception with Proxies
 When dealing with microservices, a single monolithic application intercepting all calls to an existing legacy system may not be practical. Instead, you can use a series of microservices to capture and redirect original calls. This approach might require the use of proxies to handle capturing and routing these calls.
@@ -201,7 +195,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avoiding Database Integration in Microservices
 Database integration can tightly couple microservices, making it harder to evolve and maintain them independently. To avoid this, it's recommended to use API-based communication where possible. This approach helps keep services decoupled, as changes in one service do not necessarily require updates in others.
@@ -228,7 +221,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Choreography Over Orchestration in Microservices
 Choreography and orchestration are two different ways of managing interactions between microservices. In choreography, each service independently handles its responsibilities, and communication is based on events or messages. In contrast, orchestration centralizes control over the flow of operations.
@@ -260,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Postel's Law and Tolerant Readers in Microservices
 Postel's Law, also known as the robustness principle, suggests that software should be conservative in its sending and liberal in its receiving. In microservices, this translates to tolerant readers: services should be designed to handle unexpected data gracefully without breaking.
@@ -289,7 +280,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decomposing Monolithic Applications into Microservices
 Monolithic applications grow over time and can become unwieldy, making it difficult to evolve their design. To address this, you can decompose the monolith into smaller microservices, each handling a specific domain or functionality.

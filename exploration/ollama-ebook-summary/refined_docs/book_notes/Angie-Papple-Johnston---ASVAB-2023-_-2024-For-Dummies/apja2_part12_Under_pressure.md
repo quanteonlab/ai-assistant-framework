@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Under pressure Spreading out the force. Gravity What goes up must come down
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Forces and Vector Quantities
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Work and Energy
 Background context: Work is the result of a force (usually in pounds) moving over a distance (usually in feet). In the US, work is often measured as foot-pounds. Potential energy is stored energy due to an object's position or state, while kinetic energy is the energy of motion.
@@ -46,7 +43,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Work and Force
 Work is defined as a force acting on an object over a distance (displacement). It involves both force and displacement, making it easier to understand through practical scenarios. For example, lifting a barbell involves applying force over a certain height.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3.5 Generating numbers with patterns
 
 ---
 
-**Rating: 8/10**
 
 #### Saving and Using Trained Generator Network
 Background context: After training a Generative Adversarial Network (GAN), we typically discard the discriminator as it is not needed for generating new data. However, the generator network can be saved and used to generate new samples from the latent space.
@@ -33,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generating Data Points Using Trained Generator
 Background context: Once the generator is loaded, we can use it to generate new data points in the latent space. This involves creating random noise vectors and passing them through the generator.
@@ -64,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scripting a PyTorch Model
 Background context: The `torch.jit.script()` method is used to convert a PyTorch model into TorchScript, which can be saved and executed more efficiently.
@@ -87,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loading and Using Scripted Models in PyTorch
 Background context: After scripting and saving a model, it needs to be loaded into memory for further use. This involves using `torch.jit.load()`.
@@ -112,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Plotting Generated Data Points
 Background context: After generating fake data using a GAN's generator, it is often useful to visualize this generated data. This involves plotting both real and generated samples for comparison.
@@ -146,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### One-Hot Encoding Introduction
 Background context explaining one-hot encoding. It is a technique used to convert categorical data into numerical format, which machine learning algorithms can process. Each category is represented as a binary vector where only one of the values is 1 and all others are 0.
@@ -158,7 +151,6 @@ One-hot encoding is a method for converting categorical data into a format that 
 
 ---
 
-**Rating: 8/10**
 
 #### Training Process with GANs
 

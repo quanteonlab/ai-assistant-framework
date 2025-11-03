@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Cloud Dataflow
 
 ---
 
-**Rating: 8/10**
 
 #### Unified Batch Plus Streaming Programming Model
 Background context explaining the concept. This model was developed to provide a single, nearly seamless experience for both batch and streaming data processing, addressing the need for flexibility and efficiency in handling various use cases. The model is built on the commonalities between batch and streaming processing by treating them as minor variations of streams and tables.
@@ -143,7 +141,6 @@ input.apply("Transform",
 ```
 x??
 
-**Rating: 8/10**
 
 #### Dataflow/Beam Programming Model
 Background context: Flink adopted the Dataflow/Beam programming model, which enhanced its semantic capability and placed it at a competitive advantage in the streaming world. This model supports both batch and streaming data processing.
@@ -309,7 +306,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce
 MapReduce introduced a simple set of abstractions for data processing on top of a robust and scalable execution engine, allowing data engineers to focus on business logic rather than handling distributed system complexities. This system was crucial in scaling up data processing tasks effectively.

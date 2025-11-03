@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.1.1 Challenges in generating text
 
 ---
 
-**Rating: 8/10**
 
 #### Sequence-to-Sequence Prediction Problem
 The sequence-to-sequence prediction problem is a fundamental task in natural language processing (NLP) where the model predicts the next token in a sentence given a sequence of tokens. This approach is commonly used for tasks like text generation, machine translation, and more.
@@ -31,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training an LSTM Model for Text Generation
 Training a Long Short-Term Memory (LSTM) model involves providing sequences of indexes as inputs and predicting the next token in the sequence. This process helps the model understand the context and generate coherent text.
@@ -57,7 +54,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generating Text One Token at a Time
 After training an LSTM model, you can generate text one token at a time by feeding the current sequence to the model and appending the predicted next token to the input. This process continues until the generated text reaches the desired length.
@@ -95,7 +91,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Controlling Creativity with Temperature and Top-K Sampling
 Temperature controls the randomness of predictions, making high-temperature texts more creative while low temperatures result in more confident and predictable text. Top-K sampling involves selecting tokens based on their probabilities.
@@ -141,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations of RNNs and Introduction to Transformers
 RNNs are well-suited for handling sequential data but suffer from issues like vanishing or exploding gradients, making them less effective for long sequences. The introduction of Transformer models addresses these limitations by using self-attention mechanisms.
@@ -183,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RNNs Work
 
@@ -224,7 +217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Long-Range Dependencies
 
@@ -259,7 +251,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### LSTM Networks
 
@@ -299,7 +290,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tokenization Process
 Background context explaining tokenization. Tokenization is the process of breaking down a sequence into smaller meaningful units called tokens. These can be words, punctuation marks, or special characters. The choice of tokens affects how well the model captures nuances and patterns in the text.
@@ -456,7 +446,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -480,7 +469,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequence Creation and Input
 Background context explaining how the long sequence of tokens is divided into shorter sequences used as input features (the x variable) for the LSTM model. Mention that these sequences help in predicting the next token based on previous ones.
@@ -516,7 +504,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prediction and Loss Minimization
 Background context explaining the iterative process where predictions are made to minimize cross-entropy loss. Mention that this involves comparing model outputs with actual data.
@@ -556,7 +543,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advantages and Drawbacks Continued
 
@@ -572,7 +558,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advantages and Drawbacks Continued
 
@@ -590,7 +575,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -605,7 +589,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Word Embedding Basics
 
@@ -618,7 +601,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of One-Hot Encoding
 
@@ -643,7 +625,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Word Embedding in Practice
 
@@ -667,7 +648,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Learning Process of Word Embeddings
 

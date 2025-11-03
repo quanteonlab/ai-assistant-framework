@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Deques and Other Queues
 
 ---
 
-**Rating: 8/10**
 
 #### Deque Overview
 Background context explaining what a deque is, its purpose, and how it differs from lists. A deque is a double-ended queue that supports appending and removing elements from both ends efficiently.
@@ -115,7 +113,6 @@ These packages offer different levels of synchronization, performance, and use c
 ??x
 ---
 
-**Rating: 8/10**
 
 #### Tuple Behavior as Sequences
 Background context: The author discusses how tuples in Python are made to behave like sequences, which was a pragmatic decision that enhanced the language's practicality and success compared to ABC. This approach allowed tuples to be used interchangeably with other sequence types without significant overhead.
@@ -203,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modern dict Syntax
 Background context explaining how dictionaries are used and their importance. Enhanced unpacking syntax allows for more flexible dictionary creation, including merging mappings with |  and |= operators since Python 3.9.

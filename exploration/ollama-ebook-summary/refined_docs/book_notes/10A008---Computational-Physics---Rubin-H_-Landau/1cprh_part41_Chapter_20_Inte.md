@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 41)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 20 Integral Equations. 20.1 Nonlocal Potential Binding. 20.2.1 Integral to Matrix Equations
 
 ---
 
-**Rating: 8/10**
 
 #### Nonlocal Potential Binding
 Background context: In quantum mechanics, particles can interact through a many-body medium. To simplify this problem, an effective one-particle potential is often used. This potential depends on both the position of the particle and the wave function at other positions due to interactions with other particles, making it nonlocal.
@@ -22,7 +20,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Momentum-Space Schrödinger Equation
 Background context: To solve integro-differential equations more directly, the momentum-space version of the Schrödinger equation is used. This equation allows for a more straightforward numerical approach.
@@ -38,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Integral to Matrix Equations
 Background context: The integral equation can be transformed into a matrix equation using numerical techniques like Gaussian quadrature. This allows for solving the problem with standard matrix methods.
@@ -54,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving Coupled Linear Equations
 Background context: The resulting set of coupled linear equations from the integral transformation is written in matrix form to solve for the wave function values and energy eigenvalues.
@@ -72,7 +67,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eigenvalue Problem
 Background context: The matrix form of the equations can be viewed as an eigenvalue problem. For a nontrivial solution to exist, the determinant of \( [H - E_n I] \) must vanish.
@@ -88,7 +82,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determinant and Eigenvalues
 Background context: Solving for the energy eigenvalues involves finding the roots of the determinant equation. Only certain values of \( E_n \) will satisfy this condition.
@@ -100,7 +93,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Grid Points and Solving
 Background context: The wave function is solved at specific grid points. For \( N \) grid points, there are \( N+1 \) unknowns (wave functions and energy), which must be solved together.
@@ -114,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bound State Equation
 The provided text mentions a transcendental equation that determines the bound state energy for the delta-shell potential: \( e^{-2\varphi b} - 1 = 2 \frac{\lambda}{\sqrt{2mE}} \), where \(\varphi\) is related to the wave vector by \(\varphi^2 = -\frac{2E}{m}\).
@@ -130,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Computation and Eigenvalue Solver
 The text suggests setting up a numerical computation to find eigenvalues. This involves evaluating the determinant of the Hamiltonian matrix or directly solving the eigenvalue problem.
@@ -174,7 +164,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Grid Point Adjustment
 The text suggests adjusting the number of grid points to observe how the energy changes.
@@ -223,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Extracting Bound-State Energy
 Background context: The task involves finding the best value for the bound-state energy and estimating its precision. This is done by observing how the energy changes with different numbers of grid points.
@@ -237,7 +225,6 @@ To estimate the precision of this energy value, observe how it converges as you 
 
 ---
 
-**Rating: 8/10**
 
 #### Verifying Eigenvalue Problem Solution
 Background context: The eigenvalue problem [H][ψn] = E_n[ψn] needs to be solved, and its solution should be verified by comparing the left-hand side (LHS) with the right-hand side (RHS) of the equation.
@@ -269,7 +256,6 @@ Here, `applyHamiltonianOperatorToWaveFunction` is a function that applies the Ha
 
 ---
 
-**Rating: 8/10**
 
 #### Single Bound-State and Depth Increase
 Background context: The task involves verifying the existence of a single bound state and its behavior as the potential's strength increases. Comparing with the theoretical prediction (20.17) is also necessary.
@@ -288,7 +274,6 @@ This approach confirms the uniqueness and behavior of the single bound state wit
 
 ---
 
-**Rating: 8/10**
 
 #### Determining Momentum-Space Wave Function
 Background context: The momentum-space wave function ψn(k) is determined using an eigenproblem solver. Analysis includes checking its behavior at k→∞, oscillations, and origin.
@@ -333,7 +318,6 @@ These checks ensure that your wave functions are physically meaningful.
 
 ---
 
-**Rating: 8/10**
 
 #### Coordinate-Space Wave Function via Bessel Transforms
 Background context: The coordinate-space wave function ψn(r) is determined using Bessel transforms from the momentum-space solution. It involves verifying the r-dependence of this wave function and comparing it with theoretical expectations.
@@ -393,7 +377,6 @@ These checks ensure that your coordinate-space wave functions are physically mea
 
 ---
 
-**Rating: 8/10**
 
 #### Analytical Comparison of Wave Function
 Background context: The determined ψn(r) should be compared to the analytical form given by Eq.(20.19).
@@ -421,7 +404,6 @@ Plot both ψn(r) and ψ_analytical for the same range of r values and observe ho
 
 ---
 
-**Rating: 8/10**
 
 #### Scattering Phase Shift Calculation
 Background context: The scattering phase shift δ needs to be determined using the Lippmann–Schwinger equation.
@@ -443,7 +425,6 @@ This process involves evaluating singular integrals carefully using principal va
 
 ---
 
-**Rating: 8/10**
 
 #### Conversion of Integral Equations to Linear Equations
 Background context explaining the concept. The integral equation can be converted into a set of linear equations by approximating integrals with sums over Gaussian quadrature points.
@@ -485,7 +466,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix Form of Linear Equations
 Background context explaining the concept. The linear system is expressed in matrix form for easier manipulation.
@@ -534,7 +514,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wave Matrix and Reduction to Standard Form
 Background context: The integral equation is reduced to a matrix form \([F][R] = [V]\) where \(F_{ij} = \delta_{ij} - D_j V_{ij}\). This transformation allows us to use standard linear algebra routines for solving the problem.
@@ -561,7 +540,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gaussian Elimination Method
 Background context: While a direct matrix inversion is possible, using Gaussian elimination or other linear algebra methods can be more efficient. This method is also supported by standard libraries.
@@ -579,7 +557,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exercises for Scattering Problems
 Background context: The exercises involve programming a solution to the scattering problem using matrix methods and comparing numerical results with an analytic solution.

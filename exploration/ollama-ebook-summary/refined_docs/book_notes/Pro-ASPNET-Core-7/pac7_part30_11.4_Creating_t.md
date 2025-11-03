@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 30)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11.4 Creating the account controller and views
 
 ---
 
-**Rating: 8/10**
 
 #### Applying Basic Authorization Policy
 
@@ -28,7 +26,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding the Application Layout
 
@@ -46,7 +43,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Adding a View Model for Authentication Credentials
@@ -71,7 +67,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating the Account Controller
 Background context: The text explains creating an `AccountController` to handle user authentication and login requests. This controller interacts with `UserManager<IdentityUser>` and `SignInManager<IdentityUser>` services for managing user accounts.
@@ -105,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling GET Requests in the Login Action Method
 Background context: The `Login` method with a GET request renders a view that prompts the user to enter their credentials. It initializes a `LoginModel` object with empty values and sets the return URL.
@@ -127,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling POST Requests in the Login Action Method
 Background context: The `Login` method with a POST request processes user credentials submitted via a form. It validates the model and attempts to authenticate the user using `UserManager<IdentityUser>` and `SignInManager<IdentityUser>`. If authentication fails, it creates a validation error; otherwise, it redirects the user.
@@ -158,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Client-Side Data Validation vs Server-Side Authentication
 Background context explaining the importance of client-side data validation and why server-side authentication is crucial. Client-side validation improves user experience by providing immediate feedback but should never handle sensitive operations such as authentication. Server-side authentication ensures security by validating credentials in a controlled environment.
@@ -170,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of Login.cshtml
 Background context explaining how the `Login` method and `Views/Account/Login.cshtml` work together for user authentication. The provided code snippet shows a simple form for logging into an application, using Razor syntax to bind input fields to model properties.
@@ -218,7 +209,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Redirect Behavior During Authentication
 Background context: When an unauthenticated user tries to access a protected route in ASP.NET Core, they are redirected to the login page. This behavior ensures that only authenticated users can proceed.
@@ -273,7 +263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Authentication and Authorization in ASP.NET Core
 Background context: In this scenario, the application uses built-in authentication mechanisms provided by ASP.NET Core Identity. It enforces roles-based authorization to ensure that only users with specific roles (e.g., "Admin") can access certain URLs.
@@ -308,7 +297,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Seed Data for Identity Database
 Background context: The application initializes with seed data stored in the database. This data is used to authenticate and authorize users during testing.
@@ -337,7 +325,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Use of Navigation Links for Admin Sections
 Background context: The application uses `NavLink` to provide navigation links for different administrative sections. These are styled and enabled only if they match a certain prefix, ensuring clean routing behavior.
@@ -369,7 +356,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -404,7 +390,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Locales and Docker Deployment
 Background context: When deploying to a Docker container, setting the correct locale is necessary. The chosen locale (`en-US`) represents English as spoken in the United States.
@@ -431,7 +416,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Exception Handler in ASP.NET Core
 Background context: The `app.UseExceptionHandler` method sets up a custom error handling mechanism, directing unhandled exceptions to the specified URL.

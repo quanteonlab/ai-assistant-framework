@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 59)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** F
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### AoS vs. SoA Performance Assessment
@@ -23,7 +21,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CUDA (Compute Unified Device Architecture)
 CUDA is a parallel computing platform and application programming interface model created by NVIDIA that allows software to use Nvidia GPUs for general purpose processing.
@@ -35,7 +32,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Parallel Approach in Computing
 The data parallel approach involves dividing a problem into smaller sub-problems, where each sub-problem operates on different pieces of data but uses the same operations.
@@ -66,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Parallel C++ (DPCPP)
 Data Parallel C++ (DPCPP) is a programming model for data-parallel algorithms in C++, built on the SYCL standard. It enables developers to write portable code that can run on CPUs, GPUs, and other accelerators.
@@ -78,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Assessment of CUDA Kernels
 Performance assessment in CUDA involves measuring the efficiency of kernel execution. Common metrics include:
@@ -101,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CUB (CUDA UnBound) Library
 CUB is a CUDA library designed for solving common parallel algorithms, such as sorting, scanning, reductions, and more. It aims to be high-performance and easy to use.
@@ -135,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GPU (Graphics Processing Unit)
 Background context: GPUs are specialized hardware for parallel computing, originally designed for graphics rendering but now widely used in scientific and machine learning applications due to their high computational power.
@@ -164,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File Operations in High-Performance Filesystems
 Background context: High-performance filesystems are crucial in distributed computing environments, providing efficient and scalable storage solutions for large-scale applications. These filesystems often support advanced features like parallel I/O operations.
@@ -188,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### FFT (Fast Fourier Transform)
 Background context: The Fast Fourier Transform (FFT) is a widely used algorithm for computing the discrete Fourier transform (DFT) and its inverse. It significantly reduces the number of required operations compared to direct DFT computation.
@@ -209,7 +199,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fine-Grained Parallelization
 Background context: Fine-grained parallelization involves dividing a computational task into very small, fine-grained units of work to maximize parallelism and efficiency. This is particularly useful for tasks that can be broken down into many independent operations.
@@ -232,7 +221,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### High Performance Computing (HPC)
@@ -246,7 +234,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### High Performance Conjugate Gradient (HPCG)
 Background context: HPCG is a benchmark test that evaluates the performance of high-performance computers in solving sparse linear systems using iterative methods. It is designed to assess the efficiency of both software and hardware components in handling complex numerical computations.
@@ -259,7 +246,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Heterogeneous Interface for Portability (HIP)
 Background context: HIP is an open-source framework that enables developers to write portable code for NVIDIA GPUs using a C++-like API. It aims to simplify the process of leveraging GPU acceleration across different platforms, including AMD GPUs and CPUs.
@@ -272,7 +258,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message Passing Interface (MPI)
 Background context: MPI is a standardized protocol for message passing among parallel processes on different computers or cores within a single computer. It enables efficient communication and coordination between processes, making it suitable for distributed computing environments.
@@ -285,7 +270,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Non-Uniform Memory Access (NUMA)
 Background context: NUMA is a computer memory design where the memory access time depends on the location of the memory relative to the processor. It can optimize performance by localizing memory accesses to reduce latency and improve overall system efficiency.

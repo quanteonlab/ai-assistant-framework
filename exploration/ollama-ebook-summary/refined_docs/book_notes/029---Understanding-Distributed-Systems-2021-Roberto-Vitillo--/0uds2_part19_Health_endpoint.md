@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Health endpoint. Watchdog
 
 ---
 
-**Rating: 8/10**
 
 #### Health Endpoint Mechanism
 Health endpoints allow a server to signal its state to a load balancer. When queried, these endpoints can return 200 (OK) if the process is capable of serving requests or an error code if it is overloaded and cannot handle more requests.
@@ -163,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Testing and Operations
 Historically, developers, testers, and operators were part of different teams. Developers handed over their software to a QA team for testing, then it moved to an operations team responsible for deployment, monitoring, and responding to alerts. This model is evolving as development teams now handle testing and operations themselves.
@@ -334,7 +331,6 @@ Example of a dashboard design consideration:
 ```
 x??
 
-**Rating: 9/10**
 
 #### Testing Importance and Early Bug Detection
 Background context: The provided text emphasizes that early detection of bugs through testing is crucial. It states that the longer it takes to detect a bug, the more expensive it becomes to fix it. Testing helps catch bugs as early as possible, allowing developers to make changes without breaking existing functionality.

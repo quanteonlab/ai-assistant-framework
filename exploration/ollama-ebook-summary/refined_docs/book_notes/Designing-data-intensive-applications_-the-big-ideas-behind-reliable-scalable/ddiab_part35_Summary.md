@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 35)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Approximate Search in Genome Analysis
 Background context: In genome analysis, approximate search algorithms are used to find strings that are similar but not identical. These algorithms are crucial for tasks such as aligning sequences from different organisms or identifying mutations.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Processing Engines
 Background context: Batch processing engines handle large datasets by breaking them into smaller chunks and processing them in batches. These systems can be used across various domains such as machine learning, data analytics, and database management. They often provide high-level declarative operators and are increasingly gaining built-in functionality.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioning in Distributed Batch Processing
 Background context: In distributed batch processing frameworks like MapReduce, partitioning is crucial for ensuring that related data ends up processed together by a single reducer. Mappers are typically partitioned based on input file blocks, and reducers handle the final aggregation of data.
@@ -39,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault Tolerance in Distributed Batch Processing
 Background context: Ensuring fault tolerance is a critical aspect of distributed batch processing. While systems like MapReduce rely on frequent disk writes for recovery, newer dataflow engines aim to minimize materialization of intermediate state to reduce recomputation upon failure.
@@ -50,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Join Algorithms for MapReduce
 Background context: Various join algorithms are used in MapReduce to efficiently combine datasets. These include sort-merge joins where the inputs are first sorted by their keys and then merged by reducers to ensure related data is processed together.
@@ -63,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Broadcast Hash Joins
 Background context: In distributed data processing, especially in big data scenarios, one common operation is a join between two datasets. When one of the inputs to this join is small enough to be fully loaded into memory (i.e., can fit into a hash table), we can use a broadcast hash join approach. This method allows for efficient joining operations by leveraging the small dataset that can be loaded once and queried multiple times.
@@ -79,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioned Hash Joins
 Background context: When both inputs to a join are partitioned in the same way (using the same key, hash function, and number of partitions), we can leverage the partitioning for efficient hashing. This approach is beneficial because it allows us to independently apply the hash table approach within each partition.
@@ -98,7 +90,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stateless Processing in Distributed Systems
 Background context: In distributed batch processing systems like Apache Hadoop or Apache Spark, tasks such as mappers and reducers operate under strict constraints. These tasks are assumed to be stateless (meaning they do not maintain any global state) and can only communicate with the framework through their designated input and output streams.
@@ -134,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Processing vs Stream Processing
 Background context: Batch processing involves reading a bounded amount of data (e.g., log files, database snapshots) and producing an output based on that fixed dataset. The input size is known and finite, ensuring the job eventually completes when all records have been processed.
@@ -157,7 +147,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Batch Processing vs. Stream Processing
@@ -173,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unbounded Data and Time Durations
 Background context on how unbounded data (data that keeps coming in over time) challenges traditional batch processing methods.
@@ -187,7 +175,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream Processing as Continuous Data Handling
 Explanation on how stream processing continuously processes events as they happen to reduce delay.
@@ -201,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event Streams in Data Management
 Explanation on how event streams represent a counterpart to batch data, focusing on their unbounded and incremental nature.
@@ -215,7 +201,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Representing and Transmitting Streams
 Explanation on how event streams are represented, stored, and transmitted over networks.
@@ -231,7 +216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Event Processing and Records
@@ -244,7 +228,6 @@ An event in stream processing is essentially a record representing something tha
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Processing vs. Streaming
 Background context: While batch processing involves writing data once and then potentially reading it by multiple jobs, streaming processes events as they arrive.
@@ -256,7 +239,6 @@ Batch processing writes a file once and reads it periodically for processing, wh
 
 ---
 
-**Rating: 8/10**
 
 #### Topics and Producers/Consumers
 Background context: In stream processing, related events are grouped into topics, similar to how records are grouped in files for batch processing. Producers generate events, and consumers process them.
@@ -268,7 +250,6 @@ Topics in a streaming system group related events together, much like filenames 
 
 ---
 
-**Rating: 8/10**
 
 #### Notification Mechanisms
 Background context: Traditional databases lack efficient notification mechanisms for real-time updates, making it challenging to handle continuous data streams.
@@ -280,7 +261,6 @@ Traditional relational databases have limited support for notification mechanism
 
 ---
 
-**Rating: 8/10**
 
 #### Messaging Systems
 Background context: Messaging systems provide a robust way to handle notifications by allowing multiple producers to send messages to the same topic, which can then be consumed by multiple consumers.
@@ -292,7 +272,6 @@ Messaging systems act as intermediaries for sending and receiving events. They a
 
 ---
 
-**Rating: 8/10**
 
 #### Producer-Consumer Communication
 Background context: Messaging systems enable decoupling between producers and consumers, allowing them to communicate asynchronously.
@@ -306,7 +285,6 @@ In messaging systems, producers send messages (events) to a topic, which are the
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Handling Message Overflow
@@ -344,7 +322,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Node Crash and Message Durability
 Background context: In a publish/subscribe system, nodes may crash or go offline temporarily. The question is whether any messages are lost during these events.
@@ -382,7 +359,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TCP Versus UDP
 TCP and UDP are two distinct transport layer protocols that operate differently. TCP (Transmission Control Protocol) is a connection-oriented protocol, ensuring reliable data transfer through mechanisms like acknowledgment and retransmission of packets. In contrast, UDP (User Datagram Protocol) is connectionless and provides best-effort delivery without guarantees on packet arrival or order.
@@ -416,7 +392,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Webhooks
 Webhooks are an event-driven callback system where one service can notify another via HTTP requests when specific events occur. This allows for real-time updates and actions to be triggered in response to these events, such as sending notifications, updating databases, etc.
@@ -454,7 +429,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message Brokers (Message Queues)
 Message brokers act as intermediaries that optimize message streams by storing messages centrally. They allow producers to send messages to a broker, which then delivers them to consumers asynchronously. This helps in managing clients that come and go, ensuring durability and handling message queues.
@@ -501,7 +475,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison Between Message Brokers and Databases
 Message brokers and databases have different purposes. While message brokers handle streaming data with temporary storage, databases are designed for long-term data retention and querying.
@@ -550,7 +523,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Load Balancing Pattern
@@ -590,7 +562,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fan-Out Pattern
 Fan-out is a pattern where each message from a topic is delivered to all consumers subscribed to that topic. This allows for independent processing by multiple consumers without interfering with each other, akin to reading the same file in different batch jobs.
@@ -625,7 +596,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Acknowledgment Mechanism
 Acknowledgments are used in messaging systems to ensure that messages are not lost if a consumer crashes before fully processing them. The broker expects explicit confirmation from consumers indicating successful message handling.
@@ -668,7 +638,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Redelivery and Message Ordering
 Background context explaining how load balancing, redelivery, and consumer crashes affect message ordering. The JMS and AMQP standards aim to preserve message order, but combining these features with load balancing can result in reordered messages.
@@ -694,7 +663,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Separate Queues Per Consumer
 Background context explaining that using separate queues for each consumer can avoid message reordering issues. This approach ensures messages are processed in order without interference from other consumers.
@@ -717,7 +685,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message Reordering and Dependencies
 Background context explaining the potential issues with message reordering, particularly when messages have causal dependencies. This is important in stream processing where the order of operations matters.
@@ -743,7 +710,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioned Logs and Durable Storage
 Background context explaining the difference between durable storage (like databases) and transient messaging, where messages are typically deleted after processing. This section discusses log-based message brokers as a potential hybrid solution.
@@ -788,7 +754,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Log-Based Message Brokers
 Background context explaining the concept of using logs for message storage, which can combine the benefits of durable storage with low-latency messaging.
@@ -826,7 +791,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Partitioning Log Files for Scalability
@@ -850,7 +814,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defining Topics as Groups of Partitions
 Background context: A topic is a group of partitions that handle messages of the same type. This abstraction allows for efficient processing and scaling.
@@ -872,7 +835,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Head-of-Line Blocking
 Background context: In a single-threaded processing model for partitions, slow messages can hold up the processing of subsequent messages within the same partition. This is known as head-of-line blocking.
@@ -898,7 +860,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### JMS/AMQP vs Log-Based Approach
 
@@ -922,7 +883,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consumer Offsets and Log-Based Systems
 
@@ -944,7 +904,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Slow Consumers
 

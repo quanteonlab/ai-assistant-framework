@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B004-Data-Governance_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Encryption
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Service Accounts and Application Credentials
@@ -91,7 +89,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Policies
@@ -197,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Access Transparency
 Background context: It is crucial for safeguarding access to data that any access to user data in a production system is transparent. Only a small number of on-call engineers should be able to access it, and even then, only to ensure the safe running of the system. Notifications are required whenever someone in the IT department or cloud provider accesses your data.
@@ -292,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Security Logs Analysis
 Background context explaining the importance of network security logs and their analysis. The goal is to find frequent causes of security incidents, such as multiple failed access attempts on specific files or tables.

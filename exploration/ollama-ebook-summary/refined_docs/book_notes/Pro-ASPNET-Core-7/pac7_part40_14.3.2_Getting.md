@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 40)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 14.3.2 Getting services from the HttpContext object
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Injection Overview
 Background context: Dependency injection is a design pattern that promotes loose coupling between components by providing dependencies to objects at runtime rather than having them create or find their own. This approach enhances testability and flexibility.
@@ -38,7 +36,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using a Service with Constructor Dependency
 Background context: In the provided code snippet, `WeatherMiddleware` class demonstrates how to use dependency injection by accepting an instance of `IResponseFormatter` via its constructor. This approach ensures that the middleware does not have to worry about creating or finding the formatter itself.
@@ -64,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Using `AddSingleton` for Dependency Resolution
 Background context: In the provided example, the `AddSingleton` method is used to register a service with the dependency injection system. This ensures that the same instance of the `HtmlResponseFormatter` will be reused throughout the application.
@@ -82,7 +78,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Middleware Request Handling with Dependency Injection
 Background context: The `WeatherMiddleware` class in the example handles HTTP requests and uses an instance of `IResponseFormatter` to format responses. This demonstrates how middleware can be composed without having to manage dependencies internally.
@@ -103,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ASP.NET Core Middleware Pipeline Setup
 Background context: The `app.UseMiddleware<WeatherMiddleware>();` line in the `Program.cs` file sets up the middleware pipeline. This tells the ASP.NET Core application to use the `WeatherMiddleware` class for processing requests.
@@ -128,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### HttpContext and Dependency Injection
@@ -148,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using IServiceProvider Extension Methods
 Background context explaining that `IServiceProvider` has several extension methods to obtain services. These methods are useful when you need to access services indirectly through `HttpContext`.
@@ -168,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Using Services in Endpoint
 Background context explaining how services can be used within endpoint classes by leveraging `HttpContext` and its `RequestServices`. The example provided uses `IResponseFormatter` to format responses.
@@ -193,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -208,7 +198,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Constructor Injection vs Method Injection
 
@@ -221,7 +210,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Key Concepts
 
@@ -242,7 +230,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Injection (DI)
 Background context explaining how DI simplifies the creation and management of objects by injecting their dependencies. It helps decouple components, improving testability and maintainability.
@@ -257,7 +244,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Lifecycles in ASP.NET Core
 Background context explaining how different lifecycles of services (Singleton, Transient, Scoped) affect their usage and management within an application.
@@ -279,7 +265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Routes with Endpoint Classes in ASP.NET Core
 Background context explaining how to use `MapEndpoint` method to route requests to endpoint classes that consume services.
@@ -298,7 +283,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lifecycles for Services in ASP.NET Core (Continued)
 Background context explaining the different lifecycles (`Singleton`, `Transient`, `Scoped`) and their implications on object creation and reusability.
@@ -317,7 +301,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Service Registration with Different Lifecycles
 Background context explaining how to register services with different lifecycles in ASP.NET Core.
@@ -343,7 +326,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Using Services in ASP.NET Core Endpoints
 Background context explaining how to use services within endpoints defined with `MapGet`, `MapEndpoint`, etc.
@@ -367,7 +349,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transient Services in ASP.NET Core
 Background context: In ASP.NET Core, transient services are created every time a service is requested. This means that each request will receive a new instance of the service implementation. The `AddTransient<TService, TImplementation>()` method is used to register such a service.
@@ -383,7 +364,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ensuring Service Creation for Each Request
 Background context: To ensure that a transient service is created anew for each request in middleware, you need to resolve the dependency within the `Invoke` method.
@@ -404,7 +384,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Requesting Services in EndpointExtensions.cs
 Background context: The `MapEndpoint` method in the `EndpointExtensions` class is an extension for creating endpoints that handle HTTP GET requests. It uses `ActivatorUtilities` to instantiate a service and resolve dependencies except for `HttpContext`.
@@ -425,7 +404,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Enhancing Endpoint Methods for Transient Services
 Background context: To ensure that transient services are resolved per request, the `Endpoint` method in the `WeatherEndpoint` class now takes a service as a parameter. This allows a new instance of the service to be created for each request.
@@ -445,7 +423,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differences Between Custom and Built-In Approaches
 Background context: The custom approach using `ActivatorUtilities` to create instances of services within endpoints does not resolve method dependencies as efficiently as ASP.NET Core's built-in middleware components. Middleware components handle dependency resolution for each request more seamlessly.
@@ -466,7 +443,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Transient Services
@@ -493,7 +469,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scoped Services
 Scoped services are created once per HTTP request. Within the same scope (HTTP request), all dependencies on a scoped service share the same instance.
@@ -519,7 +494,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Scopes with IServiceProvider
 To create a new scope, you can use the `CreateScope` method from the `IServiceProvider` interface. This method returns an `IServiceProvider` that is associated with a new scope and provides its own implementations of scoped services.
@@ -544,7 +518,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scoped Services and Lifecycles
 Scoped services are designed to be resolved once per HTTP request, which is useful for maintaining state or performing operations that should not persist across requests. In ASP.NET Core, scoped services can lead to issues if used outside of their designated lifecycle scope.
@@ -556,7 +529,6 @@ Scoped services in ASP.NET Core are resolved once per HTTP request and provide a
 
 ---
 
-**Rating: 8/10**
 
 #### Service Resolution in Endpoint Extensions
 When resolving services for endpoints, it is crucial to ensure that the correct lifecycle of services is used. Using `IServiceProvider.GetService` ensures that services are resolved within the context of the current HTTP request.
@@ -568,7 +540,6 @@ Using `context.RequestServices.GetService` resolves scoped services correctly be
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Instances for Each Request
 To avoid knowing about service lifecycles in endpoints, creating new instances for each request can be more flexible. This ensures that constructor and method dependencies are resolved without requiring specific lifecycle knowledge.
@@ -580,7 +551,6 @@ Creating a new instance of the endpoint class for each request allows dependency
 
 ---
 
-**Rating: 8/10**
 
 #### Endpoint Extension Method Adjustments
 The extension method `MapEndpoint` in Listing 14.29 demonstrates how to use `context.RequestServices.GetService` to resolve dependencies correctly, ensuring that each endpoint instance has access to its own scoped services.
@@ -613,7 +583,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exception Handling and Service Lifecycles
 If a scoped service is requested outside of its scope, an exception will be thrown. This is due to the nature of scoped services being tied to the lifetime of a single request.
@@ -625,7 +594,6 @@ Attempting to access a scoped service outside its designated scope results in an
 
 ---
 
-**Rating: 8/10**
 
 #### Lambda Functions and Service Lifecycles
 Using lambda functions to configure endpoints can help manage the lifecycle of services. By leveraging `context.RequestServices.GetService`, you ensure that scoped services are used correctly within the scope of each HTTP request.

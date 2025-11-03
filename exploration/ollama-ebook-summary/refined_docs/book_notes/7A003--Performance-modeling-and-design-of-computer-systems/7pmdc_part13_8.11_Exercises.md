@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.11 Exercises
 
 ---
 
-**Rating: 8/10**
 
 #### Average Number of Jobs at the Server
 
@@ -24,7 +22,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limiting Distribution for Program Analysis Problem
 
@@ -60,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Powers of Transition Matrix
 
@@ -100,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Doubly Stochastic Matrix
 
@@ -142,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Averages vs. Ensemble Averages
 Background context: The provided text discusses the difference between time averages and ensemble averages within the context of DTMCs (Discrete-Time Markov Chains). Time averages, denoted as \( p_j \), are defined as the long-run fraction of time spent in state \( j \) over one infinite sample path. Ensemble averages, represented by \( \pi_j \), are probabilities computed from all possible sample paths of length \( n \) as \( n \) approaches infinity.
@@ -198,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Periodic Chain
 Background context: The text provides an example of a two-state transition matrix where the limiting distribution does not exist due to periodicity. This means that in such chains, states are visited only at specific intervals.
@@ -222,7 +215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Time Between Visits
 Background context: This concept delves into understanding the average time spent between visits to a particular state. It relates closely to the limiting distribution and provides insights into the behavior of the Markov chain.
@@ -245,7 +237,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Existence of Limiting Distribution
 Background context: The text introduces the question of when a limiting distribution exists for finite-state Markov chains and provides an example to illustrate this concept. Periodic chains are highlighted as cases where such distributions do not exist.
@@ -271,7 +262,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Average and Stationary Distribution
 The time average spent in each state of a Discrete-Time Markov Chain (DTMC) is represented by \( p_j \), which can be determined based on the transition probabilities. For a valid DTMC, these averages must exist. In simple cases, like the one mentioned:
@@ -282,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Existence of Stationary Distribution
 The existence of a stationary distribution can be verified by solving a set of equations derived from setting up \( \pi \cdot P = \pi \), where \( \pi \) is the stationary vector and \( P \) is the transition matrix. In the given example:
@@ -298,7 +287,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Aperiodicity and Irreducibility
 Aperiodicity means that for any state \( j \), the GCD of the set of integers \( n \) such that \( P^n_{jj} > 0 \) is 1. Irreducibility requires that all states communicate with each other, meaning there is a path from one state to another.
@@ -309,7 +297,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limiting Probabilities Existence
 For a finite-state DTMC to have limiting probabilities that exist, are positive, sum to 1, and are independent of the starting state, it must be both aperiodic and irreducible.
@@ -322,7 +309,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Existence of Limiting Probabilities for aperiodic, irreducible, finite-state Markov chains
 In this section, we establish that for any aperiodic and irreducible finite-state Markov chain with a transition matrix \( P \), the limiting probabilities exist. This involves showing that as \( n \) approaches infinity, \( P^n \) has all positive elements.
@@ -334,7 +320,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defining \( n_0(i, j) \)
 To ensure that \( P^n \) has all positive elements for large enough \( n \), we define \( n_0(i, j) \) such that there is a path of length at least \( n_0(i, j) \) from state \( i \) to state \( j \). Given irreducibility and the fact that there is always a path of length \( x \) from any state \( i \) to itself (\( i = i \)), we can use these paths to find such an \( n_0(i, j) \).
@@ -346,7 +331,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defining \( P' \)
 After defining \( n_0(i, j) \) for all pairs \( (i, j) \), we find the maximum value among these definitions. We then define \( P' = P^{n_0} \). This matrix will have the property that when raised to any power \( k \geq 1 \), it remains positive.
@@ -358,7 +342,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Time between Visits to a State
 The mean time between visits to state \( j \), denoted as \( m_{jj} \), is defined as the expected number of steps needed to first return to state \( j \). This quantity is related to the limiting probability \( \pi_j \) of being in state \( j \).
@@ -370,7 +353,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Theorem 9.6: Relationship between \( m_{jj} \) and \( \pi_j \)
 For an irreducible, aperiodic finite-state Markov chain with transition matrix \( P \), the mean time between visits to state \( j \), \( m_{jj} \), is given by:
@@ -388,7 +370,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limiting Distribution and Time Averages
 Background context: For a finite-state Markov chain, when the limiting distribution exists, it is equal to the unique stationary distribution. Additionally, the probability of visiting state \( j \) over time (denoted as \( p_j \)) can be related to the mean recurrence time \( m_{jj} \), where \( p_j = \frac{1}{m_{jj}} \).
@@ -421,7 +402,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Infinite-State Markov Chains
 Background context: In infinite-state Markov chains, reasoning about the chain's behavior becomes more complex than with finite-state chains. The concepts of aperiodicity and irreducibility still apply but have different implications.
@@ -447,7 +427,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Positive Recurrence, Transience, Null Recurrence
 Background context: In infinite-state Markov chains, the concepts of positive recurrence, transience, and null recurrence are used to describe different behaviors of the chain. These terms relate to the existence and properties of limiting distributions.
@@ -474,7 +453,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Problem with Transient and Null Recurrent Chains
 Background context: The second chain (transient) can be viewed as an ocean with states drifting away, while the third chain (null recurrent) suggests visits but not guaranteed returns.
@@ -504,7 +482,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recurrent vs Transient States
 Recurrent states are those from which the Markov chain returns to the state infinitely often with probability 1. Transient states, on the other hand, have a finite number of visits before being left forever.
@@ -536,7 +513,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Geometric Distribution of Transient State Visits
 The number of visits to a transient state \(j\) follows a geometric distribution with mean \(\frac{1}{1-f_j}\), where \(f_j\) is the probability that the chain starting in state \(j\) will return to it.
@@ -559,7 +535,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Infinite Visits in Recurrent States
 For recurrent states, the Markov chain returns infinitely often with probability 1.
@@ -590,7 +565,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Number of Visits in Finite Steps
 The expected number of visits to a state \(i\) over \(s\) steps, starting from state \(i\), is given by \(\frac{s}{\sum_{n=0}^{s} P^n_{ii}}\).
@@ -624,7 +598,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Infinite vs Finite Visits in Transient and Recurrent States
 Recurrent states have infinite visits with probability 1, whereas transient states have finite visits.
@@ -667,7 +640,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Communicating States and Recurrence
 If a state \(i\) is recurrent and communicates with another state \(j\), then \(j\) must also be recurrent.
@@ -711,7 +683,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summation of State Probabilities for Recurrent States
 Background context: The passage discusses the summation properties of state probabilities in a Markov chain, focusing on recurrent states. A recurrent state is one that will be visited infinitely often with probability 1.
@@ -722,7 +693,6 @@ The equation \(\sum_{s} P^{(m+n)}_{ii}P^s_{ij} = \infty\) implies that the sum o
 
 ---
 
-**Rating: 8/10**
 
 #### Recurrence and Transience in Markov Chains
 Background context: The text defines recurrence and transience for states within a Markov chain. A state is recurrent if it is visited infinitely often with probability 1; otherwise, it is transient.
@@ -733,7 +703,6 @@ If state \(i\) is recurrent and communicates with state \(j\), then state \(j\) 
 
 ---
 
-**Rating: 8/10**
 
 #### Limiting Probabilities in Transient Markov Chains
 Background context: The text discusses the behavior of transient states over an infinite number of steps. Specifically, it states that for any state \(j\), the probability of being in state \(j\) after a large number of steps approaches zero.
@@ -744,7 +713,6 @@ Theorem 9.14 states that for a transient Markov chain, \(\lim_{n \to \infty} P^n
 
 ---
 
-**Rating: 8/10**
 
 #### Non-Existence of Limiting Distributions
 Background context: The text discusses conditions under which a limiting distribution does not exist. A limiting distribution is a stationary distribution where \(\pi_j = \lim_{n \to \infty} P^n_{ij}\).
@@ -755,7 +723,6 @@ We can prove that the limiting distribution does not exist for a transient Marko
 
 ---
 
-**Rating: 8/10**
 
 #### Stationary Distribution for Aperiodic and Irreducible Chains
 Background context: The text introduces a theorem that states if all limiting probabilities are zero for an aperiodic and irreducible chain, then no stationary distribution exists. This is based on the concept of non-recurrence and the behavior over time in such chains.
@@ -766,7 +733,6 @@ Theorem 9.17 states that if an aperiodic, irreducible Markov chain has all limit
 
 ---
 
-**Rating: 8/10**
 
 #### Infinite Random Walk Example
 Background context: The text provides an example of an infinite random walk, where at each step, the gambler either gains or loses a dollar with certain probabilities. This is used to illustrate concepts related to transient states and their limiting behaviors.
@@ -777,7 +743,6 @@ The infinite random walk model demonstrates that in a transient state scenario, 
 
 ---
 
-**Rating: 8/10**
 
 #### Calculation of Expected Number of Visits
 We use the formula for calculating the expected number of visits \( V = \sum_{n=1}^{\infty} P_n^{(0,0)} \). For a symmetric random walk where \( p = q = 0.5 \), we show that \( V \) is infinite. Otherwise, if \( p \neq q \), the expected number of visits is finite.
@@ -790,7 +755,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Number of Visits Simplification
 Using Lavrov's lemma, we simplify the expression for \( V \):
@@ -813,7 +777,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Positive Recurrence vs Null Recurrence
 Positive recurrence and null recurrence are two types of recurrent Markov chains. In a positive-recurrent MC, the mean time between recurrences (returning to the same state) is finite. In contrast, in a null-recurrent MC, the mean time between recurrences is infinite.
@@ -830,7 +793,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Time Between Visits
 The theorem provided states that if a state \(i\) is positive recurrent and communicable with another state \(j\), then \(j\) is also positive recurrent. Conversely, if \(i\) is null recurrent and communicable with \(j\), then \(j\) is also null recurrent.
@@ -849,7 +811,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proof by Contradiction
 A proof by contradiction is used to show that the mean number of steps between visits to state 0 in a symmetric random walk is infinite.

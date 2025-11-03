@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Fine-Tuning BERT for Named-Entity Recognition (NER)
 Background context: This section discusses fine-tuning a BERT model specifically for Named-Entity Recognition (NER), where the goal is to identify and classify named entities such as names, places, or organizations within unstructured text. The process involves using token-level classification rather than document-level classification.
@@ -178,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Language Modeling
 Background context: The first step in creating a high-quality Large Language Model (LLM) is to pretrain it on one or more massive text datasets. During this training, the model attempts to predict the next token based on an input without labels, aiming to learn linguistic and semantic representations.
@@ -264,7 +261,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Supervised Fine-Tuning (SFT)
 Background context explaining that during pretraining, a model learns to predict the next word(s) in a sequence. However, this doesn't necessarily mean it will follow instructions given by users.

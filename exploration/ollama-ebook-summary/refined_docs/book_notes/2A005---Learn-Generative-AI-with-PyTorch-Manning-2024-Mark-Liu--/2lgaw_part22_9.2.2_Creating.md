@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.2.2 Creating an encoder
 
 ---
 
-**Rating: 8/10**
 
 #### Positionwise Feed Forward Layer
 Position-wise feed-forward networks are a critical component of the Transformer architecture, enhancing the model’s ability to capture intricate features. The typical setup involves a hidden layer that is much larger than the input and output dimensions.
@@ -40,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Encoder Layer
 An encoder layer in the Transformer architecture consists of two sublayers: a multi-head self-attention mechanism and a position-wise feed-forward network. Both these sublayers are wrapped with residual connections and layer normalization to enhance gradient flow through deeper networks.
@@ -82,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sublayer Connection
 Sublayer connections ensure that each sublayer in an encoder layer receives its input and returns it to be used as the next step's input. This design helps maintain the flow of information and ensures proper integration of different layers.
@@ -111,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Layer Normalization
 Layer normalization is a technique that standardizes the inputs across a mini-batch to have zero mean and unit variance. This helps in stabilizing the learning process, especially for deep networks.
@@ -148,7 +143,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Encoder Class
 The `Encoder` class stacks multiple `EncoderLayer` instances to form an encoder. This is a fundamental component of the Transformer model, which processes input sequences and generates meaningful representations.
@@ -184,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decoder Layer Structure
 Background context: A decoder layer is a crucial component of the Transformer architecture, designed to process input sequences and generate output sequences. It consists of three main sublayers: masked multihead self-attention, cross-attention between the target sequence and the encoder's output, and a feed-forward network.
@@ -209,7 +202,6 @@ These sublayers work together to facilitate both internal dependencies within th
 
 ---
 
-**Rating: 8/10**
 
 #### Masked Multihead Self-Attention Layer
 Background context: The masked multihead self-attention layer is responsible for capturing the relationships between tokens in the same sequence. It uses a special mask to ensure that each token only attends to previous tokens, thus preventing information leakage from future tokens.
@@ -237,7 +229,6 @@ def masked_multihead_self_attention(query, key, value, mask):
 
 ---
 
-**Rating: 8/10**
 
 #### Cross-Attention in Decoder Layers
 Background context: The cross-attention sublayer allows the decoder to attend to the encoder's output, enabling it to capture information from the source sequence. This is particularly useful for tasks like machine translation where understanding the source sentence can help predict target tokens.
@@ -276,7 +267,6 @@ def cross_attention(query, key, value, mask):
 
 ---
 
-**Rating: 8/10**
 
 #### Feed-Forward Network in Decoder Layers
 Background context: The feed-forward network is a simple two-layer fully connected neural network applied after the attention mechanisms. It processes the input through a series of linear transformations and nonlinear activations, providing another way to introduce complexity into the model.
@@ -312,7 +302,6 @@ class FeedForward(nn.Module):
 
 ---
 
-**Rating: 8/10**
 
 #### Attention Weights Calculation
 
@@ -368,7 +357,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decoder Layer
 
@@ -437,7 +425,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decoder Class Implementation
 

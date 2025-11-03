@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Optional and Union types
 
 ---
 
-**Rating: 8/10**
 
 #### Type Annotations and Inference in Python
 
@@ -145,7 +143,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tokenize Function
 Background context: The `tokenize` function is part of a larger program that processes Unicode characters and their names, creating an inverted index. It uses regular expressions to identify words within character names and returns these as uppercased tokens.
@@ -270,7 +267,6 @@ def name2hex(name: str, color_map: Mapping[str, int]) -> str:
 ```
 x??
 
-**Rating: 8/10**
 
 #### Sorted and Duck Typing
 Background context: The `sorted` function in Python can work on any iterable as long as its elements support a `<` comparison. This means that if an object supports the less-than operation, it can be sorted even without explicitly implementing an ordering mechanism.

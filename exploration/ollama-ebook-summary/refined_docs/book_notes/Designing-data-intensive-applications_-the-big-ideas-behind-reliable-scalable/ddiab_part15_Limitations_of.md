@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Limitations of Quorum Consistency
 
 ---
 
-**Rating: 8/10**
 
 #### Quorum Consistency Overview
 Quorum consistency ensures that a read or write operation must receive successful responses from both a minimum number of nodes (`w` for writes and `r` for reads) to ensure data reliability. This mechanism helps tolerate node failures while maintaining consistency.
@@ -112,7 +110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Read Repair and Staleness
 Background context explaining the concept of read repair and staleness. Include any relevant formulas or data, such as how the staleness is measured based on parameters n, w, and r.
@@ -183,7 +180,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Sloppy Quorum Definition
@@ -249,7 +245,6 @@ public void handleWrite(String key, String value) {
 x??
 ---
 
-**Rating: 8/10**
 
 #### Last Write Wins (LWW)
 Background context: In distributed systems, particularly when implementing leaderless replication, achieving eventual consistency involves handling concurrent writes. The LWW strategy is one such method where each replica stores only the "most recent" value and discards older ones. This approach simplifies conflict resolution but at the cost of durability since not all writes may be retained.
@@ -320,7 +315,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrent Operations Definition
 Background context: The text explains how operations are concurrent when they do not know about each other. This concept is crucial for understanding replication and conflict resolution in distributed systems.
@@ -396,7 +390,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Concurrent Writes Handling
@@ -595,7 +588,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Concurrent Values and Siblings
@@ -671,7 +663,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### High Availability through Replication
 Replication can help achieve high availability by ensuring that even when one machine or several machines, or an entire datacenter goes down, the system continues to run. This is crucial for maintaining service continuity and preventing downtime.
@@ -765,7 +756,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Concurrency Issues in Multi-Leader and Leaderless Replication
@@ -844,7 +834,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### HBASE-7709: Infinite Loop Possible in Master/Master Replication

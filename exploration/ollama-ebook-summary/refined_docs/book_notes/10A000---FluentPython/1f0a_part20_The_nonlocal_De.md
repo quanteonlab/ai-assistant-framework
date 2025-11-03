@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The nonlocal Declaration
 
 ---
 
-**Rating: 8/10**
 
 #### Closures and Free Variables
 Background context: In Python, a closure is a function object that has access to variables from its lexical scope even when the function is executed outside that scope. This allows for the preservation of state across multiple calls. The `__code__.co_freevars` attribute contains names of free variables used in the function, and `__closure__` holds their values.
@@ -126,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decorator Implementation
 Background context: In Python, decorators are a powerful feature that allow for function modification without changing the underlying function's code. They can be implemented using nested functions and closures to maintain state between calls.
@@ -347,7 +344,6 @@ The overall purpose of using decorators in Python is to extend or modify the beh
 
 For example, in Example 9-14, the `clock` decorator is used to measure the execution time of functions, providing insights into their performance without altering the original function’s implementation. This allows developers to monitor and optimize code without cluttering it with timing logic directly within the function definitions.
 
-**Rating: 8/10**
 
 #### Decorator Pattern Overview
 Background context: The Decorator pattern is a design pattern that allows for adding responsibilities to an object dynamically. Unlike using subclassing, it provides a flexible alternative without altering the object structure.

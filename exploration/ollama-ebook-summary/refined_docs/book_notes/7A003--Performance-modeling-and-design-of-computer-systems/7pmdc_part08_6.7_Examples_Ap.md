@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 6.7 Examples Applying Littles Law
 
 ---
 
-**Rating: 8/10**
 
 #### Little's Law for Closed Systems - Red Jobs
 Little’s Law can be applied to subsets of jobs, such as "red" jobs. The proof is analogous to the general case but focuses only on the red jobs.
@@ -114,7 +112,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Little's Law and Operational Laws Overview
 Little's Law provides a fundamental relationship between the average number of items in a system (N), the average rate at which items arrive (λ), and the average time an item spends in the system (T): E[N] = λ·E[T].
@@ -207,7 +204,6 @@ Thus, the CPU utilization is:
 \[ \rho_{cpu} = 0.45·3·0.21 = 0.28.\]
 x??
 
-**Rating: 8/10**
 
 #### Total Service Demand (D)
 Background context: The total service demand \( D_i \) on device \( i \) for all visits of a single job is defined as the average service time required by all visits to server \( i \), given by:

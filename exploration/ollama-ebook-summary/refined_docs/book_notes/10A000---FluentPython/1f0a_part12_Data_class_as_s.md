@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Data class as scaffolding. Pattern Matching Class Instances
 
 ---
 
-**Rating: 8/10**
 
 #### Data Class as Scaffolding
 Background context: In software development, a data class often serves as a temporary placeholder or initial implementation to quickly get started with a new project. This is especially useful during rapid prototyping or when you need a simple structure for experimentation without fully defining all the behaviors and methods right away.
@@ -83,7 +81,6 @@ json_like_dict = asdict(person)  # :p What does `asdict` do here?
 The `asdict` function from the `dataclasses` module converts a data class instance into a dictionary that can be easily serialized to JSON.
 ???
 
-**Rating: 8/10**
 
 #### Simple Class Patterns
 Background context: Simple class patterns are used to match class instances by type. These patterns can be used as subpatterns within more complex pattern matching cases, such as those involving sequences and mappings. The syntax for these patterns resembles a constructor invocation.
@@ -158,7 +155,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Keyword Class Patterns
 Keyword class patterns allow for readable matching of classes based on their attributes. They work with any class that has public instance attributes and are very flexible, but can be verbose.

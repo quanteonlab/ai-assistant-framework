@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 23ptl9.7Nonlinear Function Approximation Artificial Neural Networks
 
 ---
 
-**Rating: 8/10**
 
 #### Tile Coding for State Representation
 Background context explaining tile coding. This method is used to discretize continuous state spaces into a manageable number of regions or "tiles." The choice and configuration of tilings significantly affect performance, especially when automating this process becomes challenging.
@@ -43,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Radial Basis Functions (RBFs)
 Background context explaining RBFs. Unlike binary features which are either present or absent, RBFs provide a continuous response based on distance from a center point. This allows for smoother function approximation.
@@ -83,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nonlinear Function Approximation
 Artificial neural networks (ANNs) are mentioned as an example of nonlinear function approximation methods. Unlike RBF networks, ANNs can handle complex relationships between states and actions.
@@ -97,7 +93,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logistic Function as Activation Function
 Background context: The passage mentions using S-shaped or sigmoid functions such as the logistic function \(f(x) = \frac{1}{1 + e^{-x}}\) for activation. This function maps any real-valued number into the range (0, 1), making it useful in scenarios where a binary decision is needed.
@@ -116,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rectifier Nonlinearity
 Background context: In addition to the logistic function, the passage mentions that sometimes the rectifier nonlinearity \(f(x) = \max(0, x)\) is used as an activation function. This function returns 0 for any negative input and retains the value of positive inputs.
@@ -137,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nonlinear Function Approximation: Artificial Neural Networks (ANNs)
 Background context explaining the concept. ANNs are used to approximate complex functions, especially when dealing with input-output relationships that involve non-linear transformations. The activation of each output unit is a nonlinear function of the activations over the network's input units.
@@ -189,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Objective Function and Weight Adjustments
 Background context explaining the concept. The objective function is used to measure how well a network performs on a given task. In supervised learning, this often involves minimizing the error between predicted outputs and actual labels.
@@ -213,7 +205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hierarchical Feature Learning in Deep ANNs
 Background context explaining the concept. Deep ANNs are effective because they can learn hierarchical representations of data, allowing them to capture complex patterns.
@@ -239,7 +230,6 @@ In reinforcement learning (RL), ANNs can use techniques like temporal difference
 
 ---
 
-**Rating: 8/10**
 
 #### Backpropagation Algorithm
 Background context explaining the backpropagation algorithm. The algorithm consists of alternating forward and backward passes through a neural network to compute partial derivatives for each weight, which are used as an estimate of the true gradient.
@@ -250,7 +240,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training ANNs with Hidden Layers Using Reinforcement Learning
 Background context explaining that reinforcement learning principles can be used instead of backpropagation for training ANNs with hidden layers. However, these methods are less efficient than backpropagation but may more closely mimic how real neural networks learn.
@@ -261,7 +250,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance of Backpropagation on Deep Networks
 Background context explaining that while backpropagation works well for shallow networks (1-2 hidden layers), it can underperform or even degrade the performance of deeper networks. This is due to issues with gradient decay or growth during backward passes.
@@ -272,7 +260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overfitting in ANNs
 Background context explaining that overfitting is a common issue where models perform well on training data but poorly on unseen data. It's particularly problematic for deep ANNs due to their large number of weights.
@@ -283,7 +270,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dropout Method for Reducing Overfitting
 Background context explaining that the dropout method is an effective technique to reduce overfitting in deep ANNs by introducing dependencies among weights and reducing the number of degrees of freedom.
@@ -294,7 +280,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stopping Training Based on Validation Data
 Background context explaining that stopping training when performance begins to decrease on validation data different from the training data (cross-validation) can help prevent overfitting. This method evaluates the model's performance on unseen data periodically during training.
@@ -305,7 +290,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Dropout Method
@@ -334,7 +318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deep Belief Networks
 The deep belief networks method trains the deepest layers of a deep ANN one at a time using an unsupervised learning algorithm. Without relying on the overall objective function, unsupervised learning can extract features that capture statistical regularities of the input stream.
@@ -373,7 +356,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Normalization
 Batch normalization normalizes the output of deep layers before they feed into the following layer. It has long been known that ANN learning is easier if the network input is normalized, for example, by adjusting each input variable to have zero mean and unit variance.
@@ -429,7 +411,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deep Residual Learning
 In deep residual learning, sometimes it is easier to learn how a function differs from the identity function than to learn the function itself. Adding this difference, or residual function, to the input produces the desired function.
@@ -475,7 +456,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Normalization in Deep Convolutional Networks
 Background context: Batch normalization is a method used to normalize the inputs of each layer during both training and inference, which helps stabilize and speed up training. It involves normalizing the activations from the previous layer for each mini-batch using the mean and variance computed over that batch.
@@ -486,7 +466,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deep Residual Learning
 Background context: Deep residual learning involves adding skip connections between layers in deep convolutional networks, allowing gradients to flow directly through these shortcuts. This technique helps in training very deep networks by making it easier for the network to learn identity mappings, which can be used as building blocks for the network.
@@ -497,7 +476,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Least-Squares TD (LSTD) Overview
 Background context: The Least-Squares TD algorithm, commonly known as LSTD, is a method for linear function approximation that aims to improve computational efficiency compared to iterative methods like those used in TD(0). It computes an estimate of the TD fixed point directly using matrix operations.
@@ -509,7 +487,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Estimation Formulas in LSTD
 Background context: In LSTD, estimates of matrices A and b are computed using sums over time steps, ensuring that these approximations can be updated incrementally.
@@ -528,7 +505,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Computational Complexity of LSTD
 Background context: Despite potentially high initial complexity, LSTD can be made computationally efficient through incremental updates. The outer product in the computation of \( \mathbf{b}_{A,t} \) requires careful handling to maintain efficiency.
@@ -540,7 +516,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Final TD Fixed Point Computation
 Background context: The final step in LSTD involves using the computed matrices to estimate the TD fixed point.
@@ -556,7 +531,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Computational Efficiency
 Background context: LSTD offers a more data-efficient approach compared to traditional semi-gradient TD(0), but it still has higher computational requirements due to matrix operations.
@@ -568,7 +542,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### On-policy Prediction with Approximation LSTD (Least-Squares Temporal Difference)
 
@@ -581,7 +554,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory-based Function Approximation
 
@@ -594,7 +566,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Local-learning Methods
 
@@ -607,7 +578,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Weighted Average Methods
 
@@ -620,7 +590,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Locally Weighted Regression
 
@@ -633,7 +602,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advantages of Memory-based Methods
 
@@ -646,7 +614,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Curse of Dimensionality
 

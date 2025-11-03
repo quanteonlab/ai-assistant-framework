@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Orchestration Tools
 
 ---
 
-**Rating: 8/10**
 
 #### Deployment and Kubernetes Clusters
 Background context: In cloud computing, deploying applications involves managing multiple instances of VMs or containers efficiently. This is where orchestration tools like Kubernetes come into play. Kubernetes allows you to define how your application should run as code using YAML files.
@@ -51,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kubernetes Deployment Strategy
 Background context: When deploying applications, it's important to have a strategy for updating existing deployments without causing downtime or issues with the application. Kubernetes provides several strategies such as Rolling Updates, Blue-Green Deployments, and Canary Releases.
@@ -76,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pod and Container Management in Kubernetes
 Background context: Pods are the smallest deployable units in a Kubernetes cluster, consisting of one or more containers. They share network namespaces and volumes, making it easy to manage related containers together.
@@ -103,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Auto Scaling in Kubernetes
 Background context: As application traffic changes, so should the number of containers or replicas to handle the load efficiently. Kubernetes provides auto-scaling capabilities that adjust the number of instances based on defined metrics and thresholds.
@@ -141,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Discovery in Kubernetes
 Background context: In a distributed system, it's crucial that containers can find and communicate with each other. Kubernetes provides service discovery mechanisms such as DNS and labels to enable communication between services.
@@ -176,7 +170,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deploying Updates Using Kubernetes
 Background context: When deploying a new version of your Docker container, you can use `kubectl apply -f example-app.yml` to instruct Kubernetes to deploy your application. By modifying the YAML file and running this command again, you can roll out updates without downtime.
@@ -192,7 +185,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Terraform to Provision Servers
 Background context: Terraform is a provisioning tool that allows you to create not only servers but also other components of your infrastructure such as databases, load balancers, and more. It uses configuration files written in HCL (HashiCorp Configuration Language) which are similar to YAML.
@@ -215,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Infrastructure as Code (IaC)
 Background context: IaC is a practice where infrastructure and resources are defined with code. This allows for version control, automation, and easier management of infrastructure changes.
@@ -227,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Infrastructure as Code
 Background context explaining why IaC is beneficial, including references to the 2016 State of DevOps Report which highlights improved deployment frequency, faster recovery from failures, and significantly lower lead times for organizations that use DevOps practices like IaC.
@@ -238,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Self-Service
 Background context explaining how manual infrastructure deployment can create bottlenecks and dependencies on a small number of sysadmins. Contrast this with the automation provided by IaC which enables developers to manage deployments themselves.
@@ -249,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Speed and Safety
 Background context explaining how automation in IaC leads to faster and safer deployments due to reduced manual steps and increased consistency. Discuss the benefits of this approach over manual processes.
@@ -260,7 +248,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Documentation
 Background context explaining how the lack of documentation can lead to issues when key team members leave or go on vacation, whereas IaC acts as comprehensive documentation accessible to all team members.
@@ -271,7 +258,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Version Control
 Background context explaining how version control helps capture the history of your infrastructure changes and aids in debugging issues by allowing you to revert to previous versions when necessary.
@@ -282,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Validation
 Background context explaining how automated validation processes like code reviews, tests, and static analysis tools can significantly reduce defects in your infrastructure code.
@@ -295,7 +280,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Why Use Infrastructure as Code (IaC)?
 Background context explaining why IaC is important. Discussing the repetitive and tedious nature of manual deployment, and how it leads to stress and an unpleasant environment for developers and sysadmins.
@@ -317,7 +301,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### How Terraform Works?
 Background context on how Terraform operates, including its open-source nature and the languages it is written in. Explain that Terraform uses API calls to cloud providers through configuration files.
@@ -346,7 +329,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transparent Portability Between Cloud Providers with Terraform?
 Background context on the challenge of porting infrastructure between different cloud providers. Explain why “exactly the same” infrastructure might not be directly portable due to differences in features and management.

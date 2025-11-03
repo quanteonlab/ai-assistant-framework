@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Panel Data
 
 ---
 
-**Rating: 8/10**
 
 #### Time Series Data
 Time series data is a collection of records for one or more variables associated with a single entity, observed at specific intervals over time. These data are indexed in time order and can be mathematically represented as \( X_1, X_2, \ldots , X_N \) where N is the length of the time series, and \( X \) is the observed variable.
@@ -121,7 +119,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix Representation in Portfolio Optimization
 
@@ -245,7 +242,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Visualization
 Network visualization is a method to illustrate graph data by drawing nodes and links. It works best with small networks and provides an intuitive understanding of connections between entities.
@@ -478,7 +474,6 @@ public class WeightedGraph {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Weighted Graphs
 Background context explaining weighted graphs. Weights can represent various values such as asset value, money transfer amounts, or trade volumes in financial networks.
@@ -712,7 +707,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fundamental Data Overview
 Background context explaining fundamental data, including its sources and importance. Fundamental data encompasses financial statements like balance sheets, income statements, and cash flow statements, which provide insights into a firm's structure, operations, and performance.

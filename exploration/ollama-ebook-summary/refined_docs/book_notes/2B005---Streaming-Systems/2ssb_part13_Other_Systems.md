@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Other Systems
 
 ---
 
-**Rating: 8/10**
 
 #### Duplicate Inserts Handling in BigQuery Sink
 Background context: When using a BigQuery sink in Dataflow, it is crucial to handle duplicate inserts effectively. To ensure that only unique records are inserted into BigQuery, a unique identifier (ID) must be generated for each record before attempting an insert operation. This process involves two steps: generating statistically unique IDs and ensuring these IDs remain stable across retries.
@@ -82,7 +80,6 @@ An idempotent step in this Dataflow scenario ensures that any number of retries 
 ```
 x??
 
-**Rating: 8/10**
 
 #### Spark Streaming Microbatch Architecture
 Background context: Apache Spark Streaming uses a microbatch architecture for continuous data processing. This approach allows users to logically deal with streams as if they were discrete batches, leveraging Spark's batch processing capabilities.
@@ -242,7 +239,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task Allocation and Data Transport
 

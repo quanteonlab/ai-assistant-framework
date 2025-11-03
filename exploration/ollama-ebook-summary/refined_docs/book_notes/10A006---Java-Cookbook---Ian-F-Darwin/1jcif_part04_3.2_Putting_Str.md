@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3.2 Putting Strings Together with StringBuilder
 
 ---
 
-**Rating: 8/10**
 
 #### String Tokenizer vs Regular Expressions
 Background context: In Java, `StringTokenizer` is a useful tool for breaking down strings into tokens based on delimiters. However, the provided example demonstrates that this method can become cumbersome and inflexible when dealing with varying numbers of null fields or complex input patterns.
@@ -73,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### StringBuilder vs. String
 Background context explaining that `StringBuilder` and `String` are both used to manipulate strings but have different properties: `String` is immutable, while `StringBuilder` (and its synchronized cousin `StringBuffer`) can be modified.
@@ -208,7 +205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Unicode and Character Encoding
@@ -270,7 +266,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reversing a String by Character Using StringBuilder
 Background context: The `StringBuilder` class in Java provides an efficient way to reverse strings character by character. This method is straightforward and utilizes the built-in capabilities of `StringBuilder`.
@@ -316,7 +311,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### String Trimming and Comparison
 Background context: In Java, strings often contain leading or trailing spaces which can affect various operations. The `trim()` method is useful for removing these spaces. This concept is particularly important when dealing with user input where whitespace might be inconsistently entered.

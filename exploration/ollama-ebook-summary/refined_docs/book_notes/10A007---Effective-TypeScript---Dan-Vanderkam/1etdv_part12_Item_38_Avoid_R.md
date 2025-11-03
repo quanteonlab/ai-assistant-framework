@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 38 Avoid Repeated Parameters of the Same Type
 
 ---
 
-**Rating: 8/10**
 
 #### Optional Properties in TypeScript
 Background context explaining optional properties and their impact on type checking. Discuss how they can lead to repeated and possibly inconsistent code for default values. Explain that using required properties or creating distinct types can mitigate some of these issues.
@@ -70,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prefer Unifying Types to Modeling Small Differences
 
@@ -211,7 +208,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prefer Imprecise Types to Inaccurate Types
 Background context: When writing type declarations, you often have a choice between being precise and being imprecise. Being precise means using more specific types that better capture the exact nature of the data or functionality. However, precision comes with risks—increased chances of mistakes and potential inaccuracy if real-world use cases exceed the assumptions made during type declaration.
@@ -280,7 +276,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Improved Type Precision for Expressions
 Background context: The original types were too broad, leading to false negatives where valid expressions were not flagged correctly. We aim to improve precision by making our type system more specific while ensuring that we don't introduce regressions (i.e., stop working on existing valid expressions).
@@ -437,7 +432,6 @@ const invalidExpressions: Expression4[] = [
 ??x
 ---
 
-**Rating: 8/10**
 
 #### TypeScript Improvements and Challenges
 Background context: The provided text discusses improvements in TypeScript's type checking, highlighting both benefits and challenges. It focuses on a specific `Expression` type declaration and its errors, emphasizing precision versus accuracy in type declarations.

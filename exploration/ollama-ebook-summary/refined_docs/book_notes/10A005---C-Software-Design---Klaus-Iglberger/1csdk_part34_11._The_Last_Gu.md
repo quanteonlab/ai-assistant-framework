@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 34)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11. The Last Guideline. Guideline 39 Continue to Learn About Design Patterns
 
 ---
 
-**Rating: 8/10**
 
 #### Minimize Dependencies
 Dependencies are a critical aspect of software design. Reducing dependencies is essential for maintaining and evolving your software over time.

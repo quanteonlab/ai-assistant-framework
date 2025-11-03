@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B004-Data-Governance_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Data Life Cycle Management
 
 ---
 
-**Rating: 8/10**
 
 #### Data Life Cycle Phases
 Data goes through several phases from its creation to destruction. These phases include data capture, data storage, data archiving, and data destruction.
@@ -127,7 +125,6 @@ Key takeaways include:
 
 These concepts provide a framework for organizations to implement robust data governance.
 
-**Rating: 8/10**
 
 #### Ensure Applicable Data Policies Are Captured
 Background context: This involves making sure that all necessary data policies are documented and followed. This is crucial for compliance and audits, as it provides a clear roadmap on how data should be managed throughout its lifecycle.
@@ -230,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Life Cycle Overview
 

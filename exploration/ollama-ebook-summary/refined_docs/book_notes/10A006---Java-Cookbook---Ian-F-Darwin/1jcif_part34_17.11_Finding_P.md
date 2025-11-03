@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 34)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 17.11 Finding Plug-In-Like Classes via Annotations. Problem. Solution. Discussion
 
 ---
 
-**Rating: 8/10**
 
 #### Finding Classes Annotated with a Specific Annotation
 Background context: This concept involves using Java Reflection to discover classes annotated with a specific annotation. Annotations can be applied at various levels (class, method, field, parameter) and are used for metadata purposes such as indicating plug-in-like functionality.
@@ -145,7 +143,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Invoking External Programs Using Runtime.exec()
 Background context: Java provides a method `Runtime.exec()` to invoke external programs or scripts. This is useful when you need to run applications that are not written in Java, but they must be compiled for the specific operating system.
@@ -275,7 +272,6 @@ Some popular JVM languages include:
 These languages provide different strengths and use cases within a Java application ecosystem. 
 x??
 
-**Rating: 8/10**
 
 #### Running an External Program from Java - Using Runtime.exec()
 Background context: This concept involves executing external programs from within a Java application using the `Runtime` class. The method `exec()` is used to start a separate process, which can be useful for integrating with system tools or performing tasks not directly supported by Java.

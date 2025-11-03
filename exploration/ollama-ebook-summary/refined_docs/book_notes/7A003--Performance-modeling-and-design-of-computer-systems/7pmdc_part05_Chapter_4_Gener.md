@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 4 Generating Random Variables for Simulation. 4.1 Inverse-Transform Method
 
 ---
 
-**Rating: 8/10**
 
 #### Inverse-Transform Method Overview
 The inverse-transform method is used to generate random variables (r.v.) for simulation based on their cumulative distribution function (c.d.f.). This method works by mapping uniform r.v. instances from \((0, 1)\) to the desired distribution's instance \(x\).
@@ -73,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Discrete Random Variable Generation
 Background context: The discrete case involves generating a random variable \( X \) that takes on specific values with certain probabilities. This can be represented as:
@@ -278,7 +275,6 @@ x??
 
 These flashcards cover the key concepts in the provided text, focusing on the generation of discrete and continuous random variables using both the Inverse-Transform and Accept-Reject methods. Each card includes context, relevant formulas, and code examples where appropriate to aid understanding.
 
-**Rating: 8/10**
 
 #### Generating Poisson Random Variables from Exponential Random Variables
 

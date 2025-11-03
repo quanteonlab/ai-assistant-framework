@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** On-policy Control with Approximation. Episodic Semi-gradient Control
 
 ---
 
-**Rating: 8/10**
 
 #### Episodic Semi-gradient Control
 Background context explaining the extension of semi-gradient prediction methods to action values. The update target \(U_t\) can be any approximation of \(q_\pi(S_t, A_t)\), including backed-up values such as Monte Carlo return or n-step Sarsa returns.
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Episodic Semi-gradient Sarsa for Estimating \(\hat{q}^\pi\)
 Background context explaining how this method extends the ideas from state values to action values. It uses techniques like "epsilon-greedy" for action selection and policy improvement in the on-policy case.
@@ -49,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mountain Car Task
 Background context explaining the challenge of moving an underpowered car up a mountain road. The task involves understanding when actions need to be reversed before they can achieve the goal.
@@ -60,7 +56,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Function Approximation in Mountain Car Task
 Background context explaining how continuous state-action space is handled using grid-tiling for feature extraction and linear combination with parameters \(w\).
@@ -74,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Learning Curves for Semi-gradient Sarsa
 Background context explaining the performance evaluation through learning curves. The example provided shows the negative cost-to-go function learned during one run.
@@ -87,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-step Return Definition
 In reinforcement learning, the goal is to estimate the value function or action-value function using function approximation. The n-step return generalizes the idea of an n-step return from its tabular form (7.4) to a function approximation form.
@@ -106,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semi-gradient n-step Sarsa Update Equation
 The update equation for semi-gradient n-step Sarsa is derived by using an n-step return as the target in the semi-gradient Sarsa update. The formula is:
@@ -126,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Episodic Semi-gradient n-step Sarsa Algorithm
 The episodic semi-gradient n-step Sarsa algorithm iterates over episodes to estimate the action-value function using a differentiable parameterization. The algorithm uses bootstrapping with an intermediate level of \( n \) larger than 1 for better performance.
@@ -153,7 +144,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parameters' Effects on Learning Rate
 The effects of learning rate \( \alpha \) and \( n \) on the early performance of semi-gradient n-step Sarsa with tile-coding function approximation were studied. The results indicated that an intermediate level of bootstrapping (e.g., \( n = 4 \)) performed best.
@@ -168,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Methods and Their Absence
 Monte Carlo methods are not explicitly covered or given pseudocode in this chapter. However, they can be derived from similar principles by using full episodes as returns rather than n-step returns.
@@ -185,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semi-gradient One-step Expected Sarsa Pseudocode
 Semi-gradient one-step Expected Sarsa is similar to the n-step version but uses only one step for bootstrapping. The pseudocode for this algorithm can be derived from the general semi-gradient framework.
@@ -227,7 +215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Average Reward Setting Overview
 In the context of Markov Decision Problems (MDPs), we introduce a third setting for formulating the goal—alongside episodic and discounted settings. This setting focuses on continuing tasks, where interactions between the agent and environment never terminate or have a start state. Unlike the discounted setting, which involves discounting future rewards, average reward disregards this concept and treats all time steps equally. The quality of a policy \( \pi \) is defined as its long-term average rate of reward.
@@ -239,7 +226,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Steady-State Distribution Definition
 In the context of MDPs within the average-reward setting, a policy \( \pi \) is associated with a steady-state distribution \( \mu_\pi \), which represents the long-term probability distribution over states under that policy. Mathematically, it can be expressed as:
@@ -255,7 +241,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Average Reward Calculation
 The average reward \( r(\pi) \) for a policy \( \pi \) is defined as:
@@ -277,7 +262,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Equation for Differential Value Functions
 In the average-reward setting, differential value functions have their own set of Bellman equations. The state-value function is defined as:
@@ -313,7 +297,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differential Return Definition
 In the average-reward setting, returns are defined in terms of differences between rewards and the average reward:
@@ -339,7 +322,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Average Reward Setting Overview
 Background context: The text introduces an alternative setting for reinforcement learning (RL) tasks, specifically focusing on average reward instead of discounted rewards. This change affects how value functions and Q-values are defined.
@@ -359,7 +341,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differential TD Errors
 Background context: The text introduces differential forms of TD errors for the average reward setting. These errors are used to update weights in algorithms like semi-gradient Sarsa.
@@ -377,7 +358,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differential Semi-Gradient Sarsa Algorithm
 Background context: The text provides a modified version of semi-gradient Sarsa for the average reward setting. This involves updating weights based on differential TD errors.
@@ -409,7 +389,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Task: Access-Control Queuing
 Background context: The text describes a decision task involving access control to servers where customers with different priorities arrive at a queue. Servers become free with some probability and serve the customer if available.
@@ -434,7 +413,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differential Semi-Gradient Sarsa Algorithm
 Background context: The provided text discusses a scenario where customers with varying priorities are to be accepted or rejected based on the number of free servers available. The goal is to maximize long-term reward without discounting, using a tabular solution approach that can also be considered in function approximation settings.
@@ -447,7 +425,6 @@ The objective is to maximize long-term rewards without discounting by updating a
 
 ---
 
-**Rating: 8/10**
 
 #### Value Function for States A and B
 Background context: The text introduces a modified definition of value function to handle cases where the diﬀerential return is not well-defined. This involves considering limits as described in Equation 10.13.
@@ -463,7 +440,6 @@ Thus, both states A and B have a value of \( \frac{1}{3} \).
 
 ---
 
-**Rating: 8/10**
 
 #### Update Rule for Average Reward
 Background context: The text mentions that the pseudocode in Figure 10.6 updates \( \bar{R}_t \) using \( \Delta t \) as an error rather than simply \( R_{t+1} - \bar{R}_t \). This approach helps in stabilizing the estimate of average reward.
@@ -474,7 +450,6 @@ Using \( \Delta t = R_{t+1} - \bar{R}_t \) can lead to oscillations in the estim
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example for Ring MRP
 Background context: To illustrate the concept, a simple code example can be used to simulate the ring MRP.
@@ -507,7 +482,6 @@ In this example, the `RingMRP` class simulates a ring MRP with three states and 
 
 ---
 
-**Rating: 8/10**
 
 #### Conclusion
 This set of flashcards covers key concepts from the provided text related to reinforcement learning algorithms, value function definitions in non-ergodic settings, and practical examples to reinforce understanding. Each card provides context and explanations for better comprehension and application in similar scenarios.

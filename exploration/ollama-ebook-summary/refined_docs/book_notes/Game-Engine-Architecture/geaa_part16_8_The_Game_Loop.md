@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8 The Game Loop and Real-Time Simulation. 8.2 The Game Loop
 
 ---
 
-**Rating: 8/10**
 
 #### Rendering Loop Overview
 Real-time 3D computer graphics require a different approach compared to static GUI rendering. Instead of rectangle invalidation, real-time graphics present a series of still images rapidly on-screen, simulating motion and interactivity through a loop.
@@ -41,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Game Loop Overview
 Games are composed of many interacting subsystems, each requiring periodic servicing at different rates. The game loop is the master loop that services all these systems.
@@ -87,7 +84,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pong Game Loop Details
 Pong is an early example illustrating the core logic of a game loop. The loop continuously reads player inputs, updates game state (paddle and ball positions), checks for collisions, updates scores, and renders the scene.
@@ -135,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Windows Message Pumps
 Background context explaining the concept. In a game loop, especially on Windows platforms, games need to handle messages from the operating system as well as their own subsystems. This is achieved using a message pump that services both types of events.
@@ -162,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Callback-Driven Frameworks
 Callback-driven frameworks are structured differently compared to regular libraries. They provide a pre-written main game loop but rely on the programmer to fill in specific callbacks for various tasks.
@@ -191,7 +185,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event-Based Updating
 In games, an event is any significant change in the state of the game or its environment. These can be player actions, environmental changes, etc. An event system allows various subsystems to register for specific events and react accordingly.
@@ -223,7 +216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differentiating Between Concepts
 
@@ -235,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Game Time
 Background context: Game time is an abstract timeline that can be independent of the real timeline. It allows for various effects such as pausing, slowing down, or even reversing game actions by scaling and warping one timeline relative to another.

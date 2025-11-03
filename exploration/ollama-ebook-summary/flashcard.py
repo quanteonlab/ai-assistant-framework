@@ -671,7 +671,7 @@ def process_csv_for_flashcards(input_file: str, config: Config, api_base: str,
 
                                                 hq_md_out = open(hq_current_output_file, "w", encoding='utf-8')
                                                 hq_md_out.write(f"# High-Quality Flashcards: {base_name} (Part {hq_current_file_num})\n\n")
-                                                hq_md_out.write(f"**Rating threshold:** >= {rating_threshold}/10\n\n")
+                                                # Rating threshold removed - keep only flashcard content
                                                 hq_md_out.write(f"**Starting Chapter:** {hq_chapters_in_current_file[0]}\n\n")
                                                 hq_md_out.write("---\n\n")
 
@@ -679,8 +679,7 @@ def process_csv_for_flashcards(input_file: str, config: Config, api_base: str,
                                             if title not in hq_chapters_in_current_file:
                                                 hq_chapters_in_current_file.append(title)
 
-                                            # Write to high-quality file
-                                            hq_md_out.write(f"**Rating: {usefulness_rating}/10**\n\n")
+                                            # Write to high-quality file (no rating metadata)
                                             hq_md_out.write(flashcard_content)
                                             hq_md_out.write("\n\n---\n\n")
                                             hq_current_file_text_size += len(flashcard_content)

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 38)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Neural ActorCritic
 
 ---
 
-**Rating: 8/10**
 
 #### Actor-Critic Algorithms Overview
 Actor-critic algorithms learn both policies and value functions. The actor component learns policies, while the critic evaluates these actions based on the current policy to provide feedback.
@@ -33,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Errors in Actor-Critic Algorithms
 TD errors are crucial in reinforcement learning algorithms that use temporal difference (TD) methods. They represent the difference between the expected value and the actual outcome.
@@ -61,7 +58,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of Actor-Critic Algorithms in Neural Networks
 Actor-critic algorithms can be implemented using artificial neural networks (ANNs), where the actor and critic are separate but interconnected networks.
@@ -98,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor-Critic Algorithm Overview
 Background context: The actor-critic algorithm is a type of reinforcement learning where an agent learns to take actions by combining two networks—a policy network (actor) and a value function network (critic). The critic evaluates the quality of each action, while the actor decides which action to take. Both networks learn from the environment's feedback.
@@ -110,7 +105,6 @@ The key components include an actor that adjusts its policy based on TD errors r
 
 ---
 
-**Rating: 8/10**
 
 #### Critic Network in Actor-Critic Algorithm
 Background context: The critic network plays a crucial role in estimating state values and computing TD (Temporal Difference) errors, which serve as reinforcement signals for both the critic and the actor networks.
@@ -124,7 +118,6 @@ Where \(R_t\) is the immediate reward and \(\alpha\) is the learning rate.
 
 ---
 
-**Rating: 8/10**
 
 #### Actor Network in Actor-Critic Algorithm
 Background context: The actor network determines which action to take based on the current policy. It receives TD errors from the critic as a form of feedback.
@@ -138,7 +131,6 @@ Where \(a\) is an action, \(s\) is a state, and \(\alpha_a\) is the learning rat
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Signal for Actor-Critic Networks
 Background context: The TD error, a key component of both the critic and actor networks, serves as the reinforcement signal that guides learning.
@@ -150,7 +142,6 @@ The TD error acts as a reinforcement signal that adjusts the parameters of both 
 
 ---
 
-**Rating: 8/10**
 
 #### Integration with Reinforcement Learning Environment
 Background context: The environment provides state information and reward signals that are essential for training actor-critic models.
@@ -162,7 +153,6 @@ The environment provides multiple features representing the current state to bot
 
 ---
 
-**Rating: 8/10**
 
 #### Actor and Critic Hypothesis in Brain Structures
 
@@ -182,7 +172,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor-Critic Neural Implementation
 Background context: The text mentions an actor-critic neural implementation illustrated in Figure 15.5b. This model is used to understand how dopamine neurons might work but requires refinement and extension to fully model phasic dopamine activity.
@@ -194,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Error in Actor and Critic Learning
 Background context: The text explains that the actor and critic components use the same reinforcement signal (TD error), but their learning mechanisms differ. The critic aims to minimize the TD error, while the actor tries to maximize it.
@@ -227,7 +215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eligibility Traces and Learning Rules
 Background context: The text discusses how eligibility traces are used in actor-critic learning rules. These traces help determine which actions or state transitions should be modified based on the TD error.
@@ -253,7 +240,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuing Problems and Eligibility Traces
 Background context: The text refers to specific types of problems that can be solved using actor-critic algorithms, emphasizing continuing problems where eligibility traces are used.
@@ -278,7 +264,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Critic Unit and Learning Rule
 Background context explaining the critic unit's role in learning. The critic unit is used to approximate the value function, which helps in determining how good a given state is for an agent in a reinforcement learning scenario.
@@ -314,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor Unit and Learning Rule
 Background context explaining the actor unit's role in learning. The actor unit decides on actions based on the current state, using a policy derived from the value function estimated by the critic.
@@ -352,7 +336,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eligibility Traces and TD Learning
 Background context explaining how eligibility traces work in the learning process. These traces accumulate over time, allowing synapses to be eligible for modification based on recent activity.
@@ -383,7 +366,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor-Critic Model Overview
 Background context explaining how the actor-critic model integrates both an actor and a critic in learning. The critic evaluates states, while the actor decides on actions.
@@ -413,7 +395,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Neuron Firing as Value 1
 
@@ -426,7 +407,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action Probabilities via Exponential Soft-Max Distribution
 
@@ -449,7 +429,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Incrementing Weights
 
@@ -476,7 +455,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eligibility Trace Vector
 
@@ -491,7 +469,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Contingent Eligibility Trace
 
@@ -514,7 +491,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Learning Rules Comparison
 
@@ -534,7 +510,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor and Critic Learning Rules Overview
 Background context: The provided text discusses the actor and critic learning rules within a reinforcement learning framework, highlighting their differences from Hebbian learning. It emphasizes the importance of timing factors in synaptic plasticity for accurate credit assignment during learning.
@@ -563,7 +538,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Contingent Eligibility Traces in Actor Unit
 Background context: The text explains that the contingent eligibility traces for the actor unit's learning rule must take into account the activation time of neurons to properly assign credit for reinforcement. This is necessary because ignoring activation time can lead to incorrect weight adjustments.
@@ -599,7 +573,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synaptic Efficacy Changes
 
@@ -612,7 +585,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Key Concepts
 

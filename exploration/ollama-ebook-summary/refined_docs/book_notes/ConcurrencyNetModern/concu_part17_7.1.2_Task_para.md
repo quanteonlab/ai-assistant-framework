@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 7.1.2 Task parallelism support in .NET
 
 ---
 
-**Rating: 8/10**
 
 #### Task Parallelism Overview
 Background context: Task parallelism is a paradigm where a program's execution is split into smaller tasks that can be executed concurrently. This approach aims to maximize processor utilization by distributing tasks across different processors, thereby reducing overall runtime.
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuation-Passing Style (CPS)
 Background context: Continuation-passing style (CPS) is a technique in functional programming where functions pass their continuations as arguments. This allows for the chaining of asynchronous operations and simplifies the handling of task parallelism by avoiding traditional locks.
@@ -54,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task Parallelism vs. Data Parallelism
 Background context: Task parallelism and data parallelism are two distinct approaches in parallel computing. While task parallelism involves executing multiple independent tasks concurrently, data parallelism focuses on applying the same operation to different elements of a data set simultaneously.
@@ -85,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task-Based Functional Pipeline
 Background context: Implementing a parallel functional pipeline involves composing multiple tasks that process data in sequence. Each task can run in parallel, and the output of one task is passed to another as input.
@@ -136,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Parallelism vs Task Parallelism
 Background context explaining the differences between data and task parallelism. Data parallelism involves applying a single operation to many inputs, while task parallelism involves executing multiple diverse operations independently.
@@ -148,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task Parallelism in Real-World Scenarios
 Explanation of why task parallelism is used in real-world scenarios where tasks are more complex and interdependent, making it challenging to split and reduce computations as easily as data.
@@ -160,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Why Use Functional Programming (FP) with Task Parallelism?
 Explanation on how functional programming (FP) aids in task parallelism by providing tools to control side effects and manage task dependencies.
@@ -172,7 +164,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pure Functions in Task Parallelism
 Explanation on how pure functions contribute to the effectiveness and predictability of task-based parallel programs.
@@ -184,7 +175,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Side Effects in Task Parallelism
 Explanation on how to handle side effects when using task parallelism.
@@ -196,7 +186,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Structures in Task Parallelism
 Explanation on why using immutable structures is beneficial when tasks must share data.
@@ -208,7 +197,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defensive Copy Approach
 Explanation of defensive copying as a mechanism to manage mutable objects in parallel tasks.
@@ -220,7 +208,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Defensive Copying in Code
 Example of defensive copying code with explanation.
@@ -248,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### ThreadPool Class Overview
@@ -267,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison with Conventional Thread Creation
 Background context comparing conventional thread creation to `ThreadPool` usage. In conventional multithreading, each task requires the instantiation of a new thread, leading to potential memory consumption issues and increased overhead.
@@ -289,7 +274,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### QueueUserWorkItem Method
 Background context explaining the `QueueUserWorkItem` method. This static method allows you to queue tasks for execution by the `ThreadPool`, providing a lightweight way to manage tasks without explicitly creating threads.
@@ -307,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conventional Thread vs. ThreadPool Performance
 Background context discussing the performance implications of using conventional threads versus `ThreadPool`. Conventional thread creation is expensive due to overhead and memory usage, while `ThreadPool` optimizes performance by reusing existing threads.
@@ -336,7 +319,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ThreadPool and Task Scheduling
 Background context on how `ThreadPool` schedules tasks. The `ThreadPool` schedules tasks by reusing threads for the next available work item, returning them to the pool once completed.
@@ -356,7 +338,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to .NET Task Parallel Library (TPL)
 Background context: The .NET Task Parallel Library is designed to simplify parallel and concurrent programming by abstracting away much of the complexity associated with using threads directly. It provides a set of new types that make it easier to add concurrency and parallelism to programs.
@@ -367,7 +348,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Work-Stealing Algorithm in TaskScheduler
 Background context: The work-stealing algorithm is a sophisticated scheduling mechanism used by the TPL's TaskScheduler to optimize concurrency. This approach helps in efficiently utilizing system resources, especially on multi-core systems.
@@ -394,7 +374,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Heterogeneous Tasks with Parallel.Invoke
 Background context: `Parallel.Invoke` is particularly useful when dealing with a set of independent, heterogeneous tasks that need to be executed in parallel.
@@ -405,7 +384,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Void Signature Limitation in C#
 Background context explaining that `Parallel.Invoke` method lacks resource exposure for individual task status and outcome, only completing successfully or throwing an `AggregateException`. The method does not support detailed error handling and lacks compositionality due to its void signature.
@@ -428,7 +406,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Type in Functional Programming (FP)
 Background context explaining that the unit type, denoted as `unit` or `()`, represents a value without any specific content. It is used to indicate that no meaningful return value is expected.
@@ -444,7 +421,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compositionality Issue with C#
 Background context explaining that the `Parallel.Invoke` method's void signature prevents compositionality because functions cannot return values for further processing.
@@ -466,7 +442,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of the Unit Type in C#
 Background context explaining that implementing a `Unit` type in C# can overcome the limitations of void functions by providing a value for non-returning operations. This allows for better error handling and function composition.
@@ -492,7 +467,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task-Based Functional Parallelism in C#
 Background context explaining that while `Parallel.Invoke` has limitations, the unit type can help overcome some of these by providing a meaningful return value.

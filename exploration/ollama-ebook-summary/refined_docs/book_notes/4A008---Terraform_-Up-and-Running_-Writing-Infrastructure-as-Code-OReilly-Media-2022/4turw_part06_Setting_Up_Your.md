@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Setting Up Your AWS Account
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform Basics
 Background context: The text introduces Terraform as an easy-to-learn tool for deploying infrastructure across various cloud providers.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deploying a Web Server
 Background context: After deploying a single server, the next step is to deploy a web server that can handle HTTP requests.
@@ -55,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cleaning Up Resources
 Background context: The text suggests cleaning up resources after you are done with the examples to avoid unnecessary costs.
@@ -77,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Setting AWS Credentials as Environment Variables
 Background context: This section explains how to securely store and set up AWS credentials using environment variables. The goal is to enable Terraform to make changes in your AWS account.
@@ -95,7 +90,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of a Basic AWS Provider Configuration
 Background context: This section provides an example of how to configure the AWS provider in your Terraform setup, specifying the region for infrastructure deployment.
@@ -117,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -134,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Resources with Terraform
 
@@ -165,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AMI ID Considerations
 
@@ -178,7 +169,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Terraform Documentation
 
@@ -193,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Running Terraform Plan
 After initializing the backend and providers, you can run `terraform plan` to see what changes will be made. This command simulates the execution of Terraform commands without actually making any changes to the infrastructure.
@@ -220,7 +209,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform Apply Command
 Once you are satisfied with the plan, you can execute `terraform apply` to make the proposed changes.
@@ -247,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform Backend Initialization
 The `terraform init` command also initializes a backend, which is a storage mechanism used by Terraform for storing state and workspaces.
@@ -260,7 +247,6 @@ When you see the "Initializing the backend..." message during the execution of `
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Plan Output
 The plan output shows what actions Terraform intends to take before applying them with `terraform apply`.
@@ -286,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Idempotence of `terraform init`
 `terraform init` can be run multiple times without causing issues because it is idempotent; running the command again will not alter your project unless there are changes in configuration files.
@@ -308,7 +293,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### EC2 Instance Deployment
 Terraform allows you to deploy resources like EC2 instances in your AWS account by defining resource blocks in configuration files and running `terraform apply`.
@@ -326,7 +310,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tagging Resources with Terraform
 Terraform supports tagging resources, which allows you to add metadata like names or descriptions. When deploying a resource and adding tags, Terraform can update the existing resource if it already exists.
@@ -348,7 +331,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Version Control with Git
 Version control using Git is essential for managing changes to your Terraform configurations, allowing you to track history and collaborate with team members.
@@ -378,7 +360,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform Dependency Graph
 Terraform parses dependencies, builds a dependency graph from them, and uses that to automatically determine the order of resource creation. The `terraform graph` command can visualize these relationships.
@@ -408,7 +389,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Resource Creation
 Terraform creates resources in parallel as much as possible, making the process efficient. This is a feature of declarative languages where you specify what you want, and Terraform figures out the best way to create it.
@@ -433,7 +413,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Graph Visualization
 Terraform's `graph` command can generate a DOT file, which can be visualized using tools like Graphviz or GraphvizOnline.
@@ -463,7 +442,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Apply Command and Resource Changes
 Running the `terraform apply` command shows what changes Terraform intends to make. It highlights resources that need replacement due to updates in configuration.

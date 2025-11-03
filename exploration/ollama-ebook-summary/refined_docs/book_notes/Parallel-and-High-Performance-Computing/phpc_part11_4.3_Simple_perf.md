@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4.3 Simple performance models A case study
 
 ---
 
-**Rating: 8/10**
 
 #### Compulsory Limit and Roofline Model
 Background context: The compulsory limit on a log-log plot represents the theoretical minimum performance achievable with no cache or limited cache usage. On the other hand, the roofline model helps in understanding the maximum performance that can be achieved under different conditions.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Potential for Parallelism in Performance Models
 Background context: The roofline model can indicate potential improvements by showing where a kernel falls relative to its parallel or vectorized versions compared to purely serial operations. In this case, even with some vectorization (serial+vectorization), the performance is significantly lower than what could be achieved through OpenMP (fully parallel).
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spatial Locality vs Temporal Locality
 Background context: Locality refers to how data is accessed over time or space. Spatial locality involves accessing nearby memory locations that are often referenced together, while temporal locality involves reusing recently accessed data.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coherency in Cache Updates
 Background context: Coherency ensures consistency across multiple processors by updating the cache when a change is made to shared data. However, this can lead to significant overhead if not managed properly.
@@ -54,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compressed Sparse Data Structures
 Background context: In computational science, especially for matrix operations, using compressed sparse representations like CSR (Compressed Sparse Row) can significantly reduce memory usage and improve performance. The text mentions a case study where these structures achieved over 95% memory savings and nearly 90% faster run times.
@@ -68,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Floating-Point Operations (Flops)
 Floating-point operations, or flops, are another significant factor in performance estimation. The presence of branches and small loops can also affect the overall performance.
@@ -89,7 +82,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Branch Prediction Costs
 Branch prediction is an essential aspect of performance modeling, especially when dealing with algorithms that contain branching.
@@ -116,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loop Overhead and Small Loops
 Loop overhead is another key factor in performance modeling, especially for small loops with unknown lengths. It includes costs related to branching and control.
@@ -139,7 +130,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compressed Sparse Data Structures
 Compressed sparse data structures are useful for handling large, but sparsely populated datasets efficiently. They help in reducing memory usage and improving performance by storing only non-zero values.
@@ -175,7 +165,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Structure for Sparse Case
 Explanation of the data structure used in the sparse case. The design study involves evaluating different data layouts to determine which would provide the best performance before coding.
@@ -186,7 +175,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Design Considerations for Data Layout
 Explanation of the two major design considerations: data layout (cell-based vs. material-based) and loop order.
@@ -201,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Analysis Factors
 Explanation of factors affecting performance analysis: data locality and branch prediction miss rate.
@@ -218,7 +205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Full Matrix Data Representations: Material-Centric Layout
 Background context explaining the concept. This section describes another full matrix storage representation where data is laid out by materials, with cells stored contiguously for each material.
@@ -242,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Bandwidth and Conditional Access
 Background context explaining the concept. This section discusses the impact of memory bandwidth on performance when using a conditional access pattern in the algorithm.
@@ -278,7 +263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compressed Sparse Storage Scheme
 Background context explaining the concept. This section discusses the use of a compressed sparse storage scheme to save memory, especially when dealing with mostly empty entries in the matrix.
@@ -304,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linked List Implementation in Contiguous Array
 
@@ -317,7 +300,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Navigation Arrays
 
@@ -330,7 +312,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example: Material-Dominant Algorithm Implementation
 Background context explaining how the algorithm is implemented with specific steps and loops.
@@ -358,7 +339,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Metrics: Memory Load and Flops
 Background context explaining the metrics used to evaluate the performance of different data structures.
@@ -370,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary Table: Data Structure Performance Comparison
 Background context explaining that a summary table compares different data structures and their performance metrics.

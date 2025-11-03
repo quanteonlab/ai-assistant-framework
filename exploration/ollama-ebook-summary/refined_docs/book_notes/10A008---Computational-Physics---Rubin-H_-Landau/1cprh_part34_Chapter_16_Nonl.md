@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 34)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 16 Nonlinear Dynamics of Continuous Systems. 16.1.1 Free Pendulum Oscillations
 
 ---
 
-**Rating: 8/10**
 
 #### Chaotic Pendulum Equation in Standard ODE Form
 The given equation is a second-order, time-dependent, nonlinear differential equation. We can convert it into two first-order simultaneous equations using the standard ODE form:
@@ -40,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Free Pendulum Oscillations
 Background context explaining the concept. In the absence of friction and external torque, Newton's second law for a simple pendulum takes the form: \( \frac{d^2\theta}{dt^2} = -\omega_0^2 \sin(\theta) \). For small angular displacements, this simplifies to the familiar linear equation of simple harmonic motion with frequency \(\omega_0\): 
@@ -134,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gradual Increase of Initial Angular Velocity
 
@@ -148,7 +144,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing Linear Case
 
@@ -177,7 +172,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determining Period by Counting Amplitude Passes
 
@@ -202,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Observing Period Change with Increasing Energy
 
@@ -223,7 +216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Phase Space Analysis
 
@@ -253,7 +245,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Strange Attractors
 Background context: Strange attractors represent complex, semi-periodic behaviors that are well-defined yet highly sensitive to initial conditions. They are characterized by being fractal and exhibit chaotic behavior.
@@ -265,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Chaotic Paths
 Background context: Chaotic paths exhibit complex, intermediate behaviors between periodic and random motions. They form dark or diffuse bands rather than single lines in phase space.
@@ -279,7 +269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Chaotic Pendulum Sensitivity to Initial Conditions
 Background context: The chaotic pendulum's behavior is highly sensitive to initial conditions. Small differences in starting points lead to divergent trajectories over time.
@@ -291,7 +280,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Phase Space Analysis
 Background context: The phase space plot shows how states (position \(\theta\), velocity \(\dot{\theta}\)) evolve over time. Spirals indicate energy loss due to friction.
@@ -303,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fourier Spectrum Analysis
 Background context: The Fourier spectrum helps identify periodic components of the oscillations. Broad bands indicate chaotic behavior.
@@ -315,7 +302,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Driving Force Influence
 Background context: Slight changes in the driving force \(f\) can lead to different behaviors, including chaos.

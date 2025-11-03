@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** When Triggers
 
 ---
 
-**Rating: 8/10**
 
 #### Triggers in Data Processing
 
@@ -88,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Watermark Completeness Trigger
 Background context: In Apache Beam, a watermark is used to determine when enough data has arrived for processing. A watermark completeness trigger ensures that windows are processed once the watermark passes their end boundaries.
@@ -194,7 +191,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Trigger Guarantees and Asynchronicity
@@ -281,7 +277,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Latency vs. Throughput Trade-off
 Background context: The efficiency delta between systems often comes from balancing latency with throughput. Larger bundle sizes can enhance throughput at the cost of increased latency, and more efficient shuffle implementations can improve performance without significant trade-offs.
@@ -353,7 +348,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Logical versus Physical Operations
@@ -449,7 +443,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Parse Operation
@@ -549,7 +542,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Data Processing Pipelines

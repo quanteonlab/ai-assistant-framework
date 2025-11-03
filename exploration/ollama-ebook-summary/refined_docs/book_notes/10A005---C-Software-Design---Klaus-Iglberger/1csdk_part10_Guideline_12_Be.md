@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Guideline 12 Beware of Design Pattern Misconceptions
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Design Pattern vs Implementation Pattern
@@ -68,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Design Patterns Are Not a Goal
 Background context: The text emphasizes that design patterns should not be treated as an end goal but rather as a means to achieve better software design. Overuse of design patterns can increase code complexity and reduce comprehensibility, leading to potential problems for other developers.
@@ -149,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Strategy Design Pattern Implementation Using Templates
 

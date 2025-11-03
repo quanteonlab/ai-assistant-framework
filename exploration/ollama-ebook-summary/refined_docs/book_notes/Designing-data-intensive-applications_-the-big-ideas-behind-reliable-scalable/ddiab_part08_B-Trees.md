@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** B-Trees
 
 ---
 
-**Rating: 8/10**
 
 #### Log-Structured Merge Trees (LSM-Trees)
 Background context explaining LSM-trees. These are storage engines that merge and compact sorted files, often used in databases like RocksDB and LevelDB for efficient write throughput while supporting range queries.
@@ -30,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bloom Filters in LSM-Trees
 Background context explaining how Bloom filters are used to optimize key existence checks in LSM-trees. Bloom filters provide a space-efficient way to test if an element is a member of a set without actually storing the elements.
@@ -63,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compaction Strategies in LSM-Trees
 Background context explaining different compaction strategies used to manage SSTables and maintain efficient storage. Common strategies include size-tiered and leveled compaction.
@@ -94,7 +90,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### B-Trees in Indexing Structures
 Background context explaining why B-trees are widely used and how they differ from LSM-trees. B-trees keep key-value pairs sorted by key, enabling efficient lookups and range queries.
@@ -147,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### B-Tree Overview
 B-trees break down databases into fixed-size blocks or pages, typically 4 KB in size. Each page can be identified using an address, allowing for page references that form a tree structure. The root page is the starting point for looking up keys.
@@ -164,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Insertion into B-Tree
 Inserting a new key involves finding the appropriate leaf page and adding it there. If necessary, pages are split to accommodate more keys.
@@ -185,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deletion from B-Tree
 Deleting a key involves adjusting the tree to maintain balance. If a page becomes too small after deletion, it may merge with another.
@@ -204,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Key Lookup in B-Tree
 Starting from the root page, keys and references guide you through the tree to find the desired value or location.
@@ -228,7 +219,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### B-Tree Depth and Balance
 B-trees ensure that the tree remains balanced with a depth of O(log n), where n is the number of keys. This maintains efficient search times.
@@ -244,7 +234,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Write-Ahead Log (WAL)
 Background context: A **write-ahead log** is used in B-tree implementations for crash recovery by logging every modification to an append-only file.
@@ -268,7 +257,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency Control in B-Trees
 Background context: Managing multiple threads accessing a B-tree simultaneously requires careful concurrency control to avoid inconsistent states.
@@ -297,7 +285,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Copy-on-Write Scheme
 Background context: Some databases use a **copy-on-write scheme** for crash recovery, where modifications are written to different locations rather than overwriting existing pages.
@@ -325,7 +312,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequential Layout of Leaf Pages
 Background context: Many B-tree implementations try to arrange leaf pages sequentially on disk to improve read performance by reducing disk seeks. However, maintaining this sequential layout as the tree grows can be challenging.
@@ -361,7 +347,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Write Amplification in LSM-Trees
 Background context: Write amplification occurs when a single write operation results in multiple writes to disk over time. This is common in log-structured storage systems due to compaction and merging of SSTables.
@@ -393,7 +378,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison of B-Trees and LSM-Trees
 Background context: While traditional B-trees are well-established in database systems, LSM-trees offer advantages in certain scenarios due to their performance characteristics.
@@ -439,7 +423,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advantages of LSM-Trees
 Background context: LSM-trees offer several advantages over traditional B-tree storage engines, particularly in terms of write performance and reduced fragmentation.
@@ -471,7 +454,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Downsides of LSM-Trees
 Background context: While LSM-trees offer advantages, they also have downsides such as potential interference with concurrent reads and writes during compaction.
@@ -505,7 +487,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OLTP and OLAP Differences
 Background context explaining the differences between Online Transaction Processing (OLTP) and Online Analytical Processing (OLAP). The text highlights that transaction processing involves quick reads and writes for small numbers of records, while analytics involve scanning large datasets to calculate aggregate statistics.
@@ -535,7 +516,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Warehousing Overview
 Background context explaining the concept of data warehousing and its role in enterprise-level database management. The text notes that data warehouses are separate databases used by analysts to query historical data without impacting transaction processing systems.
@@ -564,7 +544,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Indexing Algorithms for OLTP vs. OLAP
 Background context explaining that indexing algorithms work well for OLTP but are not suitable for OLAP due to their different access patterns.

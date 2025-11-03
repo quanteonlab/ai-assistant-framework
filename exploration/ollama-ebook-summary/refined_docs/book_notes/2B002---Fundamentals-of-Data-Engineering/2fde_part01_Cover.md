@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Cover
 
 ---
 
-**Rating: 8/10**
 
 #### Leadership in Data Engineering
 Background context: The text emphasizes that leading in the data engineering field requires building capabilities to provide exceptional customer and employee experiences. It stresses that this is not just a technology problem but a people opportunity that can transform your business.
@@ -90,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Engineering Fundamentals
 
@@ -210,7 +207,6 @@ Key takeaways include understanding foundational concepts, making informed decis
 
 ---
 
-**Rating: 8/10**
 
 #### Data Engineering and Its Impact on Roles
 
@@ -406,7 +402,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Data Engineering
 Background context explaining data engineering and its evolution. The term has been gaining prominence since the 2010s alongside the rise of data science.
@@ -469,7 +464,6 @@ The key difference lies in:
 ??x
 ---
 
-**Rating: 8/10**
 
 #### Data Engineering Definition
 Data engineering involves developing, implementing, and maintaining systems that ingest raw data and produce high-quality information for various downstream use cases like analysis and machine learning. It also intersects with security, data management, DataOps, data architecture, orchestration, and software engineering.
@@ -579,7 +573,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Big Data Emergence and Tools
 Background context explaining the rise of big data tools. The late 2000s and early 2010s saw a proliferation of technologies like Hadoop, Apache Pig, Apache Hive, Dremel, and others. These tools allowed for more efficient handling of large datasets but required significant expertise in software development and low-level infrastructure management.
@@ -635,7 +628,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Data Engineering Role Evolution
 Background context explaining how the data engineering role has changed over time, moving from low-level details of monolithic frameworks to a more abstract and modular approach. The evolution is driven by the need for greater flexibility and interoperation across various technologies.

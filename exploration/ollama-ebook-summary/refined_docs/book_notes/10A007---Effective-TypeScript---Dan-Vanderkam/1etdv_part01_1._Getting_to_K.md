@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 1. Getting to Know TypeScript. Item 1 Understand the Relationship Between TypeScript and JavaScript
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding TypeScript and JavaScript Relationship
 Background context explaining the relationship between TypeScript and JavaScript. Since these languages are closely linked, a strong understanding of their interplay is essential for effective use of TypeScript.
@@ -101,7 +99,6 @@ console.log("Hello, world!");
 ```
 x??
 
-**Rating: 8/10**
 
 #### TypeScript vs JavaScript
 Background context: The text discusses the differences between TypeScript and plain JavaScript, highlighting how TypeScript offers additional features like type annotations that help catch errors before runtime. It emphasizes that while all TypeScript is a subset of JavaScript, not all JavaScript can be interpreted as TypeScript without encountering syntax issues.
@@ -210,7 +207,6 @@ The main benefits of using TypeScript include improved code quality, enhanced re
 ??x
 TypeScript offers a robust framework for writing complex applications with fewer runtime issues, making it suitable for large-scale projects that require strong type checking and clear variable definitions.
 
-**Rating: 8/10**
 
 #### Property Naming Consistency and TypeScript Typing
 
@@ -349,7 +345,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TypeScript's Type Checking vs JavaScript Runtime Behavior
 Background context explaining how TypeScript models JavaScript runtime behavior but introduces stricter type checking. This includes scenarios where TypeScript flags errors even though no exceptions occur at runtime, such as using `null + 7` or `[] + 12`.
@@ -440,7 +435,6 @@ Explanation:
 ```
 x??
 
-**Rating: 8/10**
 
 #### Soundness in TypeScript
 Background context: The provided text discusses the soundness of TypeScript's type system and compares it with other static typing languages like Reason, PureScript, and Dart. Soundness means that if a program is correctly typed, it will not exhibit certain errors at runtime.
@@ -561,7 +555,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: TypeScript's Type Erasure and Runtime Independence
 Background context explaining that TypeScript’s types are erased during compilation, meaning they do not affect the emitted JavaScript. This leads to type information being lost at runtime, which impacts how you can check for specific types.
@@ -644,7 +637,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Type Assertion vs. Runtime Conversion
 TypeScript allows you to use `as` for type assertions, which are not runtime operations but compile-time checks. The `as` keyword does not affect the actual value's runtime behavior.
@@ -748,7 +740,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### TypeScript Emissions and Performance

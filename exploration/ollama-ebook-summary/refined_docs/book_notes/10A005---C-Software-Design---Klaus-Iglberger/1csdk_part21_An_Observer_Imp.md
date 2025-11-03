@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** An Observer Implementation Based on Value Semantics
 
 ---
 
-**Rating: 8/10**
 
 #### Observer Design Pattern Implementation
 Background context: The text discusses implementing the Observer design pattern using a class template and function objects (std::function) to provide value semantics. This approach avoids inheritance hierarchies, making the implementation more flexible and adhering to composition over inheritance principles.
@@ -98,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single Callable Update Function with std::function
 
@@ -285,7 +282,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### DynamicVector Class Overview
 DynamicVector is designed to handle large-scale linear algebra (LA) problems, typically involving several million elements. It offers a container-like interface with nested types like `value_type`, `iterator`, and `const_iterator`. Additionally, it provides functions such as `size()`, subscript operators for accessing individual elements, and iterator functions to iterate over the elements.
@@ -420,7 +416,6 @@ double norm = l2norm(vec); // Computes the Euclidean norm (L2 norm) of the vecto
 ```
 x??
 
-**Rating: 8/10**
 
 #### Code Duplication and DRY Principle
 Background context: The passage discusses the issue of code duplication, specifically within vector classes `DynamicVector` and `StaticVector`. It highlights how identical implementations lead to maintenance issues when changes are required. This violates the Don't Repeat Yourself (DRY) principle.

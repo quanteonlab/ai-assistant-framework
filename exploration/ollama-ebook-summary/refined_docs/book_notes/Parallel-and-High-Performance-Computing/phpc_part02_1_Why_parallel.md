@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 1 Why parallel computing
 
 ---
 
-**Rating: 8/10**
 
 #### Why Parallel Computing?
 
@@ -42,7 +40,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### What is Parallel Computing?
 
@@ -80,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Potential Parallelism
 
@@ -119,7 +115,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Practical Examples of Parallelism
 
@@ -160,7 +155,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Why Parallel Computing Matters
 
@@ -178,7 +172,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Speedup and Performance Analysis
 Parallel computing can significantly reduce an application’s run time, often referred to as speedup. This is a primary goal of parallel programming.
@@ -200,7 +193,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Larger Problem Sizes with More Compute Nodes
 Parallel computing allows you to handle larger problem sizes by utilizing more compute nodes. The key idea is that the amount of available computational resources determines what can be accomplished.
@@ -237,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Energy Efficiency by Doing More with Less
 Energy efficiency in parallel computing refers to the ability to perform more tasks using less power, which is increasingly important as devices become smaller and more energy-conscious.
@@ -277,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cost Reduction through Parallel Computing
 Parallel computing can reduce the actual monetary cost of running applications by optimizing resource utilization and reducing power consumption.

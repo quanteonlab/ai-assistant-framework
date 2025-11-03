@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Breaking Apart MusicCorp
 
 ---
 
-**Rating: 8/10**
 
 #### Identifying Bounded Contexts as Seams
 Background context: The monolithic structure of services often leads to a lack of cohesion and tight coupling, making it difficult to make changes without affecting other parts of the system. Michael Feathers' concept of seams is introduced as a way to address this issue by defining clear boundaries in code that can be worked on independently.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Packages Based on Bounded Contexts
 Background context: To effectively use bounded contexts as seams, the first step is to identify them in your codebase by creating packages or namespaces that reflect these contexts.
@@ -37,7 +34,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Refactoring Code into Bounded Context Packages
 Background context: After identifying packages, you need to move existing code into these new packages. Modern IDEs can help automate this process through refactorings.
@@ -65,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Incremental Refactoring Process
 Background context: The refactoring process is not a one-time, big-bang event but can be done incrementally over time. It allows for gradual improvement and minimizes disruptions.
@@ -89,7 +84,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pace of Change
 Background context explaining why the pace of change is a critical factor when deciding to split monoliths. It often involves upcoming changes that will make it beneficial to have separate services for quicker and easier management.
@@ -109,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Team Structure
 Context around team structure, highlighting geographical distribution as a key driver for splitting monoliths. This can lead to better ownership and autonomy among development teams.
@@ -129,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Security Considerations
 Discussion on security audits leading to the need for separation of sensitive data handling, ensuring better protection through isolation in a microservices architecture.
@@ -149,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tangled Dependencies
 Discussion on identifying tangled dependencies, particularly with the database, as a critical step in splitting monoliths. Highlighting the importance of understanding how code interacts with the database to avoid complex refactoring.
@@ -173,7 +164,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Database Splitting
 Explanation of how to split out database access code, particularly focusing on the repository layer and tools like SchemaSpy for visualizing database relationships.
@@ -192,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Breaking Foreign Key Relationships
 Background context: In the example, there's a foreign key relationship between the catalog and finance packages where the finance code uses data from the line item table stored in the catalog package. This creates a dependency that needs to be addressed when these become separate services.
@@ -214,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exposing Data via API Call
 Background context: To avoid direct database access and ensure loose coupling between services, an API call is introduced. This allows the finance package to request necessary information from the catalog package.
@@ -244,7 +232,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Considerations in Service Separation
 Background context: While separating services, performance is a critical concern. The objective is to determine whether the trade-off of slower direct database access for better service independence and scalability is acceptable.
@@ -266,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Inconsistencies Across Services
 Background context: After separating services and removing foreign key constraints, inconsistencies can arise if one service deletes data that another service references. This requires implementing custom logic to maintain data integrity.

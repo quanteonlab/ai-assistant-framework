@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Guideline 13 Design Patterns Are Everywhere
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -104,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decorator Design Pattern
 Background context explaining how combining and reusing functionality through decorators can be a powerful technique. The example uses `std::pmr::vector` and `std::pmr::string`, which are type aliases for regular C++ containers but employ a different allocator mechanism.
@@ -142,7 +139,6 @@ Design patterns are crucial because they provide a common vocabulary for solving
 ??x
 ---
 
-**Rating: 8/10**
 
 #### Design Patterns Everywhere
 Background context: Every kind of abstraction and any attempt to decouple likely represents a known design pattern. Understanding these patterns can greatly enhance your ability to solve complex problems by leveraging existing solutions.
@@ -271,7 +267,6 @@ int main() {
 
 In this code, `Print` is used as a visitor function object that will call its appropriate operator based on the type stored in the `std::variant`, effectively printing out the value.
 
-**Rating: 8/10**
 
 #### Strategy Design Pattern
 The Strategy design pattern is a behavioral pattern that allows an algorithm's behavior to be selected at runtime. It encapsulates a family of algorithms, makes them interchangeable, and lets clients choose which one to use without changing the client code.
@@ -501,7 +496,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Dynamic Polymorphism Overview
@@ -602,7 +596,6 @@ public:
 x??
 ---
 
-**Rating: 9/10**
 
 #### Direct Dependency on Enumeration
 Background context: The problem described is about a design issue where an enumeration directly influences multiple parts of the system, leading to recompilation issues when changes are made. This violates the Open-Closed Principle (OCP), which states that software entities should be open for extension but closed for modification.

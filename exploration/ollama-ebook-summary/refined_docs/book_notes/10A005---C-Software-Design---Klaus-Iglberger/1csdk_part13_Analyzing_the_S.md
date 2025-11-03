@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Analyzing the Shortcomings of the Visitor Design Pattern
 
 ---
 
-**Rating: 8/10**
 
 #### Individual Shape and Visitor Allocation
 Background context: The provided `main()` function demonstrates individual allocation of shapes using `std::make_unique`. This method ensures that each shape is allocated separately, but can lead to issues such as memory fragmentation and cache-unfriendly layouts.
@@ -134,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Visitor Pattern and std::variant Introduction
 Background context: The passage introduces an alternative approach to implementing the visitor pattern using `std::variant` in C++. This method offers more flexibility compared to a traditional base-class-based implementation. It allows for simpler and non-intrusive addition of new operations without modifying existing code.
@@ -266,7 +263,6 @@ This approach leverages `std::variant` to define a single function that can hand
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to std::variant and Shape Abstraction
 Background context: The text introduces using `std::variant` from C++ for handling a closed set of geometric shapes (Circle and Square) without needing a base class. This approach replaces the need for polymorphism by utilizing variant types.
@@ -370,7 +366,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### No Base Classes and Virtual Functions
 Background context explaining why avoiding base classes and virtual functions can be beneficial. Discuss the OCP (Open-Closed Principle) and how this approach maintains flexibility without changing existing code.
@@ -485,7 +480,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Considerations of std::variant
 

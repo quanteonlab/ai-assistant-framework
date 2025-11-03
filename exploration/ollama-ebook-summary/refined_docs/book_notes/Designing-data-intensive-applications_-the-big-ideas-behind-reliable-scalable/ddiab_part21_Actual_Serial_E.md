@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Actual Serial Execution
 
 ---
 
-**Rating: 8/10**
 
 #### Materializing Conflicts Approach
 Background context explaining the materializing conflicts approach. This technique addresses the phantom read problem by artificially creating a table that contains all possible combinations of rooms and time periods ahead of time, allowing transactions to lock these rows before performing any inserts.
@@ -24,7 +22,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Serializability
 Background context explaining the concept of serializability. This is a higher level of isolation that ensures transactions appear to execute atomically and in a serial order, even when multiple transactions are running concurrently.
@@ -43,7 +40,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges with Isolation Levels
 Background context explaining the challenges with understanding and implementing different isolation levels. Different databases can have inconsistent implementations of isolation levels like "repeatable read," making it difficult to understand their behavior.
@@ -62,7 +58,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Actual Serial Execution
@@ -77,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Changing Database Design Context (2007)
 Background context explaining the recent change in database design thinking around 2007. This change was driven by two key developments:
@@ -92,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shortness of OLTP Transactions
 Background context explaining why OLTP (Online Transaction Processing) transactions are generally short and require only a few read/write operations.
@@ -104,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transaction Processing vs Analytics
 Background context explaining that OLTP transactions are generally short and require minimal read/write operations compared to analytics transactions.
@@ -118,7 +110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Long-Running Analytic Queries and Snapshot Isolation
 Long-running analytic queries are typically read-only, making them suitable for running on a consistent snapshot using snapshot isolation. This approach is used to avoid the coordination overhead of locking during serial execution. This technique is implemented in systems like VoltDB/H-Store, Redis, and Datomic.
@@ -129,7 +120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interactive vs. Non-Interactive Transaction Processing
 Traditional web-based transactions are typically short-lived, committing within a single HTTP request. In contrast, non-interactive systems need to process multiple transactions concurrently to achieve reasonable performance due to network communication overhead.
@@ -140,7 +130,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single-Threaded Serial Transaction Processing
 Systems that process transactions serially can sometimes outperform concurrent systems due to reduced locking overhead but are limited by the throughput of a single CPU core. To maximize efficiency, transactions must be structured differently from traditional forms.
@@ -153,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deterministic Stored Procedures in VoltDB
 In the context of VoltDB, stored procedures must be deterministic. This means that when run on different nodes, they should produce the same result. If a transaction needs to use the current date and time, it must do so through special deterministic APIs.
@@ -173,7 +161,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Handling In-Memory Data with Transactions
 When all required data is in memory, transactions can execute very fast without waiting for network or disk I/O. For transactions needing data not in memory, they may be aborted and restarted after the necessary data is fetched into memory.
@@ -210,7 +197,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioning Data
 Background context: The text explains that partitioning your data can help scale your application to multiple CPU cores and nodes. By partitioning the data, each transaction can be confined to a single partition, allowing for independent processing on each partition.
@@ -222,7 +208,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single-Partition Transactions
 Background context: The text highlights the importance of single-partition transactions for achieving high throughput and efficient processing within a system. These transactions can be handled independently by different threads running on separate CPU cores.
@@ -234,7 +219,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cross-Partition Transactions
 Background context: The text mentions that cross-partition transactions involve accessing and coordinating with multiple partitions, which incurs additional overhead. These transactions are significantly slower compared to single-partition transactions.
@@ -246,7 +230,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transaction Throughput Constraints
 Background context: The text outlines the constraints that limit transaction throughput in an anti-caching approach. These include the size and speed of individual transactions, memory usage, and the ability to handle write operations on a single CPU core.
@@ -261,7 +244,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Serial Execution of Transactions
 Background context: The text explains that serial execution of transactions can achieve serializable isolation within certain constraints. This involves executing each transaction independently and ensuring no slow transaction stalls the entire process.
@@ -279,7 +261,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two-Phase Locking (2PL)
 Two-Phase Locking (2PL) has been a cornerstone for ensuring serializability and preventing certain concurrency issues in database management systems. It is widely used by databases like MySQL (InnoDB), SQL Server, and DB2 to maintain consistency.
@@ -312,7 +293,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deadlocks in Two-Phase Locking (2PL)
 In a 2PL environment, transactions can deadlock when multiple transactions are waiting for each other to release locks. For instance, if transaction A has an exclusive lock on object X and transaction B has an exclusive lock on object Y, neither can proceed because they are waiting for the other to release their respective locks.
@@ -345,7 +325,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shared and Exclusive Locks in Two-Phase Locking (2PL)
 In the context of 2PL, locks can be either shared or exclusive. Shared locks are used for reading operations, allowing multiple transactions to read the same data object simultaneously if no write is being performed on it. Exclusive locks are required for write operations, ensuring that only one transaction at a time can modify the data.
@@ -378,7 +357,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blocking Mechanism in Two-Phase Locking (2PL)
 In a 2PL system, transactions must acquire locks before performing read or write operations. If a transaction wants to perform a read operation and the object is already locked by another transaction with an exclusive lock, it must wait until that lock is released. Similarly, if a transaction wants to write to an object and the object is held by another transaction in any mode (shared or exclusive), it will also have to wait.
@@ -418,7 +396,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Two-Phase Locking Performance Issues
@@ -436,7 +413,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Predicate Locks
 Explanation of predicate locks as a way to prevent write skew and other race conditions by locking based on query conditions rather than individual objects.
@@ -453,7 +429,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Index-Range Locks
 Explanation of index-range locks as an approximation of predicate locks to improve performance by simplifying the locking mechanism.
@@ -474,7 +449,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Range Locking vs. Table-Level Locking
@@ -486,7 +460,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Serializable Snapshot Isolation (SSI)
 SSI aims to provide full serializability while maintaining good performance through an optimistic approach. Unlike two-phase locking or serial execution, SSI allows transactions to proceed without immediate blocking, with checks for conflicts only at commit time.
@@ -497,7 +470,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pessimistic vs. Optimistic Concurrency Control
 Pessimistic concurrency control, like two-phase locking, assumes that conflicts are likely and blocks access until safety is ensured. In contrast, optimistic concurrency control, such as SSI, allows transactions to proceed without blocking, with conflict resolution only at commit time.
@@ -508,7 +480,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimistic Concurrency Control with SSI
 In optimistic concurrency control, transactions continue execution even if potential conflicts are detected, relying on commit-time checks to ensure isolation. Transactions that violate isolation must be aborted and retried, while those that pass the checks can proceed to commit.
@@ -519,7 +490,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Snapshot Isolation and Repeatable Read
 Snapshot isolation ensures that all reads within a transaction are made from a consistent snapshot of the database, which is different from earlier optimistic concurrency control techniques. This method allows transactions to operate as if they have the entire database to themselves.
@@ -530,7 +500,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Write Skew and Phantom Reads
 Write skew occurs when a transaction reads some data, examines it, and decides to write based on that query result. The issue arises because snapshot isolation may return outdated data by the time the transaction tries to commit its writes.
@@ -541,7 +510,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decisions Based on an Outdated Premise
 In snapshot isolation, a transaction's action can be based on outdated data because the database does not know how the application logic uses the query results. Thus, any change in the result means potential write invalidation.
@@ -552,7 +520,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detecting Stale MVCC Reads
 In snapshot isolation, using multi-version concurrency control (MVCC), transactions read from a consistent snapshot. If another transaction modifies data before the first one commits, and this modification is ignored during reading, it can lead to an outdated premise at commit time.
@@ -563,7 +530,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Code for Detecting Stale Reads
 :p How can you implement logic in code to detect when a transaction might have acted on an outdated premise?
@@ -600,7 +566,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Stale Reads and Detecting Write Conflicts
 
@@ -613,7 +578,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avoiding Unnecessary Aborts in SSI
 
@@ -647,7 +611,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Considerations in SSI
 
@@ -677,7 +640,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributing Serialization Conflicts
 

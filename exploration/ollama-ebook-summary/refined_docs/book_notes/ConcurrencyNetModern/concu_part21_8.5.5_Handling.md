@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.5.5 Handling errors in asynchronous operations
 
 ---
 
-**Rating: 8/10**
 
 #### Monadic Bind Operator for Asynchronous Operations
 Background context: The `async Task<T>` type is a monadic container that allows for applying the monadic operators `Bind` and `Return`. These operators help in composing asynchronous operations as a chain of computations, making the code both declarative and expressive.
@@ -33,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuation-Passing Style with Bind
 Background context: Using the `Bind` operator allows you to structure asynchronous operations using a continuation-passing style (CPS). CPS defers execution until it is needed, providing finer control over the execution and enabling compositionality.
@@ -58,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Task Models in C#
 Background context: This card explains the different models of asynchronous tasks used in programming, specifically focusing on the Hot, Cold, and Task Generator models. It highlights their differences and use cases.
@@ -97,7 +93,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lazy Evaluation with Func<T> in C#
 Background context: This card describes how to lazily evaluate an asynchronous operation using a `Func<Task<T>>` delegate, which only runs the underlying operation when explicitly called.
@@ -121,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Currying and Partial Application in C#
 Background context: This card explains the concepts of currying and partial application in functional programming, allowing easier reuse of more abstract functions by specializing them with specific parameters.
@@ -170,7 +164,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Retry Mechanism for Asynchronous Operations
 Background context explaining the concept. When working with asynchronous I/O operations, particularly network requests, unexpected issues like bad internet connections or unavailable remote servers can occur, leading to failed attempts. A common practice is to implement a retry mechanism that allows the operation to be retried a specified number of times with a delay between each attempt.
@@ -201,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of the Retry Function
 Explanation on how to implement a retry function in C#. The `Retry` function is an extension method that takes an asynchronous operation (wrapped as a `Func<Task<T>>`), the number of retries allowed, and the delay between attempts. It handles cancellation tokens for graceful termination.
@@ -234,7 +226,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Error Handling in Asynchronous Operations
 Background context explaining that asynchronous operations, especially I/O-bound ones, are prone to errors. The previous section covered retry logic as a solution for handling failures. Another approach involves using a `CancellationToken` to stop execution and a fallback mechanism if the initial operation fails.
@@ -262,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fallback Task Execution
 Background context explaining that when an async operation fails, a fallback task can be executed to handle the error gracefully. The status of a task can be checked using the `Status` property, where `TaskStatus.Faulted` indicates an exception was thrown during execution.
@@ -282,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using `CancellationToken`
 Background context explaining how a `CancellationToken` can be used to stop an ongoing async operation. The default value of `CancellationToken` is `CancellationToken.None`, which means no cancellation token is provided by default.
@@ -301,7 +290,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Combining Retry Logic and Fallback
 Background context explaining how retry logic can be combined with fallback mechanisms to handle errors in asynchronous operations. This ensures that even if an initial async operation fails, a fallback mechanism is available for recovery.
@@ -323,7 +311,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Making Asynchronous Computations Cooperate
@@ -348,7 +335,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing Asynchronous Operations in a Functional Style
 Background context: F# provides an elegant way to handle asynchronous computations through its `async { }` computational expression. This allows developers to write functional code while managing asynchronous operations effectively.
@@ -378,7 +364,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Extending Asynchronous Workflow Computational Expressions
 Background context: F# extends the basic `async { }` computational expression to support additional constructs like `|>`, which allows chaining of operations. This makes writing asynchronous code more concise and readable.
@@ -410,7 +395,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Taming Parallelism with Asynchronous Operations
 Background context: Asynchronous programming enables parallelism by allowing multiple tasks to run concurrently without blocking the main thread. In F#, `Async.Parallel` is a powerful tool for managing this concurrency.
@@ -436,7 +420,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Functional Programming in F#
 Asynchronous programming models, like those found in both C# and F#, allow developers to write efficient and performant programs for I/O-bound operations. This is particularly useful in modern applications that need to handle a large number of concurrent tasks without blocking the main thread.
@@ -462,7 +445,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuation Passing Style (CPS)
 Continuation passing style is a method of transforming a program into a form where each function takes an additional argument—its continuation. This technique is used in the F# asynchronous workflow to express non-blocking computations.
@@ -477,7 +459,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### F# Asynchronous Workflow
 The F# asynchronous workflow is a feature that integrates with the .NET async programming model and offers a functional implementation of asynchronous operations. It supports compositionality, simplicity, and non-blocking computations.
@@ -507,7 +488,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison of Synchronous vs. Asynchronous Code
 Synchronous code follows a linear flow where each operation waits for the previous one to complete before proceeding. Asynchronous code, on the other hand, allows operations to run concurrently without blocking.

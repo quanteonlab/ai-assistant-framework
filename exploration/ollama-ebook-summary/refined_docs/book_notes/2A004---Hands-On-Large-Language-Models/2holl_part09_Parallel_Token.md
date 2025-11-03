@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Parallel Token Processing and Context Size
 
 ---
 
-**Rating: 8/10**
 
 #### Token Processing and Parallel Computing
 
@@ -93,7 +91,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Output Shape Explanation
 Background context explaining that the model output shape is [1, 6, 32064] due to input tokenization and transformation. The dimensions represent batch size, number of tokens, and hidden state size respectively.
@@ -172,7 +169,6 @@ print(input_ids)
 ```
 x??
 
-**Rating: 8/10**
 
 #### Time Measurement for Text Generation
 
@@ -297,7 +293,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memorization in Language Models
 Background context explaining that memorization alone is insufficient for impressive text generation. It mentions that raw language models (like GPT-3) are difficult to utilize directly and require further training on instruction-tuning and human preference/feedback fine-tuning.
@@ -361,7 +356,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Attention Mechanism Overview
 Background context explaining the attention mechanism's purpose and role in Transformer models. The mechanism is designed to enable the model to weigh different parts of the input sequence differently based on relevance.

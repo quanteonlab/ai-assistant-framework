@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A007---Build-a-Large-Language-Model_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** welcome
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Understanding Large Language Models (LLMs)
@@ -215,7 +213,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Large Language Models (LLMs)
 Background context explaining LLMs. Large language models are deep neural network models that have been developed over the past few years and are used for a wide range of Natural Language Processing (NLP) tasks. They differ from previous methods by their ability to understand, generate, and interpret human language in ways that appear coherent and contextually relevant.
@@ -310,7 +307,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deep Learning vs Traditional Machine Learning
 Background context explaining the difference between deep learning and traditional machine learning. Deep learning models, such as neural networks, automatically learn features from raw data without extensive manual feature engineering required by traditional machine learning techniques.
@@ -417,7 +413,6 @@ preprocessed_data = preprocess_data("Example text to be preprocessed.")
 This example demonstrates how you might begin the process of preprocessing data for a language model.
 x??
 
-**Rating: 8/10**
 
 #### Pretraining Process for LLMs
 Background context explaining the concept. The pretraining process is the initial phase where a large, diverse dataset is used to train an LLM, enabling it to develop a broad understanding of language. This step prepares the model as a foundational resource before further refinement through finetuning.
@@ -482,7 +477,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transformer Architecture Overview
 The transformer architecture is a deep learning model designed for tasks like language translation. It consists of two main submodules: an encoder and a decoder. The encoder processes the input text, converting it into numerical vectors that capture contextual information, which are then used by the decoder to generate the translated text word by word.
@@ -547,7 +541,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pretraining Costs for Large Language Models
 Pretraining a large language model like GPT involves significant financial investment due to the high computational requirements. The costs can range from thousands to millions of dollars, depending on the size and complexity of the model being trained.
@@ -815,7 +808,6 @@ def finetune_model(model, train_data, validation_data):
 ```
 x??
 
-**Rating: 8/10**
 
 #### Understanding Word Embeddings
 Background context explaining the concept. Deep neural network models, including LLMs, cannot process raw text directly because text is categorical and not compatible with mathematical operations used in neural networks. Therefore, words need to be represented as continuous-valued vectors or word embeddings.
@@ -887,7 +879,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Word2Vec Approach
 Background context explaining the Word2Vec approach. It trained neural network architectures to generate word embeddings by predicting either the target word's context or vice versa. The main idea is that words appearing in similar contexts tend to have similar meanings, leading to clustering of related terms in embedding space.
@@ -959,7 +950,6 @@ Concepts are differentiated by providing specific details and contexts. For exam
 
 ---
 
-**Rating: 8/10**
 
 #### Text Tokenization Process
 Background context explaining how text is split into individual tokens for LLM training. The process involves breaking down input text into words and special characters (punctuation).
@@ -1063,7 +1053,6 @@ While it's common in practice to process millions of articles and hundreds of th
 Once you have a solid understanding of these concepts using smaller texts, you can then apply them to larger datasets in subsequent stages of LLM training.
 x??
 
-**Rating: 8/10**
 
 #### Creating a Vocabulary from Tokens
 Background context: In natural language processing, creating a vocabulary involves sorting unique tokens alphabetically and assigning each token a unique integer value. This process helps in transforming text into numerical data that machine learning models can understand.
@@ -1167,7 +1156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Special Context Tokens to a Vocabulary
 Background context: This section explains how to add special tokens like `<|unk|>` and `<>` to a vocabulary used in tokenizers for natural language processing tasks. These tokens help handle unknown words and document boundaries, enhancing model understanding during training.
@@ -1250,7 +1238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tokenization Overview
 Tokenization is an essential step in processing text as input to Language Models (LLMs). It involves breaking down a sentence into smaller units called tokens. Depending on the LLM, some researchers consider additional special tokens such as [BOS], [EOS], and [PAD].
@@ -1352,7 +1339,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Efficient Data Loader Implementation for Language Models
 
@@ -1485,7 +1471,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Embedding Layer Operation
 Background context: In our previous discussion, we explored how to convert a single token ID into a three-dimensional embedding vector. Now, let's see how this operation is applied to a sequence of four token IDs.
@@ -1603,7 +1588,6 @@ print(final_embeddings)
 ```
 x??
 
-**Rating: 8/10**
 
 #### Positional Embeddings Overview
 Background context explaining positional embeddings. We discuss two types of positional embeddings: absolute and relative. The advantage of using absolute positional embeddings is that they allow models to generalize better to varying sequence lengths because the model learns "how far apart" tokens are from each other rather than their exact positions.
@@ -1689,7 +1673,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Length and Token Embeddings
 Background context explaining how LLMs process input text. The `context_length` variable represents the maximum length of input that an LLM can handle at once. If the input is longer, it gets truncated or split into chunks.

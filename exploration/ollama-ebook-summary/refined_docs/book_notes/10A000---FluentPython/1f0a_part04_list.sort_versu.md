@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** list.sort versus the sorted Built-In
 
 ---
 
-**Rating: 8/10**
 
 #### Mutable vs Immutable Objects and Augmented Assignment
 Background context: In Python, understanding mutable and immutable objects is crucial. This distinction affects operations like augmented assignment (`TOS += b`). When `TOS` (Top of Stack) refers to a mutable object, such as a list, the operation can be successful. However, if `TOS` points to an immutable object, like a tuple or string, the operation will fail.
@@ -85,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Arrays vs Lists
 Background context explaining the differences between arrays and lists. Discuss the memory efficiency, speed of operations, and use cases for each type. Highlight that Python lists are flexible but can be memory-heavy for large numerical data.
@@ -215,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MemoryView and Byte Casting
 Memory views provide a way to work directly with the memory of an underlying buffer, allowing for efficient access and manipulation. When casting elements from one type to another (like from integers to bytes), you can manipulate the data at a lower level.

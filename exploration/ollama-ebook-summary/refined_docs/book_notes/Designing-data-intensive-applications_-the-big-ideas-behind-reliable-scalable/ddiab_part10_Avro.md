@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Avro
 
 ---
 
-**Rating: 8/10**
 
 #### Avro Schema Compatibility and Evolution Rules
 Background context: In Apache Avro, ensuring that writer's schema and reader's schema can coexist without breaking compatibility is crucial. The Avro specification defines rules for maintaining forward and backward compatibility through careful addition or removal of fields with default values.
@@ -113,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Generation and Dynamically Typed Languages
 
@@ -237,7 +234,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dataflow Through Databases
 Background context: In a database, one process encodes data and writes it to the database, while another process decodes and reads from it. Backward compatibility is crucial because older versions of processes need to be able to read data written by newer versions. Forward compatibility might also be necessary in environments where multiple versions of applications or services access the same database.
@@ -337,7 +333,6 @@ This pseudocode illustrates how a rolling upgrade can manage different versions 
 
 ---
 
-**Rating: 8/10**
 
 #### Schema Evolution
 Schema evolution allows the database to appear as a single schema, despite containing records from various historical schema versions. This is particularly useful for maintaining backward compatibility and ensuring data consistency over time.
@@ -394,7 +389,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Services vs Databases
 Services and databases both allow clients to submit and query data, but they differ significantly. Databases use arbitrary queries through languages like SQL (discussed in Chapter 2), while services expose a specific API that is determined by their business logic. This API restricts the inputs and outputs allowed, providing encapsulation.
@@ -470,7 +464,6 @@ public class Example {
 ```
 x??
 
-**Rating: 8/10**
 
 #### REST vs SOAP
 Background context explaining the differences between REST and SOAP. REST is gaining popularity for cross-organizational service integration, especially with microservices. SOAP is an XML-based protocol that uses a sprawling set of standards (WS-*). RESTful APIs typically involve simpler approaches.

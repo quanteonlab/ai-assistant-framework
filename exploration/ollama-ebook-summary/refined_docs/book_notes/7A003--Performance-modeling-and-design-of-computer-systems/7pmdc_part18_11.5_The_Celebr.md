@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11.5 The Celebrated Poisson Process
 
 ---
 
-**Rating: 8/10**
 
 #### Time Until Failure of Server Components
 Background context explaining how to calculate the time until failure for server components. This involves understanding the rates at which failures occur.
@@ -44,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Poisson Process - Independent Increments
 Background context explaining the concept of independent increments in a Poisson process. This involves understanding that the number of events occurring in disjoint time intervals are independent.
@@ -69,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Poisson Process - Poisson Distribution in Intervals
 Background context explaining how the number of events in any interval of length t follows a Poisson distribution with mean λt.
@@ -89,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Poisson Process - Independent and Stationary Increments
 Background context explaining that a process with independent increments also has stationary increments due to the third item in the definition.
@@ -114,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Poisson Process - Interarrival Times are Exponential
 Background context explaining that a sequence of events can be defined using exponential interarrival times and the initial condition N(0) = 0.
@@ -143,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Poisson Process - Third Definition
 Background context explaining the third definition that involves interarrival times being i.i.d. Exponential random variables with rate λ.
@@ -178,7 +171,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Poisson Process - Third Definition
 Background context explaining the third definition that involves the limiting behavior as δ approaches 0.
@@ -221,7 +213,6 @@ This concludes the flashcards for the provided text. Each card covers a key conc
 
 ---
 
-**Rating: 8/10**
 
 #### Exponential Distribution and Poisson Process Approximation
 Background context: In a Poisson process, each δ-size interval has approximately 1 event with probability \( \lambda\delta + o(\delta) \), where events occur at rate \( \lambda \). As \( \delta \to 0 \), the number of events \( N(t) \) in time \( t \) can be approximated as a Binomial distribution, which converges to a Poisson distribution.
@@ -233,7 +224,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Merging Independent Poisson Processes
 Background context: When merging two independent Poisson processes, each with rates \( \lambda_1 \) and \( \lambda_2 \), the merged process becomes a single Poisson process with rate \( \lambda_1 + \lambda_2 \).
@@ -245,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Poisson Splitting
 Background context: Given a single Poisson process with rate \( \lambda \), where each event is classified as "type A" with probability \( p \) and "type B" with probability \( 1-p \), the type A events form a Poisson process with rate \( p\lambda \), and the type B events form a Poisson process with rate \( (1-p)\lambda \). These two processes are independent.
@@ -264,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Poisson Splitting Intuition
 Background context: The Poisson splitting theorem can be understood by analogy with the Geometric distribution. In a sequence of coin flips (with bias \( p \)), type A events are identified as "heads" and occur at rate \( \lambda p \). Type B events, corresponding to "tails," have their own independent process.
@@ -280,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Poisson Process Independence
 Background context: This section discusses how to prove that two Poisson processes are independent and form separate Poisson processes with their own rates. The key idea is using the joint probability of events in both processes.
@@ -304,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Uniformity of Poisson Process Events
 Background context: Given one event in a Poisson process, it is equally likely to have occurred at any point within the time interval.
@@ -328,7 +314,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exponential Distribution Memorylessness
 Background context: The memoryless property of an exponential distribution implies that the probability of an event occurring within a time interval, given it has not occurred yet, does not depend on how much time has already passed.
@@ -349,7 +334,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Doubling Exponential Distribution
 Background context: If job sizes are exponentially distributed with rate \(\mu\) and all double, we need to determine the new distribution.
@@ -371,7 +355,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Failure Rate of Exponential Distribution
 Background context: The failure rate is a measure of how likely an item is to fail per unit time. For the exponential distribution, it is constant.
@@ -398,7 +381,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Poisson Process with Known Events
 Background context: Given that \(N\) green packets arrived during a second in a Poisson process, we can calculate expected values and probabilities related to yellow packets.
@@ -418,7 +400,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional Distribution Given Minimum
 Background context: If \(X\) and \(Y\) are independent exponential random variables with rates \(\lambda_X\) and \(\lambda_Y\), the minimum \(Z = \min(X, Y)\) has a known distribution. We need to find the conditional distribution of \(X\) given \(X < Y\).

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9. Writing and Running Your Code. Item 72 Prefer ECMAScript Features to TypeScript Features
 
 ---
 
-**Rating: 8/10**
 
 #### Using Literal Types for Enums
 
@@ -86,7 +84,6 @@ Another issue is that parameter properties are compiled into regular class prope
 
 x??
 
-**Rating: 8/10**
 
 #### Triple-Slash Imports and Namespaces
 Background context explaining how JavaScript lacked an official module system before ECMAScript 2015. Different environments like Node.js and AMD used their own methods, while TypeScript introduced its own module system using a `module` keyword and triple-slash imports.
@@ -224,7 +221,6 @@ function logged(originalFn: any, context: ClassMethodDecoratorContext) {
 ```
 x??
 
-**Rating: 8/10**
 
 ---
 #### JavaScript's Private Fields Before ES2022
@@ -344,7 +340,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Source Maps in TypeScript Debugging
 Background context explaining source maps and their role in debugging TypeScript. Explain how TypeScript compiles to JavaScript, and why direct debugging of generated JavaScript can be challenging.
@@ -547,7 +542,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### DOM Hierarchy and TypeScript
 Background context: The text discusses how understanding the Document Object Model (DOM) hierarchy becomes crucial when using TypeScript, especially for web applications. It mentions that JavaScript and its APIs are deeply integrated with the DOM structure, making knowledge of these elements essential for debugging type errors and ensuring robust application development.
@@ -613,7 +607,6 @@ x??
 
 These flashcards cover key concepts from the provided text, focusing on DOM hierarchy in TypeScript, understanding `EventTarget`, null safety, and the differences between `Element` and `EventTarget`.
 
-**Rating: 8/10**
 
 #### Specificity of DOM Property Types
 TypeScript's type declarations for the DOM make liberal use of literal types to provide the most specific type possible. However, this is not always achievable with certain methods like `document.getElementById`.

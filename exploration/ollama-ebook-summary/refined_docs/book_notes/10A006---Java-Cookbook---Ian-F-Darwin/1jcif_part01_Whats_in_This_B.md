@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Whats in This Book. Organization of This Book
 
 ---
 
-**Rating: 8/10**
 
 #### Getting Started: Compiling and Running Java
 Background context explaining how to compile and run a basic Java program on different platforms. This involves using command-line tools or IDEs like Eclipse, IntelliJ IDEA, etc., and understanding the basics of compiling and executing Java code.
@@ -224,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Java Documentation Changes
 Background context: The text mentions that newer versions of Java have replaced a conceptual diagram with a text page. For Java 13, this page is available at <https://docs.oracle.com/en/java/javase/13>. This change reflects how documentation and learning resources evolve to adapt to new technologies.
@@ -299,7 +296,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding JAR File Placement and Classpath Configuration
 Background context: When working with Java applications, it is important to understand how the classpath (CLASSPATH) works, especially when dealing with JAR files. Unlike single class files, placing a JAR file into a directory listed in your CLASSPATH does not make its contents available without explicit mention.

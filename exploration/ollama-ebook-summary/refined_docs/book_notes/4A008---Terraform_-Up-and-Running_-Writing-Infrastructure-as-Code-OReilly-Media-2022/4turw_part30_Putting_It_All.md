@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 30)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Putting It All Together
 
 ---
 
-**Rating: 8/10**
 
 #### Application and Infrastructure Code Workflows
 This text describes the application and infrastructure code workflows used by teams. It covers version control, testing, coding changes, automated tests, merging, deployment strategies, and promotion across environments.
@@ -31,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Git Tagging for Version Control
 This section explains the process of using git tags to create versioned, immutable artifacts. It highlights the importance of creating a tagged commit in the repository as a reference point for deployments.
@@ -53,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deployment Strategies
 The text outlines various deployment strategies, including rolling updates, blue-green deployments, and canary releases. It also mentions running deployments on CI servers with limited permissions to promote versioned artifacts across environments.
@@ -69,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Environment Promotion
 This text explains the process of promoting artifacts from development to production environments through automated workflows involving approval steps.
@@ -92,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable, Versioned Artifacts
 Background context: This section discusses managing Terraform artifacts (code) as immutable and versioned entities to promote them from one environment to another. This approach ensures that changes are controlled, traceable, and repeatable.

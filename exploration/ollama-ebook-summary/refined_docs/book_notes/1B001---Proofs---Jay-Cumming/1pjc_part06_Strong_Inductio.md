@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 1B001---Proofs---Jay-Cumming_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Strong Induction
 
 ---
 
-**Rating: 8/10**
 
 #### Inductive Proof for Natural Numbers Past a Point
 
@@ -132,7 +130,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Strong Induction Explanation
 Background context: The provided text discusses strong induction, a method of mathematical proof that is used when the statement to be proved depends on more than just the immediate previous case. It involves proving that if all smaller cases are true, then the current case must also be true.
@@ -191,7 +188,6 @@ x??
 
 These flashcards cover the key concepts in the provided text, each focusing on a specific aspect and providing detailed explanations.
 
-**Rating: 8/10**
 
 #### Strong Induction Explanation
 Background context: The provided text discusses a problem related to breaking up a chocolate bar into individual squares. It emphasizes the necessity of using strong induction for this proof, as regular induction would not suffice due to the nature of how breaks are made.
@@ -248,7 +244,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Number of Breaks to Create Tchunks
 Background context: This concept explains how many breaks are required to increase the number of chunks from 1 to T. Each break increases the chunk count by 1, so T-1 breaks are needed to reach T chunks.
@@ -426,7 +421,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fake Proposition 4.11: Everyone on Earth has the same name
 Background context explaining the concept of a flawed induction proof. The base case and inductive hypothesis are correct, but the inductive step contains a subtle logical flaw.
@@ -458,7 +452,6 @@ x??
 
 These flashcards help familiarize you with common pitfalls in mathematical proofs, specifically focusing on subtle errors in induction. Understanding these flaws can improve your ability to construct and critique rigorous mathematical arguments.
 
-**Rating: 8/10**
 
 #### Inductive Proof of a Finite Sum
 

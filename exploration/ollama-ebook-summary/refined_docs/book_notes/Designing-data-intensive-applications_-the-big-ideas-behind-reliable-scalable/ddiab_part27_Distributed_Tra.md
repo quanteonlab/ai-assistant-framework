@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 27)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Distributed Transactions and Consensus
 
 ---
 
-**Rating: 8/10**
 
 #### Lamport Timestamps and Linearizability
 Lamport timestamps are a way to order events in a distributed system. The goal is to have a total order of operations that makes the system appear sequential, even when it isn't. In contrast, timestamp ordering uses a more sophisticated approach for linearizable sequence number generators.
@@ -141,7 +139,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Atomic Commit on Single Node
 
@@ -338,7 +335,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Read Committed Isolation
@@ -407,7 +403,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two-Phase Commit (2PC) Overview
 Background context explaining the concept. The 2PC is a protocol used to ensure atomicity in distributed transactions, where all participating nodes must either commit or abort the transaction consistently. This process avoids partial failures by ensuring that once a decision is made, it cannot be reverted.
@@ -526,7 +521,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Distributed Transactions Overview
@@ -598,7 +592,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Transactions and Atomic Commit Protocol Overview
 Background context explaining the concept of distributed transactions and atomic commit protocols. The text discusses how a transaction can affect multiple systems, requiring coordination to ensure consistency and reliability.
@@ -668,7 +661,6 @@ The text explains that communication between the coordinator and participants is
 The coordinator uses XA API callbacks to ask participants to prepare, commit, or abort. The driver exposes these callbacks, allowing the coordinator to coordinate operations across multiple systems.
 ??x
 
-**Rating: 8/10**
 
 #### Why Do We Care About In-Doubt Transactions?
 

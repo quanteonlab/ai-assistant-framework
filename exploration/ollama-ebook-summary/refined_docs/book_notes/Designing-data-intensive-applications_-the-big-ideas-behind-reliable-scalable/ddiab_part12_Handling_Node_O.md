@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Handling Node Outages
 
 ---
 
-**Rating: 8/10**
 
 #### Leader and Synchronous Follower Replication
 Leader-based replication involves a single leader node that coordinates writes to the database. Followers are synchronous followers, meaning they must acknowledge receipt of a write before it is considered durable by the system. This setup can be seen as semi-synchronous [7]. However, this configuration often allows for completely asynchronous operation.
@@ -123,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### STONITH and Leader Detection
 Background context: This section discusses a technique called STONITH (Shoot The Other Node In The Head), which is used to handle node failures in distributed systems. It ensures that only one leader exists at any given time, preventing split brain scenarios where multiple nodes might believe they are the leader.
@@ -277,7 +274,6 @@ public class LogicalLogReplicator {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Change Data Capture
 Change data capture (CDC) is a technique used for capturing and transmitting changes made to a database. It allows for creating custom indexes, caches, or offline analysis. This method is particularly useful when dealing with large datasets where real-time updates are not necessary.

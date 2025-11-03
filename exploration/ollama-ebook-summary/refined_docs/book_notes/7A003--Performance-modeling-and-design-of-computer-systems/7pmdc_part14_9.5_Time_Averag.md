@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.5 Time Averages
 
 ---
 
-**Rating: 8/10**
 
 #### Ergodicity and Stationary Distributions
 
@@ -129,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Renewal Theorem for Ergodic Markov Chains
 
@@ -223,7 +220,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Balance Equations and Ergodicity Theory
 Background context explaining the concept. Balance equations are used to equate the rate of leaving a state \(i\) with the rate of entering state \(i\). This is mathematically equivalent to stationary equations, allowing us to write balance equations by ignoring self-loops. These equations can be applied to both single states and sets of states.
@@ -295,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Periodic Chains Overview
 In this section, we discuss periodic chains within a Discrete-Time Markov Chain (DTMC) context. The focus is on understanding how the states behave and interact within such a chain, particularly when the chain is irreducible and positive-recurrent but has a finite period \(d < \infty\). The key concept here is that for any state in an irreducible periodic chain, the long-run time-average proportion of time spent in each state can be represented by a stationary distribution. However, it does not represent the limiting distribution; instead, it represents the long-term average.
@@ -347,7 +342,6 @@ x??
 ---
 These flashcards are designed to help you understand and internalize the key concepts discussed in the provided text about periodic chains and their properties.
 
-**Rating: 8/10**
 
 #### Understanding the Time-Average Distribution
 Background context: The time-average distribution, denoted as \(\vec{p}\), represents the long-run proportion of time spent in each state. It is derived from observing the chain every \(d\) steps when it hits states within a specific set \(\vec{i}\).

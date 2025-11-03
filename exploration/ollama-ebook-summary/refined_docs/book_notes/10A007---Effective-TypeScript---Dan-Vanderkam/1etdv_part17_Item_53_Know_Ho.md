@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 53 Know How to Control the Distribution of Unions over Conditional Types
 
 ---
 
-**Rating: 8/10**
 
 #### Preventing Distribution of Unions
 
@@ -92,7 +90,6 @@ x??
 - **Preventing Distribution**: Use `[T]` to wrap the type and ensure unions do not distribute.
 - **Distributing Conditionally**: Ensure the condition starts with `N extends ...` to allow distribution over unions.
 
-**Rating: 8/10**
 
 #### Conditional Types and Union Distribution
 Background context: In TypeScript, conditional types can be distributed over union types. This means that when a type parameter is a union, each member of the union will be processed individually by the conditional type.
@@ -158,7 +155,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional Types and Union Distribution
 
@@ -279,7 +275,6 @@ const physics: PseudoString = 'physics';       //    ~~~~~~~ Type '\"physics\"' 
 
 ---
 
-**Rating: 8/10**
 
 #### Template Literal Types and CSS Selector Parsing
 Background context explaining how template literal types can be used to create precise and accurate type definitions for complex string patterns, such as CSS selectors. This is particularly useful when working with the Document Object Model (DOM) in TypeScript.
@@ -469,7 +464,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Assignability Testing with TypeScript
 
@@ -567,7 +561,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### expect-type Library Overview
 Background context: The `expect-type` library is a powerful tool for testing TypeScript types. It integrates well with existing TypeScript test suites and helps catch type mismatches without requiring additional setup. This library leverages TypeScript's type system to ensure that functions, interfaces, and other constructs match the expected types.

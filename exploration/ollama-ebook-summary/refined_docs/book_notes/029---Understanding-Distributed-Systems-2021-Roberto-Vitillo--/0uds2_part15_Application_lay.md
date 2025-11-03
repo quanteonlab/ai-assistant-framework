@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Application layer load balancing
 
 ---
 
-**Rating: 8/10**
 
 #### Application Layer Load Balancing (L7 LB)
 Application layer load balancing is an HTTP reverse proxy that distributes requests across a pool of backend servers. At this level, the load balancer operates at the HTTP protocol and can inspect individual HTTP requests within the same TCP connection, which is crucial for handling modern protocols like HTTP/2 where multiple streams can be multiplexed over a single connection.
@@ -49,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### L7 Load Balancing with Sidecar Pattern
 
@@ -126,7 +123,6 @@ x??
 
 Note: The Java code examples are simplified and serve to illustrate the concepts rather than providing a complete implementation.
 
-**Rating: 8/10**
 
 #### Single Leader Replication
 Background context: This is a common approach to replicating data where client writes are exclusively sent to one leader node, which updates its local state and then asynchronously or synchronously replicates changes to followers. The Raft algorithm is an example of implementing this strategy.

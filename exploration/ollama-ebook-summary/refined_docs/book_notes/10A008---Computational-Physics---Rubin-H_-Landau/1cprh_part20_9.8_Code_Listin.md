@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.8 Code Listings
 
 ---
 
-**Rating: 8/10**
 
 #### Discrete Fourier Transform (DFT) Using Complex Numbers
 
@@ -38,7 +36,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Discrete Fourier Transform (DFT) Using Real Numbers
 
@@ -69,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fast Fourier Transform (FFT)
 
@@ -121,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wavelet Analysis Introduction
 Wavelet analysis is a technique used to analyze signals that change over time. Unlike Fourier analysis, which provides frequency information but lacks temporal resolution, wavelets offer both frequency and time localization, making them suitable for non-stationary signals like those with varying frequencies over time.
@@ -132,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Localization
 Wavelets are localized in time, meaning they exist for only short periods. This property allows them to capture both the frequency content and when it occurs within the signal.
@@ -143,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wave Packet Widths and Fourier Transform
 Background context: This section discusses wave packets and their relationship to time-frequency localization, specifically focusing on the widths \(\Delta t\) and \(\Delta \omega\). The Heisenberg uncertainty principle is introduced as a fundamental relation between these two quantities.
@@ -170,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fourier Transform of a Simple Wave Packet
 
@@ -203,7 +195,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wave Packet Exercises
 
@@ -228,7 +219,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Short-Time Fourier Transforms
 

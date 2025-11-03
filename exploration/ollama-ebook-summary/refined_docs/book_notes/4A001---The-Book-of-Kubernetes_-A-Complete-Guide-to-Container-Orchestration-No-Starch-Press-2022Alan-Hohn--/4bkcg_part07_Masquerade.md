@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A001---The-Book-of-Kubernetes_-A-Complete-Guide-to-Container-Orchestration-No-Starch-Press-2022Alan-Hohn--_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Masquerade
 
 ---
 
-**Rating: 8/10**
 
 #### Network Masquerade and Source NAT
 
@@ -25,7 +23,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CNI Chain for Containerized Networks
 
@@ -53,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Complexity of Container Networking
 Background context explaining the concept. The text highlights the complexity involved in container networking to achieve both isolation and connectivity among containers and between different networks.
@@ -66,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Container Storage Concepts
 Background context explaining the concept. The author introduces the next topic as understanding container storage mechanisms, including the base filesystem used for new containers and temporary storage during runtime.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Blockchain Model
 
 ---
 
-**Rating: 8/10**
 
 #### Blockchain as a Data Structure
 Background context explaining the basic structure of blockchain. A blockchain is a data structure that stores data as a chain of linked information blocks, where each block contains its own data and a hash pointer to the previous block.
@@ -218,7 +216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Data Querying Needs Evolution
@@ -322,7 +319,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Composite Index
 Background context explaining why composite indexes are used. Composite indexes are created on multiple columns and are useful when queries filter by those columns together. They can significantly speed up query performance.
@@ -379,7 +375,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Query Planner Overview
@@ -480,7 +475,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 ---
 #### Index Usage for Queries
@@ -569,7 +563,6 @@ This approach ensures that only relevant data is joined, reducing the overall pr
 
 x??
 
-**Rating: 8/10**
 
 #### Database Internals and Query Optimization
 Background context: Understanding database internals is crucial for a financial data engineer to optimize queries effectively. The EXPLAIN command helps analyze query optimizer plans, and learning about database optimization strategies can improve query performance.
@@ -636,7 +629,6 @@ public void convertCSVToSQL(String csvFilePath) {
 ```
 ??x
 
-**Rating: 8/10**
 
 #### Determining When to Clean Financial Data
 Background context: Deciding when and which data to clean within your financial data infrastructure is a critical aspect of data integrity. While it may seem intuitive to perform cleaning as early as possible, this approach requires careful consideration.
@@ -720,7 +712,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Deletion and Data Integrity
@@ -919,7 +910,6 @@ public class DividendAdjuster {
 :x??
 ---
 
-**Rating: 8/10**
 
 ---
 #### Option Data Filtering
@@ -1040,7 +1030,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Series Differentiation
 Time series differentiation is a common technique used to transform non-stationary financial data into stationary data. This transformation helps simplify analysis using classical statistical methods.

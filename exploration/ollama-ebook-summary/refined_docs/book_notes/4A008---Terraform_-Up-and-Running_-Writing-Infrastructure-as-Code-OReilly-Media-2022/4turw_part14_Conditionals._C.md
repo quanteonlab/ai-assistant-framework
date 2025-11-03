@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Conditionals. Conditionals with the count Parameter
 
 ---
 
-**Rating: 8/10**
 
 #### Conditionals Using count Parameter
 Background context: In Terraform, while direct `if` statements aren't supported, you can use the `count` parameter to conditionally create resources. The `count` parameter allows you to specify how many copies of a resource should be created based on an integer value.
@@ -48,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### count Parameter Example in Action
 Background context: The `count` parameter can be used not only for basic loops but also as a conditional mechanism. By setting `count` to 1 or 0 based on a variable value, Terraform decides whether to create the resource.
@@ -77,7 +74,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional Logic with `count` Parameter
 Conditional logic can be implemented using the ternary syntax in Terraform. Specifically, you can control whether resources are created or not based on a boolean condition. The `count` parameter is used to decide how many instances of a resource should be created.
@@ -117,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional Logic with `count` Parameter for Different Environments
 In Terraform, you can use conditional logic to enable or disable specific configurations in different environments by setting environment-specific variables.
@@ -165,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional Logic for Resource Creation
 Conditional logic using the `count` parameter in Terraform helps manage which resources are created based on a condition. The ternary operator is particularly useful here to dynamically control resource creation.
@@ -190,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Count Parameter for Conditional Resource Creation
 Background context: In Terraform, you can use the `count` parameter to conditionally create resources based on a boolean variable. This is useful when you need to decide between creating one of several similar resources depending on some input.
@@ -217,7 +210,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional Output Based on Resource Creation
 Background context: After conditionally creating resources using the `count` parameter, you might want to output an attribute of the resource that was actually created.
@@ -238,7 +230,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional Resource Creation Logic
 Background context: In Terraform, you can conditionally create resources using the `count` parameter based on a boolean input variable. This example demonstrates how to attach either a full-access or read-only IAM policy to an IAM user.
@@ -269,7 +260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ternary Syntax vs Concat and One Functions
 Background context: The text discusses different ways to handle conditional logic in Terraform, specifically focusing on ternary syntax and a safer approach using `concat` and `one` functions. This is important for ensuring code robustness as conditions become more complex.
@@ -281,7 +271,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional Logic with for_each and for Expressions
 Background context: The text explains using `for_each` combined with the `for` expression to implement more complex conditional logic in Terraform. This approach allows you to conditionally create resources based on dynamic collections.
@@ -316,7 +305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -401,7 +389,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Launch Configuration Update in Terraform
 When updating an existing launch configuration in a web server cluster, you need to ensure that the changes are applied seamlessly. The launch configuration is crucial for defining how instances should be launched within an auto-scaling group.
@@ -480,7 +467,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Zero-Downtime Deployment for AWS Auto Scaling Groups
 In order to perform an update on your AWS Auto Scaling Group (ASG) without downtime, you need to ensure that a new ASG is created first and only then destroyed after confirming its stability. This can be achieved using Terraform's `create_before_destroy` lifecycle setting.
@@ -507,7 +493,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependent ASG Name on Launch Configuration
 To ensure that the ASG's name changes every time the launch configuration is updated, making it necessary for Terraform to replace the ASG.
@@ -530,7 +515,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Initial State of ASG
@@ -543,7 +527,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load Balancer Routing
 Background context: Once the new ASG has enough healthy instances (determined by `min_elb_capacity`), traffic starts being routed to the new version of your application.
@@ -555,7 +538,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Phased Undeployment of Old ASG
 Background context: After a successful transition, the old ASG starts deregistering from the ALB, followed by shutting down until only the new version remains.
@@ -567,7 +549,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Zero-Downtime Deployment Demonstration
 Background context: To verify the zero-downtime deployment, you can make changes to parameters like `server_text` and observe traffic alternation using a continuous curl command.

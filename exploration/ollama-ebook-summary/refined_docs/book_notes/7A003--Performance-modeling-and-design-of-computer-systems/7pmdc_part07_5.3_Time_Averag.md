@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 5.3 Time Average versus Ensemble Average
 
 ---
 
-**Rating: 8/10**
 
 #### Weak Law of Large Numbers
 Background context: The weak law of large numbers (WLLN) provides a probabilistic framework for understanding the behavior of averages of i.i.d. random variables.
@@ -23,7 +21,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Strong Law of Large Numbers
 Background context: The strong law of large numbers (SLLN) provides a deterministic framework for understanding the behavior of averages of i.i.d. random variables.
@@ -40,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Tim and Enzo's Simulation Approaches
@@ -67,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Average Definition
 The time average of a process is defined as the limit of the integral of the number of jobs in the system divided by time over an infinite period. It captures the long-term behavior of a single sample path.
@@ -91,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ensemble Average Definition
 The ensemble average is defined as the limit of the expected value of the number of jobs in the system over an infinite period. It involves averaging multiple short simulations to capture the long-term behavior.
@@ -117,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Average vs Ensemble Average
 
@@ -130,7 +123,6 @@ The time average refers to calculating the average number of jobs by monitoring 
 
 ---
 
-**Rating: 8/10**
 
 #### Single Server Queue Example
 
@@ -143,7 +135,6 @@ N(ν,ω) represents the number of jobs in the system at time ν for a specific s
 
 ---
 
-**Rating: 8/10**
 
 #### Ensemble Average Concept
 
@@ -156,7 +147,6 @@ The ensemble average represents the expected number of jobs in the system when c
 
 ---
 
-**Rating: 8/10**
 
 #### Steady State Concept
 
@@ -169,7 +159,6 @@ In queueing theory, steady state refers to a point in time where the effects of 
 
 ---
 
-**Rating: 8/10**
 
 #### Steady State Probability Calculation
 
@@ -195,7 +184,6 @@ public class SteadyStateProbability {
 
 ---
 
-**Rating: 8/10**
 
 #### Time Average vs. Ensemble Average: Concepts
 Background context explaining the difference between time average and ensemble average, focusing on the practical implications for Tim (time average) and Enzo (ensemble average).
@@ -213,7 +201,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ergodic System: Definition and Intuition
 Background context explaining the concept of an ergodic system, including its defining properties.
@@ -230,7 +217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Equivalence of Time Average and Ensemble Average
 Background context explaining under what conditions the time average equals the ensemble average, leading to Theorem 5.9.
@@ -243,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Positive Recurrence
 Background context explaining how positive recurrence works through an example, such as a queueing model.
@@ -276,7 +261,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ergodicity and Averages
 Ergodic systems have the property that their time averages equal their ensemble averages. This is due to the Strong Law of Large Numbers (SLLN) which states that the sample mean converges almost surely to the expected value as the number of samples grows large.
@@ -287,7 +271,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time and Ensemble Averages in Simulation
 Time averages are obtained by running one simulation for an extended duration. Ensemble averages involve multiple simulations started at different times or with different initial conditions.
@@ -298,7 +281,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Long Run Times
 Long run times are crucial because they ensure that initial conditions do not significantly affect the observed behavior. This is necessary to reach a steady state where the system's properties become stable and representative of its long-term characteristics.
@@ -309,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Average Time in System
 The average time in the system can be defined from either a single long run (time average) or multiple short runs with averaging over all jobs (ensemble average).
@@ -324,7 +305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Operational Laws and Their Importance
 Background context: The text introduces operational laws as a powerful tool for analyzing system behavior. These laws are simple, exact, and "distribution independent," meaning they do not depend on specific distributions of job service requirements or interarrival times but only on their means. This makes them very popular among system builders.
@@ -378,7 +358,6 @@ These flashcards cover key concepts from the provided text related to operationa
 
 ---
 
-**Rating: 8/10**
 
 #### Little's Law for Open Systems
 Background context explaining the concept. Little's Law states that the average number of jobs \(E[N]\) in a system is equal to the product of the average arrival rate into the system \(\lambda\) and the mean time jobs spend in the system \(E[T]\). Mathematically, this can be expressed as:
@@ -393,7 +372,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ergodic Open Systems
 Background context explaining the concept. An ergodic open system refers to systems where, over an extended period, all possible states are visited and the long-term behavior of the system is predictable based on the steady-state probabilities.
@@ -409,7 +387,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application of Little's Law
 Background context explaining the concept. The application of Little's Law involves leveraging known quantities (such as \(E[N]\) or \(\lambda\)) to find unknowns (\(E[T]\)) in queueing systems.
@@ -426,7 +403,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Open System Setup
 Background context explaining the concept. The setup for Little's Law involves a system with arrivals at an average rate \(\lambda\), departures, and jobs spending time \(T\) in the system.
@@ -443,7 +419,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Open Systems Example
 Background context explaining the concept. To illustrate the use of Little's Law, consider a simple example where you have a queueing system with an arrival rate \(\lambda = 10\) jobs per minute and the average time spent in the system is \(E[T] = 2\) minutes.
@@ -458,7 +433,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Open Systems and Markov Chains
 Background context explaining the concept. When studying Markov chains, many techniques are used to compute \(E[N]\). Applying Little's Law will then immediately yield \(E[T]\).

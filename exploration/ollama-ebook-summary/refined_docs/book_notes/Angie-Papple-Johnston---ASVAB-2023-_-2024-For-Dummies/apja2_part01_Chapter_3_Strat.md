@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 3 Strategizing Your Way to a Good Score. Studying and Practicing for the ASVAB
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Question Elements
 Background context: To choose the correct answer, it's essential to fully understand each question, including keywords and symbols.
@@ -39,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eliminating Contradictory Choices
 Background context explaining how if two choices are contradictory, one of them is usually correct.
@@ -51,7 +48,6 @@ The answer with detailed explanations.
 
 ---
 
-**Rating: 8/10**
 
 #### Identifying Weak Areas Post-Practice Test
 Background context: Reviewing answers after the first practice test reveals which areas require more focus. Highlight questions missed for pattern analysis.
@@ -61,7 +57,6 @@ By analyzing the wrong answers, you can identify specific topics that need impro
 
 ---
 
-**Rating: 8/10**
 
 #### Reviewing Weak Areas
 Background context: The passage advises scoring practice tests and reviewing questions that were answered incorrectly to target specific areas of knowledge for improvement. This is crucial for effective preparation.
@@ -74,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Identifying Subpoints
 

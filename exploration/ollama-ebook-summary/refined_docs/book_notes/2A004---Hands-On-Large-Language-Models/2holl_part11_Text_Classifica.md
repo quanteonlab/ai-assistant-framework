@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Text Classification with Representation Models
 
 ---
 
-**Rating: 8/10**
 
 #### Text Classification Overview
 Background context: In natural language processing (NLP), text classification is a task where a model learns to assign one or more predefined categories to input texts. This can be used for sentiment analysis, intent detection, and entity extraction among other applications.
@@ -135,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Selection Overview
 Background context: Choosing the right model is crucial for effective use of NLP tasks. With over 60,000 models on the Hugging Face Hub and more than 8,000 embedding models, selecting a suitable model requires careful consideration based on the specific task, language compatibility, architecture, size, and performance.
@@ -263,7 +260,6 @@ Positive Review    |  FN (False)    |  TP (True)      |
 ```
 x??
 
-**Rating: 8/10**
 
 #### Accuracy and F1 Score
 

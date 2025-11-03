@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Guideline 7 Understand the Similarities Between Base Classes and Concepts
 
 ---
 
-**Rating: 8/10**
 
 #### Liskov Substitution Principle (LSP)
 Background context explaining the concept. The Liskov Substitution Principle is a fundamental principle of object-oriented programming that states objects of a derived class should be replaceable with objects of their base class without affecting the correctness of the program.
@@ -78,7 +76,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Self-Documenting Code and Proper Documentation of Abstractions
 Background context explaining the importance of self-documenting code and proper documentation, especially for abstractions. Highlight how these practices help in maintaining clarity and understanding among developers.
@@ -140,7 +137,6 @@ Both code snippets ensure that `useDocument()` only works with types that adhere
 
 ---
 
-**Rating: 8/10**
 
 #### LSP and Concepts vs. Base Classes
 
@@ -274,7 +270,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Function Overloading and Free Functions
 Background context explaining that function overloading, especially free functions, can be a powerful tool for creating abstractions. This includes discussing how free functions allow adding functionality to any type without intrusively modifying existing code, aligning with the Open-Closed Principle (OCP).
@@ -382,7 +377,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Free Functions and the LSP (Liskov Substitution Principle)
 Background context explaining the concept. Free functions are a powerful mechanism for generic programming, used extensively in C++'s Standard Template Library (STL) and other libraries. They can be overloaded to provide custom behavior, but this power comes with responsibilities. The Liskov Substitution Principle (LSP) states that objects of a superclass shall be replaceable with objects of its subclasses without breaking the application.

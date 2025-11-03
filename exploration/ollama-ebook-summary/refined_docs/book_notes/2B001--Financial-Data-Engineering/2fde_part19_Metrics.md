@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Metrics
 
 ---
 
-**Rating: 8/10**
 
 #### Metrics, Events, Logs, and Traces
 Metrics are quantitative measurements that provide information about a particular aspect of a system, process, variable, or activity. These metrics can be observed over specific time intervals such as daily, hourly, or in real-time. They often come with metadata (tags) to identify the metric instance, forming a time series.
@@ -189,7 +187,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Profiling Overview
 Data profiling is a comprehensive process that scans an entire dataset to understand its data quality attributes. It helps identify issues such as missing values, inconsistencies, and duplicates, providing insights into the overall data health.
@@ -291,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Scan Time
@@ -439,7 +435,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Model Risk
 Background context explaining model risk and its importance in financial institutions. Model risk refers to the risk that financial models used for asset pricing, trading, forecasting, and hedging may generate inconsistent or misleading results due to various factors such as changes in market conditions, data quality issues, or incorrect assumptions.

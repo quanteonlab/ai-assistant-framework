@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Minimizing Requirements of Template Arguments
 
 ---
 
-**Rating: 8/10**
 
 #### Separation of Concerns and Interface Segregation Principle (ISP)
 Background context: The text discusses the importance of separating concerns into distinct interfaces to minimize dependencies and enhance maintainability. It contrasts ISP with Single Responsibility Principle (SRP) and provides examples where ISP is applied, both in object-oriented programming and templates.
@@ -80,7 +78,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interface Segregation Principle (ISP)
 Background context: The Interface Segregation Principle (ISP) is a design guideline that suggests clients should not be forced to depend on methods they do not use. ISP helps reduce artificial coupling and promotes more focused interfaces. It aligns with the Single-Responsibility Principle (SRP), which advocates for making classes responsible for one and only one thing.
@@ -174,7 +171,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Design and Coupling
 Background context: In software design, it's important to maintain loose coupling between different components of a system. This means that changes in one part should have minimal impact on other parts. However, when designing test fixtures for classes, developers sometimes introduce tight coupling by making the production code aware of the test code.
@@ -229,7 +225,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Separation of Concerns in C++
 Background context: The concept revolves around isolating parts of a system that can change for different reasons, making it easier to maintain and test the code. This is essential when dealing with private member functions within classes that need testing but are not accessible due to their private scope.

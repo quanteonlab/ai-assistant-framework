@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A001---The-Book-of-Kubernetes_-A-Complete-Guide-to-Container-Orchestration-No-Starch-Press-2022Alan-Hohn--_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3 RESOURCE LIMITING
 
 ---
 
-**Rating: 8/10**
 
 #### Namespace and Process Isolation in Containers
 Background context: The text explains that containers create an isolated environment for processes, similar to traditional process isolation techniques. However, this isolation is achieved through Linux namespaces rather than full virtualization.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Container Runtimes and Namespaces
 Background context: The example demonstrates the use of `containerd` and CRI-O, which employ namespaces to isolate containers from each other. This isolation prevents processes in one container from interfering with those in another.
@@ -32,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Interference and Resource Management
 Background context: The text points out that while namespaces provide isolation, they do not prevent processes from consuming too many resources. This can affect other processes within the container.
@@ -45,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Isolation and Resource Management
 Background context: In Chapter 2, we discussed process isolation to prevent processes from affecting each other. However, without resource limits, a process could still consume too many resources (CPU, memory, network), impacting others.
@@ -57,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Completely Fair Scheduler (CFS)
 Background context: The Linux kernel uses the Completely Fair Scheduler (CFS) to manage CPU scheduling among processes.
@@ -69,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scheduling Policy and Priority
 Background context: CFS schedules processes based on both the policy and priority within that policy.
@@ -81,7 +74,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CPU Limits in Kubernetes
 Background context: Applying CPU limits ensures that a container does not consume more resources than allocated, providing certainty for resource allocation.
@@ -93,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real-Time Processes Example
 Background context: Real-time processes have critical deadlines and are given higher priority.
@@ -105,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Non-Real-Time Processes Example
 Background context: Non-real-time processes do not have strict deadlines but still require fair scheduling.
@@ -117,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scheduling Policies in Linux
 Linux supports multiple scheduling policies for different types of tasks. The most common are time-sharing (TS), first-in-first-out (FIFO or FF), and round-robin (RR).
@@ -145,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Setting Process Priorities in Linux
 Linux provides mechanisms to set and control process priorities. The priority can be adjusted using tools like `renice` or directly through the scheduling policy.
@@ -173,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Running a Containerized Process with CRI-O
 CRI-O is a container runtime for Kubernetes clusters. It allows running and managing containers on Linux systems.
@@ -234,7 +221,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linux Control Groups (cgroups)
 Control groups (cgroups) manage process resource utilization by limiting access to system resources such as CPU, memory, and block devices. Each resource type can have a hierarchy of cgroups associated with it.
@@ -245,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating and Configuring Cgroups
 Cgroups are configured through the specific filesystem interface provided by Linux. The creation and configuration process involve setting limits on resources for processes grouped within a cgroup.
@@ -265,7 +250,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -285,7 +269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Practical Example: Limiting CPU Usage with `stress-ng`
 This example demonstrates how to limit the CPU usage of a running process using cgroups.
@@ -313,7 +296,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Verifying the CPU Usage Limitation
 Background context: After setting the quota, we need to verify that the stress container is indeed limited by the configured CPU usage.
@@ -331,7 +313,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Launching a Container with Specified CPU Limits
 Background context: After configuring, we can launch the container and verify that it adheres to the defined limits.

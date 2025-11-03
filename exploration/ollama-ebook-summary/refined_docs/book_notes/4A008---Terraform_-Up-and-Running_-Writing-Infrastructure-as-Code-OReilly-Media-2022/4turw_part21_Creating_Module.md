@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Creating Modules That Can Work with Multiple Providers
 
 ---
 
-**Rating: 8/10**
 
 #### Reusable Modules in Terraform
 Background context: In Terraform, modules can be used to create reusable components that are combined with other modules and resources. Root modules combine these reusable modules into a deployable unit. The challenge is creating reusable modules that work with multiple providers without hardcoding provider blocks.
@@ -123,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple Different Providers
 Background context explaining the need to use different cloud providers and how managing multiple clouds in a single module can be impractical. Examples include AWS, Azure, and Google Cloud.
@@ -141,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Docker Crash Course
 Background context explaining that Docker images are self-contained snapshots of the operating system, software, and other relevant details. This is essential for understanding how containers can be deployed in cloud environments.
@@ -158,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kubernetes Crash Course
 Background context explaining Kubernetes' role in managing applications, networks, data stores, load balancers, secret stores, etc. This provides background on why Kubernetes is considered a cloud of its own.
@@ -175,7 +170,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deploying Docker Containers in AWS EKS
 Background context explaining the process of using Elastic Kubernetes Service (EKS) on AWS to deploy containers. This involves setting up an EKS cluster and deploying applications.
@@ -221,7 +215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Verifying the Container Environment
 Background context: This example shows how to verify that a container running Ubuntu 20.04 is correctly set up by checking system information using `cat /etc/os-release`.
@@ -236,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Docker Containers and Isolation
 Background context: This explanation covers how Docker containers are isolated at the userspace level, meaning you can only see the filesystem, memory, networking, etc., within the container.
@@ -250,7 +242,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Docker Image Self-Contained Nature
 Background context: Docker images are self-contained and portable, ensuring that applications run consistently across different environments. This is because they include everything needed to run an application—code, runtime, system tools, and libraries—and encapsulate it within a single package.
@@ -262,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Container Isolation from Host OS
 Background context: Containers run on top of the host operating system but are isolated from it as well as other containers. Each container has its own file system, network stack, and process space.
@@ -274,7 +264,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quick Startup of Containers vs Virtual Machines
 Background context: Containers start much faster than virtual machines because they share the kernel of the host OS but still have their own isolated environment for applications.
@@ -286,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Docker Port Mapping
 Background context: When running a Docker container, by default, ports inside the container are not exposed to the host operating system. This means that accessing services running inside a container from the host OS requires specific configuration.
@@ -310,7 +298,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kubernetes Overview and Basics
 Background context: Kubernetes is an orchestration tool for Docker that helps manage Docker containers across multiple servers. It handles tasks such as scheduling, auto-healing, auto-scaling, load balancing, etc.
@@ -326,7 +313,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Enabling Kubernetes on Docker Desktop
 
@@ -448,7 +434,6 @@ Here, `-f` specifies the file containing the YAML configuration for the Deployme
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Terraform Module for Kubernetes Applications
 Background context: This concept explains how to create a Terraform module that deploys an application using Kubernetes. The module will use `kubernetes_deployment` and `kubernetes_service` resources to manage the app's lifecycle, configuration, and networking.
@@ -467,7 +452,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defining Input Variables in Terraform
 Background context: Input variables define the parameters that a Terraform module requires. These inputs are used to customize the behavior of the module during deployment.
@@ -492,7 +476,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defining Pod Template in Kubernetes Deployment
 Background context: The `template` block inside the `spec` section defines how the Pods should be created. It includes details like container specifications, labels, and environment variables.
@@ -538,7 +521,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pod Template Definition
 In Kubernetes, a Pod Template defines the specifications for how the Pods should be created and configured. It includes details like container images, ports, environment variables, and labels.
@@ -576,7 +558,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kubernetes Deployment Specification
 A Kubernetes Deployment is a resource that automates the deployment and management of application containers across a cluster. It allows you to update, scale, and manage your containerized applications.
@@ -625,7 +606,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kubernetes Service Configuration
 A Kubernetes Service allows you to expose an application running on a set of Pods as a network service. It defines policies for routing traffic to the services.
@@ -656,7 +636,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Selector Block in Kubernetes Deployment
 The `selector` block in a Kubernetes Deployment ensures that the Deployment targets specific Pods based on their labels. This is crucial for maintaining consistency between the Deployment and the Pods it manages.
@@ -682,7 +661,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dynamic Block for Environment Variables
 The `dynamic` block in Terraform allows you to iterate over a list of items and generate multiple blocks based on the contents. In this context, it's used to set environment variables dynamically.
@@ -714,7 +692,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Running Terraform Apply
 This section describes how to deploy resources using Terraform after configuring the necessary modules and providers.
@@ -737,7 +714,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kubernetes Deployment and Pods Overview
 Kubernetes is a container orchestration platform that automatically deploys, scales, and manages containerized applications. In this context, Deployments ensure that a specified number of pod replicas are running at any time, while Pods encapsulate containers with shared resources.
@@ -752,7 +728,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple Containers in Action
 Kubernetes manages multiple instances (Pods) of an application, ensuring that the desired number of replicas are always running. This is different from running a single instance with Docker.
@@ -767,7 +742,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load Balancing in Kubernetes
 Kubernetes uses Services to provide load balancing across multiple Pods. A Service is an abstraction that defines a logical set of Pods running the same application and provides a single network endpoint for accessing all of them.
@@ -785,7 +759,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Automatic Rollout Updates
 Kubernetes can automatically handle rolling updates for applications. This means changes are deployed gradually to ensure availability and rollback capabilities if something goes wrong.

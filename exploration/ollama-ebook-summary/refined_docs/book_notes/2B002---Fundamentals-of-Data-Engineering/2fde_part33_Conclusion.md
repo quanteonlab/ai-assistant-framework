@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 33)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Conclusion
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Encryption at Rest
@@ -55,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Increasing Simplicity of Data Tools
 Background context: Simplified, easy-to-use tools continue to lower the barrier to entry for data engineering. This trend is beneficial, especially given the shortage of data engineers and the growing importance of data-driven practices across companies.
@@ -218,7 +215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Streaming DAGs and Simplified Code
 Background context: The passage discusses how streaming Directed Acyclic Graphs (DAGs) were previously complex to build but are now becoming simpler. Tools like Apache Pulsar enable more straightforward coding for these transformations, reducing operational burdens.

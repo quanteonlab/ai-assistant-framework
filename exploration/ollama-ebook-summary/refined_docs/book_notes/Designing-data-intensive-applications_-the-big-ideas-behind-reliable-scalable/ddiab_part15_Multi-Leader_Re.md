@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Multi-Leader Replication
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Database Operations and Consistency
 
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causally Related Writes
 
@@ -32,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Replication Lag
 
@@ -45,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transactions for Stronger Consistency
 
@@ -58,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single-Node Transactions vs Distributed Transactions
 
@@ -71,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Replication Lag Management
 
@@ -84,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transaction Mechanisms in Part III
 
@@ -99,7 +91,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Leader Replication Overview
 Multi-leader replication extends the traditional leader-based replication model by allowing more than one node to accept writes. This setup enables better performance and higher availability but introduces complexity with potential write conflicts.
@@ -110,7 +101,6 @@ In multi-leader replication, multiple nodes can accept write operations concurre
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Benefits of Multi-Leader Replication
 In multi-leader replication, every write can be processed locally without waiting for a central leader node, reducing latency. The writes are then asynchronously propagated to other nodes in different datacenters.
@@ -121,7 +111,6 @@ Multi-leader replication improves performance by processing writes locally at th
 
 ---
 
-**Rating: 8/10**
 
 #### Tolerance of Datacenter Outages in Multi-Leader Replication
 With multi-leader replication, if one datacenter fails, other datacenters can continue operating independently. Failover mechanisms ensure that the system remains operational until the failed datacenter is restored.
@@ -132,7 +121,6 @@ Multi-leader replication allows each datacenter to operate independently in case
 
 ---
 
-**Rating: 8/10**
 
 #### Network Problems in Multi-Leader Replication
 Multi-leader replication is more resilient to network issues because writes are processed asynchronously between datacenters. A temporary network interruption does not prevent local processing of writes; replication catches up later.
@@ -143,7 +131,6 @@ In a multi-leader setup, even if there's a temporary network issue between datac
 
 ---
 
-**Rating: 8/10**
 
 #### Conflict Resolution in Multi-Leader Replication
 When multiple leaders can accept write requests concurrently, there's a risk of conflicting updates to the same data. Handling these conflicts requires specialized mechanisms or tools to resolve them.
@@ -154,7 +141,6 @@ Conflict resolution in multi-leader replication involves resolving issues when t
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Leader Replication Across Multiple Datacenters
 Multi-leader replication across multiple datacenters allows writes to be processed locally before being asynchronously replicated between different locations. This setup can provide better performance and fault tolerance by distributing the load among multiple nodes in various geographical regions.
@@ -165,7 +151,6 @@ Multi-leader replication across multiple datacenters involves having a leader no
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Write Conflicts in Multi-Leader Replication
 Write conflicts are managed through various methods such as manual intervention or automated algorithms. Conflict resolution is a critical aspect of multi-leader replication because concurrent writes can lead to inconsistent states if not properly handled.
@@ -176,7 +161,6 @@ Write conflicts in multi-leader replication are typically resolved using conflic
 
 ---
 
-**Rating: 8/10**
 
 #### Collaborative Editing and Database Replication
 Background context: Collaborative editing is often compared to offline editing use cases. In this model, changes are made locally on a client's device and then asynchronously replicated to a server or other users' clients. The goal is to ensure that multiple users can edit the same document without conflicts.
@@ -187,7 +171,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single-Leader Replication vs. Multi-Leader Replication
 Background context: In single-leader replication, a single node acts as the primary source of truth for writes, while in multi-leader replication, there is no such restriction, allowing multiple nodes to accept write operations independently.
@@ -198,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Write Conflicts and Conflict Resolution
 Background context: Write conflicts occur when multiple users attempt to modify the same record at the same time without proper coordination. Handling these conflicts requires mechanisms such as locking or conflict resolution algorithms.
@@ -218,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronous vs. Asynchronous Conflict Detection
 Background context: In single-leader systems, conflicts are detected immediately (synchronously), whereas in multi-leader setups, conflicts may only be detected later when data is replicated.
@@ -229,7 +210,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conflict Avoidance Strategies
 Background context: One strategy to avoid write conflicts is by ensuring all writes for a record go through the same leader node. This approach can simplify conflict resolution but limits flexibility in routing requests.
@@ -249,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conflict Resolution Mechanisms
 
@@ -298,7 +277,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Replica Priority
 
@@ -339,7 +317,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Explicit Conflict Resolution
 
@@ -410,7 +387,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conflict Resolution in Distributed Databases
 
@@ -423,7 +399,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conflict-Free Replicated Datatypes (CRDTs)
 
@@ -436,7 +411,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Operational Transformation
 
@@ -449,7 +423,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of a Conflict
 
@@ -462,7 +435,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Leader Replication
 
@@ -475,7 +447,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conflict Resolution in Distributed Systems
 

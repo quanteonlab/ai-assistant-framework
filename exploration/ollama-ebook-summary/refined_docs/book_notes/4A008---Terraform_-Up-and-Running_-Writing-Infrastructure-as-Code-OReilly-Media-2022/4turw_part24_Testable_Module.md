@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Testable Modules
 
 ---
 
-**Rating: 8/10**
 
 #### Testable Modules
 Background context: The provided text discusses creating a test harness for infrastructure modules using Terraform. This involves writing example configurations that use your modules to ensure they function as expected before deploying them in production.
@@ -71,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Manual Test Harness
 Background context: The text explains how creating an example configuration within the `examples` folder serves as a manual test harness. This means that developers can repeatedly run `terraform apply` and `terraform destroy` commands to check if their modules behave as expected during development.
@@ -133,7 +130,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Automated Test Harness
 Background context: The text mentions that the `examples` folder can also be used for automated testing. As described in Chapter 9, these example configurations are how tests are created for your modules, ensuring they behave as expected even when the code changes.
@@ -192,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Executable Documentation
 Background context: The text highlights the value of including example configurations and a README in version control. This approach allows team members to understand how modules work and test them without writing additional code, making it both an educational tool and a way to ensure documentation remains accurate.
@@ -270,7 +265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Test-Driven Development (TDD) in Terraform Module Development
 Writing tests and examples first can lead to a better understanding of the module's API and usage patterns. This approach is known as Test-Driven Development (TDD).
@@ -295,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Validations in Terraform
 Starting from Terraform 0.13, you can add validation blocks to input variables to perform checks beyond basic type constraints.
@@ -322,7 +315,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Precondition Block for Validating Instance Types
 Background context: A precondition block can be used to ensure that certain conditions are met before Terraform applies a resource. In this example, we're validating whether an instance type is eligible for the AWS Free Tier.
@@ -358,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Postcondition Blocks for Error Checking
@@ -399,7 +390,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Validations for Input Sanitization
 Validation blocks are used to sanitize inputs, preventing users from passing invalid variables into the module. This is crucial for catching basic input errors early in the process.
@@ -423,7 +413,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Precondition Blocks for Assumption Checks
 Precondition blocks are used to verify assumptions about the state of resources and variables before any changes are made. They help in catching issues early that could otherwise lead to deployment failures.
@@ -443,7 +432,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Postconditions for Enforcing Basic Guarantees
 Postcondition blocks are used to ensure that the module behaves as expected after deployment. They provide confidence that the module either performs its intended function or exits with an error if it doesn't.
@@ -467,7 +455,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Versioning of Terraform Core
@@ -500,7 +487,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Versioning of Providers
 Background context: In addition to pinning the core version of Terraform, it is also important to manage the versions of providers used in your modules. Providers define how resources from different services (like AWS or GCP) are managed.
@@ -532,7 +518,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Versioning of Modules
 Background context: Module versioning ensures that your code remains consistent across deployments by specifying the exact versions of modules you depend on. This helps prevent accidental upgrades to incompatible module versions.
@@ -570,7 +555,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pinning Terraform Versions
 Background context: When using different versions of Terraform, it can lead to issues when mixing environments. To avoid these problems and test new features or bug fixes, pinning specific versions is recommended.
@@ -589,7 +573,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pinning Provider Versions
 Background context: In addition to managing Terraform versions, it is crucial to pin provider versions to avoid breaking changes or unexpected behavior when upgrading providers. The `required_providers` block within the Terraform configuration allows you to specify which version of a provider should be used.
@@ -613,7 +596,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -635,7 +617,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Upgrading Provider Versions Explicitly
 Background context explaining how the lock file ensures consistency but does not need minor and patch pinning from version 0.14.0 onwards due to automatic behavior. Explicit upgrades can be done by modifying the `required_providers` block and running `terraform init -upgrade`.
@@ -656,7 +637,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Security Measures via Checksums
 Background context explaining how Terraform records checksums for downloaded providers to ensure integrity. It also mentions validating signatures if the provider is cryptographically signed.
@@ -668,7 +648,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lock Files Across Multiple Operating Systems
 Background context explaining that by default, Terraform only records checksums for the platform on which `terraform init` was run. If this file is shared across multiple OSes, a command like `terraform providers lock -platform=...` needs to be run to record checksums from all relevant platforms.
@@ -688,7 +667,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pinning Module Versions Using Git Tags
 Background context explaining why it's important to pin module versions using source URLs with a specific ref parameter. This ensures consistency across different environments when initializing modules.
@@ -707,7 +685,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Outputting Deployment Information
 Explanation of how to output deployment information such as the ALB DNS name for monitoring or testing purposes.
@@ -733,7 +710,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Publishing Modules to Terraform Registry
 Explanation on how to publish a module to the Public Terraform Registry and the requirements.
@@ -758,7 +734,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Terraform Modules from the Registry
 
@@ -792,7 +767,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Private Terraform Registry
 
@@ -817,7 +791,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Beyond Terraform Modules
 
@@ -845,7 +818,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Provisioners in Terraform
 
@@ -875,7 +847,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Remote-Exec Provisioner
 
@@ -913,7 +884,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Associating Public Key with EC2 Instance
 Background context: After generating an SSH private and public key pair, the next step is to associate the public key with the EC2 instance so that you can SSH into it. This is done using the `aws_key_pair` resource.
@@ -932,7 +902,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deploying an EC2 Instance with SSH Key
 Background context: The final step is deploying an EC2 instance and associating it with the security group and the generated SSH key pair. This ensures that the instance can be accessed via SSH.
@@ -956,7 +925,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creation-Time Provisioners vs. Destroy-Time Provisioners
 Background context: Provisioners in Terraform can be configured to run either during the creation or destruction of resources, providing flexibility for different use cases such as initial setup or cleanup tasks.
@@ -996,7 +964,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### null_resource for Independent Provisioning
 Background context: Sometimes, you might need to run scripts as part of the Terraform lifecycle but not tied directly to a specific resource. The `null_resource` can be used for this purpose.
@@ -1019,7 +986,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Triggers with null_resource
 Background context: The `triggers` argument in a `null_resource` can be used to force re-creation of the resource whenever its value changes. This can be useful for executing scripts at specific times or intervals.
@@ -1044,7 +1010,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### External Data Source for Fetching Dynamic Data
 Background context: The `external` data source in Terraform allows fetching dynamic data and making it available within your code. It works by executing an external command that reads input via JSON on stdin and writes output to stdout, which is then accessible in the Terraform configuration.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 40)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Unbundling Databases. Composing Data Storage Technologies
 
 ---
 
-**Rating: 8/10**
 
 #### NoSQL Movement and Unix Philosophy
 Background context: The NoSQL movement aims to apply the low-level abstractions of Unix-like systems to distributed OLTP data storage. This approach contrasts with the high-level abstraction offered by relational databases.
@@ -28,7 +26,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Secondary Indexes in Databases
 Background context: Secondary indexes allow efficient searching of records based on specific fields. This is an important feature that enhances query performance by reducing the number of disk accesses needed.
@@ -46,7 +43,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Materialized Views and Query Optimization
 Background context: Materialized views are precomputed caches of query results. They reduce the need for recomputing frequently used data, thereby improving performance.
@@ -68,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Replication Logs for Data Synchronization
 Background context: Replication logs are used to keep copies of data on other nodes in a system synchronized. This is crucial for maintaining consistency across distributed systems.
@@ -86,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Index Creation Process
 Background context: When you run `CREATE INDEX` to create a new index in a relational database, the database processes several steps. It scans over a consistent snapshot of a table, extracts and sorts field values being indexed, writes out the index, and updates it with any backlog of writes that occurred since the snapshot was taken.
@@ -115,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reprocessing Data for Application Evolution
 Background context: The process of creating an index can be seen as reprocessing data. This is similar to how applications evolve and need new views or derived datasets based on existing ones.
@@ -141,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dataflow Across an Entire Organization
 Background context: The concept of data being transported between different places and forms can be seen as analogous to database indexing or materialized views, where data is maintained in a new form based on the original.
@@ -164,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Federated Databases: Unifying Reads
 Background context: A federated database allows unified querying across multiple storage engines or processing methods.
@@ -197,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unbundled Databases: Unifying Writes
 Background context: While federated databases unify reads across multiple storage engines, they do not have a good answer for synchronizing writes.
@@ -231,7 +221,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unbundling Database Features through Change Data Capture (CDC)
 Unbundling involves breaking down features like indexing, which are tightly integrated in traditional databases, into smaller, more manageable tools. This allows for better integration of different storage systems.
@@ -248,7 +237,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Federation and Event Logs
 Federation and unbundling are related concepts that involve composing a system out of diverse components. An event log acts as the backbone, capturing events in an ordered sequence for processing.
@@ -265,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Idempotence in Event Logs
 Idempotence ensures that processing a message multiple times yields the same result as processing it once. This is crucial for maintaining data integrity when using asynchronous event logs.
@@ -285,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Event Streams vs. Distributed Transactions
 Asynchronous event streams provide a robust way to manage data consistency across different storage systems, whereas distributed transactions can lead to complex failures.
@@ -311,7 +297,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unbundling Data Systems
 Unbundling data systems allows for independent development, improvement, and maintenance of different software components by various teams. Specialization enables each team to focus on a specific task while maintaining well-defined interfaces with other teams’ systems. Event logs serve as an interface that ensures strong consistency properties due to durability and ordering, while also being versatile enough for most data types.
@@ -322,7 +307,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Specialization and Interfaces
 Specialized teams can focus on one task efficiently due to well-defined interfaces between the systems they manage. Event logs provide a powerful yet flexible interface that supports strong consistency through durability and ordering, making them suitable for various data types.
@@ -333,7 +317,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unbundling vs Integrated Systems
 Unbundled systems do not replace databases but complement them by allowing various specialized tools for different tasks. While databases remain essential for state maintenance and query processing, unbundling enables better performance across diverse workloads through composition rather than a single monolithic solution.
@@ -344,7 +327,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Complexity of Running Different Infrastructure
 Running multiple pieces of software introduces complexity with learning curves, configuration issues, and operational quirks. A single integrated system might offer better and more predictable performance for specific use cases due to optimized design.
@@ -355,7 +337,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Considerations
 While specialized query engines excel at certain workloads (like MPP data warehouses optimized for exploratory analytic queries), combining several tools with application code can introduce complexity. Building too much scale initially can be wasteful and inflexible.
@@ -366,7 +347,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Composition of Data Systems
 As tools for composing data systems improve, there's still a gap in having a high-level language similar to Unix pipes that allows simple and declarative composition. An example is automatically indexing MySQL documents into an Elasticsearch cluster with minimal custom code.
@@ -377,7 +357,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Missing Tools for Unbundling Databases
 Currently, there isn't a widely adopted equivalent of Unix pipes for composing storage and processing systems in a simple and declarative way. A desirable feature would be the ability to declare integrated operations like `mysql | elasticsearch`, capturing changes automatically.
@@ -390,7 +369,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Materialized Views and Caches
 Background context: Materialized views are essentially precomputed caches. They allow for complex queries to be executed once and their results cached, improving performance when the same query is run repeatedly. This concept is particularly useful for recursive graph queries and application logic.
@@ -414,7 +392,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differential Dataflow
 Background context: Differential dataflow is an interesting early-stage research area aimed at making it easier to precompute and update caches. It focuses on incremental updates to datasets, which can be applied to keep materialized views up-to-date with minimal effort.
@@ -427,7 +404,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unbundling Databases
 Background context: The "database inside-out" approach, also known as unbundling databases, involves composing specialized storage and processing systems with application code. This design pattern aims to separate concerns by allowing different parts of a system (like storage and processing) to be developed independently.
@@ -440,7 +416,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dataflow Programming
 Background context: Dataflow programming models the flow of data through a network of nodes where each node performs some transformation on the input data. This is similar to how spreadsheets work, where formulas are automatically recalculated when their inputs change.
@@ -453,7 +428,6 @@ x??
 
 ---
 
-**Rating: 10/10**
 
 #### Fault-Tolerance and Scalability
 Background context: Data systems need to be fault-tolerant (able to recover from failures) and scalable (able to handle increasing loads). These properties are essential for real-world applications that must operate continuously with varying workloads.
@@ -466,7 +440,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Integration of Disparate Technologies
 Background context: Modern applications often need to integrate various technologies developed by different teams over time. This integration can be challenging due to differences in programming languages, frameworks, and tools used across the application.
@@ -479,7 +452,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Functionality
 Background context: A cache often contains pre-aggregated data in a form ready for display in user interfaces (UI). Its content depends on UI requirements, so changes to the UI might necessitate updating how the cache is populated. This requires knowledge of which fields are referenced by the UI.
@@ -490,7 +462,6 @@ Caching works by storing pre-aggregated data that will be displayed in a UI. The
 
 ---
 
-**Rating: 8/10**
 
 #### Secondary Index Derivation in Databases
 Background context: For full-text indexing and many other derived datasets, secondary indexes are commonly used as they are built into databases as core features. The `CREATE INDEX` command can be used to invoke this feature.
@@ -501,7 +472,6 @@ Secondary indexes in databases serve to derive datasets from existing ones for e
 
 ---
 
-**Rating: 8/10**
 
 #### Application Code and State Separation
 Background context: Relational databases support features like triggers, stored procedures, and user-defined functions that can execute application code within the database. However, they are not well-suited for modern application development needs such as dependency management or rolling upgrades.
@@ -513,7 +483,6 @@ Relational databases were not designed primarily to run complex application code
 
 ---
 
-**Rating: 8/10**
 
 #### State Management and Application Logic Separation
 
@@ -552,7 +521,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Passive Approach in Databases
 
@@ -596,7 +564,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dataflow and Application Code Interaction
 
@@ -632,7 +599,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tuple Spaces Model
 
@@ -675,7 +641,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unbundling Databases
 Unbundling databases means taking the idea of maintaining derived datasets outside the primary database and applying it to various scenarios such as caching, full-text search indexes, machine learning, or analytics systems. This approach uses stream processing and messaging systems to handle state changes efficiently.
@@ -687,7 +652,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Maintaining Derived Data vs. Asynchronous Job Execution
 Maintaining derived data requires ensuring that state changes are processed in a specific order, which is different from asynchronous job execution. Messaging systems traditionally designed for job execution do not guarantee reliable message delivery or ordered processing.
@@ -699,7 +663,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault Tolerance in Derived Data
 Fault tolerance is crucial when maintaining derived data because losing a single message can cause the derived dataset to go out of sync with its data source. Both reliable message delivery and state updates are essential.
@@ -711,7 +674,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Microservices vs. Dataflow Approach for Caching Exchange Rates
 In the microservices approach, caching exchange rates locally in a service could avoid synchronous network requests but would require periodic polling or subscription to updates. The dataflow approach can achieve similar efficiency by subscribing to stream updates.
@@ -723,7 +685,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Characteristics of Stream Operators
 Stream operators can be composed to build large systems around dataflow, taking streams of state changes as input and producing other streams of state changes as output.
@@ -735,7 +696,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dataflow Systems vs. Microservices Architecture
 Dataflow systems, similar to microservices, offer better fault tolerance and performance but use one-directional, asynchronous message streams instead of synchronous request/response interactions.
@@ -749,7 +709,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Time-Dependent Joins
@@ -764,7 +723,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream Join (Stream Enrichment)
 A stream join combines data from two streams based on a key or condition. This is often used for enriching one stream with information from another, such as joining purchase events with exchange rate updates.
@@ -788,7 +746,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Write Path and Read Path
 The write path refers to the process of creating derived datasets from raw data, while the read path is about serving queries on these derived datasets. Together, they represent the entire lifecycle of data processing.
@@ -820,7 +777,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-Off Between Write and Read Paths
 Background context: The passage discusses different strategies to balance the workload between write and read operations. These strategies include using materialized views, caching, full-text search indices, and grep-like scanning. The goal is to optimize performance by precomputing results where possible.
@@ -831,7 +787,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Materialized Views
 Background context: Materialized views are precomputed results stored for quick retrieval during reads. They require updates on writes that affect these views.
@@ -848,7 +803,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Caching Common Queries
 Background context: Caching common queries can reduce read-time complexity but increases write-time complexity. It's a trade-off strategy where frequent queries are precomputed and stored.
@@ -865,7 +819,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Full-Text Search Indexing
 Background context: Full-text search indices are used to quickly locate documents containing specific keywords. Writes require updates to the index, while reads involve searching the index.
@@ -884,7 +837,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Greplike Scanning Without Index
 Background context: In cases where the number of documents is small, scanning all documents as if using `grep` can be a viable option. This approach avoids the overhead of maintaining an index but requires more work on reads.
@@ -904,7 +856,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Client/Server Model Evolution
 Background context explaining how traditional web applications operate using a client/server model where clients are stateless and servers manage data. The internet connection is essential for most operations, except for basic navigation.
@@ -925,7 +876,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stateless Clients and Offline Operations
 Explaining how modern web applications, particularly single-page JavaScript apps, have gained stateful capabilities allowing them to operate without an internet connection. This has led to interest in offline-first applications that store data locally.
@@ -943,7 +893,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Offline-First Applications and Background Sync
 Describing the benefits of offline-first applications, which perform as much local processing as possible before syncing with remote servers. This approach reduces dependency on constant internet connectivity.
@@ -967,7 +916,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Caching State as a Remote Database on End-User Devices
 Explaining how the state maintained on end-user devices can be seen as a cache of remote database states, allowing for efficient and local processing.
@@ -996,7 +944,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### End-to-End Event Streams
 Background context: The text discusses extending stream processing and messaging ideas to end-user devices, emphasizing that state changes can flow through an end-to-end write path from device interaction to user interface. This concept involves managing client-side state by subscribing to a stream of events.
@@ -1007,7 +954,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Client-Side State Management
 Background context: The text mentions that recent tools like Elm language and Facebook's React, Flux, and Redux manage internal client-side state by subscribing to a stream of events representing user input or server responses.
@@ -1018,7 +964,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Publish/Subscribe Dataflow
 Background context: The text highlights the challenge of transitioning from request/response interaction to a publish/subscribe dataflow model, which is necessary for extending the write path all the way to end-user devices. This involves fundamentally rethinking many existing systems to support this new approach.
@@ -1029,7 +974,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reads as Events
 Background context: The text explains that when a stream processor writes derived data to a store (database, cache, or index), and user requests query that store, the store acts as the boundary between the write path and the read path. It allows random-access read queries to the data otherwise requiring scanning the whole event log.
@@ -1040,7 +984,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Offline Support for Devices
 Background context: The text discusses how devices can be offline some of the time and still manage to reconnect after failing or becoming disconnected without missing any messages using techniques already established in consumer offsets.
@@ -1051,7 +994,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event Sourcing
 Background context: The text mentions event sourcing as a method for structured event logs and stream processors. It discusses how state changes are managed through event logs, which can provide better responsiveness in applications like instant messaging and online games.
@@ -1064,7 +1006,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Stream Processor as a Simple Database
@@ -1079,7 +1020,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Representing Reads as Events
 Traditionally, writes are logged in event logs while reads go directly to nodes storing the queried data via transient network requests. However, an alternative approach is to represent read requests as events that are processed by the stream processor alongside write events.
@@ -1097,7 +1037,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream-Table Join
 When both reads and writes are represented as events, and routed to the same stream processor, it enables performing a join between the read queries (stream) and the database. This is similar to batch table joins but operates in real-time.
@@ -1115,7 +1054,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Dependencies and Data Provenance
 Recording logs of read events can help track causal dependencies across a system by reconstructing what happened before certain decisions. This can be particularly useful in scenarios where understanding the history is critical.
@@ -1138,7 +1076,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Partition Data Processing
 For queries that only touch a single partition, sending them through a stream processor might be overkill. However, this approach allows the distributed execution of complex queries combining data from multiple partitions.

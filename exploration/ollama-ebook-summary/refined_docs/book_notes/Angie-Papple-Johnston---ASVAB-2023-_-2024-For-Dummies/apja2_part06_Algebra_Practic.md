@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Algebra Practice Questions. Medium algebra practice questions
 
 ---
 
-**Rating: 8/10**
 
 #### Solving Linear Equations
 Background context: Solving linear equations involves finding the value of a variable that makes the equation true. The process usually includes isolating the variable on one side of the equation.
@@ -43,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Word Problems and Equations
 Background context: Word problems often require setting up equations based on given information to find unknown values. These can involve multiple steps, including defining variables, writing equations, and solving them.
@@ -111,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inequalities and Real-World Problems
 Background context: Inequalities are used to represent conditions in real-world problems where the exact value is not known but a range of possible values can be determined. These inequalities often involve multiple variables and steps.
@@ -158,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quadratic Equations
 Background context: Solving quadratic equations involves finding the roots of an equation in the form \(ax^2 + bx + c = 0\). This can be done using factoring, completing the square, or the quadratic formula.
@@ -207,7 +202,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -226,7 +220,6 @@ The final result is 50.
 
 ---
 
-**Rating: 8/10**
 
 #### Word Problems with Equations
 
@@ -246,7 +239,6 @@ There are 11 females in the platoon.
 
 ---
 
-**Rating: 8/10**
 
 #### Equation Solving for Cost Calculation (Problem 26)
 Background context: This problem involves calculating the total cost of three people taking lessons and renting equipment. Each person pays $15 to rent equipment, and each lesson costs a certain amount.
@@ -298,7 +290,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Substitution Method for Equation Solving (Problem 31)
 Background context: This problem involves using the substitution method to solve a system of equations.
@@ -342,7 +333,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pythagorean Theorem
 The Pythagorean theorem applies to right-angled triangles and states that in such a triangle, the square of the hypotenuse (the longest side) is equal to the sum of the squares of the other two sides. This relationship can be expressed as:

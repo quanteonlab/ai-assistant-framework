@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 29)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 16. Threaded Java
 
 ---
 
-**Rating: 8/10**
 
 #### Optional Interface Usage
 Background context: The `Optional` interface is used to represent an optional value. It can be used to avoid null pointer exceptions and make your APIs more robust by indicating that a method may return no value at all.
@@ -110,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Runnable Interface
 Background context explaining the `Runnable` interface, its implementation, and why it is used. This interface has only one method: `run()`, which does not return a value but runs as an independent thread of execution.
@@ -311,7 +308,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stopping a Thread: Using `stop()` Method is Deprecated
 Background context explaining why using the `Thread.stop()` method is deprecated. The compiler generates deprecation warnings, and it can lead to unreliable behavior when used in multi-threaded programs.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Streams and Tables
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Varying Relations Overview
 Background context explaining time-varying relations. Time-varying relations capture the full history of a relation over time, where each snapshot at a specific point in time is represented as a classic relation (or table).
@@ -79,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream vs Table-Based Time-Varying Relation (TVR) Overview
 Background context: The text discusses the differences between stream and table-based representations of time-varying relations. It explains how a stream captures changes over time, while a table captures snapshots at specific points in time.
@@ -184,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Stream Bias in Beam Model
@@ -265,7 +261,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Beam Model's Stream-Centric Approach

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 60)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** P
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### OpenMP (Open Multi-Processing)
@@ -20,7 +18,6 @@ It enables the creation of parallel regions within a single program, making it e
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Global Sum
 Background context explaining parallel global sum algorithms used for aggregating data across processes. Include relevant formulas if any.
@@ -33,7 +30,6 @@ For example, in distributed memory systems, each process computes its local sum 
 
 ---
 
-**Rating: 8/10**
 
 #### MPI Plus OpenMP
 Background context explaining the hybrid parallelism approach combining MPI with OpenMP. Include how it leverages both message-passing and shared memory models.
@@ -46,7 +42,6 @@ This hybrid approach allows applications to take advantage of both paradigms, ac
 
 ---
 
-**Rating: 8/10**
 
 #### Profiling Workflow Step
 Background context: Profiling is an essential part of the performance optimization process. It involves using various tools to gather data on how a program runs, including bottlenecks and resource usage.
@@ -58,7 +53,6 @@ Profiling belongs to the profiling workflow step, which is part of the overall p
 
 ---
 
-**Rating: 8/10**
 
 #### Pipeline Busy
 Background context: Pipeline busy refers to a state where a processor's instruction pipeline is actively processing instructions. Understanding this can help in optimizing code to avoid pipeline stalls and improve performance.
@@ -70,7 +64,6 @@ Pipeline busy indicates that the processor's instruction pipeline is currently o
 
 ---
 
-**Rating: 8/10**
 
 #### Placement
 Background context: The concept of placement in parallel computing involves deciding how data and tasks are distributed across multiple processing elements to optimize performance.
@@ -82,7 +75,6 @@ Placement refers to the strategy for distributing data and tasks across processi
 
 ---
 
-**Rating: 8/10**
 
 #### Quadratic Probing
 Background context: Quadratic probing is a method used in hash tables to resolve collisions when inserting or searching for items. It involves adjusting the position of an item based on its index squared.
@@ -94,7 +86,6 @@ Quadratic probing is a collision resolution technique where the probe sequence i
 
 ---
 
-**Rating: 8/10**
 
 #### Reduction Operation
 Background context: A reduction operation aggregates data across all processes or threads. This can be useful in parallel computing for operations like summing values from multiple sources.
@@ -106,7 +97,6 @@ A reduction operation is an operation that combines the results of individual ta
 
 ---
 
-**Rating: 8/10**
 
 #### Remote Procedure Call (RPC)
 Background context: RPC is a protocol for communication between programs running on different hosts. It allows one program to call functions in another program as if it were a local function.
@@ -118,7 +108,6 @@ A remote procedure call (RPC) is a method of communication where a client progra
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Scalability
@@ -147,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Roofline Plots
 Roofline plots are a graphical tool used to visualize the performance of an application in terms of its computational and memory bandwidth. They help identify performance bottlenecks by plotting the application's actual performance against theoretical maximums.
@@ -171,7 +159,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OpenMP SIMD Directives
 OpenMP SIMD directives are used to enable vectorized parallelism, allowing the compiler and runtime system to optimize code for SIMD (Single Instruction, Multiple Data) architectures. This can significantly speed up computations on CPUs with AVX or SSE extensions.
@@ -192,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SPMD (Single Program Multiple Data) Execution
 SPMD execution is a programming model where one program runs on multiple processors, and each processor executes the same instructions but operates on different data. This approach is widely used in parallel computing for tasks that can be divided into independent subtasks.

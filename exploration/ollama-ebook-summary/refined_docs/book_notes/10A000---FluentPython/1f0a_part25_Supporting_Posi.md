@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Supporting Positional Patterns
 
 ---
 
-**Rating: 8/10**
 
 #### Hashable Vectors
 Background context: In Python, to make an object hashable (i.e., suitable for use as a dictionary key or set element), you need to define both `__hash__` and `__eq__` methods. The `__hash__` method returns the hash value of an instance, which is used by dictionaries and sets. It should be consistent across all instances that are considered equal.
@@ -82,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector2d Class Overview
 Background context explaining the Vector2d class, its purpose, and how it was developed. The class is a two-dimensional vector with several special methods implemented to support various operations such as arithmetic, comparison, formatting, and hashing.
@@ -283,7 +280,6 @@ def frombytes(cls, octets):
 ```
 x??
 
-**Rating: 8/10**
 
 #### Memory Efficiency and NumPy Arrays
 Background context explaining the concept. NumPy arrays are designed to handle large datasets efficiently, offering memory efficiency and optimized functions for numeric processing.

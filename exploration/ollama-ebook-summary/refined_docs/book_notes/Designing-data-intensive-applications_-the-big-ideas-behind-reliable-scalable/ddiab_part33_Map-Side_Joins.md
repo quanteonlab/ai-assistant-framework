@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 33)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Map-Side Joins
 
 ---
 
-**Rating: 8/10**
 
 #### Hot Key Handling in Reducers
 Background context: In conventional MapReduce, reducers handle keys deterministically based on a hash of the key. However, this can lead to hot spots where one or a few reducers are overloaded with data, especially for skewed workloads.
@@ -20,7 +18,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sharded Join Method
 Background context: The sharded join method spreads the work of handling the hot key over several reducers by randomly distributing records related to a hot key. Unlike the randomization approach, this requires specifying the hot keys explicitly.
@@ -36,7 +33,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Map-Side Joins
 Background context: Map-side joins use a cut-down MapReduce job where mappers perform the join logic without sorting or merging data to reducers.
@@ -73,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Broadcast Hash Joins
 Background context: A broadcast hash join is a map-side join applicable when the smaller input dataset can fit entirely into memory. Each mapper loads this small dataset and performs lookups for each record in the large dataset.
@@ -115,7 +110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioned Hash Joins
 Background context: Partitioned hash joins are used when both join inputs are partitioned in the same way, allowing efficient local lookups and reducing memory requirements.
@@ -169,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Map-Side Merge Joins
 Background context: A map-side merge join is used when both inputs are partitioned and sorted, allowing efficient merging within each mapper.
@@ -219,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Processing Outputs Overview
 Background context: The passage discusses various outputs of batch processing workflows, highlighting their differences from transactional and analytical processes. It explains how Google's use of MapReduce for building search indexes serves as a practical example.
@@ -231,7 +223,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Building Search Indexes with MapReduce
 Background context: The text explains how Google initially used MapReduce to build search engine indexes, which involved several MapReduce jobs.
@@ -243,7 +234,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Incremental vs. Full Index Rebuilds
 Background context: The passage contrasts periodic full rebuilds of search indexes with incremental updates.
@@ -255,7 +245,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Key-Value Stores as Batch Process Outputs
 Background context: The text describes how batch processes can generate key-value databases used by web applications.
@@ -267,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling External Databases in Batch Jobs
 Background context: The passage warns against direct writes from batch jobs to external databases due to performance and operational issues.
@@ -279,7 +267,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using MapReduce for Key-Value Stores
 Background context: The text mentions several key-value stores that support building databases within MapReduce jobs.
@@ -291,7 +278,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Human Fault Tolerance
 This principle highlights the ability to recover from buggy code, especially important for iterative and agile development environments. Unlike databases that may store corrupted data persistently, Hadoop allows you to revert to a previous version of the code or use old outputs if new code introduces bugs. This concept is referred to as human fault tolerance.
@@ -302,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce Framework's Resilience Mechanism
 The MapReduce framework is designed to handle failures by automatically re-scheduling failed tasks on the same input data if the failure is due to transient issues. However, it will repeatedly fail if the issue is a bug in the code, leading to eventual job failure after several attempts.
@@ -313,7 +298,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logic Separation and Code Reusability
 Hadoop encourages a separation of logic from wiring, meaning the core processing code is separated from the configuration of input and output directories. This design promotes reusability, allowing different teams to focus on specific tasks while others decide when and where these jobs run.
@@ -324,7 +308,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Efficient Schema-Based Encoding
 Hadoop utilizes more structured file formats like Avro and Parquet, which offer efficient schema-based encoding that can evolve over time. This is an improvement over Unix tools, which often require extensive input parsing for untyped text files.
@@ -335,7 +318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison with Distributed Databases
 Hadoop is often compared to a distributed version of Unix, where HDFS acts as the filesystem and MapReduce operates like a Unix process. It supports various join and grouping operations on top of these fundamental primitives.
@@ -348,7 +330,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MPP Databases vs. MapReduce
 Background context explaining that while MPP databases focused on parallel execution of analytic SQL queries, MapReduce and distributed filesystems provided a more general-purpose system capable of running arbitrary programs. This shift allowed for greater flexibility in data storage and processing.
@@ -382,7 +363,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Raw Data Dumping in Hadoop
 Background context on how MapReduce and HDFS allow for raw data to be dumped into the system, enabling more flexible processing later. This contrasts with MPP databases, which require careful modeling of data before import.
@@ -414,7 +394,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ETL Processes in Hadoop
 Hadoop is often used for implementing Extract, Transform, Load (ETL) processes. In this context, data from transaction processing systems is first dumped into a distributed filesystem in raw form. Then, MapReduce jobs are written to clean up and transform the data before importing it into an MPP data warehouse for analytics.
@@ -425,7 +404,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Modeling in Hadoop
 Data modeling still happens but is decoupled from the data collection process because a distributed filesystem supports data encoded in any format, allowing flexibility in how data is handled and transformed.
@@ -436,7 +414,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce Processing Model
 MapReduce provides an easy way to run custom code over large datasets. It supports building SQL query execution engines on top of HDFS and MapReduce, such as Hive. However, it can be too limiting or perform poorly for other types of processing.
@@ -447,7 +424,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Additional Processing Models in Hadoop
 Hadoop's flexibility allowed the development of various processing models beyond SQL and MapReduce to cater to diverse needs such as machine learning, full-text search, and image analysis. These models run on a single shared cluster, accessing common data stored in HDFS.
@@ -458,7 +434,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Flexibility of Hadoop Clusters
 Hadoop clusters support a diverse set of workloads without the need to import data into multiple specialized systems. This is achieved by allowing various processing models to run together on a single shared-use cluster, all accessing the same files in HDFS.
@@ -471,7 +446,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling of Faults in Distributed Systems
 Background context: The handling of faults is a critical aspect of distributed systems, especially when comparing MapReduce and MPP databases. In batch processing (MapReduce), jobs can be large and long-running, making fault tolerance crucial to avoid wasted resources.
@@ -496,7 +470,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Google's Resource Management Environment
 Background context: At Google, non-production (low-priority) tasks are overcommitted because the system can reclaim resources if needed. This allows better utilization of machines but also increases the risk of task preemption.

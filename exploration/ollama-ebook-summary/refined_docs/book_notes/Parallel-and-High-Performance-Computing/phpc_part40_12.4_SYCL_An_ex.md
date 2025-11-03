@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 40)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.4 SYCL An experimental C implementation goes mainstream
 
 ---
 
-**Rating: 8/10**
 
 #### SYCL Buffer and Data Transfer
 SYCL buffers are used to transfer data between the host and device. They manage memory allocation and synchronization.
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lambda for Queue Submission
 Lambdas are used to define kernels that execute on the device. They capture variables by reference and allow for parallel execution.
@@ -54,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GPU Kernel Capture Mechanism
 
@@ -83,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kokkos Execution Spaces
 
@@ -123,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kokkos CMake Configuration
 
@@ -163,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RAJA for Performance Portability
 RAJA is a performance portable framework that aims to minimize disruptions to existing codes. It supports various backends like OpenMP, CUDA, and TBB.

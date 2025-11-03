@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** A Chain with Multiple Prompts
 
 ---
 
-**Rating: 8/10**
 
 #### Breaking Complex Prompts into Subtasks
 Background context: In advanced text generation, sometimes a single complex prompt is required to generate detailed outputs. However, handling such complexity can be challenging for Language Models (LMs). To address this, we can break down the task into smaller subtasks and handle them sequentially using multiple prompts. Each step provides intermediate outputs that are fed into the next step.
@@ -134,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conversation Buffer Window Memory
 Background context: In scenarios where maintaining a full conversation history might exceed token limits, using a windowed buffer for memory can be an effective solution. This technique retains only the last k conversations to manage the context size more efficiently. The `ConversationBufferWindowMemory` class from LangChain is used to implement this functionality.
@@ -217,7 +214,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conversation Summary Memory Concept
 Background context: The traditional methods of conversation history management, such as `ConversationBufferMemory`, have limitations like increasing chat size and token limits. To address these issues, an alternative method called `ConversationSummaryMemory` is introduced. This approach involves using a separate LLM to summarize the entire conversation history into key points before processing user prompts.

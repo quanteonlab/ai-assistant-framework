@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 40)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Applications and Case Studies. TD-Gammon
 
 ---
 
-**Rating: 8/10**
 
 #### Background on TD-Gammon
 Backgammon is a complex game played worldwide, involving both strategy and chance. Players aim to move all their pieces off the board before their opponent does. The game features 15 white and 15 black pieces moving counterclockwise and clockwise respectively across a 24-point board.
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD-Gammon's Learning Algorithm
 The algorithm used by TD-Gammon combines the Temporal Difference (TD) learning method with neural network function approximation. The core idea is that the program learns from its own experience, adjusting its predictions based on immediate rewards and future states.
@@ -47,7 +44,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD-Gammon's Neural Network
 The neural network used in TD-Gammon was a multilayer artificial neural network, which provided the necessary function approximation for predicting the value of game states. This network learned from experience, adjusting its weights through backpropagation to minimize prediction errors.
@@ -66,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Integration of Domain Knowledge
 TD-Gammon demonstrated that minimal domain knowledge was required for the program to learn effectively. Instead, the algorithm combined with neural networks allowed it to adapt and improve its performance based on experience.
@@ -91,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Learning and Backgammon
 Background context: Temporal Difference (TD) learning methods are well-suited to backgammon due to its state evolution over moves and the availability of complete game state descriptions. Rewards are defined as zero except at the end when a win occurs.
@@ -110,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD-Gammon Value Function Implementation
 Background context: TD-Gammon uses a multilayer ANN to estimate the probability of winning from any state. The value function is updated using the given update rule, which includes eligibility traces and backpropagation.
@@ -131,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Self-Playing in TD-Gammon
 Background context: To train the TD-Gammon player, Tesauro had it play against itself. Each move is considered by evaluating all possible outcomes based on dice rolls and their corresponding positions.
@@ -154,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD-Gammon Learning Process Overview
 Background context: This section describes how Tesauro's TD-Gammon program learned to play backgammon by playing itself and using temporal difference (TD) learning. The initial evaluations were arbitrary, but over time, performance improved significantly.
@@ -199,7 +190,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Rule Application in Backgammon
 Background context: The text explains the application of the nonlinear TD rule, specifically equation (15.1), which is used to update the weights of the neural network after each move during self-play.
@@ -234,7 +224,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Self-Play and Move Selection
 Background context: TD-Gammon selects moves by estimating the value of each possible resulting position using a neural network, then choosing the move that leads to the highest estimated value.
@@ -263,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Improvement over Time
 Background context: After playing about 300,000 games against itself, TD-Gammon learned to play backgammon as well as the best previous programs that used extensive backgammon knowledge.
@@ -287,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Rule with Backpropagation
 Background context: The text describes the application of equation (15.1) for updating network weights incrementally after each move during self-play.
@@ -326,7 +313,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Background on TD-Gammon's Learning Process
 :p What is the initial state of weights and evaluations for TD-Gammon 0.0?
@@ -336,7 +322,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Improvement Over Time
 :p How did the performance of TD-Gammon improve with more games played against itself?
@@ -346,7 +331,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison with Previous Backgammon Programs
 :p How did TD-Gammon 0.0 differ from other high-performance backgammon programs like Neurogammon?
@@ -356,7 +340,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Input Representation to the Network
 :p How were backgammon positions represented as inputs to TD-Gammon?
@@ -385,7 +368,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gammon Estimation in TD-Gammon
 :p How did the network estimate the probability of a gammon or backgammon?
@@ -409,7 +391,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Computation and Sigmoid Function
 Background context explaining how a neural network computes its estimated value using sigmoid functions. The output is calculated as a nonlinear function of weighted inputs.
@@ -443,7 +424,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Error Backpropagation and TD-Gammon
 Background context on the error backpropagation algorithm used in TD-Gammon, which updates network weights based on the difference between expected and actual outputs.
@@ -506,7 +486,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Self-Play in TD-Gammon
 Background context on how Tesauro used self-play to generate training data for the neural network. This involves playing the backgammon player against itself and recording moves.
@@ -537,7 +516,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Background on TD-Gammon and Self-Play Learning
 
@@ -550,7 +528,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD-Gammon 0.0 Learning Process
 
@@ -563,7 +540,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Self-Play vs. Expert Knowledge
 
@@ -576,7 +552,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD-Gammon 1.0 Introduction
 
@@ -589,7 +564,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two-Ply Search Mechanism
 
@@ -602,7 +576,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Three-Ply Search Mechanism
 
@@ -615,7 +588,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD-Gammon vs. Human Players
 
@@ -630,7 +602,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Samuel's Checkers Player
 Background context: Arthur Samuel developed early learning algorithms for checkers in the 1950s. His work laid foundational principles that influenced later reinforcement learning techniques.
@@ -644,7 +615,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Heuristic Search in Samuel’s Checkers Player
 Background context: Samuel’s checkers player utilized lookahead searches and heuristics for evaluating board states, inspired by Shannon’s minimax procedure.
@@ -689,7 +659,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Temporal-Difference Learning in TD-Gammon
 Background context: The article mentions the use of temporal-difference learning in TD-Gammon, a technique that updates estimates based on the difference between predicted and actual outcomes.
@@ -703,7 +672,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Minimax Procedure and Backed-Up Score
@@ -741,7 +709,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Minimax Search Control and Alpha-Beta Pruning
 Background context explaining how sophisticated search control methods like alpha-beta pruning were used in Samuel's programs to improve the efficiency of the minimax algorithm.
@@ -780,7 +747,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rote Learning in Samuel's Checkers Player
 Background context explaining how rote learning was used to store and reuse evaluations of previously seen board positions. This method allowed the program to save time on search when the same position appeared again.
@@ -817,7 +783,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Direction Discounting in Samuel's Checkers Player
 Background context explaining how the direction discounting technique influenced the program’s choice of moves by adjusting the value of positions based on their depth in the search tree.
@@ -840,7 +805,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Learning by Generalization in Samuel's Checkers Player
 Background context explaining how the "learning by generalization" procedure worked, involving updates to value function parameters after each move.
@@ -867,7 +831,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Rewards and Terminal States
 The text highlights that a crucial part missing from Samuel's learning method was the inclusion of explicit rewards or special treatment for terminal positions. These elements are essential for ensuring the value function is tied to the true values of states.
@@ -879,7 +842,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Potential Issues with Learning Method
 The text discusses potential problems with Samuel’s method, including the possibility of the value function becoming consistent but useless, leading to worse performance over time.
@@ -891,7 +853,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Effectiveness of Samuel’s Player
 The text mentions that despite some issues, Samuel’s checkers player was still able to achieve "better-than-average" play and was characterized as "tricky but beatable."
@@ -903,7 +864,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Alpha-Beta Pruning
 The text mentions that a later version of Samuel's program included improvements like alpha-beta pruning, enhancing its search efficiency.
@@ -917,7 +877,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Book Learning and Signature Tables
 Background context: In 1965, Samuel used an approach called "book learning" which involved extensive use of supervised learning to improve his checkers-playing program. He also utilized hierarchical lookup tables known as signature tables to represent the value function instead of using linear function approximation.
@@ -928,7 +887,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hierarchical Lookup Tables (Signature Tables)
 :p What are signature tables?
@@ -938,7 +896,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action Values for Wagering
 Background context: The action value \( \hat{q}(s, bet) \) represents the expected utility of taking a specific action (bet) in a given state. Watson calculates these values to make informed betting decisions.
@@ -962,7 +919,6 @@ This formula considers both possible outcomes: Watson answering correctly or inc
 
 ---
 
-**Rating: 8/10**
 
 #### Learning Value Function (\( \hat{v} \))
 Background context: The value function \( \hat{v}(s, w) \) is learned using reinforcement learning techniques. It estimates the probability of winning from any game state and is crucial for calculating action values.
@@ -981,7 +937,6 @@ The learning process involved millions of simulations against models representin
 
 ---
 
-**Rating: 8/10**
 
 #### Opponent Models for DD-Wagering
 Background context explaining how Watson created models based on statistics from different levels of Jeopardy contestants to serve as opponents during learning and assessment.
@@ -1012,7 +967,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monte-Carlo Trials for DD-Betting in Endgame
 Background context explaining the use of Monte-Carlo trials to estimate bet values during the endgame, improving Watson's performance by reducing errors.

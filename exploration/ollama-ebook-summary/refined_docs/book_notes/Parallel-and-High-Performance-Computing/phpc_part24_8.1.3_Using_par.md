@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.1.3 Using parallel startup commands
 
 ---
 
-**Rating: 8/10**
 
 #### MPI Initialization and Finalization
 Background context: MPI programs are typically initiated and concluded using specific functions. `MPI_Init` is called at the beginning to initialize the MPI environment, while `MPI_Finalize` terminates it. The arguments from the main routine must be passed through `argc` and `argv`, which usually represent the command-line arguments of the program.
@@ -22,7 +20,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Rank and Number of Processes
 Background context: After initializing the MPI environment, it is often necessary to know the rank of the process within its communicator (typically `MPI_COMM_WORLD`) and the total number of processes. This information is crucial for distributing tasks and coordinating communication among processes.
@@ -38,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Communicators in MPI
 Background context: A communicator in MPI is a group of processes that can communicate with each other. The default communicator `MPI_COMM_WORLD` includes all the processes involved in an MPI job.
@@ -54,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Definition
 Background context: In the context of MPI, a process is an independent unit of computation that has its own memory space and can communicate with other processes through messages.
@@ -78,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CMake Commands for MPI Testing
 Background context: The provided text outlines a series of CMake commands used to configure, build, and test an MPI (Message Passing Interface) application. These commands are essential for setting up a portable testing environment for parallel programs.
@@ -110,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message Passing Components
 Background context: In message-passing systems, messages are sent and received between processes. The text describes the components of a message, including mailboxes, pointers to memory buffers, counts, and types.
@@ -141,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Posting Receives First
 Background context: In MPI communication, it is important to post receives before sending messages. This ensures that the receiving process has allocated space for the incoming data.
@@ -169,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message Composition in MPI
 Background context: In MPI, messages are composed of a triplet at both ends: a pointer to a memory buffer, a count (size), and a type. This allows for flexible conversion between different data types.
@@ -203,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Message Envelope and Composition
@@ -222,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blocking vs Non-blocking Sends and Receives
 Blocking sends and receives wait until a specific condition is fulfilled before returning control to the program. In blocking communication, both sender and receiver need to be synchronized carefully; otherwise, a hang can occur if they are both waiting for an event that may never happen. Non-blocking (or immediate) forms of send and receive allow operations to be posted and executed asynchronously.
@@ -251,7 +240,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Safe Communication Patterns
 Certain combinations of send and receive calls in MPI can lead to hanging if not used carefully. For instance, calling a blocking send followed by a non-blocking receive or vice versa can result in a deadlock.
@@ -300,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blocking Send and Receive in MPI
 Background context: In this example, we are looking at a typical issue that can cause deadlocks (hanging) in parallel programming using Message Passing Interface (MPI). The program pairs up processes to send and receive data. Each process sends its buffer `xsend` to a partner, who is expected to have the corresponding buffer `xrecv`. This example demonstrates how the order of sending and receiving operations can lead to deadlock scenarios.
@@ -323,7 +310,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional Posting of Sends and Receives
 Background context: The original code pairs up sends and receives based on the integer division and modulo operations, but this can lead to deadlocks if not handled properly. By posting receives first in an orderly manner (based on rank), we ensure that there is no race condition leading to hanging.
@@ -362,7 +348,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sending and Receiving Messages Simultaneously (Send-Recv)
 Background context: In MPI, sometimes it is necessary to perform both a send and a receive operation simultaneously. This can be tricky with conditional logic, as seen in Listing 8.4, where if statements based on rank are used. The example shows that such an approach might lead to deadlocks or hangs.
@@ -389,7 +374,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using MPI_Sendrecv for Simultaneous Send-Recv
 Background context: The `MPI_Sendrecv` function simplifies sending and receiving messages by combining both operations into one call. This reduces the complexity of writing parallel code and helps avoid issues related to race conditions.
@@ -414,7 +398,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Communication with MPI_Isend and MPI_Irecv
 Background context: For non-blocking communication, MPI provides functions like `MPI_Isend` and `MPI_Irecv`. These functions initiate the send or receive operation immediately but do not wait for it to complete. This is useful in scenarios where you want to overlap communication with computation.
@@ -440,7 +423,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Asynchronous Send and Receive Using MPI_Isend and MPI_Irecv
@@ -464,7 +446,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mixed Immediate and Blocking Send/Receive Operations
 Background context explaining the concept. Sometimes, a mixture of immediate (non-blocking) and blocking operations is necessary to achieve desired behavior in MPI programs. The example provided shows how an `MPI_Isend` can be used to initiate a send operation, followed by a blocking receive using `MPI_Recv`.
@@ -484,7 +465,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronized Timers Using MPI_Barrier
 
@@ -515,7 +495,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Broadcasting Small File Input Using MPI_Bcast
 
@@ -556,7 +535,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Collective Communication: Broadcast Operation
 
@@ -596,7 +574,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Broadcasting a File Using MPI_Bcast
 Background context: In distributed computing, broadcasting is used to send the same data to all processes. This is done by first sending the size of the file so that each process can allocate an input buffer, and then broadcasting the actual data.
@@ -638,7 +615,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reduction Pattern in MPI
 Background context: The reduction pattern is a fundamental technique used in parallel computing for combining data from multiple processes into a single value. Common operations include `MPI_MAX`, `MPI_MIN`, `MPI_SUM`, etc.
@@ -684,7 +660,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Reductions to Get Min, Max, and Average
 Background context: The reduction pattern allows combining data from multiple processes into a single value. Common operations include finding the minimum (`MPI_MIN`), maximum (`MPI_MAX`), sum (`MPI_SUM`), etc.
@@ -732,7 +707,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Initializing the Custom Data Type and Operator
 Background context explaining how to initialize a custom MPI data type and operator for Kahan summation. This involves defining the `esum_type` structure, creating an MPI data type using `MPI_Type_contiguous`, and declaring a user-defined reduction function.

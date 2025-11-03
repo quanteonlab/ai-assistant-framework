@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 27)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 10.1.4 Creating the Razor Components
 
 ---
 
-**Rating: 8/10**
 
 #### Creating the Startup Razor Page
 Background context: A Blazor application relies on a Razor page to provide initial content and JavaScript for connecting to the server. The `Index.cshtml` file is where you set up this initial connection.
@@ -37,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating the Routing and Layout Components
 Background context: Blazor uses routing to manage navigation between components. The `Routed` component is responsible for routing based on URL paths, while `AdminLayout` provides a custom layout for administrative tools.
@@ -60,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating the Admin Layout Component
 Background context: The `AdminLayout.razor` component provides a custom layout for administrative tools, ensuring they have a distinct appearance and structure.
@@ -94,7 +90,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blazor Layout and Navigation
 Blazor uses Razor syntax to generate HTML but introduces its own directives and features. This layout renders a two-column display with product and order navigation buttons, which are created using `NavLink` elements.
@@ -125,7 +120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing Administration Features
 Now that Blazor is set up and tested, you can start implementing administration features such as viewing orders and marking them as shipped.
@@ -194,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Entity Framework Core Migrations
 Background context explaining how Entity Framework Core migrations can be used to update the database schema without manually writing SQL commands. The `dotnet ef migrations add` command is used to create a migration for adding the `Shipped` property.
@@ -213,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Displaying Orders for Administrators
 Background context explaining how two tables are displayed—one showing orders waiting to be shipped and another for shipped orders. This helps in managing the order status efficiently from an administrative perspective.
@@ -237,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Iterative Development in ASP.NET Core
 Background context explaining iterative development in software projects and how data models are typically extended over time as requirements evolve. This is a common practice in complex applications where the initial model may need adjustments based on user feedback or new features.
@@ -254,7 +245,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Razor Component Introduction
 Razor Components are a feature of Blazor that allow for server-side rendering using C# and HTML. They provide a way to create reusable UI components with logic embedded directly into the HTML, making it easier to manage complex user interfaces. The `@code` section within a Razor Component defines the properties and methods required for interactivity.
@@ -266,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parameters in Razor Components
 Parameters are used to pass data from the parent component to the child component. These parameters can be of various types and provide the necessary context for the component's functionality.
@@ -278,7 +267,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### EventCallback and Communication
 The `EventCallback<int>` property allows for asynchronous communication between components. When the button is clicked, it sends data back to the parent component or another part of the application.
@@ -290,7 +278,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Order Data Management
 The `Orders` component manages orders by fetching them from a repository, categorizing them into shipped and unshipped, and providing methods to update their shipping status.
@@ -313,7 +300,6 @@ This method fetches all orders from the database and then filters them into two 
 
 ---
 
-**Rating: 8/10**
 
 #### Component Initialization
 The `Orders` component uses the `OnInitializedAsync()` method for initializing data. It ensures that the component fetches the latest order data whenever it initializes.
@@ -334,7 +320,6 @@ This ensures that when the component is first rendered, it fetches all orders fr
 
 ---
 
-**Rating: 8/10**
 
 #### Repository Pattern Usage
 The `Orders` component uses a repository pattern for data access. The repository provides a clean separation between the business logic of managing orders and the underlying data storage.
@@ -354,7 +339,6 @@ This property ensures that the `Orders` component has its own instance of the re
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### CRUD Interface Implementation for Product Catalog Management
@@ -377,7 +361,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Entity Framework Core Repository Implementation
 Background context: The `EFStoreRepository` class implements the `IStoreRepository` interface, providing concrete implementations for CRUD operations using Entity Framework Core. This ensures that data persistence is managed through a database context.
@@ -415,7 +398,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blazor List Component for Products
 Background context: The `Products.razor` component is responsible for displaying a list of products and providing navigation links to their details, edit pages, and creation page. This component uses `NavLink` components to handle navigation based on the product's ID.

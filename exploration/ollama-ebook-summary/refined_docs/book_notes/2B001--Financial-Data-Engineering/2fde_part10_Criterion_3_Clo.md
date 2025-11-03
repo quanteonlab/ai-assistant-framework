@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Criterion 3 Cloud Versus On Premises
 
 ---
 
-**Rating: 8/10**
 
 #### Direct Market Access (DMA)
 Direct Market Access (DMA) is a trading arrangement that allows traders and investors to place orders directly into the order book of an exchange, bypassing intermediaries such as brokers. This approach requires standardized communication protocols like FIX for effective trade-related data exchanges.
@@ -56,7 +54,6 @@ Key differences include:
 
 These flashcards cover the essential concepts in the provided text, focusing on understanding rather than pure memorization.
 
-**Rating: 8/10**
 
 #### Cloud as a General-Purpose Technology
 The cloud is defined as a general-purpose technology that enables the development and delivery of computing and storage services over a networked system. This term highlights its wide-ranging applications across various sectors like businesses, governments, hospitals, research centers, financial institutions, educational institutions, the military, etc.
@@ -91,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### IaaS Definition
@@ -150,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiregion Options for Data Storage and Resource Provisioning
 
@@ -259,7 +254,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cloud Migration Strategy Importance
 Cloud migration efforts must align with your institution’s goals and requirements. Failure to match these can lead to issues like excessive costs, technological limitations, security, compliance issues, scalability, and control problems.
@@ -318,7 +312,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Public Cloud Model
 Background context: The public cloud model is a service where users access infrastructure owned and managed by third-party vendors over the internet. It supports multitenancy, which allows sharing of resources while ensuring isolation through virtualized environments. This model advocates for shared responsibility between the vendor and users in terms of security.
@@ -445,7 +438,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hybrid Multi-Cloud Architecture
 Wells Fargo's digital strategy is built on a hybrid multi-cloud architecture that leverages both public cloud infrastructures and third-party-owned data centers. This approach also includes private cloud and traditional hosting services to ensure security, reliability, and flexibility. The hybrid model allows for better performance, enhanced security, cost optimization, scalability, and innovation.

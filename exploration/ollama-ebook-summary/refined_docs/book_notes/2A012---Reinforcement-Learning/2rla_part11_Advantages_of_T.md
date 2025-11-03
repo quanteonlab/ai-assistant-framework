@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Advantages of TD Prediction Methods
 
 ---
 
-**Rating: 8/10**
 
 #### TD Methods vs. Monte Carlo and DP Methods
 Background context: The text discusses the advantages of Temporal-Difference (TD) learning methods over Monte Carlo (MC) and Dynamic Programming (DP) methods, focusing on their applicability without models and online learning capabilities.
@@ -23,7 +21,6 @@ The logic behind these points is that MC methods require the entire episode's ou
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence of TD Methods
 Background context: The text explains that for any fixed policy π, TD(0) has been proved to converge to \( v_\pi \), under specific conditions on the step-size parameter.
@@ -41,7 +38,6 @@ This means that by carefully choosing the step-size, one can ensure that the val
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison of TD and MC Methods
 Background context: The text mentions that while both TD and MC methods converge asymptotically to the correct predictions, there is an open question about which method converges faster.
@@ -55,7 +51,6 @@ The specific example shows how TD(0) values stabilized closer to the true values
 
 ---
 
-**Rating: 8/10**
 
 #### Random Walk Example: Empirical Comparison of TD and MC Methods
 Background context: The text provides an empirical comparison between TD(0) and constant-α MC methods applied to a random walk task. In this MRP, all episodes start in the center state (C), move left or right with equal probability until terminating at either end.
@@ -72,7 +67,6 @@ These values are derived from the probability of terminating on the right side i
 
 ---
 
-**Rating: 8/10**
 
 #### TD Method Performance in Random Walk Example
 Background context: The text includes a graph showing the learning process for both TD(0) and MC methods applied to the random walk task. It highlights how TD(0) estimates closely match the true values more quickly than MC methods.
@@ -89,7 +83,6 @@ This example illustrates how TD methods can provide faster and more efficient le
 
 ---
 
-**Rating: 8/10**
 
 #### Exercise 6.4 Impact of Step-Size Parameter on Algorithms
 Background context: In Exercise 6.4, the results shown in the right graph depend on the value of the step-size parameter \(\alpha\). The conclusion about which algorithm is better might be affected if a wider range of \(\alpha\) values were used. This is because different \(\alpha\) values can significantly impact how quickly and accurately the algorithms converge.
@@ -111,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exercise 6.5 RMS Error Behavior of TD Method
 Background context: In the right graph of Example 6.2, the RMS error of the TD method seems to go down and then up again, especially at high \(\alpha\). This behavior suggests that there might be a phase where increasing \(\alpha\) improves convergence but beyond a certain point, it can destabilize the learning process.
@@ -133,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exercise 6.6 True Values Calculation
 Background context: In Example 6.2, the true values for states A through E are given as 1=6, 2=6, 3=6, 4=6, and 5=6. These values can be computed in at least two different ways, such as using a linear equation or by solving a system of equations.
@@ -156,7 +147,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimality of TD(0) with Batch Updating
 Background context: In Example 6.3, batch-updating versions of TD(0) and constant-\(\alpha\) MC methods were applied to the random walk example. The value function was updated only once after processing all episodes as a batch.
@@ -183,7 +173,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch TD vs. Monte Carlo Methods
 
@@ -196,7 +185,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance of Constant-Alpha MC
 
@@ -216,7 +204,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD(0) vs. MC: The Predictor Example
 
@@ -236,7 +223,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimal Predictions in Batch Training
 
@@ -262,7 +248,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Monte Carlo vs. Batch TD(0)
 Batch Monte Carlo methods always find estimates that minimize mean-squared error on the training set, whereas batch TD(0) finds estimates that are exactly correct for the maximum-likelihood model of the Markov process.
@@ -274,7 +259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Maximum-Likelihood Estimate
 In general, the maximum-likelihood estimate is the parameter value whose probability of generating the data is greatest. For a Markov process, this means estimating transition probabilities and expected rewards based on observed episodes.
@@ -286,7 +270,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Certainty-Equivalence Estimate
 The certainty-equivalence estimate is computed using the maximum-likelihood model. It gives an estimate of the value function that would be exactly correct if the model were known with certainty.
@@ -298,7 +281,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence and Speed
 Batch TD(0) converges more quickly than Monte Carlo methods because it directly computes the certainty-equivalence estimate, whereas Monte Carlo methods minimize mean-squared error.
@@ -310,7 +292,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nonbatch TD(0)
 Nonbatch TD(0) moves roughly in the direction of the certainty-equivalence estimate and can be faster than constant-\(\alpha\) MC because it aims for a better estimate even if it does not reach it.
@@ -322,7 +303,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Methods on Large State Spaces
 TD methods can approximate the certainty-equivalence solution with much less computational overhead, making them a feasible approach for tasks with large state spaces.
@@ -336,7 +316,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sarsa Overview
 Sarsa is an on-policy temporal difference (TD) control method that uses a behavior policy and a target policy. It extends the TD prediction methods for solving control problems. The algorithm updates the action-value function \( Q(s, a) \) based on the observed rewards and transitions between state-action pairs.
@@ -368,7 +347,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sarsa Algorithm
 The general form of the Sarsa control algorithm for estimating the action-value function \( Q(\pi) \):
@@ -409,7 +387,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Windy Gridworld Example
 A standard gridworld with a crosswind running upward through the middle of the grid affects the resultant next states for certain actions.
@@ -440,7 +417,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance Sampling
 In the context of Sarsa, importance sampling is used when there is a difference between the behavior policy \( b \) and the target policy \( π \).
@@ -470,7 +446,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence of Sarsa
 Sarsa converges with probability 1 to an optimal policy and action-value function as long as all state-action pairs are visited an infinite number of times, and the policy converges to a greedy policy.

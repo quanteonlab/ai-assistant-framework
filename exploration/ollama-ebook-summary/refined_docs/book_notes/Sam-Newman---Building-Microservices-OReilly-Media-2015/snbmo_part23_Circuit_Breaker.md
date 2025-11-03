@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Circuit Breakers
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Timeouts
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Circuit Breakers
 Circuit breakers are inspired by electrical circuit protection mechanisms. They work by automatically stopping further requests to a downstream service that is experiencing issues, preventing cascading failures across dependent systems.
@@ -72,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bulkheads Concept
 In software architecture, bulkheads are mechanisms to isolate parts of a system from failure. They help contain and limit the impact of an outage or error in one component to avoid cascading failures throughout the entire system. This is similar to how physical bulkheads on ships protect against flooding.
@@ -83,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Connection Pooling for Bulkheads
 Connection pooling is a technique where multiple connections are pre-established and managed in a pool so they can be reused rather than being created and destroyed on each request. This reduces overhead and improves performance, but it also means that if one connection pool becomes saturated or exhausted, other pools may also be affected.
@@ -94,7 +89,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Separation of Concerns for Bulkheads
 Separating concerns into separate microservices can act as bulkheads by reducing the likelihood of an outage in one area affecting another. By teasing apart functionality, you create boundaries that limit the spread of failures.
@@ -105,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Circuit Breakers for Bulkheads
 Circuit breakers are an automatic mechanism that can be used to limit the spread of failures in real-time by shutting down a failing service before it causes further damage. They act as a bulkhead, protecting both the consumer and the downstream service from additional calls.
@@ -116,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load Shedding with Hystrix
 Load shedding is a technique where, when resources become saturated, requests are rejected to prevent further overload. The Netflix Hystrix library provides mechanisms for implementing this, allowing bulkheads that reject requests under certain conditions to avoid resource saturation.
@@ -144,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Bulkheads
 Bulkheads are crucial in software architecture for containing failures, ensuring that one part of a system does not bring down another. Implementing bulkheads through separation of concerns, connection pooling, and circuit breakers helps maintain the robustness and reliability of complex systems.
@@ -157,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Service Isolation
@@ -170,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Idempotency
 Idempotent operations ensure that performing an operation multiple times has no additional effect beyond performing it once. This is particularly useful for recovery scenarios where messages might be retransmitted.

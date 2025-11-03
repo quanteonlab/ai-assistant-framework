@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 26)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Analyzing the Shortcomings of the External Polymorphism Design Pattern
 
 ---
 
-**Rating: 8/10**
 
 #### External Polymorphism Design Pattern
 Background context: The External Polymorphism design pattern is a technique for introducing polymorphic behavior to non-polymorphic types without modifying their source code. This allows us to treat different types uniformly through a common interface, promoting loose coupling and abstraction.
@@ -98,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -241,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Liskov Substitution Principle (LSP) and Shape Concept
 
@@ -393,7 +389,6 @@ These principles are essential for building flexible and maintainable software d
 
 x??
 
-**Rating: 8/10**
 
 #### Rule of 5 and Copy Semantics
 When implementing copy operations, you must manually define them to preserve semantics. The Rule of 5 states that if a class needs to manage resources like memory, it should explicitly implement move constructors and move assignment operators (to avoid unnecessary copying) and may need to delete or define the copy constructor, copy assignment operator, and destructor.
@@ -639,7 +634,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Type Erasure: Introduction and Core Concepts
@@ -774,7 +768,6 @@ These setup costs can be significant in performance-critical applications. Howev
 ??x
 ---
 
-**Rating: 8/10**
 
 #### Type Erasure History and Importance
 This concept highlights the historical context of type erasure, emphasizing its importance in modern C++ programming. The technique was first discussed by Kevlin Henney in 2000 but gained popularity through Sean Parent's presentation at GoingNative 2013.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 6.1.4 Creating the application components
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Enabling the MVC Framework in Program.cs
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating the Controller
 Background context: The next step is to create a controller class (`HomeController`) that will handle requests for rendering views. This example uses basic methods to demonstrate the MVC pattern.
@@ -49,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating the View
 Background context: The view file (`Index.cshtml`) is responsible for rendering the data passed from the controller. This example uses Razor syntax to display product information.
@@ -76,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Unit Test Project for ASP.NET Core Applications
 Background context: The text explains how to create a separate Visual Studio project for unit testing in an ASP.NET Core application. This allows the tests to be deployed separately from the application code.
@@ -101,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Writing and Running Unit Tests in ASP.NET Core
 Background context: The text explains how to write unit tests for an ASP.NET Core application, focusing on using the XUnit framework. It details the Arrange-Act-Assert pattern commonly used in unit testing.
@@ -136,7 +130,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Running Tests from Command Line
 Background context: The command line provides a way to run tests outside of an integrated development environment (IDE) like Visual Studio.
@@ -152,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Correcting Unit Test Logic
 Background context: This example demonstrates how to write a correct unit test by ensuring the `Assert.Equal()` method compares the expected value with the actual value after an action.
@@ -178,7 +170,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Isolating Components for Unit Testing
 Background context: In ASP.NET Core applications, it's essential to isolate different components for unit testing. However, many of these components rely on other parts of the application or external services, making them more complex to test than simple model classes.
@@ -190,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Writing Unit Tests for Model Classes
 Background context: Simple model classes like `Product` are straightforward to test because they are self-contained, meaning any action performed on them should only affect their internal state. However, testing controllers or other complex components in ASP.NET Core involves managing dependencies.
@@ -216,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing Controllers in ASP.NET Core Applications
 Background context: In an ASP.NET Core application, controllers often rely on multiple components and dependencies, making them harder to test. You need a way to isolate these interactions.
@@ -258,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Isolating Components Using Interfaces
@@ -271,7 +259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defining an Interface to Isolate Components
 Background context: To achieve component isolation, interfaces are used to define contracts for components like repositories or data sources. By defining such interfaces, you can create testable implementations that mock the behavior of these components.
@@ -283,7 +270,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing the Interface in a Test-Specific Class
 Background context: After defining an interface, implementing that interface in a separate class enables creating test-specific instances. These classes can be used to provide controlled inputs during testing.
@@ -295,7 +281,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modifying the Controller to Use an Interface
 Background context: By changing how the controller retrieves its data source from using a concrete class to using an interface, you can easily swap out the data source implementation during testing. This makes it possible to test various scenarios with different data sets.
@@ -307,7 +292,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Dependency Injection (Manual Approach)
 Background context: While the manual approach shown in the text is effective, ASP.NET Core supports dependency injection which can simplify this process further by automatically managing dependencies. However, for clarity in this chapter, a manual approach is used.
@@ -319,7 +303,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Code for Isolation Through Interfaces
 Background context: The provided example shows how to use an interface (`IDataSource`) in a `HomeController` to isolate the controller from its dependencies, such as a repository.
@@ -347,7 +330,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fake Data Source Implementation
 Background context: The provided code demonstrates a fake implementation of an `IDataSource` interface to test a controller's behavior without relying on real data. This is useful for isolating and testing specific components like controllers independently.
@@ -367,7 +349,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Test-Driven Development (TDD)
 Background context: The text introduces the concept of Test-Driven Development (TDD), explaining how it differs from traditional unit testing where tests are written after the feature is implemented. TDD encourages writing test cases first, which helps in defining clear requirements and success criteria for the feature.
@@ -391,7 +372,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HomeController IndexActionModel Testing
 Background context: In the provided code snippet, a unit test is created for the `Index` action method of the `HomeController`. The test uses a `FakeDataSource` to simulate data and verify that the model passed to the view matches the expected output.

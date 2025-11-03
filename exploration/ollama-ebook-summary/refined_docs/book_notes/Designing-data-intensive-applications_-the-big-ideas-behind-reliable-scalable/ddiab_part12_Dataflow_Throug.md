@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Dataflow Through Services REST and RPC
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Schema Evolution
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dataflow Through Services: REST and RPC
 Dataflow through services refers to communication between clients and servers over a network. Clients make requests to servers which expose APIs (Application Programming Interfaces).
@@ -55,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service-Oriented Architecture (SOA)
 Service-oriented architecture (SOA) is a design approach where applications are decomposed into smaller, loosely coupled services that can communicate over networks.
@@ -93,7 +89,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Services vs Databases
 Services and databases both allow data interactions, but services expose application-specific APIs while databases permit arbitrary queries using query languages. This difference provides encapsulation by restricting client actions based on business logic.
@@ -104,7 +99,6 @@ Services typically restrict clients to predetermined inputs and outputs due to t
 
 ---
 
-**Rating: 8/10**
 
 #### Web Services Overview
 Web services use HTTP as a protocol for service communication, though they are not limited to web usage. They can be categorized into three main contexts: intra-organization microservices, inter-organization data exchanges, and public APIs provided by online services.
@@ -115,7 +109,6 @@ Web services involve various interactions such as client applications making req
 
 ---
 
-**Rating: 8/10**
 
 #### REST vs SOAP
 REST (Representational State Transfer) and SOAP (Simple Object Access Protocol) are two primary approaches to web services with contrasting philosophies. REST relies on simple data formats, URLs for resource identification, and HTTP features for caching, authentication, and content negotiation, while SOAP is a more structured XML-based protocol.
@@ -126,7 +119,6 @@ REST emphasizes simplicity and leverage of existing standards like HTTP methods 
 
 ---
 
-**Rating: 8/10**
 
 #### HATEOAS Principle
 HATEOAS stands for Hypermedia as the Engine of Application State and is a principle often discussed in RESTful services. It suggests that links within responses guide clients on what actions they can take next based on current state information.
@@ -137,7 +129,6 @@ HATEOAS means hypermedia controls are used to drive the application's state tran
 
 ---
 
-**Rating: 8/10**
 
 #### SOA vs Microservices
 Service-oriented architecture (SOA) aims for modular application design where services are independently deployable and evolvable, promoting easier maintenance and change management. Microservices take this further by treating applications as a collection of small, independent services that communicate over well-defined APIs.
@@ -148,7 +139,6 @@ SOA focuses on creating reusable service components to build complex application
 
 ---
 
-**Rating: 8/10**
 
 #### REST vs SOAP
 
@@ -161,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RESTful APIs
 
@@ -174,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Remote Procedure Calls (RPC)
 
@@ -187,7 +175,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Location Transparency
 
@@ -202,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Retrying Failed Network Requests
 
@@ -237,7 +223,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Latency Differences Between Local Function Calls and Network Requests
 
@@ -275,7 +260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parameter Passing in Local Function Calls vs. Network Requests
 
@@ -315,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RPC Frameworks and Their Challenges
 
@@ -349,7 +332,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### REST vs. RPC for Public APIs
@@ -364,7 +346,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evolvability in RPC Schemes
 Background context: This section covers how different RPC frameworks handle evolvability, which is crucial for maintaining backward compatibility during API changes.
@@ -383,7 +364,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Compatibility in RPC vs. REST
 Background context: This concept explains the challenges of maintaining service compatibility when using RPC for inter-organizational APIs, as opposed to RESTful services.
@@ -405,7 +385,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Message-Passing Systems Overview
 Background context: This section introduces asynchronous message-passing systems, which lie between RPC and databases in terms of data flow characteristics.
@@ -426,7 +405,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message-Broker Functionality
 Background context: This concept describes how message brokers function in asynchronous communication, providing multiple use cases such as buffering and decoupling.
@@ -451,7 +429,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Actor Frameworks Overview
 Background context: This concept introduces distributed actor frameworks, which use the actor model to handle asynchronous message-passing across multiple nodes.
@@ -483,7 +460,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Protocol Buffers for Forward/Backward Compatibility
 Protocol Buffers can be used as an alternative to Java’s built-in serialization, providing the ability to perform rolling upgrades. This is because Protocol Buffers support schema evolution.
@@ -501,7 +477,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Encoding Formats and Compatibility
 Several encoding formats are discussed, each with their own compatibility properties. Programming language-specific encodings often lack backward/forward compatibility, while schema-driven binary formats like Thrift and Protocol Buffers provide clear definitions for these.
@@ -518,7 +493,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modes of Dataflow in Distributed Systems
 Data flows through various mechanisms like databases, RPCs, and asynchronous message passing. Each scenario requires different handling for encoding and decoding data.

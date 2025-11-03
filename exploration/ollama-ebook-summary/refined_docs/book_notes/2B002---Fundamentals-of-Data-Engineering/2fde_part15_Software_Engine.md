@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Software Engineering
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -114,7 +112,6 @@ Consider the cadence and frequency of data availability. Determine if data is av
 
 ---
 
-**Rating: 8/10**
 
 #### Networking Considerations
 Understanding how your application will communicate over the network is crucial for accessing source systems. You need to consider whether you are working with HTTP(s), SSH, or a VPN.
@@ -317,7 +314,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Von Neumann Architecture vs. Harvard Architecture
 Background context explaining the differences between von Neumann and Harvard architectures. The von Neumann architecture stores code and data together, while the Harvard architecture separates them.

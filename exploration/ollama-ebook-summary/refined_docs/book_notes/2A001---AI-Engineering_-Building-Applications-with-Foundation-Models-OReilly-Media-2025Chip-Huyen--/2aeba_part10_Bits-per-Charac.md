@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A001---AI-Engineering_-Building-Applications-with-Foundation-Models-OReilly-Media-2025Chip-Huyen--_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Bits-per-Character and Bits-per-Byte
 
 ---
 
-**Rating: 8/10**
 
 #### Entropy
 Background context explaining the concept of entropy and its relation to information. The formula for entropy is given as \(H = -\sum p_i \log_2(p_i)\), where \(p_i\) represents the probability of a token.
@@ -37,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cross Entropy
 Background context explaining the concept of cross entropy and its relevance to language models. The formula for cross entropy is given as \(H(P||Q) = -\sum p_i \log_2(q_i)\), where \(P\) represents the true distribution of training data, and \(Q\) is the distribution learned by the model.
@@ -69,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Perplexity
 Background context explaining the concept of perplexity and its relation to cross entropy.
@@ -94,7 +90,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bits-Per-Character (BPC)
 Background context explaining the concept of BPC and its relation to entropy and cross entropy.
@@ -120,7 +115,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Cross Entropy and Kullback-Leibler Divergence
@@ -145,7 +139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cross Entropy vs. KL Divergence
 Cross entropy measures the difficulty for a model to predict the next token in a sequence, while KL divergence measures the uncertainty or information needed to change one probability distribution into another.
@@ -159,7 +152,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Perplexity
 Perplexity measures the uncertainty or surprise of a model's predictions. It is derived from cross entropy and is defined as:
@@ -183,7 +175,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bit vs. Nat for Entropy and Cross Entropy
 Background context explaining the concept. The text discusses the use of bits and nats as units for measuring entropy and cross entropy. Bits represent 2 unique values, while nats use the base \(e\). Popular frameworks like TensorFlow and PyTorch use nats.
@@ -204,7 +195,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Perplexity Interpretation and Use Cases
 Background context explaining the concept. The text provides a detailed explanation of how perplexity is used to measure the uncertainty in predicting tokens by language models.
@@ -220,7 +210,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Examples of Perplexity in Different Contexts
 Background context explaining the concept. The text provides examples comparing perplexity values for different types of data and contexts.
@@ -238,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Perplexity as a Model Evaluation Metric
 Background context explaining the concept. The text discusses how perplexity is used as an evaluation metric for language models, emphasizing that it reflects the model's uncertainty and predictive accuracy.
@@ -257,7 +245,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Perplexity as a Model Proxy
 
@@ -270,7 +257,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quantization and Perplexity
 
@@ -283,7 +269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overall Performance Proxy
 
@@ -298,7 +283,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Perplexity Calculation for Language Models
 Background context: Perplexity is a measure used to evaluate how well a language model predicts a given sequence of tokens. It provides insight into the complexity of generating a particular piece of text. The lower the perplexity, the better the model's performance.
@@ -327,7 +311,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exact Evaluation vs Subjective Evaluation
 Background context: When evaluating models' performance, it is crucial to understand the difference between exact and subjective evaluation methods. Exact evaluations provide clear and unambiguous results, while subjective evaluations depend on human judgment.
@@ -340,7 +323,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Correctness Evaluation
 Background context: Evaluating systems based on whether they perform intended functionality is known as functional correctness evaluation. This method checks if a model generates output that meets specific criteria, like creating a website or making reservations.
@@ -353,7 +335,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Functional Correctness in Code Generation
 Background context: An example of functional correctness evaluation is evaluating a model's ability to generate valid and accurate code. This can be done by checking if the output functions correctly when executed.
@@ -389,7 +370,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Correctness Evaluation in Code Verification
 
@@ -406,7 +386,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Test Cases for Function Validation
 
@@ -425,7 +404,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pass@k Score in Model Evaluation
 
@@ -445,7 +423,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Game Bots Evaluation
@@ -458,7 +435,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reference Data Evaluation
 Background context: When tasks cannot be evaluated through functional correctness alone, reference data is used to evaluate AI outputs. This method involves comparing generated responses against known correct (reference) responses.
@@ -470,7 +446,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Similarity Measurements
 Background context: When exact match or reference-free methods are not applicable, similarity measurements can be used to evaluate AI outputs. There are three common methods for comparing texts: exact matching, lexical similarity, and semantic similarity.
@@ -482,7 +457,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semantic Similarity
 Background context: Semantic similarity evaluates how close in meaning two texts are, which is particularly useful when exact wording may vary but the essence should be preserved.
@@ -494,7 +468,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Similarity Measurements for Various Use Cases
 Background context: The provided text explains various applications of similarity measurements, including retrieval and search, ranking, clustering, anomaly detection, and data deduplication. These techniques are essential for processing and understanding complex texts or items.
@@ -511,7 +484,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semantic Similarity
 Background context: Lexical similarity focuses on token overlap, while semantic similarity considers meaning beyond just word choice. It’s particularly useful for complex tasks where exact phrasing might vary.
@@ -532,7 +504,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Edit Distance and Fuzzy Matching
 Background context: Lexical similarity can be measured using approximate string matching, known as fuzzy matching. This method calculates the minimum number of single-character edits required to transform one string into another. The three basic operations are deletion, insertion, and substitution.
@@ -544,7 +515,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Common Metrics for Lexical Similarity
 Background context: Various metrics like BLEU, ROUGE, METEOR++, TER, and CIDEr are used to measure lexical similarity. These metrics differ in how they calculate the overlap of tokens or n-grams.
@@ -556,7 +526,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges with Reference-Based Metrics
 Background context: While reference-based metrics like BLEU, ROUGE, etc., are useful, they face challenges such as requiring a comprehensive set of reference responses and potential biases from low-quality references.
@@ -568,7 +537,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations of Lexical Similarity Metrics
 Background context: Higher lexical similarity scores do not always correlate with better quality responses. For instance, in code generation tasks like HumanEval, optimizing for BLEU scores might not align with the goal of generating functionally correct solutions.
@@ -582,7 +550,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semantic Similarity vs Lexical Similarity
 
@@ -597,7 +564,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semantic Similarity and Embeddings
 
@@ -612,7 +578,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cosine Similarity Calculation
 
@@ -647,7 +612,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Embeddings
 

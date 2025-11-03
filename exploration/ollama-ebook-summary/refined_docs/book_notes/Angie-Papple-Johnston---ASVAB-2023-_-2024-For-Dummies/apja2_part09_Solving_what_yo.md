@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Solving what you can and guessing the rest. Making use of the answer choices
 
 ---
 
-**Rating: 8/10**
 
 #### Using Logic to Solve Problems
 Background context: Sometimes a wrong but seemingly logical answer can represent an intermediate step in calculations. Utilizing such answers can help solve problems and find the right solution.
@@ -34,7 +32,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Forces and Equilibrium: The Role of Unbalanced Forces
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -52,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Newton’s Second Law of Motion: Acceleration and Force Relationship
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -72,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Newton's Second Law of Motion
@@ -91,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Newton's Law of Universal Gravitation
 Background context: This law describes how all objects in the universe attract each other with a gravitational force that depends on their masses and the distance between them. The equation for this is \(\mathbf{F} = G\frac{m_1 m_2}{r^2}\), where \(G\) is the gravitational constant, \(m_1\) and \(m_2\) are the masses of the two objects, and \(r\) is the distance between them.
@@ -105,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Work
 Background context: In physics, work is defined as the product of a force acting upon an object that causes a displacement. The formula for calculating work is \(W = F \cdot d\). Units are newton-meters (Nm) or joules (J).
@@ -125,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Force
 Background context: Force is defined as an interaction between objects that can cause a change in motion. Forces are typically measured in newtons (N) and are described by Newton's laws.

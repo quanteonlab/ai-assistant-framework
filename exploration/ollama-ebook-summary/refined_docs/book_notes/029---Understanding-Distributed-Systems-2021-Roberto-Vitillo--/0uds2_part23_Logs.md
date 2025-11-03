@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Logs
 
 ---
 
-**Rating: 8/10**
 
 #### Observability Overview
 Observability is a set of tools that provide granular insights into a system's behavior, enabling operators to understand and debug complex emergent failures. These tools help minimize time-to-validate hypotheses by providing rich contextual information.
@@ -105,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logging Levels and Cost Control
 Background context: To understand why a remote call failed, it's important to have detailed logs. However, logging everything can be costly. Different logging levels like debug, info, warning, error help control the amount of log data generated.
@@ -207,7 +204,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Tracing Overview
 Background context: In a distributed system, tracking the flow of requests can be challenging. Each component needs to send detailed information about its interactions with other services, which is where tracing comes into play. This involves creating spans that represent stages in the request lifecycle and emitting them for collection.

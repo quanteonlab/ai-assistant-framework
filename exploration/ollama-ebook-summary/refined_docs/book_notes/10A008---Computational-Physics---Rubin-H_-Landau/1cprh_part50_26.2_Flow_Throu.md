@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 50)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 26.2 Flow Through Parallel Plates
 
 ---
 
-**Rating: 8/10**
 
 #### Fluid Hydrodynamics Overview
 Background context explaining the Navier-Stokes equations and their application. The pressure gradient term (\(\nabla P\)) describes velocity changes due to pressure variations, while the \(\nu \nabla^2 v\) term describes velocity changes caused by viscous forces that tend to impede flow.
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partial Differential Equations for Flow
 Explanation of the reduced PDEs and their significance.
@@ -47,7 +44,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parabolic Velocity Profile
 Explanation and formula for the parabolic velocity profile in parallel plate flow.
@@ -65,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Navier–Stokes Difference Equation for \( v(x) \)
 
@@ -91,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Navier–Stokes Difference Equation for \( v(y) \)
 
@@ -112,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relaxation Method for Solving Navier-Stokes Equation
 
@@ -131,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Successive Overrelaxation (SOR) Method
 
@@ -149,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Solution for 2D Fluid Flow
 
@@ -169,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vorticity Form of Navier-Stokes Equation
 

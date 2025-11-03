@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.2.2 Adding the cart summary widget
 
 ---
 
-**Rating: 8/10**
 
 #### Adding a Cart Summary Widget
 Background context: The cart functionality is currently functional but has an integration issue. Customers can only view their cart contents by adding new items, which is inconvenient and unintuitive. To improve user experience, we are implementing a widget that summarizes the cart content and provides direct access to it throughout the application.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating CartSummaryViewComponent Class
 Background context: We need a view component that will summarize the contents of the cart and can be included in various parts of the application. This component will receive a `Cart` object as an argument and pass it to the view for rendering.
@@ -49,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modifying the Layout to Include Cart Summary
 Background context: To ensure that the cart summary is always available, we need to modify the layout file (`_Layout.cshtml`) so it includes our `CartSummaryViewComponent` in a prominent location.
@@ -93,7 +89,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Order Model Class
 Background context: The next step is to create a model class to capture shipping details from users. This involves adding validation attributes and ensuring sensitive data is not overwritten by HTTP requests.
@@ -139,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Checkout Controller and View
 Background context: To handle order processing, a controller named `OrderController` is needed. This controller should have a method to render a view where users can enter their shipping details.
@@ -225,7 +219,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding a Property to Database Context
 Background context: The text explains how adding a property to the `StoreDbContext` class allows Entity Framework Core to manage orders in the database. This setup is essential for storing and retrieving order information.
@@ -253,7 +246,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Database Migrations
 Background context: The text discusses creating and applying migrations in Entity Framework Core. These migrations help manage changes to the application's data model without losing existing data.
@@ -271,7 +263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Resetting the Database
 Background context: During development, frequent changes to the model may lead to misalignment between migrations and the actual database schema. To resolve this, you might need to reset the database.
@@ -295,7 +286,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing Order Repository Interface
 Background context: The text explains how to implement an `IOrderRepository` interface using Entity Framework Core. This repository provides methods for accessing and managing order data.
@@ -335,7 +325,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Attaching Related Entities
 Background context: When saving an order, it's necessary to inform Entity Framework Core about related entities (like products) that should not be saved if they already exist in the database.

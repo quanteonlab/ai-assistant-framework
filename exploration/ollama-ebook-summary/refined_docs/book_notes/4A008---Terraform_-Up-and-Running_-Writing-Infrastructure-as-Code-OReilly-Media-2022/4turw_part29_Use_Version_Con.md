@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 29)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Use Version Control
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Consistent Environment Across Developer Machines
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Better Permissions Management Through CI Server
 Background context: Giving developers direct access to the production environment can lead to security risks. Using a single CI server for deployments simplifies permission management and enforces good security practices.
@@ -31,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Workflow for Deploying Infrastructure Code
 Background context: The workflow for deploying infrastructure code mirrors that of application code but with additional complexities due to the nature of infrastructure changes. Version control, testing, and deployment are key steps.
@@ -54,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Live Repo and Modules Repo
 Live repo and modules repo are separate version control repositories used for managing Terraform infrastructure code. Typically, one is dedicated to reusable, versioned modules, while another focuses on live infrastructure deployments.
@@ -75,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Golden Rule of Terraform
 The Golden Rule of Terraform is a way to ensure your Terraform code accurately reflects the current state of your deployed infrastructure. To check this rule:
@@ -92,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Trouble with Branches
 Branching in Terraform can lead to issues due to the nature of infrastructure as code (IaC). Each branch may have slightly different configurations that are hard to reconcile when merging back to master.
@@ -104,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Workflow for Deploying Infrastructure Code
 A recommended workflow involves having a specialized infrastructure team that builds reusable, robust modules. These teams focus on creating production-grade components that implement best practices like:
@@ -125,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Golden Rule of Terraform: Main Branch Representation
 Background context explaining this concept. According to the golden rule, the main branch of the live repository should be a 1:1 representation of what's actually deployed in production. This means that every resource deployed should have corresponding code checked into the live repo.
@@ -137,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avoiding Out-of-Band Changes
 This concept explains why making manual or out-of-band changes to deployed infrastructure bypasses the version control process, leading to potential inconsistencies.
@@ -149,7 +139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Terraform Workspaces vs. Separate Environment Folders
 This concept differentiates between using workspaces to manage environments and maintaining separate folders for each environment.
@@ -161,7 +150,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Main Branch as a Single Source of Truth
 This concept explains why the main branch should be the single source of truth for production deployments.
@@ -173,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Consistent Branching for Shared Environments
 Background context explaining why consistent branching is crucial for shared environments like staging or production. The example illustrates how Terraform’s implicit mapping from code to infrastructure means only one branch should be used for shared environments.
@@ -189,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Workflow for Deploying Infrastructure Code
 Background context explaining the iterative process of making code changes, running `terraform apply`, and testing with commands like `curl` or automated tests. The goal is to get feedback quickly and iteratively improve the infrastructure.
@@ -210,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Review and Clean Coding Practices for Terraform
 Background context explaining why code reviews and clean coding practices are essential for writing maintainable, understandable infrastructure code. The example includes documentation requirements like READMEs, API docs, and design documents.
@@ -225,7 +210,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Isolation via File Layout
 Background context explaining how the file layout of Terraform code can affect isolation guarantees between different environments (e.g., staging vs. production). This ensures that changes in one environment do not inadvertently affect another.
@@ -247,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Style and Formatting
 Background context: Consistent coding style is important for maintainability, readability, and avoiding bugs. Tools like `terraform fmt` can help enforce a consistent code style across your team.
@@ -265,7 +248,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Automated Tests
 Background context: Automated tests, including unit, integration, end-to-end, and `plan` tests, are crucial for ensuring that your Terraform configurations work as expected without causing unintended changes.
@@ -283,7 +265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Review Process
 Background context: A thorough code review ensures that changes are well thought out and align with team standards. Tools like Atlantis can automate part of this process by running `terraform plan`.
@@ -305,7 +286,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scripting in General-Purpose Languages
 You can write scripts using general-purpose programming languages like Python, Ruby, or Bash to customize how you use Terraform. This approach allows for more complex automation tasks beyond what Terraform’s core functionality provides.
@@ -316,7 +296,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Terraform Errors
 Certain errors in Terraform are transient and can be fixed by re-running the command. Deployment tooling should detect these known errors and retry automatically after a brief pause. For state file issues, if the apply fails due to temporary network problems, it saves an errored state file.
@@ -329,7 +308,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CI Server Lock Management
 Background context: In a CI/CD pipeline, Terraform locks state files to prevent concurrent modifications. However, if something goes wrong (like a CI server crash), locks might not be released properly, causing issues when trying to deploy again.
@@ -341,7 +319,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deployment Server Best Practices
 Background context: All infrastructure code changes should be applied from a CI server, ensuring full automation and consistent environments. However, managing permissions for the CI server to deploy infrastructure can be tricky due to the elevated administrative privileges required.
@@ -365,7 +342,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CI Server Security Measures
 Background context: To minimize the risk of security breaches, especially when granting admin permissions to a CI server, you need to harden it against attacks. This includes securing network access, implementing authentication, and following best practices for server hardening.
@@ -392,7 +368,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Enforcing Approval Workflows
 Background context: To ensure that every deployment is thoroughly reviewed and validated before it happens, you can enforce an approval workflow in your CI/CD pipeline. This involves requiring at least one person (other than the original requestor) to approve any changes before they are deployed.
@@ -424,7 +399,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Temporary Credentials
 Background context: To further enhance security, you should avoid using permanent credentials for your CI server. Instead, use authentication mechanisms that provide temporary credentials, such as IAM roles and OIDC.
@@ -442,7 +416,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Isolating Admin Credentials
 Background context: To mitigate the impact of credential leaks, you should isolate admin credentials to a separate and isolated worker. This way, even if an attacker gains access to your CI server, they won't have full admin privileges.
@@ -468,7 +441,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Promoting Artifacts Across Environments
 Background context: To manage infrastructure as code effectively across environments, you should promote immutable, versioned artifacts from one environment to another. This ensures that changes are tested before being applied to production.
@@ -490,7 +462,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avoiding Rollback in Case of Errors
 Background context: Terraform does not provide automatic rollback mechanisms when changes fail, so it is crucial to test changes in pre-production environments before applying them to production.
@@ -512,7 +483,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Duplication in Environments
 
@@ -542,7 +512,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Terragrunt for Code Duplication
 
@@ -570,7 +539,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Remote State Configuration with Terragrunt
 Background context: This section explains how to manage backend configurations across multiple modules using a single `terragrunt.hcl` file.

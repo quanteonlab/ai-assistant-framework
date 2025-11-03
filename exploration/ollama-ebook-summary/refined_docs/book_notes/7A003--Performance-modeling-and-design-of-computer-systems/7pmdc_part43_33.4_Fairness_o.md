@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 43)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 33.4 Fairness of SRPT
 
 ---
 
-**Rating: 8/10**
 
 #### SJF vs PS and SRPT Performance under High Load
 
@@ -133,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fairness vs Performance in Scheduling Policies
 

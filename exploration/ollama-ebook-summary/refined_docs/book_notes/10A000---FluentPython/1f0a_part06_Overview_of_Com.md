@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Overview of Common Mapping Methods
 
 ---
 
-**Rating: 8/10**
 
 #### Hashable Objects in Python
 
@@ -151,7 +149,6 @@ x??
 
 These flashcards provide a structured way to familiarize yourself with the concepts of hashability and common mapping methods in Python.
 
-**Rating: 8/10**
 
 #### Default Factory in `defaultdict`
 Background context explaining that a default factory is used to instantiate the default value for a missing key. It's not a method but a callable attribute set by the user when creating a `defaultdict`.
@@ -298,7 +295,6 @@ for word in sorted(index, key=str.upper):
 ```
 x??
 
-**Rating: 8/10**
 
 #### StrKeyDict and __missing__
 Background context: The provided text discusses a custom dictionary subclass, `StrKeyDict`, that handles string conversion for keys. This is useful to ensure consistent behavior when dealing with mixed-type keys.

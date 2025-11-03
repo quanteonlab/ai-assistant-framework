@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Case Study Source Watermarks for Google Cloud PubSub
 
 ---
 
-**Rating: 8/10**
 
 #### Pub/Sub Workflow Overview
 Background context explaining how Google Cloud Pub/Sub works. Messages are published on topics, which can be subscribed to by any number of subscriptions. The same messages are delivered on all subscriptions for a given topic.
@@ -192,7 +190,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event Time Timestamp Reordering and Late Data Handling
 Explanation: The text mentions that source data-event timestamp reordering within a specific estimation band will ensure no additional late data is introduced. This concept is crucial for understanding how data processing systems handle out-of-order events.
@@ -343,7 +340,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Processing-Time Windows: Objective and Use Cases

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Conclusion
 
 ---
 
-**Rating: 8/10**
 
 #### Infrastructure as Code
 Background context: Infrastructure as Code (IaC) involves managing and provisioning infrastructure resources using machine-readable definition files, similar to how source code is managed. This approach allows for leveraging software engineering best practices in managing infrastructure, making it more reliable, scalable, and easier to maintain.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modules in Infrastructure as Code
 Background context: In IaC, modules represent reusable components of infrastructure defined by Terraform configuration files. These modules can be semantically versioned and shared among teams to ensure consistency and reduce redundancy.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional Statements in Terraform
 Background context: Terraform provides a way to handle conditional logic using expressions within its configuration language. This allows for creating flexible and configurable infrastructure definitions that can adapt to different requirements or scenarios.
@@ -53,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Zero Downtime Deployment with Terraform
 Background context: Achieving zero downtime in infrastructure deployments is crucial for maintaining service availability. Terraform can be used to manage state transitions and rolling updates, ensuring that changes are applied smoothly without disrupting services.
@@ -99,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loops in Terraform
 Background context: In a declarative language like Terraform, loops are not natively supported as they would be in procedural languages such as C or Java. However, you can use `for_each` and `count` meta-parameters to achieve similar functionality.
@@ -139,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditionals in Terraform
 Background context: Conditional logic is essential for creating flexible and dynamic infrastructure as code. In a declarative language like Terraform, you can use the `try`, `catch`, and ternary operator to handle conditional statements.
@@ -168,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform Gotchas
 Background context: There are several common pitfalls in using Terraform that developers should be aware of to avoid issues during deployment and configuration.
@@ -214,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loops with the count Parameter
 Background context: In Terraform, you can create multiple instances of a resource using the `count` parameter. This is useful for creating resources like AWS IAM users where you might need to create more than one instance but want to maintain some level of consistency in their naming or configuration.
@@ -248,7 +239,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Plan Command and Resource Creation with count
 Background context: When you run the `plan` command in Terraform, it generates a plan that shows what actions will be taken. This includes creating resources based on the `count` parameter.
@@ -283,7 +273,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Count and Array Indexing in Terraform
 Background context: The `count` attribute is used in Terraform to create multiple instances of a resource. When combined with the `index` variable, it allows you to dynamically set attributes based on the index of each item in an array.
@@ -329,7 +318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Output Variables and Array Lookup in Terraform
 Background context: In Terraform, you can use output variables to provide information about your infrastructure. When working with arrays or lists, you might need to reference specific elements using array indexing.
@@ -383,7 +371,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using `count` Parameter with Modules
 
@@ -420,7 +407,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations of Using `count` with Modules
 

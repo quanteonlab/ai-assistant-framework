@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Semi-gradient n-step Sarsa
 
 ---
 
-**Rating: 8/10**
 
 #### Semi-gradient n-step Sarsa Overview
 Semi-gradient n-step Sarsa extends the tabular form of semi-gradient Sarsa to a function approximation setting. The update target is an n-step return, which generalizes from its tabular form (Equation 7.4) to a function approximation form as shown in Equation 10.4.
@@ -98,7 +96,6 @@ The higher standard errors at large values of \( n \) compared to small values a
 Higher standard errors at large values of \( n \) are due to the increased risk of overfitting and instability in the estimates. As \( n \) increases, the algorithm relies more on predictions far into the future, which can be less accurate. Conversely, smaller values of \( n \) reduce variance but introduce bias, leading to more stable performance with lower standard errors.
 ---
 
-**Rating: 8/10**
 
 #### Average Reward Setting for Continuing Tasks
 In this setting, we address Markov decision problems (MDPs) where there is no inherent termination condition; interactions between an agent and environment continue indefinitely. Unlike the discounted setting which discounts future rewards to a lower value, the average reward setting does not discount future rewards.
@@ -186,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deprecating the Discounted Setting
 

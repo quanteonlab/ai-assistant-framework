@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Q-learning Off-policy TD Control
 
 ---
 
-**Rating: 8/10**
 
 #### Q-learning: Off-policy TD Control
 Background context explaining the concept. Q-learning is an off-policy temporal difference control algorithm that directly approximates the optimal action-value function \(q^\star\) independent of the policy being followed. The update rule for Q-learning is given by:
@@ -20,7 +18,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stochastic Wind in Gridworld
 The background context explains how the wind's effect is now stochastic, sometimes varying by 1 cell from the mean values given for each column. The update rule remains similar but now accounts for the stochasticity:
@@ -35,7 +32,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Backup Diagram for Q-learning
 The backup diagram illustrates how the update rule (6.8) works by showing that it updates from action nodes to the next state's action nodes.
@@ -54,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Difference Between Sarsa and Q-learning
 The background context compares how Sarsa and Q-learning handle action selection differently. Sarsa uses the current policy to choose actions, while Q-learning can use any arbitrary policy for updates.
@@ -66,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cliff Walking Example
 The background context provides an example where the gridworld environment includes a dangerous region ("The Cliff"). Sarsa learns the safer path while Q-learning converges to the optimal policy but with occasional failures due to \(\epsilon\)-greedy action selection.
@@ -78,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Why Q-learning is Off-policy
 The background context explains that an off-policy algorithm learns about a target policy different from its behavior policy.
@@ -90,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Greedy Action Selection with Q-learning
 The background context explains that if actions are selected greedily, Q-learning behaves like Sarsa.
@@ -104,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Sarsa Algorithm Overview
 Expected Sarsa is an algorithm that modifies Q-learning by using the expected value of the next state-action values instead of the maximum over all possible actions. This change makes it move deterministically towards better policy-improving moves, similar to how Sarsa behaves in expectation.
@@ -133,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cliff Walking Task Overview
 The cliff walking task is a navigation problem where the agent must move from a start state to a goal state in a grid world. The environment is deterministic, and actions result in specific changes in the agent's position with fixed rewards.
@@ -189,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance of Expected Sarsa Compared to Q-Learning and Sarsa
 
@@ -232,7 +221,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Q-learning and Expected Sarsa Comparison
 Background context: The text compares the performance of Q-learning, Expected Sarsa, and their variants on the cliff walking task. It discusses how different learning rates (\(\alpha\)) affect the algorithms' performance over episodes.
@@ -249,7 +237,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interim and Asymptotic Performance
 Background context: The text discusses the interim and asymptotic performance of various TD control methods (Q-learning, Expected Sarsa) on the cliff walking task. It uses an \(\epsilon\)-greedy policy with \(\epsilon = 0.1\) to evaluate the algorithms.
@@ -265,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Sarsa vs. Sarsa
 Background context explaining the concept of Expected Sarsa and Sarsa, including their differences and performance characteristics over a wide range of step-size parameters. The text mentions that in deterministic state transitions with randomness from the policy (like in cliff walking), Expected Sarsa can use a larger step-size parameter (`\(\alpha = 1\)`) without degrading asymptotic performance, whereas Sarsa performs well only at small values of `\(\alpha\)` where short-term performance is poor. The empirical advantage of Expected Sarsa over Sarsa is highlighted.
@@ -277,7 +263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Maximization Bias
 Background context explaining why maximization bias occurs in TD control algorithms. The text discusses how the maximum of estimated values is used as an estimate of the true maximum value, leading to a positive bias when there's uncertainty about the actual values.
@@ -289,7 +274,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Double Q-learning
 Background context explaining the concept of double learning in TD control algorithms, particularly focusing on how it mitigates maximization bias. The example provided involves a simple episodic MDP with states A and B, where the left action transitions to state B, which has many actions that lead to termination with rewards drawn from a normal distribution.
@@ -301,7 +285,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cliff Walking Example
 Background context explaining the example of cliff walking where state transitions are deterministic but randomness comes from the policy. The text describes how Expected Sarsa can perform better due to its ability to use a larger step-size parameter.
@@ -313,7 +296,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Q-learning vs. Double Q-learning
 Background context explaining the comparison between Q-learning and Double Q-learning on a simple episodic MDP. The text highlights that in the example provided, Q-learning initially learns to take the left action much more often than the right action, while Double Q-learning is essentially unaffected by maximization bias.
@@ -327,7 +309,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Maximization Bias and Its Impact on Q-learning
 
@@ -345,7 +326,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Double Learning and Its Application
 
@@ -367,7 +347,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Double Q-learning Algorithm
 
@@ -393,7 +372,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of Double Q-learning
 
@@ -433,7 +411,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Double Q-learning Update Rule
 
@@ -462,7 +439,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Double Expected Sarsa Update Rule
 
@@ -485,7 +461,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Afterstates in Reinforcement Learning
 
@@ -513,7 +488,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reformulating Jack's Car Rental Task
 

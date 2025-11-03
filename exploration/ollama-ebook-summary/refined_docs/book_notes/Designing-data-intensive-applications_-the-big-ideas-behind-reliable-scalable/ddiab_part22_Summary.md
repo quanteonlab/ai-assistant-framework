@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Concurrency Control in SSI
@@ -48,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Isolation Levels: Read Committed
 The read committed isolation level ensures that a transaction sees only committed changes. It prevents dirty reads, where a transaction can read uncommitted data from another transaction.
@@ -82,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Isolation Levels: Snapshot Isolation
 Snapshot isolation allows transactions to read a consistent snapshot of the database at a point in time, preventing issues like non-repeatable reads and phantom reads.
@@ -118,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Isolation Levels: Serializable
 Serializable is the strongest isolation level, ensuring that transactions are executed in a serial fashion to prevent all concurrency issues. However, it can lead to decreased performance due to additional locking.
@@ -157,7 +152,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unreliable Networks
 Background context: In distributed systems, network reliability is a critical issue. Networks can be unpredictable and fail in various ways, leading to significant challenges for system designers. Understanding these issues helps in building robust systems that can handle network failures gracefully.
@@ -169,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unreliable Clocks
 Background context: In distributed systems, clocks can behave unpredictably due to differences in hardware timing, system load, and external factors such as internet connections. This unreliability can affect time-based operations like timeouts, deadlines, and synchronization.
@@ -181,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Knowledge, Truth, and Lies
 Background context: Understanding the state of a distributed system in the face of partial failures involves grappling with concepts like knowledge, truth, and lies. These terms help in reasoning about what nodes believe they know and how to handle inconsistent information.
@@ -193,7 +185,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partial Failures
 Background context: Partial failures refer to situations where some parts of a system fail but others remain functional. Handling partial failures effectively is crucial for maintaining overall system availability and correctness.
@@ -205,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault Tolerance in Distributed Systems
 Background context: Fault tolerance is essential for ensuring that distributed systems continue to function even when parts of them fail. Techniques like replication and consensus algorithms are used to achieve this.
@@ -217,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consequences of Faults
 Background context: Understanding the consequences of faults helps in designing systems that can handle failures gracefully. These consequences can range from minor inconveniences to system-wide outages.
@@ -229,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimism vs Pessimism in Distributed Systems Design
 Background context: System designers often adopt an optimistic approach (assuming things will work) until they encounter failures. However, a more pessimistic approach is necessary for robustness.
@@ -241,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Engineering Challenges in Distributed Systems
 Background context: Building reliable distributed systems involves overcoming numerous challenges related to network unreliability, clock skew, and handling partial failures.
@@ -255,7 +242,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partial Failures in Distributed Systems
 Distributed systems must deal with partial failures where parts of the system might be broken unpredictably. This can lead to nondeterministic behavior and uncertain outcomes, making it challenging to ensure reliable operations.
@@ -284,7 +270,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spectrum of Large-Scale Computing Systems
 There is a spectrum from high-performance computing (HPC), which uses supercomputers for intensive tasks, to cloud computing with commodity computers and elastic resources. Traditional enterprise datacenters fall in between these extremes.
@@ -318,7 +303,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Faults in Supercomputers vs. Enterprise Datacenters
 Supercomputers typically checkpoint computation state to handle node failures by stopping the entire cluster workload, while traditional enterprise datacenters may have more complex fault tolerance strategies.
@@ -352,7 +336,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Node Reliability and Failure Rates
 
@@ -392,7 +375,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Topologies in Supercomputers vs. Cloud Services
 
@@ -453,7 +435,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partial Failure and Fault-Tolerance
 
@@ -489,7 +470,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Geographically Distributed Systems
 
@@ -533,7 +513,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault Handling in Distributed Systems
 Background context: The reliability of a distributed system is often less than its individual components due to the possibility of faults. These faults can range from network interruptions, component failures, or software bugs. It's crucial for developers and operators to design systems that can handle such faults gracefully.
@@ -545,7 +524,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Building Reliable Systems from Unreliable Components
 Background context: A reliable system can be constructed by layering protocols or algorithms that handle failures at a higher level, even if underlying components are unreliable. Examples include error-correcting codes and TCP on top of IP.
@@ -585,7 +563,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unreliable Networks in Distributed Systems
 Background context: In distributed systems, networks are often asynchronous packet networks where messages may be lost, delayed, duplicated, or out of order. These characteristics introduce challenges for reliable communication.
@@ -624,7 +601,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Pauses in Distributed Systems
 Background context: In distributed systems, nodes can experience pauses due to various reasons such as garbage collection. These pauses can affect the responsiveness of requests.

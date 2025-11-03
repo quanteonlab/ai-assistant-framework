@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Relying on Linearizability
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability in Distributed Systems
 In distributed systems, linearizability is a consistency model that ensures operations appear to be executed atomically and sequentially as if they were operating on a single node. This property is crucial for ensuring correctness in scenarios where multiple nodes interact with shared state.
@@ -55,7 +53,6 @@ Operations in distributed systems need to be linearizable when they involve crit
 ??x
 Linearizable operations are essential for scenarios like enforcing uniqueness constraints, implementing distributed locks and leader election, ensuring cross-channel timing dependencies, and maintaining critical state in distributed databases. They help prevent issues where nodes might disagree on the order or outcome of operations.
 
-**Rating: 8/10**
 
 #### Linearizability and File Storage Consistency
 In the context of distributed systems, ensuring linearizable consistency is crucial for maintaining data integrity across multiple nodes. A system is said to be linearizable if it behaves as though there were only one copy of the data being accessed atomically by all operations.
@@ -187,7 +184,6 @@ public void simulateRaceCondition(int key) {
 ```
 x??
 
-**Rating: 8/10**
 
 ---
 #### Dynamo-Style Quorum Consistency
@@ -254,7 +250,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability and Network Interruptions
 Background context explaining the concept. The CAP theorem states that for a distributed system, it is impossible to simultaneously achieve consistency (C), availability (A), and partition tolerance (P). If an application requires linearizable reads and writes, network interruptions can cause unavailability in certain datacenters.
@@ -349,7 +344,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CAP Theorem Overview
 Background context explaining the CAP theorem. It states that a distributed system can at most provide two of the following three guarantees: Consistency, Availability, and Partition tolerance. When a network fault occurs, you have to choose between either linearizability or total availability.

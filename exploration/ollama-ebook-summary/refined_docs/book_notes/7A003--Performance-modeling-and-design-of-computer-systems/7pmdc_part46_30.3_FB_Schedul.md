@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 46)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 30.3 FB Scheduling
 
 ---
 
-**Rating: 8/10**
 
 #### PLCFS vs PS: Preemption and Performance
 
@@ -45,7 +43,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Derivation of E[T(x)]FB
 
@@ -91,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### DFR and FB Scheduling Performance
 
@@ -109,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Response Time Formulas
 Background context: This section lists various formulas for calculating the mean response time in different queueing models. The formulas are derived from specific conditions and distributions.
@@ -142,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### FB versus PS under Exponential Workloads
 Background context: The problem asks to prove that the mean response times for both FB and PS are equal when the job size distribution is Exponential.
@@ -168,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/G/1/FB Transform
 Background context: The problem asks for the derivation of the transform for response time under FB.
@@ -190,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Database Performance Analysis
 Background context: The problem models a database system with an M/M/1/PS queue and load-dependent service rates.
@@ -212,7 +204,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hybrid FCFS/PS Architecture
 Background context: The problem explores Bianca’s hybrid architecture combining FCFS with PS.
@@ -234,7 +225,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preemptive Priority Queueing
 In contrast to non-preemptive priority queueing, preemptive priority queueing allows for the interruption of a currently executing job if a higher priority job arrives. This ensures that high-priority tasks are given immediate attention without waiting for the current task to complete.
@@ -245,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/G/1 Priority Queue Model
 The M/G/1 priority queue model divides jobs into multiple priority classes based on their importance or urgency. Each class has its own arrival rate and service time distribution. The server serves the highest-priority non-empty queue first, ensuring that higher-priority jobs are processed before lower-priority ones.
@@ -259,7 +248,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Average Number of Jobs in Queue
 The average number of jobs in the queue for a specific priority class \(k\) can be calculated using the formula:
@@ -275,7 +263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Average Time in Queue
 The average time a job spends in queue before being serviced can be calculated using Little’s Law:

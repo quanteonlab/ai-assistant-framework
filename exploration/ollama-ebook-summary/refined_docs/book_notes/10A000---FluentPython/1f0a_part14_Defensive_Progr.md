@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Defensive Programming with Mutable Parameters
 
 ---
 
-**Rating: 8/10**
 
 #### Mutable Default Arguments
 Background context explaining that mutable default arguments can lead to unexpected behavior because they are evaluated only once when the function is defined. This means any changes made to the argument will affect all instances where it was used, leading to shared state issues.
@@ -110,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mutable Objects as Default Parameters
 Background context: In Python, mutable objects (like lists or dictionaries) used as default parameters can lead to unexpected behavior. When a function is called with a default parameter, that parameter is only evaluated once when the function is defined, not each time the function is called. This means any changes made to the object in place will affect all future calls using that default.
@@ -201,7 +198,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### First-Class Objects Concept
 Functions and other program entities that can be created at runtime, assigned to variables or elements in data structures, passed as arguments to functions, and returned as results of functions are referred to as first-class objects. Examples include integers, strings, dictionaries, and functions.
@@ -259,7 +255,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Python Functions as Full-Fledged Objects
 In Python, functions are considered first-class objects. This means that functions can be treated like any other object, such as being assigned to a variable, passed as an argument to another function, and returned from functions as results.

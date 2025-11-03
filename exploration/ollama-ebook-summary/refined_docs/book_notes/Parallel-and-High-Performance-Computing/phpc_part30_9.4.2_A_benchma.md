@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 30)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.4.2 A benchmark application for PCI bandwidth
 
 ---
 
-**Rating: 8/10**
 
 #### Host to Device Memory Transfer Pseudocode
 Explanation of the CUDA-based code that allocates and copies data from the CPU (host) to the GPU (device).
@@ -30,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Pinned and Pageable Memory
@@ -57,7 +54,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-GPU Platforms and MPI
 Background context: In multi-GPU systems, the use of Message Passing Interface (MPI) is often necessary due to the distributed nature of the GPUs. Each MPI rank can be assigned to a single GPU for data parallelism or multiple ranks can share a GPU.
@@ -74,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Transfer Optimization Across Networks
 Background context: Efficient data transfer between GPUs across networks is crucial for applications that require inter-GPU communication. The standard method involves multiple copies and stages, which can be inefficient. Newer technologies like NVIDIA GPUDirect® allow for direct data transfers over the PCI bus without these intermediate steps.
@@ -99,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimizing Data Movement with GPUDirect
 Background context: Direct transfer capabilities like NVIDIA GPUDirect® or AMD's DirectGMA enable more efficient communication between GPUs. By bypassing the CPU memory, these methods significantly reduce the overhead and improve overall performance.
@@ -129,7 +123,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: CPU vs GPU Performance Comparison
 The text provides a comparison between the performance of CPUs and GPUs using Roofline plots, which illustrate theoretical peak performance limits for both architectures. For many applications, these peak values are not always achieved in practice.
@@ -140,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reducing Time-to-Solution with GPU Acceleration
 The example uses Cloverleaf as a proxy application to compare the performance of different systems: an Intel Ivybridge system, a Skylake Gold 6152 system, and a V100 GPU system. The goal is to demonstrate how much faster GPUs can be in reducing the time-to-solution for long-running applications.

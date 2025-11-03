@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 35)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 15.2.1 Flower images as the training data
 
 ---
 
-**Rating: 8/10**
 
 #### Training Process Overview
 Background context: During training, we iterate over the dataset in batches. We add noise to the flower images and present them to the U-Net model along with time steps \(t\). The model predicts noise based on current parameters and minimizes L1 loss (mean absolute error) during each epoch.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Forward Diffusion Process
 Background context: The forward diffusion process is a method used to gradually add noise to clean images over time steps, transforming them into increasingly noisy images. This process is crucial for training denoising models as it simulates how real-world data might degrade over time.
@@ -69,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### UNet Model Overview
 Background context explaining the structure and functionality of a U-Net model in the context of denoising images. The U-Net architecture includes contracting, bottleneck, and expansive paths with skip connections to enable effective feature extraction and reconstruction.
@@ -121,7 +117,6 @@ class UNet(nn.Module):
 
 ---
 
-**Rating: 8/10**
 
 #### Time Embedding in UNet
 Background context explaining how time steps are embedded and used as inputs in various stages of the U-Net model. This embedding allows the model to understand the noise level or denoising step at which each input image is.
@@ -146,7 +141,6 @@ The embedding is then passed through a custom `time_embedding` function and used
 
 ---
 
-**Rating: 8/10**
 
 #### Skip Connections in UNet
 Background context explaining the role of skip connections in U-Net architecture. These connections allow feature maps from earlier layers to be concatenated with those from later layers, providing rich contextual information during the expansive path.
@@ -167,7 +161,6 @@ This mechanism ensures that the model can effectively leverage both coarse and f
 
 ---
 
-**Rating: 8/10**
 
 #### Noisy Image Representation
 Background context: In the process of denoising images, a noisy image at any time step \( t \), denoted as \( x_t \), can be represented as a weighted sum of a clean image, \( x_0 \), and standard normally distributed random noise, \( \epsilon \). This representation is given by:
@@ -183,7 +176,6 @@ This equation ensures that as \( t \) increases from 0 to \( T \), the clean ima
 
 ---
 
-**Rating: 8/10**
 
 #### Denoising U-Net Model Instantiation
 Background context: The denoising U-Net model is instantiated using a predefined class in a local module. The instantiation involves specifying the number of input channels, hidden dimensions, and image size.
@@ -214,7 +206,6 @@ This results in a model with approximately 133.42 million parameters.
 
 ---
 
-**Rating: 8/10**
 
 #### Training the Denoising U-Net Model
 Background context: The training process involves cycling through all batches in the training data, adding random noise to clean images at different time steps, and using these noisy images to predict their corresponding noises.
@@ -234,7 +225,6 @@ This process iteratively trains the model, improving its ability to predict the 
 
 ---
 
-**Rating: 8/10**
 
 #### AdamW Optimizer Overview
 AdamW is a variant of the Adam optimizer that decouples weight decay from the optimization process. This means that instead of applying weight decay directly to the gradients, it applies it directly to the parameters after the optimization step.
@@ -248,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Process for Denoising U-Net
 The training process involves several key steps: introducing noise to clean images, using the denoising U-Net to predict the noise in these noisy images, comparing the predicted noise with actual noise, and adjusting model parameters to minimize the mean absolute error.
@@ -291,7 +280,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CLIP Model: Multimodal Transformer
 
@@ -304,7 +292,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CLIP Training Process
 
@@ -323,7 +310,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CLIP Model Architecture
 

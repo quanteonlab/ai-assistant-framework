@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 14 Server Farms MMk and MMkk. 14.1 Time-Reversibility for CTMCs
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Reversibility for CTMCs
 Background context: In this section, we revisit the concept of time-reversibility but specifically for Continuous-Time Markov Chains (CTMCs). Time-reversibility is a property that allows us to understand how a system behaves when reversed in time. For discrete-time Markov chains (DTMCs), Theorem 9.34 provided conditions under which such reversibility could be established.
@@ -96,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Reversibility of CTMCs
 
@@ -184,7 +181,6 @@ Thus, the Erlang-B formula is:
 
 This derivation connects the Erlang-B formula to the Poisson distribution, highlighting its independence from the specific service time distribution.
 
-**Rating: 8/10**
 
 #### System Utilization Definition
 The system utilization, denoted by \(\rho\), is defined for an M/M/k queueing system as \(\rho = \frac{\lambda}{k\mu}\). Here, \(\lambda\) is the arrival rate into the system in jobs/sec and \(k\mu\) represents the total service capacity of the system in jobs/sec.

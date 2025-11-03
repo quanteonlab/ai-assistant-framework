@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Stars and Snowflakes Schemas for Analytics
 
 ---
 
-**Rating: 8/10**
 
 #### OLTP Databases vs. Data Warehouses
 Background context explaining how transaction processing (OLTP) databases and data warehouses differ, focusing on their data models, query patterns, and optimization goals.
@@ -24,7 +22,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Star Schema in Data Warehouses
 Background context explaining the star schema, a common data model used in data warehouses for analytic purposes.
@@ -38,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fact Tables and Dimension Tables
 Background context explaining the roles of fact tables and dimension tables within a star schema.
@@ -53,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Large Scale Data Warehouses
 Background context explaining the scale and structure of large enterprise data warehouses.
@@ -67,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dremel and SQL-on-Hadoop Projects
 Background context on how some open-source projects are inspired by Google's Dremel for efficient data processing.
@@ -83,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Star Schema
 Background context: The star schema is a data warehouse design that organizes data around facts and dimensions. Fact tables store measurements, while dimension tables provide metadata about these facts. The name "star" comes from the visual representation of these tables in a database schema.
@@ -118,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Column-Oriented Storage
 Background context: In column-oriented storage, data is stored in columns rather than rows. This approach optimizes the storage and querying of large datasets by reducing the amount of disk I/O needed.
@@ -142,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison of Row-Oriented vs. Column-Oriented Storage
 Background context: Traditional row-oriented storage stores all columns in a single table row, while column-oriented storage separates data into individual files per column.
@@ -166,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Query Optimization in Column-Oriented Storage
 Background context: Queries on wide tables can benefit significantly from column-oriented storage because only the necessary columns are read and processed.
@@ -191,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Column-Oriented Storage Layout
 Background context: In column-oriented storage, data is organized by columns rather than rows. This allows for more efficient query processing and compression techniques.
@@ -203,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Column Compression Techniques
 Background context: Column compression aims to reduce disk space usage while maintaining performance. Techniques like bitmap encoding are particularly effective in data warehouses due to repetitive sequences of values.
@@ -215,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Efficient Query Execution with Bitmaps
 Background context: Bitmap indexes are particularly useful for common query operations in data warehouses, such as `IN` clauses.

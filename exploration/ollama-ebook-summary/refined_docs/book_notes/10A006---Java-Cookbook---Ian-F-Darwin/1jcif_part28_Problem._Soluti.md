@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 28)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Problem. Solution. Discussion
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Package in Java
 Background context: In Java, packages are used to organize classes and interfaces. A package name is typically derived from your domain or organization's reverse domain name, such as `com.darwinsys` for an example domain. This helps avoid naming conflicts and organizes code in a hierarchical manner.
@@ -128,7 +126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Java Annotations/Metadata Introduction
 Annotations, or metadata, were introduced to provide a mechanism for adding information to your source code that can be used at runtime. They are reminiscent of Javadoc tags but offer more structured and integrated functionality within the Java language.
@@ -227,7 +224,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modularizing Your Application for Smaller Distributions
 
@@ -305,7 +301,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Module System Introduction
 Background context: The Java 9 introduced the module system (JPMS) to manage dependencies and encapsulate libraries. A `module-info.java` file is used to declare a module's name, its dependencies on other modules, and the packages it exports.

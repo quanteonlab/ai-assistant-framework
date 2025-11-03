@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 41)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Optimizing Memory Control
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Learning Memory Controller
 Description of how reinforcement learning (RL) was used in designing a memory controller, its benefits, and context within existing state-of-the-art controllers.
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Learning in DRAM Controller Design
 Background context: ˙Ipek et al.'s approach models the DRAM access process using an MDP (Markov Decision Process) where states represent transaction queue contents and actions are commands to the DRAM system.
@@ -33,7 +30,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actions in the Reinforcement Learning Model
 Background context: In this model, specific actions like precharge, activate, read, write, and NoOp are defined as potential moves by the reinforcement learning agent.
@@ -45,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Transitions in the MDP
 Background context: The next state depends not only on the scheduler's command but also on uncontrollable aspects like processor core workloads.
@@ -57,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### NoOp Action and Reward Signal
@@ -69,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Features and Action Constraints
 The system uses six integer-valued features to represent states. However, the constraints (sets \(A(S_t)\)) are defined by a broader set of factors related to timing and resource constraints that must be satisfied by the hardware implementation.
@@ -80,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sarsa Learning Algorithm
 The scheduling agent uses the SARSA algorithm to learn an action-value function. This involves updating the Q-values based on the observed rewards and predicted future values.
@@ -93,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tile Coding with Hashing
 The algorithm uses linear function approximation implemented via tile coding with hashing to approximate the action-value function. It divides the state space into 32 tilings, each storing 256 action values as 16-bit fixed-point numbers.
@@ -128,7 +119,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### -Greedy Exploration Strategy
 Exploration is implemented using \(\epsilon\)-greedy with \(\epsilon = 0.05\). This balances exploration (trying new actions) and exploitation (choosing known good actions).
@@ -167,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pipeline Design for Action Value Calculation
 Background context: The design of a system includes two five-stage pipelines to calculate and compare action values at every processor clock cycle, updating appropriate action values. This system accesses tile coding stored on-chip in static RAM.
@@ -192,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Controller Performance Evaluation
 Background context: The performance of the learning controller (RL) was compared with other controllers (FR-FCFS, conventional, and Optimistic) using nine memory-intensive parallel workloads.
@@ -215,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Online Learning Impact
 Background context: The impact of online learning was analyzed compared to a previously-learned fixed policy.
@@ -240,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Genetic Algorithms for Reward Functions
 Background context: The passage mentions that additional actions and more complex reward functions were derived using genetic algorithms to further improve memory controller performance.
@@ -252,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deep Multi-Layer ANN for Feature Design
 Background context: The passage describes how a deep multi-layer artificial neural network (ANN) can automate feature design, making reinforcement learning applicable to more complex problems.
@@ -264,7 +249,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Learning and Backpropagation
 Background context: The text mentions that backpropagation is used in conjunction with reinforcement learning to improve learning internal representations.
@@ -276,7 +260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD-Gammon and Its Learning Process
 Background context: The text discusses how TD-Gammon, an AI program that learned to play backgammon using Temporal Difference (TD) learning, improved through different iterations. It highlights the importance of raw input representations versus specialized features in learning performance.
@@ -311,7 +294,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deep Q-Network (DQN) and Atari 2600 Games
 Background context: Mnih et al. developed the DQN, which combined Q-learning with deep convolutional neural networks to achieve high-level performance on various Atari 2600 games without specialized feature sets.
@@ -372,7 +354,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Arcade Learning Environment (ALE)
 Background context: ALE is a publicly available platform that simplifies the process of using Atari 2600 games for reinforcement learning research. It was created to encourage and facilitate studies on learning algorithms.
@@ -425,7 +406,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### DQN and TD-Gammon Comparison
@@ -438,7 +418,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Experience Replay Method in DQN
 Experience replay is a key component in DQN that helps mitigate issues related to correlation between consecutive experiences. It involves storing the agent's experiences (state, action, reward, next state) in a memory buffer and periodically using these samples for training instead of always using the most recent experience.
@@ -450,7 +429,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model-Free and Off-Policy Nature of Q-Learning
 DQN uses Q-learning as its algorithm due to its model-free and off-policy nature. These characteristics make it particularly suitable for complex environments like Atari games where predicting future states is challenging.
@@ -462,7 +440,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atari Games Environment
 DQN was tested on Atari games using a game emulator (ALE). Since predicting next states for all possible actions directly would be impractical, DQN used an experience replay mechanism combined with Q-learning to handle the complexity.
@@ -474,7 +451,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Evaluation Against Human Player
 Mnih et al.'s experiments compared DQN's performance against both state-of-the-art machine learning systems and human players in Atari games. The results showed that DQN outperformed previous systems on 40 out of 46 games, reaching or exceeding human-level play on 29 games.
@@ -488,7 +464,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mnih et al. (2015) Overview
 Mnih et al. published their groundbreaking work on Deep Q-Networks (DQN) in 2015, which achieved impressive results in playing Atari games at human-level performance without game-specific modifications. This achievement was particularly remarkable because the learning system could handle a wide variety of games using identical preprocessing and network architecture.
@@ -500,7 +475,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preprocessing Steps for DQN Input
 The input to the DQN system involved preprocessing of raw image data from the Atari games. Each frame was first converted into a grayscale 84 x 84 array, and then four consecutive frames were stacked together as the network's input.
@@ -551,7 +525,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### DQN Network Architecture
 The architecture of the DQN included three convolutional layers, followed by a fully connected hidden layer and an output layer. The network was designed to handle partial observability by stacking frames and using rectifier nonlinearities.
@@ -588,7 +561,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action Values in DQN
 The output units of the DQN network represent estimated optimal action values for each state-action pair. The network maps input states to these values.
@@ -622,7 +594,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### DQN Reward Signal Mechanism
@@ -636,7 +607,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exploration vs Exploitation with ε-Greedy Policy
 DQN employed an \(\epsilon\)-greedy policy, where \(\epsilon\) (epsilon) decreases linearly over the first million frames of training. After this initial phase, \(\epsilon\) remained at a low value for the rest of the learning session.
@@ -649,7 +619,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Q-Learning Update Mechanism
 DQN used a semi-gradient form of Q-learning for updating its network weights based on the experiences it had stored in a replay memory. The update formula was:
@@ -668,7 +637,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Experience Replay Technique
 Experience replay stored the agent's experience at each time step in a replay memory, which was used to perform weight updates later on.
@@ -681,7 +649,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mini-Batch Gradient Descent and RMSProp
 To smooth sample gradients and accelerate learning, DQN used a mini-batch method that updated weights after accumulating gradient information over a small batch of images (32 in the case described). They also employed RMSProp, an algorithm that adjusts step-size parameters based on the running average of recent gradients.
@@ -698,7 +665,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Q-learning and Experience Replay
 Q-learning is an off-policy algorithm that does not need to be applied along connected trajectories. Mnih et al. improved Q-learning by incorporating experience replay, which provided several advantages over standard Q-learning.
@@ -710,7 +676,6 @@ Experience replay reduces variance and instability by allowing each stored exper
 
 ---
 
-**Rating: 8/10**
 
 #### Target Update Dependency in Q-learning
 In standard Q-learning, the target value depends on the current action-value function estimate, which can complicate the update process and lead to oscillations or divergence when using parameterized function approximation.
@@ -722,7 +687,6 @@ The dependency of the target on the current weights complicates the update proce
 
 ---
 
-**Rating: 8/10**
 
 #### Bootstrapping in Q-learning
 Mnih et al. introduced a method that brings Q-learning closer to supervised learning by using a technique called target network updates (or bootstrapping), which helps stabilize the learning process.
@@ -734,7 +698,6 @@ Mnih et al.'s approach addresses stability issues by using a separate target net
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation Details
 The updated rule using the target network is given by:
@@ -751,7 +714,6 @@ where \( \tilde{q} \) is the output of the duplicate network. This rule stabiliz
 
 ---
 
-**Rating: 8/10**
 
 #### Q-Learning Modification for Stability
 Background context explaining the modification of standard Q-learning to enhance stability. The error term was clipped within a specific interval to ensure better learning dynamics.
@@ -772,7 +734,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deep Q-Network (DQN) Features and Performance
 Background context explaining the various features of DQN that were tested to understand their impact on performance. The study involved running DQN with different combinations of experience replay and duplicate target network.
@@ -798,7 +759,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deep Convolutional Neural Network (CNN) in DQN
 Background context explaining the role of deep CNNs in enhancing DQN's learning ability. The study compared a DQN with a single linear layer to one using a deep CNN, both processing stacked preprocessed video frames.
@@ -822,7 +782,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advancements in Artificial Intelligence Through DQN
 Background context explaining how DQN contributed to the broader field of artificial intelligence by demonstrating the potential of deep reinforcement learning. The study showed that a single agent could learn problem-specific features to achieve human-competitive skills across multiple tasks.
@@ -855,7 +814,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges in Mastering the Game of Go
 Background context explaining why methods that succeeded in other games were not as successful for Go. Despite improvements over time, no Go program had reached human-level skill until recently.
@@ -889,7 +847,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AlphaGo's Components
 AlphaGo integrated several advanced AI techniques, including deep neural networks (ANNs), supervised learning, Monte Carlo tree search (MCTS), and reinforcement learning to excel in the game of Go. These components worked together to provide a comprehensive approach to playing the game.
@@ -905,7 +862,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AlphaGo Zero: A New Approach
 AlphaGo Zero represented a significant shift in the approach used by DeepMind, relying solely on reinforcement learning with no human data or guidance beyond the basic rules of Go. This program aimed for higher performance and more pure reinforcement learning.
@@ -916,7 +872,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Learning in Go Programs
 Both AlphaGo and AlphaGo Zero utilized reinforcement learning, which involved training the programs through self-play simulations to improve their gameplay strategies over time. This approach allowed them to learn complex game states without explicit programming of specific rules.
@@ -927,7 +882,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Search Space and Complexity in Go
 
@@ -940,7 +894,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluation Function Challenges
 
@@ -953,7 +906,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Tree Search (MCTS) Introduction
 
@@ -994,7 +946,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Iterative Process in MCTS
 
@@ -1013,7 +964,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MCTS Action Selection
 

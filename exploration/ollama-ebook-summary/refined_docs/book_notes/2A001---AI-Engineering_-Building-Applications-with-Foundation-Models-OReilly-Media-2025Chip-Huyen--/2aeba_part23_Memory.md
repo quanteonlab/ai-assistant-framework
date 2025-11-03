@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A001---AI-Engineering_-Building-Applications-with-Foundation-Models-OReilly-Media-2025Chip-Huyen--_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Memory
 
 ---
 
-**Rating: 8/10**
 
 #### Tool Failures and Efficiency
 Background context explaining the concept. Tool failures can happen due to a lack of access to necessary tools or when the agent doesn't have proper authorization to use them. Tool-dependent tasks require independent testing, and each tool call should be printed for inspection. Efficient agents not only complete tasks correctly but do so with minimal resources and time.
@@ -32,7 +30,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluating Agent Efficiency
 Background context explaining the concept. To evaluate an agent’s efficiency, consider metrics like the number of steps required, cost incurred, and time taken for actions. Comparing these with a baseline helps in understanding how well the agent performs compared to alternatives.
@@ -54,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Persisting Information Between Sessions
 Background on how long-term memory helps AI models maintain information across different sessions.
@@ -87,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RAG (Retrieval-Augmented Generation)
 Background context: Retrieval-Augmented Generation (RAG) is a pattern that addresses the limitations of models by retrieving relevant information from external memory before generating responses. This approach enhances response quality and efficiency, making it particularly useful for tasks requiring extensive background knowledge.
@@ -100,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agent Pattern
 Background context: The agent pattern involves an AI planner analyzing tasks, considering solutions, and selecting the best one. Agents can solve complex tasks through multiple steps, requiring powerful models with planning capabilities and memory systems to track progress.
@@ -127,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Security Risks in Agents
 Background context: As agents become more automated, they face increased security risks. These risks are discussed in detail in Chapter 5 and need to be mitigated with rigorous defensive mechanisms.
@@ -145,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finetuning Overview
 Finetuning is a method of adapting a model to a specific task by further training it, either on new data or with modified parameters. It aims to enhance the model’s performance for particular tasks, such as coding, medical question answering, or adhering to specific output styles and formats.
@@ -156,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Footprint of Finetuning
 Compared to prompt-based methods, finetuning requires a much higher memory footprint due to the need for training more parameters. For large foundation models, naive finetuning often necessitates more memory than can fit on a single GPU.
@@ -167,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### PEFT (Parameter-Efficient Finetuning)
 PEFT is a memory-efficient approach that has become dominant in finetuning space. It aims to reduce the number of parameters that need to be fine-tuned, thus lowering memory requirements while still improving model performance.
@@ -178,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adapter-Based Techniques
 Adapter-based techniques are part of PEFT and involve adding small, task-specific modules (adapters) to pre-trained models. These adapters can be fine-tuned independently of the rest of the model, making them more memory-efficient and easier to manage.
@@ -189,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Choosing Between Finetuning and Other Methods
 When deciding between finetuning and other methods like RAG (Retrieval-Augmented Generation), consider factors such as the model's domain-specific capabilities, safety needs, and instruction-following requirements. The choice depends on whether you need more specialized knowledge or a broader, adaptable approach.
@@ -205,7 +193,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transfer Learning
 Transfer learning is a broader concept that focuses on transferring knowledge from one task to another related task. Finetuning can be seen as an application of transfer learning, where pre-trained models are adapted for new tasks by adjusting their parameters based on specific data.
@@ -218,7 +205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transfer Learning Overview
 Transfer learning allows a model trained on one task to be adapted for another related task with fewer resources. This is particularly valuable when there's limited or expensive training data available for the target task.
@@ -232,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sample Efficiency in Transfer Learning
 Transfer learning improves sample efficiency by allowing models to learn the same behavior with fewer examples compared to training from scratch.
@@ -246,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Feature-Based Transfer Learning
 Feature-based transfer learning involves using the features or embeddings extracted by one model as input for another.
@@ -260,7 +244,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finetuning vs. Pre-Training
 Finetuning is an extension of pre-training where a model is adapted for a specific task after being pretrained on general data.
@@ -274,7 +257,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Supervised Finetuning
 Supervised finetuning involves training a pre-trained model using labeled data for a specific task.
@@ -288,7 +270,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preference Finetuning
 Preference finetuning involves training models on tasks where labels are implicit or involve ranking and preferences.
@@ -302,7 +283,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finetuning Process
 Finetuning involves fine-tuning a pre-trained model’s parameters with task-specific data to adapt it for a specific application.
@@ -318,7 +298,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Supervised vs Self-Supervised Finetuning
 Supervised finetuning uses labeled data to refine a model, aligning it with human preferences. In contrast, self-supervised finetuning (also called continued pre-training) relies on unlabeled data for initial learning.
@@ -345,7 +324,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Infilling Finetuning
 Infilling finetuning involves filling in the blank using both preceding and following tokens. This technique is particularly useful for tasks like text editing or code debugging.
@@ -366,7 +344,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Long-Context Finetuning
 Long-context finetuning extends the model's ability to process longer sequences by modifying its architecture, such as adjusting positional embeddings.
@@ -390,7 +367,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Instruction Finetuning
 Instruction finetuning involves training a model with (input, output) pairs where inputs are instructions and outputs are responses. This is also referred to as supervised finetuning.
@@ -411,7 +387,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preference Finetuning
 Preference finetuning uses comparative data in the format of (instruction, winning response, losing response) to train a model to generate preferred outputs.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 77 Understand the Relationship Between Type Checking and Unit Testing
 
 ---
 
-**Rating: 8/10**
 
 #### Environment Modeling for TypeScript Applications
 
@@ -163,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Type Checking and Unit Testing Complementarity
 Type checking helps catch incorrect behaviors by ensuring type safety, while unit tests ensure correct behavior on specific inputs. Both are important for program correctness but serve different purposes.
@@ -223,7 +220,6 @@ To improve build performance, you might consider the following strategies:
 These techniques can help balance between thorough type checking and fast build times.
 ??x
 
-**Rating: 8/10**
 
 #### Transpile Only Mode
 Background context: The text discusses how tools like ts-node and bundlers can perform type checking and then bundle or run the generated JavaScript. However, they do not necessarily need to perform these steps, especially if you are only interested in transpiling TypeScript code into JavaScript.
@@ -286,7 +282,6 @@ $ tsc --listFiles  # Produces output showing all included sources
 By visualizing these relationships, you can better manage your project's dependencies and improve overall performance.
 x??
 
-**Rating: 8/10**
 
 #### General Rule of Thumb for Project Structure
 Background context: The general rule suggests that TypeScript is more beneficial when you have a higher proportion of your own first-party code compared to third-party libraries. This often applies to large corporations with extensive custom codebases, but may not hold true for smaller projects.
@@ -407,7 +402,6 @@ Key strategies include simplifying types to avoid large unions, using interfaces
 x??
 ---
 
-**Rating: 8/10**
 
 #### ECMAScript Modules
 ECMAScript modules provide a standard way to break JavaScript code into separate modules. Prior to ES2015, there was no standard module system, and developers had to use various methods like manual concatenation, Node.js require statements, AMD define callbacks, or TypeScript's own module system.

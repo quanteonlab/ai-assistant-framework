@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 16.3 Burkes Theorem
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Reversibility of CTMCs
 Background context: A Continuous-Time Markov Chain (CTMC) is time-reversible if for every pair of states \(i, j\), the rate of transitions from state \(i\) to state \(j\) equals the rate of transitions from state \(j\) to state \(i\). This can be mathematically expressed as \(\pi_i q_{ij} = \pi_j q_{ji}\) and \(\sum_i \pi_i = 1\).
@@ -56,7 +54,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interdeparture Time Distribution in M/M/1 Queue
 Background context: The interdeparture times for an M/M/1 queue are typically thought to switch between two modes, either being Exp(μ) (when the server is busy) or a combination of Exp(λ) and Exp(μ) (when the server is idle). However, Burke’s theorem states that these interdeparture times should form a Poisson process with rate λ. This concept aims to clarify why this is the case.
@@ -142,7 +139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Comparison of Two Systems
 

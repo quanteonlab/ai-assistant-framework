@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 26)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 16.5 Application Tandem Servers
 
 ---
 
-**Rating: 8/10**
 
 #### Interdeparture Time Distribution in M/M/1 Queues
 
@@ -36,7 +34,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Burke's Theorem for Tandem Queues
 
@@ -64,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Reversibility and Burke's Theorem
 
@@ -88,7 +84,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/1 Queue Analysis
 
@@ -116,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Poisson Arrival Process and M/M/1 Queues
 
@@ -131,7 +125,6 @@ where \(\rho_1 = \lambda / 3\) and \(\rho_2 = \lambda / 6\). The performance is 
 
 ---
 
-**Rating: 8/10**
 
 #### Burke’s Theorem Application in Acyclic Networks
 
@@ -144,7 +137,6 @@ According to part (1) of Burke’s theorem, the arrival process into each server
 
 ---
 
-**Rating: 8/10**
 
 #### Limiting Probabilities in Acyclic Networks
 
@@ -160,7 +152,6 @@ where \(\rho_i\) is the utilization factor for server \(i\).
 
 ---
 
-**Rating: 8/10**
 
 #### Probability of Jobs at a Server
 
@@ -175,7 +166,6 @@ where \(\rho_1 = \lambda / s_1\) and \(s_1\) is the service rate of server 1.
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Time-Reversibility and Burke’s Theorem
@@ -196,7 +186,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Burke’s Theorem
 Burke’s theorem states that in an M/M/1 queue, the departure process is a Poisson process with the same rate as the arrival process. This theorem extends to more general queueing networks under certain conditions.
@@ -209,7 +198,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exact Throughput for Closed System Performance
 The exact throughput \(X\) in a closed queueing network can be calculated using the service rates and routing probabilities. The mean response time (excluding think times) can also be computed.
@@ -228,7 +216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asymptotic Throughput for High N
 The asymptotic throughput for high \(N\) in a closed system performance can be approximated using operational analysis from Chapter 7, which often involves fluid or diffusion approximations.
@@ -242,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Chip Manufacturing Plant
 In a chip manufacturing plant, wafers pass through three stations with Poisson arrivals and exponential service times. The mean time from arrival until completion can be derived by analyzing the queueing network.
@@ -275,7 +261,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Square-Root Stafﬁng in Chip Manufacturing
 The square-root staffing rule is used to determine the minimum number of servers needed such that fewer than 20% of wafers experience any delay.
@@ -302,7 +287,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Alternative Views of Time-Reversibility
 Time-reversibility involves proving properties about cycles and paths in a CTMC.

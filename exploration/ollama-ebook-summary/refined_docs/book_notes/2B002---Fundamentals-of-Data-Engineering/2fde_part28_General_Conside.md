@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 28)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** General Considerations for Serving Data
 
 ---
 
-**Rating: 8/10**
 
 #### Serving Data for Analytics and BI
 Background context: This involves preparing data for use in statistical analysis, reporting, and dashboards. It is a traditional area of data serving that predates IT and databases but remains crucial for stakeholders to have visibility into business, organizational, and financial processes.
@@ -128,7 +126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Self-Service Data Products
 
@@ -195,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Definitions
 Data definitions refer to the meaning of data as it is understood throughout the organization. These meanings are critical for ensuring that data is used consistently and accurately across different departments.
@@ -269,7 +265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Frequency of Data Ingestion
 Background context: The frequency at which data is ingested impacts how it is processed and served. Streaming applications should ideally ingest real-time data streams, even if downstream processing steps are handled in batches. This approach ensures that data is available for immediate action or analysis.

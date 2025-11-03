@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 34)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.4.5 Creating terminal middleware
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Using `MapWhen` Middleware
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Terminal Middleware with `Run` Method
 Background context: Terminal middleware is a type of middleware that does not forward requests to other components and always marks the end of the request pipeline. The `Run` method in ASP.NET Core simplifies creating terminal middleware by directly writing content to the response without calling the next middleware.
@@ -48,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Applying Terminal Middleware Using `Run` Method
 Background context: In ASP.NET Core, terminal middleware components end the request pipeline without forwarding requests. The `Run` method is used in these cases to ensure that no further middleware processes are called.
@@ -69,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Terminal Support in Class-based Middleware
 Background context: Class-based components can be designed to work as both regular and terminal middleware by handling the `nextDelegate` parameter appropriately. When this parameter is provided (non-null), the component behaves like regular middleware; otherwise, it acts as a terminal component.
@@ -108,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding the ASP.NET Core Platform
 Background context: The provided text discusses how to configure and use middleware in an ASP.NET Core application. Middleware is a powerful feature that allows developers to intercept HTTP requests before they reach their destination and modify responses before they are sent back.
@@ -124,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring Middleware with the Options Pattern
 Background context: The text explains that some built-in ASP.NET Core middleware components utilize the options pattern, which allows for configurable settings via a class. This is demonstrated using the `MessageOptions` class to configure custom middleware.
@@ -145,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Accessing Configuration Options in Middleware
 Background context: The provided code snippet shows how to access configuration options from a middleware component using the `IOptions<T>` interface. This allows for dynamic configuration based on application settings.
@@ -167,7 +159,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Injection in ASP.NET Core Middleware
 Dependency injection is a design pattern used to supply dependencies to classes or components at runtime, rather than having them hard-coded. In ASP.NET Core, this allows for more flexible and testable code by injecting configuration options or services directly into middleware components.
@@ -188,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Options Pattern with Lambda Middleware
 The `IOptions<T>` pattern in ASP.NET Core allows you to inject configuration settings into your components. This is particularly useful when working with middleware, as it enables you to easily configure and use the settings defined in your application's configuration.
@@ -209,7 +199,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Options Pattern with Class-Based Middleware
 The options pattern can also be applied to class-based middleware components. This is achieved by injecting `IOptions<T>` into the constructor of the middleware class, which allows access to configuration settings.
@@ -247,7 +236,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring the Middleware with Dependency Injection
 Configuring middleware in ASP.NET Core using dependency injection involves setting up services and then using `UseMiddleware` or `Use` to integrate the middleware into the request pipeline. The configuration is often done through a setup like `ConfigureServices`, where you define how your services should be configured.
@@ -276,7 +264,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing Middleware with Configuration
 Testing middleware that uses configuration settings involves ensuring the middleware correctly reads and processes the configured values. This is typically done by making requests to your application and verifying the output matches the expected behavior based on the configuration.

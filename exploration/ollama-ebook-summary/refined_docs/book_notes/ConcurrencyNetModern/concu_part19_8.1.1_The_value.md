@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.1.1 The value of asynchronous programming
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Asynchronous Programming Model (APM)
 Asynchronous programming derives from the Greek words "asyn" meaning "not with" and "chronos" meaning "time," describing actions that aren't occurring at the same time. In the context of running a program, asynchronous operations are those that begin with a specific request but complete at some point in the future independently.
@@ -17,7 +15,6 @@ Asynchronous operations start with a request and may or may not succeed, complet
 
 ---
 
-**Rating: 8/10**
 
 #### Difference Between Synchronous and Asynchronous Operations
 Synchronous operations wait for one task to complete before moving on to another, whereas asynchronous operations can start a new operation independently of others without waiting for completion.
@@ -28,7 +25,6 @@ Synchronous operations block the execution until the current task completes. Asy
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Programming on Server Side
 Asynchronous programming allows systems to remain responsive by not blocking threads when waiting for I/O operations to complete. This reduces the need for more servers and improves scalability.
@@ -39,7 +35,6 @@ Asynchronous programming prevents bottlenecks caused by blocking I/O operations,
 
 ---
 
-**Rating: 8/10**
 
 #### Task-Based Asynchronous Programming Model (TAP)
 The Task-based Asynchronous Pattern (TAP) is a model in .NET that enables developers to write asynchronous code more easily by managing background operations, ensuring tasks can run concurrently without blocking threads.
@@ -50,7 +45,6 @@ TAP is an asynchronous programming model used in .NET for developing robust, res
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Processing with Asynchronous Operations
 Asynchronous operations enable processing multiple I/O operations simultaneously, enhancing performance and responsiveness regardless of hardware limitations.
@@ -61,7 +55,6 @@ Asynchronicity allows concurrent execution of tasks, reducing wait times for I/O
 
 ---
 
-**Rating: 8/10**
 
 #### Customizing Asynchronous Execution Flow
 Customization of asynchronous execution flow is crucial to managing complex workflows where tasks depend on each other or have specific timing requirements.
@@ -72,7 +65,6 @@ Customizing asynchronicity involves managing task dependencies, ensuring proper 
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Semantics in Asynchronous Programming
 Performance semantics refer to understanding how asynchronicity affects the performance characteristics of an application, such as responsiveness and scalability.
@@ -83,7 +75,6 @@ Performance semantics involve understanding how asynchronicity impacts applicati
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Programming Model (APM)
 Asynchronous programming is a method of organizing computation such that waiting tasks do not block the execution of other tasks. It's particularly useful when dealing with I/O operations, where delays are common and can significantly impact performance if handled synchronously.
@@ -105,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blocking I/O Operations and Synchronous Programming
 Blocking I/O operations refer to tasks that halt the execution of a thread until they complete. In synchronous programming, when such an operation is initiated, the calling thread must wait for it to finish before proceeding with other code.
@@ -128,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuation-Passing Style (CPS)
 Continuation-passing style (CPS) is a programming technique that involves passing the next operation as a parameter to the current function. This allows functions to be more flexible and control their own continuation, enabling them to continue execution after an asynchronous operation completes.
@@ -156,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Programming for Performance and Scalability
 Asynchronous programming helps in building scalable applications by avoiding thread blocking during I/O operations. This allows the application to handle more concurrent tasks efficiently without exhausting resources.
@@ -192,7 +180,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronous I/O Processing
 Synchronous I/O processing involves each new request starting its execution while the caller waits for a response. A new thread is created to run every database query, making the process synchronous. Threads must wait for a database response before proceeding, and this leads to an increase in system resources such as threads and memory.
@@ -228,7 +215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Pool Exhaustion
 Thread pool exhaustion occurs when all threads in a thread pool are busy, leading to incoming requests being queued. This results in an unresponsive system where blocked threads can only be freed once database responses come back, causing high frequency of context switches and negatively impacting performance.
@@ -267,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous I/O Processing
 Asynchronous I/O processing allows threads to be reused by the scheduler, preventing them from waiting for I/O operations to complete. This model improves efficiency by recycling resources during idle times and avoids creating new resources, optimizing memory consumption and enhancing performance.
@@ -305,7 +290,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switching Impact on Performance
 Context switching, which occurs when threads are constantly being switched in and out of execution by the scheduler, can significantly degrade system performance. In synchronous I/O processing, this is exacerbated due to the need for waiting threads to be re-awakened after database responses.
@@ -342,7 +326,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous I/O Operations
 
@@ -355,7 +338,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OS Scheduler Optimization
 
@@ -368,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Completion Notification
 
@@ -381,7 +362,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scalability in Asynchronous Programming
 
@@ -394,7 +374,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Critical Paths
 
@@ -407,7 +386,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Resource Availability
 
@@ -420,7 +398,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scalability and Resource Management
 
@@ -433,7 +410,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Operations vs Synchronous Operations
 
@@ -446,7 +422,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### CPU-bound vs. I/O-bound Operations
@@ -474,7 +449,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Programming Model (APM)
 Background context on how asynchronous programming allows multiple tasks to run independently and in parallel, enhancing the execution of I/O-bound computations. This model reduces blocking by returning control to the caller immediately after starting a task.
@@ -500,7 +474,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unbounded Parallelism with Asynchronous Programming
 Background context on how asynchronous programming supports unbounded parallelism by leveraging I/O-bound operations, which are not constrained by the number of CPU cores. This allows for efficient use of resources in single-core environments.
@@ -532,7 +505,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Non-blocking and Asynchronous Operations
 Background context on the interchangeability of non-blocking and asynchronous operations, which are closely related concepts in asynchronous programming. Both terms describe scenarios where tasks do not block waiting for external events.
@@ -560,7 +532,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Parallel Asynchronous Computations
@@ -604,7 +575,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Execution of Async Operations
 Background context explaining how asynchronous operations can be executed in parallel, regardless of the number of available cores. The example demonstrates running multiple asynchronous operations concurrently on a four-core machine.
@@ -622,7 +592,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronicity vs. Parallelism
 Background context explaining the differences between asynchronicity and parallelism, focusing on their application in CPU-bound and I/O-bound scenarios.
@@ -640,7 +609,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Asynchronous Programming
 Background context: Asynchronous programming is a pattern that offloads work from the main execution thread, delivering better responsiveness and scalability. It splits long-running functions into two parts: one for starting the asynchronous operation (Begin) and another for handling its completion (End).
@@ -651,7 +619,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blocking vs Non-Blocking Operations
 Background context: In synchronous code, operations like file reading block the execution of the calling thread. Asynchronous operations use callbacks or await patterns to notify the completion of asynchronous I/O without blocking.
@@ -662,7 +629,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous I/O in .NET
 Background context: In .NET, the FileOptions.Asynchronous flag ensures that file operations are performed asynchronously at the operating system level. This improves performance by allowing other tasks to run while waiting for I/O.
@@ -673,7 +639,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Pool and Asynchronous Execution
 Background context: The thread pool managed by the Common Language Runtime (CLR) schedules tasks for execution. When an I/O operation starts in an asynchronous method, the current thread is returned to the thread pool to handle other work if available.
@@ -686,7 +651,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Callback Mechanism
@@ -711,7 +675,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Operations and Callback Hell
 Background context explaining how a series of asynchronous operations can lead to callback hell, which is difficult to maintain and read. Callbacks create a chain of nested functions, making the code hard to follow and manage.
@@ -762,7 +725,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Managing Asynchronous Operations with Tasks
 Background context explaining how using the `Task` class can simplify managing asynchronous operations and avoid callback hell. The `Task` class provides a more structured way to handle async operations, making it easier to manage state and handle errors.
@@ -821,7 +783,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Error Handling and Resource Management
 Background context explaining the importance of proper error handling and resource management in asynchronous programming. Using `try-catch` blocks and disposing resources correctly ensures that your application behaves predictably and efficiently.
@@ -905,7 +866,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Programming Breaks Code Structure
 Background context: In traditional asynchronous programming model (APM), the operation starts, but its callback notification is received after it completes. This decouples the start of the operation from the completion and makes debugging and exception handling difficult.
@@ -917,7 +877,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event-based Asynchronous Programming (EAP)
 Background context: EAP was introduced as an alternative to APM with .NET 2.0. It uses events to notify when an asynchronous operation completes. This model simplifies some aspects of handling progress reporting, cancellation, and error handling.
@@ -929,7 +888,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task-based Asynchronous Programming (TAP)
 Background context: TAP aims to simplify asynchronous programming by focusing on syntax. It uses `Task` and `async/await` keywords in C#. TAP encapsulates long-running operations into tasks that can be awaited.
@@ -941,7 +899,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task and Task<T> Constructs in C#
 Background context: In .NET 5.0, `Task` and `Task<T>` were introduced to model asynchronous operations. The `async/await` keywords are used to write asynchronous methods.
@@ -961,7 +918,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Pool in .NET
 Background context: The .NET thread pool manages worker and I/O threads. Worker threads handle CPU-bound tasks, while I/O threads are more efficient for I/O-bound operations.
@@ -973,7 +929,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using `await` with `Task.Run`
 Background context: In C#, the `await` keyword can be used within an `async` method to wait for a task without blocking the calling thread.

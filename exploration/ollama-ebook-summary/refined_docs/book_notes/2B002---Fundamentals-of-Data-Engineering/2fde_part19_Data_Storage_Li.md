@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Data Storage Lifecycle and Data Retention
 
 ---
 
-**Rating: 8/10**
 
 #### Zero-Copy Cloning
 Background context: In cloud-based systems, zero-copy cloning is a technique where a new virtual copy of an object (e.g., a table) is created without physically copying underlying data. Instead, new pointers are created to raw data files, and any future changes will only be recorded in the new object.
@@ -112,7 +110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Engineer Responsibilities Based on Maturity Level
 In early-stage data maturity, a data engineer will manage the entire storage system and workflow. As organizations mature, the scope of responsibility might diminish to managing specific sections of the storage system while collaborating with teams responsible for ingestion and transformation.
@@ -212,7 +209,6 @@ MonitoringSystem.init("my-object-storage");
 ```
 x??
 
-**Rating: 8/10**
 
 ---
 #### Design for Reliability and Durability

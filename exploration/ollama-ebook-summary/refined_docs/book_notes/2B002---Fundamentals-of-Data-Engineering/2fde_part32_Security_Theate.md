@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 32)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Security Theater Versus Security Habit. The Principle of Least Privilege
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### At Face Value - Handling Sensitive Data and Credentials
@@ -82,7 +80,6 @@ This approach ensures that security measures are tailored to the specific risks 
 x??
 ---
 
-**Rating: 8/10**
 
 #### Principle of Least Privilege
 The principle of least privilege (PoLP) ensures that individuals and systems are granted only the minimum level of access necessary to perform their job functions. This minimizes potential damage from security breaches or errors.
@@ -168,7 +165,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Security Practices for Personal Devices
 Background context: This section emphasizes the importance of treating company-issued devices as personal extensions and maintaining them closely. It also discusses best practices during screen sharing, such as protecting sensitive information and only sharing what is necessary.

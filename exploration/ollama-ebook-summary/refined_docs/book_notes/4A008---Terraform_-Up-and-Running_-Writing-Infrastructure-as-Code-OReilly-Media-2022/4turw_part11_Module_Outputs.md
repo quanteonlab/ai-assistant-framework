@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Module Outputs
 
 ---
 
-**Rating: 8/10**
 
 #### Using Local Values for Ease of Maintenance
 Local values can be used to make Terraform configurations more readable and maintainable. By defining variables like `local.any_port`, `local.any_protocol`, and `local.all_ips` in your configuration, you avoid hardcoding these values directly into the resource blocks.
@@ -33,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defining Auto Scaling Schedules Directly in Production
 Auto scaling schedules can be used to adjust the number of servers based on traffic patterns. In this example, you define two scheduled actions: one for scaling out during business hours and another for scaling in at night.
@@ -60,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Accessing Module Outputs for Resource Parameters
 Modules can output values that can be used in other configurations or modules. In this scenario, you need to access the name of an Auto Scaling Group (ASG) defined within a module.
@@ -98,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File Paths and Path References
 Background context explaining how file paths can be a challenge when using Terraform, especially with modules. Discuss why relative paths are necessary and introduce path references.
@@ -121,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inline Blocks vs Separate Resources in Terraform Modules
 Background context explaining the difference between using inline blocks and separate resources for configurations within a module, and the potential issues when mixing both.
@@ -167,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exporting Outputs in Terraform Modules
 Background context on why it's useful to export specific outputs, such as the DNS name of an ALB, so users can easily reference them outside the module.
@@ -196,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Security Group IDs as Outputs
 Background context on why exporting the ID of a security group attached to an ALB can be useful for extending or modifying configurations in other parts of the infrastructure.
@@ -233,7 +225,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Isolation
 Background context: The provided text discusses how the network environments created using Terraform are not isolated at a network level, which can pose risks. Resources from one environment (e.g., staging) can communicate with another environment (e.g., production), leading to potential issues like configuration mistakes affecting both or security breaches compromising multiple environments.
@@ -244,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Module Versioning
 Background context: The text explains why it’s important to version modules when working with Terraform, especially for separate environments like staging and production. This helps in making changes in one environment without affecting another by using different versions of the same module.
@@ -255,7 +245,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Separating Module and Live Repositories
 Background context: The text suggests storing reusable modules in one Git repository and the configuration for live environments in another. This separation allows for better management of infrastructure changes without affecting live deployments directly.
@@ -279,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example: Versioned Modules in Repositories
 Background context: The text provides an example of how to use different versions of the same module for different environments.
@@ -317,7 +305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Remote Repository and Pushing Code
 Background context: After initializing your Git repositories, you need to set up a remote repository on platforms like GitHub. This allows you to push changes to a central location for collaboration or backup.
@@ -334,7 +321,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Specifying Module Version in Terraform Code
 Background context: When using modules, specifying the correct version ensures that you are using the intended code. This is especially important when multiple environments or teams need to use consistent versions.
@@ -358,7 +344,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Updating and Testing Modules in Staging
 
@@ -377,7 +362,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deploying Modules in Different Environments
 

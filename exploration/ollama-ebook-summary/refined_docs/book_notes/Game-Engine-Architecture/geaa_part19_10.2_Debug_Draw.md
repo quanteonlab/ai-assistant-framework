@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 10.2 Debug Drawing Facilities
 
 ---
 
-**Rating: 8/10**
 
 #### Crash Reports
 Crash reports are a crucial tool for identifying and fixing issues in games. When a game crashes, these reports can provide detailed information that helps developers understand why and how it failed.
@@ -42,7 +40,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Debug Drawing Facilities
 Debug drawing facilities are essential tools for visualizing mathematical and logical errors during development. Modern games rely heavily on mathematical operations to position, orient, move objects, test collisions, cast rays, and more.
@@ -62,7 +59,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Screenshot of the Game at Crash Time
 Screenshots can provide a visual reference to understand what was happening in the game when it crashed.
@@ -80,7 +76,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Visualizing NPC Perception and Line of Sight
 
@@ -110,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Visualizing Explosion Blast Radius
 
@@ -147,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Debug Drawing API Requirements
 
@@ -199,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Primitive Drawing with Depth Testing
 Background context: This concept discusses how to draw primitives (basic shapes and lines) in a 3D scene, allowing for both depth testing and its disabling. Enabling depth testing ensures that only visible parts of the primitives are drawn, while disabling it makes the drawing more straightforward but may hide parts of the primitives behind objects.
@@ -222,7 +214,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Drawing Primitives Anywhere in Code
 Background context: Debugging often requires drawing primitives at various points within the code. Most rendering engines have specific phases for submitting geometry, but a flexible API allows calls from anywhere.
@@ -242,7 +233,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Efficient Handling of Multiple Debug Primitives
 Background context: Managing a large number of debug primitives efficiently is essential to ensure the game remains usable even when debugging features are active.
@@ -264,7 +254,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of In-Game Menus and Debug Draw
 Background context: The text covers the integration of debug draw features and in-game menus within game engines. It explains how these tools help developers quickly visualize and adjust various aspects of gameplay.
@@ -279,7 +268,6 @@ Debug draw functions and in-game menus significantly enhance game development by
 
 ---
 
-**Rating: 8/10**
 
 #### Background Meshes and Rendering Control
 In game development, rendering engines control how 3D models are displayed. This involves managing various aspects such as lighting, texture application, and object visibility. The specific configuration can be accessed through menus within the engine.
@@ -300,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### In-Game Console in Game Development
 An in-game console provides a command-line interface to game engine features, similar to how a DOS prompt or shell access system functions. It allows developers to adjust global settings and run commands directly.
@@ -320,7 +307,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Debug Cameras and Pausing Games
 Debug cameras allow developers to fly around the game world from a detached perspective, useful for scene inspection. Pausing the game while keeping the camera control active is crucial for detailed analysis.
@@ -340,7 +326,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pausing the Game for Debugging
 Pausing the game allows developers to inspect various aspects without altering the current state. Keeping the camera controls active during this pause is important.

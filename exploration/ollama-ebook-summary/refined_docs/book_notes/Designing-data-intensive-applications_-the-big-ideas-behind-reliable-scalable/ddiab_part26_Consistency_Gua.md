@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 26)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Consistency Guarantees
 
 ---
 
-**Rating: 8/10**
 
 #### Consistency and Fault Tolerance in Distributed Systems
 
@@ -39,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability
 
@@ -73,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event Ordering in Distributed Systems
 
@@ -109,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Transactions and Consensus
 
@@ -149,7 +144,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability Overview
 Background context: In an eventually consistent database, different replicas might return different answers to the same question at the same time. To avoid this confusion and ensure all clients see a single copy of data with up-to-date values, linearizability is introduced. It makes systems appear as if there were only one replica.
@@ -159,7 +153,6 @@ Linearizability ensures that operations on the database are atomic and consisten
 
 ---
 
-**Rating: 8/10**
 
 #### Making a System Linearizable
 Background context: To achieve linearizability, all read operations must reflect the most recent write operation that has completed. This means that after a client successfully writes to the database, subsequent reads from any client must return that value immediately without delay or stale data.
@@ -169,7 +162,6 @@ Linearizability ensures consistency by treating each atomic operation as if it w
 
 ---
 
-**Rating: 8/10**
 
 #### Register in Linearizable Systems
 Background context: In distributed systems literature, a register (like key x) refers to a single piece of data that can be read from and written to by different clients concurrently. This concept is analogous to variables in programming languages but operates across multiple nodes in a network.
@@ -179,7 +171,6 @@ In linearizable databases, a register (like key x) represents a piece of data th
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizable System Example
 Background context: Figure 9-2 illustrates a scenario where three clients (C1, C2, and C3) concurrently read and write to the same key x in a linearizable database. Each client's operations are treated as if they were performed sequentially on a single copy of the data.
@@ -189,7 +180,6 @@ In a linearizable system, even though multiple clients can read and write concur
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing Linearizability
 Background context: Achieving linearizability involves careful handling of concurrent requests to ensure that the order of operations is preserved as if they were executed sequentially on a single node. This often requires sophisticated algorithms and coordination mechanisms.
@@ -200,7 +190,6 @@ Implementing linearizability typically involves using synchronization primitives
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Global Clock Assumption
@@ -240,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability
 
@@ -269,7 +257,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability Constraint
 
@@ -301,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability Concept
 Linearizability is a property of concurrent systems where each operation appears to have executed atomically at some point between its start and end. This means that if one client's read returns the new value, all subsequent reads must also return the new value until it is overwritten.
@@ -313,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Read and Write Operations
 In linearizable systems, writes to a shared variable must be visible to all subsequent reads after they have occurred. The timing of these operations is crucial for maintaining consistency.
@@ -325,7 +310,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Compare-and-Swap Operation
 The `cas(x, vold, vnew)` operation allows for atomic comparison and update of a register's value based on its current state.
@@ -337,7 +321,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Non-Linearizable Behavior Example
 The example in the text shows a scenario where the final read by client B is not linearizable because it returns an outdated value.
@@ -353,7 +336,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Compare-and-Swap (CAS)
 Atomic compare-and-swap operations are used to ensure that a value is not concurrently changed by another client between reading and writing. This operation checks if the current value of a variable matches an expected value; if it does, it writes a new value. Otherwise, it fails without changing the state.
@@ -380,7 +362,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Non-Linearizable Reads
 Non-linearizable reads occur when a read operation returns a value that is not the latest written by any transaction. This can happen if another transaction writes a different value between the time of the first and second read.
@@ -407,7 +388,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Serializability vs. Linearizability
 Serializability and linearizability are two different consistency models in database systems.
@@ -438,7 +418,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability in Practice
 Linearizability is tested by recording the timings of all requests and responses to ensure they can be arranged into a valid sequential order.
@@ -491,7 +470,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability and its Importance in Distributed Systems
 
@@ -510,7 +488,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Uniqueness Constraints
 
@@ -539,7 +516,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability in Distributed Locking
 
@@ -582,7 +558,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ensuring Consistency in Distributed Systems
 

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chain Prompting Breaking up the Problem
 
 ---
 
-**Rating: 8/10**
 
 #### One-Shot Prompting Overview
 One-shot prompting is a technique where you provide a single example to guide the model, allowing it to generate responses that align with the provided context. It's useful when you want to give the AI a clear direction without overwhelming it with too many examples.
@@ -116,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Large Language Models as Optimizers
 Background context: This research focuses on using large language models (LLMs) to optimize problems. The paper "Large language models as optimizers" by Chengrun Yang et al. discusses how these models can be utilized for optimization tasks, potentially improving efficiency and effectiveness compared to traditional methods.
@@ -164,7 +161,6 @@ x??
 ---
 These flashcards cover key concepts from the provided text, ensuring a clear understanding without pure memorization.
 
-**Rating: 8/10**
 
 #### Quantization of LLM Models
 Quantization is a technique used to reduce the number of bits required to represent the parameters of a large language model (LLM) while attempting to maintain most of its original information. This process can significantly improve the efficiency and speed of running the model without losing much accuracy.

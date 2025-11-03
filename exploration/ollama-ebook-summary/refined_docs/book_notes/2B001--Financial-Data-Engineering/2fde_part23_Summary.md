@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Data Lifecycle Challenges in ML Workflow Design
 Background context: The article by Neoklis Polyzotis, Sudip Roy, Steven Euijong Whang, and Martin Zinkevich discusses the challenges faced in designing reliable and high-performance machine learning (ML) workflows. These challenges are primarily centered around effective data management and ensuring data quality.
@@ -162,7 +160,6 @@ These workflows are essential for effective data management and analysis in fina
 
 ---
 
-**Rating: 8/10**
 
 #### Entities and Their Attributes
 Background context: In the project, you are designing a bank account management system using PostgreSQL. The conceptual phase focuses on understanding business requirements and defining the high-level structure of the database system by identifying entities and their attributes.
@@ -323,7 +320,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Business Constraints for Database Implementation
 Background context: The business team has outlined specific constraints to ensure high data quality, consistency, and integrity within a database implementation. These constraints cover various aspects such as minimum balance limitations, unique IDs, data redundancy minimization, null value restrictions, and uniqueness of certain fields.

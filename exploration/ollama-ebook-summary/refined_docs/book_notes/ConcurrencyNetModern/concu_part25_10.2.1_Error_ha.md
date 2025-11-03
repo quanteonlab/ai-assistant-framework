@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 10.2.1 Error handling in FP exceptions for flow control
 
 ---
 
-**Rating: 8/10**
 
 #### Option Type for Error Handling in Functional Programming
 Background context explaining how traditional exception handling can obfuscate programmer intentions and lead to complex, less maintainable code. The introduction of functional programming (FP) paradigms offers a cleaner approach by explicitly returning values indicating success or failure rather than using exceptions.
@@ -40,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Retry Mechanism with Error Handling
 Background context explaining the importance of retrying operations that might fail for various reasons, especially in distributed systems where network issues or transient errors are common. The `Retry` combinator can be used to automatically retry an operation a specified number of times before giving up.
@@ -74,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task.Catch for Error Handling in Functional Programming
 Background context explaining the use of `Task.Catch` to handle exceptions within asynchronous tasks, making it easier to manage errors without breaking the flow. This is particularly useful when working with async operations that might throw unexpected exceptions.
@@ -106,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Option Type and Higher-Order Functions in C#
 Background context: The `Option<T>` type is a fundamental concept in functional programming, which provides a way to handle optional values. It helps mitigate null pointer exceptions by ensuring that every value has an explicit representation of absence (`None`) or presence (`Some`). This approach simplifies the handling of potential null values and enhances code readability.
@@ -134,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Errors with Task<Option<T>> in C#
 Background context: The `Task<Option<T>>` type is used to handle asynchronous operations that may or may not return a value. It wraps an `Option<T>` inside a task, making it easier to manage both synchronous and asynchronous scenarios.
@@ -159,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Async.Catch Function for Error Handling
@@ -178,7 +171,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Converting Choice to Option for Asynchronous Operations
 To simplify the handling of asynchronous operations and convert them into a more idiomatic functional style, you can use `Option.ofChoice`. This function takes a `Choice<'a, exn>` and converts it into an `Option<'a>`, allowing you to handle errors gracefully.
@@ -196,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Errors with Option vs Result Types
 
@@ -227,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Introducing the Result Type
 
@@ -262,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Result Type for Debugging
 
@@ -297,7 +286,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Different Error Cases with Result Type
 
@@ -338,7 +326,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Result Types
 Background context explaining the need for handling errors using `Result` types. This type is an alternative to `Option` and provides more detailed error information without propagating side effects.
@@ -359,7 +346,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparing Nullable Primitives, Option, and Result Types
 Background context comparing different types of error handling in various programming languages. This includes nullable primitives, `Option`, and `Result` types.
@@ -385,7 +371,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generic Result Type Implementation in C#
 Background context on how to implement a generic `Result<T>` type in C# that is polymorphic and handles exceptions.

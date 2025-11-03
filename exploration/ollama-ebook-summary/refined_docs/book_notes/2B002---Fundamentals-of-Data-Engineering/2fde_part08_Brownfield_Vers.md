@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Brownfield Versus Greenfield Projects
 
 ---
 
-**Rating: 8/10**
 
 #### Tight vs Loose Coupling in Data Architecture
 Background context: The concepts of tight versus loose coupling originated from software development. These principles have been around for over 20 years, but are now being applied to data architecture. In traditional architectures, data is often monolithic and tightly coupled, which can limit flexibility and scalability.
@@ -195,7 +193,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multitenancy Considerations
 Background context: In large organizations, multitenancy is a common practice where different departments or customers share resources. The main factors to consider are performance and security. Performance issues can arise due to resource contention (noisy neighbor problem), while security requires proper data isolation to prevent unauthorized access.
@@ -249,7 +246,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Brownfield Projects
 Background context explaining brownfield projects, including their constraints and approach. Often involve refactoring an existing architecture with limited flexibility due to past choices.
@@ -345,7 +341,6 @@ public class ResumeDrivenExample {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Data Lakes and Their Challenges
 Background context: The initial data lakes, while promising flexible storage of large volumes of data, faced significant challenges. These included difficulty in managing deletions or updates to rows (DML operations), high costs associated with managing Hadoop clusters, and a steep learning curve for users.
@@ -434,7 +429,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Converged Data Platform
@@ -468,7 +462,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lambda Architecture Overview
 Lambda architecture addresses the challenges of combining batch and stream processing by using a dual-layer system. The batch layer handles historical data, while the speed layer processes real-time events. However, managing these two systems can be error-prone due to their different codebases.
@@ -532,7 +525,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real-time vs. Batch Processing
 Background context explaining how real-time and batch processing can use nearly identical code, adopting a philosophy of "batch as a special case of streaming." Various frameworks like Apache Flink and Spark support this approach by providing unified stream and batch processing capabilities.

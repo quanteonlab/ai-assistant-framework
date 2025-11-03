@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A001---The-Book-of-Kubernetes_-A-Complete-Guide-to-Container-Orchestration-No-Starch-Press-2022Alan-Hohn--_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Linux Control Groups
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Process Prioritization and CPU Utilization
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Container Orchestration Challenges
 Explanation: In multitenant Kubernetes clusters, container orchestration faces challenges due to varying priorities and unpredictable CPU usage patterns among multiple applications or teams.
@@ -31,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linux Control Groups (cgroups)
 Explanation: cgroups are a mechanism within the Linux kernel that can enforce limits on resource usage by processes or groups of processes, ensuring that each process gets only as much CPU time as it is allocated.
@@ -43,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hierarchy of Control Groups
 Explanation: Cgroups in Linux form a hierarchical structure where each resource type (CPU, memory, block device) has its own cgroup hierarchy. Processes are placed within these hierarchies, and the kernel enforces limits from the group.
@@ -55,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating and Configuring Cgroups
 Explanation: In Linux, configuring cgroups involves managing processes through a special filesystem that mirrors the hierarchical structure of cgroups.
@@ -72,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kubernetes and Resource Management
 Explanation: To effectively manage resource allocation in Kubernetes, specific resource requests and limits are set for containers. This ensures that even non-real-time processes do not consume more resources than allocated.
@@ -102,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Understanding cgroups and CPU Controls
@@ -115,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using `cpu.cfs_period_us` and `cpu.cfs_quota_us`
 These files control the CPU time allocation per period.
@@ -137,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Setting CPU Quotas for Containers
 Background context: In this scenario, we need to control the CPU usage of a container named `stress` by setting an absolute quota. The method involves modifying the `cpu.cfs_quota_us` file within the cgroup filesystem, which specifies how much time in microseconds (μs) the processes can use the CPU per period.
@@ -156,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Launching a Container with CPU Limits
 Background context: Once you have defined the necessary YAML files for your Pod and containers, you can launch a container with predefined CPU limits by running these configurations through `crictl`.
@@ -183,7 +172,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CPU Usage and Quotas
 Background context explaining the concept of CPU usage, including how `top` provides a snapshot of process activity. The text describes using `stress-ng` to monitor CPU usage and shows how CRI-O manages CPU quotas via cgroups.
@@ -207,7 +195,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unix Limits and Containers
 
@@ -220,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### cgroups for Memory Limits
 
@@ -233,7 +219,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OOM Killer Overview
 Background context explaining the concept. The Out of Memory (OOM) killer is a feature in Linux that helps manage system memory when it becomes scarce by killing processes to free up memory. This is particularly useful in containerized environments where individual containers are not critical and can be restarted.
@@ -244,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differences Between Regular Memory Limits and OOM Killer
 Background context explaining how regular memory limits differ from the OOM killer behavior. Regular memory limits cause immediate failure when exceeded, whereas the OOM killer sends SIGKILL signals to terminate processes.
@@ -255,7 +239,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conclusion: Handling Memory Constraints in Containers
 Background context summarizing the need for handling memory constraints effectively in containerized environments. The OOM killer is a useful tool, but it should be balanced with proper resource management practices to ensure system stability and efficiency.
@@ -268,7 +251,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Bandwidth Control Overview
 Background context: This section explains the challenges in controlling network bandwidth, including why managing ingress traffic at the host level is difficult. It introduces VLANs and traffic shaping as potential solutions.
@@ -283,7 +265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using `tc` for Traffic Control
 Background context: The text explains how to use `tc` (Traffic Control) to set a quota for outgoing traffic, providing an example with specific parameters.

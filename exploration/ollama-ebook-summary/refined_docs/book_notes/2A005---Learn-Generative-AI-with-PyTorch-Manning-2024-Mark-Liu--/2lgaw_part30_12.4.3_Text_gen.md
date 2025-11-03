@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 30)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.4.3 Text generation with different versions of the trained model
 
 ---
 
-**Rating: 8/10**
 
 #### Prompt Validation and Text Tokenization
 Background context: This section describes how to validate a prompt for generating text using the GPT model. It ensures that the input prompt is not empty and prepares it by converting it into a series of tokens.
@@ -97,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Epochs and Model Performance
 Background context: The number of training epochs can affect the model's performance. A higher number of epochs increases the likelihood of generating text that closely mirrors the training data.
@@ -123,7 +120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Diffusion Models Overview
 Background context: Chapter 15 introduces diffusion models, which are the foundation of text-to-image Transformers like DALL-E 2 or Imagen. These models work by gradually adding noise to an input until it becomes completely random and then reversing this process to generate high-quality images.
@@ -173,7 +169,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### LangChain Overview
 Background context: Chapter 16 uses the LangChain library to combine pretrained large language models with Wolfram Alpha and Wikipedia APIs to create a zero-shot know-it-all personal assistant. This integration leverages the strengths of different technologies to provide comprehensive information.
@@ -233,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Treating Music Generation as an Object Creation Problem
 Background context explaining how music generation is treated similarly to image generation, where a piece of music is considered a multidimensional object. The objective is to create a complete and coherent piece of music that can be evaluated for its realism.
@@ -247,7 +241,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Building and Training a Generative Adversarial Network (GAN)
 Background context explaining that MuseGAN uses GANs to generate multitrack music, similar to how other GAN models work. The model consists of two primary components: the generator and the critic.
@@ -263,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generative Process with MuseGAN
 Background context explaining how the generator produces complete pieces of music and submits them to the critic for evaluation. The generator then modifies its output based on feedback from the critic.
@@ -280,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Code for Generator and Critic Interaction
 Background context explaining how the generator and critic interact during the training process. This example is hypothetical but provides insight into the logic behind the interaction.

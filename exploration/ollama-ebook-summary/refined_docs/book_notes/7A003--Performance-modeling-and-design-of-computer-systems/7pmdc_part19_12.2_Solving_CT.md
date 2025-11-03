@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.2 Solving CTMCs
 
 ---
 
-**Rating: 9/10**
 
 #### Time to Next Event in CTMCs
 In a Continuous-Time Markov Chain (CTMC), the time until the next event is exponentially distributed. If we are currently in state \(i\), the time until the next arrival, \(X_A\), follows an exponential distribution with parameter \(\lambda\) and the time until the next departure, \(X_D\), follows an exponential distribution with parameter \(\mu\). These events occur independently of each other.
@@ -99,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transition from CTMC to DTMC
 Background context: The process of converting a Continuous-Time Markov Chain (CTMC) into a Discrete-Time Markov Chain (DTMC) involves modeling transitions over small time steps, often denoted as δ. This allows us to use the familiar balance equations for solving limiting probabilities.
@@ -164,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transition to Continuous-Time Markov Chains
 The text discusses how to handle continuous-time Markov chains (CTMCs) without explicitly converting them into discrete-time Markov chains (DTMCs). The focus is on deriving balance equations directly from CTMCs, which can be solved to find the limiting probabilities \( \pi_i \).

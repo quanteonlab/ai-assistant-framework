@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 27)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.10 Action State Machines
 
 ---
 
-**Rating: 8/10**
 
 #### Animation Pipeline Overview
 Background context: The animation pipeline is a series of steps that transform raw data into final animation outputs. It includes processes such as decompression, pose extraction, blending, skinning, and rendering.
@@ -28,7 +26,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action State Machines (ASM)
 Background context: Action State Machines are used to manage the various actions of a game character. They provide a state-driven interface for animation, allowing higher-level game code to control the character's behavior effectively.
@@ -58,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Layered Action State Machine
 Background context: A layered action state machine allows for more complex and nuanced animations by adding multiple layers on top of a basic state. This includes variations, gestures, and additional layers that can control different aspects of the character.
@@ -98,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Smooth State Transitions in Action State Machines
 Background context: When transitioning between states, it is essential to ensure that the transition is smooth and natural. This often involves blending the final poses of both states together.
@@ -125,7 +120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Independent Body Parts in Action State Machines
 Background context: In complex animations, different parts of the body can perform independent actions. This ensures that actions like running and shooting are executed naturally.
@@ -156,7 +150,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Flat Weighted Average Approach
 Background context: In animation systems, a flat weighted average approach is used to blend multiple animations contributing to a character's final pose. This method maintains a list of all active animations and their corresponding blend weights. The final pose for each joint is calculated as an N-point weighted average of the translations, rotations, and scales extracted from these animations.
@@ -184,7 +177,6 @@ In practice, this method simplifies the blending process by treating all active 
 
 ---
 
-**Rating: 8/10**
 
 #### Blend Trees for Animation Blending
 Background context: An alternative to the flat weighted average approach is using blend trees. In a blend tree, each contributing animation clip is represented as a leaf node, with internal nodes representing various blending operations that combine the clips into action states. This allows for more complex and hierarchical control over animations.

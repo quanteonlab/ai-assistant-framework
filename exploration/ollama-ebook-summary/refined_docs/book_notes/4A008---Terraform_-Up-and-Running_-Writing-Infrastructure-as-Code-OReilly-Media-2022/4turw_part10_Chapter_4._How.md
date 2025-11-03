@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 4. How to Create Reusable Infrastructure with Terraform Modules
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Terraform Modules
 
@@ -45,7 +43,6 @@ output "target_group_arn" {
 
 ---
 
-**Rating: 8/10**
 
 #### Different Environments with Modules
 
@@ -75,7 +72,6 @@ output "target_group_arn" {
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Using Modules
 
@@ -98,7 +94,6 @@ Using modules enhances testability by allowing you to define your infrastructure
 
 ---
 
-**Rating: 8/10**
 
 #### Module Basics
 Background context explaining that a Terraform module is any set of configuration files in a folder and how running `terraform apply` on such a module directly refers to it as a root module. The example provided moves code from an existing setup into a reusable structure.
@@ -124,7 +119,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Module Inputs
 Background context explaining that hardcoded values in a module can cause issues when reusing it across multiple environments or instances of the same environment. The example demonstrates how fixed names and data sources can lead to conflicts.
@@ -149,7 +143,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Module Locals
 Background context explaining the use of locals in Terraform modules for defining variables scoped only within the module. Locals help in creating more modular and reusable configurations by keeping intermediate results out of the inputs or outputs section.
@@ -178,7 +171,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Module Outputs
 Background context explaining how outputs allow modules to expose information that calling configurations can use. The example shows a scenario where fixed details like database addresses might need to be configurable.
@@ -205,7 +197,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Module Gotchas
 Background context explaining common pitfalls when working with Terraform modules, such as hard-coded names and resource dependencies. The example highlights issues that might arise if a module is not designed for reusability across multiple environments.
@@ -223,7 +214,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Module Versioning
 Background context explaining the importance of version control for Terraform modules to manage changes and dependencies effectively. The example suggests that managing versions is crucial for reproducibility and maintainability in complex infrastructure projects.
@@ -248,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Setting Remote State Parameters
 :p How do you configure remote state parameters in Terraform?

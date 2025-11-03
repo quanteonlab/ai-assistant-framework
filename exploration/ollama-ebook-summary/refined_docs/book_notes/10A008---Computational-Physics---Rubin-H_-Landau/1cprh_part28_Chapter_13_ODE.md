@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 28)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 13 ODE Applications Eigenvalues Scattering Trajectories. 13.2.1 Not Recommended Matchless Searching
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Solution of the Schrödinger Equation
 To solve the Schrödinger equation numerically, we use an ODE solver. For a particle in a finite square well potential \(V(x)\), the wave function \(\psi(x)\) is determined by:
@@ -49,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Integration Method
 The numerical method involves integrating the wave function step-by-step. We start by assuming a wave function that satisfies the boundary condition at \(x \to -\infty\) and integrate towards the origin. Similarly, we assume another wave function satisfying the boundary condition at \(x \to +\infty\) and integrate backwards to the matching radius.
@@ -78,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Search Algorithm for Bound States
 The search algorithm involves integrating the wave function from both sides and finding the point where they match. This is done iteratively by checking various energies until the boundary conditions are satisfied.
@@ -96,7 +92,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Iteration Scheme for Solving ODEs
 
@@ -132,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Plotting Wave Function and Potential
 
@@ -166,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Identifying Ground State and Excited States
 
@@ -222,7 +215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finding Excited States
 
@@ -269,7 +261,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparing Numerov and RK4 Methods
 
@@ -316,7 +307,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determining Wave Function Continuity
 
@@ -345,7 +335,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atan2 Function for Angle Calculation
 
@@ -376,7 +365,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving ODE for Numerov Method
 
@@ -416,7 +404,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving ODE for RK4 Method
 
@@ -455,7 +442,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RK4 Method for Simultaneous ODEs
 Background context explaining the concept. The Runge-Kutta method of order 4 (RK4) is a numerical technique to solve ordinary differential equations (ODEs). For projectile motion with drag, we need to simultaneously solve two coupled first-order ODEs: one for the horizontal position \(x(t)\), and another for the vertical position \(y(t)\).
@@ -481,7 +467,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Phase Space Trajectories
 Background context explaining the concept. Phase space trajectories are plotted to analyze the dynamics of projectile motion with drag by examining both position and velocity components over time.
@@ -500,7 +485,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Identifying Discontinuities in d𝜃/db
 Background context explaining the concept. Discontinuities in \( \frac{d\theta}{db} \) and thus \( \sigma(\theta) \) can be identified by analyzing characteristic features of trajectories.
@@ -520,7 +504,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modifying RK4 Program for Friction
 Background context explaining the concept. The Runge-Kutta method is modified to solve ODEs with friction, using \( n \) values of 1, 3/2, and 2 to model different velocities.

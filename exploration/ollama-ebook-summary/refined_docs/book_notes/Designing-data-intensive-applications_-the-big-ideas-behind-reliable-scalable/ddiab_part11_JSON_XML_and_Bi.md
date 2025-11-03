@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** JSON XML and Binary Variants
 
 ---
 
-**Rating: 8/10**
 
 #### Evolvability: Making Change Easy
 Background context explaining that applications change over time, requiring modifications to both features and data storage. The idea of building systems that facilitate easy adaptation is introduced as evolvability.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Schema Flexibility in Relational Databases vs. "Schemaless" Databases
 Background context explaining how relational databases assume a single schema at any given time and require schema migrations for changes, while "schemaless" databases like document models can contain mixed data formats.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rolling Upgrade and Server-Side Applications
 Background context explaining the process of rolling upgrades where new versions are deployed gradually across multiple nodes.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Backward Compatibility and Forward Compatibility
 Background context explaining the need for both backward compatibility (new code reading old data) and forward compatibility (old code reading new data).
@@ -54,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Schema Evolution in Avro
 Background context explaining how Avro handles schema evolution, supporting both backward and forward compatibility.
@@ -66,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RESTful Services and Data Exchange Formats
 Background context explaining how data is exchanged in web services using Representational State Transfer (REST) and remote procedure calls (RPC).
@@ -78,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message-Passing Systems: Actors and Message Queues
 Background context explaining the use of actors and message queues as communication mechanisms.
@@ -92,7 +84,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Binary Encoding Formats
 
@@ -122,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CSV Format
 Background context that CSV is a popular language-independent format but has limitations.
@@ -134,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimizing Encoding
 
@@ -149,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avro Schema Evolution
 Avro supports schema evolution by distinguishing between the writer’s and reader’s schemas. This ensures that data can be correctly decoded even if there are changes in the schema over time.
@@ -180,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Schema Compatibility in Avro
 
@@ -193,7 +180,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Field Order Irrelevance
 
@@ -236,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Schema Inference for Avro Data Encoding
 Background context: When encoding data using Apache Avro, it is crucial to know how the writer's schema was used to encode a particular piece of data. However, embedding the entire schema with every record would be inefficient because schemas are typically larger than the records themselves.
@@ -267,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Schema Versioning for Databases with Avro
 Background context: In databases where records are written at different times using potentially different schemas, it is essential to keep track of schema versions. This ensures that readers can understand the format of older records even if newer ones have a different structure.
@@ -300,7 +284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Schema Negotiation for Network Communication
 Background context: When two processes communicate over a network using Avro, they can negotiate the schema version on connection setup. This ensures that both parties are using compatible schemas during communication.
@@ -335,7 +318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dynamic Schemas and Avro
 Background context: One of Avro's advantages is its ability to handle dynamically generated schemas without needing tag numbers. This makes it easier to adapt to changes in the data structure over time.
@@ -384,7 +366,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Merits of Using Schemas
 
@@ -405,7 +386,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dataflow Through Databases
 Data is stored and retrieved through databases, where one process encodes data into a database while another decodes it. This setup often requires both backward and forward compatibility to ensure that old processes can read new data and new processes can handle older formats correctly.
@@ -417,7 +397,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single vs Multiple Processes Accessing Databases
 In some scenarios, a single process might write to the database and later read from it (future self). However, in other cases, multiple processes may simultaneously access a shared database.
@@ -429,7 +408,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Unknown Fields in Databases
 When adding new fields to a schema, it's common for newer processes to write data containing unknown fields while older processes might read and update this data, potentially losing the newly added information.
@@ -457,7 +435,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Lifespan and Code Changes
 The context of data storage in databases implies that stored data can outlive the code that created it. This means that when a new version of an application is deployed, old versions might still access older data.
@@ -469,7 +446,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Schema Evolution in Databases
 Schema changes, such as adding new columns, are common but need careful handling to avoid rewriting existing data. Relational databases and document-based systems like Avro provide mechanisms for managing these changes.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Operating-Systems_-Three-Easy-Pieces_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11. Summary Dialogue on CPU Virtualization
 
 ---
 
-**Rating: 8/10**
 
 #### CPU Virtualization Mechanisms
 The OS virtualizes the CPU using various mechanisms such as traps, trap handlers, timer interrupts, and state saving/restoration. These mechanisms are crucial for context switching between processes.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Philosophy of the Operating System
 The OS acts as a resource manager and is designed to be paranoid, ensuring it maintains control over the machine by managing processes efficiently but also being prepared to intervene in case of errant or malicious behavior.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scheduler Policies
 Schedulers are designed with various policies such as Shortest Job First (SJF), Round Robin (RR), and Multi-Level Feedback Queue (MLFQ). The MLFQ scheduler is a good example of combining multiple scheduling algorithms in one. There's still ongoing debate over which scheduler is the best, reflecting that there isn't necessarily a clear "right" answer.
@@ -39,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### C/Java Code Examples for Context Switching
 In the context of CPU virtualization, understanding how state is saved and restored during a context switch is crucial. Here’s an example in pseudocode:
@@ -69,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preemptive Schedulers
 Background context explaining preemptive schedulers. These are modern schedulers that can interrupt a process at any time to run another.
@@ -109,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Round Robin Scheduling Introduction
 Background context: To address the issues with SJF regarding response time, another scheduling algorithm called Round Robin (RR) was introduced. RR ensures that each job gets a fair share of CPU time by running them in a cyclic manner within short time slices.
@@ -121,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Slice Selection in Round Robin
 Background context: In RR scheduling, the length of the time slice significantly affects its performance. A shorter time slice can improve response times but increases overhead due to frequent context switching. Conversely, a longer time slice reduces context switch frequency but might degrade responsiveness.
@@ -133,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Amortization in Context Switching
 Background context: The concept of amortization is used in RR scheduling to manage the cost associated with context switching. By increasing the time slice, the frequency of context switches can be reduced, thereby reducing the overall overhead.
@@ -145,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switch Cost Example
 Background context: The example provided explains how context switch costs are managed by adjusting the time slice length. A shorter time slice increases the overhead from frequent context switching, while a longer time slice reduces this overhead but may increase waiting times for short jobs.
@@ -161,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### CPU Caches and State Flushing
@@ -176,7 +165,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Round-Robin Scheduling (RR) and Response Time
 Background context: RR is an excellent scheduler if response time is the only metric we care about because it ensures that each job gets a fair share of CPU time, leading to quick responses.
@@ -190,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### I/O and Assumption Relaxation
 Background context: The assumption that jobs do not perform any I/O operations is unrealistic because most programs interact with external systems. Additionally, it's assumed that the run-time of each job is known.
@@ -204,7 +191,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overlapping Operations for Utilization
 Background context: Overlapping operations is an optimization technique that maximizes system utilization by starting one operation before another completes. This practice is useful in various domains, such as disk I/O or remote message sending.
@@ -218,7 +204,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### I/O Handling in Scheduling
 In scheduling, when a job initiates an I/O request, it is blocked and cannot use the CPU during this time. The scheduler must decide whether to run another job or wait for the current one's I/O to complete.
@@ -238,7 +223,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overlapping I/O and CPU Usage
 When a job needs to perform an I/O operation, it is blocked from using the CPU. However, this can be used to schedule other jobs that do not require I/O.
@@ -257,7 +241,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dynamic Job Lengths in Scheduling
 In a general-purpose OS, the scheduler typically has limited knowledge of the exact length of each job. Therefore, it must adapt scheduling algorithms to work effectively without this information.
@@ -277,7 +260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Scheduling Concepts
 Scheduling involves deciding which job to execute at any given time. Different algorithms aim to optimize either turnaround time or response time.
@@ -298,7 +280,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtual Memory Overview
 Background context: Virtual memory is a method that allows an operating system to provide processes with an address space larger than the actual physical memory available. This illusion of more memory than physically exists is created by mapping virtual addresses used by user programs into physical addresses on the underlying hardware.
@@ -322,7 +303,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Base/Bounds Mechanism
 Background context: The base/bounds mechanism is one of the simplest techniques used for memory virtualization. It involves defining a base address and size (bounds) for each process, which helps in mapping virtual addresses to physical ones.
@@ -346,7 +326,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hardware and OS Interaction
 Background context: Virtual memory requires coordination between the hardware and operating system to manage the mapping of virtual addresses to physical ones. The hardware supports these mappings through mechanisms like Translation Lookaside Buffers (TLBs) and Page Tables.
@@ -379,7 +358,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Page Tables and Multi-Level Structures
 Background context: Modern virtual memory systems use complex structures like page tables, which can be multi-level for handling larger address spaces efficiently. These help in breaking down the mapping of large address spaces into smaller, manageable segments.
@@ -414,7 +392,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Isolation and Protection
 Background context: Virtual memory also provides isolation and protection between processes, ensuring that one process cannot interfere with another. This is crucial for maintaining system stability and security.
@@ -441,7 +418,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Error Handling and Protection
 Background context: Virtual memory systems handle errors such as invalid addresses or overflows by providing mechanisms to catch these conditions and take appropriate actions, like terminating a process.

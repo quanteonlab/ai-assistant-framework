@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** See Also. 9.1 Using LambdasClosures Instead of Inner Classes. Problem. Solution. Discussion
 
 ---
 
-**Rating: 8/10**
 
 #### Lambda Expressions in Java
 
@@ -120,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Lambda Predefined Interfaces Instead of Your Own
 In Java 8, predefined interfaces from `java.util.function` package can be used for lambda expressions instead of defining your own. These interfaces provide common functional methods that are widely applicable.
@@ -196,7 +193,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Streams in Java 8
 Streams are a new mechanism introduced with Java 8 that allow for processing data through a pipeline-like mechanism. This approach simplifies complex data transformations and aggregations using a fluent programming style.

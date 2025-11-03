@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Consistent Prefix Reads
 
 ---
 
-**Rating: 8/10**
 
 #### Logical Timestamps and Clock Synchronization
 Logical timestamps can be used to indicate the ordering of writes, such as log sequence numbers. In contrast, actual system clock usage requires careful clock synchronization across replicas. This is crucial for maintaining consistency but adds complexity.
@@ -76,7 +74,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Independent Partitions and Reads
 Background context explaining the concept. Different partitions operate independently, leading to no global ordering of writes. When a user reads from the database, they may see some parts of the database in an older state and some in a newer state.
@@ -186,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single-Leader Replication Overview
 Background context: In this section, we discuss single-leader replication architectures where only one node acts as a leader for all writes. The leader processes write requests and forwards changes to other nodes. This is a common approach but has limitations.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Operating-Systems_-Three-Easy-Pieces_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 27. Thread API
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Creation Interface
 Background context explaining how to create threads using POSIX. The `pthread_create` function is a key part of creating and managing threads in this API.
@@ -72,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Arguments and Return Values
 Background context explaining how `void*` arguments and return values are used in thread functions.
@@ -131,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Attributes Initialization
 Background context explaining how to initialize and use attributes for threads in POSIX.
@@ -223,7 +219,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Thread
 Thread creation involves defining a custom argument type and passing it to the `pthread_create` function. This allows for passing more complex data structures between threads.
@@ -261,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Waiting for Thread Completion
 Waiting for a thread completion requires using `pthread_join` which waits until the specified thread has finished executing.
@@ -311,7 +305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Argument Packing and Unpacking
 Thread arguments can be complex data structures. When a thread is created with custom argument types, the main thread packs these into a single variable which is then passed to `pthread_create`. The child thread unpacks this structure using casting.
@@ -352,7 +345,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Arguments and Return Values
 For threads that need to return values, a custom structure can be used as an argument. The main thread can then use `pthread_join` to retrieve this value.
@@ -400,7 +392,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Return Values and Stack Allocation
 Background context: In multi-threaded programming, it is crucial to understand how thread functions handle return values. Unlike function calls that operate on the heap or stack, threads often have limited scope for returning complex data structures directly due to their call stacks' characteristics.
@@ -422,7 +413,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Creation and Join
 Background context: The `pthread_create()` function is used to create a new thread, while `pthread_join()` waits for the thread to complete execution. However, combining both functions in a single-threaded fashion can lead to unusual situations.
@@ -458,7 +448,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Locks and Mutual Exclusion
 Background context: In multi-threaded programming, ensuring that critical sections of code are executed atomically is essential to prevent race conditions. POSIX threads provide `pthread_mutex_t` for managing mutual exclusion.
@@ -489,7 +478,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proper Initialization of Locks
 Background context: To ensure that locks work as intended, they must be properly initialized. This is crucial for critical section protection to function correctly. There are two ways to initialize a mutex lock in POSIX threads.
@@ -505,7 +493,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dynamic Initialization of Locks
 Background context: You can also dynamically initialize a mutex at runtime using `pthread_mutex_init()`. This method is useful when you need more control over the attributes of the lock.
@@ -522,7 +509,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proper Error Handling with Locks
 Background context: When using lock operations like `pthread_mutex_lock()`, it's essential to handle potential errors. Failure can occur if another thread holds the lock, leading to deadlocks or incorrect operation.
@@ -534,7 +520,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wrapper Functions for Locks
 Background context: To ensure that lock operations are used correctly and safely, it's recommended to wrap them in custom functions. This practice helps maintain clean code while ensuring proper error handling.
@@ -553,7 +538,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### `pthread_mutex_trylock()`
 Background context: Sometimes you might want to attempt acquiring a lock without blocking. The `pthread_mutex_trylock()` function checks if the mutex can be acquired immediately.
@@ -573,7 +557,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### `pthread_mutex_timedlock()`
 Background context: If you need to acquire a lock with a timeout, the `pthread_mutex_timedlock()` function can be used. It returns after either acquiring the lock or when the specified time elapses.
@@ -598,7 +581,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Condition Variables Overview
 Background context explaining condition variables and their importance in threading. Condition variables are used for signaling between threads, allowing a thread to wait until a certain condition is met before proceeding.
@@ -610,7 +592,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Initializing Condition Variables and Locks
 Explanation on how to initialize condition variables and locks in C using POSIX threading.
@@ -629,7 +610,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using `pthread_cond_wait` and `pthread_cond_signal`
 Explanation on how to use the functions `pthread_cond_wait` and `pthread_cond_signal`.
@@ -671,7 +651,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Holding Mutex in `pthread_cond_wait`
 Explanation on why holding a mutex is crucial when using `pthread_cond_wait`.
@@ -699,7 +678,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using `while` Loop in Condition Variable Wait
 Explanation on why using a `while` loop instead of an `if` statement when waiting for a condition.
@@ -729,7 +707,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spurious Wakeups and Condition Variables
 
@@ -764,7 +741,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Flags for Synchronization
 
@@ -797,7 +773,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compiling and Running Pthreads Programs
 
@@ -818,7 +793,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Pthreads Basics
 
@@ -836,7 +810,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tips for Writing Multi-threaded Code
 
@@ -879,7 +852,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Keep it Simple
 Background context: When using POSIX thread libraries to create multi-threaded programs, keeping your code simple is crucial. Complicated interactions between threads can lead to bugs and make debugging extremely difficult.
@@ -891,7 +863,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Minimize Thread Interactions
 Background context: Reducing the number of ways in which threads interact can help avoid race conditions and other synchronization issues. Careful consideration should be given to each interaction, ensuring it follows well-known patterns.
@@ -903,7 +874,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Initialize Locks and Condition Variables
 Background context: Failing to properly initialize locks and condition variables can result in unpredictable behavior, where the program sometimes works correctly but often fails unexpectedly.
@@ -915,7 +885,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Check Return Codes
 Background context: In any C or Unix programming, it is essential to check return codes from functions. This practice should also be applied when using thread APIs.
@@ -927,7 +896,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Be Careful with Argument Passing
 Background context: Passing references to stack-allocated variables between threads can lead to undefined behavior, as each thread has its own stack.
@@ -939,7 +907,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Stack Management
 Background context: Each thread has its own stack, meaning local variables are private to that thread. To share data between threads, use a common memory space.
@@ -951,7 +918,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Use Condition Variables for Synchronization
 Background context: Using simple flags to signal between threads is not recommended due to potential race conditions.
@@ -963,7 +929,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Read POSIX Thread Manual Pages
 Background context: The pthread man pages on Linux contain detailed information about thread APIs, which are highly informative.
@@ -977,7 +942,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ad Hoc Synchronization Considered Harmful
 Ad hoc synchronization refers to an approach where programmers manually add synchronization constructs like locks and condition variables without a formal, systematic method. This can lead to complex bugs and difficult-to-maintain code. The paper by Xiong et al. demonstrates that seemingly simple synchronization mechanisms can introduce a surprising number of issues.
@@ -989,7 +953,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Helgrind Tool for Data Race Detection
 Helgrind is a tool used to detect data races in multi-threaded programs. It helps developers understand where race conditions occur by analyzing memory accesses.
@@ -1001,7 +964,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### main-race.c Code Example
 The program in `main-race.c` contains an unguarded shared variable that is accessed by multiple threads without synchronization. This leads to data races and potential bugs.
@@ -1016,7 +978,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### main-deadlock.c Code Example
 The `main-deadlock.c` program has a deadlock situation where multiple threads are waiting indefinitely for each other to release locks.
@@ -1028,7 +989,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### main-signal-cv.c Code Example
 In `main-signal-cv.c`, the signaling between threads is done using condition variables with proper locking.
@@ -1040,7 +1000,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### main-deadlock-global.c Code Example
 In `main-deadlock-global.c`, the global variable is shared among multiple threads.
@@ -1052,7 +1011,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Signaling and Condition Variables
 Condition variables allow threads to wait for specific conditions before proceeding. They are typically used in conjunction with locks.
@@ -1066,7 +1024,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Introduction to Locks
@@ -1087,7 +1044,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Declaring Locks
 Background context explaining the need to declare locks before using them in your code. This is necessary because each lock variable represents a state that can be either free or held.
@@ -1104,7 +1060,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Locks in Code
 Background context explaining the process of using locks around critical sections of code. This ensures that only one thread can execute these sections at a time, preventing concurrent modification issues.
@@ -1124,7 +1079,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lock Semantics
 Background context explaining the semantics of the `lock()` and `unlock()` functions, which are used to acquire and release a lock respectively. The state of the lock can be either free or held by one thread.
@@ -1139,7 +1093,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lock State Transition
 Background context explaining how the state of a lock transitions between free and held. This involves understanding that only one thread can hold the lock at any time, preventing race conditions.
@@ -1154,7 +1107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Scheduling and Locks
 Background context explaining how locks can provide some control over scheduling by ensuring that only one thread executes a critical section at a time. This helps transform chaotic OS scheduling into more controlled execution.
@@ -1174,7 +1126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mutex Concept and Usage
 Mutex, short for mutual exclusion, is a mechanism used to manage access to resources that cannot be shared between threads. In the context of POSIX threads (pthreads), mutexes are used to protect critical sections of code, ensuring that only one thread can execute within these sections at any given time.
@@ -1197,7 +1148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fine-Grained vs Coarse-Grained Locking Strategies
 Fine-grained locking involves using separate locks for different resources, whereas coarse-grained locking uses a single large lock to protect all resources. Fine-grained locking allows more concurrent execution as threads can enter critical sections that do not conflict with their operations.
@@ -1224,7 +1174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hardware and OS Support in Lock Implementation
 Locks require both hardware support (such as atomic operations) and operating system (OS) support. The hardware provides low-level mechanisms, while the OS manages higher-level concurrency control and synchronization.
@@ -1256,7 +1205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluating Locks for Mutual Exclusion, Fairness, and Performance
 To evaluate a lock's effectiveness, consider mutual exclusion (whether it prevents multiple threads from accessing a resource simultaneously), fairness (how threads are treated when they wait for the lock), and performance overhead.
@@ -1292,7 +1240,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Contention on a Single CPU
 Here, multiple threads are contending for a single lock on one CPU. This situation can lead to performance concerns due to context switching and potential delays.
@@ -1327,7 +1274,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Contention on Multiple CPUs
 In scenarios involving multiple CPUs, threads from different cores contend for a single lock. This can impact performance due to the increased complexity of managing locks across multiple processors.
@@ -1360,7 +1306,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interrupt Disabling for Mutual Exclusion
 Interrupt disabling was an early solution for providing mutual exclusion in single-processor systems. This approach involved disabling interrupts before entering a critical section and re-enabling them afterward.
@@ -1387,7 +1332,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Disadvantages of Using Interrupt Disabling
 While interrupt disabling provides a simple solution, it has significant disadvantages, especially in modern multi-processor systems and complex applications.
@@ -1412,7 +1356,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simple Flag for Mutual Exclusion
 Background context explaining how mutual exclusion is achieved using a simple flag variable. This concept uses an integer flag to indicate whether a thread holds the lock or not. The code provided in Figure 28.1 illustrates this approach, where threads test and set the flag to manage access to a critical section.
@@ -1431,7 +1374,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Critical Section Access with Simple Flag
 Background context on how threads access a critical section using a simple flag. The code snippet in Figure 28.1 provides an implementation where threads contend for a single resource (a shared `flag` variable) to ensure mutual exclusion.
@@ -1451,7 +1393,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Issue with Simple Flag
 Background context on why using a simple flag for mutual exclusion can be inefficient. The provided code in Figure 28.1 demonstrates how threads might spin-wait, which can significantly degrade performance compared to normal instruction execution due to busy-waiting.
@@ -1470,7 +1411,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Correctness Issue with Simple Flag
 Background context on how a simple flag implementation can fail to ensure mutual exclusion due to race conditions. The example provided in Figure 28.2 illustrates that timely or untimely interrupts can cause both threads to incorrectly acquire the lock.
@@ -1490,7 +1430,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interrupt Masking for Atomicity
 Background context on how interrupt masking can be used within an operating system to ensure atomicity when accessing its data structures. This method relies on turning off interrupts during critical sections to prevent other threads or interrupts from interfering.
@@ -1517,7 +1456,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Spin-Waiting and Context Switches
@@ -1549,7 +1487,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Test-and-Set Instruction Overview
 The test-and-set instruction provides a mechanism to atomically check and set the value of a bit in memory. It is used by various locking mechanisms, including spin locks and more sophisticated ones.
@@ -1580,7 +1517,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dekker's Algorithm for Mutual Exclusion
 Dekker’s algorithm is a simple solution to the mutual exclusion problem using only atomic loads and stores. It was designed as an alternative to more complex hardware-supported solutions.
@@ -1622,7 +1558,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Peterson’s Algorithm for Mutual Exclusion
 Peterson's algorithm is an improvement over Dekker’s algorithm, using similar principles but more streamlined logic. It also uses two flags: `flag[0]` and `flag[1]`, along with a single variable `turn`.
@@ -1666,7 +1601,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spin Locks and Test-and-Set
 Spin locks are a mechanism for mutual exclusion where threads repeatedly check whether they can acquire the lock. The test-and-set instruction is crucial for implementing spin locks, ensuring atomic operations.
@@ -1685,7 +1619,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simple Spin Lock Implementation Using `TestAndSet`
 The provided code demonstrates a simple spin lock using the `TestAndSet` operation. The key idea is that threads will repeatedly check and set the flag to acquire the lock.
@@ -1705,7 +1638,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Acquiring a Lock with `TestAndSet`
 When a thread calls the `lock()` function and no other thread currently holds the lock, it acquires the lock by setting the flag to 1. If another thread already has the lock, the current thread will spin until the lock is released.
@@ -1722,7 +1654,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Releasing a Lock with `unlock()`
 The `unlock()` function sets the flag back to 0, allowing other threads to acquire the lock. It ensures that multiple threads can take turns accessing the critical section.
@@ -1740,7 +1671,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spin Lock with Thread Contention
 In a scenario where multiple threads are contending for the same lock, one thread might call `lock()` and repeatedly check the `TestAndSet` operation until it can acquire the lock. Once acquired, other threads will continue to spin until they finally get the chance.
@@ -1760,7 +1690,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Concurrency as a Malicious Scheduler
 The provided text suggests thinking of concurrency as interacting with a "malicious scheduler" that can arbitrarily decide which thread runs next. This perspective helps in designing robust concurrent programs.
@@ -1785,7 +1714,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spin Lock Concept
 Spin locks are a type of synchronization primitive designed to ensure mutual exclusion. They operate by having threads repeatedly check and possibly modify a shared variable until they can acquire ownership of the lock.
@@ -1797,7 +1725,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preemptive Scheduler Requirement
 For spin locks to work effectively on a single processor, the scheduler must be preemptive. A preemptive scheduler periodically interrupts threads to run others.
@@ -1809,7 +1736,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spin Lock Fairness
 Spin locks do not provide fairness guarantees; a waiting thread might never get a chance to execute if the lock holder never releases it.
@@ -1821,7 +1747,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compare-and-Swap (CAS) Operation
 The `CompareAndSwap` function checks if the current value of `*ptr` matches `expected`. If so, it sets `*ptr` to `new` and returns `actual`.
@@ -1833,7 +1758,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Compare-and-Swap Instruction
@@ -1848,7 +1772,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spin Lock Using Compare-and-Swap
 A spin lock is a type of mutual exclusion object in computer science. It uses busy waiting (spinning) to acquire and release the lock. The `CompareAndSwap` instruction can be used to create a simple spin lock.
@@ -1865,7 +1788,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load-Linked and Store-Conditional Instructions
 Load-linked and store-conditional are a pair of instructions that work together to build locks and other concurrent structures. The `load-linked` instruction fetches a value from memory into a register, while the `store-conditional` updates memory only if no intervening stores have occurred.
@@ -1880,7 +1802,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing a Lock Using Load-Linked and Store-Conditional
 Using `load-linked` and `store-conditional`, one can implement a spin lock by checking if the flag is 0 (indicating no other thread holds the lock) and atomically setting it to 1.
@@ -1902,7 +1823,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Store-Conditional Failure Mechanism
 Background context: The store-conditional (SC) instruction is crucial for ensuring atomicity and mutual exclusion, especially in lock implementations. However, it can fail if another thread updates the value between a load-linked (LL) read and an SC write. This can lead to race conditions.
@@ -1929,7 +1849,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Short-Circuiting Lock Implementation
 Background context: The original lock implementation uses a loop with `LoadLinked` followed by `StoreConditional`. However, this can be simplified using short-circuit evaluation.
@@ -1948,7 +1867,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fetch-And-Add Instruction
 Background context: The fetch-and-add instruction is a hardware primitive that atomically increments a value and returns the old value. This operation is useful in implementing synchronization constructs like locks or counters.
@@ -1969,7 +1887,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lauer's Law (Less Code is Better Code)
 Background context: Lauer’s Law emphasizes that concise code is preferred because it is easier to understand and has fewer bugs. This law encourages programmers to focus on writing clear, minimalistic solutions.
@@ -1991,7 +1908,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ticket Locks
 Explanation of ticket locks and their advantages over previous locking mechanisms. The concept involves using a ticket number for each thread to determine its turn, ensuring all threads make progress eventually.
@@ -2005,7 +1921,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spinning Wasted Time
 Explanation of inefficiency due to excessive spinning when a thread is preempted by the operating system, leading to wasted CPU cycles.
@@ -2019,7 +1934,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ensuring Progress in Ticket Locks
 Explanation on how ticket locks ensure that all threads get a chance to enter the critical section eventually.
@@ -2033,7 +1947,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spinlock vs Ticket Lock
 Comparison between simple spinlocks (like test-and-set) and ticket locks in terms of efficiency and progress guarantees.
@@ -2047,7 +1960,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example for Ticket Lock
 Detailed explanation of how the provided code works using a ticket lock mechanism.
@@ -2086,7 +1998,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Yield-Based Approach for Locks
 
@@ -2116,7 +2027,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Queues: Sleeping Instead of Spinning
 
@@ -2166,7 +2076,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Describing the Guard Lock Mechanism
 
@@ -2196,7 +2105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spin Locks and Priority Inversion
 Background context: Spin locks are a type of mutual exclusion mechanism where a thread repeatedly checks to see if it can acquire the lock. However, this approach has drawbacks, especially on systems with varying thread priorities.
@@ -2228,7 +2136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Priority Inversion Example: Two Threads
 Background context: The example illustrates a scenario where a high-priority thread is blocked because it must wait for a lock held by a lower-priority thread. This can cause the higher-priority thread to spin indefinitely, leading to system unresponsiveness.
@@ -2281,7 +2188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Priority Inversion Example: Three Threads
 Background context: This example extends the previous one to involve a third thread with an even higher priority. It demonstrates how lower-priority threads can be starved, leading to a situation where high-priority threads control system resources.
@@ -2345,7 +2251,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solutions to Priority Inversion: Avoiding Spin Locks
 Background context: One way to mitigate priority inversion is by avoiding spin locks. Instead, a thread can use a blocking method like `park()` and `unpark()`, which allows the system to schedule other threads even when holding a lock.
@@ -2400,7 +2305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solutions to Priority Inversion: Priority Inheritance
 Background context: Another solution is using priority inheritance, where a high-priority thread waiting for a resource temporarily inherits the priority of the lower-priority thread that holds the lock.
@@ -2451,7 +2355,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Combining Test-and-Set with Queuing for Efficient Locking
 
@@ -2479,7 +2382,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Queue Management in Lock Implementation
 
@@ -2501,7 +2403,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Race Condition in Lock Implementation
 
@@ -2522,7 +2423,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solaris Solution for Wakeup/Waiting Race
 
@@ -2545,7 +2445,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Futex Mechanism in Linux
 Background context explaining how futexes provide a way for threads to block on specific conditions and wake up efficiently. Futexes are kernel-based synchronization primitives that allow efficient waiting without blocking the entire thread, which is particularly useful for reducing contention overhead.
@@ -2562,7 +2461,6 @@ For example, if a thread wants to acquire a mutex represented by a futex, it wil
 
 ---
 
-**Rating: 8/10**
 
 #### Mutex Lock Implementation
 Code snippet from lowlevellock.h in the nptl library. It uses an integer value as a mutex lock that combines hold status (high bit) with waiter count.
@@ -2602,7 +2500,6 @@ In the loop:
 
 ---
 
-**Rating: 8/10**
 
 #### Mutex Unlock Implementation
 Code snippet from lowlevellock.h in the nptl library. It uses an integer value as a mutex lock that combines hold status (high bit) with waiter count.
@@ -2624,7 +2521,6 @@ The `mutex_unlock` function performs an atomic addition to the mutex value with 
 
 ---
 
-**Rating: 8/10**
 
 #### Two-Phase Locks
 Two-phase locks combine spinning and blocking to optimize acquisition of a lock based on whether contention is expected or not.
@@ -2643,7 +2539,6 @@ This approach minimizes overhead by reducing unnecessary blocking when the lock 
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Two-Phase Locks Overview
@@ -2672,7 +2567,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real Locks in Modern Systems
 Explanation of how real locks are implemented today, involving hardware support and operating system layers. Provide specific examples like Solaris `park()`/`unpark()`, or Linux's `futex`.
@@ -2710,7 +2604,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Lock Implementation
 Summary of the current approach in lock implementation: hardware support (e.g., advanced instructions) plus OS support. Mention that details vary, and code is usually highly optimized.
@@ -2741,7 +2634,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RDLK Operation and Spin Locks
 RDLK is an operation that reads from and writes to a memory location in one indivisible step, similar to test-and-set operations. Dave Dahm created spin locks (Buzz Locks) and two-phase locks called "Dahm Locks."
@@ -2753,7 +2645,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OSSpinLock Safety Concerns
 OSSpinLock is a spin lock mechanism used on macOS systems. However, calling OSSpinLock can be unsafe when using threads of different priorities; you might end up spinning forever.
@@ -2765,7 +2656,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Peterson's Algorithm
 Peterson's algorithm introduces a simple solution to the mutual exclusion problem using only two shared variables: `flag` and `turn`. It ensures that at most one process can execute its critical section at any time.
@@ -2796,7 +2686,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load-Link and Store-Conditional (LL/SC)
 Load-Link, Store-Conditional (LL/SC) instructions are atomic memory operations used in various architectures to ensure that a load instruction is only committed if the value being loaded hasn’t been modified by another thread.
@@ -2818,7 +2707,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single Flag Lock Mechanism Implementation
 
@@ -2874,7 +2762,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Effect of Register Values on Lock Mechanism
 
@@ -2893,7 +2780,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Impact of Interrupt Interval on Lock Mechanism
 
@@ -2918,7 +2804,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Peterson’s Algorithm Implementation
 
@@ -2994,7 +2879,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ticket Lock Mechanism Implementation
 
@@ -3085,7 +2969,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Yield Instruction in Operating Systems
 
@@ -3147,7 +3030,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Test-and-Test-and-Set Lock Mechanism
 

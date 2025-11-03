@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Least-Squares TD
 
 ---
 
-**Rating: 8/10**
 
 #### Least-Squares TD (LSTD) Algorithm
 Background context: The Least-Squares TD algorithm, commonly known as LSTD, provides a more data-efficient form of linear TD(0). It directly computes the solution to the TD fixed point problem using estimates of matrices \( A \) and \( b \), rather than iterating iteratively. This approach can be computationally intensive but offers better performance in terms of data efficiency.
@@ -106,7 +104,6 @@ function data_efficiency_example():
 ```
 x??
 
-**Rating: 8/10**
 
 #### On-policy Prediction with Approximation LSTD
 
@@ -262,7 +259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### k-d Tree Overview
 Memory-based methods for nearest neighbor search have developed ways to accelerate the process, including using specialized data structures. One such structure is the k-d tree (k-dimensional tree), which recursively splits a k-dimensional space into regions arranged as nodes of a binary tree.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 7.6.2 Example of implementing high-level OpenMP
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Reducing Thread Startup Costs
@@ -34,7 +32,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Explicitly Dividing Work Among Threads
 Background context: To reduce cache thrashing and race conditions, it is important to explicitly divide the work among threads. This involves calculating lower and upper bounds for each thread's range of work.
@@ -54,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimizing Variable Scoping
 Background context: In high-level OpenMP, explicitly stating whether variables are shared or private helps the compiler optimize memory access. This prevents unnecessary synchronization overhead and improves performance by ensuring that each thread has a clear understanding of its memory space.
@@ -77,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detecting and Fixing Race Conditions
 Background context: Using tools from section 7.9 helps detect race conditions in parallel programs. These tools can identify synchronization issues that might arise due to improper variable scoping or lack of barriers between loops.
@@ -98,7 +93,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Hybrid Threading and Vectorization Concept
@@ -123,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OpenMP Parallel and For Loop Integration
 Background context: This concept demonstrates integrating an OpenMP parallel for loop with SIMD (Single Instruction Multiple Data) pragmas to optimize the performance of loops over large data sets. The `#pragma omp parallel for simd` is used to achieve both parallelism and vectorization.
@@ -144,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Initialization and Barrier Management
 Background context: Proper initialization of threads and managing barriers is crucial for ensuring correct execution and synchronization in parallel programs. In OpenMP, thread IDs are used to identify each thread.
@@ -168,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimizing Stencil Kernel with OpenMP
 Background context: Optimizing stencil kernels involves parallelizing nested loops that update elements of an array based on neighboring values. The goal is to reduce the number of pragmas while improving performance.
@@ -193,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Locality Optimization for Stencil Operator
 Memory locality is crucial in minimizing the speed gap between processors and memory. By making array sections private to each thread where possible, we can enhance memory access patterns.
@@ -205,7 +195,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advanced Handling of Thread Scoping with OpenMP
 In the stencil operator, different dimensions have varying data-sharing requirements. For instance, `x-face` data can be private to each thread, while `y-face` data needs to be shared.
@@ -239,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Decomposition and Memory Management
 Thread decomposition involves dividing the data among threads, with each thread handling a portion of the workload. Efficient memory management is key to optimizing performance.
@@ -253,7 +241,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shared Y-Face Storage
 Background context explaining that the y-face requires access to adjacent cells in the y direction, necessitating shared storage. This ensures that both threads can access the required data simultaneously.
@@ -265,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OpenMP Barriers for Synchronization
 Background context explaining the use of barriers in OpenMP to ensure all threads have completed their work before proceeding.
@@ -277,7 +263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stencil Operator Implementation
 Background context explaining the implementation of a stencil operator with OpenMP, ensuring proper distribution of work among threads.
@@ -319,7 +304,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Heap Allocation of 2D Arrays
 
@@ -359,7 +343,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Barrier Synchronization
 

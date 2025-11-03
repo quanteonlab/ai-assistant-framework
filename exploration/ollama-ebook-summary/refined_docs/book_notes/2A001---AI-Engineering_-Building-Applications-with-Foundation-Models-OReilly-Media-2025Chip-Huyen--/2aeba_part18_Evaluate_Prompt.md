@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A001---AI-Engineering_-Building-Applications-with-Foundation-Models-OReilly-Media-2025Chip-Huyen--_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Evaluate Prompt Engineering Tools
 
 ---
 
-**Rating: 8/10**
 
 #### Prompt Engineering Best Practices
 Background context: Prompt engineering involves refining prompts to optimize model performance, considering factors such as clarity, structure, and specificity. This practice helps in creating more effective queries that lead to better outputs.
@@ -33,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Separating Prompts from Code
 Background context: This practice involves storing prompts in separate files to facilitate reusability, testing, and readability. By separating concerns, it becomes easier to manage multiple applications that might share the same prompt.
@@ -67,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defensive Prompt Engineering
 
@@ -85,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prompt Extraction Risks
 

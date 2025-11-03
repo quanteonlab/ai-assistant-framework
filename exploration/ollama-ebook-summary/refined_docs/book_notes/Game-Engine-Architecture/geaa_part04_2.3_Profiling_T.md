@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 2.3 Profiling Tools
 
 ---
 
-**Rating: 8/10**
 
 #### Statistical Profilers
 Background context explaining the concept. Statistical profilers are designed to be unobtrusive and measure execution time by periodically sampling the CPU’s program counter register. They provide an approximate percentage of total running time eaten up by each function without significantly impacting performance.
@@ -35,7 +33,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Instrumenting Profilers
 Background context explaining the concept. Instrumenting profilers are aimed at providing the most accurate timing data by preprocessing executables and inserting special prologue and epilogue code into every function. However, this approach can significantly slow down real-time execution.
@@ -62,7 +59,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Low-Overhead Profilers (LOP)
 Background context explaining the concept. Low-overhead profilers use statistical approaches to sample processor states periodically while analyzing call stacks to determine parent functions and their call distribution.
@@ -91,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Leak and Corruption Detection Overview
 Memory leaks and corruption are critical issues for C and C++ programmers. A memory leak occurs when dynamically allocated memory is not freed, leading to out-of-memory conditions. Memory corruption happens when data is written to an incorrect location or overwritten improperly.
@@ -104,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Object-Oriented Programming (OOP) Basics
 Object-oriented programming is a paradigm based on the concept of "objects," which can contain data, in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods).
@@ -115,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Classes and Objects
 A class in OOP serves as a blueprint for creating objects. It defines the structure and behavior of an object. When a class is instantiated, it produces an object (or instance) of that class.
@@ -126,7 +119,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Encapsulation in OOP
 Encapsulation is a principle that restricts direct access to some of an object's components, which can prevent accidental interference or misuse. This concept ensures that only authorized parts of the code are allowed to modify the internal state of the object.
@@ -137,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### C++ as a Focus Language
 The chapter emphasizes C++ due to its widespread use in game development but notes that other languages like C#, Java, Python, Lua, Lisp, Scheme, and F# are also important. Learning multiple languages enhances one's ability to think critically about programming.
@@ -150,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inheritance Overview
 Inheritance allows new classes to be defined as extensions to preexisting classes. It enables modification or extension of data, interface, and behavior of existing classes. If class Child extends class Parent, we say that Child inherits from or is derived from Parent.
@@ -179,7 +169,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Diamond Problem
 The diamond problem occurs in multiple inheritance when a class inherits from two classes that both inherit from the same parent. This can lead to ambiguity and confusion about which base class member is being referred to.
@@ -221,7 +210,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mix-in Classes
 Mix-in classes are simple, parentless classes that can be multiple-inherited into a hierarchy. They typically add functionality (e.g., animation) without affecting the core structure.
@@ -251,7 +239,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mix-in Classes
 
@@ -285,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Polymorphism
 
@@ -319,7 +305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtual Functions in Polymorphism
 
@@ -369,7 +354,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Composition
 
@@ -390,7 +374,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Composition vs Aggregation
 Explanation of composition and aggregation, highlighting their differences and benefits. These relationships are "has-a" or "uses-a" rather than "is-a". They result in simpler and more focused classes, making them easier to test, debug, and reuse.
@@ -428,7 +411,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Design Patterns Overview
 Explanation of what a design pattern is, including examples like Singleton and Iterator. These patterns are common solutions to recurring problems in software design.
@@ -460,7 +442,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Resource Acquisition Is Initialization (RAII)
 Explanation of the RAII pattern, which binds resource acquisition and release to class constructors and destructors. This prevents accidental forgetting of resource management.
@@ -506,7 +487,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rvalue References and Move Semantics
 Background context: To optimize handling temporary objects, C++11 introduced rvalue references and move semantics. These features allow the compiler to efficiently transfer ownership of resources from temporaries to other variables or functions.
@@ -528,7 +508,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Risk vs Reward
 

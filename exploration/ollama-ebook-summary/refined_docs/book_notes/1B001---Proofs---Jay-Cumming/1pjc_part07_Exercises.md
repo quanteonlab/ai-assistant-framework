@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 1B001---Proofs---Jay-Cumming_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Exercises
 
 ---
 
-**Rating: 8/10**
 
 #### Induction Proof for Sum of Squares
 
@@ -203,7 +201,6 @@ Thus, by induction, the statement holds for all \(n\).
 
 x??
 
-**Rating: 8/10**
 
 #### Divisibility and Prime Factorization
 Background context: This section discusses a fundamental theorem of arithmetic, which states that every integer greater than 1 can be uniquely factored into prime numbers. The proof involves showing that if \( n \geq 2 \) is an integer with factorizations \( n = p_1p_2\ldots p_k \) and \( n = q_1q_2\ldots q_\ell \), then the number of primes in each list must be equal, and the primes themselves are identical (up to order).
@@ -266,7 +263,6 @@ By strong induction, \( a_n = 2^n - 1 \) is true for all \( n \in \mathbb{N} \).
 ---
 ---
 
-**Rating: 8/10**
 
 #### Logic and Statements
 Background context: In logic, statements are sentences or mathematical expressions that can be classified as true or false. This forms the foundation for constructing proofs and understanding logical reasoning.
@@ -341,7 +337,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logical Connectives and Truth Values
 Background context: In logic, statements can be combined using logical connectives such as conjunction (^), disjunction (v), and negation (~). These operations transform simple statements into more complex ones that also hold truth values. For example:
@@ -456,7 +451,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Set Theory and Logical Operators
 Background context explaining the analogy between set operations and logical operators. Include any relevant formulas or data here.
@@ -543,7 +537,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Double Negatives and Logical Equivalence
 

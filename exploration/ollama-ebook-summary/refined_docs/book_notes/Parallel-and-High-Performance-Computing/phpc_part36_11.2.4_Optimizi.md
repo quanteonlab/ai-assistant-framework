@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 36)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11.2.4 Optimizing the GPU kernels
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Changing Vector Length Setting
@@ -30,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimizing GPU Kernel Performance
 Background context: While OpenACC provides good kernel generation by default, there are scenarios where further optimizations can lead to better performance. These include fine-tuning vector lengths, choosing appropriate parallelism levels, and minimizing data movement between host and device memory.
@@ -60,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Worker Setting with `num_workers`
 Background context: The `num_workers` clause allows you to modify how parallel work is divided among threads. While not used for examples in this chapter, it can be beneficial when shortening vector lengths or enabling additional levels of parallelization. OpenACC does not provide synchronization directives at the worker level but shares resources such as cache and local memory.
@@ -71,7 +67,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gangs in OpenACC
 Background context: In OpenACC, the `gang` level is crucial for tasks that need to run asynchronously on GPUs. Many gangs help hide latency and achieve high occupancy, with the compiler typically setting this to a large number unless specified otherwise.
@@ -82,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kernels Directive and Loop Clauses
 Background context: The `kernels` directive is used for more complex parallel regions that may include multiple nested loops. The `loop` clause can be applied individually to each loop within a kernel region, with the ability to specify vector lengths or other optimizations.
@@ -93,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loop Combining with `collapse(n)`
 Background context: The `collapse(n)` clause can be used to combine multiple loops into a single loop that is processed in parallel. This can simplify code and improve performance by reducing the overhead of nested loops.
@@ -106,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tile Clause Usage
 Background context: The `tile` clause in OpenACC directives is used for optimizing nested loops by breaking them down into smaller blocks (tiles) that can be processed independently. This helps in better load balancing and efficient use of GPU resources.
@@ -130,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stencil Code Example
 Background context: The stencil code is a common pattern used for numerical computations in various applications. In the provided example, we see how to optimize this type of code for execution on GPUs using OpenACC directives.
@@ -159,7 +150,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Movement Optimization
 Background context: Optimizing data movement between CPU and GPU is crucial for efficient execution on GPUs. In stencil computations, minimizing data transfer can significantly reduce overhead.
@@ -192,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tile Clause for Parallel Loops
 The `tile` clause is used to specify how data should be partitioned and tiled in parallel regions. By default, the compiler decides the tile size, but it can also be explicitly set by specifying dimensions.
@@ -218,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Results of Stream Triad
 
@@ -230,7 +218,6 @@ The typical pattern observed was an initial slowdown by about a factor of 3 when
 
 ---
 
-**Rating: 8/10**
 
 #### Advanced OpenACC Techniques
 
@@ -242,7 +229,6 @@ The `#pragma acc routine` directive allows for better integration of functions w
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Operations to Avoid Race Conditions
 
@@ -254,7 +240,6 @@ The `#pragma acc atomic` directive ensures that operations on shared variables a
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Operations
 
@@ -275,7 +260,6 @@ The `async` clause allows for concurrent operations, while the `wait` ensures th
 
 ---
 
-**Rating: 8/10**
 
 #### Device vs Host Pointers
 
@@ -289,7 +273,6 @@ A device pointer points to memory allocated on the GPU, while a host pointer poi
 
 ---
 
-**Rating: 8/10**
 
 #### OpenMP Target Teams Directives
 OpenMP introduces a set of directives to enable parallelism on accelerators, such as GPUs. These directives allow for fine-grained control over how work is distributed and executed across hardware resources. The `#pragma omp target teams distribute parallel for simd` directive is one way to specify this distribution.
@@ -306,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Target Directive Breakdown
 The `#pragma omp target` directive is the first part of the long directive, which allows code to be offloaded to an accelerator.
@@ -320,7 +302,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Teams Directive Explanation
 The `teams` keyword in the OpenMP directive creates a team of threads that will execute the subsequent work. This is often used to create multiple worker threads within a single execution context.
@@ -337,7 +318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distribute Directive
 The `distribute` keyword in the OpenMP directive is used to specify how the work should be spread out among the teams of threads.
@@ -354,7 +334,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Directive Explanation
 The `parallel` keyword in the OpenMP directive replicates work on each thread, ensuring that multiple threads can execute the same code concurrently.
@@ -371,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### For Directive Explanation
 The `for` keyword in the OpenMP directive spreads work out within each team, defining how individual iterations of a loop are assigned to threads.
@@ -388,7 +366,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simd Directive Explanation
 The `simd` keyword in the OpenMP directive spreads work out to threads within a work group, allowing for vectorized operations.
@@ -405,7 +382,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream Triad Example
 An example of using the `#pragma omp target teams distribute parallel for simd` directive is shown in Listing 11.13, where it is applied to a stream triad operation.
@@ -439,7 +415,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dynamic Array Allocation with OpenMP
 Background context: The code snippet introduces dynamic array allocation within an OpenMP target region. This is more common in real-world applications where the size of arrays cannot be determined at compile time. The use of `malloc` for dynamic memory allocation allows better flexibility and performance optimization.

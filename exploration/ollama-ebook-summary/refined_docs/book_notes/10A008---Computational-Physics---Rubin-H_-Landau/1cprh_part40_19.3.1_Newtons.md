@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 40)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 19.3.1 Newtons Potential Corrected. 19.3.2 Orbit Computation via Energy Conservation
 
 ---
 
-**Rating: 8/10**
 
 #### Effect of Energy on Orbits
 Background context explaining how the effective potential affects orbits and the significance of energy in determining orbit characteristics.
@@ -28,7 +26,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finding Maximum and Minimum of Effective Potential
 Background context explaining how to find the critical points of the effective potential.
@@ -62,7 +59,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Circular Orbit Existence
 Background context explaining how to determine if a circular orbit exists and its stability.
@@ -97,7 +93,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Exploration of Orbits
 Background context explaining how to use energy conservation and the ODE derived from it to numerically explore orbits.
@@ -139,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Minimum Effective Potential and Orbits
 Background context explaining how to find orbits corresponding to the minimum of the effective potential.
@@ -185,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differential Equation for Planetary Orbits
 
@@ -200,7 +193,6 @@ The final differential equation relating distance \( r \) and angle \( \phi \) f
 
 ---
 
-**Rating: 8/10**
 
 #### Precession of Mercury
 
@@ -212,7 +204,6 @@ The text mentions that the precession of Mercury's perihelion is 9.55 minutes of
 
 ---
 
-**Rating: 8/10**
 
 #### Differential Equation Derivation
 
@@ -233,7 +224,6 @@ Using the definitions for \( d\tau/dt \) and \( d\phi/dt \), the equation is tra
 
 ---
 
-**Rating: 8/10**
 
 #### Perihelion Precession Calculation
 
@@ -267,7 +257,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Perihelion Precession Calculation - Numerical Value
 

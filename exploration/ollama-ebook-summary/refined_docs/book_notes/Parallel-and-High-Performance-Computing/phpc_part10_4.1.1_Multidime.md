@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4.1.1 Multidimensional arrays
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Layout for Multidimensional Arrays
 
@@ -53,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Array of Structures (AoS) and Structure of Arrays (SoA)
 
@@ -102,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Structure of Arrays (SoA) Data Layout
 
@@ -157,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hybrid Data Structure: Array of Structures of Arrays (AoSoA)
 
@@ -226,7 +221,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Array of Structures (AoS) Performance Assessment
 Background context: In the AoS representation, all three components for a point are stored together. This is commonly used in graphics operations where all R, G, and B values might be needed simultaneously. However, if only one of these values is accessed frequently within a loop, cache usage can become poor.
@@ -263,7 +257,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Usage and Padding
 Background context: If the compiler adds padding, it can increase memory loads by 25% for AoS representations. This padding is to ensure proper alignment of data structures but may not be present in all compilers.
@@ -309,7 +302,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Structure of Arrays (SoA) vs. Array of Structures (AoS)
 Background context: In data-oriented design, the choice between using an Array of Structures (AoS) and a Structure of Arrays (SoA) can significantly impact performance, depending on the specific operations being performed.
@@ -361,7 +353,6 @@ In mixed use cases where both AoS and SoA accesses are common, testing is crucia
 
 ---
 
-**Rating: 8/10**
 
 #### Instruction Cache Misses and Subroutine Calls Overhead
 Background context explaining how instruction cache misses and subroutine calls overhead can impact performance. Instruction caches are divided into two levels: Level 1 (L1) for instructions and data, and Level 2 (L2) or higher for larger amounts of data.
@@ -388,7 +379,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inlining Functions for Performance Optimization
 Background context explaining how inlining functions can reduce the overhead of subroutine calls. The C++ compiler has certain heuristics to decide whether to inline a function based on its complexity and size.
@@ -423,7 +413,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data-Oriented Design with Struct of Arrays (SoA)
 Background context explaining the concept of data-oriented design and how it can improve cache usage. In a traditional Array of Structures (AoS) layout, each object contains all its members, leading to potential cache line pollution when accessing shared members.
@@ -487,7 +476,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hash Table Implementation with Key-Value Pairs
 Background context explaining how to implement hash tables using structures for key-value pairs. This approach can be used to store data efficiently by grouping keys and values together.
@@ -523,7 +511,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Array of Structures (AoS) vs Structure of Arrays (SoA)
 Background context explaining the difference between AoS and SoA layouts. AoS groups all fields of an object together into one structure, while SoA groups related data elements into separate arrays.
@@ -588,7 +575,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Array of Structures (SoA) Layout
@@ -619,7 +605,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Three Cs of Cache Misses: Compulsory, Capacity, Conflict
 Background context: Cache misses significantly impact the performance of intensive computations. The three C’s help understand why cache misses occur and how to mitigate them.
@@ -642,7 +627,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Cache Miss Cost
@@ -655,7 +639,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Memory Overview
 Background context: Cache memory is a crucial component for managing data access from main memory to CPU, reducing the cost of cache misses. It works by loading data in blocks called cache lines (typically 64 bytes) based on their address.
@@ -679,7 +662,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Direct-Mapped Cache
 Background context: In a direct-mapped cache, each memory block is mapped to one specific location in the cache. This means only one array can be cached at a time if two arrays map to the same location.
@@ -708,7 +690,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### N-Way Set Associative Cache
 Background context: An N-way set associative cache provides multiple locations to load data, allowing more flexibility in caching multiple arrays without conflicts.
@@ -741,7 +722,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Prefetching
 Background context: Prefetching involves issuing an instruction to preload data before it is needed, reducing cache misses and improving performance. This can be done either in hardware or by the compiler.
@@ -773,7 +753,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Thrashing
 Background context: Cache thrashing occurs when cache misses due to capacity or conflict evictions lead to repeated reloading of the same data. This can significantly degrade performance.
@@ -814,7 +793,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Misses Overview
 Cache misses are a significant performance issue where data is not found in the cache, leading to slower access times. Compulsory, capacity, and conflict misses are types of cache misses that can affect the performance of programs.
@@ -830,7 +808,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stencil Kernel Explanation
 The stencil kernel processes an image by averaging neighboring pixel values. The kernel uses 5 floating-point operations (flops) per element and stores the result back into memory.
@@ -854,7 +831,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Arithmetic Intensity Calculation
 Arithmetic intensity measures how much computation (flops) is performed per unit of data transferred (bytes).
@@ -875,7 +851,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Flushing
 Between iterations, a large array is written to flush the cache and ensure no relevant data from previous iterations remains in it.
@@ -896,7 +871,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Roofline Model Overview
 The roofline model helps in understanding the hardware limits by showing maximum floating-point operations (MFLOPS) versus memory bandwidth.

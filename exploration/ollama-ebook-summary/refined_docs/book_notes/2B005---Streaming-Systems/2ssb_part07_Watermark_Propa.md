@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Watermark Propagation
 
 ---
 
-**Rating: 9/10**
 
 ---
 #### Input Watermark
@@ -95,7 +93,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Watermark Propagation and Output Timestamps Overview
 Background context: In processing pipelines, output timestamps play a crucial role in determining how watermarks progress through stages. Understanding these nuances helps in optimizing the pipeline's performance and correctness.
@@ -208,7 +205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Session Timestamp Assignment Impact on Fixed Windows
 

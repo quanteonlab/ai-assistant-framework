@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 32 Avoid Including null or undefined in Type Aliases
 
 ---
 
-**Rating: 8/10**
 
 #### Avoid Repeating Type Information in Comments and Variable Names
 Background context: When working with programming, it's important to avoid redundancy by not repeating type information within comments or variable names. This practice can lead to inconsistencies if the types are updated but the documentation isn't.
@@ -101,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Push Null Values to the Perimeter of Your Types
 When you first turn on strictNullChecks, it may seem as though you have to add scores of if statements checking for null and undefined values throughout your code. This is often because the relationships between null and non-null values are implicit: when variable A is non-null, you know that variable B is also non-null and vice versa.
@@ -210,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prefer Unions of Interfaces to Interfaces with Unions
 

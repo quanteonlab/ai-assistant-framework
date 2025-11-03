@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Hadoop
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce Overview
 MapReduce introduced a simple and scalable programming model for processing large datasets. It abstracts away complex distributed system details, allowing developers to focus on writing map and reduce functions.
@@ -111,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spark's Origins and Early Success
 Background context: Apache Spark was developed around 2009 at UC Berkeley's AMPLab. It gained fame due to its ability to perform most calculations in memory, significantly improving performance over traditional Hadoop jobs by leveraging Resilient Distributed Datasets (RDDs). RDDs capture the lineage of data and allow for efficient recomputation after failures.
@@ -173,7 +170,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MillWheel Overview
 Background context explaining the concept of MillWheel and its initial focus. MillWheel was Google’s original, general-purpose stream processing architecture founded by Paul Nordstrom around when Google opened its Seattle office in 2008.

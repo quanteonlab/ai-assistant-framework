@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Pre-production. Rollbacks
 
 ---
 
-**Rating: 8/10**
 
 #### Pre-production Environment
 During this stage, the artifact is deployed and released to a synthetic pre-production environment. Although this environment lacks the realism of production, it's useful to verify that no hard failures are triggered (e.g., a null pointer exception at startup due to a missing configuration setting) and that end-to-end tests succeed. Because releasing a new version to pre-production requires significantly less time than releasing it to production, bugs can be detected earlier.
@@ -128,7 +126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blackbox Monitoring vs White-box Monitoring
 Background context: The text discusses two types of monitoring techniques used to assess system health and performance. Blackbox monitoring focuses on external visibility, while white-box monitoring delves into internal details via application-level measurements.
@@ -248,7 +245,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pre-Aggregation on Clientside
 Background context: To reduce bandwidth, compute, and storage requirements for metrics, we can pre-aggregate metrics on the clientside before sending them to a telemetry backend like AWS Watch6. This approach involves aggregating data at the source rather than waiting until it reaches the backend.

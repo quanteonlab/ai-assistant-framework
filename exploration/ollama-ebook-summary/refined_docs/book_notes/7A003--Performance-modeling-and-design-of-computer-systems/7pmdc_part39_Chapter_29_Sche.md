@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 39)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 29 Scheduling Non-Preemptive Non-Size-Based Policies
 
 ---
 
-**Rating: 8/10**
 
 #### Work in System and Device Utilization
 Background context: When analyzing a single queue, two important metrics are work in system (remaining tasks to complete) and device utilization (fraction of time that the device is busy). These metrics can help understand how different scheduling policies affect system performance.
@@ -137,7 +135,6 @@ public class SlowdownDerivation {
 ```
 x??
 
-**Rating: 8/10**
 
 #### FCFS vs LCFS Scheduling Policies
 FCFS (First-Come, First-Served) and LCFS (Last-Come, First-Served) are non-preemptive policies that do not use job size information. In an M/G/1 queue setting, they serve jobs based on their arrival order or the reverse of it.
@@ -197,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Processor-Sharing (PS) Concept
 Background context: In Chapter 30, we explore three preemptive scheduling policies that do not rely on job size or priority class. One of these policies is Processor-Sharing (PS). PS allows short jobs to time-share with all other jobs in the system immediately upon arrival, which can reduce their waiting times compared to non-preemptive policies.
@@ -321,7 +317,6 @@ public class StochasticSetting {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Expected Number of Jobs in System with Size x to x+h
 

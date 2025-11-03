@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Turtles All the Way Down
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Modularity and Bounded Contexts
@@ -30,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Boundaries and Bounded Contexts Alignment
 Once the bounded contexts are identified, these should be modeled as separate modules or services. This alignment ensures that each microservice represents a specific business capability within its bounded context, leading to loose coupling and strong cohesion.
@@ -53,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Premature Decomposition
 Premature decomposition of a system into microservices can lead to increased costs and maintenance challenges. It is often better to develop the initial system as a monolith and understand its boundaries more thoroughly before moving towards microservices.
@@ -72,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Business Capabilities vs Data Models
 When identifying bounded contexts, focus on the business capabilities they provide rather than just data models. This approach ensures that services expose meaningful operations (like getting a current stock list or setting up payroll) rather than simple CRUD operations.
@@ -99,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nested Bounded Contexts
 Bounded contexts can contain further bounded contexts, allowing for nested decomposition. This approach helps in managing complexity by breaking down larger contexts into smaller, more manageable units.
@@ -130,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bounded Contexts and Microservices
 Background context: The changes to a system are often driven by business needs. When decomposing systems into microservices, these services should be aligned with bounded contexts—areas within the domain that have their own language, rules, and data. This approach helps in isolating changes to specific microservices, reducing complexity.
@@ -153,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Communication Through Business Concepts
 Background context: Communicating between microservices should mimic the language and concepts used within the business. This approach ensures that teams understand each other better, reducing misunderstandings.
@@ -179,7 +171,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Technical Boundary Issues
 Background context: The example provided discusses a situation where services were modeled incorrectly along technical boundaries rather than business ones. This led to performance and maintenance issues.
@@ -207,7 +198,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bounded Contexts and Microservices
 Background context: This concept explains how bounded contexts are crucial in identifying seams within a problem space, allowing for microservices that maintain high cohesion and loose coupling. These boundaries help ensure that changes in one part of the system do not adversely affect another.
@@ -218,7 +208,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Domain-Driven Design (DDD)
 Background context: DDD provides useful tools for finding sensible boundaries between microservices by focusing on the core domain logic and entities. The ideas from DDD help ensure that services remain autonomous, making it easier to change and release them independently.
@@ -229,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ideal Integration Technology Considerations
 Background context: Choosing the right technology for microservice communication is crucial to maintain autonomy and avoid breaking changes or tangled systems. Factors like avoiding breaking changes and ensuring API agnosticism are key in selecting an integration technology.
@@ -243,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Integration Technologies
 Background context: There are various options for integrating microservices, including SOAP, XML-RPC, REST, and Protocol Buffers. Each has its strengths and weaknesses, but it's crucial to choose one that aligns with the goals of minimizing breaking changes and ensuring API agnosticism.
@@ -260,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avoiding Breaking Changes
 Background context: When making changes to microservices, it's crucial to ensure that consumers are not adversely affected. Techniques like introducing new fields without breaking existing consumers can help maintain system stability.
@@ -276,7 +262,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Technology-Agnostic APIs
 Background context: As the IT industry evolves rapidly, it's important for APIs to remain agnostic of specific technologies. This ensures that services can be easily migrated or replaced without impacting other parts of the system.
@@ -294,7 +279,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Keeping Options Open with Microservices
 Background context: The text discusses why microservices are preferred for keeping options open, particularly focusing on technology-agnostic communication between services. It emphasizes making services simple and accessible to consumers while hiding internal implementation details.
@@ -311,7 +295,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Making Services Easy for Consumers
 Background context: The text emphasizes making microservices easy for consumers to use by providing full freedom in their technology choice. It suggests that while client libraries can ease adoption, they may increase coupling and thus should be used judiciously.
@@ -329,7 +312,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hiding Internal Implementation Details
 Background context: The text stresses the importance of hiding internal implementation details to avoid breaking consumers if changes are made within the microservice. This is crucial for maintaining loose coupling and reducing technical debt.
@@ -353,7 +335,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shared API Fragility due to Database Changes
 Background context: The passage highlights that a shared database acts as a brittle shared API, making it challenging to change the underlying schema without breaking other services.
@@ -383,7 +364,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tying Consumers to Specific Technology Choices
 Background context: Direct database access binds consumers to the specific technology and structure of the database, making it hard to switch storage strategies without impacting these consumers.
@@ -405,7 +385,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Losing Cohesion and Strong Coupling
 Background context: The passage points out that direct database access leads to scattered logic across different services, compromising cohesion and strong coupling.
@@ -435,7 +414,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avoiding Database Integration for Microservices
 Background context: The passage concludes by advising against using direct database access in microservices architecture due to the issues it introduces.

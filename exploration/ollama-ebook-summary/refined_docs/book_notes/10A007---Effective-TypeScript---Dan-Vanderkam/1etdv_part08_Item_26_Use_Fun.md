@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 26 Use Functional Constructs and Libraries to Help Types Flow
 
 ---
 
-**Rating: 8/10**
 
 #### Evolving Types and Functional Constructs
 Background context: The passage explains how using functional constructs like `map`, `reduce`, etc., can help types flow through your TypeScript code, reducing the need for explicit type annotations. It mentions that these constructs come with their own advantages but also caveats related to incorrect use or overreliance on them.
@@ -109,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Promises
 Promises are a way of handling asynchronous operations in JavaScript. They represent a value that may be available now, in the future, or never. A Promise can be in one of three states: pending (initial), fulfilled (has a value), or rejected (has an error).
@@ -256,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Async Functions and Promises
 

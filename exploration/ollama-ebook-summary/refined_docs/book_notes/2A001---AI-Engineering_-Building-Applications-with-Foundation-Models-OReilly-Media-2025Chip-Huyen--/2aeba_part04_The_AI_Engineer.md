@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A001---AI-Engineering_-Building-Applications-with-Foundation-Models-OReilly-Media-2025Chip-Huyen--_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The AI Engineering Stack
 
 ---
 
-**Rating: 8/10**
 
 #### Competitive Advantages in AI
 In AI, there are three main types of competitive advantages: technology, data, and distribution. Foundation models often have similar core technologies, giving big companies an edge in distribution. However, a startup can differentiate itself by gathering sufficient usage data to continually improve its product.
@@ -23,7 +21,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Useful Thresholds for AI Products
 When building an AI application, it's crucial to define clear expectations on the product’s usefulness threshold. This helps ensure that the product is not put in front of customers before it meets a certain standard.
@@ -43,7 +40,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluating Existing Models for Goals
 The initial step in planning an AI product is understanding the capabilities of existing models. By evaluating these models, you can determine how much work needs to be done to meet your goals. For instance, if a model can automate 30% of customer support tickets and your goal is to automate 60%, then you might need less effort compared to starting from scratch.
@@ -55,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Milestone Planning for AI Products
 Once you have set measurable goals, creating a plan to achieve them becomes essential. The effectiveness of the plan depends on where you start. If your off-the-shelf model can already partially meet some of your goals, then less effort might be required compared to starting from scratch.
@@ -67,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Maintenance of AI Products
 Maintenance is a critical aspect of AI product development that extends beyond achieving initial goals. You need to consider how the product will evolve and how it should be maintained over time. The fast-paced nature of AI means that maintaining an AI product requires constant updates and adaptations.
@@ -79,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evolution of Inference Costs
 Inference costs are decreasing rapidly as AI models improve. The cost of inference has dropped significantly over a short period, making it cheaper and faster to compute model outputs.
@@ -93,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cost-Benefit Analysis of Technology Investments
 
@@ -112,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### API Convergence and Model Interoperability
 
@@ -127,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Infrastructure Challenges in AI Engineering
 
@@ -147,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AI Engineering vs. ML Engineering
 
@@ -165,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Engineering Stack for Building AI Applications
 
@@ -188,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application Development Layer
 Background context: The application development layer is where anyone can use readily available models to develop applications. It's a rapidly evolving field that requires good prompts, necessary context, and rigorous evaluation of the applications developed.
@@ -210,7 +197,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Development Layer
 Background context: The model development layer provides tools for developing new models, including frameworks for modeling, training, finetuning, and inference optimization. It also involves dataset engineering.
@@ -225,7 +211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Infrastructure Layer
 Background context: The infrastructure layer is crucial for deploying models at scale. It involves managing resources such as data and compute, and monitoring the performance of deployed models.
@@ -242,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ML vs. AI Engineering Principles
 
@@ -256,7 +240,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Key Differences Between AI and ML Engineering
 
@@ -273,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluation Challenges in AI Engineering
 
@@ -287,7 +269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finetuning
 Background context explaining finetuning as a method to update model weights by making changes directly to the model. This technique is more complex and requires more data but can significantly improve model performance.
@@ -299,7 +280,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Development Layer
 Background context describing the responsibilities in developing an AI application, including modeling and training, dataset engineering, inference optimization, and evaluation.
@@ -316,7 +296,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modeling and Training
 Background context on modeling and training, including examples of tools like TensorFlow, Hugging Face’s Transformers, and Meta’s PyTorch. It also mentions the need for specialized ML knowledge to develop models.
@@ -333,7 +312,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluation
 Background context on evaluation in the application development layer, noting that it is discussed further in a separate section.
@@ -347,7 +325,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Pre-training
@@ -359,7 +336,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finetuning
 Finetuning means continuing to train a previously trained model—the model weights are obtained from the previous training process. Because the model already has certain knowledge from pre-training, finetuning typically requires fewer resources (e.g., data and compute) than pre-training.
@@ -370,7 +346,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Post-training
 Post-training and finetuning are often used interchangeably, but sometimes people might use them differently to signify different goals. Conceptually, post-training is done by model developers, while finetuning can be performed by application developers. It’s usually post-training when a model like InstructGPT is improved for following instructions before release.
@@ -381,7 +356,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Dataset Engineering
@@ -413,7 +387,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inference Optimization
 
@@ -439,7 +412,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Needs for Different Adapter Techniques
 
@@ -475,7 +447,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluation of Foundation Models
 Evaluation is a critical process to mitigate risks and uncover opportunities, essential throughout the model adaptation process. It's necessary for selecting models, benchmarking progress, determining deployment readiness, and detecting issues or improvement opportunities.
@@ -489,7 +460,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prompt Engineering for Foundation Models
 Prompt engineering involves using carefully crafted prompts to elicit desired behaviors from AI models without changing the underlying model weights. This technique is crucial because different prompts can significantly impact model performance.
@@ -503,7 +473,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Construction in Prompt Engineering
 Context construction is a part of prompt engineering that involves providing AI models with necessary context and tools to perform complex tasks effectively, especially those involving long contexts. This might require additional systems like memory management to help the model track its history.
@@ -515,7 +484,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AI Interface Development for Applications
 AI interfaces enable end users to interact with AI applications. With foundation models, anyone can build such applications, whether as standalone products or integrated into other platforms.
@@ -527,7 +495,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differentiation through Application Development
 In traditional ML engineering, model quality differentiates teams building proprietary models. However, with foundation models where many use the same underlying model, differentiation comes from application development layers such as evaluation, prompt engineering, and AI interface.

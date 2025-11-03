@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 34)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Tight Feedback Between Applications and ML
 
 ---
 
-**Rating: 8/10**
 
 #### Modern Data Stack (MDS) Limitations
 Background context: The modern data stack is praised for its powerful tools, cost-effectiveness, and empowerment of analysts. However, it has limitations when compared to next-generation real-time applications due to its cloud data warehouse-centric nature.
@@ -99,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Availability Zones
 Background context explaining the concept. Availability zones are the smallest unit of network topology that public clouds make visible to customers. They generally consist of two or more data centers, ensuring independent resources so a local power outage doesn't affect multiple zones.
@@ -142,7 +139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Physical Distance and Network Hops Impact on Performance
 

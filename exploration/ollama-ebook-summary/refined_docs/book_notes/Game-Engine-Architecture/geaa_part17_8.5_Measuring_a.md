@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.5 Measuring and Dealing with Time
 
 ---
 
-**Rating: 8/10**
 
 #### Frame Rate and Time Deltas
 Background context: The frame rate of a real-time game describes how frequently 3D frames are presented to the viewer. In games, this is typically measured in frames per second (FPS), which is equivalent to Hertz (Hz). Common frame rates include 24 FPS for films, 30 or 60 FPS for North American and Japanese games, and 50 FPS for European and most other world games due to their respective television standards.
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Measuring Time in Games
 Background context: To accurately measure the time between frames, game developers often use `deltaTime` or `deltatime`. This value is essential for tasks such as updating animations and managing physics simulations smoothly.
@@ -47,7 +44,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Frame Rate and Speed Calculation
 Background context: In real-time games, the frame rate determines how frequently positions or states are updated. This is crucial for maintaining a consistent speed regardless of the number of frames per second.
@@ -67,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Frame Rate Variations Across Regions
 Background context: Different regions have different television standards, which affect the frame rate of games rendered on those systems. North America and Japan typically use 30 or 60 FPS due to NTSC standard, while Europe uses 50 FPS with PAL or SECAM.
@@ -92,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reversing Animations and Time Scaling
 Background context: Animations can be played in reverse by reversing the direction of time. This is equivalent to mapping the clip onto the global timeline with a negative `deltaTime` or a scaling factor.
@@ -111,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scaling Time for Animation Playback
 Background context: The speed at which an animation plays can be adjusted by scaling the local timeline. This is useful for slowing down or speeding up animations without changing their intrinsic duration.
@@ -132,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Updating Based on Elapsed Time
 Background context: To make games CPU-independent, it is essential to measure \(\Delta t\) during each frame. This can be achieved by reading the value of the high-resolution timer at the beginning and end of a frame, then subtracting these values to get an accurate measure of \(\Delta t\). This delta time (\(\Delta t\)) can then be used across various engine subsystems.
@@ -159,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Frame-Rate Spike Problem
 Background context: Using \(\Delta t\) from the previous frame to estimate the upcoming frame's duration can lead to inaccuracies. This is because real-world factors might cause a significant deviation in actual frame time, which we call a "frame-rate spike." Such deviations can create a "vicious cycle" of poor frame times.
@@ -186,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Handling Bad Frames
@@ -207,7 +197,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using a Running Average
 Background context: Game loops often maintain some frame-to-frame coherence, meaning that subsequent frames might have similar characteristics to the previous one. Averaging frame-time measurements over multiple frames can help smooth out spikes and provide a more stable estimate for \(\Delta t\).
@@ -230,7 +219,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Governing the Frame Rate
 Background context: Ensuring a consistent frame rate is crucial for maintaining stability in real-time simulations and providing a smooth user experience. By governing the frame rate, the system can maintain a steady performance even if individual frames take longer than expected.
@@ -255,7 +243,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consistent Elapsed Frame Times for Record and Playback
 Background context: When frame times are consistent, features like record and playback become more reliable. This is because every event during gameplay can be accurately recorded and replayed with the same timing.
@@ -310,7 +297,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Screen Tearing and V-Sync
 Background context: Screen tearing is a visual anomaly where part of the screen shows an old image while another part shows a new one, resulting from buffer swapping during partial rendering. To avoid tearing, many engines wait for the vertical blanking interval (V-blank) before swapping buffers.
@@ -348,7 +334,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### V-Sync and Frame Rate Synchronization
 Background context: V-sync is a technique used to synchronize the frame rate of the main game loop with the monitor's refresh rate. It effectively clamps the update rate to multiples of the screen’s refresh interval.
@@ -416,7 +401,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### High-Resolution Timer Overview
 Background context explaining the need for high-resolution timers. Discuss why functions like `time()` are not suitable for real-time applications due to low resolution.
@@ -429,7 +413,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### High-Resolution Timer Example on Intel Pentium
 Background context explaining how high-resolution timers are implemented differently across various platforms and processors. Highlight specific instructions like `rdtsc` for Intel processors.
@@ -458,7 +441,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### High-Resolution Timer Drift
 Background context explaining the potential drift issue with high-resolution timers, especially on multi-core processors.
@@ -473,7 +455,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Units and Clock Variables Overview
 This section discusses the choices involved when measuring or specifying time durations in a game. The primary questions are: What time units should be used (seconds, milliseconds, machine cycles), and what data type should store these measurements (64-bit integer, 32-bit integer, 32-bit floating point).
@@ -490,7 +471,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Floating-Point Clocks for Time Deltas
 Another common method is storing small time deltas in floating-point format measured in seconds. This involves converting CPU cycle durations to seconds using the clock frequency.
@@ -528,7 +508,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations of Floating-Point Clocks
 Background context explaining the concept. In a 32-bit IEEE float, the 23 bits of the mantissa are dynamically distributed between the whole and fractional parts by way of the exponent (see Section 3.3.1.4). Small magnitudes require only a few bits for the whole part, leaving plenty of bits of precision for the fraction. However, as the magnitude grows too large, more bits are allocated to the whole part, reducing the available bits for the fractional part. Eventually, even the least-significant bits of the whole part become implicit zeros.
@@ -550,7 +529,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Game-Defined Time Units
 Background context explaining the concept. Some game engines allow timing values to be specified in a game-defined unit that is fine-grained enough for an integer format to be used, precise enough for various applications within the engine, and large enough so that a 32-bit clock won’t wrap too often.
@@ -579,7 +557,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dealing with Breakpoints in Game Loops
 Background context explaining the concept. When your game hits a breakpoint, its loop stops running and the debugger takes over. If you run the game on the same computer as the debugger, the CPU continues to run, and the real-time clock accrues cycles. A large amount of wall clock time can pass while inspecting code at a breakpoint. This can lead to massive spikes in measured frame duration when resuming execution.
@@ -614,7 +591,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Frame Delta Time Calculation
 Background context explaining how frame delta time is calculated to ensure smooth game performance. This involves reading the current time, calculating the difference between the previous and current times, and adjusting if the time difference is too large.
@@ -637,7 +613,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiprocessor Game Loops
 Background context explaining how game engines can utilize multiple processors or cores to improve performance through task and data parallelism.
@@ -652,7 +627,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task Decomposition for Concurrency
 Background context explaining how task decomposition transforms a sequential program into a concurrent one. Describes two main categories: task parallelism and data parallelism.
@@ -672,7 +646,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### One Thread per Subsystem
 Background context explaining a simple approach to decompose tasks by assigning different subsystems (e.g., rendering, collision detection) to separate threads. These threads are controlled by a master thread that handles the game's high-level logic.
@@ -714,7 +687,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Limitations and Imbalances
 Background context: The passage discusses the limitations of assigning each engine subsystem to its own thread. Issues include mismatched core counts, varying processing demands, and dependencies between subsystems.
@@ -739,7 +711,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scatter/Gather Approach
 Background context: The passage introduces a divide-and-conquer approach called scatter/gather to handle data-intensive tasks. This method divides work into smaller subunits, processes them in parallel on multiple cores, and then combines the results.
@@ -758,7 +729,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scatter/Gather in Game Loop
 Background context: The passage explains how scatter/gather operations might be performed by the master game loop thread during a single iteration to parallelize CPU-intensive tasks. This involves dividing the work into smaller subunits, executing them on multiple cores, and combining the results once all workloads are completed.
@@ -794,7 +764,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Processing Workload Division
 Background context: The architecture discussed involves dividing a large dataset into smaller batches to be processed by worker threads. This approach is particularly useful for parallel processing tasks where the system has multiple cores available.
@@ -820,7 +789,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread-Based Scatter/Gather Approach
 Background context: This approach involves dividing work into smaller tasks that can be executed in parallel by multiple threads. Each thread processes a subset of the data and returns results to the master thread.
@@ -859,7 +827,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SIMD for Scatter/Gather
 Background context: SIMD (Single Instruction Multiple Data) is a technique that allows performing operations on multiple data points simultaneously. In the context of scatter/gather, it can be used to process smaller units of data within each worker thread.
@@ -895,7 +862,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Making Scatter/Gather More Efficient
 Background context: To mitigate the overhead of creating and joining threads, a thread pool can be used. This approach pre-allocates a set of worker threads that are ready to take on tasks without needing to create new ones every time.
@@ -935,7 +901,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiprocessor Game Loops and Thread Management
 The challenge lies in synchronizing threads to perform various tasks during each frame of a game loop, especially when dealing with a large number of variables. Directly spawning threads for every scatter/gather operation would be inefficient and hard to manage.
@@ -947,7 +912,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Job Systems Overview
 A job system allows subdividing game loop iterations into multiple independent jobs that can be executed concurrently across available cores. This approach maximizes processor utilization and scales naturally with varying core counts.
@@ -959,7 +923,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Typical Job System Interface
 A typical job system provides an easy-to-use API similar to threading libraries. Key functions include spawning jobs, waiting for other jobs to complete, and managing critical sections.
@@ -985,7 +948,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Job System Usage
 In game development, various tasks like animation, physics simulations, and rendering can be broken down into independent jobs. These jobs can then be submitted to the job system for execution.
@@ -1016,7 +978,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronization in Job Systems
 To manage concurrent operations, job systems often provide mechanisms like spin locks or mutexes. These ensure that critical sections of code are executed atomically.
@@ -1042,7 +1003,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scalability and Flexibility of Job Systems
 Job systems can adapt to hardware configurations with varying numbers of CPU cores, making them ideal for game engines where performance is crucial.
@@ -1056,7 +1016,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Job Declaration Structure
@@ -1113,7 +1072,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Job Execution Mechanism
 Background context explaining how jobs are executed using a thread pool.
@@ -1147,7 +1105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Counter Mechanism
 Background context explaining how counters are used in the job system for synchronization.
@@ -1172,7 +1129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Job Scheduling and Priority
 Background context explaining how priorities can be assigned to jobs in the system.
@@ -1205,7 +1161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Job Worker Thread Implementation
 
@@ -1242,7 +1197,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Problem with Simple Thread-Pool Job System
 
@@ -1273,7 +1227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coroutines as a Solution
 
@@ -1310,7 +1263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Job System Based on Fibers
 Background context explaining that Naughty Dog’s job system is based on fibers, allowing jobs to sleep and be woken up. This enables the implementation of a join function for the job system, similar to `pthread_join()` or `WaitForSingleObject()`.
@@ -1321,7 +1273,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Job Counters in Job System
 Background context explaining how job counters act like semaphores but in reverse, incrementing on job kick and decrementing on termination. This approach is more efficient than polling individual jobs.
@@ -1332,7 +1283,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Efficient Job Synchronization Using Counters
 Background context on the inefficiency of polling individual jobs versus waiting for a counter to reach zero. Counters are used in Naughty Dog’s job system to achieve this efficiency.
@@ -1343,7 +1293,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiprocessor Game Loops and Job System
 Background context explaining the need for synchronization in concurrent programs and how a job system must provide synchronization primitives similar to threading libraries.
@@ -1354,7 +1303,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spinlocks for Job Synchronization
 Background context on the use of spinlocks to avoid putting an entire worker thread to sleep when multiple jobs need to wait for the same lock. Explanation that this approach works well under low contention.
@@ -1367,7 +1315,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mutex Mechanism for Job Systems
 Background context: In a high-contention job system, a custom mutex mechanism can help manage resource contention. The mutex allows jobs to wait without consuming CPU cycles when they cannot acquire a lock. This mechanism involves busy-waiting initially and then yielding the coroutine or fiber to another job if the lock remains unavailable.
@@ -1389,7 +1336,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fiber-Based Job System Overview
 Background context: The Naughty Dog job system, used on games like *The Last of Us: Remastered*, *Uncharted 4: A Thief's End*, and *Uncharted: The Lost Legacy*, employs a fiber-based approach to manage jobs efficiently. This system is designed to maximize the utilization of CPU cores available on platforms such as PS4.
@@ -1409,7 +1355,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Job Queue and Fiber Pool Management
 Background context: Jobs are enqueued for execution, and the system manages a pool of fibers. When cores become free, new jobs are pulled from the queue and executed using available fibers.
@@ -1440,7 +1385,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Job Synchronization with Counters
 Background context: The system uses counters to synchronize jobs. When a job needs to wait, it sets up a counter and goes to sleep until the counter reaches zero.
@@ -1462,7 +1406,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Job System Fiber Management
 Background context: The job system manages its own set of fibers that it uses to handle job execution and synchronization. When a job completes, it switches back to the job system's management fiber.

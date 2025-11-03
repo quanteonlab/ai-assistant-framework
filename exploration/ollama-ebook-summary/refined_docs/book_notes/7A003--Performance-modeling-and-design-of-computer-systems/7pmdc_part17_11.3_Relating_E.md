@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11.3 Relating Exponential to Geometric via -Steps
 
 ---
 
-**Rating: 8/10**
 
 #### Exponential Distribution for Customer Stay Time
 Background context: The time a customer spends in a bank is exponentially distributed with a mean of 10 minutes. This implies an exponential distribution parameter \( \lambda = \frac{1}{10} \).
@@ -118,7 +116,6 @@ Then the number of events \( N(t) \) in time \( t \) follows a Poisson distribut
 This relationship is fundamental for analyzing and modeling real-world phenomena such as customer arrivals, call center calls, or radioactive decay.
 ??x
 
-**Rating: 8/10**
 
 #### Definition of o(δ)
 Background context: The definition provided states that a function \( f \) is \( o(\delta) \) if as \( \delta \to 0 \), the limit of \( \frac{f}{\delta} \) tends to zero. This indicates that \( f \) goes to zero faster than \( \delta \). For example, \( \delta^2 \) is \( o(\delta) \) because \( \lim_{\delta \to 0} \frac{\delta^2}{\delta} = 0 \).
@@ -215,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time until a Failure of Either Type
 

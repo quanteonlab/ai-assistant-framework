@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 37)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 26.3 Readings. Chapter 27 Power Optimization Application
 
 ---
 
-**Rating: 8/10**
 
 #### M/G/1 Queue: Job Size Distribution
 Background context explaining the concept of an M/G/1 queue and its job size distribution. The job sizes \(S\) follow a two-phase exponential distribution:
@@ -190,7 +188,6 @@ x??
 ---
 These flashcards cover key concepts and provide context and explanations to aid in understanding the material.
 
-**Rating: 8/10**
 
 #### Distribution of Idle Periods
 Background context: In an M/G/1 system, the busy period is defined as the time from when the server first becomes busy until it first goes idle. Conversely, an idle period is the time between two consecutive arrivals. The average arrival rate is denoted by λ, and job sizes are represented by a random variable S.
@@ -313,7 +310,6 @@ The variability of S plays a key role in E[T] through the inspection paradox and
 ```
 x??
 
-**Rating: 8/10**
 
 #### Laplace Transform of \(\tilde{B}(x)(s)\)
 Background context: The Laplace transform of \(\tilde{B}(x)(s)\) is given, which represents the probability that the total work \(B\) (which starts with a random variable \(W\) and has job sizes \(S\)) is less than or equal to \(x\).

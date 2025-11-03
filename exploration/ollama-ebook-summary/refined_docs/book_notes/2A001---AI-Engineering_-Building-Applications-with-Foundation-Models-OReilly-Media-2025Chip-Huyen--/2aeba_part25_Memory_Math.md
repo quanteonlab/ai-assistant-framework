@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A001---AI-Engineering_-Building-Applications-with-Foundation-Models-OReilly-Media-2025Chip-Huyen--_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Memory Math
 
 ---
 
-**Rating: 8/10**
 
 #### Inference Memory Calculation for Models
 
@@ -39,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Memory Calculation for Models
 
@@ -78,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient Checkpointing and Activation Recomputation
 
@@ -96,7 +92,6 @@ While this reduces memory requirements, it increases computational time because 
 
 ---
 
-**Rating: 8/10**
 
 #### Range and Precision Bits
 Background context: The text explains how range and precision bits affect the representable values and their accuracy.
@@ -111,7 +106,6 @@ For example, reducing FP32's 23-bit mantissa to FP16's 10-bit mantissa decreases
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Representations and Formats
 Background context explaining the concept. The text highlights that designing lower-precision formats can improve system efficiency without compromising quality. It emphasizes the importance of loading models with the correct numerical format for optimal performance.
@@ -122,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Footprint Reduction Through Quantization
 Background context explaining the concept. The text discusses reducing a model's memory footprint by quantizing its values, which means representing them with fewer bits than in the standard FP32 format.
@@ -133,7 +126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Weight Quantization vs Activation Quantization
 Background context explaining the concept. The text differentiates between weight quantization and activation quantization, noting that weight quantization is more common due to its stability and minimal impact on performance.
@@ -144,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### KV Cache in Transformer Models
 Background context explaining the concept. The text mentions that the key-value (KV) cache is a significant contributor to memory footprint in transformer-based models. It's covered more thoroughly in Chapter 9.
@@ -155,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mixed Precision Inference
 Mixed precision inference combines different levels of precision to balance memory usage and computational efficiency. This approach allows models to use lower precision when possible and higher precision when necessary.
@@ -166,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reduced Precision and Latency Trade-offs
 
@@ -179,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loss Values and Precision
 
@@ -192,7 +180,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Post-Training Quantization (PTQ)
 
@@ -205,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Quantization
 
@@ -220,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quantization-Aware Training (QAT)
 
@@ -233,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mixed Precision Training
 
@@ -246,7 +230,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lower Precision Training
 
@@ -259,7 +242,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Backpropagation Sensitivity
 

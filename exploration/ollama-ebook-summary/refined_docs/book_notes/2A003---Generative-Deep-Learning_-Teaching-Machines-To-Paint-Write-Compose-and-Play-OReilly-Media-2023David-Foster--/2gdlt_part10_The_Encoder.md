@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A003---Generative-Deep-Learning_-Teaching-Machines-To-Paint-Write-Compose-and-Play-OReilly-Media-2023David-Foster--_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Encoder
 
 ---
 
-**Rating: 8/10**
 
 #### Variational Autoencoder (VAE) vs. Traditional Autoencoder
 Background context: The text compares the traditional autoencoder where each image maps directly to a single point in the latent space, and the VAE, which uses a multivariate normal distribution around a point in the latent space.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multivariate Normal Distribution in VAE
 Background context: The text describes how each image is mapped to a multivariate normal distribution centered at a specific point in the latent space, with the mean and variance defining the spread of this distribution.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Encoder Changes in VAE
 Background context: The passage explains that converting an autoencoder into a variational autoencoder involves changes to both the encoder and the loss function. Specifically, it mentions altering the encoding process to use a multivariate normal distribution around each point.
@@ -39,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loss Function Changes in VAE
 Background context: The text does not explicitly detail the loss function changes but mentions that both the encoder and loss function need to be adjusted for a variational autoencoder. Typically, this involves incorporating a Kullback-Leibler divergence term to ensure the distribution is close to a standard normal.
@@ -50,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Normal Distribution in One Dimension
 Background context: The normal distribution, often referred to as Gaussian, is a continuous probability distribution that describes how the values of a variable are distributed. In one dimension, it has a well-known formula with parameters mean (μ) and variance (σ²).
@@ -75,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multivariate Normal Distribution
 Background context: A multivariate normal distribution extends the concept of a one-dimensional normal distribution to multiple dimensions. It is used when dealing with vectors where each element follows a normal distribution, and there might be correlations between elements.
@@ -113,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variational Autoencoders and Multivariate Normal Distributions
 Background context: In VAEs, the encoder maps each input to mean (z_mean) and log variance (z_log_var), which together define a multivariate normal distribution in the latent space. This helps in capturing the uncertainty of the mapping.
@@ -147,7 +139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variational Autoencoder Architecture
 Background context: A VAE consists of an encoder and a decoder. The encoder maps inputs to mean and log variance vectors, while the decoder generates outputs based on latent variables.
@@ -180,7 +171,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reparameterization Trick
 Background context explaining the concept. The reparameterization trick is a technique used in variational autoencoders to ensure that gradients can backpropagate through the sampling process, which involves sampling from a distribution parameterized by mean and variance.
@@ -215,7 +205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sampling Layer Implementation
 Background context explaining the concept. In variational autoencoders, a new type of layer called `Sampling` is implemented to handle sampling from a distribution defined by z_mean and z_log_var.
@@ -262,7 +251,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### VAE Encoder Architecture
 Background context explaining the concept. In a variational autoencoder (VAE), the encoder maps input data to a latent space with an uncertainty captured in terms of mean and variance.
@@ -302,7 +290,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Encoder Architecture in VAE
 
@@ -319,7 +306,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loss Function in VAE
 
@@ -347,7 +333,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Beta-VAE
 
@@ -363,7 +348,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Key Concepts
 
@@ -382,7 +366,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variational Autoencoder (VAE) Overview
 Background context: A Variational Autoencoder is a type of neural network that uses probabilistic methods to learn latent representations from data. It consists of an encoder and a decoder, where the encoder maps input data into a probability distribution over the latent space, and the decoder generates output samples from this latent representation.
@@ -394,7 +377,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Custom Training Step Method
 Background context: The `train_step` method in the `VAE` class handles the forward pass, backward pass, and updates during each training iteration.
@@ -436,7 +418,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loss Calculation in VAE
 Background context: The `train_step` method calculates two main losses: reconstruction loss and KL divergence.

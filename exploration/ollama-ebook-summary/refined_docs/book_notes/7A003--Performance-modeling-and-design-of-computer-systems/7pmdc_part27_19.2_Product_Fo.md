@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 27)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 19.2 Product Form Solution
 
 ---
 
-**Rating: 8/10**
 
 #### Difference Between Open and Closed Jackson Networks
 Background context: The closed Jackson network is defined similarly to the open Jackson network, but with a few critical differences. For an open network, there are no constraints on the number of jobs, while for a closed network, the total number of jobs in the system remains constant at \(N\). This means that some states are not possible in a closed network.
@@ -90,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limiting Probabilities and Performance Metrics
 Background context: The provided text discusses how to use limiting probabilities to determine various performance metrics, such as the mean number of jobs at a server. It provides an example calculation for server 1.
@@ -164,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Probability Calculation for Job Observation
 Background context: The text describes how to calculate the probability that a job observes a specific state \((n_1, n_2, ..., n_k)\) where \( \sum_{j=1}^{k} n_j = M-1 \). This involves comparing rates of transitions between servers.
@@ -226,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Little's Law and MVA
 Background context: This section discusses using Little’s Law to determine the expected number of jobs at each server in a closed system with multiple servers. The example uses an MVA (Mean Value Analysis) approach, which iteratively calculates the expected time spent by a job at each server.
@@ -358,7 +353,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Empirical Job Size Distributions
 Background context: Chapter 20 discusses empirical job size distributions from computing workloads, often characterized by heavy tails, very high variance, and a decreasing failure rate. These characteristics differ significantly from the Markovian (Exponential) distributions used in previous chapters.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Conventions Used in This Book
 
 ---
 
-**Rating: 8/10**
 
 #### Python Programming Background
 Background context explaining the importance of Python programming, including its wide use in data science and finance domains.
@@ -123,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Risk Management
 Risk management focuses on measuring and managing the uncertainty around the future value of a financial asset or a portfolio of assets. This involves identifying, quantifying, and mitigating risks to ensure the stability and profitability of investments.
@@ -261,7 +258,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Financial Data Engineering
 Financial data engineering is a specialized field that combines traditional data engineering practices with financial domain knowledge. It focuses on designing, implementing, and maintaining data infrastructure for managing financial data from various sources. The challenges include dealing with complex financial landscapes, regulatory requirements, entity systems, speed and volume constraints, and diverse delivery mechanisms.
@@ -363,7 +359,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Volume, Variety, and Velocity of Financial Data
 Background context explaining the concept. Big data is defined as a combination of three attributes: large size (volume), high dimensionality and complexity (variety), and speed of generation (velocity).
@@ -458,7 +453,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Velocity
 Data velocity refers to the speed at which data is generated and ingested. In financial markets, high-frequency trading, financial transactions, financial news feeds, and finance-related social media posts generate large volumes of data rapidly.
@@ -612,7 +606,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variety of Financial Data Increased Significantly
 

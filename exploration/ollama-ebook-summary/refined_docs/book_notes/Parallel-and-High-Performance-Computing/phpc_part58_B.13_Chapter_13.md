@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 58)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** B.13 Chapter 13 GPU profiling and tools. B.15 Chapter 15 Batch schedulers Bringing order to chaos
 
 ---
 
-**Rating: 8/10**
 
 #### Raja:forall Syntax for Initialization Loops
 
@@ -41,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Profiling with NVProf
 
@@ -71,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Combining Vector Addition and Pythagorean Formula
 
@@ -106,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OpenACC Max Radius Example
 
@@ -175,7 +170,6 @@ Please continue with more flashcards if needed. Each card should follow the form
 
 ---
 
-**Rating: 8/10**
 
 #### Dr. Memory Tool Usage
 Background context: The Dr. Memory tool is used to detect memory issues in C/C++ programs. It can help identify race conditions, memory leaks, and other common errors.
@@ -193,7 +187,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Cache Misses and Thrashing
@@ -228,7 +221,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bandwidth and Machine Balance
 Bandwidth refers to the rate at which data can be transferred between different components of a system. In high-performance computing (HPC), achieving an optimal balance between floating-point operations per second (FLOPS) and memory bandwidth is crucial for performance.
@@ -260,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Operations and OpenACC
 Asynchronous operations are critical for achieving performance gains in parallel computing environments, especially when using GPUs. In OpenACC, asynchronous calls allow the compiler to schedule tasks without waiting for previous operations to complete, leading to better utilization of resources.
@@ -285,7 +276,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Global Sum Using OpenACC
 Parallel global sum is a common operation in scientific computing where multiple parallel tasks need to contribute to a single aggregated result. In OpenACC, this can be efficiently implemented by leveraging shared memory and reduction clauses.
@@ -329,7 +319,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Directive in OpenACC
 The atomic directive in OpenACC is used to ensure thread safety when modifying a shared variable. This is particularly useful for concurrent memory accesses, especially when updating counters or other shared resources in parallel sections.

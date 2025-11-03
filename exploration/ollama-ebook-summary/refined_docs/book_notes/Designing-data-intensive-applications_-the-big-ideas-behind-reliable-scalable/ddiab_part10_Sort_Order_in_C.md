@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Sort Order in Column Storage
 
 ---
 
-**Rating: 8/10**
 
 #### Column-Oriented Storage and Column Families
 
@@ -20,7 +18,6 @@ The answer highlights the misnomer and differences.
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Bandwidth and Vectorized Processing
 
@@ -52,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sort Order in Column Storage
 
@@ -86,7 +82,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple Sort Orders in Column Storage
 
@@ -100,7 +95,6 @@ The answer explains the benefits of having multiple sort orders.
 
 ---
 
-**Rating: 8/10**
 
 #### Column-Oriented Storage
 Background context: Column-oriented storage is optimized for data warehouses where large read-only queries are common. It allows faster read operations through compression, sorting, and efficient memory utilization. However, updates become more challenging as they require rewriting entire column files.
@@ -128,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### LSM-Trees and Write Optimization
 Background context: To overcome write challenges in column-oriented storage, LSM-trees are used. These trees store all writes temporarily in memory before periodically flushing them to disk as sorted segments.
@@ -155,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Aggregation and Materialized Views
 Background context: In data warehouses, aggregation is frequently used to reduce the volume of raw data. Materialized views store precomputed aggregate results, reducing the need for complex queries over large datasets.
@@ -187,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Cubes and OLAP Cubes
 Background context: Data cubes are a special type of materialized view used in data warehouses, designed to handle multi-dimensional analysis. They store precomputed aggregations that can be quickly queried.
@@ -211,7 +202,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OLTP vs. OLAP Systems Overview
 Background context explaining the differences between OLTP and OLAP systems. Both types of databases handle data storage and retrieval differently due to their distinct use cases.
@@ -236,7 +226,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Log-Structured Storage Engines
 Background context explaining the concept of log-structured storage engines and their approach to handling writes.
@@ -258,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Update-in-Place Storage Engines
 Background context explaining the concept of update-in-place storage engines and their approach to handling writes.
@@ -280,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Warehouse Architecture
 Background context explaining the architecture of data warehouses and why they differ from OLTP systems.
@@ -307,7 +294,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Storage Engine Types
 Background context summarizing the two main categories of storage engines: OLTP and OLAP.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 36)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Log-Based Approach and Database Streams
@@ -78,7 +76,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Experience-Based Statements About Software Technologies
@@ -167,7 +164,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Transactions vs. Log-Based Systems
 
@@ -222,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logical Timestamps for Causal Dependencies
 Background context explaining how logical timestamps can provide a total ordering of events without requiring coordination. This is particularly useful when capturing causal dependencies between events that may be processed out of order.
@@ -344,7 +339,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Microbatching vs. Hopping or Sliding Windows
 Microbatching involves processing data in batches, whereas hopping or sliding windows involve more dynamic and potentially overlapping windowing mechanisms. Microbatching may perform poorly with these types of windows because microbatches can be batch-oriented and less flexible.
@@ -434,7 +428,6 @@ public class Reprocessor {
 This code iterates through historical data, applying transformations to derive new views, thereby supporting application evolution.
 x??
 
-**Rating: 8/10**
 
 #### Reprocessing for Dataset Restructuring
 Reprocessing allows restructuring a dataset into a different model to better serve new requirements. This process is analogous to schema migrations in database systems, where existing data models are updated without causing downtime.
@@ -553,7 +546,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Lambda Architecture's Challenges

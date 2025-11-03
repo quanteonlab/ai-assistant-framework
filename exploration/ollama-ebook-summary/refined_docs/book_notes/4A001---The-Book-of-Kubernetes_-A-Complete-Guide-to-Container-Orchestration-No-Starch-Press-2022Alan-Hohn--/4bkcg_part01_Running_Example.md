@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A001---The-Book-of-Kubernetes_-A-Complete-Guide-to-Container-Orchestration-No-Starch-Press-2022Alan-Hohn--_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Running Examples
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Containers and Kubernetes
 Background context: This section introduces the importance of containers and Kubernetes in modern software development and deployment. Containers ensure consistent application environments across different systems, while Kubernetes provides a management layer for containerized applications.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Part II: Deploying Containers with Kubernetes
 Background context: The second part of the book focuses on installing and deploying containers to a Kubernetes cluster, understanding its internal mechanisms.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Running Examples on Virtual Machines
 Background context: The examples provided in the book run entirely on temporary virtual machines to allow for experimentation without risking production systems.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Containers Overview
 Containers are a fundamental part of modern application architecture, simplifying packaging, deployment, and scaling. They enable reliable and resilient applications by allowing them to handle failures gracefully without downtime or data loss.
@@ -61,7 +56,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Container Engines
 A container engine is a piece of software that manages the creation and execution of containers. It provides APIs, command-line tools, and other mechanisms to interact with and manage containerized applications.
@@ -79,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linux Kernel Features for Containers
 Linux kernel features like namespaces, cgroups (control groups), and seccomp are key to implementing lightweight virtualization for containers. Namespaces isolate processes from each other, cgroups limit resource usage, and seccomp filters system calls.
@@ -96,7 +89,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Storage in Containers
 Storage in containers is managed through shared filesystems or volume mount points, which allow data to persist and be shared between the host system and multiple containers.
@@ -114,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conclusion: Understanding Containers
 Understanding the underlying mechanisms of containers helps in leveraging their benefits while managing potential limitations and challenges, such as shared kernel resources and the need for careful resource management.
@@ -136,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cloud Native Technologies
 Background context explaining the concept. The term "cloud native" refers to applications designed and built to take full advantage of cloud environments, focusing on leveraging abstractions provided by cloud platforms. At its core, the cloud is an abstraction layer that manages underlying physical resources like processors, memory, storage, and networking. Developers can declare resource needs, and these are provisioned dynamically.
@@ -149,7 +139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modern Application Architecture
 Background context explaining the concept. In modern software applications, scale is a critical attribute. Applications designed for large-scale deployments need to handle millions of users simultaneously while maintaining stability and reliability. This requires careful consideration of application architecture to ensure that the system can scale horizontally, be resilient, and remain reliable under varying loads.
@@ -166,7 +155,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cloud as an Abstraction
 Background context explaining the concept. In cloud computing, the provider abstracts away the underlying hardware and infrastructure so that developers can focus on writing code rather than managing servers. This abstraction allows for dynamic provisioning and de-provisioning of resources based on demand.
@@ -179,7 +167,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Containerization
 Background context explaining the concept. Containers are lightweight, standalone executable packages that include everything needed to run an application: code, runtime, system tools, and libraries. This ensures that applications will always run the same way in any environment, reducing the "works on my machine" problems.
@@ -205,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Container Orchestration with Kubernetes
 Background context explaining the concept. Kubernetes (often referred to as K8s) is an open-source platform for automating deployment, scaling, and management of containerized applications. It enables developers to manage multiple containers across a cluster of machines.
@@ -243,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modularity in Application Architecture
 Background context explaining modularity. The core of modularity involves high cohesion and low coupling, but modern practices emphasize separating modules into individual processes for runtime flexibility.
@@ -255,7 +240,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Microservices Architecture
 Background context on the shift towards microservices from traditional application server models. Microservices are small, independently deployable services that operate as individual processes.
@@ -267,7 +251,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Using Small Servers for Microservices
 Background on the practical advantages of using small, cheap commodity servers for deploying microservices.
@@ -279,7 +262,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Organizational Advantages of Microservices
 Background on how microservices help organize teams by reducing complexity in large-scale development.
@@ -291,7 +273,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application Servers vs. Microservices
 Background on traditional application servers and their limitations compared to microservices.
@@ -305,7 +286,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scalability
 Background context explaining the concept. When we want to grow an application so that it can handle thousands or millions of users at once, bottlenecks inevitably arise on computing resources like processing, memory, storage, or network bandwidth. The only way to overcome these is by distributing the application across multiple servers, networks, and eventually geographically.
@@ -317,7 +297,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reliability
 Background context explaining the concept. In our simplest application running on one server, if that server fails, the entire application fails, indicating a lack of reliability. To enhance reliability, we need to stop sharing resources that can potentially fail and distribute them across many servers.
@@ -329,7 +308,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Resilience
 Background context explaining the concept. An application running on one server can be easily installed on as many servers as needed, but this setup lacks resilience. Resilience is about an application’s ability to respond meaningfully to failure.
@@ -341,7 +319,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Microservices Architecture
 Background context explaining the concept. To achieve scalability, reliability, and resilience, cloud native microservices architecture is required. This approach breaks down an application into many independent pieces that are not tied to specific hardware.
@@ -353,7 +330,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Containerization and Kubernetes
 Background context explaining the concept. Containerized approaches like those seen in Kubernetes allow for more flexibility than traditional application server architectures. They enable running multiple applications on a single host while sharing the same process space.
@@ -365,7 +341,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cloud Native Microservices
 Background context explaining the concept. Cloud native microservices architecture leverages containerized environments like Kubernetes to provide a scalable, reliable, and resilient infrastructure for modern applications.

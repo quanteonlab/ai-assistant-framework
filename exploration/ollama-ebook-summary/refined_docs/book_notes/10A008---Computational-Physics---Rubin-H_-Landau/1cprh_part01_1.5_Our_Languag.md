@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 1.5 Our Language The Python Ecosystem
 
 ---
 
-**Rating: 8/10**
 
 #### Computational Physics Overview
 Background context explaining the interdisciplinary nature of computational physics, which encompasses physics, applied mathematics, and computer science. It involves extending traditional experimental and theoretical approaches to include simulation techniques. Recent developments have introduced powerful data mining tools such as neural networks, artificial intelligence, and quantum computing.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Problem-Solving Approach
 The approach described involves a learn-by-doing methodology with exercises, problems, and ready-to-run codes. The book surveys topics at an undergraduate level, suitable for both undergraduates and graduates.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Textbook Structure
 Chapters 1-8 cover basic numerics, ordinary differential equations with applications, matrix computing using linear algebra libraries, and Monte Carlo methods. Midway through the book, there are powerful data mining tools like Fourier transforms, wavelet analysis, principal component analysis, and neural networks.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Video Lecture Supplements
 Video lectures are provided to cover almost every topic in the text. They consist of 60 modules that include dynamic tables of contents, talking heads, video controls, live scribbling, and older content.
@@ -54,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Problem Sets and Exercises
 Each chapter starts with a keynote "Problem" that leads into various steps in computational problem solving. Additional problems and exercises throughout the chapters are essential for learning.
@@ -66,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Computational Physics and Python
 
@@ -79,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Python Ecosystem
 
@@ -92,7 +84,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Python Packages and Libraries
 
@@ -110,7 +101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SymPy
 
@@ -123,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### General Numerical Methods
 
@@ -138,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Floating-Point Representation
 Floating-point numbers represent real numbers as a binary version of scientific or engineering notation. They consist of a sign bit, an exponent, and a mantissa.
@@ -157,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Floating-Point Error Analysis
 Floating-point errors occur due to the finite number of bits used to store numbers. Small numbers can have large relative errors because many leading zeros in the mantissa reduce precision.
@@ -173,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Floating-Point Number Representation Basics
 Background context: The IEEE 754 standard defines how floating-point numbers are represented and stored. This standard ensures consistency across different computing platforms but may vary among manufacturers.

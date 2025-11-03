@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Business-Law_-Text-and-Cases_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Unit Six Application and Ethics Federal Student Loans-Default and Discharge
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Tina's Bankruptcy Petition
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Third Party’s Reasonable Reliance
 Background context: For the doctrine of agency by estoppel to apply, the third party must reasonably believe that an agency relationship exists. This belief needs to be based on facts and circumstances such that a prudent person would also conclude there was authority.
@@ -41,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Acts or Declarations by the Principal
 Background context: The doctrine of agency by estoppel is not created solely by the acts or declarations of a purported agent. Instead, it is based on the deeds or statements made by the principal that create an appearance of authority.
@@ -61,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Express Authority
 Express authority is when a principal directly gives permission to an agent to act on their behalf. This explicit grant of power means that both the principal and third parties are legally bound by any contract made within this scope.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Principle 6 Build Loosely Coupled Systems
 
 ---
 
-**Rating: 8/10**
 
 #### Technical Leadership and Data Architecture
 Background context: Martin Fowler describes an ideal software architect who focuses on mentoring the development team to improve their skills. This approach provides greater leverage than being a sole decision-maker, avoiding becoming an architectural bottleneck.
@@ -65,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed System Design - Loose Coupling and Iterative Improvement
 Background context: The passage describes a distributed system where many small teams independently work on different components of a large, complex system. These teams communicate via APIs and messages, enabling them to evolve their parts without worrying about others' internal details.
@@ -125,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hardened-Perimeter vs Zero-Trust Security Models
 Background context: The traditional hardened-perimeter security model has been widely used but is now considered vulnerable to both insider and external threats. This model assumes that everything inside the perimeter is trusted, while anything outside is untrusted. However, as security breaches through human targets have increased, this assumption becomes less reliable.
@@ -250,7 +246,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tight Versus Loose Coupling: Tiers, Monoliths, and Microservices
 Background context explaining the concept of coupling in data architecture. This involves understanding how dependencies within domains and services can be either tightly or loosely coupled, which affects the reliability and flexibility of the system.

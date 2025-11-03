@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 23 Be Consistent in Your Use of Aliases
 
 ---
 
-**Rating: 8/10**
 
 #### Aliases and Type Narrowing
 Background context: In TypeScript, aliases can be created by assigning a variable to another object or property. This can sometimes confuse the type checker about the exact type of values at runtime due to how control flow analysis works.
@@ -126,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context in Type Inference
 
@@ -311,7 +308,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evolving Types in TypeScript
 Evolving types are a unique behavior in TypeScript where a variable's type can change based on assignments or operations performed during runtime. This is different from narrowing, which involves refining a type to be more specific within conditional checks.

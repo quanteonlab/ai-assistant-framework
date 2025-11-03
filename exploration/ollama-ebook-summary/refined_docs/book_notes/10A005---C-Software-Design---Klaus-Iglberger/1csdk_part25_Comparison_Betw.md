@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Comparison Between Bridge and Strategy
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Incomplete Types and std::unique_ptr
 Background context explaining how `std::unique_ptr` interacts with incomplete types, specifically when using PIMPL (Pointer-to-implementation) idiom. The issue arises because `std::unique_ptr` requires a fully defined type to be able to call its member functions or operators.
@@ -140,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bridge Implementation Performance Impact
 
@@ -303,7 +300,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### External Polymorphism Design Pattern
 External Polymorphism is a technique where an external hierarchy manages and delegates virtual function calls to the desired implementation. This approach separates concerns by extracting polymorphic behavior into a dedicated class or template, enhancing flexibility and maintainability.
@@ -383,7 +379,6 @@ The `DrawStrategy` type alias in the `ShapeModel` class template is a function o
 ---
 These flashcards cover key concepts from the provided text, ensuring familiarity with external polymorphism, separation of concerns, single responsibility principle, open-closed principle, and design patterns in class templates.
 
-**Rating: 8/10**
 
 #### ShapeConcept Abstraction and LSP Compliance
 Background context explaining that the `ShapeConcept` represents a classic abstraction adhering to the Liskov Substitution Principle (LSP), ensuring that objects of derived classes can be used interchangeably with their base class without breaking the expected behavior. This is crucial for maintaining the integrity and reliability of software designs.
@@ -445,7 +440,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Template-Based ShapeModel Implementation
 
@@ -549,7 +543,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### External Polymorphism Design Pattern
 This pattern allows for polymorphic behavior without requiring inheritance or composition between shape classes. Instead, it uses a template approach to integrate drawing strategies with specific shape implementations.

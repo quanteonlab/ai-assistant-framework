@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 31)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11.6.3 Creating the Docker image
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring Environment for ASP.NET Core Production Deployment
 Background context: The provided text discusses how to configure an ASP.NET Core application named SportsStore for production deployment. This includes setting up environment-specific configuration, using Docker, and preparing the application for containerization.
@@ -28,7 +26,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Docker Configuration for SportsStore
 Background context: The provided text outlines how to configure and create a Docker image for the SportsStore application. This involves creating a `Dockerfile` and a `docker-compose.yml` file.
@@ -49,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Building and Publishing the Application for Docker
 Background context: The provided text explains how to prepare the SportsStore application for deployment using Docker. This involves running commands to publish the application in release mode, build the Docker image, and start the containers.
@@ -67,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ASP.NET Core User Authentication and Authorization
 Background context: ASP.NET Core applications leverage the built-in identity system for handling user authentication (logging in users) and authorization (determining what actions a logged-in user can perform). This framework simplifies securing your application by integrating these features directly into the application logic.
@@ -87,7 +82,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Publishing ASP.NET Core Applications for Deployment
 Background context: Before deploying an application, you need to prepare it by publishing the code. This process compiles and packages your application into a format suitable for running on any target environment.
@@ -104,7 +98,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Deployment into Containers
 Background context: Containers provide an isolated environment for applications, ensuring consistent behavior across different deployment scenarios. ASP.NET Core applications can be deployed in containers, making them suitable for most hosting platforms or local data centers.
@@ -120,7 +113,6 @@ Deploying an ASP.NET Core application to a container provides several benefits:
 
 ---
 
-**Rating: 8/10**
 
 #### ASP.NET Core Platform Overview
 Background context: The ASP.NET Core platform is essential for building web applications, providing features necessary to use frameworks like MVC and Blazor. It handles low-level details of HTTP request processing so developers can focus on user-facing features.
@@ -132,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Basic Structure of an ASP.NET Core Application
 Background context: The basic structure includes several key files and directories that define the application’s entry points, configurations, and services.
@@ -159,7 +150,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HTTP Request Processing Pipeline and Middleware Components
 Background context: The ASP.NET Core application uses a pipeline to process incoming HTTP requests. Middleware components can be added or removed from this pipeline.
@@ -192,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Custom Middleware Components
 Background context: Developers can create custom middleware components to extend or alter the application's behavior.
@@ -226,7 +215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding the Program.cs File
 Background context: The `Program.cs` file contains top-level statements that are responsible for starting the application and configuring services.
@@ -257,7 +245,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pitfalls and Limitations of Program.cs
 Background context: The `Program.cs` file can be confusing due to the complexity of its configurations. Careful attention is needed when ordering statements.
@@ -290,7 +277,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Alternatives to Working with the Platform Directly
 Background context: While ASP.NET Core is required for ASP.NET Core applications, developers can choose not to work directly with it and rely on higher-level features like MVC or Blazor.

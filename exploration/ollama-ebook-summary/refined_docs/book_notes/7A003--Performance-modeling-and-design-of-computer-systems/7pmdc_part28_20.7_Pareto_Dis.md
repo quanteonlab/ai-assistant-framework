@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 28)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 20.7 Pareto Distributions Are Everywhere
 
 ---
 
-**Rating: 8/10**
 
 #### Decreasing Failure Rate (DFR) Property of Pareto Distribution
 Background context: The decreasing failure rate (DFR) property of the Pareto distribution states that as more CPU has been used, the remaining lifetime of a job increases. This implies older jobs have higher expected remaining lifetimes.
@@ -161,7 +159,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simulation of M/BP/1
 
@@ -342,7 +339,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Phase-Type Distributions and CTMC Modeling
 Background context: In systems modeling, especially Markov chains (CTMCs), it is crucial that workloads have the memoryless property (Exponential distribution). However, many real-world scenarios do not fit this requirement. The method of phases introduces phase-type distributions as a way to approximate non-memoryless distributions using Exponentials.
@@ -406,7 +402,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Erlang-k Distribution and Generalized Erlang (Hypoexponential) Distribution
 

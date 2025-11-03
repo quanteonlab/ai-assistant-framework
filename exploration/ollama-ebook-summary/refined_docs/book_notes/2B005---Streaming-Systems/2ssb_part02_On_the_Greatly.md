@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** On the Greatly Exaggerated Limitations of Streaming
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Streaming vs. Tables
@@ -105,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event Time vs Processing Time
 In data processing, especially for unbounded and unordered data, it is crucial to understand the difference between event time and processing time. Event time represents when events actually occurred, while processing time refers to when they are observed by the system.
@@ -173,7 +170,6 @@ In summary, windowing helps in managing unbounded datasets but requires careful 
 ??x
 ---
 
-**Rating: 8/10**
 
 #### Completeness Problem in Event-Time Windows
 Background context explaining the concept. When dealing with unbounded data, especially using event-time windows, there's a challenge in determining when all relevant data for an event time X has been observed due to the lack of a predictable mapping between processing time and event time.
@@ -246,7 +242,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Based Shuffle for Logs Processing
 Background context explaining how logs can be processed using time-based shuffles. Events are written into directory and file hierarchies whose names encode the window they correspond to, making initial processing seem straightforward but with inherent challenges.
@@ -338,7 +333,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Agnostic Processing
 Time-agnostic processing is used for cases where time is essentially irrelevant, meaning that all logic is data-driven. Since the processing depends solely on the arrival of new data, streaming engines do not need to support specific temporal operations other than basic data delivery.
@@ -412,7 +406,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sliding Windows Overview
 Background context explaining sliding windows, their typical alignment and use cases. Note that while they are drawn to suggest motion, all windows apply across the entire dataset.
@@ -464,7 +457,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event-Time Windowing Basics
 Background context: In scenarios where data arrives out of order due to network issues or other delays, processing the data strictly by event time rather than processing time is crucial. This method ensures that data is grouped and processed according to when it actually occurred, not just when it arrived.

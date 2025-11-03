@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 38)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 27.5 Readings. 27.6 Exercises
 
 ---
 
-**Rating: 8/10**
 
 #### M/G/1 Queue with Setup Times Overview
 Background context: The chapter discusses the M/G/1 queue model, which includes a setup time for service. This setup time adds complexity to the system dynamics and affects various performance metrics like response time, work in system, etc.
@@ -196,7 +194,6 @@ This analysis provides insights into how the setup time impacts system performan
 --- 
 End of flashcards. Each card focuses on a key concept or derivation from the provided text, providing context and detailed explanations. Use these cards to gain familiarity with the concepts without pure memorization.
 
-**Rating: 8/10**
 
 #### Scheduling Overview
 Scheduling is a critical aspect of system design, influencing performance metrics like mean response time, fairness, and service differentiation. The M/G/1 queue model is often used for analysis due to its simplicity while capturing variability in job sizes.
@@ -277,7 +274,6 @@ Preemptive priority queues manage multiple classes of jobs based on predefined p
 
 These flashcards provide a comprehensive overview of the key concepts in scheduling policies discussed in Part VII, focusing on both theoretical understanding and practical application through examples and explanations.
 
-**Rating: 8/10**
 
 ---
 #### Mean Response Time and Mean Waiting Time

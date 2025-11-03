@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.4 Clips
 
 ---
 
-**Rating: 8/10**
 
 #### Animation Systems
 Background context: The provided text discusses how animation systems work differently between film and game development. In films, animations are planned out meticulously before any frames are created, whereas games require more dynamic and interactive animations due to player control.
@@ -29,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Local Timeline and Pose Interpolation
 Background context: Every animation clip has a local timeline, typically denoted by \( t \). At the start of a clip, \( t = 0 \), and at the end, \( t = T \) where \( T \) is the duration of the clip. An important concept here is that the rate at which frames are displayed to the viewer can differ from the rate at which poses are created by the animator.
@@ -41,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pose Interpolation vs. Frame Rate
 Background context: Animators typically create keyposes (keyframes) at specific times within a clip, while the computer interpolates these keyposes to generate intermediate frames. This is different from the fixed frame rate used in film.
@@ -56,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuous vs. Discrete Timeline
 Background context: The timeline of an animation clip is continuous, allowing for sampling at non-integer frame indices. In contrast, film animations are typically sampled at discrete integer frames.
@@ -81,7 +76,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Scaling in Real-Time Games
 Background context: In real-time games, the frame rate can vary due to CPU/GPU load and time scaling is often used to adjust the speed of animations. This means that an animation clip may not always be sampled at integer frame numbers.
@@ -110,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Units in Animation
 Background context: Since the animation timeline is continuous, time should be measured in units of seconds for more precise control and calculations.
@@ -141,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Frame vs Sample
 
@@ -154,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sample vs Frame - Duration and Samples
 
@@ -171,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Looping Clips and Redundancy
 
@@ -188,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Normalized Time (Phase)
 
@@ -205,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-scaling in Animation Clips
 Background context explaining how scaling the playback rate affects the perceived speed of an animation. The text explains that time-scaling is expressed as a playback rate `R`.
@@ -233,7 +221,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Looping Animations in the Global Timeline
 Background context explaining that animations can be looped by repeatedly mapping their local timeline onto the global timeline. The text provides an example of playing a looping animation multiple times.
@@ -263,7 +250,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Animation Looping and Clamping
 Background context: When working with animations, especially in games or interactive applications, you need to handle how clips loop and are sampled. This involves understanding different looping behaviors such as finite loops (N=1) and infinite loops (N=∞). The key is to ensure that the time parameter `t` remains within a valid range for sampling poses from the clip.
@@ -288,7 +274,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Animation Looping with Modulo
 Background context: For animations that loop infinitely or a finite number of times, the time parameter `t` must be wrapped around within the duration `T` using modulo operations.
@@ -320,7 +305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Local vs Global Clocks in Animation Systems
 Background context: In animation systems, you can use either a local clock or a global clock to manage time indices for each clip being played. A local clock is simpler and easier to implement but may require precise synchronization when clips need to start at the same time.
@@ -348,7 +332,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronizing Animations with a Local Clock
 Background context: With a local clock, each clip has its own timeline starting from `t=0` when it begins playing. This makes synchronization complex because clips must start at exactly the same moment in game time.
@@ -381,7 +364,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message-Passing System Delays
 Background context explaining how message-passing systems can introduce delays between subsystems, affecting game loop performance and synchronization. This is particularly relevant for animations and events triggered by player input or AI actions.
@@ -401,7 +383,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Global Clock Approach for Synchronization
 Background context explaining how using a global clock helps synchronize animations across different parts of the game. A global clock ensures that all animations start at the same time and continue in sync, regardless of when their associated code runs.
@@ -427,7 +408,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### JointPose Structure
 Background context explaining the `JointPose` structure. This is a fundamental component used to represent the state of individual joints in an animation clip.
@@ -446,7 +426,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AnimationSample Structure
 Background context explaining the `AnimationSample` structure. Each sample within an animation clip defines a snapshot of the pose of all joints at a particular frame.
@@ -464,7 +443,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AnimationClip Structure
 Background context explaining the `AnimationClip` structure. This structure encapsulates all necessary information to play back an animation for a specific skeleton, including its pose samples and timing details.
@@ -486,7 +464,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuous Channel Functions
 Background context explaining that animation clips define continuous functions over time, with interpolation used to approximate these functions.
@@ -509,7 +486,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Footstep and Particle Synchronization
 Background context: In animation, special event triggers can be used to synchronize sound effects, particle effects, or other game events with specific moments within an animation. For instance, when a character's left foot touches the ground, a footstep sound effect might play along with a "cloud of dust" particle effect.
@@ -521,7 +497,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Animated Locators for Camera Positioning
 Background context: In some game engines, locators are used as animated joints that can encode the position and orientation of objects in the scene. These are particularly useful for defining how a camera should move during an animation sequence.
@@ -550,7 +525,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relationship between Meshes, Skeletons and Clips
 Background context: In a game engine, animation clips are linked with skeletons and meshes to create realistic character movements. The UML diagram in Figure 12.25 illustrates how these components interact.
@@ -570,7 +544,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Animation Retargeting
 Background context: Animation retargeting is a technique used to adapt animations from one character’s skeleton to another, even if they have different morphologies. This involves using special poses called "retarget poses" to capture essential differences between skeletons.
@@ -586,7 +559,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Mathematics of Skinning
 Background context: To mathematically represent the movement of a skinned mesh, we need to find a matrix that transforms the vertices from their original positions in bind pose into new positions corresponding to the current skeleton pose. This transformation is known as a skinning matrix.
@@ -618,7 +590,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bind Pose and Current Pose of a Single Joint
 In this context, we discuss how to represent a single joint's position and orientation within an animation system. The bind pose refers to the initial or resting state of the joint, while the current pose is the joint's state during runtime.
@@ -657,7 +628,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Joint Coordinate Systems
 The text discusses two coordinate systems relevant for skinned animations:
@@ -677,7 +647,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Skinning Matrix Calculation
 The process described involves converting a vertex from model space to the joint's coordinate system, applying the current pose transformation of the joint, and then converting back to model space. This sequence effectively morphs the vertex’s position according to the joint movement.
@@ -714,7 +683,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vertex Position Tracking in Joint Space
 The text explains that the position of a vertex bound to a joint remains constant in the joint's coordinate system, even as the joint moves. This is achieved by converting the vertex’s bind pose coordinates from model space to joint space and then back to model space during runtime.
@@ -750,7 +718,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vertex Transformation to Joint Space
 Background context: In animation systems, vertices are transformed into joint space for skinning purposes. This involves multiplying vertex coordinates by the inverse of the bind pose matrix. The transformation from joint space back to model space uses the current pose matrix.
@@ -775,7 +742,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Skinning Matrix Calculation
 Background context: A skinning matrix is used to transform vertices from their positions in bind pose to their positions in the current pose for each joint. This involves calculating the inverse of the bind pose matrix and multiplying it with the current pose matrix.
@@ -799,7 +765,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix Palette Generation for Multijointed Skeletons
 Background context: In a multijointed skeleton, each joint requires its own skinning matrix. This array of matrices is known as the matrix palette and is passed to the rendering engine.
@@ -836,7 +801,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Incorporating Model-to-World Transform into Skinning Matrices
 Background context: To transform vertices from model space to world space, some engines premultiply the skinning matrices by the object’s model-to-world transformation. This optimization saves one matrix multiplication per vertex during rendering.
@@ -868,7 +832,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Skinning a Vertex to Multiple Joints
 Background context: When a vertex is influenced by multiple joints, its final position is calculated as a weighted average of positions from each joint. The weights are determined by the rigging artist and must sum to one.
@@ -907,7 +870,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Animation Blending
@@ -920,7 +882,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### LERP Blending
 Background context explaining linear interpolation (LERP) between two skeletal poses. This method helps in finding intermediate poses by interpolating joint positions.
@@ -949,7 +910,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Skinning Matrix
 Background context explaining how skinning matrices are used in vertex animation. These matrices are crucial for blending multiple animations applied to a single vertex.
@@ -990,7 +950,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Interpolation of Translation Component T
 Background context: The translation component \(T\) of an SRT (Scale, Rotation, Translation) transformation can be linearly interpolated between two points \(A\) and \(B\). This is done using vector linear interpolation (LERP), where the position at time or blend factor \(b\) is calculated.
@@ -1021,7 +980,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quaternion Linear Interpolation and Spherical Linear Interpolation
 Background context: The rotation component \(Q\) of an SRT transformation can be linearly interpolated between two quaternions. There are two main methods for doing this: quaternion LERP, which is not the most natural looking; and spherical linear interpolation (SLERP), which provides a more natural pose blending.
@@ -1076,7 +1034,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Interpolation of Scale Component
 Background context: The scale component \(S\) can be linearly interpolated between two points, either as a scalar or vector value. This is done using vector LERP, where the scale factor at time or blend factor \(b\) is calculated.
@@ -1107,7 +1064,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pose Blending for Skeletal Poses
 Background context: When blending skeletal poses, it is typically done on local poses rather than global poses. This allows for more natural-looking animations because each joint's pose is interpolated independently based on its immediate parent.
@@ -1131,7 +1087,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Temporal Interpolation for Game Animations
 Background context: In game animations, frame indices are often not integers due to variable frame rates. To find intermediate poses between sampled frames, linear interpolation (LERP) blending is used.
@@ -1182,7 +1137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Motion Continuity: Cross-Fading in Game Characters
 Background context: Game characters are animated by combining multiple fine-grained clips. To ensure smooth transitions between these clips, cross-fading techniques can be used.
@@ -1223,7 +1177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### C0 Continuity
 C0 continuity refers to the quality of motion where the paths traced out by each joint in a character's skeleton are smooth, with no sudden jumps. This is an ideal state but often challenging to achieve mathematically. In practice, this concept ensures that movement transitions between animations are seamless.
@@ -1235,7 +1188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### C1 Continuity
 C1 continuity goes beyond just ensuring the path of a joint is continuous; it also requires that the first derivatives (velocity) of these paths are continuous as well. This means that not only do the positions change smoothly, but their rates of change must be smooth too.
@@ -1247,7 +1199,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cross-Fading Between Clips
 Cross-fading involves blending two animations together by overlapping their timelines and gradually changing from one animation to another. This technique is used to create a seamless transition between clips.
@@ -1279,7 +1230,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Smooth Transition in Cross-Fading
 A smooth transition during cross-fading involves both animations playing simultaneously as the blend percentage `b` increases. This requires that both clips are looping and their timelines must be synchronized.
@@ -1309,7 +1259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Smooth Transition Using Blend Factor
 Background context explaining how blend factors can be used to create smooth transitions between clips. The blend factor \(b\) varies with time, and a linear variation is mentioned as one approach.
@@ -1335,7 +1284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ease-in and Ease-out Curves Using Bézier Functions
 Background context explaining how cubic functions, such as Bézier curves, can be used to create smoother transitions. The text mentions that ease-in and ease-out curves are applied based on whether a clip is being blended in or out.
@@ -1373,7 +1321,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Core Poses and Motion Continuity
 Background context explaining how core poses can be used to achieve C0 continuity in animation blending, ensuring that the last pose of one clip matches the first pose of the next.
@@ -1407,7 +1354,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Targeted Movement Implementation
 
@@ -1445,7 +1391,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Backward Movement in Targeted Movement
 
@@ -1485,7 +1430,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pivotal Movement Implementation
 
@@ -1527,7 +1471,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### One-Dimensional LERP Blending
 
@@ -1561,7 +1504,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Targeted Movement as One-Dimensional LERP Blending
 
@@ -1645,7 +1587,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simple Two-Dimensional LERP Blending
 
@@ -1717,7 +1658,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Triangular Two-Dimensional LERP Blending
 
@@ -1789,7 +1729,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Barycentric Coordinates for Three-Clip LERP Blending
 Background context explaining how barycentric coordinates are used to blend three animation clips. The formula provided is a weighted average where weights must sum to one, and the barycentric coordinates help determine these weights.
@@ -1828,7 +1767,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generalized Two-Dimensional LERP Blending
 Background context explaining how the technique can be extended to an arbitrary number of clips. The key is using Delaunay triangulation to find a set of triangles that enclose the desired blend position.
@@ -1860,7 +1798,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partial-Skeleton Blending
 Background context explaining how partial-skeleton blending allows different parts of the body to be controlled independently, such as waving an arm while walking.
@@ -1890,7 +1827,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Partial Skeleton Blending
@@ -1912,7 +1848,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blend Mask in Partial Skeleton Blending
 Background context: A blend mask is used to specify the degree of influence that each animation has on different parts of the character's skeleton. It can be thought of as a way to "mask out" certain joints by setting their blend percentages to zero.
@@ -1938,7 +1873,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Additive Blending
 Background context: Additive blending is an alternative approach to combining animations that introduces difference clips. These clips represent the differences between two regular animation clips and can be added onto a base clip to create variations in character movement and pose.
@@ -1955,7 +1889,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Additive Pose Calculation
 
@@ -1978,7 +1911,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Temporal Interpolation of Difference Clips
 
@@ -2010,7 +1942,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Additive Blend Percentage In-Game Context
@@ -2027,7 +1958,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations of Additive Blending
 While additive blending is powerful for creating smooth and natural animations, it has some limitations:
@@ -2040,7 +1970,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stance Variation
 Background context explaining how stance variation works using additive blending. Animators create one-frame difference animations for each desired stance, which are then blended with a base animation to drastically change the character's stance without altering the fundamental action.

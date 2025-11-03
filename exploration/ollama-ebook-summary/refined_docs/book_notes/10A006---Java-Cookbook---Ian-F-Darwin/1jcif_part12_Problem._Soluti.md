@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Problem. Solution. Discussion. 7.4 Like an Array but More Dynamic
 
 ---
 
-**Rating: 8/10**
 
 #### Growth Factor for Data Structures
 Background context explaining the growth factor. It is often used to manage memory allocation and ensure efficient data handling, especially when dealing with dynamic data structures like lists or sets.
@@ -146,7 +144,6 @@ System.out.println(queue.peek());      // Output: Grapes
 ```
 x??
 
-**Rating: 8/10**
 
 #### ArrayList Overview
 Background context explaining how `ArrayList` is a dynamic array implementation in Java. It allows adding elements without worrying about storage reallocation.
@@ -278,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generic Types and Their Usage
 Background context explaining the use of generic types, including their purpose in Java to avoid casting. This concept is crucial for defining container classes that can operate with any type of object while maintaining type safety.

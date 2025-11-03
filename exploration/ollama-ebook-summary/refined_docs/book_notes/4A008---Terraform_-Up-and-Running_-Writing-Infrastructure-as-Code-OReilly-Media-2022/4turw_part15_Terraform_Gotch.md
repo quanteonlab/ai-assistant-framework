@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Terraform Gotchas. count and for_each Have Limitations
 
 ---
 
-**Rating: 8/10**
 
 #### Count and For_each Limitations
 
@@ -40,7 +38,6 @@ terraform apply -target=random_integer.num_instances -auto-approve
 
 ---
 
-**Rating: 8/10**
 
 #### Valid Plans Can Fail
 
@@ -59,7 +56,6 @@ For example, a plan might look good but fail if an unexpected external dependenc
 
 ---
 
-**Rating: 8/10**
 
 #### Refactoring Can Be Tricky
 
@@ -80,7 +76,6 @@ For example, refactoring an AWS Lambda function's code might require updating it
 
 ---
 
-**Rating: 8/10**
 
 #### Zero-Downtime Deployment Limitations with create_before_destroy
 
@@ -93,7 +88,6 @@ This approach may cause the ASG to revert to its minimal size post-deployment, t
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Prefer Native Deployment Options
@@ -112,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Valid Plans Can Fail
 Background context explaining how Terraform plans and applies actions based on its state file, which may not include resources created manually or through other means. The example provided shows a case where an IAM user resource was planned but failed during apply due to the user already existing.

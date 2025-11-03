@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 30)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9. The Decorator Design Pattern. Your Coworkers Design Issue
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Decorator Design Pattern
 Background context: The chapter introduces the Decorator design pattern, explaining its importance and versatility in software development. It highlights the utility of this pattern for combining and reusing different implementations without altering existing code.
@@ -199,7 +197,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Concept: Separation of Concerns
 Background context explaining the concept. The separation of concerns is a design principle where a complex system is broken down into distinct parts that have separate responsibilities.
@@ -375,7 +372,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Item Base Class and DecoratedItem
 Background context: The `Item` base class is an abstraction for all possible items, defining a pure virtual function `price()` to query the price. The `DecoratedItem` class is a concrete implementation that stores another `Item` and provides protected methods to access it.

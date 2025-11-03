@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Parallel Query Execution. Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioning Strategies and Coordination Services
 
@@ -216,7 +214,6 @@ In this example, `optimizeQuery` takes a complex query and breaks it down into m
 
 These flashcards cover various partitioning strategies and techniques used by NoSQL databases and MPP relational database systems for managing data across distributed clusters.
 
-**Rating: 8/10**
 
 #### Sorting for Efficient Range Queries
 
@@ -297,7 +294,6 @@ x??
 
 These flashcards cover key concepts related to partitioning and indexing strategies for databases. Each card provides context and explanations suitable for understanding rather than pure memorization.
 
-**Rating: 8/10**
 
 #### Transaction Overview
 Background context explaining the role of transactions. Transactions are a mechanism for grouping several reads and writes together into a logical unit, ensuring that operations either fully succeed or fail entirely (commit or abort/rollback). They simplify error handling by abstracting away partial failure scenarios.
@@ -389,7 +385,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### The Slippery Concept of a Transaction
 Background context explaining the concept. Most relational databases support transactions, and some nonrelational databases have started to abandon or redefine transactional guarantees due to scalability concerns.
@@ -549,7 +544,6 @@ conn.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
 ??? 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Atomicity Definition
@@ -624,7 +618,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### CAP Theorem and Consistency
@@ -685,7 +678,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transaction Isolation Levels and Performance
 Background context: The text discusses the concept of transaction isolation levels, particularly focusing on serializable isolation. It mentions that while serializability is theoretically desirable for preventing race conditions, it often comes with a performance penalty. In practice, many databases implement weaker forms of isolation like snapshot isolation.
@@ -771,7 +763,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomicity in Transactions
 Atomicity ensures that a transaction is treated as a single, indivisible unit of work. If an error occurs during a sequence of operations within a transaction, all changes made up to the point of failure should be rolled back, maintaining database consistency.
@@ -844,7 +835,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomicity in Transactions
 Atomicity ensures that a transaction is treated as a single, indivisible unit of work. If an error occurs during any part of the transaction, all changes made by the transaction are rolled back to maintain data consistency.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 32)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 17. Reflection or A Class Named Class. 17.1 Getting a Class Descriptor
 
 ---
 
-**Rating: 9/10**
 
 ---
 #### Dynamic Class Loading
@@ -80,7 +78,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Getting Class Objects Using `Class.forName()`
 To obtain a `Class` object for an arbitrary class, you can use `Class.forName(String className)`. This method is useful when the class name is provided as a string at runtime. The `Class` object obtained this way provides access to various reflective capabilities of the specified class.
@@ -232,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ClassLoader Overview
 Background context explaining the role of a ClassLoader. A ClassLoader is a program that loads classes into memory, which can be from various sources like network connections, local disks, or even constructed in memory.

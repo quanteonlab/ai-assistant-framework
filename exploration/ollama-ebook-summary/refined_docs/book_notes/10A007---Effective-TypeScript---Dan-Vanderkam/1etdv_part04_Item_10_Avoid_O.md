@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 10 Avoid Object Wrapper Types String Number Boolean Symbol BigInt
 
 ---
 
-**Rating: 8/10**
 
 #### String and Object Wrapper Types
 Background context explaining that JavaScript has primitive values like strings, numbers, booleans, etc., which are immutable and do not have methods. Strings can seem to have methods because of implicit conversion.
@@ -107,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Excess Property Checking
 Excess property checking is a mechanism provided by TypeScript that helps catch errors where an object literal has properties that do not match the declared type. This check ensures that only known properties are used, which can prevent mistakes such as typos or unintended extra properties.
@@ -315,7 +312,6 @@ These checks help catch typos and unintended extra properties, improving code qu
 
 x??
 
-**Rating: 8/10**
 
 #### Applying Types to Entire Function Expressions
 Background context explaining how TypeScript distinguishes between function statements and expressions, and why applying a type to an entire function can be beneficial. This helps reduce repetition and provides better safety checks.

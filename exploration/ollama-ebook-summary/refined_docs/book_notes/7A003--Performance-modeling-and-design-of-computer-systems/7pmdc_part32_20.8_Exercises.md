@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 32)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 20.8 Exercises
 
 ---
 
-**Rating: 8/10**
 
 #### Simulation of M/BP/1 System
 Background context: This section describes a simulation exercise to model an FCFS (First-Come-First-Served) server with job arrivals following a Poisson process and job sizes distributed according to a Bounded Pareto distribution. The goal is to measure the mean time in the queue \(E[TQ]\).
@@ -103,7 +101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept Title: Phase-Type Distributions and Markov Chains
 
@@ -118,7 +115,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept Title: Mixing Exponential Distributions for Deterministic or Near-Deterministic Distributions
 
@@ -162,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Erlang-k Distribution and Hypoexponential (Generalized Erlang) Distribution
 
@@ -203,7 +198,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence to Deterministic Distribution
 
@@ -220,7 +214,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Constructing Erlang-k Distribution
 
@@ -265,7 +258,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Phase-Type Distribution (PH)
 
@@ -311,7 +303,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/E 2/1 Markov Chain
 Background context: This example involves a single FCFS queue where arrivals follow a Poisson process with rate λ, and service times are Erlang-2 distributed. The mean job size is μ, split into two phases Exp(μ1) and Exp(μ2), where μ1 = μ2 = 2μ.
@@ -326,7 +317,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/H 2/1 Markov Chain
 Background context: This example involves a single FCFS queue where arrivals follow a Poisson process with rate λ, and service times are Hyperexponentially distributed. The probability of a job having an Exp(μ1) service time is \(p\) and an Exp(μ2) service time is \(1 - p\).
@@ -341,7 +331,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### E 2/M/1 Markov Chain
 Background context: In this example, interarrival times are Erlang-2 distributed with a mean of \(\frac{1}{\lambda}\), and the service rate is μ. The state space should track:

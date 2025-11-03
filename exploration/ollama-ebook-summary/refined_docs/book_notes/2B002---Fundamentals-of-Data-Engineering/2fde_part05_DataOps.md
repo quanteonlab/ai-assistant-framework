@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** DataOps
 
 ---
 
-**Rating: 8/10**
 
 #### Ethical Behavior and Privacy in Data Engineering
 
@@ -143,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### DataOps Definition
 DataOps borrows principles from lean manufacturing and supply chain management, focusing on people, processes, and technology to enhance data engineering efficiency and quality. It aims for rapid innovation, high data quality, collaboration, and clear measurement of results.
@@ -238,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cloud Instance Operational Problems
 Background context: As data pipelines become more complicated, the reliability of cloud instances hosting cron jobs becomes a critical factor. If an instance has operational issues, it can cause the scheduled tasks to stop running unexpectedly.
@@ -391,7 +387,6 @@ def process_data():
 ```
 x??
 
-**Rating: 8/10**
 
 #### Data Horror Stories and their Impact
 Data horror stories can undermine initiatives, waste years of work, and potentially lead to financial ruin. Systems that create data for reports may stop working, causing delays and producing stale information. This often results in stakeholders losing trust in the core data team, leading to splinter teams and unstable systems.
@@ -473,7 +468,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Architecture
 
@@ -593,7 +587,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Pipelines as Code

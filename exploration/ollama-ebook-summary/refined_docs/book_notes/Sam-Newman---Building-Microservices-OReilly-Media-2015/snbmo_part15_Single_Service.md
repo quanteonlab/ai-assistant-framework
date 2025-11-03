@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Single Service Per Host
 
 ---
 
-**Rating: 8/10**
 
 #### Single Service Per Host Model
 This model aims to simplify monitoring, remediation, and scaling by ensuring each host runs only a single microservice. It helps reduce single points of failure and eases security management.
@@ -35,7 +33,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monitoring and Remediation Simplicity
 By running a single service per host, monitoring the health of services becomes more straightforward. Each host can be monitored independently, simplifying the process of identifying issues and applying fixes.
@@ -50,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scale and Failure Design
 Designing for scale and failure becomes more manageable with the single-service-per-host model. This approach helps in identifying which service has failed when an outage occurs.
@@ -79,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cost Implications of More Servers
 While the single-service-per-host model provides benefits in terms of monitoring and management, there are downsides like increased server management overhead and potential cost implications for running more distinct hosts.
@@ -96,7 +91,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Alternative Deployment Techniques
 The single-service-per-host model opens up the potential to use alternative deployment techniques such as image-based deployments or immutable server patterns. These methods can simplify updates and rollbacks but require careful planning.
@@ -138,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Automation in DevOps
 Automation can significantly reduce the overhead associated with managing multiple servers and services, making it easier to scale without increasing workload proportionally. Tools like Ansible or Jenkins facilitate this automation.
@@ -161,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Automation in Microservice Architectures
 Background context explaining how automation is crucial for managing microservices, including provisioning services, deployment processes, and monitoring. The chapter emphasizes that automation helps maintain productivity among developers by enabling self-service for provisioning and deploying services.
@@ -177,7 +169,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Case Study: RealEstate.com.au
 Background context explaining the journey of REA towards a distributed microservices architecture. The case study highlights how automation was essential in transitioning from monolithic architectures to microservices, reducing development time significantly over 18 months.
@@ -195,7 +186,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Case Study: Gilt
 Background context explaining Gilt's move from a monolithic Rails application to multiple microservices. The case study illustrates how automation, particularly in tooling for developers, drove the rapid adoption and growth of microservices within the company.
@@ -213,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Diminishing Returns in Slicing VMs
 Explain why there are diminishing returns when slicing a physical server into smaller VMs, highlighting resource allocation issues.
@@ -239,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lightweight Containers
 Introduce the concept of lightweight containers as an alternative to traditional VMs, discussing their advantages and disadvantages compared to virtualization.
@@ -264,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Security Considerations with Linux Containers
 Despite their advantages, Linux containers have limitations regarding isolation. Processes within a container can potentially interact with other containers or the host due to shared kernel resources.

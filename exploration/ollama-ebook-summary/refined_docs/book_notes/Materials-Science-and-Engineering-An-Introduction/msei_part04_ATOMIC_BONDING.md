@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Materials-Science-and-Engineering-An-Introduction_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** ATOMIC BONDING IN SOLIDS. 2.5 Bonding Forces and Energies
 
 ---
 
-**Rating: 8/10**
 
 #### Interatomic Forces and Bonding
 Background context: Understanding atomic bonding is crucial for explaining the physical properties of materials. At large distances, atoms do not influence each other due to negligible interactions; however, at small separations, both attractive (FA) and repulsive (FR) forces come into play. The net force \(F_N\) between two atoms can be described as:
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependence of Forces on Interatomic Separation
 Background context: The forces between two atoms depend on their interatomic separation. Figure 2.10a shows the schematic plot of these forces. At large distances, the forces are negligible; as \(r\) decreases, repulsive and attractive forces become significant.
@@ -32,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Potential Energy of Interatomic Bonding
 Background context: Instead of working with forces directly, it can be more convenient to consider potential energies. The relationship between energy and force is given by:
@@ -51,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bonding Energy in Solids
 Background context: While the treatment for two atoms was ideal, solids involve complex interactions among many atoms. A bonding energy analogous to \(E_0\) can still be associated with each atom. The magnitude and shape of this energy curve vary from material to material based on the type of atomic bonding.
@@ -62,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Force-Potential Energy Relationship
 Background context: The relationship between force and potential energy can also be expressed in terms of derivatives:
@@ -81,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Structure and Interatomic Bonding Overview
 Background context explaining the concept. Materials having large bonding energies typically also have high melting temperatures, leading to solid substances at room temperature for such materials. Conversely, small bonding energies favor a gaseous state, with liquids prevailing when the bonding energies are of intermediate magnitude.
@@ -92,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mechanical Stiffness and Force-Versus-Interatomic Separation
 Background context explaining the concept. The mechanical stiffness of a material is related to the shape of its force-versus-interatomic separation curve. A steeper slope indicates higher stiffness, while shallower slopes indicate more flexible materials.
@@ -103,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Coefficient of Thermal Expansion
 Background context explaining the concept. The linear coefficient of thermal expansion in materials is related to the shape of their energy-versus-interatomic separation (E–versus–r) curve. A deep and narrow "trough" typically correlates with a low coefficient of thermal expansion.
@@ -114,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Types of Primary Bonds
 Background context explaining the concept. There are three primary types of chemical bonds found in solids: ionic, covalent, and metallic. Each type involves valence electrons and is driven by the desire of atoms to achieve stable configurations like those of inert gases.
@@ -129,7 +119,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ionic Bonding Overview
 Background context explaining the concept. Ionic bonding involves the transfer of valence electrons from a metal atom to a nonmetal atom, resulting in ions with stable configurations. Sodium chloride (NaCl) is an example of ionic bonding.
@@ -140,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ionic Bonding Coulombic Force
 Background context explaining the concept. The attractive bonding forces in ionic compounds are coulombic and can be described by the formula \( E_A = - \frac{A}{r} \), where \( A = \frac{1}{4\pi\epsilon_0} |Z_1|e|Z_2|e \). The constant \( A \) is determined experimentally.
@@ -155,7 +143,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Ionic Bonding and Energy Relationships
@@ -170,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stability and Neighboring Ions for Ionic Materials
 Ionic materials are stable when positive ions have negative ions as nearest neighbors, and vice versa. This non-directional bonding means the bond strength is equal in all directions.
@@ -182,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bonding Energies and Melting Temperatures
 Bonding energies for ionic compounds typically range from 600 to 1500 kJ/mol. High bonding energies result in high melting temperatures, contributing to the material's hardness and brittleness.
@@ -194,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ceramic Materials and Their Properties
 Ceramics, characterized by their hardness and brittleness, also exhibit poor electrical and thermal conductivity due to their ionic bonding nature.
@@ -206,7 +190,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### NaCl Formation and Ionic Bonding Example
 The formation of sodium chloride (NaCl) involves the transfer of an electron from a sodium atom to a chlorine atom, resulting in the creation of positive and negative ions.
@@ -218,7 +201,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Calculation of Forces Between Ions
 The force of attraction \(FA\) between two ions can be calculated using the formula:
@@ -248,7 +230,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Covalent Bonding Overview
 Background context: Covalent bonding is a type of chemical bond that involves the sharing of electrons between atoms. This type of bonding occurs when there are small differences in electronegativity, typically found between nonmetallic elements near each other in the periodic table.
@@ -259,7 +240,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Directionality and Types of Covalently Bonded Materials
 Background context: Covalent bonds are directional; they occur between specific atoms and may only exist along a particular axis. Examples of covalently bonded materials include nonmetallic elements like chlorine (Cl2) and fluorine (F2), as well as molecules containing different types of atoms such as methane (CH4).
@@ -270,7 +250,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bonding Energies and Melting Temperatures in Covalently Bonded Materials
 Background context: The strength of covalent bonds can vary significantly. Stronger bonds are found in materials like diamond with high melting points (over 3550°C), while weaker ones exist in bismuth, which melts at about 270°C.
@@ -281,7 +260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Crystal Structure of Diamond and Its Carbon-Carbon Bonds
 Background context: Diamond's crystal structure consists of carbon atoms bonded to four other carbon atoms through sp3 hybridized covalent bonds. Each carbon atom is tetrahedrally coordinated, leading to a very strong bond network with high melting point and hardness.
@@ -294,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Covalent Bonding in Hydrogen Molecules
 Covalent bonding involves sharing electrons between atoms to achieve stability.
@@ -306,7 +283,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Formation of sp3 Hybrid Orbitals in Carbon
 sp3 hybridization involves mixing an s orbital with three p orbitals, creating four equivalent sp3 hybrid orbitals that point towards the corners of a tetrahedron.
@@ -318,7 +294,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Structure and Bonding in Graphite
 Graphite consists of layers of hexagons formed by sp2 hybridized carbon atoms, where three out of the four p orbitals are used, leaving one unhybridized 2p orbital.
@@ -330,7 +305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Metallic Bonding
 Metallic bonding involves delocalized valence electrons freely moving throughout the metal lattice.
@@ -342,7 +316,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Formation of sp2 Hybrid Orbitals in Carbon
 sp2 hybridization involves mixing one 2s orbital with two p orbitals, leaving one unhybridized 2pz orbital.
@@ -354,7 +327,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bonding in Graphite Layers
 Graphite layers are bonded together by weak van der Waals forces involving the unhybridized 2pz orbitals.
@@ -368,7 +340,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Metallic Bonding Overview
@@ -381,7 +352,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Electrical Conductivity in Metals
 Background context: Metals conduct electricity due to free electrons that can move throughout the lattice.
@@ -393,7 +363,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ductility in Metals
 Background context: Most metals and their alloys exhibit ductile behavior at room temperature, meaning they can deform significantly before breaking.
@@ -405,7 +374,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dipoles and Secondary Bonding
 Background context: Secondary bonding arises due to atomic or molecular dipoles. An electric dipole exists when there is a separation of positive and negative portions within an atom or molecule.
@@ -417,7 +385,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Van der Waals Bonds
 Background context explaining how van der Waals bonds are formed between induced dipoles, leading to temporary attractive forces. This type of bonding is significant in the liquefaction or solidification of certain molecules like inert gases and H2.
@@ -441,7 +408,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Polar Molecule–Induced Dipole Bonds
 Background context explaining how permanent dipole moments in polar molecules can induce dipoles in adjacent nonpolar molecules, leading to stronger bonds compared to van der Waals bonding. This is illustrated through Figure 2.22b.
@@ -464,7 +430,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Permanent Dipole Bonds and Coulombic Forces
 Background context explaining how permanent dipoles create stronger bonding energies through Coulombic forces compared to induced dipoles. The hydrogen bond is mentioned as a special case, occurring between molecules with covalently bonded H-F, H-O, or H-N bonds.
@@ -490,7 +455,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Abnormal Melting and Boiling Temperatures
 Background context: Substances like hydrogen fluoride (HF), ammonia (NH₃), and water exhibit unusually high melting and boiling points compared to their molecular weights. This is due to the extensive hydrogen bonding between molecules, which requires more energy to break.
@@ -502,7 +466,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Examples of Physical Phenomena
 Background context: Secondary bonds such as hydrogen bonding influence various physical phenomena including solubility, surface tension, capillary action, vapor pressure, volatility, and viscosity. These phenomena are crucial in many everyday applications.
@@ -514,7 +477,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Polymer Properties and Secondary Bonds
 Background context: The properties of polymers, such as their strengths, stiffnesses, and softening temperatures, can be influenced by secondary bonds that form between chain molecules.

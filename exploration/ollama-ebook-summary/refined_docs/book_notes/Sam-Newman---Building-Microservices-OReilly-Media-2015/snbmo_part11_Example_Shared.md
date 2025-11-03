@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Example Shared Static Data
 
 ---
 
-**Rating: 8/10**
 
 #### Duplicating Shared Static Data Tables
 Background context: One approach to address the inconsistency issue mentioned earlier is to duplicate the shared static data table for each package or service. This ensures that every service has its own copy, reducing the risk of inconsistent updates.
@@ -23,7 +21,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Treating Shared Static Data as Code
 Background context: Another approach is to treat shared static data as part of the application’s code or configuration. This could involve storing it in a property file or using enums within the codebase, making changes easier and more controlled compared to altering a live database table.
@@ -67,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shared Data and Implicit Models
 Background context explaining shared mutable data, where both finance and warehouse systems update a common customer record table. This leads to potential issues like race conditions and inconsistent states.
@@ -100,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Domain Concepts and Code Organization
 Background context about needing to model domain concepts explicitly rather than implicitly. The current setup where both finance and warehouse systems use a generic customer record table without clear boundaries leads to confusion.
@@ -146,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bounded Contexts and Service Layer Separation
 Background context about recognizing bounded contexts as distinct domains with their own rules and models. The example illustrates how separating the Customer domain into its own service helps in managing changes and responsibilities.
@@ -194,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Refactoring Databases
 Background context: The example discusses the need to refactor a database schema by separating concerns that were previously conflated. This is part of a broader process of breaking down monolithic applications into microservices, each with its own bounded context and database schema.
@@ -206,7 +199,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Splitting Tables into Separate Entities
 Background context: The example suggests splitting a shared line item table into two separate entities—one for catalog details and another for warehouse inventory. This separation helps in managing data more effectively within different contexts.
@@ -218,7 +210,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Staging the Break for Schema Separation
 Background context: After refactoring the database schema, it is recommended to keep the application code together before fully separating the services into microservices. This staged approach helps in managing potential issues arising from breaking transactional integrity.
@@ -230,7 +221,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transactional Boundaries in Monolithic Schema vs. Separated Schemas
 Background context: The example illustrates how transactions work within a monolithic schema versus when schemas are separated. In a monolithic schema, all operations can be performed within a single transaction; however, once the schemas are separated, this safety is lost.
@@ -242,7 +232,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Transactional Boundaries
 Background context: The example uses a MusicCorp scenario to illustrate how transactions work when separating database schemas. It shows that operations that need to be atomic across different databases now span two separate transaction boundaries, which can lead to partial failures.

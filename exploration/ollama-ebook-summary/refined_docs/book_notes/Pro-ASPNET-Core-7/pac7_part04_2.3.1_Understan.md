@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 2.3.1 Understanding endpoints
 
 ---
 
-**Rating: 8/10**
 
 #### Creating an ASP.NET Core Project Using Command Line
 Background context: This section explains how to create a basic ASP.NET Core project using the command line interface (CLI) provided by the .NET SDK. It covers essential commands for setting up the environment and creating a new MVC project.
@@ -38,7 +36,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring the `launchSettings.json` File
 The `Properties/launchSettings.json` file in an ASP.NET Core project determines which HTTP port the application will use. This file can be edited to change the default settings.
@@ -83,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Starting the ASP.NET Core Application
 Using command-line tools to run an ASP.NET Core application provides more reliability and consistency compared to integrated development environments (IDEs).
@@ -106,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Endpoints in ASP.NET Core
 In an ASP.NET Core application, incoming HTTP requests are handled by endpoints. These endpoints consist of actions, which are methods written in C#. Actions are defined within controllers, derived from `Microsoft.AspNetCore.Mvc.Controller`.
@@ -133,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ASP.NET Core Project Structure and Controllers
 Background context: In ASP.NET Core projects, controllers play a crucial role in handling HTTP requests. The project template typically includes a `Controllers` folder with a default `HomeController`. This controller handles common routing such as `/Home/Index`.
@@ -144,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding ASP.NET Core Routing System
 Background context: The routing system in ASP.NET Core is responsible for selecting the endpoint that will handle an HTTP request based on a defined rule. When the project was created, it included default rules to get started.
@@ -156,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HTML Rendering with Views
 Background context: To produce an HTML response from the application, a view is required. The Index action method was initially returning plain text instead of HTML.
@@ -174,7 +166,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating and Rendering Views
 Background context: After changing the action method to return `ViewResult`, you need to create a matching view in the appropriate folder.
@@ -189,7 +180,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Errors During View Rendering
 Background context: Initially, attempting to render a non-existent view results in an error message.
@@ -204,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### View Structure and Razor Syntax
 Background context: The structure of a view typically includes HTML with embedded Razor expressions for dynamic content.
@@ -224,7 +213,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dynamic Output Through ViewModel
 Background context: Action methods can pass complex data structures (view models) to views for dynamic content generation.
@@ -243,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Key Concepts
 Background context: This section covers the basics of routing, view rendering, and dynamic content generation in ASP.NET Core.
@@ -257,7 +244,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### ASP.NET Core Development Environment
@@ -270,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Endpoint Processing in ASP.NET Core
 Background context: In the example provided, an HTTP request is received by the ASP.NET Core platform, which then uses a routing system to match the request URL with an endpoint. The endpoint here refers to an action method defined within a controller.
@@ -282,7 +267,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action Method and ViewResult
 Background context: The text explains that the matched endpoint (the `Index` action method) generates a `ViewResult`, which contains metadata about the view to be rendered and the data model.
@@ -294,7 +278,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### View Engine and Razor
 Background context: Once the action method produces a `ViewResult`, the Razor view engine is responsible for rendering the actual HTML response. The `@Model` expression within the Razor view evaluates to insert the data from the view model into the response.
@@ -306,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HTTP Request and Endpoint Matching
 Background context: The example provided shows how an HTTP request URL can be matched to an endpoint in ASP.NET Core through its routing system.
@@ -318,7 +300,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### C# vs HTML in Endpoints
 Background context: The text mentions that endpoints can be written entirely in C# or use a combination of HTML and code expressions.

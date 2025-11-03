@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The 10-armed Testbed
 
 ---
 
-**Rating: 8/10**
 
 #### Sample-Average Method for Estimating Action Values
 Background context explaining the concept. The true value of an action is the mean reward when that action is selected. One natural way to estimate this is by averaging the rewards actually received:
@@ -20,7 +18,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Greedy Action Selection Method
 The simplest action selection rule is to select one of the actions with the highest estimated value, that is, one of the greedy actions as defined in the previous section. If there is more than one greedy action, then a selection is made among them in some arbitrary way, perhaps randomly.
@@ -34,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### \(\epsilon\)-Greedy Action Selection Method
 A simple alternative is to behave greedily most of the time, but every once in a while (with small probability \( \epsilon \)), select randomly from among all the actions with equal probability independently of the action-value estimates.
@@ -46,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### 10-Armed Testbed
 To assess the relative effectiveness of greedy and \(\epsilon\)-greedy methods, experiments were conducted on a suite of test problems known as the 10-armed testbed. Each bandit problem had 10 actions with true values selected according to a normal distribution with mean zero and unit variance.
@@ -58,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Comparison on the 10-Armed Testbed
 The performance of greedy and \(\epsilon\)-greedy methods was compared numerically using the 10-armed testbed. For each run, one of the bandit problems was applied to a learning method over 1000 time steps.
@@ -70,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Armed Bandit Exploration vs Exploitation
 Background context explaining the concept of the multi-armed bandit problem and how greedy methods perform suboptimally compared to -greedy methods. The lower graph shows that greedy methods find the optimal action in only approximately one-third of tasks, while -greedy methods continue to explore and improve their chances of finding the optimal action.
@@ -81,7 +74,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exploration vs Exploitation Tradeoff
 Background context explaining that the trade-off between exploring new actions and exploiting known good actions is crucial in reinforcement learning tasks. The performance of these methods depends on the task characteristics such as reward variance and whether the task is stationary or nonstationary.
@@ -92,7 +84,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bandit Action Selection
 Background context explaining how the choice of actions affects long-term performance in multi-armed bandits. The example provided illustrates a specific sequence of action and reward selections under an -greedy strategy.
@@ -103,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Long-Run Performance of Algorithms
 Background context explaining that different algorithms perform differently over time in terms of cumulative reward and probability of selecting the best action. The example provided compares two methods: greedy and -greedy with =0.1.
@@ -114,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Incremental Implementation of Averages
 Background context explaining how action-value estimates can be computed efficiently with constant memory and per-time-step computation using incremental formulas. The example provided shows how to update averages using the formula derived in equation (2.3).
@@ -127,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### General Form of Incremental Estimation
 Background context explaining the general form of incremental estimation used in reinforcement learning algorithms, where an old estimate is updated with a step size towards a target value.
@@ -142,7 +130,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Weighted Average with Exponential Decay
 
@@ -159,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditions for Convergence with Non-constant Step-size Parameters
 
@@ -177,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sample-Average Method
 
@@ -192,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Experiment for Nonstationary Problems
 

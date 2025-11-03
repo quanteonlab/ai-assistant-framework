@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 2.3 Classification of Queueing Networks. 2.5 More Metrics Throughput and Utilization
 
 ---
 
-**Rating: 8/10**
 
 #### Open Queueing Networks
 Background context: An open queueing network has external arrivals and departures. It can be represented by a series of servers where packets or jobs can enter from outside (external arrivals) and leave after service completion (departures). This type of network is often used to model systems like the Internet, where data packets may arrive from different sources and move through multiple nodes before exiting.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network of Queues with Probabilistic Routing
 Background context: In a probabilistic routing scenario within an open queueing network, packets are routed to different servers based on predefined probabilities \( p_{ij} \). This allows for variability in how packets move through the network. If the class of the packet depends on its source and destination, the probability can vary.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network of Queues with Non-Probabilistic Routing
 Background context: In a non-probabilistic routing scenario within an open queueing network, all jobs follow a predetermined route through the network. This is often used in systems where specific paths are necessary for data processing, such as data center networks or specific packet flows.
@@ -39,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finite Buffer Capacity
 Background context: A finite buffer capacity restricts the number of jobs that can be present at any server. If a new job arrives when the buffer is full, it will be dropped. This is often used in modeling real-world systems where resources are limited and cannot accommodate unlimited demand.
@@ -50,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throughput and Utilization
 Background context: Throughput measures the rate of completions (e.g., jobs per second) at a device or within a network, while utilization measures the fraction of time that a server is busy. Understanding these metrics helps in optimizing system performance and resource allocation.
@@ -67,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison of Throughput Between Systems
 Background context: In comparing the throughput of different systems, it's crucial to understand how varying parameters like service rates and arrival rates affect system performance. The example provided in Figure 2.6 illustrates that even with different processor speeds, the overall throughput can remain constant if other factors are adjusted.
@@ -78,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Utilization Law
 Background context: The Utilization Law states that the throughput \(X_i\) of a server i is equal to its service rate \(\mu_i\) multiplied by its utilization \(\rho_i\). This relationship helps in understanding how busy a server is and how it impacts system performance.
@@ -89,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throughput in a Single-Server Network
 Background context: In a single-server network with finite buffer capacity, understanding how throughput \(X\) relates to service rate \(\mu\) and arrival rate \(\lambda\) is critical. The key insight is that the throughput does not depend on the service rate but rather on the balance between arrivals and departures.
@@ -109,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throughput in Probabilistic Networks of Queues
 Background context: In a probabilistic network of queues, we analyze the throughput or the number of jobs that can be processed per unit time. For server \(i\), \(\lambda_i\) represents the total arrival rate into the server, and \(\mu_i\) is the service rate at server \(i\). The system's overall throughput \(X\) can be derived by understanding how flow balances between servers.
@@ -120,7 +110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throughput at Server i in Probabilistic Networks of Queues
 Background context: For a specific server \(i\) in a network, the throughput is equal to the total arrival rate \(\lambda_i\). However, to determine \(\lambda_i\), we need to solve simultaneous equations that balance flow into and out of each server.
@@ -133,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throughput Constraints in Probabilistic Networks of Queues
 Background context: For the network to reach equilibrium, meaning flow into each server equals flow out, we must ensure \(\lambda_i < \mu_i\) for all servers. This constraint affects how the arrival rates \(r_i\) are determined.
@@ -144,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throughput in Networks with Finite Buffers
 Background context: In networks where buffers have finite capacities, the throughput is constrained by the utilization \(\rho\) of the system. Here, \(\rho = \frac{\lambda}{\mu}\) and \(X = \rho \mu\). However, due to buffer limitations, not all arrivals are processed, leading to a reduced throughput.
@@ -157,7 +144,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throughput in Closed Networks - Interactive Systems
 Background context: In closed networks with interactive systems, the number of jobs in the system is fixed and equal to the number of terminals (multiprogramming level or MPL). The throughput \(X\) is defined as the number of jobs crossing "out" per second. 
@@ -170,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throughput in Closed Networks - Batch Systems
 Background context: In batch systems, there are always \(N\) jobs in the central subsystem, and the throughput \(X\) refers to the number of jobs processed per unit time. 
@@ -183,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throughput in Closed Interactive Systems
 Background context: In closed interactive systems, the response time \(R\) and the system time (or "time in system") \(T\) are different concepts. The goal is to minimize the response time while maintaining a fixed multiprogramming level (MPL).
@@ -194,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throughput in Closed Interactive Systems - System Time
 Background context: In closed interactive systems, while response time \(R\) measures the delay before a job gets its result, the system time \(T\) includes both the response time and the think time. The goal is to optimize \(T\).
@@ -207,7 +190,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throughput in Closed Interactive Systems - Goal
 Background context: In closed interactive systems, the goal is to maximize the number of users that can get onto the system while keeping the average response time \(E[R]\) below a threshold. The behavior is highly sensitive to changes in the multiprogramming level \(N\).
@@ -220,7 +202,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throughput in Closed Batch Systems
 Background context: In batch systems, there are always \(N\) jobs in the central subsystem, and the goal is to maximize throughput by optimizing the central subsystem's performance.
@@ -233,7 +214,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throughput in Closed Batch Systems - Goal
 Background context: The goal of batch systems is to achieve high throughput, meaning processing as many jobs as possible overnight. Changes are made within constraints such as memory capacity.
@@ -246,7 +226,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Response Time in Closed Batch Systems
 Background context: In a closed batch system, the mean response time \( E[R] \) is equal to the mean time in the system \( E[T] \). This equality arises because every "arrival" waits behind \( N-1 \) jobs and then runs. The relationship between the number of jobs \( N \), the service rate \( \mu \), and the mean time in the system is given by:
@@ -261,7 +240,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throughput in Closed Systems vs. Open Systems
 Background context: For closed systems, the throughput \( X \) changes when we double the service rates \( \mu_i \), while for open systems, the throughput is independent of the service rates.
@@ -275,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modeling Single-Server Queue with Throughput
 Background context: IBM's attempt to model a blade server as a single-server queue involves understanding how to determine the mean job size \( E[S] \).
@@ -289,7 +266,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differences Between Open and Closed Networks
 Background context: Open networks have independent throughput, while closed networks show relationships between throughput and response time.
@@ -303,7 +279,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scheduling Orders: SRPT vs. Mean Response Time
 Background context: The Shortest-Remaining-Processing-Time (SRPT) scheduling policy aims to minimize mean response time by always serving the job with the smallest remaining processing time.
@@ -319,7 +294,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throughput in Open vs. Closed Systems
 Background context: The throughput in open systems is independent of individual service rates, whereas in closed systems, higher throughput leads to lower average response times.

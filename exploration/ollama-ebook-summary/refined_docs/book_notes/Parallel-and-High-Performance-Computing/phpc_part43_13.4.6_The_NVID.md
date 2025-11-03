@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 43)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 13.4.6 The NVIDIA Nsight suite of tools can be a powerful development aid
 
 ---
 
-**Rating: 8/10**
 
 #### Data Transfer Cost Analysis
 An example is provided showing how data transfer costs are measured and compared between two versions of the same code.
@@ -20,7 +18,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example for Workgroup Size Adjustment
 Consider the following pseudocode where you adjust the workgroup size based on occupancy metrics.
@@ -47,7 +44,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stalls and Their Causes
 Provide a list of reasons for kernel stalls, including memory dependency, execution dependency, synchronization, memory throttle, constant miss, texture busy, and pipeline busy.
@@ -66,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Achieved Bandwidth and Its Importance
 Explain the importance of bandwidth as a metric, especially for understanding application performance. Mention that comparing achieved bandwidth to theoretical and measured values can provide insights into efficiency.
@@ -78,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Docker Containers as a Workaround
 Describe the use of Docker containers for running software that doesn't work on the native operating system. Mention the process to build and run a Docker container.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 2.7.3 Lazy support in F. 2.7.4 Lazy and Task a powerful combination
 
 ---
 
-**Rating: 8/10**
 
 #### Combining Lazy and Task in F#
 Background context explaining the concept. The `Lazy<T>` type can be combined with `Task<T>` to implement a useful pattern for instantiating objects that require asynchronous operations, ensuring lazy evaluation on demand using an independent thread.
@@ -36,7 +34,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Function Composition in FP
 Background context explaining the concept. Function composition involves applying the result of one function to the input of another, creating a new function that solves complex problems by decomposing them into smaller and simpler problems.
@@ -58,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Closures in FP
 Background context explaining the concept. A closure is an inline delegate/anonymous method attached to its parent method, where variables defined within the parent's body can be referenced from within the anonymous method. This allows functions to maintain state even after execution has left the scope of the parent function.
@@ -81,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memoization in FP
 Background context explaining the concept. Memoization is a technique that maintains the results of intermediate computations instead of recomputing them, often used to speed up algorithms and reduce redundant calculations.
@@ -106,7 +101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Precomputation in FP
 Background context explaining the concept. Precomputation involves performing an initial computation that generates a series of results, usually stored as a lookup table, to avoid redundant computations during execution.
@@ -130,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lazy Initialization in FP
 Background context explaining the concept. Lazy initialization defers the computation of a factory function for object instantiation until needed, creating the object only once and improving performance by reducing memory consumption.
@@ -150,7 +143,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Data Structures and Immutability Overview
 Functional programming fits well into data transformation scenarios. By using immutable data structures, you can avoid side effects and state changes, making concurrent programming easier.
@@ -167,7 +159,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Building a Functional List in C#
 Creating a functional list involves defining operations that transform the list without modifying the original data. This ensures immutability and thus thread safety.
@@ -193,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Immutability in F#
 Immutability is easier to achieve in languages like F# due to its strong typing system and pattern matching capabilities.
@@ -208,7 +198,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing Parallel Patterns with Functional Recursion
 Parallel recursion allows you to perform operations in parallel, making use of multiple threads for efficiency.
@@ -229,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Working with Immutable Objects in C# and F#
 Immutable objects ensure that once an object is created, its state cannot be changed. This is crucial for maintaining consistency and preventing bugs.
@@ -252,7 +240,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrent Programming with Functional Data Structures
 Functional data structures can improve performance by sharing immutable data between threads. This avoids the need for locks and reduces race conditions.
@@ -272,7 +259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing Parallel Recursion with Tree Structures
 Parallel recursion can be applied to tree structures, such as binary trees, allowing for efficient data processing across multiple threads.
@@ -298,7 +284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Production Environment Challenges
@@ -315,7 +300,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread-Safe Issues with Shared State
 Background context: In the given scenario, a chat application was using a shared state (a `Dictionary` in memory) to keep track of connected users. The `OnConnected` and `OnDisconnected` methods were causing a bottleneck due to thread contention on this shared state.
@@ -349,7 +333,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Profiling and Performance Analysis
 Background context: To identify bottlenecks in applications, profiling tools were used. These tools sample the application during execution to analyze which methods are performing the most work.
@@ -369,7 +352,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Static Constructor in C#
 A static constructor is used to initialize a static class or its static members. In the context of SignalR, it ensures that the dictionary `onlineUsers` is initialized only once when the application starts.
@@ -390,7 +372,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutability and Shared State in SignalR Hub
 Immutability is a principle that suggests minimizing the number of mutable state changes to improve concurrency. In the given context, using immutable data structures can help avoid thread contention.
@@ -433,7 +414,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Safety with Collections: Dictionary and Enumerating Issues
 The `Dictionary` class can support multiple readers but not when being modified. Enumerating through a collection while another thread is modifying it can lead to exceptions or inconsistent states.
@@ -454,7 +434,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Safety Solutions: Locking vs Immutable Collections
 Locking provides thread safety but can degrade performance due to contention. Immutable collections, introduced by .NET Framework 4.5, offer a way to maintain thread safety without locks.
@@ -476,7 +455,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Collections Overview
 Background context: In the .NET Framework 4.5, immutable collections were introduced to provide thread-safe and non-mutable data structures. These collections are designed to prevent changes once created, ensuring that operations on them do not lead to unexpected behavior or race conditions.
@@ -517,7 +495,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Constructing Immutable Collections with Builders
 Background context: Using builders is a convenient way to construct immutable collections by adding elements one at a time and then sealing the collection into an immutable structure.
@@ -548,7 +525,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread-Safe Collections and CAS Operations
 Background context: While immutable collections provide thread safety by ensuring that once a collection is created, it cannot be changed, certain operations still need to be protected. Lock statements can be used around read/write operations, but this approach can lead to performance bottlenecks. A more efficient technique involves using compare-and-swap (CAS) operations for write protection.
@@ -580,7 +556,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Atomic Operations and CAS Instructions
@@ -605,7 +580,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of Atom Class
 The `Atom` class encapsulates reference objects and uses the `Interlocked.CompareExchange` method to perform atomic operations, ensuring thread safety without requiring locks. It is inspired by Clojure atoms.
@@ -643,7 +617,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Removing User Connections with ImmutableInterlocked
 Explanation of how to remove a user connection using `ImmutableInterlocked.TryRemove`.

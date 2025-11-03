@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Write Skew and Phantoms
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Conflict Resolution in Replicated Databases
@@ -119,7 +117,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Write Skew Anomaly
 Background context explaining write skew, including its definition and why it's problematic. Snapshot isolation is mentioned as a mechanism that might not prevent this issue.
@@ -213,7 +210,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Write Skew and Its Examples
 Background context: Write skew is a form of data inconsistency that can occur when concurrent transactions modify related but independent data. It often happens during operations like booking systems, multiplayer games, or financial services where different parts of an application are writing to the database based on conditions derived from existing data.
@@ -329,7 +325,6 @@ Example scenario:
 This can be mitigated by using serializable isolation levels or row-level locks.
 x??
 
-**Rating: 8/10**
 
 ---
 #### Write Skew and Phantom Read Problem
@@ -376,7 +371,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Lack of Good Tools for Detecting Race Conditions
@@ -434,7 +428,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Long-Running Analytic Queries and Snapshot Isolation
 
@@ -500,7 +493,6 @@ Background context explaining the concept. To optimize performance, applications
 Storing transaction logic in stored procedures helps with performance by consolidating all transaction steps into a single execution path. This reduces network latency and simplifies transaction handling on the database side.
 ??x
 
-**Rating: 8/10**
 
 ---
 #### Two-Phase Locking (2PL)
@@ -549,7 +541,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two-Phase Locking Performance Issues
 Background context: Two-phase locking (2PL) is a method used to ensure serializability of transactions by acquiring and releasing locks appropriately. However, it often results in lower transaction throughput and response times compared to weaker isolation levels due to lock overhead and reduced concurrency.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 47)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 31.2 Non-Preemptive Priority
 
 ---
 
-**Rating: 8/10**
 
 #### Time in Queue for Jobs of Priority 1
 Background context: The derivation starts by considering a priority 1 arrival, which must wait for both (i) the job currently being served, if any, and (ii) all jobs of the same or higher priority already in the queue. This leads to a formula for \(E[TQ(1)]\), the expected time in queue for jobs of priority 1.
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time in Queue for Jobs of Priority 2
 Background context: The derivation extends to a priority 2 arrival, which must wait not only for the job currently being served but also for all jobs of higher or equal priority already in the queue and any new jobs of lower priority that arrive while it waits.
@@ -36,7 +33,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### General Time in Queue for Jobs of Priority k
 Background context: The general formula for \(E[TQ(k)]\) can be derived through induction, considering that a job of priority k must wait for all lower-priority jobs already in the queue and any new arrivals during its waiting period.
@@ -50,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SJF Performance Analysis
 
@@ -87,7 +82,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load and Job Sizes
 
@@ -123,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Impact on Small Jobs
 Background context: Even small jobs can be negatively affected by the variability in job sizes. This is because a high variance in job size means that a system with a load \( \rho \) might appear as if it has low load from the perspective of a small job, but the large variance can dominate and affect performance.
@@ -135,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Non-Preemptive Policies and Mean Time in Queue
 Background context: Non-preemptive policies like SJF can perform poorly due to the squared term \( E[S^2] \) in their mean time in queue formula. In systems with heavy-tailed job sizes, this term becomes significant.
@@ -147,7 +139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tagging Policy for High Variance
 Background context: In scenarios where preemption is unavailable and checkpointing is difficult, a tagging policy like TAGS can help. This policy involves killing long-running jobs after some time to allow shorter jobs to run.
@@ -159,7 +150,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Priority Scheduling for M/G/1 Systems
 Background context: In an M/G/1 system with non-preemptive priority scheduling, to minimize the mean waiting time over all jobs, class S (small) jobs should be given higher priority than class L (large) jobs.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Size
 
 ---
 
-**Rating: 8/10**
 
 #### Test Pyramid
 Background context: The Test Pyramid is a concept that illustrates the relative proportion of different types of tests within an application's test suite. This helps in understanding which type of testing should be prioritized and where resources can be effectively allocated.
@@ -147,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tradeoffs in Testing
 Background context: When testing, especially for complex services involving multiple components and external dependencies, there are often trade-offs to be made. The goal is to write tests that are small and maintainable while ensuring they cover critical functionalities.
@@ -262,7 +259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuous Delivery and Deployment Overview
 Background context: Continuous delivery and deployment (CD) automate the release of changes to production. This process ensures that changes can be released quickly, safely, and with minimal manual intervention. It requires significant investment in automation, monitoring, and safeguards.

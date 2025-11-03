@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 8 Differential Equations and Nonlinear Oscillations. 8.1 Nonlinear Oscillators
 
 ---
 
-**Rating: 8/10**
 
 #### Nonlinear Oscillators Introduction
 This section introduces the study of nonlinear oscillations, focusing on a mass attached to a spring with both a restoring force and an external time-dependent driving force. The motion is constrained to one dimension, and the system's equation of motion can be derived using Newton’s second law.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Spring Model
 In the first model, the potential energy \( V(x) \approx \frac{1}{2}kx^2 (1 - \frac{2}{3}\alpha x) \), where \( k \) and \( \alpha \) are constants. The restoring force is given by \( F_k(x) = -\frac{dV(x)}{dx} = -kx(1-\alpha x) \). For small displacements, the motion is harmonic, but as \( x \to \frac{1}{\alpha} \), nonlinear effects increase.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### General Nonlinear Oscillator Model
 For a more general model, assume the potential energy function is proportional to an even power \( p \) of \( x \): \( V(x) = \frac{1}{p} kx^p \). The restoring force derived from this potential is \( F_k(x) = -\frac{dV(x)}{dx} = -kx^{p-1} \).
@@ -39,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Equation of Motion
 The equation of motion for the mass is given by: \( m\frac{d^2x}{dt^2} = -kx(1-\alpha x) + F_{ext}(x,t) \). This equation can be simplified to \( m\frac{d^2x}{dt^2} = -kx(1-\alpha x) \), assuming no external force.
@@ -50,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nonlinear Effects and Motion Characteristics
 For small displacements \( x < \frac{1}{\alpha} \), the motion will be periodic but not necessarily harmonic. As the amplitude increases, the symmetry in the motion to the left and right of the equilibrium position becomes broken. For large values of \( x > \frac{1}{\alpha} \), the force becomes repulsive, pushing the mass away from the origin.
@@ -61,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear vs Nonlinear Equations
 
@@ -85,7 +78,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Initial and Boundary Conditions
 
@@ -100,7 +92,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dynamic Form of ODEs
 
@@ -146,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Initial Conditions and Force Function
 
@@ -159,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ODE Solution Algorithms
 
@@ -172,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Euler's Rule
 
@@ -189,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Step Size Adaptation in ODE Solvers
 
@@ -202,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Runge-Kutta Algorithm
 
@@ -218,7 +204,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Runge-Kutta 2 (rk2)
 

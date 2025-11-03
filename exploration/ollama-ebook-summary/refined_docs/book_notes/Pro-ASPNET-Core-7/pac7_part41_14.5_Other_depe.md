@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 41)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 14.5 Other dependency injection features. 14.5.1 Creating dependency chains
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Creating Dependency Chains
@@ -34,7 +32,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring Services with Lifecycles
 Services in ASP.NET Core can have different lifetimes. `AddScoped` indicates that the service is created per scope, and dependencies within it will also be scoped appropriately.
@@ -48,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Demonstrating Dependency Chain in Action
 The example provided shows how resolving one service can trigger the resolution of its dependencies. In this case, `TimeResponseFormatter` depends on `ITimeStamper`, and when an HTTP request is made to a specific endpoint, both services are resolved.
@@ -67,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Accessing Configuration Data in Program.cs
 
@@ -103,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Service Factory Functions
 
@@ -139,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Environment Property in WebApplicationBuilder
 
@@ -177,7 +170,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defining Service Implementations with Multiple Capabilities
 Background context: This concept involves defining a service interface that provides insight into the capabilities of each implementation. By adding a `RichOutput` property to the `IResponseFormatter` interface, different implementations can indicate their unique features or behaviors.
@@ -216,7 +208,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Registering Multiple Implementations for a Service
 Background context: This involves registering multiple service implementations with the same interface in order to allow consumers to choose the most suitable implementation based on their needs. The `AddScoped` method is used to register these services, and the consumer can select an appropriate implementation using dependency injection.
@@ -247,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Selecting Services Based on Capabilities
 Background context: This concept involves using the `RichOutput` property to select a service implementation that offers specific features. The consumer can retrieve services and filter them based on their capabilities.
@@ -286,7 +276,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Dependency Injection to Request Services
 Background context: This involves using the `GetRequiredService<T>` method to request a service from the service provider. The consumer can directly access a specific service implementation based on its type.

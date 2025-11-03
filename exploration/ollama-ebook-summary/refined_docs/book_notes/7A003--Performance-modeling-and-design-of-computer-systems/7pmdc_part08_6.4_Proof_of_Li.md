@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 6.4 Proof of Littles Law for Open Systems
 
 ---
 
-**Rating: 8/10**
 
 #### Little's Law Intuition
 Background context explaining the intuitive understanding of Little’s Law. Consider a fast-food restaurant where E[T] (average time spent by a customer) and E[N] (average number of customers waiting for service) are inversely proportional. A faster service means lower E[T], while fewer seats result in lower E[N].
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Little's Law for Open Systems - Statement via Time Averages
 Background context explaining the statement of Little’s Law for open systems in terms of time averages. This involves defining λ as the limit of the number of arrivals by time t divided by t, and X as the limit of the number of system completions (departures) by time t divided by t.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Little's Law Proof for Open Systems
 Background context explaining the proof of Little’s Law for open systems by considering the area under a graph representing arrivals and departures. The proof involves summing up times spent in the system and comparing it with the number of jobs in the system at any moment.
@@ -39,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Utilization Law
 Background context explaining the concept of device utilization or load. Given a single device with arrival rate λ and service rate μ where λ < μ, the long-run fraction (ρ) that the device is busy can be derived using Little’s Law.
@@ -50,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Corollary for Time in Queue
 Background context explaining Little's Law application to the time spent in queues. This involves defining NQ as the number of jobs in queue and TQ as the time jobs spend in queues, similar to the main theorem but focusing on queuing times.
@@ -61,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Difference Between Time Averages and Ensemble Averages
 Background context explaining the distinction between time averages and ensemble averages, particularly under ergodicity assumptions. This helps in applying Little’s Law to systems where the long-term behavior is consistent across all paths.
@@ -72,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application of Little's Law to Systems with Service Orders and Multiple Servers
 Background context explaining how Little’s Law applies regardless of service order or number of servers. This involves understanding that the law holds for any system configuration, be it FCFS or other scheduling policies.
@@ -85,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Little's Law for Closed Systems - General Overview
 Little’s Law applies to closed systems where there are no exogenous arrivals, and jobs generate themselves within the system. It states that the number of jobs (N) in a system over time is equal to the throughput (X) times the mean time each job spends in the system (TTime Avg). The formula can be expressed as \( N = X \cdot T_{\text{TimeAvg}} \).
@@ -97,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throughput Law for Closed Systems
 The Throughput Law (also known as Response Time Law) states that the throughput (\(X\)) of a closed system can be calculated using \( X = \frac{N}{E[R] - E[Z]} \), where \( N \) is the number of users, \( E[R] \) is the expected response time, and \( E[Z] \) is the expected think time.
@@ -109,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example 1: Interactive System with N=10 Users
 An interactive system has 10 users. The expected think time is \(E[Z] = 5\) seconds, and the expected response time is \(E[R] = 15\) seconds.
@@ -127,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example 2: Disk System with Throughput and Service Time
 In a more complex interactive system, disk 3 has a throughput (\(X_{\text{disk3}} = 40\) requests/sec) and an average service time (\(E[S_{\text{disk3}}] = 0.0225\) sec). The average number of jobs in the system consisting of disk 3 and its queue is 4 (\(E[N_{\text{disk3}}] = 4\)).
@@ -144,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example 2: System Throughput Calculation
 Given the throughput (\(X\)) and average think time (\(E[Z]\)), and knowing that \( E[R] = N / X - E[Z] \), we can calculate the system throughput.
@@ -171,7 +158,6 @@ Each flashcard covers a specific aspect of the provided text, ensuring that all 
 
 ---
 
-**Rating: 8/10**
 
 #### Little's Law and Operational Laws
 Background context: Little’s Law states that the average number of jobs in a system (E[N]) is equal to the arrival rate (λ) multiplied by the average time a job spends in the system (E[T]): \( E[N] = \lambda \cdot E[T] \). Other operational laws, such as the Forced Flow Law, are also discussed.
@@ -183,7 +169,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Forced Flow Law
 Background context: The Forced Flow Law relates system throughput to the throughput of an individual device. It states that the system throughput (X) is equal to the sum of the product of the number of visits to a device per job (V_i) and the throughput at that device (X_i): \( X = \sum_{i} V_i \cdot X_i \).
@@ -201,7 +186,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Combining Operational Laws: Simple Example
 Background context: The example uses operational laws to calculate the mean response time in an interactive system with multiple devices.
@@ -225,7 +209,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Combining Operational Laws: Harder Example
 Background context: The harder example involves a more complex system with a memory queue and multiple devices.

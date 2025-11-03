@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4.1.1 Creating a project using the command line
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Project Using Command Line
 Background context: This section explains how to create an ASP.NET Core project using command line tools, which is recommended for simplicity and predictability. The `dotnet` command provides various templates for different types of projects.
@@ -25,7 +23,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Solution File
 Background context: This section explains how to create and manage multiple projects using solution files, which are commonly used by Visual Studio.
@@ -44,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding a Project to Solution File
 Background context: This section explains how to add a project to an existing solution file, which is useful for grouping multiple projects together.
@@ -63,7 +59,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Building and Running Projects Using Command-Line Tools
 To build and run a .NET Core project using command-line tools, you first need to configure the environment properly by adding specific statements in `Program.cs` and setting up `launchSettings.json`.
@@ -118,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding a Statement to Program.cs
 In .NET Core projects, adding statements like those for handling HTTP requests and serving static files is crucial for setting up basic routing and functionality.
@@ -130,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring Static Files and Routing in .NET Core
 .NET Core applications need configuration to handle static files such as HTML or CSS served from specific folders.
@@ -142,7 +135,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 

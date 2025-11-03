@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Data Models Overview
 Background context: This section provides an overview of various data models, their historical development, and modern usage. It covers hierarchical, relational, and NoSQL (document and graph) databases.
@@ -142,7 +140,6 @@ public class LHCDataAnalyzer {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Log-Structured Storage Engines
 Log-structured storage engines are known for their append-only nature, making them efficient for write operations. The underlying principle is that data can be appended without needing to overwrite existing content. This approach minimizes disk seeks and improves performance for writes but requires additional mechanisms for read operations.
@@ -238,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SSTables Overview
 SSTables, or Sorted String Tables, represent a more structured format for log-structured storage segments. Each segment is now sorted by keys and contains unique entries per key to avoid redundancy.

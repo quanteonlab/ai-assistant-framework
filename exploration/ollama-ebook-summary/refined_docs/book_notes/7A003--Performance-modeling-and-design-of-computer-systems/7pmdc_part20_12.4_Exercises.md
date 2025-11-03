@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.4 Exercises
 
 ---
 
-**Rating: 8/10**
 
 #### Transition to Continuous-Time Markov Chains (CTMC)
 In practice, we do not always need to translate a CTMC into a discrete-time Markov chain (DTMC) with δ-steps. We can directly derive balance equations for the CTMC and solve them for the limiting probabilities πi.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Balance Equations in CTMCs
 The balance equations for a CTMC are derived from the principle that the rate at which jobs leave state j equals the rate at which they enter state j. The standard notation is:
@@ -39,7 +36,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interpreting Balance Equations for CTMCs
 The left-hand side (LHS) of the balance equation represents the product of the limiting probability \(π_j\) and the transition rate out of state j, νj. The right-hand side (RHS) is a sum over all states i, where each term represents the product of the limiting probability of being in state i and the transition rate from state i to state j.
@@ -51,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interpreting Balance Equations for CTMCs (continued)
 The ith term on the RHS represents the product of the limiting probability \(π_i\) and the transition rate \(q_{ij}\), which is the rate at which transitions from state i to state j occur. The sum over all states i on the RHS gives the total rate at which transitions enter state j.
@@ -63,7 +58,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary Theorem for CTMCs
 For an irreducible CTMC with πi’s that satisfy the balance equations:
@@ -87,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Converting a CTMC to a DTMC
 The provided figure (Figure 12.10) shows a simple CTMC with states 1, 2, and 3, and transition rates λ31, λ12, λ21, and λ32.
@@ -105,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Potential Pitfall: Balance vs Stationary Equations
 For a CTMC, the balance equations yield the limiting probabilities directly. However, stationary equations are meaningless unless they are first translated into a DTMC.
@@ -119,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/1 Queueing System Overview
 Background context: The simplest queueing model consists of a single server with Exponentially distributed service times and Poisson-distributed interarrival times. This system is denoted as M/M/1, where "M" stands for memoryless (Exponential distribution) in both the arrival process and service times, and the first slot describes the number of servers (1 in this case).
@@ -130,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Birth-Death Process
 Background context: In an M/M/1 system, the states of the queue form a birth-death process where state transitions only occur between consecutive states. The rate at which the system leaves state \( j \) is denoted as \( μ_j \), and the rate at which it enters state \( j+1 \) is denoted as \( λ_j \).
@@ -141,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Balance Equations for State 1
 Background context: To find the steady-state probabilities \( π_j \) for each state \( j \), balance equations are used. These equate the rate at which the system leaves a state with the rate at which it enters that state.
@@ -154,7 +143,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### General Form of Steady-State Probabilities
 Background context: The steady-state probabilities \( π_j \) for states in an M/M/1 queueing system are derived by assuming a general form and then solving balance equations. This involves finding expressions for \( π_j \) that satisfy the balance equations.
@@ -167,7 +155,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determining π₀
 Background context: The value of \( π_0 \) must be determined so that the sum of all probabilities equals 1. This involves solving a geometric series.
@@ -189,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Number of Customers in the System
 Background context: The mean number of customers \( E[N] \) can be derived by conditioning on the state. This involves summing over all states, weighted by their probabilities.
@@ -210,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/1 Queue Mean Number of Customers
 
@@ -223,7 +208,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variance of Number of Customers
 
@@ -236,7 +220,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Little’s Law and Mean Response Time
 
@@ -255,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Impact of Increasing Arrival and Service Rates
 

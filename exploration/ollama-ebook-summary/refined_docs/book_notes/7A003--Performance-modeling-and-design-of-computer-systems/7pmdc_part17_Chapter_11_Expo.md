@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 11 Exponential Distribution and the Poisson Process. 11.2 Memoryless Property of the Exponential
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Exponential Distribution
 
@@ -47,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memoryless Property of Exponential Distribution
 
@@ -70,7 +67,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hazard Function and Failure Rate
 
@@ -106,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exponential Distribution for Customer Service Time
 
@@ -127,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional Probability Given Time in Bank
 
@@ -148,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Value Given a Threshold
 
@@ -169,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Post Office Example
 
@@ -194,7 +186,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relating Exponential to Geometric via δ-Steps
 
@@ -215,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Geometric Distribution as Discrete Memoryless
 
@@ -232,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distribution of Time Until Success
 
@@ -257,7 +246,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Probability of X1 < X2 for Exponential Random Variables
 Background context about the exponential distribution and how it models time-to-event scenarios.
@@ -283,7 +271,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Minimum of Two Exponential Random Variables
 Background context on the properties of exponential distributions and their applications in reliability theory.
@@ -304,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application in Server Failure
 Background context on reliability and failure analysis, specifically focusing on two independent components (power supply and disk) of a server.

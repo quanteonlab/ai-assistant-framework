@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** How Does Entity Resolution Work
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Data Preprocessing for Entity Resolution
@@ -60,7 +58,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pair-Wise Comparisons and Computational Complexity
 Background context: In record linkage, when comparing two large datasets for matching, a brute-force approach involves comparing each element in one dataset with every element in another. This leads to an exponential increase in computational complexity as the size of the datasets grows. The number of comparisons is \(O(x^2)\), where \(x\) is the number of records in the datasets.
@@ -107,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pairwise Comparisons Overview
 Background context: The initial setup involves performing all possible pairwise comparisons, which can be computationally expensive. Reducing this number by using blocking techniques and other indexing methods is beneficial for efficiency.
@@ -268,7 +264,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Classification of Record Pairs
 Classification is a crucial step after similarity computation, categorizing pairs into match, non-match, and potential match categories. In basic binary classification, records are classified as matches (high similarity scores) or non-matches (low similarity scores). A less restrictive approach uses three classes: match, non-match, and potential match.
@@ -393,7 +388,6 @@ public class EvaluationMetrics {
 ```
 x??
 
-**Rating: 8/10**
 
 ---
 #### True Positives (TP)
@@ -527,7 +521,6 @@ For the given data in Table 4-9:
 \[ \text{F1 Score} = 2 \times \frac{1 \times 0.75}{1 + 0.75} = \frac{1.5}{1.75} \approx 0.857 \]
 x??
 
-**Rating: 8/10**
 
 #### Link Tables
 Link tables are used to match datasets by mapping identifiers between them. This method is particularly useful for financial applications where data might change over time, requiring maintenance and updating of link statuses.
@@ -651,7 +644,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Quality Framework (DQF)
 Background context explaining the concept. The DQF is essential for ensuring that financial data satisfies its intended use, particularly in decision-making and product development processes within financial institutions.

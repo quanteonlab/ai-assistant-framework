@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Listcomps Versus map and filter. Cartesian Products
 
 ---
 
-**Rating: 8/10**
 
 #### List Comprehensions vs. map() and filter()
 Background context: The text discusses list comprehensions (listcomps) as a more flexible and readable alternative to using `map()` and `filter()`. It provides examples of how listcomps can achieve the same results with less complexity compared to chaining `map()` and `filter()` with lambda functions. Listcomps are generally faster in Python, contrary to common beliefs.
@@ -77,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tuple Unpacking vs. Iterable Unpacking
 Background context: The term "tuple unpacking" is widely used by Python developers, but "iterable unpacking" is gaining more traction, as seen in PEP 3132—Extended Iterable Unpacking. This allows for unpacking sequences and iterables beyond just tuples.
@@ -192,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Destructuring Nested Tuples
 Background context: Destructuring is a powerful feature that allows you to unpack values from sequences (like tuples) into variables. In Python 3.10, match/case statements support destructuring, which can be used to pattern match elements within nested structures.

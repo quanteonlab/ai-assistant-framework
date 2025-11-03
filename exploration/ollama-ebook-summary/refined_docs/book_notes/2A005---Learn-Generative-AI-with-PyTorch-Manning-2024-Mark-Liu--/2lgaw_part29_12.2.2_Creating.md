@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 29)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.2.2 Creating batches for training
 
 ---
 
-**Rating: 8/10**
 
 #### DataLoader and Batch Iteration
 Context: The DataLoader class in PyTorch is used to load data into batches for efficient processing during training.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### PyTorch Embedding Layer
 Context: The nn.Embedding() layer is used in neural networks to convert index-encoded tokens into dense vectors.
@@ -34,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shuffling Training Data
 Context: Shuffling the training data ensures that the model is exposed to a diverse set of samples during each epoch.
@@ -48,7 +44,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Word Embedding Layer and Positional Encoding
 
@@ -63,7 +58,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Hyperparameters for GPT
 
@@ -76,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using GPU for Faster Training
 
@@ -89,7 +82,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Feed-Forward Network in Decoder Block
 
@@ -102,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Self-Attention Mechanism
 Background context: The causal self-attention mechanism is a fundamental component of transformers, particularly useful for sequence modeling tasks like language generation. It allows each position in a sequence to attend to all positions before it in the sequence, effectively capturing dependencies in time series data or sequential text.
@@ -158,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decoder Block in GPT Model
 Background context: In the GPT (Generative Pre-trained Transformer) model, each decoder block combines a causal self-attention sublayer with a feed-forward network. This structure allows for complex interactions between tokens within a sequence while also introducing nonlinearity through the feed-forward mechanism.
@@ -193,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Layer Normalization in GPT Model
 Background context: Layer normalization is a technique used to stabilize the training of deep neural networks by normalizing the outputs of previous layers. In the GPT model, layer normalization (nn.LayerNorm) is applied before and after the self-attention mechanism and feed-forward network.
@@ -217,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Layer Normalization and Residual Connections
 Layer normalization and residual connections are techniques used to improve the stability and performance of neural networks, particularly in deep architectures like transformers. These techniques help mitigate issues such as internal covariate shift and vanishing/exploding gradients.
@@ -232,7 +220,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Word Embedding and Positional Encoding
 In the provided code, word embeddings and positional encodings are applied to input tokens before passing them through the transformer blocks.
@@ -247,7 +234,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Forward Pass Through the GPT Model
 The forward pass of the GPT model involves processing input tokens through embedding layers, positional encodings, transformer blocks, and linear transformations.
@@ -290,7 +276,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Instantiation and Parameter Counting
 The model is instantiated by creating an instance of the `Model` class, and parameters are counted for resource management.
@@ -314,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Process Overview
 Background context explaining the training process for the GPT model. This involves using a specific loss function and optimizer, as well as setting parameters like the learning rate and number of epochs.
@@ -328,7 +312,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Training Code Example
 Explanation of the code snippet provided in Listing 12.6, which outlines the process of training the GPT model.
@@ -345,7 +328,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient Norm Clipping
 Explanation of gradient norm clipping, its purpose, and how it is applied in the training process.
@@ -359,7 +341,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Text Generation Function: Output Explanation
 Explanation of how the `generate()` function works, including its purpose and key steps.

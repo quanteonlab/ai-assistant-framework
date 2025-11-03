@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Conversion Attribution with Apache Beam
 
 ---
 
-**Rating: 8/10**
 
 #### Persistent State Considerations
 Background context explaining why persistent state is a critical consideration for performance in pipelines. Discuss the costs associated with writing to persistent storage and how it can become a bottleneck.
@@ -151,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Impression Class Overview
 This class represents an impression event, which captures user interactions on a website or application. The class holds information about the source and target URLs of the impression along with the timestamp when it occurred.
@@ -258,7 +255,6 @@ public String toString() {
 ```
 x??
 
-**Rating: 8/10**
 
 #### State and Timer Management Overview
 This section explains how state and timers are managed in Apache Beam pipelines. State is used to store information between processing elements, while timers help manage periodic or delayed actions based on event-time watermarking.
@@ -382,7 +378,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Flexibility in Data Structures
 Flexibility in data structures is highlighted by the use of maps, sets, values, and timers to manipulate state effectively for processing visits and impressions. This allows efficient handling of various states and operations within the algorithm.
@@ -514,7 +509,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conversion Attribution Pipeline Implementation
 This section explains how to implement a conversion attribution pipeline that processes visit and impression data efficiently, handling out-of-order events. The implementation ensures proper tracking and deduplication of impressions.
@@ -627,7 +621,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TestStream Creation and Watermark Management
 Background context: This concept describes how to create a test stream with specific coder types, add elements at certain times, and manage watermarks. It showcases the use of `KvCoder`, `AvroCoder`, and `Utils.parseTime` for setting timestamps.
@@ -714,7 +707,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Importance of Persistent State
@@ -809,7 +801,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### What Is Streaming SQL?
@@ -853,7 +844,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Closure Property of Relational Algebra
 Background context explaining the closure property and its significance. The core idea is that applying any operator from relational algebra to valid relations should always yield another relation, making relations a seamless part of relational algebra operations.
@@ -929,7 +919,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Classic Relations vs. Time-Varying Relations
 

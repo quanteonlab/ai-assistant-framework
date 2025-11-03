@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Discovery
 
 ---
 
-**Rating: 8/10**
 
 #### Certificate Chain Verification Process
 Background context: When establishing a TLS connection, the client verifies the server's certificate by scanning through the certificate chain until it finds one that it trusts. The certificates are then verified in reverse order from that point in the chain. The verification process checks several things such as the certificate's expiration date and whether the digital signature was actually signed by the issuing CA.
@@ -170,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### API and Service Communication Styles
@@ -239,7 +236,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### JavaScript and C# Handling Asynchronous Code
 Background context explaining how asynchronous programming was traditionally handled using callbacks but modern languages like JavaScript and C# offer async/await as a more straightforward approach to writing asynchronous code. Async/await simplifies handling of promises and makes it easier to deal with asynchronous operations.

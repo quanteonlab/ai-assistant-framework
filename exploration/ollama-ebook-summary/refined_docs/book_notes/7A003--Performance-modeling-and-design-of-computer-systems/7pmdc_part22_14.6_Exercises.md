@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 14.6 Exercises
 
 ---
 
-**Rating: 8/10**
 
 #### Utilization and Mean Number of Jobs in the System
 
@@ -118,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Load in M/M/k Systems
 Background context explaining the concept. In a single-server M/M/1 system, it is common to keep the utilization, ρ, below 0.8. If ρ gets higher (e.g., ρ=0.95), delays can explode. For an M/M/k system, we explore whether this rule of thumb still applies.
@@ -161,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/∞ Queueing System Overview
 

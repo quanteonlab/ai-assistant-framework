@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Deploying a Configurable Web Server
 
 ---
 
-**Rating: 8/10**
 
 #### Private Subnets for Production Systems
 Background context: In cloud infrastructure, particularly within a Virtual Private Cloud (VPC), it is crucial to ensure that sensitive components such as data stores are protected from direct public internet access. By deploying these services into private subnets, their IP addresses can only be accessed internally through the VPC.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Don't Repeat Yourself (DRY) Principle
 Background context: The DRY principle, also known as "Don’t Repeat Yourself," encourages developers to avoid redundancy in their code. This is important for maintainability and reducing the risk of errors when modifying configurations.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Variables in Terraform
 Background context: To adhere to the DRY principle, Terraform allows users to define input variables that can be reused throughout the configuration. These variables provide flexibility by allowing values to be passed from external sources such as command-line arguments or environment variables.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Enforcing Type Constraints
 Background context: Specifying type constraints for variables in Terraform helps ensure that only valid data types are passed into your configuration files. This can help catch simple errors early.
@@ -54,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sensitive Information Handling
 Background context: In many scenarios, sensitive information like passwords and API keys need to be passed into Terraform configurations. To protect such information, the `sensitive` parameter can be used to prevent logging of these values.
@@ -68,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -90,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### List Input Variables
 
@@ -110,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numeric List Input Variables
 
@@ -130,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Map Input Variables
 
@@ -154,7 +144,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Structural Input Variables Using Object
 
@@ -184,7 +173,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Default Values for Input Variables
 
@@ -204,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Input Variables in Terraform Code
 
@@ -228,7 +215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Output Variables
 
@@ -248,7 +234,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sensitive Parameter
 Background context: The `sensitive` parameter in Terraform output variables is used to prevent logging sensitive information such as passwords or private keys. This ensures that potentially harmful data is not exposed during plan or apply operations.
@@ -268,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Depends_on Parameter
 Background context: The `depends_on` parameter in Terraform can be used to explicitly define dependencies between resources or outputs. This is particularly useful when a resource's state needs to be updated before an output variable can accurately reflect its value.
@@ -293,7 +277,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Auto Scaling Groups (ASGs) for Web Servers
 Background context: In cloud environments, ensuring your application can handle varying loads is crucial. An Auto Scaling Group (ASG) automatically manages a group of Amazon EC2 instances by launching new instances when needed and terminating old ones as demand decreases. This helps maintain optimal resource usage while avoiding downtime.
@@ -305,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating an Auto Scaling Group with Terraform
 Background context: To create an ASG in Terraform, you need to define both the launch configuration and the ASG itself. The ASG will then use the specified launch configuration to manage a fleet of EC2 instances.
@@ -343,7 +325,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Data Sources in Terraform
 Background context: Data sources allow you to fetch read-only information from the provider (in this case, AWS). They are useful for retrieving details like VPC subnets without creating new resources.
@@ -371,7 +352,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AWS Auto Scaling Group (ASG) with VPC
 When deploying servers using ASG within a VPC, you need to specify which subnets the instances should be launched into. The `vpc_zone_identifier` argument in the ASG resource is used for this purpose.
@@ -396,7 +376,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load Balancing with Amazon Elastic Load Balancer (ALB)
 Load balancing is essential for distributing traffic across multiple servers, providing a single point of access to users. In AWS, you can use the Elastic Load Balancer (ALB) service to achieve this. The ALB works at Layer 7 of the OSI model and is ideal for HTTP and HTTPS traffic.
@@ -428,7 +407,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deploying a Load Balancer in Terraform
 To deploy a load balancer using Terraform, you can use the AWS ALB resource. You need to configure listeners, target groups, and security settings.
@@ -460,7 +438,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AWS Load Balancer Overview
 Background context: This section explains how to set up an Application Load Balancer (ALB) using Terraform. It covers creating the ALB, defining a listener, and setting up a target group for an Auto Scaling Group (ASG). The focus is on understanding the steps required to configure these components.
@@ -471,7 +448,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating the ALB with Terraform
 Background context: This step involves creating an ALB using the `aws_lb` resource in Terraform. The configuration includes specifying the load balancer type, subnets for the ALB, and security groups.
@@ -490,7 +466,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Setting Up a Target Group for ASG
 Background context: A target group is essential to manage and monitor the health of instances in an Auto Scaling Group (ASG). It performs periodic health checks using configured paths and protocols.
@@ -522,7 +497,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Auto Scaling Group Integration with Target Group
 When an EC2 Instance fails to respond, it is marked as "unhealthy," and the target group stops sending traffic to minimize disruption. With an Auto Scaling Group (ASG), Instances can launch or terminate dynamically, making a static list of instances impractical.
@@ -553,7 +527,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deployed Load Balancer Verification
 Background context: Once `terraform apply` completes, it is essential to verify that your load balancer and associated resources are correctly configured. This involves checking the AWS Management Console.
@@ -571,7 +544,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing the ALB URL
 Background context: After confirming that all components are healthy, you can test your load balancer by accessing its DNS name.
@@ -587,7 +559,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Instance Termination and Self-Healing
 Background context: The Auto Scaling Group (ASG) can automatically launch new instances when existing ones are terminated.
@@ -599,7 +570,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adjusting Desired Capacity
 Background context: You can manually adjust the number of instances managed by your Auto Scaling Group (ASG).

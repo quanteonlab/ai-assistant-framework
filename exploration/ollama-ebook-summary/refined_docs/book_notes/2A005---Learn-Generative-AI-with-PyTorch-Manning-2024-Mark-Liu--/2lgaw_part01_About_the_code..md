@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** About the code. Part 1
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Generative AI
 The book introduces generative AI, distinguishing it from discriminative models and explaining why PyTorch is chosen as the framework. Deep neural networks are used throughout the book for creating generative models.
@@ -37,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Why PyTorch for Deep Learning and Generative AI
 Background context explaining why PyTorch is ideal for deep learning and generative AI. PyTorch offers flexibility in model architecture design, ease of use, and GPU support.
@@ -49,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generative Adversarial Networks (GANs)
 Background context explaining GANs. A GAN consists of two networks: a generator that creates data instances and a discriminator that evaluates them.
@@ -61,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Attention Mechanism and Transformers
 Background context explaining attention mechanisms and how they are used in transformers. Attention allows models to weigh different parts of input data differently during processing.
@@ -73,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advantages of Creating Generative AI Models from Scratch
 Background context explaining why creating generative models from scratch is beneficial. Understanding the inner workings allows for more control and customization.
@@ -85,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### What is Generative AI?
 Generative AI creates new content, such as text, images, or music, by learning patterns from existing data. It contrasts with discriminative models, which focus on recognizing and categorizing pre-existing content.
@@ -105,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Difference Between Generative and Discriminative Models
 Discriminative models determine the class of input data by capturing key features. They predict conditional probabilities (prob(Y|X)). In contrast, generative models learn the joint probability distribution (prob(X, Y)) to synthesize new instances.
@@ -135,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Types of Generative Models: GANs and Transformers
 GANs involve two neural networks competing against each other to improve their performance. The generator tries to create data indistinguishable from real samples, while the discriminator aims to identify these synthetic ones.
@@ -169,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transformers: Deep Neural Networks for Sequence-to-Sequence Tasks
 Transformers are deep neural networks designed to handle sequence data efficiently. They excel at capturing intricate long-range dependencies and solving sequence-to-sequence prediction tasks.
@@ -202,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Applications of GANs and Transformers
 GANs can generate high-quality images, transform content (e.g., changing a face's hair color), and even create realistic music. Transformers excel in tasks like text generation due to their ability to capture long-range dependencies.
@@ -228,7 +217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges in Text Generation with Transformers
 Text generation is more challenging due to the sequential nature of text, where the order and arrangement of characters hold significant meaning. Transformers are designed to handle these complexities by using self-attention mechanisms.

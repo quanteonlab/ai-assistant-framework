@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Transformation Patterns
 
 ---
 
-**Rating: 8/10**
 
 #### Batch vs Streaming Transformations
 In data processing, transformations can be categorized into batch and streaming based on when and how data is processed. Batch transformations process data in predefined intervals or once a complete set of data (batch) has been received, while streaming transformations handle data as it arrives without waiting for a full batch to accumulate.
@@ -127,7 +125,6 @@ public class StreamingDataProcessor {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Disk-Based versus Memory-Based Transformations
 Disk-based and memory-based transformations differ in how they handle intermediary results during data processing. Disk-based transformations save intermediate results to a storage medium like a data lake, while memory-based transformations keep these results in memory for efficiency.
@@ -259,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Apache Spark Overview
 Apache Spark emerged as a significant evolution within the Hadoop ecosystem, offering substantial performance improvements over traditional Hadoop MapReduce. Spark's primary advantage lies in its ability to perform computations in memory via Resilient Distributed Datasets (RDDs), which are immutable and can be distributed across nodes.
@@ -322,7 +318,6 @@ Dynamic feature engineering in memory is beneficial for large and changing datas
 Dynamic feature engineering in memory is advantageous for large, changing datasets as it supports real-time processing with minimal overhead. However, it requires substantial computational resources and execution time. Precomputing and persisting features can improve performance by reducing computation time and memory usage during model training and inference, but this may not be optimal for complex or expensive queries.
 ??x
 
-**Rating: 8/10**
 
 #### Full versus Incremental Data Transformations
 Full data transformation involves processing the entire dataset (or its complete history) at once, regardless of changes. This approach is simple and ensures consistency but can be resource-intensive with large datasets.
@@ -397,7 +392,6 @@ Using database logs in CDC ensures data integrity by logging all changes made to
 
 ---
 
-**Rating: 8/10**
 
 #### Computational Speed
 Background context explaining computational speed. It is a critical requirement for financial data transformations and is typically measured by the time difference between the start and end of a data transformation execution. This can also be linked to latency, which includes average latency and latency jitter.
@@ -493,7 +487,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### High-Frequency Trading Risks
 Background context explaining high-frequency trading (HFT) and its reliance on real-time data for fast decision-making. Mention that HFT can amplify market volatility and contribute to events like flash crashes due to the rapid execution of trades.
@@ -594,7 +587,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Avoiding Data Storage and Transformation Layer Changes
 Background context: Changing your data storage system or transformation layer can be costly and should be avoided if possible. Once these components are defined and implemented, they should remain stable to avoid disruptions.
@@ -660,7 +652,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### High-Performance Computing (HPC) in Finance
 Background context explaining HPC and its relevance to finance. HPC refers to the practice of aggregating and connecting multiple computing resources to solve complex computation problems efficiently. It involves several concepts and technologies such as parallel computing, distributed computing, virtualization, CPUs, GPUs, in-memory computation, networking, etc.
@@ -812,7 +803,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Assessing Storage Layer Scalability
 When planning for scaling requirements, it's crucial to consider how both the transformation and storage layers interact. The max concurrency limit on your data storage layer (e.g., 500 concurrent requests) directly impacts the design decisions for the transformation layer.
@@ -938,7 +928,6 @@ public class DataTransformationLambda {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Data Consumers
 Background context: Financial data engineers must determine who the ultimate data consumers are and understand their specific needs to create appropriate mechanisms for delivering transformed data. This involves identifying human users, applications, business units, teams, or systems that depend on company-generated data.

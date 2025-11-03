@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 26)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.3.5 Completing the order controller
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Services to Configure the Application
 
@@ -32,7 +30,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring Middleware and Routing
 
@@ -50,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Completing the OrderController Class
 
@@ -84,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Testing the OrderController
 
@@ -120,7 +115,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Adding Validation Summary to Checkout Form
@@ -139,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Server-Side Validation in ASP.NET Core
 Background context: When a user submits a form, the data is first sent to the server for validation. This process is known as **server-side validation**. It's essential because it ensures that only valid and secure data reaches the server before processing.
@@ -152,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Client-Side Validation Complementing Server-Side Validation
 Background context: While server-side validation is crucial for security and ensuring that all rules are strictly followed, client-side validation provides a better user experience. It allows the browser to check the input in real-time before sending it to the server.
@@ -166,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Representations of User Data as Session Data
@@ -192,7 +183,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### View Components in ASP.NET Core
 Background context explaining view components, which are used to encapsulate reusable UI elements that can be included within a Razor page. View components can access services via dependency injection (DI) to fetch the necessary data.
@@ -219,7 +209,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### ASP.NET Core Model Binding for HTTP POST Requests
 Background context explaining how user data can be received via HTTP POST requests, which are then transformed into C# objects using model binding. This process is essential for handling form submissions and other user inputs.
@@ -243,7 +232,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### ASP.NET Core Validation and Error Details
 Background context explaining how ASP.NET Core provides built-in validation mechanisms for user input. These validations can be performed on model properties using attributes like `[Required]`, and detailed error messages can be displayed to users.

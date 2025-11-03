@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 28)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Performance Benchmarks
 
 ---
 
-**Rating: 8/10**
 
 #### Equality Comparison and Performance Considerations
 Background context: The text discusses the challenges of equality comparison using type erasure, noting that while it is sometimes possible, it can be difficult or expensive to implement. It also mentions that returning to `std::function` would introduce performance penalties.
@@ -150,7 +148,6 @@ sdoc.serialize(/* pass necessary arguments */);
 ```
 x??
 
-**Rating: 8/10**
 
 #### Type Erasure Overview
 Type erasure is a technique used in C++ to achieve runtime polymorphism without using virtual functions. It involves creating a type-erased wrapper that hides specific types, allowing for more loosely coupled and efficient code.
@@ -228,7 +225,6 @@ By optimizing these aspects, you can maintain the benefits of type erasure while
 
 ---
 
-**Rating: 8/10**
 
 #### Small Buffer Optimization (SBO)
 Background context: One of the primary concerns when optimizing performance is to minimize memory allocations, which can be very slow and nondeterministic. In the case of type erasure, a common implementation involves dynamic memory allocation through `std::make_unique()`. However, this approach can significantly impact performance, especially for small objects.
@@ -312,7 +308,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OwningModel and Placement New
 Background context: The text discusses manually creating an `OwningModel` within a byte buffer using `std::construct_at()` or placement new. This requires the user to explicitly call the destructor for proper memory management.
@@ -457,7 +452,6 @@ private:
 
 x??
 
-**Rating: 8/10**
 
 #### Separation of Concerns and Policy-Based Design
 
@@ -595,7 +589,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Optimization of Virtual Functions
 Virtual functions introduce a performance overhead due to indirection through virtual function tables and vptrs. A virtual function call typically involves two indirections: one via the vptr, and another to fetch the actual function pointer from the table.

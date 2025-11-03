@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 1B001---Proofs---Jay-Cumming_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Greatest Common Divisors
 
 ---
 
-**Rating: 8/10**
 
 #### Division Algorithm
 Background context: The division algorithm states that for all integers \(a\) and \(m > 0\), there exist unique integers \(q\) and \(r\) such that \(a = mq + r\) where \(0 \leq r < m\). This is fundamental in number theory.
@@ -92,7 +90,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modular Arithmetic Basics
 Background context explaining modular arithmetic. The definition of congruence modulo m is provided, along with several examples showing how to determine if two numbers are congruent modulo m.
@@ -208,7 +205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modular Arithmetic Basics
 Background context explaining modular arithmetic, including definitions and basic properties. The text provides several examples of modular congruence, such as \(12 \equiv 2 \pmod{5}\), and explains how these can be used to perform arithmetic operations under a modulus.
@@ -364,7 +360,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Prime and Composite Numbers
 Background context explaining the definition of prime numbers and composite numbers. The definition states that an integer \( p \geq 2 \) is a prime if its only positive divisors are 1 and \( p \). An integer \( n \geq 2 \) is composite if it is not prime, which means it can be written as \( n = st \), where \( s \) and \( t \) are integers and \( 1 < s, t < n \).
@@ -444,7 +439,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inclusive vs Exclusive OR
 
@@ -511,7 +505,6 @@ Euclid's contribution is noted for writing down proofs of these results nearly 2
 ---
 Note: The flashcards provided are designed to cover key concepts from the given excerpt, with detailed explanations and questions.
 
-**Rating: 8/10**
 
 #### Modular Congruence and Divisibility
 
@@ -557,7 +550,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modular Equivalence of Sets
 
@@ -619,7 +611,6 @@ This is Fermat's little theorem.
 ---
 ---
 
-**Rating: 8/10**
 
 #### Proof Strategy for Inequalities
 Background context explaining how to prove inequalities using algebraic manipulation. The example provided shows a step-by-step approach to proving \( \sqrt{x} \geq \sqrt{y} \) given that \( x \geq y \).
@@ -713,7 +704,6 @@ Thus, we have proved the AM-GM inequality.
 
 ---
 
-**Rating: 8/10**
 
 #### Starting from Conclusion and Working Backwards
 

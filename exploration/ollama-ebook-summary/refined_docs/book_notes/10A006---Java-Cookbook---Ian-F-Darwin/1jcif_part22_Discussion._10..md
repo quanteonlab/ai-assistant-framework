@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Discussion. 10.23 Getting the Directory Roots. Solution
 
 ---
 
-**Rating: 8/10**
 
 #### Listing Directory Contents Using Files.list Method
 Background context: The `java.nio.file.Files` class provides methods for working with files and directories. To list the contents of a directory, you can use its `list(Path)` method. This is useful for generating listings similar to the Unix `ls` command.
@@ -77,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: File Watch Service for Monitoring Changes
 Background context explaining how modern applications often need to monitor file changes without constantly polling. The `java.nio.file.FileWatchService` allows you to register a directory and get notified about specific events like creation, deletion, or modification of files within that directory.
@@ -187,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Create a Temporary File
 Background context: When saving user data to disk, creating a temporary file is the first step. This helps ensure that if something goes wrong during the save process, the previous version of the file remains intact.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A003---Generative-Deep-Learning_-Teaching-Machines-To-Paint-Write-Compose-and-Play-OReilly-Media-2023David-Foster--_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Discriminator
 
 ---
 
-**Rating: 8/10**
 
 #### GAN Architectural Design
 Background context explaining the core idea of GANs and their importance. In 2014, Ian Goodfellow et al. introduced GANs at NeurIPS, marking a significant milestone in generative modeling with highly successful results.
@@ -18,7 +16,6 @@ The core idea involves training these networks in an adversarial fashion—where
 
 ---
 
-**Rating: 8/10**
 
 #### Building a DCGAN with Keras
 Background context on building GANs using Keras. The chapter aims to build and train a deep convolutional GAN (DCGAN) from scratch, explaining each step of the process.
@@ -67,7 +64,6 @@ The generator converts random noise to images, and the discriminator evaluates t
 
 ---
 
-**Rating: 8/10**
 
 #### Training a DCGAN
 Background on training a GAN involves backpropagation through both networks simultaneously. The goal is to improve both the quality of generated images and the ability to distinguish real from fake ones.
@@ -83,7 +79,6 @@ To address these issues, techniques such as adding a gradient penalty term or us
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding WGAN
 Background on how Wasserstein GAN (WGAN) addresses some of the problems encountered with DCGAN. The core idea is that it uses the Wasserstein distance to measure the discrepancy between the real and generated distributions, providing a more stable training process.
@@ -105,7 +100,6 @@ where \( \lambda \) is a hyperparameter that controls the strength of the penalt
 
 ---
 
-**Rating: 8/10**
 
 #### Building and Training WGAN-GP with Keras
 Background on how to implement and train a Wasserstein GAN with Gradient Penalty (WGAN-GP). This method addresses some of the issues encountered in traditional DCGANs by adding a gradient penalty term, leading to more stable training.
@@ -212,7 +206,6 @@ This code outlines the steps to create a WGAN-GP model in Keras, including defin
 
 ---
 
-**Rating: 8/10**
 
 #### Generative Adversarial Network (GAN)
 Background context: A GAN consists of two neural networks, a generator and a discriminator. The generator creates fake data samples, while the discriminator evaluates them to determine their authenticity. This adversarial process drives both models to improve iteratively.
@@ -492,7 +485,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Discriminator Architecture
 Background context: The discriminator is a model that takes an input image and outputs a single number between 0 and 1, indicating whether the input image is real or fake. This is achieved through stacking Conv2D layers with BatchNormalization, LeakyReLU activation, and Dropout layers.
@@ -527,7 +519,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generator Architecture
 Background context: The generator is a model that takes a vector from a multivariate standard normal distribution and generates an image of the same size as images in the training data. This architecture resembles a decoder in a variational autoencoder, converting latent space vectors into real-world image representations.
@@ -560,7 +551,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conv2DTranspose vs UpSampling2D
 Background context: Both Conv2DTranspose and UpSampling2D can be used to increase the spatial dimensions of a tensor, but they do so differently. Conv2DTranspose fills gaps between pixels with zeros, while UpSampling2D repeats existing pixel values.
@@ -589,7 +579,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### DCGAN Model Summary
 Background context: The Deep Convolutional GAN (DCGAN) is a specific architecture that combines the generator and discriminator models. It uses a particular structure for both networks to ensure they work effectively together.
@@ -637,7 +626,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training the Discriminator and Generator in DCGANs
 Background context: In a DCGAN, the training process involves both the discriminator and generator networks. The goal is to create realistic images that fool the discriminator into thinking they are real.
@@ -683,7 +671,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Noise to Training Labels in GANs
 Background context: Adding a small amount of random noise to the labels can improve the stability and quality of generated images during training. This technique is known as label smoothing.

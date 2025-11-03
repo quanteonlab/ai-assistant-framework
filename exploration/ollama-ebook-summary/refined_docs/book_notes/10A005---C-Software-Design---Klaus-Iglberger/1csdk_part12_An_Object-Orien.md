@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** An Object-Oriented Solution
 
 ---
 
-**Rating: 8/10**
 
 #### Copy-and-Paste Code Pattern
 Background context explaining the concern about explicit type handling and potential maintenance issues. Highlight that this pattern often arises due to convenience but can lead to significant problems in larger codebases.
@@ -102,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Object-Oriented vs. Procedural Solutions
 
@@ -252,7 +249,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Design for Addition of Types or Operations
 Background context: The guideline discusses choosing between adding types or operations based on the strengths and weaknesses of programming paradigms. It emphasizes using object-oriented solutions when primarily adding types, while preferring procedural/functional solutions when mainly adding operations.
@@ -379,7 +375,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Visitor Design Pattern Overview
 Background context: The Visitor design pattern is used to add new operations without changing existing classes. It aims to enable dynamic addition of functionality to objects by separating the behavior from the object structure.
@@ -500,7 +495,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to ShapeVisitor Design Pattern
 The initial problem was that every new operation required a change to the `Shape` base class. The goal is to fulfill the Open/Closed Principle (OCP) by allowing the addition of operations without modifying existing code. This involves extending the `ShapeVisitor` hierarchy.

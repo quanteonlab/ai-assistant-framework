@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** How Important Is Reliability
 
 ---
 
-**Rating: 8/10**
 
 #### Reliability Definition and Faults
 Background context explaining reliability, faults, and failures. Typically, a reliable system should perform as expected under various conditions, including user errors and unexpected use cases.
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault-Tolerant Systems and Tolerance Mechanisms
 Background context explaining how fault-tolerant systems are designed to handle faults without causing failures.
@@ -55,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deliberate Fault Injection for Testing
 Background context explaining why deliberate fault injection is used in testing fault-tolerant systems.
@@ -83,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distinguishing Between Faults and Failures
 Background context explaining that faults do not necessarily lead to failures, but it is important to design systems to prevent this from happening.
@@ -127,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Chaos Monkey and Fault Tolerance
 Background context: The Netflix Chaos Monkey is a tool that introduces random failures into the system to ensure that it remains resilient. This approach tests whether the system can handle unexpected failures gracefully, promoting fault tolerance over absolute prevention of faults. While it's generally better to tolerate faults, there are instances where prevention might be more critical, such as in security matters.
@@ -138,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Redundancy and RAID Configurations
 Background context: To reduce the failure rate of systems due to hardware components, redundancy is often used. Common techniques include setting up hard disks in a RAID configuration or using dual power supplies for servers. Datacenters may also have backup power solutions like batteries and diesel generators.
@@ -149,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Software Fault Tolerance in Cloud Platforms
 Background context: As applications demand more resources and data volumes increase, cloud platforms like AWS are designed to prioritize flexibility and elasticity over single-machine reliability. This can lead to the loss of entire virtual machine instances without warning. To handle such failures, software fault-tolerant techniques are used.
@@ -160,7 +152,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rolling Upgrades and Node-Level Patching
 Background context: Systems that can tolerate the loss of entire machines are favored over single-server systems because they allow for patching one node at a time without affecting the whole system. This is known as a rolling upgrade, which is detailed in Chapter 4.
@@ -171,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Code for Rolling Upgrade
 Background context: The following pseudocode illustrates how a rolling upgrade might be implemented in a simplified manner.
@@ -207,7 +197,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Systematic Software Errors
 Background context: Systematic software errors are harder to anticipate and correlate across nodes. Examples include bugs that cause widespread crashes or resource exhaustion issues.
@@ -229,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cascading Failures
 Background context: Cascading failures occur when a small fault in one component triggers faults in other components, leading to further failures. These are particularly dangerous as they can propagate and affect the entire system.
@@ -257,7 +245,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quick Recovery from Human Errors
 Background context: The importance of having mechanisms for quick recovery from human errors is crucial to minimize the impact when failures occur. This includes tools and processes that allow easy rollback of configuration changes, gradual rollout of new code, and reprocessing data if necessary.
@@ -274,7 +261,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detailed Monitoring (Telemetry)
 Background context: Setting up detailed monitoring, often referred to as telemetry, is essential for tracking system performance and diagnosing issues. This includes collecting metrics like performance and error rates, which can provide early warning signals.
@@ -303,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Reliability
 Background context: While often associated with critical systems like nuclear power stations and air traffic control, reliability is crucial for all applications. Bugs in business applications can lead to productivity losses, while outages on e-commerce sites can result in significant financial damage.
@@ -320,7 +305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scalability
 Background context: Scalability refers to the ability of a system to handle increased load over time. This is important because today's performance does not guarantee future reliability without considering how the system will scale.
@@ -347,7 +331,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Describing Load with Parameters
 Background context: To discuss scalability, it is necessary to first define the current load on the system using specific metrics known as "load parameters." These parameters help in understanding how different parts of the system are stressed.
@@ -367,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Scalability Challenges - Twitter
 Background context: Twitter's example illustrates how scalability challenges can arise from increasing load. The key operation is handling fan-out, where a user follows many people or is followed by many others.
@@ -401,7 +383,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Job Running Time in Theory vs. Practice
 
@@ -447,7 +428,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Twitter's Scalability Challenge
 
@@ -472,7 +452,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Parameters in Batch Processing
 
@@ -492,7 +471,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Response Time in Online Systems
 
@@ -522,7 +500,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Measuring Performance as a Distribution
 
@@ -557,7 +534,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Outliers and High Percentiles
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -576,7 +552,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Application: Amazon's Service Requirements
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -594,7 +569,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-offs in Optimizing Percentiles
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -615,7 +589,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Level Objectives (SLOs) and Service Level Agreements (SLAs)
 Background context explaining SLOs and SLAs, their purpose, and how they are used to define expected performance levels for services. The median response time and 99th percentile are often used as key metrics.
@@ -626,7 +599,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Head-of-Line Blocking
 Explanation of head-of-line blocking and its impact on response times. This phenomenon occurs when slow requests hold up the processing of subsequent requests, leading to increased overall latency.
@@ -637,7 +609,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Percentiles and Tail Latency Amplification
 Explanation of how high percentiles (e.g., 99th percentile) are important indicators of tail latency, especially in services called multiple times per request. Discusses the concept of tail latency amplification where an end-user request can be slow due to a single slow backend call.
@@ -648,7 +619,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Efficient Percentile Calculation
 Explanation of why efficient calculation of percentiles over a rolling window of recent data points is important. Discusses methods like forward decay and t-digest that can approximate percentiles with minimal computational overhead.

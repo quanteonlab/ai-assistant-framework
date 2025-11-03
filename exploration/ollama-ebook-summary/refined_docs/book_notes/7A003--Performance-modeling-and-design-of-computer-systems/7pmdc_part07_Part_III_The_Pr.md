@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Part III The Predictive Power of Simple Operational Laws What-If Questions and Answers
 
 ---
 
-**Rating: 8/10**
 
 #### Operational Laws and Their Importance
 Operational laws are fundamental principles that apply to any system or part of a system, making them both simple and exact. They do not depend on specific distributions like job service requirements or interarrival times but rather on their means. This makes operational laws highly useful for system design and analysis.
@@ -50,7 +48,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Little's Law for Open Systems
 Background context explaining the concept. Little’s Law states that the average number of jobs in a system \( E[N] \) is equal to the product of the average arrival rate into the system \( λ \) and the mean time a job spends in the system \( E[T] \). This can be expressed as:
@@ -102,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Little's Law Intuition
 

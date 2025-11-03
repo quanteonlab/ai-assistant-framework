@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 1B001---Proofs---Jay-Cumming_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Exercises
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Sets and Set Operations
 Background context: This section covers various operations on sets, including set membership, intersection, union, difference, Cartesian products, power sets, and the empty set. These operations are fundamental in understanding set theory.
@@ -200,7 +198,6 @@ x??
 This concludes the explanations for each of the problems. If you have more questions or need further assistance, feel free to ask! 
 ```
 
-**Rating: 8/10**
 
 #### Counterexample for Set Union Formula
 Background context: The conjecture that \( |A \cup B| = |A| + |B| \) is false because it does not account for elements shared by both sets A and B. The correct formula should include a correction term, typically the size of the intersection \( |A \cap B| \).
@@ -342,7 +339,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Domino Principle Introduction
 Background context explaining how dominoes can be used as a metaphor for mathematical induction. The principle works by showing that if the first statement is true, and every following statement follows from the previous one, then all statements are true.
@@ -447,7 +443,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inductive Hypothesis and Base Case
 
@@ -523,7 +518,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inductive Hypothesis and Its Application
 
@@ -586,7 +580,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Induction Proof for Odd Products
 Background context: The text demonstrates an induction proof to show that \(1 \cdot 3 \cdot 5 \cdots (2k-1) = \frac{(2k)!}{2^k k!}\).
@@ -717,7 +710,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Base Case for Induction
 Background context explaining the base case of induction. In this problem, we start with a 2×2 chessboard and show that any single square removed can be covered by an L-shaped tile.

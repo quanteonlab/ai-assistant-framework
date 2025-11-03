@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 37)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 16.2.2 Using the OpenAI API in LangChain
 
 ---
 
-**Rating: 8/10**
 
 #### Need for LangChain Library
 Background context: The objective is to build a zero-shot know-it-all agent that can generate content, retrieve real-time information, and answer factual questions without explicit instructions. This requires an agent that can intelligently decide which tools to use based on the task at hand.
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example with LangChain for Factual Question
 Background context: Even advanced LLMs like GPT-4 struggle to provide real-time information or predictions about future events. For instance, querying who won the Best Actor Award in the 2024 Academy Awards would yield an inability to provide accurate data due to its nature.
@@ -32,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using LangChain to Invoke OpenAI API
 Background context: The langchain-openai library allows you to use OpenAI GPTs with minimal prompt engineering. You only need to explain what you want the LLM to do in plain English.
@@ -73,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Zero-shot Prompting
 Background context: In zero-shot prompting, the model is given a task or question without any examples. The prompt typically includes a clear description of what is expected.
@@ -104,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Few-shot Prompting
 Background context: In few-shot prompting, multiple examples are provided to help the model understand the task better. This technique can improve accuracy by showing patterns or rules.
@@ -146,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### One-shot Prompting
 Background context: In one-shot prompting, a single example is provided to illustrate the task. The model learns from this single instance and generates responses accordingly.
@@ -186,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding a Sentiment Classifier Tool to the Agent's Toolbox
 Background context: The task involves adding a tool for sentiment analysis to the agent’s toolbox. This is achieved by defining a new function and integrating it into the existing workflow. Sentiment analysis helps classify texts into categories like positive, negative, or neutral based on their tone and content.
@@ -224,7 +216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Code Generation Tools to the Agent's Toolbox
 Background context: The task involves adding tools for generating code and images. These tools are essential for expanding the agent's capabilities to handle various types of content generation tasks. Here, we focus on adding a tool for generating Python code.

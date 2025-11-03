@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Data Models Overview
 Data models are essential for organizing and storing data efficiently. Historically, hierarchical models were used but didn't handle many-to-many relationships well. Relational databases addressed this issue with tables and SQL, while more recent NoSQL databases offer alternatives like document and graph databases.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hierarchical Model Limitation
 As mentioned, the hierarchical model was good for simple tree-like structures but didn’t handle complex relationships well. For example, a user could be friends with multiple users, and each of those users could have multiple friends.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relational Model Introduction
 The relational model introduced tables and SQL (Structured Query Language) to better handle many-to-many relationships through the use of primary keys, foreign keys, and joins.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### NoSQL Databases Overview
 NoSQL databases diverged into document and graph databases. Document databases store self-contained documents, while graph databases handle highly interconnected data.
@@ -54,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Graph Databases Use Case
 Graph databases excel at handling applications where entities have many connections to other entities. For example, social networks or recommendation engines.
@@ -66,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Query Languages Overview
 Various query languages exist for different data models: SQL (relational), Cypher (graph), MongoDB's aggregation pipeline (document), etc.
@@ -78,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MongoDB Aggregation Pipeline
 MongoDB's aggregation pipeline processes documents through a series of stages, similar to SQL joins but more flexible. It can be used to aggregate data in complex ways.
@@ -96,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lookup Performance
 
@@ -109,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Log-Structured Storage Engines
 
@@ -122,7 +112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Indexing for Efficient Lookups
 
@@ -135,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-offs Between Indexing
 
@@ -148,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Selecting Appropriate Storage Engines
 
@@ -161,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Log-Structured vs Page-Oriented Storage
 
@@ -176,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SSTables and Sorted String Tables
 Background context: In database systems, especially for storage engines like those used in Cassandra or RocksDB, handling large volumes of data efficiently is crucial. Log-structured merge-trees (LSM-Trees) are a common approach to achieve this. Each log-structured storage segment initially stores key-value pairs in the order they were written, but values later in the log take precedence over earlier ones for the same key.
@@ -190,7 +175,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Merging SSTables
 Background context: When dealing with multiple SSTable files, merging them to reduce fragmentation and improve performance is necessary. The merge process is designed to be simple and efficient, leveraging the sorted nature of each file.
@@ -221,7 +205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Efficient Search with SSTables
 Background context: With SSTables, searching for a specific key does not require an index if the file is sorted. Instead, you can leverage the sorted order to perform efficient range scans and locate keys without needing in-memory indices.
@@ -251,7 +234,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compaction and Memtables
 Background context: To manage writes efficiently, the storage engine uses a combination of in-memory structures (memtables) and on-disk sorted files (SSTables). Memtables are used for active writes, while SSTables store historical data. Periodic compaction processes merge these to optimize disk usage.

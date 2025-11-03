@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Data Arrival Processes
 
 ---
 
-**Rating: 8/10**
 
 #### Physical Networking Layer and Financial Markets
 Background context: The physical networking layer, particularly through fiber-optic technology, has become increasingly important for financial markets, especially with the rise of high-frequency trading. Ultra-low latency networks are crucial as they can significantly reduce trade execution times, providing a competitive edge in automated trading.
@@ -62,7 +60,6 @@ public class EventDrivenDataIngestion {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Event-Driven Systems and Real-Time Systems
 Event-driven systems operate based on events, switching resource utilization from a fixed to an on-demand pattern. They are often associated with real-time systems due to their low response time requirements.
@@ -118,7 +115,6 @@ In the context of event-driven systems, idempotency means that performing a part
 
 These flashcards cover key concepts from the provided text on real-time systems, their classifications, and the concept of idempotency in event-driven systems.
 
-**Rating: 8/10**
 
 #### Real-Time Systems and Financial Systems
 Background context explaining real-time systems, particularly in financial contexts like Forex currency conversions. The classification of real-time systems into hard or firm is discussed, with a focus on RFQs and market risks associated with them.
@@ -169,7 +165,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Max Connection Limit and Quota Limits
 Background context: High data ingestions can exceed a database's max connection limit or API quota, leading to system overload. This is especially relevant when dealing with real-time data streams or large volumes of data being ingested simultaneously.
@@ -280,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### General-Purpose Data Formats
 Background context: General-purpose data formats are widely used and have broad applicability within financial markets. Examples include CSV, TSV, TXT, JSON, XML, Microsoft Excel files, and compressed files. These formats are popular due to their reliability, simplicity, and advanced analytical capabilities.
@@ -341,7 +335,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### FIX Tag-Value Encoding
 FIX messages use a tag-value encoding format where each field is represented by an integer (tag) followed by its value. The tags are separated from their values with an equal sign (`=`), and each pair is separated by the Start of Heading control character `<SOH>` (hexadecimal 0x01). This structure allows for efficient and clear communication between financial institutions.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 7.3.1 Loop level OpenMP Vector addition example
 
 ---
 
-**Rating: 8/10**
 
 #### MPI + OpenMP for Extreme Scalability
 Background context: This section discusses combining OpenMP with Message Passing Interface (MPI) to achieve extreme scalability in applications. It mentions the use of threading within one memory region, commonly a Non-Uniform Memory Access (NUMA) region, and how this can be used to supplement distributed memory parallelism.
@@ -30,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### High-Level OpenMP Implementation Model and Methodology
 Background context: This section delves into the methodology of high-level OpenMP, which is designed to extract maximum performance by considering the entire system. It outlines a step-by-step method for achieving better scalability compared to loop-level parallelism.
@@ -54,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Parallel Regions and Pragmas
@@ -73,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shared and Private Variables in OpenMP
 Each variable within a parallel construct can be either shared or private. Shared variables are accessible to all threads, while private variables have unique copies per thread.
@@ -98,7 +93,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Model and Synchronization in OpenMP
 OpenMP has a relaxed memory model. Each thread has its own temporary view of memory to avoid overhead from frequent synchronization with main memory. This requires explicit barriers or flush operations for synchronization.
@@ -125,7 +119,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Addition Optimization: First Touch Concept
 Background context: In vector addition, optimizing memory allocation can significantly improve performance. The "first touch" concept involves initializing arrays such that they are allocated close to the threads that will work with them, minimizing memory access latency.
@@ -137,7 +130,6 @@ The first touch optimization ensures that array elements are allocated near the 
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Addition: Memory Allocation in Main vs. Parallel Loops
 Background context: In the initial implementation of vector addition, array elements are first touched by the main thread during initialization before being used in parallel computations. This can lead to suboptimal memory allocation and increased latency.
@@ -151,7 +143,6 @@ In contrast, in the initial code (Listing 7.7), the main thread allocates all el
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Addition: Improved Performance Through First Touch
 Background context: The first touch optimization aims to allocate array data close to the threads that will be working with them during their first access. This reduces memory latency and improves performance.
@@ -165,7 +156,6 @@ By placing the data close to where it will be used, this optimization can lead t
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Addition: Difference Between Initial and Optimized Code
 Background context: The initial code initializes arrays in the main thread before parallel execution. The optimized code distributes initialization within a `#pragma omp parallel for` loop.
@@ -179,7 +169,6 @@ In contrast, initializing arrays in the main thread before any parallel executio
 
 ---
 
-**Rating: 8/10**
 
 #### OpenMP Vector Addition Example
 Background context: This example demonstrates how to use OpenMP to parallelize a vector addition operation, highlighting the performance improvement through thread spawning and loop distribution.
@@ -200,7 +189,6 @@ void vector_add(double *c, double *a, double *b, int n) {
 
 ---
 
-**Rating: 8/10**
 
 #### NUMA and Memory Access Costs
 Background context: Non-Uniform Memory Access (NUMA) refers to computer systems in which memory access times depend on where data is located relative to the processing unit. In a NUMA system, threads that are assigned to specific nodes have faster access to local memory.
@@ -222,7 +210,6 @@ NUMA configuration significantly impacts performance because accessing remote me
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### OpenMP for Parallelizing Loops
@@ -242,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stencil Operation Implementation
 Background context: The stencil operation is a common numerical technique used in various scientific computations. It involves computing the value of each cell based on its neighbors.
@@ -264,7 +250,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loop-Level OpenMP Implementation Details
 Background context: The provided code demonstrates a loop-level OpenMP implementation where each thread is responsible for processing a portion of the data. The `#pragma omp parallel for` directive is used to distribute iterations among threads.

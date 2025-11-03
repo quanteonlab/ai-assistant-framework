@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 26)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Bellman Error is Not Learnable
 
 ---
 
-**Rating: 8/10**
 
 #### Residual-Gradient Algorithm and BE Objective Issues
 Background context explaining the concept. The residual-gradient algorithm and the behavior objective (BE) do not always find optimal solutions, especially when using function approximation. A specific example is the A-presplit problem where both the naive version and the residual-gradient method converge to a poor solution.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Learnability of Bellman Error Objective
 Background context explaining the concept. In reinforcement learning, some objectives cannot be accurately learned from any amount of data due to their dependence on internal structure rather than observable features. The Bellman error objective is one such example that cannot be reliably estimated or computed from observed sequences.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two Markov Reward Processes (MRPs) Example
 Background context explaining the concept. The example uses two MRPs to illustrate that certain quantities in reinforcement learning, such as the Bellman error objective, cannot be learned from observed data due to their dependence on internal structure.
@@ -39,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implications for Bellman Error Objective
 Background context explaining the concept. The example shows that even given infinite data, it might not be possible to determine the true nature of the environment generating a sequence of observations. This lack of learnability is a significant issue for objectives like the Bellman error, making them unreliable in practice.
@@ -52,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Value Estimation and Learnability
 Background context explaining that the Value Estimation (VE) is not learnable from data, even though it can be computed based on knowledge of the Markov Reward Process (MRP). The problem arises because VE does not have a unique function with respect to the data distribution. However, the parameter vector that optimizes VE might still be learnable.
@@ -69,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Error (BE)
 Background context explaining that the Bellman Error (BE) can be computed based on knowledge of the MRP but is not learnable from data. The optimal parameter vector for BE, however, is learnable.
@@ -94,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distinct vs. Indistinguishable States in MRPs
 Background context explaining that states can be distinct or indistinguishable, and how this affects learning objectives like VE and MSRE.
@@ -115,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relationship Between VE and MSRE
 Background context explaining that while VE is not learnable, its minimizing parameter vector can still be found. The Mean Square Return Error (MSRE) is another objective function that is both learnable and unique with respect to the data distribution.
@@ -138,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Value of Action A
 Background context: The action A has a dedicated weight with an unconstrained value. Despite being followed by a 0 and transitioning to a state with nearly zero value, the optimal value for vw(A) is negative rather than zero because it reduces errors on leaving and entering A.
@@ -149,7 +139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Error (BE) vs Data Distribution
 Background context: The BE cannot be learned from the data alone because two MRPs can generate identical data distributions but have different BEs. The VE and BE objectives are readily computable from the MDP but not from the data distribution P alone.
@@ -160,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deterministic Transition and Value Calculation
 Background context: In the second MRP, A is followed by a 0 and transitions to a state with nearly zero value. The transition from B to this state has a reward of 1, implying that B should have a higher value than A by approximately 1.
@@ -171,7 +159,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Markov Decision Processes (MDPs) and Their Value Functions
 Background context: The text introduces a simple example of MDPs where states are represented by symbols, actions (if any), and transitions between states. It discusses how these MDPs can have different behaviors even when they produce the same observable data.
@@ -182,7 +169,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Behavioral Error (BE)
 Background context: The text explains that even when two MDPs generate identical observable data, they can have different behaviors as quantified by their behavioral errors. This is illustrated through the example of \( v = 0 \) in both MDPs but with varying outcomes.
@@ -193,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exact vs. Approximate Solutions
 Background context: The example highlights that an exact solution in one MDP may not be optimal or even applicable in another, despite both generating identical observable data.
@@ -204,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Identical Observable Data vs. Different Behaviors
 Background context: The text emphasizes that two different MDPs can generate identical observable data but have distinct behaviors, as measured by their BE. This is due to differences in how they handle transitions and value functions.
@@ -215,7 +199,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Minimal Behavioral Error (BE)
 Background context: The text points out that there can be multiple minimal-BE value functions, depending on the MDP. For the first example, this is straightforward, but for the second, it requires a different solution to minimize BE.
@@ -226,7 +209,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example MDPs and Value Functions
 Background context: The text introduces two Markov Decision Processes (MDPs) that generate identical observable data but differ in their underlying structure. This leads to different Bellman Errors (BE). One MDP has distinct states, while the other shares a state, making their minimal-BE value functions different.
@@ -238,7 +220,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distinct States vs Shared States
 Background context: In the example given, the first MDP (MDP1) has two distinct states, while the second MDP (MDP2) combines these into one state with shared weights.
@@ -250,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Error and Observability
 Background context: The text discusses how the Bellman Error (BE) cannot be estimated solely from data. It highlights that while observable data is identical for both MDPs, their BE values differ due to internal structural differences.
@@ -262,7 +242,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Minimal-BE Value Function
 Background context: The minimal-BE value function is discussed in relation to the two MDPs. For MDP1, it is exact and zero for any discount factor \(\gamma\). For MDP2, the minimal-BE value function is not exact due to shared states.
@@ -274,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Observable Data vs Hidden Structure
 Background context: The text emphasizes that while observable data is identical for both MDPs, their hidden structures (internal state representation) lead to different Bellman Errors and minimal-BE value functions.
@@ -286,7 +264,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Observable Data
 Background context: The text provides a specific example of observable data generated by both MDPs, highlighting that despite identical observables, internal state representations differ.
@@ -298,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Error Calculation
 Background context: The text discusses how to calculate the Bellman Error (BE) for the two MDPs, emphasizing that it depends on the internal structure of the states.
@@ -310,7 +286,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Minimal-BE Value Function Determination
 Background context: The text explains that while the Bellman Error cannot be estimated from data alone, it can still be useful for learning if its minimizing value can be determined.
@@ -324,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Markov Decision Processes (MDPs) and Value Estimation
 
@@ -363,7 +337,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Value Estimation Errors (BE)
 
@@ -394,7 +367,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Minimal-BE Value Functions
 
@@ -429,7 +401,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### BE Unobservable from Data
 
@@ -460,7 +431,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Markov Decision Processes (MDPs) and Bellman Error (BE)
 Background context: The provided text discusses two simple MDPs that generate identical observable data but have different Bellman errors (BE). This example highlights how BE cannot be estimated solely from the observable data. Both MDPs have actions or states leading to transitions with rewards, and their value functions are used to determine the expected future reward.
@@ -473,7 +443,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Identical Observable Data
 Background context: The text presents two MDPs that produce identical observable data but differ in their internal structure and Bellman error. Specifically, they both generate a sequence starting with A followed by 0, then multiple Bs or B' each followed by a -1 until the last one is followed by a 1, repeating this pattern.
@@ -503,7 +472,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Error (BE)
 Background context: The BE is an error measure used in reinforcement learning to evaluate the difference between a value function and its optimal counterpart. In the given example, two MDPs have identical observable data but different minimal BE value functions.
@@ -516,7 +484,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Minimal Bellman Error (min-BE)
 Background context: The minimal BE value function represents the best possible approximation of the true optimal value function given certain constraints. In the text, it's noted that MDP1 has a minimal BE value function \( v = 0 \) for any \(\alpha\), while MDP2 requires a different approach.
@@ -529,7 +496,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Distribution
 Background context: The text discusses how knowing the data distribution (P) does not fully characterize an MDP. It points out that while P completely defines the probability of observing a particular trajectory, it does not capture all details of the underlying MDP structure.
@@ -542,7 +508,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Value Error (VE)
 Background context: The text mentions that while some error functions like VE might not be directly observable from data, their minimizers can still be used effectively in learning settings. This is because these minimizers can be determined by analyzing the structure of the MDP, even if the full MDP details are not known.
@@ -555,7 +520,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MDPs and Value Functions
 Background context: The text discusses two Markov Decision Processes (MDPs) that generate identical data but have different behavior evaluation (BE) values. These examples highlight how observable data alone may not suffice to determine optimal solutions or value functions.
@@ -567,7 +531,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Behavior Evaluation (BE)
 Background context: The text explains that while observable data can be identical between two MDPs, their behavior evaluations may differ due to differences in how state values are approximated or assigned.
@@ -579,7 +542,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Minimal-BE Value Functions
 Background context: The text illustrates that minimal behavior evaluation (BE) value functions may differ between MDPs with similar observable data.
@@ -591,7 +553,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Objectives
 Background context: The example demonstrates that while the value error (VE) objective cannot be determined from data alone due to identical observable data leading to different optimal parameter vectors, another objective like return expectation (RE) is learnable.
@@ -603,7 +564,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bootstrapping Objectives
 Background context: The text highlights how bootstrapping objectives like Prediction-Based Error (PBE) and Temporal Difference (TDE) can provide unique solutions that are learnable directly from the data distribution.
@@ -615,7 +575,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Learnability and Model-Based Settings
 Background context: The text emphasizes that while some objectives like VE cannot be learned from data alone, other objectives such as RE, PBE, and TDE can be determined from observable data. This distinction is crucial for understanding the learnability of these objectives in model-based settings.
@@ -629,7 +588,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient-TD Method Overview
 Background context: The text introduces gradient-based temporal difference (TD) methods for minimizing the prediction error bound (PBE) under oﬄine policy training and nonlinear function approximation. It discusses an approach using stochastic gradient descent (SGD) to achieve robust convergence properties, unlike traditional least-squares methods which can be computationally expensive.
@@ -640,7 +598,6 @@ The primary objective is to develop an SGD method that minimizes the prediction 
 
 ---
 
-**Rating: 8/10**
 
 #### Expression of PBE in Matrix Terms
 Background context: The text provides a detailed expansion and rewriting of the prediction error bound (PBE) using matrix notation, leading to an expression that can be used for gradient calculations. This involves transforming the objective function into a form suitable for SGD algorithms.
@@ -653,7 +610,6 @@ where \( \bar{\phi} \) represents the state-action features, and \( X \) is the 
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient Calculation for PBE
 Background context: The text calculates the gradient with respect to the parameter vector \( w \) using the expanded form of the PBE. This step is crucial for developing an SGD method that can efficiently minimize the prediction error bound.
@@ -666,7 +622,6 @@ This involves three expectations that need to be estimated.
 
 ---
 
-**Rating: 8/10**
 
 #### Derivation of SGD for PBE
 Background context: The text outlines the process of transforming the gradient into a form suitable for an SGD method. This involves writing each factor in terms of expectations under the behavior policy distribution \( \mu \).
@@ -679,7 +634,6 @@ This involves estimating and storing the product of two factors, which are a d×
 
 ---
 
-**Rating: 8/10**
 
 #### Learning Vector \( v \) in Gradient-TD Methods
 Background context: The text describes how to learn the vector \( v \) that approximates the product of expectations. This vector is crucial for reducing the overall computational complexity from quadratic (O(d²)) to linear (O(d)).
@@ -692,7 +646,6 @@ This vector approximates the product of the second and third factors in the grad
 
 ---
 
-**Rating: 8/10**
 
 #### Algorithm for GTD2
 Background context: The text presents the algorithm GTD2, which combines the learned vector \( v \) with a simple SGD update to minimize the prediction error bound. This method is designed to be computationally efficient.
@@ -705,7 +658,6 @@ where \( \alpha \) is a step-size parameter.
 
 ---
 
-**Rating: 8/10**
 
 #### Algorithm for TDC
 Background context: The text also introduces the algorithm TDC, which can be seen as an alternative form of GTD2 with slightly different steps to achieve similar goals. This method aims to reduce the variance in updates by using expectations more effectively.
@@ -718,7 +670,6 @@ This rule reduces computational complexity to O(d) by leveraging the stored vect
 
 ---
 
-**Rating: 8/10**
 
 #### Example of TDC Behavior
 Background context: The text provides an example showing how the TDC algorithm behaves on Baird’s counterexample. It demonstrates that while the PBE falls to zero, individual parameter components do not necessarily converge.
@@ -731,7 +682,6 @@ The behavior of TDC shows that:
 
 ---
 
-**Rating: 8/10**
 
 #### Emphatic-TD Methods Overview
 Background context: Emphatic-TD methods aim to address the challenge of oﬄine policy learning with function approximation. The method adjusts state updates by emphasizing or de-emphasizing states based on their importance, aiming to return the distribution closer to the on-policy distribution.
@@ -742,7 +692,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Emphatic-TD Algorithm
 The one-step Emphatic-TD algorithm for learning episodic state values is defined by:
@@ -761,7 +710,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence in Emphatic-TD
 Background context: The convergence of Emphatic-TD methods is often proven under two-time-scale assumptions, where the emphasis term (\(M_t\)) converges faster than the weight vector updates.
@@ -777,7 +725,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two-Time-Scale Learning Processes
 Background context: In methods like GTD2 and TDC, there are two learning processes: a primary one updating \(w\), and a secondary one updating \(v\). The secondary process is faster and assumed to be at its asymptotic value, aiding the convergence of the primary process.
@@ -792,7 +739,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient-TD Methods
 Background context: Gradient-TD methods are widely used for oﬄine policy learning and are known for their stability and efficiency. These methods extend linear semi-gradient TD to include action values and control (GQ), eligibility traces (GTD(λ) and GQ(λ)), and nonlinear function approximation.
@@ -808,7 +754,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hybrid Algorithms
 Background context: Hybrid algorithms combine elements of semi-gradient TD and gradient TD, behaving differently in states where the target and behavior policies are different or identical.
@@ -819,7 +764,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pseudo Termination
 Background context: Discounting can be thought of as pseudo-termination, where episodes are constantly restarting with probability 1 - \(\gamma\) on each step. This concept is crucial for understanding oﬄine policy methods.

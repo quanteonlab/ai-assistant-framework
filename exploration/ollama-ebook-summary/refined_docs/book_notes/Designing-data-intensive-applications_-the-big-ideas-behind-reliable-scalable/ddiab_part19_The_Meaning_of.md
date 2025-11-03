@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Meaning of ACID
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Reliability Challenges in Data Systems
 Background context explaining the concept. Include any relevant formulas or data here. The passage highlights several potential issues that can arise in distributed systems, including software/hardware failures, application crashes, network interruptions, concurrent writes by multiple clients, and race conditions.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Importance of Transactions
 Background context explaining the concept. Include any relevant formulas or data here. The passage emphasizes that transactions are used as a mechanism to simplify handling these reliability challenges by grouping multiple operations into an atomic unit.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Transaction Commit and Rollback
 Background context explaining the concept. Include any relevant formulas or data here. The passage explains that transactions can be committed or rolled back, ensuring atomicity.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Transactional Guarantees and Costs
 Background context explaining the concept. Include any relevant formulas or data here. The passage discusses that while transactions provide safety guarantees, they also come with certain costs in terms of performance and complexity.
@@ -54,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency Control and Race Conditions
 Concurrency control is crucial for ensuring that database transactions do not interfere with each other. In a multi-user environment, race conditions can occur where the outcome depends on the sequence of events, which might be unpredictable.
@@ -86,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ACID Properties - Atomicity
 Atomicity ensures that database operations are indivisible and either all succeed or none at all. This property guarantees that transactions act as a single, indivisible unit.
@@ -127,7 +120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ACID Properties - Consistency
 Consistency ensures that database transactions adhere to the business rules and constraints. This means the database must maintain its consistency before and after a transaction.
@@ -169,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ACID Properties - Isolation
 Isolation ensures that transactions do not interfere with each other. This means that concurrent execution of transactions must produce the same result as if they were executed sequentially.
@@ -205,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ACID Properties - Durability
 Durability ensures that once a transaction has been committed, it will remain so even if there is a system failure. The changes made by the transaction are permanently saved on non-volatile storage.
@@ -241,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Atomicity
@@ -256,7 +245,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consistency
 Background context: The term "consistency" is highly overloaded and can refer to various aspects of data management, such as ensuring that data adheres to certain rules or constraints. In ACID properties, it means that once a transaction is committed, the database remains in a valid state with respect to all constraints.
@@ -270,7 +258,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ACID vs BASE
 Background context: ACID is an acronym for Atomicity, Consistency, Isolation, and Durability. It represents the ideal state for database transactions where each property ensures strong data integrity and consistency. However, in practical systems, particularly distributed ones, achieving all these properties simultaneously can be challenging.
@@ -286,7 +273,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Isolation
 Background context: In database management, isolation ensures that concurrent transactions do not interfere with each other. ACID's isolation property prevents dirty reads, non-repeatable reads, and phantom reads by ensuring that each transaction sees a consistent view of the data.
@@ -313,7 +299,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 ---
 #### CAP Theorem Consistency and Linearizability
@@ -325,7 +310,6 @@ Linearizability ensures that every operation appears to take effect instantaneou
 
 ---
 
-**Rating: 8/10**
 
 #### ACID Consistency (Invariants)
 Background context: In ACID consistency, data invariants are application-specific rules about how the data should always be valid. For example, an accounting system requires credits and debits to balance across all accounts.
@@ -336,7 +320,6 @@ ACID consistency depends on the application's definition of invariants. These in
 
 ---
 
-**Rating: 8/10**
 
 #### Transaction Atomicity, Isolation, Durability
 Background context: ACID transactions ensure atomicity (all-or-nothing), isolation (no interference between concurrent operations), and durability (once committed, changes are permanent).
@@ -347,7 +330,6 @@ Isolation ensures that transactions do not interfere with each other. This is fo
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency Control and Serializability
 Background context: In a multi-client environment, ensuring concurrent operations on the same database records does not lead to race conditions (e.g., incorrect counter increment).
@@ -365,7 +347,6 @@ public class TransactionManager {
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Concurrency Issue: Counter Increment
 Background context: A simple example where a counter is incremented by two clients simultaneously, leading to incorrect values due to race conditions.
@@ -391,7 +372,6 @@ public class Counter {
 
 ---
 
-**Rating: 8/10**
 
 #### Serializable Isolation vs. Snapshot Isolation
 
@@ -423,7 +403,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Durability in Database Systems
 
@@ -463,7 +442,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Replication and Durability
 
@@ -506,7 +484,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomicity in Transactions
 Atomicity ensures that a transaction is treated as a single, indivisible unit of work. If an error occurs during the execution of a transaction, all changes made by the transaction are rolled back, ensuring consistency.
@@ -517,7 +494,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Isolation in Transactions
 Isolation ensures that concurrent transactions do not interfere with each other. This means that if one transaction modifies a piece of data, it should not be visible to another transaction until the first transaction commits or rolls back.
@@ -528,7 +504,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling TCP Connection Interruptions
 In the context of distributed systems, if a TCP connection is interrupted between a client and server, it can lead to uncertainty about whether a transaction has been committed successfully. A transaction manager addresses this by using unique transaction identifiers that are not tied to specific connections.
@@ -539,7 +514,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Scenario with Atomicity and Isolation
 An example from an email application shows how atomicity ensures that the unread counter remains in sync with emails. If an error occurs during the update process, both the email insertion and counter update are rolled back.
@@ -550,7 +524,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Scenario with Isolation
 In Figure 7-3, atomicity is crucial because if an error occurs during the transaction, the mailbox contents and unread counter might become inconsistent. Atomic transactions ensure that partial failures result in a rollback to maintain data integrity.
@@ -561,7 +534,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Combining Atomicity and Isolation
 Isolation and atomicity together ensure that transactions do not interfere with each other and that the entire transaction is treated as a single unit of work, maintaining data integrity and consistency even under concurrent operations.
@@ -576,7 +548,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomicity and Transaction Management
 Background context explaining atomicity and transaction management. In distributed systems, ensuring that transactions are both atomic (an operation is either fully completed or not at all) and consistent (no intermediate states occur during a transaction) is crucial for maintaining data integrity.
@@ -597,7 +568,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-object Transactions and Relational Databases
 Background context explaining how multi-object transactions work in relational databases. Typically, a transaction is associated with a single TCP connection where all statements within the BEGIN TRANSACTION block are treated as part of that transaction.
@@ -617,7 +587,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Increment in Distributed Systems
 Background context explaining atomic increment operations. While "atomic" in a distributed system can refer to ensuring that an operation is executed as one unit of work, it's often referred to as isolated or serializable increment for clarity.
@@ -634,7 +603,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single-Object Operations and Atomicity
 Background context explaining how single-object operations ensure atomicity on a per-object basis, especially in distributed systems. Ensuring that writes to individual objects are atomic helps prevent partial updates or inconsistent states.
@@ -659,7 +627,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges with Multi-object Transactions in Distributed Systems
 Background context explaining the challenges of implementing multi-object transactions across distributed systems. These transactions can be difficult to manage due to network partitions and the need for coordination between multiple nodes.
@@ -681,7 +648,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Denormalization in Document Databases
@@ -712,7 +678,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Secondary Indexes and Transactions
 Secondary indexes in databases need to be updated every time a value changes. These indexes are treated as separate database objects from a transactional standpoint, which can lead to inconsistencies if transactions are not properly managed.
@@ -741,7 +706,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Aborts in ACID Databases
 ACID databases have a robust mechanism for handling aborted transactions. If a transaction is at risk of violating atomicity, isolation, or durability guarantees, the database will abandon it entirely to ensure these properties are upheld.
@@ -773,7 +737,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Error Handling Without Transactions
 In databases without strong transaction guarantees, error handling becomes more complex. Even if the transaction is aborted, any side effects outside of the database must still be handled.
@@ -817,7 +780,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Weak Isolation Levels Overview
 Background context: The passage discusses various levels of transaction isolation, particularly focusing on how weaker forms of isolation are used to balance between performance and correctness. It mentions that while serializable isolation ensures transactions run as if they were executed one after another, it comes at a cost in terms of performance. Therefore, databases often use weaker levels of isolation to improve concurrency.
@@ -828,7 +790,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Read Committed Isolation Level
 Background context: Read committed ensures that a transaction only reads data that has been committed and does not overwrite uncommitted data. This helps prevent dirty reads and writes, making the database state more predictable.
@@ -840,7 +801,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preventing Dirty Reads
 Background context: In the read committed isolation level, a transaction must ensure that it does not perform a dirty read, where it sees partially updated data. This can lead to confusion and incorrect decisions by users or other transactions.
@@ -851,7 +811,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preventing Dirty Writes
 Background context: A dirty write occurs when a transaction overwrites an uncommitted value with another transaction's committed data. In read committed isolation, preventing dirty writes ensures that later transactions do not overwrite uncommitted values, which can lead to inconsistent states in the database.
@@ -862,7 +821,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing Read Committed Isolation
 Background context: Databases implementing read committed isolation typically use row-level locks to prevent dirty writes. A transaction must acquire a lock on an object before modifying it and hold that lock until the transaction is committed or aborted.
@@ -873,7 +831,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Dirty Writes
 Background context: The passage provides an example where two transactions update different parts of a database (e.g., updating a car listing and sending an invoice) but might still result in inconsistent states due to uncommitted changes.

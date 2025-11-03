@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Isolation via File Layout
 
 ---
 
-**Rating: 8/10**
 
 #### File Layout for Isolation
 Background context: The text recommends using file layout as an alternative to workspaces for achieving full isolation between environments. This involves structuring your Terraform configurations and backends in a way that clearly separates different environments and components.
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Isolation Beyond Environments
 Background context: The text emphasizes that achieving isolation should extend beyond just environments to include components. This is because certain infrastructure elements are rarely changed (e.g., network topology), while others might be deployed frequently (e.g., web servers).
@@ -40,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State File Isolation
 Background context: The text highlights the importance of using separate state files for different environments and components. This helps prevent accidental changes or data corruption between environments.
@@ -56,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependencies and Providers Management
 It's common to centralize data sources in a `dependencies.tf` file, which can help track what external dependencies your code has. Similarly, managing providers in a dedicated `providers.tf` file can simplify the management of different cloud provider configurations.
@@ -90,7 +85,6 @@ provider "aws" {
 
 ---
 
-**Rating: 8/10**
 
 #### State File Isolation and Management
 When moving components like a web server cluster or S3 bucket, it's important to ensure that the `.terraform` directory is also moved to avoid reinitialization. This helps maintain the state files associated with these resources.
@@ -114,7 +108,6 @@ By doing this, you maintain the integrity of your Terraform state files and can 
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Clear Code and Environment Layout
 
@@ -141,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Isolation Between Environments and Components
 
@@ -162,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Working with Multiple Folders and Commands
 
@@ -190,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Resource Duplication and Code Management
 This section discusses how duplicating code across different folders (like `stage` and `prod`) can lead to maintenance issues. Instead, it suggests using Terraform modules to manage this effectively.
@@ -206,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Terraform Modules
 The text suggests using Terraform modules to avoid duplicating code across different environments, ensuring consistency and ease of maintenance.
@@ -234,7 +223,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using `terraform_remote_state` Data Source
 The text introduces the `terraform_remote_state` data source as a way to fetch the state of another set of Terraform configurations, enabling you to use resources defined in one configuration from another.
@@ -272,7 +260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example: Web Server Cluster with RDS
 The text provides an example of setting up a web server cluster communicating with an RDS MySQL instance, explaining how to use `terraform_remote_state` to fetch state information.
@@ -325,7 +312,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Storing Secrets Outside Terraform Code
 Background context: In this scenario, you are learning how to securely handle secrets like database passwords within your Terraform configurations. Storing sensitive information directly in code can lead to security breaches and is not recommended. Instead, use a secure method to manage these secrets.
@@ -347,7 +333,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring AWS DB Instance in Terraform
 Background context: You need to create an AWS MySQL database instance using Terraform. This involves providing necessary parameters and securing sensitive information.
@@ -383,7 +368,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring AWS DB Instance Resource in Terraform
 Background context: You are configuring an AWS database instance resource within your Terraform code. This involves setting up the necessary parameters and ensuring sensitive data is handled securely.
@@ -407,7 +391,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring Terraform Backend for S3
 Background context: You need to store your Terraform state in an S3 bucket to manage the database instance securely and efficiently.
@@ -430,7 +413,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using `terraform_remote_state` Data Source
 Background context explaining how to use the `terraform_remote_state` data source in Terraform configurations, specifically for accessing outputs from another Terraform module.
@@ -464,7 +446,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### User Data Script Example
 Background context: The provided example includes a Bash script that is meant to be used as user data for an AWS Launch Configuration. This script creates a simple HTML page with dynamic content, which is served using `httpd`.
@@ -493,7 +474,6 @@ EOF
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform Remote State Data Source
 Background context: The `data.terraform_remote_state` data source is used to access state information from other modules or workspaces in a multi-module setup.
@@ -518,7 +498,6 @@ data "terraform_remote_state" "db" {
 
 ---
 
-**Rating: 8/10**
 
 #### Deployment and Output Verification
 Background context: After deploying the configuration, you should verify that the instances are correctly configured by registering them with an Application Load Balancer (ALB) and checking the output.
@@ -541,7 +520,6 @@ Expected output: You should see an HTML page displaying the database address and
 
 ---
 
-**Rating: 8/10**
 
 #### Code Duplication in IaC
 Background context: The text discusses the challenge of code duplication when running a web server cluster in both staging and production environments using Terraform. It suggests the use of Terraform modules as a solution to avoid copying and pasting code between different environments.
@@ -562,7 +540,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Terraform Modules
 Background context: The text introduces the concept of Terraform modules as a solution for managing code duplication in IaC. It emphasizes that modules are the main topic of Chapter 4.

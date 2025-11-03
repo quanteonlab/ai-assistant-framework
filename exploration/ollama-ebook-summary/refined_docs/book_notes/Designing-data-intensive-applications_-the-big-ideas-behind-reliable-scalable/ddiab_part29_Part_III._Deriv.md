@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 29)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Part III. Derived Data
 
 ---
 
-**Rating: 8/10**
 
 #### Systems of Record vs. Derived Data
 Background context: In a complex application, data is often stored and processed using different systems that serve various needs. A system of record holds the authoritative version of your data, while derived data systems process or transform existing data to meet specific requirements.
@@ -67,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Offline Systems Definition
 Background context: In data processing, offline systems are those that operate without direct user interaction. These systems typically process large amounts of input data and produce output over an extended period.
@@ -141,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SSTables and LSM-Trees Overview
 SSTables (Sorted String Tables) are part of the LevelDB storage format, commonly used in database systems like Apache Cassandra. These files store sorted data efficiently, allowing for quick retrieval. LSM-Trees (Log-Structured Merge-Trees) combine memory-mapped structures with on-disk storage to provide fast writes and efficient reads.
@@ -187,7 +183,6 @@ This uniformity makes it possible for developers to build applications that can 
 ??x
 ---
 
-**Rating: 8/10**
 
 #### Uniform Interface in Unix
 Background context explaining that in Unix, a uniform interface enables programs to be easily composed. This interface is primarily through files or file descriptors which represent various types of data such as actual files on the filesystem, communication channels, device drivers, and sockets.
@@ -255,7 +250,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Uniform Interface of Unix Tools
 Background context: The uniform interface of Unix tools, specifically focusing on ASCII text and its usage in shell scripting. While not perfect, it remains a remarkable feature that allows for smooth interoperation between different programs.

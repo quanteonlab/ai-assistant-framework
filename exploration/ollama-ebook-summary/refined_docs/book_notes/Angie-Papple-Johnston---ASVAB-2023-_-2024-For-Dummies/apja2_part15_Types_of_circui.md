@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Types of circuits
 
 ---
 
-**Rating: 8/10**
 
 #### Series Circuits
 Background context: In a series circuit, there's only one path for current to flow. The same amount of current passes through every component, and if any part breaks, the entire circuit stops working.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Circuits
 Background context: In parallel circuits, multiple branches exist, allowing current to split and flow in different directions. Breaks in one branch do not affect others.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Series-Parallel Circuits
 Background context: Series-parallel circuits combine both series and parallel configurations, offering flexibility but with more complex behavior.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Resistance in Circuits
 Background context: Calculating resistance involves understanding series, parallel, and series-parallel configurations.
@@ -64,7 +59,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Circuits and Total Resistance
 Background context: In a parallel circuit, the total resistance \( R_{total} \) can be calculated using the formula involving the reciprocal of each individual resistance.
@@ -87,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Power Calculation Using Voltage and Current
 Power (P) in watts can be calculated using the formula:
@@ -106,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Heat Effect of Electricity
 Electricity passing through conductors causes them to heat up due to resistance. This is used in heating elements like electric stoves.
@@ -124,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Electromagnetic Induction
 When a conductive material (like a loop of wire) moves through a magnetic field, an induced current is created due to the change in magnetic flux. This is used in electric generators.
@@ -157,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Capacitors and Inductors
 Background context: Capacitors store charge, while inductors use magnetic fields to resist changes in current. These components provide specific reactances needed for circuit operation.

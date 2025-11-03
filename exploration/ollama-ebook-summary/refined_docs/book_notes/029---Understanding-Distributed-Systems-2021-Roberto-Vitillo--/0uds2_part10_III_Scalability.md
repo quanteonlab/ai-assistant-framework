@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** III Scalability
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Decomposition
 Functional decomposition involves breaking an application into separate services, each with its own well-defined responsibility. This approach enhances modularity and maintainability.
@@ -104,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monolithic Application Challenges
 Background context: An application typically starts its life as a monolith, often a single-stateless web service that exposes a RESTful HTTP API and uses a relational database. It is composed of components or libraries implementing different business capabilities. As more feature teams contribute to the same codebase, the complexity increases over time.
@@ -138,7 +135,6 @@ The term "microservices" can be misleading because the services do not necessari
 ??? 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Microservices
 Breaking down the backend by business capabilities into a set of services allows each service to be developed and operated independently. This approach can significantly increase development speed for several reasons:

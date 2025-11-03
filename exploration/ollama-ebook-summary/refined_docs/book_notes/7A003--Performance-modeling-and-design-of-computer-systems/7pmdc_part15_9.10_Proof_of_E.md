@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.10 Proof of Ergodic Theorem of Markov Chains
 
 ---
 
-**Rating: 8/10**
 
 #### Stationary Solution and Positive Recurrence
 
@@ -67,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of \(f_{k}^{ii}\)
 Background context: The definition introduces \(f_{k}^{ii}\) as the probability of first returning to state \(i\) after the \(k\)th transition. This is crucial for understanding the recurrence properties in Markov chains.
@@ -152,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Return Probability and Limiting Distribution
 Background context: The theorem discusses the limiting behavior of a recurrent, aperiodic Markov chain. Specifically, it focuses on how to determine the long-term probability of being in state \(i\) given an initial state \(i\). This is often denoted as \(\lim_{n \to \infty} P^n_{ii}\), where \(P^n_{ii}\) represents the probability of returning to state \(i\) after \(n\) steps.
@@ -220,7 +216,6 @@ Since \(\lambda = \limsup P^n_{ii}\) and \(\mu = \liminf P^n_{ii}\), it must be 
 ---
 ---
 
-**Rating: 8/10**
 
 #### Irreducibility, Aperiodicity, and Positive Recurrence
 Background context: In this section, we analyze several transition matrices to determine whether Markov chains are irreducible, aperiodic, or positive recurrent. These properties are crucial for understanding the long-term behavior of the chain.
@@ -370,7 +365,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Why or why not? (d)
 Background context: In this question, you are asked to determine what fraction of time a data center is working. This involves analyzing the long-term behavior of a system using Markov chains.
@@ -763,7 +757,6 @@ print(f"Expected number of minutes until k consecutive failures: {T0_value}")
 The result will be the expected number of minutes until k consecutive failures in a row.
 x??
 
-**Rating: 8/10**
 
 #### Long-run Proportion of Time in State i
 
@@ -889,7 +882,6 @@ Using properties of Catalan numbers and the fact that paths are infinitely long,
 ??x
 The mean time between visits to state 0 in a symmetric random walk is infinite (\(m_{00} = \infty\)). This result comes from the infinite number of possible paths and the nature of Catalan numbers, ensuring that returns are increasingly rare as the path length increases.
 
-**Rating: 8/10**
 
 #### Characterizing Middle Steps for T00=n
 
@@ -1102,7 +1094,6 @@ If we can show that \( E[T_{22}] = \infty \), then state 2 is also recurrent. Th
 
 x??
 
-**Rating: 8/10**
 
 #### Markov Chain Recurrence and Transience
 
@@ -1354,7 +1345,6 @@ This problem covers several important aspects of Markov chains:
 
 These findings provide a comprehensive understanding of Markov chain behavior under different conditions and constraints. \(\boxed{\text{All key aspects have been addressed as per the problem statement.}}\) \end{document}
 
-**Rating: 8/10**
 
 #### Why Citation Counting Alone Is Inadequate
 Background context explaining why citation counting alone is not a good measure of page importance. Discuss how it fails to consider the quality and relevance of links.

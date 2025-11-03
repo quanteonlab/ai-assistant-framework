@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Did you hear that Understanding sound waves. Side effects Feeling hot and cold
 
 ---
 
-**Rating: 8/10**
 
 #### The Zeroth Law of Thermodynamics
 
@@ -28,7 +26,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Force Formula
 Background context: The force (\(F\)) acting on an object can be determined using Newton's second law of motion. According to this law, force equals mass (\(m\)) times acceleration (\(a\)), expressed as \( \vec{F} = m\vec{a} \).
@@ -40,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Force Calculation
 Background context explaining Newton's second law of motion which states that force equals mass times acceleration (\(F = m \times a\)). This relationship helps determine how much force is exerted on an object.

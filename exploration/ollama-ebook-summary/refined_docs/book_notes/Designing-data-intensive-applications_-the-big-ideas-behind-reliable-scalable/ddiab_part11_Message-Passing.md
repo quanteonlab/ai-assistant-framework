@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Message-Passing Dataflow
 
 ---
 
-**Rating: 8/10**
 
 #### RESTful APIs and Evolution
 
@@ -65,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nonuniform Memory Access (NUMA)
 Background context explaining NUMA. In a large machine, although any CPU can access any part of memory, some banks of memory are closer to one CPU than to others. This is called nonuniform memory access (NUMA). To make efficient use of this architecture, processing needs to be broken down so that each CPU mostly accesses memory that is nearby—which means that partitioning is still required, even when ostensibly running on one machine.
@@ -343,7 +340,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Leader-Based Replication (Master-Slave)
 Background context: In leader-based replication, also known as master-slave or active/passive replication, one replica is designated as the leader that handles all write operations. Other replicas are called followers and only handle reads from clients. The leader writes new data to its local storage and then synchronizes this change with its followers.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 34)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 22 Networks with Time-Sharing PS Servers BCMP. 22.1 Review of Product Form Networks. 22.2 BCMP Result
 
 ---
 
-**Rating: 8/10**
 
 #### Overview of Phase-Type Distributions and Networks
 
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### BCMP Theorem Overview
 
@@ -32,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Product Form Networks with FCFS Servers
 
@@ -48,7 +44,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Product Form Networks with PS Servers
 
@@ -61,7 +56,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison between FCFS and PS Servers
 
@@ -74,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application of BCMP Theorem
 
@@ -87,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detailed Conditions of BCMP Theorem
 
@@ -108,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Product Form Solution
 
@@ -123,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Jackson Networks and PS Servers
 
@@ -155,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application to Communication Networks
 
@@ -195,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Scheduling and PS Transition
 In time-sharing systems, the CPU rotates among jobs using round-robin scheduling with fixed quantum sizes. As the quantum size approaches zero, the system transitions into Processor-Sharing mode.
@@ -207,7 +195,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Completion Time and Slowdown for PS
 When \( n \) jobs with service requirements of 1 arrive at time 0 to a PS server with a service rate of 1, they will complete at time \( n \). The slowdown for each job in this case is also \( n \).
@@ -219,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditions for BCMP Theorem with PS
 The BCMP theorem applies to networks where servers use Processor-Sharing (PS) service order, provided that outside arrivals are Poisson, service times can follow any Coxian distribution, and service rates at servers may be load-dependent.
@@ -236,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### BCMP Theorem and PS Servers
 BCMP states that product form solutions exist for networks with PS servers under specific conditions: outside arrivals must be Poisson, service times can follow any Coxian distribution, and service rates may depend on load or class.
@@ -253,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/1/PS Queue Introduction
 Background context: We are discussing a single-server queue with time-sharing (PS) service discipline. In PS, when there are \(n\) jobs at the server, each job is serviced at a rate of \(\frac{\mu}{n}\), where \(\mu\) is the total service rate.
@@ -294,7 +278,6 @@ The CTMC for both systems looks similar, but the M/M/1/PS has a shared service r
 
 ---
 
-**Rating: 8/10**
 
 #### Example of CTMC Model for M/M/1/PS
 Background context: To better understand the M/M/1/PS queue, we model it as a CTMC with states representing the number of jobs at the server.
@@ -345,7 +328,6 @@ This pseudo-code outlines the process of updating probabilities in a single-serv
 
 ---
 
-**Rating: 8/10**
 
 #### Service Rate for Phase 1
 In an M/Cox/1/PS server, the service rate experienced by a student in phase 1 (the "quals" phase) is determined by the total number of students served by the professor. If there were no other students, a student would be served at rate μ1. However, because students share the professor's time equally, the effective service rate for each student in phase 1 becomes:
@@ -380,7 +362,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Departure Rate from Phase 1
 The departure rate from phase 1 is the rate at which jobs leave state \((n_1, n_2)\) due to a job completing its service in that phase. This can be calculated by considering all \( n_1 \) jobs currently in phase 1 and their individual exponential service rates.
@@ -406,7 +387,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Local Balance Equations
 To find the limiting probabilities \(\pi_{n_1, n_2}\), we use local balance equations. These equations equate the rate of leaving a state due to a departure from phase \( i \) with the rate of entering that state due to an arrival into phase \( i \).
@@ -447,7 +427,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Entering Rate into Phase 0
 The rate at which jobs enter state \((n_1, n_2)\) due to an arrival into phase 0 (outside) is denoted by \( B'_{0} \). This can be calculated as the sum of the rates from all possible arriving students.
@@ -473,7 +452,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Entering Rate into Phase 1
 The rate at which jobs enter state \((n_1, n_2)\) due to an arrival into phase 1 is denoted by \( B'_1 \). This can be calculated based on the number of students in state \((n_1 - 1, n_2)\).
@@ -498,7 +476,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Entering Rate into Phase 2
 The rate at which jobs enter state \((n_1, n_2)\) due to an arrival into phase 2 is denoted by \( B'_2 \). This can be calculated based on the number of students in state \((n_1 + 1, n_2 - 1)\).
@@ -525,7 +502,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Equating B1 and B/prime 1
 Background context: The goal is to verify that the guess for the limiting probabilities πn1,n2 works, specifically focusing on equating B1 (the expected number of customers with n1 jobs at server 1 and no waiting) to its prime counterpart. This involves using the relationship πn1,n2=ρ1n1+n2 *πn1−1,n2 where ρ1=λ/μ1.
@@ -547,7 +523,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Equating B2 and B/prime 2
 Background context: The next step is to verify the expression for B2 (the expected number of customers with no jobs at server 1 but one job waiting) by comparing it to its prime counterpart. This involves using the relationship πn1,n2=ρ1n1+n2 *πn1−1,n2 where ρ1=λ/μ1.
@@ -569,7 +544,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expression for P{Number of Jobs in the System}
 Background context: The objective is to find an expression for the probability that there are n jobs in the system by summing over all possible configurations. This involves using the guess for the limiting probabilities πn1,n2 and expressing it as a binomial expansion.
@@ -595,7 +569,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interpretation of 1/μ1 + p/μ2
 Background context: The term \( \frac{1}{\mu1} + \frac{p}{\mu2} \) represents the average service time for a job entering the system, which is an insensitivity property.
@@ -612,7 +585,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Insensitivity Property
 Background context: The M/G/1/PS queueing system has an insensitivity property, meaning that the limiting probabilities depend only on the mean of the job size distribution and not on its specific form. This property makes the analysis simpler because the performance measures are equivalent to those of a single-server M/M/1 system.
@@ -631,7 +603,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Response Time
 Background context: The mean response time for the M/G/1/PS system can be calculated using a similar approach to that of an M/M/1 system, where the mean service time \( E[S] \) plays a crucial role in determining this performance metric.
@@ -658,7 +629,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of a System with p > 1
 Background context: For the case where \( p > 1 \), all jobs go to server 1, and the mean response time can be simplified.
@@ -782,7 +752,6 @@ In summary, for all given scenarios:
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Response Time for Jobs
 Background context: The problem describes a tandem network of two M/G/1/PS servers. We need to calculate the mean response time by considering the mean response times at each server and their respective probabilities.
@@ -799,7 +768,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tandem Network of M/G/1/PS Servers
 Background context: This section discusses a tandem network with two PS servers, each having two phases. The state is defined by the number of jobs at every phase of both servers.
@@ -825,7 +793,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Product Form Guess for Limiting Probabilities
 Background context: The product form guess is a method to simplify finding limiting probabilities in tandem networks by assuming that the probability of being in state \( (n_1, n_2, m_1, m_2) \) can be expressed as a product of factors corresponding to each phase.
@@ -846,7 +813,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load Calculation for Servers
 Background context: The load on each server can be calculated based on the product form guess. The overall system load is the sum of individual loads.

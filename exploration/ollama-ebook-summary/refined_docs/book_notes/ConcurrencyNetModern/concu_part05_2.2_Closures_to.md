@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 2.2 Closures to simplify functional thinking
 
 ---
 
-**Rating: 8/10**
 
 #### Function Composition in Functional Programming
 
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Function Composition in F#
 
@@ -50,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Closures in Functional Programming
 
@@ -72,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Closures in C#
 
@@ -96,7 +91,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Captured Variables and Closures in Asynchronous Programming
 
@@ -134,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Null Objects and Closures
 
@@ -170,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Closures and Multithreading
 
@@ -192,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memoization-Caching Technique for Program Speedup
 Background context: Memoization is a technique used to optimize functions by caching their results. This approach is particularly useful when repeated function calls with the same arguments occur, as it avoids redundant computations and improves performance.
@@ -206,7 +197,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Behavior of Immutable Types in F#
 Background context: In functional programming languages like F#, variables are typically immutable, meaning once a value is assigned, it cannot be changed. Instead, new values are created with different memory locations.
@@ -220,7 +210,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Caching Mechanism with Memoization
 Background context: Memoization stores the results of function calls for future use, avoiding redundant computations.
@@ -234,7 +223,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of Memoization in a Function
 Background context: Figure 2.3 illustrates how memoization works with a diagram showing function evaluation and table storage.
@@ -248,7 +236,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memoization Overview
 Background context explaining the concept. Memoization is a technique that converts a function into a data structure to store results of expensive function calls and reuse them when the same inputs occur again. This is particularly useful for functions with repetitive computations, where storing results can significantly reduce execution time.
@@ -259,7 +246,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Closures for Memoization
 Background context explaining how closures are used in memoization to create a local variable (lookup table) and store function results based on the arguments passed.
@@ -270,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of Memoization
 Code example showing how to implement memoization using a higher-order function (HOF) in C#.
@@ -299,7 +284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Application: Image Processing
 Background context explaining how memoization can be applied to optimize image processing by caching results of pixel color filtering operations.
@@ -312,7 +296,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Implementation in Code
 Code example demonstrating a simple cache implementation using `Dictionary` in C#.
@@ -335,7 +318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memoization in Functional Programming
 Background context: Memoization is a technique used to optimize recursive functions and functions with expensive computations by caching their results based on function inputs. This can significantly improve performance for functions that are called repeatedly with the same arguments.
@@ -361,7 +343,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memoized Greeting Function in C#
 Background context: The memoized version of the `Greeting` function uses a dictionary to store and retrieve previously computed results. This allows subsequent calls with the same arguments to return cached results, reducing computation time.

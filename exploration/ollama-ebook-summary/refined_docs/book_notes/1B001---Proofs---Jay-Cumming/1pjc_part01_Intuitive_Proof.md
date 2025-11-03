@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 1B001---Proofs---Jay-Cumming_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Intuitive Proofs. Chessboard Problems
 
 ---
 
-**Rating: 8/10**
 
 #### Intuitive Proofs and Problem Solving
 Background context: This section introduces problem-solving techniques, particularly focusing on intuitive proofs. It suggests using smaller examples to tackle larger problems and emphasizes the importance of actively engaging with the material.
@@ -78,7 +76,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Domino Covering Proof
 Background context: This section introduces a method to prove that certain arrangements of dominoes on an 8×8 chessboard cannot form a perfect cover, by considering the placement process step-by-step. The proof relies on the fact that each domino covers exactly one black and one white square.
@@ -158,7 +155,6 @@ x??
 
 Each flashcard is designed to cover a key concept from the provided text, encouraging familiarity with the ideas and questions posed.
 
-**Rating: 8/10**
 
 #### Theorem, Proposition, Lemma, and Corollary
 Background context: In mathematics, results are categorized into different types based on their importance and usage. A theorem is a significant result that has been proved. A proposition is less important than a theorem but still has been proved. A lemma is used as a stepping stone to prove theorems or propositions. A corollary follows quickly from a theorem or proposition and often represents a special case of it.
@@ -296,7 +292,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pigeonhole Principle - Socks Example
 Background context: The pigeonhole principle states that if you have more items than containers, at least one container must contain more than one item. In this example, we are dealing with socks where each pair has a unique color.
@@ -355,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pigeonhole Principle Introduction
 Background context: The pigeonhole principle is a fundamental concept in combinatorics and discrete mathematics. It states that if \( n \) items are put into \( m \) containers, with \( n > m \), then at least one container must contain more than one item.
@@ -434,7 +428,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prime Numbers and Box Pairs
 In this problem, we are tasked with selecting 100 boxes to place numbers from 1 to 200 such that any two chosen numbers in the same box have a divisibility relationship. The initial attempt involved pairing prime numbers larger than 100 with other numbers, but this approach became overly complex.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A001---AI-Engineering_-Building-Applications-with-Foundation-Models-OReilly-Media-2025Chip-Huyen--_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### AI Engineering as a Discipline
 
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shift in AI Development Workflow
 
@@ -32,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### New Workflow for AI Engineering
 
@@ -45,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rapid Evolution of AI
 
@@ -58,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Data Distribution
 Background context: Model developers curate training data, which significantly influences a model's capabilities and limitations. The distribution of this training data is crucial as it shapes how well the model performs on different types of tasks.
@@ -83,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transformer Architecture Dominance
 Background context: The transformer architecture has been the dominant choice for foundation models due to its ability to handle long-range dependencies and parallelize computations efficiently. Understanding why it is so special requires delving into its design principles.
@@ -108,7 +101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sampling in Models
 Background context: Sampling is a critical process where models choose outputs from all possible options. This process can significantly affect model behavior and performance, especially leading to issues like hallucinations.
@@ -130,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Data Quality and Sources
 
@@ -162,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Common Crawl and Its Usage in Training AI Models
 
@@ -193,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Performance and Data Relevance
 
@@ -225,7 +214,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Curating Datasets for Specific Needs
 
@@ -255,7 +243,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finetuning Models on General-Purpose Models
 
@@ -285,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Quality and Model Performance
 
@@ -298,7 +284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benchmarks for Domain-Specific Performance
 Background context: The text provides an example of how models like CLIP and OpenCLIP perform on specific image datasets, indicating their strengths and limitations.
@@ -312,7 +297,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Data Impact
 Background context: This section discusses how the training data influences a model's performance on various domains. The text mentions that general-purpose models are trained on diverse datasets, while domain-specific models are curated for particular fields.

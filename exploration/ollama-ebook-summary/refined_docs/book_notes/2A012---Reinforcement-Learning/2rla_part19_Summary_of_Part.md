@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary of Part I Dimensions
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Tree Search (MCTS) Overview
 Monte Carlo Tree Search (MCTS) is a planning and learning algorithm that originates from root state, making it akin to rollout algorithms. MCTS benefits from online, incremental sample-based value estimation and policy improvement. It saves action-value estimates for tree edges and updates them using reinforcement learning's sample updates.
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action-Value Estimates
 Action-value estimates are attached to tree edges in MCTS. These estimates are updated using reinforcement learning's sample updates, which have the effect of focusing Monte Carlo trials on initial segments common to high-return trajectories.
@@ -42,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Incremental Tree Expansion in MCTS
 Incrementally expanding the tree in MCTS allows it to grow a lookup table for state-action pairs. Memory is allocated to estimate values of these pairs based on initial segments of high-yielding sample trajectories.
@@ -66,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Planning vs. Learning Relationship
 Planning and learning are closely related in MCTS due to the shared value functions and incremental updates. Both involve estimating value functions, making it natural to update these estimates incrementally.
@@ -89,7 +84,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model of Environment
 A model of the environment in planning and learning can be either distribution or sample-based. Distribution models provide probabilities for next states and rewards, while sample models generate single transitions according to these probabilities.
@@ -105,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dynamic Programming Requirements
 Dynamic programming requires a model that can handle probabilistic transitions, using expectations over all possible next states and rewards. Sample-based models are better suited for simulation during interaction with the environment.
@@ -118,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Integrating Learning and Planning
 Learning and planning can be integrated by updating a shared estimated value function. Any learning method can be converted into a planning method by applying it to simulated experience instead of real experience.
@@ -148,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Acting and Model-Learning Interaction
 Acting, model-learning, and planning interact in a circular fashion. Each process provides what the others need to improve, with no additional interaction required or prohibited.
@@ -161,7 +152,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Asynchronous and Parallel Processing
@@ -174,7 +164,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distribution of Updates
 
@@ -187,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### On-Policy Trajectory Sampling
 
@@ -200,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Planning at Decision Time
 
@@ -213,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Classical Heuristic Search
 
@@ -226,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generalized Policy Iteration
 
@@ -242,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Organizing Principles of Intelligence
 
@@ -260,7 +244,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sample Updates vs. Expected Updates
 Background context: The methods of reinforcement learning vary along two important dimensions related to how they update the value function. One dimension is whether the updates are sample-based or expected-based.
@@ -272,7 +255,6 @@ Sample updates use actual experience data, while expected updates rely on a mode
 
 ---
 
-**Rating: 8/10**
 
 #### Depth of Update (Bootstrapping)
 Background context: The depth of update measures how far ahead the method looks in estimating values. This is also known as bootstrapping.
@@ -284,7 +266,6 @@ The depth of updates ranges from one-step TD updates to full-return Monte Carlo 
 
 ---
 
-**Rating: 8/10**
 
 #### Temporal-Difference Learning (TD) and Dynamic Programming (DP)
 Background context: Two key methods in the space of reinforcement learning are temporal-difference learning and dynamic programming. TD involves updating based on a single step while DP uses expected updates.
@@ -296,7 +277,6 @@ Temporal-difference learning updates the value function based on a single step (
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Methods
 Background context: Monte Carlo methods estimate values by running complete trajectories and collecting returns.
@@ -308,7 +288,6 @@ Monte Carlo methods are characterized by their full-return nature, where the val
 
 ---
 
-**Rating: 8/10**
 
 #### Exhaustive Search (Deep Expected Updates)
 Background context: At one extreme of the depth dimension is exhaustive search, which updates values to a point where they converge using deep expected updates.
@@ -320,7 +299,6 @@ Exhaustive search involves running all possible trajectories until the contribut
 
 ---
 
-**Rating: 8/10**
 
 #### On-Policy vs. Off-Policy Methods
 Background context: Another important dimension is whether methods learn about their current policy (on-policy) or a different one (off-policy).
@@ -332,7 +310,6 @@ On-policy methods update the value function for the current policy, while off-po
 
 ---
 
-**Rating: 8/10**
 
 #### Episodic vs. Continuing Tasks
 Background context: The definition of return also depends on whether tasks are episodic (with clear end points) or continuing (without such endpoints).
@@ -344,7 +321,6 @@ An episodic task has well-defined episodes with start and end, while a continuin
 
 ---
 
-**Rating: 8/10**
 
 #### Action Values vs. State Values vs. Afterstate Values
 
@@ -363,7 +339,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronous vs. Asynchronous Updates
 
@@ -376,7 +351,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real vs. Simulated Experience
 
@@ -389,7 +363,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Location of Updates
 
@@ -402,7 +375,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Timing of Updates
 
@@ -415,7 +387,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory for Updates
 
@@ -428,7 +399,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differentiating Concepts
 
@@ -443,7 +413,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dyna Architecture
 Background context explaining the Dyna architecture introduced by Sutton (1990). This architecture combines model-based and model-free learning to enhance planning capabilities.
@@ -484,7 +453,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### E3 Algorithm and R-max Algorithm
 Background context explaining the E3 algorithm and R-max algorithm, which are extensions of model-based reinforcement learning methods.
@@ -523,7 +491,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prioritized Sweeping
 Background context explaining the development of prioritized sweeping by Moore and Atkeson (1993) and Peng and Williams (1993). This method aims to focus updates on states that are likely to have high impact.
@@ -563,7 +530,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trajectory Sampling
 Background context explaining trajectory sampling, which has been implicitly part of reinforcement learning since its inception but was explicitly emphasized by Barto et al. (1995) with RTDP.
@@ -625,7 +591,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Barto et al. (1995) Convergence Proof and Adaptive RTDP
 Background context: Barto et al. combined Korf’s convergence proof for LRTA* with Bertsekas’ results on asynchronous dynamic programming (DP) to prove a convergence result for solving stochastic shortest path problems in the undiscounted case. This combination led to the development of Adaptive Real-Time Dynamic Programming (Adaptive RTDP).
@@ -637,7 +602,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model-Learning and RTDP (Adaptive RTDP)
 Background context: Adaptive Real-Time Dynamic Programming (Adaptive RTDP) is an extension of RTDP that incorporates model-learning, allowing it to handle problems with large or unknown state spaces. It combines the benefits of model-free reinforcement learning with the ability to use a learned model for improved efficiency.
@@ -649,7 +613,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Peng and Williams' Exploration of Forward Focusing Updates
 Background context: Peng and Williams explored a forward focusing approach in their updates, which is similar to the concept introduced in this section. This method focuses on updating states that are more likely to be encountered in the future.
@@ -661,7 +624,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tesauro and Galperin's Backgammon Improvement
 Background context: Tesauro and Galperin demonstrated the effectiveness of rollout algorithms by applying them to improve backgammon programs. They used the term "rollout" to describe this process, which involves playing out positions with different sequences of dice rolls.
@@ -673,7 +635,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bertsekas' Work on Rollout Algorithms
 Background context: Bertsekas and his colleagues examined rollout algorithms applied to combinatorial optimization problems and discrete deterministic optimization problems. They found that these algorithms are often surprisingly effective.
@@ -685,7 +646,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MCTS (Monte Carlo Tree Search) Introduction
 Background context: Monte Carlo Tree Search (MCTS) was introduced by Coulom and Kocsis and Szepesvári. It builds upon previous research with Monte Carlo planning algorithms and is widely used in various applications.
@@ -697,7 +657,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Large State Spaces and Approximate Solutions
 Background context: In many reinforcement learning applications, the state space is enormous or even combinatorial. The goal is to find good approximate solutions using limited computational resources rather than exact solutions.
@@ -711,7 +670,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generalization in Reinforcement Learning
 Background context: The key issue in reinforcement learning is generalizing experience from a limited subset of the state space to produce good approximations over a much larger subset. This process often involves function approximation, which is analogous to supervised learning and pattern recognition techniques.
@@ -723,7 +681,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Function Approximation in Reinforcement Learning
 Background context: Function approximation is used when we need to generalize examples from a desired function (e.g., value function) to approximate the entire function. This method leverages techniques studied in machine learning, artificial neural networks, and statistical curve fitting.
@@ -735,7 +692,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nonstationarity, Bootstrapping, and Delayed Targets
 Background context: When dealing with function approximation in reinforcement learning, several issues arise that do not typically occur in conventional supervised learning. These include nonstationarity (the environment or policy changes over time), bootstrapping (using predictions from a model as targets for training), and delayed targets (where the target values depend on future rewards).
@@ -747,7 +703,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### On-Policy Training: Prediction Case
 Background context: In on-policy reinforcement learning for prediction, we are given a policy and need to approximate its value function. This is different from control cases where we aim to find an optimal policy.
@@ -759,7 +714,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### On-Policy Training: Control Case
 Background context: In the control case, we aim to find an optimal policy rather than just approximating the value function of a given policy.
@@ -771,7 +725,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Off-Policy Learning with Function Approximation
 Background context: Off-policy learning in reinforcement learning is more challenging than on-policy methods because it involves using data generated by a different policy for training.
@@ -783,7 +736,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eligibility Traces
 Background context: Eligibility traces are a mechanism that improves computational efficiency in multi-step reinforcement learning methods by keeping track of which states were active during past episodes.
@@ -795,7 +747,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy-Gradient Methods
 Background context: Policy-gradient methods approximate the optimal policy directly without forming an approximate value function. However, approximating a value function can still be beneficial for efficiency.
@@ -809,7 +760,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Aggregation for Function Approximation
 
@@ -822,7 +772,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Distribution
 
@@ -835,7 +784,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Function Approximation
 
@@ -851,7 +799,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Feature Vectors
 
@@ -864,7 +811,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stochastic Gradient Descent (SGD)
 
@@ -882,7 +828,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence of SGD in Linear Function Approximation
 
@@ -895,7 +840,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semi-Gradient TD(0) Algorithm
 
@@ -910,7 +854,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Weight Update Formula for TD(0)
 In the context of on-policy prediction using approximation, the weight vector \( w_t \) is updated at each time step \( t \) as follows:
@@ -939,7 +882,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Fixed Point
 From the weight update formula, if the system converges, it must converge to a fixed point where \( b - A w_{TD} = 0 \). This implies:
@@ -960,7 +902,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence Analysis of Linear TD(0)
 The analysis shows that the system will converge if \( I - \alpha A \) has all diagonal elements between 0 and 1. For a diagonal matrix \( A \), stability is assured if all diagonal elements are positive, allowing for a suitable choice of \( \alpha < 1/\text{largest diagonal element} \).
@@ -982,7 +923,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Positive Definiteness and Convergence
 For the matrix \( A \) to ensure convergence, it must be positive definite. In the context of linear TD(0), this means that for any non-zero vector \( y \in \mathbb{R}^d \):
@@ -1009,7 +949,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Positive Definiteness and Stability
 
@@ -1022,7 +961,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asymptotic Error Bound
 
@@ -1035,7 +973,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence of Other On-Policy Methods
 
@@ -1048,7 +985,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Aggregation Example
 
@@ -1063,7 +999,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Aggregation for Semi-Gradient TD Methods
 Background context: The text discusses using state aggregation to approximate the value function in a large-state space environment, specifically a 1000-state random walk task. This method is compared with a tabular approach where state transitions were simpler (up to 19 states). State aggregation groups multiple states together and approximates their values as a single group.

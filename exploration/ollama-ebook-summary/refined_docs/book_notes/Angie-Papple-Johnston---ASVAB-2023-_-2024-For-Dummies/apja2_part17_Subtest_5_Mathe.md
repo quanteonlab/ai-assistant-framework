@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Subtest 5 Mathematics Knowledge
 
 ---
 
-**Rating: 8/10**
 
 #### Roots and Powers
 Background context: This problem involves finding roots and understanding how they relate to powers.
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Equations
 Background context: This problem involves finding the equation of a line passing through two given points. The general form is \( y = mx + b \), where \( m \) is the slope and \( b \) is the y-intercept.
@@ -51,7 +48,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exponent Rules
 Background context: This problem tests understanding of exponent rules and simplification.
@@ -71,7 +67,6 @@ x??
 
 ---
 
-**Rating: 10/10**
 
 ---
 #### Ohm's Law
@@ -84,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rectification Process
 Background context: Changing AC to DC is called rectification. This process is essential in many electronic devices where only DC power is required.
@@ -95,7 +89,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Current Definition
 Background context: Current is the rate at which electric charge flows through a conductor. It is measured in amperes (A). The definition of current can vary, but the most accurate is the presence of electron flow.
@@ -106,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Active Element Identification
 Background context: An active element in an electronic circuit is a component that can control the flow of current using non-electrical means, such as voltage or power supply. It includes elements like power supplies and operational amplifiers.
@@ -117,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding the Question Structure
 Background context: Each question includes one initial drawing that presents a problem, and four additional drawings that propose possible solutions. You need to analyze these drawings to determine which solution best addresses the issue shown in the first drawing.

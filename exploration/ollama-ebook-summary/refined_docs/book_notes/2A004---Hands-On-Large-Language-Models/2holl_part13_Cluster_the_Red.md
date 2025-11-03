@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Cluster the Reduced Embeddings
 
 ---
 
-**Rating: 8/10**
 
 #### UMAP for Dimensionality Reduction
 Background context explaining that UMAP is used to handle nonlinear relationships and structures better than PCA. Mention that dimensionality reduction techniques do not perfectly capture high-dimensional data, leading to information loss.
@@ -87,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HDDBSCAN Clustering Process
 Background context explaining how HDBSCAN is used for clustering, mentioning its advantages over traditional clustering methods. HDBSCAN (Hierarchical Density-Based Spatial Clustering of Applications with Noise) is a density-based clustering algorithm that does not require specifying the number of clusters in advance. It automatically determines the number of clusters based on the data structure and can handle outliers well.
@@ -230,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Text Clustering vs. Topic Modeling
 Background context explaining the difference between text clustering and topic modeling. In text clustering, we group similar documents together based on their content without explicitly labeling them with a topic. However, once clusters are formed, identifying specific themes or topics within each cluster often requires manual inspection.

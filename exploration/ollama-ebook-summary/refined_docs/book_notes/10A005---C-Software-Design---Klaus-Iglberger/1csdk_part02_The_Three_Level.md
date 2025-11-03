@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Three Levels of Software Development
 
 ---
 
-**Rating: 8/10**
 
 #### Overview of Software Development Levels
 
@@ -111,7 +109,6 @@ This code ensures that the file is closed when the object goes out of scope, enc
 
 These flashcards cover key concepts and provide detailed explanations to enhance understanding.
 
-**Rating: 8/10**
 
 #### Abstraction and Encapsulation
 Abstraction and encapsulation are two fundamental principles of object-oriented programming. Abstraction helps in simplifying complex systems by hiding unnecessary details, making them easier to understand and change. Encapsulation, on the other hand, ensures that data is protected from external interference and misuse.
@@ -207,7 +204,6 @@ private:
 ```
 x??
 
-**Rating: 8/10**
 
 #### Importance of Software Design
 Software design is crucial for writing maintainable and adaptable software. It forms the foundation of project success, making it essential to focus on software architecture and principles rather than just features.
@@ -296,7 +292,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Separation of Concerns - Orthogonality
 
@@ -383,7 +378,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Artificial Dependencies Introduction
 Background context: The passage discusses how bundling data and functions within a base class can lead to artificial dependencies, making subsequent changes harder. Specifically, it mentions that implementing pure virtual member functions like `exportToJSON()` and `serialize()` introduces dependencies on third-party libraries.
@@ -516,7 +510,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Byte Order Format
 Background context explaining byte order and its significance. Big endian and little endian are two common byte order formats used in computer systems for storing multi-byte data types like integers or floating-point numbers.
@@ -609,7 +602,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logical Versus Physical Coupling
 Logical coupling refers to dependencies between classes that depend on each other's internal implementation details. Physical coupling, on the other hand, involves direct or indirect dependencies through physical elements such as header files or library imports.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Partitioning by Hash of Key
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioning Definition and Terminology
 Grace Murray Hopper emphasized breaking away from sequential computing and stated that partitioning is crucial for future computer management. In database terminology, a **partition** is often referred to by different names across various systems:
@@ -94,7 +92,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Leader-Follower Replication Model
 In a leader-follower replication model, each partition’s leader is assigned to one node, and its followers are assigned to other nodes. Each node may be the leader for some partitions and a follower for others. This setup allows for better scalability and fault tolerance.
@@ -181,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Key Range Partitioning
 Background context explaining the concept. When data is partitioned based on a key range, such as timestamps or IDs, it can lead to hot spots because writes are often clustered into the same partition.
@@ -295,7 +291,6 @@ public class SensorDatabase {
 ```
 x??
 
-**Rating: 8/10**
 
 ---
 #### Partitioning by Hash of Key
@@ -342,7 +337,6 @@ Cassandra handles partitioning by hashing only the first part of the compound pr
 ??x
 ---
 
-**Rating: 8/10**
 
 #### Partitioning Secondary Indexes by Term
 
@@ -430,7 +424,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fixed Number of Partitions
 Background context explaining the concept. When partitioning data, it's important to manage how partitions are assigned to nodes in a cluster. One approach is to create more partitions than there are nodes, and assign several partitions to each node from the outset.
@@ -486,7 +479,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Nodes to a Database Cluster
 
@@ -649,7 +641,6 @@ public class PartitionBalancer {
 ??x
 ---
 
-**Rating: 8/10**
 
 #### Partitioning Strategies Overview
 Background context: This section discusses different strategies for partitioning data across nodes in a distributed system. The goal is to balance load and maintain performance as the dataset grows or the number of nodes changes.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 1B001---Proofs---Jay-Cumming_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Abstraction and Generalization
 
 ---
 
-**Rating: 8/10**
 
 #### Abstraction and Generalization in Mathematics
 Mathematicians sought abstraction and generalization to understand core properties that apply across different mathematical structures. They identified essential properties like reﬂexivity, symmetry, and transitivity.
@@ -64,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functions and Relations Overview
 Background context explaining functions, relations, morphisms in set categories. Discusses vertical line test, domain, codomain, and Cartesian products.
@@ -138,7 +135,6 @@ For instance, if A = {1, 4, 6} and B = {1, 2, 4, 6, 7}, then A ⊆ B because all
 
 Each flashcard contains a single question that prompts understanding of key concepts from the text provided.
 
-**Rating: 8/10**
 
 #### Definition of Partial Order
 Background context: A partial order is a binary relation that is reflexive, antisymmetric, and transitive. These properties ensure that the relation behaves in a specific structured way within a set.
@@ -252,7 +248,6 @@ Despite his short life, Galois laid foundational stones for future mathematician
 
 :x??
 
-**Rating: 8/10**
 
 #### Equivalence Relation Examples
 

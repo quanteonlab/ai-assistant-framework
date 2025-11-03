@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 41)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 26 MG1 Transform Analysis. 26.1 The z-Transform of the Number in System
 
 ---
 
-**Rating: 8/10**
 
 #### Deriving πM/G/1 i for M/G/1 Queue
 Background context: To derive the z-transform of the number of jobs in an M/G/1 queue, we need to find \( \hat{\pi}_{\text{M/G/1}}(i) \), which represents the long-run fraction of time that there are \( i \) jobs in the system. For the M/M/1 queue, this was straightforward using a continuous-time Markov chain (CTMC). However, for the M/G/1, where service times are not exponential and thus do not follow the memoryless property, we need another approach.
@@ -30,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transition Probabilities in the Embedded DTMC
 Background context: In the embedded DTMC of an M/G/1 queue, we need to determine the transition probabilities \( P_{ij} \). These represent the probability that a departure leaves behind \( j \) jobs given that there were \( i \) jobs before the departure.
@@ -64,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Background of Transform Analysis and Laplace Transforms
 
@@ -161,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/G/1 Queue with H2 Distribution
 Background context: In this problem, you are given an M/G/1 queue where job sizes \( S \) follow an H2 distribution. The H2 distribution is a mixture of two exponential distributions:

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A001---The-Book-of-Kubernetes_-A-Complete-Guide-to-Container-Orchestration-No-Starch-Press-2022Alan-Hohn--_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Why Containers
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Resilience and Microservices
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modern Application Architecture
 Modern application architecture using microservices is appealing due to its flexibility and scalability. However, building such applications involves significant trade-offs related to complexity in managing individual services.
@@ -31,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-offs in Microservices Architecture
 Engineering trade-offs are crucial when designing modern applications with microservices. While microservices offer independence and flexibility, they introduce complex problems such as deployment, configuration, and dependency management.
@@ -43,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Containers in Microservices Architecture
 Containers are used to manage the complexities introduced by microservices architecture. They help with isolation, versioning, fast startup, and low overhead, making it easier to deploy and maintain microservices.
@@ -55,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Requirements for Containers
 To address the needs of deploying microservices, containers must bundle applications, uniquely identify versions, isolate services, start quickly, and minimize resource usage.
@@ -74,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Orchestration for Multiple Microservices
 Orchestration is necessary to manage multiple microservices working together. It involves clustering services across servers to ensure processing, memory, and storage are effectively utilized.
@@ -88,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Discovery: How Microservices Find Each Other
 Background context explaining how microservices discover and communicate with each other. In a dynamic environment, containers might move around, so a discovery mechanism is needed to ensure that services can find one another reliably.
@@ -100,7 +92,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuration: Decoupling Configurations from Code
 Background context explaining the importance of decoupling configurations from code in microservices, allowing for easier reconfiguration and deployment without changing the application logic.
@@ -112,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Access Control: Managing Container Authorization
 Background context explaining how access control ensures only authorized containers are allowed to run, maintaining security within a microservice architecture.
@@ -124,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load Balancing: Distributing Requests Among Containers
 Background context explaining how load balancing distributes incoming requests across multiple instances of a service to avoid overloading any single instance.
@@ -136,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monitoring: Detecting Failed Microservice Instances
 Background context explaining the importance of monitoring for identifying failed or unhealthy microservices to ensure load balancing works effectively.
@@ -148,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Resilience: Automatic Recovery from Failures
 Background context explaining how resilience mechanisms help in automatically recovering from failures within a microservice architecture.
@@ -160,7 +147,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Container Orchestration: Running Containers Dynamically
 Background context explaining how container orchestration environments like Kubernetes manage containers across multiple servers.
@@ -172,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Container Image and Volume Mounts
 Docker containers are often misunderstood as virtual machines due to their isolated nature. When we pull a container image, it is similar to downloading an OS image for a virtual machine. We can run a container from this image with specific configurations like volume mounts and environment variables.
@@ -192,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Containers vs Virtual Machines
 Containers provide an isolated environment that resembles a separate system but do not have their own kernel. They are lightweight and share resources with the host, such as the file system and network stack.
@@ -215,7 +199,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kubernetes and Application Deployment
 Background context: The text introduces the concept of deploying applications using Kubernetes, a container orchestration framework that provides load balancing, resilience, and automated scaling. It discusses setting up a single-node K3s cluster and deploying an example "to-do" application with both Node.js and PostgreSQL components.
@@ -234,7 +217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kubernetes Scaling and Recovery Mechanism
 Background context: The text highlights how to scale applications in a Kubernetes cluster, emphasizing the automated recovery mechanism when containers are destroyed.

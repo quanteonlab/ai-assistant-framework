@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 28)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 18 Classed Network of Queues. 18.1 Overview. 18.2 Motivation for Classed Networks
 
 ---
 
-**Rating: 8/10**
 
 #### Overview of Classed Network of Queues
 Background context: This chapter generalizes Jackson's network to include classed networks, where routing probabilities and service rates can depend on job classes. Key properties like product form still apply but with additional considerations for job types.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Motivation for Classed Networks: CPU-Bound and I/O-Bound Jobs
 Background context: Discusses a computer system with different workloads where the behavior of jobs (I/O-bound vs. CPU-bound) affects their processing.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Motivation for Classed Networks: Service Facility with Repair Center
 Background context: Describes a service scenario where jobs may need to visit a repair center after some visits. The job's history affects its routing and future behavior.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Job Class Dependent Arrival Rates
 Background context: Discusses the need for arrival rates to depend on job classes in classed networks.
@@ -54,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Class Dependent Routing Probabilities
 Background context: Explains that routing probabilities should be allowed to depend on the job class in classed networks.
@@ -66,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Job Class Dependent Service Rates
 Background context: Discusses allowing service rates to vary based on job classes in classed networks.
@@ -78,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Notation and Modeling for Classed Jackson Networks
 Background context: The provided text introduces notation and modeling for a classed Jackson network, which is an extension of the basic Jackson network with additional features. It defines various quantities such as arrival rates (both total and per-class), service rates, utilization, and routing probabilities.
@@ -101,7 +93,6 @@ This notation is crucial for understanding the flow of different classes of pack
 
 ---
 
-**Rating: 8/10**
 
 #### Deriving Total Arrival Rates
 Background context: The text discusses how to derive total arrival rates \( \lambda_j \) into server \( j \). However, it notes that we cannot directly solve for \( \lambda_j \), but can compute per-class arrival rates \( \lambda_j(c) \).
@@ -124,7 +115,6 @@ Here, \( P(c')(c)_ij \) represents the probability that a job at server \( i \) 
 
 ---
 
-**Rating: 8/10**
 
 #### State Space of CTMC for Classed Networks
 Background context: The text explains how to model the state space for continuous-time Markov chains (CTMC) in classed networks. It highlights that knowing just the number of jobs at each server is insufficient; we need additional information about the classes of these jobs.
@@ -147,7 +137,6 @@ The state of the network is then represented as:
 
 ---
 
-**Rating: 8/10**
 
 #### Single-Server Classed Network
 Background context: The text introduces a single-server classed network to understand the behavior of such networks. It considers an M/M/1 queue with multiple classes of packets.
@@ -168,7 +157,6 @@ This formula accounts for the probability of having specific classes in a given 
 
 ---
 
-**Rating: 8/10**
 
 #### Proof of Limiting Probability Formula
 Background context: The text provides an outline to prove that the guessed limiting probability \( \pi(c(1)_1, c(2)_1, ..., c(n_1)_1) \) satisfies the balance equations for a single-server classed network.
@@ -191,7 +179,6 @@ The balance equations can be verified by ensuring that these rates are equal, wh
 
 ---
 
-**Rating: 8/10**
 
 #### Arrival and Departure Mechanisms in M/M/1 Classed Queues
 
@@ -229,7 +216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Product Form Theorem for Classed Networks
 
@@ -277,7 +263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Calculating the Distribution of Jobs in Each Queue
 

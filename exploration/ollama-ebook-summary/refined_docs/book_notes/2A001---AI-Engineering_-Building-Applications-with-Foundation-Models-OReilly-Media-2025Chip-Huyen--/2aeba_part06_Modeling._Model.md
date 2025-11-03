@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A001---AI-Engineering_-Building-Applications-with-Foundation-Models-OReilly-Media-2025Chip-Huyen--_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Modeling. Model Architecture
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Self-Supervision
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Backpropagation
 Background context explaining backpropagation, which is about updating a model's parameters based on the error, discussed in Chapter 7.
@@ -46,7 +43,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modeling Decisions
 Background context on the importance of modeling decisions before training a model, which impact the architecture and parameters chosen.
@@ -60,7 +56,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transformer Architecture
 Background context on the popularity of the transformer architecture, based on the attention mechanism introduced in Vaswani et al., 2017. It addresses limitations of previous architectures and is widely used for language-based foundation models.
@@ -71,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Seq2Seq Architecture
 Background context on the seq2seq architecture's role before the transformer emerged, with its encoder-decoder design using RNNs for sequence-to-sequence tasks.
@@ -102,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges of RNNs
 Background context on the challenges faced by RNNs, particularly with vanishing and exploding gradients.
@@ -119,7 +112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Seq2Seq Architecture Issues
 Background context: The vanilla seq2seq model has two main limitations that hinder its performance, particularly with long sequences. First, it generates output tokens using only the final hidden state of the input sequence. Second, both encoding and decoding processes are sequential, making them slow for long inputs.
@@ -133,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transformer Architecture Introduction
 Background context: The transformer model addresses the limitations of the seq2seq architecture by introducing an attention mechanism that allows parallel processing of input tokens during encoding and decoding.
@@ -149,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Attention Mechanism Overview
 Background context: At the heart of the transformer architecture is the attention mechanism, which uses key, query, and value vectors to weigh the importance of different tokens when generating output tokens.
@@ -198,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Attention Mechanism Vectors
 Background context: The attention mechanism uses key, query, and value vectors to weigh the importance of different input tokens when generating each output token. These vectors are central to understanding how attention works in transformers.
@@ -229,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Key and Value Vectors Representation
 Background context: In the context of transformer models, each previous token is represented by a key vector (K) and a value vector (V). The key vector represents the page number, while the value vector represents the content of that page. The attention mechanism uses these vectors to determine how much importance should be given to each previous token during the generation process.
@@ -256,7 +244,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Attention Mechanism Calculation
 Background context: The attention mechanism in transformer models calculates the importance of each previous token by computing a dot product between the query vector and its corresponding key vector. This process determines how much weight should be given to each value vector when generating the next token.
@@ -295,7 +282,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Query, Key, and Value Matrices
 Background context: The key and value vectors are computed from the input using specific matrices. These matrices are used to transform the input tokens into meaningful representations for the attention mechanism.
@@ -351,7 +337,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Head Attention Mechanism
 Background context: To enhance the model's ability to attend to different groups of previous tokens, multi-head attention is used. This mechanism splits the query, key, and value vectors into smaller sub-vectors (heads) and processes them in parallel.
@@ -436,7 +421,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Attention Module
 Background context explaining the attention module. It consists of four weight matrices: query, key, value, and output projection.
@@ -523,7 +507,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MLP Module
 Background context explaining the MLP module. It consists of linear layers separated by nonlinear activation functions, allowing learning of complex patterns.
@@ -583,7 +566,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transformer Block
 Background context explaining the structure of a transformer block. It consists of an attention module and an MLP module.
@@ -625,7 +607,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Embedding Module
 Background context explaining the embedding module. It converts tokens and their positions into embedding vectors.
@@ -666,7 +647,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Output Layer
 Background context explaining the output layer. It maps model outputs into token probabilities.
@@ -717,7 +697,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dimension of the Feedforward Layer
 
@@ -732,7 +711,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Alternative Architectures
 
@@ -749,7 +727,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison Between Architectures
 Background context: The text discusses the evolution of state space models (SSMs) from S4 in 2021 to Mamba and Jamba in later years, highlighting their improvements in efficiency, scalability, and performance.
@@ -761,7 +738,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Size and Parameters
 Background context explaining that model size, particularly parameter count, is a significant factor in AI performance. Increasing parameters can enhance learning capacity but also requires more compute resources. The number of parameters often determines the memory usage for inference.
@@ -773,7 +749,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sparse Models
 Background context discussing sparse models, which have a high percentage of zero-value parameters, allowing for efficient storage and computation despite having many parameters.
@@ -785,7 +760,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mixture-of-Experts (MoE)
 Background context explaining MoE models, which divide their parameters into different groups called experts, with only a subset being active for each token processed.
@@ -797,7 +771,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Calculation of Model Parameters and Memory Usage
 Background context providing an example calculation for determining the memory needed for inference based on parameter count.
@@ -818,7 +791,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Size and Model Performance
 Background context discussing the importance of training data size relative to model size. Even large models can underperform smaller models if not adequately trained.
@@ -830,7 +802,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Number of Tokens and Training Samples
 Background context: The number of tokens is a better metric to measure dataset sizes for large language models (LLMs) compared to the number of words or sentences. Different models can tokenize datasets differently, leading to varying numbers of tokens even for the same dataset.
@@ -851,7 +822,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Tokens and Epochs
 Background context: The number of training tokens is crucial in understanding the extent to which a model has been trained. An epoch represents one complete pass through the entire dataset during training.
@@ -872,7 +842,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Quality and Diversity
 Background context: While the quantity of data is important, the quality and diversity of the data are also critical factors in determining a model's effectiveness. High-quality, diverse datasets can significantly enhance a model’s ability to understand various contexts and generate accurate responses.
@@ -893,7 +862,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compute Requirements for Pre-Training
 Background context: Pre-training large language models requires significant computational resources. The amount of compute needed can be measured by the number of machines, such as GPUs, CPUs, and TPUs, but these differ in capacity and cost.
@@ -918,7 +886,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modeling and Compute Costs
 Background context explaining the relationship between model size, dataset size, compute costs, and budgeting. Larger language models sometimes perform worse on certain tasks due to memorization requirements or strong priors.
@@ -930,7 +897,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compute-Optional Models
 Background context explaining the concept of compute-optional models and how they are determined based on a fixed compute budget.
@@ -942,7 +908,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scaling Law Application
 Background context explaining how to apply the Chinchilla scaling law in practice. The authors trained 400 language models ranging from 70 million to over 16 billion parameters on varying amounts of data.
@@ -954,7 +919,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cost Considerations in Training
 Background context explaining the cost considerations when acquiring data versus compute. The text mentions that acquiring data is generally cheaper than compute.
@@ -966,7 +930,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Scaling Law and Compute Budget
@@ -979,7 +942,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hyperparameter Optimization in Large Models
 Background context: For large models, training multiple times with different hyperparameters is impractical, leading to the emergence of scaling extrapolation or hyperparameter transfer.
@@ -991,7 +953,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parameter vs Hyperparameter
 Background context: Parameters are learned during model training, while hyperparameters are set by users to control how the model learns.
@@ -1003,7 +964,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Hyperparameter Transfer
 Background context: A 2022 paper by Microsoft and OpenAI demonstrated that hyperparameters from a smaller model could be effectively transferred to a much larger one.
@@ -1017,7 +977,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Emergent Abilities and Scaling
 
@@ -1030,7 +989,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scaling Bottlenecks: Training Data and Electricity
 
@@ -1043,7 +1001,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modeling Data Concerns
 
@@ -1056,7 +1013,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Forgetting Mechanisms
 
@@ -1071,7 +1027,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Potential Risks of AI-Generated Data
 Background context: The increasing use of AI-generated data poses significant risks, including unauthorized access to removed content and degradation of model performance over time. This is particularly relevant as companies continue to train new models using internet data.
@@ -1091,7 +1046,6 @@ This issue is particularly highlighted in the case where Grok was trained using 
 
 ---
 
-**Rating: 8/10**
 
 #### Recursive Training Impact
 Background context: Recursive training of AI models on AI-generated data can lead to a degradation in performance due to the models gradually forgetting the original data patterns. This is a nuanced issue that requires careful consideration.
@@ -1108,7 +1062,6 @@ This issue was highlighted in research by Shumailov et al., (2023), indicating t
 
 ---
 
-**Rating: 8/10**
 
 #### Data Source Restrictions
 Background context: There is a growing trend of companies restricting access to their publicly available data sources due to concerns about unauthorized use and degradation of AI models. This is particularly relevant given the rapid increase in data restrictions from web sources.
@@ -1129,7 +1082,6 @@ This trend highlights the growing challenge of accessing sufficient, high-qualit
 
 ---
 
-**Rating: 8/10**
 
 #### Issues with Pre-trained Models
 Background context: Pre-trained models, especially those trained using self-supervision, have inherent limitations such as focus on text prediction over conversations and potential biases due to indiscriminate data scraping.
@@ -1142,7 +1094,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Supervised Finetuning (SFT)
 Background context: To address the issues of pre-trained models, supervised finetuning is used to optimize models for conversations by training them on high-quality instruction data.
@@ -1153,7 +1104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preference Finetuning
 Background context: Preference finetuning is crucial for aligning the output of models with human preferences, typically using reinforcement learning (RL) techniques like RLHF, DPO, or RLAIF.
@@ -1164,7 +1114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Post-Training Workflow
 Background context: The post-training process involves two main steps—supervised finetuning (SFT) and preference finetuning—to enhance the conversational skills and human alignment of pre-trained models.
@@ -1177,7 +1126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Instruction Finetuning Terminology
 Background context: There is ambiguity in terminology where some refer to supervised finetuning as instruction finetuning, which can lead to confusion.
@@ -1188,7 +1136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Post-Training Workflow Diagram
 Background context: The workflow includes steps like self-supervised pre-training, supervised finetuning (SFT), and preference finetuning using techniques like RLHF.

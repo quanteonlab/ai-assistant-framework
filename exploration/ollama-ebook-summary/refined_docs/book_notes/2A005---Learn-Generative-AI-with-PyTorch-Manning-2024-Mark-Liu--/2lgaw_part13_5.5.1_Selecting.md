@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 5.5.1 Selecting images with or without eyeglasses
 
 ---
 
-**Rating: 8/10**
 
 #### Training Loop for Conditional GANs
 Background context: The training loop involves iterating through batches of data, training the generator and critic models, and calculating loss values. This process helps in refining the model to generate images with specific characteristics based on input labels.
@@ -34,7 +32,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Noise Vector and Label Influence on Image Generation
 
@@ -109,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interpolated Noise Vector and Label Arithmetic
 Background context: In this project, you are working with a Conditional Generative Adversarial Network (cGAN) that generates images based on a combination of noise vectors and labels. The interpolated noise vector is a weighted average of two random noise vectors, which generate female and male faces respectively. Similarly, the label is a weighted average of labels indicating whether an image has eyeglasses or not.
@@ -128,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Arithmetic
 Background context: The concept of vector arithmetic in this project refers to creating a series of images that transition between two different attributes by interpolating between noise vectors. Specifically, the model generates 36 images based on the interpolated noise vector and label, with each row showing a gradual change in eyeglasses presence or absence, while each column shows a transition from male to female faces.
@@ -141,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wasserstein GAN (WGAN)
 Background context: WGAN is a technique used to improve the training stability and performance of GAN models by using the Wasserstein distance as the loss function instead of the binary cross-entropy. The key idea is that the critic's function must be 1-Lipschitz continuous, meaning the gradient norms must be at most 1 everywhere.
@@ -160,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cycle Consistency Loss
 Cycle consistency loss ensures that the model preserves key features by ensuring the original image can be reconstructed from the transformed one after a round-trip conversion.
@@ -181,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Steps in CycleGAN
 In each iteration of training, real images from both domains are fed into the generators to produce fake images. These fake images are then used as input for their respective discriminators, and losses are calculated.

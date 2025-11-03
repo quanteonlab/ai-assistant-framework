@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Unreliable Networks
 
 ---
 
-**Rating: 8/10**
 
 #### Fault Handling in Distributed Systems
 Fault handling is crucial for ensuring reliability, especially in distributed systems where components can fail unpredictably. The software must be designed to handle various faults gracefully and provide expected behavior under unexpected conditions.
@@ -202,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Reliability Challenges
 Background context explaining the concept. Network reliability is a critical aspect of computer networks, where packets may be lost or delayed, making it impossible for the sender to determine if the message was delivered without receiving confirmation. The usual approach involves setting timeouts to manage this uncertainty, but even with timeouts, the network's state remains unknown.
@@ -261,7 +258,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detecting Faulty Nodes
 Detecting faulty nodes is crucial for maintaining system reliability, especially in distributed systems. Network unreliability can make it challenging to determine whether a node is genuinely down or merely experiencing temporary issues.
@@ -421,7 +417,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Timeout Considerations
 
@@ -520,7 +515,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Packet Queuing at Destination Machine
 When a packet reaches the destination machine, if all CPU cores are currently busy, the incoming request is queued by the operating system. The length of time before the application can handle it depends on the load on the machine.
@@ -586,7 +580,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Delays and Queues
 Network resources can be shared among many customers, leading to variable delays. High utilization can cause queues to build up quickly. In public clouds and multi-tenant datacenters, network links and switches are shared.

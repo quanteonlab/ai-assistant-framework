@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 39)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.2.3 Hipifying the CUDA code
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronization in GPU Programming
 Background context: Proper synchronization is crucial when programming GPUs due to their asynchronous nature. In CUDA and HIP, `hipDeviceSynchronize()` or `cudaDeviceSynchronize()` are used to ensure that all previous device operations have completed before continuing execution.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HIP Source Code Differences
 Background context: This section highlights the syntax differences between CUDA and HIP. Understanding these differences is crucial for developers who want to use HIP for AMD GPUs, ensuring that their code works seamlessly across both platforms.
@@ -56,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### EZCL_Lite Library Overview
 
@@ -141,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using CMake for Building OpenCL Applications
 
@@ -188,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Setting Work Group Size and Padding
 Background context: Properly setting the work group size is crucial for efficient OpenCL programming. The global and local work sizes must be compatible to ensure optimal performance.
@@ -213,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kernel Argument Setting
 Background context explaining how kernel arguments are set in OpenCL. Unlike CUDA's single line setting of arguments, OpenCL requires separate calls for each argument.
@@ -242,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Enqueueing Kernel Calls
 Background context explaining how OpenCL enqueues kernel calls and handles barriers to ensure proper synchronization between host and device operations.
@@ -270,7 +262,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### OpenCL Language Interfacing
@@ -291,7 +282,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sum Reduction in OpenCL and CUDA
 Background context: Sum reductions are common operations in parallel computing. The approach is similar between OpenCL and CUDA but there are some differences due to the nature of their APIs.
@@ -318,7 +308,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sum Reduction Kernel Implementation in OpenCL
 Background context: The implementation of the sum reduction kernel involves multiple steps, including setting up local work sizes and enqueuing kernel calls. This process is similar to CUDA but with different syntax.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 2.1.1 Version control Creating a safety vault for your parallel code
 
 ---
 
-**Rating: 8/10**
 
 #### Version Control and Team Development Workflows
 Version control systems are essential for tracking changes in the codebase. They allow developers to manage different versions of their code, making it easier to revert or merge changes.
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Performance Capabilities and Limitations
 Understanding the performance characteristics of your application is critical before attempting to parallelize it. This includes knowing where bottlenecks are and what hardware limitations might affect performance.
@@ -52,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Developing a Plan to Parallelize a Routine
 The workflow involves repeating four steps (Profile, Plan, Commit, Implement) to incrementally parallelize an application. This approach is particularly suited for agile project management techniques.
@@ -104,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determining Computing Resources Capabilities
 Background context: Before starting a project, it's crucial to assess the computing resources available and understand their limitations. This involves benchmarking the system to determine its compute capabilities.
@@ -131,7 +126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application Profiling
 Background context: Understanding the application's demands is essential for identifying bottlenecks and optimizing performance. Profiling helps in understanding how the application uses computational resources, particularly focusing on computationally intensive kernels.
@@ -157,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallelizing Routines
 Background context: After profiling, you identify which parts of your code are computationally intensive (kernels) and plan how these sections can be parallelized. This involves breaking down tasks that can run concurrently to improve performance.
@@ -184,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Committing Changes to Version Control
 Background context: Once the parallelization and optimization are complete, changes need to be committed to a version control system. This ensures that modifications are tracked and can be reverted if necessary.
@@ -203,7 +195,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ensuring Code Quality with Modularity
 Background context: Good code is modular, meaning it is composed of independent subroutines or functions that have well-defined inputs and outputs. This approach helps in making the code easy to modify and extend.
@@ -225,7 +216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ensuring Code Portability
 Background context: Code portability ensures that your application can be compiled and run on multiple platforms. This is crucial for adapting to changing hardware and software environments.
@@ -250,7 +240,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Version Control Overview
 Background context: The importance of version control is highlighted when working on parallelism tasks, as it allows for recovery from broken or problematic code versions. This is particularly crucial in scenarios where rapid changes and small commits are common.
@@ -266,7 +255,6 @@ For example, suppose you have multiple developers working on the same codebase. 
 
 ---
 
-**Rating: 8/10**
 
 #### Pull Request Model
 Background context: The pull request (PR) model involves changes being posted for review by other team members before they are committed to the main repository. This process is often used to ensure quality checks and collective code ownership.
@@ -291,7 +279,6 @@ The `sendPullRequest` method simulates sending a pull request, which would be re
 
 ---
 
-**Rating: 8/10**
 
 #### Git as a Version Control System
 Background context: Git is the most common distributed version control system and is recommended for managing parallel code development. It allows multiple repository databases and is advantageous in open-source projects or remote work environments.
@@ -321,7 +308,6 @@ The `initializeRepository` and `commitCode` methods demonstrate basic Git comman
 
 ---
 
-**Rating: 8/10**
 
 #### Commit Messages
 Background context: Commit messages provide detailed information about the changes made, helping developers understand why certain modifications were necessary. They are crucial for maintaining clarity in the codebase.
@@ -346,7 +332,6 @@ The `createCommit` method simulates creating a commit with a detailed message th
 
 ---
 
-**Rating: 8/10**
 
 #### Version Control Commit Messages
 Version control systems like Git are essential for managing changes to software projects. A commit message is a tool used to document and communicate the purpose of your recent changes. Properly structured commit messages can significantly improve team collaboration, especially when multiple developers are working on the same codebase.
@@ -377,7 +362,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Diff Utilities
 Background context: When comparing numerical outputs across different runs or compilers, tools like `numdiff` and `ndiff` can be used to identify small differences. These utilities allow specifying a tolerance for acceptable variation.
@@ -402,7 +386,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HDF5 and NetCDF for Data Comparison
 Background context: HDF5 and NetCDF are binary data formats used in scientific computing. These formats allow storing large datasets efficiently. Tools like `h5diff` can be used to compare files with a certain numeric tolerance, ensuring that small numerical differences do not indicate errors.
@@ -436,7 +419,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Tests with CTest
 The `add_test` command adds a specific test case to your project by specifying the name of the test and the executable along with any necessary arguments. This integrates the test directly into the build process.
@@ -453,7 +435,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Test Results and Comparison
 Background context explaining the importance of comparing outputs between runs to detect changes in the application. Mention storing a gold standard file for comparison.
@@ -480,7 +461,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Coverage with GCC
 Background context explaining code coverage and how to measure it using GCC. Mention that high code coverage is important but more critical for parts of the code being parallelized.
@@ -514,7 +494,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Different Kinds of Tests
 Background context explaining various types of tests and their purposes. Include a brief description of regression tests, unit tests, continuous integration tests, and commit tests.
@@ -538,7 +517,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Application Development Importance
 Background context: The importance of planning for parallelization is highlighted to ensure that bugs are detected early, reducing debugging time and effort. This is particularly crucial when working with large-scale systems involving thousands of processors.
@@ -553,7 +531,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Testing in Parallel Code Development
 Background context: Unit testing is an essential part of the development process. It helps in identifying issues early, making it easier to resolve them. Test-driven development (TDD) involves creating tests before writing the actual code.
@@ -575,7 +552,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Commit Tests in Development Workflow
 Background context: Commit tests are critical for continuous integration and maintaining code quality. They run before a developer commits changes to the repository, ensuring that all committed code is functional.
@@ -590,7 +566,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuous Integration Tests
 Background context: Continuous integration (CI) tests are automatically triggered when changes are committed to the repository. These tests provide an additional layer of quality assurance, ensuring that all code is reliable.
@@ -605,7 +580,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Regression Testing
 Background context: Regression testing is performed after making changes to ensure that existing functionality continues to work as expected. These tests are typically run overnight and can be extensive, covering all aspects of the application.
@@ -620,7 +594,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CMake and CTest Integration in Workflow
 Background context: Using CMake and CTest to manage testing workflows can simplify the process of setting up and running different types of tests. This integration helps in maintaining a consistent development environment.
@@ -637,7 +610,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Uninitialized Memory
@@ -650,7 +622,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Overwrites
 Background context: Memory overwriting occurs when a program writes data into a memory location not owned by the variable. Common examples include writing past the bounds of an array or string.
@@ -662,7 +633,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memcheck Tool in Valgrind
 Background context: The Memcheck tool is the default tool in the Valgrind suite, intercepting instructions to check for memory errors and generating diagnostics.

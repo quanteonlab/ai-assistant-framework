@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 27)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Implementing Linearizable Systems
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability and Race Conditions
 
@@ -30,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single-Leader Replication (Potentially Linearizable)
 
@@ -63,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Leader Replication (Not Linearizable)
 
@@ -97,7 +93,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consensus Algorithms (Linearizable)
 
@@ -131,7 +126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability and Quorums
 
@@ -175,7 +169,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Dynamo-Style Quorum Linearizability
@@ -204,7 +197,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Riak vs. Cassandra on Linearizability
 Riak does not perform synchronous read repair due to performance penalties, while Cassandra waits for read repair to complete during quorum reads but loses linearizability in scenarios of multiple concurrent writes using last-write-wins conflict resolution. This means that only linearizable read and write operations can be implemented this way; a compare-and-set operation cannot because it requires a consensus algorithm.
@@ -232,7 +224,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Leader vs. Single-Leader Replication
 Multi-leader replication allows each datacenter to continue operating normally during network interruptions, as writes are queued up and exchanged when connectivity is restored. In contrast, single-leader replication requires all read and write requests to be sent synchronously over the network to the leader in case of a network interruption between datacenters.
@@ -276,7 +267,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability and Network Interruptions
 Background context: The provided text discusses how linearizable reads and writes can be problematic when network interruptions occur. Specifically, if an application requires linearizability, a network partition can cause some replicas to become unavailable as they cannot contact the leader or other replicas.
@@ -288,7 +278,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Leader Replication and Availability
 Background context: The text explains how if an application does not require linearizability, it can be designed in a way that each replica processes requests independently even when disconnected from other replicas. This approach ensures availability in the face of network problems.
@@ -300,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The CAP Theorem
 Background context: The CAP theorem discusses the trade-offs between consistency, availability, and partition tolerance in distributed systems. Eric Brewer proposed this theorem in 2000, but the concept has roots in earlier database design principles.
@@ -312,7 +300,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Faults vs. Partitions
 Background context: The text differentiates between network faults and partitions. Network faults are broader, including various types of failures, whereas a partition is specifically a network issue where the system can be split into multiple isolated parts.
@@ -324,7 +311,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sharding (Data Partitioning)
 Background context: The text mentions sharding as a method of deliberately breaking down large datasets into smaller parts to manage them more efficiently. Sharding is distinct from network partitions in that it is a deliberate design choice.
@@ -336,7 +322,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Impact on Database Design
 Background context: The CAP theorem influenced the design space for distributed databases, encouraging engineers to consider multi-leader replication and other non-linearizable models that ensure availability even during partitions.
@@ -350,7 +335,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CAP Theorem Overview
 Background context: The CAP theorem states that a distributed system can only provide two of the following three guarantees at most: Consistency (all nodes see the same data at the same time), Availability (every request receives a response about whether it was successful or not), and Partition Tolerance (the system continues to operate despite arbitrary message loss or failure). The theorem highlights that in partitioned networks, achieving all three guarantees simultaneously is impossible.
@@ -361,7 +345,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability vs. Performance Trade-offs
 Background context: Linearizability is a strong form of consistency that requires operations to appear as if they occur atomically in some total order. However, achieving linearizability comes with significant performance overhead due to the need for coordination across nodes.
@@ -372,7 +355,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-core Memory Consistency Models
 Background context: Modern CPUs use caches to improve performance by allowing local writes to be faster. However, this introduces inconsistencies between cores due to asynchronous memory updates. Linearizability is often impractical in such systems because of these inherent delays.
@@ -383,7 +365,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Delays and Linearizability
 Background context: The CAP theorem focuses on network partitions but doesn't fully address all types of network delays. Linearizable systems require responses to be immediate, which is often impractical due to variable network delays.
@@ -394,7 +375,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consistency Models and Performance Trade-offs
 Background context: While linearizability is a strong guarantee of consistency, many distributed systems opt for weaker consistency models to improve performance. These models sacrifice some level of consistency to achieve lower latency.
@@ -405,7 +385,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Theoretical Limits of Linearizability
 Background context: Atiya and Welch’s theorem proves that achieving linearizable consistency requires a response time proportional to network delay uncertainty. This makes linearizability impractical in networks with highly variable delays.
@@ -416,7 +395,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avoiding Linearizability Without Sacrificing Correctness
 Background context: Even though linearizability is theoretically important, many systems choose to avoid it for performance reasons. This doesn't mean correctness is compromised; alternative approaches can maintain consistency guarantees without the overhead of linearizability.
@@ -429,7 +407,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Ordering and Causality
@@ -447,7 +424,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability
 Linearizable operations behave as if they are executed atomically at some point in time. This means that every read or write operation appears to happen instantaneously, and there is a well-defined order in which these operations take place.
@@ -480,7 +456,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Write Conflicts
 In systems with multiple leaders, conflicts can arise if operations are not properly ordered. The leader is responsible for determining the order of writes in the replication log to prevent such conflicts.
@@ -520,7 +495,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Snapshot Consistency and Causality
@@ -532,7 +506,6 @@ In the context of snapshot isolation, "consistent" means that what a transaction
 
 ---
 
-**Rating: 8/10**
 
 #### Read Skew and Causality Violation
 Explanation about read skew or non-repeatable reads where data is read in an inconsistent state violating causality. A scenario involves reading the database at a single point in time which may show stale data due to concurrent operations.
@@ -543,7 +516,6 @@ Read skew, also known as non-repeatable reads, occurs when a transaction reads d
 
 ---
 
-**Rating: 8/10**
 
 #### Write Skew and Causal Dependencies
 Explanation about write skew between transactions, particularly how actions like Alice going off call depend on observations (like who is currently on call) to establish causal dependencies. Serializable Snapshot Isolation detects such write skews by tracking these dependencies.
@@ -554,7 +526,6 @@ Write skew involves situations where the outcome of one transaction depends on t
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Consistency in Systems
 Explanation about the concept of causal consistency where a system adheres to an ordering imposed by causality, meaning cause comes before effect. This is relevant in database systems like snapshot isolation which ensure that any read reflects operations that happened before the snapshot.
@@ -565,7 +536,6 @@ A system is said to be causally consistent if it respects the causal ordering of
 
 ---
 
-**Rating: 8/10**
 
 #### Total Order vs. Causal Order
 Explanation about why mathematical sets are not totally ordered but causal order is a partial ordering where elements can't always be compared directly due to the lack of a clear temporal or causal relationship between them.
@@ -578,7 +548,6 @@ Causal order, as used in systems like snapshot isolation, does not allow direct 
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability vs. Causality
 
@@ -609,7 +578,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Consistency
 
@@ -645,7 +613,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partial Ordering
 
@@ -668,7 +635,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency in Distributed Systems
 
@@ -701,7 +667,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability and Causality Relationship
 
@@ -741,7 +706,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Consistency and Performance Trade-offs
 

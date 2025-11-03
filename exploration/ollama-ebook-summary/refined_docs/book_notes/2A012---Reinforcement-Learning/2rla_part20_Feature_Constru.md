@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Feature Construction for Linear Methods. Fourier Basis
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations of Linear Value Functions
 Background context explaining how linear value functions may struggle with state representations that involve complex interactions. The limitations of using basic polynomial features are discussed, focusing on their inability to capture certain types of interactions.
@@ -24,7 +22,6 @@ Thus, simple polynomial features may not be sufficient to capture such complex i
 
 ---
 
-**Rating: 8/10**
 
 #### Feature Selection for High Dimensional State Spaces
 For state spaces with dimensions larger than a small value (e.g., k ≤ 5), one can select an appropriate order `n` for Fourier features such that all features are used, making feature selection more automatic. However, in high-dimensional spaces, it is necessary to manually choose a subset of these features based on prior knowledge or automated methods.
@@ -42,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Automating Feature Selection with Reinforcement Learning
 In reinforcement learning scenarios, automated feature selection methods can be adapted to handle the incremental and nonstationary nature of the problem. Fourier features are beneficial because their selection can be adjusted by setting certain parameters like `ci` vectors to account for state variable interactions and limiting `cj` values to filter out high-frequency noise.
@@ -60,7 +56,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recommendations Against Using Polynomials for Online Learning
 Polynomials are not recommended for online learning due to their limitations. This recommendation is based on the performance observed in the 1000-state random walk example, where polynomials did not perform as well as the Fourier basis.
@@ -80,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Feature Size Affects Initial Generalization
 Background context explaining that the initial learning phase can be strongly affected by the size of the receptive fields (features). Larger features allow for broader generalization but may result in a coarser approximation initially.
@@ -91,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Feature Width’s Effect on Learning
 Background context explaining how the width of features (receptive fields) impacts initial and final learning outcomes. The width affects the extent of influence during training but has a lesser effect on the final solution quality.
@@ -102,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Feature Width’s Impact
 Background context providing an example where a one-dimensional square-wave function was learned using coarse coding with different feature widths (narrow, medium, and broad).
@@ -115,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tile Coding Overview
 Tile coding is a form of coarse coding for multi-dimensional continuous spaces that is flexible and computationally efficient. It allows for practical feature representation suitable for modern sequential digital computers.
@@ -127,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single Tiling Example
 In the simplest case of tile coding, a two-dimensional state space can be represented as a uniform grid. Each point in this grid falls within one tile.
@@ -139,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple Tiling Example
 To achieve true coarse coding, multiple tilings are used, each offset from one another. Each point in the space falls into exactly one tile per tiling.
@@ -151,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Feature Vector Construction
 In tile coding with multiple tilings, the feature vector \( x(s) \) has one component per tile in each tiling. For a state that falls within four tiles across four different tilings, this would result in four active features.
@@ -163,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Practical Advantage: Consistent Feature Count
 One practical advantage is that using multiple tilings ensures exactly one feature is active in each tiling at any given time. This allows setting the step-size parameter \( \alpha = \frac{1}{n} \), where \( n \) is the number of tilings.
@@ -175,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example with the Random Walk
 Tile coding was applied in an experiment involving a 1000-state random walk. With multiple offset tilings, it provided better performance than using just one tiling.
@@ -187,7 +173,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tile Coding Overview
 Background context explaining tile coding and its use in value function approximation. Tile coding involves breaking down a state space into smaller regions (tiles) to approximate values using linear methods.
@@ -199,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prior Estimate Update Rule
 Background context explaining how new estimates are updated based on prior estimates.
@@ -211,7 +195,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Learning Rate in Tile Coding
 Background context explaining the importance of the learning rate.
@@ -223,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Feature Representation
 Background context explaining how states are represented using tiles.
@@ -235,7 +217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generalization in Tile Coding
 Background context explaining how generalization occurs within tiles.
@@ -247,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tile Offsets for Generalization
 Background context explaining tile offsets and their impact.
@@ -278,7 +258,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tiling Strategy with Multiple Types of Tiles
 Background context: Using different types of tiles (e.g., vertical and horizontal stripes) can promote generalization along each dimension while allowing specific value learning through conjunctive rectangular tiles.

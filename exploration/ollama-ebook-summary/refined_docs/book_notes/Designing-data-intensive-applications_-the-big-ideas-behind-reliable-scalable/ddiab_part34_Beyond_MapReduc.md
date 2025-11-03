@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 34)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Beyond MapReduce. Materialization of Intermediate State
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### MapReduce Overview
@@ -34,7 +32,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Higher-Level Abstractions on MapReduce
 Background context explaining the creation of Pig, Hive, Cascading, and Crunch as abstractions to simplify common batch processing tasks. These tools are easier to use compared to raw MapReduce APIs.
@@ -54,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Issues with MapReduce
 Background context explaining the robustness of MapReduce but also its potential performance limitations for certain types of processing.
@@ -72,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Materialization of Intermediate State
 Background context explaining the independence of MapReduce jobs and the need for external workflow management to link job outputs as inputs.
@@ -91,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce Workflow Execution
 Background context: In traditional MapReduce workflows, each job can only start when all tasks in the preceding jobs have completed. This sequential nature leads to issues with stragglers and redundant mappers.
@@ -114,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Redundant Mappers and Redundancy in MapReduce
 Background context: In some cases, mappers are redundant as they just read back data that was previously written by reducers. This redundancy can be reduced if mapper outputs were processed similarly to reducer outputs.
@@ -140,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dataflow Engines: Spark, Tez, and Flink
 Background context: To address the limitations of MapReduce, several new execution engines like Spark, Tez, and Flink were developed. These dataflow engines handle a complete workflow as one job and model the flow of data through multiple processing stages.
@@ -172,7 +164,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Flexible Operators in Dataflow Engines
 
@@ -191,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Repartitioning and Sorting in Dataflow Engines
 
@@ -215,7 +205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Broadcast Hash Joins in Dataflow Engines
 
@@ -237,7 +226,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advantages of Dataflow Engines Over MapReduce
 
@@ -259,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reusing JVM Processes in Dataflow Engines
 
@@ -281,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing MapReduce Workflows with Dataflow Engines
 
@@ -303,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault Tolerance Mechanisms
 Background context: In distributed computing frameworks like MapReduce, Spark, Flink, and Tez, fault tolerance is a critical aspect. MapReduce uses durable intermediate state to handle failures by simply restarting failed tasks. However, frameworks like Spark, Flink, and Tez do not write intermediate states to HDFS but instead rely on recomputing data from available inputs.
@@ -314,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recomputation in Spark, Flink, Tez
 Background context: Unlike MapReduce, frameworks like Spark, Flink, and Tez avoid writing intermediate states to HDFS. Instead, they recomputed lost data from other available sources when a machine fails or operator state is lost. This requires tracking the ancestry of data and how it was computed.
@@ -325,7 +309,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determinism in Computation
 Background context: For effective fault tolerance and recovery, operators must produce deterministic results. Non-deterministic behavior can cause issues when recomputing data, especially if some of the lost data has already been sent to downstream operators. Ensuring determinism is crucial for reliable fault recovery.
@@ -336,7 +319,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Materialization vs Recomputation
 Background context: While frameworks like Spark avoid materializing intermediate states, recomputing large datasets can be expensive in terms of time and resources. Therefore, a balance needs to be struck between recomputing data and storing it temporarily. The choice depends on the size of the intermediate data and the cost of recomputation.
@@ -347,7 +329,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pipeline Execution in Flink
 Background context: Dataflow engines like Flink are designed for pipelined execution, where output from one operator is immediately passed to downstream operators without waiting for complete input data. Sorting operations are an example of tasks that need to accumulate state temporarily before producing results.
@@ -360,7 +341,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Iterative Processing in Graphs
 Background context: In scenarios where data needs to be processed in batches rather than for quick OLTP-style queries, iterative processing on graphs is common. This approach often involves algorithms that require traversing graph edges repeatedly until a condition is met. For instance, PageRank algorithm estimates the importance of nodes based on their connections.
@@ -371,7 +351,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Directed Acyclic Graph (DAG) in Dataflow Engines
 Background context: Dataflow engines like Spark, Flink, and Tez arrange operators as a DAG to manage data flow efficiently. Each node represents an operator, and edges represent data flow between them. While these DAGs are not the same as graph processing where data itself has the form of a graph.
@@ -382,7 +361,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Iterative Algorithms for Graph Processing
 Background context: Many graph algorithms require iterative processing because they need to traverse the graph multiple times, updating states based on new information from adjacent vertices. Examples include PageRank and transitive closure. These cannot be expressed efficiently in plain MapReduce as it only performs a single pass over the data.
@@ -393,7 +371,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bulk Synchronous Parallel (BSP) Model
 Background context: The BSP model optimizes iterative graph processing by allowing each vertex to remember its state from one iteration to the next. This approach is used in frameworks like Apache Giraph, Spark’s GraphX API, and Flink’s Gelly API.
@@ -404,7 +381,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pregel Processing Model
 Background context: The Pregel processing model is an implementation of the BSP approach for graph processing. It allows vertices to send messages along edges and remember state between iterations.
@@ -415,7 +391,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault Tolerance in Pregel
 Background context: Vertex communication through message passing improves performance and fault tolerance since messages can be batched and delays are managed by the framework. Iterations ensure reliable processing even if network issues occur, as all messages are delivered in subsequent iterations.
@@ -428,7 +403,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault Tolerance Mechanism in Distributed Graph Processing
 Fault tolerance is a critical aspect of distributed graph processing frameworks, ensuring that computations can recover from node failures. This mechanism involves periodically checkpointing the state of all vertices at the end of each iteration to durable storage.
@@ -456,7 +430,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Execution in Distributed Graph Processing
 In distributed graph processing, the location of where each vertex executes is abstracted away from the application. The system decides which machine runs which vertex and how messages are routed based on vertex IDs.
@@ -480,7 +453,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### High-Level APIs in Batch Processing Systems
 High-level APIs and languages have become popular for distributed batch processing as they simplify the development process compared to writing MapReduce jobs from scratch. These APIs often use relational-style operations like joining datasets.
@@ -500,7 +472,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Moving Towards Declarative Query Languages
 Declarative query languages allow specifying operations in a more abstract manner, where the system can optimize the execution plan based on input properties. This is particularly useful for joins and other complex operations.
@@ -517,7 +488,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Specialization for Different Domains in Batch Processing
 Batch processing systems are increasingly specialized to meet the needs of different domains, such as statistical and numerical algorithms. Reusable implementations of common building blocks can be implemented on top of these frameworks.

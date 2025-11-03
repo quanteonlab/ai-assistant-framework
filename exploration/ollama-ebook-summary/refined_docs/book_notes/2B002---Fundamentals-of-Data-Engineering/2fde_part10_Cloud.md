@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Cloud
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### On Premises Systems
@@ -133,7 +131,6 @@ public class CTODecisionMaker {
 x?
 ---
 
-**Rating: 8/10**
 
 #### VMs and Short-Term Resource Reservation
 VMs can be quickly spun up, typically within a minute. Subsequent usage is billed per second. This allows for dynamic scaling of resources that were previously impractical with on-premises servers.
@@ -295,7 +292,6 @@ public void manageCloudBudget(double budget) {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Autoscaling and Serverless Functions
 Cloud FinOps emphasizes the importance of using autoscaling to manage workloads efficiently. This approach allows servers to scale down when loads are light, reducing costs, and scale up during peak times to handle increased demand.
@@ -466,7 +462,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Netflix’s Custom Infrastructure and Cost Savings
 Background context: The text discusses how Netflix leverages AWS for certain services but has built a custom Content Delivery Network (CDN) to handle its massive internet traffic more cost-effectively. This example highlights that companies with extraordinary scale can benefit from managing their own hardware and network connections.
@@ -573,7 +568,6 @@ public class BuildOrBuyDecision {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Decision Factors for Build vs. Buy
 Background context: The decision to build or buy a solution is influenced by Total Cost of Ownership (TCO), Technical Operability and Complexity (TOCO), and whether the solution provides a competitive advantage. Often, it's more beneficial to leverage existing open-source solutions or commercial products rather than building everything in-house.

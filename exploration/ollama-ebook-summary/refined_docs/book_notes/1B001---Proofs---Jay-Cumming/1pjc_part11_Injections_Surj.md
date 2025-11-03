@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 1B001---Proofs---Jay-Cumming_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Injections Surjections and Bijections
 
 ---
 
-**Rating: 8/10**
 
 #### Set Notation and Function Representation
 Background context explaining set notation, functions, and how they are represented. Mention that sets can be defined with curly braces and functions can map elements from one set to another using function notation.
@@ -95,7 +93,6 @@ Background context explaining how existence and uniqueness criteria shift betwee
 ??x When defining a function \( f:A.B \), we focus on existence for every \( x \in A \) that \( f(x) \) exists and is unique. To be injective, the attention shifts to B with an existence criterion (for every \( b \in B \), there exists some \( a \in A \) such that \( f(a) = b \)). And to be surjective, it focuses on a uniqueness-type criterion (for every \( b \in B \), there is at most one \( a \in A \) such that \( f(a) = b \)).
 x??
 
-**Rating: 8/10**
 
 #### Definition of a Bijection
 Background context: A bijection is defined as a function that is both injective and surjective. This means every element in set \(A\) is paired with exactly one element in set \(B\), and every element in \(B\) has exactly one element from \(A\) mapping to it.
@@ -206,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Bijection and Injectivity
 
@@ -364,7 +360,6 @@ public class BijectiveProofExample {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Function Surjectiveness
 
@@ -461,7 +456,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ordered Pairs and Equality
 Background context explaining the concept of ordered pairs and their equality. In this case, we are dealing with a function that maps an ordered pair to another ordered pair.
@@ -589,7 +583,6 @@ For bijection (both injective and surjective), we need \( |A| = |B| \).
 ??x
 ---
 
-**Rating: 10/10**
 
 #### Composition of Functions
 Composition of functions is a fundamental concept where the output of one function serves as the input to another. Given two functions \(g: A \to B\) and \(f: B \to C\), their composition, denoted by \(f \circ g\), is defined such that:
@@ -684,7 +677,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Function Composition and Bijectivity
 

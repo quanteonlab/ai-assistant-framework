@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 32)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Graphs and Iterative Processing
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Iterative Processing in Graphs
@@ -87,7 +85,6 @@ In this example, `receive()` is called on each vertex to get the messages it has
 x?
 ---
 
-**Rating: 8/10**
 
 #### Fault Tolerance Mechanism in Distributed Graph Processing
 
@@ -224,7 +221,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Processing Overview
 Batch processing involves executing algorithms on large datasets, often with a focus on data transformation and analysis. This method is widely used for tasks that require intensive computation over extensive datasets, such as genome analysis or complex data mining operations.
@@ -335,7 +331,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Broadcast Hash Joins
 Background context: In a broadcast hash join, one of the two inputs is small enough to be entirely loaded into memory as a hash table. The other input, which is larger, is partitioned and processed in parallel by multiple mappers. Each mapper loads the entire small input into its own hash table and processes its part of the large input against this hash table.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Service-level objectives
 
 ---
 
-**Rating: 8/10**
 
 #### Little's Law
 Little's Law is a fundamental principle used to understand queuing systems. It states that the average number of items in a system (\(L\)) equals the average arrival rate (\(\lambda\)) multiplied by the average time an item spends in the system (\(W\)), or mathematically, \(L = \lambda W\).
@@ -290,7 +288,6 @@ public class ChaosTesting {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Alerting and Its Types
 
@@ -393,7 +390,6 @@ This approach ensures that operators are alerted only when necessary, reducing n
 
 ---
 
-**Rating: 8/10**
 
 #### Alerting for Known Hard-Failure Modes
 Background context: In monitoring systems, it's crucial to define alerts based on Service Level Objectives (SLOs) as they provide a clear threshold of service quality. However, there are scenarios where known issues persist without immediate solutions or design fixes. These can trigger hard-failure modes that need automated responses.

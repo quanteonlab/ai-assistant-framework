@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Relational Model
 
 ---
 
-**Rating: 8/10**
 
 #### AWS IAM and NASDAQ's Access Control Policy
 Background context: NASDAQ implemented a comprehensive access control policy using AWS Identity and Access Management (AWS IAM) for data stored on S3. This involved setting up policies to manage who can access what resources, ensuring that only authorized users have access based on their roles and permissions.
@@ -115,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### SQL Standards Evolution
@@ -181,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### First Normal Form (1NF)
@@ -275,7 +271,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transitive Dependency and 3NF Normalization
 Normalization is a process used to eliminate redundancy and improve data integrity. The goal of normalization is to organize data into tables such that each piece of information has one and only one place where it can be stored.
@@ -359,7 +354,6 @@ Constraints can be implemented directly within the `CREATE TABLE` or `ALTER TABL
 The pseudocode demonstrates creating a table with constraints and inserting data that must adhere to these rules.
 x??
 
-**Rating: 8/10**
 
 #### Importance of Indexing for Query Optimization
 Background context explaining why indexing is crucial for query optimization. Without indexes, queries can become very slow as they may need to scan entire tables. The choice of columns for indexing depends on how often these columns are used in filtering statements.
@@ -444,7 +438,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single Point of Failure
 In a system where all operations rely on a single machine, any failure in that machine can lead to total service interruption. This setup is often used due to its simplicity and ease of maintaining data consistency.
@@ -554,7 +547,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relational Databases for Financial Applications
 
@@ -736,7 +728,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed SQL Databases Overview
 Background context explaining the importance of distributed SQL databases, particularly for mission-critical applications like payments. These systems are designed to handle high availability and scalability requirements.
@@ -995,7 +986,6 @@ Shipt managed idempotency by using idempotency tokens for each payment request. 
 
 ---
 
-**Rating: 8/10**
 
 #### Document Model
 Background context explaining the document model, focusing on JSON-based documents. The example provided shows a structure where each field represents different attributes of an entity (like Microsoft Corporation).
@@ -1115,7 +1105,6 @@ public List<Product> getProducts(String category) {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Document and Collection Structure
 In document databases, data is stored as documents that are analogous to rows in relational databases. Documents can contain various types of data (strings, integers, dates, Booleans, arrays, subdocuments) and are grouped into collections, which function like tables in SQL databases.
@@ -1188,7 +1177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### User ID Field and Document Databases
 Document databases allow referencing one document from another using fields like user IDs. This can be used to join or find related documents efficiently.
@@ -1341,7 +1329,6 @@ try {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Document Databases in Financial Applications
 Document databases are preferred for financial applications due to their scalability, latency, availability, and schema flexibility. MongoDB is a popular choice among financial institutions for various business needs.
@@ -1425,7 +1412,6 @@ public class KafkaProducerExample {
 x??
 This example demonstrates how to set up a simple Kafka producer in Java, which could be part of the real-time stream processing setup used by Wells Fargo.
 
-**Rating: 8/10**
 
 #### Amazon DynamoDB Performance and Integration
 
@@ -1539,7 +1525,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Series Data Model Overview
 Time series data models are specialized for storing and processing time series data efficiently. They are designed to handle large volumes of time-stamped data, making them ideal for applications where historical data trends and patterns are critical.

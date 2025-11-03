@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Operating-Systems_-Three-Easy-Pieces_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 42. FSCK and Journaling
 
 ---
 
-**Rating: 8/10**
 
 #### Crash Consistency Problem
 Background context explaining the challenge faced by file systems due to power losses and crashes. The problem occurs when a system is writing data to disk, and an unexpected crash or power loss happens before all writes are completed.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File System Checker (fsck)
 Background context explaining how older file systems handled inconsistencies after a crash using fsck tools.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Journaling Technique
 Background context explaining the journaling technique as an approach to recover from crashes more quickly by logging writes before they are applied.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Basic Machinery of Journaling
 Background context explaining the core mechanism of journaling, including how writes are logged and later committed.
@@ -54,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example of Journaling Operation
 Background context with an example of how journaling might be implemented in pseudocode.
@@ -79,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inode and Data Block Allocation
 In this file system, we have a simple structure where an inode bitmap, data bitmap, inodes, and data blocks are used to manage file allocation. Each inode can point to up to four direct data blocks.
@@ -109,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inode Update on Append Operation
 When a file is appended to, a new data block needs to be allocated and the inode must be updated to reflect this change. The inode bitmap, data bitmap, and the new data block need to be updated.
@@ -137,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### On-Disk Image Transition
 The final state of the file system after an append operation should have updated inodes, data bitmap, and a new data block. These updates must be written to disk.
@@ -170,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Crash Scenarios
 Crashes can occur at various points during the writing process, leading to inconsistent file system states.
@@ -187,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Just Data Block Write
 Background context: In a single write operation, only the data block (Db) is written to disk. This scenario can occur due to a crash during the write process.
@@ -203,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Just Inode Write
 Background context: In this scenario, only the updated inode (I[v2]) is written to disk. The inode now points to the location where Db should have been written, but Db itself has not yet been written.
@@ -219,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two Writes Fail - Inode and Bitmap
 Background context: This scenario involves two writes (inode I[v2] and bitmap B[v2]) failing while only the data block Db is successfully written.
@@ -235,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two Writes Fail - Inode and Data Block
 Background context: In this scenario, only the bitmap B[v2] is written successfully, while the inode (I[v2]) and data block Db are not.
@@ -251,7 +237,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two Writes Fail - Bitmap and Data Block
 Background context: Here, only the inode (I[v2]) is written successfully, while the bitmap B[v2] and data block Db are not.
@@ -269,7 +254,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Crash Consistency Problem
 Background context explaining the crash consistency problem. Disk writes are atomic but may fail, leading to inconsistent file system states. The problem is often termed "consistent-update" as well.
@@ -281,7 +265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solution #1: The File System Checker (fsck)
 Explanation on how fsck addresses crash consistency. It checks and repairs inconsistencies by running before mounting the file system.
@@ -293,7 +276,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Superblock Check by Fsck
 Explanation of how fsck verifies the superblock integrity during its operation phases. It performs sanity checks on the file system size relative to allocated blocks.
@@ -305,7 +287,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Free Blocks Check by Fsck
 Explanation on how fsck scans inodes and indirect blocks to build an understanding of currently allocated blocks and update allocation bitmaps.
@@ -317,7 +298,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inode State Check by Fsck
 Explanation of the process where fsck verifies inode fields for corruption or other problems.
@@ -329,7 +309,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inode Links Verification by Fsck
 Explanation of how fsck verifies link counts for each file.
@@ -341,7 +320,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inode and File System Consistency Checks (fsck)
 Background context: fsck is a utility used to check the file system for consistency, ensuring that the metadata within the inodes matches what is expected. It performs various checks such as mismatched counts, duplicate pointers, bad blocks, and directory structure integrity.
@@ -352,7 +330,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mismatch Between Inode Count and On-Disk Data
 :p What action is taken if there's a mismatch between the newly-calculated count and what’s found within an inode?
@@ -362,7 +339,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Directory Integrity Checks
 :p What specific checks does fsck perform on directory entries?
@@ -372,7 +348,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Issues with fsck
 :p Why was fsck’s performance considered problematic as disks grew larger?
@@ -382,7 +357,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Journaling (Write-Ahead Logging) as a Solution
 :p What is journaling in file systems?
@@ -392,7 +366,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of Journaling
 :p How does journaling work in practice?
@@ -413,7 +386,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Write-Ahead Logging (WAL) Concept
 Write-ahead logging is a technique used by file systems to ensure data consistency during writes. The idea is to write an entry describing the pending update before updating the actual structures on disk. This helps recover from crashes, as the system can redo the operations described in the log.
@@ -424,7 +396,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Journaling Example
 Data journaling in file systems like ext3 involves writing transaction logs (journal) of data block writes. This ensures that if a crash occurs during write operations, the system can recover by replaying these transactions.
@@ -440,7 +411,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Journal Write Operation
 Background context: The journal write operation involves writing a transaction, including blocks for data and metadata updates, to a log file. This ensures that all pending changes are recorded before they are applied to the main file system.
@@ -452,7 +422,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transaction Blocks
 Background context: The text mentions specific blocks like TxB, I[v2], B[v2], Db, and TxE. These represent different parts of a transaction that needs to be recorded in the journal.
@@ -470,7 +439,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Crashes During Journal Writes
 Background context: The text discusses strategies for ensuring the correct order of writes during journaling operations, particularly when a crash might occur.
@@ -493,7 +461,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Write Barriers Mechanism
 Background context: Write barriers are used to ensure that all writes before a barrier complete before any writes after it start. This is crucial for maintaining the correct order of operations during journaling.
@@ -517,7 +484,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Journaling Vulnerability
 Background context explaining the potential hazard of performing large sequential writes without ensuring atomicity. Disk scheduling can cause parts of a write operation to be written out of order, leading to inconsistencies if power loss occurs during the process.
@@ -531,7 +497,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Crash Consistency Issue
 Background context explaining how crash inconsistencies can arise during log writes. Describes the problem of journal entries being written out of order, which can lead to data corruption if the system reboots before all parts of the write are completed.
@@ -545,7 +510,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Optimization in Journaling
 Background context explaining how optimizing log writes can improve performance by reducing unnecessary waits. Describes Vijayan Prabhakaran's idea of including checksums in journal begin and end blocks.
@@ -574,7 +538,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Writing Transactions in Two Steps
 Background context explaining the need to split transactions into two parts to ensure atomicity and integrity during log writes.
@@ -609,7 +572,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Journaling Process Overview
 Background context explaining how journaling helps ensure data consistency and integrity during system crashes. The process involves writing transaction blocks to a log, committing the transaction, and finally checkpointing changes.
@@ -621,7 +583,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Journal Write Phase
 Background context explaining the first phase where the transaction blocks (including metadata and data) are written to the journal.
@@ -647,7 +608,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Journal Commit Phase
 Background context explaining how the transaction commit block (TxE) is written after all other blocks have been safely logged.
@@ -675,7 +635,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Checkpoint Phase
 Background context explaining the final step of writing changes to their on-disk locations.
@@ -706,7 +665,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Redo Logging Process During Recovery
 Background context explaining how the file system recovers from a crash by replaying committed transactions.
@@ -732,7 +690,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Journaling and Transaction Management
@@ -750,7 +707,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transaction Committing
 
@@ -796,7 +752,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Log Size Management
 
@@ -851,7 +806,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Journaling System Overview
 Background context: The journaling system helps ensure data consistency and reduces recovery time by recording information about transactions that have not been checkpointed yet. This process enables efficient use of log space, reducing the overall recovery time.
@@ -863,7 +817,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Journal Write Step
 Background context: In the journaling process, a transaction is written to the log before being committed. The write operation involves recording both the transaction block (TxB) and the contents of the update.
@@ -884,7 +837,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Journal Commit Step
 Background context: After the transaction is written to the log, it is committed by writing a transaction commit block (TxE) to the journal. This step ensures that the transaction is officially considered completed.
@@ -904,7 +856,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Checkpointing
 Background context: Once a transaction is committed and its changes are recorded in the journal, the actual data blocks are then written to their final locations within the file system.
@@ -923,7 +874,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Freeing Journal Entries
 Background context: After a transaction has been committed and checkpointed, it can be marked as free in the journal by updating the superblock. This frees up space in the log for new transactions.
@@ -942,7 +892,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Impact of Data Journaling
 Background context: Writing user data blocks to both the journal and the file system can significantly increase disk I/O, reducing write throughput. Metadata journaling reduces this overhead by only writing metadata changes.
@@ -963,7 +912,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequential Write Workload Impact
 Background context: Sequential writes are particularly affected by the overhead of writing to the journal first. This can reduce peak write bandwidth.
@@ -986,7 +934,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Write Order for Db Block
 Background context: In journaling file systems, particularly those using metadata-only journaling like ext3, ensuring write order is crucial to maintain data consistency. The update consists of three blocks: I[v2], B[v2], and Db. While I[v2] and B[v2] are logged and checkpointed, Db is written directly to the file system without logging.
@@ -1011,7 +958,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Journaling Protocol Overview
 Background context: The journaling protocol ensures that a data write is committed to disk before related metadata updates. This order prevents situations where pointers in metadata could point to invalid or garbage data.
@@ -1044,7 +990,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tricky Case: Block Reuse
 Background context: In journaling file systems, there are specific scenarios that can complicate the write order and consistency. One such scenario involves block reuse, where a data block might be reused before its associated metadata is properly written.
@@ -1070,7 +1015,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Crash Consistency and Journal Replay
 Background context explaining the concept. During a crash recovery process, journal replay ensures that all transactions are either fully committed or rolled back to maintain consistency. However, issues arise when blocks are reused during deletions, causing old data from deleted files to overwrite new user data.
@@ -1099,7 +1043,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transaction Begin and End Blocks (TxB and TxE)
 Background context explaining the transaction begin block (TxB) and transaction end block (TxE). These blocks are crucial for ensuring that file system metadata remains consistent. The writes to TxB and the contents of the transaction can be issued at any time logically, but they must complete before the write to the TxE block.
@@ -1110,7 +1053,6 @@ The Transaction Begin Block (TxB) marks the start of a transaction. It records t
 
 ---
 
-**Rating: 8/10**
 
 #### Write-Ordering Requirements
 Background context explaining the importance of maintaining correct write-ordering requirements in journaling protocols. This ensures that certain operations are completed in a specific order, preventing inconsistencies.
@@ -1121,7 +1063,6 @@ The metadata journaling protocol requires that the transaction begin block (TxB)
 
 ---
 
-**Rating: 8/10**
 
 #### Soft Updates
 Background context explaining the Soft Updates approach for maintaining file system consistency. This method carefully orders all writes to ensure that on-disk structures never enter an inconsistent state.
@@ -1132,7 +1073,6 @@ The main advantage of the Soft Updates technique is ensuring that on-disk file s
 
 ---
 
-**Rating: 8/10**
 
 #### Copy-on-Write (COW)
 Background context explaining the copy-on-write approach used in file systems like ZFS. COW avoids overwriting files or directories in place by placing new updates to unused locations on disk.
@@ -1143,7 +1083,6 @@ A key feature of the Copy-on-Write (COW) technique is that it never overwrites e
 
 ---
 
-**Rating: 8/10**
 
 #### Journaling vs Soft Updates
 Background context explaining the differences between journaling and Soft Updates approaches in maintaining file system consistency.
@@ -1154,7 +1093,6 @@ Journaling involves writing transaction begin and end blocks to ensure that all 
 
 ---
 
-**Rating: 8/10**
 
 #### Example: Ordering Writes
 Background context explaining how write-ordering rules can be applied in practice with examples.
@@ -1165,7 +1103,6 @@ In a journaling system, imagine writing new data and updating its inode. First, 
 
 ---
 
-**Rating: 8/10**
 
 #### I/O Subsystem Role
 Background context explaining how the I/O subsystem determines completion times for writes, which may reorder writes to improve performance.
@@ -1176,7 +1113,6 @@ The I/O subsystem in a real system can reorder writes to improve overall perform
 
 ---
 
-**Rating: 8/10**
 
 #### Summary: Consistency Techniques
 Background context summarizing various techniques used to maintain file system consistency, including journaling, Soft Updates, COW, and LFS.
@@ -1220,7 +1156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Journaling File Systems
 Background context: Traditional file systems often require a full scan (FSCK) after a crash, which can be slow. Journaling reduces recovery time by logging changes to a journal before writing them to the disk. The recovery process only needs to replay the log, making it much faster.
@@ -1243,7 +1178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ordered Metadata Journaling
 Background context: Ordered metadata journaling is a specific type of journaling where only metadata writes are journaled, reducing the overhead compared to logging both data and metadata. This approach provides reasonable consistency guarantees while minimizing traffic to the journal.
@@ -1266,7 +1200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Crash Consistency Summary
 Background context: The summary highlights the importance of crash consistency and different approaches. While traditional file system checkers (FSCK) work, they are too slow for modern systems. Journaling significantly reduces recovery time by logging changes before writing them to disk, making it a preferred approach in many modern file systems.
@@ -1287,7 +1220,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Optimistic Crash Consistency Protocol
@@ -1300,7 +1232,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reimplementing the Cedar File System (1987)
 This is the first work that applied write-ahead logging to a file system. It laid the groundwork for modern journaling protocols and introduced group commit techniques.
@@ -1321,7 +1252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Iron File Systems (2005)
 This paper focuses on studying how file systems react to disk failures. It introduces a transaction checksum to speed up logging, which was eventually adopted into Linux ext4.
@@ -1342,7 +1272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Analysis and Evolution of Journaling File Systems (2005)
 This paper examines what file systems guarantee after crashes and contrasts these guarantees with application expectations, leading to various interesting problems.
@@ -1366,7 +1295,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Journaling File Systems: Introduction
 Journaling file systems are designed to ensure data integrity and consistency after a crash by logging changes before committing them to disk. This approach helps in reducing the recovery time by avoiding full file system checks (fsck) during boot-up.
@@ -1378,7 +1306,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File System Corruption Simulation with fsck.py
 fsck.py is a simple simulator designed to generate and detect file system corruptions. It provides insights into how inconsistencies can arise and how they might be fixed.
@@ -1390,7 +1317,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Identifying Inconsistencies in File Systems
 Using fsck.py, one can introduce and detect corruptions. The tool helps in understanding how different types of inconsistencies manifest and provides a basis for developing robust repair strategies.
@@ -1402,7 +1328,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Repairing Inconsistencies in File Systems
 Repair tools need to handle a variety of inconsistencies based on the information available from file system structures.
@@ -1424,7 +1349,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Complex Inconsistencies in File Systems
 Some inconsistencies may require more complex handling, such as dealing with missing directory entries or broken links.
@@ -1448,7 +1372,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ensuring Data Integrity During File System Repair
 Repair tools must ensure that any changes made to the file system are accurate and do not introduce new inconsistencies.
@@ -1477,7 +1400,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detecting and Fixing File System Inconsistencies with fsck.py
 fsck.py provides a comprehensive toolset for simulating and fixing file system inconsistencies, aiding in the development of robust repair strategies.

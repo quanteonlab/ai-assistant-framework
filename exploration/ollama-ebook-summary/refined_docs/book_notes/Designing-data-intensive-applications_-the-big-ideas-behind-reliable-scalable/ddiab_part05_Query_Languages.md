@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Query Languages for Data
 
 ---
 
-**Rating: 8/10**
 
 #### Relational and Document Databases Convergence
 :p How are relational and document databases becoming more similar over time?
@@ -16,7 +14,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Query Languages: Imperative vs Declarative
 :p What is the difference between an imperative query language and a declarative one?
@@ -42,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Declarative Query Languages
 :p Why are declarative query languages more attractive than imperative ones?
@@ -54,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce Programming Model
 Background context explaining the MapReduce programming model. It is a framework for processing large data sets across many machines, popularized by Google. The Map function processes input data and generates intermediate key-value pairs, while the Reduce function aggregates these pairs to generate output.
@@ -85,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MongoDB MapReduce Example
 Background context explaining how the same query can be implemented in MongoDB using its `mapReduce` function.
@@ -122,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MongoDB Aggregation Pipeline
 Background context explaining how the aggregation pipeline can be used to achieve similar functionality with a more declarative approach.
@@ -157,7 +150,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Graph Data Models Overview
 Background context: In data modeling, many-to-many relationships are crucial. While document and relational models handle simpler cases well, more complex many-to-many connections may require a graph model. A graph consists of vertices (nodes) and edges (relationships). Typical examples include social networks, the web graph, and road networks.
@@ -169,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Property Graph Model
 Background context: The property graph model allows flexibility by using unique identifiers for vertices and edges, along with labels and properties. Vertices can connect to any other vertex through edges, and each edge has labels describing the type of relationship.
@@ -187,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Edge Components in Property Graphs
 Background context: Edges connect two vertices and have unique identifiers, labels to describe the relationship, and associated properties. Efficient traversal is enabled by indexes on tail_vertex and head_vertex.
@@ -206,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Efficient Traversal Using Indexes
 Background context: In property graphs, indexes on `tail_vertex` and `head_vertex` enable efficient traversal. This allows for quick access to incoming or outgoing edges from any vertex.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Object Storage
 
 ---
 
-**Rating: 8/10**
 
 #### Local Disk Failure and Resilience Strategies
 
@@ -123,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Object Storage Ideal for High-Volume Web Traffic and Big Data Processing
 Cloud object storage is designed to handle high-volume web traffic and support big data processing by providing scalable, durable, and highly available storage. These characteristics enable efficient data management and processing, especially when combined with ephemeral compute clusters.
@@ -281,7 +278,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Object Stores vs. File Stores
 Background context: The text discusses how object stores differ from file stores, particularly focusing on their lack of a directory tree structure for managing objects.
@@ -324,7 +320,6 @@ This ensures that any read operation will eventually see the most recent data wr
 ---
 Note: This set of flashcards aims to cover key concepts from the provided text, focusing on differences between object stores and file stores, costs associated with directory-like operations, and methods for achieving strong consistency in object storage.
 
-**Rating: 8/10**
 
 #### Purpose and Use Case Identification
 Background context: As a data engineer, you need to identify the purpose of storing the data. This involves understanding what the data will be used for within your organization.
@@ -406,7 +401,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Lakes Revisited
 Background context: James Dixon, in his blog post "Data Lakes Revisited," discusses how cloud data warehouses are often used to organize massive amounts of unprocessed raw data similar to a true data lake. Cloud data warehouses excel in handling large volumes of structured and semi-structured data but struggle with truly unstructured data such as images or videos.

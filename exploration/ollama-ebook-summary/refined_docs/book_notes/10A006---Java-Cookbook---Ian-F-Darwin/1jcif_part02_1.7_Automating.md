@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 1.7 Automating Dependencies Compilation Testing and Deployment with Apache Maven. Problem. Solution. Discussion
 
 ---
 
-**Rating: 8/10**
 
 #### Maven Overview
 Maven is a build tool for Java projects that automates dependency management, compilation, testing, and deployment. It uses a configuration file called `pom.xml` to specify project details and instructions.
@@ -73,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Maven Central for Dependency Sharing
 Background context: Maven Central is a repository where open-source projects can share their dependency information. This makes it easier for other developers to include your project's dependencies directly in their builds using various build tools, including Gradle and Ant.
@@ -168,7 +165,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuous Integration (CI) Overview
 Continuous Integration is a practice where developers integrate their changes into a shared repository several times a day. This ensures that the integration and testing process is automated, making it easier to detect issues early.

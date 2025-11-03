@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Detecting Concurrent Writes
 
 ---
 
-**Rating: 8/10**
 
 #### Read Repair and Staleness
 Background context explaining read repair, including how it handles stale values. Note that anti-entropy is not used; values can become very old if infrequently read.
@@ -29,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eventual Consistency
 Background context explaining eventual consistency and its importance in quantifying the term "eventually."
@@ -52,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sloppy Quorums and Hinted Handoff
 Background context explaining how quorums work and the challenges of network interruptions, leading to the need for sloppy quorums and hinted handoffs.
@@ -86,7 +82,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Sloppy Quorum Concept
@@ -98,7 +93,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Datacenter Operation in Leaderless Replication
 Background context: Multi-datacenter operation in leaderless replication allows for distributed writes and reads across multiple datacenters without a single leader. This model is suitable for handling network interruptions, latency spikes, and conflicting concurrent writes by ensuring nodes can operate independently within their local clusters.
@@ -123,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detecting Concurrent Writes in Dynamo-Style Databases
 Background context: In Dynamo-style databases, multiple clients can concurrently write to the same key. This leads to conflicts which must be resolved by ensuring nodes have a well-defined ordering of writes or by using conflict resolution mechanisms.
@@ -141,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Last Write Wins (LWW) Conflict Resolution
 
@@ -161,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Concurrent Writes in Cassandra
 
@@ -174,7 +165,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determining Concurrency and Timestamps
 
@@ -187,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Leaderless Replication
 
@@ -200,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Concurrent Writes
 
@@ -215,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Dependency and Concurrency
 Background context: The text discusses how operations can be ordered based on their causal relationship. If one operation depends on another, it is considered to have happened after the first. Conversely, if two operations are unaware of each other, they are said to be concurrent.
@@ -226,7 +213,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrent Operations
 Background context: In distributed systems, operations are considered concurrent if they do not have any causal dependency and are unaware of each other's existence during their execution. Exact timing is less important than the awareness of these operations.
@@ -237,7 +223,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Happens-Before Relationship
 Background context: The concept involves determining if one operation happened before another based on whether the second depends on the first for correctness. This is crucial for understanding concurrency in databases and resolving conflicts.
@@ -248,7 +233,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency and Time in Distributed Systems
 Background context: In distributed systems, exact timing of events is often challenging due to clock differences and network delays. The concept introduces a more abstract notion of concurrency based on awareness rather than absolute time.
@@ -259,7 +243,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Leaderless Replication in Distributed Databases
 Background context: The text explains how leaderless replication works, where a database has multiple replicas that operate independently. Determining the correct sequence of operations is crucial to maintain data consistency.
@@ -270,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Scenario: Concurrent Shopping Cart Operations
 Background context: The text uses an example of two clients adding items to the same shopping cart concurrently, which helps illustrate the concepts of concurrent operations and the need for conflict resolution in a distributed database setting.
@@ -283,7 +265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrent Writes and Versioning
 Background context: In distributed systems, particularly those involving leaderless replication like a shopping cart example, concurrent writes can lead to complex versioning scenarios. This is managed through version numbers that ensure causality and consistency without requiring a central leader.
@@ -320,7 +301,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Dependencies in Replication
 Background context: In the example, clients concurrently modify a shopping cart, leading to multiple writes and maintaining causal dependencies through version numbers. Each write operation depends on previous reads, ensuring that no data is lost and all operations are recorded.
@@ -357,7 +337,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Client Reading Before Writing
 Background context: Clients must read a key before writing to ensure they have the latest state. This helps in managing concurrent writes by ensuring that reads include all non-overwritten values and allow clients to merge these values correctly before writing.
@@ -389,7 +368,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overwriting vs. Concurrent Versions
 Background context: When handling writes in a leaderless replication system, the server must distinguish between overwriting old versions and keeping concurrent ones. This is achieved by comparing version numbers and deciding whether to overwrite or keep based on causality.
@@ -429,7 +407,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sibling Values and Merging
 Sibling values occur when concurrent writes happen to a single key. In such cases, Riak calls them siblings and requires clients to merge these values to avoid data loss.
@@ -441,7 +418,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tombstone Markers
 Tombstone markers indicate deletions when merging siblings. They are used to handle removals in distributed databases where items might have been deleted only on one replica.
@@ -453,7 +429,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Version Vectors
 Version vectors are used in multi-replica systems without a leader to track dependencies between operations and manage concurrent writes.
@@ -465,7 +440,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Context in Riak
 Riak uses causal context to encode version vectors for sending with read operations. This ensures that clients can correctly handle the merging of siblings.
@@ -477,7 +451,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Removals in Siblings
 When items can be removed from a shopping cart, simply taking the union of siblings might not give the correct result. A marker must indicate removal to avoid re-adding deleted items.
@@ -489,7 +462,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Automatic Conflict Resolution with CRDTs
 CRDTs (Conflict-free Replicated Data Types) can automatically merge siblings in sensible ways, including preserving deletions.
@@ -503,7 +475,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### High Availability and Replication
 Replication is used to keep a system running even when one or more machines, including entire data centers, fail. This ensures continuous operation of applications.
@@ -515,7 +486,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Disconnected Operation and Replication
 Replication allows applications to continue functioning during network interruptions when data is kept synchronized across multiple machines.
@@ -527,7 +497,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Latency and Replication
 Geographic placement of data close to users reduces latency, allowing faster interaction with the system.
@@ -539,7 +508,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scalability and Replication
 Multiple replicas can handle higher read volumes compared to a single machine, improving overall system throughput.
@@ -551,7 +519,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single-Leader Replication
 A single leader manages all writes and sends change events to followers, which may serve read requests but can have stale data.
@@ -563,7 +530,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Leader Replication
 Multiple nodes can accept writes, and they communicate data change events among themselves, allowing for more robust systems but complicating fault tolerance.
@@ -575,7 +541,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Leaderless Replication
 Writes are distributed among several nodes, and reads can be performed from any node to detect and correct stale data.
@@ -587,7 +552,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronous vs Asynchronous Replication
 Synchronous replication ensures immediate acknowledgment before committing data changes, while asynchronous replication may delay this process.
@@ -599,7 +563,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consistency Models in Replication
 Consistency models like Read-after-write, Monotonic reads, and Consistent prefix reads help ensure predictable behavior under replication lag.
@@ -613,7 +576,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Concurrency Issues in Multi-Leader and Leaderless Replication
@@ -644,7 +606,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conflict Resolution through Merging Updates
 Background context: When concurrent writes occur in distributed systems, merging the updates is a common approach to resolve conflicts. This involves combining changes made by multiple operations into a single, consistent state.
@@ -683,7 +644,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### References and Further Reading
 Background context: The text references various papers, articles, and books to support the discussion on distributed databases and replication techniques. These sources provide deeper insights into specific technologies and concepts.
@@ -703,7 +663,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Weighted Voting for Replicated Data (Gifford, 1979)
 Background context: David K. Gifford's work on weighted voting for replicated data [44] introduced an approach to handle the challenges of distributed systems where nodes have different weights or priorities in decision-making processes. This method ensures that more important nodes can influence decisions more significantly.
@@ -715,7 +674,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Flexible Paxos (Howard, Malkhi, Spiegelman, 2016)
 Background context: The paper [45] by Heidi Howard, Dahlia Malkhi, and Alexander Spiegelman discusses Flexible Paxos, which revisits the concept of quorum intersection. This method aims to optimize the consensus process in distributed systems, making it more flexible and adaptable to different network conditions.
@@ -727,7 +685,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Re: Absolute Consistency (Blomstedt, 2012)
 Background context: In his email [46], Joseph Blomstedt discusses the challenges of achieving absolute consistency in distributed systems like Riak. The discussion revolves around balancing consistency with other aspects such as availability and partition tolerance.
@@ -739,7 +696,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eventual Consistency (Bailis et al., 2014)
 Background context: The paper [48] by Peter Bailis, Shivaram Venkataraman, Michael J. Franklin, and others provides a detailed analysis of eventual consistency using the PBS tool. It quantifies how eventual consistency performs under different conditions and helps in understanding its behavior.
@@ -751,7 +707,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modern Hinted Handoff (Ellis, 2012)
 Background context: Jonathan Ellis's article [49] on modern hinted handoff discusses an improvement in Cassandra for handling replica placement failures by automatically redirecting read/write requests. This mechanism ensures data remains accessible even if a node is down.
@@ -763,7 +718,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Project Voldemort Wiki (2013)
 Background context: The [50] link points to an older version of the Project Voldemort wiki, which provided documentation and insights into the distributed database system. It was a valuable resource for understanding Voldemort's architecture and usage.
@@ -775,7 +729,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Apache Cassandra 2.0 Documentation (2014)
 Background context: The [51] link leads to the official documentation for Apache Cassandra 2.0, which detailed its features, performance optimizations, and best practices for deployment and management.
@@ -787,7 +740,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Riak Multi-Datacenter Replication (Basho Technologies, 2014)
 Background context: The [52] whitepaper from Basho Technologies detailed how Riak supports multi-datacenter replication, ensuring data consistency across different geographical locations. This is crucial for applications requiring high availability and disaster recovery.
@@ -799,7 +751,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Why Cassandra Doesn’t Need Vector Clocks (Ellis, 2013)
 Background context: In his article [53], Jonathan Ellis argues that Cassandra does not require vector clocks for achieving consistency. He explains how other mechanisms can effectively handle causality in distributed systems.
@@ -811,7 +762,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time, Clocks, and the Ordering of Events (Lamport, 1978)
 Background context: Leslie Lamport's seminal paper [54] introduced fundamental concepts about time and ordering of events in distributed systems. This work laid the groundwork for understanding how to manage causal relationships between events.
@@ -823,7 +773,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dotted Version Vectors (Preguiça, Baquero, Almeida, 2010)
 Background context: [57] by Nuno Preguiça, Carlos Baquero, Paulo Sérgio Almeida, et al., introduces dotted version vectors as a logical clock mechanism for optimistic replication. This method helps manage versioning and causality in distributed systems.
@@ -835,7 +784,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Clocks Revisited (Bailis et al., 2015)
 Background context: Russell Brown's blog post [58] revisits vector clocks to discuss their limitations and how they are used. The discussion provides insights into the practical challenges of implementing vector clocks in distributed systems.
@@ -847,7 +795,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Version Vectors Are Not Vector Clocks (Baquero, 2011)
 Background context: Carlos Baquero's blog post [59] clarifies the distinction between version vectors and vector clocks. This is important for understanding different approaches to managing causality in distributed systems.
@@ -859,7 +806,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioning Overview
 Background context explaining partitioning. Grace Hopper's quote highlights the importance of breaking down databases to avoid limitations and support future needs. The main reason for partitioning is scalability, allowing data to be distributed across many disks and processors.
@@ -871,7 +817,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioned Databases
 Explanation about the main reason for wanting to partition data and how it can be achieved.
@@ -883,7 +828,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shared-Nothing Clusters
 Explanation about shared-nothing clusters and their relevance to partitioning.
@@ -895,7 +839,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Indexing and Partitioning Interaction
 Explanation about how indexing interacts with partitioning.
@@ -907,7 +850,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rebalancing Partitions
 Explanation about rebalancing when adding or removing nodes.
@@ -919,7 +861,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Request Routing and Query Execution
 Explanation about how requests are routed to the right partitions.
@@ -931,7 +872,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioning and Replication Combined
 Explanation about combining partitioning with replication for fault tolerance.
@@ -945,7 +885,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Leader-Follower Replication Model
 Background context explaining the concept of leader-follower replication model. Each partition's leader is assigned to one node, and its followers are assigned to other nodes. The leader handles all write operations, while followers replicate these writes from the leader. Read operations can be handled by either leaders or followers.
@@ -980,7 +919,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioning of Key-Value Data
 Background context explaining how partitioning is used to spread data and query load evenly across nodes. The goal is to distribute the data so that each node takes a fair share, allowing multiple nodes to handle increased loads.
@@ -1006,7 +944,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioning by Key Range
 Background context explaining key range partitioning as an example of how to assign ranges of keys (from some minimum to some maximum) to each partition. This method allows for efficient querying based on key ranges.
@@ -1032,7 +969,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Skew and Hot Spots in Partitioning
 Background context explaining skew and hot spots, terms used to describe unfair data distribution that can make partitioning less effective. A hot spot occurs when a single partition receives disproportionately high load.
@@ -1060,7 +996,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Key Range Partitioning Strategy
 
@@ -1079,7 +1014,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hash-Based Partitioning Strategy
 
@@ -1098,7 +1032,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sensor Database Example
 
@@ -1115,7 +1048,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Partitioning by Hash of Key
@@ -1127,7 +1059,6 @@ Consistent hashing is a method for distributing load across an internet-wide sys
 
 ---
 
-**Rating: 8/10**
 
 #### Consistent Hashing
 Background context explaining the concept. Consistent hashing was defined by Karger et al. and is used in systems like CDNs. It uses randomly chosen partition boundaries to avoid needing central control or distributed consensus.
@@ -1149,7 +1080,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Key-Range Partitioning vs. Hash Partitioning
 Background context explaining the concept. Key-range partitioning maintains adjacency of keys, allowing efficient range queries. However, hash partitioning loses this property as keys are distributed across partitions.
@@ -1160,7 +1090,6 @@ Key-range partitioning supports efficient range queries because it keeps related
 
 ---
 
-**Rating: 8/10**
 
 #### Cassandra's Compound Primary Key with Hash Partitioning
 Background context explaining the concept. In Cassandra, a compound primary key can be declared with multiple columns where only the first part is hashed for partitioning, while other parts are used as an index for sorting data in SSTables (sorted string tables).
@@ -1179,7 +1108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioning Strategies Summary
 Background context explaining the concept. Different systems like Cassandra, Riak, Couchbase, and Voldemort handle partitioning differently: Cassandra uses compound primary keys with hash partitioning, while others either do not support range queries or use consistent hashing which is less effective for databases.

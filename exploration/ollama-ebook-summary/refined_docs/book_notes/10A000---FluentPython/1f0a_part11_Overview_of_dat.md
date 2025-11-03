@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Overview of data class builders
 
 ---
 
-**Rating: 8/10**
 
 #### Classic Named Tuples
 Background context: The classic `NamedTuple` is a factory function from the `collections` module that simplifies creating named tuples. It allows you to define classes with fields and automatically generates methods like `__init__`, `__repr__`, and `__eq__`.
@@ -119,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variable Annotations and `typing.Optional`
 
@@ -204,7 +201,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Instance Attributes and Class Attributes Behavior
 Background context: The provided text discusses how instance attributes and class attributes behave within a `DemoDataClass`. It highlights that while `a` and `b` are typical instance attributes, `c` is actually a class attribute accessed via an instance. This example illustrates the mutability of instances in Python.

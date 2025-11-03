@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A001---The-Book-of-Kubernetes_-A-Complete-Guide-to-Container-Orchestration-No-Starch-Press-2022Alan-Hohn--_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 2 PROCESS ISOLATION
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Service and Traffic Distribution
@@ -32,7 +30,6 @@ This setup indicates that the Service is load-balancing traffic across five Pods
 
 ---
 
-**Rating: 8/10**
 
 #### Kubernetes and Microservices Architecture
 Kubernetes enables the deployment of applications as a set of containers, providing scalability and self-healing capabilities through its orchestration features. Modern applications are often designed using microservices architecture to achieve better scalability and reliability by deploying components independently.
@@ -56,7 +53,6 @@ This would start an Nginx container replicated across three instances managed by
 
 ---
 
-**Rating: 8/10**
 
 #### Process Isolation Using Linux Namespaces
 Linux namespaces provide a mechanism for isolating processes and resources from the host environment. This isolation can be used to create a distinct system within the same physical or virtual machine, which is useful in containerization.
@@ -91,7 +87,6 @@ This code creates a new PID namespace and runs a shell command inside it, printi
 
 ---
 
-**Rating: 8/10**
 
 #### Process Isolation Overview
 Background context explaining the need for process isolation. Processes share a single computer, but they must be isolated to prevent interference and ensure fair resource usage. This includes managing CPU, memory, storage, and network resources.
@@ -102,7 +97,6 @@ The primary reason for needing process isolation is to allow multiple programs t
 
 ---
 
-**Rating: 8/10**
 
 #### Filesystem Permissions and Process Isolation
 Background context explaining how filesystem permissions control visibility and actions of processes. Linux uses owner and group permissions for read, write, execute capabilities.
@@ -117,7 +111,6 @@ This command shows file permissions where only the owner ('syslog') can write to
 
 ---
 
-**Rating: 8/10**
 
 #### Chroot for Process Isolation
 Background context on `chroot` and its role in isolating processes by limiting their view of the filesystem.
@@ -135,7 +128,6 @@ This command sequence sets up a new root directory for the process, making only 
 
 ---
 
-**Rating: 8/10**
 
 #### Containers and Process Isolation
 Background context on how containers use namespaces to provide isolation. Namespaces create separate views of system resources like processes, users, filesystems, and network interfaces.
@@ -154,7 +146,6 @@ This command creates an isolated environment where the process inside is not aff
 
 ---
 
-**Rating: 8/10**
 
 #### Process Isolation via Containers
 
@@ -167,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Container Platforms and Container Runtimes
 
@@ -180,7 +170,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Container Runtimes Overview
 Background context: Container runtimes are low-level libraries that form the foundation of containerized applications. They handle running and managing containers but do not provide user-facing tools for direct interaction, as these tasks are typically handled by higher-level orchestration platforms like Docker or Kubernetes.
@@ -192,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linux Namespaces Overview
 Background context explaining the role of namespaces in containerization. Linux namespaces provide a way to isolate processes from each other and from the host system, ensuring that a process sees only the resources it is supposed to access. Different types of namespaces (mnt, uts, ipc, pid, net) are used for various levels of isolation.

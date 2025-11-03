@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 31)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 22.5 Tandem Network of MG1PS Servers
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Response Time for Jobs
 Background context: The provided text discusses calculating the mean response time for jobs in a tandem network of M/G/1/PS servers. The system is composed of two servers, each with two phases (a total of 4 phases), and it uses a product form guess for the limiting probabilities.
@@ -135,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network of PS Servers with Probabilistic Routing
 Background context: This concept describes a network of PS (Processor Sharing) servers where jobs are routed probabilistically. The system has Poisson outside arrivals and general Coxian service times. The main result is that such networks can have a product form solution, similar to Jackson networks but with different distributions.
@@ -205,7 +202,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### BCMP Theorem Overview
 Background context: This section discusses the application of the method of phases, specifically how it applies to networks with time-sharing (PS) servers using the BCMP theorem. It mentions that under certain conditions, an M/Cox/1/PS queue can behave like an M/M/1/FCFS queue and that a network of such queues has product form.

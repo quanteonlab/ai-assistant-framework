@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 26)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.7 Qiskit Plus IBM Quantum
 
 ---
 
-**Rating: 8/10**
 
 #### Comparing Simulation Results on Aer and IBM Quantum
 The Qiskit Aer simulator can be used to run circuits and simulate their states. The results from the simulator are compared with those obtained from running the same circuit on an actual quantum device.
@@ -31,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quantum Adder Code
 Background context on the code provided for constructing the quantum adder circuit.
@@ -64,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quantum Fourier Transform Overview
 The Quantum Fourier Transform (QFT) is a quantum version of the Discrete Fourier Transform, used extensively in quantum algorithms such as Shor's algorithm. It transforms an N-qubit quantum state into its frequency components, which are represented by complex numbers.

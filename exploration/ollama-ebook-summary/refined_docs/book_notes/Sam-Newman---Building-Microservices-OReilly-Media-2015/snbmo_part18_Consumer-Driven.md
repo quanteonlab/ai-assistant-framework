@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Consumer-Driven Tests to the Rescue
 
 ---
 
-**Rating: 8/10**
 
 #### Test Ownership and Maintenance
 Background context: For end-to-end tests involving multiple services, determining who should write and maintain these tests is crucial. Initially, one might think each service's team owns their respective tests. However, when dealing with shared end-to-end tests, deciding on ownership becomes more complex.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example for Flaky Test Identification
 Background context: To identify and track down flaky tests, it's useful to log detailed information about test failures.
@@ -50,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dedicated Team Ownership vs. Joint Ownership
 Background context: A common organizational response is to centralize test writing in a dedicated team, but this can lead to decreased involvement from the original service developers, causing delays and reduced knowledge of the tests' specifics.
@@ -66,7 +62,6 @@ Joint ownership ensures:
 
 ---
 
-**Rating: 8/10**
 
 #### Slowness of End-to-End Test Suites
 Background context: The issue arises when end-to-end test suites are slow to run, often due to lack of optimization and comprehensive coverage, leading to delays in development cycles and reduced developer engagement.
@@ -81,7 +76,6 @@ The main problems include:
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Execution and Test Suite Optimization
 Background context: Running tests in parallel can mitigate the slowness issue, but it's not a substitute for actively optimizing the suite by removing redundant or flaky tests. Tools like Selenium Grid facilitate parallel execution.
@@ -97,7 +91,6 @@ Improvements include:
 
 ---
 
-**Rating: 8/10**
 
 #### Joint Ownership as the Best Balance
 Background context: The ideal approach is a shared ownership model where multiple teams contribute to and are responsible for the end-to-end test suite. This balances centralization with decentralization, ensuring both accountability and flexibility.
@@ -114,7 +107,6 @@ Joint ownership improves:
 
 ---
 
-**Rating: 8/10**
 
 #### Long Feedback Cycles and Pile-Ups
 Background context: Describes how long feedback cycles from end-to-end tests impact developer productivity and deployment processes, leading to pile-ups where multiple changes accumulate during test failures.
@@ -128,7 +120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### End-to-End Test Journeys vs. Stories
 Background context: The passage discusses the challenges and limitations of end-to-end (E2E) tests when dealing with multiple services, highlighting the potential for test suite bloat and inefficiency.
@@ -142,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Core Journeys vs. Individual Functionalities
 Background context: The passage suggests focusing on core journeys rather than individual functionalities to manage the complexity of end-to-end tests.
@@ -156,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consumer-Driven Contracts (CDCs)
 Background context: The passage introduces consumer-driven contracts as an alternative to traditional end-to-end testing, focusing on ensuring service interoperability.
@@ -170,7 +159,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consumer-Driven Tests in Practice
 Background context: The passage explains how to implement and benefit from consumer-driven tests, focusing on their integration into CI/CD pipelines.
@@ -196,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Integration into Test Pyramid
 Background context: The passage describes where consumer-driven tests fit in the test pyramid and their unique focus.
@@ -228,7 +215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overview of Pact
 Pact is a consumer-driven testing tool that was originally developed for Ruby but now supports JVM and .NET. It allows consumers to define expectations about producer behavior, creating JSON-based pact files that are used to verify the producer's API. This approach ensures that both parties have a clear understanding of their interaction.
@@ -239,7 +225,6 @@ Pact enables consumer-driven testing by allowing developers to define what they 
 
 ---
 
-**Rating: 8/10**
 
 #### Pact Workflow Overview
 In the Pact workflow, the consumer starts by defining expectations using a Ruby DSL. These expectations are then tested against a local mock server to create a pact file. On the producer side, this JSON pact file is used to verify that the API behaves as expected. This process requires both the consumer and producer to be in different builds.
@@ -270,7 +255,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pact Specification File
 The pact file is a JSON specification that formalizes the interaction between consumer and producer. It can be hand-coded but using the language API like Pact’s Ruby DSL makes it easier, especially for testing purposes.
@@ -283,7 +267,6 @@ Using the language API (like Pact’s Ruby DSL) makes it easier to generate thes
 
 ---
 
-**Rating: 8/10**
 
 #### Using Pact for Multi-Language Projects
 Pact's ability to use a JSON-based pact file across multiple languages is particularly useful. For example, you can define expectations in Ruby but verify them against a Java implementation using the JVM port of Pact.
@@ -315,7 +298,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agile Stories and Conversations
 Agile stories are placeholders for conversations that define what a service API should look like. CDCs (Conversations Driven Contracts) codify these discussions and serve as triggers for evolving APIs when they break.
@@ -326,7 +308,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CDCs and Communication
 CDCs require good communication and trust between consumer and producing services. In intra-team or same-person scenarios, this is easier but in third-party or large-scale public API consumption, frequent communication and trust might be lacking.
@@ -337,7 +318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### End-to-End Tests vs. CDCs
 While end-to-end tests are valuable, they have significant drawbacks as the number of moving parts increases. Many organizations prefer CDCs for intra-team or internal APIs but use end-to-end tests with semantic monitoring to catch issues before production.
@@ -348,7 +328,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blue/Green Deployments
 Blue/green deployments involve deploying two versions of an application simultaneously, where one receives live traffic while the other is tested in situ. This technique helps detect and fix issues before they affect all users.
@@ -381,7 +360,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Canary Releasing
 Canary releasing is a deployment strategy where a small percentage of users are directed to the new version of an application. This approach helps detect issues without impacting all users and provides feedback for gradual rollouts.

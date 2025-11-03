@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 49)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 32.5 Exercises
 
 ---
 
-**Rating: 8/10**
 
 #### Warmup: Preemptive Priority Queue M/M/1 Model
 Background context: The problem considers an M/M/1 queue with n preemptive priority classes, where class i jobs arrive at rate \( \lambda_i \). All job sizes are exponentially distributed with mean 1. The task is to derive a simple expression for the mean response time of the kth class.
@@ -25,7 +23,6 @@ where \( \mu \) is the service rate and \( \lambda_k \) is the arrival rate of t
 
 ---
 
-**Rating: 8/10**
 
 #### cμ-Rule: Optimal Scheduling Policy
 Background context: The cμ-rule states that in a single-server queue with n classes and exponential service times, jobs from the class with the highest product of cost \( c_i \) and mean service time \( \frac{1}{\mu_i} \) should be given priority. This rule aims to minimize operational costs associated with holding jobs in the system.
@@ -38,7 +35,6 @@ When all holding costs \( c_i \) are set to be the same, i.e., \( c_1 = c_2 = \c
 
 ---
 
-**Rating: 8/10**
 
 #### Work Sum Inequality for cμ-Rule
 Background context: The cμ-rule is about minimizing operational costs by prioritizing classes in order of their cost \( c_i \) and mean service time \( \frac{1}{\mu_i} \). A key part of the proof involves showing that the cμ-policy minimizes a certain sum of work.
@@ -53,7 +49,6 @@ The inequality states that under the cμ-policy, the sum of expected work for al
 
 ---
 
-**Rating: 8/10**
 
 #### Proving Cost Minimization with cμ-Rule
 Background context: To prove that the cμ-policy minimizes operational costs, we need to show that it minimizes a certain sum of work first. Then, this result can be translated into a cost-minimizing policy.
@@ -93,7 +88,6 @@ Since \( \sum_{i=1}^j E[W_{c\mu i}] \leq \sum_{i=1}^j E[W_\pi i] \) and the cons
 
 ---
 
-**Rating: 8/10**
 
 #### Response Time Analysis of SRPT
 The mean response time for SRPT in the M/G/1 setting is given by:
@@ -112,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Waiting Time Intuition
 The waiting time for SRPT can be understood as:
@@ -125,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Residence Time Calculation
 The residence time in SRPT is calculated as:
@@ -138,7 +130,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of WSRPT x
 Background context: WSRPT x (Work that an arrival of size \( x \) finds in the system relevant to itself) is a crucial concept. It includes both jobs originally smaller than or equal to \( x \) and those larger than \( x \) but now reduced to size \( x \).
@@ -150,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Analysis Trick for Work Composition
 Background context: To analyze WSRPT x, a trick is employed to break the queueing system into two parts: 
@@ -164,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Queue Analysis for Type a Jobs
 Background context: To determine \( E[TQ] \), the mean delay experienced by an arrival of type a into system X (a combination of type a and b jobs):
@@ -183,7 +172,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary
 Background context: The key steps involve breaking down the problem into simpler components (type a and b jobs), analyzing each part separately, and combining them using a specific formula.

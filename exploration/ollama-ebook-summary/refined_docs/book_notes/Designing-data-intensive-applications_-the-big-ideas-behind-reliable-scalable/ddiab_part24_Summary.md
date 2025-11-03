@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Network Packet Loss and Delay
 Network packets can be lost or arbitrarily delayed, and replies may also suffer from the same fate. This makes it challenging to determine if a message was successfully delivered without receiving confirmation.
@@ -123,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consistency Guarantees Overview
 Background context explaining the concept of consistency guarantees and their importance in distributed systems. The text highlights that most replicated databases provide eventual consistency, where all read requests eventually return the same value after a certain period.
@@ -212,7 +209,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability Overview
 Background context explaining linearizability. The concept aims to make a system appear as if there is only one copy of the data and all operations on it are atomic, ensuring recency guarantees.
@@ -259,7 +255,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability Concept
 
@@ -356,7 +351,6 @@ Client B's final read is not linearizable because it returns a value (1) that wa
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Compare-and-Swap (CAS) Operation
 Background context: An atomic compare-and-set operation is a fundamental building block for ensuring consistency in concurrent systems. It checks if the current value of a variable matches an expected value and, if so, updates it to a new value atomically without interference from other operations.

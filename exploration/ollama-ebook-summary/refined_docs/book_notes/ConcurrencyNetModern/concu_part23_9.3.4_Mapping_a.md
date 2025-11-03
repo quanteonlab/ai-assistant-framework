@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.3.4 Mapping asynchronous operation the Async.map functor
 
 ---
 
-**Rating: 8/10**
 
 #### AsyncRetryBuilder and Retry Logic
 Background context: The AsyncRetryBuilder is a custom computation expression that extends F# to handle retries for asynchronous operations. It allows retrying an operation up to three times with a delay of 250 milliseconds between each attempt.
@@ -23,7 +21,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Global Computation Expression for Asynchronous Operations
 Background context: A global value identifier can be created for a computation expression to reuse it in different parts of the program. This is useful when the same async workflow or sequence needs to be executed multiple times.
@@ -41,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Extending the Asynchronous Workflow to Support Task Types
 Background context: The F# asynchronous computation expression can be extended to work with `Task` types, which are common in .NET but not natively supported by the default F# async workflow.
@@ -64,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mapping Asynchronous Operations with `Async.map`
 Background context: The `Async.map` function allows you to map a function over an asynchronous computation, applying the function only after the async operation completes.
@@ -94,7 +89,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Functional Programming in F#
 Background context: This section discusses asynchronous functional programming, focusing on using `Async.map` and `Async.Parallel` for efficient parallel execution of operations. These functions are part of F#'s powerful asynchrony support to handle I/O-bound tasks without blocking the main thread.
@@ -115,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Execution with `Async.Parallel`
 Background context: The `Async.Parallel` function in F# allows for efficient parallel execution of multiple asynchronous computations. It leverages the scalability properties of the .NET thread pool and controlled overlapping by modern operating systems to maximize resource utilization.
@@ -135,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Composing Asynchronous Workflows
 Background context: This example demonstrates how to build and compose asynchronous workflows in F# for efficient image processing tasks. The `downloadMediaCompAsync` function handles downloading and processing images, while `transformAndSaveImage` applies transformations.
@@ -156,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Retrying Asynchronous Operations
 Background context: The `retry` computation builder in F# is used to handle retries of asynchronous operations, ensuring robustness and fault tolerance.
@@ -170,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Side Effects with `Async.tap`
 Background context: The `Async.tap` function is used to apply side effects (like saving images) without affecting the result of an asynchronous workflow. It's useful for logging or performing actions after computations complete.
@@ -189,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Async.tap Operator Implementation
 Background context: The `Async.tap` operator is a utility function that applies an asynchronous transformation to a value without waiting for its result. This operator is particularly useful when you want to perform side effects (like logging) after starting some asynchronous computation, but don't need the results of those computations.
@@ -215,7 +204,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Async.Parallel Function
 Background context: The `Async.Parallel` function allows you to run multiple asynchronous computations concurrently and wait until all of them complete. It aggregates the results into a single array, which can then be iterated over.
@@ -278,7 +266,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Async.StartCancelable
@@ -302,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Async.StartWithContinuations
 Background context explaining that `Async.StartWithContinuations` is a powerful operator for starting an asynchronous workflow and handling its completion in multiple ways. It allows specifying handlers for the result, exception, or cancellation.
@@ -332,7 +318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Async.Ignore
 Background context explaining that `Async.Ignore` is a method used to ignore the result of an asynchronous operation, effectively returning unit (`()`) once the computation completes.
@@ -361,7 +346,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Async.Start and Asynchronous Computation Expressions
 Background context explaining that `Async.Start` is used to start an asynchronous workflow without returning a value. It queues the computation for execution in the thread pool and returns control immediately, allowing other tasks to run while this one runs asynchronously.
@@ -385,7 +369,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Workflow Cancellation Support
 Background context explaining the importance of cancellation in long-running, non-blocking operations. The F# asynchronous workflow supports cancellation natively and allows you to cancel a workflow and all its child computations.
@@ -413,7 +396,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Async.TryCancelled and Composable Cancellation
 Background context explaining that `Async.TryCancelled` allows you to handle cancellations with custom behavior and still return a value. It’s useful for adding extra code when an asynchronous operation is cancelled.

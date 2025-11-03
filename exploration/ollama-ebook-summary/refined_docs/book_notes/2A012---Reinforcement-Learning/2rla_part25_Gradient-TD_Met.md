@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Gradient-TD Methods
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient-TD Methods Overview
 Background context explaining the goal of using SGD methods for minimizing the PBE (Policy Beam Error) under o↵-policy training with nonlinear function approximation. The aim is to find an SGD method that has robust convergence properties and is computationally efficient.
@@ -105,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Emphatic-TD Methods Overview
 Emphatic-TD methods are a strategy aimed at obtaining efficient and stable off-policy learning methods with function approximation. The core idea is to adjust the distribution of state updates so that it mimics the on-policy distribution, thereby ensuring stability and convergence.
@@ -192,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variance Control in Off-Policy Methods
 
@@ -349,7 +345,6 @@ function defineTargetPolicy(state) {
 ```
 x??
 
-**Rating: 8/10**
 
 ---
 #### Off-Policy Learning Challenge
@@ -468,7 +463,6 @@ public void updateEmphaticTD(double alpha, double emphasis) {
 x??
 ---
 
-**Rating: 8/10**
 
 #### Linear TD(λ) (Sutton, 1988)
 Background context: The first semi-gradient method was linear TD(0), introduced by Sutton in 1988. This method is a foundational concept in off-policy learning and variance reduction techniques.

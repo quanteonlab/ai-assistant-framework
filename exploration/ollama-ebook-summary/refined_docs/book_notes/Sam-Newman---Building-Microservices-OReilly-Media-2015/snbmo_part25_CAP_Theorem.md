@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** CAP Theorem
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### CAP Theorem Overview
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consistency in Distributed Systems
 Background context: In a distributed system, consistency ensures that every read operation will return the most recent write operation made by any node. However, achieving strong consistency across a network where nodes might fail or be partitioned is challenging.
@@ -31,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Availability in Distributed Systems
 Background context: Availability refers to the system's ability to process requests at all times. In a highly available distributed system, every request should receive a response, even if some parts of the system fail.
@@ -43,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partition Tolerance in Distributed Systems
 Background context: Partition tolerance ensures that the system continues to operate and maintain consistency even when communication between nodes fails (i.e., network partitions occur).
@@ -55,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Scenario with Two Data Centers
 Background context: Consider an inventory service deployed across two data centers with databases in each center that synchronize via replication. This setup can help distribute the load and ensure high availability, but it introduces challenges related to consistency and partition tolerance.
@@ -67,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Partition Failures with Replication
 Background context: When partition failures occur in a distributed system, replication techniques are used to ensure that changes made in one part of the network can eventually be propagated to other parts. However, this introduces challenges in maintaining consistency across all nodes.
@@ -79,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-offs in Distributed Systems
 Background context: The CAP theorem highlights that achieving all three properties—consistency, availability, and partition tolerance—is not possible in a distributed system. Designers must choose which two of these properties are most critical for their specific use case.
@@ -93,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### AP System
@@ -105,7 +96,6 @@ An AP system refers to a situation where availability and partition tolerance ar
 
 ---
 
-**Rating: 8/10**
 
 #### Eventually Consistent Systems
 Background context: To maintain high availability and partition tolerance (AP), systems often accept that data inconsistencies will exist temporarily. This means updates may take time to propagate across all nodes, leading to a state of eventual consistency.
@@ -116,7 +106,6 @@ An eventually consistent system accepts that after a network partition heals, al
 
 ---
 
-**Rating: 8/10**
 
 #### Sacrificing Availability for Consistency (CP System)
 Background context: To ensure consistency across multiple nodes, nodes must communicate and coordinate updates. During a partition, if nodes cannot talk to each other, they lose the ability to enforce consistency rules, leading to potential inconsistency issues.
@@ -127,7 +116,6 @@ When maintaining consistency (C), nodes must stay in sync even during partitions
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Locking Challenges
 Background context: Ensuring consistent reads across multiple database nodes requires transactional reads that involve locking mechanisms. However, implementing and managing these locks can lead to significant performance issues and complications.
@@ -138,7 +126,6 @@ Distributed locking is challenging because it involves coordinating between diff
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Distributed Locking in Java
 Background context: Implementing a distributed lock mechanism typically involves using external services like Redis or implementing custom solutions with care due to the complexity involved.
@@ -173,7 +160,6 @@ The `acquireLock` method attempts to set a key with an expiry time. If the lock 
 
 ---
 
-**Rating: 8/10**
 
 #### CAP Theorem Overview
 Background context explaining the core idea of the CAP theorem. It states that in distributed computer systems, it is impossible to simultaneously guarantee all three of these properties: Consistency (C), Availability (A), and Partition Tolerance (P). Typically, a system can only have at most two of these guarantees.
@@ -184,7 +170,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CP vs AP Systems
 Background context discussing the trade-offs between CP and AP systems in distributed environments. Consistent, Partition-Tolerant (CP) systems prioritize consistency over availability and partition tolerance. Available, Partition-Tolerant (AP) systems sacrifice consistency for availability and partition tolerance. The decision on which to choose depends heavily on the specific requirements of the application.
@@ -195,7 +180,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eventual Consistency
 Background context explaining eventual consistency in distributed systems. In an eventually consistent system, all operations are processed and eventually completed successfully. Eventually, all nodes will reflect the same state; however, until that point, reads might return stale data.
@@ -206,7 +190,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Choosing Between AP and CP
 Background context discussing how to decide between an AP or CP system based on business requirements. The decision depends on understanding whether a small amount of inconsistency is acceptable (AP) or if strong consistency is necessary at all times (CP).
@@ -217,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Microservice Consistency
 Background context on how different services within the same application can have varying consistency requirements. An entire system doesn't need to be uniformly CP or AP; individual microservices can have different guarantees based on their specific use cases.
@@ -228,7 +210,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sacrificing Partition Tolerance
 Background context on the challenges of building systems without partition tolerance. A system without partition tolerance cannot operate over a network and must run as a single process locally, making it impractical for distributed applications.
@@ -241,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-offs in CAP Theorem
 Background context explaining the trade-offs between Consistency, Availability, and Partition Tolerance as described by the CAP theorem. It's important to understand that while a system can fully achieve either consistency or availability (and sometimes both) in the absence of partitioning, in the presence of partitions, the choice is forced.
@@ -272,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nuanced Trade-offs in Cassandra
 Background context explaining how Cassandra allows for nuanced trade-offs between consistency and availability, offering different levels of quorum settings.
@@ -306,7 +285,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Discovery in Microservices
 Background context explaining how service discovery becomes critical as the number of microservices increases, highlighting its importance for monitoring and inter-service communication.
@@ -334,7 +312,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### DNS Service Discovery
 Background context: DNS (Domain Name System) is a fundamental part of the internet, allowing us to map human-readable domain names to IP addresses. In microservices architecture, using DNS for service discovery can help developers quickly locate services without knowing their current IP addresses.
@@ -354,7 +331,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Load Balancers with DNS
 Background context: To mitigate the issues of stale entries and frequent updates, one can use DNS to point to a load balancer. The load balancer then manages routing traffic to individual instances.

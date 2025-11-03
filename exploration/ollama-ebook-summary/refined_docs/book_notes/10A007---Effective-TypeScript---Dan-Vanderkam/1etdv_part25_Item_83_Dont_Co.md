@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 83 Dont Consider Migration Complete Until You Enable noImplicitAny
 
 ---
 
-**Rating: 8/10**
 
 #### Starting Migration by Adding @types
 
@@ -219,7 +217,6 @@ These settings help in ensuring that your TypeScript code is robust and type-saf
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Understand the Relationship Between TypeScript and JavaScript

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11.3 Advanced Lighting and Global Illumination
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Choosing a Scene Graph for Game Rendering
@@ -28,7 +26,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advanced Lighting and Global Illumination
 Background context: For rendering photorealistic scenes, advanced lighting techniques are crucial to achieve realistic effects. These techniques often involve complex algorithms beyond the scope of this discussion but are widely used in the game industry.
@@ -43,7 +40,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Normal Mapping
 Background context: Normal mapping allows for detailed surface representations using texture maps. This technique enhances the appearance of a 3D model without increasing its polygon count significantly.
@@ -58,7 +54,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Normal Mapping in Practice
 Background context: An example of normal mapping involves using texture maps to simulate intricate details on a surface. This technique can make a single triangle appear highly detailed and realistic.
@@ -75,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Normal Vectors Encoding
 Background context: Normal vectors are often encoded using RGB color channels of a texture to represent surface orientation. This method overcomes the issue that RGB values are strictly positive, whereas normal vector components can be negative. Sometimes only two coordinates are stored, and the third is calculated at runtime under the assumption that surface normals are unit vectors.
@@ -97,7 +91,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Heightmaps
 Background context: A heightmap is a grayscale image that encodes the height of an ideal surface relative to the triangle mesh. This information can be used for various purposes such as bump mapping, parallax occlusion mapping, and displacement mapping.
@@ -126,7 +119,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bump Mapping, Parallax Occlusion Mapping, Displacement Mapping
 Background context: These are techniques used to simulate surface details such as bumps, dents, or fine textures without increasing the number of vertices. Bump mapping uses a heightmap to generate normal vectors that appear bumpy on a flat surface. Parallax occlusion mapping uses height information to adjust texture coordinates, creating depth effects. Displacement mapping physically moves vertices based on height values.
@@ -162,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Specular Power Map
@@ -177,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Environment Mapping
 Environment mapping is a technique used to simulate reflections on surfaces by projecting the scene or environment onto the surface of an object. It provides a cost-effective way to achieve convincing reflections.
@@ -191,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spherical Environment Maps
 Spherical environment maps represent the environment surrounding an object using a fisheye lens-like image. They are addressed using spherical coordinates, which can lead to resolution issues at higher angles.
@@ -205,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cube Maps
 Cube maps are used to avoid the resolution issues found in spherical environment maps. They consist of six separate images (one for each primary direction) pieced together.
@@ -219,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### High Dynamic Range Lighting
@@ -235,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Global Illumination
 Background context: Global illumination (GI) methods account for how light interacts with multiple objects in a scene. These interactions include shadows, reflections, caustics, and color bleeding between objects.
@@ -250,7 +236,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shadow Rendering
 Background context: Shadows are created when an object blocks the path of light, causing darker regions on other surfaces. Real-world shadows have blurry edges due to the angular spread of light rays from real-world light sources.
@@ -266,7 +251,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shadow Volumes Overview
 Shadow volumes are a technique used to generate shadows by extruding silhouette edges of shadow-casting objects. This creates a geometry that occludes light from reaching parts of the scene.
@@ -278,7 +262,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stencil Buffer Usage with Shadow Volumes
 In the shadow volume technique, a stencil buffer is used to determine which parts of the screen are in shadow. The stencil buffer stores integer values for each pixel.
@@ -290,7 +273,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shadow Map Technique Overview
 Shadow mapping involves rendering a depth map of the scene from the light source's point of view, which is then used to determine if fragments are in shadow.
@@ -302,7 +284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shadow Map Generation Process
 Shadow maps are generated by rendering the scene with only depth information and saving this to a texture. This texture is then used to determine if fragments are in shadow during regular rendering.
@@ -316,7 +297,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shadow Map Usage in Rendering
 During regular rendering, the shadow map is used to determine if fragments are occluded by closer geometry from the light’s perspective.
@@ -330,7 +310,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Perspective Projection for Shadow Mapping
 Background context: For rendering shadow maps, a perspective projection is used from the point of view of a particular light source. This method accurately models how objects would cast shadows based on their relative distances and positions.
@@ -341,7 +320,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Orthographic Projection for Shadow Mapping (Directional Light)
 Background context: For directional lights, an orthographic projection is employed. This approach simplifies depth calculations as the light is considered infinitely far away and parallel in all directions.
@@ -352,7 +330,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shadow Mapping Process
 Background context: The shadow mapping process involves drawing the scene from a light source's perspective and calculating which fragments are in shadow by comparing their light-space z-coordinates to the values stored in the shadow map.
@@ -363,7 +340,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ambient Occlusion Technique
 Background context: Ambient occlusion (AO) models soft shadows caused by ambient lighting, providing a sense of how accessible each point on a surface is to light. This technique enhances realism by making areas less exposed to indirect illumination appear darker.
@@ -374,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ambient Occlusion Computation
 Background context: To compute ambient occlusion, a large hemisphere is constructed around each point on the surface, and its visibility from the point is assessed. This information can be precomputed for static objects and stored in texture maps.
@@ -385,7 +360,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Precomputation for Ambient Occlusion
 Background context: Since ambient occlusion depends only on view direction and not incident light direction, it can be precomputed offline for static objects. The results are typically stored in a texture map to save real-time computation.
@@ -398,7 +372,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Reflections
@@ -427,7 +400,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deferred Rendering
 Background context: In traditional triangle-rasterization based rendering, lighting calculations are performed in world space, view space or tangent space, leading to inefficiencies such as unnecessary shading work and the proliferation of different shader variants.
@@ -441,7 +413,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### G-Buffer
 Background context: In deferred rendering, the G-buffer stores all necessary information for subsequent lighting stages in screen space. The G-buffer can be implemented as multiple buffers or conceptually as a single rich frame buffer.
@@ -455,7 +426,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Physically Based Shading (PBS)
 Background context: Traditional game lighting engines require artists to tweak various non-intuitive parameters across multiple systems to achieve a desired "look" in-game.
@@ -471,7 +441,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Physically Based Shading Models
 Physically based shading models are designed to mimic real-world lighting interactions with surfaces, allowing for more accurate and intuitive material appearance. They use parameters that represent physical properties such as reflectance, roughness, and metallic-ness. These models can help in creating materials that behave similarly under different lighting conditions.
@@ -483,7 +452,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Particle Rendering Systems
 Particle rendering systems handle the creation and display of amorphous objects like smoke, sparks, flames, etc., which are composed of a large number of relatively simple geometric entities. These particles often require specific rendering techniques due to their translucent nature and camera-facing properties.
@@ -495,7 +463,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Post Effects and Overlays
 Post effects and overlays extend the basic 3D rendering pipeline to include full-screen visual elements such as particle effects, decals, hair, water, and text for HUDs. These post-processes apply various visual effects like vignettes, motion blur, and color enhancements.
@@ -507,7 +474,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rendering Text and HUDs
 The game’s menu system and heads-up display (HUD) are typically rendered as 2D or 3D graphics overlaid on top of the main 3D scene. This involves rendering text and other UI elements that provide information to the player.
@@ -519,7 +485,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Camera-Facing Particle Geometry
 Particle effects often require camera-facing geometry to ensure that each quad always points directly at the camera's focal point. This ensures proper visual representation but can complicate rendering.
@@ -531,7 +496,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Particle Systems
 Background context explaining particle systems. Particle systems are used to create a wide range of visual effects, such as fire, smoke, and bullet tracers. Their positions, orientations, sizes (scales), texture coordinates, and shader parameters can vary over time, often defined by hand-authored animation curves or procedural methods. Particles are typically spawned and killed continuously; an emitter creates particles at a specified rate until the particle hits a predefined death plane or lives for a certain amount of time.
@@ -588,7 +552,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decals
 Background context explaining decals. A decal is a small piece of geometry that can be overlaid on top of regular scene geometry to modify its appearance dynamically. Examples include bullet holes, footprints, scratches, and cracks. Modern engines typically model decals as rectangular areas projected along rays into the scene.
@@ -635,7 +598,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rendering Skies
 
@@ -665,7 +627,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modern Sky Rendering Techniques
 
@@ -705,7 +666,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sky Dome or Box
 
@@ -734,7 +694,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terrain Modeling
 
@@ -776,7 +735,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -799,7 +757,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terrain Detail Management
 Background context: The number of triangles per unit area can be varied based on distance from the camera. This technique ensures that large-scale features are visible in the distance while maintaining detailed local information for closer areas.
@@ -820,7 +777,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Water Rendering and Simulation
 Background context: Water renderers in games require specialized techniques to simulate various water bodies like oceans, pools, rivers, etc. These methods often involve combining rendering technologies such as shaders, particle effects, and texture layers.
@@ -842,7 +798,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Text and Font System Implementation
@@ -875,7 +830,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Signed Distance Fields for Text Rendering
 Background context: Another method of rendering high-quality character glyphs involves using signed distance fields. In this approach, each pixel contains the signed distance from that pixel center to the nearest edge of the glyph. Inside the glyph, distances are negative; outside the glyph’s outlines, they are positive.
@@ -902,7 +856,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Text Animation Features
 Background context: While some text systems offer features like animated characters, it is important for developers to ensure that only required features are implemented. Implementing unnecessary features can complicate the engine without providing value.
@@ -914,7 +867,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gamma Correction Implementation
 Background context: A high-quality rendering engine ensures that final image values are properly gamma-corrected by performing gamma encoding before displaying images on a CRT monitor. Bitmap textures used for texture maps may already be gamma-corrected, which the engine must account for by decoding them prior to use.
@@ -926,7 +878,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Motion Blur
 Background context: Motion blur is a full-screen post effect that simulates camera motion by selectively blurring parts of the rendered image. It can be implemented using a buffer of screen-space velocity vectors and a convolution kernel.

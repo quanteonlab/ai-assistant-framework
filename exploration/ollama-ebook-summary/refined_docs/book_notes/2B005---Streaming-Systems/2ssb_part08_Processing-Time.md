@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Processing-Time Watermarks
 
 ---
 
-**Rating: 8/10**
 
 #### Percentile Watermarks
 Background context explaining how percentile watermarks are used to draw window boundaries. They help in early triggering of windows but trade off with increased late data marking.
@@ -95,7 +93,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GroupByKey Operation in Dataflow
 Background context: In Google Cloud Dataflow, a `GroupByKey` operation is used to group elements by their keys. This often necessitates shuffling data between different workers responsible for processing different key ranges.
@@ -257,7 +254,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### In-Band Watermarks in Flink
 In Flink, watermarks are tracked and aggregated directly within the pipeline without relying on a centralized agent. This approach allows for more efficient and lower latency watermark propagation compared to Google Cloud Dataflow's out-of-band method.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Normalization
 
 ---
 
-**Rating: 8/10**
 
 #### Streaming Data Joins Complexity
 Background context explaining the concept. When streaming data is joined, different streams may arrive at varying latencies, leading to complications. For example, one stream might have a five-minute delay compared to another. Events like session close or offline events can be significantly delayed due to network conditions.
@@ -74,7 +72,6 @@ For example:
 - In a financial institution, a well-defined data model ensures that customer transactional data is consistent and accurate, supporting compliance and risk management strategies.
 x??
 
-**Rating: 8/10**
 
 ---
 #### Denormalized OrderDetail Table
@@ -200,7 +197,6 @@ public void breakOrderLineItem(List<OrderLineItem> items) {
 x??
 ---
 
-**Rating: 8/10**
 
 #### Transitive Dependencies and 3NF
 Background context explaining the concept. In database normalization, third normal form (3NF) aims to eliminate transitive dependencies, which are indirect functional dependencies that violate 3NF. A transitive dependency occurs when a column \(X\) functionally depends on another column \(Y\), but \(Y\) does not depend on any other columns in the relation.
@@ -341,7 +337,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logical Model Focus
 Background context explaining that the logical model must focus on a specific area, such as "sales." This ensures all details related to sales are included—business keys, relationships, attributes, etc. The model is integrated into a consolidated and highly normalized data structure.
@@ -433,7 +428,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fact Table Structure
 
@@ -553,7 +547,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Vault Overview
 Data Vault was created by Dan Linstedt in the 1990s. It offers a different approach to data modeling compared to Kimball and Inmon, focusing on keeping data as closely aligned to the business as possible while allowing for agile, flexible, and scalable models.
@@ -612,7 +605,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wide Tables and Their Benefits
 
@@ -716,7 +708,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Denormalized Data and Quick Insights
 Background context: The text discusses an approach to managing data where the data is not modeled into a strict schema. This method allows for quick insights by querying data sources directly, often used when companies are just starting or need immediate answers without complex modeling.

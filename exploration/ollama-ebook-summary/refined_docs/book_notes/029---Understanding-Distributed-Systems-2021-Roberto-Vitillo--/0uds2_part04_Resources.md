@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Resources
 
 ---
 
-**Rating: 8/10**
 
 #### HTTP and Its Versions
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -108,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Resource URL Structure and Naming Conventions
 When working with APIs, it is essential to follow a consistent and clear structure for URLs. This helps maintain simplicity even when dealing with nested resources.
@@ -264,7 +261,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OpenAPI Specification Overview
 OpenAPI is a popular IDL for defining RESTful APIs based on HTTP. It allows formally describing an API's interface in a YAML document, including endpoints, request methods, response status codes, and resource representations.

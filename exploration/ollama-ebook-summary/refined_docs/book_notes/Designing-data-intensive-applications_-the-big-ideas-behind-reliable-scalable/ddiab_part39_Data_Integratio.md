@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 39)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Data Integration
 
 ---
 
-**Rating: 8/10**
 
 #### Future of Data Systems
 In this final chapter, the discussion shifts towards envisioning how data systems and applications should be designed and built for the future. The aim is to explore ideas that could fundamentally improve reliability, scalability, and maintainability of applications.
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reliability in Future Data Systems
 Reliability is a crucial aspect of modern data systems. The discussion here revolves around fault-tolerance algorithms that can help ensure the robustness of applications.
@@ -34,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scalability in Future Data Systems
 Scalability is another critical aspect discussed for future applications. Partitioning strategies are mentioned as a way to improve scalability.
@@ -47,7 +43,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Maintainability in Future Data Systems
 Maintainability is discussed as another important aspect for future applications. The chapter emphasizes the need for mechanisms that facilitate evolution and abstraction.
@@ -65,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evolution in Future Data Systems
 Evolution involves the ability of an application or system to adapt and improve over time. The chapter suggests that this is essential for creating applications that are not just functional but also beneficial to humanity.
@@ -80,7 +74,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Integration Challenges
 In this book, various solutions to data storage and retrieval problems have been discussed. For instance, different storage engines (log-structured storage, B-trees, column-oriented storage) and replication strategies (single-leader, multi-leader, leaderless) are mentioned in Chapters 3 and 5 respectively. Each solution has its pros, cons, and trade-offs.
@@ -92,7 +85,6 @@ For example, integrating an OLTP database with a full-text search index is commo
 
 ---
 
-**Rating: 8/10**
 
 #### Combining Specialized Tools for Data Integration
 Data integration becomes increasingly challenging as the number of different representations of data increases. To handle diverse use cases, it is often necessary to integrate various types of software tools, such as databases and search indexes, with other systems like analytics platforms, caching layers, machine learning models, or notification systems.
@@ -128,7 +120,6 @@ This integration layer ensures that updates in the OLTP database are reflected i
 
 ---
 
-**Rating: 8/10**
 
 #### Dataflows Across an Organization
 Background context: When dealing with data across multiple storage systems, understanding dataflows becomes crucial. Ensuring that data writes are managed correctly is essential to maintain consistency and avoid conflicts between different storage systems.
@@ -151,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Change Data Capture (CDC)
 Background context: Change Data Capture is a technique used to capture and apply changes made to a database in real-time. This ensures that all derived systems are consistent with the source of truth.
@@ -174,7 +164,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Concurrent Writes Without CDC
 Background context: If data is written directly to multiple systems without using change data capture (CDC), conflicts can arise due to different processing orders.
@@ -201,7 +190,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Total Order Replication Approach
 Background context: To ensure consistent data across multiple storage systems, a total order replication approach can be used. This involves deciding on an ordering for all writes through a single system.
@@ -225,7 +213,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event Sourcing for Derived Data Systems
 Background context: Event sourcing involves storing all state changes as a sequence of events. This can make it easier to update derived data systems deterministically and idempotently.
@@ -245,7 +232,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Transactions vs. Derived Data Systems
 Background context: Both distributed transactions and derived data systems aim to keep different data systems consistent, but they do so by different means. Distributed transactions enforce consistency through coordination, while derived data systems rely on a total order of writes.
@@ -291,7 +277,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Distributed Transactions and Ordering Mechanisms
@@ -303,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Commit and Consistency Guarantees
 Distributed transactions use atomic commit to ensure changes take effect exactly once, whereas log-based systems often rely on deterministic retry and idempotence for consistency. Transaction systems typically provide linearizability (see “Linearizability” on page 324), offering useful guarantees such as reading your own writes.
@@ -314,7 +298,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability and Timing Guarantees
 Transaction systems usually provide linearizability (see “Linearizability” on page 324), which implies useful guarantees such as reading your own writes (see “Reading Your Own Writes” on page 162). On the other hand, derived data systems are often updated asynchronously and do not offer the same timing guarantees.
@@ -325,7 +308,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations of Total Ordering
 With systems that are small enough, constructing a totally ordered event log is entirely feasible (as demonstrated by databases with single-leader replication). However, as systems scale toward bigger and more complex workloads, limitations begin to emerge. These include the need for leader nodes in each datacenter to handle network delays efficiently.
@@ -336,7 +318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Total Order Broadcast and Consensus Algorithms
 Deciding on a total order of events is known as total order broadcast (equivalent to consensus). Most consensus algorithms assume sufficient throughput for a single node. Designing scalable consensus algorithms that work well in geographically distributed settings remains an open research problem.
@@ -347,7 +328,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Microservices and Event Ordering
 When applications are deployed as microservices, each service and its durable state are deployed independently with no shared state between services. This can lead to undefined order of events originating from different services, making total ordering more difficult.
@@ -358,7 +338,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Offline Client Operations and Event Ordering
 Some applications maintain client-side state that is updated immediately on user input without waiting for server confirmation and can continue to work offline. This often leads to clients and servers seeing events in different orders.
@@ -370,7 +349,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Dependencies in Event Systems
 Background context: The example discusses a scenario where two events, "unfriend" and "send message," need to be processed in a specific order. If not handled correctly, it can lead to incorrect behavior like sending notifications to an ex-partner who should not see the message.
@@ -408,7 +386,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logical Timestamps for Ordering Events
 Background context: Logical timestamps are mentioned as a way to provide total ordering without needing coordination between systems. They can help maintain the correct sequence of events, especially when total order broadcast is not feasible.
@@ -446,7 +423,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logging State to Capture Causal Dependencies
 Background context: The text suggests that logging a state snapshot before an action can help capture causal dependencies, allowing later events to reference this state. This method is useful for maintaining the correct processing order of events.
@@ -501,7 +477,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch and Stream Processing Overview
 Background context: This section discusses the goals of data integration, which involve consuming inputs, transforming, joining, filtering, aggregating, training models, and writing to outputs. It highlights that batch and stream processors are tools for achieving these goals.
@@ -543,7 +518,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differences Between Batch and Stream Processing
 Background context: The text explains that while batch and stream processing share many principles, their main difference lies in handling unbounded datasets for streams versus known, finite-size inputs for batches. Additionally, modern implementations are blurring the lines between these two paradigms.
@@ -579,7 +553,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Flavor of Batch Processing
 
@@ -610,7 +583,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream Processing and Managed State
 
@@ -639,7 +611,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronous vs Asynchronous Maintenance of Derived Data
 
@@ -664,7 +635,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reprocessing for Application Evolution
 
@@ -704,7 +674,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Derived Views for Gradual Data Schema Evolution
 Background context: To restructure a dataset without a sudden switch, derived views can be used. These allow maintaining both the old schema and the new schema side by side as two independently derived views onto the same underlying data. Users can gradually shift to the new view while continuing to use the old one.
@@ -715,7 +684,6 @@ Derived views enable gradual changes in datasets by creating separate read-optim
 
 ---
 
-**Rating: 8/10**
 
 #### Lambda Architecture
 Background context: The lambda architecture addresses combining batch processing (historical data) and stream processing (recent updates). It uses an immutable event sourcing approach where events are appended to a dataset. Two parallel systems—batch processing for accurate but slower updates, and stream processing for fast approximate updates—are run.
@@ -726,7 +694,6 @@ The lambda architecture integrates batch and stream processing by maintaining an
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example for Stream Processing in Lambda Architecture
 Background context: In the lambda architecture, the stream processing system consumes events from an event store and produces approximate updates quickly.
@@ -764,7 +731,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example for Batch Processing in Lambda Architecture
 Background context: The batch processing system consumes events from an event store and produces accurate, slower updates.
@@ -806,7 +772,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lambda Architecture Challenges
 Background context: The lambda architecture introduced a method for processing both batch and stream data, but faced practical issues such as additional effort required for maintaining logic across systems, merging outputs from separate pipelines, and the cost of frequent reprocessing.
@@ -822,7 +787,6 @@ This leads to operational complexity in debugging, tuning, and maintaining two s
 
 ---
 
-**Rating: 8/10**
 
 #### Data Merging in Lambda Architecture
 Background context: In the lambda architecture, stream pipelines and batch pipelines produce separate outputs that need to be merged before responding to user requests. This merging process is straightforward for simple aggregations but becomes complex when dealing with more advanced operations or non-time series outputs.
@@ -838,7 +802,6 @@ The merging complexity increases when dealing with more sophisticated computatio
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Processing Incremental Batches
 Background context: The lambda architecture often requires setting up a batch pipeline to process incremental batches rather than reprocessing everything due to the high cost of full reprocessing on large datasets. This setup introduces challenges in handling stragglers and window boundaries between batches.
@@ -853,7 +816,6 @@ This approach aims to balance between reprocessing efficiency and maintaining a 
 
 ---
 
-**Rating: 8/10**
 
 #### Unifying Batch and Stream Processing
 Background context: Recent work has aimed to unify batch and stream processing in one system, combining the benefits of both while mitigating their downsides. This unification requires features such as replaying historical events through the same engine that handles recent events, ensuring exactly-once semantics, and windowing by event time.
@@ -869,7 +831,6 @@ Tools like Apache Beam provide APIs for expressing such computations that can be
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example for Event Time Windowing with Apache Beam
 Background context: Apache Beam provides an API for handling windows based on event times rather than processing times, which is crucial when reprocessing historical data.

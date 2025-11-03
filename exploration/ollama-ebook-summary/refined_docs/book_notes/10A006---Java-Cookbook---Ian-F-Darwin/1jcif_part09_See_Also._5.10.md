@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** See Also. 5.10 Multiplying Matrices. Problem. Solution. Discussion
 
 ---
 
-**Rating: 8/10**
 
 #### Random Number Generation and Distributions
 Background context explaining how pseudo-random number generators (PRNGs) work, with a focus on `java.util.Random` for generating flat distributions and its limitations. The importance of cryptographic uses is highlighted via `java.security.SecureRandom`.
@@ -158,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Converting Between Dates/Times and Epoch Seconds
 When working with dates and times, it's often necessary to convert between different representations such as local date/time, epoch seconds, or other numeric values. This conversion is essential for operations that require time measurements to be consistent across systems.
@@ -256,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Getting Current Time and Date
 Background context: This section covers how to retrieve the current date and time using Java's `ZonedDateTime` and `LocalDateTime`. It also shows how to convert these times into different time zones.

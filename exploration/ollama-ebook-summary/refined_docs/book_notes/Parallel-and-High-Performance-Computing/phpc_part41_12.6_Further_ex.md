@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 41)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.6 Further explorations. 13 GPU profiling and tools
 
 ---
 
-**Rating: 8/10**
 
 #### Raja and Performance Portability
 Background context explaining how RAJA enables performance portability across different hardware platforms. Mention that it uses a domain-specific language (DSL) to express algorithms for various target devices.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### C++ Lambda Function Usage in Raja
 Explanation of how lambda functions are utilized within RAJA's `forall` construct to perform computations. Mention the importance of this approach for expressing parallelism.
@@ -33,7 +30,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exercises for GPU Programming Languages
 Explanation of exercises provided to help gain practical experience with various GPU programming languages like CUDA, HIP, SYCL, and RAJA.
@@ -45,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kokkos and SYCL for Performance Portability
 Explanation of single-source performance portability languages like Kokkos and SYCL, highlighting their advantages for running applications on a variety of hardware platforms.
@@ -57,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sum Reduction Example with CUDA
 Explanation of the sum reduction example using CUDA, emphasizing the importance of careful design in GPU kernel programming.
@@ -69,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Overview of Profiling Tools for GPU
@@ -81,7 +74,6 @@ The primary purpose of profiling tools in GPU development is to optimize applica
 
 ---
 
-**Rating: 8/10**
 
 #### NVIDIA Nsight
 Nsight is an updated version of NVVP that provides both CPU and GPU usage visualization. Eventually, it may replace NVVP. This tool helps in understanding the overall application performance by integrating information from both CPU and GPU.
@@ -92,7 +84,6 @@ Nsight integrates information from both CPU and GPU to provide a comprehensive v
 
 ---
 
-**Rating: 8/10**
 
 #### Method 2: Remote Server
 Background context: This method involves running applications with a command-line tool on the GPU system and transferring files back to your local machine. It can be challenging due to firewall restrictions and HPC system constraints.
@@ -104,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Local Development and Optimization

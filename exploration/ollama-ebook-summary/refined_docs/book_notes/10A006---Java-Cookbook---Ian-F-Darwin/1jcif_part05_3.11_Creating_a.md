@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3.11 Creating a Message with I18N Resources. Problem. Solution
 
 ---
 
-**Rating: 8/10**
 
 #### ResourceBundle and Localization
 Background context: In Java, `ResourceBundle` is used for internationalization (I18N) and localization (L10N). It allows fetching localized resources such as strings based on the user's locale. This mechanism ensures that your application can adapt to different languages and cultures without changing the underlying code.
@@ -113,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Getting Available Locales
 Background context: The `Locale.getAvailableLocales()` method provides a list of all available locales that can be used for formatting and other operations. This is useful when you need to know which locale options are supported by your system.
@@ -204,7 +201,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Regular Expression Syntax Overview
 Background context explaining the syntax and usage of regular expressions in Java. Regular expressions are a powerful tool for pattern matching, allowing developers to search strings using complex patterns. The syntax is designed to be flexible and powerful while remaining simple enough for everyday use.
@@ -393,7 +389,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Regex Matching Capabilities
 Background context: Regular expressions (regex) can be used for complex pattern matching beyond simple character checks. For example, a regex like ^T matches any line starting with the capital letter T.

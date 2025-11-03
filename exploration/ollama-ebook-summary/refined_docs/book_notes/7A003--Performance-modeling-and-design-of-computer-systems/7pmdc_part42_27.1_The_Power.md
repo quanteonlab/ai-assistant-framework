@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 42)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 27.1 The Power Optimization Problem
 
 ---
 
-**Rating: 8/10**
 
 #### Performance-per-Watt (Perf/W)
 Context: The objective of maximizing performance per watt by balancing mean response time and mean power consumption.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Length of an Idle Period Distribution
 
@@ -33,7 +30,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recursive Nature of Busy Periods
 
@@ -50,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deriving the Laplace Transform of Busy Period
 
@@ -69,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Laplace Transform of Busy Period
 
@@ -87,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Moments of Busy Period
 
@@ -105,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variability in Busy Period and Response Time
 
@@ -124,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Length of \(\tilde{B}_W\)
 Background context: The mean length of the busy period with work \(W\) is derived using the Laplace transform properties.
@@ -154,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Duration of Busy Period with Setup Cost \(I\)
 Background context: The busy period duration when there is an initial setup cost \(I\) affects not just the job starting it but also subsequent jobs.
@@ -184,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fraction of Time Server is Busy with Setup Cost \(I\)
 Background context: The fraction of time \(\rho_{setup}\) that the server is busy, including setup time, is derived using renewal theory.

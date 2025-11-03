@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 14 Use readonly to Avoid Errors Associated with Mutation
 
 ---
 
-**Rating: 8/10**
 
 #### Interfaces vs. Types in TypeScript
 Background context explaining how interfaces and types are used in TypeScript. Explain that interfaces describe blueprints for objects, while types can be more flexible, including unions, tuples, etc.
@@ -74,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Readonly Property Modifier and Readonly<T>
 The `Readonly<T>` utility type in TypeScript is used to make all properties of an object readonly, meaning they cannot be reassigned. However, it only performs a shallow transformation; nested properties can still be mutated if they are not also marked as readonly.
@@ -161,7 +158,6 @@ const c: number[] = b; // Error: Type 'readonly number[]' is 'readonly' and cann
 ```
 x??
 
-**Rating: 8/10**
 
 #### DRY Principle: Don’t Repeat Yourself
 
@@ -305,7 +301,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reducing Code Duplication with Interfaces and Types
 
@@ -405,7 +400,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mapped Types and Generic Types
 Mapped types allow you to transform one type into another by iterating over its keys. This is particularly useful for creating subsets of existing interfaces, making your code more concise and avoiding duplication. The generic type `Pick<T, K>` from the TypeScript standard library does this but isn't fully explained here.
@@ -534,7 +528,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Type Inference and Control Flow Analysis
 
@@ -639,7 +632,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Type Inference for Object Literals and Arrays
 TypeScript infers types based on object literals and array elements, which can add precision to variable types without explicit annotations. This is generally beneficial but should be balanced with clarity.
@@ -744,7 +736,6 @@ Here, without an explicit type for `id`, TypeScript cannot determine its type fr
 
 x??
 
-**Rating: 8/10**
 
 #### Type Inference and Annotations
 TypeScript infers types based on usage, but sometimes explicit annotations are beneficial for clarity or error reporting. This section discusses when to leave type annotations off versus when to include them.
@@ -845,7 +836,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Annotating Return Types
 

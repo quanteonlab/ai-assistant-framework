@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 36)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 23.4 Applying Renewal-Reward to Get Expected Excess
 
 ---
 
-**Rating: 8/10**
 
 #### Renewal Process Definition
 A renewal process is a stochastic process where the times between events are independent and identically distributed (i.i.d.) random variables with a common distribution function \( F \). This means that each event's timing is independent of previous events, and all inter-event intervals have the same probability distribution.
@@ -22,7 +20,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Renewal-Reward Theorem
 The theorem allows us to compute the long-term average reward earned in a renewal process. It states that if we receive rewards at each renewal event with a mean \( E[R] \) and the time between events has a mean \( E[X] \), then the long-term average rate of earning rewards is given by:
@@ -36,7 +33,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Average Excess Definition
 In the context of a renewal process, the excess at time \( t \), denoted as \( S_e(t) \), is defined as the amount of service time remaining after \( t \). For example, if we are considering a queueing system where services end at the end of each cycle, the excess will be the leftover service time that hasn't been completed by time \( t \).
@@ -54,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Applying Renewal-Reward to Get Expected Excess
 To apply the Renewal-Reward theorem in calculating the expected excess, we define:
@@ -74,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cycle Definition in Renewal-Reward
 A cycle is defined as one complete event interval in a renewal process. In the context of queueing, it often refers to one full service completion.
@@ -89,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Average Reward and Renewal-Reward Theory
 Background context: We use Renewal-Reward theory to determine the time-average reward, which is the same as the time-average excess. The formula for this is derived by considering the reward earned during a cycle.
@@ -113,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inspection Paradox
 Background context: The inspection paradox occurs when a random arrival is more likely to land in an interval that is longer than the average. This can be observed in various scenarios, such as bus arrivals.
@@ -141,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/G/1 Queue and Expected Excess Time
 Background context: In an M/G/1 queue, the expected excess time (time until next service starts) is a key concept. The formula for this is derived from Renewal-Reward theory.
@@ -165,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pollaczek-Khinchin Formula in M/G/1 Queue
 Background context: The Pollaczek-Khinchin (P-K) formula is used to determine the expected waiting time in an M/G/1 queue. This formula incorporates the variability of service times.
@@ -193,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variability and Delay in Queues
 Background context: The variability of service times affects the expected waiting time significantly. This is evident from the Pollaczek-Khinchin formula, where higher variability leads to increased delays.
@@ -217,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variance of Waiting Time in M/G/1 Queue
 Background context: The variance of the waiting time in an M/G/1 queue is given by a formula that includes the third moment of the service time.
@@ -243,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/H 2/1 Queue Excess and Waiting Time
 Background context: In an M/H 2/1 queue, jobs arrive according to a Poisson process with rate \(\lambda\), and service times follow some heavy-tailed distribution. The goal is to derive expressions for the expected excess time \(E[\text{Excess}]\) and the expected waiting time in the queue \(E[T_Q]\).
@@ -276,7 +263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Doubling CPU Service Rate and Arrival Rate
 Background context: In a system with a single CPU serving jobs according to an M/G/1 model, if the arrival rate \(\lambda\) doubles, we can compensate by doubling the service capacity. The key is to understand how this affects the mean response time.
@@ -313,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/G/1 with Different Job Types
 Background context: Consider an M/G/1 queue where there are two types of jobs (red and blue) arriving according to Poisson processes. Red jobs have a different arrival rate and service requirements compared to blue jobs.
@@ -368,7 +353,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inspection Paradox
 Background context: The inspection paradox occurs when the observed average of a sample is different from its expected value due to the way we observe data. In this problem, two types of renewals (short and long) are considered.
@@ -419,7 +403,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/H 2/1 Queue Excess and Waiting Time (continued)
 Background context: In an M/H 2/1 queue, the key is to understand how the excess time \(E[\text{Excess}]\) and waiting time in the queue \(E[T_Q]\) are calculated. The Pollaczek-Khintchine formula for an M/G/1 queue can be adapted for heavy-tailed distributions.
@@ -465,7 +448,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/G/1 Queue and Heavy-Tailed Distributions (continued)
 Background context: In an M/G/1 queue with heavy-tailed service times, the Pollaczek-Khintchine formula can be adapted to account for the variability in service times. The excess time \(E[\text{Excess}]\) and waiting time \(E[T_Q]\) are critical metrics.
@@ -511,7 +493,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple Job Types in M/G/1 Queue (continued)
 Background context: In an M/G/1 queue with multiple job types, each type has its own arrival rate and service distribution. The mean response time for each type can be calculated using the Pollaczek-Khintchine formula.

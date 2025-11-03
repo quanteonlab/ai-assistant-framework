@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 5.10.2 Using lambda expression methods and properties
 
 ---
 
-**Rating: 8/10**
 
 #### Lambda Expressions in Action Methods
 Background context: In ASP.NET Core development, you often use single-statement action methods that select data and render views. These can be rewritten using lambda expressions for conciseness.
@@ -22,7 +20,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Default Implementations in Interfaces
 Background context: C# provides a feature to define default implementations for properties and methods within interfaces. This allows developers to add new features to an interface without breaking existing implementations of that interface.
@@ -45,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Methods Overview
 Asynchronous methods allow background tasks to be performed without blocking the main execution thread, thus improving overall application performance. In ASP.NET Core, asynchronous methods are crucial for handling requests efficiently and making use of multi-core processors.
@@ -57,7 +53,6 @@ The primary purpose of using asynchronous methods in applications like ASP.NET C
 
 ---
 
-**Rating: 8/10**
 
 #### Using `async` and `await` Keywords
 The introduction of `async` and `await` keywords in C# simplifies working with asynchronous methods, making the code more readable and maintainable.
@@ -86,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Controller Methods in ASP.NET Core
 Asynchronous controller methods in ASP.NET Core use `async` and `await` to improve performance by allowing background operations.

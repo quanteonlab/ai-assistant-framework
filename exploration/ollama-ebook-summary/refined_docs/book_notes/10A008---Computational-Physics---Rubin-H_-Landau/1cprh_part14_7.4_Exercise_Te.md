@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 7.4 Exercise Tests Before Use
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Inverse of a Matrix
 
@@ -48,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving Linear Equations
 
@@ -100,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eigenvalues and Eigenvectors
 
@@ -148,7 +144,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving a System with Hilbert Matrix
 
@@ -191,7 +186,6 @@ These flashcards cover key concepts in solving linear equations and eigenvalue p
 
 ---
 
-**Rating: 8/10**
 
 #### Speeding Up Matrix Computing with Python
 Background context explaining why matrix computations in Python can be slow and how NumPy can help. NumPy is written mainly in C/C++ and provides efficient vectorized operations.
@@ -231,7 +225,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Forward and Central Difference Derivatives
 Background context explaining the concept of difference derivatives, which are used to approximate derivatives numerically. The example uses a simple array of values for demonstration.
@@ -266,7 +259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix Multiplication Strides
 Background context: This example demonstrates how different strides in matrix multiplication can affect performance. The goal is to optimize memory access patterns for efficient computation.
@@ -310,7 +302,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vectorized Operations vs. Explicit Loops
 Background context: This example contrasts vectorized operations with explicit loops for performance comparison. Vectorized operations (using NumPy) can often outperform explicit loops due to optimized internal implementations and better use of parallelism.
@@ -350,7 +341,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SymPy for Symbolic Computation in Quantum Mechanics
 Background context: This example demonstrates the use of SymPy, a Python library for symbolic mathematics, to perform calculations related to hyperfine splitting in hydrogen atoms. Understanding this allows for precise mathematical modeling and manipulation of physical systems.
@@ -392,7 +382,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Iterative Solution of Nonlinear Equations
 Background context: This example demonstrates an iterative approach to solving a system of nonlinear equations. The method used is similar to Newton's method for finding roots of functions.

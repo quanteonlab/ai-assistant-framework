@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 44 Prefer More Precise Variants of any to Plain any
 
 ---
 
-**Rating: 8/10**
 
 #### Prefer More Precise Variants of any
 Background context: In TypeScript, using `any` can lead to a loss of type safety and make debugging harder. It's generally better to use more specific types when possible to ensure that your code is as robust as it could be.
@@ -114,7 +112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prefer More Precise Types Over `any[]` for Rest Parameters
 Background context: In TypeScript, rest parameters can be used to accept a variable number of arguments. The type `any[]` allows any JavaScript value as an argument but is less precise compared to more specific types like `unknown[]`. Using more precise types enhances code safety and maintainability.
@@ -190,7 +187,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Type Assertions and Assertions in TypeScript
 
@@ -273,7 +269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unknown Type vs Any Type
 Background context: The `unknown` type is introduced as a safer alternative to using `any` when you have values but don't know their exact types. This helps maintain stricter type safety and enables better error messages from TypeScript.

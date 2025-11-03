@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 2.4 Memoize in action for a fast web crawler
 
 ---
 
-**Rating: 8/10**
 
 #### Memoization for Improved Performance
 Explanation of memoization and how it improves the performance of recursive or repetitive operations. The provided example shows using `Memoize` to avoid redundant downloads by caching results.
@@ -22,7 +20,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Execution with PLINQ
 Explanation of how LINQ and PLINQ can be used to process queries in parallel for better performance. This is demonstrated by changing the query to use `AsParallel()`.
@@ -40,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Combining Memoization and Parallel Execution
 Explanation of combining memoization with parallel execution to optimize both performance and efficiency.
@@ -60,7 +56,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ConcurrentDictionary for Thread-Safe Memoization
 Background context: The provided text discusses the use of `ConcurrentDictionary` to ensure thread-safe memoization, which is crucial when dealing with parallelism. This approach helps avoid race conditions and ensures that multiple threads do not access or modify shared data concurrently in an unsafe manner.
@@ -89,7 +84,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lazy Evaluation for Enhanced Performance
 Background context: The text introduces the concept of lazy evaluation to further optimize memoization. By using `Lazy<R>` instead of direct caching, you ensure that function initialization is deferred until necessary, reducing overhead in highly concurrent applications where expensive object initializations are involved.
@@ -110,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Benefits of Parallel Execution with PLINQ
 Background context: The text demonstrates the performance benefits of using PLINQ for parallel execution in web crawling tasks. By leveraging `AsParallel()` and concurrent memoization techniques, the processing time can be significantly reduced compared to sequential implementations.
@@ -132,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reducing Network I/O Operations with Concurrent Memoization
 Background context: The text emphasizes that concurrent memoization not only speeds up execution but also reduces network I/O operations. By caching results efficiently and avoiding redundant function evaluations, the number of requests made to external resources like web servers is minimized.
@@ -156,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Safety and Lazy Evaluation
 Thread safety is crucial in multithreaded environments to prevent data corruption or inconsistent states. Without explicit thread safety, functions like `func(a)` could be executed concurrently by multiple threads, leading to undefined behavior.
@@ -191,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Weak References for Memoization
 Using `WeakReference` can help manage memory more effectively by allowing results to be garbage collected when the associated key is no longer alive. This approach avoids unnecessary memory retention and optimizes memory usage.
@@ -223,7 +213,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Expiration Policy
 Cache expiration policies involve storing additional metadata (like timestamps) with each cached item to automatically invalidate and remove old items. This approach ensures that the cache is not indefinitely holding onto stale data.
@@ -261,7 +250,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Speculative Processing and Concurrent Speculation
@@ -274,7 +262,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fuzzy Match Function Implementation in C#
 Background context: The provided `FuzzyMatch` function uses PLINQ (Parallel LINQ) to find the best fuzzy match for a given word among a list of words. It leverages the Jaro-Winkler distance algorithm.
@@ -286,7 +273,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Issue with Fuzzy Match Function
 Background context: The current implementation of the `FuzzyMatch` function has an efficiency issue because it rebuilds the word set (HashSet) every time the function is called, leading to redundant computation.
@@ -298,7 +284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partial Application and Memoization for Optimization
 Background context: To optimize the performance of the fuzzy match function, we can use partial application and memoization techniques. These allow us to precompute parts of the logic once and reuse them, reducing redundant computation.
@@ -310,7 +295,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fast Fuzzy Match Implementation with Precomputation
 Background context: The provided code snippet shows how to implement a more efficient fuzzy match function using partial application and memoization. It creates a function that precomputes the word set and retains it in a closure, reducing redundant computation.
@@ -322,7 +306,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partial Application and Precomputation
 Background context: The provided text discusses how to optimize a function for fuzzy matching by using partial application and precomputation. By creating a partially applied version of the `PartialFuzzyMatch` function, you can consume the first argument as soon as it is passed, thereby precomputing an efficient lookup structure such as a `HashSet`. This approach significantly reduces computation time during subsequent calls.
@@ -342,7 +325,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Efficient Lookup with HashSet
 Background context: The text explains that by using a `HashSet`, you can efficiently store and look up words. This is particularly useful for fuzzy matching because it provides quick access to the stored values, reducing the time complexity of operations like membership tests.
@@ -361,7 +343,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Static Read-Only Properties and Performance Optimization
 Background context: The text highlights the performance difference between a static function that recalculates values each time it is called versus a static read-only property that initializes once. This optimization ensures that the lookup table is computed only once, reducing overall processing time.
@@ -385,7 +366,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Precomputation as a Caching Technique
 Precomputation is a caching technique that performs an initial computation to create data structures ready for fast access. This approach is particularly useful when dealing with expensive or frequently accessed computations.
@@ -411,7 +391,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Style and Partial Application
 In F#, functions are curried by default. This means that a function like `fuzzyMatch` can be treated as a composition of functions, which makes partial application straightforward.
@@ -435,7 +414,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Precomputation in Computation Engines
 Precomputation is essential for creating fast and efficient computation engines. By performing initial computations, you can optimize subsequent operations by reducing the computational load.
@@ -451,7 +429,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Speculative Evaluation
 Speculative evaluation aims to consume CPU resources that would otherwise sit idle. This technique can be implemented in any language that supports closures, which allows capturing and exposing partial values.
@@ -470,7 +447,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lazy Evaluation
 Lazy evaluation is a technique where an expression is not evaluated until it’s actually needed. This approach can significantly improve performance by reducing unnecessary computations and optimizing resource usage.
@@ -490,7 +466,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eager Evaluation (Strict Languages)
 Eager evaluation, or strict evaluation, evaluates an expression immediately as soon as it’s encountered. Most mainstream programming languages like C# and F# are strictly evaluated by default.
@@ -509,7 +484,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Task Management with Cancellation Tokens
 Parallel task management involves running multiple tasks concurrently and managing them effectively to optimize resource use. Using a cancellation token can help in terminating less important tasks when the fastest one completes.
@@ -559,7 +533,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cancellation Tokens and Lazy Evaluation Together
 Combining lazy evaluation with the use of cancellation tokens can lead to efficient resource management. Lazy evaluation ensures that computations are performed only when necessary, while cancellation tokens allow for graceful termination of tasks.
@@ -586,7 +559,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lazy Evaluation and Side Effects
 Background context explaining that lazy evaluation can introduce non-determinism when combined with imperative features like side effects. Side effects, such as I/O operations or exceptions, make it hard to control the order of execution, which is a core principle in functional programming.
@@ -605,7 +577,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Programming and Side Effects
 Background context explaining that functional programming aims to be explicit about side effects, providing tools to manage them effectively. This is in contrast to imperative languages where side effects can occur anywhere.
@@ -626,7 +597,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lazy Initialization Using Lazy<T> in C#
 Background context explaining how the `Lazy<T>` generic type constructor in C# simplifies lazy initialization of objects, ensuring thread-safe deferred creation.
@@ -664,7 +634,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency and Lazy Evaluation
 Background context explaining the benefits of lazy evaluation in concurrent programming by reducing the need for race conditions and ensuring that resources are initialized only once.
@@ -699,7 +668,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lazy Initialization and Singleton Pattern
 
@@ -720,7 +688,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Singleton Pattern Using `Lazy<T>`
 
@@ -752,7 +719,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Safety with `Lazy<T>`
 
@@ -779,7 +745,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### `LazyInitializer` and Optimized Initialization
 

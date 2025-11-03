@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part08_Summary.md",
+                "file": "book_notes/Game-Engine-Architecture/geaa_part12_5.5_Comparison.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "msei_part08_Summary"
+              "title": "geaa_part12_5.5_Comparison"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part08_Summary.md",
+                "file": "book_notes/Game-Engine-Architecture/geaa_part12_5.5_Comparison.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for msei_part08_Summary"
+              "title": "Backlinks for geaa_part12_5.5_Comparison"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part08_Summary.md",
+                "file": "book_notes/Game-Engine-Architecture/geaa_part12_5.5_Comparison.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from msei_part08_Summary"
+              "title": "Outgoing links from geaa_part12_5.5_Comparison"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part08_Summary.md",
+                "file": "book_notes/Game-Engine-Architecture/geaa_part12_5.5_Comparison.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of msei_part08_Summary"
+              "title": "Outline of geaa_part12_5.5_Comparison"
             }
           }
         ]
@@ -171,12 +171,16 @@
   },
   "active": "8f642d2ec2209bbd",
   "lastOpenFiles": [
+    "book_notes/Game-Engine-Architecture/geaa_part15_7.2_The_Resourc.md",
+    "book_notes/Game-Engine-Architecture/geaa_part23_11.3_Advanced_L.md",
+    "book_notes/Game-Engine-Architecture/geaa_part24_12_Animation_Sy.md",
+    "book_notes/Game-Engine-Architecture/geaa_part26_12.7_Post-Proce.md",
+    "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part08_Summary.md",
     "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part02_1.4_Classificat.md",
     "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part03_Learning_Object.md",
     "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part13_5.5_Factors_Tha.md",
     "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part11_4.10_Microscopi.md",
     "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part09_4.3_Impurities.md",
-    "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part08_Summary.md",
     "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part07_3.12_Close-Pack.md",
     "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part06_CRYSTALLOGRAPHI.md",
     "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part01_List_of_Symbols.md",
@@ -192,9 +196,6 @@
     "book_notes/10A000---FluentPython/1f0a_part23_Decorator-Enhan.md",
     "book_notes/Contract-Law-For-Dummies/cldo_part05_Letting_the_Par.md",
     "book_notes/Contract-Law-For-Dummies/cldo_part04_Part_IV_Perform.md",
-    "book_notes/Contract-Law-For-Dummies/cldo_part02_Making_Distinct.md",
-    "book_notes/7F001-Systems-Performance-Modeling-Issn-4----Adarsh-Anand-editor-Mangey/7spmi_part03_7._Performance.md",
-    "book_notes/7F001-Systems-Performance-Modeling-Issn-4----Adarsh-Anand-editor-Mangey/7spmi_part02_4._Increasing_f.md",
-    "book_notes/7F001-Systems-Performance-Modeling-Issn-4----Adarsh-Anand-editor-Mangey/7spmi_part01_1._Impact_of_av.md"
+    "book_notes/Contract-Law-For-Dummies/cldo_part02_Making_Distinct.md"
   ]
 }

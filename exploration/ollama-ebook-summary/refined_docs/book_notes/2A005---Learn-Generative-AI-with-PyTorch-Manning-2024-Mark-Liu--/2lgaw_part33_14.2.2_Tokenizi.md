@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 33)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 14.2.2 Tokenizing MIDI files
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Input Sequences
 
@@ -41,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training the Music Transformer
 
@@ -77,7 +74,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Data Generation
 
@@ -118,7 +114,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Cross-Entropy Loss Calculation
 Cross-entropy loss is a common objective function used in classification tasks, including predicting the next token in a sequence. In this context, it measures how well the model's predicted probabilities match the true labels.
@@ -160,7 +155,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training the Music Transformer
 The training process for a music Transformer involves several steps, including tokenizing and indexing music pieces, preparing batches of input-output pairs, and adjusting model parameters to minimize loss.
@@ -192,7 +186,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Splitting Train, Validation, and Test Subsets
 Background context: The code snippet shown in the text processes each MIDI file from the `maestro-v2.0.0.json` file, categorizing them into train, validation, or test subsets based on their metadata.
@@ -220,7 +213,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Self-Attention Mechanism
 Background context explaining the self-attention mechanism and its application to sequence modeling.
@@ -276,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient Clipping in Training
 Background context: During the training of the model, it is essential to ensure that the gradients do not become too large. If they do, known as "exploding gradients," the optimization process can fail or produce unstable results.
@@ -292,7 +283,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loss Calculation and Optimization in Training
 Background context: The loss during training measures how well the model's predictions match the actual outputs. In this specific case, a cross-entropy loss function is used to calculate the difference between the predicted output from the model (`output`) and the true target sequence `y`.
@@ -310,7 +300,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary Points
 Summary points highlighting key concepts such as performance-based representation of music, sequence generation, and temperature control.

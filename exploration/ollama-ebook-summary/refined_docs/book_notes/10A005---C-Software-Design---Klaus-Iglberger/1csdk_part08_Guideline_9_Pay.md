@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Guideline 9 Pay Attention to the Ownership of Abstractions. The Dependency Inversion Principle
 
 ---
 
-**Rating: 8/10**
 
 #### Function Overloading and Semantic Requirements
 
@@ -162,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Inversion Principle (DIP)
 Background context: The Dependency Inversion Principle states that high-level modules should not depend on low-level modules, but both should depend on abstractions. Abstractions should not depend upon details; details should depend upon abstractions.
@@ -234,7 +231,6 @@ public:
 In this example, the high-level `Editor` class depends on the abstract `Plugin` interface defined at the low level. This ensures that the editor can be extended with new plug-ins without changing its core logic.
 x??
 
-**Rating: 8/10**
 
 #### Dependency Inversion via Templates
 Background context: The Dependency Inversion Principle (DIP) is a principle of software design that suggests high-level modules should not depend on low-level modules, but both should depend on abstractions. This can be achieved through templates where the abstraction is owned by the higher level.

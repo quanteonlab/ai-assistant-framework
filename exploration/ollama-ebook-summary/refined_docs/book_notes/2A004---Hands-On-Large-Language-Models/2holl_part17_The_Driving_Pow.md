@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Driving Power Behind Agents Step-by-step Reasoning
 
 ---
 
-**Rating: 8/10**
 
 #### What Are Agents?
 Agents are systems that leverage LLMs to determine which actions they should take and in what order. They can utilize tools for tasks beyond the capabilities of LLMs alone.
@@ -105,7 +103,6 @@ if result1.contains_prices():
 ```
 x??
 
-**Rating: 8/10**
 
 #### Overview of Semantic Search and RAG
 
@@ -207,7 +204,6 @@ function processQuery(query):
 x??
 This pseudocode illustrates how an agent with an LLM works in a RAG system. The agent first reasons about what action to take, performs that action, and then generates a response based on the results.
 
-**Rating: 8/10**
 
 #### Dense Retrieval Concept
 Background context explaining dense retrieval. Embeddings transform text into numeric representations, allowing us to find similar texts based on their proximity in a high-dimensional space.
@@ -361,7 +357,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semantic Search vs. Keyword Search
 
@@ -473,7 +468,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Caveats of Dense Retrieval
 Background context explaining dense retrieval and its limitations. In semantic search, dense retrieval tries to find the most relevant documents based on the similarity between query embeddings and document embeddings. However, it faces challenges such as returning irrelevant results or not finding exact matches for specific phrases.
@@ -595,7 +589,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Embedding Documents in Chunks
 
@@ -793,7 +786,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Retrieval Systems
 Background context: As mentioned, vector retrieval systems are crucial for efficiently finding similar documents when dealing with millions of vectors. Libraries like Annoy and FAISS can be utilized to perform approximate nearest neighbor search. These libraries optimize performance by leveraging GPU acceleration and distributed computing.

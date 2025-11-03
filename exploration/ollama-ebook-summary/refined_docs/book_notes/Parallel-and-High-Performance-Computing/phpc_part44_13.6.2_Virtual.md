@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 44)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 13.6.2 Virtual machines using VirtualBox
 
 ---
 
-**Rating: 8/10**
 
 #### Docker Containers Overview
 Docker containers provide a lightweight and portable way to package software. They are particularly useful for developers who need an isolated environment for their applications without having to manage the underlying infrastructure fully.
@@ -20,7 +18,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cloud Computing Overview
 Cloud computing refers to servers provided by large data centers, which can be accessed via various cloud providers. These services are useful when specific hardware resources like GPUs are limited or unavailable on local machines. Some cloud providers cater specifically towards High Performance Computing (HPC) needs.
@@ -32,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Docker Containers for Development
 Background context: Using pre-built Docker containers can be easier than manually configuring and installing software on individual systems, especially given the complexity of setting up development environments for GPU computing.

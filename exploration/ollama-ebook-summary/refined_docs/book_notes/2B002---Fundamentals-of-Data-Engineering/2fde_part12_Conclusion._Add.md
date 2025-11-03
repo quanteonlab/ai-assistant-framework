@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Conclusion. Additional Resources
 
 ---
 
-**Rating: 8/10**
 
 #### Airflow Alternatives and Orchestration Frameworks
 In this context, Airflow is a popular open-source platform for orchestrating workflows. However, it has limitations that may prompt data engineers to explore alternatives like Prefect or Dagster. These frameworks aim to address issues by rethinking components of the Airflow architecture.
@@ -125,7 +123,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Analog Data Creation
 Analog data creation occurs in the real world, such as vocal speech, sign language, writing on paper, or playing an instrument. This type of data is often transient; for instance, a verbal conversation's contents are usually lost after it ends.
@@ -204,7 +201,6 @@ public void writeDataToDatabase(String sql) {
 ```
 x??
 
-**Rating: 8/10**
 
 ---
 #### OLTP and Analytics

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 1B001---Proofs---Jay-Cumming_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Bonus Examples
 
 ---
 
-**Rating: 8/10**
 
 #### Proof by Pigeonhole Principle: Divisibility of Integers
 Background context explaining the concept. We are given a set of integers from 1 to 200, and we need to prove that among any 101 chosen numbers, at least one number divides another.
@@ -57,7 +55,6 @@ x??
 ---
 These flashcards cover the key concepts and examples provided in the text. Each card is designed to help with understanding the logic behind the proofs and examples given.
 
-**Rating: 8/10**
 
 #### Proving Statements about Integers
 
@@ -117,7 +114,6 @@ x??
 ---
 Each flashcard provides a detailed explanation and prompts for understanding key concepts in the provided text.
 
-**Rating: 8/10**
 
 #### Implication and Symbolization
 Background context explaining implication, its symbol, and how it is used to express conditional statements. The text introduces the concept of using "implies" (=>) as a special symbol for expressing implications between mathematical statements.
@@ -222,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proof by Cases
 Background context: A proof strategy where a problem is broken down into two or more cases to be proven individually. Direct proofs are often used within each case.
@@ -350,7 +345,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Direct Proof Structure and Divisibility
 Background context: The text outlines a direct proof for a divisibility proposition. It explains that \(a \mid b\) means \(b = as\) for some integer \(s\), and \(b \mid c\) means \(c = bt\) for some integer \(t\). The goal is to show that \(a \mid c\).

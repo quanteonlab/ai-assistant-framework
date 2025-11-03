@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 7.11 Further explorations
 
 ---
 
-**Rating: 8/10**
 
 #### Task-Based Parallel Strategy Overview
 Background context: The task-based parallel strategy allows dividing work into separate tasks that can be assigned to individual processes. This approach is more natural for many algorithms compared to traditional thread management techniques. OpenMP has supported this since version 3.0 and continues to improve in subsequent releases.
@@ -36,7 +34,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recursive Data Splitting in Task-Based Summation
 Background context: In the provided code, the algorithm recursively splits an array into smaller halves during a downward sweep. This process continues until each sub-array has a length of 1. During the upward sweep, pairs are summed.
@@ -83,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Upward Sweep for Pairwise Summation
 Background context: After the downward sweep where arrays are recursively split into halves, the upward sweep begins. This phase involves summing pairs of elements from the recursive splits, starting with single-element arrays and working back up to larger sums.
@@ -141,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recursive Task Launching
 Background context: The `PairwiseSumBySubtask` function recursively divides an array into smaller subarrays until each element can be processed individually (i.e., when the subarray size is 1). Then, it merges results from these subtasks using OpenMP tasks.
@@ -173,7 +168,6 @@ The `#pragma omp task` directives create tasks to compute the sums of the left a
 
 ---
 
-**Rating: 8/10**
 
 #### Task Synchronization with Taskwait
 Background context: After launching multiple tasks, it's necessary to ensure all tasks have completed before proceeding. This is handled using the `#pragma omp taskwait` directive.
@@ -185,7 +179,6 @@ Background context: After launching multiple tasks, it's necessary to ensure all
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Tuning in Task-Based Algorithms
 Background context: Achieving good performance with OpenMP task-based algorithms requires careful tuning, such as controlling the number of threads spawned and keeping task granularity reasonable.
@@ -203,7 +196,6 @@ For example, setting a threshold in the `final` directive helps avoid creating t
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Message Passing Interface (MPI)
@@ -215,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compilation and Execution of MPI Programs
 Explanation on how to compile and run MPI programs. Common compiler wrappers are mentioned.

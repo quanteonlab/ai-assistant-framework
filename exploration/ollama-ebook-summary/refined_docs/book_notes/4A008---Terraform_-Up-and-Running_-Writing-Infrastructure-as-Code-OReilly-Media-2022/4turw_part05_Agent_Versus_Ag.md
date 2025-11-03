@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Agent Versus Agentless
 
 ---
 
-**Rating: 8/10**
 
 #### Maintenance of Agents
 Background context explaining how maintaining and updating agents on a periodic basis can introduce complexities, including synchronization with the master server and monitoring to ensure they remain functional.
@@ -33,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Security Concerns with Agents
 Background context explaining the security risks associated with agents, such as opening outbound and inbound ports to communicate with master servers or other agents.
@@ -51,7 +48,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Infrastructure as Code (IaC) Tools and Cloud Providers
 Background context explaining how cloud providers handle the installation of agents, reducing the need for manual agent installations when using IaC tools.
@@ -76,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Provisioning plus Server Templating with Packer
 This combination involves using Packer to create VM images and Terraform to deploy those VMs along with other infrastructure components. It supports an immutable infrastructure approach, making maintenance easier but can be slow due to long VM build times.
@@ -87,7 +82,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Provisioning plus Server Templating plus Orchestration with Docker and Kubernetes
 This advanced combination includes using Packer to create VM images with Docker and Kubernetes agents installed, then deploying these VMs into a cluster managed by Terraform. Finally, the cluster forms a Kubernetes environment for managing containerized applications.
@@ -100,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform Overview
 Terraform is a tool used for deploying and managing infrastructure as code. It automates the process of setting up servers, networks, storage, and other resources required to run applications or services. Terraform uses configuration files written in HCL (HashiCorp Configuration Language) to define the desired state of the infrastructure.
@@ -112,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kubernetes Overview
 Kubernetes manages containerized applications by orchestrating Docker containers within a cluster. It provides features such as deployment strategies, auto-healing, and auto-scaling to ensure high availability and efficient resource utilization.
@@ -124,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Docker Containers
 Docker containers are lightweight, standalone executable packages that include everything needed to run an application. They encapsulate the code along with its runtime, dependencies, libraries, and configuration files into one package.
@@ -136,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Puppet Overview
 Puppet is an open-source automation tool that uses declarative manifests to describe the desired state of systems. It supports both mutable and immutable infrastructures.
@@ -148,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ansible Overview
 Ansible is an open-source automation tool that uses YAML playbooks to describe tasks. It provides a simple configuration management approach with no agents needed on the managed nodes.
@@ -160,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CloudFormation Overview
 CloudFormation is an AWS service that uses templates to define and provision AWS resources in an organized way. It enables the creation of complex resource configurations through YAML or JSON.
@@ -172,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform Flexibility
 Terraform is flexible enough to be used in various configurations beyond its default use. For example, it can be used without a master or for immutable infrastructure.
@@ -184,7 +171,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gruntwork Criteria
 Gruntwork selected Terraform due to its open-source nature, cloud-agnostic capabilities, large community, mature codebase, support for immutable infrastructure, declarative language, masterless and agentless architecture, and optional paid service.

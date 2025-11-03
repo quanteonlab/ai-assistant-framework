@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3.4.1 Numerical Recursion Method
 
 ---
 
-**Rating: 8/10**
 
 #### Spherical Bessel Functions
 
@@ -33,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Recursion for Spherical Bessel Functions
 
@@ -64,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Errors in Bessel Functions
 Background context: When computing Bessel functions numerically, even though we start with a pure \( j_l(x) \), the computer's lack of precision can introduce errors due to the admixture of \( n_l(x) \). This is because both \( j_l \) and \( n_l \) satisfy the same differential equation, leading to similar recurrence relations. When the numerical value of \( n_l(x) \) becomes much larger than that of \( j_l(x) \), even a small admixture can lead to significant errors.
@@ -81,7 +77,6 @@ Where \( j_0^{\text{anal}}(x) = \sin x / x \).
 
 ---
 
-**Rating: 8/10**
 
 #### Downward Recursion in Bessel Functions
 Background context: The downward recursion method for computing Bessel functions starts at a large value of \( l \) and moves downwards, avoiding subtractive cancellation. This method normalizes the computed values to ensure accurate relative values.
@@ -99,7 +94,6 @@ This normalization is crucial for maintaining the accuracy of relative values, e
 
 ---
 
-**Rating: 8/10**
 
 #### Stability and Convergence
 Background context: The stability and convergence of Bessel function calculations are crucial for accurate results. Using downward recursion starting from a large \( l = L \) can help reduce numerical errors, but both methods need to be tested for different values of \( x \).
@@ -112,7 +106,6 @@ For certain values of \( x \), both upward and downward recursions may give simi
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation: Bessel.py
 Background context: The provided code snippet is a Python implementation using Visual Python (VP) to determine spherical Bessel functions via downward recursion. Modifying this code to include upward recursion can help in comparing both methods.
@@ -136,7 +129,6 @@ def down(x, n, m):
 
 ---
 
-**Rating: 8/10**
 
 #### Scaling Pseudorandom Numbers
 To generate pseudorandom numbers in a specific range [A, B], you can scale the generated random numbers \( r_i \) by dividing them by \( M \) and then multiplying by the desired range:

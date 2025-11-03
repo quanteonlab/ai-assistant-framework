@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A003---Generative-Deep-Learning_-Teaching-Machines-To-Paint-Write-Compose-and-Play-OReilly-Media-2023David-Foster--_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Prerequisites
 
 ---
 
-**Rating: 8/10**
 
 #### Transforming Interaction through Generative AI
 Generative AI is transforming the way we interact with machines by enabling them to produce original and creative outputs. This technology has the potential to revolutionize our lives in various domains, including work, play, and daily interactions.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generative AI's Potential
 Generative AI aims to answer the question: can we create something that is in itself creative? Recent advances have enabled machines to paint, write coherently, compose music, and develop game strategies by generating imaginary future scenarios.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Generative Models
 The book aims to train readers on how to create their own generative models using data. It focuses on teaching from first principles rather than relying solely on pre-trained models available in open-source repositories.
@@ -39,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Practical Applications in Generative AI
 The book provides practical applications of generative models, including full working examples from the literature. Each step is explained with clear code implementations that illustrate the underlying theory.
@@ -50,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generative Modeling
 Background context: The book introduces generative modeling as a fundamental concept that allows for the creation of new data samples similar to those from an existing dataset. This is crucial for tasks such as image synthesis, language generation, and more.
@@ -62,7 +56,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deep Learning
 Background context: The book delves into deep learning, specifically through neural networks like multilayer perceptrons (MLPs) using Keras. It explores how these networks can be adapted for various tasks by adding different layers and architectures.
@@ -74,7 +67,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variational Autoencoders (VAEs)
 Background context: VAEs are discussed as a method in generative modeling where the model learns an encoding distribution over data points and then decodes it back into a sample.
@@ -91,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generative Adversarial Networks (GANs)
 Background context: GANs are introduced as a framework where two neural networks, the generator and discriminator, compete against each other in a minimax game.
@@ -108,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Autoregressive Models
 Background context: The concept of autoregressive models, particularly recurrent neural networks (RNNs) such as LSTM for text generation and PixelCNN for image generation, are discussed.
@@ -131,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Normalizing Flow Models
 Background context: This section introduces normalizing flows as a technique to model complex probability distributions by transforming simpler ones.
@@ -148,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Energy-Based Models
 Background context: The book covers energy-based models which are trained by minimizing an energy function that measures how likely or unlikely a given configuration of variables is.
@@ -168,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Langevin Dynamics and Contrastive Divergence in Chapter 7
 Background context: The seventh chapter focuses on techniques like Langevin dynamics and contrastive divergence, which are essential for sampling from complex probability distributions used in generative models.
@@ -179,7 +166,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transformer Architecture in Chapter 10
 Background context: The tenth chapter is entirely new and explores the Transformer architecture in detail. Transformers have become central to many areas of generative deep learning due to their ability to process sequential data efficiently.
@@ -190,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modern Transformer Architectures in Chapter 11
 Background context: The eleventh chapter focuses on modern Transformer architectures, replacing the LSTM-based models from the first edition. This update reflects current advancements in sequence processing within generative deep learning.
@@ -201,7 +186,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Learning Applications in Chapter 12
 Background context: The twelfth chapter updates its content with new diagrams and descriptions. It also includes a section discussing how generative deep learning approaches are influencing state-of-the-art reinforcement learning today.

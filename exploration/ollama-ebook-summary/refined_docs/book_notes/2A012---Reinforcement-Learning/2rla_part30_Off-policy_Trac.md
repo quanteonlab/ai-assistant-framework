@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 30)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Off-policy Traces with Control Variates
 
 ---
 
-**Rating: 8/10**
 
 #### Truncated Version of General O↵-Policy Return
 
@@ -28,7 +26,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Forward View Update
 
@@ -51,7 +48,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Backward View Update
 
@@ -75,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action-Based O↵-Policy Return
 
@@ -104,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action-Based Forward View Update
 
@@ -125,7 +119,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action-Based Backward View Update
 
@@ -167,7 +160,6 @@ Each flashcard covers a different aspect of o↵-policy returns and their approx
 
 ---
 
-**Rating: 8/10**
 
 #### Eligibility Traces Overview
 Background context: Chapter 12 discusses various eligibility traces methods, including those that deal with oﬀ-policy learning. The key idea is to update value functions based on trajectories and target policies, even if some actions have zero probability under these policies.
@@ -179,7 +171,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dutch-Trace and Replacing-Traces
 Background context: This section introduces variations of eligibility traces for state-value and action-value methods, including the Dutch-trace and replacing-trace versions.
@@ -191,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Watkins’s Q( ) Backup Diagram
 Background context: The diagram illustrates how Watkins’s Q( ) works, showing that it decays eligibility traces until a non-greedy action is taken.
@@ -203,7 +193,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eligibility Trace Update for Q-Learning
 Background context: The update rule involves target-policy probabilities of selected actions.
@@ -217,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-Step Expected Sarsa vs. Tree Backup
 Background context: Distinguishing between n-step Expected Sarsa and n-step Tree Backup, where Tree Backup retains no importance sampling.
@@ -229,7 +217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generalization of Tree Backup to Eligibility Traces
 Background context: Extending Tree Backup to eligibility traces involves weighting each length update.
@@ -243,7 +230,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance Sampling and Stability
 Background context: Issues of high variance arise with oﬀ-policy methods using importance sampling.
@@ -257,7 +243,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Double Expected Sarsa Extension to Eligibility Traces
 Double Expected Sarsa is an extension of the Expected Sarsa algorithm that incorporates eligibility traces. This method helps in achieving stability under off-policy training and can be useful in certain reinforcement learning scenarios.
@@ -269,7 +254,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient-TD (GTD) Algorithm Overview
 The GTD(α) algorithm is a variant of the Gradient-TD method that uses eligibility traces to stabilize learning under off-policy conditions. It aims to learn parameters \( w \) such that it approximates the value function, even when using data from another policy.
@@ -281,7 +265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GQ(α) Algorithm Overview
 GQ(α) is the Gradient-TD algorithm with eligibility traces applied to action-values. It aims to learn parameters \( w \) that approximate the state-action value function, enabling it to be used as a control algorithm when combined with an "ε-greedy" policy.
@@ -295,7 +278,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HTD(α) Algorithm Overview
 HTD(α) is a hybrid state-value algorithm that combines GTD(α) and TD(α). It generalizes TD(α) to off-policy learning while maintaining the simplicity of only one step-size parameter.
@@ -316,7 +298,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Emphatic TD(α) Algorithm Overview
 Emphatic TD(α) extends the one-step Emphatic-TD algorithm to incorporate eligibility traces. This approach retains strong off-policy convergence guarantees while allowing for flexible bootstrapping.

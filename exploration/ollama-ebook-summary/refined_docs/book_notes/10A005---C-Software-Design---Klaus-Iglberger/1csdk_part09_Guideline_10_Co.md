@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Guideline 10 Consider Creating an Architectural Document
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Inversion Principle (DIP)
 Background context explaining DIP. The principle states that high-level modules should not depend on low-level modules, but both should depend on abstractions. Abstractions should not depend upon details; details should depend upon abstractions.
@@ -60,7 +58,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quick Feedback vs. Fast Software Change
 Background context: The text emphasizes that quick feedback is essential for identifying issues early, but it does not equate to being able to change software quickly and easily without good design and architecture.
@@ -235,7 +232,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Architectural Document Importance
 Background context: An architectural document is crucial for maintaining and communicating the current state of a project's architecture. It helps in ensuring that all team members are on the same page regarding the design decisions, which is vital for the long-term success of the project.
@@ -337,7 +333,6 @@ x??
 
 ---
 
-**Rating: 10/10**
 
 #### Understanding Design Patterns
 
@@ -486,7 +481,6 @@ Using the name of a design pattern helps in quickly conveying complex ideas to o
 
 ---
 
-**Rating: 8/10**
 
 #### Design Patterns Have a Name
 Background context: A design pattern has an official name, which allows for clear and concise communication. This name provides immediate recognition of both the problem and potential solutions.
@@ -603,7 +597,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Design Pattern Overview
 Background context: A design pattern is a general reusable solution to commonly occurring problems in software design. It does not provide a one-to-one mapping of class or component interfaces, but rather a description of how elements fit together and what responsibilities they should have.
@@ -716,7 +709,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Factory Method vs. std::make_unique
 

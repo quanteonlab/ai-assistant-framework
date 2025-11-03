@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 10.4.1 Generating Wavelet Basis Functions
 
 ---
 
-**Rating: 8/10**
 
 #### Short-Time Fourier Transform (STFT)
 Background context explaining the concept. The short-time Fourier transform involves translating a window function \( w(t-\tau) \) over a signal to analyze it locally in time, as described by equation 10.13.
@@ -32,7 +30,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wavelet Transform Equations and Interpretation
 Background context explaining the wavelet transform equations. The forward and inverse wavelet transforms are given by equations 10.18 and 10.19, respectively.
@@ -64,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Morlet Wavelet Calculation
 Background context: The Morlet wavelet is a complex wavelet given by the formula \( \psi(t) = \frac{1}{\sqrt{\pi f_b}} e^{i 2 \pi f_c t} e^{-t^2 / f_b} \).
@@ -80,7 +76,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inverse Wavelet Transform
 Background context: The inverse wavelet transform can be used to reconstruct the original signal from its wavelet coefficients.
@@ -108,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Discrete Wavelet Transforms (DWT)
 Background context: DWT is a method used to analyze time signals that are measured at discrete times. Unlike continuous wavelet transforms, DWT deals with discrete values of scaling and translation parameters, making it suitable for practical applications where data is often sampled at discrete intervals.

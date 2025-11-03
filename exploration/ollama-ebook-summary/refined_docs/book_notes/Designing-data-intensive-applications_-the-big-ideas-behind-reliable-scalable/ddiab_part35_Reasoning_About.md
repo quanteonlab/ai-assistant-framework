@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 35)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Reasoning About Time
 
 ---
 
-**Rating: 8/10**
 
 #### Message-Passing Systems vs. RPC
 Message-passing systems and Remote Procedure Calls (RPC) are both mechanisms for services to communicate, but they differ fundamentally in their use cases and design principles.
@@ -82,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event Time vs Processing Time
 The text discusses the difference between event time and processing time. Event time refers to the timestamp of when an event actually occurred, while processing time is the moment at which a stream processor processes that event.
@@ -130,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Straggler Events
 
@@ -269,7 +265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Tumbling Window
@@ -374,7 +369,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Click-Search Event Join in Advertising Systems
 Context: In advertising systems, accurately joining click events with search events is crucial for measuring ad effectiveness and user behavior. The timing between a search event and a potential click can be highly variable, ranging from seconds to weeks. To handle this variability, a sliding window approach can be used where searches and clicks are joined if they occur within an hour of each other.
@@ -501,7 +495,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Batch Jobs vs. Stream Processing
@@ -673,7 +666,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Join Time Dependence
 Background context explaining how state changes over time and how joins can depend on different states at various points in time. This is particularly relevant when dealing with tax rates changing over time, where you need to join sales data with the correct tax rate applicable at the time of sale.

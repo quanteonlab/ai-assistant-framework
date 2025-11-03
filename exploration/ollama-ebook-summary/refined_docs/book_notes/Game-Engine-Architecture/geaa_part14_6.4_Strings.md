@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 6.4 Strings
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Hash Table Size and Modulo Operation
@@ -31,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Robin Hood Hashing
 Background context explaining that Robin Hood hashing is a method to improve the performance of closed hash tables by reducing clustering. This technique involves moving elements to maintain an equal distance between all occupied slots.
@@ -59,7 +56,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### String Storage and Management in Game Engines
 Background context explaining the challenges of string storage and management, including dynamic allocation, localization, text orientation handling, and internal use within game engines.
@@ -96,7 +92,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Profiling Insights
 Background context: The text mentions a scenario where profiling revealed that string operations were among the most expensive parts of the codebase, leading to performance improvements by optimizing these operations.
@@ -108,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Efficient String Passing and Usage
 Background context: The text emphasizes passing string objects by reference to avoid unnecessary copies and improve performance.
@@ -120,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pathclass for Cross-Platform Compatibility
 Background context: In game development, it's crucial to handle file paths across different operating systems. This requires a Pathclass that can automatically convert Windows-style backslashes (\) to UNIX-style forward slashes (/) or vice versa. This ensures compatibility with various platforms and simplifies the handling of file paths.
@@ -140,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unique Identifiers for Game Objects and Assets
 Background context: In a game engine, objects and assets need unique identifiers for efficient management and retrieval. These identifiers allow designers to name objects meaningfully while ensuring fast comparison operations at runtime.
@@ -162,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hashed String IDs for Performance and Descriptiveness
 Background context: Using strings as identifiers can be flexible, but comparing them is slow. To balance descriptiveness with performance, hashed string IDs are used. These provide the benefits of descriptive names while allowing fast comparison operations.
@@ -193,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unreal Engine's StringID Implementation
 Background context: In the Unreal Engine, `FName` is used as a string ID that combines the flexibility of strings with the performance of integers. This implementation helps in maintaining descriptive names while ensuring fast comparisons.
@@ -218,7 +208,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Use of 64-bit Hashing for String IDs
@@ -230,7 +219,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Runtime vs Compile-Time Hashing
 At runtime, most game engines handle string ids by hashing strings on-the-fly. Naughty Dog allows this approach but also uses C++11's user-defined literals feature to hash strings at compile time. This is done using syntax like `\"any_string\"_sid` directly transformed into a hashed integer value.
@@ -241,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### String ID Management in Unreal Engine and Naughty Dog
 
@@ -263,7 +250,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Debug Memory Usage in Game Development
 
@@ -286,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Localization Concerns
 Background context: Even after adapting software to use Unicode, other localization issues can arise. This includes handling string databases for different languages and ensuring consistent user experience across multiple locales.
@@ -315,7 +300,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Localization Database and String Management
 Background context: This section explains how to manage strings for localization, ensuring that game texts are correctly displayed based on user settings. It covers database design, string IDs, and retrieving translated strings dynamically.
@@ -327,7 +311,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asset Management
 Background context: Each asset within the localization tool is uniquely identified by its hashed string id. Assets can be either strings used in menus or HUDs, or speech audio clips with optional subtitle text.
@@ -339,7 +322,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Audio Asset Retrieval
 Background context: For audio clips used as dialog or in cinematics, assets are looked up by their unique identifier. The system also retrieves the corresponding subtitle if it exists.
@@ -365,7 +347,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quake's Cvars for Configuration Management
 Background context: The Quake engine uses console variables (cvars) as its configuration management system. These cvars can be inspected and modified through an in-game console, making them flexible and easily accessible.
@@ -401,7 +382,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### In-Game Menu Settings in Naughty Dog's Engine
 :p Describe the implementation of in-game menu settings in Naughty Dog’s engine.
@@ -438,7 +418,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### In-game Data Lookup
 Background context: The engine can read data from binary files using the `LookupSymbol` function, which is templated on the data type.
@@ -463,7 +442,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Path APIs Overview
 Background context explaining that paths are complex and require handling various aspects like directory isolation, filename extraction, canonicalization, etc. The shlwapi.dll library provides useful functions for path manipulation on Windows platforms.
@@ -475,7 +453,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Custom I/O Wrappers in Game Engines
 Background context: Many game engines use custom wrappers around the operating system’s native I/O API. This approach ensures consistent behavior across different platforms, simplifies the API, and provides extended functionality.
@@ -504,7 +481,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Optimization with Asynchronous I/O
 Background context: In scenarios where performance is critical, such as in game development, using asynchronous I/O can help improve the responsiveness of the application. This involves offloading file operations to separate threads or processes to avoid blocking the main thread.
@@ -549,7 +525,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Writing Custom Asynchronous I/O Libraries
 If an asynchronous file I/O library is not available for a specific platform, developers can write their own by wrapping the underlying system APIs. This approach ensures portability across different operating systems and hardware configurations.
@@ -560,7 +535,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Read Operation Example
 The following code snippet demonstrates how to perform an asynchronous read operation from a file into an in-memory buffer using a callback function:
@@ -605,7 +579,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Asynchronous Read File Operation
@@ -626,7 +599,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous I/O Priorities
 Asynchronous I/O operations are often prioritized based on their importance. Lower-priority requests can be suspended or preempted by higher-priority ones, ensuring that critical tasks complete within their deadlines.
@@ -641,7 +613,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Semaphores for Synchronization
 Semaphores are used in asynchronous systems to coordinate between threads, particularly when waiting for an operation to complete.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 26)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Leaderboards. Automated Evaluation. Human Evaluation
 
 ---
 
-**Rating: 8/10**
 
 #### Overview of Evaluation Methods for LLMs
 
@@ -109,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preference Tuning Overview
 Background context explaining the process of aligning an LLM to human preferences. This involves evaluating generated outputs based on predefined criteria and updating the model accordingly.
@@ -186,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reward Model and Its Purpose
 The reward model is used to evaluate the quality of a generation given a prompt. It outputs a single number that represents the preference or quality score of the generated content relative to the provided prompt.

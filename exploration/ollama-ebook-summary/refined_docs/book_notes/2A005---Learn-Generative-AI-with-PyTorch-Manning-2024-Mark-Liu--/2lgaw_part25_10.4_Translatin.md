@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 10.4 Translating English to French with the trained model
 
 ---
 
-**Rating: 8/10**
 
 #### SimpleLossCompute Class Overview
 The `SimpleLossCompute` class is designed for training a Transformer model by computing and adjusting loss values. It consists of three primary elements: 
@@ -31,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loss Function Setup
 To set up the loss function, we use a utility class `LabelSmoothing` to handle label smoothing during training. We also utilize another utility class `SimpleLossCompute`, which takes the generator from the Transformer model, a criterion function, and an optimizer as inputs.
@@ -63,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Loop Overview
 The training loop processes batches of data through the Transformer model and updates its parameters based on the computed losses. This involves several key steps:
@@ -111,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Saving Model Weights
 After training, the weights of the model are saved to a file named `en2fr.pth`. This allows you to save the trained model for future use or re-loading.
@@ -134,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tokenization and Encoding Process
 Background context explaining how the English sentence is tokenized, indexed, and encoded for translation.
@@ -156,7 +150,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Encoder-Decoder Mechanism
 Background context explaining how the encoder-decoder architecture works during translation.
@@ -201,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Processing in Transformers
 Transformers process input data such as sentences in parallel, unlike recurrent neural networks (RNNs) which handle data sequentially. This parallelism enhances efficiency but doesn't inherently allow recognition of sequence order.
@@ -219,7 +211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Positional Encodings in Transformers
 Positional encodings are unique vectors assigned to each position in the input sequence and align in dimension with the input embeddings. This is added to address the issue of sequence order recognition which RNNs handle through sequential processing.
@@ -237,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Label Smoothing in Training Neural Networks
 Label smoothing is a technique used during training deep neural networks. It helps improve the generalization of models by addressing overconfidence issues and reducing overfitting.
@@ -255,7 +245,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Autoregressive Translation in Transformers
 The decoder in the trained Transformer translates input sentences in an autoregressive manner, starting with a "BOS" token. In each step, it generates the most likely next token based on previously generated tokens until reaching the "EOS" token.
@@ -279,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Building a Generative Pretrained Transformer from Scratch
 Background context: This chapter focuses on constructing a generative pretrained Transformer model, starting with an understanding of its architecture and capabilities. The model will be based on GPT-2, which is designed to generate coherent and contextually relevant text. It uses the Transformer architecture but is decoder-only, meaning it doesn't have an encoder stack.
@@ -291,7 +279,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Self-Attention Mechanism
 Background context: Causal self-attention is a crucial component of Transformer models. It allows each token in the input sequence to attend to all previous tokens but not to any future tokens, ensuring that the generated text remains coherent and follows the order of the input.
@@ -303,7 +290,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Extracting and Loading Weights from a Pretrained Model
 Background context: After building the GPT-2 model from scratch, you will learn to extract weights from an existing pretrained model hosted on platforms like Hugging Face. These extracted weights can then be loaded into your own model for fine-tuning or direct use.
@@ -325,7 +311,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Controlling Creativity with Temperature and Top-K Sampling
 Background context: To control the creativity of generated text, GPT-2 can use temperature and top-K sampling techniques. These methods influence how the model selects tokens for generation.
@@ -360,7 +345,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Self-Attention Mechanism
 Causal self-attention is the core mechanism of GPT-2 that allows the model to focus on relevant parts of the input sequence when generating text. It ensures that the model only attends to tokens that have appeared before in the current context, effectively breaking the attention symmetry.
@@ -372,7 +356,6 @@ For example, if generating the word "dog" after "The quick brown," causal self-a
 
 ---
 
-**Rating: 8/10**
 
 #### GPT-2 Input and Output Processing
 GPT-2 processes input text by first converting tokens into word embeddings, adding positional encodings to account for the order of words in the sequence. The model then passes this processed input through a series of decoder blocks before generating an output.

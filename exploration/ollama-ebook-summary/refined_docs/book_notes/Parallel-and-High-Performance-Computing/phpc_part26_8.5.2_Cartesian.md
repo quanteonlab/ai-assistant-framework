@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 26)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.5.2 Cartesian topology support in MPI
 
 ---
 
-**Rating: 8/10**
 
 #### Sending and Receiving Data Using MPI Cartesian Topology
 Background context: With the setup of the Cartesian topology, we can now use `MPI_Cart_shift` to find neighbors and send/receive data between them.
@@ -31,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Communicating with Neighbors Using MPI Cartesian Topology
 Background context: After identifying neighboring processes using `MPI_Cart_shift`, we can perform non-blocking sends and receives to exchange data.
@@ -61,7 +58,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronizing Operations Using MPI_Waitall
 Background context: After initiating non-blocking operations, we need to ensure all the operations have completed before proceeding. `MPI_Waitall` is used for this purpose.
@@ -87,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### MPI_Neighbor_alltoallw Function Overview
@@ -122,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Send and Receive Types for Neighbor Communication in 3D Cartesian Grid
 Background context: In a 3D Cartesian grid, send/receive types are crucial as they determine how the data is block-structured and organized for communication between neighboring processes. These types need to be correctly ordered according to their spatial arrangement (front, back, bottom, top, left, right).
@@ -156,7 +150,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Script for Performance Testing
 Background context: The batch script `batch.sh` is designed to automate the execution of multiple test cases, each representing a combination of process dimensions, mesh sizes, and halo widths. It ensures consistent testing across several configurations.
@@ -178,7 +171,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Plotting Performance Results
 Background context: After running the performance tests, various Python scripts are used to generate plots that help in visualizing the relative performance of different ghost cell exchange methods. These plots aid in understanding which configurations perform best.
@@ -200,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hybrid Parallelization: MPI + OpenMP
 Hybrid parallelization combines two or more parallelization techniques, such as MPI (Message Passing Interface) and OpenMP (Open Multi-Processing). This approach is particularly useful for extremely large-scale applications where both inter-node communication efficiency and intra-node thread-level parallelism are critical.
@@ -211,7 +202,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Hybrid MPI + OpenMP
 Several benefits can be gained from using hybrid MPI + OpenMP in performance-critical applications:
@@ -226,7 +216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modified CartExchange Example for Hybrid MPI + OpenMP
 The example provided modifies the `CartExchange_Neighbor` function to include both OpenMP threading and vectorization. Key changes include:
@@ -270,7 +259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Affinity in Hybrid Parallel Applications
 Affinity is a technique to assign processes or threads a preference for scheduling on specific hardware components, reducing variability in run-time performance due to core migration.

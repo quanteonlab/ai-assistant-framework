@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 56)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** A.6 Chapter 8 MPI The parallel backbone. A.8 Chapter 10 GPU programming model
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Efficient Reproducible Floating Point Summation and BLAS
@@ -23,7 +21,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Hashing on GPU
 Background context: This reference introduces techniques for real-time parallel hashing on GPUs, which is essential for applications requiring fast hash computations, such as data indexing and searching.
@@ -35,7 +32,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scans as Primitive Parallel Operations
 Background context: This reference introduces the concept of scan operations (prefix sums) as primitive and fundamental building blocks for parallel computing.
@@ -66,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hierarchical Roofline Analysis for GPUs
 Background context: This reference introduces a hierarchical approach to performance analysis for GPUs, which helps in optimizing GPU-based systems for specific tasks.
@@ -80,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Reduction in CUDA
 Background context: Reduction is a common operation in parallel programming where elements from an array are combined into a single value. The paper "Optimizing Parallel Reduction in CUDA" by Harris provides efficient techniques for implementing reduction operations on NVIDIA GPUs.
@@ -104,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Placement and Affinity
 Background context: Managing hardware affinity in high-performance computing applications is crucial for performance optimization. hwloc, a framework discussed by Broquedis et al., provides tools to manage hardware affinities.
@@ -123,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Strategies in Checkout Lines
 The checkout line example in Figure 1.1 demonstrates multiple strategies for parallel processing, such as Multiple Instruction, Multiple Data (MIMD), distributed data, pipeline parallelism, and out-of-order execution with specialized queues.
@@ -162,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Image-Processing Application Speedup Calculation
 For an image-processing application that needs to process 1,000 images daily, each being 4 MiB in size, it takes 10 minutes per image in serial.
@@ -205,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Establishing a Version Control System with Git
@@ -237,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Test Using CTest
 Background context: CTest is a testing tool for CMake-based projects. It helps in validating that code changes or bug fixes do not break existing functionality by running predefined tests.
@@ -279,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Profiling the Hardware and Application
 Background context: Profiling is crucial to understand how your application performs on hardware. This includes measuring performance metrics like CPU frequency, energy consumption, and memory usage.
@@ -306,7 +294,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Measuring Memory Bandwidth Using STREAM Benchmark
 Background context: The STREAM benchmark measures memory bandwidth by copying data between arrays in different modes. This provides insights into the efficiency of your memory system.
@@ -327,7 +314,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Measuring Arithmetic Intensity
 Background context: Arithmetic intensity is a measure of how much computation an application does relative to memory access. This helps in understanding the balance between compute and memory bandwidth.
@@ -348,7 +334,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Measuring Application Memory Usage
 Background context: Knowing the memory footprint of your application is essential for performance optimization and resource management.
@@ -373,7 +358,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modifying Cell-Centric Full Matrix Data Structure
 Background context: This concept involves modifying a full matrix data structure to eliminate conditional statements, which can potentially improve performance by reducing branching. The original code uses an `if` statement to check conditions based on cell values.

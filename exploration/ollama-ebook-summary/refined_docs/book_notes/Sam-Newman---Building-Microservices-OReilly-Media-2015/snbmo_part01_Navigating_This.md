@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Navigating This Book
 
 ---
 
-**Rating: 8/10**
 
 #### Microservices Introduction
 Background context explaining microservices as an approach to distributed systems that promotes finely grained services with their own lifecycles. These services collaborate together and are primarily modeled around business domains, avoiding problems of traditional tiered architectures.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evolutionary Architect
 Explanation of the difficulties faced by architects in making trade-offs when implementing microservices, emphasizing the need for a comprehensive approach.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modeling Services
 Description of using domain-driven design techniques to define the boundaries of microservices.
@@ -56,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Integration
 Explanation of service collaboration techniques and integration challenges, including user interfaces and legacy systems.
@@ -82,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Splitting the Monolith
 Discussion on using microservices as an antidote to large monolithic systems.
@@ -110,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deployment
 Explanation of the challenges and advancements in deployment strategies for microservices.
@@ -144,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing
 Explanation of the importance of testing in microservices and specific techniques like consumer-driven contracts.
@@ -175,7 +167,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monitoring
 Explanation of monitoring and handling emergent complexity in distributed systems.
@@ -199,7 +190,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Security
 Explanation of security aspects in microservices, including user-to-service and service-to-service authentication.
@@ -229,7 +219,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conway’s Law and System Design
 Explanation of how organizational structure influences system architecture.
@@ -255,7 +244,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Microservices at Scale
 Explanation of challenges and solutions for scaling microservices.
@@ -289,7 +277,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bringing It All Together
 Summary of microservices principles and key points from the book.
@@ -310,7 +297,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Background on Microservices Evolution
 Microservices have emerged as a result of several technological advancements and practices over the years. This includes domain-driven design, continuous delivery, virtualization, infrastructure automation, small autonomous teams, and the experiences from large organizations like Amazon, Google, and Netflix.
@@ -329,7 +315,6 @@ Several key factors have contributed to the development of microservices:
 
 ---
 
-**Rating: 8/10**
 
 #### Characteristics of Microservices
 Microservices are small, autonomous services that work together to form a larger application. They are designed to be independent and easily replaceable without affecting other parts of the system.
@@ -346,7 +331,6 @@ Microservices are characterized by their:
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Microservices
 By embracing microservices, organizations can deliver software faster and more flexibly, allowing them to adapt quickly to changing requirements and technologies.
@@ -363,7 +347,6 @@ The key benefits of microservices include:
 
 ---
 
-**Rating: 8/10**
 
 #### Collaboration Across Teams
 Microservices enable better collaboration among teams by breaking down large systems into smaller, manageable services that can be owned and developed independently.
@@ -380,7 +363,6 @@ Microservices facilitate team collaboration through:
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges in Implementing Microservices
 While microservices offer numerous benefits, they also introduce challenges such as complexity in orchestration, monitoring, and data management across services.
@@ -397,7 +379,6 @@ Some key challenges include:
 
 ---
 
-**Rating: 8/10**
 
 #### Example Code for a Microservice
 Here’s an example of how a simple REST API might look in Java using Spring Boot:
@@ -425,7 +406,6 @@ This code sets up a simple controller that handles GET requests to `/hello` and 
 
 ---
 
-**Rating: 8/10**
 
 #### Cohesion and Codebase Management
 Background context explaining the importance of cohesion and how it relates to monolithic systems. Discuss Robert C. Martin’s Single Responsibility Principle (SRP) and its relevance to microservices.
@@ -451,7 +431,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Microservices Boundaries
 Background context explaining how microservices boundaries align with business boundaries. Discuss the benefits of keeping services focused on a specific boundary and avoiding large monolithic systems.
@@ -480,7 +459,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determining Service Size
 Background context explaining the challenges of determining the size of a microservice, including factors like team management and complexity. Discuss Jon Eaves' rule of thumb for microservices.
@@ -500,7 +478,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Size and Complexity
 Background context explaining the trade-offs between service size and complexity. Discuss how reducing service size can increase interdependence benefits but also introduce more moving parts.
@@ -528,7 +505,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Organizational Alignment and Microservices
 Background context explaining the importance of aligning microservices with team structures. Discuss how this can help in breaking down large systems.
@@ -554,7 +530,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Autonomous Deployment of Microservices
 Microservices are deployed as separate entities, often isolated on a platform as a service (PAAS) or their own operating system process. This isolation is crucial for maintaining simplicity and ease of reasoning about the distributed system.
@@ -580,7 +555,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Communication Between Microservices
 Communication between microservices is done via network calls to ensure separation of concerns and avoid tight coupling. This approach enforces loose coupling, making services more resilient and easier to maintain.
@@ -611,7 +585,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Decoupled APIs
 Decoupling APIs is crucial for ensuring that services can be modified independently without impacting other services. This approach helps in maintaining the autonomy of each service.
@@ -635,7 +608,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Technology Heterogeneity
 Technology heterogeneity allows different services within a system to use different technologies suited for their specific needs, rather than using a single, standardized technology stack.
@@ -665,7 +637,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Embracing Different Technologies with Microservices
 Background context: The passage discusses how microservices can facilitate a more flexible and safer approach to adopting new technologies. In a monolithic application, introducing a new technology often requires significant changes across the entire system, posing higher risks. Conversely, microservices allow for experimenting with new technologies in smaller, isolated services.
@@ -685,7 +656,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Risks and Constraints of Technology Choices in Microservices
 Background context: The text mentions organizations like Netflix and Twitter that adopt specific technology stacks, such as the Java Virtual Machine (JVM), due to their familiarity with its reliability and performance. However, these organizations do not restrict themselves to a single stack for all services.
@@ -705,7 +675,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mitigating Risks through Rapid Iteration
 Background context: The passage emphasizes the advantage of microservices in rapidly iterating and adopting new technologies. If a team can quickly rewrite a microservice, they can better manage risks associated with new technology by limiting potential negative impacts.
@@ -728,7 +697,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evolving Technology Choices with Microservices
 Background context: The text highlights the importance of balancing technology choices and evolution. As mentioned, organizations like Netflix and Twitter adopt specific technology stacks but still allow services to evolve independently.
@@ -751,7 +719,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ensuring Service Independence through Integration
 Background context: The passage concludes by suggesting that integration strategies in microservices should focus on ensuring services can evolve independently without excessive coupling.
@@ -780,7 +747,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Resilience in Microservices
 Resilience is a crucial aspect of microservice architecture, where service boundaries act as bulkheads. In monolithic systems, if one component fails, it can bring down the entire system. However, with microservices, isolated failures are contained within specific services, allowing other parts of the system to continue functioning.
@@ -803,7 +769,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scaling in Microservices
 In monolithic applications, scaling is a challenge because all components scale together. However, with microservices, you can scale individual services based on their needs. This allows for more efficient use of hardware resources and better handling of traffic spikes.
@@ -828,7 +793,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ease of Deployment in Microservices
 Deploying changes in a monolithic application requires redeploying the entire system. This can be risky and infrequent, leading to large deltas between deployments. In microservices, you can update individual services independently, reducing risk and accelerating deployment cycles.
@@ -855,7 +819,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Organizational Alignment
 Background context explaining how large teams and large codebases can lead to productivity issues, especially with distributed teams. Microservices allow better alignment of architecture to organization size, optimizing team sizes for higher productivity.
@@ -874,7 +837,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Composability
 Explanation of how microservices enhance functionality reuse across different platforms (Web, mobile, desktop). Microservices allow for flexibility and adaptability to changing customer engagement strategies.
@@ -896,7 +858,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimizing for Replaceability
 Explanation of the challenges faced with large, legacy systems and how microservices can make it easier to replace or remove services without significant risk.
@@ -927,7 +888,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service-Oriented Architecture (SOA)
 Background context: SOA is a design approach where multiple services collaborate to provide end-user capabilities. Each service typically runs as a separate process and communicates via network calls, promoting reusability and ease of maintenance. While theoretically sound, many challenges arise in implementing SOA effectively.
@@ -939,7 +899,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges with SOA Implementation
 Background context: Despite its benefits, SOA implementation faces numerous challenges such as communication protocols (e.g., SOAP), vendor middleware, and lack of guidance on service granularity. These factors can undermine the goal of SOA.
@@ -955,7 +914,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Microservices as a Specific Approach for SOA
 Background context: Microservices represent a granular approach to SOA, focusing on breaking down large systems into smaller, independently deployable services. This aligns with the principles of SOA but addresses its challenges by providing practical guidance.
@@ -971,7 +929,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decompositional Techniques
 Background context: Microservices emerge from the need to decompose large systems effectively. Other techniques like shared libraries also offer ways to achieve similar benefits by breaking down codebases into reusable components.
@@ -986,7 +943,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shared Libraries
 
@@ -1015,7 +971,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Drawbacks of Shared Libraries
 
@@ -1036,7 +991,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modular Decomposition
 

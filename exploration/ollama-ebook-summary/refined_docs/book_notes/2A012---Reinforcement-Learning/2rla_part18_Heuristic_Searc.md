@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Heuristic Search
 
 ---
 
-**Rating: 8/10**
 
 #### RTDP Overview
 RTDP (Real-Time Dynamic Programming) is a method that focuses on updating fewer states during each sweep, unlike traditional value iteration which updates all states. This approach makes it more efficient for problems with large state spaces.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Updates in RTDP
 In an average run of RTDP, a significant number of states are updated relatively few times, with some not being updated at all.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison with Value Iteration
 RTDP and value iteration differ in their approach to policy generation. RTDP uses a greedy policy, which can lead to early emergence of an optimal or near-optimal policy.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Racetrack Example
 The racetrack example demonstrates that RTDP can achieve near-optimality with fewer updates compared to traditional value iteration.
@@ -54,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Computational Efficiency of RTDP
 RTDP is computationally more efficient than traditional value iteration, achieving near-optimal results with about half the computational effort.
@@ -66,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simultaneous Planning and Acting
 RTDP combines planning (using a model) with acting in the environment, making it useful for real-time decision-making.
@@ -78,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence in RTDP
 The convergence theorem for RTDP ensures that it will eventually focus only on relevant states, i.e., those making up optimal paths.
@@ -90,7 +82,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Additional Advantages of RTDP
 RTDP's advantages include early identification of near-optimal policies and efficient use of computational resources.
@@ -104,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Background Planning vs. Decision-Time Planning
 Background planning involves improving a policy or value function over time, while decision-time planning focuses on selecting an action for the current state. Both methods can blend together but are often studied separately.
@@ -127,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decision-Time Planning
 Decision-time planning involves selecting an action for the current state, often by evaluating a large tree of possible continuations for each state. This method is useful when fast responses are not required.
@@ -159,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Approximate Value Function and Backing Up
 
@@ -172,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Greedy and -greedy Action Selection
 
@@ -185,7 +172,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### UCB Action Selection
 
@@ -198,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Heuristic Search in TD-Gammon
 
@@ -211,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Current State Updates
 
@@ -226,7 +210,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Heuristic Search and Focus of Updates
 Background context: The text discusses how heuristic search can be effective due to its ability to focus computational resources on current decisions. This focusing is achieved by concentrating memory and computational resources on the current state and likely successors, which can lead to better decision-making compared to unfocused updates.
@@ -251,7 +234,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rollout Algorithms Overview
 Background context: The text introduces rollout algorithms as decision-time planning techniques based on Monte Carlo control applied to simulated trajectories starting from the current state. These algorithms estimate action values by averaging returns of many simulated trajectories and select actions with the highest estimated value.
@@ -284,7 +266,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Improvement Theorem
 Background context: The text mentions the policy improvement theorem which states that given two policies, if one policy is better than another in terms of the expected return from a particular state, then it can be improved. Rollout algorithms use this principle to improve their current policy by selecting actions with the highest estimated value.
@@ -320,7 +301,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-offs in Rollout Algorithms
 Background context: The text highlights that while better rollout policies can lead to improved performance, they require more computational resources due to the need for simulating enough trajectories to obtain accurate value estimates. This trade-off must be considered when implementing rollout algorithms.
@@ -356,7 +336,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Monte Carlo Trials
 Background context explaining how Monte Carlo trials can be run in parallel to improve efficiency. The independence of these trials allows for parallel execution on separate processors.
@@ -368,7 +347,6 @@ Monte Carlo trials can be run in parallel across multiple processors or cores, t
 
 ---
 
-**Rating: 8/10**
 
 #### Trajectory Truncation and Evaluation Functions
 Background context on how trajectories are often truncated for efficiency reasons, with evaluation functions used to correct these truncations.
@@ -380,7 +358,6 @@ Monte Carlo simulations can be optimized by truncating the length of simulated t
 
 ---
 
-**Rating: 8/10**
 
 #### Action Pruning and Parallel Implementation Challenges
 Background context on action pruning techniques that might simplify parallel implementations but could complicate their execution.
@@ -392,7 +369,6 @@ Action pruning involves monitoring Monte Carlo simulations and removing candidat
 
 ---
 
-**Rating: 8/10**
 
 #### Rollout Algorithms and Reinforcement Learning
 Background context on how rollout algorithms leverage features of reinforcement learning for estimating action values through sampling.
@@ -404,7 +380,6 @@ Rollout algorithms are a type of reinforcement learning approach that focuses on
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Tree Search (MCTS)
 Background context introducing MCTS as a successful decision-time planning method that enhances rollout algorithms with value accumulation.
@@ -416,7 +391,6 @@ The primary goal of Monte Carlo Tree Search (MCTS) is to enhance traditional rol
 
 ---
 
-**Rating: 8/10**
 
 #### Variations and Applications of MCTS
 Background context on the effectiveness of MCTS in various settings and its adaptability beyond games.
@@ -428,7 +402,6 @@ Monte Carlo Tree Search (MCTS) has proven effective in a wide range of applicati
 
 ---
 
-**Rating: 8/10**
 
 #### Execution and State Selection in MCTS
 Background context on the continuous execution of MCTS as states change.
@@ -442,7 +415,6 @@ MCTS is typically executed iteratively after encountering each new state to sele
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Tree Search (MCTS) Overview
 
@@ -457,7 +429,6 @@ The core idea is to focus multiple simulations starting from the current state b
 
 ---
 
-**Rating: 8/10**
 
 #### Selection in MCTS
 
@@ -481,7 +452,6 @@ public Action selectNode(Node node, double epsilon) {
 
 ---
 
-**Rating: 8/10**
 
 #### Simulation in MCTS
 
@@ -507,7 +477,6 @@ public int simulate(Node node) {
 
 ---
 
-**Rating: 8/10**
 
 #### Backup in MCTS
 
@@ -532,7 +501,6 @@ public void backup(Node node, int outcomeValue) {
 
 ---
 
-**Rating: 8/10**
 
 #### Expansion Step in MCTS
 Background context: In Monte Carlo Tree Search (MCTS), after a node is selected, it may be necessary to expand the tree by adding child nodes. This expansion depends on unexplored actions from the currently selected leaf node.
@@ -558,7 +526,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simulation Step in MCTS
 Background context: After a node is selected and possibly expanded, the next step in MCTS involves running a simulation (episode) from one of the newly added child nodes. This simulation uses the rollout policy to select actions until the end of the episode.
@@ -583,7 +550,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Selection Mechanism in MCTS
 Background context: Once all iterations are complete, an action is selected from the root node of the tree. This selection mechanism depends on the accumulated statistics (like visit counts or values) within the tree.
@@ -617,7 +583,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application of MCTS in Game Playing
 Background context: MCTS was initially designed for game playing, where each iteration involves running a complete game play using both tree and rollout policies.
@@ -646,7 +611,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MCTS and Reinforcement Learning Integration
 Background context: The AlphaGo program extended MCTS by integrating it with a deep artificial neural network that learns action values through self-play reinforcement learning.

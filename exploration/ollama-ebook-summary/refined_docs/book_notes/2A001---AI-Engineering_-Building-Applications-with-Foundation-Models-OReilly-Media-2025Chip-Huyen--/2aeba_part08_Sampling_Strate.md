@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A001---AI-Engineering_-Building-Applications-with-Foundation-Models-OReilly-Media-2025Chip-Huyen--_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Sampling Strategies
 
 ---
 
-**Rating: 8/10**
 
 #### Logits and Softmax Layer
 
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sampling Strategies
 
@@ -54,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Arg Max Function vs Softmax Probabilities at Different Temperatures
 
@@ -91,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Underflow Problem in Probabilities
 
@@ -120,7 +115,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Top-k Sampling Strategy
 
@@ -147,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Top-k Sampling
@@ -162,7 +155,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Top-p (Nucleus) Sampling
 Top-p or nucleus sampling dynamically selects tokens based on their cumulative probability. The model sums probabilities in descending order until it reaches a threshold p, and then only considers these values for the next token.
@@ -176,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Min-p Sampling
 Min-p sampling involves setting a minimum probability threshold for tokens to be considered during generation. This ensures that only tokens with sufficient probability are chosen.
@@ -190,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stopping Conditions
 Stopping conditions are used in autoregressive language models to limit the length of generated sequences, reducing computational costs and improving user experience.
@@ -206,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Test Time Compute Concept
 Background context explaining the use of test time compute to improve model responses. This technique involves generating multiple outputs for a single input and selecting the best one based on various criteria.
@@ -220,7 +209,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Beam Search
 Explanation of beam search and how it differs from generating all outputs independently.
@@ -269,7 +257,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Diverse Outputs Strategy
 Explanation of strategies to increase the diversity of outputs, such as varying model sampling variables.
@@ -311,7 +298,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Log Prob Calculation
 Explanation of calculating log probabilities for sequence generation and why it’s used.
@@ -342,7 +328,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Selection Methods
 Explanation of selection methods used in test time compute, such as choosing based on average logprob or using reward models.
@@ -393,7 +378,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Verifiers and Reward Models
 Explanation of using verifiers and reward models to improve model performance, including their benefits and potential drawbacks.
@@ -428,7 +412,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application-Specific Heuristics
 Explanation of using application-specific heuristics for selecting outputs, such as choosing the shortest response or valid SQL queries.
@@ -490,7 +473,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Self-Consistency Approach
 Background context: Wang et al. (2023) introduced a self-consistency approach for handling brittle models, which are models that may not perform consistently under small input variations.
@@ -519,7 +501,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Response Generation
 Background context: To address latency issues in models, especially for complex queries like chain-of-thought questions, a common approach is to generate multiple responses in parallel and display the first valid response. This method helps reduce overall wait times.
@@ -561,7 +542,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sampling for Robustness
 Background context: When dealing with brittle models, sampling multiple outputs can help in obtaining more robust and reliable results. This technique is particularly useful when the model's responses vary significantly with small input variations.
@@ -591,7 +571,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Structured Output Tasks
 Background context: In certain applications, models need to generate outputs in a specific format. This is particularly common in tasks like semantic parsing, where natural language needs to be converted into machine-readable formats.
@@ -627,7 +606,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Structured Outputs Overview
 Structured outputs are necessary when downstream applications require specific formats for processing. Even though the model itself may not need structured data, its outputs must be parseable by these applications.
@@ -638,7 +616,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generating Constrained Outputs Using Guidance
 Guidance can be used to generate outputs constrained within specific options or regex patterns. This technique helps ensure that generated content matches desired formats.
@@ -649,7 +626,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Constrained Sampling
 Constrained sampling involves guiding the model to generate outputs that fit specific formats, often used when the model is already good at generating structured data but needs a little help.
@@ -660,7 +636,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finetuning for Structured Outputs
 Finetuning can be used to improve a model's ability to generate structured outputs, especially in cases where simple prompting and constrained sampling don’t suffice.
@@ -673,7 +648,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AI as a Judge Approach
 
@@ -686,7 +660,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Constraint Sampling
 
@@ -699,7 +672,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Grammar and Constraint Sampling
 
@@ -712,7 +684,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Increased Latency in Grammar Verification
 
@@ -725,7 +696,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -742,7 +712,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Classifier Head Addition
 Adding a classifier head to a base model is a technique used for classification tasks. This involves appending a new component to the existing model that processes the features generated by the foundation model and produces class probabilities or labels.
@@ -777,7 +746,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finetuning vs. Training From Scratch
 Training a model from scratch involves initializing and training the entire model on the given task data, while finetuning starts with a pre-trained model and adjusts it for specific tasks.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Encoding and Decoding Context with Attention
 
 ---
 
-**Rating: 8/10**
 
 #### Semantic Similarity and Embeddings
 Background context explaining that embeddings allow us to measure the semantic similarity between words using distance metrics. Words with similar meanings tend to be closer in multidimensional space.
@@ -72,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Attention Mechanism in Transformers
 Background context explaining the concept. The attention mechanism is a fundamental part of the Transformer architecture, allowing it to focus on different positions within a sequence during both encoding and decoding processes. This differs from traditional RNNs that process one token at a time.
@@ -154,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### BERT Overview
 Background context explaining the BERT model's introduction and significance. The original Transformer model is an encoder-decoder architecture, but BERT introduces a new encoder-only architecture that can be used for various tasks such as text classification.

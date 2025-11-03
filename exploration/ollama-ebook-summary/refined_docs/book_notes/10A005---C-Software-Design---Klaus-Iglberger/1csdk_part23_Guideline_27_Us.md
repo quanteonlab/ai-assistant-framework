@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Guideline 27 Use CRTP for Static Mixin Classes. A Strong Type Motivation
 
 ---
 
-**Rating: 8/10**
 
 #### CRTP Drawbacks and Alternatives
 
@@ -117,7 +115,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Problem with Direct Operator Overloading
 
@@ -259,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CR TP Implementation Details
 Background context explaining the concept. The implementation details of the CR TP (Class Template Partial) are provided, which involves adding mixins through template template parameters to selectively enhance specific StrongType instantiations.
@@ -326,7 +322,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CRTP as a Design Pattern vs. Implementation Pattern
 Background context: The text discusses how the Curiously Recurring Template Pattern (CRTP) can be used both as a design pattern and an implementation pattern, explaining their differences and contexts of usage.
@@ -451,7 +446,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bridge Design Pattern
 Background context explaining the concept. The Bridge design pattern decouples an abstraction from its implementation so that the two can vary independently. This is achieved by separating an object's interface from its implementation.

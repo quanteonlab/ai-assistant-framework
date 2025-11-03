@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** More Efficient Attention
 
 ---
 
-**Rating: 8/10**
 
 #### Local/Sparse Attention
 Background context explaining the concept. The area that gets the most focus from the research community is the attention layer of the Transformer, specifically for efficiency improvements. Local/sparse attention limits the context of previous tokens that the model can attend to.
@@ -135,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transformer Block Overview
 Background context explaining the core components of a Transformer block, including attention layers and feedforward neural networks. The original design included residual connections and layer normalization operations.
@@ -227,7 +224,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Transformer LLM Generation Process

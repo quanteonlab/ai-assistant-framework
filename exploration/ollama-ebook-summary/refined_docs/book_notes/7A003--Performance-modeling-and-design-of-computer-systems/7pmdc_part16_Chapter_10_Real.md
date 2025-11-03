@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 10 Real-World Examples Google Aloha and Harder Chains. 10.1 Googles PageRank Algorithm
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Backlinks Not Being Equal
 Background context: In Google’s PageRank algorithm, backlinks are used to determine the importance of a web page. However, not all backlinks should be considered equally important.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creation of DTMC for Web Pages
 Background context: Google uses a Markov chain to model web surfing behavior, where each state represents a web page and transitions represent clicking from one page to another.
@@ -56,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Infinite-State Markov Chains and Generating Functions
 Background context: Solving infinite-state Discrete-Time Markov Chains (DTMCs) is challenging due to the lack of a finite number of balance equations. Generating functions can provide a solution for such chains by transforming recurrence relations into closed-form expressions.
@@ -68,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Caching Problem
 Background context: This problem involves a web server with three pages and caching. The objective is to find the proportion of time that the cache contains certain combinations of pages, and the proportion of requests for cached pages.
@@ -98,7 +93,6 @@ The objective in part (b) is to find the proportion of requests that are for cac
 
 ---
 
-**Rating: 8/10**
 
 #### Time to Empty - Part 1
 Background context: This problem involves a router where packets increase or decrease in number each step, and we need to compute the expected time and variance for the router to empty.
@@ -120,7 +114,6 @@ The expected time to get from state 1 to state 0 can be computed using:
 
 ---
 
-**Rating: 8/10**
 
 #### Time to Empty - Part 2
 Background context: This problem is an extension of the previous one but considers a general starting state \( n \).
@@ -139,7 +132,6 @@ For other states, the expected time follows a similar recursive formula derived 
 
 ---
 
-**Rating: 8/10**
 
 #### Processor with Failures
 Background context: This problem involves a DTMC that tracks the number of jobs in a system, including processor failures.

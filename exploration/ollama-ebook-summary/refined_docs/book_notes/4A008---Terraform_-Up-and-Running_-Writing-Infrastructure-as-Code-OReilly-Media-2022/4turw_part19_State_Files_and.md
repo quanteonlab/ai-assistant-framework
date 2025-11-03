@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** State Files and Plan Files
 
 ---
 
-**Rating: 8/10**
 
 #### Using Terraform Backends for State File Security
 Background context: To mitigate the risks associated with storing secrets in plain text within the state files, it is recommended to use Terraform backends that support encryption such as S3, GCS, or Azure Blob Storage. These backends help ensure that the state file is both encrypted in transit and at rest.
@@ -29,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Managing Secrets in Plan Files
 Background context: Similar to the state files, any secrets passed into resources during planning will also be stored in plain text within the plan file. This poses a significant security risk if the plan files are not properly secured.
@@ -55,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Strict Access Control for Plan Files
 Background context explaining why it is important to control access to Terraform plan files, especially when they may contain secrets. The example provided illustrates that sensitive information should be protected with as much care as the secrets themselves.
@@ -83,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Passing Secrets to Resources and Data Sources
 Background context explaining different methods for passing secrets to Terraform resources and data sources, including environment variables, encrypted files, and centralized secret stores.
@@ -103,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Securing State and Plan Files
 Background context explaining that Terraform stores secrets in state files and plan files, which should be encrypted and access-controlled.
@@ -135,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -152,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Provider Naming and Versioning
 Explanation on naming conventions and version management in providers.

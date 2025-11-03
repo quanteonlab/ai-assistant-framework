@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Refactoring Can Be Tricky
 
 ---
 
-**Rating: 8/10**
 
 #### Renaming Variables and Functions Carefully
 Background context: When refactoring Terraform code, renaming variables or functions can lead to unintended downtime if not handled correctly. Terraform associates resource identifiers with cloud provider resources, so a change in identifier name is perceived as deleting one resource and creating another.
@@ -79,7 +77,6 @@ Using `terraform state mv` or adding a `moved` block ensures that the resource i
 
 ---
 
-**Rating: 8/10**
 
 #### Changing Resource Identifiers Carefully
 Background context: When refactoring resources in Terraform, changing the identifier of a resource can lead to unintended deletion and recreation of the resource, causing downtime. For example, renaming `aws_security_group.instance` to `aws_security_group.cluster_instance`.
@@ -128,7 +125,6 @@ Using `terraform state mv` or adding a `moved` block ensures that the resource i
 
 ---
 
-**Rating: 8/10**
 
 #### Using the Plan Command to Catch Issues
 Background context: The `plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted. Running `terraform plan` before applying changes allows you to review the intended state changes and avoid unexpected downtime.
@@ -162,7 +158,6 @@ This indicates that Terraform plans to delete and recreate the security group, w
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Before Destroying
 Background context: Sometimes, it's necessary to replace resources by creating new ones before deleting old ones. Using the `create_before_destroy` lifecycle policy can help achieve this goal more gracefully.
@@ -199,7 +194,6 @@ This will first create the new resource and then destroy the old one, ensuring m
 
 ---
 
-**Rating: 8/10**
 
 #### Updating State Files Without Downtime
 Background context: Refactoring code may require updating state files in Terraform to avoid unintentional deletion and recreation of resources. Using `terraform state mv` or adding a `moved` block can help update the state file correctly without causing downtime.
@@ -224,7 +218,6 @@ Using `terraform state mv` allows you to rename resources in your Terraform code
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Moved Blocks for State Updates
 Background context: Adding a `moved` block to your Terraform code can help automate the process of updating the state file when refactoring resources. This ensures that the transition from old identifiers to new ones is handled correctly without causing unintended downtime.
@@ -262,7 +255,6 @@ ensures that the state transition is handled correctly. When you run `terraform 
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Best Practices for Refactoring in Terraform
 Background context: When refactoring code in Terraform, it's crucial to follow best practices to avoid unintentional resource deletion and recreation, causing downtime. Using the `plan` command, `create_before_destroy`, `terraform state mv`, or adding a `moved` block can help achieve this goal.
@@ -387,7 +379,6 @@ By following these steps, you can ensure that your refactoring process is as smo
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -458,7 +449,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -529,7 +519,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -600,7 +589,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -671,7 +659,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -742,7 +729,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -813,7 +799,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -884,7 +869,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -955,7 +939,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -1026,7 +1009,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -1097,7 +1079,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -1168,7 +1149,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -1239,7 +1219,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -1310,7 +1289,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -1381,7 +1359,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -1452,7 +1429,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -1523,7 +1499,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -1594,7 +1569,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -1665,7 +1639,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -1736,7 +1709,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -1807,7 +1779,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -1878,7 +1849,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -1949,7 +1919,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -2020,7 +1989,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -2091,7 +2059,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -2162,7 +2129,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 
@@ -2233,7 +2199,6 @@ By integrating these best practices and resources, you can effectively refactor 
 
 ---
 
-**Rating: 8/10**
 
 ## Refactoring Resources in Terraform
 

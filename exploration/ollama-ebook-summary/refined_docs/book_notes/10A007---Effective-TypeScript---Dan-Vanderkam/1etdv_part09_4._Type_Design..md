@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4. Type Design. Item 29 Prefer Types That Always Represent Valid States
 
 ---
 
-**Rating: 8/10**
 
 #### Valid State Representation
 Background context: When designing types, it is crucial to ensure that they can only represent valid states. This makes your code more understandable and reduces the likelihood of bugs. If a type allows invalid states, it can lead to confusion when reading or maintaining the code.
@@ -187,7 +185,6 @@ This type ensures that `paymentStatus` cannot be set unless the order is in a "s
 
 By enforcing such constraints through types, you create a more robust and maintainable codebase.
 
-**Rating: 8/10**
 
 #### Improved State Representation
 Background context: The original state representation was ambiguous, leading to difficulties in implementing `render()` and `changePage()`. A new approach using tagged unions (discriminated unions) explicitly models the different states a network request can be in. This approach eliminates invalid states and makes it easier to implement functions like `renderPage` and `changePage`.
@@ -295,7 +292,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Designing Interfaces for Simplicity and Safety
 Background context: The text discusses the importance of designing interfaces, especially those involving critical systems like aircraft controls, to ensure they are simple, unambiguous, and safe. It uses the example of Airbus 330’s side sticks and the getStickSetting function to illustrate potential pitfalls in complex system designs.
@@ -342,7 +338,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Robustness Principle (Postel's Law)
 Background context: The robustness principle, also known as Postel’s Law, advises developers to be conservative in what they produce and liberal in what they accept. This principle is crucial for creating resilient software systems, especially in network protocols where different implementations can interact with each other.
@@ -406,7 +401,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Input Types vs Output Types
 Background context: The text highlights that input types often have broader types compared to output types. Optional properties and union types are more common in parameter types, while void returns can be awkward for clients.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.9 Using Dependency Injection
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -144,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Injection Frameworks
 Background context: Dependency injection (DI) is a design pattern that helps to manage object dependencies. It allows you to avoid hard-coding dependencies into classes, making them more testable and easier to maintain. DI frameworks like Spring or CDI provide mechanisms to inject these dependencies at runtime.
@@ -270,7 +267,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Injection Overview
 Background context: The provided text discusses dependency injection (DI) and its implementation using various frameworks such as Spring, Java EE CDI, and Guice. DI allows classes to be loosely coupled by managing their dependencies through an external container or mechanism.

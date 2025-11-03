@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Business-Law_-Text-and-Cases_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 36-4 Franchise Termination
 
 ---
 
-**Rating: 8/10**
 
 #### Pricing Arrangements
 
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Effects of S Election on Taxation
 Background context: The passage explains how an S corporation is taxed differently than a regular corporation, passing corporate income through to shareholders and avoiding double taxation.
@@ -60,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### When Appraisal Rights Apply
 Background context: Appraisal rights typically apply to mergers, consolidations, share exchanges, and sales of substantially all corporate assets. These rights are especially important in short-form mergers where minority shareholders have no prior notice or say.

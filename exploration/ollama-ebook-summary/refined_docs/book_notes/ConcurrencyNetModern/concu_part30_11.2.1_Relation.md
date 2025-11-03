@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 30)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11.2.1 Relation with message passing and immutability. 11.2.2 Natural isolation. 11.3.2 What an agent can do
 
 ---
 
-**Rating: 8/10**
 
 #### Immutability and Concurrency
 Immutability ensures that an object's state cannot be modified after it is created. This makes concurrent operations safer because there are no race conditions or inconsistencies due to simultaneous modifications.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Natural Isolation
 Natural isolation in concurrent programming involves giving each thread a separate copy of the data to work on, preventing race conditions by ensuring that each task operates on its own independent set of data.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agents in Concurrent Programming
 Agents are single-threaded units of computation designed for message-passing and isolation in concurrent applications. They manage internal state and process messages asynchronously.
@@ -39,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agent Mailbox
 The mailbox in an agent serves as an internal queue for handling asynchronous messages. It ensures that messages are processed one at a time and buffered when the current task has not finished.
@@ -50,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Supervision in Actor Systems
 Actor systems provide tools like supervision for managing exceptions and potentially self-healing the system. These features are not as directly supported by agents but can still be implemented.
@@ -61,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor Model vs Agent-Based Concurrency
 The actor model supports features like supervision, routing, and fault tolerance built into its framework. Agents, inspired by actors, lack these features but can implement them using various libraries.
@@ -74,7 +67,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Behavior and State in Agents
@@ -87,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agent State Isolation
 Each agent has an isolated state that is not shared with other agents. This prevents race conditions and allows for concurrent operations.
@@ -99,7 +90,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message Passing and Concurrency
 Agents communicate only through asynchronous messages that are buffered in a mailbox. This approach supports concurrent operations without needing locks.
@@ -111,7 +101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application of Agent Programming
 Agent programming supports various applications such as data collection and mining, real-time analysis, machine learning, simulation, Master/Worker pattern, Compute Grid, MapReduce, gaming, and audio/video processing.
@@ -123,7 +112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Share-Nothing Approach for Concurrency
 The share-nothing approach in agent programming ensures that no single point of contention exists across the system. Each agent is independent, preventing race conditions.
@@ -135,7 +123,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agent-based Programming as Functional?
 While agents can generate side effects, which goes against functional programming (FP) principles, they are still used in FP because of their ability to handle concurrent tasks without sharing state.
@@ -147,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interconnected System of Agents
 Agents communicate through message passing, forming an interconnected system where each agent has its own isolated state and independent behavior.
@@ -161,7 +147,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reactive Programming and Agents Overview
 Reactive programming is a programming paradigm oriented around handling asynchronous data streams. Agents are used to handle messages asynchronously, where each message can be processed independently and potentially in parallel.
@@ -173,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unidirectional Message Flow
 The design of an agent model supports a unidirectional flow pattern for message passing. This means messages are sent from one agent to another in a chain where the state changes within each agent are encapsulated.
@@ -185,7 +169,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agent Model as Functional Programming
 The agent model is functional because it allows for encapsulating actions (behaviors) with their corresponding state, enabling runtime updates using functions.
@@ -197,7 +180,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MailboxProcessor in F#
 MailboxProcessor is a primitive type provided by the F# programming language, which acts as an agent for handling asynchronous message passing.

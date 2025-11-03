@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 38)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The End-to-End Argument for Databases
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -59,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Duplicate Suppression in Stream Processing and Beyond
@@ -149,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unique Identifier for Idempotent Operations
 Background context: When dealing with idempotent operations across multiple network hops, traditional transaction mechanisms might not suffice. To ensure that a request is processed only once despite being submitted multiple times (e.g., due to timeouts), you need an end-to-end mechanism involving unique identifiers.
@@ -222,7 +218,6 @@ x??
 
 These flashcards cover key concepts related to handling idempotent operations and the importance of considering the entire communication flow.
 
-**Rating: 8/10**
 
 ---
 #### End-to-End Transaction Identifier and Integrity Checks
@@ -331,7 +326,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Uniqueness Constraints and Consensus
 
@@ -443,7 +437,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple Partition Data Processing
 Background context: The idea of using multiple differently partitioned stages is similar to what we discussed in “Multi-partition data processing” on page 514 (see also “Concurrency control” on page 462). This technique allows for parallel processing but requires careful management to ensure data consistency.
@@ -569,7 +562,6 @@ public void maintainDatabaseIndex() {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Lag in Transaction Systems
 Background context explaining why lag can occur and its normalcy. Highlight that banks reconcile transactions asynchronously, which allows for some delay without compromising system integrity.
@@ -665,7 +657,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compensating Transactions
 Compensating transactions are a mechanism to handle violations of constraints by making compensatory changes that correct the mistake. This is often used when strict uniqueness or other constraints cannot be enforced immediately, but can be corrected later.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Downloading and Running an LLM
 
 ---
 
-**Rating: 8/10**
 
 #### Tokenization Process Overview
 Tokenization is a crucial step where input texts are broken down into smaller units called tokens. These tokens can be words, subwords, or other meaningful units depending on the tokenizer's design. This process enables LLMs to understand and generate language effectively.
@@ -112,7 +110,6 @@ print(input_ids)
 ```
 x??
 
-**Rating: 8/10**
 
 #### Subword Tokenization Overview
 
@@ -214,7 +211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Subword Tokenizers and Byte-Level Representations
 
@@ -322,7 +318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tokenization and Whitespace Handling
 

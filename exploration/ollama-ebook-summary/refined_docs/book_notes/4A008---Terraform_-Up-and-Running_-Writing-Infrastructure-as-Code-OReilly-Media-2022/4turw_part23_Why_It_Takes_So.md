@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Why It Takes So Long to Build Production-Grade Infrastructure
 
 ---
 
-**Rating: 8/10**
 
 #### Accidental Complexity vs. Essential Complexity
 Accidental complexity refers to the problems imposed by specific tools and processes chosen, while essential complexity is inherent in the task itself regardless of the tools used.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Yak Shaving
 Yak shaving can occur in DevOps projects where small tasks lead to larger and more complex issues.
@@ -32,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Production-Grade Infrastructure Checklist Overview
 The context of this checklist is to ensure that infrastructure is production-ready by addressing common gaps developers might overlook. The goal is to standardize deployment processes and ensure critical functionalities are covered.
@@ -46,7 +42,6 @@ This helps standardize the process across different teams and projects within an
 
 ---
 
-**Rating: 8/10**
 
 #### Install Task
 The task of installing software binaries and their dependencies is crucial for setting up a production environment. Tools like Bash, Ansible, Docker, and Packer can be used to automate this process.
@@ -64,7 +59,6 @@ These tools help automate the process of installing software binaries and their 
 
 ---
 
-**Rating: 8/10**
 
 #### Configure Task
 The "Configure" task involves setting up the software at runtime. This includes settings like port configurations, TLS certificates, service discovery, leaders, followers, replication, etc. Tools such as Chef, Ansible, and Kubernetes can be used to manage these configurations.
@@ -81,7 +75,6 @@ These tools help manage runtime configurations effectively.
 
 ---
 
-**Rating: 8/10**
 
 #### Provision Task
 The "Provision" task involves setting up the infrastructure, including servers, load balancers, network configuration, firewall settings, IAM permissions, etc. Tools like Terraform and CloudFormation can be used for this purpose.
@@ -97,7 +90,6 @@ These tools help manage the setup and configuration of servers, load balancers, 
 
 ---
 
-**Rating: 8/10**
 
 #### Deploy Task
 The "Deploy" task involves deploying the service on top of the infrastructure with zero downtime. Tools like ASG (Auto Scaling Group), Kubernetes, and ECS (Elastic Container Service) can be used to manage deployments.
@@ -114,7 +106,6 @@ These tools help manage deployments to ensure minimal downtime during rollouts.
 
 ---
 
-**Rating: 8/10**
 
 #### High Availability Task
 The "High Availability" task involves ensuring the infrastructure can withstand outages in individual processes, servers, services, datacenters, and regions. Multi-datacenter and multi-region strategies are essential for achieving high availability.
@@ -130,7 +121,6 @@ These strategies help maintain service availability and minimize downtime.
 
 ---
 
-**Rating: 8/10**
 
 #### Scalability Task
 The "Scalability" task involves scaling the infrastructure both horizontally (adding more servers) and vertically (bigger servers). Tools like Auto Scaling can be used to manage this process.
@@ -146,7 +136,6 @@ These tools help manage horizontal and vertical scaling, ensuring the infrastruc
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Task
 The "Performance" task involves optimizing CPU, memory, disk, network, and GPU usage. Tools like Dynatrace, Valgrind, and VisualVM can be used for performance optimization.
@@ -163,7 +152,6 @@ These tools help optimize resource usage, ensuring better performance of the inf
 
 ---
 
-**Rating: 8/10**
 
 #### Networking Task
 The "Networking" task involves configuring static and dynamic IPs, ports, service discovery, firewalls, DNS, SSH access, and VPN access. Tools like VPCs (Virtual Private Cloud) and Route 53 can be used for network configuration.
@@ -179,7 +167,6 @@ These tools help configure static and dynamic IPs, ports, DNS settings, and othe
 
 ---
 
-**Rating: 8/10**
 
 #### Security Task
 The "Security" task involves ensuring encryption in transit (TLS), authentication, authorization, secrets management, server hardening. Tools like ACM (AWS Certificate Manager), Let’s Encrypt, KMS (Key Management Service), and Vault can be used.
@@ -199,7 +186,6 @@ These tools help ensure robust security measures are in place, protecting data a
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Small Modules
@@ -211,7 +197,6 @@ Large modules are slow because they contain more than a few hundred lines of cod
 
 ---
 
-**Rating: 8/10**
 
 #### Composable Modules
 Background context: Composing smaller modules allows for more maintainable and reusable code. Each module should focus on a single responsibility, making them easier to test and understand.
@@ -222,7 +207,6 @@ The benefit of using composable modules is that they allow for better organizati
 
 ---
 
-**Rating: 8/10**
 
 #### Testable Modules
 Background context: Automated testing ensures that changes do not break existing functionality. Testable modules allow for comprehensive testing of infrastructure code before deployment.
@@ -233,7 +217,6 @@ Having testable modules helps ensure that changes to infrastructure code do not 
 
 ---
 
-**Rating: 8/10**
 
 #### Versioned Modules
 Background context: Versioning allows for tracking changes to modules over time and ensures that upgrades or downgrades are managed properly. It is crucial for maintaining consistency in deployments.
@@ -244,7 +227,6 @@ Versioning is important because it provides a historical record of changes, maki
 
 ---
 
-**Rating: 8/10**
 
 #### Beyond Terraform Modules
 Background context: While Terraform modules are powerful, they may not cover all aspects of production-grade infrastructure management. Other tools and practices (e.g., Infracost for cost optimization) should also be considered to ensure comprehensive and robust infrastructure.
@@ -256,7 +238,6 @@ Additional tools like Infracost can help with cost optimization by providing det
 
 ---
 
-**Rating: 8/10**
 
 #### Large Modules are Risky
 Background context: The provided text discusses why large modules can be problematic. It highlights risks such as breaking everything due to a minor mistake, difficulty in understanding complex code, difficulties in reviewing and testing extensive modules.
@@ -279,7 +260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Small Modules Benefit
 Background context: The text emphasizes the benefits of using small modules. Smaller modules are easier to understand and manage, reducing the risk of errors.
@@ -308,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Refactoring Example: Webserver-Cluster
 Background context: The text provides a specific example of refactoring a large `webserver-cluster` module into smaller, more manageable modules.
@@ -340,7 +319,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Small Modules
 Background context: The text discusses the benefits of breaking down large modules into smaller ones. It includes points like better understanding, easier review, and improved testing.
@@ -363,7 +341,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing Infrastructure Code
 Background context: The text mentions the difficulty in testing large infrastructure modules due to their complexity.
@@ -387,7 +364,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unix Philosophy: Write Programs That Do One Thing and Do It Well
 
@@ -400,7 +376,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Composable Modules in Terraform
 
@@ -444,7 +419,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Function Composition in Programming
 
@@ -483,7 +457,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reusability in Terraform Modules
 
@@ -498,7 +471,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform Module Composition
 
@@ -533,7 +505,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Subnet IDs Variable
 Background context: The `subnet_ids` variable allows the module to be used with any VPC or subnets, making it more flexible and reusable. This change is part of transforming a hardcoded deployment approach into a generic one.
@@ -552,7 +523,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding User Data Variable
 Background context: The `user_data` variable allows for a customizable User Data script, enabling the deployment of any application across an ASG. This makes the module more versatile and adaptable to different use cases.
@@ -572,7 +542,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Passing Through Variables to AWS Auto Scaling Group Resource
 Background context: The `aws_autoscaling_group` resource now uses the new input variables (`subnet_ids`, `target_group_arns`, and `health_check_type`) instead of hardcoded references. This makes the module more flexible, allowing it to be used with various configurations.
@@ -596,7 +565,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Output Variables for ASG and Security Group IDs
 Background context: Output variables (`asg_name` and `instance_security_group_id`) are added to make the module more reusable. These outputs can be used by consumers of the module to add new behaviors, such as attaching custom rules to the security group.

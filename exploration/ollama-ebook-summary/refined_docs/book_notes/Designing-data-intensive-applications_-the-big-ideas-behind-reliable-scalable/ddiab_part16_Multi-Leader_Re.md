@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Multi-Leader Replication Topologies
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Leader Replication Overview
 
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Replication Topologies
 
@@ -37,7 +34,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Identifying and Ignoring Replicated Data
 
@@ -67,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Replication Message Order
 
@@ -102,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault Tolerance in Replication
 
@@ -137,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Leaderless Replication Overview
 Background context explaining leaderless replication. In this model, there is no single node acting as a leader to order writes and ensure consistency across replicas. Instead, clients can send write requests directly to any replica or through a coordinator that does not enforce an ordering of writes.
@@ -149,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Failover Handling in Leader-based vs. Leaderless Replication
 Explaining how failure handling works differently between leader-based and leaderless replication configurations.
@@ -161,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quorum Writes and Reads
 Explanation on quorum requirements for write operations in Dynamo-style databases.
@@ -173,7 +164,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Read Repair Process
 Explanation on how read repair works to keep data consistent across all replicas.
@@ -193,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Anti-Entropy Process
 Explanation on the anti-entropy process used to synchronize data between replicas.
@@ -205,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quorum Read Operation
 Explanation on how quorum reads work to ensure up-to-date values.
@@ -223,7 +211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tolerating Node Unavailability
 Explanation on how node unavailability can be tolerated in leaderless replication.
@@ -237,7 +224,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Quorum Consistency Overview
@@ -249,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Setting w and r Values
 In quorum consistency, choosing appropriate values for w (write quorum) and r (read quorum) is crucial. Often, both are set as a majority (more than n/2) to tolerate up to n/2 node failures while ensuring that the read operation will return an updated value.
@@ -260,7 +245,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quorum Conditions
 Quorum conditions ensure overlap between the sets of nodes used for write and read operations. This guarantees that at least one node in the read set has the latest value after a write operation.
@@ -271,7 +255,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Flexibility with Quorum Assignments
 Quorum assignments can vary beyond majorities. While a majority is common to tolerate up to n/2 failures, other configurations are possible where w + r ≤ n. This configuration allows lower latency and higher availability but increases the risk of reading stale values.
@@ -282,7 +265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Edge Cases with Quorum Consistency
 Edge cases can arise where stale values are read even when w + r > n. These include scenarios like sloppy quorums (where writes may go to different nodes than reads), concurrent writes leading to ambiguity, and network interruptions affecting the quorum condition.
@@ -296,7 +278,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Leaderless Replication
 In leaderless replication, there’s no single node responsible for coordinating writes. This increases flexibility but complicates monitoring and maintaining quorum conditions due to the lack of a fixed order in which writes are applied.
@@ -307,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monitoring Staleness
 Monitoring staleness involves tracking whether databases return up-to-date results. Even if an application can tolerate some staleness, understanding replication health is crucial to prevent significant delays or failures.

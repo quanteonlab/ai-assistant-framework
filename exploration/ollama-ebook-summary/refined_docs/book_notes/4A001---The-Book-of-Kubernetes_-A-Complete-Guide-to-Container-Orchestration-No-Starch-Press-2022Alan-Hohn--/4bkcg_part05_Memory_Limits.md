@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A001---The-Book-of-Kubernetes_-A-Complete-Guide-to-Container-Orchestration-No-Starch-Press-2022Alan-Hohn--_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Memory Limits
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Limits in Linux
 Background context: The provided text discusses memory management and limitations on processes. It explains that setting a virtual memory limit ensures that a process cannot exceed a certain amount of memory, including both RAM and swap space.
@@ -32,7 +30,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cgroups for Memory Limits
 Cgroups (Control Groups) are used to enforce memory limits effectively in container environments. They allow setting resource limits at the cgroup level, ensuring that all processes within a container adhere to those limits.
@@ -45,7 +42,6 @@ Using cgroups helps manage memory limits by allowing you to set resource constra
 
 ---
 
-**Rating: 8/10**
 
 #### OOM Killer in Container Environments
 The context is about understanding why containers might be killed by the Out of Memory (OOM) killer, especially in a scenario where memory limits are exceeded. The OOM killer intervenes when the system runs out of memory, killing processes to prevent the entire system from crashing.
@@ -59,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OOM Killer vs. Memory Limits
 To understand the difference, we need to know that regular memory limits cause allocation failures rather than process termination by the OOM killer.
@@ -76,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OOM Killer in Containerized Environments
 The context explains that container environments use the OOM killer to manage memory usage, especially when scaling and reliability are key concerns.
@@ -91,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Management in Containers
 The text discusses how containers manage memory and the risks associated with setting strict limits.
@@ -105,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Bandwidth Control with `tc`
 To limit egress bandwidth, tools like `tc` (Traffic Control) can be used to apply rate limits and ensure that processes do not saturate the available bandwidth.
@@ -125,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Identifying Network Interfaces
@@ -141,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Applying Bandwidth Limits with Token Bucket Filter (TBF)
 Token Bucket Filter (TBF) is used to limit bandwidth by controlling the token bucket refill rate and size. When a packet arrives, it consumes a token. If there are no tokens available, the packet is queued until tokens become available.
@@ -158,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Isolating Processes for Precise Control
 While the TBF limits bandwidth for all processes on a system, to control bandwidth usage more precisely, we need to isolate specific processes from other processes.
@@ -170,7 +159,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Namespaces for Isolation
 Network namespaces allow each container to have its own set of network interfaces, IP addresses, and ports.

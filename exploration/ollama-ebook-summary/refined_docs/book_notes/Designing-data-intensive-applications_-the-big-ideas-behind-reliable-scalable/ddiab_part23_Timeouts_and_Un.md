@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Timeouts and Unbounded Delays
 
 ---
 
-**Rating: 8/10**
 
 #### Network Faults and Reliability Challenges
 Network faults can be surprisingly common, even in controlled environments like data centers. Studies have shown that network issues are frequent, with medium-sized data centers experiencing about 12 network faults per month on average. Components such as switches and load balancers fail at high rates. Redundant networking gear does not fully mitigate these failures due to human errors.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Partitions and Faults
 A network partition occurs when one part of the network is cut off from the rest due to a fault. This can lead to deadlocks or data deletion if not handled properly.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Network Faults in Software
 Software must be designed to handle network faults because failures can occur. This includes defining and testing error handling mechanisms to prevent deadlocks or data loss.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detecting Faulty Nodes
 
@@ -67,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detecting Faults in Distributed Systems
 
@@ -92,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Node Outages
 
@@ -112,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Timeout and Unbounded Delays
 Background context: When using timeouts to detect faults, there's a trade-off between the risk of declaring a node dead too early (prematurely) versus waiting too long before detecting a fault. A short timeout can quickly identify issues but may incorrectly declare nodes as dead due to temporary slowdowns or load spikes. Conversely, longer timeouts reduce the risk of false positives but increase wait times and potential user frustration.
@@ -130,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unreliable Networks
 Background context: In many real-world systems, networks do not provide guarantees on maximum delays or server response times. Asynchronous networks may experience unbounded delays due to network congestion and queueing.
@@ -157,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Congestion and Queueing
 Background context: Network congestion occurs when multiple nodes try to send packets to the same destination simultaneously. The switch must queue these packets before sending them one by one. If the queue fills up, packets are dropped and need to be resent, even if the network is functioning fine.
@@ -202,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Switch Queueing Delays in Networks
 When multiple machines send traffic to the same destination, switch queues can fill up. This occurs because all ports trying to send packets to the same destination compete for limited bandwidth.
@@ -226,7 +215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TCP Retransmission Mechanism
 TCP considers a packet lost if it is not acknowledged within a timeout period. Lost packets are automatically retransmitted, adding to the variability of network delays even when the application does not see these delays.
@@ -254,7 +242,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Variability and Noisy Neighbors
 Background context: In public clouds and multi-tenant datacenters, shared resources can lead to network delays that are highly variable. This variability is often exacerbated by "noisy neighbors," where other customers use significant amounts of resources, affecting your application's performance.
@@ -266,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Phi Accrual Failure Detector
 Background context: The phi accrual failure detector is a mechanism used to detect failures based on observed response times rather than constant timeouts. It helps balance the trade-off between failure detection delay and risk of premature timeouts.
@@ -303,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronous vs. Asynchronous Networks
 Background context: Traditional fixed-line telephone networks provide reliable, low-latency connections due to the use of circuit switching. In contrast, datacenter networks and the internet use packet switching, which can suffer from unbounded delays and queueing.
@@ -319,7 +304,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Datacenter Network Utilization and Bursty Traffic
 Background context: Datacenter networks are optimized for bursty traffic, dynamically allocating resources among multiple users. Circuit switching would be less efficient for these scenarios due to the need for frequent re-allocation of bandwidth.
@@ -336,7 +320,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quality of Service (QoS) and Admission Control
 Background context: QoS and admission control mechanisms allow for more controlled resource sharing in packet-switched networks. These techniques can emulate circuit switching or provide statistically bounded delays.
@@ -352,7 +335,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Latency Guarantees vs. Utilization
 Background context: Static resource partitioning (dedicated hardware) provides latency guarantees but reduces utilization due to fixed allocations. Dynamic resource sharing maximizes utilization but introduces variable delays.
@@ -370,7 +352,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Peering Agreements and BGP
 Peering agreements between internet service providers (ISPs) are similar to circuit switching mechanisms. ISPs can establish dedicated routes through Border Gateway Protocol (BGP) to exchange traffic directly, allowing for guaranteed bandwidth. However, internet routing operates at a network level rather than individual connections, and the timescale is longer.
@@ -383,7 +364,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monotonic Clocks for Measuring Time Intervals
 Monotonic clocks are used to measure durations such as timeouts or service response times. Unlike time-of-day clocks, monotonic clocks guarantee that they always move forward and do not jump back in time.
@@ -407,7 +387,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Clock Synchronization and Accuracy
 Clock synchronization is crucial for maintaining consistency across distributed systems. However, hardware clocks like quartz oscillators can drift due to temperature changes, leading to inaccuracies.

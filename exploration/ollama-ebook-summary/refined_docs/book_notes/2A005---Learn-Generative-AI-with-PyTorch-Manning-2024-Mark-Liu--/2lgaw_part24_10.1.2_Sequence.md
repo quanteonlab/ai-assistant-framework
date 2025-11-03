@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 10.1.2 Sequence padding and batch creation
 
 ---
 
-**Rating: 8/10**
 
 #### Subword Tokenization and Phrase Restoration
 Background context: In natural language processing, subword tokenization is a technique that breaks down words into smaller units called subwords. This approach helps handle out-of-vocabulary (OOV) words by breaking them into known subwords. The provided code demonstrates how to restore a French phrase after subword tokenization and post-processing steps.
@@ -37,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequence Padding and Batch Creation for Natural Language Processing (NLP)
 Background context: In machine learning models like Transformers used in NLP tasks, it's common to process data in batches to improve computational efficiency. However, unlike image data where each input has a fixed size, text data can vary significantly in length. Therefore, padding is necessary to ensure all sequences in a batch have the same length.
@@ -70,7 +67,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distinctive Features in Machine Translation
 Background context: In machine translation, specific processes like incorporating BOS (Beginning of Sentence) and EOS (End of Sentence) tokens are crucial because the input typically consists of entire sentences or phrases rather than individual tokens.
@@ -90,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequence Padding Function
 Background context: The sequence padding function `seq_padding()` is used to ensure that sequences within a batch are of the same length, which is necessary for efficient processing during training. This padding ensures that shorter sequences are extended with zeros at the end to match the maximum length in the batch.
@@ -108,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Source and Target Sequences
 Background context: The `src` and `trg` sequences in the `Batch` class represent the source and target language data. These sequences are crucial for training a sequence-to-sequence model.
@@ -130,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Source Mask
 Background context: The `src_mask` is used to hide padding tokens in the source sequence during training. This ensures that the model does not treat padding as meaningful input.
@@ -144,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Target Mask
 Background context: The `trg_mask` is used to hide future tokens in the target sequence and also mask out padding. This helps in training the model by preventing it from seeing or using future tokens during prediction.
@@ -160,7 +152,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Token Count Calculation
 Background context: The `ntokens` attribute calculates the total number of valid target tokens (excluding padding) from the batch. This is useful for calculating loss and other metrics during training.
@@ -176,7 +167,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Source Mask Creation
 Background context: The source mask (`src_mask`) is used to conceal padding at the end of a sentence during training. Padding tokens are added to ensure all sentences within a batch have the same length, which helps maintain tensor compatibility for parallel processing.
@@ -201,7 +191,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Input and Target for Decoder
 Background context: The `Batch` class processes input data into a format suitable for training by creating inputs for the decoder and target outputs. This process is essential for ensuring that the model learns to predict future tokens based on previous ones.
@@ -225,7 +214,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Target Mask Creation
 Background context: The target mask (`trg_mask`) is used to hide the subsequent tokens in the input sequence, ensuring that the model relies solely on previous tokens for making predictions. This helps prevent the model from peeking at future tokens during training.
@@ -265,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Class Implementation
 Background context: The `Batch` class processes batches of English and French phrases, converting them into a format suitable for training. It handles source and target sequences, creates masks, and prepares inputs and outputs for the model.
@@ -311,7 +298,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Word Embedding Concept
 Word embedding transforms discrete token indexes into continuous vector representations. This process helps capture semantic information and reduces model complexity, allowing for more efficient training compared to one-hot encoding.
@@ -323,7 +309,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Positional Encoding Concept
 Positional encoding is used to convey the relative or absolute position of tokens in a sequence. It ensures that the model retains information about the order of elements.
@@ -335,7 +320,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Positional Encoding Implementation
 The `PositionalEncoding` class generates positional encodings using sine and cosine functions.
@@ -370,7 +354,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Positional Encodings in Transformers
 Positional encodings are essential for providing positional information to Transformer models. Unlike recurrent neural networks, Transformers do not have inherent notions of sequence order due to their self-attention mechanism. Therefore, we need to explicitly provide this information through positional encodings.
@@ -384,7 +367,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loss Function Selection for Translation Models
 The choice of loss function is critical in training neural machine translation models. One common approach is label smoothing, which can improve model generalization by reducing overconfidence in predictions.
@@ -398,7 +380,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### NoamOpt Learning Rate Scheduler
 The `NoamOpt` class implements a warm-up learning rate strategy where the learning rate increases linearly at first and then decreases according to an inverse square root schedule.
@@ -412,7 +393,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adam Optimizer with NoamOpt
 The `Adam` optimizer is commonly used for deep neural network training due to its adaptive learning rates, which help in finding optimal weights.

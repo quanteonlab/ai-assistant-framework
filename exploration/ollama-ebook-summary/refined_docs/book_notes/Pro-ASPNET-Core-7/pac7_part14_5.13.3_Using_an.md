@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 5.13.3 Using an asynchronous enumerable
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Enumerables Overview
 Asynchronous enumerables are a feature in C# that allow for the efficient and non-blocking generation of sequences of values over time. This is particularly useful when dealing with I/O-bound operations, such as making HTTP requests to multiple websites.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Asynchronous Enumerables with HttpClient
 In the provided text, an asynchronous enumerable is used to make multiple HTTP GET requests asynchronously. The `GetPageLengths` method demonstrates how to use this feature.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Difference Between Task and IAsyncEnumerable
 In the provided code, `GetPageLengths` is updated from returning `Task<IEnumerable<long?>>` to `async IAsyncEnumerable<long?>`. This change enables a more efficient way of handling asynchronous sequences.
@@ -44,7 +40,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using `await foreach` with Asynchronous Enumerables
 The updated `Index` action method in the controller uses `await foreach` to process each result from an asynchronous enumerable.
@@ -56,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Code for Asynchronous Enumerables
 Here's a simplified version of the code provided:
@@ -90,7 +84,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ASP.NET Core Support for IAsyncEnumerable<T>
 ASP.NET Core has special support for `IAsyncEnumerable<T>` in web services, allowing data values to be serialized as the values in the sequence are generated.
@@ -104,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Null State Analysis in C#
 Background context: Null state analysis is a feature that ensures null values can only be assigned to nullable types and that values are read safely. This helps prevent null reference exceptions by enforcing type safety at compile time.
@@ -135,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### String Interpolation in C#
 Background context: String interpolation allows you to embed expressions inside string literals, using the `@` symbol or `${}` syntax. This feature makes it easier to create formatted strings without having to manually concatenate strings and variables.
@@ -164,7 +155,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Creating a New Project Using Dotnet CLI

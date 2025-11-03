@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 31)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Comparison Between Decorator Adapter and Strategy
 
 ---
 
-**Rating: 8/10**
 
 #### CustomAllocator Overview
 Background context explaining how CustomAllocators can be used to extend standard library behavior without modifying existing code. This involves understanding memory management and allocation strategies.
@@ -137,7 +135,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decorator Design Pattern Overview
 Background context explaining the decorator pattern. The decorator pattern allows for flexible and dynamic feature enhancement by wrapping objects with additional behaviors without modifying their structure or interface.
@@ -268,7 +265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decorator Design Pattern Overview
 Background context: The Decorator design pattern is a structural design pattern that allows behavior to be added to an individual object, either statically or dynamically, without affecting the behavior of other objects from the same class. It promotes loose coupling by allowing decorator classes to wrap around any object with a compatible interface.
@@ -362,7 +358,6 @@ Background context: The text highlights the differences between Decorator, Adapt
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Decorator Pattern Implementation
 
@@ -457,7 +452,6 @@ These features make the implementation more maintainable and scalable.
 
 ---
 
-**Rating: 8/10**
 
 #### Compile-Time vs Runtime Decorator Implementation
 Background context: This section discusses the performance comparison between a runtime decorator implementation and a compile-time template-based decorator implementation. The focus is on showing how the compile-time approach can provide significant performance improvements due to the lack of pointer indirections and potential for inlining.

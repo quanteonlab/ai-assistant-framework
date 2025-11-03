@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A001---The-Book-of-Kubernetes_-A-Complete-Guide-to-Container-Orchestration-No-Starch-Press-2022Alan-Hohn--_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Bridge Interfaces
 
 ---
 
-**Rating: 8/10**
 
 #### Connecting Interfaces to the Network
 Explanation of how interfaces are connected to the network and the role of bridges in this process.
@@ -23,7 +21,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Veth Pairs and Communication Between Namespaces
 Explanation of veth pairs and their role in facilitating communication between different network namespaces.
@@ -40,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Address Translation (NAT) and Masquerading
 
@@ -54,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Isolation and Connectivity Replication
 Background context explaining how to replicate a network setup similar to what CRI-O provides for container networking using `iptables`. The provided text details setting up custom NAT rules to isolate and connect specific containers while ensuring that they can still communicate effectively with other networks or containers.

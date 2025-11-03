@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Variables Are Not Boxes
 
 ---
 
-**Rating: 8/10**
 
 #### Variables Are Not Boxes
 Background context: In Python, variables are not like boxes where you store data. The usual "variables as boxes" metaphor can be misleading for understanding reference variables in object-oriented programming languages. This metaphor is particularly inaccurate when dealing with mutable objects and aliasing issues.
@@ -175,7 +173,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparing Values vs. Object Identities
 
@@ -271,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Shallow Copies vs. Deep Copies

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 33)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 21.4 Analysis of Time-Varying Load
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Varying Arrival Rate (M t/M/1)
 Background context: The example discusses a queue with a non-Markovian arrival process where the arrival rate changes over time, oscillating between \(\lambda_H\) and \(\lambda_L\). The system spends an exponential amount of time in each phase, denoted by \(Exp(\alpha_H)\) for the high-rate regime and \(Exp(\alpha_L)\) for the low-rate regime. This is represented using a Markov-modulated Poisson process (MMPP).
@@ -37,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Markov Chain for M t/M/1
 Background context: To model the queue with a time-varying arrival rate, we need to create a Markov chain that tracks whether the system is operating in the high-load or low-load phase. The state of the Markov chain indicates both the number of jobs in the system and which regime (high load or low load) the system is currently in.
@@ -65,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix-Analytic Method
 Background context: Developed by Marcel Neuts, matrix-analytic methods are numerical techniques for solving inﬁnite-state Markov chains. These chains repeat after a certain point and grow unboundedly in no more than one dimension. They can be used to solve the chains discussed in Section 21.2.
@@ -108,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix \( R \) and Its Derivation
 
@@ -173,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generator Matrix \( Q \)
 
@@ -215,7 +209,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix \( Q \) for M<sub>t</sub>/M/1 Queue
 
@@ -264,7 +257,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Phase-Type Distributions and Matrix-Analytic Methods Overview
 Phase-type distributions are used to model the time until an event occurs, often represented by a continuous-time Markov chain. The balance equations for these distributions can be written in matrix form, leading to a system of linear equations that need solving.
@@ -276,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finding \(\vec{\pi}_0\)
 Once \(R\) converges, we can determine the limiting probabilities by substituting back into the balance equations. The vector \(\vec{\pi}_0\) is found using normalization.
@@ -319,7 +310,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### E[N] Calculation Using Matrix-Analytic Methods
 Background context: We derive a closed-form expression for \(E[N]\) using matrix-analytic methods. The performance metric involves the limiting probabilities \(\pi_0\) and the matrix \(R\).
@@ -418,7 +408,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Phase-Type Distributions and Matrix-Analytic Methods Overview
 Phase-type distributions are a powerful technique for representing general distributions through Markovian processes. They allow complex systems to be analyzed using matrix-based methods, such as solving balance equations and normalization constraints.
@@ -432,7 +421,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/1 Queue Analysis Using Matrix-Analytic Methods
 Given an M/M/1 queue with arrival rate \( \lambda \) and service rate \( \mu \), the matrix-analytic method involves constructing matrices to solve for the steady-state distribution.
@@ -480,7 +468,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Varying Load in M t/M/1 Queue
 An M t/M/1 queue models a system with time-varying load, where the arrival rate \( \lambda \) fluctuates between high-load (1.2) and low-load (0.2), each state being exponentially distributed.
@@ -520,7 +507,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/Cox/1 Queue Analysis
 The M/Cox/1 queue models a system where the service times follow a phase-type distribution with 2 stages. Each stage has an exponential duration with rates \( \mu_1 \) and \( \mu_2 \), invoked with probability \( p \).
@@ -558,7 +544,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Effect of Variability in Service Time on M/H 2/1 Queue
 The Hyperexponential distribution \( H_2 \) is used with a balanced branches structure. The mean service time \( E[S] = 1 \) and coefficient of variation squared \( C^2 = 10 \).
@@ -594,7 +579,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variance of Number of Jobs in M/M/1 Queue
 The variance of the number of jobs \( N \) can be derived using matrix-analytic methods, extending from the mean derivation.
@@ -628,7 +612,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Setup Time in M/M/1 and M/M/2 Queues
 The setup time \( I \) introduces additional complexity to the system, changing the behavior of the queue.

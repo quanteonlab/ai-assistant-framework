@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Interfacing with Large Language Models
 
 ---
 
-**Rating: 8/10**
 
 #### Bias and Fairness
 Background context explaining how LLMs can inherit biases from their training data. It is important to recognize that these biases might be amplified during model training and usage.
@@ -68,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Time and GPU Utilization
 Training time for models is measured in GPU hours, which is calculated by multiplying the training time with the number of GPUs. VRAM (Video Random-Access Memory) plays a critical role as it affects model usage; larger VRAM allows more complex models to be run.
@@ -143,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proprietary Large Language Models (LLMs)
 Background context: These models are developed by organizations that invest significant resources into their development, leading to better performance but at a cost. They offer managed services with fine-tuning limitations and data sharing concerns.
@@ -195,7 +191,6 @@ Key differences between proprietary LLMs and open LLMs include:
 These differences influence the choice based on specific needs, such as performance requirements, budget, and data privacy concerns.
 x??
 
-**Rating: 8/10**
 
 #### Intuition and Backend Packages for LLMs
 Background context: The text discusses the importance of intuition when working with Large Language Models (LLMs) and highlights backend packages that facilitate their use without a GUI. These packages include llama.cpp, LangChain, Hugging Face Transformers, and others.
@@ -289,7 +284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tokens and Their Role in Language Models
 Background context explaining tokens and their importance. Tokens are small chunks of text that language models use to process information, making it easier for machines to understand and manipulate text data.

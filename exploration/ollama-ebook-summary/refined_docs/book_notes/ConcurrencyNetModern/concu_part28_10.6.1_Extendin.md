@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 28)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 10.6.1 Extending the F async workflow with applicativefunctoroperators
 
 ---
 
-**Rating: 8/10**
 
 #### Pure Function Implementation in F#
 Background context: The `pure` function is a fundamental part of applicative functors. It lifts a value to an asynchronous workflow (`Async`). This allows you to encapsulate synchronous operations within an asynchronous context, making them awaitable.
@@ -22,7 +20,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Apply Function Implementation in F#
 Background context: The `apply` function in applicative functors combines two asynchronous computations by executing them in parallel and then applying the result of one to the other. This is often used when you have a computation that depends on the results of another.
@@ -45,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Chain of Operations with Applicative Functor in F#
 Background context: The `apply` function can be used to create a parallel chain of operations, where each operation is started asynchronously and combined once all are completed. This is demonstrated through the blending of images from blob storage.
@@ -73,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Difference Between Bind and Apply in Asynchronous Compositions
 Background context: `Bind` (`>>=`) is used when the result of one asynchronous operation determines the next, while `Apply` starts both computations independently.
@@ -116,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Applicative Functor in F#
 Background context: In functional programming, applicative functors are a way to apply functions inside a computational context. This allows for elegant and compositional code that can handle side effects like asynchronous operations without losing the purity of the functional approach. In F#, Async is used as an applicative functor.
@@ -131,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Custom Infix Operators in F#
 Background context: In F#, custom infix operators allow for more declarative and readable code by defining operators with specific precedence. This feature is not supported in C#. The provided text demonstrates how to define the `Async.apply` and `Async.map` as infix operators.
@@ -150,7 +143,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Applying Functions with Infix Operators in F#
 Background context: The provided text shows how using infix operators can simplify code when working with asynchronous operations in F#. This makes the code more readable and declarative, leveraging the applicative functor semantics.
@@ -170,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Applicative Functors and Heterogeneous Parallel Computation
 Applicative functors provide a way to handle computations with varying result types within parallel operations. The idea is to use applicative combinators to lift functions and then apply them across asynchronous tasks, enabling heterogeneous parallel computation.
@@ -199,7 +190,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of Lift2 and Lift3 Functions in C#
 The implementation details of `Lift2` and `Lift3` functions are crucial for understanding how heterogeneous parallel computations are achieved using applicative functors. These functions use currying, lifting, and the `Apply` operator to handle asynchronous tasks with different result types.
@@ -227,7 +217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of Lift3 Function in C#
 The `Lift3` function extends the concept of `Lift2` by handling three asynchronous tasks with potentially different types. It uses similar logic but for a higher arity function and more arguments.
@@ -255,7 +244,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Computation Composition
 Parallel computation involves breaking down a complex task into smaller, independent subtasks that can be executed concurrently. This approach is often used to improve performance by utilizing multiple cores or processors. In functional programming, combinators like `async` and operators like `Fork/Join` are commonly used to manage asynchronous tasks efficiently.
@@ -302,7 +290,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transaction Calculation
 The `calcTransactionAmount` function calculates the amount that can be traded based on various conditions. This includes considering the bank account balance, stock price, and applying certain fees.
@@ -337,7 +324,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Composition and Applicative Functors
 Background context explaining how applicative functors promote reusability and better compositionality. Discuss the use of `AsyncResult` for handling results that can be either successful or error-prone.
@@ -357,7 +343,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Operations with `Async.StartCancelable`
 Background context explaining the use of asynchronous operations and how they are managed using continuations. Discuss the benefits of running computations asynchronously.
@@ -377,7 +362,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Applicativity and Combinators in Asynchronous Programming
 Background context explaining the use of combinators for composing asynchronous operations. Discuss how these combinators can be used to build complex workflows.
@@ -409,7 +393,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reproducibility and Common Patterns in Code
 Background context explaining how using common patterns like applicative functors can make code more understandable and maintainable. Discuss the importance of having consistent coding practices.
@@ -427,7 +410,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Async Workflow Conditional Combinators Overview
 This section introduces combinators for conditional asynchronous programming using F# async workflows. The combinators help to branch logic and manage conditions within an asynchronous context without leaving that context.
@@ -446,7 +428,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ifAsync Combinator
 The `ifAsync` combinator takes an asynchronous boolean predicate and two arbitrary async operations as arguments. Depending on the outcome of the predicate, only one of these computations will run.
@@ -462,7 +443,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OR Combinator
 The `OR` combinator takes two async boolean operations as arguments. It uses the `ifAsync` combinator to run both operations and return a true result if either is true.
@@ -483,7 +463,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inline Functions and Inlining Keyword
 Inline functions replace function calls with the actual function body at compile time, aiming to reduce overhead from method calls. This can improve performance but increases code size as the function is duplicated at each call site.
@@ -505,7 +484,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous AND Combinator: Task.WhenAll
 The `Task.WhenAll` operator is used to wait for multiple tasks to complete before proceeding. It returns a single task that will fire when all of the specified tasks are ready.
@@ -525,7 +503,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous OR Combinator: Task.WhenAny
 The `Task.WhenAny` operator starts multiple tasks in parallel and waits only until the first one completes. This is useful for implementing speculative computations.
@@ -545,7 +522,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AsyncResult Conditional Combinators
 `AsyncResult` combinators provide a way to perform logical AND and OR operations over asynchronous results. These combinators are particularly useful when dealing with generic types.

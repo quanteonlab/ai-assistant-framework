@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Emulating Numeric Types
 
 ---
 
-**Rating: 8/10**
 
 #### Special Methods Overview
 Special methods are called by Python’s interpreter and not directly by you. They provide a way to emulate built-in types or implement custom behavior for operations such as addition, length calculation, etc.
@@ -111,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Special Methods Overview
 Background context explaining that special methods are used for operator overloading and other operations. These methods are not called directly but by Python's interpreter or certain built-in functions.
@@ -258,7 +255,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### String/Bytes Representation Methods

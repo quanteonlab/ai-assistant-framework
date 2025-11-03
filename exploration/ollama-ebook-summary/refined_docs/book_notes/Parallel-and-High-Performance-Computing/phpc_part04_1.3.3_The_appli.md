@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 1.3.3 The applicationsoftware model for todays heterogeneous parallel systems
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Computing Basics
 Background context: The text introduces parallel computing and explains how it works on modern hardware. It highlights that parallel operations require explicit instructions from source code to spawn processes or threads, offload data, work, and instructions, and operate on blocks of data.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message Passing for Process-Based Parallelization
 Background context: This section explains how process-based parallelization works through message passing in distributed memory architectures.
@@ -46,7 +43,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread-Based Parallelization with Shared Memory
 Background context: This section discusses how thread-based parallelization uses shared memory to communicate between threads, which operate within the same address space.
@@ -77,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vectorization for Parallel Computing
 Background context: This section introduces vectorization, a technique that allows multiple operations to be performed with a single instruction.
@@ -100,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream Processing with Specialized Processors
 Background context: This section describes stream processing, which utilizes specialized processors for handling data streams efficiently.
@@ -134,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Message Passing Interface (MPI)
@@ -158,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread-Based Parallelization
 Explanation of thread-based parallelization, including shared data via memory, and potential pitfalls related to correctness and performance.
@@ -182,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Computing vs. Parallel Computing
 Explanation of the difference between distributed computing, where processes are loosely coupled and communicate via OS-level calls, versus parallel computing, which focuses on shared memory.
@@ -201,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inter-Process Communication (IPC)
 Explanation of IPC, including various types used for exchanging information between processes in parallel and distributed computing.
@@ -226,7 +216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Computing Overview
 Parallel computing involves executing multiple processes or threads simultaneously to speed up computations. The key advantage is handling independent tasks efficiently, which can be implemented using threading systems like OpenMP.
@@ -238,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Threading Systems
 Threading systems, such as OpenMP, enable the creation of threads to divide a task among different cores or processors. These systems are useful for modest speedup but are limited within a single node.
@@ -250,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vectorization Basics
 Vectorization involves processing multiple data items in one instruction cycle, effectively reducing the number of instructions needed. This technique is particularly useful on portable devices where resources are limited.
@@ -262,7 +249,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compiler Analysis in Vectorization
 Compiler analysis can automatically optimize code for vectorization if explicit flags are not provided. However, this may result in suboptimal performance without user guidance.
@@ -274,7 +260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream Processors (GPUs)
 GPUs are specialized processors designed to handle stream processing efficiently, making them ideal for tasks like graphics rendering and data-intensive computations.
@@ -288,7 +273,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Flynn’s Taxonomy: SIMD vs MIMD
 Background context: Flynn’s Taxonomy categorizes parallel architectures based on how instructions and data are handled. SIMD (Single Instruction, Multiple Data) processes the same instruction across multiple data points, while MIMD (Multiple Instructions, Multiple Data) handles multiple instructions for different data points.
@@ -319,7 +303,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Parallelization
 Background context: Data parallelization is a common approach where the same operation is applied to multiple data elements simultaneously. This method is often used for particles, cells, or other objects and can be seen in GPU computations.
@@ -339,7 +322,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GPU and GPGPU
 Background context: GPUs have been repurposed from their graphics processing origins to General-Purpose computing on Graphics Processing Units (GPGPU). This allows for the offloading of tasks that can benefit from parallel processing, such as simulations or data-intensive applications.
@@ -361,7 +343,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SIMT (Single Instruction, Multiple Thread)
 Background context: SIMT is a variant of SIMD used in GPU programming where each thread within a block processes the same instruction but operates on different data. This approach is widely used for general-purpose GPU computing.
@@ -382,7 +363,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Parallelism
 Background context explaining data parallelism. In this approach, each process executes the same program but operates on a unique subset of data. This method scales well with increasing problem size and number of processors.
@@ -394,7 +374,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task Parallelism
 Background context explaining task parallelism. Task parallelism involves dividing the workload into smaller tasks which are executed concurrently by different threads or processes.
@@ -406,7 +385,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pipeline Strategy
 Background context explaining the pipeline strategy, which is used in superscalar processors to enable parallel processing of different types of calculations.
@@ -418,7 +396,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bucket-Brigade Strategy
 Background context explaining the bucket-brigade strategy used in distributed computing to manage data transformation across processors.
@@ -430,7 +407,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Combining Parallel Strategies
 Background context explaining how different parallel strategies can be combined to expose greater degrees of parallelism.
@@ -442,7 +418,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Speedup vs Comparative Speedup
 Background context explaining the difference between parallel speedup (serial-to-parallel) and comparative speedup (between architectures).
@@ -456,7 +431,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Normalizing Performance Comparisons
 Background context explaining normalization of performance comparisons to account for power or energy requirements.
@@ -470,7 +444,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Contextual Qualifications to Performance Comparisons
 To help users and developers understand the context of performance comparisons, specific terms should be added. These include indicators like "Best 2016," "Common 2016," "Mac 2016," or "GPU 2016:CPU 2013" to denote the hardware used in performance benchmarks.
@@ -483,7 +456,6 @@ Adding these qualifiers helps users and developers understand whether they are c
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Comparison Context
 Performance numbers should be qualified to indicate the nature of the comparison, acknowledging that performance metrics often involve a mix of different hardware configurations, making direct comparisons challenging.
@@ -496,7 +468,6 @@ For example, when comparing GPU performance to CPU performance, you might add "(
 
 ---
 
-**Rating: 8/10**
 
 #### Key Skills Gained from Reading the Book
 After reading this book, developers can gain several key skills related to parallel programming, including determining when message passing is more suitable than threading, estimating speedup with vectorization, and identifying which parts of their applications have the most potential for performance improvements.
@@ -509,7 +480,6 @@ Furthermore, they can learn to establish the peak potential performance of their
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Programming Approaches
 The book covers different approaches to parallel programming, including message passing (MPI) versus threading (OpenMP), which are essential for developers aiming to optimize the performance of their applications on various hardware platforms.
@@ -522,7 +492,6 @@ The book also discusses how to leverage GPUs to accelerate applications and esta
 
 ---
 
-**Rating: 8/10**
 
 #### Exercises in Each Chapter
 To reinforce learning, readers are encouraged to work through exercises provided at the end of each chapter. These exercises help integrate the concepts presented and ensure a deeper understanding of parallel programming techniques.
@@ -535,7 +504,6 @@ Working through these exercises will help solidify understanding and provide han
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Operations in Daily Life
 
@@ -556,7 +524,6 @@ Consider a scenario where you cook two dishes at once instead of one. If each di
 
 ---
 
-**Rating: 8/10**
 
 #### GPU vs CPU Performance
 
@@ -581,7 +548,6 @@ So, the GPU application should process more than approximately 143 images per mi
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Parallelism in Hardware
 

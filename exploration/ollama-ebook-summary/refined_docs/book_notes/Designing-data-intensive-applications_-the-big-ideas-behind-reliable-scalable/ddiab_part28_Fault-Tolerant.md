@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 28)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Fault-Tolerant Consensus
 
 ---
 
-**Rating: 8/10**
 
 #### Stateless Application Servers vs Coordinator Involvement
 Background context: The text discusses how application servers can be added and removed dynamically. However, when a coordinator (a central component that oversees transactions) is part of an application server, it changes the nature of deployment. This makes the coordinator's logs critical for recovery in case of crashes.
@@ -53,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Uniform Agreement and Integrity Properties
@@ -128,7 +125,6 @@ Byzantine faults refer to scenarios where nodes may behave arbitrarily and unpre
 ??x
 ---
 
-**Rating: 8/10**
 
 #### Byzantine Fault Tolerance in Consensus Algorithms
 In distributed systems, consensus algorithms are crucial for ensuring that nodes agree on a single value despite network partitions and faulty nodes. The key idea is to achieve agreement even when up to one-third of the nodes can behave arbitrarily (Byzantine faults).
@@ -187,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Epoch Numbering and Quorums
 In distributed systems, achieving consensus often involves using epoch numbers to manage leader election. Each consensus protocol uses a mechanism to incrementally assign unique identifiers (epoch numbers) to each round of leader elections. These epoch numbers help resolve conflicts between multiple leaders by ensuring that the latest leader is always considered authoritative.
@@ -230,7 +225,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two-Phase Commit vs. Consensus Algorithms
 
@@ -469,7 +463,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ZooKeeper as a Coordination Service
 
@@ -581,7 +574,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Membership Service and Consensus
 Membership services track which nodes are currently active members of a cluster. Due to unbounded network delays, reliably detecting node failures is challenging. However, coupling failure detection with consensus allows nodes to agree on which nodes should be considered alive or not.
@@ -655,7 +647,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Transaction Commit
 Background context: The database needs to decide whether to commit or abort a distributed transaction. This involves ensuring that all operations are atomic, consistent, isolated, and durable (ACID properties).
@@ -817,7 +808,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ZooKeeper and Consensus
 ZooKeeper is a widely used tool for managing configuration information, naming, providing distributed synchronization, and group services. It supports consensus-based operations to ensure fault tolerance in distributed systems.

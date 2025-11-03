@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Parameter-Efficient Fine-Tuning PEFT
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Adapters for Parameter-Efficient Fine-Tuning (PEFT)
@@ -138,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Low-Rank Adaptation (LoRA)
 Background context explaining LoRA. It is a method for fine-tuning large language models (LLMs) by creating a small subset of parameters instead of adding layers to the model, which can be kept separately from the base LLM. This approach allows for much quicker fine-tuning as only a small part of the base model needs to be updated.
@@ -252,7 +249,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Weight Representation and Precision
 Background context explaining how weights in large language models (LLMs) are represented with a specific precision, typically float64 or float32. Reducing the number of bits can decrease memory requirements but also reduces accuracy as shown in Figure 12-15.
@@ -347,7 +343,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quantization Overview
 Quantization is a technique used to reduce the memory footprint and computational complexity of deep learning models without significantly degrading their performance. It involves converting high-precision weights (e.g., 32-bit floating-point) into lower-precision representations, such as 4-bit or 8-bit integers.
@@ -513,7 +508,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Perplexity: A Measure of Prediction Difficulty
 Perplexity is a measure used to evaluate how well a language model predicts the next token in a sequence. It provides insights into the confidence with which the model can predict the correct next word given the context.

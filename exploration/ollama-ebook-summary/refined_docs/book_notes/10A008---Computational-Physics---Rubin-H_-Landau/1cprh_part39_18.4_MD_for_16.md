@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 39)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 18.4 MD for 16 Particles
 
 ---
 
-**Rating: 8/10**
 
 #### MD Program for 16 Particles
 
@@ -51,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Histogram of Number of Particles on RHS
 
@@ -77,7 +74,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Velocity Distribution
 
@@ -104,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Heat Capacity Calculation
 
@@ -143,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Molecular Dynamics Simulations Overview
 Molecular dynamics (MD) simulations are used to study the motion of atoms and molecules over time. These simulations combine Newton's equations of motion with molecular mechanics force fields, allowing the simulation of physical processes at the atomic scale.
@@ -183,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Initial Conditions in MD Simulation
 Setting the initial conditions is crucial as it initializes the state of the system. The provided code sets up an initial position for each atom based on its index and assigns random velocities scaled by the square root of the initial temperature.
@@ -217,7 +210,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Force Calculation in MD Simulation
 The force calculation is a critical component of the simulation as it determines how particles interact with each other and influences their motion.
@@ -253,7 +245,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Evolution in MD Simulation
 The time evolution of the system is carried out by updating the positions and velocities of atoms over discrete time steps. The provided code uses a simple Velocity Verlet algorithm for this purpose.
@@ -286,7 +277,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Energy Calculation in MD Simulation
 Energy is a critical quantity to monitor during the simulation as it provides insights into the system's behavior.
@@ -315,7 +305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Periodic Boundary Conditions (PBC) in Molecular Dynamics Simulation
 Periodic boundary conditions are a common approach used in simulating systems with finite size, such as molecules or atoms. The idea is to treat the simulation box as if it were infinite by assuming that particles exiting one side of the box re-enter on the opposite side. This ensures that interactions between particles are considered over the entire system.
@@ -336,7 +325,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Force Calculation in Molecular Dynamics Simulation
 Force calculation is a critical step in molecular dynamics simulations, especially when using potential functions like the Lennard-Jones potential. The code snippet provided shows how forces are calculated between pairs of atoms based on their distance.
@@ -366,7 +354,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Potential Energy Calculation
 Potential energy calculation is essential for understanding the total potential energy of a system in molecular dynamics. The code snippet demonstrates how to calculate potential energy using the `Forces` function, which also accounts for kinetic energy.
@@ -389,7 +376,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Evolution of a System
 Time evolution in molecular dynamics is handled by updating positions and velocities at each time step. The code snippet illustrates a simple Euler integration method to update positions and velocities.
@@ -422,7 +408,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Force Updates for Time Evolution
 Force updates in molecular dynamics are crucial for accurate time evolution. The code snippet shows how forces are updated during each time step:
@@ -444,7 +429,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Energy Averages in Molecular Dynamics
 Energy averages are computed over multiple time steps to ensure statistical equilibrium. The code snippet demonstrates how energy averages (kinetic, potential, total) are calculated:
@@ -479,7 +463,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Atom Positioning and Visualization
@@ -501,7 +484,6 @@ After calculating `x` and `y`, a sphere representing an atom is created at these
 
 ---
 
-**Rating: 9/10**
 
 #### Force Calculation Between Atoms
 Background context: The text describes how forces between atoms are computed using the Lennard-Jones potential. This interaction helps in determining the dynamics of the system.
@@ -584,7 +566,6 @@ This approach ensures accurate trajectory updates while handling periodic bounda
 
 ---
 
-**Rating: 8/10**
 
 #### Geodesic Equation and its Applications
 
@@ -610,7 +591,6 @@ This simplified form is similar to Galileo's hypothesis that all particles have 
 
 ---
 
-**Rating: 8/10**
 
 #### Calculating the Riemann and Ricci Tensors
 
@@ -686,7 +666,6 @@ def calculate_tensors():
 
 ---
 
-**Rating: 8/10**
 
 #### Event Horizons
 
@@ -753,7 +732,6 @@ By comparing the numerical solution with the analytic approximation, we can vali
 
 ---
 
-**Rating: 8/10**
 
 #### Gravitational Lensing
 

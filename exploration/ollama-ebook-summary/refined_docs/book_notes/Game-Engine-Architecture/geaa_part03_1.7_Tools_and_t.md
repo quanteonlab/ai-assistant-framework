@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 1.7 Tools and the Asset Pipeline
 
 ---
 
-**Rating: 8/10**
 
 #### Game-Specific Subsystems
 Game engines consist of various subsystems that are specific to the game's mechanics and functionalities. These subsystems lie between the game-specific tools and the gameplay foundations layer, handling specialized tasks such as rendering, collision detection, and player interaction.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tools and Asset Pipeline
 The asset pipeline in a game engine is the process of managing and processing game assets from their initial creation to their use within the engine. This includes tools used for creating various types of data, such as 3D models, textures, animations, and sounds.
@@ -58,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Formats for Digital Content Creation (DCC) vs Game Engine Requirements
 
@@ -76,7 +72,6 @@ The answer is that DCC applications store models in highly detailed formats whic
 
 ---
 
-**Rating: 8/10**
 
 #### Asset Conditioning Pipeline (ACP)
 
@@ -96,7 +91,6 @@ The answer is that the ACP transforms data from DCC applications into formats su
 
 ---
 
-**Rating: 8/10**
 
 #### Brush Geometry in Game Engines
 In some engines, brush geometry is used as an "oldschool" approach to creating renderable 3D objects. This method involves defining geometry using convex hulls and planes.
@@ -116,7 +110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Skeletal Meshes and Articulated Animation
 Skeletal meshes are special types of 3D models that are bound to a skeletal hierarchy for the purpose of animating parts of the model independently.
@@ -133,7 +126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Skeletal Animation Data Storage
 Skeletal animations in game engines involve complex data structures and memory optimizations due to the nature of skeletal hierarchies.
@@ -147,7 +139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compression Schemes for Animation Data
 Different game engines use various compression schemes to manage the large amount of animation data required for skeletal meshes.
@@ -164,7 +155,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Particle Systems in Game Development
 Particle systems allow for complex visual effects in games, often authored by specialized artists using tools like Houdini. However, most game engines cannot support all particle system features created in such powerful tools, so custom tools are used to expose only the necessary and supported effects.
@@ -175,7 +165,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asset Pipeline and Metadata Management
 Game engines handle a wide range of asset types, including geometry, materials, textures, animations, and audio. Each asset has associated metadata describing its properties and usage within the engine. This metadata includes unique IDs, source file paths, frame ranges, loop settings, compression levels, and more.
@@ -186,7 +175,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### In-Engine Editor Architecture
 Background context: The text explains that some game engines incorporate their tools directly into the runtime engine, providing total access to data structures. An example given is Unreal’s world editor (UnrealEd) which can be run by passing a specific command-line argument.
@@ -208,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Why Use Version Control
 Background context: Version control is essential for multi-engineer projects as it helps prevent conflicts between developers working on the same codebase. It provides a way to track changes, maintain backups, and manage different versions of the project.
@@ -225,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Three-Way Merge
 
@@ -254,7 +240,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linking Process
 Linking combines object files into a single executable or library file, resolving external references and calculating final memory addresses.
@@ -271,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Debug vs Non-Debug Builds
@@ -296,7 +280,6 @@ In a non-debug build, the `printf` statement would be omitted due to optimizatio
 
 ---
 
-**Rating: 8/10**
 
 #### Local and Global Optimizations
 Optimizations can be categorized into local optimizations, which operate on small chunks of code (basic blocks), and global optimizations, which consider the entire control flow.
@@ -321,7 +304,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Common Sub-expression Elimination (CSE)
@@ -339,7 +321,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Breakpoints
 Background context: A breakpoint is a debugging tool that instructs the program to halt execution at a specific line of code so you can inspect the state of your application.
@@ -376,7 +357,6 @@ The arrow indicates the current position of the program counter, showing where e
 
 ---
 
-**Rating: 8/10**
 
 #### Setting Breakpoints and Stepping Through Code
 Background context: In debugging, setting breakpoints allows you to pause the execution of your program at a specific point. This is useful for inspecting variables and understanding the flow of execution. Once a breakpoint is hit, you can step through your code line by line using F10 (step over) or F11 (step into).
@@ -394,7 +374,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hit Count for Breakpoints
 Background context: The hit count feature allows you to specify how many times a breakpoint should be hit before the debugger stops execution. This is particularly useful in loops where you want to inspect state changes at specific iterations.
@@ -413,7 +392,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Debugging Optimized Builds
 Background context: Debugging optimized builds can be challenging due to compiler optimizations that may change the behavior of your code. Understanding how to debug in both debug and release modes is crucial for effective development.
@@ -444,7 +422,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Learn to Read and Step Through Disassembly
@@ -468,7 +445,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modify the Code to Debug
 If you can reproduce a non-debug-only bug, consider modifying the source code temporarily to aid in debugging. This might involve adding print statements or introducing global variables that make it easier to inspect problematic areas.

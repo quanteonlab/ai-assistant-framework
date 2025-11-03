@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Transformers for Vision
 
 ---
 
-**Rating: 8/10**
 
 #### Dense Retrieval Overview
 Dense retrieval relies on the similarity of text embeddings. This method embeds a search query and retrieves documents with the nearest embeddings to the query's embedding.
@@ -124,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Visual Transformer (ViT) Algorithm
 Background context: The provided text discusses the main algorithm behind ViT, which is a type of transformer model designed to process image data by breaking images into patches and treating them as tokens. This method allows for leveraging the powerful sequence modeling capabilities of transformers.
@@ -159,7 +156,6 @@ CLIP is particularly useful for applications where you need to compare and find 
 ??x
 ---
 
-**Rating: 8/10**
 
 #### Transformers for Vision
 Background context: Transformers are powerful models used primarily for natural language processing, but they can also be adapted to process visual data. Invision transformers, or ViTs, convert images into numerical representations that can be understood by transformer architectures.

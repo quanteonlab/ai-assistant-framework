@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Vector Class Redux
 
 ---
 
-**Rating: 8/10**
 
 #### Pythonic Classes and Protocols
 Background context: A Pythonic class is designed to be as natural and intuitive for a Python programmer as built-in types. This involves implementing special methods without necessarily using inheritance, leveraging duck typing principles. The Python Data Model allows user-defined classes to have behaviors similar to built-in objects.
@@ -142,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector2d Class Overview
 This section describes a Python class `Vector2d` which represents 2D vectors. The class includes several special methods to enable various operations and behaviors expected from an object-oriented design.
@@ -272,7 +269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Custom Format Specification for Vector2d
 Background context: The `Vector2d` class needs a custom format method to handle both Cartesian and polar coordinate representations. This involves using Python's built-in `format()` function and understanding how it works with different format specifiers.
@@ -380,7 +376,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Making a Vector2d Hashable
 

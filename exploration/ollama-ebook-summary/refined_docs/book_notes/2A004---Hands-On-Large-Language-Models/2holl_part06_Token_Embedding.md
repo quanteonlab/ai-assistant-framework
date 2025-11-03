@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Token Embeddings. Creating Contextualized Word Embeddings with Language Models
 
 ---
 
-**Rating: 8/10**
 
 #### Tokenization and Token Embeddings Overview
 Background context explaining tokenization as breaking down texts into smaller units (tokens) which are then represented numerically. This process is crucial for language models to understand and generate text.
@@ -82,7 +80,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Text Embeddings for Sentences and Documents
 Background context: In natural language processing (NLP), token embeddings are essential as they represent individual words or tokens. However, many applications require understanding entire sentences or documents beyond single tokens. To address this need, specialized models called text embedding models have been developed to convert larger pieces of text into a single vector that captures the overall meaning.
@@ -156,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Word Embeddings and Their Applications
 Word embeddings are numerical representations of words that capture their semantic meaning. These embeddings are generated using models like word2vec, which can be used to power various applications such as categorization, semantic search, recommendation systems, and more. The embeddings provide a way to represent text in a format that is useful for machine learning algorithms.

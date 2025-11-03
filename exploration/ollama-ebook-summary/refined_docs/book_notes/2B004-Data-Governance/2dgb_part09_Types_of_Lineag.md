@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B004-Data-Governance_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Types of Lineage
 
 ---
 
-**Rating: 8/10**
 
 #### Lineage Importance in Data Governance
 Data moves around your data lake, intermingling and interacting with other sources to produce insights. Metadata about these data sources is at risk of getting lost as data travels. This can affect decisions on:
@@ -119,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Label-based Security
 Label-based security is a method of controlling access to data based on predefined labels or metadata. This approach allows you to grant specific individuals access to sensitive columns while keeping other data accessible, avoiding the need for full table access or constant rewrites.
@@ -254,7 +251,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Data Inference and Automation Using Lineage

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 31)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Part VI Real-World Workloads High Variability and Heavy Tails
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Empirical Job Size Distributions
@@ -21,7 +19,6 @@ The differences lie in the fact that heavy-tailed distributions imply a higher l
 
 ---
 
-**Rating: 8/10**
 
 #### Phase-Type Distributions
 Phase-type distributions are introduced to represent general distributions as mixtures of Exponential distributions, enabling the use of Markov chains in systems with more complex distributional assumptions.
@@ -59,7 +56,6 @@ The code example demonstrates how phase-type distributions can be used in practi
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix-Analytic Techniques
 Matrix-analytic techniques are introduced for solving Markov chains resulting from general distributions, which often have no simple solutions.
@@ -92,7 +88,6 @@ Matrix-analytic methods are powerful because they allow us to handle complex sys
 
 ---
 
-**Rating: 8/10**
 
 #### Processor-Sharing (PS) Servers and BCMP Theorem
 Chapter 22 introduces networks of PS servers where job sizes are generally distributed. The BCMP theorem is used to analyze these networks, providing a simple closed-form solution for systems with PS servers.
@@ -130,7 +125,6 @@ Matrix construction and solution are key steps in applying the BCMP theorem. The
 
 ---
 
-**Rating: 8/10**
 
 #### Pollaczek-Khinchin (P-K) Formula
 Chapter 23 introduces the tagged-job technique, leading to the P-K formula for calculating mean delay in an M/G/1 FCFS queue.
@@ -177,7 +171,6 @@ The code example demonstrates how to apply the P-K formula in a practical settin
 
 ---
 
-**Rating: 8/10**
 
 #### Exponential Distribution in Job Lifetimes
 Background context explaining why there was a belief that UNIX job lifetimes were exponentially distributed, and its implications. The common wisdom suggested that all jobs had the same remaining lifetime regardless of their current age.
@@ -189,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Identifying Non-Exponential Distribution
 Background context explaining how the exponential distribution was tested against the actual measured data, showing that it did not fit an Exponential distribution.
@@ -212,7 +204,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Probability of a Job Living Beyond Age \( b \) Given it Has Survived to Age \( a \)
 

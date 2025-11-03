@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Analyzing the Shortcomings of the Adapter Design Pattern
 
 ---
 
-**Rating: 8/10**
 
 #### Adapter Design Pattern Overview
 Background context explaining how the Adapter design pattern allows different objects to collaborate despite incompatible interfaces. This is often done by providing a wrapper object that adapts one interface into another expected interface.
@@ -113,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adapter Design Pattern: Object Adapters
 
@@ -345,7 +342,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Observer Pattern - Introduction and Design Principles
 
@@ -497,7 +493,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Change Handling Through Overloads
 
@@ -623,7 +618,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Notify Function Implementation Complexity
 Background context explaining why `notify()` function is implemented as it is. The implementation ensures that detach operations can be detected during iteration, allowing observers to remove themselves from the list while being notified.

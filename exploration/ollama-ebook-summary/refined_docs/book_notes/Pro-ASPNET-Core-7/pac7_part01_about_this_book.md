@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** about this book. Who should read this book. About the code
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Setting Up the Development Environment
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Simple Web Application
 Background context: After setting up the environment, the book introduces how to create a basic web application in ASP.NET Core. This is foundational knowledge that helps developers understand the structure and workflow of creating applications.
@@ -31,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Key Features of ASP.NET Core Platform
 Background context: The second part of the book delves into the key features of the ASP.NET Core platform, including HTTP request processing, middleware components, routing, services, and Entity Framework Core.
@@ -43,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Processing HTTP Requests in ASP.NET Core
 Background context: Understanding how HTTP requests are handled is crucial for developing web applications. Middleware plays a significant role in this process by intercepting and processing incoming and outgoing traffic.
@@ -75,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Routes in ASP.NET Core
 Background context: Routing in ASP.NET Core involves defining routes for your application to map URLs to specific actions. This helps manage how different parts of the application are accessed.
@@ -118,7 +112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Working with Entity Framework Core
 Background context: Entity Framework Core (EF Core) is an object-relational mapper (ORM) for .NET. It simplifies database interactions by allowing you to work with data in a more object-oriented way.
@@ -162,7 +155,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Technical Editor: Fabio Claudio Ferracchiati
 
@@ -175,7 +167,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MVC Framework Introduction
 Background context explaining the introduction of the Model-View-Controller (MVC) framework alongside Web Forms. It mentions that MVC was introduced to address issues with Web Forms by embracing HTTP and HTML characteristics.
@@ -187,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transition to .NET Core
 Background context explaining how the original ASP.NET MVC Framework was built on Web Forms foundations but later rebuilt for .NET Core. It notes that this transition led to an open, extensible, and cross-platform foundation.
@@ -199,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single-Page Applications (SPAs)
 Background context explaining the shift towards SPAs in web development, where browsers make a single HTTP request to receive an HTML document that delivers a rich client application.
@@ -211,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Usefulness of MVC in Modern Web Development
 Background context explaining that while the clean separation of concerns emphasized by MVC is less important in SPAs, the MVC framework remains useful for supporting web services.

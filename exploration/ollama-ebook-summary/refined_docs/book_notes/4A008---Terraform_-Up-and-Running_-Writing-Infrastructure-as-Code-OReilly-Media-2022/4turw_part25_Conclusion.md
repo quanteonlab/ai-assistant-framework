@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Conclusion
 
 ---
 
-**Rating: 8/10**
 
 #### Production-Grade Infrastructure Checklist
 The process involves going through a checklist to ensure all necessary elements for production-grade Terraform code are considered. This includes aspects such as error handling, logging, security, and more, ensuring the infrastructure is robust and maintainable.
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Test Folder and Automated Tests
 Create a `test` folder to write automated tests for each example. This ensures that your infrastructure code is reliable and robust.
@@ -82,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing Web Server Code in Ruby
 Background context: An example of manually testing code written in a general-purpose programming language, specifically a simple web server in Ruby.
@@ -139,7 +135,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing Terraform Code Manually
 Background context: Manual testing of Terraform code by deploying and destroying resources on a real environment to ensure they behave as expected.
@@ -186,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AWS Account Management and Testing
 
@@ -199,7 +193,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Validation Methods for Infrastructure
 
@@ -212,7 +205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Isolated Sandbox Environments
 
@@ -225,7 +217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Automated Testing for Infrastructure
 
@@ -240,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Automated Testing Overview
 Background context explaining the concept of automated testing. Automated testing is a process where test code validates that your real code behaves as intended, ensuring robustness and reliability. It helps maintain a working state of the code by running tests after every commit.
@@ -255,7 +245,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Tests
 Background context explaining unit tests. In general-purpose programming languages, unit tests verify the functionality of small units of code—typically individual functions or classes. They replace external dependencies with mocks to test various scenarios.
@@ -281,7 +270,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Integration Tests
 Background context explaining integration tests. These tests ensure that multiple units work together correctly. They often mix real dependencies with mocks, depending on the specific part of the system being tested.
@@ -309,7 +297,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### End-to-End Tests
 Background context explaining end-to-end tests. These tests validate that your entire system works as expected, running it in conditions similar to production with minimal resources to save costs.
@@ -341,7 +328,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Refactoring Code for Unit Testing
@@ -387,7 +373,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Testing Web Server Logic
 After refactoring, unit testing can be performed more easily on the `Handlers` class. The `handle` method of the `Handlers` class returns simple values which are easy to mock or stub.
@@ -435,7 +420,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simplicity in Code Design for Testing
 The refactored code with a `Handlers` class demonstrates how simplifying inputs and outputs can make testing easier. The key idea is to avoid complex methods with multiple responsibilities and instead create smaller, focused functions that return simple values.
@@ -469,7 +453,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Testing for Web Server Code
 Background context explaining the unit testing approach and its benefits. The provided Ruby test cases demonstrate how to write simple unit tests for a web server's endpoints, ensuring they behave as expected.
@@ -498,7 +481,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations of Unit Testing Terraform Code
 Background context discussing the challenges and limitations when trying to unit test Terraform code, focusing on the complexity introduced by external dependencies.
@@ -509,7 +491,6 @@ Pure unit testing for Terraform code is infeasible because most of its functiona
 
 ---
 
-**Rating: 8/10**
 
 #### Key Takeaway: Unit Testing for Terraform
 Background context explaining why pure unit testing is impractical and suggesting alternative approaches like integration testing to build confidence in Terraform code.
@@ -522,7 +503,6 @@ The key takeaway is that you cannot do pure unit testing for Terraform code due 
 
 ---
 
-**Rating: 8/10**
 
 #### Writing Unit Tests for Terraform
 Background context: Writing unit tests for Terraform involves creating standalone modules and deploying them to a real environment using `terraform apply`. The goal is to validate that the infrastructure created by the code works as expected, similar to manual testing but automated. This process helps ensure your Terraform configurations behave correctly before applying them in production.
@@ -555,7 +535,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deploying and Validating Infrastructure with Terraform in Tests
 Background context: When writing unit tests for Terraform modules using Terratest, you need to deploy the module's example infrastructure into a real environment. This involves running `terraform apply`, validating that it works as expected, and then cleaning up with `terraform destroy`.
@@ -587,7 +566,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Validating Infrastructure Functionality Post-Deployment
 Background context: After deploying infrastructure using Terraform via tests, it is essential to validate that the deployed resources work as intended. This validation can involve sending HTTP requests for services like ALBs or checking other outputs from Terraform.
@@ -631,7 +609,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ensuring Infrastructure Cleanup Post-Test
 Background context: After running tests that deploy infrastructure with Terraform, it is crucial to clean up the resources by running `terraform.destroy`. However, this must be done reliably even if the test fails.
@@ -649,7 +626,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Running the Test with Timeout
 When running tests that deploy real infrastructure using Terraform, setting an extended timeout is essential to avoid premature termination of the test run.
@@ -667,7 +643,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Clean Up After Testing
 After testing, it is crucial to clean up any resources created by Terraform. This ensures that no unwanted infrastructure remains running after tests complete.
@@ -688,7 +663,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Manual vs Automated Testing
 For testing, especially automated testing of Terraform code deployed on AWS, it is essential to use a sandbox account for manual tests but a separate, dedicated environment for automated tests. This separation ensures that automated tests do not interfere with or affect production resources.
@@ -706,7 +680,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Use of `go mod tidy`
 `go mod tidy` is a command used to ensure all dependencies are correctly installed and updated according to the requirements specified in your `go.mod` file. This command resolves any version mismatches or missing dependencies.
@@ -730,7 +703,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Automated Tests
 Background context: The text mentions that automated tests can be run in less than five minutes to verify if the ALB module works as expected, providing a fast feedback loop for infrastructure changes in AWS.
@@ -743,7 +715,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Injection in Unit Testing
 Background context: The example provided demonstrates how adding an HTTP call to an external dependency (`example.org`) can complicate unit testing due to potential issues like outages, behavioral changes, or delays. Dependency injection is proposed as a solution to minimize reliance on these external dependencies during unit tests.
@@ -756,7 +727,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing Dependency Injection
 Background context: The example shows how dependency injection can be applied by allowing the external HTTP call to be injected into the `Handlers` class through a constructor parameter instead of being hardcoded. This allows unit tests to mock the response and isolate the code under test from real-world dependencies.
@@ -795,7 +765,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Injection for Web Services
 Background context explaining dependency injection and how it applies to web services. This technique helps minimize external dependencies, making testing more manageable and reliable.
@@ -843,7 +812,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mocking for Testing
 Background context on how to use mocks in testing to simulate behavior of external systems. This helps in writing faster and more reliable tests by controlling the environment.
@@ -886,7 +854,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Test for Web Server
 Background context on how unit tests can be written to ensure the correct behavior of components. This includes checking both external dependencies and internal logic.
@@ -920,7 +887,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Moving Dependencies to `dependencies.tf` File
 Background context: In Terraform, it's essential to make dependencies clear and manageable. By moving all data sources and resources representing external dependencies into a separate `dependencies.tf` file, it becomes easier for users of your module to understand what their code depends on.
@@ -956,7 +922,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Input Variables to Inject Dependencies
 Background context: To test modules effectively, it's crucial to be able to inject dependencies from outside the module. This is achieved by defining input variables that can be passed in during testing or deployment.
@@ -1010,7 +975,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding the Impact of Dependency Injection on Testing
 Background context: By moving dependencies into `dependencies.tf` and using input variables, you can reduce the number of external dependencies required for testing a module.
@@ -1051,7 +1015,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of a `variables.tf` File for the `hello-world-app` Module
 Background context: The `variables.tf` file is where you define all the input variables that your module requires. These variables can be used to pass in values during deployment or testing.
@@ -1103,7 +1066,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optional Variables and Default Values
 Background context: In Terraform, variables can be optional. When a variable is not explicitly set by the user, it defaults to a specified value (in this case, `null`). This allows for flexibility in configuration.
@@ -1129,7 +1091,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Type-Safe Function Composition
 Background context: By structuring variables and outputs to match expected types, you can achieve type-safe function composition. This means that when passing data from one module to another, Terraform can validate the types automatically.
@@ -1155,7 +1116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional Data Source Usage Based on Input Variables
 Background context: Depending on whether certain input variables are set, you can conditionally apply data sources in your Terraform configuration. This is useful for modular design where different parts of the stack might need or not need specific data sources.
@@ -1179,7 +1139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Test for `hello-world-app` Example
 Explanation on creating a unit test with custom validation logic.
@@ -1231,7 +1190,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Running Tests in Parallel
 Background context explaining how Go tests can be run sequentially or in parallel, and why running tests in parallel is important for reducing test execution time.
@@ -1258,7 +1216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring Resource Names in Tests
 Background context explaining the need to namespace resources in tests to avoid name clashes when running multiple tests or in a CI environment.
@@ -1303,7 +1260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Running Tests with Mock Data
 Background context explaining how to pass in mock data for testing, such as using an in-memory database during tests.
@@ -1346,7 +1302,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Running a Single Test with Go
 Background context explaining how to run only a specific test using the `go test` command.
@@ -1373,7 +1328,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Running Tests in Parallel
 

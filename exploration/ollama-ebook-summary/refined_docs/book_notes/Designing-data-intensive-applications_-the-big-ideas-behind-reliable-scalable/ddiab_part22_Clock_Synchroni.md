@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Clock Synchronization and Accuracy
 
 ---
 
-**Rating: 8/10**
 
 #### Internet Routing and Bandwidth
 Background context explaining how internet routing operates at a higher level compared to IP itself. It discusses peering agreements, BGP, and the possibility of buying dedicated bandwidth.
@@ -82,7 +80,6 @@ A real-time clock, often called "real-time" in computer systems, refers to hardw
 
 ---
 
-**Rating: 8/10**
 
 #### Time Synchronization Issues with Network Time Protocol (NTP)
 Background context: NTP is widely used for time synchronization over networks. However, several factors can limit its accuracy and reliability.
@@ -230,7 +227,6 @@ public class FinancialClockSync {
 ```
 x??
 
-**Rating: 8/10**
 
 #### NTP Daemon Misconfiguration and Clock Drift
 
@@ -287,7 +283,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Last Write Wins (LWW)
@@ -395,7 +390,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Confidence Intervals for Clock Readings
 Background context explaining that clock readings are not as precise as they may appear due to drift and network latency. For instance, even if a system synchronizes with an NTP server every minute, it can still have drift of several milliseconds. Public internet synchronization may introduce errors over 100 ms during network congestion.
@@ -501,7 +495,6 @@ function syncTimeWithNTP() {
 x??
 ---
 
-**Rating: 8/10**
 
 #### Distributed Sequence Generators like Snowflake
 Background context: In distributed systems, generating unique and monotonically increasing IDs is crucial for various operations. Twitter’s Snowflake is an example of a sequence generator that allocates blocks of ID space to different nodes to achieve scalability but struggles with ensuring causality due to the timescale disparity between ID block allocation and database reads/writes.
@@ -559,7 +552,6 @@ If the local clock and the remote clock are not synchronized, this can lead to f
 ??x
 ---
 
-**Rating: 8/10**
 
 #### I/O Pauses and GC Pauses Convergence
 Background context: In distributed systems, delays can occur due to I/O operations and garbage collection (GC) processes. The convergence of these delays can significantly impact performance. For instance, if a disk is part of a network filesystem or block device like Amazon’s EBS, the variability in network delays adds to the latency issues.
@@ -659,7 +651,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real-Time Systems in Embedded Devices
 

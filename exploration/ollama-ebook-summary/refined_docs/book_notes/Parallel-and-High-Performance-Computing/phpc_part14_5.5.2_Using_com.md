@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 5.5.2 Using compact hashing for spatial mesh operations
 
 ---
 
-**Rating: 8/10**
 
 #### Optimizing Write Operations in Hashing
 Background context: To address the issues with the initial neighbor finding algorithm, optimizations were introduced to minimize writes and improve load balancing.
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load Factor and Size Multiplier
 Background context: The load factor helps in understanding how much data is stored compared to the total capacity, aiding in optimizing memory usage.
@@ -42,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avoiding Thread Divergence in Parallel Processing
 Background context: In parallel processing, maintaining load balance and minimizing thread divergence is crucial for performance.
@@ -56,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spatial Hashing Overview
 Background context: The provided text discusses spatial hashing, a technique for efficiently storing and querying spatial data. It explains how to handle collisions through open addressing with different probing methods (linear, quadratic, double hashing).
@@ -88,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Perfect Spatial Hashing
 Background context: The text describes how perfect spatial hashing assigns keys to spatial data based on their proximity. This is a crucial step before compression and collision resolution.
@@ -108,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compression and Bucket Indexing
 Background context: The text explains how entries are compressed into a smaller hash table, leading to potential collisions. These collisions need to be resolved by finding an empty slot in the same hash table.
@@ -141,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Open Addressing and Probing Methods
 Background context: The text describes open addressing as a method to resolve collisions by finding the next available slot in the hash table. It mentions three probing methods: linear, quadratic, and double hashing.
@@ -168,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Estimation of Optimizations
 
@@ -278,7 +269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overview of Optimization Techniques for k-D Trees and Spatial Hashing
 
@@ -291,7 +281,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### k-D Tree Optimization Overview
 
@@ -304,7 +293,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compact Hashing for Spatial Hashing
 
@@ -326,7 +314,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Remap Operation Optimization
 
@@ -353,7 +340,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Perfect Hash Table for Remap Operation
 Background context: The perfect hash table is used to map cell indices from an input mesh to their respective locations in an output mesh. This method is particularly useful in remapping operations, where data needs to be transferred between meshes of different resolutions.
@@ -389,7 +375,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Read Phase of Remap Operation
 Background context: After writing the cell indices into the hash table, the next step involves reading these values back from the hash table and mapping them correctly to their positions in the output mesh. This is done using a hierarchical approach that handles cells at different refinement levels.
@@ -442,7 +427,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hierarchical Hash Technique
 Background context: The hierarchical hash technique uses multiple hash tables, each for a different level of refinement in the mesh. This allows for more efficient remapping operations without needing to initialize all hash table entries to a sentinel value at the start.
@@ -492,7 +476,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recursion on GPU
 Background context: Despite the theoretical limitations of recursion on GPUs due to potential stack overflow issues, the implementation of the remap operation using a hierarchical hash technique shows that limited amounts of recursion can still work efficiently. This is crucial for ensuring compatibility between CPU and GPU implementations.
@@ -531,7 +514,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prefix Sum (Scan) Pattern Overview
 Background context: The prefix sum, also known as a scan, is crucial for parallel computing tasks involving irregular data structures. It helps processors know where to start writing or reading values based on local indices. In the context of hash tables and mesh operations, it ensures that processes can correctly access and manipulate values in global arrays.
@@ -543,7 +525,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exclusive vs. Inclusive Scan
 Background context: The prefix sum operation can be performed as an exclusive scan (where the current value is not included in the sum) or an inclusive scan (where it is included). These scans provide starting and ending addresses for data segments.
@@ -569,7 +550,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tree-Based Reduction for Prefix Sum
 Background context: The prefix sum can be parallelized using a tree-based reduction pattern, where each node sums with its predecessor and possibly nodes further down in the hierarchy.
@@ -608,7 +588,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Serial Inclusive Scan Operation
 Background context explaining the serial inclusive scan operation. This involves processing each element of an array sequentially to compute a prefix sum, where each element is the sum of all preceding elements up to itself.
@@ -632,7 +611,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Inclusive Scan Operation (Step-Efficient)
 Background context explaining the step-efficient parallel scan. This operation aims to perform the same task as the serial inclusive scan but in a more efficient manner by leveraging multiple processes.
@@ -659,7 +637,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Work-Efficient Parallel Scan Operation
 Background context explaining the work-efficient parallel scan. This algorithm minimizes the number of operations while maintaining a logarithmic number of steps, making it suitable when fewer processes are available.
@@ -698,7 +675,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Scan Patterns and Their Importance
 Background context explaining the importance of parallel scan patterns in parallel computing. These patterns are crucial for optimizing performance, especially in scenarios where the number of available processes is limited.
@@ -715,7 +691,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Scan Operations for Large Arrays
 Background context: For larger arrays, a parallel scan operation is necessary. The provided text outlines an algorithm using three kernels for the GPU. Each kernel serves a specific purpose: reduction sum, offset calculation, and final scan application.
@@ -743,7 +718,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kernel 3 for Final Scan Application
 Background context: The third kernel applies the workgroup offsets calculated in the previous step to perform a final scan on the original array. This results in the desired parallel scan output.
@@ -765,7 +739,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Addressing Associativity in Parallel Global Sum
 Background context: The text discusses how parallel computing can suffer from non-reproducibility of sums across processors due to changes in addition order. This is addressed by ensuring associativity through specific algorithms.
@@ -785,7 +758,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Prefix Scan Library Usage (CUDPP and CLPP)
 Background context: The text mentions the use of libraries like CUDPP for CUDA and CLPP or hash-sorting code from LANL’s PerfectHash project for OpenCL. These libraries provide optimized implementations of parallel prefix scans.
@@ -809,7 +781,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Catastrophic Cancellation
 Catastrophic cancellation occurs when subtracting two nearly equal numbers, leading to a loss of precision due to the subtraction of significant digits. This phenomenon can cause the result to have only a few significant figures, filling the rest with noise.
@@ -826,7 +797,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reduction Operation in Parallel Computing
 A reduction operation is a process where an array of one or more dimensions is reduced to at least one dimension less, often resulting in a scalar value. This is a common pattern in parallel computing and can lead to issues related to precision and consistency between serial and parallel execution.
@@ -850,7 +820,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Precision Problem in Parallel Summation
 
@@ -885,7 +854,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Global Summation in Parallel Computing
 
@@ -928,7 +896,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Pairwise and Kahan Summation
 
@@ -968,7 +935,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pairwise Summation Algorithm
 
@@ -1013,7 +979,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kahan Summation Algorithm
 
@@ -1057,7 +1022,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Kahan Summation Technique
 
@@ -1104,7 +1068,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison of Summation Techniques
 Background context explaining the concept. The text compares different summation techniques (regular double, long double, pairwise, Kahan, Knuth) and their accuracy and performance.
@@ -1116,7 +1079,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance of Pairwise Summation
 Background context explaining the concept. The pairwise summation technique reduces errors by pairing elements together before adding them.
@@ -1128,7 +1090,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kahan Summation Implementation
 Background context explaining the concept. The Kahan summation algorithm maintains an error term to correct for loss of precision.
@@ -1140,7 +1101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vectorized Implementation of Kahan Summation
 Background context explaining the concept. The vectorized implementation of the Kahan summation reduces run-time overhead while maintaining accuracy.
@@ -1152,7 +1112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Locality for Cache
@@ -1176,7 +1135,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Locality for Operations
 Avoiding unnecessary operations on all data can help maintain complexity and performance. This is referred to as "locality of operations." A classic example is spatial hashing which keeps interactions local and reduces the complexity from \(O(N^2)\) to \(O(N)\).
@@ -1218,7 +1176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Execution
 Avoiding synchronization between threads can help improve performance. This is achieved by making sure that different parts of a program do not wait on each other unnecessarily, which reduces the overhead of synchronization and improves parallel efficiency.
@@ -1253,7 +1210,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fewer Conditionals
 Reducing conditionals can help improve performance on some architectures by minimizing thread divergence issues. Thread divergence occurs when different threads take different execution paths based on conditional logic, which can reduce parallel efficiency.
@@ -1310,7 +1266,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reproducibility
 Parallel algorithms often violate the lack of associativity in finite-precision arithmetic. Enhanced precision techniques can help maintain consistency and reproducibility across different runs or platforms.
@@ -1357,7 +1312,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Higher Arithmetic Intensity
 Current architectures have added floating-point capabilities faster than memory bandwidth. Algorithms that increase arithmetic intensity can make good use of parallelism, such as vector operations.

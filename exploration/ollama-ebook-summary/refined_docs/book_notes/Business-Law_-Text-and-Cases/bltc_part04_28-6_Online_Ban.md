@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Business-Law_-Text-and-Cases_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 28-6 Online Banking and E-Money
 
 ---
 
-**Rating: 8/10**
 
 #### Substitute Checks
 Background context: Substitute checks are created from digital images of original checks and contain all necessary information for automated processing. They can be used in place of physical checks, reducing paper usage.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Intermediary Bank
 An intermediary bank is a financial institution that acts as a bridge between the customer and the final destination of funds in an EFT process. It may be involved in processing, confirming, or transferring funds.
@@ -51,7 +48,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Issue Spotting 1: Contract Enforcement for Services Rendered

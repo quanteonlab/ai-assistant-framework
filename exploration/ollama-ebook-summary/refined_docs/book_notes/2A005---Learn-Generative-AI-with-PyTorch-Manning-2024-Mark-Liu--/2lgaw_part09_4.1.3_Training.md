@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4.1.3 Training GANs to generate images of clothing items
 
 ---
 
-**Rating: 8/10**
 
 #### Modifying Generator G for Clothing Item Generation
 
@@ -263,7 +261,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convolutional Layers Overview
 Convolutional layers are a critical component of CNNs, specifically designed for image processing tasks. Unlike fully connected (dense) layers, convolutional layers have neurons that connect only to small regions of the input, reducing parameter count and improving efficiency.
@@ -275,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Shared Weights in Convolutional Layers
 Convolutional layers utilize shared weights across different regions of the input. This property enables translation invariance, meaning features detected by a filter are consistent regardless of their position within the image.
@@ -306,7 +302,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Convolutional Operations Explanation
 Convolutional operations involve applying a set of learnable filters (kernels) to the input data. The result is a feature map that highlights specific patterns and features at different spatial scales.
@@ -343,7 +338,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Zero-Padding in Convolutional Operations
 Zero-padding adds extra rows or columns of zeros around the input to maintain its spatial dimensions during convolution. It helps preserve the spatial resolution of features.
@@ -382,7 +376,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convolutional Layer Basics
 Convolutional layers are a fundamental component of convolutional neural networks (CNNs) used for image processing tasks. They apply a set of learnable filters to an input image, generating new feature maps that capture important features.
@@ -394,7 +387,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Convolutional Layer
 To create a 2D convolutional layer, we use PyTorch's `nn.Conv2d` module.
@@ -413,7 +405,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Padding in Convolutional Operations
 Background context explaining the concept. Padding is used to add zero values around the borders of an input image before applying convolution operations. This technique helps maintain the spatial dimensions of the output feature map, preventing it from shrinking.
@@ -436,7 +427,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stride and Padding Example
 Background context explaining the concept. The given example shows how changing the `stride` and `padding` parameters affects the output feature map in a convolutional operation.

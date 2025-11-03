@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 50)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 33.3 Comparisons with Other Policies
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison of SRPT and Other Policies
 Background context: This section discusses the comparison between Shortest Remaining Processing Time First (SRPT) and other policies such as PSJF (Processor Sharing with Job Size First). The objective is to understand how different policies affect job waiting times and overall mean response time.
@@ -68,7 +66,6 @@ Figure 33.1 shows the mean response time as a function of load for different M/G
 
 ---
 
-**Rating: 8/10**
 
 --- 
 
@@ -100,7 +97,6 @@ SRPT beats FB on every job size \( x \), as shown by Lemma 33.1. This is because
 
 ---
 
-**Rating: 8/10**
 
 --- 
 
@@ -124,7 +120,6 @@ In Figure 33.1, a Weibull job size distribution with mean 1 and \( C_2 = 0.1 \) 
 
 ---
 
-**Rating: 8/10**
 
 #### Variance of Job Size Distribution
 
@@ -142,7 +137,6 @@ Small jobs are favored because they gain priority as they receive service, and t
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Evaluation with Mathematica
 
@@ -160,7 +154,6 @@ SRPT performs better than other policies like PSJF because it has lower waiting 
 
 ---
 
-**Rating: 8/10**
 
 #### Overall Mean Response Time
 
@@ -180,7 +173,6 @@ Figure 33.1 reveals that SRPT outperforms other policies in terms of mean respon
 
 ---
 
-**Rating: 8/10**
 
 #### PS Policy Invariance to Job Size Variability
 
@@ -200,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mathematical Derivation for Fairness and SRPT Policy
 
@@ -218,7 +209,6 @@ This inequality needs to hold for the policy comparison. Here, \( \lambda \), \(
 
 ---
 
-**Rating: 8/10**
 
 #### Utilization Factor (\(\rho\)) and Fairness
 
@@ -236,7 +226,6 @@ Given that \( \rho > \rho_x \) and under the theorem assumption that \( \rho < 1
 
 ---
 
-**Rating: 8/10**
 
 #### Integration and Probability
 
@@ -252,7 +241,6 @@ These functions are crucial in the derivation as they help in calculating expect
 
 ---
 
-**Rating: 8/10**
 
 #### Fairness vs. Performance
 
@@ -266,7 +254,6 @@ The text claims that fairness can be counterintuitive because a seemingly "unfai
 
 ---
 
-**Rating: 8/10**
 
 #### Theorem Assumptions
 

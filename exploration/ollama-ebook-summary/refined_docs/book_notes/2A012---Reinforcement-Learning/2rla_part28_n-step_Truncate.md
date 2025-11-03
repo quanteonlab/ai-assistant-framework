@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 28)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** n-step Truncated -return Methods
 
 ---
 
-**Rating: 8/10**
 
 #### Off-line λ-return Algorithm Performance
 
@@ -37,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD(λ) Convergence
 
@@ -74,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Truncated λ-return Methods
 
@@ -104,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example: Approximating λ-return with TD(λ)
 
@@ -139,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sum of TD(λ) Updates
 
@@ -169,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Online Ө-Return Algorithm Overview
 Online Ө-return algorithm is an approach to improve learning efficiency by redoing updates on each time step, using the latest horizon. This method allows for more accurate value function estimation by incorporating recent data into the target values.
@@ -181,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Truncation Parameter n in Ө-Return
 The parameter `n` in truncated Ө-return involves balancing between approximating the offline Ө-return method effectively (by making `n` large) and ensuring timely updates that can influence current behavior (by keeping `n` small).
@@ -195,7 +187,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proving Equation (12.10)
 Equation (12.10) states that \( G_{t:t+n} = \hat{v}(S_t, w_{t-1}) + \sum_{i=t+1}^{t+n-1} (\gamma^{\alpha_i}) (R_{i+1} + \hat{v}(S_{i+1}, w_i) - \hat{v}(S_t, w_{t-1})) \).
@@ -215,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Redoing Updates
 Redoing updates involves revisiting previous steps to incorporate new data, starting from the initial weights \( w_0 \) every time the horizon is extended.
@@ -231,7 +221,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Update Target Calculation
 The update target for the first time step is \( G_{t:h} = \hat{v}(S_t, w_{t-1}) + \sum_{i=t+1}^{t+h-1} (\gamma^{\alpha_i}) (R_{i+1} + \hat{v}(S_{i+1}, w_i) - \hat{v}(S_t, w_{t-1})) \).
@@ -246,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Update Sequence
 An example sequence for updating weight vectors in the online Ө-return algorithm is given as follows:
@@ -271,7 +259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### True Online TD(λ) Algorithm
 
@@ -315,7 +302,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Diagonal Weight Vectors
 
@@ -348,7 +334,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pseudocode for True Online TD(λ)
 
@@ -414,7 +399,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Update Rule for True Online TD(λ)
 

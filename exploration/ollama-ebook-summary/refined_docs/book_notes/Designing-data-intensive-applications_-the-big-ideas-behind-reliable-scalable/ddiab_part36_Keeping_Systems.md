@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 36)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Keeping Systems in Sync
 
 ---
 
-**Rating: 8/10**
 
 #### Log-Based Message Brokers vs. Traditional Message Brokers
 Log-based message brokers store messages in a persistent log, allowing consumers to replay old messages without affecting other consumers or services. This is different from traditional message brokers where shutting down a consumer can disrupt service due to accumulated messages in queues.
@@ -28,7 +26,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event Streams and Databases
 In a database context, events can be seen as records of data changes that need to be processed. Replication logs in databases are streams of write events, ensuring replicas end up in the same state through deterministic processing.
@@ -48,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronization Across Heterogeneous Systems
 In complex applications, different systems store data in optimized representations. Ensuring these systems stay synchronized can be challenging due to race conditions and inconsistent updates when using dual writes.
@@ -69,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Commit Problem in Synchronization
 Ensuring that changes across multiple systems succeed or fail together is challenging. The atomic commit problem, often solved using Two-Phase Commit (2PC), can be expensive and complex.
@@ -93,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Change Data Capture (CDC) Overview
 Change data capture involves observing and extracting all data changes made to a database so they can be replicated to other systems. Historically, databases have treated their replication logs as internal implementation details, making it difficult for clients to leverage them directly.
@@ -105,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Use of CDC in Stream Processing
 CDC allows for continuous application of changes to other systems, ensuring consistency across different storage technologies like search indices, caches, or data warehouses.
@@ -117,7 +110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of Change Data Capture
 Implementing CDC often involves setting up mechanisms like log consumers (derived data systems) that observe changes from the source database and apply them to other systems.
@@ -129,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Nature of CDC
 CDC systems are typically asynchronous, meaning the source database does not wait for changes to be applied to consumers before committing.
@@ -141,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Initial Snapshot in CDC
 Initial snapshot involves taking a full copy of the database state before applying logs, ensuring complete data consistency.
@@ -153,7 +143,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Log Compaction in CDC
 Log compaction helps manage storage by keeping only recent updates and removing duplicates.
@@ -165,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### API Support for Change Streams
 Modern databases are increasingly supporting change streams as a first-class interface.
@@ -179,7 +167,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Change Data Capture
 Change data capture (CDC) involves writing transactions to a special table that cannot be queried, but whose log of committed tuples is consumed by external systems. This allows for asynchronous updates and stream processing.
@@ -191,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kafka Connect for Change Data Capture
 Kafka Connect integrates change data capture tools with Kafka, allowing stream of change events to be used to update derived data systems and feed into stream processing.
@@ -203,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event Sourcing Technique
 Event sourcing stores all changes to application state as a log of immutable events. Unlike CDC, which works at a lower level and captures database writes, event sourcing focuses on capturing high-level application actions.
@@ -215,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Event Sourcing
 Event sourcing offers several advantages such as easier debugging, better application evolution, and guarding against bugs.
@@ -232,7 +216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deriving Current State from Event Log
 To present current state, applications using event sourcing need to transform the log of events into a form suitable for users. This transformation should be deterministic and allow reconstruction of the system’s current state by replaying the logs.
@@ -244,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Log Compaction in Event Sourcing
 Log compaction is handled differently in CDC and event sourcing. In CDC, it discards redundant events by keeping only the latest version for primary keys. In contrast, event sourcing requires retaining all history to reconstruct final state accurately.
@@ -256,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Snapshots for Performance Optimization
 Applications using event sourcing often store snapshots of current states derived from the log of events. These are used for performance optimization by speeding up reads and recovery.

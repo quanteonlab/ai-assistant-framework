@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Speed to Market
 
 ---
 
-**Rating: 8/10**
 
 #### Team Size and Capabilities
 Background context explaining the importance of team size and capabilities. In data engineering, a small team might need to handle multiple roles, whereas larger teams can specialize in different areas. The size of the team determines how complex technologies can be adopted effectively.
@@ -243,7 +241,6 @@ if (industryTrendsTowardsCloudNative) {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Total Cost of Ownership (TCO)
 Total cost of ownership is a comprehensive approach to understanding all the costs associated with an initiative, including both direct and indirect expenses. Direct costs are those that can be easily traced back to specific initiatives, such as salaries for team members or cloud service bills. Indirect costs, also known as overhead, are incurred regardless of the project's outcome.
@@ -307,7 +304,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Technologies
 Background context: The text discusses the importance of choosing technologies that are likely to remain stable and useful over time, often referred to as "immutable" technologies. These include foundational components like object storage, networking, servers, and certain programming languages.

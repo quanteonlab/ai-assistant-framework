@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 49)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 25.6.3 Implementation
 
 ---
 
-**Rating: 8/10**
 
 #### 2D Sine-Gordon Equation and Numerical Solutions
 Background context: The 2D sine-Gordon equation (2DSGE) can describe wave propagation in nonlinear elastic media. It has applications in quantum field theory where soliton solutions are proposed as models for elementary particles. To solve the 2DSGE numerically, we use a finite difference approach on a space-time lattice.
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Discretization of the 2DSGE
 Background context: To numerically solve the 2D sine-Gordon equation, we discretize the spatial and temporal domains into a lattice. We use finite difference approximations for derivatives and set boundary conditions to ensure stability.
@@ -32,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of Numerical Solution
 Background context: The numerical solution involves setting up an array to store values on a grid, applying boundary conditions, and updating the lattice using finite difference approximations. This approach is used to simulate wave propagation in a 2D space-time domain.
@@ -49,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Boundary Conditions and Time Evolution
 Background context: To ensure stability in the numerical solution, boundary conditions are applied to handle the edges of the lattice. These conditions help simulate the behavior at the boundaries without loss of information.
@@ -64,7 +59,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Evolution of Solitons
 Background context: The numerical simulation shows how a circular ring soliton evolves over time. Initially, it shrinks, then expands, and finally returns to another (but not identical) ring soliton. A small amount of energy radiates away, leading to some interference with the boundary conditions.
@@ -77,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advection Equation Solution via Lax-Wendroff Scheme
 
@@ -108,7 +101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Plotting Initial and Exact Solutions
 
@@ -131,7 +123,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Korteweg de Vries Equation for Solitons
 
@@ -152,7 +143,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Solution of KdV Equation
 
@@ -177,7 +167,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Plotting Soliton Evolution
 
@@ -199,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fluid Hydrodynamics Overview
 Background context: This section introduces fluid dynamics, focusing on equations like the Navier-Stokes equation. These equations are crucial for understanding how fluids move and interact with submerged objects.
@@ -210,7 +198,6 @@ The primary focus is on examining more general equations of fluid dynamics and t
 
 ---
 
-**Rating: 8/10**
 
 #### Continuity Equation
 Background context: The continuity equation describes how mass is conserved in a fluid flow system. It states that the rate of change of density plus the divergence of the velocity field must equal zero.
@@ -225,7 +212,6 @@ This equation ensures that the total mass within a fluid system remains constant
 
 ---
 
-**Rating: 8/10**
 
 #### Navier-Stokes Equation
 Background context: The Navier-Stokes equations describe the motion of fluids by accounting for forces and momentum transfer. They are fundamental in understanding complex flow behaviors, especially under conditions where friction (viscosity) cannot be ignored.
@@ -240,7 +226,6 @@ Here, \(\frac{D \mathbf{v}}{Dt}\) is the material derivative representing the ra
 
 ---
 
-**Rating: 8/10**
 
 #### Material Derivative
 Background context: The material derivative (or substantial derivative) describes how properties like velocity change along with fluid particles. It accounts for both convective acceleration and local acceleration.
@@ -255,7 +240,6 @@ This derivative is particularly important in fluid dynamics because it captures 
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Solution of Navier-Stokes Equation
 Background context: The Navier-Stokes equations are nonlinear and typically do not have analytic solutions, making numerical methods essential. These methods involve discretizing space and time to approximate solutions.

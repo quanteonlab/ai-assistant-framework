@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 26)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Overwriting a Class Attribute
 
@@ -118,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Slicing Behavior
 Background context: In Python, slicing a sequence type returns a new instance of that same type. However, this behavior isn't explicitly defined by the programmer and is handled internally by Python. The `__getitem__` method can be overridden to control how slices are processed.
@@ -217,7 +214,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Class Handling Slices
 

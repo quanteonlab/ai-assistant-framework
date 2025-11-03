@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 44)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 28 Performance Metrics. 28.2 Commonly Used Metrics for Single Queues
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Traditional Performance Metrics Overview
@@ -24,7 +22,6 @@ x??
 
 ---
 
-**Rating: 10/10**
 
 #### Impact on Mean Response Time
 The improvement in mean waiting time (\(E[TQ]\)) by a factor of 100 does not necessarily translate to a similar improvement in the overall response time (\(E[T]\)). This is because \(E[T]\) includes both the waiting time and the service time.
@@ -50,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Time Consideration
 The benefit of reducing waiting time (\(E[TQ]\)) significantly depends on the relative size of the service time \(E[S]\). If \(E[S]\) is much larger than \(E[TQ]\), a substantial improvement in \(E[TQ]\) can result in a more significant reduction in the overall response time.
@@ -73,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Work in System and Utilization for Single Queues
 
@@ -107,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Slowdown Metrics in Queuing Systems
 
@@ -141,7 +135,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deriving Performance Metrics
 
@@ -187,7 +180,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tail Behavior of Response Times
 
@@ -214,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deriving the Transform of Response Time
 
@@ -253,7 +244,6 @@ x?? - This concludes the explanations and code snippets based on your questions.
 
 ---
 
-**Rating: 8/10**
 
 #### Comparing Mean Response Times
 It might seem that FCFS should have the best mean response time because it serves jobs close to their arrival times. However, all three policies—FCFS, LCFS, and RANDOM—actually have the same mean response time due to an equal distribution of jobs in the system.
@@ -264,7 +254,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Theorem 29.2 Proof Outline
 Theorem 29.2 states that non-preemptive service orders without using job sizes have the same distribution of jobs in the system. This can be shown by analyzing the M/G/1 queue at departure points, which forms a DTMC.
@@ -285,7 +274,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Var(T) Comparison
 LCFS can lead to high response times, whereas FCFS and RANDOM have lower variances in response time. This counterintuitive result highlights the complexity of scheduling without job size information.
@@ -296,7 +284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Laplace Transform for LCFS
 To derive Var(T)LCFS, the Laplace transform of waiting time is calculated. This involves understanding the busy period length for a job with size Se.
@@ -315,7 +302,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Busy Period Formulas Recap
 The busy period formulas are crucial for understanding the waiting times in LCFS. They include \(B(x)\), \(\widetilde{B}(x)(s)\), \(BW(s)\), and \(\widetilde{BW}(s)\).

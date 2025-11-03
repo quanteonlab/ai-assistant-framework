@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B004-Data-Governance_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Physical Security
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Tenancy Considerations for Enterprises Moving to Cloud
 
@@ -104,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Security by Obscurity
 Background context: The passage argues against relying solely on security by obscurity, explaining that the scale and sophistication of tools used in cloud environments change the security landscape. It highlights how advanced AI tools can quickly scan for sensitive data or unsafe content, and how processing large volumes of data in real time is made possible.
@@ -215,7 +212,6 @@ The type of cloud traffic affects its security surface in several ways:
 
 ---
 
-**Rating: 8/10**
 
 #### Physical Security Model
 Background context: The physical security of data centers is crucial to protect sensitive information from unauthorized access, theft, and damage. A layered security model involves multiple safeguards like electronic access cards, alarms, and biometrics.
@@ -299,7 +295,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Data Exfiltration Overview
@@ -423,7 +418,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Compartmentalizing Data and Permissions

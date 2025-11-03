@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 30)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 16.4 Rendezvous and Timeouts. Problem. Solution. 16.5 Synchronizing Threads with the synchronized Keyword
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Rendezvous and Timeouts Concept
@@ -98,7 +96,6 @@ public class Join {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Synchronized Keyword Usage
 Background context: The `synchronized` keyword is used to control access to shared resources in a multi-threaded environment. It ensures that only one thread can execute the synchronized method or block of code at any given time, thus preventing race conditions and data corruption.
@@ -242,7 +239,6 @@ class InterruptSafeThread implements Runnable {
 x??
 ---
 
-**Rating: 8/10**
 
 #### Synchronized Methods and Blocks Overview
 Background context explaining synchronized methods and blocks. This is an essential concept for ensuring thread safety in Java, where multiple threads can interact with shared resources without causing data corruption or inconsistent states.
@@ -344,7 +340,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Servlet Methods and Roles
 
@@ -439,7 +434,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overview of Threaded Java Concepts
 This section covers various synchronization techniques and their implementation in Java. It introduces the use of `Lock` mechanisms from the `java.util.concurrent.locks` package to manage thread access more efficiently than traditional synchronized blocks.

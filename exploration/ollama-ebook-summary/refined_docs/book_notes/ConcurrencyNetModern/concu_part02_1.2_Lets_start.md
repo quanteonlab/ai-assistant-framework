@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 1.2 Lets start with terminology
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Concurrency and Functional Paradigm
 
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Traditional vs. Functional Paradigm
 
@@ -32,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Functional Programming for Concurrency
 
@@ -45,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Operations with Task Parallel Library
 
@@ -58,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency Models with Functional Paradigm
 
@@ -71,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Building High-Performance Concurrent Systems
 
@@ -84,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Declarative Style for Asynchronous Computations
 
@@ -97,7 +89,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data-Parallel Programming
 
@@ -110,7 +101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reactive Programming with Rx
 
@@ -123,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Concurrent Collections
 
@@ -138,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrent Programming
 Concurrent programming allows the execution of multiple tasks at the same time, giving an illusion of multitasking. In reality, only one task is executed at a time due to resource sharing.
@@ -175,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Programming
 Parallel programming executes multiple tasks simultaneously on different cores, improving application performance and throughput.
@@ -211,7 +198,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency vs. Parallelism
 Concurrency and parallelism are related but distinct concepts in programming. Concurrency refers to the ability to run several programs or parts of a program simultaneously, while parallelism involves executing tasks concurrently on multiple cores.
@@ -247,7 +233,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multitasking vs. Concurrent Programming
 Multitasking is a broader term used in operating systems to manage the execution of multiple processes or tasks, while concurrent programming specifically refers to executing parts of a program simultaneously.
@@ -288,7 +273,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Concurrency Foundations
 Functional concurrency is about splitting a task into independent subtasks that can be executed concurrently. This principle allows better use of multicore processors, where each core can handle different tasks simultaneously.
@@ -300,7 +284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallelism and Concurrency
 Parallelism allows the simultaneous execution of multiple operations, while concurrency focuses on designing systems where tasks are executed in an interleaved manner.
@@ -312,7 +295,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preemptive Multitasking Systems
 Preemptive multitasking involves the operating system actively switching between tasks based on predefined time slices.
@@ -324,7 +306,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multithreading for Performance Improvement
 Multithreading allows subdividing specific tasks into individual threads that run in parallel within the same process.
@@ -336,7 +317,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Processes and Threads
 A process is an instance of a running program, while each thread is a unit of computation that can be executed independently.
@@ -348,7 +328,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switching in Multicore Environments
 Context switching involves saving and restoring a thread's state to switch between tasks on different cores.
@@ -360,7 +339,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency vs. Parallelism in Practice
 Concurrency designates how a program is structured to handle tasks, while parallelism refers to actual execution of these tasks.
@@ -372,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequential Programming
 Background context explaining sequential programming, including a definition and comparison to other types of programming like concurrent and parallel.
@@ -390,7 +367,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrent Programming
 Background context explaining concurrent programming, its definition, and how it differs from sequential programming.
@@ -413,7 +389,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Programming
 Background context explaining parallel programming, its definition, and how it differs from both sequential and concurrent programming.
@@ -441,7 +416,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multithreading
 Background context explaining multithreading, including its definition and how it relates to concurrent programming.
@@ -462,7 +436,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency vs Parallelism and Their Relationship with Hardware
 Background context explaining the relationship between concurrency, parallelism, multithreading, multitasking, and hardware support.
@@ -479,7 +452,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Need for Concurrency
 Background context explaining why applications need to be concurrent, including performance and responsiveness benefits.
@@ -492,7 +464,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Future Trends in Concurrency
 Background context explaining the increasing need for parallel computing due to exponential data growth.
@@ -505,7 +476,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consequences of Non-Parallel Applications
 Background context explaining how non-concurrent applications can waste resources on multicore machines.

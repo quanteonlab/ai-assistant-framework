@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Workflow Management Systems. Flexibility. Scalability
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Flexibility of WMS
@@ -78,7 +76,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Synchronous Blocking Pattern vs. Asynchronous Non-Blocking Pattern Scalability
@@ -133,7 +130,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ETL Workflows Overview
 ETL (Extract-Transform-Load) workflows are fundamental to data warehousing and involve three phases: extraction, transformation, and loading. They streamline the process of moving and transforming raw data from various sources into a target destination, typically an enterprise data warehouse.

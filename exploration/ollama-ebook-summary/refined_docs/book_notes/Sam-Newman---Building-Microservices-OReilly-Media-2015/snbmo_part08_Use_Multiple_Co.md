@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Use Multiple Concurrent Service Versions
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple Concurrent Service Versions
 Background context: This versioning strategy involves running different versions of a service simultaneously to support both old and new consumers. It is used by Netflix for legacy devices or when the cost of changing older consumers is too high.
@@ -31,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blue/Green Deployments
 Background context: This is a deployment strategy where both the old and new versions of an application run in parallel, with traffic directed to one or the other. It allows for a seamless transition without downtime.
@@ -57,7 +54,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Canary Releases
 Background context: This is a form of controlled release where a new version of an application is first deployed to a small subset of users or nodes. Feedback from this group helps in determining whether the release can be expanded.
@@ -85,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Web-based User Interfaces
 
@@ -111,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Towards a Holistic Digital Experience
 
@@ -144,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### API Composition for User Interfaces
 Background context: When designing user interfaces, it’s important to leverage existing APIs that services use for communication. This approach can make development more efficient and ensure consistency in data retrieval.
@@ -164,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### UI Fragment Composition
 Background context: Instead of the UI interacting directly with APIs and mapping responses to controls, services can provide pre-constructed UI fragments that are combined by the UI. This approach reduces complexity in handling API responses.
@@ -187,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### API Gateway as an Intermediate Layer
 Background context: An API gateway can help manage and optimize communication between services and the user interface, especially when dealing with multiple APIs. It aggregates requests to reduce the number of direct calls, thereby improving efficiency.
@@ -212,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coarse-Grained Fragments Serving UI Components
 
@@ -235,7 +225,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ensuring Consistency of User Experience
 
@@ -258,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cross-Cutting Interactions
 
@@ -284,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Backends for Frontends (BFFs)
 Background context: A common approach to manage interactions between front-end interfaces and back-end services is through an API gateway. However, this can lead to complications when these gateways become too complex, leading to issues with maintaining and updating them independently.
@@ -315,7 +302,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monolithic Gateway Issue
 Background context: Using a single monolithic gateway can lead to several problems, including tightly coupling all services and making it difficult to update or modify individual components independently.
@@ -337,7 +323,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dedicated Backends for Frontends (BFFs)
 Background context: To avoid the pitfalls of monolithic gateways, a better approach is to use dedicated backends for each front-end interface. This method allows teams working on specific user interfaces to handle their server-side components more effectively.
@@ -365,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Authentication and Authorization Layer
 Background context: In a system using BFFs, there might be a need for an additional layer between the BFFs and the front-end interfaces to handle authentication and authorization. This layer ensures that only authorized users can access specific functionalities.

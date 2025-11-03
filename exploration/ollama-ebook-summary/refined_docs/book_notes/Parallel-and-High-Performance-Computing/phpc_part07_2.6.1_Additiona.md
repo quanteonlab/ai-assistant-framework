@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 2.6.1 Additional reading
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Commit Process in Software Development
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adaptation of Commit Process
 Background context: The commit process should be regularly reviewed and adapted as project requirements change. This ensures that the process remains effective and aligned with current needs.
@@ -45,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Crashes in the Application
 Background context: In a scenario where an application occasionally crashes without clear reasons, the commit process can be enhanced to include checks for potential issues like thread race conditions.
@@ -66,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Preparation for Parallelism
 Background context: Preparing your serial code for parallelism is a critical first step. This involves understanding and adapting existing code to work efficiently in a parallel environment, which often requires significant effort.
@@ -90,7 +85,6 @@ Optimizing data structures to minimize contention and improve cache efficiency h
 
 ---
 
-**Rating: 8/10**
 
 #### Test Creation for Parallelism
 Background context: Testing is crucial in the parallel development workflow, especially unit testing which can be challenging to implement effectively.
@@ -107,7 +101,6 @@ Creating these tests early helps identify and fix bugs before integrating them i
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Error Fixes with Valgrind
 Background context: Memory errors can significantly impact the performance and correctness of parallel applications. Tools like Valgrind help in identifying and fixing such issues.
@@ -133,7 +126,6 @@ For instance, if `myapp` has a memory leak in its allocation of a large buffer, 
 
 ---
 
-**Rating: 8/10**
 
 #### Estimation of Performance Capabilities
 Background context: Estimating performance capabilities involves understanding how your application performs on different hardware configurations, which helps in planning and optimizing.
@@ -157,7 +149,6 @@ For instance, if you discover during profiling that certain parts of the wave he
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Performance Limits and Profiling
 Background context explaining how scarce programmer resources can be effectively targeted. It emphasizes the importance of measuring performance to determine where development time should be spent.
@@ -168,7 +159,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bandwidth vs. Latency
 Background context explaining that while bandwidth is about data transfer rates, latency concerns the time for initial data transfer. The text highlights that latency can be much slower than bandwidth and becomes a limiting factor when streaming behavior cannot be achieved.
@@ -179,7 +169,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application Potential Performance Limits
 Background context explaining that computational scientists still often consider floating-point operations (flops) as a primary performance limit but modern architectures have shifted focus due to improvements in parallelism and hardware design. Other limits include memory bandwidth, latency, instruction queue efficiency, networks, and disk access.
@@ -198,7 +187,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Limits in Modern Architectures
 Background context explaining that with hardware advances, especially through parallelism, the number of arithmetic operations per cycle has increased significantly. The text provides an example starting from 1 word and 1 flop per cycle to illustrate how different operations impact performance limits.
@@ -209,7 +197,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Access Patterns and Caching
 Background context explaining that the performance increase through deeper cache hierarchies means memory accesses must fit within L1 cache (typically ~32 KiB) to match operation speeds. Latency times can be much slower than bandwidth.
@@ -222,7 +209,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Arithmetic Intensity Definition
@@ -245,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Roofline Plot Explanation
 Background context: The roofline plot is a graphical representation that helps visualize the performance limits and bottlenecks of different computing systems. It shows the relationship between arithmetic intensity and achievable performance.
@@ -268,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Hierarchy and Cache Lines
 Background context: The memory hierarchy consists of multiple levels of cache (L1, L2, etc.) between main memory (DRAM) and the CPU. This structure helps to hide the slower main memory by providing faster access from lower-level caches.
@@ -294,7 +278,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Instruction Cache Limitations
 Background context explaining the concept. The text points out that instruction caching might not be able to keep a processor core busy due to insufficient loading speed, which can be another performance limit. Integer operations also become more frequent as dimensionality increases because index calculations grow more complex.
@@ -306,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example: Optimizing Data Processing
 Background context explaining the concept. The example in the text discusses an image detection application where data comes over the network, is stored to disk for processing, and then a decision is made to eliminate this intermediate storage step. One team member suggests adding more floating-point operations due to their low cost on modern processors.
@@ -318,7 +300,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Measuring Performance and Confirming Hypothesis
 Background context explaining the concept. The text concludes with a team decision to measure performance and confirm whether memory bandwidth is indeed the limiting factor in their wave simulation code.

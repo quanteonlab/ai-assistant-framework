@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### TD Learning Overview
 Background context explaining the concept. Temporal-difference (TD) learning is a type of machine learning algorithm that combines elements of supervised and reinforcement learning by using experience to update predictions or policies. It can be used both for prediction and control problems, with extensions like generalized policy iteration (GPI).
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### On-Policy vs Off-Policy TD Control Methods
 On-policy methods such as Sarsa update policies using the same policy for both exploration and exploitation, while off-policy methods like Q-learning use a different behavior policy from the target policy.
@@ -58,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Sarsa
 Background context explaining the concept. Expected Sarsa is an off-policy control method that generalizes Q-learning by considering the expected value of actions under a behavior policy.
@@ -88,7 +84,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor-Critic Methods
 Background context explaining the concept. Actor-critic methods are a class of reinforcement learning algorithms that separate the actor, which decides actions, from the critic, which evaluates the actions.
@@ -119,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence of TD Methods
 Background context explaining the concept. The convergence of TD methods is a critical aspect for their reliability in practice.
@@ -146,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real-World Applications of TD Learning
 Background context explaining the concept. TD learning is not limited to reinforcement learning and can be applied in various domains where long-term predictions about dynamical systems are needed.
@@ -174,7 +167,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-step Bootstrapping Concept
 
@@ -187,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Predicting Returns with \(n\)-step Bootstrapping
 
@@ -200,7 +191,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Backup Diagrams for \(n\)-step Updates
 
@@ -213,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of n-step TD Prediction
 
@@ -243,7 +232,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transition Between MC and TD Methods
 
@@ -256,7 +244,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bootstrapping Over Multiple Time Intervals
 
@@ -271,7 +258,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-step TD Prediction
 Background context: The text introduces \(n\)-step temporal difference (TD) methods as a generalization of one-step updates, where the update over multiple steps is considered. These methods extend the idea of updating value estimates based on rewards and states observed within an episode.
@@ -293,7 +279,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-step TD Learning Algorithm
 Background context: The text explains that \(n\)-step TD methods involve updating value estimates based on observed sequences of states and rewards, rather than waiting until the end of an episode as in Monte Carlo updates.
@@ -313,7 +298,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Error Reduction Property of n-step Returns
 Background context: The text states that the expectation of an \(n\)-step return is a better estimate of the true state value than the previous estimate. Formally, the worst-case error for the expected \(n\)-step return is guaranteed to be less than or equal to \(n\) times the worst-case error under the previous value function:
@@ -330,7 +314,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example: n-step TD on Random Walk
 Background context: The text provides an example of using \(n\)-step TD methods in a 5-state random walk task. In this scenario, an episode might progress from the center state (C) to the right through states D and E, terminating at the right with a return of 1.
@@ -351,7 +334,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Programming Exercise: n-step TD
 Background context: The text describes an exercise where you need to show that the error in \(n\)-step TD can be written as a sum of TD errors under certain conditions. It also mentions experimenting with different algorithms to determine their effectiveness.
@@ -366,7 +348,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Larger Random Walk Task
 Background context: The use of a larger random walk task (19 states instead of 5) and the change from a reward of 0 to -1 on the left side are crucial for understanding how different values of \( n \) affect performance. This setup allows for more complex interactions between states, making it easier to observe differences in learning behaviors.
@@ -405,7 +386,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-step Sarsa for Prediction
 Background context: The concept of \( n \)-step methods extends the traditional one-step methods (like Sarsa(0)) and Monte Carlo methods to incorporate more information from recent experiences. This allows for better generalization and potentially faster learning.
@@ -446,7 +426,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance of \( n \)-step TD Methods
 Background context: The performance of different \( n \)-step methods is evaluated based on their ability to predict the true state values after a series of episodes and trials. The example uses a random walk with 19 states and shows how varying \( n \) affects the learning process.
@@ -472,7 +451,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-step Sarsa for Control
 Background context: \( n \)-step methods can be used not only for prediction but also for control. By incorporating more recent experiences, they help in making better decisions and improving the learning process.

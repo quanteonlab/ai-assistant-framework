@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Dyna Integrated Planning Acting and Learning
 
 ---
 
-**Rating: 8/10**
 
 #### Unified View of Planning and Learning Methods
 Background context: The chapter discusses how various state-space planning methods fit into a unified framework, where each method differs mainly in their update operations, order of updates, and duration of retained information. This perspective highlights the connection between planning and learning algorithms, emphasizing that both rely on value function estimation through backup operations.
@@ -77,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model-Learning and Direct Reinforcement Learning
 
@@ -177,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dyna Architecture Overview
 Dyna is an integrated framework for planning, acting, and learning. The core idea behind Dyna architecture lies in leveraging simulated experiences to enhance real-world experience, thus improving the agent's performance. This approach combines direct reinforcement learning (RL) with model-based processes.
@@ -337,7 +333,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Maze Task Description
 Background context: This task describes a simple maze where an agent moves from a start state (S) to a goal state (G). The environment has a discount factor  \(\gamma = 0.95\), and rewards are zero except on transitions into the goal state, which have a reward of +1.
@@ -471,7 +466,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exploration vs. Exploitation in Dyna-Q+
 Background context: In reinforcement learning, there is a continuous trade-off between exploration and exploitation. Exploration involves trying out new actions to discover potentially better strategies, while exploitation focuses on using known good strategies. The goal is to balance these two aspects so that the agent can both learn about its environment and make use of what it has learned.
@@ -560,7 +554,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prioritized Sweeping Introduction
 Background context explaining the concept. The example provided discusses a scenario where an agent's value function updates are inefficient when focusing on transitions leading to zero-valued states, unless there is a direct change close to the goal state. This inefficiency becomes more pronounced in larger problems.
@@ -700,7 +693,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prioritized Sweeping Algorithm Overview
 Prioritized sweeping is an efficient method for maintaining and updating state-action values in reinforcement learning, particularly useful in environments where state transitions are deterministic. The core idea involves maintaining a queue of state-action pairs whose value estimates would change significantly if updated. This queue is prioritized by the magnitude of the expected change.
@@ -887,7 +879,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Expected vs. Sample Updates
 

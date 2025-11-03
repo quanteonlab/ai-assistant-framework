@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A001---AI-Engineering_-Building-Applications-with-Foundation-Models-OReilly-Media-2025Chip-Huyen--_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Retrieval Optimization
 
 ---
 
-**Rating: 8/10**
 
 #### Cheap and Precise Retrieval Sequence
 Background context: This concept explains a strategy where an initial retrieval step uses less precise but faster methods, followed by more precise but slower mechanisms to refine results. The term-based system fetches broad candidates, while k-nearest neighbors or vector search refines these to the most relevant documents.
@@ -25,7 +23,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reranking Mechanism
 Background context: After the initial broad retrieval, a more precise mechanism like k-nearest neighbors is used to refine and rank the candidate documents more accurately. This step ensures that only the most relevant results are presented.
@@ -63,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Chunking Strategy for Indexing Documents
 Background context: The chunking strategy involves dividing documents into manageable segments (chunks) to optimize retrieval efficiency. Different units like characters, words, sentences, or paragraphs can be used based on the task requirements.
@@ -143,7 +139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Document Chunking Strategies
 
@@ -163,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Token-Based Chunking
 
@@ -204,7 +198,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Length Constraints
 
@@ -248,7 +241,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Embedding-based Retrieval Challenges
 Background context explaining the concept. Halving the chunk size means that you have twice as many chunks to index and twice as many embedding vectors to generate and store, leading to a larger vector search space which can reduce query speed. There is no universal best chunk size or overlap size; experimentation is needed.
@@ -267,7 +259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Query Rewriting in RAG Systems
 Background context explaining the concept. Query rewriting is used to transform ambiguous or incomplete user queries into more precise and meaningful ones that can yield relevant results.
@@ -287,7 +278,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Chunk Augmentation Techniques
 Chunk augmentation involves adding contextual information to document chunks, such as tags, keywords, and entities extracted from the original text. This helps in better retrieval when queried.
@@ -312,7 +302,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluating Retrieval Solutions
 Evaluating a retrieval solution involves considering various factors such as supported retrieval mechanisms, embedding models and vector search algorithms, scalability, indexing time, query latency, and pricing.
@@ -344,7 +333,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multimodal RAG
 Multimodal Retrieval-Augmented Generation (RAG) extends traditional RAG systems by incorporating non-textual data, such as images and videos. This approach enriches the context for the model to generate more informative responses. The retriever can fetch both textual information and visual content relevant to a query.
@@ -369,7 +357,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Retrieval from Tabular Data
 Retrieving data from structured formats like tables is essential in many applications, particularly those involving databases or tabular datasets. This involves generating a SQL query based on the user's text input and executing it to retrieve relevant data.
@@ -407,7 +394,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Text-to-SQL Conversion for Tabular Data Retrieval
 Text-to-SQL conversion is a process where the system takes user queries in natural language and converts them into SQL queries. This step is crucial for interacting with databases that store structured data.
@@ -429,7 +415,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overview of Agents
 Background context explaining the concept. The term agent has been used in various engineering contexts, including software agents, intelligent agents, user agents, conversational agents, and reinforcement learning agents. An agent is anything that can perceive its environment through sensors and act upon it through actuators.
@@ -440,7 +425,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agent Environment and Actions
 Background context explaining how an agent's environment and actions are related. The environment determines what tools an agent can potentially use, while the tool inventory restricts the environment an agent can operate within.
@@ -451,7 +435,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RAG System Actions
 Background context explaining that a RAG system has multiple actions for query processing, such as response generation, SQL query generation, and execution. The example given is about projecting sales revenue for Fruity Fedora over three months.
@@ -462,7 +445,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agent's Failures
 Background context explaining that agents have new modes of failures due to their complex operations involving tools and planning. Evaluating agents is crucial to catch these failures.

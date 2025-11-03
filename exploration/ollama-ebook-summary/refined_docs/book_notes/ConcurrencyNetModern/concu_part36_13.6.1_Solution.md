@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 36)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 13.6.1 Solution implementing a polymorphic  publisher-subscriber pattern
 
 ---
 
-**Rating: 8/10**
 
 #### Thread-safe Random Number Generator
 Background context: In multithreaded applications, generating random numbers can be a challenge due to the shared state of `System.Random`. This class may not provide thread safety when accessed concurrently by multiple threads. To address this, `ThreadLocal<T>` is used to ensure each thread has its own instance of `Random`.
@@ -45,7 +43,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### ThreadLocal Random Number Generation
@@ -81,7 +78,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Polymorphic Event Aggregator Design Pattern
 Background context: The `EventAggregator` pattern is a design pattern used to manage events of different types in a loosely coupled manner. It allows publishers to raise events and subscribers to handle them without knowing the specific event type.
@@ -139,7 +135,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Custom Rx Scheduler for Controlling Degree of Parallelism
 Background context explaining the need to control parallelism in Rx when dealing with large volumes of event streams. The default schedulers provided by Rx, like `TaskPool` and `ThreadPool`, may not be optimal due to their initial thread creation delays.
@@ -159,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Custom Scheduler Interface for Rx
 The `ParallelAgentScheduler` implements the `IScheduler` interface to integrate with Rx. This allows it to be used as a valid scheduler in Rx operations like `SubscribeOn`.
@@ -180,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Custom Scheduler for Concurrent Programming with Rx
 The `ParallelAgentScheduler` is a custom Rx scheduler that supports concurrent programming by managing the degree of parallelism. It uses an agent to coordinate and manage notifications, ensuring that tasks are executed in parallel without unnecessary delays.
@@ -197,7 +190,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Managing Concurrency with Rx
 By implementing a custom scheduler like `ParallelAgentScheduler`, you can manage concurrency more effectively in Rx-based applications. This is particularly useful for large volumes of event streams where precise control over parallelism can significantly impact performance.

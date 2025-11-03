@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 6.4 Programming style for better vectorization
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Vectorization Methods Overview
@@ -71,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Comparison of Vectorization Methods
 The provided text compares different vectorization methods based on their performance and accuracy. The comparison involves various techniques such as serial sum, Kahan sum, and 4/8 wide vectors using different intrinsics and classes.
@@ -101,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Programming Style for Better Vectorization
 The text recommends a programming style that facilitates better vectorization by following certain guidelines. This includes using restrict attributes, optimizing loop structures, and ensuring memory is accessed contiguously.
@@ -122,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Register Usage Identification
 The text provides a method to identify which vector instruction set is being used based on the presence of specific registers (ymm, zmm).
@@ -152,7 +147,6 @@ Each flashcard provides a clear understanding of key concepts in vectorization a
 
 ---
 
-**Rating: 8/10**
 
 #### Vectorization Instruction Sets
 Background context: When setting up vectorization, it is important to choose the appropriate instruction set based on the target hardware. This can lead to better performance but might result in a loss of compatibility with older processors.
@@ -170,7 +164,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generating Vectorization Reports
 Background context: Compiler reports can help you understand how well the compiler is vectorizing code. These reports provide insights into optimization levels and missed opportunities, aiding in fine-tuning.
@@ -188,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compiler Strict Aliasing and Vectorization
 Compilers often apply strict aliasing rules which can impact the effectiveness of vectorization. To optimize loops with conditionals, additional floating-point flags are necessary to ensure correct handling of potential errors like division by zero or square root of a negative number.
@@ -203,7 +195,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Turning Off Vectorization
 Sometimes it is necessary or beneficial to turn off vectorization. This can help in analyzing and verifying results without vectorization's influence. Compilers like GCC, Clang, Intel, MSVC, XLC, and Cray offer specific flags to disable vectorization entirely.
@@ -217,7 +208,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OpenMP SIMD Directives for C/C++
 OpenMP SIMD directives provide a portable way to request vectorization, enhancing performance on modern processors. These directives can be used alone or combined with threading directives like `#pragma omp for`. The basic directive syntax is:
@@ -242,7 +232,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OpenMP SIMD Reduction Clause in C/C++
 The `reduction` clause creates a private variable for each vector lane and performs the specified operation between the values at the end of the loop. This is useful for aggregating results across threads.

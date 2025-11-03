@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 48)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 25.2.2 Implementation and Assessment
 
 ---
 
-**Rating: 8/10**
 
 #### Continuity Equation
 Background context explaining the concept. The continuity equation describes conservation of mass for fluid motion:
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advection Equation
 Background context explaining the concept. The advection equation describes the horizontal transport of a quantity from one region of space to another as a result of a flow's velocity field. It can be written in first-derivative form:
@@ -46,7 +43,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lax-Wendroff Algorithm for Burgers' Equation
 Background context explaining the concept. The Lax-Wendroff method is used to solve Burgers' equation more accurately than the leapfrog scheme by retaining second-order differences for time derivatives. This method improves stability and accuracy.
@@ -69,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Leapfrog Method for Solving Burgers' Equation
 
@@ -133,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Stability and Accuracy in Solving KdV Equation
 
@@ -161,7 +155,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### KdV Equation Numerical Solution
 
@@ -189,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Truncation Error and Stability for KdV Equation
 
@@ -219,7 +211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Initial Condition Setup for Soliton Simulation
 
@@ -262,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Advancement in Soliton Simulation
 

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 33)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Policy Gradient for Continuing Problems
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Performance for Continuing Problems
 
@@ -23,7 +21,6 @@ Explanation: The performance \(J(\theta)\) is the long-term average reward per t
 
 ---
 
-**Rating: 8/10**
 
 #### Steady-State Distribution
 
@@ -42,7 +39,6 @@ for all \(s' \in S\).
 
 ---
 
-**Rating: 8/10**
 
 #### Actor-Critic Algorithm Pseudocode
 
@@ -75,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Value Definitions for Continuing Problems
 
@@ -98,7 +93,6 @@ These definitions are crucial for understanding how much reward can be expected 
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Gradient Theorem in Continuing Problems
 
@@ -119,7 +113,6 @@ This theorem helps in optimizing policies by directly updating parameters based 
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Parameterization for Continuous Actions
 Policy-based methods offer practical ways of dealing with large action spaces, even continuous ones. Instead of computing learned probabilities for each of the many actions, we learn statistics (mean and standard deviation) of the probability distribution.
@@ -138,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Parameterization
 In policy-based methods for continuous action spaces, policies are parameterized using parametric function approximators that learn the mean and standard deviation of a Gaussian distribution.
@@ -157,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deriving Eligibility Vectors for Gaussian Policy
 To derive eligibility vectors for a Gaussian policy, we need to calculate the gradients of the log probability with respect to the parameters.
@@ -178,7 +169,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bernoulli-Logistic Unit
 A Bernoulli-logistic unit is a stochastic neuron-like unit used in some ANNs. Its output, \( A_t \), is a random variable with values 0 or 1, based on the policy parameter \( \theta_t \).
@@ -197,7 +187,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monte-Carlo REINFORCE Update for Bernoulli-Logistic Unit
 The Monte Carlo REINFORCE update for a Bernoulli-logistic unit involves updating the parameters based on the return received.
@@ -222,7 +211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Gradient Methods Overview
 Background context: This section discusses methods that learn a parameterized policy directly, as opposed to learning action values and then selecting actions. The advantages include specific probabilities for taking actions, appropriate exploration levels, handling continuous action spaces naturally, and representing policies parametrically when necessary.
@@ -262,7 +250,6 @@ x??
 
 ---
 
-**Rating: 10/10**
 
 #### Policy Gradient Theorem
 Background context: This theorem provides an exact formula for how performance is affected by changes in the policy parameter without involving derivatives of the state distribution. It forms the theoretical foundation for many policy gradient methods.
@@ -288,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### REINFORCE Method
 Background context: REINFORCE is a simple policy gradient method that updates the policy parameter on each step based on an estimate of the gradient of performance with respect to the policy parameter. It involves sampling actions from the current policy and using these samples to approximate the necessary gradients.
@@ -335,7 +321,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor-Critic Methods Overview
 Background context: These methods combine the concepts of actors and critics. The actor selects actions based on the current state, while the critic evaluates the policy's action selection by assigning credit (or blame) to it.
@@ -374,7 +359,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor-Critic Methods Variations
 Background context: Various extensions and variations of actor-critic methods have been developed, such as off-policy methods and entropy regularization. These improve performance in different ways by addressing issues like variance reduction and exploration.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Reranking
 
 ---
 
-**Rating: 8/10**
 
 #### Fine-Tuning Process for Embeddings
 Background context explaining how fine-tuning embeddings helps improve search relevance. The process involves moving relevant queries closer to a document and irrelevant queries farther away from it.
@@ -129,7 +127,6 @@ for score in cosine_scores:
 ```
 x??
 
-**Rating: 8/10**
 
 #### Mean Average Precision (MAP)
 Background context explaining the concept. MAP is a metric used to evaluate the performance of information retrieval systems by considering the average precision score for every query in the test suite. It provides a single numerical value that allows for comparisons between different search systems.
@@ -232,7 +229,6 @@ def semantic_search(query_embedding, document_embeddings):
 ```
 x??
 
-**Rating: 8/10**
 
 #### Query Rewriting
 Background context explaining how query rewriting helps RAG systems, especially chatbots. It involves transforming verbose user queries into more precise ones to improve retrieval accuracy.

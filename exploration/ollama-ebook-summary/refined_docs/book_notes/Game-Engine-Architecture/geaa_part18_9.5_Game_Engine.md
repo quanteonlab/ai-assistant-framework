@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.5 Game Engine HID Systems
 
 ---
 
-**Rating: 8/10**
 
 #### Game Engine HID Systems
 Background context: Game engines typically don’t use raw HID inputs directly. They process the data through various transformations to ensure smooth and intuitive gameplay behaviors.
@@ -39,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dead Zones
 
@@ -52,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Analog Signal Filtering Implementation
 
@@ -91,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context-Sensitive Inputs
 
@@ -117,7 +112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Controller Input Remapping
 
@@ -160,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiplayer HID Management
 
@@ -196,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event Detection
 
@@ -236,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gesture Detection
 
@@ -272,7 +263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detecting Input Events Concept
 Background context: HID (Human Interface Device) interfaces provide game engines with the current state of various inputs. However, games often need to detect changes in input states rather than just inspecting the current state each frame.
@@ -294,7 +284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detecting Chord Events
 
@@ -344,7 +333,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Delayed Button Detection for Chord Input
 Background context: In games, it's often desired to allow players to perform complex actions by pressing a combination of buttons simultaneously (a chord) rather than waiting for each button press individually. This is particularly useful for enhancing game mechanics or creating more natural input experiences.
@@ -385,7 +373,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Game Engine HID Systems for Gesture Detection
 Background context: In addition to handling individual button presses, game engines can use gesture detection to recognize more complex sequences of actions. This is useful for creating more nuanced and responsive player inputs.
@@ -446,7 +433,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequences in Game Input Handling
 Background context: Recognizing sequences of inputs can be used to detect more complex player actions, such as rapid button tapping or specific input patterns. This is useful for triggering special moves or enhancing game mechanics.
@@ -515,7 +501,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Update Method Logic
 The `Update` method checks if any button in a specific sequence is pressed or released, and updates the internal state of the detector accordingly. If all buttons in the sequence are correctly pressed within the allowed time frame, it triggers an event.
@@ -563,7 +548,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequence Detection Logic
 The sequence detection logic involves tracking the current button to be detected and checking if it was pressed within a certain time frame. If the correct sequence of buttons is recognized, an event is triggered.
@@ -598,7 +582,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Managing Multiple Human Interface Devices
 This topic discusses how a game engine handles multiple human interface devices (HIDs) for multiplayer scenarios. The engine must identify which device is attached to which player and route input appropriately.
@@ -630,7 +613,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cross-Platform HID Systems
 Background context: Many game engines are designed to be cross-platform, meaning they need to work on multiple hardware platforms. To handle HID inputs and outputs effectively across these different platforms, a hardware abstraction layer (HAL) can be implemented.
@@ -678,7 +660,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Abstract Control Indices
 Background context: To support multiple hardware platforms, game engines often define abstract control indices that are used consistently across different devices. This abstraction helps to maintain consistency and allows the same codebase to work on various platforms.
@@ -716,7 +697,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Analog Input Shuffling
 
@@ -750,7 +730,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Abstract vs Physical Controls
 
@@ -787,7 +766,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Input Remapping for Custom Control Schemes
 
@@ -831,7 +809,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Normalizing Input Controls
 Background context explaining the need for normalizing input controls, especially for devices with both digital and analog inputs. Mentioning different types of axes (digital buttons, unidirectional axes, bidirectional axes, and relative axes) and their respective normalized ranges.
@@ -869,7 +846,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context-Sensitive Controls
 Background context explaining how a single physical control can have different functions depending on the current game state or context, with examples like the "use" button.
@@ -921,7 +897,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Control Ownership
 Background context explaining that certain inputs might be owned by different parts of the game, such as player control, camera control, and menus. Mentioning logical devices composed of a subset of physical device inputs.
@@ -962,7 +937,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Disabling Inputs
 Background context explaining the necessity of disabling player controls in certain scenarios, such as cinematics or narrow doorways. Mentioning a bitmask approach to disable individual inputs.
@@ -999,7 +973,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Camera and Player Action Logic
 Background context: To avoid masking HID inputs for all clients, it is advisable to implement control logic directly within the relevant systems like player or camera code. This allows certain actions or behaviors to be disabled selectively without limiting other game systems.
@@ -1025,7 +998,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logging and Tracing: Introduction
 Background context explaining the importance of logging and tracing in game development. Debugging tools are crucial for making the game development process easier and less error-prone.
@@ -1037,7 +1009,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Custom Formatted Output Function: VDebugPrintF()
 Explanation on creating a custom function to handle formatted output using `vsnprintf()`.
@@ -1071,7 +1042,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Channel-Based Debug Output System
 Debug messages can often be categorized into different channels based on the system they originate from (e.g., animation, physics). This allows developers to focus on specific areas of interest without being overwhelmed by irrelevant data.
@@ -1113,7 +1083,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logging and Tracing
 Logging allows developers to record debug output for later analysis. This is particularly useful when dealing with issues that occur after runtime or in environments where direct debugging is difficult.
@@ -1151,7 +1120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mirroring Output to Files
 Mirroring debug output to files helps in diagnosing issues by providing a persistent record of all debug information, independent of the current verbosity settings or active channels.

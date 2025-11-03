@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A001---AI-Engineering_-Building-Applications-with-Foundation-Models-OReilly-Media-2025Chip-Huyen--_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** How to Use AI as a Judge
 
 ---
 
-**Rating: 8/10**
 
 #### AI Judge Concept
 Background context: The term "AI judge" refers to using an AI model, particularly a large language model (LLM), to evaluate other AI models or outputs. This approach has gained significant traction since 2020 with the advent of advanced AI models like GPT-3.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluation Metrics Without Reference
 Background context: In 2017, a method called MEWR (Machine translation Evaluation metric Without Refer‐ ence text) was introduced to automatically evaluate machine translations. However, the author did not pursue this further due to personal circumstances.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AI Judges and Their Applications
 Background context explaining the use of AI judges. The passage mentions that AlpacaEval authors found a near-perfect correlation between their AI judges and LMSYS’s Chat Arena leaderboard, which is evaluated by humans. Additionally, it states that AI can not only evaluate responses but also provide explanations for its decisions.
@@ -39,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inconsistency of AI Judges
 Background context: Evaluating AI-generated responses using another AI model (AI judge) introduces inconsistencies due to the probabilistic nature of AI models. These inconsistencies can vary based on how the prompts or sampling parameters are set, which may lead to different scores for the same input.
@@ -52,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Criteria Ambiguity
 Background context: Different AI judges use various scoring systems and criteria definitions that can lead to misunderstandings or misinterpretations. This ambiguity makes it challenging to compare results across different tools or to ensure consistent evaluation of generated responses.
@@ -73,7 +67,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluation Method Inconsistency Over Time
 Background context: The performance of an application can change over time, but the evaluation metrics should ideally remain fixed. However, changes in AI judges' prompts or models can lead to misleading interpretations of these changes. This inconsistency makes it challenging to track genuine improvements in the application's quality.
@@ -88,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cost and Latency Considerations
 Background context: Using AI judges for evaluating generated responses can introduce increased costs due to the need for multiple API calls, especially when using powerful models like GPT-4. This can also add latency if evaluations are performed before returning responses to users. However, reducing the number of evaluations (spot-checking) can help mitigate these issues.
@@ -105,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Position Bias of AI Models
 Background context explaining the concept. AI models often exhibit a preference for certain positions in response lists, such as favoring longer responses or the first position. This bias can be mitigated by repeating tests with different orderings or carefully crafted prompts.
@@ -120,7 +111,6 @@ For example:
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluation Methodology: Weaker Judge vs Stronger Model
 Background context explaining the concept. When evaluating a stronger model with a weaker one, there are trade-offs in terms of cost and latency. Using a weaker model can help manage resources while still ensuring that evaluations are conducted.

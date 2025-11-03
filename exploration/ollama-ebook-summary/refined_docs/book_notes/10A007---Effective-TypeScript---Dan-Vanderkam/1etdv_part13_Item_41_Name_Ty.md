@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 41 Name Types Using the Language of Your Problem Domain
 
 ---
 
-**Rating: 8/10**
 
 #### Ambiguous Type Definitions
 Background context explaining why ambiguous type definitions can lead to confusion and incorrect mental models. The example provided illustrates how a general term like `name` is not specific enough, while fields like `endangered` are ambiguous without proper context.
@@ -102,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GeoJSON Type Declaration Importance
 Background context: The provided text discusses the importance of using formal type declarations from a specification, such as the GeoJSON spec, to avoid bugs and ensure robustness. TypeScript is used here for type safety.
@@ -194,7 +191,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OpenAPI Schema and Type Safety
 Background context: The provided text discusses using an OpenAPI schema to generate type-safe interfaces for interacting with REST APIs. An OpenAPI schema is a JSON file that describes endpoints, HTTP verbs, and request/response types.
@@ -274,7 +270,6 @@ Strategies include regularly updating the schema file from the official source, 
 
 ---
 
-**Rating: 8/10**
 
 #### Using any Wisely in TypeScript
 Background context: In TypeScript, the `any` type is a powerful but potentially dangerous tool. It can be used to bypass type checking for parts of your code, making it easier to work with legacy or dynamically typed JavaScript codebases. However, improper use can lead to runtime errors and loss of type safety.

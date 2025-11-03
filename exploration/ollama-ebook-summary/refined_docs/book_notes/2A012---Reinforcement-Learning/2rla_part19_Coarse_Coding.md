@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Coarse Coding
 
 ---
 
-**Rating: 8/10**
 
 #### Coarse Coding Overview
 Background context: The text describes coarse coding, a method where features are used to represent states within a continuous space. Each feature corresponds to a circle (or more generally, a receptive field) in state space. If a state lies inside such a circle, the corresponding feature is present and has a value of 1; otherwise, it is absent with a value of 0.
@@ -60,7 +58,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tile Coding Overview
 Tile coding is a method for creating feature representations from continuous state spaces that are practical and efficient on modern digital computers. It involves partitioning the state space into tiles, or partitions, to create features that can represent states within these partitions.
@@ -171,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tile Coding Basics
 Tile coding involves breaking down a state space into multiple overlapping tilings, each represented by binary feature vectors. The choice of how to offset these tilings can significantly impact generalization and approximation quality.
@@ -235,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Feature Construction for Linear Methods 1996
 Background context: The text discusses feature construction techniques, particularly focusing on tile coding and hashing. It emphasizes the importance of flexible tiling choices and how these can impact generalization. Hashing is introduced as a method to reduce memory requirements by collapsing tiles into smaller sets.
@@ -309,7 +304,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Universal Approximation Property of ANNs
 Background context explaining that a single hidden layer with sigmoid units can approximate any continuous function. This is due to the properties of sigmoid functions and the ability of neural networks to model complex functions through their nonlinearity.
@@ -407,7 +401,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Backpropagation Algorithm
 Background context explaining the backpropagation algorithm. The algorithm involves alternating forward and backward passes through the network to compute the activation of each unit given the current activations of the input units, and then using a backward pass to compute partial derivatives for each weight as an estimate of the true gradient.
@@ -474,7 +467,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Dropout Technique
@@ -625,7 +617,6 @@ In this example, `SubtractionLayer` computes \( y - x \) where \( y \) is the ou
 By doing so, the network learns the difference from the identity function directly, making it easier for gradient-based algorithms to make progress in training.
 x??
 
-**Rating: 8/10**
 
 #### Skip Connections in Neural Networks
 Background context: Skip connections, also known as residual connections, are used to alleviate the vanishing gradient problem by adding a direct connection from an earlier layer to a later layer in deep neural networks. This allows the error to be directly backpropagated through these connections without going through all the intermediate layers.

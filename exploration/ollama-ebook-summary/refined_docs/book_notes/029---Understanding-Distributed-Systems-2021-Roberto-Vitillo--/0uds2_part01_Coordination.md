@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Coordination
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Systems Overview
 Distributed systems are complex as they involve nodes that communicate and coordinate over a network. The failure of any node can render parts of the system unusable, highlighting the need for robust design and architecture.
@@ -138,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coordination in Distributed Systems
 Background context: The challenge of coordinating nodes in a distributed system to ensure they operate as a single coherent entity despite potential failures is complex. A famous example, the "two generals" problem, illustrates this issue where two generals need to agree on an attack time using messengers who might be captured or delayed.
@@ -229,7 +226,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scaling Up vs. Scaling Out
 

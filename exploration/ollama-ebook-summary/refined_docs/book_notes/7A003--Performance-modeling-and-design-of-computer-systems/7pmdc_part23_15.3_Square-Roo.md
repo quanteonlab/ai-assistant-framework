@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 15.3 Square-Root Staffing
 
 ---
 
-**Rating: 8/10**
 
 #### Square-Root Stafﬁng Rule Background
 Square-root stafﬁng is a method used to determine the minimum number of servers \( k^*_{\alpha} \) required to ensure that the probability of queueing, \( P_Q \), is below some given threshold \( \alpha \). This method is particularly useful in server farms where the goal is to meet specific Quality-of-Service (QoS) requirements.
@@ -169,7 +167,6 @@ public class QueueingSystem {
 ```
 This method approximates the number of servers needed to meet a specific QoS requirement based on the given \( R \) and \( \alpha \).
 
-**Rating: 8/10**
 
 #### Capacity Provisioning for Server Farms
 Background context: The passage discusses capacity provisioning techniques for server farms, focusing on the probability of blocking (Pblock) and the quality of service (PQ). It introduces an approximation formula based on normal distribution properties to determine the number of servers needed.
@@ -275,7 +272,6 @@ The 95th percentile of response time \( T_{95} \) grows more than linearly with 
 
 ---
 
-**Rating: 8/10**
 
 #### 95th Percentile of Time in Queue - M/M/k
 
@@ -357,7 +353,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Queueing Theory Basics
 
@@ -441,7 +436,6 @@ This result shows that the mean response time includes both the service time and
 
 x??
 
-**Rating: 8/10**
 
 #### Throughput Calculation
 

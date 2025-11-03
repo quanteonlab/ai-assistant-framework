@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** How Does Named Entity Recognition Work
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Canonicalization Techniques
@@ -147,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -257,7 +254,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Confusion Matrix Overview
 A confusion matrix is a table that is often used to describe the performance of an algorithm, typically a classification model. It provides a summary of prediction results for one or more classes—in our case, entity and non-entity classifications.
@@ -338,7 +334,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lexicon Approach
 
@@ -451,7 +446,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logistic Regression Overview
 Logistic regression is a statistical model used for binary classification problems. It models the probability of an event occurring as a function of explanatory variables.
@@ -638,7 +632,6 @@ The main challenges faced by traditional models like logistic regression, Random
 - **Limited Contextual Understanding**: Models like logistic regression or CRFs may not effectively capture the context of longer sentences, leading to less accurate predictions.
 x??
 
-**Rating: 8/10**
 
 #### Deep Learning Models and Their Challenges
 Background context explaining deep learning (DL) models, their interpretability issues, hardware requirements, and time constraints. Mention that simpler approaches should be tried first before moving to more complex techniques like DL.
@@ -865,7 +858,6 @@ def recognize_financial_entities(finbert_model, text):
 ```
 x??
 
-**Rating: 9/10**
 
 #### Entity Resolution Overview
 Entity resolution (ER) is a process of identifying and matching records that refer to the same unique entity within one or more data sources. This task becomes critical when dealing with datasets that lack unique identifiers, as it allows for the aggregation of relevant information about an entity.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Mapping Continuous Integration to Microservices
 
 ---
 
-**Rating: 8/10**
 
 #### Event Data Pump
 
@@ -44,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Netflix's Data Reporting Pipeline
 Background context: Netflix uses Hadoop to process SSTable backups for reporting across large amounts of data. They have open-sourced this approach as the Aegisthus project.
@@ -76,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generic Eventing Systems for Real-Time Data
 Background context: The approach of using a single location for reporting is being reconsidered due to the variety of use cases with different accuracy and timeliness requirements. Netflix is moving towards generic eventing systems that can route data to multiple places as needed.
@@ -102,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Decomposition and Boundaries
 Background context: In this section, we discuss the process of decomposing large services into smaller, more manageable ones. This is done by identifying seams where service boundaries can emerge incrementally. The goal is to make it easier to maintain and evolve the system over time.
@@ -239,7 +234,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Artifacts for Microservices
 In the context of microservices deployment, we often create artifacts that are used for further validation. These artifacts can include compiled code, binaries, or running services that can be tested.
@@ -253,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Microservices CI Mapping
 When implementing CI for microservices, it’s important to map individual services to their own builds rather than a single monolithic one.
@@ -289,7 +282,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single Repository vs. Multiple Repositories for CI
 A single repository can be used for all microservices, but this approach might not always be ideal.
@@ -328,7 +320,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cycle Time and Deployment Complexity
 Background context: The text discusses challenges related to deploying changes efficiently, particularly when working with microservices. Key points include managing cycle time (the speed of moving a change from development to live) and determining which services need to be deployed.
@@ -340,7 +331,6 @@ The primary challenges involve accurately identifying which services should be d
 
 ---
 
-**Rating: 8/10**
 
 #### Build Services and Deployment
 Background context: The text explores different approaches to managing builds in microservices environments. These include deploying all services together, using a monolithic source control system with multiple CI builds, and having one CI build per microservice.
@@ -352,7 +342,6 @@ Deploying everything together can lead to significant delays if there's an issue
 
 ---
 
-**Rating: 8/10**
 
 #### Microservice-Specific CI Builds
 Background context: The preferred approach discussed is having one CI build per microservice. This allows for rapid and targeted deployment.
@@ -364,7 +353,6 @@ It provides clear ownership of the service by the respective team, simplifies te
 
 ---
 
-**Rating: 8/10**
 
 #### Test Automation in Microservices
 Background context: The text emphasizes that tests should be part of each microservice's source code repository to ensure accurate test coverage.
@@ -376,7 +364,6 @@ Tests for a microservice should reside within the same source control as its cod
 
 ---
 
-**Rating: 8/10**
 
 #### Continuous Delivery Integration
 Background context: The text moves beyond CI to discuss continuous delivery, indicating an end-to-end process from development to production.
@@ -388,7 +375,6 @@ Continuous Delivery (CD) extends the benefits of CI by automating not just build
 
 ---
 
-**Rating: 8/10**
 
 #### Build Pipelines and Continuous Delivery
 Continuous integration (CI) is a method where developers merge their work frequently, usually several times a day, into a shared repository. This allows for multiple stages within a build to be introduced, particularly useful when different types of tests are involved. The idea behind this is to ensure that fast, small-scoped tests provide quick feedback before slow, large-scoped tests run.
@@ -399,7 +385,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Build Pipelines
 Build pipelines are a way of organizing stages in a build process where each stage runs specific tasks or tests. This helps in tracking the progress of software as it clears through different environments, providing insights into its quality before release.
@@ -411,7 +396,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuous Delivery
 Continuous delivery (CD) builds upon continuous integration by treating each check-in as a potential release candidate. It involves modeling all processes from development to production and tracking the readiness of software versions.
@@ -423,7 +407,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multistage Build Pipelines
 Multistage build pipelines extend the concept of continuous integration by including multiple stages that an artifact must pass through to be considered production-ready. This helps in tracking the quality and progress of software as it moves towards release.
@@ -435,7 +418,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model All Processes
 In continuous delivery, all processes from check-in to production are modeled to track the readiness of every version of the software.
@@ -447,7 +429,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Microservices World
 In a microservices world, where services are released independently, one pipeline per service is recommended to ensure proper release management.
@@ -461,7 +442,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Initial Service Boundaries for Greenfield Projects
 When a team is starting out with a new project, especially one that’s completely new, there will be significant churn as they figure out where service boundaries should lie. During this initial phase, it's often beneficial to keep services larger and in the same build because changes across these boundaries are frequent.
@@ -472,7 +452,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Automated Deployment Tools
 Tools like Puppet, Chef, and Ansible can help manage and configure additional software needed to deploy microservices that use different artifact formats. These tools can also standardize the deployment process across multiple technologies.
@@ -483,7 +462,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Varying Dependencies
 
@@ -496,7 +474,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Custom Virtual Machine Images
 

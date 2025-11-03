@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Read Committed
 
 ---
 
-**Rating: 8/10**
 
 #### Weak Isolation Levels
 Background context explaining the concept of weak isolation levels. Concurrency issues arise when transactions read or write data that is concurrently modified by another transaction. These issues are hard to find and reproduce, making them a challenge for application developers.
@@ -122,7 +120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Read Committed Isolation
 Background context: The read committed isolation level is a common transactional isolation level used by databases. It ensures that transactions cannot read uncommitted data, thus preventing dirty reads (reading data that might be rolled back). However, it does not prevent non-repeatable reads and phantoms.
@@ -177,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Snapshot Isolation Overview
 Snapshot isolation is a technique used to ensure that transactions read consistent data from the database. This is particularly useful for long-running, read-only queries and periodic integrity checks. The idea behind snapshot isolation is that each transaction reads from a consistent snapshot of the database—that is, the transaction sees all the data that was committed in the database at the start of the transaction.
@@ -293,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Transaction ID and Versioning
@@ -404,7 +399,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Append-Only B-Trees
 Background context explaining the concept. The described approach avoids overwriting pages of a B-tree when updated by creating new copies and updating parent pointers. This ensures that immutable versions of data are preserved, while allowing for consistent snapshots at write transaction points.
@@ -492,7 +486,6 @@ function resolveConflicts(document, userEdits) {
 ??x
 ---
 
-**Rating: 8/10**
 
 ---
 #### Lost Update Problem
@@ -558,7 +551,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Atomic Operations and Locking

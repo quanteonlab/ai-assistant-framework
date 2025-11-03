@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B004-Data-Governance_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Considerations for Governance Across a Data Life Cycle
 
 ---
 
-**Rating: 8/10**
 
 #### Deployment Time for Governance Processes
 Background context explaining that crafting and setting up governance processes across the data life cycle is a time-consuming task. This involves understanding that the setup can be overwhelming given the number of concepts introduced, and there isn't a one-size-fits-all solution. Automation tools and artificial intelligence (AI) can reduce deployment time.
@@ -131,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -325,7 +322,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Data Quality in AI/ML Models
 Background context explaining the importance of data quality, especially within machine learning models. Machine learning models extrapolate from existing data to predict future outcomes, and if input data contains errors, these errors can be amplified, leading to model degradation.

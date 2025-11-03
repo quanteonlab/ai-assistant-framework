@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The CRTP Design Pattern Explained
 
 ---
 
-**Rating: 8/10**
 
 #### CRTP Design Pattern Introduction
 Background context: The CRTP (Curiously Recurring Template Pattern) is a design pattern used to create compile-time abstractions. It builds upon the concept of creating an abstraction via a base class but establishes this relationship at compile time rather than runtime using virtual functions.
@@ -79,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CRTP and Virtual Functions
 Background context explaining that CRTP (Template Curiously Recurring Template Pattern) is a design pattern used to achieve compile-time polymorphism, avoiding virtual functions and their associated performance overhead. This allows for more efficient code without sacrificing flexibility.
@@ -161,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CRTP Incomplete Type Issue
 Background context: The Curiously Recurring Template Pattern (CRTP) is a powerful technique in C++ for achieving compile-time polymorphism. However, it can lead to interesting issues when dealing with incomplete types.
@@ -296,7 +292,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Special Property of Class Templates
 Background context: In C++, when using class templates, member functions are only instantiated on demand. This means they are created and compiled only when called, not at the time of template declaration.
@@ -384,7 +379,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ZeroVector Class Implementation
 Background context explaining how a ZeroVector class could be implemented. It should not store elements but return zero by value when accessed, making it efficient.
@@ -467,7 +461,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CRTP vs C++20 Concepts: Compile-Time Polymorphism
 Background context explaining that CRTP provides compile-time polymorphism, which is useful for static type abstractions but lacks runtime flexibility and can be restrictive. C++20 concepts offer a more flexible and nonintrusive alternative.

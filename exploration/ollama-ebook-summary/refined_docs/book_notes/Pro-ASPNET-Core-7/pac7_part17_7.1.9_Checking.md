@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 7.1.9 Checking and running the application
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Creating a HomeController and Index View
@@ -29,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mapping Default Routes and URLs
 Background context: This concept explains how routing works in ASP.NET Core. The `MapDefaultControllerRoute` method is used to match incoming HTTP requests to the appropriate controller action.
@@ -51,7 +48,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rendering a View with Razor Syntax
 Background context: This part explains how to create a simple HTML view using Razor syntax. The `Index.cshtml` file is created in the `Views/Home` folder, which contains the basic structure of an HTML page that will be rendered by ASP.NET Core.
@@ -69,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Running the Application
 Explanation: Before adding data to the application, it is recommended to ensure that the application builds and runs correctly. This involves running the `dotnet run` command from within the SportsStore project folder.
@@ -95,7 +90,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Entity Framework Core Overview
 Explanation: Entity Framework Core (EF Core) is an ORM framework developed by Microsoft for ASP.NET Core projects. It helps developers map C# objects and collections into SQL queries.
@@ -120,7 +114,6 @@ Here, `Product` is an entity class that defines the structure of data in the dat
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Adding Entity Framework Core Packages
@@ -141,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Installing Entity Framework Core Tools
 Background context: EF Core requires tools for preparing and creating databases, especially when working with ASP.NET Core applications. These tools need to be installed globally and matched with the version of EF Core in use.
@@ -164,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defining Connection Strings in appsettings.json
 Background context: Configuration settings like database connection strings are stored in JSON configuration files. For the SportsStore project, these settings need to be defined within `appsettings.json` or an environment-specific file such as `appsettings.Development.json`.
@@ -187,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating the Database Context Class
 Background context: Entity Framework Core uses a context class to interact with the database. This context acts as an entry point to the data model and provides methods for querying and modifying the data.

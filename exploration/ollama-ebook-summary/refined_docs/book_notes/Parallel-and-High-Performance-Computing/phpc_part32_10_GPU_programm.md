@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 32)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 10 GPU programming model
 
 ---
 
-**Rating: 8/10**
 
 #### Developing a General GPU Programming Model
 Background context: This chapter aims to create an abstract model for understanding how work is performed on GPUs. The goal is to develop an application that works across different GPU devices from various vendors, focusing on essential aspects without delving into hardware specifics.
@@ -17,7 +15,6 @@ The primary objective is to create a mental model of the GPU's architecture and 
 
 ---
 
-**Rating: 8/10**
 
 #### Key Components for GPU Programming Languages
 Background context: Every GPU programming language requires components such as parallel loops, data movement, and reduction mechanisms. These elements are crucial for effective GPU programming.
@@ -31,7 +28,6 @@ The three key components are:
 
 ---
 
-**Rating: 8/10**
 
 #### Exposing Parallelism on GPUs
 Background context: To fully utilize the power of GPUs, applications need to expose as much parallelism as possible by breaking down tasks into many small sub-tasks that can be distributed across thousands of threads.
@@ -42,7 +38,6 @@ It is important because GPUs have thousands of threads available for computation
 
 ---
 
-**Rating: 8/10**
 
 #### Programming Model vs. High-Level Languages
 Background context: The chapter discusses how to plan application design using the programming model independently of specific programming languages like CUDA or OpenCL. This is particularly useful when using higher-level languages with pragmas.
@@ -53,7 +48,6 @@ Understanding the programming model helps developers make informed decisions abo
 
 ---
 
-**Rating: 8/10**
 
 #### GPU Performance and Scalability Considerations
 Background context: The chapter emphasizes the importance of considering performance and scalability in application design for GPUs. This includes organizing work, understanding expected performance, and deciding whether an application should even be ported to a GPU.
@@ -67,7 +61,6 @@ Developers should consider:
 
 ---
 
-**Rating: 8/10**
 
 #### Conclusion on GPU Programming Models
 Background context: The chapter concludes by emphasizing the importance of having a good mental model for developing applications that run efficiently on GPUs. This is crucial regardless of the specific programming language used.
@@ -78,7 +71,6 @@ The chapter suggests that developers should develop their application designs wi
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Massive Parallelism on GPUs
@@ -91,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Computational Domain Decomposition
 The computational domain is broken down into smaller chunks to enable efficient processing by work groups or threads.
@@ -103,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Chunk-Sized Work for Processing
 Each chunk is assigned to a work group or thread block, which processes the data in parallel.
@@ -115,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shared Memory Usage
 Shared memory within a work group allows for efficient communication and coordination among neighboring threads.
@@ -127,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single Instruction Multiple Data (SIMD)
 SIMD instructions apply a single instruction across multiple data items, enhancing efficiency.
@@ -139,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Work Group Structure
 A work group consists of a fixed number of threads, enabling coordinated execution.
@@ -151,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of GPU Programming Techniques
 GPU programming abstractions include data decomposition, chunk-sized work, SIMD/Vectorization, and utilizing work group shared resources.
@@ -171,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Data Decomposition into NDRange or Grid
@@ -202,7 +187,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Work Group Synchronization and Context Switching
 Work group synchronization involves coordinating the execution of multiple subgroups or work groups to ensure that they complete their operations in a coordinated manner. Context switching refers to switching between different subgroups or work groups.

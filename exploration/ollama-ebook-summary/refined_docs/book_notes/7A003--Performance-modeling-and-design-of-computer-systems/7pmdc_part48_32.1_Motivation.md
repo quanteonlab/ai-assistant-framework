@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 48)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 32.1 Motivation. 32.2 Preemptive Priority Queueing
 
 ---
 
-**Rating: 8/10**
 
 #### Preemptive Priority Queueing
 Background context: In preemptive priority queueing, jobs of higher priority are interrupted and given service before lower-priority jobs that have been waiting longer. The system models different job classes with varying arrival rates and service requirements.
@@ -35,7 +33,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Time in System for Preemptive Priority Queueing
 Background context: The objective is to compute the mean time in system (E[T(k)]) for a job of priority k using preemptive priority queueing. This involves considering all work that must be completed before a job can leave the system.
@@ -70,7 +67,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Component (2) of Expected Time in System
 
@@ -117,7 +113,6 @@ This simplification uses the fact that in FCFS, the order of service is determin
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Residence Time
 
@@ -143,7 +138,6 @@ Waiting time refers to the time before a job begins receiving service. Residence
 
 ---
 
-**Rating: 8/10**
 
 #### First Term of (32.1)
 Background context explaining the concept. The first term \(E[S_k] \frac{1}{\sum_{i=1}^{k-1} \rho_i}\) represents the mean residence time, or expected length of a busy period started by a job of size \(E[S_k]\). Only jobs of classes 1 through \(k-1\) are allowed in this busy period. This formula is crucial for understanding the behavior of preemptive priority queueing systems.
@@ -167,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Equation (32.3)
 Background context explaining the concept. The equation \(E[T(k)]_{\text{P-Priority}} = E[S_k] \frac{1}{\sum_{i=1}^{k-1}\rho_i} + \lambda \sum_{i=1}^k p_i E[S^2_i] (1-\sum_{i=1}^{k-1}\rho_i)(1-\sum_{i=1}^k\rho_i)\) is a reformulated version of the previous terms, making it clearer that the mean time \(E[T(k)]\) for a job of priority \(k\) to receive service depends only on the first \(k\) classes in a preemptive priority queue.
@@ -208,7 +201,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### First Approach for Analyzing PSJF
 We use results from preemptive priority classes where each job’s class is its size and take the limit as the number of classes goes to infinity. Starting with the formula:
@@ -227,7 +219,6 @@ Where \( f(t) \) is the probability density function of job size, and \( \rho_x 
 
 ---
 
-**Rating: 8/10**
 
 #### Second Approach for Analyzing PSJF
 We break down the response time into waiting time and residence time. The waiting time \( E[Wait(x)]_{PSJF} \) can be seen as a busy period duration starting with a job of size \( x \), where only jobs of size \( \leq x \) are considered.
@@ -247,7 +238,6 @@ Now, \( Wait(x) \) can be viewed as the length of a busy period started by a pha
 
 ---
 
-**Rating: 8/10**
 
 #### Calculation of \( E[W_x]_{PSJF} \)
 \( E[W_x]_{PSJF} \) is the work in the system as seen when job \( x \) puts on transformer glasses that make anyone whose (original) size is greater than \( x \) invisible.
@@ -268,7 +258,6 @@ Therefore, the waiting time can be derived as:
 
 ---
 
-**Rating: 8/10**
 
 #### Laplace Transform of Response Time
 Background context: The text derives the Laplace transform for the response time in an M/G/1/PSJF queue. This is useful for analyzing performance under different conditions and job sizes.
@@ -285,7 +274,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determining \(\tilde{\text{Wait}}(x)(s)\)
 Background context: \(\tilde{\text{Wait}}(x)(s)\) represents the waiting time for a job of size \( x \). This is part of deriving the Laplace transform for response times in M/G/1/PSJF queues.
@@ -301,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determining \(\tilde{\text{Res}}(x)(s)\)
 Background context: \(\tilde{\text{Res}}(x)(s)\) represents the residence time (busy period) for a job of size \( x \). This is crucial in understanding how long a job stays active under PSJF scheduling.
@@ -317,7 +304,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determining \(\tilde{\text{W}}_x(s)\)
 Background context: \(\tilde{\text{W}}_x(s)\) is the Laplace transform of the work in system (Wx) for jobs of size \( x \). This helps in understanding the total workload handled by a busy period.
@@ -333,7 +319,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Concepts
 Background context: This section summarizes the key concepts derived for PSJF scheduling in an M/G/1 queue setting.

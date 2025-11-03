@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 30)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 21.6 Readings and Further Remarks. 21.7 Exercises
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix-Analytic Method for M/M/1 Queue
 
@@ -220,7 +218,6 @@ x??
 
 Continue creating flashcards for the remaining concepts in a similar format. Each card should focus on one specific question or concept derived from the provided text.
 
-**Rating: 8/10**
 
 #### Overview of Product Form Networks
 In earlier chapters, we explored various types of networks that exhibit product form solutions. These include open and closed Jackson networks with FCFS servers and Exponential service rates. The systems assumed Poisson arrivals and probabilistic routing.
@@ -297,7 +294,6 @@ Phase-type (PH) distributions help model non-Exponential workloads by matching 2
 
 ---
 
-**Rating: 8/10**
 
 #### BCMP Model Limitations: Exponential Service Times
 BCMP model assumes that service times for FCFS servers are exponentially distributed. This is a significant restriction because it limits the flexibility of modeling different job types or server characteristics.
@@ -369,7 +365,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Processor-Sharing (PS) in Computer Systems
 Background context explaining the concept. Processor Sharing is a scheduling policy where each job receives service from the server, but the amount of service is shared among all jobs present in the system. The quantum size, which determines how much service each job gets before switching to another job, approaches 0, leading to PS. In PS, there's no overhead for context-switching between jobs.
@@ -479,7 +474,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/1/PS Queue Overview
 Background context: The chapter discusses how to find the limiting probabilities for specific queueing systems, starting with the M/M/1/PS (Poisson arrival, Exponential service time, single server, PS discipline) queue. This system uses a time-sharing server where the service rate of each job is μ/n when there are n jobs being served.
@@ -566,7 +560,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Rate for Phase 1 (Quals)
 Background context: In a single M/Cox/1/PS server with an abridged two-phase Coxian distribution, each job has to complete phase 1 before potentially moving on to phase 2. The service rate of a student in phase 1 is affected by the number of students also trying to complete that phase.
@@ -686,7 +679,6 @@ public class ArrivalRateExample {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Equating B1 and B/prime 1
 In the context of an M/G/1/PS system, we need to verify that a given guess for the limiting probabilities is correct. The hint suggests observing that \(B_1 = B'/1 \Rightarrow \pi_{n1,n2} = \rho_1^{n1+n2} n1 \pi_{n1-1,n2}\), where \(\rho_1 = \frac{\lambda}{\mu_1}\).

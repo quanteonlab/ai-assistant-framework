@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Strategy Design Pattern Explained
 
 ---
 
-**Rating: 8/10**
 
 #### Strategy Design Pattern Intent
 Background context explaining the intent of the Strategy design pattern. The pattern aims to define a family of algorithms, encapsulate each one, and make them interchangeable. This allows for changing how different shapes are drawn without modifying existing code.
@@ -132,7 +130,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Injection through DrawStrategy
 
@@ -261,7 +258,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Strategy Design Pattern: Overview
 The Strategy design pattern is a behavioral design pattern that enables you to define a family of algorithms, encapsulate each one, and make them interchangeable. This pattern lets the algorithm vary independently from clients that use it.

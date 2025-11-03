@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B004-Data-Governance_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 8. Monitoring. Why Perform Monitoring
 
 ---
 
-**Rating: 8/10**
 
 #### Monitoring Definition
 Monitoring allows you to know what is happening as soon as it happens so you can act quickly. It involves detecting and alerting about possible errors of a program or system in a timely manner, ultimately delivering value to the business. Organizations use monitoring systems for various aspects like devices, infrastructure, applications, services, policies, and even business processes.
@@ -80,7 +78,6 @@ Implementing a monitoring system has several implications:
 These implications help in maintaining a robust data management system that is both efficient and secure.
 ??x
 
-**Rating: 8/10**
 
 #### Why Perform Monitoring?
 Background context: Monitoring is crucial for reviewing and assessing performance of data assets, introducing policy changes, learning from successes and failures, and ultimately creating business value. It helps organizations reduce costs, increase revenue, and ensure compliance with regulations.
@@ -132,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Quality Monitoring
 
@@ -226,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real Time Analysis
 In today's fast-paced business environment, real-time analysis is crucial for making quick decisions and responding to issues promptly. A monitoring system that can process data and provide insights instantly ensures that you are always on top of your operations.

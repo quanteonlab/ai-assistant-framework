@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Domain Adaptation Overview
 Background context: When dealing with limited labeled data, unsupervised techniques like TSDAE are used to create an initial embedding model. However, these models often struggle with learning domain-specific concepts effectively compared to supervised methods. Domain adaptation aims to improve these embeddings by adapting them to a specific textual domain.
@@ -108,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fine-Tuning Representation Models for Classification
 
@@ -161,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### F1 Score and Model Performance Comparison
 Background context explaining the concept. In this scenario, we compare the performance of a fine-tuned model with that of a task-specific pretrained model. The fine-tuned model achieved an F1 score of 0.85, which is higher than the 0.80 obtained by the task-specific pretrained model in Chapter 4.

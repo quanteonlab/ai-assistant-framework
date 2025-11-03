@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Materials-Science-and-Engineering-An-Introduction_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4.3 Impurities in Solids
 
 ---
 
-**Rating: 8/10**
 
 #### Calculation of Vacancies in Copper at 1000 °C
 Background context: The problem involves calculating the equilibrium number of vacancies per cubic meter for copper at a specified temperature. Key steps include determining the atomic sites per volume and using the Arrhenius equation to find the vacancy concentration.
@@ -28,7 +26,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Impurities and Solid Solutions
 Background context: Impurities are always present in pure metals, even when refined to high purity. These impurities can form solid solutions or new phases depending on their nature.
@@ -44,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Substitutional and Interstitial Solid Solutions
 Background context: In solid solutions, impurity atoms can occupy substitutional or interstitial sites. These types of impurities affect the properties of metals by altering their lattice structure.
@@ -68,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interstitial Solid Solutions in FCC and BCC Structures
 Background context: Interstitial impurities occupy interstices among host atoms. In FCC and BCC crystals, there are specific types of interstitial sites based on coordination numbers.
@@ -87,7 +82,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interstitial Atom Placement in BCC Unit Cell
 Background context: This section explains how an interstitial atom is positioned within a body-centered cubic (BCC) unit cell, touching two adjacent corner atoms. The edge length of the unit cell is derived using both geometric and atomic radius relationships.
@@ -120,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Specification of Composition
 Background context: The text discusses the two common ways to specify composition—weight percent and atom percent. It explains how these methods are used in alloy composition.
@@ -147,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atom Percent Calculation
 Background context: The text explains the basis of atom percent calculations, which are based on the number of moles or atoms relative to the total moles or atoms in an alloy.
@@ -174,7 +166,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conversions Between Composition Schemes
 Background context: The text explains how to convert between weight percent and atom percent, including formulas for both schemes.
@@ -204,7 +195,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept Check Questions
 Background context: The text includes concept check questions to test understanding of the material.
@@ -225,7 +215,6 @@ The answer explains that substitutional solutions allow complete solid solubilit
 
 ---
 
-**Rating: 8/10**
 
 #### Dislocation in Solids
 Background context: This section explains the concept of dislocations, which are linear defects in crystalline materials where some atoms are misaligned around a defect line. Two types of dislocations are discussed: edge and screw.
@@ -251,7 +240,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mixed Dislocations
 Background context: Most dislocations found in crystalline materials are mixed, meaning they have components of both edge and screw dislocations.

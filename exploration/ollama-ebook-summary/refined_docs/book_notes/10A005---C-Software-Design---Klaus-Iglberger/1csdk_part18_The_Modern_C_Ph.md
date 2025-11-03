@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Modern C Philosophy Value Semantics
 
 ---
 
-**Rating: 8/10**
 
 #### Raw Pointers vs. Smart Pointers
 Background context explaining that raw pointers do not manage ownership, while smart pointers take on this responsibility. The discussion highlights how smart pointers improve code semantics and management of resources but still have limitations.
@@ -135,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Value Semantics Overview
 Value semantics refer to a programming paradigm where values are copied by value, meaning that operations on these values do not affect other copies. This leads to more predictable and safer code because changes are localized. Compilers often exploit this for optimization purposes.
@@ -276,7 +273,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### std::function Overview
 Background context explaining that `std::function` is a C++ template that can hold any callable, such as functions, lambdas, or bind expressions. It supports value semantics and allows storing calls to different functions with varying signatures.
@@ -367,7 +363,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Intrusive vs Non-Intrusive Strategy Pattern
 Background context: The traditional Strategy pattern typically requires a base class to be defined, which all strategy implementations inherit from. This can introduce tight coupling and make it harder to implement different drawing strategies without modifying existing code.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 1B001---Proofs---Jay-Cumming_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Proofs Using the Contrapositive
 
 ---
 
-**Rating: 8/10**
 
 #### Proving "If n² is odd, then n is odd" by Contrapositive
 
@@ -124,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Contrapositive Proof of 3n+5 is Even Implies n is Odd
 Background context: The statement to prove is "If \(3n + 5\) is even, then \(n\) is odd." We will use a contrapositive proof. In logic, the contrapositive of \(P \rightarrow Q\) is \(\neg Q \rightarrow \neg P\). Here, \(P = (3n + 5) \text{ is even}\), and \(Q = n \text{ is odd}\).
@@ -215,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reductio ad Absurdum (Proof by Contradiction)
 Background context: The method of reductio ad absurdum, also known as proof by contradiction, is a common logical argument where one assumes the opposite of what is to be proven and then shows that this assumption leads to a contradiction or an absurdity. This contradiction implies that the original assumption must be false, thus proving the statement in question.
@@ -349,7 +345,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proof by Contradiction Introduction
 Proofs often use a method called proof by contradiction, where you assume the opposite of what you want to prove and show that this leads to an impossible situation or contradiction. This method is particularly useful when direct proofs are difficult.
@@ -418,7 +413,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Euclid's Proof of Infinite Primes
 Background context explaining Euclid's proof. This proof uses contradiction to show that there are infinitely many prime numbers. The proof relies on multiplying all known primes and adding 1, which results in a number that is either a new prime or a product of new primes.
@@ -490,7 +484,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Euclid's Proof of Infinite Primes
 Euclid provided a proof that there are infinitely many prime numbers. The core idea is to show that assuming a finite number of primes leads to a contradiction.

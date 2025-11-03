@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Materials-Science-and-Engineering-An-Introduction_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4.10 Microscopic Techniques
 
 ---
 
-**Rating: 8/10**
 
 #### Microscopic Examination Overview
 Microscopic examination is essential for understanding and characterizing materials, particularly when examining microscopic structural elements that influence their properties. Some grains are visible to the naked eye (macroscopic), while others require a microscope due to their tiny size (microscopic). Microscopy techniques include optical, electron, and scanning probe microscopy.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Microstructure Characteristics
 Microstructure characteristics include not just grain size and shape but also other features like textures and defects. These are studied using advanced microscopy techniques.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Metallographic Techniques
 Metallographic techniques involve using optical microscopy to study opaque materials like metals, ceramics, and polymers, focusing on surface observations due to their lack of transparency.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Surface Preparation for Microscopy
@@ -73,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Etching Characteristics
 Background context explaining the chemical reactivity of grains in single-phase materials and how it varies with crystallographic orientation. This leads to different etching characteristics from grain to grain in polycrystalline specimens.
@@ -100,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optical Microscopy
 Background context explaining the limitations of optical microscopes and how they are used to view etched surfaces. The upper limit for magnification is approximately 2000x, beyond which electron microscopy may be required.
@@ -123,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Electron Microscopy
 Background context explaining the principle behind electron microscopy, including how high magnification and resolution are achieved due to short wavelengths of electrons. The process involves focusing an electron beam using magnetic lenses.
@@ -154,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Piezoelectric Components for Control
 Background context: Piezoelectric components play a crucial role in SPMs, providing nanometer-resolution control over the probe's movements. These components enable precise positioning necessary for generating high-resolution images.
@@ -166,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Applications and Advantages of SPMs
 Background context: New SPMs allow examination at atomic and molecular levels, providing detailed information about various materials. This has led to advancements in understanding and designing nanomaterials.
@@ -178,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Linear Intercept Method
@@ -206,7 +195,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison Method
 Background context: The comparison method involves comparing the grain structure of a sample with standardized charts that have known average grain sizes to determine the grain size as a grain-size number. This method is useful for quickly assessing the grain size without extensive calculations.
@@ -234,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Vacancies and Self-Interstitials
@@ -247,7 +234,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Equilibrium Number of Vacancies
 Background context: The equilibrium number of vacancies in a material can be determined using Equation 4.1, which states:
@@ -263,7 +249,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Alloy Composition
 Background context: An alloy is a metallic substance composed of two or more elements. The composition can be specified in weight percent (Equation 4.3a) or atom percent (Equations 4.5a and 4.5b). Conversion between weight percent and atom percent is provided by Equations 4.6a and 4.7a.
@@ -289,7 +274,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dislocations
 Background context: Dislocations are one-dimensional crystalline defects, divided into two pure types: edge and screw. An edge dislocation involves a lattice distortion along the end of an extra half-plane of atoms, while a screw dislocation is described as a helical planar ramp.
@@ -305,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Burgers Vector
 Background context: The magnitude and direction of lattice distortion associated with a dislocation are specified by its Burgers vector. For an edge dislocation, the Burgers vector is perpendicular to the line of the dislocation; for a screw dislocation, it is parallel; and for mixed dislocations, neither condition applies.

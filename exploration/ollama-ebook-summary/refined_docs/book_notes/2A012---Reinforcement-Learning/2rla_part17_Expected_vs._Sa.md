@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Expected vs. Sample Updates
 
 ---
 
-**Rating: 8/10**
 
 #### Expected vs. Sample Updates
 Background context explaining the concept of expected and sample updates. The text discusses different types of value-function updates, focusing on one-step updates that can update state values or action values for optimal policies or arbitrary given policies. These updates are categorized into four classes: \(q^*, v^*, q^\pi\), and \(v^\pi\). The key difference between expected and sample updates lies in their computational requirements and accuracy.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Computational Requirements for Updates
 The text provides formulas for the expected update and the corresponding sample update. The expected update involves summing over all possible next states and actions, while the sample update uses a single sampled transition.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Formula for Expected Updates
 The text provides a formula for the expected update in the context of approximate value function \(Q\).
@@ -45,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Formula for Sample Updates
 The text provides a formula for the sample update, which resembles Q-learning.
@@ -60,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Computational Cost Comparison
 The text explains that expected updates can be significantly more computationally expensive than sample updates.
@@ -72,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Effectiveness of Updates in Stochastic Environments
 The text discusses the accuracy and computational cost trade-offs between expected and sample updates.
@@ -84,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Practical Considerations for Planning Methods
 The text mentions Dyna-Q agents and prioritized sweeping as examples where expected updates are used, while sample updates are common.
@@ -96,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Computational Efficiency for Large Problems
 The text highlights the importance of computational efficiency, especially in large problems with many state-action pairs.
@@ -108,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Computational Trade-off Analysis
 The text provides an analysis showing the estimation error as a function of computation time for both types of updates.
@@ -122,7 +112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison of Expected and Sample Updates
 
@@ -142,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trajectory Sampling
 
@@ -158,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### On-Policy Distribution and Its Advantages
 
@@ -174,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Empirical Evaluation of On-Policy vs Uniform Updates
 
@@ -192,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Real-time Dynamic Programming (RTDP)
@@ -204,7 +189,6 @@ Real-time dynamic programming (RTDP) is an advanced method that uses trajectory 
 
 ---
 
-**Rating: 8/10**
 
 #### On-policy Trajectory Sampling in Large Problems
 In large problems with many states but small branching factors, focusing solely on the on-policy distribution can be disadvantageous because commonly occurring states already have their correct values. This means sampling these states is ineffective, whereas exploring other less common states might still provide useful information.
@@ -215,7 +199,6 @@ Focusing exclusively on the on-policy distribution can be disadvantageous in lar
 
 ---
 
-**Rating: 8/10**
 
 #### Replicating RTDP Experiment (b=3)
 Replicate the experiment from Figure 8.8 with b=3 and compare it with the original b=1 case to understand how varying the discount factor affects the performance of RTDP.
@@ -226,7 +209,6 @@ The purpose of replicating the RTDP experiment for b=3 is to observe how changin
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous DP Algorithms in RTDP
 RTDP is an example of an asynchronous DP algorithm that updates state values in any order without systematic sweeps. This flexibility allows for more efficient exploration of the state space, particularly when starting from designated start states.
@@ -237,7 +219,6 @@ RTDP exemplifies an asynchronous dynamic programming (DP) algorithm because it d
 
 ---
 
-**Rating: 8/10**
 
 #### Relevance of States in RTDP for Prediction Problems
 In prediction problems where states can be reached from start states under some optimal policy, only relevant states need to be considered. Irrelevant states that cannot be reached are skipped, saving computational resources.
@@ -249,7 +230,6 @@ Relevance is crucial in prediction problems as it allows RTDP to focus on states
 
 ---
 
-**Rating: 8/10**
 
 #### RTDP for Episodic Tasks with Exploring Starts
 RTDP is an asynchronous value-iteration algorithm that converges to optimal policies for discounted finite MDPs and certain undiscounted episodic tasks under specific conditions. The algorithm updates values based on trajectories generated during episodes, which begin in a randomly chosen start state and end at a goal state.
@@ -323,7 +303,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence Conditions for RTDP
 The convergence conditions for RTDP on episodic tasks with absorbing goal states that generate zero rewards are crucial to ensure the algorithm converges to an optimal policy.
@@ -342,7 +321,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example: Racetrack Problem
 The racetrack problem is a classic example of a stochastic optimal path problem where the objective is to minimize the cost or maximize the negative returns, which is equivalent to minimizing time in this context. Each step taken produces a reward of -1, and reaching the goal state (finishing the race) generates zero additional rewards.
@@ -388,7 +366,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real-time Dynamic Programming for Stochastic Optimal Path Problems
 Stochastic optimal path problems, such as the racetrack problem or minimum-time control tasks, can be solved using RTDP. The objective is to find a policy that minimizes the cost (time) or maximizes the negative returns.
@@ -409,7 +386,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Racetrack Problem Overview
 The task involves an agent learning to drive a car around a racetrack and cross the finish line as quickly as possible while staying on the track. The start states are all zero-speed states on the starting line, and goal states are those that can be reached by crossing the finish line from inside the track. Unlike previous exercises, there is no limit on the car's speed, making the state space potentially infinite.
@@ -421,7 +397,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence Criteria
 For conventional DP, convergence was judged when the maximum change in a state value over a sweep was below \(10^{-4}\). For RTDP, it was based on the stabilization of the average time taken to cross the finish line across 20 episodes.
@@ -435,7 +410,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Evaluation
 Both methods resulted in similar policies with an average of between 14 and 15 steps to cross the finish line. However, RTDP required significantly fewer updates than DP.
@@ -447,7 +421,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example (Pseudocode for RTDP)
 ```pseudocode

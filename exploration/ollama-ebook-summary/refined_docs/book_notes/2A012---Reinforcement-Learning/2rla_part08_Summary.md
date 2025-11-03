@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Value Iteration Update
 
@@ -24,7 +22,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous DP Algorithms
 
@@ -40,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Flexibility in Selecting States for Updates
 
@@ -56,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Intermixing Computation with Real-Time Interaction
 
@@ -72,7 +67,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generalized Policy Iteration
 
@@ -92,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Generalized Policy Iteration (GPI)
@@ -105,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence of Policies and Value Functions
 Background context: The processes in GPI stabilize when the value function is consistent with the current policy and the policy is greedy with respect to the current value function. This ensures the Bellman optimality equation holds, making both the value function and policy optimal.
@@ -117,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interaction Between Evaluation and Improvement Processes
 Background context: In GPI, the evaluation and improvement processes compete by pulling in opposing directions but ultimately cooperate towards a joint solution of optimality. This interaction can be visualized as two lines representing goals in space.
@@ -129,7 +120,6 @@ x??
 
 ---
 
-**Rating: 10/10**
 
 #### Bellman Optimality Equation
 Background context: The Bellman optimality equation (4.1) is fundamental in determining the optimal policy and value function. It states that for any state, the value of being in that state should be equal to the expected reward from taking an action plus the discounted future rewards.
@@ -143,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Iteration Behavior
 Background context: In policy iteration, each process drives the system towards one of two goals: a consistent value function or a greedy policy. These processes take steps that may move away from the other goal but ultimately converge to optimality.
@@ -157,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Efficiency of Dynamic Programming (DP)
 Background context: The text discusses the efficiency and practicality of using DP methods to solve Markov Decision Processes (MDPs). It compares DP with other methods like linear programming, emphasizing that while DP might not be practical for very large problems, it is more efficient compared to direct search or linear programming in terms of computational operations.
@@ -177,7 +165,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison with Other Methods
 Background context: The text compares DP methods to other techniques like linear programming in terms of efficiency and practicality. While both can be used to solve MDPs, DP is more feasible for larger state spaces.
@@ -197,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Curse of Dimensionality
 Background context: The text mentions the "curse of dimensionality," which refers to the exponential growth in the number of states with an increase in state variables, making DP challenging but not impossible for large state spaces.
@@ -218,7 +204,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Iteration and Value Iteration
 Background context: The text introduces two popular methods for solving MDPs using DP: policy iteration and value iteration. Both aim to find optimal policies, but their approaches differ.
@@ -243,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Dynamic Programming Methods
 Background context: The text discusses the use of asynchronous methods in solving MDPs, especially when dealing with large state spaces. These methods can be more efficient than synchronous methods.
@@ -262,7 +246,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Dynamic Programming (DP)
 Background context: The text summarizes the basic ideas and algorithms of DP, emphasizing policy evaluation, policy improvement, and their integration into policy iteration and value iteration.
@@ -287,7 +270,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dynamic Programming (DP) and Policy Iteration (GPI)
 Dynamic programming methods, such as policy iteration (GPI), involve two interacting processes: one for policy evaluation and another for policy improvement. These processes are designed to iteratively refine a policy until it converges to an optimal solution.
@@ -317,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Dynamic Programming Methods
 Asynchronous DP methods are iterative algorithms that update states in an arbitrary order, potentially using out-of-date information. These methods do not require a complete sweep through the state set and can be viewed as fine-grained forms of GPI.
@@ -338,7 +319,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bootstrapping in Dynamic Programming
 Bootstrapping refers to the practice of updating estimates of state values based on estimates of successor states. This technique is fundamental in dynamic programming and many reinforcement learning algorithms.
@@ -358,7 +338,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Iteration Theorem and Algorithm
 The policy iteration theorem states that if you start with an arbitrary policy and alternately improve it using value function updates (evaluation) and use the improved policy to update values (improvement), this process will converge to an optimal policy. Bellman and Howard provided foundational work on this concept.
@@ -379,7 +358,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modifed Policy Iteration (Puterman and Shin, 1978)
 Background context: The discussion of value iteration as a form of truncated policy iteration is based on the approach of Puterman and Shin (1978), who presented a class of algorithms called modified policy iteration. This includes policy iteration and value iteration as special cases.
@@ -390,7 +368,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Value Iteration (Bertsekas, 1987)
 Background context: An analysis showing how value iteration can be made to find an optimal policy in finite time is given by Bertsekas (1987). This method is a form of truncated policy iteration where the evaluation and improvement steps are combined.
@@ -401,7 +378,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Iterative Policy Evaluation (Classical Successive Approximation)
 Background context: Iterative policy evaluation is an example of a classical successive approximation algorithm for solving a system of linear equations. The version that uses two arrays—one holding old values while the other is updated—is often called a Jacobi-style algorithm, after Jacobi’s classical use of this method.
@@ -412,7 +388,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Jacobi-Style Iterative Policy Evaluation
 Background context: The Jacobi-style algorithm is used when all the updates are considered at once, making it resemble a synchronous algorithm where all values are updated simultaneously, even though this process happens sequentially.
@@ -423,7 +398,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gauss–Seidel-Style Iterative Policy Evaluation
 Background context: The in-place version of the algorithm, often called a Gauss–Seidel-style algorithm, updates values as soon as they are computed, reflecting the nature of the classical Gauss–Seidel algorithm for solving systems of linear equations.
@@ -434,7 +408,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous DP Algorithms (Bertsekas, 1982, 1983)
 Background context: Asynchronous dynamic programming algorithms were introduced by Bertsekas in 1982 and 1983. These are designed for use on multiprocessor systems with communication delays and no global synchronizing clock.
@@ -445,7 +418,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Updates (Williams and Baird, 1990)
 Background context: Williams and Baird presented asynchronous DP algorithms that are finer-grained than the previous versions. They break down update operations into steps that can be performed asynchronously.
@@ -456,7 +428,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Curse of Dimensionality (Bellman, 1957a)
 Background context: The phrase "curse of dimensionality" was coined by Bellman in 1957. It refers to the exponential increase in complexity with increasing dimensions, making problems increasingly difficult to solve as the number of states grows.
@@ -467,7 +438,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Programming Approach (de Farias, 2002; de Farias and Van Roy, 2003)
 Background context: Foundational work on the linear programming approach to reinforcement learning was done by Daniela de Farias. This approach transforms the problem into a form that can be solved using linear programming techniques.
@@ -480,7 +450,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Methods Overview
 Background context: This chapter introduces Monte Carlo methods for reinforcement learning, where the focus is on estimating value functions and discovering optimal policies without requiring complete knowledge of the environment. Instead, learning relies solely on experience—sequences of states, actions, and rewards from actual or simulated interactions.
@@ -490,7 +459,6 @@ Monte Carlo methods use sampled experiences to learn about value functions and p
 
 ---
 
-**Rating: 8/10**
 
 #### Difference Between Monte Carlo Methods and Dynamic Programming
 Background context: Unlike dynamic programming, which requires complete knowledge of state transition probabilities and rewards, Monte Carlo methods can work with models that generate sample transitions. This difference makes Monte Carlo more flexible in practical applications where explicit probability distributions are hard to obtain.
@@ -500,7 +468,6 @@ Monte Carlo methods require only the ability to generate samples or episodes of 
 
 ---
 
-**Rating: 8/10**
 
 #### Episodic Tasks and Value Estimation
 Background context: For simplicity, Monte Carlo methods are initially defined for episodic tasks where value estimates and policies are updated only at the end of episodes. This ensures that complete returns are available.
@@ -510,7 +477,6 @@ Monte Carlo methods require complete returns to estimate values accurately, whic
 
 ---
 
-**Rating: 8/10**
 
 #### General Policy Iteration (GPI) in Monte Carlo Methods
 Background context: Just like dynamic programming uses general policy iteration (GPI), Monte Carlo methods adapt this idea for learning value functions from sampled returns rather than known MDPs.
@@ -520,7 +486,6 @@ General Policy Iteration involves alternating between policy evaluation and poli
 
 ---
 
-**Rating: 8/10**
 
 #### Prediction Problem Using Monte Carlo Methods
 Background context: The prediction problem in Monte Carlo methods involves computing \(v_{\pi}\) and \(q_{\pi}\) for a given policy \(\pi\) using sampled returns. This is akin to how bandit algorithms estimate the expected reward.
@@ -530,7 +495,6 @@ The prediction problem in Monte Carlo methods involves determining the value fun
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Improvement Using Sampled Returns
 Background context: After estimating the value functions, policies are improved based on these estimates. This step ensures that the learned policies are closer to optimal over time.
@@ -540,7 +504,6 @@ Policy improvement in Monte Carlo methods involves updating policies based on th
 
 ---
 
-**Rating: 8/10**
 
 #### Control Problem Using General Policy Iteration
 Background context: The control problem involves finding the optimal policy by combining value function estimation with policy improvement in a nonstationary environment.
@@ -550,7 +513,6 @@ The control problem in Monte Carlo methods involves discovering the optimal poli
 
 ---
 
-**Rating: 8/10**
 
 #### Nonstationary Environment Handling
 Background context: Because all action selections are undergoing learning, the environment becomes nonstationary from the perspective of earlier states. To handle this, methods like Monte Carlo adaptively update policies and value functions.
@@ -560,7 +522,6 @@ Monte Carlo addresses nonstationarity by adapting to changing environments as mo
 
 ---
 
-**Rating: 8/10**
 
 #### Example: Policy Evaluation Using Monte Carlo Methods
 Background context: An example can illustrate how Monte Carlo methods evaluate a policy by averaging returns from multiple episodes.
@@ -589,7 +550,6 @@ This example shows how the value function is updated by averaging returns from e
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Prediction Overview
 Background context: This section introduces Monte Carlo methods for learning state-value functions. It starts by explaining that the value of a state is the expected return, which is the cumulative future discounted reward starting from that state. An obvious way to estimate it is through averaging returns observed after visits to that state.
@@ -617,7 +577,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### First-VISIT MC Method
 Background context: The first-visit MC method estimates \( v_{\pi}(s) \) by averaging the returns observed after the first visit to state \( s \). This method converges to the expected value as more data are gathered.
@@ -647,7 +606,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Every-VISIT MC Method
 Background context: The every-visit MC method averages the returns observed after all visits to state \( s \), which extends more naturally to function approximation and eligibility traces discussed in later chapters.
@@ -673,7 +631,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence of MC Methods
 Background context: Both first-visit and every-visit MC methods converge to the state-value function as the number of visits or first visits goes to infinity. The law of large numbers supports this convergence, with the standard deviation of the error falling as \( \frac{1}{\sqrt{n}} \), where \( n \) is the number of returns averaged.
@@ -701,7 +658,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example: Blackjack
 Background context: The goal of the popular casino card game blackjack is to obtain a sum of card values as close to 21 as possible without exceeding it. Face cards count as 10, and an ace can count as either 1 or 11.
@@ -725,7 +681,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blackjack Policy and State-Value Function
 
@@ -738,7 +693,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State-Value Function for Usable Ace
 
@@ -751,7 +705,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State-Value Function Behavior
 
@@ -764,7 +717,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State-Value Function Behavior
 
@@ -777,7 +729,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison of Value Functions
 
@@ -792,7 +743,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Estimation of Action Values
 Monte Carlo methods can be used to estimate action values (q-values) when a model is not available. These q-values represent the expected return for starting in state \(s\), taking action \(a\), and following policy \(\pi\) thereafter.
@@ -825,7 +775,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deterministic Policy and Exploration
 When following a deterministic policy \(\pi\), returns are observed only for one action per state. This means that other actions within the same state might never be evaluated if they have lower expected values.
@@ -840,7 +789,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Exploration
 Exploration is necessary because the purpose of learning action values is to choose among actions available in each state effectively. Without exploring all possible actions, one cannot accurately estimate their values.
@@ -855,7 +803,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Evaluation for Action Values
 The policy evaluation problem for action values involves estimating \(q_\pi(s, a)\), the expected return when starting in state \(s\), taking action \(a\), and following policy \(\pi\) thereafter.
@@ -878,7 +825,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exploring Starts Assumption
 Background context: The exploration starts assumption is a useful but not always reliable method for ensuring that all state-action pairs are encountered. It relies on starting conditions being helpful, which may not be the case when learning from actual interaction with an environment.
@@ -890,7 +836,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Control Overview
 Background context: Monte Carlo control aims to approximate optimal policies by using episodes of interaction with the environment. The approach alternates between policy evaluation and policy improvement phases, similar to DP but without requiring a model.
@@ -902,7 +847,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Policy Iteration
 Background context: In Monte Carlo policy iteration, we alternate between complete steps of policy evaluation and improvement starting from an arbitrary initial policy. The goal is to converge to the optimal policy and action-value function.
@@ -918,7 +862,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Evaluation in Monte Carlo
 Background context: Policy evaluation involves updating the value function to better approximate the true value function for the current policy. It is done through many episodes, with the action-value function improving asymptotically.
@@ -945,7 +888,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Improvement in Monte Carlo
 Background context: Policy improvement makes the policy greedy with respect to the current value function. This is done by choosing actions that maximize the action-value function.
@@ -981,7 +923,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Iteration Convergence
 Background context: The policy iteration method ensures convergence to the optimal policy and action-value function under specific assumptions. These assumptions include observing an infinite number of episodes with exploring starts.
@@ -1008,7 +949,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exploring Starts and Policy Evaluation
 Background context: The provided text discusses the challenges of performing policy evaluation with an infinite number of episodes, especially within the context of Monte Carlo methods. This is a common issue as both classical Dynamic Programming (DP) methods like iterative policy evaluation and Monte Carlo methods converge asymptotically to the true value function.
@@ -1020,7 +960,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Removing the Infinite Episodes Assumption
 Background context: The text states that removing the assumption of needing an infinite number of episodes can be challenging but feasible. Both DP methods and Monte Carlo methods converge asymptotically to the true value function, meaning they require a large number of iterations to reach convergence.
@@ -1032,7 +971,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Approximating q⇡k
 Background context: The text mentions that one approach is to hold firm to the idea of approximating \(q_\pi(k)\) (the action-value function under a given policy \(\pi\)) in each policy evaluation. This involves making measurements and assumptions about the bounds on errors and taking enough steps during each evaluation to make these error bounds small.
@@ -1044,7 +982,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Value Iteration
 Background context: The text describes a second approach where policy evaluation does not complete before moving on to policy improvement, leading to an iterative process. One extreme form of this idea is value iteration, which performs only one iteration of policy evaluation between each step of policy improvement.
@@ -1056,7 +993,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo ES (Exploring Starts)
 Background context: The provided pseudocode outlines a Monte Carlo control algorithm called Monte Carlo ES that addresses the problem by alternating between policy evaluation and policy improvement on an episode-by-episode basis. It uses observed returns from episodes to improve policies.
@@ -1068,7 +1004,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pseudocode for Monte Carlo ES
 Background context: The provided pseudocode demonstrates a practical implementation of the Monte Carlo ES algorithm with exploring starts.
@@ -1097,7 +1032,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Incremental Update of Mean and Count
 
@@ -1136,7 +1070,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo ES Convergence Properties
 
@@ -1157,7 +1090,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application of Monte Carlo ES in Blackjack
 

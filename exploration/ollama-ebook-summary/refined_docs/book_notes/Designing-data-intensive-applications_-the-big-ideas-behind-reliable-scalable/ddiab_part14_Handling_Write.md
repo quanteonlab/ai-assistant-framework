@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Handling Write Conflicts
 
 ---
 
-**Rating: 8/10**
 
 #### Collaborative Editing as a Database Replication Problem
 Background context: Collaborative editing can be viewed through the lens of database replication. In this model, changes made by one user are applied to their local replica and then asynchronously replicated to the server and other users who might also be editing the same document.
@@ -62,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conflict Resolution Mechanisms in Multi-Leader Replication
 Background context: In a multi-leader replication setup, ensuring data consistency across different replicas becomes challenging due to concurrent writes. Each leader may apply updates independently without a defined order, leading to potential conflicts.
@@ -123,7 +120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conflict Resolution in Distributed Databases
 
@@ -202,7 +198,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Multi-Leader Replication vs. Star Schema
@@ -305,7 +300,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Leaderless Replication Overview
 Background context: In leaderless replication, there is no single node (leader) that handles all write requests. Instead, any replica can accept writes directly from clients. This contrasts with traditional leader-based replication where one node enforces the order of writes.

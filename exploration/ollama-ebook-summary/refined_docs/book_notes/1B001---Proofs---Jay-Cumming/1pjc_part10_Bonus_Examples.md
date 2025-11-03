@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 1B001---Proofs---Jay-Cumming_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Bonus Examples
 
 ---
 
-**Rating: 8/10**
 
 #### Proof by Contradiction - Validity and Power
 Proofs by contradiction are a valid method of proving mathematical statements. They help us understand why something is true, not just that it is. However, they can sometimes hinder understanding because we focus on what isn't rather than what is.
@@ -114,7 +112,6 @@ x??
 
 ---
 
-**Rating: 10/10**
 
 #### The Halting Problem
 
@@ -220,7 +217,6 @@ public class DebuggingExample {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Proof by Minimal Counterexample
 Background context explaining the concept. The proof by minimal counterexample is a variant of reductio ad absurdum where, assuming the negation of a theorem for every natural number, one assumes there exists at least one counterexample and then considers the smallest such counterexample to derive a contradiction.
@@ -279,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Existence of Division Algorithm Proof
 Background context: The proof for the division algorithm, as mentioned, asserts that for any integers \(a\) and \(m > 0\), there exist unique integers \(q\) and \(r\) such that \(a = mq + r\) where \(0 \leq r < m\). This is a fundamental concept in number theory.
@@ -407,7 +402,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Direct Proof vs. Proof by Contradiction
 Direct proof is a straightforward method where you start from the given premise and logically deduce the conclusion, whereas a proof by contradiction involves assuming the negation of what you want to prove and showing that this leads to an absurdity or contradiction.
@@ -512,7 +506,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Contrapositive, Contra-diction, Converse, and Counterexample
 
@@ -677,7 +670,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functions: Definition and Basic Properties
 Functions are a fundamental concept in mathematics, often introduced early on but deeply explored throughout one's mathematical education. A function \( f \) from set \( A \) to set \( B \), denoted as \( f : A \to B \), assigns each element \( x \in A \) exactly one value \( y = f(x) \in B \). The domain of the function is the set \( A \), the codomain is \( B \), and the range (or image) is the subset of \( B \) that includes all values attained by \( f \).

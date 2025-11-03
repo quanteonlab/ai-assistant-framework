@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Turning up the transistor radio. Picture It Decoding Electrical Circuit Codes
 
 ---
 
-**Rating: 8/10**
 
 #### Semiconductor Diodes
 Background context: Semiconductors, like diodes made from materials such as silicon or germanium, play a critical role in rectification by allowing current to pass in only one direction.
@@ -22,7 +20,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transformer
 Background context: A transformer uses two coils of wire linked by an iron core to step up (increase) or step down (decrease) AC voltages without making a direct electrical connection between the coils.
@@ -34,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ground
 Background context: A ground provides a connection to the Earth, which helps ensure safety by providing a path for excess current.
@@ -46,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Capacitors: Storage and Filtering
 Capacitors store electric charge and are crucial for timing circuits where it takes time for a capacitor to fill with charge. They also play a role in filter circuits, passing AC signals while blocking DC.
@@ -58,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Diodes: Directional Current Flow
 Diodes allow electricity to flow only in one direction, acting as an electrical valve. Light-emitting diodes (LEDs) emit light when a current passes through them. Zener diodes can conduct current in the opposite direction after reaching a certain voltage threshold.
@@ -70,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transformer Components and Functionality
 Background context: Transformers are devices that change voltage levels. They consist of multiple windings (coils) around a core. The primary winding drives the secondary winding via a magnetic field.
@@ -82,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rectification Process
 Background context: Rectification converts alternating current (AC) to direct current (DC). This process is crucial for certain electronic circuits that require DC.
@@ -94,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Capacitors in Circuits
 Background context: Capacitors store electric charge. They are used in timing circuits because they take time to become charged.
@@ -106,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Grounding an Electrical Circuit
 Background context: Grounding provides a safe place to discharge electricity. It helps prevent electric shock.
@@ -119,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Equations and Problem Solving
 Background context explaining that this question involves solving a linear equation where one variable (number) is given in terms of another number plus a constant.

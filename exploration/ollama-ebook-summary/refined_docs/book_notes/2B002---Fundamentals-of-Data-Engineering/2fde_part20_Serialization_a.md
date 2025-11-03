@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Serialization and Deserialization
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Data Ingestion Overview
@@ -77,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -241,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Ingestion
 Asynchronous ingestion allows for individual events to be processed independently, much like a microservices architecture. Events can become available in storage immediately after being ingested, providing flexibility and handling spikes in event rates gracefully.
@@ -371,7 +367,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Reliability and Durability in Data Ingestion
@@ -459,7 +454,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Shapes in Various Formats
 Background context: Different types of data have distinct shapes that are important for understanding and processing. These include tabular, semistructured JSON, unstructured text, images, uncompressed audio, and more. The size and schema (if applicable) are key factors to consider during the ingestion phase.
@@ -550,7 +544,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Data Ingestion and Schema Changes
 Background context: The passage discusses how data engineers need to understand application internals, particularly source schemas, during the ingestion process. It highlights that schema changes are frequent but often beyond the control of data engineers, who must implement strategies for detecting and handling these changes.
@@ -622,7 +615,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Push Versus Pull Patterns

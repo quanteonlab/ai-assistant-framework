@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 6.3.6 Using a mocking package. 6.3.7 Creating a mock object
 
 ---
 
-**Rating: 8/10**
 
 #### Test-Driven Development (TDD)
 Background context: TDD is a software development approach where tests are written before the actual implementation of a feature. The goal is to ensure that each new piece of code meets its intended purpose through automated testing, promoting robust and reliable code.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Mocking Packages
 Background context: Mocking packages are used to create fake or mock objects to simulate real dependencies during testing, especially when dealing with complex classes. This helps isolate units of code and ensure tests are more reliable.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Verifying Method Calls
 Background context: Verifying that a method was called during test execution is crucial for ensuring that the code behaves as expected. Moq provides a way to track such calls.
@@ -46,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing with Mock Data
 Background context: When using mock data in tests, it's important to compare actual and expected results accurately. Moq provides a way to return predefined data and compare it effectively.
@@ -66,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Testing Overview
 Background context: This section explains how unit tests are typically organized and executed within an application. It highlights the benefits of using a dedicated project for unit testing, as well as the importance of isolating components to ensure that each part can be tested independently.
@@ -78,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Arrange/Act/Assert Pattern
 Background context: The Arrange/Act/Assert pattern is a common structure used in writing unit tests to ensure that each part of the system under test (SUT) is isolated and tested independently. This pattern helps in organizing the test by preparing the test environment, executing the code, and validating the results.
@@ -110,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ASP.NET Core Application Overview
 Background context: This chapter introduces the creation of a more realistic e-commerce application called SportsStore. The application will include features such as an online product catalog, shopping cart, checkout process, and administrative area for managing products.
@@ -122,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Testing in SportsStore Application
 Background context: Throughout the development of the SportsStore application, various unit tests will be created to isolate and test different components of the ASP.NET Core framework. These tests help ensure that each part of the system works as expected without relying on external dependencies.
@@ -134,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Minimal ASP.NET Core Project Setup
 Background context: The setup involves creating a minimal ASP.NET Core project with specific template and framework configurations using dotnet CLI commands. These commands ensure that the project is set up correctly for development.
@@ -154,7 +144,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Unit Test Project
 Background context: The process of creating a unit test project for an application involves setting up a new project using a testing framework like xUnit. This ensures that individual units or components of the code can be tested independently.
@@ -179,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preparing Services and Request Pipeline
 Background context: The `Program.cs` file is where you configure services and middleware for an ASP.NET Core application. This includes setting up dependency injection, routing, and serving static files.
@@ -206,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring the Razor View Engine
 Background context: The Razor view engine processes .cshtml files to generate HTML responses. Proper configuration of this engine ensures that views are easier to create and maintain.

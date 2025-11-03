@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7F001-Systems-Performance-Modeling-Issn-4----Adarsh-Anand-editor-Mangey_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4. Increasing failure rate software reliability models for agile projects a comparative study
 
 ---
 
-**Rating: 8/10**
 
 #### Software Reliability Engineering Overview
 Background context: The study focuses on developing new software reliability models for agile projects, particularly those that can handle increasing failure rates and incorporate reliability growth. Traditional models like non-homogeneous Poisson processes have limitations when applied early in development cycles.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Polya Stochastic Process and Urn Model
 Background context: The proposed model draws inspiration from the Polya stochastic process, which models a contagion phenomenon through a pure birth process. This process describes how failures can spread over time.
@@ -45,7 +42,6 @@ Engineers can implement proactive strategies by identifying high-risk areas in c
 
 ---
 
-**Rating: 8/10**
 
 #### New Pure Birth Process Proposal
 Background context: The authors propose a new pure birth process with a failure rate function that depends both on time and the number of previously detected failures. This approach aims to better capture real-world scenarios where failure rates increase over time.
@@ -70,7 +66,6 @@ The key difference is that the new model considers past failure data in its calc
 
 ---
 
-**Rating: 8/10**
 
 #### Model Validation
 Background context: The authors validate their proposed model by applying it to several datasets and comparing its performance against non-homogeneous Poisson process models. This helps establish the practical utility of their approach.
@@ -85,7 +80,6 @@ By comparing with non-homogeneous Poisson process models, they aim to show super
 
 ---
 
-**Rating: 8/10**
 
 #### Contagious Software Reliability Model
 Background context: A contagious software reliability model takes into account how failures can spread among different parts of a software system due to common causes such as shared code or modules. This model is essential for understanding and predicting failure patterns in the early stages of development.
@@ -95,7 +89,6 @@ A contagious software reliability model considers the interactions between progr
 
 ---
 
-**Rating: 8/10**
 
 #### Need for Improved Stochastic Models
 Background context: Existing stochastic models developed decades ago need improvement to account for recent advances in software development engineering and modern testing practices such as Agile methodologies. Current models often lack detailed human factors, process monitoring, and performability evaluations.
@@ -105,7 +98,6 @@ Existing models need improvement because they fail to incorporate the complexiti
 
 ---
 
-**Rating: 8/10**
 
 #### Novel Approach to Contagion Models
 Background context: The proposed approach aims to enhance existing models by incorporating more general functional forms of failure rates and introducing the concept of contagion as a key factor in software reliability.
@@ -115,7 +107,6 @@ The main objective of the novel approach is to develop more sophisticated softwa
 
 ---
 
-**Rating: 8/10**
 
 #### Simulation of Software Failures
 Background context: The simulation of software failures is crucial for assessing software reliability. This can be achieved through various methods, including pure birth processes based on exponential waiting times.
@@ -138,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Polya Stochastic Process
 Background context: The Polya stochastic process is a pure birth process often used to model increasing failure rates. However, it has limitations when modeling mean number of failures over time.
@@ -160,7 +150,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Contagious Model for Software Reliability
 Background context: A contagious model is proposed as a modification to the Polya process. This new model aims to account for nonlinear time-dependent mean numbers of failures, making it more flexible and applicable to various scenarios.
@@ -184,7 +173,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pure Birth Process Overview
 Background context: The text introduces a pure birth process, which is used to model scenarios where entities are born and do not die. This process can be applied to reliability analysis in software projects, particularly focusing on increasing failure rates.
@@ -238,7 +226,6 @@ The new proposed failure rate differs in its mean number of failures, as it acco
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Number of Failures
 
@@ -261,7 +248,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional MTBF and Asymptotic Behavior
 
@@ -287,7 +273,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asymptotic Behavior for Large Values of \( s \)
 
@@ -306,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reliability Growth Factor and Inverse Proportionality
 
@@ -328,7 +312,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Failure Dataset Analysis
 
@@ -346,7 +329,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Non-Homogeneous Poisson Process (NHPP) and MTBF Calculation
 
@@ -367,7 +349,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parameter Estimation for NHPP Models
 
@@ -389,7 +370,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bathtub Curve Analogy
 
@@ -408,7 +388,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Estimation for NTDS
 Background context: The study analyzed four models—Goel-Okumoto, Delayed S-shaped, Logistic, and an in-house model—to fit the NTDS dataset. Each model provided estimated parameters which were used to analyze reliability growth and failure predictions.
@@ -420,7 +399,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Failure Rate Curves of Models
 Background context: The models' failure rate curves were compared to understand their fit with the NTDS dataset. Each model had unique characteristics in predicting reliability growth and overall failure rates.
@@ -432,7 +410,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fit Metrics for Models
 Background context: The text compares fit metrics for four models—Goel-Okumoto, Delayed S-shaped Logistic, and the author's proposed model—for the NTDS project. These include PRR (Predictive Reliability Rate) values under least-squares (LS) and maximum likelihood (ML) estimations.
@@ -443,7 +420,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real Data vs. Model Fit
 Background context: The text compares real data with various models (Goel-Okumoto, Delayed S-shaped Logistic, and the author's proposed model) to assess their fit. It notes that the Goel-Okumoto model follows almost perfectly the constant failure rate stage but is not accurate at predicting project start behavior.
@@ -454,7 +430,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parameter Estimation Methods
 Background context: The text mentions two parameter estimation methods—least-squares (LS) and maximum likelihood (ML). It states that neither method showed significant differences between LS and ML estimations.
@@ -465,7 +440,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Comparison Summary
 Background context: The text compares four models (Goel-Okumoto, Delayed S-shaped Logistic, and the author's proposed model) based on AIC values and fit metrics like PRR over time. It notes that the Delayed S-shaped model performed well overall, while the logistic and proposed models showed better performance.
@@ -478,7 +452,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agile #1 Project Analysis
 Background context: The analysis of the Agile #1 project dataset involves fitting reliability growth models (Goel-Okumoto, Delayed S-Shaped, Logistic, and a custom model) and comparing their performance using fit metrics such as PRR and AIC.
@@ -496,7 +469,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Delayed S-shaped Model Estimation
 
@@ -509,7 +481,6 @@ The Delayed S-shaped, logistic, and our proposed model were used for parameter e
 
 ---
 
-**Rating: 8/10**
 
 #### Proposed Model's Performance
 
@@ -522,7 +493,6 @@ The proposed model outperformed both the Delayed S-shaped and logistic models, p
 
 ---
 
-**Rating: 8/10**
 
 #### MTBF Curves Analysis
 
@@ -535,7 +505,6 @@ Figure 4.7 illustrates the mean value curves for the second agile project, showi
 
 ---
 
-**Rating: 8/10**
 
 #### Conclusion on the Proposed Model
 
@@ -548,7 +517,6 @@ The report concludes that the proposed software reliability model is effective, 
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison of Our Model with Other Models
 Background context: The text discusses how a particular software reliability model was compared against other models like Yamada's delayed S-shaped, logistic, and Goel-Okumoto models. These comparisons were made during different stages of failure rates (increasing and decreasing) in modern projects developed under agile methodologies.
@@ -560,7 +528,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Goel-Okumoto Model
 Background context: The Goel-Okumoto model was used to compare with our new model, specifically during decreasing failure rates.
@@ -572,7 +539,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### PRR (Predictive Ratio Risk)
 Background context: The text mentions that the predictive ratio risk was used to compare the new model against others.
@@ -584,7 +550,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Feller's An Introduction to Probability Theory
 Background context: The text references a book by William Feller, which provides foundational knowledge on probability theory.
@@ -596,7 +561,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Software Reliability Growth Model by Barraza
 Background context: The research includes contributions from N.R. Barraza, who proposed new models for software reliability growth.
@@ -608,7 +572,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Yamada's Software Reliability Modeling Book
 Background context: The text references a book on software reliability modeling written by S. Yamada.
@@ -620,7 +583,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rotella et al. on Predicting Field Reliability
 Background context: The text references work by Rotella et al., who focus on predicting field reliability.
@@ -632,7 +594,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Rate-based Queueing Simulation Model for Debugging Activities
@@ -659,7 +620,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### S-shaped Reliability Growth Modeling for Software Error Detection
 Background context: This concept introduces the S-shaped reliability growth model, originally proposed by Yamada et al. (1983), to represent how software error detection evolves over time in a non-linear fashion.
@@ -679,7 +639,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Software Reliability Modeling in Dynamic Development Environments
 Background context: Barraza (2019) discusses software reliability models that are particularly relevant to dynamic development environments, such as those used by agile teams. These models aim to capture the variability and rapid changes typical of agile projects.
@@ -702,7 +661,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### System Software Reliability
 Background context: Pham (2010) provides an overview of system software reliability, which focuses on the stability and correctness of operating systems and other critical components. The book covers various statistical methods for assessing and improving reliability.
@@ -729,7 +687,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Estimating Parameters of Non-homogeneous Poisson-Process Model
 Background context: Hossain and Dahiya (1993) discuss methods for estimating parameters in non-homogeneous Poisson-process models, which are used to model software reliability. These models account for varying rates of defect detection over time.
@@ -749,7 +706,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Effort Prediction Models
 Background context: The chapter explores several effort prediction models based on jump diffusion and Wiener processes to understand external factors affecting OSS projects. These models are crucial for assessing the quality and reliability of OSS developed under open-source projects.
@@ -760,7 +716,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Jump Diffusion Process Model
 Background context: The jump diffusion process model is discussed as one of the methods used to control the OSS maintenance effort during operation. This model incorporates both continuous and discrete jumps to better capture real-world scenarios where sudden changes can occur.
@@ -771,7 +726,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parameter Estimation Methods
 Background context: The chapter uses maximum likelihood, deep learning, and genetic algorithms as parameter estimation methods for stochastic differential equation and jump diffusion process models. These methods are essential to accurately estimate the parameters of the proposed effort prediction models.
@@ -782,7 +736,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Examples with Fault Big Data
 Background context: Several numerical examples based on actual fault big data from OSS projects are presented to illustrate the application of effort prediction models. These examples help validate the proposed models and demonstrate their practical utility.
@@ -793,7 +746,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application in OSS Projects
 Background context: The results of parameter estimation based on AI are presented using actual fault big data from OSS projects. These applications show how the proposed models can be used to predict software effort for quality and reliability assessment.
@@ -806,7 +758,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OSS Maintenance Effort Model Using Classical Software Reliability Modelling
 Background context: This concept explains how the maintenance effort of an Open Source Software (OSS) is modeled using classical software reliability modeling techniques. The model considers the maintenance effort over time and introduces Brownian motion to account for irregular fluctuations.
@@ -826,7 +777,6 @@ The equation models how Z(t), which could represent cumulative maintenance effor
 
 ---
 
-**Rating: 8/10**
 
 #### Stochastic Differential Equation (SDE) with Brownian Motion
 Background context: To account for irregular continuous fluctuations in the maintenance effort, a stochastic differential equation (SDE) is introduced. This SDE includes a term representing Brownian motion.
@@ -846,7 +796,6 @@ This SDE models how the maintenance effort varies over time with both determinis
 
 ---
 
-**Rating: 8/10**
 
 #### NHPP for OSS Effort Expenditure Function
 Background context: The model assumes that \( \beta_t \), the mean value function, is derived from non-homogeneous Poisson process (NHPP) models. This provides a way to predict and understand the maintenance effort expenditure over time.
@@ -870,7 +819,6 @@ These equations model how the maintenance effort increases over time as latent f
 
 ---
 
-**Rating: 8/10**
 
 #### Estimation Methods for Jump Parameters
 Background context: Several estimation methods have been proposed for jump parameters in jump diffusion process models, but there is no effective method available yet. The text suggests using deep learning to estimate these parameters due to their complexity.
@@ -881,7 +829,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Examples for Effort Expenditure Prediction
 Background context: The text provides examples using Apache HTTP Server as an OSS model to predict operation effort expenditures. Two prediction models are compared: exponential and S-shaped effort prediction models.
@@ -892,7 +839,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison of Prediction Models
 Background context: The text compares two models for predicting OSS operation effort expenditures: an exponential effort prediction model and an S-shaped effort prediction model. The performance is evaluated based on actual data sets.
@@ -905,7 +851,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exponential Effort Prediction Model Using GA
 Background context: The text mentions the use of Genetic Algorithms (GA) to estimate cumulative OSS operation effort expenditures based on exponential effort prediction models. Figures 5.2 and 5.4 illustrate these predictions.
@@ -929,7 +874,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Streams and IoT
 Background context: This section discusses data streams, particularly those originating from Internet-of-Things (IoT) devices. The heterogeneity of these devices introduces complexity in processing real-time data. Heterogeneity includes differences in device types, proprietary data formats, and variations in precision and accuracy.
@@ -940,7 +884,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Heterogeneity in IoT Devices
 Background context: The heterogeneity of IoT devices introduces challenges and opportunities. It allows for non-proprietary solutions but also increases complexity due to differences in device types, data formats, and precision/accuracy.
@@ -969,7 +912,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real-Time Data Processing and System Performance
 Background context: The text emphasizes the importance of real-time data processing in system performance, especially considering adaptability and dynamism. Real-time systems must efficiently handle incoming data to maintain optimal performance.
@@ -1001,7 +943,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modeling Data Streams for IoT Devices
 Background context: The text describes a modeling strategy to understand and process data streams from IoT devices. This involves distinguishing between cooperative (multiple metrics in one stream) and exclusive (each metric in its own stream) data streams.
@@ -1040,7 +981,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real-Time Decision-Making
 
@@ -1053,7 +993,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges in Real-Time Decision-Making
 
@@ -1073,7 +1012,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Intuition vs. Data-Driven Decision-Making
 
@@ -1113,7 +1051,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Processing Overhead Analysis
 Background context: The analysis focuses on the potential overhead associated with translating one type of stream into another. This includes understanding how this translation impacts system performance, resource usage, and overall efficiency in processing different types of data streams.
@@ -1124,7 +1061,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Literature Systematic Mapping on Data Streams
 Background context: Section 6.3 discusses the systematic mapping of literature related to data stream modeling, aiming to synthesize existing approaches and identify gaps or new directions for research in this area.
@@ -1135,7 +1071,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Processing Strategy Framework
 Background context: Section 6.5 outlines the necessity of having a framework throughout the measurement process to ensure effective handling of different types of data streams, their processing strategies, and associated requirements.
@@ -1146,7 +1081,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modeling Exclusive and Cooperative Streams
 Background context: Sections 6.6 describe how exclusive and cooperative data streams are modeled, providing a structured approach to understanding different behaviors and processing needs of diverse devices.
@@ -1157,7 +1091,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Basic Operations Over Streams
 Background context: Section 6.7 outlines some fundamental operations over exclusive and cooperative data sources, such as filtering, aggregation, and transformation, which are crucial for effective stream processing.
@@ -1168,7 +1101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Processing Overhead Analysis Details
 Background context: Section 6.8 analyzes the specific overhead associated with translating between cooperative and exclusive data streams, focusing on performance impacts like latency, computational load, and memory usage.
@@ -1180,7 +1112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### User Activity and System Information ([15])
 Background context: [15] focuses on integrating streams that are derived from user activity along with system information. This integration allows for a more comprehensive analysis of the data.
@@ -1198,7 +1129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load-Aware Shedding Algorithm ([16])
 Background context: [16] introduces a load-aware shedding algorithm for data stream systems. This algorithm helps manage the load by selectively discarding or delaying parts of the data stream.
@@ -1218,7 +1148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real-Time Data Streams with Timestamps ([17])
 Background context: [17] defines data streams as unbounded sequences of real-time data, where each tuple has attributes and a special timestamp attribute.
@@ -1246,7 +1175,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GeoStreams Concept
 GeoStreams are described as data streams containing both temporal and spatial data. They are presented as a permanently updating source of information coming from active origins, emphasizing push mechanisms related to data generators.
@@ -1278,7 +1206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hash Table for Detecting Duplicates in Data Streams
 Background context: The introduction of a hash table data structure to detect duplicates in data streams is an interesting approach. This method requires understanding the organization of each element's symbol to determine if it is duplicated or not, aligning with Chandy’s proposal which also deals with symbols.
@@ -1301,7 +1228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Impact on Processing Based on Data Organization (RQ2)
 Background context: The second research question aims to explore how the organization of data in a stream impacts the processing. This includes understanding whether certain structures lead to more efficient or effective processing methods.
@@ -1332,7 +1258,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Online Active Learning
 Online active learning is a paradigm introduced by Lughofer, focusing on improving practical usability of data stream modeling methods. It involves continuously updating models with new incoming data without the need to retrain from scratch.
@@ -1354,7 +1279,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Streams as Sequences of Data
 Data streams are sequences of data that can be sampled in various ways using different techniques. This concept is crucial for understanding how to handle real-time and dynamic data.
@@ -1386,7 +1310,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dataflow Anomalies Detection Overview
 Background context: The paper discusses detecting anomalies in dataflows within business processes, focusing on different modeling approaches. The authors mention that big data challenges require sophisticated methods to handle varying data streams and their processing.
@@ -1404,7 +1327,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Apache Spark and Flink Data Processing Models
 Background context: The text explains how platforms like Apache Spark and Flink handle data processing using variations of graph models, particularly through concepts like RDD or DataSet. It emphasizes the bidimensional nature and immutability of these data structures.
@@ -1433,7 +1355,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Pipeline Modeling with Restrictions
 Background context: Dubrulle et al. [31] propose a model for data pipelines that includes restrictions between producers and consumers using graph theory. This involves representing producers and consumers as edges in the graph.
@@ -1471,7 +1392,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Stream Modeling
 Background context: Masulli et al. [33] emphasize the importance of developing tools for modeling data streams due to their significance in managing large volumes of data over time. They suggest clustering nonstationary streams and tracking time-evolving data streams as important perspectives.
@@ -1483,7 +1403,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Flow Modeling with Petri Nets
 Background context: Chadli et al. [36] introduced different approaches for dealing with data flow associated with business processes, including clustering nonstationary streams and tracking time-evolving data streams. They use a data-flow matrix to study challenges and employ Petri nets for anomaly detection.
@@ -1495,7 +1414,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Flow Model with Tokens
 Background context: Mackie et al. [37] proposed a dataflow model using tokens to represent data traveling through a network, where each token represents an atomic sequence of data being communicated between computation components.
@@ -1507,7 +1425,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Measurement and Quantification
 Background context: The concept of measurement involves quantifying objects or subjects using attributes that help characterize them. It includes understanding why we need to measure and compare results with known patterns.
@@ -1522,7 +1439,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparative Strategy for Evolution Measurement
 In today's complex and rapidly changing global economy, it is crucial to have a measurement process that can adapt to real-time data processing. The goal is to ensure comparability over time despite dynamic environments with diverse market conditions.
@@ -1561,7 +1477,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Metrics and Their Components
 Metrics are quantified by specific methods and devices. Each metric has an associated values domain, scale, unit, method to obtain the quantitative value.
@@ -1601,7 +1516,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Measure and Indicator Definition
 Background context: In measurement, a measure is a numerical value obtained from a metric. This concept is crucial as it allows for comparing measures across different methods or scenarios. An indicator consumes one or more measures and incorporates decision criteria based on an entity's state and current scenario to provide contextual interpretation.
@@ -1612,7 +1526,6 @@ A measure is a numerical value obtained from a metric, while an indicator uses o
 
 ---
 
-**Rating: 8/10**
 
 #### Decision-Maker Role
 Background context: The decision-maker interprets indicators, leveraging past experiences and expert knowledge to provide actionable recommendations or courses of action. This involves reviewing interpretations and applying judgment to ensure the relevance and utility of the data in specific scenarios.
@@ -1623,7 +1536,6 @@ The decision-maker interprets the provided indicator values, considering past ex
 
 ---
 
-**Rating: 8/10**
 
 #### Framework for Measurement Processes
 Background context: A measurement framework is essential for defining terms, concepts, and relationships necessary for implementing a consistent, repeatable, extensible, and consistent measurement process. This framework can be formalized through ontologies or other methods, ensuring that the process is understandable, communicable, and sharable.
@@ -1634,7 +1546,6 @@ A measurement framework defines all terms, concepts, and relationships needed to
 
 ---
 
-**Rating: 8/10**
 
 #### Data Stream Modeling Impact
 Background context: The point in the processing chain where data starts being modified, summarized, or transformed significantly impacts the overall data collection strategy. This decision is critical for ensuring that the collected data remains relevant and useful throughout the process.
@@ -1645,7 +1556,6 @@ Choosing a processing strategy at different points in the chain can dramatically
 
 ---
 
-**Rating: 8/10**
 
 #### Near Data Processing vs Centralized Processing
 
@@ -1672,7 +1582,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advantages of Near Data Processing
 
@@ -1697,7 +1606,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Disadvantages of Near Data Processing
 
@@ -1723,7 +1631,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unification of Data Processing
 Background context: Centralizing data processing in a single unit provides a global perspective but increases complexity. All collected heterogeneous sensor data is aggregated at one point, requiring interpretation and conversion to make sense of the data. The central processing unit then handles all this data, which can lead to higher global processing times.
@@ -1747,7 +1654,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Data Processing Approach
 Background context: In a distributed approach, application logic is spread across the components of the processing architecture. This reduces the transmitted data volume by processing part of it near the source and increases the autonomy of each data collector. It also introduces challenges in coordinating the collection strategy to avoid risks like isolation.
@@ -1769,7 +1675,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed vs Centralized Data Collection
 
@@ -1824,7 +1729,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Processing Overhead in Distributed Systems
 
@@ -1871,7 +1775,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Query Processing in Distributed Systems
 
@@ -1924,7 +1827,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Stream Representation and Interpretation
 Background context: The text discusses the representation of data streams, noting that they can be seen as unbounded sequences. It also emphasizes the importance of understanding both the origin and meaning of data to ensure accurate measurement processes.
@@ -1963,7 +1865,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Measurement Framework and Data Stream Interpretation
 Background context: The text stresses the importance of aligning components like sensors, collectors, and measurement frameworks to ensure consistent and reliable data interpretation. It mentions that understanding the characteristics being monitored and their relationships is crucial for effective monitoring.
@@ -2005,7 +1906,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuous Data Stream Updates
 Background context: The idea behind continuous updates is that the data stream provides an ongoing representation of the situation related to an event, rather than a single sporadic piece of data. This ensures real-time monitoring and dynamic updating as conditions change.
@@ -2016,7 +1916,6 @@ It means the data stream continuously provides updated information about an even
 
 ---
 
-**Rating: 8/10**
 
 #### Data Rate Variability
 Background context: The rhythm or rate at which data arrives can vary significantly and unpredictably. There is no predefined periodicity to the data rates, making it challenging to anticipate how often new data will be generated.
@@ -2027,7 +1926,6 @@ It means that the rate at which data is generated can change over time without a
 
 ---
 
-**Rating: 8/10**
 
 #### Temporal Data Stream
 Background context explaining that depending on the nature of the data model (temporal data streams are time-based), different types of data streams can have varying properties regarding order and processing. The concept of order is crucial in some projects to determine if a person has fever, for example.
@@ -2038,7 +1936,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Arriving Time Concept
 Background context explaining that arriving time is the instant in which data arrives at the processor unit, independent of when it was generated. The arriving time depends on the first contact with the datum by the processing unit and is independent of the monitored attribute or kind of value received.
@@ -2049,7 +1946,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Landmark Window Definition
 Landmark windows are defined based on events, where one point (initial or final) is updated upon the occurrence of an event. The content of the window can restart with each new event, making its size variable.
@@ -2087,7 +1983,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Positional Data Streams
 Background context explaining positional data streams and their relation to timestamps, as described in the text. Positional data streams correspond with single values organized based on arrival time, obtaining the notion of time from when the processing unit reads the data.
@@ -2100,7 +1995,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Stream Windows
 Background context explaining the concept of windows in the context of data streams, whether physical or logical, updating their content either in a sliding manner or by landmarks. The text emphasizes that data within a window is eventually discarded to make room for new data, maintaining an updated state.
@@ -2113,7 +2007,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Timestamp Consistency in Collectors
 Background context: The text emphasizes the importance of timestamp consistency provided by collectors linked to sensors. Each collector must ensure that all values within a data stream correspond to the same timestamp.
@@ -2126,7 +2019,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sliding Windows for Positional and Temporal Cooperative Data Streams
 Background context: The provided text discusses sliding windows used to process data streams, specifically focusing on positional and temporal cooperative data streams. These are specified using equations (6.27) and (6.28), while landmark windows are described by equations (6.29) and (6.30).
@@ -2153,7 +2045,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logical and Temporal Windows
 
@@ -2186,7 +2077,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Operations Over Data Streams
 
@@ -2213,7 +2103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Positional and Temporal Aspects Separation
 
@@ -2227,7 +2116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Temporal Data Streams
 Background context: Temporal data streams have a temporal dimension, meaning they report data over time. The challenge in union and intersection operations is managing the temporality of these streams.
@@ -2244,7 +2132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Combining Temporal and Positional Streams
 Background context: When combining streams with different structures (temporal and positional), the result often includes mixed timestamps. The new stream assumes arriving timestamps as generation timestamps.
@@ -2263,7 +2150,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Difference Operation
 
@@ -2287,7 +2173,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### streamCE Library
 
@@ -2310,7 +2195,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Processing Time Analysis
 Background context: The processing times were continuously monitored over 10 minutes. Peaks observed in the graph are due to the garbage collector's activity.
@@ -2322,7 +2206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Garbage Collector Impact on Processing Time
 Background context: The garbage collector's activity caused significant jumps in the unitary processing time, as evidenced by peaks in Figure 6.9.
@@ -2334,7 +2217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuous Processing Time Analysis
 Background context: The simulation ran for 10 minutes, with continuous monitoring of the processing times.
@@ -2346,7 +2228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Garbage Collector Peaks and Processing Rate
 Background context: The graph showed significant peaks related to garbage collector activity, which impacted the unitary processing time.
@@ -2360,7 +2241,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Impact of Garbage Collector Peaks
 Background context explaining that peaks observed in the figure are related to the additional consumed time by the garbage collector.
@@ -2372,7 +2252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data-Driven Decision-Making
 Background context explaining that data-driven decision-making has emerged as a real alternative for supporting decisions in various habitats.
@@ -2384,7 +2263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Centered and Distributed Processing Strategies
 Background context explaining how different processing strategies can impact monitoring systems. The text discusses synthetic descriptions, schematizations, comparisons, and environments suitable for each approach.
@@ -2396,7 +2274,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simulation Results on Common Hardware
 The simulation results show processing rates for operations like projection and union.
@@ -2408,7 +2285,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Machine Learning Algorithm Implementations in MPI, Spark, and Flink
 Background context: The article discusses the implementations of machine learning algorithms using Message Passing Interface (MPI), Apache Spark, and Apache Flink. It highlights the differences in how these frameworks handle data parallelism and pipeline parallelism.
@@ -2442,7 +2318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CSDF a: A Model for Exploiting Trade-Offs
 Background context: The paper presents CSDF (Computational State Data Flow) as a model to exploit the trade-offs between data and pipeline parallelism. It aims at balancing these aspects based on specific application requirements.
@@ -2482,7 +2357,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Flow Model with Frequency Arithmetic
 Background context: This paper introduces a data flow model that incorporates frequency arithmetic to better handle real-time and streaming data. The approach focuses on improving the accuracy of data processing by considering temporal aspects such as the frequency at which data is generated or consumed.
@@ -2525,7 +2399,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finding Classification Zone Violations with Anonymized Message Flow Analysis
 Background context: The paper discusses a method for identifying violations of classification zones in data streams using anonymized message flow analysis. This technique can help detect security breaches or anomalous behavior by monitoring and analyzing the patterns of data exchange.
@@ -2563,7 +2436,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tracking Time-Evolving Data Streams for Short-Term Traffic Forecasting
 Background context: The paper focuses on tracking time-evolving data streams to forecast short-term traffic conditions. It uses dynamic clustering techniques to adapt to changing traffic patterns.

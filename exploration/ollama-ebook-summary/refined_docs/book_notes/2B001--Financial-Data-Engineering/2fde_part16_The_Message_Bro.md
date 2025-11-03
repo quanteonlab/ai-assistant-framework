@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Message Broker Model
 
 ---
 
-**Rating: 8/10**
 
 #### Benchmarking Specialized Databases for High-Frequency Data
 Background context: The provided reference discusses a comparative study on databases suitable for high-frequency data, specifically focusing on specialized databases and their performance. This study is crucial for applications such as algorithmic trading where rapid access to market data is essential.
@@ -80,7 +78,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Topic Modeling
 Background context explaining how topics are used as containers for messages, similar to tables in SQL databases. Topics are defined based on business requirements and can have specific optimizations depending on their use case.
@@ -172,7 +169,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Serialization and Deserialization Process
 Explanation: This section discusses how data objects are transformed into a byte stream (serialization) for efficient transmission or storage, and then reverted back to their original form (deserialization).
@@ -320,7 +316,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message Brokers in Financial Applications
 Message brokers are essential tools in financial systems, especially for managing high-volume data and ensuring real-time processing. They support various operations such as payments, transaction approvals, fraud analysis, and client notifications.
@@ -392,7 +387,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relational Databases vs. Graph Databases
 Background context: Traditional relational databases are designed under the assumption of independence between records, making them highly efficient for querying sets of rows and performing operations that involve structured data. However, when dealing with interconnected or relationship-centric data, these databases often struggle due to their inherent structure.
@@ -475,7 +469,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Graph-Based Fraud Detection
 
@@ -562,7 +555,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Warehouse Model Overview
 The need for an enterprise-wide system to store, access, analyze, and report on structured data is common in data-driven organizations. This concept led to the development of data warehousing as a solution since the 1970s. Bill Inmon and Ralph Kimball defined it differently but both emphasized consistency, integration, nonvolatility, and time-variant characteristics.

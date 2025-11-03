@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 46)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 14.3 Thread affinity with OpenMP
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Thread Affinity Overview
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example for Vector Addition
 Here’s a code snippet from the provided example, demonstrating the use of OpenMP directives and thread placement reporting.
@@ -78,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Automating Exploration with Multiple Threads
 This section explains how to automate the exploration of different OpenMP settings for varying numbers of threads, which can help in optimizing performance by adjusting thread placement and binding based on system characteristics.
@@ -109,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Script: `calc_avg_stddev()`
 The script contains a function named `calc_avg_stddev()` which calculates the average runtime of multiple trials and their standard deviation. This is essential to understand how different settings affect program performance.
@@ -139,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Executing Performance Tests
 The script sets the environment variables `OMP_NUM_THREADS`, `OMP_PLACES`, and `OMP_PROC_BIND` to test different thread counts, core placements, and binding settings. It then runs performance tests with these configurations and compares their speedup against a single-threaded baseline.
@@ -182,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread and Core Placement Strategies
 Background context: The graph in Figure 14.4 illustrates how varying thread and core placement strategies can affect parallel scaling for an `omp_proc_bind=spread` setting. The text suggests that spreading processes across cores (Threads spread, Cores spread) is generally more beneficial than keeping them close together.
@@ -196,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Gain from Custom Placement
 Background context: Recent versions of OpenMPI provide tools for custom placement, which can lead to performance gains. These gains depend on how well the scheduler optimizes placement.
@@ -210,7 +202,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Core Affinity and Memory Allocation
 Core affinity in MPI applications can significantly impact performance by influencing how processes are mapped to physical cores. If the application's memory requirements exceed the available RAM on a single node, it may fail during memory allocation.
@@ -227,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### NUMA Region and Socket Affinity
 NUMA regions are typically aligned with the sockets of a node. Setting affinity to a socket can optimize data locality, which is important for performance in distributed computing.
@@ -244,7 +234,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Alternative Placement Strategy
 Another approach is to use `--npersocket` instead of `--npernode`. This can help in scenarios where processes need to communicate more frequently with their nearest neighbors, as adjacent ranks might be placed on the same NUMA domain.
@@ -263,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Binding MPI Processes to Cores
 Background context: In this scenario, we are exploring how to control where MPI processes run on a multi-core system by binding them to specific hardware resources. The `--bind-to` option in `mpirun` allows us to specify the granularity of process placement and affinity. For example, using `--bind-to core`, we bind each process to a specific core.
@@ -277,7 +265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### NUMA Binding and Placement
 Background context: Non-Uniform Memory Access (NUMA) refers to a system where memory access times depend on the location of the data relative to the processing element. Binding processes to specific NUMA nodes can help reduce inter-process communication latency.

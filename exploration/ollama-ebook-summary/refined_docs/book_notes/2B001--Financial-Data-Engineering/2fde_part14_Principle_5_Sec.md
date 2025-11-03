@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Principle 5 Security. Primary Versus Secondary
 
 ---
 
-**Rating: 8/10**
 
 #### Data Encryption at Rest
 Background context: Ensuring strong database security is crucial, and data encryption at rest protects sensitive information such as customer account details stored within databases. This method involves encoding data so that it can only be read or accessed if a specific decryption key is provided.
@@ -132,7 +130,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OLTP vs. OLAP DSSs
 Background context: In Data Storage Systems (DSS), operational processes are often handled by Online Transaction Processing (OLTP) systems, which prioritize reliability and transactional guarantees. Analytical processes, on the other hand, are managed by Online Analytical Processing (OLAP) systems, which focus on speed and advanced querying capabilities.
@@ -180,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Polyglot Persistence Approach
 Polyglot persistence is a strategy that allows an application to use multiple database technologies for different components of the application. This approach leverages the strengths of each data storage technology, providing better performance and flexibility.
@@ -286,7 +282,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Landing Zone Structure
 In the context of a data lake, the landing zone is where raw files are stored without any modification. This structure helps organize data by time and format to ensure clarity and ease of access.
@@ -398,7 +393,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Privacy Considerations in Data Lakes
 Background context: When dealing with data lakes, privacy is a crucial concern. Sensitive user information such as personally identifiable information (PII) must be handled carefully to ensure compliance with privacy rules. This often involves anonymizing sensitive data and separating storage for sensitive versus non-sensitive data.
@@ -463,7 +457,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cloud Migration and Data Lakes
 Background context: Many financial institutions are moving to cloud environments, and data lake solutions like AWS S3 are becoming popular due to their simplicity and flexibility. These platforms can store any type or size of data efficiently.

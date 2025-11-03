@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Character Encoding and Text Strings
 
@@ -193,7 +191,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unicode Character Retrieval and Slicing Issues
 Background context explaining the challenges associated with retrieving characters by position and slicing Unicode text. These issues are exacerbated as emojis become more popular, leading to problems like mojibake.
@@ -328,7 +325,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Classes Overview
 Background context explaining data classes. Data classes are simple classes that serve primarily as data containers, containing fields without additional methods or logic. They are useful for reducing boilerplate code and making code more readable.

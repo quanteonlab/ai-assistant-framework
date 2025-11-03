@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 49)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 15.4 Automatic restarts for long-running jobs
 
 ---
 
-**Rating: 8/10**
 
 #### Signal Handling in Application Code
 Background context: The application code demonstrates how to handle signals sent by the batch system and how to perform checkpointing. Signals are used to notify the application that its time is nearly up, allowing it to save its state before termination.
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Submission of Restart Script
 Background context: The batch script resubmits itself recursively until the job is completed. This process ensures that long-running jobs can continue even if they are interrupted.
@@ -72,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Submitting Jobs with Dependencies
 Background context: The script uses the `--dependency=afterok` option to ensure that a job starts only after another specific job has completed successfully. This is crucial for managing workflow dependencies, especially in scenarios where jobs need to be sequential or conditional.
@@ -88,7 +84,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Options for Batch Jobs
 Slurm offers several dependency options that control when a job can begin execution based on the status of other jobs.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Data Engineering Skills and Activities. Data Maturity and the Data Engineer
 
 ---
 
-**Rating: 8/10**
 
 #### Data Engineering Skill Set
 
@@ -116,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Data Team's Isolation
@@ -223,7 +220,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Communicate Effectively with Nontechnical and Technical People
 Communication is a critical skill for data engineers. You need to be able to establish rapport and trust with people across different departments, including technical and non-technical stakeholders. Understanding organizational hierarchies, who reports to whom, how people interact, and the existence of silos will help you navigate these relationships more effectively.
@@ -305,7 +301,6 @@ The main stages include:
 5. **Serving**: Making transformed data available for consumption by applications or end-users.
 x??
 
-**Rating: 8/10**
 
 ---
 
@@ -398,7 +393,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SQL and Data Engineering
 
@@ -579,7 +573,6 @@ Consider the task of creating a dashboard.
 These examples illustrate the different approaches internal and external-facing data engineers might take to achieve their respective goals.
 x??
 
-**Rating: 8/10**
 
 #### Data Scientists Working Exclusively on a Single Workstation
 Data scientists who work solely on one workstation often have to downsample data, which complicates the preparation and potentially degrades model quality. This approach also poses challenges for deploying locally developed code and environments into production systems, making workflows less efficient due to manual interventions.

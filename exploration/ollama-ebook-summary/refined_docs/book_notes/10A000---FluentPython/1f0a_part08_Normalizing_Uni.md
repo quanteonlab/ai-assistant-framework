@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Normalizing Unicode for Reliable Comparisons
 
 ---
 
-**Rating: 8/10**
 
 #### Unicode and Character Encodings
 Background context: Understanding character encodings is crucial for handling text data, especially when working with non-ASCII characters. On Windows, different code pages like 'cp850' or 'cp1252' are commonly used. These support only ASCII with 127 additional characters that vary between encodings.
@@ -74,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unicode Normalization and Search Challenges
 Background context: When dealing with Unicode, normalization is crucial because different representations of the same character can exist. For example, the VULGAR FRACTION ONE HALF could be represented as "1⁄2" or "1/2", but NFKC normalization turns it into "1\u0035\/\u0032". This means that searching for "1/2" will not find this normalized sequence.
@@ -149,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### PyUCA Overview
 PyUCA is a Python implementation of the Unicode Collation Algorithm (UCA), which helps in sorting strings according to their linguistic rules, ensuring that characters are sorted correctly based on locale-specific rules. This is particularly important for languages with complex character compositions and ordering requirements.

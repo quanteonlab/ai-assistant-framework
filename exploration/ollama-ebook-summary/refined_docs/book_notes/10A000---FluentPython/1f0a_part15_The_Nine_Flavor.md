@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Nine Flavors of Callable Objects
 
 ---
 
-**Rating: 8/10**
 
 #### Lambda Functions and Anonymous Functions
 Lambda functions are a way to create small, anonymous functions within Python expressions. The `lambda` keyword is used for this purpose. However, lambda functions have limitations compared to regular functions defined with `def`. They can only contain pure expressions and cannot include statements like `while`, `try`, or assignments.
@@ -100,7 +98,6 @@ print(callable_instance(2))  # Output: 10
 ```
 x??
 
-**Rating: 8/10**
 
 #### Callable Objects and Instance Methods
 Callable objects are Python objects that can be called like functions. To make an instance callable, one needs to define a `__call__` method within its class definition. This allows instances of the class to behave as if they were actual functions.
@@ -318,7 +315,6 @@ print(expensive_function(4))  # No "Computing" message, uses cached value
 
 :x??
 
-**Rating: 8/10**
 
 #### Positional and Keyword Parameters in Python Functions
 Python functions offer a flexible parameter handling mechanism that allows for both positional and keyword arguments. This flexibility is achieved through the use of *args and **kwargs, which unpack iterables and mappings into separate arguments when calling a function.

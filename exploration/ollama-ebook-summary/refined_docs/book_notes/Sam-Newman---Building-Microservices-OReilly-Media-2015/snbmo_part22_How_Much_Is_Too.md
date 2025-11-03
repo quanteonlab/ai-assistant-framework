@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** How Much Is Too Much
 
 ---
 
-**Rating: 8/10**
 
 #### Microservices and Developer Mindset
 Background context explaining how microservices can change a developer’s mindset from thinking about code in isolation to considering network boundaries and operational concerns. It also discusses the challenges of moving developers from monolithic systems to microservices.
@@ -20,7 +18,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### People Problem
 Background context citing Gerry Weinberg’s quote that it's always a people problem. The text discusses how microservices can create a more complex operational environment for developers.
@@ -36,7 +33,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Aligning Service Ownership to Colocated Teams
 Background context: The text discusses aligning service ownership to colocated teams and bounded contexts within the organization. This alignment is crucial for avoiding tension points in microservice architectures.
@@ -57,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges at Scale
 Background context: The text highlights the challenges that arise as microservice architectures grow beyond simple examples. It mentions handling multiple service failures and managing a large number of services.
@@ -86,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conway's Law and Service Design
 Background context: The text introduces Conway’s law, which suggests that the structure of an organization influences the design of its systems. It emphasizes aligning service ownership with organizational boundaries to avoid tension points.
@@ -109,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Embracing Failure at Scale
 Background context: In distributed systems, failure is an inevitable aspect that needs to be planned for and managed. Understanding this principle helps organizations make better trade-offs and design more resilient systems.
@@ -135,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-offs in Resilience and Cost
 Background context: When building resilient systems, it's important to balance the cost of implementing high-reliability solutions against the potential benefits. Sometimes, simpler designs can be more effective if failure is accounted for.
@@ -164,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cross-Functional Requirements in Distributed Systems
 Background context: Understanding cross-functional requirements helps in designing systems that meet durability, availability, throughput, and latency goals. However, the level of redundancy and fault tolerance required can vary based on the specific application.
@@ -197,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Blue/Green Deployments
@@ -221,7 +211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### User Requirements and Tolerances
 Understanding user requirements is crucial for designing a system that meets their needs. You need to identify how much downtime or latency users can tolerate, which depends on the nature of the service (e.g., ecommerce vs. corporate intranet).
@@ -256,7 +245,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Response Time/Latency
 Response times are critical for user satisfaction, especially on services with high traffic. Measuring these at different levels of concurrency helps understand how the system performs under various loads.
@@ -296,7 +284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Availability
 Availability refers to the uptime of a service. It is important for critical services where downtime could have significant consequences.
@@ -329,7 +316,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Degrading Functionality
 Background context: The ability to safely degrade functionality is crucial when building a resilient system with microservices. Understanding which parts of the functionality are critical and knowing how to handle failures gracefully can significantly improve system resilience.
@@ -343,7 +329,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Architectural Safety Measures
 Background context: To ensure that failures do not cause widespread issues, architectural safety measures such as bulkheads, timeouts, and circuit breakers are crucial. These measures help prevent a single point of failure from cascading into the entire system.
@@ -357,7 +342,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Strangler Application Example
 Background context: The example describes a scenario where an online classified ads website was strangling older legacy applications by gradually replacing them with new microservices. This process can introduce vulnerabilities if not managed carefully.
@@ -371,7 +355,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bulkheads
 Background context: Bulkheads are a method of isolating parts of your application so that failures in one part do not affect others. This is particularly useful when dealing with external dependencies that may be unreliable.
@@ -385,7 +368,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Circuit Breaker
 Background context: A circuit breaker is a pattern used to handle faults by breaking the circuit when a certain threshold of failures is reached. This prevents further requests from being sent to unhealthy services, allowing them to recover.
@@ -401,7 +383,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Antifragile Organization Concept
 Background context explaining that organizations like Netflix and Google have embraced a philosophy of building systems resilient to failure by regularly causing it. This is based on Nassim Taleb’s concept of antifragility, where systems benefit from disorder and failure.
@@ -412,7 +393,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Game Days for Simulating Failures
 Background context on how some organizations, including Google during my time there, simulate server failure through game days where teams practice reacting to such events. This is a form of preparing the organization for real-world scenarios.
@@ -423,7 +403,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Chaos Monkey: A Simian Army Tool
 Background context on Netflix's use of tools like Chaos Monkey, which randomly turns off machines during certain hours, ensuring developers are prepared for failures in production environments.
@@ -434,7 +413,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Latency Monkey: Simulating Network Delays
 Background context on how the Latency Monkey simulates slow network connectivity between machines, adding another layer of complexity and unpredictability to test system resilience.
@@ -445,7 +423,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preparing for Distributed System Failures
 Background context on how distributed systems, due to their nature, are inherently more vulnerable to failure compared to centralized ones. The importance of preparing for such failures is highlighted by companies like Netflix and Google.

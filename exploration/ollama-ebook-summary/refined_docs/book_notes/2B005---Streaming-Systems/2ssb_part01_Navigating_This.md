@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Navigating This Book
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Streaming 101
@@ -198,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-varying Relations
 Time-varying relations represent a critical concept in understanding streaming systems. They are essentially dynamic datasets that change over time, capturing temporal aspects of data. This idea is foundational to grasping how streaming processes work and contrasts with traditional batch processing methods.
@@ -286,7 +283,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terminology: Streaming vs. Bounded/Unbounded Data
 

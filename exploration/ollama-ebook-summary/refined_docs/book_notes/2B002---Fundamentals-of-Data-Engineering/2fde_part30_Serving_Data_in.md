@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 30)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Serving Data in Notebooks
 
 ---
 
-**Rating: 8/10**
 
 #### Federated Queries
 Background context: Federated queries allow users to perform analysis on data stored across multiple sources without physically moving the data. This is particularly useful when you need to blend data from various systems for ad hoc analyses or when source data needs tight control.
@@ -60,7 +58,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Large Datasets Beyond Local Memory
 Background context: When working with datasets that exceed the available memory on a local machine, data scientists face significant limitations. This can lead to performance bottlenecks and computational inefficiencies. To address this issue, various scalable options are available.
@@ -126,7 +123,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Health and Downtime
 Data health is crucial for ensuring that data is available, accurate, and up-to-date. It includes monitoring for data downtime to minimize disruptions. A common metric used here might be Mean Time Between Failures (MTBF) or Mean Time To Repair (MTTR).

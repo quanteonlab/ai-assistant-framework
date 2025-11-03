@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 27)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.9 Oracle  Diffuser equals Grovers Search Algorithm
 
 ---
 
-**Rating: 8/10**
 
 #### Oracle + Diffuser = Grover's Search Algorithm
 Background context: The goal is to search through a database of \(N = 2^n\) elements using quantum computing. This involves initializing the system, applying an oracle, and then using a diffuser (amplifier) to increase the amplitude of the target state.
@@ -54,7 +52,6 @@ Each flashcard should cover a single concept or step from the provided text. The
 
 ---
 
-**Rating: 8/10**
 
 #### Period Finding in Shor's Algorithm
 Period finding is essential for determining the period \( T \) of a function \( f(x) = r^x \mod N \).
@@ -68,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Entangled Quantum States Calculation
 Background context: This section explains how to calculate entangled quantum states using numpy and eigenvalue decomposition. The Hamiltonian for entangled quantum states is calculated, along with its eigenvalues and eigenvectors.
@@ -263,7 +259,6 @@ These flashcards cover key concepts from the provided text in a structured forma
 
 ---
 
-**Rating: 8/10**
 
 #### Amod15 Function
 This function defines the quantum circuit for modular exponentiation \( a^{2^k} \mod 15 \). The circuits are parameterized based on the value of \( a \) and used in Shor’s algorithm.

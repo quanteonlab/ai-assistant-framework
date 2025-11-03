@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 2.3 Binary classification. 2.3.2 Building and training a binary classification model
 
 ---
 
-**Rating: 8/10**
 
 #### Building and Training a Binary Classification Model
 Background context: This section demonstrates how to build and train a binary classification model using PyTorch. The goal is to differentiate between t-shirts (label 0) and ankle boots (label 9). We use a neural network with multiple layers, including linear transformations and activation functions.
@@ -138,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loss Backpropagation and Optimization Steps
 Background context: During training, we compute gradients to update model parameters using backpropagation. The process involves computing the loss, performing backward propagation, and then updating the weights.
@@ -170,7 +167,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Accuracy Calculation for Predictions
 Background context: After training, we use the trained model to make predictions on a test set and compare these predictions with actual labels to calculate accuracy. The prediction from the binary classification model is a probability value between 0 and 1, which needs to be converted into a binary label (0 or 1) using `torch.where()`.
@@ -198,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Iterating Through Test Set to Calculate Accuracy
 Background context: The test set is used to evaluate how well the model generalizes. We calculate the overall accuracy by iterating through each batch, making predictions, and comparing them with actual labels.
@@ -235,7 +230,6 @@ This set of flashcards covers key concepts from the provided text, focusing on t
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Validation Set and Early Stopping Mechanism
 
@@ -256,7 +250,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### DataLoader for Batch Processing
 
@@ -294,7 +287,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Early Stopping Mechanism
 
@@ -336,7 +328,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loss Function Selection for Multicategory Classification
 
@@ -356,7 +347,6 @@ loss_function = nn.CrossEntropyLoss()
 
 ---
 
-**Rating: 8/10**
 
 #### Output Layer Differences Between Binary and Multicategory Classification
 
@@ -386,7 +376,6 @@ model = nn.Sequential(
 
 ---
 
-**Rating: 8/10**
 
 #### Training and Validation Process
 
@@ -427,7 +416,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Validation Function
 
@@ -463,7 +451,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Early Stopping Mechanism
 
@@ -490,7 +477,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Predicting Test Set Labels
 
@@ -524,7 +510,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Trained Model for Prediction
 Background context: After training a deep learning model, we often need to use it to make predictions on new data. The prediction process involves feeding input data through the trained model and interpreting the output.
@@ -558,7 +543,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Calculating Accuracy on Test Dataset
 Background context: After making predictions using a trained model, you might want to evaluate its performance by calculating the accuracy of these predictions. This involves comparing predicted labels with actual labels and computing the proportion of correct predictions.

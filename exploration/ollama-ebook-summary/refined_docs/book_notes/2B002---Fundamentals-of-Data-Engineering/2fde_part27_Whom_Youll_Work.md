@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 27)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Whom Youll Work With. Downstream Stakeholders
 
 ---
 
-**Rating: 8/10**
 
 #### Window Frequency and Latency Considerations
 Window frequency refers to how often a batch of data is processed, while latency denotes the delay between when an event occurs and when it is included in the analysis. For Black Friday sales metrics, micro-batches are suitable if updates occur every few minutes. However, for critical operations like DDoS detection, true streaming with lower latency may be necessary.
@@ -58,7 +56,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Model and Transformations
 Data models are crucial for defining how data is structured within a system. A well-designed data model ensures that data can be queried efficiently and used effectively by downstream stakeholders like analysts, data scientists, ML engineers, and business users. Transformations involve manipulating raw data to fit specific needs, which often requires writing SQL queries or using ETL tools.
@@ -191,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Robust Data Ingestion and Storage Systems
 Background context: When transforming data, robust ingestion and storage systems are crucial. The choice of these systems directly impacts the ability to perform reliable queries and transformations. Poor choices can lead to system failures under high workload.

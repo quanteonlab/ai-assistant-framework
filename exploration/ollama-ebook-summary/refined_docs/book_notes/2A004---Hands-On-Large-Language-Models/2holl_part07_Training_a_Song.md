@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Training a Song Embedding Model
 
 ---
 
-**Rating: 8/10**
 
 #### Loading Dataset for Playlist Analysis
 Background context: The dataset contains information about song playlists and individual songs, including metadata like titles and artists. This data is necessary to build a recommendation system based on similar song embeddings.
@@ -94,7 +92,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tokenizers and Their Role in LLMs
 Tokenizers play a crucial role in processing input to Language Models (LLMs). They transform raw textual input into token IDs, which are integers that represent individual tokens. The choice of tokenizer can significantly impact how information is preserved or altered during this transformation process.
@@ -189,7 +186,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loading the Language Model and Pipeline
 Background context: To understand how a Transformer language model works, we first need to load the necessary components. This involves loading the tokenizer and the model itself, as well as creating a pipeline for generating text.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Problem Definition
 
 ---
 
-**Rating: 8/10**
 
 #### At-Least-Once Processing
 Background context explaining at-least-once processing. This is necessary to guarantee that a record will be processed even if a worker fails during the execution of a pipeline. However, it can lead to non-idempotent side effects being executed more than once for a given record.
@@ -105,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shuffle Mechanism in Dataflow
 Dataflow uses RPCs (Remote Procedure Calls) for its shuffle process. RPC failures can occur due to network interruptions, timeouts, or server crashes. To ensure that every record is shuffled exactly once, Dataflow implements upstream backup: the sender retries failed RPCs until it receives positive acknowledgment of receipt.
@@ -224,7 +221,6 @@ public class DataflowExample {
 ```
 x??
 
-**Rating: 8/10**
 
 ---
 #### Deterministic vs. Nondeterministic Processing
@@ -301,7 +297,6 @@ PTransform<PInput, POutput> deduplicate = p.apply("Deduplicate", GroupByKey.crea
 ```
 x??
 
-**Rating: 8/10**
 
 #### Bloom Filters for Duplicate Detection
 Background context: Bloom filters are compact data structures that allow quick set-membership checks. They can return false positives but never false negatives, making them perfect for scenarios where avoiding unnecessary lookups is crucial. The primary use case here is detecting duplicate records in a data pipeline.
@@ -440,7 +435,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Garbage Collection Strategy for Record IDs
 
@@ -529,7 +523,6 @@ x??
 
 These flashcards cover the key concepts in the provided text, ensuring a clear understanding of garbage collection strategies, handling network remnants, deterministic sources, and exactly-once processing.
 
-**Rating: 8/10**
 
 #### Nondeterministic Sources and Pub/Sub
 Background context explaining how Dataflow handles nondeterministic sources like Google Cloud Pub/Sub. Multiple subscribers can pull from a Pub/Sub topic, but which subscribers receive a given message is unpredictable. When processing fails, Pub/Sub will redeliver messages to different workers in potentially a different order.

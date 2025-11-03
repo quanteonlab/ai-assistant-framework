@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4.2 Three Cs of cache misses Compulsory capacity conflict
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Array of Structures (SoA)
@@ -32,7 +30,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Varying Vector Length
 Background context explaining how varying the variable `V` can match hardware vector lengths or GPU work group sizes. The text suggests that by changing `V`, we can create portable data abstractions for different hardware configurations.
@@ -50,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Cache Miss Cost
@@ -62,7 +58,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Line Concept
 Explanation of cache lines and their typical size, along with how they are loaded based on memory addresses.
@@ -73,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Direct-Mapped Cache
 Explanation of direct-mapped caches and their limitations with array mapping.
@@ -84,7 +78,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### N-Way Set Associative Cache
 Explanation of set associative caches and their benefits over direct-mapped caches.
@@ -95,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prefetching Data
 Explanation of prefetching and its implementation either in hardware or by the compiler.
@@ -106,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eviction Process
 Explanation of eviction, capacity misses, and conflict misses.
@@ -117,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Miss Categorization: Compulsory Misses
 Explanation of compulsory misses and their necessity in data access.
@@ -128,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Miss Categorization: Capacity Misses
 Explanation of capacity misses and their relation to limited cache size.
@@ -139,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Miss Categorization: Conflict Misses
 Explanation of conflict misses and their impact on performance due to simultaneous access to same location.
@@ -152,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Misses and Stencil Kernel Analysis
 Background context: This concept discusses cache behavior, memory access patterns, and performance analysis through a stencil kernel example. The focus is on understanding how cache misses affect computation efficiency.
@@ -186,7 +173,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Arithmetic Intensity Calculation
 Background context: This concept introduces how to calculate arithmetic intensity, which is crucial for understanding and optimizing performance in stencil kernels.
@@ -217,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Roofline Plot Analysis
 Background context: This concept discusses the roofline model as applied to the stencil kernel, providing insights into performance limits and bottlenecks.
@@ -269,7 +254,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cold Cache Performance Model
 Background context: In a performance model, a cold cache refers to a scenario where there is no relevant data from previous operations stored in memory. The distance between the large dot (representing the kernel's performance with a cold cache) and the compulsory limit gives an idea of how effective caching is for this particular kernel.
@@ -279,7 +263,6 @@ This distance represents the effectiveness of the cache. A smaller distance indi
 
 ---
 
-**Rating: 8/10**
 
 #### Serial Kernel vs Parallelism Potential
 Background context: The text discusses how serial kernels can be improved through parallelism. It mentions that while there's only a 15% increase in cache capacity and conflict loads over compulsory limits, adding parallelism could potentially improve performance by nearly an order of magnitude.
@@ -289,7 +272,6 @@ Parallel kernels have greater potential to improve performance compared to their
 
 ---
 
-**Rating: 8/10**
 
 #### Spatial Locality vs Temporal Locality
 Background context: Locality is crucial for optimizing memory access. Spatial locality refers to data that is close together in memory and is often accessed concurrently, while temporal locality involves reusing recently accessed data.
@@ -299,7 +281,6 @@ Spatial locality refers to the tendency of accessing nearby elements in memory, 
 
 ---
 
-**Rating: 8/10**
 
 #### Coherency in Cache Updates
 Background context: Coherency is necessary when multiple processors need to access shared data in a cache, ensuring that updates are synchronized across processors.
@@ -309,7 +290,6 @@ Coherency ensures that all processors have the latest version of the data by syn
 
 ---
 
-**Rating: 8/10**
 
 #### Compressed Sparse Data Structures
 Background context: The text highlights the use of compressed sparse matrices (like CSR) in computational science, noting significant memory savings and faster run times.
@@ -319,7 +299,6 @@ Compressed sparse data structures like CSR offer substantial memory savings (gre
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Compressed Sparse Row (CSR) Format
 Background context: The CSR format stores a sparse matrix efficiently using three arrays—values, row pointers, and column indices.
@@ -350,7 +329,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loop Overhead Costs
 Loop overhead costs (Lc) are assigned to account for the branching and control of small loops. The loop penalty (Lp) can be estimated by dividing the loop cost by the processor frequency.
@@ -375,7 +353,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sparse Case Overview
 Background context: The study focuses on data structures for physics simulations, specifically addressing the sparse case where many materials are present in a computational mesh but each cell contains only one or few materials. Cell 7 is an example of such a scenario with four materials.
@@ -496,7 +473,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Full Matrix Data Representation: Performance Considerations
 Background context explaining the performance implications of using full matrix storage. Given that many entries are zero, a compressed sparse storage scheme could save significant memory.

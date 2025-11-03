@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Subtest 5 Mathematics Knowledge Answers
 
 ---
 
-**Rating: 8/10**
 
 #### Solving Equations
 Background context: To solve equations, isolate the variable by performing inverse operations. For linear equations like \(ax + b = c\), subtract or add constants and divide or multiply by coefficients to get the variable alone.
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quadratic Equations
 Background context: A quadratic equation is in the form \(ax^2 + bx + c = 0\). Solving these involves factoring or using the quadratic formula. For this example, we can factor out a common term and solve for \(x\).
@@ -39,7 +36,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Right Triangles
 Background context: A right triangle has one angle that measures exactly 90 degrees. The Pythagorean theorem states that in a right triangle, the square of the length of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the lengths of the other two sides.
@@ -52,7 +48,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exponentiation
 Background context: When multiplying a number by itself multiple times, exponents are used. For example, \(a^3 = a \times a \times a\). Exponential properties allow simplification of expressions involving powers.
@@ -66,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Power Calculation: Current and Voltage
 Background context: Power (P) in an electrical system can be calculated using the formula P = I * V, where I is current and V is voltage.
@@ -78,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Calculating Areas and Volumes of Geometric Shapes
 Background context: This involves using geometric formulas to calculate areas and volumes. The key is recognizing the correct formula based on the shape given.

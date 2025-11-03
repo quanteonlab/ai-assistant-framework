@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 29)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Ways to Serve Data for Analytics and ML
 
 ---
 
-**Rating: 8/10**
 
 #### Real-Time Data Streaming and Quality Control
 Background context: In a manufacturing plant, real-time data from various machines is being streamed for quality control. Cameras record video on the production line, and technicians monitor these streams to identify defects manually. To improve efficiency, a cloud machine vision tool can be used to automatically detect defects.
@@ -155,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Difference Between Batch and Streaming Data for ML Models
 
@@ -308,7 +305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Streaming Systems
 Background context explaining streaming systems and their importance in serving analytics. Emphasize that emitted metrics are different from traditional queries, and operational analytics databases play a growing role by combining aspects of OLAP databases with stream-processing systems.

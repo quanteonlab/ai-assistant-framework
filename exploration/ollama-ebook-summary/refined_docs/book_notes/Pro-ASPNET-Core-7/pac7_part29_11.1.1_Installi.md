@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 29)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11.1.1 Installing the Identity package for Entity Framework Core. 11.1.3 Defining the connection string
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Installing the Entity Framework Core Package for ASP.NET Core Identity
@@ -24,7 +22,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating the Context Class for ASP.NET Core Identity
 Background context: The text explains how to create a database context class (`AppIdentityDbContext`) that serves as a bridge between the database and the Identity model objects provided by ASP.NET Core. This involves deriving from `IdentityDbContext` and specifying the user type.
@@ -55,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defining a Connection String in `appsettings.json`
 Background context: The connection string is essential for connecting to the database. In ASP.NET Core, this configuration is stored in the `appsettings.json` file, which allows for easy management of settings like database connections.
@@ -90,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring Identity Services
 Background context: ASP.NET Core Identity provides authentication and authorization services out of the box. It needs to be properly configured in the application’s entry point (`Program.cs`) to work effectively.
@@ -140,7 +135,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring Middleware for Authentication and Authorization
 Background context: After setting up services, you need to configure middleware in `Program.cs` to enable authentication and authorization functionalities.
@@ -196,7 +190,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating and Applying Database Migrations
 Background context: Entity Framework Core (EF Core) is a popular ORM tool that allows for database schema management through migrations. In this scenario, we are using EF Core to manage the migration of the Identity database used by ASP.NET Core Identity.
@@ -211,7 +204,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Applying the Database Migrations
 Background context: After creating a migration, applying it updates the database schema according to the specified changes.
@@ -226,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Seeding the Identity Database in Program.cs
 Background context: The `Program.cs` file is where the application's entry point and configuration are defined. Seeding data here ensures that necessary administrative accounts or other initial data exist when the application starts.

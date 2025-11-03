@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 43)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Thermal Soaring
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of Thermal Soaring Policies
 Background context: The text describes how thermal soaring, inspired by bird behavior, was modeled using reinforcement learning to understand and optimize glider flight in turbulent air currents. This approach aimed to improve understanding of environmental cues used by birds and enhance technology for autonomous gliders.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Learning and Turbulent Air Modeling
 Background context: The simulation involved modeling the complex interaction between a glider and turbulent air using sophisticated partial differential equations for air flow. Small random perturbations were introduced to generate realistic thermal updrafts and turbulence.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SARSA Algorithm Overview
 The SARSA (State-Action-Reward-State-Action) algorithm is a reinforcement learning method used to find an optimal policy for decision-making processes. It updates the Q-function, which estimates the expected future rewards given a current state and action taken. The update rule for the Q-function is as follows:
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Q-Function Update Rule
 The Q-function is updated using the following formula at each step:
@@ -58,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Gradient Calculation
 The policy is encoded as:
@@ -74,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State and Action Spaces
 The state space includes sensorimotor cues like height ascended, while the action space consists of controlling the glider's angle of attack (incremented or decremented in 2.5° steps) and bank angle (ranging from -15° to 15°).
@@ -86,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SARSA Algorithm
 Background context: The excerpt introduces the SARSA algorithm, a model-free reinforcement learning method used in decision-making processes, particularly relevant to modeling animal behavior. The algorithm updates its Q-function based on rewards and learning rates.
@@ -127,7 +119,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Convergence in SARSA
 Background context: The text explains how the policy derived from the SARSA algorithm approaches optimality over time, influenced by a temperature parameter that anneals as training progresses.
@@ -166,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SARSA Algorithm Overview
 The SARSA (State-Action-Reward-State-Action) algorithm is a model-free reinforcement learning method that aims to identify an approximately optimal policy. In contrast to other algorithms, it considers both state and action values, making it useful for problems with continuous and high-dimensional state and action spaces.
@@ -177,7 +167,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sensorimotor Cues and Reward Function for Effective Learning
 In the context of the soaring problem, sensorimotor cues (state space) are crucial because they provide information to the glider about its environment, enabling it to make informed decisions. The reward function is designed to train the glider to ascend quickly, serving as a performance metric.
@@ -188,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Space Discretization
 To handle continuous and high-dimensional state spaces in reinforcement learning problems like soaring, it is necessary to discretize these spaces. This can be achieved using a lookup table representation, where each possible combination of states and actions maps to an expected value or reward.
@@ -217,7 +205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actions and Their Control Parameters
 The glider can control its angle of attack and bank angle to navigate through the environment effectively. By discretizing these parameters into specific steps (2.5° for angle of attack and 5° for bank angle), we can limit the number of possible actions while still allowing for a wide range of movement.
@@ -252,7 +239,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action Definitions for the Agent
 Background context: The authors defined actions for the agent's bank angle and angle of attack. These actions were used in simulations to control the glider's movement within the turbulent environment.
@@ -264,7 +250,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Space Discretization
 Background context: The state space was discretized into three bins for each dimension to simplify the problem and make it more manageable for reinforcement learning.
@@ -276,7 +261,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reward Signal Design
 Background context: Reddy et al. experimented with different reward signals to improve learning outcomes in their reinforcement learning agent.
@@ -288,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Improved Reward Signal Implementation
 Background context: The authors found that using a linear combination of vertical wind velocity and acceleration on the previous time step resulted in better learning outcomes.
@@ -300,7 +283,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action Selection Logic
 Background context: The selection of actions was based on a softmax distribution normalized by an eligibility trace parameter.
@@ -312,7 +294,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example of Action Selection
 Background context: The following code snippet illustrates how action probabilities are computed in this model.
@@ -364,7 +345,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action Preferences Calculation During Learning
 Background context: As the learning process progresses, the temperature parameter decreases, influencing how actions are selected based on their estimated values. The action with the highest value receives a preference of 1/⌧, while the least preferred gets a preference of 0. Other actions' preferences are scaled between these extremes.
@@ -405,7 +385,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Episode Duration and Convergence of Learning
 Background context: Each learning episode lasted 2.5 minutes in simulated time with a 1-second time step. The learning process effectively converged after a few hundred episodes.
@@ -419,7 +398,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Improvement During Learning
 Background context: As learning progressed, the number of times the glider touched the ground consistently decreased, indicating improved performance.
@@ -431,7 +409,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Feature Selection for Learning
 Background context: The combination of vertical wind acceleration and torques was found to be most effective among available features, providing information about the gradient of vertical wind velocity.
@@ -443,7 +420,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Turbulence Levels and Learning Policies
 Background context: The learning was performed under varying levels of turbulence from weak to strong. Different turbulence levels led to variations in learned policies.
@@ -455,7 +431,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Discount Rate Impact on Performance
 Background context: The discount rate was found to influence performance, with a maximum altitude gain observed at a discount rate of 0.99.
@@ -469,7 +444,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### General Value Functions and Cumulants
 Background context: The chapter discusses extending the concept of value functions to predict arbitrary signals, not just rewards. This is formalized as a general value function (GVF) with a cumulative signal \(C_t\). The GVF formula is given by:
@@ -499,7 +473,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Auxiliary Tasks and Their Role in Reinforcement Learning
 Background context: The text discusses auxiliary tasks as extra tasks that can help an agent learn more effectively. These tasks are not directly related to the main task but may require similar representations or provide easier learning opportunities.
@@ -528,7 +501,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Multiple Predictions for State Estimation
 Background context: The text suggests that multiple predictions can help in constructing state estimates. This is because learning many different predictions might require similar representations, which can then be used effectively for the main task.
@@ -555,7 +527,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Temporal Abstraction via Options
 Background context: The MDP (Markov Decision Process) formalism can be applied to tasks at various time scales, from fine-grained muscle twitches to high-level decisions like choosing a job. This flexibility is crucial for designing agents that can handle different temporal contexts effectively.
@@ -584,7 +555,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Learned Predictions and Reflexive Actions
 Background context: Designers can connect predictions of specific events (e.g., impending collisions) directly to predetermined actions without the need for explicit learning. For example, a self-driving car might be designed with built-in reflexes that trigger when certain predictions exceed a threshold.
@@ -627,7 +597,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Role of Auxiliary Tasks in State Representation
 Background context: The assumption that the state representation is fixed and given to the agent can limit the flexibility and adaptability of learning algorithms. Auxiliary tasks help overcome this limitation by enabling more dynamic and flexible state representations.
@@ -679,7 +648,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of an Option
 Options are a generalized notion of action that allows for actions to be executed over multiple time steps. The agent can either select a low-level action or an extended option, which might execute for many time steps before terminating.
@@ -692,7 +660,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy and Terminating Function
 The policy (⇡) decides which action to take given a state, while the terminating function () determines when an option should terminate.
@@ -705,7 +672,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Low-Level Actions as Special Cases of Options
 Low-level actions can be considered special cases of options where the policy selects a specific action and the termination probability is zero.
@@ -718,7 +684,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Extending Action Space with Options
 Options extend the traditional concept of actions by allowing sequences of actions within a single option, thereby effectively extending the action space.
@@ -731,7 +696,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generalizing Action-Value Function
 The value function for an option (Q) generalizes the conventional action-value function by taking both state and option as input.
@@ -744,7 +708,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hierarchical Policy
 A hierarchical policy selects options rather than actions. When an option is selected, it executes until termination.
@@ -757,7 +720,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Environmental Model Generalization
 The environmental model generalizes from state-transition probabilities and expected immediate reward to include both the probability of executing an option and the expected cumulative reward.
@@ -770,7 +732,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reward Model for Options
 The reward model for options is defined as a sum of discounted future rewards.
@@ -785,7 +746,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State-Transition Model for Options
 The state-transition model for options characterizes the probability of reaching a final state after various numbers of time steps, each discounted differently.
@@ -802,7 +762,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transition Part of an Option Model
 In the context of option models, the transition part describes how options can be used to model complex actions or behaviors. This is particularly useful for hierarchical policies where low-level actions are a special case. The general Bellman equation for state values considering options is provided below.
@@ -816,7 +775,6 @@ In this equation, \( \Delta(s) \) is the set of all possible options that can be
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Equation for Low-Level Actions
 If the set of options \( \Delta(s) \) includes only low-level actions, then the above equation reduces to a form similar to the usual Bellman equation. However, since the option model does not include the explicit transition part, it behaves as if the policy is directly applied.
@@ -830,7 +788,6 @@ This means that when low-level actions are considered, the equation behaves as i
 
 ---
 
-**Rating: 8/10**
 
 #### Planning Algorithms with Options
 Planning algorithms using options can be adapted to work similarly to their counterparts for standard policies. For instance, value iteration with options can be seen as an extension of the usual value iteration algorithm but applied within the context of options.
@@ -844,7 +801,6 @@ This algorithm iteratively improves the value function by considering the best o
 
 ---
 
-**Rating: 8/10**
 
 #### Learning Option Models via Generalized Value Functions (GVFs)
 Learning option models can be achieved through the use of generalized value functions (GVFs). The process involves formulating GVFs to represent both the reward part and the state-transition part of the options.
@@ -863,7 +819,6 @@ This setup ensures that GVFs only update their values when the option transition
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges of Combining Concepts
 Combining all these concepts—transition models, reward functions, and learning methods—into a cohesive system is challenging. Function approximation and other essential components need to be carefully integrated to ensure effective learning and planning.

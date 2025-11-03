@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 35)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Instrumental Conditioning
 
 ---
 
-**Rating: 8/10**
 
 #### Instrumental Conditioning Overview
 In instrumental conditioning experiments, learning depends on the consequences of behavior: the delivery of a reinforcing stimulus is contingent on what the animal does. This contrasts with classical conditioning, where the reinforcing stimulus (US) is delivered independently of the animal's behavior.
@@ -24,7 +22,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Learning in Instrumental Conditioning
 The TD model is an algorithm used in reinforcement learning that helps account for instrumental conditioning. It works by predicting rewards and adjusting these predictions based on experience.
@@ -59,7 +56,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Model Representation of Instrumental Conditioning
 The TD model can represent instrumental conditioning through specific stimulus and response mechanisms. For example, it includes representations that translate unconditioned stimuli (US) predictions into conditioned responses (CR).
@@ -102,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Model in Biological Learning Context
 TD learning not only serves as an algorithm but also provides a basis for models of biological processes like the activity of neurons producing dopamine. Dopamine is involved in reward processing and reinforces learning behaviors.
@@ -134,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Instrumental Conditioning and Reinforcement Learning
 :p How do instrumental conditioning experiments relate to reinforcement learning?
@@ -170,7 +164,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Components of Reinforcement Learning Algorithms
 :p What are the essential features of reinforcement learning algorithms?
@@ -209,7 +202,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Law of Effect and Reinforcement Learning
 
@@ -238,7 +230,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exploration in Reinforcement Learning
 
@@ -266,7 +257,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thorndike’s Observations and Reinforcement Learning
 
@@ -298,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Schedules
 Background context explaining the concept, including the use of reinforcement schedules in experiments like recording cumulative lever presses.
@@ -309,7 +298,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shaping Behavior
 Background context explaining the concept through the example of training a pigeon to bowl by reinforcing successive approximations of the desired behavior.
@@ -320,7 +308,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Learning Principles
 Background context explaining how reinforcement learning principles can model experimental results like those in Skinner’s operant conditioning studies but not fully developed yet.
@@ -331,7 +318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Credit-Assignment Problem for Learning Systems
 Background context: The credit-assignment problem involves distributing credit for success among many decisions that may have been involved in producing an outcome. In RL and behaviorist psychology, this is particularly relevant when rewards or penalties are delayed.
@@ -342,7 +328,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eligibility Traces in Reinforcement Learning Algorithms
 Background context: Eligibility traces are used in RL algorithms to address delayed reinforcement by tracking which states and actions were involved in producing an outcome. They allow the system to remember past activities for a certain period, enabling learning from delayed rewards.
@@ -353,7 +338,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Learning and Eligibility Traces
 Background context: Temporal Difference (TD) learning is a method for reinforcement learning that combines on-policy updates with predictions of future rewards. Eligibility traces extend this by giving more weight to recent actions in the update process.
@@ -364,7 +348,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditioning Experiments and Trace Mechanisms
 Background context: In classical conditioning experiments, trace mechanisms like stimulus traces can help explain how animals learn despite delays between conditioned (CS) and unconditioned stimuli (US). These mechanisms are crucial for bridging temporal gaps in reinforcement learning.
@@ -375,7 +358,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exponential Decay of Traces
 Background context: Hull hypothesized that internal stimuli decay exponentially over time, reaching zero after about 30-40 seconds. This decay rate affects how actions are associated with subsequent rewards or penalties in learning tasks.
@@ -386,7 +368,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Learning Implementation in Code
 Background context: Implementing TD learning with eligibility traces involves updating value functions based on the difference between expected and actual rewards, weighted by eligibility traces.
@@ -427,7 +408,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Critic and Actor in Reinforcement Learning
 Background context: The actor–critic architecture is a type of reinforcement learning algorithm where the critic evaluates the current policy, and the actor updates it. This system closely mirrors how biological systems work, with the TD error acting as a conditioned reinforcement signal.
@@ -451,7 +431,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cognitive Maps and Latent Learning
 Background context: Cognitive maps are mental representations of the environment that allow organisms to plan routes and predict outcomes. They are often used in model-based reinforcement learning algorithms. Latent learning refers to learning that occurs without immediate rewards.
@@ -495,7 +474,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model-Based Reinforcement Learning Algorithms
 Background context: In model-based reinforcement learning, agents use environment models that predict state transitions and rewards. These models help in planning by predicting future states and their associated values.
@@ -533,7 +511,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model-Free vs. Model-Based Reinforcement Learning
 Background context: In reinforcement learning, model-free approaches rely on trial and error without a complete environment model, while model-based approaches learn an internal representation of the environment dynamics.
@@ -544,7 +521,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decision Strategies in Model-Free vs. Model-Based Reinforcement Learning
 Background context: A hypothetical task involving navigating a maze is used to illustrate the differences between model-free and model-based decision strategies. The maze has distinctive goal boxes with associated rewards.
@@ -557,7 +533,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model-Free Strategy Overview
 A model-free strategy relies on stored values for state-action pairs to make decisions. The rat estimates the highest return it can expect from each action taken from every nonterminal state, which are obtained through repeated trials of running a maze.
@@ -569,7 +544,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action Value Estimation in Model-Free Strategy
 In a model-free strategy, action values are estimates of the highest return that can be expected from each action taken from every nonterminal state. These values are refined over many trials until they approximate the optimal returns.
@@ -581,7 +555,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Model-Free Strategy in Maze Navigation
 In the provided example, a rat navigates a maze with specific states (S1, S2, S3) and actions (L, R). When action values have been sufficiently accurate, the rat selects L from state S1 and R from state S2 to achieve a maximum return of 4.
@@ -593,7 +566,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model-Based Strategy Overview
 A model-based strategy involves learning an environment model that consists of state-action-next-state transitions and a reward model associated with goal boxes. The agent uses this model to simulate sequences of actions to find paths yielding the highest return.
@@ -605,7 +577,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Model-Based Strategy in Maze Navigation
 In the provided text, a rat uses a state-transition model and reward model to simulate paths and select the best sequence of actions (L from S1 and R from S2) to achieve the maximum return.
@@ -617,7 +588,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Direct Policy Cache in Model-Free Strategy
 Instead of action values, a different model-free approach might cache direct policy links from states to specific actions, making decisions based on these cached policies.
@@ -629,7 +599,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simulating Sequences in Model-Based Strategy
 A model-based agent uses its environment model to simulate sequences of actions to find paths yielding the highest return. For instance, it might select L from S1 and then R from S2 to achieve a reward of 4.
@@ -641,7 +610,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Planning in Model-Based Strategy
 Planning in the context of model-based strategies involves comparing the predicted returns of simulated paths to decide on the best sequence of actions.
@@ -655,7 +623,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model-Free vs. Model-Based Agents
 Model-free agents rely on direct experience to update their policies and value functions, while model-based agents use a model of the environment for planning actions, allowing them to adapt without personal experience.
@@ -682,7 +649,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Goal-Shifts and Policy Updates
 When a goal's reward changes, model-free agents must gather new experiences in the updated environment to update their policies or value functions. This process can be time-consuming as it involves repeated visits to states.
@@ -699,7 +665,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Extinction Trials and Behavior Reduction
 Background context explaining the concept. In the extinction trials, rats reduced lever-pressing even without directly experiencing the link between lever pressing and subsequent sickness. They seemed able to combine knowledge of the outcome with its negative value.
@@ -710,7 +675,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model-Free vs. Model-Based Algorithms
 Background context explaining the concept. Not every psychologist agrees with Adams and Dickinson's model-based account, as there are alternative explanations for the rats' behavior. However, it is widely accepted that agents can use both model-free and model-based algorithms.

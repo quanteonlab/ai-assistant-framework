@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 13.3 PASTA
 
 ---
 
-**Rating: 8/10**
 
 #### PASTA (Poisson Arrivals See Time Averages)
 
@@ -19,7 +17,6 @@ No, according to Claim 13.1, \(a_n\) (the probability that an arrival sees \(n\)
 
 ---
 
-**Rating: 8/10**
 
 #### Proof of PASTA
 
@@ -32,7 +29,6 @@ Yes, according to Claim 13.2, when customers arrive one at a time and are served
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Uniform Interarrival Times with Deterministic Service Times
 
@@ -45,7 +41,6 @@ In a scenario where interarrival times are uniformly distributed between 1 and 2
 
 ---
 
-**Rating: 8/10**
 
 #### Independence Assumption
 
@@ -58,7 +53,6 @@ The independence assumption is necessary because if interarrival times and servi
 
 ---
 
-**Rating: 8/10**
 
 #### Application of PASTA in Simulation
 
@@ -71,7 +65,6 @@ PASTA is useful in system simulations because it helps estimate the state of the
 
 ---
 
-**Rating: 8/10**
 
 #### PASTA Principle (Poisson Arrivals See Time Averages)
 Background context: The PASTA principle states that, for a queueing system with Poisson arrivals, an arriving customer will observe a state of the system that is statistically the same as the long-term average state of the system. This means that by averaging over what arrivals see at the moment they enter the system, you can obtain the true time-average behavior.
@@ -84,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bathroom Queue Scenario
 Background context: This problem involves comparing the waiting times in women's and men's bathroom queues. The women's line is modeled as an M/M/1 queue with arrival rate \(\lambda\) and service rate \(\mu\). The men's line is also modeled as an M/M/1 queue but with a higher service rate of \(2\mu\).
@@ -121,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Server Farm with Split Jobs
 Background context: In this scenario, jobs arrive according to a Poisson process with rate \(\lambda\) and are split between two servers. The first server has service rate \(\mu_1\), and the second server has service rate \(\mu_2\). The proportion of jobs going to each server is given by \(p\) (for the first) and \(q = 1 - p\) (for the second).
@@ -159,7 +150,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/1 Simulation
 Background context: This problem requires simulating an M/M/1 queue. The mean job size is 10, and the mean arrival rate is \(\lambda\). Three different loads (\(\rho = 0.5\), \(\rho = 0.7\), \(\rho = 0.9\)) need to be tested.
@@ -229,7 +219,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/1 Number in Queue
 Background context: For an M/M/1 queue with load \(\rho\), the expected number of jobs \(E[N_Q]\) can be derived using a specific formula. The traffic intensity \(\rho\) is defined as \(\rho = \frac{\lambda}{\mu}\).
@@ -250,7 +239,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/1/FCFS with Finite Capacity
 Background context: This problem describes a scenario where there is a single CPU with finite buffer capacity \(N-1\). Jobs arrive according to a Poisson process and are serviced in FCFS order. The objective is to reduce the loss probability by either doubling the buffer size or doubling the CPU speed.
@@ -317,7 +305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: CTMC Diagram for M/M/1 with Finite Capacity
 
@@ -353,7 +340,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Limiting Probabilities
 
@@ -393,7 +379,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Utilization of the System
 
@@ -415,7 +400,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Loss Probability
 
@@ -444,7 +428,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Response Time Distribution for M/M/1 Queue
 
@@ -499,7 +482,6 @@ You will need to utilize results related to the sum of exponential random variab
 
 ---
 
-**Rating: 8/10**
 
 #### Variance of Number of Jobs in an M/M/1 Queue
 
@@ -521,7 +503,6 @@ The hint suggests using a result from Exercise 3.22, which likely provides a key
 
 ---
 
-**Rating: 8/10**
 
 #### Back to the Server Farm
 
@@ -545,7 +526,6 @@ Using known results from Chapter 11 on the sum of exponential random variables, 
 
 ---
 
-**Rating: 8/10**
 
 #### Threshold Queue
 
@@ -576,7 +556,6 @@ This confirms that when \(T = 0\), we have the correct M/M/1 result.
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/k Server Farm Model
 Background context: This model involves analyzing systems where multiple servers work cooperatively to handle incoming requests from a single queue. The analysis provides simple closed-form formulas for the distribution of the number of jobs in the system.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11.1 Machine Learning with Java
 
 ---
 
-**Rating: 8/10**
 
 #### Map/Reduce Overview
 Map/Reduce is a programming model and an associated algorithmic framework for processing and generating large data sets with a parallel, distributed algorithm on a cluster. It was originally developed by Google to handle large-scale web page ranking and indexing.
@@ -136,7 +134,6 @@ Key components of Apache Hadoop for big data processing include:
 
 These components work together to provide a robust environment for handling large datasets across multiple nodes in a cluster.
 
-**Rating: 8/10**
 
 #### SparkSession and Reading Data
 Apache Spark uses `SparkSession` to create a session for executing operations. A `SparkSession` object is used for various tasks such as reading data, creating datasets or dataframes, transforming them, and finally collecting or writing the results back.
@@ -260,7 +257,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Connecting to a Server Using Socket in C
 

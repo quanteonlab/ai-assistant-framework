@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Deprecating the Discounted Setting
 
 ---
 
-**Rating: 8/10**
 
 #### Deprecating the Discounted Setting
 
@@ -31,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Proportionality of Average Discounted Return to Average Reward
 
@@ -54,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Theoretical Difficulties with Discounting
 
@@ -81,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Alternative Approaches with Function Approximation
 
@@ -116,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differential Semi-Gradient n-step Sarsa Overview
 This section introduces a variant of semi-gradient Sarsa that supports n-step bootstrapping. It generalizes the concept by defining an n-step return and TD error, enabling better handling of delayed rewards.
@@ -138,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-Step Return Definition
 The definition of \( G_{t:t+n} \) is given by combining future rewards with function approximation. This involves estimating the sum of future rewards up to step \( t+n \).
@@ -156,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Error Calculation
 The TD error in differential semi-gradient n-step Sarsa is calculated using the n-step return and the current value function estimate.
@@ -177,7 +169,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Algorithm Pseudocode for Differential Semi-Gradient n-step Sarsa
 The algorithm involves updating the weights of the value function using the TD error and an estimate of the average reward.
@@ -220,7 +211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Unbiased Constant-Step-Size Trick
 The step-size parameter on the average reward \( \bar{R} \) needs to be small so that it becomes a good long-term estimate. However, this can introduce bias due to its initial value.
@@ -240,7 +230,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semi-gradient Sarsa with Function Approximation
 Background context: Rummery and Niranjan (1994) first explored semi-gradient Sarsa with function approximation. Linear semi-gradient Sarsa with ε-greedy action selection does not converge in the usual sense, but it can enter a bounded region near the best solution (Gordon, 1996a, 2001). Precup and Perkins (2003) showed convergence under a differentiable action selection setting.
@@ -266,7 +255,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence in Oﬀ-policy Methods with Function Approximation
 Background context: The extension of oﬀ-policy learning to function approximation is significantly harder compared to on-policy methods. While tabular off-policy methods like Q-learning and Sarsa can be extended to semi-gradient algorithms, these do not converge as robustly under function approximation.
@@ -292,7 +280,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mountain–Car Example
 Background context: The mountain–car example is based on a similar task studied by Moore (1990), but the exact form used here is from Sutton (1996). It involves moving a car up a hill using reinforcement learning techniques. The environment has two states representing the position and velocity of the car, with the goal being to move the car to the top of the hill.
@@ -311,7 +298,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Oﬀ-policy Methods and Approximation Theory
 Background context: The chapter discusses oﬀ-policy methods, particularly those using function approximation. While on-policy methods can robustly converge under function approximation, off-policy methods face significant challenges due to the mismatch between behavior and target policies.
@@ -354,7 +340,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Access-Control Queuing Example
 Background context: The access-control queuing example was suggested by Carlström and Nordström (1997). It involves managing access control in a queueing system where the goal is to optimize waiting times and resource usage. The example highlights the practical applications of reinforcement learning methods.
@@ -371,7 +356,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Importance Sampling and Function Approximation
@@ -384,7 +368,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semi-Gradient Off-Policy TD(0)
 Background context: To extend off-policy learning algorithms like TD(0) to function approximation, we replace value updates with weight vector updates. This transformation helps maintain stability and ensures that the algorithm converges under certain conditions.
@@ -411,7 +394,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semi-Gradient Off-Policy Expected Sarsa
 Background context: Extending the concept to action values involves updating the weight vector based on expected Q-values. This approach is necessary for handling off-policy updates in a more complex manner.
@@ -438,7 +420,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stability and Unbiasedness in Tabular Case
 Background context: While semi-gradient methods can diverge when using function approximation, they are guaranteed to be stable and asymptotically unbiased for the tabular case. This stability is crucial as it allows combining these methods with feature selection techniques.
@@ -455,7 +436,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance Sampling and Function Approximation in Reinforcement Learning
 Background context: This concept discusses the importance of using or avoiding importance sampling in reinforcement learning algorithms, especially when function approximation is involved. The discussion includes both tabular methods and their generalizations with function approximation.
@@ -467,7 +447,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-Step Semi-Gradient Expected Sarsa
 Background context: The text introduces the n-step version of semi-gradient expected SARSA, which involves importance sampling to handle different state-action pairs contributing to a single overall approximation.
@@ -485,7 +464,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-Step Tree Backup Algorithm
 Background context: The text introduces the n-step tree backup algorithm, which is an oﬄine policy algorithm and does not involve importance sampling.
@@ -502,7 +480,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-Step Q(α) Algorithm
 Background context: The text mentions the n-step Q(α) algorithm, which is a unified action-value method. It notes that semi-gradient forms of both n-step state-value and n-step Q(α) algorithms are left as exercises for the reader.
@@ -514,7 +491,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exercise 11.1 - n-Step Off-Policy TD
 Background context: This exercise asks you to convert the equation of n-step off-policy TD (7.9) to a semi-gradient form.
@@ -532,7 +508,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exercise 11.2 - n-Step Q(α)
 Background context: This exercise asks you to convert the equations of n-step Q(α) (7.11 and 7.17) to semi-gradient form.
@@ -552,7 +527,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Oﬀ-Policy Divergence Example
 
@@ -575,7 +549,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Importance Sampling Ratio
 
@@ -596,7 +569,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Unstable Update Rule
 
@@ -612,7 +584,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Off-Policy Training Overview
 Off-policy training allows the behavior policy to take actions that the target policy does not. This means that transitions where the target policy would take a different action are ignored, as the update is only made when the target policy takes the same action.
@@ -626,7 +597,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### On-Policy vs Off-Policy Divergence
 On-policy methods keep the system in check by ensuring that each state can only be supported by higher future expectations. This means that every action taken must eventually lead to a better state, making it harder for the system to diverge.
@@ -638,7 +608,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Baird’s Counterexample
 Baird’s counterexample demonstrates a case where off-policy methods can diverge due to the behavior policy taking actions that the target policy never does. This leads to situations where the value function cannot be accurately estimated.
@@ -650,7 +619,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MDP Structure in Baird’s Example
 The Markov Decision Process (MDP) used by Baird consists of seven states, with actions leading to either other upper states or a specific lower state. The behavior policy mixes these actions, while the target policy always selects one action.
@@ -662,7 +630,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Baird’s Counterexample for Semi-gradient TD(0)
 Background context: The text discusses an instability issue with semi-gradient TD(0) when applied to a specific case, which involves linear function approximation. This example highlights that even with simple algorithms like semi-gradient TD and DP, the system can become unstable if updates are not done according to the on-policy distribution.
@@ -673,7 +640,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Instability with Expected Updates
 Background context: The text emphasizes that semi-gradient methods, such as TD(0), can become unstable if not updated according to the on-policy distribution. Even with expected updates (like in dynamic programming), the system remains unstable unless the updates are done asynchronously.
@@ -684,7 +650,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### On-policy Distribution Convergence
 Background context: The text explains that altering the distribution of DP updates from uniform to on-policy can guarantee convergence. This is significant because it shows that stability can be achieved with semi-gradient methods if they follow the correct update rules.
@@ -695,7 +660,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tsitsiklis and Van Roy’s Counterexample
 Background context: The text presents another counterexample where linear function approximation fails even when least-squares solutions are formed at each step, emphasizing the instability issue with on-policy distributions. This example highlights that forming the best approximation is not enough to guarantee stability.
@@ -706,7 +670,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Divergence of Q-learning
 Background context: The text discusses the concerns about Q-learning diverging, especially when the behavior policy is not close enough to the target policy. It mentions that considerable effort has gone into finding solutions or weaker guarantees for this issue.

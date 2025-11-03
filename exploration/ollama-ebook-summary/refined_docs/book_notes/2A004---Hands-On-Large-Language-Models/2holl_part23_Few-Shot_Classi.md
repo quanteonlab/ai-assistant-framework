@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Few-Shot Classification. SetFit Efficient Fine-Tuning with Few Training Examples
 
 ---
 
-**Rating: 8/10**
 
 #### Few-shot Classification
 Background context explaining few-shot classification, which is a technique within supervised learning where you have limited labeled data per class. This method allows training a model with only a few high-quality labeled examples for each category.
@@ -145,7 +143,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two-Step Pretraining and Fine-Tuning Process
 Background context: The two-step process involves pretraining a model (often using masked language modeling) and then fine-tuning it for a specific task. This method is widely used but has limitations when dealing with domain-specific data, as the pretrained models might not be well-tuned to the specific terminology or concepts of the domain.
@@ -283,7 +280,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fine-Tuning Model for Classification
 

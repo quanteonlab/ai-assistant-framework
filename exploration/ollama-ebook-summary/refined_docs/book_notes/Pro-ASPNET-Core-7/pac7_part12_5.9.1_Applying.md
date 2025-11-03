@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 5.9.1 Applying extension methods to an interface
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Extension Methods
@@ -34,7 +32,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Applying Extension Methods
 Background context: In the provided code, an extension method called `TotalPrices` is applied to a `ShoppingCart` object. This demonstrates how you can extend the functionality of existing classes using extension methods.
@@ -53,7 +50,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Extension Methods and Interfaces
 Background context: The text shows how to apply extension methods to interfaces. This allows calling these methods on any class that implements the interface, adding flexibility and reusability.
@@ -78,7 +74,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Extension Methods in ASP.NET Core
@@ -105,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Lambda Expressions for Multiple Filters
 Background context: Lambda expressions provide a concise way to create anonymous functions. In this scenario, using lambda expressions allows you to define multiple filtering methods without duplicating code.
@@ -128,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Extension Methods in C#
 Background context explaining extension methods. Extension methods allow adding functionality to existing types without modifying their source code. They are defined inside a static class and use the `this` keyword before the type name as shown in the example.
@@ -148,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lambda Expressions in C#
 Background context explaining lambda expressions. Lambda expressions provide a concise way to define inline methods. They are particularly useful for defining simple functions that can be passed as parameters, such as filters or action delegates.

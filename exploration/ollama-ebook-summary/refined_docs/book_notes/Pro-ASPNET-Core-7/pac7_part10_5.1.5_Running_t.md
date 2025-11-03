@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 5.1.5 Running the example application
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Creating and Using a Razor View
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Setting HTTP Port in ASP.NET Core
 The `launchSettings.json` file allows you to configure how your application runs during development. The `applicationUrl` setting specifies the URL where the app will run.
@@ -66,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Running an ASP.NET Core Application
@@ -84,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Top-Level Statements in ASP.NET Core
 Background context: The text explains that top-level statements are used to simplify the configuration of an ASP.NET Core application. Traditionally, this was done through a `Startup` class, but now it can be done directly within `Program.cs`.
@@ -109,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Null State Analysis in ASP.NET Core
 Null state analysis is an enabling feature of the ASP.NET Core project templates that helps identify potential null reference exceptions by analyzing references at compile time. It prevents runtime errors caused by accessing potentially null objects.
@@ -129,7 +123,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Null References in C#
 Handling null references is crucial in programming, as they can lead to runtime errors like `NullReferenceException`. Nullable types and the `required` keyword help manage this risk.
@@ -147,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nullable Types and Arrays
 Background context: In C#, nullable types allow variables to hold null values. This is useful when you want to allow the absence of a value, such as in an array.
@@ -159,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary and Differentiation
 Background context: The flashcards cover various aspects of handling nullable types in C#, including the use of default values with properties, understanding arrays with nullable references, and differentiating between allowed null states.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 12 Transition to Continuous-Time Markov Chains. 12.1 Defining CTMCs
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Discrete-Time Markov Chain (DTMC)
 Background context: The provided text introduces a definition of a Discrete-Time Markov Chain (DTMC) and lists its three properties:
@@ -50,7 +48,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Continuous-Time Markov Chain (CTMC)
 Background context: The text defines a Continuous-Time Markov Chain (CTMC) as a continuous-time stochastic process \(\{X(t), t\geq0\}\) with properties analogous to DTMCs but allowing for transitions at any time.
@@ -79,7 +76,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### View 1 of CTMC
 Background context: VIEW 1 of a CTMC is defined as follows:
@@ -132,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### View 2 of CTMC
 Background context: VIEW 2 of a CTMC is described as follows:
@@ -179,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modeling a Single-Server Network as CTMC
 Background context: The example provided models a single-server network using a CTMC where:
@@ -232,7 +226,6 @@ This format can be used to create multiple flashcards covering the key concepts 
 
 ---
 
-**Rating: 8/10**
 
 #### Time to Next Event in CTMCs
 Background context explaining that events in a Continuous-Time Markov Chain (CTMC) are arrivals and departures. The time until the next arrival \( X_A \sim Exp(\lambda) \) and the time until the next departure \( X_D \sim Exp(\mu) \). The time to leave state \( i \), regardless of how long we have been in that state, is given by:
@@ -245,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transition Probabilities in CTMCs
 Background context explaining that the probability of leaving state \( i \) to state \( i+1 \) when \( X_A < X_D \) is:
@@ -260,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limiting Probabilities in CTMCs
 Background context explaining that if a DTMC can be used to model a CTMC by approximating it with small steps \( \delta \), the solution to the original CTMC equals the solution to the equivalent DTMC as \( \delta \to 0 \).
@@ -286,7 +277,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transition Probabilities in DTMC Approximation
 Background context explaining the approximation of a CTMC using a DTMC with small steps \( \delta \). The transition probabilities are derived from flipping two coins simultaneously at each step.
@@ -321,7 +311,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving for Limiting Probabilities in CTMC
 Background context explaining that the limiting probabilities can be found by solving balance equations derived from the equivalent DTMC.
@@ -348,7 +337,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transition to Continuous-Time Markov Chains (CTMCs)
 Background context: The transition from a Discrete-Time Markov Chain (DTMC) to a CTMC involves understanding how rates of transitions can be converted into probabilities. This process helps in approximating the behavior of continuous-time processes using discrete steps.
@@ -371,7 +359,6 @@ Thus, the balance equations for the DTMC are derived from these approximations.
 
 ---
 
-**Rating: 8/10**
 
 #### Balance Equations in CTMC
 Background context: The balance equations derived from the approximation of rates to probabilities help us understand how states transition over time. These equations resemble the balance conditions of a DTMC.
@@ -389,7 +376,6 @@ The answer is that these balance equations represent the condition where the rat
 
 ---
 
-**Rating: 8/10**
 
 #### Generalization and Interpretation of Balance Equations
 Background context: The method for converting a CTMC into a DTMC by using balance equations can be generalized to any CTMC. This involves modeling the CTMC with discrete steps and solving for limiting probabilities.

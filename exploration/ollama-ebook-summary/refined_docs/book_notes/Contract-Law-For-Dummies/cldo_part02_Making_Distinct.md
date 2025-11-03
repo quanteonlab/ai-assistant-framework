@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Contract-Law-For-Dummies_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Making Distinctions about Consideration
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple Promises in Exchange
 Background context: A single consideration can cover multiple promises as long as there's a clear bargain for each promise.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Contracts Contrary to Public Policy
 Contracts that go against societal norms, moral standards, or legal policies are deemed void. These contracts cannot be enforced by the courts due to their adverse impact on public welfare and order.
@@ -31,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mistake
 Mistakes in contracts occur when one or both parties hold incorrect beliefs about a fact that is crucial to the agreement's validity. These mistakes can be mutual, where both parties are mistaken, or unilateral, where only one party holds an incorrect belief. Contracts based on such mistakes may be voidable.
@@ -44,7 +40,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Enforceability Through Conspicuousness
 To ensure that unusual terms are enforceable, drafters must make them noticeable and highlight their presence. This can be achieved by:

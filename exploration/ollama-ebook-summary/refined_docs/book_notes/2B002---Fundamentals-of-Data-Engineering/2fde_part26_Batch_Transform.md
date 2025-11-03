@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 26)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Batch Transformations
 
 ---
 
-**Rating: 8/10**
 
 #### Data Transformations Overview
 Background context: Bill Inmon emphasizes the importance of data transformations for unifying and integrating data. Transformations manipulate, enhance, and save data for downstream use, increasing its value in a scalable, reliable, and cost-effective manner.
@@ -138,7 +136,6 @@ class NodeJoin {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Broadcast Join
 Background context: A broadcast join is a type of join operation used in distributed data processing frameworks, such as Apache Spark. It is particularly useful when one table (smaller table) can fit on a single node and the other table (larger table) needs to be distributed across multiple nodes. The smaller table is "broadcasted" or replicated to all nodes, reducing the amount of shuffling required during the join operation.
@@ -276,7 +273,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SQL for Complex Data Transformations
 Background context explaining that while SQL can be used to build complex Directed Acyclic Graphs (DAGs) using common table expressions or orchestration tools, it has certain limitations. The focus is on batch transformations where engineers might opt for native Spark or PySpark code over SQL due to readability and maintainability.
@@ -372,7 +368,6 @@ stemmed_words.show()
 ```
 x??
 
-**Rating: 8/10**
 
 #### Filter Early and Often
 Background context: Efficient data processing is crucial when using Spark. Filtering early and often can significantly reduce the amount of data that needs to be processed, improving performance.
@@ -444,7 +439,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Upsert Pattern Overview
@@ -595,7 +589,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CDC Performance Issues
 Background context: Engineering teams often try to run near real-time merges from Change Data Capture (CDC) directly into columnar data warehouses, but this approach frequently fails due to performance limitations. Columnar databases are not optimized for frequent updates and can become overloaded with high update frequency.
@@ -680,7 +673,6 @@ def clean_data(df):
 ```
 x??
 
-**Rating: 8/10**
 
 #### Data Wrangling Overview
 Data wrangling involves cleaning and transforming raw data into a format that can be easily analyzed. This process often requires significant effort from data engineers, who must handle malformed data and perform extensive preprocessing before downstream transformations can begin.
@@ -756,7 +748,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Ingestion and Processing Pipeline
 Spark processes data through a series of steps, including ingestion, joining, shuffling, filtering, and writing to S3. The pipeline can involve spill operations when cluster memory is insufficient for processing large datasets.
@@ -847,7 +838,6 @@ These concepts are essential for understanding the intricacies of data processin
 x??
 ---
 
-**Rating: 8/10**
 
 #### Apache Spark vs Hadoop MapReduce
 Background context: The passage compares Apache Spark and Hadoop MapReduce, highlighting their differences in handling data processing tasks. While both frameworks support distributed computing, they differ in how they manage memory, disk usage, and overall performance.
@@ -907,7 +897,6 @@ Background context: The text describes how data virtualization abstracts away th
 Data virtualization refers to a system that does not store data internally but instead processes queries against external sources. This allows for flexible querying of various data sources without needing to move or replicate data.
 ??x
 
-**Rating: 8/10**
 
 #### Query Pushdown
 Background context explaining query pushdown. This technique involves moving as much work as possible to the source databases, thereby offloading computation from virtualization layers and potentially reducing data transfer over the network.

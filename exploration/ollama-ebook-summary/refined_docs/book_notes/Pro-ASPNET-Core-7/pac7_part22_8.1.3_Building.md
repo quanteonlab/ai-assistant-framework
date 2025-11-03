@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.1.3 Building a category navigation menu
 
 ---
 
-**Rating: 8/10**
 
 #### View Components in ASP.NET Core
 
@@ -43,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Integrating the Navigation Menu into Shared Layout
 
@@ -74,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Category List in Navigation Menu
 
@@ -110,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rendering Partial Views with View Components
 
@@ -143,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using a View Component
 Background context: In ASP.NET Core, view components are reusable pieces of UI that can be embedded into views. They provide a more flexible way to create complex user interfaces compared to partial views or helper methods.
@@ -178,7 +172,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Injection for View Components
 Background context: Dependency injection is a design pattern that allows objects to be passed the dependencies they need to function. In ASP.NET Core, this mechanism extends to view components as well, allowing them to access services and repositories without hardcoding any specific implementation.
@@ -207,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing a View Component
 Background context: Unit testing is crucial for ensuring that components and services work as expected. In this case, we need to test whether our `NavigationMenuViewComponent` can correctly generate a list of categories.
@@ -259,7 +251,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generating Categories with LINQ and ViewComponentResult
 Background context: The `Invoke` method in view components is where the logic for rendering data into a view is implemented. In this example, we use LINQ to process the categories from the repository before passing them to the view.
@@ -290,7 +281,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Razor View Component for Navigation Menu
 Background context: The text describes creating a Razor view component to generate navigation links for product categories. This component dynamically creates anchor tags based on the provided category data.
@@ -302,7 +292,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Mock to Test View Component
 Background context: The unit test ensures that the view component correctly adds details of the selected category by reading the value from the `ViewBag` property. This is done using a mock object and setting up the required routing data.
@@ -342,7 +331,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Highlighting Selected Categories
 Background context: The provided code snippet demonstrates how to highlight selected categories using Bootstrap classes. This is achieved by dynamically applying the `btn-primary` class to the currently selected category and `btn-outline-secondary` to other categories.
@@ -363,7 +351,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Correcting Page Count for Selected Categories
 Background context: The provided code snippet aims to adjust the pagination logic so that it correctly reflects the number of products in a selected category. This ensures users do not end up on an empty page if they navigate through multiple pages.
@@ -394,7 +381,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Test for Category-Specific Product Counts
 Background context: The provided unit test ensures that the application can correctly count products in different categories. This is crucial for accurate pagination and display of product lists.
@@ -438,7 +424,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring Razor Pages
 Background context: This section explains how to configure Razor Pages within an ASP.NET Core application for implementing a shopping cart feature. The `Program.cs` file is used to set up services required by Razor Pages and map them appropriately.
@@ -454,7 +439,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### _ViewImports.cshtml File Setup
 Background context: The text mentions adding an `_ViewImports.cshtml` file to the `Pages` folder, setting up namespaces and allowing for easier use of application classes within views.

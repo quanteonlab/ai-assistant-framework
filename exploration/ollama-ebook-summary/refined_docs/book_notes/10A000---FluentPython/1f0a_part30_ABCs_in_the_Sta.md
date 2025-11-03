@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 30)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** ABCs in the Standard Library
 
 ---
 
-**Rating: 8/10**
 
 #### Iterable Interface
 Iterable supports iteration with the `__iter__` method. This interface is crucial for creating classes that can be iterated over, such as lists or custom sequence types.
@@ -156,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Misleading isinstance and issubclass Checks
 

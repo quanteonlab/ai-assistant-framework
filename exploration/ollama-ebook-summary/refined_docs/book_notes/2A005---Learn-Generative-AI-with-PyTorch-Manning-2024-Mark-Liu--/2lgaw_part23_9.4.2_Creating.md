@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.4.2 Creating a model to translate between two languages
 
 ---
 
-**Rating: 8/10**
 
 #### Transformer Class Definition
 
@@ -49,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generator Class Definition
 
@@ -75,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Creation with `create_model`
 
@@ -109,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MultiHead Attention Mechanism
 
@@ -158,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tokenizing English and French Phrases to Subwords
 Tokenization involves breaking down words into smaller units, typically subwords or tokens. This process is essential for machine translation models like Transformers as it helps handle rare or out-of-vocabulary (OOV) words by decomposing them into more frequent subword units.
@@ -184,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Word Embedding
 Word embeddings map words to dense vectors in a high-dimensional space. These vectors capture semantic relationships between words, which can be learned from data or pre-trained.
@@ -207,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Positional Encoding
 Positional encoding is a mechanism to add information about the position of tokens in sequences, which is necessary because self-attention mechanisms are permutation-invariant and do not inherently know about the order of input elements.
@@ -246,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training a Transformer from Scratch
 Training a Transformer involves several components including the self-attention mechanism, positional encodings, and feed-forward networks. The goal is to optimize these components so that they can effectively translate between languages.
@@ -275,7 +266,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using the Trained Transformer to Translate an English Phrase into French
 Once a Transformer is trained on parallel English-French sentence pairs, it can be used to translate new input sentences from English to French.
@@ -321,7 +311,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Subword Tokenization Overview
 Subword tokenization is a method that strikes a balance between character-level and word-level tokenization. It keeps frequently used words whole in the vocabulary while splitting less common or more complex words into subcomponents, which can be particularly useful for languages like English where certain prefixes or suffixes are common.
@@ -333,7 +322,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loading and Exploring Data
 To begin with, we need to load our dataset containing English-to-French translations. The provided text mentions using a CSV file named `en2fr.csv` which contains pairs of English and French phrases.
@@ -356,7 +344,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Converting Data to Batches of Index Sequences
 Once we have the sequences of indexes, we need to organize them into batches suitable for training. This involves grouping sentences together and padding them to ensure they are of uniform length.
@@ -384,7 +371,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training the Encoder-Decoder Transformer
 Finally, we will train an encoder-decoder Transformer model using the collected dataset. The model will learn to translate English phrases into French by leveraging the subword tokenization and index sequences.
@@ -449,7 +435,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tokenization Process Overview
 Background context: Tokenization is a crucial step in Natural Language Processing (NLP) tasks where raw text is divided into meaningful units or tokens. This process helps convert unstructured text data into structured data that can be fed into machine learning models.
@@ -471,7 +456,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tokenization of English Question
 Background context: The example provided includes tokenizing a question in both English and French to demonstrate the tokenizer's behavior on different languages.
@@ -488,7 +472,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tokenization of French Question
 Background context: The text also tokenizes the corresponding French phrase "Comment êtes-vous?" to illustrate how different languages are handled by the same tokenizer.
@@ -505,7 +488,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mapping English Tokens to Indexes
 Background context: In natural language processing (NLP) and machine learning, it's essential to convert textual data into numerical representations for model training. This process involves mapping each unique token (word or sub-word) to a unique integer index. The provided code snippet demonstrates how to create such mappings from a dataset of English sentences.
@@ -551,7 +533,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inserting Special Tokens
 Background context: In the provided code, special tokens like "BOS" (beginning of sentence) and "EOS" (end of sentence) are inserted at the start and end of each sentence. These tokens help in handling sequences more effectively.
@@ -572,7 +553,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transforming English Sentences into Integer Sequences
 Background context: Once tokens are mapped to indexes, transforming sentences into numerical sequences becomes straightforward. This transformation enables the use of these sequences for training machine learning models.
@@ -607,7 +587,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tokenization and Index Conversion Process
 Background context: In natural language processing, tokenization is a crucial step where sentences are broken down into individual words or tokens. These tokens are then indexed using dictionaries to facilitate easier manipulation and processing by machine learning models.

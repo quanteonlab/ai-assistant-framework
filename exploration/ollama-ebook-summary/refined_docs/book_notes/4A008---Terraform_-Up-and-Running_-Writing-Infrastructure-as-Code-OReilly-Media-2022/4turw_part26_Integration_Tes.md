@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 26)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Integration Tests
 
 ---
 
-**Rating: 8/10**
 
 #### Integration Tests Overview
 Integration tests are designed to test how different components of a system interact with each other. Unlike unit tests, which focus on isolated functions or methods, integration tests simulate real-world scenarios where these components are brought together and tested as a whole.
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### DoIntegrationTest Method Implementation
 The `do_integration_test` method is responsible for running an HTTP server in a separate thread and then making HTTP requests to test various endpoints. This method ensures that the web server runs independently of the test code, preventing blocking.
@@ -62,7 +59,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Integration Test Execution
 After writing integration tests for each endpoint, you can run all the tests to see if everything works as expected.
@@ -79,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Comparison Between Unit Tests and Integration Tests
 Unit tests are generally faster because they only interact with isolated pieces of code, whereas integration tests require setting up more complex environments. In this example, the unit tests ran in 0.000572 seconds, while the integration tests took 0.221561 seconds.
@@ -93,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform Integration Testing Overview
 In this section, we will focus on integrating modules and ensuring they work correctly together. This involves deploying several modules to validate their interaction, particularly in a testing environment isolated from production. The main objective is to ensure that all automated tests run in an isolated AWS account.
@@ -104,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring Variables for Test Environment
 To run tests in an isolated AWS account, you need to ensure that all hardcoded values are configurable. In this case, we expose `db_name` as an input variable in the MySQL module configuration so it can be set dynamically during testing.
@@ -115,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Database Deployment Options (`createDbOpts`)
 The `createDbOpts` function initializes Terraform options for deploying the MySQL module in a testing environment. It sets unique names and credentials to avoid conflicts during tests.
@@ -126,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Partial Configuration for Terraform Backends
 Background context explaining the concept. In this scenario, you're configuring Terraform to use an S3 backend for storing state files but want to ensure that tests do not interfere with the actual production environment's state file. By using partial configuration, you can define the necessary backend settings in a separate `backend.hcl` file and pass appropriate values during testing.
@@ -142,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring Variables for the `hello-world-app` Module
 Background context explaining the concept. For better modularity and flexibility, you need to expose variables in the `variables.tf` file of the `hello-world-app` module so that these values can be passed from the calling code when deploying to different environments or with different backend configurations.
@@ -185,7 +175,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing `createHelloOpts` Method for Passing Backend Configurations
 Background context explaining the concept. You need a method to create and configure options for deploying the `hello-world-app` module, ensuring that it uses the same backend configuration as the `mysql` module.
@@ -211,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Integration Testing Overview
 Background context explaining the purpose and significance of integration testing, especially for Terraform. This involves verifying that different modules work correctly together.
@@ -223,7 +211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hello World App Module Update and Validation Process
 Background context: This concept outlines the process of updating a module, validating changes, and cleaning up resources using Terraform. It involves making a change to an existing module, applying these changes, and ensuring everything works as expected before proceeding further.
@@ -242,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Workflow with Skipping Stages
 Background context: The provided text demonstrates a typical workflow where certain stages are skipped to optimize testing. This is particularly useful during development iterations, allowing you to focus on specific parts of the system.
@@ -263,7 +249,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Quick Test Execution Using Environment Variables
@@ -290,7 +275,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Flaky Tests with Retries
 The text discusses how flaky tests can occur due to transient issues such as network errors or resource availability. To make tests more resilient, retries for known errors can be configured using the `terraform.Options` structure in Terratest.
@@ -337,7 +321,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### End-to-End Tests Overview
 Background context explaining end-to-end tests and their role in testing infrastructure. The test pyramid model is introduced, showing the relative positions of unit tests, integration tests, and end-to-end tests.
@@ -349,7 +332,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Test Pyramid Model
 The test pyramid model explains the structure of different types of tests, typically starting with many unit tests at the bottom, fewer integration tests in the middle, and a smaller number of end-to-end tests on top.
@@ -361,7 +343,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Complexity and Cost in End-to-End Tests
 This section discusses why end-to-end tests are rarely implemented due to their high cost and brittleness. It mentions that deploying everything from scratch can take several hours.
@@ -373,7 +354,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Brittleness of End-to-End Tests
 The probability of end-to-end tests failing due to transient errors is discussed, using a formula to calculate these odds.
@@ -385,7 +365,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-offs in Test Pyramid
 This section explains the trade-offs between different levels of tests and why lower-level testing (unit and integration) is preferred.
@@ -397,7 +376,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Incremental Deployment Strategy for End-to-End Testing
@@ -416,7 +394,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### End-to-End Testing Strategy Overview
 Background context: The text outlines an end-to-end testing strategy where changes are applied to a running "test" environment, mimicking production deployments. This approach helps in validating both the functionality of the infrastructure and the correctness of the deployment process.
@@ -434,7 +411,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Static Analysis for Terraform Code
 Background context: The text introduces static analysis as a fundamental way to test Terraform code by parsing and analyzing it without execution, covering tools like `terraform validate`, `tfsec`, `tflint`, and `Terrascan`.
@@ -453,7 +429,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Checking Resource Counts in Plan Output
 Background context explaining how to use `GetResourceCount` to validate the number of resources added, changed, or destroyed during a Terraform plan execution.
@@ -471,7 +446,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Programmatic Access to Plan Output
 Background context explaining how to use `InitAndPlanAndShowWithStructNoLogTempPlanFile` to parse the plan output into a struct, providing programmatic access to resource values and attributes.
@@ -491,7 +465,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform Plan and OPA Integration for Policy Enforcement
 Background context: This concept explains how to integrate policy enforcement using Open Policy Agent (OPA) with Terraform plans. It covers the steps required to convert a Terraform plan into JSON, evaluate it against a policy written in Rego, and handle different outcomes based on the policy evaluation.
@@ -515,7 +488,6 @@ This process helps ensure that your Terraform configurations meet company-specif
 
 ---
 
-**Rating: 8/10**
 
 #### Plan Testing Tools for Terraform
 Background context: This concept discusses the strengths and weaknesses of plan testing tools used in conjunction with OPA to enforce policies against Terraform plans. It highlights how these tools can be integrated into CI/CD pipelines.
@@ -536,7 +508,6 @@ These tools are particularly useful in CI/CD pipelines where policies need to be
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### InSpec Overview

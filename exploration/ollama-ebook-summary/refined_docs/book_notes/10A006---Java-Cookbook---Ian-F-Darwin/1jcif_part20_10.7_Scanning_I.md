@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 10.7 Scanning Input with Grammatical Structure. Solution
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Push and Pop Operations on a Stack
@@ -91,7 +89,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parser Generators Overview
 Parser generators are tools that help create parsers for programming languages, scripts, and other input structures. They use a combination of lexical and grammatical specifications to recognize complex patterns within input data.
@@ -220,7 +217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Handling End-of-Line Characters in Java

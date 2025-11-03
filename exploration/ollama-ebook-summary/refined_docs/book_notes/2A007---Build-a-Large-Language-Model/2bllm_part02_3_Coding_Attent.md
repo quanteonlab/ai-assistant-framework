@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A007---Build-a-Large-Language-Model_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3_Coding_Attention_Mechanisms
 
 ---
 
-**Rating: 8/10**
 
 #### The Problem with Modeling Long Sequences
 Background context explaining the limitations of traditional encoder-decoder architectures, especially when dealing with long sequences. This is due to their sequential processing nature, which can lead to issues like vanishing gradient problems and limited contextual understanding.
@@ -118,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Encoder-Decoder RNNs for Machine Translation
 
@@ -231,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Self-Attention Mechanism Overview
 Self-attention is a mechanism used in transformers to compute more efficient input representations by allowing each position in a sequence to interact with and weigh the importance of all other positions within the same sequence. This is crucial for understanding relationships between different parts of an input, such as words in a sentence or pixels in an image.
@@ -296,7 +292,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Self-Attention Mechanism Overview
 Self-attention mechanisms are crucial in natural language processing (NLP) tasks, especially for models like Language Models (LLMs). They enable each element in a sequence to consider information from all other elements in the same sequence. This is achieved by computing attention scores and context vectors.
@@ -371,7 +366,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Attention Weight Normalization using Softmax
 Background context explaining the concept. In this scenario, we are dealing with attention mechanisms where raw scores need to be converted into meaningful weights that sum up to 1. This normalization ensures that each input is weighted appropriately according to its relevance.
@@ -448,7 +442,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Attention Scores Calculation Using Dot Product
 Background context explaining that attention scores are calculated by computing the dot product between each pair of input vectors. This process is illustrated using a loop for simplicity, but matrix operations can provide efficiency.
@@ -543,7 +536,6 @@ This step ensures that our self-attention implementation matches known values, c
 
 x??
 
-**Rating: 8/10**
 
 #### Introduction to Trainable Weights in Self-Attention
 Background context: In this section, we are enhancing our understanding of self-attention mechanisms used in language models like GPT. The goal is to implement a more sophisticated version that includes trainable weight matrices \(W_q\), \(W_k\), and \(W_v\). These weights allow the model to learn from data and improve its performance on specific tasks.
@@ -593,7 +585,6 @@ The next steps involve using these vectors to compute the attention weights, whi
 
 This format can be repeated for other concepts in the provided text.
 
-**Rating: 8/10**
 
 #### Input Dimensions and Weights Initialization
 Background context: The input dimensions and weight initialization are crucial for understanding how to set up a basic attention mechanism in neural networks, particularly in models like GPT. Here, we initialize three weight matrices \( W_{query} \), \( W_{key} \), and \( W_{value} \) with different input and output dimensions.
@@ -715,7 +706,6 @@ This step ensures that the attention mechanism remains numerically stable and ef
 
 ---
 
-**Rating: 8/10**
 
 #### Context Vectors and Self-Attention Mechanism
 Background context explaining how self-attention mechanisms compute context vectors. The core idea is to combine all value vectors using attention weights, where each weight reflects the importance of a particular value vector for the given query.
@@ -804,7 +794,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Self-Attention Mechanism Overview
 Background context explaining the self-attention mechanism and its importance. The mechanism allows each element of a sequence to attend to all elements, which is crucial for capturing dependencies among tokens in sequences.
@@ -886,7 +875,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Attention Mechanism
 Background context explaining the concept. The causal attention mechanism is a specialized form of self-attention used in models like GPT to prevent access to future information during training, which is crucial for tasks such as language modeling. This ensures that predictions at any given position depend only on previous tokens.
@@ -1046,7 +1034,6 @@ x??
 
 These flashcards cover the key concepts related to implementing causal attention in models like GPT. Each card explains a different aspect of the process and provides relevant code examples for better understanding. ---
 
-**Rating: 8/10**
 
 #### Masking and Softmax in Causal Attention
 
@@ -1157,7 +1144,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dropout Mechanism in Causal Attention
 Dropout is a regularization technique commonly used during training to prevent overfitting by randomly ignoring (dropping out) hidden units. In the context of causal attention within transformer models like GPT, dropout can be applied after computing the attention weights to reduce overfitting.
@@ -1319,7 +1305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Attention Mechanism
 Background context explaining the causal attention mechanism. This involves ensuring that each position in a sequence can only attend to positions before it, effectively creating a causal mask for self-attention mechanisms. This is crucial for tasks like language modeling where the model should not "see" future tokens during training.
@@ -1390,7 +1375,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Attention Mechanism Overview
 Background context explaining the concept of causal attention. It involves creating a sequence of tokens where each token is only influenced by previous tokens, not future ones, which is crucial for tasks like language modeling and time series analysis.
@@ -1497,7 +1481,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Head Attention Concept
 Multi-head attention is a mechanism used to combine information from different heads or perspectives by running the attention mechanism multiple times with different linear projections. This allows the model to focus on different aspects of the input data, enhancing its ability to capture complex patterns.
@@ -1588,7 +1571,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding MultiHeadAttentionWrapper and Embedding Dimensions
 
@@ -1774,7 +1756,6 @@ x??
 
 ---
 
-**Rating: 10/10**
 
 #### Multi-Head Attention Concept
 Background context explaining how multi-head attention works. This involves splitting the input into multiple parallel attention layers to capture different types of relationships between tokens. The key operation is the reshaping and transposing of tensors to facilitate batched matrix multiplications.
@@ -1899,7 +1880,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Output Projection Layer in MultiHeadAttention
 

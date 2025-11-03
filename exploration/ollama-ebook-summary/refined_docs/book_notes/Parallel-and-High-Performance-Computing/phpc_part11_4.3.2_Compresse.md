@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4.3.2 Compressed sparse storage representations
 
 ---
 
-**Rating: 8/10**
 
 #### Contiguous Data Arrays and State Arrays
 The storage layout includes multiple arrays to manage both pure and mixed cells efficiently.
@@ -22,7 +20,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Model Analysis
 Background context: The performance model analyzes the memory bandwidth requirements and computational costs of different algorithms, estimating run times based on given parameters. This analysis helps in optimizing the data layout and algorithm choices.
@@ -56,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Material-Dominant Algorithm for Compressed Sparse Data Layout
 Background context: The material-dominant algorithm processes each material subset sequentially, which reduces the computational load by focusing on relevant cells. This approach minimizes unnecessary operations and improves performance.
@@ -95,7 +91,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison with Cell-Centric Full Matrix Data Structure
 Background context: The cell-centric full matrix data structure uses dense matrices to store all cells and materials, whereas the material-centric compressed sparse data layout uses a more compact representation focused on specific materials.
@@ -116,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Execution Cache Memory (ECM) Model
 
@@ -147,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Hierarchy and Memory Transfers
 
@@ -167,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Units and Their Role
 
@@ -184,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Memory Operations and AVX Instructions
 Background context explaining how vector memory operations can significantly improve performance, especially for bandwidth-limited kernels. The ECM model analysis shows that AVX vector instructions can provide a two-fold performance improvement over manually optimized loops due to better load balancing and parallelism exploited by the compiler.
@@ -215,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gather/Scatter Memory Operations
 Background context on how gather/scatter memory operations allow data to be loaded from non-contiguous memory locations into vector units, which is crucial for many real-world numerical simulations. However, current implementations still have performance issues that need addressing.
@@ -243,7 +233,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Streaming Stores and Cache Hierarchy
 Background context on how streaming stores bypass the cache hierarchy to directly write data to main memory, reducing cache line movement and improving performance. This is often enabled as an optimization by modern compilers.
@@ -274,7 +263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Message Transfer Time Model
 Background context on how network bandwidth is measured differently from memory bandwidth. The model provided estimates transfer times based on latency and bandwidth, useful for understanding the performance of communication in distributed systems.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.8 When Chains Are Periodic or Not Irreducible
 
 ---
 
-**Rating: 9/10**
 
 #### Balance Equations and Ergodicity Theory
 
@@ -20,7 +18,6 @@ The equality of fluxes makes sense because every transition out of state \( S \)
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Reversibility Theorem
 
@@ -35,7 +32,6 @@ If a Markov chain is time-reversible, then the limiting probabilities can be det
 
 ---
 
-**Rating: 8/10**
 
 #### Periodic or Irreducible Chains
 
@@ -49,7 +45,6 @@ Aperiodicity ensures that the chain does not get stuck in cycles, while irreduci
 
 ---
 
-**Rating: 8/10**
 
 #### Application of Time-Reversibility
 
@@ -63,7 +58,6 @@ To determine if a Markov chain is time-reversible, attempt to find constants \( 
 
 ---
 
-**Rating: 8/10**
 
 #### Example: Three Types of Equations
 
@@ -80,7 +74,6 @@ The example differentiates by showing that while regular stationary equations ar
 
 ---
 
-**Rating: 8/10**
 
 #### Positive Recurrence for Periodic Chains
 In Theorem 9.36, it is shown that for a periodic and positive-recurrent chain (with finite period), there exists a unique stationary distribution \(\vec{\pi}\) which represents the long-run time-average proportion of time spent in each state.
@@ -94,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Labeling States in Periodic Chains
 The states are labeled according to their residue classes. This labeling helps in understanding how states interact over time and simplifies the analysis of the periodicity.
@@ -113,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proof Outline for Periodic Chains
 The proof involves several steps:
@@ -136,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transition Matrix \(P\) Structure
 Background context explaining that the transition matrix can be partitioned based on residue classes, and each row corresponds to transitions from one residue class to another.
@@ -176,7 +166,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Form of \(P^d\)
 Background context explaining that raising the matrix \(P\) to the power \(d\) results in a specific form, where each block \(D_{i,i}\) is composed of products of transition matrices.
@@ -222,7 +211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Properties of \(D_{i,i}\)
 Background context explaining that \(D_{i,i}\) is stochastic and represents the probability of moving between states within a residue class in exactly \(d\) steps.
@@ -264,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Time-Average Distribution
 Background context explaining the time-average distribution and its relation to periodic chains. The formula for the distribution is given as:
@@ -280,7 +267,6 @@ The explanation is that if the chain visits each state in vector\(i\) only once 
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of q/vectori
 Background context explaining the relationship between \(\vec{p}\) and \(\vec{q}\). The definition is given as:
@@ -292,7 +278,6 @@ Background context explaining the relationship between \(\vec{p}\) and \(\vec{q}
 
 ---
 
-**Rating: 8/10**
 
 #### Stationary Distribution for Di,i
 Background context explaining the relation between stationary distributions and the matrices \(D_i,i\). The equations provided are:
@@ -306,7 +291,6 @@ This equation implies that \( \vec{q}_i \) is a stationary distribution for the 
 
 ---
 
-**Rating: 8/10**
 
 #### Transition Matrix P
 Background context explaining how to relate \(\vec{q}_i\) back to the original transition matrix \(P\). The logic involves transforming from \(D_i,i+1\) matrices back to \(P\) using the relation:
@@ -320,7 +304,6 @@ Since the elements of \( \vec{q}_i \) sum to 1 and \(A_{i,i+1}\) is a stochastic
 
 ---
 
-**Rating: 8/10**
 
 #### Uniqueness of Stationary Distribution
 Background context explaining why \((\vec{p}_0, \vec{p}_1, ..., \vec{p}_{d-1})\) is a stationary distribution for \(P\). The reasoning involves showing that:
@@ -332,7 +315,6 @@ This implies that \((\vec{p}_0, \vec{p}_1, ..., \vec{p}_{d-1})\) is a stationary
 
 ---
 
-**Rating: 8/10**
 
 #### Summary Theorem for Periodic Chains
 Background context explaining the theorem that given an irreducible DTMC with period \(d < \infty\), if a stationary distribution \(\vec{\pi}\) exists, then the chain must be positive recurrent.
@@ -343,7 +325,6 @@ The theorem states that if an irreducible discrete-time Markov chain (DTMC) has 
 
 ---
 
-**Rating: 8/10**
 
 #### Proof for Positive Recurrence
 Background context explaining the proof's structure and key steps in showing positive recurrence using residue classes and matrices \(D_{i,i}\).
@@ -354,7 +335,6 @@ The proof argues that while the original matrix \(P\) might not be positive recu
 
 ---
 
-**Rating: 8/10**
 
 #### Aperiodic and Irreducible Chains
 Background context: The text discusses properties of a Markov chain, specifically focusing on aperiodicity and irreducibility. A period \( d(i) \) is defined as the greatest common divisor (gcd) of all \( n > 0 \) such that \( P^n(i, i) > 0 \). A chain is aperiodic if \( d(i) = 1 \) for all states \( i \), and irreducible means it's possible to get from any state to any other state in a finite number of steps.
@@ -366,7 +346,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stationary Solution and Normalizing Constant
 Background context: Given the condition \( π/\vec{v}_i·D_{ii} = π/\vec{v}_i \), where \( D \) represents a diagonal matrix, it indicates that the stationary probability vector \( π \) satisfies this equation. The normalizing constant ensures the probabilities sum to 1.
@@ -378,7 +357,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Positive Recurrence in Irreducible Chains
 Background context: The text states that a chain is positive recurrent if it has a stationary solution. For irreducible chains, this means every state can be reached from any other state, leading to the conclusion of positive recurrence.
@@ -390,7 +368,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limiting Probabilities in Non-Irreducible Chains
 Background context: For a non-irreducible Markov chain, limiting probabilities are defined component-wise rather than globally. The chain can be divided into irreducible components.
@@ -402,7 +379,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Equivalences of Limiting Probabilities
 Background context: The text outlines several equivalent ways to represent limiting probabilities, such as average fraction of time spent in a state, stationary probability, and reciprocal of mean time between visits.
@@ -414,7 +390,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Techniques for Determining Limiting Probabilities
 Background context: The text mentions several methods for determining limiting probabilities, including matrix powers, stationary equations, and time-reversibility.
@@ -432,7 +407,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of fkii and Pki
 Background context: The definitions provided are fundamental to understanding the behavior of a Markov chain, specifically focusing on the probability of returning to state \(i\) after a certain number of transitions. 
@@ -448,7 +422,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recurrent Markov Chain - Lemma 9.41
 Background context: For a recurrent Markov chain, we are interested in showing that given \(\lambda = \limsup_{k \to \infty} P_k^{ii}\), there exists a subsequence \(\{P_{n_j}^{ii}\}\) such that \(P_{n_j}^{ii} \to \lambda\). Additionally, for any positive constant \(c\) and integer \(d \geq 0\), we show that the limit of the sequence \(P_{n_j - c \cdot d}^{ii}\) also converges to \(\lambda\).
@@ -493,7 +466,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recurrent Markov Chain - Lemma 9.42
 Background context: Similar to the previous lemma, but dealing with the limit inferior instead of the limit superior.
@@ -540,7 +512,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Recurrent and Aperiodic Markov Chain
 A recurrent, aperiodic Markov chain is defined such that every state i returns to itself with probability 1, meaning \(\lim_{n \to \infty} P^n_{ii}\) exists for all states \(i\). The sequences \(\{f_k^{(ii)}\}\) and \(\{P_k^{(ii)}\}\) are specified in Definition 9.38.
@@ -551,7 +522,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relationship Between Sequences
 The relationship between sequences and return times can be expressed as \(m_i = \sum_{n=0}^{\infty} n r_n\), where \(r_n\) is the probability of not returning to state \(i\) within the first \(n+1\) steps.
@@ -562,7 +532,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summation Property
 The summation property states that for all \(n\), \(\sum_{k=0}^{n} r_k P^n-k_{ii} = 1\). This is because the probability of not returning to state \(i\) before time \(n\) and then eventually returning must sum up to 1.
@@ -573,7 +542,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limit Superior and Inferior
 Let \(\lambda = \limsup_{n \to \infty} P^{(n)}_{ii}\) and \(\mu = \liminf_{n \to \infty} P^{(n)}_{ii}\). The objective is to show that both limits are equal, establishing the existence of a unique stationary distribution.
@@ -584,7 +552,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Irreducibility, Aperiodicity, and Positive Recurrence
 Background context: In this section, we are given several transition matrices to determine whether they represent an irreducible, aperiodic, and positive recurrent Markov chain. An irreducible Markov chain is one where all states communicate with each other. Aperiodicity means the period of the state is 1 (the greatest common divisor of return times is 1). Positive recurrence implies that the expected time to return to any state is finite.
@@ -609,7 +576,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Average Fraction Using Balance Equations
 Background context: The problem involves solving for the time-average fraction of time spent in each state using balance equations. This typically requires setting up a system of linear equations based on steady-state probabilities.
@@ -652,7 +618,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Centers and Transition Probabilities
 Background context: This problem involves a data center that can transition between "working" and "down" states based on specific probabilities. The goal is to draw the state diagram and determine if it is ergodic, time-reversible, and recurrent.
@@ -676,7 +641,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ergodicity and Time-Reversibility
 Background context: We need to check the ergodicity and time-reversibility of a given Markov chain. Ergodicity means that the chain is both irreducible and aperiodic, implying it converges to a unique stationary distribution.
@@ -698,7 +662,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Reversibility
 Background context: Time-reversibility means that the transition probabilities in reverse order are also valid. This implies detailed balance equations hold between states \(i\) and \(j\).
@@ -725,7 +688,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Why or why not?
 Background context: This question is asking for a justification whether a statement (or conditions) is true or false. It requires understanding of irreducibility and aperiodicity.
@@ -758,7 +720,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### What is the expected number of days between backhoe failures?
 Background context: This question involves understanding the concept of mean recurrence time, which is related to the mean time until a state returns to itself in a Markov chain. For an irreducible and positive recurrent DTMC, the mean recurrence time for any state j (denoted as \(m_{jj}\)) can be computed.
@@ -784,7 +745,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prove or disprove Sherwin’s conjecture
 Background context: The conjecture \(m_{jj} \leq m_{ji} + m_{ij}\) is about the mean recurrence time in a Markov chain. This involves understanding the concept of hitting times and return times.
@@ -831,7 +791,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-average fraction of time spent in each state
 Background context: This problem involves finding the long-term (time-averaged) probability of being in each state, which is given by the steady-state probabilities. The system tends to revert to a specific position over time.
@@ -856,7 +815,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected number of minutes until k consecutive failures
 Background context: This problem involves understanding the concept of run length in probability theory, where we are interested in the expected time to observe a sequence of \(k\) consecutive failures.
@@ -898,7 +856,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Long-run Proportion of Time in State i (Ergodicity Theory)
 Background context: In a stochastic process, particularly one that is ergodic, the long-run proportion of time spent in each state can be determined using stationary equations. However, for this problem, we'll focus on the time-reversibility equations to find the long-run proportion of time.
@@ -964,7 +921,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Time for King to Return to Corner Using Time-Reversibility
 Background context: We need to calculate the expected time for the king to return to its starting corner using the concept of time-reversibility, which simplifies the calculation significantly.
@@ -990,7 +946,6 @@ This means the expected return time for the king to return to its starting corne
 
 ---
 
-**Rating: 8/10**
 
 #### Positive Recurrence of Threshold Queue
 Background context: We need to argue that the Markov chain representing a threshold queue, where \(T=3\), is both aperiodic and positive recurrent. This involves understanding the behavior of the states in the chain over time.
@@ -1007,7 +962,6 @@ The Markov chain for the threshold queue with \(T=3\) is positive recurrent beca
 
 ---
 
-**Rating: 8/10**
 
 #### Lower Bound on \(P\{T_{0,0} = n\}\)
 
@@ -1054,7 +1008,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expectation of Sum Involving i.i.d. Random Variables
 
@@ -1080,7 +1033,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proving \(m_{11} = \infty\) Using Wald's Equation
 
@@ -1116,7 +1068,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Value of a Sum with i.i.d. Variables
 
@@ -1142,7 +1093,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recurrence and Transience of Markov Chain
 In a Markov chain, states can be classified as either recurrent (a state that is visited infinitely often with probability 1) or transient (a state that is not visited infinitely often with positive probability). The classification depends on the expected number of visits to each state. If the expected number of returns to any state \(i\) is infinite, then the chain is recurrent; otherwise, it is transient.
@@ -1190,7 +1140,6 @@ This can be understood by considering the long-term behavior of the random walk.
 
 ---
 
-**Rating: 8/10**
 
 #### Time to Return to State 0 in Transient Markov Chain
 For a transient Markov chain where \(p < q\), we can derive the expected time \(E[T_{00}]\) to go from state 0 back to state 0.
@@ -1225,7 +1174,6 @@ This can be understood by noting that for a transient state, the chain will spen
 
 ---
 
-**Rating: 8/10**
 
 #### Positive Recurrence for Finite-State DTMCs
 For a finite-state, irreducible DTMC, we can prove the theorem that all states are positive recurrent using class properties:
@@ -1251,7 +1199,6 @@ This can be understood by recognizing that in a finite state space, the chain ca
 
 ---
 
-**Rating: 8/10**
 
 #### Time Reversibility and Finite-State DTMCs
 For a finite-state, irreducible DTMC with \(p < q\), we can determine if the chain is time-reversible by examining its stationary probabilities.

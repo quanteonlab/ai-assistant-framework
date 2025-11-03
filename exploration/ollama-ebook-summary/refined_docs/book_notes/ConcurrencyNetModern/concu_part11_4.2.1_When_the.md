@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4.2.1 When the GC is the bottleneck structs vs. class objects
 
 ---
 
-**Rating: 8/10**
 
 #### CPU Time vs. Elapsed Time
 Background context: The elapsed time refers to how much time a program takes with all parallelism going on, while the CPU time measures the sum of execution times for each thread running in different CPUs at the same given time. On a multicore machine, a single-threaded (sequential) program has an elapsed time almost equal to its CPU time because only one core works. When run in parallel using multiple cores, the elapsed time decreases as the program runs faster, but the CPU time increases due to the sum of all threads' execution times.
@@ -22,7 +20,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Worker Threads and Core Utilization
 Background context: The optimal number of worker threads should be equal to the number of available hardware cores divided by the average fraction of core utilization per task. For instance, in a quad-core computer with an average core utilization of 50%, the perfect number for maximum throughput is eight (4 cores × (100% max CPU utilization / 50% average core utilization per task)). Any more than this could introduce extra overhead due to context switching.
@@ -43,7 +40,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Garbage Collection and Memory Optimization
 Background context: In the Mandelbrot example, memory allocation for `Complex` objects can significantly impact garbage collection performance. Reference types like `Complex` are allocated on the heap, leading to frequent GC operations, which pause program execution until cleanup is complete.
@@ -75,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GC Generation Comparison
 Background context: The number of garbage collection (GC) generations impacts application performance. Short-lived objects are typically in Gen 0 and scheduled for quick cleanup, while longer-lived ones are in Gen 1 or 2.
@@ -112,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Parallel Loops and Race Conditions
@@ -125,7 +119,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Degree of Parallelism
 Background context: The degree of parallelism refers to how many iterations of a loop can run simultaneously. It depends on the number of available cores in the computer, and generally, more cores lead to faster execution until diminishing returns occur due to overhead.
@@ -137,7 +130,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Speedup in Parallel Programming
 Background context: Speedup measures the improvement in execution time when running a program on multiple cores compared to a single core. Linear speedup is the ideal scenario where an application runs n times faster with n cores, but this is often not achievable due to overhead.
@@ -149,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overhead in Parallelism
 Background context: Parallel programming introduces overhead such as thread creation, context switching, and scheduling, which can limit the achievable speedup. This overhead increases with more cores.
@@ -161,7 +152,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Amdahl's Law
 Background context: Amdahl’s Law defines the maximum speedup achievable by a program with parallelism. It states that the overall speedup depends on the proportion of time spent in sequential code.
@@ -173,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Speedup vs. Amdahl’s Law
 Background context: While linear speedup assumes that running n tasks on n cores results in an execution 1/n times faster, Amdahl’s Law provides a more accurate formula for calculating the theoretical maximum speedup achievable.
@@ -185,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Amdahl’s Law: Speedup Calculation
 
@@ -206,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gustafson’s Law: Performance Improvement Calculation
 
@@ -227,7 +214,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Loops: Deterministic vs. Non-deterministic Behavior
 
@@ -262,7 +248,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ThreadLocal Variables for Deterministic Parallel Loops
 

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11.6 Merging Independent Poisson Processes. 11.7 Poisson Splitting
 
 ---
 
-**Rating: 8/10**
 
 #### Exponential Distribution and Poisson Process Approximation
 Background context: The exponential distribution describes the time between events in a Poisson process. As the interval δ approaches zero, the number of events N(t) by time t can be approximated as a binomial random variable that converges to a Poisson distribution.
@@ -67,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Poisson Process Independence
 Background context: In a Poisson process, if we consider two types of events (e.g., A and B) with rates \( \lambda p \) and \( \lambda(1-p) \), respectively, then the number of type A events in time \( t \) (\( N_A(t) \)) and the number of type B events in time \( t \) (\( N_B(t) \)) are independent Poisson processes.
@@ -146,7 +143,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Discrete-Time Markov Chains (DTMCs)
 Background context: DTMCs are stochastic processes where transitions between states occur at discrete time steps. The process is memoryless, meaning that given the current state, future states depend only on the present and not on past events. Transition probabilities remain constant over time.

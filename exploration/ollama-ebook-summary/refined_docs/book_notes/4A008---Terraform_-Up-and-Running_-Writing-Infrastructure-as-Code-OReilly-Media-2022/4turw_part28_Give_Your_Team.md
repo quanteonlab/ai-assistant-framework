@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 28)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Give Your Team the Time to Learn
 
 ---
 
-**Rating: 8/10**
 
 #### Value Delivered in Each Step
 In large projects, there's a risk of getting zero value if the project gets canceled or delayed. Splitting the work into steps that deliver value incrementally helps mitigate this risk.
@@ -25,7 +23,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Contextual Learning and Process Definition
 Contextual learning involves providing detailed documentation, tutorials, and dedicated time to help the team adopt IaC. Defining a systematic workflow is crucial as your company grows.
@@ -44,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Use Version Control
 Background context: In software development, version control is essential for managing changes to source code over time. This helps developers track modifications, collaborate on projects, and revert to previous versions if necessary.
@@ -56,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Running Code Locally
 Background context: Running code locally is the first step in the workflow where developers test their changes before committing them. This allows for quick feedback on whether the code works as expected without involving external dependencies or other team members.
@@ -68,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Submitting Changes for Review
 Background context: Code reviews are an essential part of the development process, ensuring quality and consistency across the codebase. Peer review helps catch issues early, improves code quality, and fosters knowledge sharing among team members.
@@ -80,7 +74,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Running Automated Tests
 Background context: Automated testing is critical for ensuring the reliability of application code. It helps detect bugs early in the development cycle, improves code quality, and provides confidence when making changes.
@@ -92,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Merging and Release
 Background context: After thorough testing and review, the code is merged into the main branch or a staging environment for final preparation before production deployment.
@@ -104,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deploying
 Background context: Deployment involves moving the application from development or staging environments into a live environment where users can access it.
@@ -118,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Making Code Changes
 Background context: After verifying the application code works as expected locally, you can start making changes to the code. This process involves making a change, running manual or automated tests to ensure everything still works correctly, and repeating these steps iteratively until the desired functionality is achieved.
@@ -184,7 +174,6 @@ The output will indicate whether all tests passed or if any failed.
 
 ---
 
-**Rating: 8/10**
 
 #### Committing Code Changes
 Background context: After making and testing changes locally, you should commit your code with a clear message explaining what was changed. This helps maintain the history of changes made to the project.
@@ -223,7 +212,6 @@ You can open this URL in your browser and fill out the pull request title and de
 
 ---
 
-**Rating: 8/10**
 
 #### Setting Up Commit Hooks for Automated Tests
 Continuous integration (CI) servers like Jenkins, CircleCI, or GitHub Actions can be used to set up commit hooks that run automated tests on every push. This ensures code quality and reduces bugs before merging into the main branch.
@@ -253,7 +241,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Running Automated Tests in GitHub Pull Requests
 Automated tests can be run and their results displayed directly in the pull request. This helps developers review code changes more effectively.
@@ -279,7 +266,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Infrastructure Practices for Releasing Code
 Using immutable infrastructure practices ensures that once a code artifact is created, it cannot be changed. Each release should have a unique version number or tag.
@@ -318,7 +304,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deployment Tooling
 
@@ -337,7 +322,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deployment Strategies
 
@@ -352,7 +336,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blue-Green Deployment
 
@@ -367,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Canary Deployment Overview
 In software development, a canary deployment is a method used to test new versions of an application in production before rolling it out fully. The process involves deploying a small number of instances (the "canary") and comparing them against existing instances ("control"). This helps identify potential issues early on.
@@ -378,7 +360,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Difference Between Canary and Control
 During a canary deployment, the "canary" is one or more instances of an application that have been newly deployed. These instances run alongside existing ("control") instances to allow for detailed comparisons. The goal is to ensure both versions perform similarly in all relevant metrics.
@@ -389,7 +370,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rolling Deployment Strategies
 After a canary deployment confirms no issues with the new version, you can proceed with a rolling deployment. This strategy gradually deploys the updated code to all instances, allowing time for monitoring and ensuring smooth operation.
@@ -403,7 +383,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CI Server Deployment
 Deploying from a CI (Continuous Integration) server ensures that all deployment steps are automated. This practice promotes consistency, reduces human error, and streamlines the process by capturing workflows as scripts or commands.

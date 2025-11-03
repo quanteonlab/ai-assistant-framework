@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 29)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Defensive programming and fail fast
 
 ---
 
-**Rating: 8/10**
 
 #### Duck Typing and Defensive Programming
 Duck typing is a concept in dynamically typed languages where an object's suitability for a particular purpose is determined by its methods and properties, rather than its type. This approach can make code more flexible but also requires careful handling to avoid runtime errors.
@@ -66,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Goose Typing and Python ABCs
 Background context: The text discusses how Python uses Abstract Base Classes (ABCs) to implement an interface-like mechanism, which complements duck typing. It highlights that while Python doesn't have explicit `interface` keywords as in some other languages, it provides a way to define interfaces using abstract base classes.
@@ -192,7 +189,6 @@ isinstance(lottery, DrawABC)  # True
 ```
 x??
 
-**Rating: 8/10**
 
 #### Virtual Subclassing and ABCs
 Virtual subclassing allows you to define a relationship between an abstract base class (ABC) and your custom classes, even if they do not directly inherit from it. This is useful for runtime checks using `isinstance` or `issubclass`.
@@ -307,7 +303,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Duck Typing and ABCs in Python
 Background context: The passage discusses the use of duck typing and abstract base classes (ABCs) in Python, particularly within a plug-in architecture. It emphasizes that duck typing is simpler and more flexible than explicit type checks, and advises restraint in using ABCs to avoid unnecessary ceremony.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 34)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Classical Conditioning
 
 ---
 
-**Rating: 8/10**
 
 #### Formalism Provided by RL
 Background context: RL offers a clear formalism that is useful in making sense of experimental data from psychological studies. It suggests new kinds of experiments and points to critical factors that need to be manipulated and measured.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Computational Principles and Animal Learning
 Background context: The computational perspective provided by RL is meaningful because it highlights principles important to learning, whether by artificial or natural systems.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cognitive Processing and RL
 Background context: Some aspects of cognitive processing naturally connect with the computational perspective provided by RL, suggesting potential applications beyond traditional reinforcement learning.
@@ -39,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prediction and Control in Reinforcement Learning
 Background context explaining how reinforcement learning algorithms are divided into prediction and control categories. These categories mirror classical (Pavlovian) conditioning and instrumental (operant) conditioning from psychology, respectively.
@@ -58,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Instrumental Conditioning in Reinforcement Learning
 Explanation of how instrumental conditioning relates to control algorithms. In this type, the focus is on controlling actions based on future rewards.
@@ -76,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prediction Algorithms in Reinforcement Learning
 Explanation that prediction algorithms estimate future rewards or environmental features and play a key role in evaluating policies.
@@ -94,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Control Algorithms in Reinforcement Learning
 Explanation that control algorithms aim to improve policies by directly influencing future rewards through actions.
@@ -113,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Delay Conditioning
 Background context explaining how the conditioned stimulus (CS) extends throughout the interstimulus interval (ISI), which is the time between CS and US onset.
@@ -157,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Higher-order Conditioning
 Background context explaining higher-order conditioning. A previously-conditioned CS acts as a US in conditioning another initially neutral stimulus, leading to complex hierarchical learning processes.
@@ -176,7 +166,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor-Critic Methods and TD Learning
 In actor-critic methods, the critic uses Temporal Difference (TD) learning to evaluate the actor's policy based on state-action values. The critic provides feedback to the actor in a way that mimics higher-order instrumental conditioning.
@@ -187,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Model in Actor-Critic Methods
 The TD model, used in actor-critic methods, provides reinforcement to the actor via value estimates from the critic. These value estimates act as a form of higher-order conditioned reinforcer.
@@ -198,7 +186,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Update Rule for Associative Strengths
 In the Rescorla-Wagner model, associative strengths between stimuli can be updated based on prediction errors. This is analogous to adjusting weights in machine learning algorithms.
@@ -232,7 +219,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison with Least Mean Square (LMS) Rule
 Both the Rescorla-Wagner model and the LMS rule share similarities in their learning dynamics. However, there are some differences.
@@ -254,7 +240,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Model Overview
 The TD (Temporal Difference) model extends the Rescorla–Wagner model by considering how within-trial and between-trial timing relationships among stimuli can influence learning. Unlike the Rescorla–Wagner model, which updates associative strengths based on complete trials, the TD model updates these strengths in real-time.
@@ -277,7 +262,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Error Calculation
 The TD model introduces a new concept called the "TD error," which is used to determine how much the associative strength should change. This error combines the prediction target and the predicted value at the next time step.
@@ -307,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eligibility Traces and Real-Time Updates
 Eligibility traces in the TD model are used to keep track of which parts of the feature vector have been active recently. They help in determining how much an associative strength should be updated based on recent events.
@@ -339,7 +322,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Representations in TD Model
 The TD model allows for flexible state representations. Each state \( s \) is represented by a feature vector \( x(s) \), which can describe the external stimuli an animal experiences or internal neural activity patterns.
@@ -367,7 +349,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Higher-Order Conditioning and Bootstrapping
 Higher-order conditioning can naturally arise in the TD model due to its bootstrapping idea. This means that a stimulus can condition another stimulus even if they are not directly associated, but rather indirectly through their association with a common antecedent.
@@ -399,7 +380,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Model vs Rescorla–Wagner Model
 
@@ -424,7 +404,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real-Time Conditioning and Timing Considerations
 
@@ -463,7 +442,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Temporal Generalization in TD Models
 
@@ -509,7 +487,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Model with Presence Representation
 Background context explaining how the presence representation works within the TD model. The text indicates that even simple presence representations can account for basic properties of classical conditioning and features beyond trial-level models.
@@ -542,7 +519,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ISI-Dependency in TD Model
 Background context: The text discusses how the Temporal Difference (TD) model behaves differently depending on the interval (ISI) between stimuli. It states that conditioning increases at a positive ISI and then decreases after a varying interval.
@@ -553,7 +529,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Higher-Order Conditioning in TD Model
 Background context: The TD model can account for higher-order conditioning. In this process, a previously-conditioned CS (CSB) predicts a US, while another neutral stimulus (CSA) is paired with it. This leads to CSA acquiring associative strength even though it never pairs directly with the US.
@@ -565,7 +540,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Model's Temporal Difference Error
 Background context: The TD model uses the temporal difference error t(14.5), which involves ˆv(St+1,wt) – ˆv(St,wt). This allows the model to account for second- and higher-order conditioning by treating the temporal difference as equivalent to the occurrence of a US.
@@ -579,7 +553,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Algorithm Development and Dynamic Programming Connection
 
@@ -594,7 +567,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exponential Increase and Discounting
 
@@ -617,7 +589,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overall Model Flexibility
 

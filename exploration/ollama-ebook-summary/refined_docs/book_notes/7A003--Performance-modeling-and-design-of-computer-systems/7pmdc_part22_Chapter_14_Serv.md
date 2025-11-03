@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 14 Server Farms MMk and MMkk. 14.1 Time-Reversibility for CTMCs
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Reversibility for CTMCs
 Background context: In this section, we revisit the concept of time-reversibility but extend it to Continuous-Time Markov Chains (CTMCs). We discuss rates of transitions between states and how they can be used to determine limiting probabilities. The key terms are \(q_{ij}\), \(\pi_i q_{ij}\), \(\nu_i\), and \(\nu_i P_{ij}\).
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Time-Reversibility for CTMCs
 Background context: A CTMC is considered time-reversible if, for all states \(i\) and \(j\), the rate of transitions from state \(i\) to state \(j\) equals the rate of transitions from state \(j\) to state \(i\).
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proof of Lemma 14.2
 Background context: The proof involves showing that if certain conditions hold, then the values \(x_i\) can be identified as the limiting probabilities and the system is time-reversible.
@@ -46,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differentiating M/M/k and M/M/k/k Systems
 Background context: In this chapter, two types of server farm models are discussed. The M/M/k system allows for unbounded queuing, while the M/M/k/k system has a capacity constraint.
@@ -58,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Reversibility in CTMCs
 Background context: The concept of time-reversibility for Continuous-Time Markov Chains (CTMCs) is crucial for understanding the behavior and properties of these systems.
@@ -70,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Code for Time-Reversibility Check
 Background context: To verify time-reversibility, one needs to check if certain conditions hold.
@@ -95,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CTMC and Time-Reversibility
 
@@ -116,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Birth-Death Processes
 
@@ -158,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/k/k Loss System
 
@@ -195,7 +185,6 @@ This is particularly useful in practical applications where exact distributions 
 
 ---
 
-**Rating: 8/10**
 
 #### System Utilization (ρ)
 Background context: The system utilization, denoted by \(\rho\), is a measure of how busy the servers are. In an M/M/k system, it is defined as \(\rho = \frac{\lambda k}{\mu}\), where \(\lambda\) is the arrival rate and \(k\mu\) represents the total service capacity.
@@ -207,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Resource Requirement (R)
 Background context: The resource requirement \(R\) is defined as the expected number of jobs in service and can also be interpreted as the minimum number of servers needed to maintain stability, given by \(R = \frac{\lambda}{\mu}\).
@@ -219,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Probability that an Arrival Has to Queue (PQ)
 Background context: The probability that an arriving job has to queue, denoted by \(P_Q\), is the probability that all servers are busy when a new job arrives. This can be expressed as:
@@ -235,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Erlang-C Formula
 Background context: The famous Erlang-C formula is used to find \(P_Q\), which is the blocking probability. It relates directly to the system utilization \(\rho\) as:
@@ -250,7 +236,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Number of Jobs in Queue (E[NQ])
 Background context: The expected number of jobs in queue \(E[N_Q]\) is calculated as:
@@ -265,7 +250,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Time in Queue (E[TQ])
 Background context: The expected time a job spends in the queue \(E[T_Q]\) is given by:
@@ -280,7 +264,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Total Time in System (E[T])
 Background context: The expected total time a job spends in the system \(E[T]\) is:
@@ -295,7 +278,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Number of Jobs in System (E[N])
 Background context: The expected number of jobs in the system \(E[N]\) is:

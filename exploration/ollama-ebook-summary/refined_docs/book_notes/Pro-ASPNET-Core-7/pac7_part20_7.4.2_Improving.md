@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 7.4.2 Improving the URLs
 
 ---
 
-**Rating: 8/10**
 
 #### Updating the Model View Type
 The `@model` directive was changed from a simpler type to `ProductsListViewModel`, which contains information about the products and paging details. This change is necessary for handling paginated data properly.
@@ -23,7 +21,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generating User-Friendly URLs with ASP.NET Core Routing
 By adding a new route in the `Program.cs` file, the application can generate more user-friendly URLs for navigating through paginated data. This improves the URL structure and enhances the user experience.
@@ -42,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ensuring URL Changes Reflect in the Application
 After adding a new route for pagination, ASP.NET Core automatically updates the URLs used by the application. Tag helpers like `page-model` are aware of these changes and generate appropriate links.
@@ -63,7 +59,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Styling Content with Bootstrap
 Background context: The process of styling content using Bootstrap classes in Razor views, particularly focusing on product listings and pagination links.
@@ -101,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Customizing Pagination Links
 Background context: Implementing custom pagination link styles in Razor views using `PageLinkTagHelper`.
@@ -172,7 +166,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partial View in ASP.NET Core
 A partial view is a reusable piece of markup that can be embedded into another Razor view. This allows for reducing code duplication and maintaining consistency across multiple views.
@@ -192,7 +185,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Updating Index.cshtml with Partial View
 By refactoring `Index.cshtml` to use a partial view, you can maintain cleaner code and reuse the same markup across different views.

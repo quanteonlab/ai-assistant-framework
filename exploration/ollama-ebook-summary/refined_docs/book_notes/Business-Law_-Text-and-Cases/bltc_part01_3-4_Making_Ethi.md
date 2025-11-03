@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Business-Law_-Text-and-Cases_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3-4 Making Ethical Business Decisions
 
 ---
 
-**Rating: 8/10**
 
 #### Step 4: Review
 After implementing the decision, it is essential to review its outcome. The purpose is to determine if the chosen action solved the ethical problem and if stakeholders are satisfied with the result. This evaluation helps in improving future decisions.
@@ -37,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ethical Perspectives and Their Application
 Background context explaining that ethical perspectives vary and can be more or less helpful depending on the situation. Discusses Heigl's rights to privacy and image control versus potential safety concerns in other scenarios.
@@ -55,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### IDDR Approach for Decision-Making
 Background context: The IDDR (Identify, Decide, Do, Review) approach is a structured method for decision-making that includes identifying issues, making decisions, implementing actions, and reviewing outcomes. It ensures systematic consideration of ethical implications.
@@ -74,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade Secrets and Brad’s Involvement
 Background context: If Brad, who helped with the design but was involved in selling Hallowed to another company, takes the idea and sells it, this raises issues related to trade secrets. A trade secret protects confidential business information that provides a competitive edge, such as formulas, practices, or processes.

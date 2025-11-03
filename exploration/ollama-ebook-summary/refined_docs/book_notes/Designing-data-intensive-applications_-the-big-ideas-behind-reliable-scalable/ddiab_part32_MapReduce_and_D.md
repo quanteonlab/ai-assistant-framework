@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 32)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** MapReduce and Distributed Filesystems
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce and Distributed Filesystems Overview
 Background context: MapReduce is a distributed computing paradigm that processes large datasets across many machines. Hadoop’s implementation uses HDFS (Hadoop Distributed File System), which differs from object storage services in how it manages data locality and replication.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HDFS Architecture and Design
 Background context: HDFS implements the shared-nothing principle, providing fault tolerance through replication. It consists of NameNode managing metadata and DataNodes handling data blocks across multiple machines.
@@ -32,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Replication Strategies in HDFS
 Background context: To ensure reliability and availability, HDFS uses replication strategies like full copies or erasure coding. Full replicas provide high redundancy but consume more storage space, while erasure coding offers a balance between performance and storage efficiency.
@@ -49,7 +45,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### HDFS Scalability
 HDFS has scaled well, supporting tens of thousands of machines and hundreds of petabytes. This scalability is achieved using commodity hardware and open-source software, making it cost-effective compared to dedicated storage appliances.
@@ -61,7 +56,6 @@ The cost-effectiveness comes from using commodity hardware, which reduces the ov
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce Programming Framework
 MapReduce is a framework for processing large datasets across a cluster of computers. It consists of two main steps: mapping and reducing.
@@ -76,7 +70,6 @@ A MapReduce job involves four primary steps:
 
 ---
 
-**Rating: 8/10**
 
 #### Mapper Function in MapReduce
 The mapper function processes individual records from the input dataset and outputs key-value pairs. Each record is processed independently, with no state retained between calls to the mapper.
@@ -99,7 +92,6 @@ public class LogMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 
 ---
 
-**Rating: 8/10**
 
 #### Reducer Function in MapReduce
 The reducer function processes all key-value pairs with the same key. It iterates over these values and generates output records.
@@ -121,7 +113,6 @@ public class LogReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce Job Execution Example
 In a web server log analysis example, the mapper extracts URLs from logs, and the reducer counts their occurrences.
@@ -136,7 +127,6 @@ The process involves:
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### MapReduce Framework Overview
@@ -163,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce Data Flow in Hadoop
 In Hadoop MapReduce, the data flow involves a series of steps where input data is processed by map tasks and then passed to reduce tasks. The framework handles the distribution of the data among the nodes in the cluster.
@@ -189,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shuffle and Sort Process
 The shuffle process in MapReduce involves moving the output of mappers to reducers. This is done by sorting the mapper outputs based on keys and then distributing them to the appropriate reducers.
@@ -211,7 +199,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Putting Computation Near the Data
 The principle of "putting computation near the data" means running map tasks on nodes where their input resides to minimize network overhead.
@@ -248,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Chaining MapReduce Jobs in Workflows
 MapReduce jobs can be chained together to form workflows, where the output of one job serves as input for another.
@@ -291,7 +277,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Workflow Schedulers for Hadoop
 Background context explaining the concept. Various workflow schedulers for Hadoop like Oozie, Azkaban, Luigi, Airflow, and Pinball help in managing large collections of batch jobs.
@@ -322,7 +307,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Denormalization and Joins
 Background context explaining the concept. Denormalization can reduce the need for joins but generally cannot eliminate them entirely. In a database, an index is used to quickly locate records of interest.
@@ -351,7 +335,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce and Indexing
 Background context explaining the concept. MapReduce does not have a concept of indexes in the usual sense, whereas databases do. When processing data with MapReduce, it performs full table scans rather than index lookups.
@@ -375,7 +358,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Join Implementation in Batch Processing
 Background context explaining the concept. In batch processing, joins are used to resolve all occurrences of some association within a dataset, such as processing data for all users simultaneously.
@@ -410,7 +392,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Local Data Synchronization in Batch Processing
 To overcome the limitations of remote database queries during batch processing, it is more efficient to synchronize and store relevant data locally. This approach ensures that all necessary data for a join operation is available on one machine, improving performance through local access.
@@ -458,7 +439,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce for Join Operations in Batch Processing
 Using MapReduce to perform join operations between datasets is a scalable approach. The mapper extracts keys and values from input records, which are then combined based on these keys. In the context of joining user activity events with user profiles, different mappers handle each dataset.
@@ -506,7 +486,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reduce-Side Sort-Merge Join
 Background context: This concept explains how to perform a join operation using MapReduce, specifically focusing on bringing related data together by user ID. The process involves sorting mapper output and leveraging reducers to merge and join records from both sides of the join. Key aspects include partitioning files, secondary sorts for specific record ordering, and efficient processing in the reducer.
@@ -540,7 +519,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Secondary Sort for Join Operations
 Background context: Secondary sort is a technique used in MapReduce to ensure that specific types of records are sorted together, allowing efficient join operations. In the given example, all user records and activity events sharing the same user ID become adjacent, enabling the reducer to process them in a specific order (e.g., birth date first, then timestamp order).
@@ -575,7 +553,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce Architecture Separation
 Background context: This concept highlights how the MapReduce framework separates physical network communication aspects (like data distribution across nodes) from application logic (processing the data). The separation allows efficient handling of partial failures and simplifies error recovery without affecting the application's main logic.
@@ -604,7 +581,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Grouping Records in MapReduce
 Background context: In batch processing, grouping records by a key is commonly done to perform aggregations or operations within each group. This can be achieved using SQL's GROUP BY clause and similar techniques in frameworks like MapReduce.
@@ -628,7 +604,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Aggregation Operations in Grouping
 Background context: After records are grouped by a specific key, common operations include counting records, summing values, or finding top k items within each group.
@@ -650,7 +625,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Skew in Grouping Operations
 Background context: If there are a few records associated with many keys (linchpin objects or hot keys) and most records associated with very few keys, this can lead to significant skew where one reducer has to process significantly more data than the others.

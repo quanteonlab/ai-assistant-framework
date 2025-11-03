@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Logical clocks
 
 ---
 
-**Rating: 8/10**
 
 #### Physical Clocks
 Physical clocks are based on quartz crystals and are inexpensive but not very accurate. The rate at which a clock runs is called clock drift, while the difference between two clocks at a specific point in time is referred to as clock skew.
@@ -83,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Clocks: Introduction and Basic Concepts
 Vector clocks are a type of logical clock used to track causality between operations across distributed systems. Unlike physical clocks, vector clocks can handle partial orderings of events that happen on different processes. The basic idea is to use an array of counters, one for each process in the system.
@@ -202,7 +199,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Raft Leader Election Overview
 Raft is a consensus algorithm used to manage distributed systems, ensuring that all nodes agree on the state of the system. In this context, leader election is crucial for determining which process has special powers such as access to shared resources or task assignment.

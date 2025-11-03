@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Serializable Snapshot Isolation SSI
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Two-Phase Locking
@@ -64,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency Control and Transaction Isolation Levels
 
@@ -176,7 +173,6 @@ Suppose two transactions, T1 and T2, are running concurrently. If T1 starts read
 
 ---
 
-**Rating: 8/10**
 
 #### Single Computer Reliability
 In a single computer environment, software typically behaves predictably. Either it works perfectly or fails entirely due to hardware issues like memory corruption. The system is deterministic under normal conditions.
@@ -242,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Systems Challenges
 Background context explaining the challenges in distributed systems, including the concept of partial failures and nondeterminism. Partial failures are unpredictable issues where parts of a system may be broken while other parts work fine. Nondeterminism refers to situations where outcomes can vary unpredictably due to network delays or hardware failures.

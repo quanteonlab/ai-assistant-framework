@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Environments
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Servers
 Background context explaining how storing configuration in source control ensures reproducibility. The problem of "configuration drift" is highlighted as a common issue that needs to be addressed.
@@ -37,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Different Environments for Deployments
 Background context explaining the various stages and environments a microservice might go through in a CD pipeline, such as test, UAT, performance, and production. The differences between these environments are highlighted.
@@ -81,7 +78,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Configuration Management
 Background context explaining how service configuration should be handled to avoid problems. Discusses the issues with building one artifact per environment and suggests managing configuration separately.
@@ -105,7 +101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service-to-Host Mapping
 Background context on the concept of hosts in a microservices environment, explaining how multiple services can be run on a single host for easier management and cost savings. Discusses challenges such as monitoring, side effects, and deployment complexity.
@@ -132,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple Services Per Host Model
 Background context on how deploying multiple microservices on a single host can simplify deployment and reduce costs, but also poses challenges like increased monitoring complexity and resource contention. Discusses the trade-offs between this model and alternatives.
@@ -159,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges with Multiple Services Per Host Model
 Background context on the complexities introduced by deploying multiple services on a single host, such as increased monitoring complexity, resource contention, and deployment challenges. Discusses the importance of maintaining independent release strategies.
@@ -186,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Impact Analysis and Deployment Complexity
 Background context on how having multiple services per host can complicate impact analysis during failures and deployment, as well as limiting autonomy of teams and options for image-based deployments.
@@ -213,7 +205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Technological Constraints of Application Containers
 Background context discussing how application containers can constrain technology choices, leading to the need for a specific technology stack that limits options for implementation and automation.
@@ -235,7 +226,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overhead and Resource Management
 Background context highlighting the overhead associated with managing multiple hosts, and how automation can help address these challenges. Discusses potential downsides of using application containers like increased complexity in lifecycle management and slower spin-up times.
@@ -256,7 +246,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Self-Contained Deployable Microservices
 Background context on the approach of using self-contained deployable microservices as artifacts, highlighting examples like Nancy for .NET and Jetty embedded container in Java. Discusses their potential to operate at scale.
@@ -277,7 +266,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Resource Overhead and Management Complexity
 Background context on the resource overhead associated with application containers, including commercial costs and added complexity in analyzing resource use and threads due to multiple applications sharing the same process.

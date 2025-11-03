@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Problem. Solution. See Also
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Formatting Date Outputs
@@ -94,7 +92,6 @@ public class DateDifference {
 x??
 ---
 
-**Rating: 8/10**
 
 #### Date and Time Calculations
 Background context explaining the importance of date and time calculations. Discuss how APIs like `LocalDate`, `Period`, and `ChronoUnit` facilitate these operations.
@@ -191,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convertion Between New and Legacy Date APIs
 Background context: The new date/time API introduced in Java 8 is intended to replace the older `java.util.Date` and `java.util.Calendar`. However, due to legacy codebase dependencies, it may be necessary to interact with these classes. This section outlines how to convert between the two.

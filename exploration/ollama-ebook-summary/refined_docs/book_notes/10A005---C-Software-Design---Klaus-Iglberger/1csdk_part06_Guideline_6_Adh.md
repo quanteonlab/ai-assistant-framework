@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Guideline 6 Adhere to the Expected Behavior of Abstractions
 
 ---
 
-**Rating: 8/10**
 
 #### Abstractions and Managing Complexity
 Background context: This section discusses how abstractions are crucial for managing complexity in software design and architecture. Good abstractions help maintain a clear separation of concerns, making it easier to manage complex systems.
@@ -49,7 +47,6 @@ The concept of "ownership of abstractions" refers to determining which parts of 
 
 ---
 
-**Rating: 9/10**
 
 #### Dependency Inversion Principle (DIP)
 In software design, the Dependency Inversion Principle (DIP) is a fundamental guideline that aims to reduce tight coupling between high-level modules and low-level modules. According to DIP, high-level modules should not depend on low-level modules but should both depend on abstractions. Abstractions should not depend upon details; details should depend upon abstractions.
@@ -157,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Precondition Strengthening Violation
 Background context: The Liskov Substitution Principle (LSP) ensures that subtypes do not strengthen preconditions. This means a subtype cannot expect more from its methods than what is expected by the supertype's method.

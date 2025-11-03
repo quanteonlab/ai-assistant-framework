@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 56 Pay Attention to How Types Display
 
 ---
 
-**Rating: 8/10**
 
 #### Pay Attention to How Types Display
 Background context explaining the importance of how types display. The way TypeScript libraries choose to display their types can greatly affect user experience and understanding.
@@ -146,7 +144,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tail-Recursive Generic Types
 
@@ -252,7 +249,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exhaustiveness Checking Using Never Types
 
@@ -368,7 +364,6 @@ In these examples, `throwError` and `foreverLoop` are marked with `never` to ind
 
 x??
 
-**Rating: 8/10**
 
 #### Exhaustiveness Checking in TypeScript
 Background context explaining the need for exhaustiveness checking. This ensures that all possible cases are handled, preventing runtime errors due to unhandled cases.
@@ -474,7 +469,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Template Literal Types and Exhaustiveness Checking
 

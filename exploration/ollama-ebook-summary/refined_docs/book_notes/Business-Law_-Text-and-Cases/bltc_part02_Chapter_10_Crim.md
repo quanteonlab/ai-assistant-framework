@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Business-Law_-Text-and-Cases_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 10 Criminal Law and Cyber Crime
 
 ---
 
-**Rating: 8/10**
 
 #### Data Security Breach and Legal Implications (LabMD, Inc. v. Tiversa, Inc.)
 Background context: Dartmouth College professor M. Eric Johnson collaborated with Tiversa to search peer-to-peer networks for private information that could be misused. They found sensitive data from LabMD, a health-care company, which included Social Security numbers and insurance information. Upon discovering this breach, Tiversa contacted LabMD to offer their services but instead faced legal action.
@@ -20,7 +18,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Specific Description in Warrant
 Background context: The Fourth Amendment requires a specific description of what is to be searched or seized. General searches through a person's belongings are not allowed and the search cannot extend beyond what is described in the warrant.
@@ -31,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Notify Authorities and Victims
 
@@ -69,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avoid Sanctions
 

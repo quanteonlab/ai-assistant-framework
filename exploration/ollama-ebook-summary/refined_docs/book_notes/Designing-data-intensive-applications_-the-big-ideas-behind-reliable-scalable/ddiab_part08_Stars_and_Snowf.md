@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Stars and Snowflakes Schemas for Analytics
 
 ---
 
-**Rating: 8/10**
 
 #### OLTP Databases vs Data Warehouses
 Background context explaining the divergence between OLTP databases and data warehouses. These systems often share a SQL query interface but are optimized for very different types of queries, with OLTP focusing on transaction processing and data warehousing focused on analytics.
@@ -98,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Star Schema Overview
 Background context: A star schema is a type of database schema used for data warehousing and business intelligence. It consists of fact tables surrounded by dimension tables, forming a "star" shape when visualized. This structure allows efficient querying and aggregation of data.
@@ -182,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Column-Oriented Storage Layout
 Column-oriented storage organizes data by columns rather than rows, which is advantageous for data warehousing and analytics. This layout allows for efficient querying of large datasets because it only loads the necessary columns from disk.

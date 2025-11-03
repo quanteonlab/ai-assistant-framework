@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4.2 Implicit Parallelism
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Concurrent Software and Parallel Hardware Independence
@@ -35,7 +33,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pipelining Concept
 Background context: The text explains that implicit parallelism is used to improve the execution speed of a single thread by utilizing techniques like pipelined CPU architectures. It provides an overview of how CPUs execute instructions through various stages.
@@ -76,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Instruction Pipeline Stages
 Instruction execution involves several stages, each handled by a specific component within the CPU. The stages include fetch, decode, execute, memory access, and register write-back.
@@ -135,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallelism and Instruction-Level Parallelism (ILP)
 Parallel execution of instructions is achieved through pipelining, where different stages of instruction execution are handled by separate hardware components. ILP aims to keep all stages busy at all times.
@@ -217,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pipelining Example with Multiple Instructions
 Consider the execution of two instructions A and B through a pipelined CPU. In each clock cycle, different parts of the pipeline process various stages of these instructions.
@@ -291,7 +285,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Pipeline Latency and Throughput
@@ -311,7 +304,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pipeline Stages and Throughput
 To achieve higher throughput, it is ideal if all stages in a CPU have roughly equal latencies. If one stage takes significantly longer than others, breaking that stage into smaller segments can help balance out the latencies.
@@ -329,7 +321,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pipeline Stalls
 Stalls occur when the CPU cannot issue a new instruction on a particular clock cycle. This can happen due to dependencies between instructions in the pipeline.
@@ -345,7 +336,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Dependencies and Stalls
 Data dependencies cause stalls by forcing instructions to wait for data from earlier instructions. For instance, if `imul` has not completed, the result cannot be used in the subsequent `add`.
@@ -363,7 +353,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Instruction Reordering to Mitigate Data Dependencies
 Background context: To mitigate data dependencies and avoid pipeline stalls, instructions can be reordered. Compilers and programmers can rearrange the sequence of instructions to ensure that non-dependent instructions are executed while waiting for dependent ones.
@@ -391,7 +380,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Out-of-Order Execution
 Background context: Modern CPUs support out-of-order execution, which dynamically detects data dependencies between instructions. When a dependency is found, the CPU searches for another instruction that can be issued out of order and execute it to keep the pipeline busy.
@@ -423,7 +411,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Speculative Execution
 Background context: CPUs use speculative execution, also known as branch prediction, to mitigate the impact of branch dependencies. The idea is that the CPU tries to guess which path a branch will take and continues executing instructions from that path in anticipation.
@@ -435,7 +422,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Branch Prediction Techniques
 Background context: CPUs use various techniques to improve branch prediction accuracy. Some common methods include assuming branches are never taken, always taking backward branches, and using more sophisticated hardware-based branch predictors.
@@ -447,7 +433,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Union for Bitwise Masking
 
@@ -488,7 +473,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Select Operation
 Background context explaining the concept of a select operation, including its relation to branches and predication. Mention how certain ISAs provide specific instructions for performing these operations efficiently.
@@ -521,7 +505,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multicore CPUs
 Multicore CPUs contain two or more processing cores on a single chip. Each core acts as an independent self-contained unit capable of executing instructions from at least one instruction stream.
@@ -533,7 +516,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kernel and Device Drivers Architecture
 Background context: The kernel is the core of the operating system, handling fundamental operations. Device drivers run directly on top of hardware to manage specific tasks like input/output (I/O). All other software runs on top of these components, usually in a more restricted mode.
@@ -544,7 +526,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Protection Rings
 Background context: To manage security and resource allocation effectively, many operating systems use protection rings. Each ring has different privileges based on trust levels. The kernel runs in the most trusted ring 0, with full access to hardware.
@@ -555,7 +536,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Protection Rings
 Background context: The example illustrates how different components run in specific rings based on their trust level and required privileges. Ring 0 is for the kernel, ring 1 for device drivers, ring 2 for I/O trusted programs, and ring 3 for all other user applications.
@@ -572,7 +552,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detailed Explanation of Kernel Calls
 Background context: When a program in user mode needs to perform a task that requires privileged access, it makes a special call (kernel call) to the operating system kernel. This request is handled by switching to kernel mode temporarily.
@@ -589,7 +568,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example for Kernel Call
 Background context: An example could illustrate how a C program might make a kernel call by using an interrupt or syscall instruction. This demonstrates switching from user to kernel mode temporarily.
@@ -620,7 +598,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallelism and Concurrent Programming: Protected Memory Pages
 Protected memory pages are segments of virtual memory that the kernel locks down, preventing user programs from writing to them. This ensures that critical system data remains intact and prevents crashes caused by unauthorized access.
@@ -640,7 +617,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interrupts: Hardware Interrupts
 An interrupt is a signal sent to the CPU by an external device or internal timer. A hardware interrupt is triggered when a non-zero voltage is placed on one of the CPU's pins. This can happen at any time, even during the execution of a CPU instruction.
@@ -663,7 +639,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switching
 Context switching occurs when control transitions from one process to another. This involves saving the state of the current program and restoring the state of the next program.
@@ -690,7 +665,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preemptive Multitasking
 Preemptive multitasking involves running multiple programs at different times by switching between them based on predefined criteria. In contrast to cooperative multitasking, preemptive multitasking can take control away from a program and switch to another one even if the current program is still executing.
@@ -720,7 +694,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preemptive Multitasking
 Background context explaining the need for preemptive multitasking and how it addresses the issues with cooperative multitasking. Provide a brief explanation of hardware interrupts and their role in context switching.
@@ -738,7 +711,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Processes
 Background context explaining what processes are in an operating system and how they differ from programs. Provide details on the key components of a process.
@@ -758,7 +730,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switching
 Background context explaining what context switching is and how hardware interrupts play a role.
@@ -777,7 +748,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronization and Communication Mechanisms
 Background context: Processes need mechanisms to synchronize their activities and communicate with each other. Examples include message queues, pipes, and semaphores.
@@ -832,7 +802,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Threads in a Process
 Background context: A process can contain multiple threads. Each thread is an independent stream of execution within the same address space.
@@ -844,7 +813,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Scheduling and Multitasking
 Background context: The operating system schedules multiple threads to run on available CPU cores using preemptive multitasking.
@@ -856,7 +824,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtual Memory Map of a Process
 Background context: Each process has its own virtual memory map, which is defined by the process's virtual page table.
@@ -902,7 +869,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Secure and Stable Execution Environment
 Background context: Each process has its own virtual page table, ensuring that processes cannot corrupt each other's memory unless explicitly shared.
@@ -914,7 +880,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kernel Space and User Mode Protection
 Background context: The kernel runs in a special range of addresses known as kernel space, which is only accessible by code running in kernel mode.
@@ -928,7 +893,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relocatable Code and Address Resolution
 Relocatable code means that addresses are specified as relative offsets rather than absolute memory addresses. The operating system fixes up these relative addresses into real (virtual) addresses before running the program.
@@ -940,7 +904,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Call Stack Creation
 When a process is first run, the kernel creates a default thread for it and allocates physical memory pages for this thread's call stack, mapping them into the process’s virtual address space.
@@ -952,7 +915,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Management in Processes
 Processes can manage their own virtual address space with physical pages allocated on demand.
@@ -966,7 +928,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### User and Kernel Space Memory Mapping
 Background context: In most operating systems, including Windows, address space is divided into user and kernel spaces. User space is unique per process, while kernel space is shared among all processes.
@@ -978,7 +939,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switching into Kernel Mode
 Background context: When a user process makes a system call, it undergoes a context switch from user mode to kernel mode. This allows the CPU to execute privileged instructions necessary for system operations.
@@ -990,7 +950,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process vs. Thread in Execution Context
 A process is an instance of a program that runs within the operating system and contains its own memory space, resources, and execution context. A thread is the smallest unit of execution within a process, encapsulating an instruction stream with its own call stack and register values.
@@ -1023,7 +982,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Libraries
 Modern operating systems support multithreading through system calls. Portable thread libraries such as the POSIX pthread library, C11/C++11 standard thread libraries, and PlayStation 4 SDK's scethread functions are available to facilitate thread creation and manipulation.
@@ -1069,7 +1027,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Creation and Termination
 Background context: When a program is executed, an operating system (OS) creates a process to encapsulate it. This process typically starts with one thread called the main thread, which begins execution at the `main()` function. Additional threads can be created by calling OS-specific functions like `pthread_create()`, `CreateThread()`, or using C++11's `std::thread`.
@@ -1095,7 +1052,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Request to Exit
 Background context: A thread can request another thread to exit using specific functions. This is useful in scenarios where a thread needs to communicate with or depend on the termination of other threads.
@@ -1117,7 +1073,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Yielding
 
@@ -1155,7 +1110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Yielding Mechanism
 Background context explaining how thread yielding works and its benefits. Thread yielding involves relinquishing the remainder of a time slice by calling specific system functions like `pthread_yield`, `Sleep(0)`, or `SwitchToThread()`. This approach helps reduce wasted CPU cycles and improves power consumption compared to pure busy-wait loops.
@@ -1176,7 +1130,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread States and Context Switching
 Background context explaining the states a thread can be in (Running, Runnable, Blocked) and what causes a context switch. A context switch happens whenever the kernel transitions a thread from one state to another.
@@ -1195,7 +1148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switching Between Threads vs Processes
 Background context: During a context switch, the operating system saves and restores CPU registers. If threads belong to different processes, additional steps are required to save and restore virtual memory maps and flush TLBs.
@@ -1206,7 +1158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Priorities and Affinity
 Background context: Threads can have different priorities that affect their scheduling. Priority and affinity are two ways programmers can influence how threads run on cores.
@@ -1217,7 +1168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Priority-Based Scheduling Algorithm
 Background context: The simplest priority-based scheduling algorithm ensures that higher-priority threads run first until a higher-priority thread becomes available, thus allowing lower-priority threads to be scheduled.
@@ -1228,7 +1178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switching Between Processes vs Threads
 Background context: Context switching between processes is more expensive than within the same process due to additional steps required like saving and restoring virtual memory maps and flushing TLBs.
@@ -1241,7 +1190,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Starvation and Thread Affinity
@@ -1257,7 +1205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Local Storage (TLS)
 Thread local storage (TLS) is a mechanism where each thread has its own private memory block. This ensures data specific to one thread does not interfere with other threads in the same process.
@@ -1279,7 +1226,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fibers Overview
 Fibers are a lightweight alternative to threads that can be used in game engines and other applications. Unlike traditional threads, fibers do not require context switching into kernel space, making them faster and less resource-intensive.
@@ -1293,7 +1239,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Debugging Fibers
 Before committing to a fiber-based design in your game engine, it is crucial to ensure that your debugger has adequate support for debugging fibers. If not, this could become a significant limitation.
@@ -1307,7 +1252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switch Implementation
 Implementing user-level threads involves managing context switches. A context switch mostly requires swapping the contents of CPU registers, including the instruction pointer and call stack.
@@ -1342,7 +1286,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coroutines
 Coroutines are a specific type of user-level thread that can be particularly useful in writing asynchronous programs. They generalize the concept of subroutines by allowing a coroutine to yield control to another coroutine.
@@ -1358,7 +1301,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coroutines vs. Threads in Memory Context
 Coroutines maintain their own private execution context, including a call stack and register contents. When one coroutine yields control to another, it acts more like a context switch between threads than a function call.
@@ -1389,7 +1331,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coroutines Implementation in High-Level Languages
 High-level languages like Ruby, Lua, and Google’s Go provide built-in support for coroutines. These implementations are often optimized and can be efficiently used without needing to implement them from scratch.

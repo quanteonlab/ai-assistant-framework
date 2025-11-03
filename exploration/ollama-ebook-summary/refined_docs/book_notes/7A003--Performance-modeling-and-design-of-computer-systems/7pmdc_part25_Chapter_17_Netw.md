@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 17 Networks of Queues and Jackson Product Form. 17.2 The Arrival Process into Each Server
 
 ---
 
-**Rating: 8/10**
 
 #### Jackson Network Definition
 Background context explaining the concept. A Jackson network is a very general form of queueing network with \(k\) servers, each having its own unbounded queue and serving jobs on a First-Come-First-Served (FCFS) basis. Each server has a service rate \(\mu_i\). Jobs arrive at each server according to a Poisson process with rate \(r_i\), and the routing of jobs is probabilistic based on probabilities \(P_{ij}\).
@@ -52,7 +50,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Balance Equations for Jackson Networks
 
@@ -123,7 +120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Local Balance Approach Overview
 Local balance is a method used to simplify complex balance equations, particularly in queueing theory. The approach aims to break down the balance equation into smaller, more manageable components rather than using reverse chain arguments or other complex methods.
@@ -221,7 +217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Guessing πn1,...,n k Term
 Background context: To solve for \(\pi_{n_1,\ldots,n_k}\), we need to ensure that \(A = A'\). This involves understanding how transition rates and probabilities interact within a queue system. The goal is to find constants \(c_i\) such that the equations balance.
@@ -277,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Product Form Solution for πn1,...,nk
 
@@ -364,7 +358,6 @@ The answer: The theorem states that a Jackson network with \(k\) servers has a p
 This theorem implies that the network can be analyzed as a product of individual M/M/1 queue models, even though the overall system might have complex routing and non-Poisson arrivals.
 x??
 
-**Rating: 8/10**
 
 #### Overview of Classed Network of Queues
 Background context: This section introduces a broader class of queueing networks that extend Jackson's product form result to include "classed" networks. These networks allow for different routing probabilities based on job classes and permit jobs to change their classes after service, making the model more flexible.

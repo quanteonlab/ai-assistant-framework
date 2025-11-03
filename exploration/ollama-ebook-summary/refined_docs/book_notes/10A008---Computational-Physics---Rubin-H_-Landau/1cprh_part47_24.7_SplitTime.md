@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 47)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 24.7 SplitTime FDTD
 
 ---
 
-**Rating: 8/10**
 
 #### Time Delay of Wave Packets
 Background context explaining the need to determine the time delay for wave packets and how it relates to classical orbits with unending scatterings. The algorithm aims to find the time it takes for most of the initial packet to leave the scattering region.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Plotting Time Delay vs Wave Packet Momentum
 Background context on plotting the relationship between time delay and momentum to look for indications of chaos such as sharp peaks or rapid changes. The literature suggests high degrees of multiple scatterings occur when \( \frac{a}{R} \approx 6.245 \).
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finite Difference Time Domain (FDTD) Simulation for Electromagnetic Waves
 Background context on using FDTD simulations to model electromagnetic waves, emphasizing the coupling between \( E \) and \( H \) fields where variations in one vector generate the other. The initial conditions are given as sinusoidal spatial variation.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Maxwell's Equations for EM Wave Propagation
 Background context on how Maxwell’s equations describe electromagnetic wave propagation, focusing on the z-dimension with no sources or sinks.
@@ -67,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Split-Time FDTD Algorithm for Maxwell’s Equations
 Background context on solving coupled partial differential equations using central difference approximations in both time and space. The initial conditions are set to sinusoidal spatial variation, and the algorithm uses an interleaved lattice structure.
@@ -86,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Renormalization of Electric Fields
 Background context on renormalizing the electric fields to have the same dimensions as the magnetic fields for simplicity.
@@ -104,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Split-Time FDTD Algorithm for Electromagnetic Waves
 
@@ -135,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### FDTD Algorithm Implementation
 
@@ -158,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stability Condition for FDTD Algorithm
 
@@ -182,7 +172,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Courant-Friedrichs-Lewy (CFL) Condition
 
@@ -203,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example for FDTD Implementation
 
@@ -234,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Periodic Boundary Conditions
 
@@ -259,7 +246,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Courant Condition Testing
 
@@ -289,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pulse Propagation Verification
 
@@ -320,7 +305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gaussian Pulse Simulation
 
@@ -347,7 +331,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dielectric Material Effects
 
@@ -372,7 +355,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Frequency-Dependent Filtering
 
@@ -394,7 +376,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wave Plate Simulation
 
@@ -428,7 +409,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wave Equations for Electromagnetic Waves
 Background context: Maxwell's equations are given to describe the propagation of electromagnetic waves along the z-axis in free space. These equations involve first-order partial derivatives of electric (Ex, Ey) and magnetic (Hx, Hy) fields.
@@ -447,7 +427,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### FDTD Algorithm for Solving EM Waves
 Background context: The Finite-Difference Time-Domain (FDTD) approach is used to solve the wave equations. A simplified set of equations with a beta value is provided, ensuring symmetry and stability.
@@ -472,7 +451,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Twin Lead Transmission Line Model
 Background context: The model describes a twin-lead transmission line with two parallel wires carrying alternating current or pulses. It includes components like inductance (LΔx), resistance (RΔx), capacitance (CΔx), and conductance (GΔx).
@@ -495,7 +473,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Leapfrog Algorithm for Telegrapher's Equations
 Background context: The leapfrog algorithm is applied to solve the telegrapher's equations, ensuring stability by considering the Courant-Friedrichs-Lewy (CFL) condition.
@@ -513,7 +490,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Experimenting with Different Values for Δx and Δt
 Background context: The problem involves experimenting to find better precision or speedup in computations. This is often achieved by adjusting the spatial step size (Δx) and temporal step size (Δt). For finite difference methods, smaller values of Δx and Δt can improve accuracy but may also increase computational cost.
@@ -533,7 +509,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Boundary Conditions V(0,t) = V(L,t) = 0
 Background context: The boundary conditions specify the values of the wave function at the ends of the transmission line. These conditions are essential for solving partial differential equations accurately.
@@ -552,7 +527,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving Time-Dependent Schrödinger Equation for Gaussian Wave Packet
 Background context: The code provided solves the time-dependent Schrödinger equation for a Gaussian wave packet in a harmonic oscillator potential. This problem involves numerical methods and visualization to understand wave packet dynamics.
@@ -573,7 +547,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving for Wavepacket Scattering from Three Disks
 Background context: The code provided simulates the scattering of a wave packet from three disks. This problem involves numerical methods to understand how waves interact with obstacles.
@@ -594,7 +567,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### FDTD Algorithm for Linearly Polarized Wave Propagation
 Background context: The code provided solves Maxwell's equations via the Finite-Difference Time-Domain (FDTD) algorithm to simulate linearly polarized wave propagation in the z-direction. This method is widely used in electromagnetic simulations.
@@ -614,7 +586,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### FDTD Algorithm for 1D Wave Propagation
@@ -645,7 +616,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Boundary Conditions in FDTD Simulation
 The code implements periodic boundary conditions to handle the edges of the computational domain. These ensure that the fields wrap around from one end of the simulation box to the other, simulating an infinite domain.
@@ -667,7 +637,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Evolution of Fields
 The time evolution of the fields is computed iteratively by updating their values based on neighboring cells' fields from previous time steps. This process involves finite difference schemes to approximate spatial derivatives.
@@ -692,7 +661,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Circularly Polarized Wave Simulation
 The code simulates the propagation of circularly polarized waves in the z-direction using FDTD. It updates the fields with complex phase shifts to represent the rotation of polarization.
@@ -717,7 +685,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Importing Required Libraries
@@ -736,7 +703,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Plotting Fields
 Background context: The `plotfields` function updates the visual arrows based on the current values of electric and magnetic fields.
@@ -758,7 +724,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Stepping and Field Updates
 Background context: The `newfields` function performs time stepping to update the electric and magnetic fields.

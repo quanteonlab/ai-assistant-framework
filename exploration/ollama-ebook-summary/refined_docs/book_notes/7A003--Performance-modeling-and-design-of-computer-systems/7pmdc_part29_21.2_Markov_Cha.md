@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 29)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 21.2 Markov Chain Modeling of PH Workloads
 
 ---
 
-**Rating: 8/10**
 
 #### Markov Chain for M/E 2/1
 In this scenario, we consider a single FCFS queue with Poisson arrivals of rate λ and service times following an Erlang-2 distribution. The mean job size is μ, which implies that the service time requires passing through two exponential phases: Exp(μ1) and Exp(μ2), where μ1 = μ2 = 2μ.
@@ -82,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Varying Arrival Rate - M t/M/1 Queue
 Background context: In a queue with time-varying arrival rate, the system alternates between high and low arrival rates. This is denoted as \(M_t\), where the arrival rate fluctuates between \(\lambda_H\) (high) and \(\lambda_L\) (low). The durations spent in these regimes are exponentially distributed: \(\text{Exp}(\alpha_H)\) for \(\lambda_H\) and \(\text{Exp}(\alpha_L)\) for \(\lambda_L\).
@@ -149,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix-Analytic Methods Overview
 
@@ -249,7 +245,6 @@ Here, `getTransitionMatrixR()` retrieves the transition matrix \(R\) and `multip
 
 The answer explains the recursive expression of \(\bar{π}\) using a matrix \(R\), detailing the iterative computation process.
 
-**Rating: 8/10**
 
 #### Phase-Type Distributions and Matrix-Analytic Methods Overview
 This section delves into solving balance equations for phase-type distributions using matrix-analytic methods. The goal is to determine the steady-state probabilities \(\vec{\pi}_i\) by solving a set of matrix equations.
@@ -354,7 +349,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix-Analytic Method for M/M/1
 

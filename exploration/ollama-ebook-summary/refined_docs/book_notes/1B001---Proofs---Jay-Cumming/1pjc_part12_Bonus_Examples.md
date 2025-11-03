@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 1B001---Proofs---Jay-Cumming_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Bonus Examples
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Injection and Bijection
 Background context explaining that an injection is a function where each element of the domain maps to a unique element in the codomain, ensuring no two different elements in the domain map to the same element in the codomain. A bijection is both an injection and a surjection.
@@ -152,7 +150,6 @@ This covers the key concepts from the provided text with detailed explanations a
 
 Note: The `??x` and `x??" format is used as placeholders for questions and answers, respectively, within the context of the flashcards. The code examples are provided to illustrate the concepts in a practical manner.
 
-**Rating: 8/10**
 
 #### Function Composition
 Function composition involves applying one function to the results of another. This is a fundamental concept used in both abstract mathematics and programming.
@@ -257,7 +254,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exercise 8.2 Explanation of Why f(x) = ±√x is Not a Function
 
@@ -402,7 +398,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Equivalence Relation Overview
 In mathematics, an equivalence relation on a set \(A\) is a specific type of binary relation that partitions the elements of the set into disjoint subsets called "equivalence classes." This concept is fundamental for understanding how certain properties can group similar elements together.
@@ -512,7 +507,6 @@ public class Example {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Reflexive, Symmetric, and Transitive Properties
 Background context: The text explains the properties of equivalence relations—reflexive, symmetric, and transitive. These properties ensure that a relation is consistent and well-defined.
@@ -631,7 +625,6 @@ An example of a relation that is not an equivalence relation is defined as \(a \
 
 Therefore, this relation is a good example of how relaxing the properties can make a relation more general than an equivalence relation.
 
-**Rating: 8/10**
 
 #### Equivalence Relation and Modulo Notation
 Background context explaining that "if a5b, then b5a" is true since this is just notation for “if ab(mod 5), then ba(mod 5).” This can be quickly proved by the definition of mods.
@@ -709,7 +702,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Equivalence Classes and Relations
 Background context explaining equivalence relations, including reﬂexivity, symmetry, and transitivity. Provide examples to illustrate these properties.
@@ -773,7 +765,6 @@ For example, in mod-5 arithmetic, the equivalence class of 0 is all integers tha
 ??x
 ---
 
-**Rating: 8/10**
 
 #### Forward Direction of Equivalence Relation Proof
 Background context: The forward direction assumes that [a] = [b], and aims to show that a  b. This involves using properties of equivalence relations (reflexivity, symmetry, transitivity).
@@ -857,7 +848,6 @@ Given a partition of \(A\) by \(\{P_i\}_{i \in S}\). If \(a \sim b\) and \(b \si
 ```
 x??
 
-**Rating: 8/10**
 
 #### Symmetry of Equivalence Relation
 Background context: This section explains how to prove that a given relation is symmetric. The proof involves showing that if \(a \sim b\), then \(b \sim a\) for all elements \(a, b\) in set \(A\).

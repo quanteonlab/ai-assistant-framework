@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 38)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 24.3 Optimal Server Farm Design
 
 ---
 
-**Rating: 8/10**
 
 #### Task Assignment Policies for Server Farms Among Worst Performers
 
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimal Server Farm Design
 
@@ -32,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stochastic Analysis vs. Worst-Case Analysis
 
@@ -47,7 +43,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### SRPT Policy for Single Queue
@@ -69,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Central-Queue-SRPT Policy for Server Farms
 Background context: The Central-Queue-SRPT policy extends the SRPT concept to a server farm by serving jobs in an SRPT order from a central queue. Each of the k servers works on the job with the shortest remaining processing time at any given moment.
@@ -93,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wasted Resources with Central-Queue-SRPT
 Background context: The text highlights that although the worst-case competitive ratio of Central-Queue-SRPT is not optimal, it can still be effective under certain conditions. However, in the example given, it shows how resource wastage occurs due to poor job packing and scheduling.
@@ -114,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimal Server Farm Design with SRPT Scheduling at Hosts
 Background context: The text suggests that for server farms where immediate dispatch is required, SRPT scheduling at the individual hosts can be optimal. This approach ensures short jobs are spread out over all servers to maximize efficiency.
@@ -135,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Open Problems in Queueing Theory
 Background context: The passage outlines some of the open problems related to analyzing algorithms like Central-Queue-SRPT from a stochastic perspective and optimal task assignment under immediate dispatch constraints.
@@ -160,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Size-Based Task Assignment (SITA) and Its Variants for Server Farms
 
@@ -374,7 +364,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Server Farm with Size-Interval-Task-Assignment
 Background context: The problem involves a server farm with two identical FCFS hosts, where job sizes follow a power-law distribution. Jobs are routed based on their size to either the first or second server.
@@ -415,7 +404,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### PS Server Farm
 Background context: This problem considers a server farm with two identical PS hosts and SITA task assignment. The goal is to prove that the cutoff which minimizes mean response time balances load between the servers.
@@ -446,7 +434,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hybrid Server Farm
 Background context: The problem involves a server farm with two identical hosts, where small jobs are scheduled FCFS on the first host and large jobs on the second using PS. Load is balanced such that each host handles an equal amount of work.
@@ -480,7 +467,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Equivalence of LWL and M/G/k
 Background context: This problem explores the equivalence between Last-Worst-Least (LWL) and an \(M/G/k\) system, where both systems process the same job sequence.
@@ -507,7 +493,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### One Fast Machine versus Two Slow Ones
 Background context: This problem compares the performance of one fast machine with two slow ones, where job sizes are not exponentially distributed.
@@ -548,7 +533,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### To Balance Load or Not to Balance Load?
 Background context: This problem explores whether load balancing between two identical FCFS hosts is always beneficial for minimizing \(E[T_Q]\).
@@ -582,7 +566,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hybrid Server Farm with Different Descriptions
 Background context: This problem focuses on a hybrid server farm setup, but includes specific details to differentiate it from previous descriptions.

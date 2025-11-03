@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3.4.1 Additional reading. 4 Data design and performance models
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Statistics Calls
 
@@ -41,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Roofline Model
 
@@ -86,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### STREAM Benchmark
 
@@ -145,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data-Oriented Design
 
@@ -182,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Model
 
@@ -218,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data-Oriented Design Overview
 Data-oriented design focuses on optimizing data layout for better performance, especially in scenarios involving large datasets and intensive computations. This approach contrasts with object-oriented programming (OOP) by prioritizing efficiency over code organization.
@@ -230,7 +223,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inlining for Performance
 Inlining is a technique where the compiler copies the source code from a subroutine into the location where it's called. This avoids the performance hit of function calls.
@@ -265,7 +257,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Array-Based Data Structures for Performance
 Using arrays over structures can lead to better cache usage, as data is accessed in contiguous memory locations.
@@ -283,7 +274,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Object-Oriented Programming vs. Data-Oriented Design
 Object-oriented programming (OOP) focuses on organizing code around objects, while data-oriented design prioritizes efficient data layout for performance.
@@ -298,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Array of Structures (AoS) and Structures of Arrays (SoA)
 Background context explaining the concept. AoS and SoA are two different ways to organize related data into data collections.
@@ -330,7 +319,6 @@ struct { int R[1000]; int G[1000]; int B[1000]; } polygon_color;
 
 ---
 
-**Rating: 8/10**
 
 #### Array of Structures (AoS) Performance Assessment
 Background context: In the provided example, we are discussing how memory layout affects performance when using different data structures. Specifically, AoS refers to storing all components for each point together in a structure.
@@ -364,7 +352,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Structure of Arrays (SoA) vs. Array of Structures (AoS)
 Background context explaining the difference between SoA and AoS data layouts. Discuss how data is organized in memory for both structures.
@@ -401,7 +388,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Utilization in AoS vs. SoA
 Background context discussing how the layout of data affects cache utilization and performance, particularly for different types of operations.
@@ -434,7 +420,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Layout Optimization for Performance
 Background context discussing how the optimal data layout depends on specific usage patterns and performance needs.
@@ -468,7 +453,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Allocation in SoA
 Background context explaining how memory allocation works for SoA structures and why it might be necessary to use separate arrays.
@@ -507,7 +491,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Array of Structs (AoS) vs Structure of Arrays (SoA)
 Background context: The choice between AoS and SoA can significantly impact performance, especially when dealing with large datasets. AoS stores all elements of a single type in one array, while SoA groups elements by their structure.
@@ -545,7 +528,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hash Table Design
 Background context: A hash table is a data structure that uses key-value pairs. The choice between storing keys and values in the same array versus separate arrays can impact performance.
@@ -582,7 +564,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Physics State Structure
 Background context: In physics simulations, state structures like density, 3D momentum, and total energy are commonly used. The choice between AoS and SoA can greatly affect performance.

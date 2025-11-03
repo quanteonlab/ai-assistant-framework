@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Message Queues and Event-Streaming Platforms
 
 ---
 
-**Rating: 8/10**
 
 #### Data Sharing and Data Mesh
 
@@ -96,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message Queues and Decoupling
 Background context explaining that message queues allow applications and systems to be decoupled from each other, useful in microservices architectures. Message queues buffer messages for load spikes and ensure durability through replication.
@@ -148,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event-Streaming Platform Overview
 
@@ -253,7 +249,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream Partitioning
 Stream partitioning is a technique used to distribute messages across different partitions based on a chosen partition key. This ensures that related messages are processed together, which can be crucial for maintaining data integrity and performance in distributed systems. The process involves dividing the message ID (or any other chosen key) by the number of partitions and taking the remainder as the partition identifier.
@@ -319,7 +314,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding SLAs and SLOs
 Background context: Service-Level Agreements (SLAs) are contracts between a provider and customer that define service expectations, including uptime, response times, and other performance metrics. A Service-Level Objective (SLO) measures how well these agreements are met. Establishing clear SLAs and SLOs ensures reliability and quality of data.

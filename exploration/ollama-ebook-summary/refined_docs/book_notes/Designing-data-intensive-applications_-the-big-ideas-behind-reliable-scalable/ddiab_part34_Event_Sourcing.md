@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 34)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Event Sourcing
 
 ---
 
-**Rating: 8/10**
 
 #### Change Data Capture (CDC)
 Background context: Change Data Capture is a technique that allows for the extraction of changes made to a database into a special table, which can then be used by external systems for various purposes. The stream of transactions written to this special table is consumed asynchronously by external consumers.
@@ -94,7 +92,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Command vs. Event Distinction
@@ -188,7 +185,6 @@ public class EventSourcedRepository {
 x?
 ---
 
-**Rating: 8/10**
 
 #### Mutable State and Immutable Events
 Mutable state changes over time, while an append-only log of immutable events records these changes. Together, they represent the evolution of state over time.
@@ -303,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Event Logs and Recovery
 Background context: In batch processing, if you deploy buggy code that writes bad data to a database, recovery is more challenging because destructive overwrite of data complicates diagnosing issues. An append-only log of immutable events offers easier recovery due to its nature of capturing comprehensive information.
@@ -412,7 +407,6 @@ By running old and new systems side by side, you can ensure smooth transitions a
 
 x??
 
-**Rating: 8/10**
 
 ---
 #### Normalization vs. Denormalization in Event Sourcing
@@ -571,7 +565,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutability and Data History
 Immutability is a property where data cannot be changed after it has been created. This concept is widely used in databases, version control systems, and other software applications to ensure consistency and prevent accidental modifications. However, maintaining an immutable history of all changes forever comes with significant challenges.
@@ -612,7 +605,6 @@ In practice, this means that while you can indicate a piece of data is no longer
 ??x
 ---
 
-**Rating: 8/10**
 
 ---
 #### Processing Streams
@@ -692,7 +684,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Averaging and Windowing
 Averaging over a few minutes helps smooth out short-term fluctuations, providing timely insights into traffic patterns. The time interval used for aggregation is called a window.

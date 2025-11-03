@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A001---AI-Engineering_-Building-Applications-with-Foundation-Models-OReilly-Media-2025Chip-Huyen--_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Probabilistic Nature of AI
 
 ---
 
-**Rating: 8/10**
 
 #### Deterministic vs. Probabilistic Models
 Deterministic models always produce the same output for a given input, while probabilistic models can vary their responses based on probabilities. This difference is crucial in understanding how AI systems operate and the challenges they present.
@@ -39,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consistency Issues in AI Models
 Background context explaining the concept. Inconsistent outputs can create a jarring user experience, as users expect consistency when interacting with AI systems. This inconsistency can arise due to various factors such as different sampling variables or hardware differences.
@@ -68,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Systems and Prompt Crafting
 Background context explaining the concept. To achieve more consistent and relevant outputs, AI models can be trained with a memory system or fine-tuned using carefully crafted prompts.
@@ -100,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Learning from Human Feedback (RLHF) for Reducing Hallucination
 Background context: Schulman proposed using reinforcement learning with human feedback (RLHF) to reduce hallucinations. This involves training the model not only on factual data but also based on comparisons of responses.
@@ -126,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detecting Hallucinations
 Background context on how difficult it is to detect when a human is lying or making things up. Despite this difficulty, efforts have been made to develop methods for detecting and measuring hallucinations in AI models.
@@ -140,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Core Design Decisions When Building a Foundation Model
 Background context explaining the importance of considering core design decisions when building foundation models. These choices significantly impact model performance and usability.
@@ -154,7 +147,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Data Importance
 Background context explaining why training data is so important. The chapter highlights how training data impacts model performance, especially when targeting specific languages or domains.
@@ -168,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transformer Architecture
 Background context explaining the transformer architecture and its design purposes. The chapter discusses the problems it addresses and its limitations.
@@ -182,7 +173,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scaling Law and Bottlenecks
 Background context explaining how scaling a model can improve its performance but may eventually face limitations. The chapter discusses the scaling law and potential bottlenecks in training large models.
@@ -196,7 +186,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Post-Training Steps
 Background context explaining post-training steps used to address output inconsistencies and hallucinations. The chapter discusses supervised finetuning and preference finetuning.
@@ -212,7 +201,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sampling in AI Models
 Background context explaining how sampling makes AI models probabilistic. The chapter highlights this characteristic as a reason why outputs can be inconsistent or hallucinatory, affecting creativity and user interaction with models like ChatGPT.
@@ -226,7 +214,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluation Pipelines
 Background context explaining why evaluation pipelines are essential for detecting model failures and unexpected changes. The chapter states that evaluation is so crucial that two chapters will be dedicated to it, starting next.
@@ -242,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Evaluation of AI Systems and Risks
 Background context explaining that as AI is increasingly used, there is a higher risk of catastrophic failure. The chapter discusses how foundation models have shown failures such as suicide encouragement by chatbots, false evidence submitted by lawyers, and misinformation provided by AI chatbots to Air Canada. These risks highlight the need for robust evaluation methods.
@@ -253,7 +239,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Metrics for Language Models
 Background context explaining that language models often require specific metrics like cross entropy and perplexity for evaluation. These metrics help in guiding training and fine-tuning of language models.
@@ -264,7 +249,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Iterative Improvement of AI Models
 Background context explaining that as AI systems improve and become more sophisticated, they may require evaluations by even the brightest human minds. This raises questions about who will evaluate future models if current evaluators find them challenging to assess.
@@ -277,7 +261,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MMLU to MMLU-Pro
 Background context: The text states that MMLU (2020), an early strong benchmark for foundation models, was largely replaced by MMLU-Pro (2024). This change reflects a shift towards more comprehensive and possibly updated evaluation methods.
@@ -289,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluation Scope Expanding for General-Purpose Models
 Background context: The text explains that general-purpose model evaluations now extend beyond known tasks to discover new capabilities and explore potential AI applications.

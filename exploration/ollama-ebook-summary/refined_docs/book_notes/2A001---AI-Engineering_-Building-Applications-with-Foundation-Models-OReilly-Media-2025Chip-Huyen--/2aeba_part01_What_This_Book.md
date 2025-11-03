@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A001---AI-Engineering_-Building-Applications-with-Foundation-Models-OReilly-Media-2025Chip-Huyen--_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** What This Book Is About
 
 ---
 
-**Rating: 8/10**
 
 #### Background on AI Evolution and Application Development
 Background context explaining the evolution of AI models, their application capabilities, and how they have transformed into development tools. The text discusses the advancements from AlexNet to modern language models like GPT, highlighting the impact of scaling up model sizes and the explosion of new applications. It also mentions the importance of systematic experimentation and rigorous evaluation in building AI applications.
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scaling Up Models and Their Impact
 Background context on how scaling up models improves their performance, as noted by AlexNet authors in 2012. The text emphasizes the importance of waiting for faster GPUs and bigger datasets.
@@ -46,7 +43,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### New Possibilities and Application Development
 Background context on how new AI capabilities have increased demand for applications and lowered the entry barrier for developers. The text highlights that it is now easier to build applications without writing a single line of code.
@@ -66,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Best Practices in AI Engineering
 Background context on traditional best practices like systematic experimentation, rigorous evaluation, and model optimization. The text emphasizes that while these principles remain valid, new challenges require innovative solutions.
@@ -86,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RAG (Retrieval-Augmented Generation) Applications
 Background context on how RAG applications are built upon retrieval technology that has been in use for long before the term was coined. The text also discusses the strategies and mechanisms involved in RAG.
@@ -106,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AI Engineering Challenges and Solutions
 Background context on the continuous evolution of tools, tutorials, and techniques in AI engineering. The text highlights the need to navigate the AI landscape, understand different types of models, evaluation benchmarks, and application patterns.
@@ -126,7 +119,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consulting Experts
 Consulting an extensive network of researchers and engineers helps identify important problems and potential solutions. These experts often provide insights based on their deeper understanding of the field.
@@ -136,7 +128,6 @@ Consulting experts leverages their knowledge and experience, providing valuable 
 
 ---
 
-**Rating: 8/10**
 
 #### Lindy’s Law
 Lindy’s Law states that a technology's future life expectancy is proportional to its current age. If something has been around for a while, it is likely to continue existing for an extended period.
@@ -146,7 +137,6 @@ Lindy’s Law suggests that the longer a technology or concept has existed, the 
 
 ---
 
-**Rating: 8/10**
 
 #### Key Concepts for Building AI Applications
 Basic understanding of ML and statistics, including probabilistic concepts, ML terms, neural network architectures, and evaluation metrics, can enhance the effectiveness of building AI applications. These concepts are essential but not mandatory prerequisites.
@@ -156,7 +146,6 @@ Before diving into AI application development, it’s beneficial to familiarize 
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding AI Application Development
 This chapter is designed to help you understand whether building an AI application is necessary, and what foundational questions need to be answered before diving into development. It introduces a range of successful use cases for foundation models, helping you gauge their potential impact.
@@ -167,7 +156,6 @@ This chapter addresses critical questions such as whether an AI application is n
 
 ---
 
-**Rating: 8/10**
 
 #### The Role of ML Background
 While not strictly necessary for building AI applications, understanding the basics of how a foundation model operates under the hood can significantly enhance your ability to leverage these tools effectively.
@@ -178,7 +166,6 @@ Having a foundational knowledge of machine learning (ML) can provide deeper insi
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluation in AI Development
 Evaluation is an integral part of every stage when building with foundation models. This process helps ensure the application performs well under various conditions and meets specific performance metrics.
@@ -189,7 +176,6 @@ Evaluation plays a crucial role by ensuring that each step of the AI application
 
 ---
 
-**Rating: 8/10**
 
 #### Streamlining AI Development Process
 The book also aims to help streamline the AI development process for teams, making it more systematic, faster, and reliable. This is particularly useful for engineering managers and technical product managers who oversee multiple projects.
@@ -200,7 +186,6 @@ This book helps in streamlining the AI development process by offering structure
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluation Methods and Pipeline
 Evaluation of AI models is crucial but challenging, especially for engineering. The book dedicates two chapters (Chapters 3 and 4) to explore various evaluation methods and create a reliable and systematic pipeline.
@@ -217,7 +202,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prompt Engineering
 Chapter 5 focuses on prompt engineering, including understanding what prompts are, why they work, best practices, and defending against prompt attacks.
@@ -229,7 +213,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context for Models
 Chapter 6 explores the importance of context in generating accurate responses and discusses two main application patterns: RAG (Retrieval-Augmented Generation) and agentic.
@@ -245,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finetuning Models
 Chapter 7 covers finetuning to adapt a model for an application. It discusses different approaches to finetuning, including techniques that use less memory due to the scale of foundation models.
@@ -261,7 +243,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data for Finetuning
 Chapter 8 focuses on collecting, annotating, synthesizing, and processing data for finetuning models. It discusses broader topics related to data quality.
@@ -279,7 +260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inference Optimization
 Chapter 9 is about optimizing model inference to make it cheaper and faster. It covers optimizations at both the model level and the inference service level.
@@ -295,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Building an Application End-to-End
 The final chapter integrates all concepts discussed earlier to build a complete application. It also covers designing a user feedback system.
@@ -309,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scale of AI Models Post-2020
 Background context: The text emphasizes that post-2020, AI models like those behind ChatGPT and Google’s Gemini have reached an unprecedented scale. These models consume a significant portion of global electricity and require large amounts of data for training.
@@ -320,7 +298,6 @@ The primary impact of scaling in AI models is that these models become more powe
 
 ---
 
-**Rating: 8/10**
 
 #### Consequences of Scaling Up AI Models
 Background context: The text highlights two major consequences of the scaling up of AI models: they become more capable, and training large language models (LLMs) requires significant resources that only a few organizations can afford. This has led to model as a service.
@@ -333,7 +310,6 @@ The two main consequences mentioned are:
 
 ---
 
-**Rating: 8/10**
 
 #### Model as a Service (MaaS)
 Background context: The text explains that due to the high resource requirements for training large language models, model as a service has emerged. This allows others to use these models without having to invest in building them themselves.
@@ -344,7 +320,6 @@ Model as a service (MaaS) refers to the practice of organizations developing and
 
 ---
 
-**Rating: 8/10**
 
 #### Productionizing AI Applications
 Background context: The text indicates that principles of productionizing AI applications remain similar even with new generations of LLMs, but there is now a shift towards using pre-trained models for building applications.

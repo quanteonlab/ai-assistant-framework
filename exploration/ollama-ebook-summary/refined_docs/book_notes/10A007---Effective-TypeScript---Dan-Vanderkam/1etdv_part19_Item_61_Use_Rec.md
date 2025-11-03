@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 61 Use Record Types to Keep Values in Sync
 
 ---
 
-**Rating: 8/10**
 
 #### Record Types to Keep Values in Sync
 Background context: This concept revolves around managing state changes in UI components, particularly in scenarios where certain properties should trigger updates while others shouldn't. The `Record` type and `keyof` assertion are used to enforce that all necessary properties are accounted for when checking if a component needs an update.
@@ -105,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using `Rest Parameters and Tuple Types` to Model Variadic Functions
 Background context explaining the concept. When you need a function that can take a different number of arguments based on some TypeScript type, using rest parameters with tuple types provides a powerful solution. This approach ensures safety by aligning the parameter count with the expected input.
@@ -235,7 +232,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exclusive Or (XOR) in TypeScript
 Background context: In TypeScript, the inclusive OR (`|`) operator can sometimes lead to unexpected behaviors when modeling exclusive conditions. The traditional understanding of "or" as an exclusive operation is common in ordinary speech but not always reflected in programming languages like JavaScript and TypeScript.

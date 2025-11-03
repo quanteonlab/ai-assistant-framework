@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Knowledge Truth and Lies. The Truth Is Defined by the Majority
 
 ---
 
-**Rating: 8/10**
 
 #### Node Uncertainty in Distributed Systems
 In distributed systems, nodes cannot rely on shared memory and must communicate via an unreliable network. Delays and partial failures are common issues. Nodes can only make guesses based on messages they receive or don't receive.
@@ -115,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GC Preemption and Node Failure Handling
 Background context: This concept discusses how garbage collection (GC) can preempt all threads of a node, causing it to pause for an extended period. During this time, no requests are processed or responses sent, leading other nodes to declare the failed node dead due to inactivity. The GC eventually completes, and the node resumes operation as if nothing happened.
@@ -186,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Corruption Bug Due to Incorrect Lock Implementation
 Background context explaining that a distributed system can face issues when implementing locks incorrectly. The example provided is from HBase, where a bug occurred due to an incorrect implementation of locking. This issue arises because if a client holding a lease (or lock) pauses for too long, its lease expires while another client acquires the same resource.
@@ -279,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Byzantine Faults and Fencing Tokens
 Background context: The concept of Byzantine faults is introduced, where nodes may act unpredictably or maliciously. This contrasts with typical failures that are predictable and can be handled by simple mechanisms like fencing tokens. In a distributed system, it's critical to distinguish between honest but unreliable nodes and potentially malicious ones.
@@ -351,7 +346,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Asynchronous Model
@@ -419,7 +413,6 @@ x??
 ---
 ---
 
-**Rating: 8/10**
 
 #### Safety Properties
 Safety properties are those that, once violated, cannot be undone. They guarantee correctness at all times and can pinpoint a specific time when they were broken.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** B-Trees
 
 ---
 
-**Rating: 8/10**
 
 #### Log-Structured Merge (LSM) Storage Engines
 
@@ -146,7 +144,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### B-Tree Structure and Segmentation
 B-trees break down databases into fixed-size blocks or pages, traditionally 4 KB in size. Each page can be identified using an address or location, allowing one page to refer to another—similar to a pointer but on disk instead of in memory.
@@ -309,7 +306,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Disk Overwrite Operation
 
@@ -426,7 +422,6 @@ public class BTree {
 
 ---
 
-**Rating: 8/10**
 
 #### B+ Tree Optimization
 B+ trees are a type of balanced tree that is optimized for disk storage and retrieval. They are often used in databases due to their efficient use of space and time on disk. In B+ trees, non-leaf nodes store keys, which are used to direct queries to the appropriate leaf node. The leaves contain actual data records.
@@ -509,7 +504,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Online Transaction Processing (OLTP)
 Background context explaining OLTP. It involves processing business transactions, with a focus on low-latency reads and writes. The access pattern is characterized by small numbers of records fetched by keys.

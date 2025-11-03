@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 1. Why Terraform. What Is DevOps
 
 ---
 
-**Rating: 8/10**
 
 #### What is DevOps?
 Background context explaining the concept. In the past, developers and operations teams worked in isolation, with manual processes for deploying applications. This led to inefficiencies and reliability issues as companies scaled.
@@ -23,7 +21,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### What is Infrastructure as Code?
 Background context explaining the concept. Traditionally, infrastructure setup was done manually or via scripts specific to each environment. Infrastructure as code (IaC) involves treating infrastructure configuration as a software asset, written in a declarative language and managed with version control.
@@ -34,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### What Are the Benefits of Infrastructure as Code?
 Background context explaining the concept. IaC allows for the automation of repetitive tasks, reduces human errors through consistent application of policies, and enables better collaboration between development and operations teams by treating infrastructure like any other code.
@@ -60,7 +56,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### How Does Terraform Work?
 Background context explaining the concept. Terraform is a tool for infrastructure management that allows you to define, manage, and deploy multi-cloud infrastructure as code. It uses configuration files written in HCL (HashiCorp Configuration Language) or JSON.
@@ -87,7 +82,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Infrastructure as Code (IaC)
 Background context: Infrastructure as Code (IaC) is a practice where infrastructure is managed through source control and defined with programming languages. This approach aims to treat all aspects of operations, including hardware configuration, as software. It provides an alternative to ad hoc scripts and specialized tools like Chef, Puppet, Ansible, and others.
@@ -99,7 +93,6 @@ Infrastructure as Code (IaC) refers to managing infrastructure through source co
 
 ---
 
-**Rating: 8/10**
 
 #### Configuration Management Tools (Chef, Puppet, Ansible)
 Background context: Configuration management tools like Chef, Puppet, and Ansible automate the installation and maintenance of software on servers. These tools enforce consistent structures, making it easier to manage infrastructure across multiple machines.
@@ -111,7 +104,6 @@ Configuration management tools are specialized IaC tools designed to install and
 
 ---
 
-**Rating: 8/10**
 
 #### Idempotence in Configuration Management Tools
 Background context: Idempotent code performs the same action regardless of how many times it is executed. This property ensures that running the same script multiple times does not lead to unintended side effects.
@@ -123,7 +115,6 @@ Idempotence refers to a function or process where performing an operation multip
 
 ---
 
-**Rating: 8/10**
 
 #### Ansible Role Example (web-server.yml)
 Background context: An Ansible role provides a structured way to define tasks that are idempotent and easy to manage. The provided example shows how to configure an Apache web server using Ansible.
@@ -135,7 +126,6 @@ The `web-server.yml` Ansible role configures an Apache web server by installing 
 
 ---
 
-**Rating: 8/10**
 
 #### Virtual Machines vs. Containers
 
@@ -157,7 +147,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Containers
 

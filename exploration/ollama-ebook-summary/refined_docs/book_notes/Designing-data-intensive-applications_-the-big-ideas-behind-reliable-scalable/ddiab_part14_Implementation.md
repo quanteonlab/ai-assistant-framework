@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Implementation of Replication Logs
 
 ---
 
-**Rating: 8/10**
 
 #### Split Brain Scenario
 Background context: A split brain scenario occurs when two nodes in a distributed system both believe they are the leader. Without proper conflict resolution, this can lead to data loss or corruption.
@@ -24,7 +22,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Timeout for Leader Detection
 Background context: Determining when a node should be declared dead involves setting an appropriate timeout. A longer timeout means slower recovery in case of failure but shorter timeouts may trigger unnecessary failovers.
@@ -57,7 +54,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Statement-Based Replication
 Background context: Statement-based replication logs every write request executed by the leader and sends these statements to followers. While simple, it can lead to issues with non-deterministic functions, autoincrement columns, and side effects.
@@ -92,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Write-Ahead Log (WAL) Shipping
 Background context: WAL shipping logs all writes to an append-only log that followers can process to build replicas. This method is used in PostgreSQL and Oracle but can be coupled closely with the storage engine.
@@ -133,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logical (Row-Based) Log Replication
 Background context: Logical log replication logs writes at a row level, decoupling from the storage engine's internals. This allows more flexibility in running different versions of database software on leader and follower nodes.
@@ -184,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Change Data Capture (CDC)
 Background context: Change data capture is a technique used to track and record changes made to data in a database, which can be used for offline analysis or building custom indexes. This technique allows developers to react to and process these changes as they happen.
@@ -196,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trigger-based Replication Overview
 Background context: In some cases, the default replication mechanisms provided by databases may not suffice due to specific requirements like replicating only certain subsets of data, handling different types of database systems, or implementing conflict resolution logic. Trigger-based replication allows more flexibility by using application code to handle these scenarios.
@@ -227,7 +219,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Problems with Replication Lag: Read-Your-Writes Consistency
 Background context: Asynchronous replication can lead to issues where reads from replicas may not reflect the latest writes, causing apparent inconsistencies in applications. Ensuring read-after-write consistency (also known as read-your-writes) is crucial for maintaining user trust and application reliability.
@@ -263,7 +254,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logical Timestamps and Clock Synchronization
 Logical timestamps can be used to indicate the ordering of writes, such as log sequence numbers. Actual system clocks require clock synchronization across replicas, which is crucial for correct functioning.
@@ -286,7 +276,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cross-Device Read-After-Write Consistency
 To ensure that users see the latest updates on multiple devices, you need to manage timestamps or other metadata centrally. With distributed replicas across datacenters, routing requests to the same datacenter becomes a challenge.
@@ -312,7 +301,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monotonic Reads
 Monotonic reads ensure that a user does not see the system go backward in time when performing multiple queries. This is achieved by ensuring all reads are from the same replica.
@@ -338,7 +326,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consistent Prefix Reads
 Consistent prefix reads ensure that writes appear in the same order when read from any replica. This is crucial for maintaining causality in distributed systems.

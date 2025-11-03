@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Shared Storage for State Files
 
 ---
 
-**Rating: 8/10**
 
 #### Plan Command in Terraform
 Background context: The `terraform plan` command is used before applying changes, allowing you to preview the impact of your proposed configuration. It helps catch potential issues and ensures that the intended infrastructure matches what will be deployed.
@@ -33,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform State File
 Background context: The `terraform.tfstate` file stores information about the infrastructure managed by Terraform. This state file is crucial for tracking changes and ensuring consistency between your configuration files and the actual deployed infrastructure.
@@ -76,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Locking State Files
 Background context on how sharing state files can introduce concurrency issues when multiple users run `terraform apply` commands simultaneously.
@@ -96,7 +92,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Isolating State Files
 Background context on the importance of environment isolation in managing infrastructure changes.
@@ -116,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Remote Backends Overview
 Remote backends like Amazon S3, Azure Storage, Google Cloud Storage, and HashiCorp’s Terraform Cloud or Enterprise solve issues such as manual error, locking, and secrets management during state file handling. These solutions enhance security by encrypting state files both in transit and at rest.
@@ -127,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Amazon S3 as a Remote Backend
 Amazon S3 is preferred for remote backend storage due to its managed nature, high durability and availability, native support for encryption, and robust security features like IAM policies. Additionally, it supports locking via DynamoDB and versioning, making it an ideal choice for state management in Terraform.
@@ -138,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Enabling Server-Side Encryption on S3 Bucket
 Background context: To enhance the security of stored data, AWS provides server-side encryption (SSE). This encrypts data both at rest and in transit. For added security, SSE can be enabled by default for all data written to an S3 bucket.
@@ -159,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a DynamoDB Table for Locking
 Background context: To ensure that Terraform operations are idempotent and avoid race conditions, particularly in distributed environments, a locking mechanism is necessary. DynamoDB can be used to create such a lock system due to its strong consistency and support for conditional writes.
@@ -182,7 +173,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring Terraform Backend for S3
 Background context: To store Terraform state securely, the backend configuration must be set to use an AWS S3 bucket. This involves specifying the bucket name, key path, region, and DynamoDB table used for locking.
@@ -206,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### DynamoDB Table for Locking Mechanism
 Explanation of how to use a DynamoDB table for locking purposes in Terraform. This ensures that only one instance can modify resources at any given time, preventing race conditions.
@@ -218,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Encrypting Terraform State on Disk
 Explanation of why encryption should be enabled on the disk storage backend to secure sensitive data.
@@ -230,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Outputs for State File Information
 Explanation of how outputs can be used to display state file details such as ARN and lock mechanism names.
@@ -281,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform Locking Mechanism During Apply
 Background context: When using a remote backend, such as S3, to manage state files, Terraform ensures data consistency by acquiring a lock before running an `apply` command and releasing it afterward. This prevents concurrent modifications that could lead to conflicts.
@@ -292,7 +278,6 @@ Terraform acquires a lock on the remote backend (e.g., S3) before executing the 
 
 ---
 
-**Rating: 8/10**
 
 #### Two-Step Process for Initial State Management
 Background context: When initially setting up Terraform to use an S3 backend, you need to create the necessary resources (S3 bucket and DynamoDB table) using a local backend first. Then, configure the remote backend in your Terraform code and copy the state to the remote location.
@@ -304,7 +289,6 @@ Background context: When initially setting up Terraform to use an S3 backend, yo
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations with Variables in Backend Configuration
 Background context: The backend block in Terraform does not allow variables or references, which can lead to repetitive and error-prone code. To avoid this, you can use a separate configuration file for backend settings and pass parameters via command-line arguments.
@@ -315,7 +299,6 @@ Variables cannot be used directly within the backend block because Terraform's l
 
 ---
 
-**Rating: 8/10**
 
 #### Using Partial Configurations for Backend Settings
 Background context: To reduce redundancy, you can create a partial configuration file with common backend settings that can be reused across multiple modules. These settings are then passed via command-line arguments when initializing Terraform.
@@ -335,7 +318,6 @@ In your main Terraform configuration, keep only the unique key for each module a
 
 ---
 
-**Rating: 8/10**
 
 #### State File Isolation
 Background context: In Terraform, managing infrastructure across different environments (e.g., development, staging, production) requires isolation of state files to avoid breaking one environment when changes are made to another. The provided example discusses how using a single backend and configuration for all environments can lead to issues like accidental state corruption or deployment errors.
@@ -347,7 +329,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring Workspaces for Isolation
 Background context: The example provided shows how to configure Terraform using S3 as the backend and setting up a workspace for isolating states across different environments.
@@ -373,7 +354,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Applying Workspaces in Practice
 Background context: After setting up workspaces, you can use Terraform commands like `terraform workspace new` and `terraform workspace select` to manage different environments.
@@ -401,7 +381,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Terragrunt for State Management
 Background context: Terragrunt is an open-source tool designed to enhance Terraform by providing more advanced state management and configuration. It helps reduce duplication of backend settings across multiple modules.
@@ -413,7 +392,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of State File Isolation Techniques
 Background context: The text discusses various techniques for managing Terraform states, including using workspaces and Terragrunt, to ensure that changes in one environment do not affect others.
@@ -429,7 +407,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform Backend Configuration
 Background context: The provided text shows how to configure a backend for storing Terraform state and manage different workspaces. This is crucial for managing infrastructure as code, ensuring that states are isolated between different environments or configurations.
@@ -451,7 +428,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Initializing Terraform with Backend
 Background context: The text demonstrates the process of initializing Terraform with a backend configuration and how to verify that everything is set up correctly.
@@ -469,7 +445,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Managing Workspaces
 Background context: The text explains how to manage multiple Terraform workspaces for different environments or configurations, ensuring that state files are isolated and changes do not conflict between them.
@@ -491,7 +466,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Workspace Isolation with S3 Backend
 Background context: The text highlights how the S3 backend storage mechanism isolates state files between different workspaces, ensuring that each environment has its own independent state.
@@ -512,7 +486,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Workspace Listing and Management
 Background context: The text demonstrates how to list available workspaces and manage them using the `terraform workspace` command suite. This allows for seamless switching between different environments or configurations.
@@ -535,7 +508,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Custom Workspaces and State File Isolation
@@ -560,7 +532,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Drawbacks of Using Workspaces for Environment Isolation
 While workspaces provide a way to manage multiple environments within the same backend, they come with several drawbacks. These include shared state files and lack of visibility into which workspace you are working on.

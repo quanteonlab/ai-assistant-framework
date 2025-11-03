@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3.13 Linearity of Expectation
 
 ---
 
-**Rating: 8/10**
 
 #### Law of Total Probability for Discrete Random Variables
 Background context: The Law of Total Probability is a fundamental concept that extends to random variables. It states that the probability of an event E can be computed by conditioning on all possible outcomes of another event F1, ..., F_n that partition the sample space Ω. For discrete random variables, it's expressed as:
@@ -156,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Var(X+Y) for Independent Random Variables
 
@@ -274,7 +271,6 @@ x??
 --- 
 Note: Each flashcard covers one specific concept from the provided text, with clear explanations and relevant formulas. The answers include detailed context to ensure understanding beyond pure memorization. Code examples have been used where applicable to illustrate logical processes.
 
-**Rating: 8/10**
 
 #### Expectation Brainteaser
 Background context: The scenario involves understanding how two different measures of central tendency (mean and minimum value) can coexist. Here, we are given that a friend claims he was never in a class with less than 90 students during his first year in school, yet the dean states that the mean freshman class size is 30.
@@ -558,7 +554,6 @@ public class VarianceScaling {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Variance of Sum vs. Scalar Multiple
 
@@ -814,7 +809,6 @@ x??
 
 This set of problems covers various aspects of probability and statistics, including bounds on file sizes, quality of service analysis, binomial approximations, and covariance proofs. Each problem builds understanding through step-by-step reasoning and formal derivations. The solutions provided should help in grasping the core concepts involved. x??
 
-**Rating: 8/10**
 
 #### Expected Cost to Find a Wife
 Background context: The man, who has only experienced failure so far and is choosing an approach (generous or cheapskate) at random, decides to search for a wife. This scenario can be modeled using a geometric distribution since it involves the number of trials until the first success.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Upstream resiliency. Rate-limiting
 
 ---
 
-**Rating: 8/10**
 
 #### Load Shedding
 Background context: Servers receive requests without much control over their quantity, which can significantly impact performance. When servers operate at capacity, they should start rejecting excess requests to focus on processing existing ones.
@@ -127,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rate-Limiting Overview
 Rate-limiting is a technique used to restrict the number of requests that can be made to an API within a given time period. This is different from load shedding, which rejects traffic based on the local state of a process (like concurrent requests processed by it), whereas rate-limiting considers the global state of the system, such as total concurrent requests for a specific API key across all service instances.
@@ -288,7 +285,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Upstream Resiliency Approach for Rate Limiting
 

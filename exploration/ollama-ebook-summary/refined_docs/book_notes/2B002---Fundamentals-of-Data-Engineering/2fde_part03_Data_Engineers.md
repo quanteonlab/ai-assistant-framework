@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Data Engineers and Business Leadership
 
 ---
 
-**Rating: 8/10**
 
 #### ML Engineering and MLOps
 Machine Learning (ML) engineering has evolved from focusing on building models to incorporating best practices such as Machine Learning Operations (MLOps). This parallels developments in data engineering, where software engineering and DevOps principles are increasingly applied. MLOps involves the automation of model deployment, monitoring, and updating.
@@ -118,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Engineering Overview
 Data engineering involves building and maintaining the data infrastructure that powers data pipelines, storage systems, and analytics. Data engineers are responsible for ensuring reliable and efficient data processing, transformation, and storage.
@@ -220,7 +217,6 @@ These books provide strong frameworks and perspectives on the roles of executive
 
 ---
 
-**Rating: 8/10**
 
 #### Data Engineering Lifecycle Overview
 Background context: The data engineering lifecycle is a framework that describes how raw data ingredients are transformed into useful end products. It consists of five stages and is supported by undercurrents such as security, data management, DataOps, data architecture, orchestration, and software engineering.
@@ -301,7 +297,6 @@ The importance of communication with source system owners lies in preventing dis
 This ensures that modifications to the source systems do not negatively impact downstream processes.
 ??x
 
-**Rating: 8/10**
 
 ---
 #### Data Provider for Downstream Consumption

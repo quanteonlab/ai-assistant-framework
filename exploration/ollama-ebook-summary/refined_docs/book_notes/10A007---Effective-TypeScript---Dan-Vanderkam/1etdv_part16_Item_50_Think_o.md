@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 50 Think of Generics as Functions Between Types
 
 ---
 
-**Rating: 8/10**
 
 #### Generics and Type-Level Programming in TypeScript
 
@@ -122,7 +120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Narrowing Type Parameters Using Extends
 
@@ -234,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding TypeScript Generic Functions and Types
 
@@ -337,7 +333,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Type Parameters Should Appear Twice - Golden Rule of Generics
 Background context explaining the concept. The "Golden Rule of Generics" is a principle to ensure that generic type parameters are used effectively by appearing at least twice within a function signature, which helps with type inference and makes code more readable.
@@ -450,7 +445,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generics Usage Analysis
 Generics provide a way to make your functions and classes reusable across different data types. However, using generics effectively requires understanding when they are necessary and how to structure them properly.
@@ -539,7 +533,6 @@ The type parameter `T` is used in the constructor, property definition, and meth
 
 x??
 
-**Rating: 8/10**
 
 #### Overload Signatures vs Conditional Types
 

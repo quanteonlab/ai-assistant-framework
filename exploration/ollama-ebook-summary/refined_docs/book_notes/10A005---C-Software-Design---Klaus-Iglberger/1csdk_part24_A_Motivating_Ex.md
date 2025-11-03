@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** A Motivating Example
 
 ---
 
-**Rating: 8/10**
 
 #### Bridge Design Pattern
 Background context: The term "bridge" suggests connecting two things to bring them closer together. However, in software design, bridges are used to reduce physical dependencies and decouple pieces of functionality that need to work together but shouldn't know too many details about each other.
@@ -102,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bridge Design Pattern Overview
 The Bridge design pattern is a classic GoF (Gang of Four) design pattern introduced in 1994. Its primary goal is to minimize physical dependencies by encapsulating implementation details behind an abstraction, enabling easy change and separation of concerns.
@@ -177,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pimpl Idiom Explanation
 Background context: The Pimpl idiom is a technique used to hide implementation details and ensure binary stability (ABI) by separating the interface from the implementation. This separation allows the class's internal structure to change without affecting its users, provided that the public interface remains unchanged.

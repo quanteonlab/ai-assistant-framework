@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 26)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.7 Post-Processing
 
 ---
 
-**Rating: 8/10**
 
 #### Additive Blending for Aim Pose Adjustment
 Additive blending can be used to aim a weapon. The technique allows aiming at different angles by adjusting frames within an animation clip, which is demonstrated using a three-frame clip with left, forward, and right poses.
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overloading the Time Axis in Animation Clips
 The time axis of an animation clip does not need to represent actual time. It can be used for procedural animations or specific pose blending. For example, a three-frame animation clip could provide poses at frame 1 (left), frame 2 (forward), and frame 3 (right).
@@ -44,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inverse Kinematics for Adjusting Skeleton Poses
 Inverse kinematics (IK) is a technique used to adjust the pose of end effectors based on desired global poses. It solves the problem by minimizing the error between the current and target positions.
@@ -73,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### IK Minimization Problem
 Background context: Inverse kinematics (IK) is a technique used to determine the joint angles required for an end effector (e.g., hand, finger, or leg) to reach a specific target position. The problem often involves finding a local minimum in a three-dimensional plot representing the distance from the end effector to the target.
@@ -84,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rag Dolls
 Background context: A rag doll simulates the natural movement of a character's body when it becomes lifeless, using a collection of physically simulated rigid bodies connected by joints that mimic the character’s anatomy. The positions and orientations of these rigid bodies are driven by the physics system and then used to animate certain key joints in the skeleton.
@@ -95,7 +89,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Physics Systems and Rag Dolls
 Background context: Understanding how collision and physics systems work is essential to creating natural rag doll behavior. Rag dolls involve simulating rigid bodies that interact with the environment, constrained at joints, to produce realistic animations of a "lifeless" character.
@@ -106,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compression Techniques for Animation Data
 Background context: Large amounts of data are required to store animation sequences, which can be memory-intensive. To manage this efficiently, game developers use various compression techniques to reduce file size without compromising on the quality of animations.
@@ -117,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Channel Omission in Animation Data
 Background context: By omitting redundant or unnecessary channels from the animation data, developers can significantly reduce file sizes. This is particularly useful since each channel (for translation, rotation, scale) typically uses 4 bytes of memory per frame.
@@ -128,7 +119,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Code for Channel Omission
 Background context: The following code snippet demonstrates how to omit certain animation channels based on the joint type.
@@ -159,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quaternion Storage Optimization
 Background context explaining how quaternions are stored and optimized. Quaternions are normalized, meaning they always lie on a unit sphere. This allows us to store only three components (x, y, z) and infer the fourth component (w) during runtime.
@@ -174,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Constant Channels Optimization
 Background context explaining how channels with constant poses are stored. Channels whose pose does not change over an entire animation can be stored more efficiently.
@@ -186,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quantization Technique
 Background context explaining how quantization can reduce storage by reducing precision. Typically, floating-point numbers are stored in 32-bit IEEE format with 23 bits of precision and an 8-bit exponent.
@@ -202,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Quantization Implementation
 Background context explaining how to implement quantization in practice.
@@ -238,7 +224,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CompressUnitFloatRL Function
 Background context: The `CompressUnitFloatRL` function encodes a floating-point value in the range [0, 1] into an n-bit integer using Jonathan Blow’s RL method. This is useful for compressing values that are already normalized or can be normalized.
@@ -271,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sampling Frequency and Key Omission
 
@@ -294,7 +278,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Selective Loading and Streaming in Animation Systems
 Selective loading and streaming allow games to manage memory usage effectively by not loading all animation clips at once. Some clips are only relevant to specific characters or game levels, so they can be loaded on demand when needed.
@@ -308,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Animation Pipeline Stages
 The animation pipeline transforms inputs (animation clips and blend specifications) into desired outputs such as local and global poses, plus a matrix palette for rendering.
@@ -336,7 +318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Clip Decompression and Pose Extraction
 In this stage, each clip’s data is decompressed, and a static pose is extracted at the required time index. This can result in full-body poses, partial poses, or difference poses used in additive blending.
@@ -353,7 +334,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pose Blending
 Pose blending combines multiple input poses using full-body LERP (Linear Interpolation) blending, partial-skeleton LERP blending, or additive blending. The output is a single local pose for all joints.
@@ -372,7 +352,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Global Pose Generation
 The global pose is generated by walking the skeletal hierarchy and concatenating local joint poses. This stage calculates the position, rotation, and scaling of each joint relative to its parent.
@@ -393,7 +372,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Post-Processing
 Post-processing modifies local or global poses before finalizing them. This includes operations like inverse kinematics (IK) and rag doll physics.
@@ -416,7 +394,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix Palette Generation
 Matrix palette generation involves multiplying each joint’s global pose matrix by its inverse bind pose matrix to create a skinning matrix suitable for rendering.

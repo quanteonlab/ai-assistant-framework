@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3.2 Creating the project
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Controller and View
 Background context: This part involves setting up a controller that handles HTTP requests and generates views to present forms.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Validating User Data and Displaying Errors
 Background context: This step involves ensuring that input from users is correct before processing it.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring the Project Settings
 Background context: This concept involves setting up the `launchSettings.json` file in the `Properties` folder to specify which port the application will listen on for HTTP requests. It helps in ensuring that the application starts correctly.
@@ -61,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defining a HomeController
 Background context: This concept involves creating a basic home controller that returns a view when requested. It sets the stage for adding more functionality such as displaying information, handling forms, and validation.
@@ -88,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding a Data Model
 Background context: The data model represents real-world objects, processes, and rules that define the subject of an ASP.NET Core application. For simplicity, only one domain class (`GuestResponse`) is needed for the PartyInvites project.
@@ -111,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Validation
 Background context: Nullable properties in the `GuestResponse` class are important for validation. ASP.NET Core will handle null values appropriately, ensuring that optional fields are not required to be filled out.
@@ -139,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Second Action and View
 Background context: An ASP.NET Core application often needs multiple actions to handle different requests. The `RsvpForm` action method was added to the `HomeController` to provide an RSVP form for users.

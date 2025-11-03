@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B004-Data-Governance_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Scorecard. Prioritization. Profiling
 
 ---
 
-**Rating: 8/10**
 
 #### Data Source Scorecard
 
@@ -93,7 +91,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Profiling
 Data profiling involves generating a data profile that includes information about a range of data values, such as minimum and maximum values, cardinality, missing values, out-of-bounds values, and outliers. This process helps determine the legal values within the dataset and their meanings.
@@ -180,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deduplicating Names and Locations
 
@@ -320,7 +316,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Quality Overview
 Data quality ensures that data is accurate, complete, and timely for a specific business use case. Different business tasks require different levels of these qualities.
@@ -383,7 +378,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Transformations
 Data transformations are crucial steps in moving data between systems, often involving processes like extract-transform-load (ETL) or its modern variant, ELT. ETL involves extracting data from sources, transforming it into a desired format, and loading it into a target system. In contrast, ELT extracts the data first but loads it directly into the target system without extensive transformation, which is then handled within the data warehousing solution.

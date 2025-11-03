@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 42)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 13.4 A sample of a profiling workflow. 13.4.1 Run the shallow water application
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Method for Estimating Properties
 The shallow water application employs a numerical method where properties like mass and momentum are estimated at the faces of each computational cell halfway through the time step. This estimation is then used to calculate the amount of mass and momentum that moves into the cell during the current time step.
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Profiling with gprof
 Background context: Profiling is an essential step in optimizing applications. For CPU profiling, tools like `gprof` are commonly used to identify performance bottlenecks and optimize code. The provided text demonstrates how to use `gprof` for profiling a simple C program.
@@ -52,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Visual Profiling with NVVP
 Background context: The NVIDIA Visual Profiler (NVVP) is used to visualize performance data and identify bottlenecks in GPU applications. This tool provides detailed insights into memory transfers, compute regions, and overall performance.
@@ -81,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Zooming into Kernels for Performance Analysis
 Background context: The provided text discusses using NVIDIA’s Visual Profiler (NVVP) to analyze and optimize performance by zooming into specific kernels. This helps identify where data movements can be optimized, reducing overall execution time.
@@ -101,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Data Movement Directives
 Background context: The text explains the importance of adding data movement directives to improve application performance by reducing expensive memory copies. This is done using specific OpenACC pragmas.
@@ -120,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Guided Analysis for Further Optimization
 Background context: NVVP provides a guided analysis feature to suggest further improvements based on performance metrics. This helps in identifying areas where compute and memory operations can overlap more efficiently.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Sequential consistency
 
 ---
 
-**Rating: 8/10**
 
 #### Strong Consistency
 
@@ -133,7 +131,6 @@ public class Leader {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Producer/Consumer Model
 Background context explaining the producer/consumer model. In this pattern, a producer process writes items to a queue, and a consumer reads from it. The producer and consumer see the items in the same order, but the consumer lags behind the producer.
@@ -193,7 +190,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency Control Concepts
 Concurrency control is essential to ensure that transactions run smoothly without conflicts. Two common methods are pessimistic concurrency control and optimistic concurrency control.

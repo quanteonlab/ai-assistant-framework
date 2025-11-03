@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 38)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Stream Joins
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Tumbling Window
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hopping Window
 Background context explaining the concept. A hopping window also has a fixed length but allows windows to overlap in order to provide some smoothing. For example, a 5-minute window with a hop size of 1 minute would contain events between 10:03:00 and 10:07:59, then the next window would cover events between 10:04:00 and 10:08:59, and so on. You can implement this hopping window by first calculating 1-minute tumbling windows, and then aggregating over several adjacent windows.
@@ -55,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sliding Window
 Background context explaining the concept. A sliding window contains all the events that occur within some interval of each other. For example, a 5-minute sliding window would cover events at 10:03:39 and 10:08:12, because they are less than 5 minutes apart (note that tumbling and hopping 5-minute windows would not have put these two events in the same window, as they use fixed boundaries). A sliding window can be implemented by keeping a buffer of events sorted by time and removing old events when they expire from the window.
@@ -82,7 +78,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Session Window
 Background context explaining the concept. Unlike other windows, a session window has no fixed duration and is defined by grouping together all events for the same user that occur closely together in time, with the window ending when the user has been inactive for some time (e.g., if there have been no events for 30 minutes). Sessionization is common in website analytics.
@@ -123,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream-Stream Join (Window Join)
 Background context explaining the concept. In stream processing, joins on streams are more challenging than in batch jobs because events can appear at any time. To join two streams of events, you need to find matching events based on a common key or condition, such as session IDs.
@@ -163,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Click-Search Join for Ad Systems
 Clicks and searches are highly variable events where a user might abandon their search or revisit it later. To measure accurate click-through rates, both search and click events need to be analyzed together. A stream processor needs to maintain state by indexing recent events (e.g., last hour) using session IDs.
@@ -217,7 +210,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream-Table Join for Enrichment
 A stream-table join enriches a stream of events with information from a database. The goal is to augment each activity event in the stream with additional user profile data.
@@ -248,7 +240,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Job vs. Continuous Stream Processing
 Batch jobs typically process data offline or with periodic intervals, while stream processors handle continuous data streams in real-time.
@@ -282,7 +273,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Stream Processor vs Batch Job
@@ -295,7 +285,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Change Data Capture (CDC)
 To keep up with changes in the database over time, change data capture (CDC) is used. CDC allows a stream processor to subscribe to a changelog of user profile updates and activity events.
@@ -307,7 +296,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream-Table Join
 In a stream-table join, a stream is joined with a materialized view of a table. This join can be conceptualized as having an infinitely long window for one input (the changelog stream) and no window at all for the other input (the activity stream).
@@ -319,7 +307,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Twitter Timeline Example
 The timeline for a user in Twitter is created by maintaining a cache of tweets based on follow relationships and tweet events.
@@ -331,7 +318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Slowly Changing Dimensions (SCD)
 Background context: In data warehousing, slowly changing dimensions occur when data changes over time but still needs to be tracked accurately. For example, tax rates change and need to be applied correctly for historical sales records.
@@ -342,7 +328,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault Tolerance in Stream Processing
 Background context: Unlike batch processing, stream processing deals with infinite data streams, making fault tolerance more complex. Retrying tasks and ensuring exactly-once semantics is crucial but challenging due to ongoing input.
@@ -353,7 +338,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exactly-Once Semantics
 Background context: Ensuring exactly-once semantics in stream processing means that every record is processed exactly once, even if tasks fail and are retried. This avoids duplicate processing and ensures consistency.
@@ -365,7 +349,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Idempotence in Stream Processing
 Background context: Ensuring idempotent operations can help achieve exactly-once semantics. An operation is idempotent if performing it multiple times has the same effect as doing it once.
@@ -391,7 +374,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Recovery in Stream Processing
 Background context: Maintaining and recovering state is crucial for operations like windowed aggregations and joins. Ensuring that state can be reconstructed after failures is key to achieving consistency.
@@ -416,7 +398,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream-table join (stream enrichment)
 Stream-table join is a technique where data from a stream is enriched by joining it with data stored in a table. This can be particularly useful when processing real-time or event-driven data, as it allows for dynamic and flexible data augmentation.
@@ -430,7 +411,6 @@ For example, if you are processing transaction streams in financial applications
 
 ---
 
-**Rating: 8/10**
 
 #### Local State Replication
 Replicating state locally within stream processors can prevent data loss during recovery from failures. This approach ensures that when a task fails and is reassigned, it can resume processing where it left off without missing any events.
@@ -444,7 +424,6 @@ For example, in Apache Flink, operators maintain their states locally and period
 
 ---
 
-**Rating: 8/10**
 
 #### Periodic State Snapshots
 Periodic state snapshots involve capturing a consistent view of the operator's state at regular intervals and storing it in durable storage.
@@ -458,7 +437,6 @@ For instance, Apache Flink periodically takes snapshots of operator states and w
 
 ---
 
-**Rating: 8/10**
 
 #### Log Compaction
 Log compaction is a mechanism where older log entries are discarded if newer ones with the same key overwrite them. This helps in managing large volumes of log data efficiently.
@@ -472,7 +450,6 @@ For example, in Kafka Streams, state changes are logged to a dedicated topic wit
 
 ---
 
-**Rating: 8/10**
 
 #### Message Brokers Comparison
 Message brokers like AMQP/JMS-style message brokers and log-based message brokers serve different purposes and have distinct characteristics regarding how messages are handled.
@@ -498,7 +475,6 @@ public class TaskQueue {
 
 ---
 
-**Rating: 8/10**
 
 #### Log-based Message Broker with Checkpointing
 Log-based message brokers retain messages on disk, allowing for replay or checking progress through offsets. This is useful in scenarios where historical data needs to be accessed.
@@ -527,7 +503,6 @@ public class LogBasedMessageBroker {
 
 ---
 
-**Rating: 8/10**
 
 #### Log-Based Approach Overview
 Log-based approaches are similar to database replication logs and log-structured storage engines. They are particularly useful for stream processing systems that consume input streams and generate derived state or output streams. Streams can originate from various sources such as user activity events, periodic sensor readings, data feeds (e.g., financial market data), and even database changes.
@@ -538,7 +513,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Representing Databases as Streams
 Representing databases as streams allows for keeping derived data systems continually up-to-date by consuming the changelog of database changes. This can involve implicit change data capture or explicit event sourcing.
@@ -549,7 +523,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream Processing Techniques
 Stream processing involves several techniques such as complex event processing, windowed aggregations, and materialized views. These techniques help in searching for patterns, computing aggregations over time windows, and maintaining up-to-date views on derived data.
@@ -563,7 +536,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Reasoning in Stream Processors
 Stream processors must handle time reasoning, distinguishing between processing time and event timestamps. They also need to deal with straggler events that arrive after the window of interest is considered complete.
@@ -576,7 +548,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stream Joins
 Stream joins can be categorized into three types based on their inputs: stream-stream joins (with self-joins), stream-table joins, and table-table joins. Each type involves different strategies for joining streams or tables to produce derived outputs.
@@ -590,7 +561,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault Tolerance and Exactly-Once Semantics
 Techniques for achieving fault tolerance and exactly-once semantics involve methods to ensure that messages are processed reliably, even in the presence of failures or retries.

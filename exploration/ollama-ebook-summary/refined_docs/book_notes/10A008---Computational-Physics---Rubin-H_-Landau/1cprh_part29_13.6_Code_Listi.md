@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 29)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 13.6 Code Listings
 
 ---
 
-**Rating: 8/10**
 
 #### Newton's Law of Gravitation and Planetary Orbits
 Background context explaining how Newton used his laws to explain planetary motion. The formula for gravitational force between a planet \(m\) and the sun \(M\) is given by:
@@ -59,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Solution of Planetary Orbit Equations
 Background context on solving the differential equations numerically. The position and velocity are updated iteratively using a numerical integration method like Runge-Kutta 4th order (RK4).
@@ -125,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Discovery of Neptune Using Orbital Mechanics
 Background context on how Neptune was discovered by observing perturbations in Uranus's orbit. The masses and distances of the planets are given, along with their initial angular positions.
@@ -173,7 +169,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerov Method for Solving Schrödinger Equation
 Background context: The Numerov method is a numerical algorithm used to solve the time-independent Schrödinger equation for bound states. It is particularly useful for problems where an analytical solution is not feasible, such as the harmonic oscillator potential.
@@ -187,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bisection Algorithm to Find Bound State Energies
 Background context: The bisection algorithm is used in conjunction with the Numerov method to find the energies for which the wave functions satisfy boundary conditions at the edges of the computational domain. This is done by iteratively narrowing down the energy range until a solution is found.
@@ -201,7 +195,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Setting Up the Numerov Wave Function Solvers
 Background context: The code sets up solvers for the left and right sides of the computational domain using the Numerov method. These solvers are essential for ensuring that the wave functions match at the boundaries.
@@ -225,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Right and Left Wave Functions for Numerov Method
 Background context: The code initializes the left (`uL`) and right (`uR`) wave functions. These are essential components of the Numerov method, which iteratively computes these wave functions to find a solution that matches at the boundaries.
@@ -239,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Root-Finding Using Runge-Kutta 4th Order (RK4)
 Background context: The Runge-Kutta 4th order method is a powerful technique for solving differential equations numerically. In this code, it is used to find eigenvalues and wave functions by integrating the Schrödinger equation.
@@ -255,7 +246,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Visualizing Wave Functions
 Background context: The code visualizes the left (`uL`) and right (`uR`) wave functions on either side of a computational domain. This helps in understanding how well the boundary conditions are met by the computed wave functions.
@@ -269,7 +259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adjusting Energy Range with Bisection
 Background context: The bisection algorithm continuously narrows down the energy range by checking if the current midpoint value of `e` satisfies the boundary conditions. This process repeats until the correct energy level is found within a specified precision (`eps`).
@@ -285,7 +274,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bisection Algorithm for Finding Eigenvalues
 Background context: The provided Python script uses a bisection algorithm to find an eigenvalue \(E\) that satisfies a specific condition. This is done by repeatedly dividing the interval between two guesses, \(E_{max}\) and \(E_{min}\), until the difference in the derivative of the wave function at the boundaries falls below a specified tolerance \(\epsilon\). The script also uses a function `diff(E, h)` to evaluate the condition.
@@ -317,7 +305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Iterative Process for Eigenvalue Calculation
 Background context: The script iteratively calculates an eigenvalue \(E\) using a bisection algorithm. It starts with initial guesses for \(E_{max}\) and \(E_{min}\), then repeatedly narrows the interval by evaluating the function `diff(E, h)` until the difference in derivatives at both ends of the interval falls below a specified tolerance \(\epsilon\).
@@ -342,7 +329,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wave Function Renormalization and Plotting
 Background context: After integrating the wave function to both sides, the script renormalizes the left and right wave functions by dividing their values at each point by a normalization factor. This ensures that the overall amplitude of the wave functions is consistent.
@@ -366,7 +352,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RK4 Integration Method
 Background context: The script uses the Runge-Kutta (RK4) method to numerically integrate the wave function. This is a fourth-order method that provides a good balance between accuracy and computational efficiency.
@@ -401,7 +386,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Projectile Motion with Air Resistance
 Background context: The script models the trajectory of a projectile in two scenarios: one without air resistance and another with air resistance using a drag coefficient \(kf\). It calculates the time to reach maximum height, total flight time, and range for both cases. Then it uses numerical integration (RK4) to plot the trajectory with and without air resistance.
@@ -445,7 +429,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Self-Similarity and Fractals
 Background context: The Sierpiński gasket is self-similar, meaning that any small region of the figure is similar to the whole structure at different scales. This property is fundamental to fractal geometry.
@@ -462,7 +445,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Measuring Fractal Dimension Empirically
 Background context: The fractal dimension can be empirically determined by analyzing how the total mass \( M \) of an object scales with its size \( L \). For a Sierpiński gasket, each dot has a mass of 1, and the density is defined as the mass per unit area.
@@ -493,7 +475,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code for Generating 3D Fractal Fern
 
@@ -506,7 +487,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Key Concepts
 

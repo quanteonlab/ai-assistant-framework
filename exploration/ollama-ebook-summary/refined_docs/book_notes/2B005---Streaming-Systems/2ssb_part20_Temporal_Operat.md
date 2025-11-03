@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Temporal Operators
 
 ---
 
-**Rating: 8/10**
 
 #### Event-Time vs Processing-Time Timestamps
 Event-time timestamps capture the time at which an event occurred, whereas processing-time timestamps are supplied by the system and represent when records arrive. In SQL, these can be represented as additional columns.
@@ -135,7 +133,6 @@ x??
 
 These flashcards cover key concepts related to event-time and processing-time timestamps, ordering data in SQL, temporal validation ranges (TVR), and handling streams in a SQL context. Each card provides background information, relevant code examples, and prompts for understanding each concept deeply.
 
-**Rating: 8/10**
 
 ---
 #### Retractions in SQL Pipelines
@@ -228,7 +225,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Sessions and Retractions without Retractions Enabled
 
@@ -344,7 +340,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Streaming vs. Nonstreaming Data Processing: Key Difference
@@ -458,7 +453,6 @@ Stream<Row> output = input.apply("AssignTimestampsAndWatersmarks", new AssignerW
 ```
 x??
 
-**Rating: 8/10**
 
 #### Watermark Triggers
 Watermark triggers are used to yield a single output per window when the inputs to that window are believed to be complete. This is particularly useful for handling late-arriving data where the system needs to assert with confidence that no more updates will come.
@@ -556,7 +550,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Streaming Joins Overview

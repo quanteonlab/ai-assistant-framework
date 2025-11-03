@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A007---Build-a-Large-Language-Model_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Appendix_D._Adding_Bells_and_Whistles_to_the_Training_Loop
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -42,7 +40,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Learning Rate Warmup
 Background context: In machine learning, especially for training large language models (LLMs), it is common to start with a low initial learning rate and gradually increase it to a peak value during the early stages of training. This technique helps stabilize the training process as the model learns more complex patterns.
@@ -161,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient Clipping Concept
 Background context explaining gradient clipping. Gradient clipping is a technique used to enhance stability during Large Language Model (LLM) training by limiting the magnitude of gradients that are backpropagated through the network.
@@ -255,7 +251,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Warmup and Cosine Decay for Learning Rate Scheduling
 Background context: During model training, it's common to use a learning rate scheduler that adjusts the learning rate over time. In this scenario, linear warmup is used at the beginning of training to gradually increase the learning rate from an initial value to a peak value. After the warmup period, cosine decay is applied to smoothly decrease the learning rate to a minimum value. This approach helps in stabilizing the training process.

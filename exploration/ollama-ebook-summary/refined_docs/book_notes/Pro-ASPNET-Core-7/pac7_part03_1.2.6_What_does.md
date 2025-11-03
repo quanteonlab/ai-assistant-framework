@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 1.2.6 What doesnt this book cover
 
 ---
 
-**Rating: 8/10**
 
 #### Reporting Errors in the Book
 Background context: The book outlines a process for reporting errors found in the content, including example code. This is important to ensure that other readers are not affected by similar issues.
@@ -28,7 +26,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Overview of ASP.NET Core Development Process (SportsStore Project)
@@ -40,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Key Features of ASP.NET Core Platform (Part 2)
 This section explains essential concepts such as HTTP request processing, middleware creation and usage, route definition, service implementation and consumption, and working with Entity Framework Core. Understanding these foundations is crucial for effective development using ASP.NET Core.
@@ -51,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Types of Applications in ASP.NET Core (Part 3)
 This part discusses creating various types of applications, including RESTful web services and HTML applications using controllers and Razor Pages. It also covers generating HTML through views, view components, and tag helpers.
@@ -62,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advanced ASP.NET Core Features (Part 4)
 This final part of the book covers advanced features such as Blazor Server apps, experimental Blazor WebAssembly, user authentication and authorization through ASP.NET Core Identity.
@@ -73,7 +67,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ASP.NET Core Overview
 Background context: The text provides an overview of ASP.NET Core as a framework for creating web applications. It mentions that ASP.NET Core has evolved over time with different frameworks like MVC, Razor Pages, and Blazor.
@@ -87,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differences Between MVC and Razor Pages
 Background context: The text contrasts the MVC framework with the newer Razor Pages framework. The MVC framework is older and more complex but offers greater flexibility.
@@ -103,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blazor Framework Overview
 Background context: The text introduces Blazor as a framework for writing client-side applications using C# instead of JavaScript. It mentions two versions of Blazor, one running within an ASP.NET Core server and another executing entirely in the browser.

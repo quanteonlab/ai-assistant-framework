@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 34)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 10.6.2 Case 2 Unstructured mesh application
 
 ---
 
-**Rating: 8/10**
 
 #### Reduction Pattern on GPU
 Background context: The reduction pattern is a common algorithmic technique where a set of values is reduced to a single value. This process often involves summing elements or performing other aggregations across an array.
@@ -51,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Computing through Queues (Streams)
 Background context: GPUs operate asynchronously, meaning that tasks are queued and executed based on the availability of resources rather than in a strict sequence. This allows for overlapping data transfer and computation, which can significantly improve performance.
@@ -83,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Queues for Parallel Work Scheduling
 Explanation: The text describes how commands can be placed into different queues (like Queue 1, Queue 2, etc.), allowing parallel execution and overlapping of data transfers and computations.
@@ -95,7 +91,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overlapping Computation and Data Transfers
 Explanation: The text provides an example where overlapping computation and data transfers reduce overall execution time by allowing multiple queues to run simultaneously.
@@ -107,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Multiple Queues
 Explanation: The use of multiple queues can lead to better utilization of GPU resources by overlapping data transfers and computations.
@@ -119,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overlapping Execution Example
 Explanation: The text illustrates how overlapping execution in multiple queues can reduce the total time required for operations.
@@ -133,7 +126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Option 1: Distribute Data in a 1D Fashion Across the z-Dimension
@@ -156,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Option 2: Distribute Data in 2D Vertical Columns Across y- and z-Dimensions
 Background context explaining the benefits of distributing data across two dimensions for GPU parallelism. It discusses the number of potential work groups and local memory constraints.
@@ -179,7 +170,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Locality and Data Partitioning
 To optimize unstructured data processing on the GPU, it's essential to maintain some spatial locality. This can be achieved using techniques like data-partitioning libraries or space-filling curves.
@@ -195,7 +185,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GPU Programming Model Evolution
 The basic structure of GPU programming models has stabilized over time. However, there have been ongoing developments, particularly as GPUs are increasingly used for 3D graphics, physics simulations, scientific computing, and machine learning.
@@ -212,7 +201,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GPU Programming Languages and Tools
 Several programming languages and tools support different types of GPU architectures, including OpenCL for mobile devices, and CUDA for discrete GPUs.
@@ -229,7 +217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallelism on GPUs vs CPUs
 Background context explaining the parallelism requirements for GPU and CPU. The GPU needs thousands of independent work items to utilize its architecture effectively, while the CPU only requires tens.

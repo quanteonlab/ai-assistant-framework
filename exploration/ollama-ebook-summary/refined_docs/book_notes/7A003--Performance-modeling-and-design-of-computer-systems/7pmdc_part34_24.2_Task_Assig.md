@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 34)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 24.2 Task Assignment for PS Server Farms
 
 ---
 
-**Rating: 8/10**
 
 #### ROUND-ROBIN Optimal for Deterministic Job Sizes
 When job sizes are deterministic (e.g., all jobs have size 1), the ROUND-ROBIN policy is optimal because it maximally spaces out arrivals to a server, ensuring no delays if both job sizes and interarrival times are deterministic.
@@ -138,7 +136,6 @@ public class SitAScheduler {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Job Size Distributions and Their Characteristics
 Background context explaining that the text discusses various job size distributions, each with a mean of 2 but increasing variance. The distributions range from deterministic to bimodal, with specific examples provided.
@@ -201,7 +198,6 @@ Task assignment policies like JSQ perform well in preemptive server farms due to
 ??x
 ---
 
-**Rating: 8/10**
 
 #### SRPT Policy for Single Queue
 Background context explaining that the Shortest Remaining Processing Time (SRPT) policy is optimal with respect to mean response time when there's a single queue and fully preemptible jobs, regardless of the arrival sequence.
@@ -257,7 +253,6 @@ This packing strategy ensures minimal mean response time by keeping servers busy
 
 Each flashcard should cover a specific aspect of the provided text, helping with understanding and recall.
 
-**Rating: 8/10**
 
 #### Server Farm with Size-Interval-Task-Assignment (SITA)
 Background context: In a server farm, jobs are assigned to servers based on their size. Here, small jobs (<10 units) go to Host 1 and large jobs (≥10 units) go to Host 2. Jobs arrive according to a Poisson process with rate λ, and job sizes follow a power-law distribution.

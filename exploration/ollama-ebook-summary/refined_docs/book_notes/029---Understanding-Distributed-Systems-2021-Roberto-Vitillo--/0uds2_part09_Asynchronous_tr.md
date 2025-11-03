@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Asynchronous transactions. Log-based transactions
 
 ---
 
-**Rating: 8/10**
 
 #### Log-based Transactions
 Log-based transactions involve using a message log to coordinate updates across multiple data stores. This approach is particularly useful when traditional two-phase commit (2PC) cannot be used due to compatibility or performance reasons.
@@ -138,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Log Abstraction and Messaging
 Log abstraction is a method used for state machine replication where changes to the system's state are recorded. In this context, we see logs as part of messaging interaction styles. Messaging involves communication through channels (brokers) rather than direct request-response methods. Messages have headers containing metadata like unique IDs and bodies with actual content.
@@ -292,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Idempotent Messages
 Background context: In a workflow implementing asynchronous transactions, messages might appear twice at the receiving end. This can lead to duplication issues if actions are not designed to handle such cases. To address this, participants need to make their messages idempotent, meaning that applying the operation multiple times has the same effect as applying it once.

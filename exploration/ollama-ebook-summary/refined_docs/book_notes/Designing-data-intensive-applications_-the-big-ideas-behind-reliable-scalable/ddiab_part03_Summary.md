@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Scaling Up vs. Scaling Out
 Background context explaining the difference between scaling up and scaling out. Vertical scaling involves moving to a more powerful machine, whereas horizontal scaling distributes load across multiple smaller machines. Distributing load across multiple machines is also known as a shared-nothing architecture.
@@ -33,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Elastic Systems vs. Manually Scaled Systems
 Background context explaining the difference between elastic and manually scaled systems. An elastic system can automatically add computing resources based on detected load increases, while a manually scaled system relies on human intervention.
@@ -60,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stateless vs. Stateful Systems
 Background context explaining the difference between stateless and stateful systems. Stateless services can be distributed easily across multiple nodes, while stateful data systems require more complex setup due to shared state.
@@ -91,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Database Scaling
 Background context explaining the common wisdom to keep databases on a single node until scaling or availability requirements force distributed setup. As distributed system tools improve, this may change.
@@ -118,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Specifics of Scalable Architectures
 Background context explaining that scalable architectures are highly specific to the application. There is no one-size-fits-all solution.
@@ -140,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scalability Considerations
 Background context: In designing architectures for applications, it's crucial to consider which operations will be common and which will be rare. These assumptions form the basis of load parameters that can significantly impact engineering efforts if they turn out to be incorrect. For early-stage startups or unproven products, rapid iteration on features is often more critical than scaling to a hypothetical future load.
@@ -152,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Iteration Over Scalability
 Background context: In early-stage startups, maintaining agility to quickly iterate on product features is more critical than focusing on scaling for potential future loads. However, building scalable architectures from general-purpose components in familiar patterns is still essential.
@@ -164,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Maintainability Principles
 Background context: Software maintainability involves reducing costs related to ongoing maintenance such as fixing bugs, adapting to new platforms, and modifying for new use cases. Good design practices like operability, simplicity, and evolvability can mitigate these issues.
@@ -181,7 +172,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simplicity in Software Design
 Background context: As software projects grow, they often become complex and difficult to understand. This complexity slows down development and maintenance efforts. Simplifying the system can improve maintainability.
@@ -222,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evolvability in Software Design
 Background context: Evolvability ensures that the system can be modified for unanticipated use cases and changing requirements. It involves making it easy to adapt to future changes without breaking existing functionality.
@@ -253,7 +242,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Big Ball of Mud
 Background context: A software project described as a "big ball of mud" refers to one that is difficult to understand, maintain, and scale due to high complexity. Symptoms include explosion of state space, tight coupling of modules, tangled dependencies, inconsistent naming, and more.
@@ -264,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Symptoms of Complexity
 Background context: Various symptoms indicate when a system might be too complex. These include an explosion in state space, tightly coupled modules, tangled dependencies, inconsistent naming, performance hacks, special-casing, etc.
@@ -278,7 +265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Impact of Complexity on Maintenance
 Background context: High complexity makes maintenance harder and increases the risk of introducing bugs when changes are made. Developers find hidden assumptions and unintended consequences more easily overlooked due to lack of understanding of the system.
@@ -291,7 +277,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reducing Complexity through Simplicity
 Background context: Simplifying systems by reducing accidental complexity can greatly improve maintainability. Accidental complexity arises from implementation choices rather than inherent requirements.
@@ -304,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Abstraction as a Tool for Removing Complexity
 Background context: Abstraction can hide complex implementation details behind simple interfaces, making the system more manageable. High-level languages like SQL provide excellent examples of abstraction in practice.
@@ -318,7 +302,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of SQL as an Abstraction
 Background context: SQL is a powerful abstraction that simplifies database operations by hiding complex data structures and concurrency issues. Developers can work at a high level without dealing with underlying complexities.
@@ -332,7 +315,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evolvability in Distributed Systems
 Background context: In distributed systems, maintaining evolvability is crucial as requirements change frequently. Good abstractions help manage complexity but finding them can be challenging.
@@ -347,7 +329,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reliability
 Reliability means ensuring that a system works correctly even when faults occur. Faults can arise from hardware, software, or human errors. To handle hardware failures, fault-tolerant techniques can be implemented to hide certain types of faults from end users.
@@ -364,7 +345,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scalability
 Scalability involves having strategies for maintaining good performance as load increases. To discuss scalability, it is essential to first describe and measure load and performance quantitatively.
@@ -380,7 +360,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Maintainability
 Maintainability encompasses making life easier for engineering and operations teams working with a system. It involves good abstractions to reduce complexity, along with effective visibility into the system’s health and management tools.
@@ -394,7 +373,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Describing Load (Example)
 In the context of Twitter's home timelines, describing load involves quantifying how many tweets are generated and consumed over time.
@@ -428,7 +406,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Models and Their Importance
 Data models are crucial for software development as they impact both how applications are built and how problems are conceptualized. Each layer of a data model is represented in terms of the next lower layer, creating an abstraction hierarchy.
@@ -447,7 +424,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Role of Layers in Data Models
 The text describes multiple layers involved in representing real-world entities digitally:
@@ -469,7 +445,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison of Relational vs. Document Model
 The document model represents data as documents, often in formats like JSON or XML, which can be more flexible than the fixed schema of relational databases.
@@ -490,7 +465,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hierarchical and Network Models
 Hierarchical models represent data using a tree structure where each entity has one parent but multiple children. The network model allows many-to-many relationships between entities.
@@ -521,7 +495,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relational Databases Dominance
 Relational databases have dominated data storage for business data processing. Despite competing models like object databases and XML databases, relational databases generalized well beyond their initial use cases.
@@ -533,7 +506,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### NoSQL Emergence
 NoSQL emerged in the 2010s as an attempt to address limitations of relational databases, focusing on scalability, flexibility, and open-source software.
@@ -545,7 +517,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Schema Flexibility in Document Model
 One advantage of using JSON is its schema flexibility, allowing for dynamic and expressive data modeling.

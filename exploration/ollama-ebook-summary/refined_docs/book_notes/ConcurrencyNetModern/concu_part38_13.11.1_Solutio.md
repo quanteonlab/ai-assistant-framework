@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 38)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 13.11.1 Solution implementing an agent that runs jobs with a configured degree of parallelism
 
 ---
 
-**Rating: 8/10**
 
 #### CSP-based Pipeline Implementation
 Background context explaining the concept of Concurrent/Sequenced Pipeline (CSP) and its implementation using channels. The example provided uses F# channels to process images through different stages, applying 3D effects before saving them.
@@ -34,7 +32,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throttling Asynchronous Computations
 Background context explaining the need to control the degree of parallelism in CPU-heavy operations to avoid excessive resource consumption and inefficiency.
@@ -50,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agent Programming Model for Job Coordination
 Background context explaining the use of agents to coordinate concurrent jobs and limit parallelism. The example demonstrates how an agent can be used to process a sequence of asynchronous operations efficiently.
@@ -79,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TamingAgent Implementation
 Background context: The `TamingAgent` is implemented as a functional agent that manages the execution of asynchronous jobs within a specified degree of parallelism. It uses an event to notify subscribers when jobs complete.
@@ -124,7 +119,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event Notification
 Background context: An event object (`jobCompleted`) is used to notify subscribers when a job completes.
@@ -146,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallelism Management Logic
 Background context: The TamingAgent uses a recursive function (`running`) to track the number of concurrently running operations and manage their execution.
@@ -180,7 +173,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TamingAgent Concept Overview
 The `TamingAgent` is a utility designed to manage and coordinate concurrent jobs, ensuring that the number of running tasks does not exceed a specified limit. It uses asynchronous programming principles to handle job completion events and notify subscribers.
@@ -193,7 +185,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Job Execution
 The `TamingAgent` runs each job asynchronously to obtain the result. Once a job completes, it sends back the result and notifies subscribers through the `jobCompleted` event.
@@ -212,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Concurrent Job Limit
 When the limit of concurrent jobs is reached, the `TamingAgent` switches to an idle state. It waits for a new incoming message or until some running jobs complete.
@@ -236,7 +226,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kleisli Operator and Monadic Composition
 
@@ -333,7 +322,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrent Object Pool
 Background context explaining the use of concurrent object pools. These pools are essential for optimizing performance by reusing objects, thereby reducing garbage collection (GC) generations and improving program execution speed.
@@ -378,7 +366,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallelizing Dependent Tasks with Constrained Order of Execution
 Background context explaining how parallelizing dependent tasks can maximize concurrent execution while respecting order constraints. This is useful for tasks that need to be executed in a specific sequence but can benefit from running other independent tasks concurrently.
@@ -428,7 +415,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reader-Writer Coordination for Shared Resources
 Background context explaining how multiple threads can coordinate access to shared resources for reader-writer operations without blocking, maintaining a FIFO ordering. This pattern increases application performance through parallelism and reduced resource consumption.
@@ -480,7 +466,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event Aggregator and Rx Implementation
 Background context explaining the use of event aggregators and Rx for handling events in a multi-threaded environment. Event aggregators act similarly to mediators, while Rx supports concurrent event handling.
@@ -506,7 +491,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Custom Rx Scheduler
 Background context explaining the implementation of a custom Rx scheduler using the IScheduler interface. This allows fine control over parallelism and prevents unnecessary thread expansion.
@@ -539,7 +523,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Non-blocking Message Passing with F# MailboxProcessor or TDF
 Background context explaining how to use the F# `MailboxProcessor` or Task-based Design Framework (TDF) for non-blocking synchronous message passing. This allows coordination and balancing of payload between asynchronous operations.
@@ -573,7 +556,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Server-Side Application Architecture
 
@@ -599,7 +581,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Embarrassingly Parallel Applications
 
@@ -638,7 +619,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrent Functional Programming in Server-Side Applications
 
@@ -677,7 +657,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real-Time Monitoring of the Stock Market
 
@@ -728,7 +707,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CQRS Pattern with WebSocket Notifications
 
@@ -766,7 +744,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message Bus Implementation
 
@@ -825,7 +802,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Programming Principles
 Functional programming (FP) emphasizes immutability, first-class functions, and isolation of side effects. These principles enhance flexibility, simplicity, ease of reasoning, and robustness.
@@ -855,7 +831,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency and Asynchronous Operations in .NET
 .NET supports concurrent functional programming through support for asynchronous operations and agents. This makes it suitable for server-side programming by allowing efficient parallelism with the Task Parallel Library (TPL).
@@ -883,7 +858,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stateless Server Design in Large-Scale Applications
 Stateless server design is crucial for building scalable web applications that can handle a high number of concurrent requests. It avoids storing application or user data, making it easier to scale horizontally.
@@ -909,7 +883,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Amdahl’s Law and Scalability
 Amdahl's Law describes the theoretical maximum speedup in latency of the execution of a program using multiple processors. It helps determine how much an application can be sped up with parallelization.
@@ -935,7 +908,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Auto-scaling and Concurrency
 Auto-scaling in stateless servers leverages the fact that no shared state is stored between requests, allowing efficient distribution of load across multiple instances or processes without coordination.
@@ -982,7 +954,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Asynchronicity
@@ -1010,7 +981,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Caching
 Caching aims to avoid repeating work by storing results of previous computations. This reduces overhead and improves performance, especially for time-consuming operations that are frequently repeated but whose output doesn't change often.
@@ -1044,7 +1014,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distribution
 Distribution involves partitioning requests across multiple systems to scale out processing. This is particularly effective in stateless systems where servers do not retain much state between operations.
@@ -1071,7 +1040,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scalability and Performance Goals in Design
 Performance is a critical aspect of software design that should be considered from the outset. Redesigning an application to meet performance goals later can be significantly more expensive than incorporating these goals early.
@@ -1101,7 +1069,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fallacies of Distributed Computing
 The fallacies of distributed computing refer to common assumptions that often lead to flawed designs and architectures, such as assuming a secure, reliable network with zero latency.
@@ -1146,7 +1113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Programming Patterns
 Background context explaining the concept of asynchronous programming and its importance in designing performant applications. Asynchronicity means dispatching a job to complete in the future, often using two patterns: continuation passing style (CPS) or callbacks, and asynchronous message passing.
@@ -1158,7 +1124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Queue-based Asynchronous Pattern
 Background context explaining how queueing tasks can smooth the workload of a program. Tasks are sent to a service that queues them for future execution. The service processes these tasks, and upon completion, notifies the originator with details.
@@ -1198,7 +1163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Queue-based Asynchronous Pattern
 Background context explaining how online companies like Twitter and Facebook have successfully reduced costs by using queue-based asynchronous patterns in their software design.
@@ -1212,7 +1176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Choosing the Right Concurrent Programming Model
 Background context explaining how research in increasing program performance through concurrency and parallelism has led to multiple concurrent programming models each with its own strengths and weaknesses.
@@ -1232,7 +1195,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Actor Model for Message-Passing Systems
@@ -1245,7 +1207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TPL for Dynamic Task Parallel Computation (Fork/Join Pattern)
 TPL (Task Parallel Library) in .NET provides a framework that allows developers to express parallelism and concurrency easily. The Fork/Join pattern is one of the key patterns supported by TPL, which involves dividing work into smaller tasks and then combining their results.
@@ -1283,7 +1244,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TPL for Sequential Loops (Parallel Loop)
 TPL also supports the Parallel Loop pattern, which can be used to parallelize loops where each iteration is independent and there are no dependencies among the steps. This helps in distributing the workload across multiple threads.
@@ -1319,7 +1279,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Reducer (Fold or Aggregate) with TPL
 A parallel reducer, such as the `Parallel.ForEach` method combined with aggregation functions like `Aggregate`, can be used to merge results in a parallel manner. This is particularly useful for operations that require combining intermediate results into a single output.
@@ -1350,7 +1309,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CQRS Pattern Overview
 CQRS stands for Command and Query Responsibility Segregation, a pattern that separates read concerns from write concerns. In the context of the online stock market application, this means having separate models and commands for handling user requests (commands) versus data retrieval queries.
@@ -1364,7 +1322,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event Sourcing
 Event sourcing is a persistence pattern where the state of an application is stored as a sequence of events. Each event represents an action or change in the system, and the current state can be reconstructed by replaying all past events.
@@ -1378,7 +1335,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agent Programming Model
 Agent programming is a paradigm where processes communicate via messages. In F#, this can be implemented using `MailboxProcessor`. Each user connection spawns its own agent that handles requests independently.
@@ -1403,7 +1359,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reactive Extensions (Rx)
 Rx is a library for composing asynchronous and event-based programs by using observable sequences. It enables you to write reactive code that handles events in an efficient manner.
@@ -1426,7 +1381,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Concurrency Techniques
 Functional concurrency techniques, such as immutability and functional programming constructs like `MailboxProcessor` in F#, help manage state changes without side effects. This is particularly useful for maintaining a consistent application state.

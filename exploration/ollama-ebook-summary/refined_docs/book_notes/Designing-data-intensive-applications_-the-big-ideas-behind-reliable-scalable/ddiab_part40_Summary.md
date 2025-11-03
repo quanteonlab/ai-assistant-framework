@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 40)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Evolving Applications through Dataflow Transformations
 In dataflow applications, transformations are used to evolve applications. If a processing step needs to be changed, such as altering an index or cache structure, you can rerun the updated transformation code on the entire input dataset to rederive the output. Similarly, if something goes wrong, fixing the code and reprocessing the data allows recovery.

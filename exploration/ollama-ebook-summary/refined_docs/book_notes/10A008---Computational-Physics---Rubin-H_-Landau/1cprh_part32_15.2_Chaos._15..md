@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 32)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 15.2 Chaos. 15.3 Bifurcation Diagrams
 
 ---
 
-**Rating: 8/10**
 
 #### Exploring Long-Term Behavior in Chaotic Region
 
@@ -37,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Chaos in Logistic Map
 
@@ -68,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bifurcation Diagram Implementation
 
@@ -94,7 +90,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nonlinear Population Dynamics
 Background context: The text discusses how certain mathematical maps can exhibit nonlinear dynamics, leading to complex behaviors such as bifurcations and chaos. Specifically, it mentions the importance of constants like \(\mu\), \(c\), and \(\delta\) in understanding these phenomena.
@@ -123,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Other Maps Bifurcations and Chaos
 Background context: The text lists several nonlinear maps that can generate sequences with bifurcations, highlighting their properties. It mentions the logistic map and ecology map as examples.
@@ -154,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lyapunov Coefficients
 Background context: The text explains that the Lyapunov coefficient \(\lambda\) is a measure of chaos in dynamical systems. It quantifies how neighboring trajectories diverge or converge over time, providing insight into whether a system is chaotic.
@@ -188,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Measures of Chaos
 Background context: The text introduces measures to quantify chaos in dynamical systems, focusing on the Lyapunov coefficients and Shannon entropy. These measures help in understanding the unpredictability and complexity of chaotic behavior.

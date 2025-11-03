@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Loss Functions
 
 ---
 
-**Rating: 8/10**
 
 #### Cosine Similarity Evaluation
 Background context explaining the concept. The `pearson_cosine` value is a measure of similarity between two vectors, with higher values indicating greater similarity. It ranges from 0 to 1.
@@ -65,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fine-Tuning an Embedding Model Using Pretrained Models
 Fine-tuning embedding models using pre-trained sentence-transformers models is a powerful method for adapting existing models to specific tasks or datasets. This approach allows us to leverage the knowledge gained during large-scale training and adapt it to our particular use case, often more efficiently than training from scratch.
@@ -179,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TSDAE Overview
 Background context: The Transformer-Based Sequential Denoising Auto-Encoder (TSDAE) is a method for unsupervised sentence embedding learning. It works by adding noise to sentences and then reconstructing them, with the goal of accurately representing the original sentence in an embedding space.

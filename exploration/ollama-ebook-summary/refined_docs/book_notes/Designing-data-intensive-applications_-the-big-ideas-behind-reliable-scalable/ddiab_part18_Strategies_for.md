@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Strategies for Rebalancing
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioning Secondary Indexes by Term
 In a distributed database system, secondary indexes can be partitioned to improve read performance. Instead of each partition having its own local index, a global index that covers data across all partitions is often created. However, storing this global index on one node would create a bottleneck and reduce the benefits of partitioning.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Global Index Partitioning Strategy
 The global index for term-partitioned secondary indexes is divided into different partitions based on terms (e.g., colors starting with 'a' to 'r' in one partition and those starting with 's' to 'z' in another). This allows queries to be targeted to specific partitions rather than scanning all of them.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioning by Term vs Hash
 Term-partitioned indexes can be partitioned either by the term itself or using a hash of the term. Partitioning by the term is useful for range scans, while hashing provides more even distribution of load.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Global Index Advantages
 A global secondary index overcomes some limitations of local indexes by allowing efficient reads, as clients only need to request data from the partition containing the desired term. However, writes are slower and more complicated because they may affect multiple partitions.
@@ -53,7 +48,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Global Index Drawbacks
 While global indexes provide benefits for read efficiency, they come with drawbacks, such as slower and more complicated writes because a single write operation may affect multiple partitions. Additionally, updates to the index are often asynchronous.
@@ -64,7 +58,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation Considerations
 Implementing term-partitioned secondary indexes requires careful consideration of how terms map to partitions, as well as handling distributed transactions across affected partitions for consistency. In practice, updates to these indexes can be asynchronous due to limitations in some database systems.
@@ -78,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hash Mod N Partitioning Issue
 Background context: When using hash partitioning, sometimes a simple approach like `hash(key) % n` (where `n` is the number of nodes) is tempting because it seems straightforward. However, this method can cause excessive data movement during rebalancing when the number of nodes changes.
@@ -99,7 +91,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fixed Number of Partitions Strategy
 Background context: To mitigate the frequent reassignment issues, a better approach is to use a fixed number of partitions that exceed the number of nodes. This ensures that when adding or removing nodes, only some partitions are reassigned.
@@ -130,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioning by Key Range
 
@@ -171,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dynamic Partitioning
 
@@ -209,7 +198,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pre-splitting
 
@@ -247,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rebalancing Partitions
 
@@ -289,7 +276,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioning Strategies and Their Impact on Data Distribution
 
@@ -302,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hash-Based Partitioning
 
@@ -315,7 +300,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consistent Hashing
 
@@ -328,7 +312,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rebalancing Strategies
 
@@ -341,7 +324,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Request Routing Mechanisms
 
@@ -354,7 +336,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Discovery
 
@@ -367,7 +348,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using ZooKeeper for Metadata Management
 
@@ -382,7 +362,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioning Techniques Overview
 Background context explaining how partitioning is used to handle large datasets. Partitioning helps distribute data and query load across multiple machines, preventing hot spots. Different NoSQL databases employ various strategies for managing partitions.
@@ -421,7 +400,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Routing Tier Overview
 Background context explaining the role of a routing tier. A routing tier helps clients find the correct nodes to query, reducing dependency on external services like ZooKeeper.
@@ -451,7 +429,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gossip Protocol for Partitioning
 Background context explaining the gossip protocol used by Cassandra and Riak. This protocol allows nodes to share information about changes in their state.
@@ -503,7 +480,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Key Range Partitioning
 Background context explaining key range partitioning. This approach involves dividing keys into ranges and assigning each range to a specific node.
@@ -542,7 +518,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sorting for Partitioning
 
@@ -555,7 +530,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hash Partitioning
 
@@ -568,7 +542,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dynamic Partitioning
 
@@ -602,7 +575,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hybrid Partitioning
 
@@ -641,7 +613,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Secondary Indexes
 
@@ -690,7 +661,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Query Routing
 
@@ -725,7 +695,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Write Operations in Partitioned Databases
 
@@ -766,7 +735,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Richard Low on Secondary Indexing in Cassandra
 Richard Low discusses the optimal use of secondary indexing in Apache Cassandra, providing insights into when and how to effectively utilize this feature.
@@ -778,7 +746,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Apache Solr Reference Guide
 The Apache Software Foundation provides a comprehensive reference guide for Apache Solr, a powerful search platform built on top of Lucene.

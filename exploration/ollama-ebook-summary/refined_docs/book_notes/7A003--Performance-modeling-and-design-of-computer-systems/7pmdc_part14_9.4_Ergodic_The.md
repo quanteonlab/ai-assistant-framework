@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.4 Ergodic Theorem of Markov Chains
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Ergodicity and Limiting Probabilities of DTMCs
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ergodic Theorem of Markov Chains
 Background context: The Ergodic Theorem states that under certain conditions (ergodic), the limiting probabilities exist and can be computed. Specifically, for an ergodic DTMC, these limits are positive and equal to 1 over the mean time between visits to a state.
@@ -39,7 +36,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Limiting Distributions and Stationary Distributions
 Background context: The text summarizes the possible states (transient, null-recurrent, or positive recurrent) for irreducible DTMCs and their implications on limiting distributions and stationary distributions.
@@ -56,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Corollary on Summing Limiting Probabilities
 Background context: This corollary confirms that the limiting probabilities for positive recurrent states indeed sum up to 1.
@@ -78,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transience, Null Recurrence, and Positive Recurrence in Irreducible Chains
 Background context: The text explains how transience, null recurrence, and positive recurrence are class properties, meaning all states share the same property.
@@ -96,7 +90,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ergodicity and Irreducibility
 Background context explaining the concept. In a Discrete-Time Markov Chain (DTMC), ergodicity is a desirable property that simplifies analysis. Specifically, if a DTMC is both irreducible and aperiodic, it can be shown that it has a unique stationary distribution which also serves as its limiting probability distribution.
@@ -107,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Periodic Chains and Their Solutions
 Background context explaining the concept. When dealing with DTMCs that are not irreducible or periodic, the stationary equations may still have solutions, but their interpretation differs from when the chain is positive recurrent and irreducible.
@@ -118,7 +110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Averages and Long-Run Behavior
 Background context explaining the concept. The time average fraction \(p_j\) of time spent in state \(j\) can be defined as the limit of the ratio of the number of times the Markov chain enters state \(j\) by time \(t\), to \(t\). This is an important measure for understanding long-run behavior.
@@ -131,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Positive Recurrence and Irreducibility
 Background context explaining the concept. For a positive recurrent, irreducible DTMC, Theorem 9.28 provides strong guarantees about the convergence of the time averages to the limiting probabilities.
@@ -144,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Corollary 9.29 - Ergodic DTMC
 Background context explaining the concept. A corollary to Theorem 9.28, specifically for ergodic (irreducible and aperiodic) Markov chains, relates time averages to limiting probabilities in a straightforward manner.
@@ -157,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summation of Limiting Probabilities
 Background context explaining the concept. The fact that the sum of all limiting probabilities must equal 1 for a Markov chain is derived from the properties of ergodic chains and their convergence.
@@ -170,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Strong Law of Large Numbers (SLLN)
 Background context explaining the concept. The SLLN provides a foundational result for understanding the convergence of time averages in sequences of independent, identically distributed random variables.
@@ -183,7 +170,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Renewal Process
 Background context explaining the concept. A renewal process is a stochastic process where the inter-event times are i.i.d. random variables, each drawn from a distribution \(F\). This concept is fundamental in understanding the long-term behavior of certain systems.
@@ -196,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Renewal Theorem
 The Renewal Theorem states that for a renewal process, the long-run average number of events per unit time converges to 1/E[X] almost surely as t approaches infinity. Here, E[X] is the expected value of the inter-renewal times.
@@ -209,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proof of Renewal Theorem
 The proof involves applying the Strong Law of Large Numbers (SLLN) to show that both upper and lower bounds on the renewal process converge almost surely to \( E[X] \). Specifically, it shows:
@@ -232,7 +216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ergodic Markov Chain and Limiting Probabilities
 For an ergodic (irreducible and positive recurrent) Markov chain, the limiting probability \( \pi_i \) of being in state i is the long-run proportion of time that the process spends in state i.
@@ -245,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transition Rates
 For a Markov chain, the rate of transitions out of state i can be calculated as \( \sum_j \pi_i P_{ij} \), and the rate of transitions into state i from any other state j is given by \( \sum_j \pi_j P_{ji} \). The stationary equations then relate these rates.
@@ -256,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stationary Equations and Transition Rates
 For an ergodic Markov chain, the stationary probabilities \( \pi_i \) satisfy the equation:
@@ -271,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stationary Equations Simplified
 The stationary equations can also be simplified by ignoring self-loops:

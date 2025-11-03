@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Decorators 101
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Decorators and Closures
 
@@ -197,7 +195,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Function Decorators and Registration Decorators
 
@@ -308,7 +305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bytecode and Local Variables
 Background context explaining how Python's bytecode operates, specifically focusing on local variables. The example provided demonstrates that a variable's nature as local cannot change within the function body despite later assignments.

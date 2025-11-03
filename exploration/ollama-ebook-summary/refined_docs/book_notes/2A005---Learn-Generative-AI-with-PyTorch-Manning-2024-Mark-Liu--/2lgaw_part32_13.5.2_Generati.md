@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 32)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 13.5.2 Generating music with the trained MuseGAN
 
 ---
 
-**Rating: 8/10**
 
 #### Differentiating Between Concepts
 Background context: The text covers various aspects of the MuseGAN model, including noise vector generation, model training, and output decoding. Understanding these concepts is crucial for effectively using the model.
@@ -23,7 +21,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tokenizing Music into a Sequence of Indexes
 Background context: To use neural networks in music generation, we need to convert musical elements (like notes and chords) into numerical sequences that the network can process. This involves tokenization, where each unique element is mapped to an index.
@@ -53,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Building and Training a Music Transformer
 Background context: A music Transformer is designed to predict the next musical event based on all previous events in the sequence. This approach leverages techniques from text generation, using self-attention mechanisms to understand long-range dependencies.
@@ -90,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Process Flow
 The input sequence first undergoes word embedding and positional encoding. It then passes through six decoder layers using self-attention mechanisms to capture the relationships among musical events before being processed by a linear layer to produce logits.
@@ -147,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Self-Attention Mechanism
 Causal self-attention ensures that the model only attends to previous tokens, making it suitable for generating music in a sequence. Each attention head captures different aspects of token meanings.

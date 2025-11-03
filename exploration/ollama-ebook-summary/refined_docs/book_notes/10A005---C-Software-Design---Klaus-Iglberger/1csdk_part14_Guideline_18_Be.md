@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Guideline 18 Beware the Performance of Acyclic Visitor
 
 ---
 
-**Rating: 8/10**
 
 #### std::variant for Visitor Pattern
 
@@ -111,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Team Dynamics and Office Politics
 
@@ -303,7 +300,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Strategy Design Pattern Overview
 The Strategy design pattern is a behavioral design pattern that enables selecting and using a family of algorithms dynamically. The pattern allows you to encapsulate each algorithm behind an interface or abstract class, making it easy to change the behavior at runtime without modifying client code.
@@ -394,7 +390,6 @@ int main() {
 ??x
 ---
 
-**Rating: 9/10**
 
 #### Single-Responsibility Principle (SRP) Violation
 Background context: The current implementation of drawing shapes violates the SRP because it tightly couples shape classes with specific drawing implementations, making future changes difficult and intrusive. This is problematic if the tool needs to support multiple graphic libraries in the future.

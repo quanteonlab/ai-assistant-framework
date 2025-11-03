@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 27)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Conclusion
 
 ---
 
-**Rating: 8/10**
 
 #### Weaknesses of Server Testing Tools
 Server testing tools have several limitations that make them less than ideal for comprehensive infrastructure testing. They are slow due to needing a full apply cycle, which includes deploying servers and waiting for deployment completion. This can lead to flaky tests because real-world issues may arise during this process. Additionally, these tools require authentication to a real provider (such as AWS) and necessitate the deployment/undeployment of actual resources, which incurs both time and cost.
@@ -28,7 +26,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Infrastructure Code Rots Quickly Without Tests
 Infrastructure code without automated tests quickly rots, meaning it becomes unreliable and harder to maintain. Manual testing and reviews help initially but eventually fail to catch all bugs. Automated tests are essential because they catch nontrivial bugs that manual testing might miss.
@@ -49,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Smaller Modules in Testing
 Smaller modules are easier and faster to test because they have fewer moving parts, making it simpler to identify issues. Larger monolithic modules can be complex and harder to manage.
@@ -70,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adopting Infrastructure as Code in Your Team
 Background context: In the real world, you will likely work within a team that needs to adopt Terraform and IaC tools. Convincing your team of its benefits is crucial for successful implementation.
@@ -86,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Workflow for Deploying Infrastructure Code
 Background context: When deploying infrastructure code, you need a workflow that allows multiple team members to understand and modify Terraform scripts safely. This involves version control systems like Git.
@@ -112,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Putting It All Together
 Background context: Integrating all the above workflows ensures that both application code and infrastructure are managed effectively. This involves aligning with existing tech stacks, integrating CI/CD tools, and maintaining best practices.
@@ -154,7 +147,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Skills Gap
 Background context: Adopting IaC often requires Ops engineers to spend most of their time writing code, which can be a significant transition from their usual manual tasks. While some may embrace the change, others might find it challenging due to the need for new skills or hiring additional staff.

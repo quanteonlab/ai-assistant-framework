@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 28)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.1.2 Dedicated GPUs The workhorse option
 
 ---
 
-**Rating: 8/10**
 
 #### CUDA Programming Language
 Background context: CUDA was introduced by NVIDIA in 2007 to enable general-purpose GPU programming.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Directive-Based APIs (OpenACC & OpenMP)
 Background context: To simplify GPU programming, directive-based APIs like OpenACC and OpenMP with the new target directive were developed.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Global Memory and Compute Units
 Describes the role of global memory and compute units (CUs) in GPU performance, including their impact on bandwidth.
@@ -54,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Compute Unit (CU) and Its Components
@@ -105,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Calculating Peak Theoretical FLOPS
 

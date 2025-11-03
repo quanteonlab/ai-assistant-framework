@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Earning the good conductor medal
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Current, Voltage, and Power
 
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Electrical Flow
 
@@ -40,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Circuit Diagrams
 
@@ -53,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Resistance and Regulation
 Background context: Resistance is necessary in circuits to regulate the flow of electricity, preventing overheating and damage to devices. Even wires can act as resistance.
@@ -69,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relationship Between Voltage, Current, and Resistance (Ohm's Law)
 Background context: The relationship between voltage (V), current (I), and resistance (R) in a circuit is described by Ohm's law:
@@ -88,7 +82,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ohm’s Law: Relating Resistance, Current, and Voltage
 Background context: Georg Simon Ohm formulated the relationship between voltage (V), current (I), and resistance (R) in electrical circuits. The formula \( I = \frac{V}{R} \) represents this relationship.

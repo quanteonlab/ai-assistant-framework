@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 10.3 Generating Functions for Harder Markov Chains
 
 ---
 
-**Rating: 8/10**
 
 #### Retransmission Probability and Optimal q Value
 Background context: The retransmission probability is critical in understanding how often messages are successfully sent. In a network, if \( q \) (the probability of successful transmission on any given attempt) is small, the system will experience high delays due to frequent retransmissions. This leads to an increase in mean delay and overall time for message transmission.
@@ -67,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recurrence Relation Solution
 Background context: This section explains how to solve a linear recurrence relation of the form \( f_{n+2} = b \cdot f_{n+1} + a \cdot f_n \) given initial conditions \( f_0 \) and \( f_1 \). The solution involves using generating functions.
@@ -277,7 +274,6 @@ public class ProcessorFailures {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Definition of Exponential Distribution
 

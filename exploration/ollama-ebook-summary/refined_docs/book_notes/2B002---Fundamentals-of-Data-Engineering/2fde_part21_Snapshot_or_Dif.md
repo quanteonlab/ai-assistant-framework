@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Snapshot or Differential Extraction. File-Based Export and Ingestion. Inserts Updates and Batch Size
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Full Snapshots vs. Differential Updates
@@ -104,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Batch Operations Performance
@@ -199,7 +196,6 @@ public void ingestData(List<Map<String, Object>> data) {
 ```
 x??
 
-**Rating: 8/10**
 
 ---
 #### Schema Evolution

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Stream Processing Workflows
 
 ---
 
-**Rating: 8/10**
 
 #### Ingestion Layer
 Background context: The ingestion layer handles the real-time reception of incoming data traffic from various sources. This is a critical component for any stream processing workflow, ensuring that data can be processed as soon as it arrives.
@@ -178,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Apache Spark and Apache Flink Overview
 Apache Spark is an open-source cluster computing system designed for large-scale data processing. It supports a wide variety of programming models, including batch processing, stream processing, and machine learning. Apache Flink is another popular distributed streaming framework that emphasizes stateful computations over unbounded and bounded streams.
@@ -319,7 +316,6 @@ public class WorkflowManager {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Microservices Adoption in Financial Sector
 Background context: Danske Bank, one of the largest banks in Denmark, transitioned from a monolithic to a microservice-oriented architecture. This transformation is detailed in an IEEE Software article that provides insights into the challenges and benefits of adopting microservices in financial institutions.
@@ -432,7 +428,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Data Extraction
@@ -725,7 +720,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Computing Resources for ML Workflows
 Background context: An ML workflow often requires specific computing resources to ensure optimal performance. These can include advanced technologies such as GPUs, distributed and parallel computing frameworks, and specialized data storage systems like vector databases.

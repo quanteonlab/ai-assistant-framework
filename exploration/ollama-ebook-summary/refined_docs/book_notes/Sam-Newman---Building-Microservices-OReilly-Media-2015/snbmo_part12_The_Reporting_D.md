@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Reporting Database
 
 ---
 
-**Rating: 8/10**
 
 #### Retrying Operations
 Background context: Sometimes, operations that fail to insert into a warehouse’s picking table can be retried later. This approach is often used when dealing with long-lived business operations, ensuring eventual consistency rather than strict transactional consistency upon failure.
@@ -39,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compensating Transactions
 Background context: When an operation fails and cannot be retried, compensating transactions are used to undo the effects of a failed transaction. This ensures that the system remains in a consistent state despite individual failures.
@@ -68,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Transactions and Two-Phase Commit
 Background context: For operations involving multiple systems or databases, distributed transactions can ensure consistency across them. The two-phase commit (2PC) protocol is a common method used in this scenario.
@@ -101,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Transaction Voting Process
 Background context: In a distributed transaction, each participant (cohort) communicates with the central transaction manager to decide whether it can proceed. The transaction manager aggregates these decisions and either commits or rolls back all transactions based on the outcome.
@@ -137,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Central Coordination and Outages in Distributed Transactions
 Background context: The voting process relies on central coordination, meaning that all parties must halt until the transaction manager tells them to proceed. This reliance can lead to issues during outages or when participants fail to respond.
@@ -178,7 +172,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Complexity and Scalability Issues in Distributed Transactions
 Background context: Distributed transactions introduce significant complexity due to the need for central coordination, which can lead to performance bottlenecks, lock contention, and overall system scalability issues. The use of compensating retry logic adds further layers of complexity.
@@ -219,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Alternatives and Best Practices for Distributed Transactions
 Background context: When considering distributed transactions, it's crucial to evaluate whether the operations truly require such complexity. Simplifying or avoiding the splitting of state can lead to more scalable and maintainable systems.
@@ -269,7 +261,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reporting in Microservices Architecture
 Background context: When splitting a service into smaller parts, we also need to consider how data is stored and managed. This becomes crucial for reporting use cases since traditional monolithic architectures store all data in one database, making it easier to generate reports.
@@ -297,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges in Microservices Reporting
 Background context: When moving to a microservices architecture, data is split across multiple databases. This requires a different approach for generating reports since each service might have its own database schema and storage solution.
@@ -321,7 +311,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Alternatives to Traditional Reporting Databases
 Background context: As data storage in microservices architectures diversifies, traditional approaches to reporting may no longer be the best solution. There are multiple alternatives available to bring together data for reporting purposes.
@@ -349,7 +338,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch APIs for Reporting Systems
 Background context: The text suggests that traditional APIs might not be optimized for reporting needs. A potential solution is using batch APIs where a list of IDs can be passed to retrieve multiple records in one go.
@@ -375,7 +363,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Materialized Views for Aggregation
 Explanation of using materialized views to reduce coupling and improve performance in relational databases. This technique allows the creation of a single monolithic reporting schema by exposing only the necessary data.

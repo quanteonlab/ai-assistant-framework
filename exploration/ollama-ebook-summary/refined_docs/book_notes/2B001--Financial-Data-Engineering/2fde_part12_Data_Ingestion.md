@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Data Ingestion Technologies. Financial APIs
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Service APIs Overview
@@ -103,7 +101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Secure File Transfer Protocol (SFTP)
 Background context: SFTP is a widely used protocol for secure file transfer, leveraging SSH to encrypt both data and commands. It offers security, reliability, and platform independence, making it suitable for bulk and large file transfers. However, it may not be the best option in high-speed and large-volume systems due to its slower performance compared to alternatives.
@@ -236,7 +233,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Incremental Change

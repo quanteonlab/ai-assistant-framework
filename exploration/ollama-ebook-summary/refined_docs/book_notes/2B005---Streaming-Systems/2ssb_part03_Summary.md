@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Streaming vs. Batch Processing
 Streaming and batch processing are two distinct but related approaches to data processing, often categorized under "streaming." However, batch processing deals with fixed, bounded datasets that fit into memory, while streaming systems handle unbounded datasets where data keeps arriving over time.
@@ -174,7 +172,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Triggers
 Background context explaining triggers. Triggers are mechanisms for declaring when the output for a window should be materialized relative to some external signal. They provide flexibility in choosing when outputs should be emitted, acting as flow control mechanisms and allowing you to declare when to take snapshots of results over time.
@@ -242,7 +239,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Processing: What Results Are Calculated?
 

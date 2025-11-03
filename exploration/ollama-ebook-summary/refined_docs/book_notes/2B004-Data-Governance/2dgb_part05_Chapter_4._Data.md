@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B004-Data-Governance_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 4. Data Governance over a Data Life Cycle
 
 ---
 
-**Rating: 8/10**
 
 #### Tool Sufficiency Issues
 Background context: The text discusses situations where governance/data management tools are not sufficient on their own, meaning they lack comprehensive functionality desired by companies. This leads to issues such as unauthorized data access and misuse, non-compliance with established processes, and a general gap in meeting governance standards.
@@ -74,7 +72,6 @@ The key points include:
 
 x??
 
-**Rating: 8/10**
 
 #### What is a Data Life Cycle?
 
@@ -186,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Processing
 Data processing involves capturing data and preparing it for storage and eventual analysis through integration, cleaning, scrubbing, or ETL processes. This phase is crucial for ensuring that data meets quality standards before further use.

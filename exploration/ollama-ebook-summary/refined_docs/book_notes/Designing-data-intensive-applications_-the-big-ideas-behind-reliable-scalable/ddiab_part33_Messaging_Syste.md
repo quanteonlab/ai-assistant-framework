@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 33)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Messaging Systems
 
 ---
 
-**Rating: 8/10**
 
 #### Stream Processing Overview
 Background context: In Chapter 10, batch processing techniques were discussed where a set of files serves as input to produce another set of output files. The output is derived data, meaning it can be recreated by running the batch process again if necessary. However, real-world scenarios often involve unbounded datasets that arrive gradually over time.
@@ -109,7 +107,6 @@ public class StreamProcessor {
 ```
 x??
 
-**Rating: 8/10**
 
 ---
 #### Event and Record in Stream Processing
@@ -167,7 +164,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Producer-Consumer Dynamics
@@ -310,7 +306,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message Brokers Overview
 Message brokers are a widely used alternative to direct messaging systems. They act as intermediaries, enabling producers and consumers to communicate indirectly by sending messages through them. This approach centralizes message handling, making it easier to manage clients that connect, disconnect, or crash.
@@ -394,7 +389,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Load Balancing Pattern
@@ -443,7 +437,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Redelivery and Message Ordering
@@ -539,7 +532,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Partitioning and Replication Strategy
@@ -645,7 +637,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### JMS/AMQP vs Log-based Message Brokers
 
@@ -804,7 +795,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Change Data Capture (CDC) Introduction
 Background context: The problem with most databases’ replication logs is that they have long been considered an internal implementation detail of the database, not a public API. Clients are supposed to query the database through its data model and query language, not parse the replication logs and try to extract data from them.

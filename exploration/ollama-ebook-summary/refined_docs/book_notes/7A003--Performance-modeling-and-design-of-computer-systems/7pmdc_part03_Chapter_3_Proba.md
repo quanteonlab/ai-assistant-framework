@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 3 Probability Review. 3.8 Probabilities and Densities
 
 ---
 
-**Rating: 8/10**
 
 #### Sample Space and Events
 Background context: The sample space, denoted by \(\Omega\), is the set of all possible outcomes of an experiment. An event \(E\) is any subset of the sample space \(\Omega\). For example, if we roll two dice, each outcome can be represented as a pair (i,j) where i and j are the results of the first and second rolls respectively. There are 36 such outcomes in total.
@@ -44,7 +42,6 @@ x??
 ---
 These flashcards cover the key concepts from the provided text, focusing on understanding and application rather than pure memorization.
 
-**Rating: 8/10**
 
 #### Sample Space Probability
 Background context: The probability of the sample space Ω is defined to be 1. This means that at least one outcome must occur from all possible outcomes. 
@@ -107,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mutual Exclusivity and Independence of Events
 Background context: Two events are mutually exclusive if they cannot occur at the same time. For independent events, the occurrence of one does not affect the probability of the other. However, mutual exclusivity and independence are different properties; a pair of mutually exclusive events can never be independent unless at least one has zero probability (which is non-null in this context).
@@ -181,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Extended Bayes Law
 The theorem provides a way to update probabilities based on new evidence. It is crucial for understanding conditional probabilities in complex scenarios involving multiple conditions.
@@ -277,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expectation of a Random Variable (Discrete Case)
 Background context: The expectation or mean of a discrete random variable \(X\) is calculated by summing all possible values weighted by their probabilities. This concept generalizes to continuous distributions as well, but here we focus on the discrete case.
@@ -433,7 +427,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional Probabilities and Expectations for Discrete Random Variables
 

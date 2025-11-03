@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 34)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.5.5 Meshing Reactive Extensions Rx and TDF
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Parallel Workflow and Agent Programming with TPL Dataflow
@@ -22,7 +20,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ensuring Order Integrity with TransformBlock
 Background context: The TDF documentation guarantees that `TransformBlock` will maintain the order of messages as they arrived. However, this guarantee does not hold for asynchronous I/O operations and network transmissions.
@@ -37,7 +34,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Order Integrity in Network Transmissions
 Background context: Network transmissions and varying bandwidth can disrupt message order integrity. To ensure correct sequence, data chunks are processed by a stateful agent that maintains local persistence.
@@ -60,7 +56,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linking DataFlow Blocks with Completion Propagation
 Explanation of how `DataFlowLinkOptions` can be used to propagate completion and handle errors between blocks in a TPL Dataflow pipeline.
@@ -92,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Single Responsibility Principle (SRP)
@@ -104,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Open-Closed Principle (OCP)
 Background context: The open-closed principle is another core principle in OOP, which suggests that software entities like classes, modules, functions, etc., should be open for extension but closed for modification. This means you can add new functionality without changing existing code.
@@ -115,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Don’t Repeat Yourself (DRY) Principle
 Background context: The DRY principle is about eliminating duplication in your code. It encourages you to write reusable components and avoid repeating yourself, thus making your code more maintainable and easier to read.
@@ -126,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Object Pooling for `MemoryStream`
 Background context: To reduce memory allocation and improve performance when handling large data streams, an object pool can be used to pre-allocate `MemoryStream` instances that can be reused multiple times. This approach minimizes the number of large object heap allocations and reduces memory fragmentation.
@@ -137,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Recipes for Solving Common and Complex Problems
@@ -152,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Full Implementation of a Stock Market Server
 This chapter details the full implementation of a scalable and high-performance stock market server application. The application includes both iOS and WPF versions for client-side interaction, showcasing how to apply functional programming principles in real-world scenarios.
@@ -180,7 +169,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Positive Side Effects of Functional Principles
 Applying functional principles in concurrent programming has several positive side effects. These include reducing bugs through immutability and avoiding shared mutable state, which inherently simplifies the design and maintenance of software systems.
@@ -206,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Asynchronous Object Pool Implementation
@@ -221,7 +208,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ObjectPoolAsync Class Definition
 
@@ -271,7 +257,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Object Pool Usage Example
 

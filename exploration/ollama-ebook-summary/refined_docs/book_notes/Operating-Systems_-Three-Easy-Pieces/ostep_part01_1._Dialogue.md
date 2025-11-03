@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Operating-Systems_-Three-Easy-Pieces_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 1. Dialogue
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Operating Systems in Three Easy Pieces
 
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtualization
 
@@ -32,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency
 
@@ -45,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Practical Learning Approach
 
@@ -64,7 +59,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtualization Concept
 Background context: The professor uses a peach analogy to explain virtualization, where one physical resource (peach) is split into many virtual resources (virtual peaches). This creates an illusion for each user that they have their own exclusive resource.
@@ -76,7 +70,6 @@ Virtualization is the process of creating a virtual version of a resource such a
 
 ---
 
-**Rating: 8/10**
 
 #### CPU Virtualization Example
 Background context: The professor explains how virtualization works by splitting a single CPU into multiple virtual CPUs (vCPUs), making each application think it has its own CPU.
@@ -101,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application Perceptions in Virtualization
 Background context: The professor illustrates that each application running on the system believes it has its own CPU, but in reality, there is only one physical CPU being shared among multiple virtual CPUs.
@@ -131,7 +123,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Illusion of Independence
 Background context: The professor emphasizes the importance of creating an illusion where each application or user perceives a physical resource but in reality uses a shared one.
@@ -143,7 +134,6 @@ It is crucial because applications need to operate as if they have their own ded
 
 ---
 
-**Rating: 8/10**
 
 #### Conclusion on Virtualization
 Background context: The professor concludes by reinforcing that virtualization is about creating a seamless illusion where each user believes they have their own exclusive resource.
@@ -155,7 +145,6 @@ Virtualization aims to create an illusion of exclusive resources for users and a
 
 ---
 
-**Rating: 8/10**
 
 #### Process Definition and Concept
 Background context explaining what a process is. Processes are instances of running programs that transform static instructions into dynamic, useful tasks through the operating system's intervention.
@@ -167,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Sharing and CPU Virtualization
 Explanation about time sharing as a technique used by OSes. It involves allocating CPU resources among multiple processes in short intervals.
@@ -179,7 +167,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switching Mechanism
 Explanation about context switching, a low-level mechanism that enables the switching of running processes. It involves saving and restoring the state of each process.
@@ -191,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scheduling Policies
 Explanation about scheduling policies that decide which processes get to run next. These policies use various criteria like historical usage, workload knowledge, and performance metrics.
@@ -203,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mechanisms and Policies in OS Design
 Explanation about the dual approach of mechanisms (low-level methods) and policies (high-level intelligence) used by OSes.
@@ -215,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Context Switching Code
 Explanation of a simple context switching example using pseudocode.
@@ -234,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conclusion on Process Management
 Summary of the key points discussed: processes, time sharing, context switching, scheduling policies, and space sharing.
@@ -248,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory and Address Space of a Process
 Background context explaining that memory is an essential part of a process's machine state, including both instructions and data. The address space refers to the memory regions accessible by the process.
@@ -265,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Registers and Machine State
 Background context explaining that registers are crucial for understanding a process's state, especially special-purpose registers like the Program Counter (PC).
@@ -288,7 +269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process State and Machine State
 Background context explaining that understanding a process involves knowing its machine state, which includes memory and registers. This is necessary for tracking what parts of the system are being accessed or affected by the running program.
@@ -307,7 +287,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Creation API
 Background context explaining that an operating system must provide methods for creating new processes. This is essential when a user runs a command or clicks on an application icon.
@@ -326,7 +305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Destruction API
 Background context explaining that an operating system must provide methods for destroying processes. This is useful when a user wants to terminate a running program.
@@ -345,7 +323,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Wait API
 Background context explaining that waiting for a process is sometimes necessary, such as when a user wants to wait until an application stops running.
@@ -364,7 +341,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Allocation for Stack and Heap
 Background context: After loading the code and static data, the OS allocates memory for runtime stack and heap. The stack is used for local variables, function parameters, and return addresses, while the heap is used for dynamically allocated data.
@@ -376,7 +352,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stack Initialization with Arguments
 Background context: During process initialization, the OS initializes the stack by setting up arguments for the `main()` function. This typically involves filling in the parameters like `argc` and `argv`.
@@ -388,7 +363,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Input/Output Initialization
 Background context: The OS performs various initialization tasks related to input/output (I/O), such as setting up file descriptors for standard input, output, and error.
@@ -400,7 +374,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### I/O and File Descriptors
 Background context explaining the concept. The text discusses loading code into memory, setting up a stack, and preparing for program execution by initializing I/O setup. It mentions that the operating system (OS) will eventually start executing the main() function of the program.
@@ -411,7 +384,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process States Overview
 The chapter discusses three main states a process can be in: running, ready, and blocked. These states help manage processes more efficiently as they transition based on various conditions like scheduling by the OS or waiting for I/O operations to complete.
@@ -427,7 +399,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scheduling and Descheduling
 The text explains that a process can be moved between ready and running states at the discretion of the OS. Being in the running state means the process is executing instructions, while being in the ready state indicates it's waiting to run but has not been chosen by the OS. When a process becomes blocked (e.g., due to I/O), it remains in that state until some event (like completion) allows it to resume.
@@ -438,7 +409,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process State Transitions
 The text describes transitions between states through diagrams and examples. Processes can transition from ready to running (scheduled) or running to ready (descheduled). Blocked processes remain blocked until an event allows them to become ready again, often transitioning directly to running if possible.
@@ -465,7 +435,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Process State Transition: CPU Only
 This example shows two processes, each using only CPU resources. The processes switch between states as they complete their execution.
@@ -493,7 +462,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Process State Transition: I/O Involvement
 This example demonstrates how a process can transition to the blocked state after initiating an I/O operation, allowing another process to run while it waits for the I/O to complete.
@@ -518,7 +486,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process State Transition
 In the provided example, we see a scenario where processes transition between different states based on I/O operations. This is a fundamental concept in operating systems that demonstrates how processes can be managed and scheduled by the kernel.
@@ -530,7 +497,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switching
 Context switching is a key process management technique where the operating system saves the current state of one process and restores another's state to resume execution.
@@ -542,7 +508,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process State Enumerations
 The `proc_state` enum in the provided code snippet lists various states a process can be in: UNUSED, EMBRYO, SLEEPING, RUNNABLE, RUNNING, and ZOMBIE.
@@ -554,7 +519,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Structure in xv6
 The `proc` structure shown in Figure 4.5 is a key data structure used by the xv6 operating system to manage processes, including their state, memory, context, and more.
@@ -578,7 +542,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scheduling Decisions
 The example illustrates the scheduling decisions made by an operating system, such as deciding when to run a process that has initiated I/O or not immediately resume it after the I/O completes.
@@ -593,7 +556,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### xv6 Context Structure
 The `context` structure shown is used to save and restore the context of a stopped process.
@@ -618,7 +580,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### xv6 Process Structure Details
 The `proc` structure in Figure 4.5 provides detailed information about each process, including memory management and state tracking.
@@ -632,7 +593,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Initial and Final States of a Process
 Background context explaining initial and final states, including zombie state. This is important for understanding how processes transition between different states during their lifecycle.
@@ -649,7 +609,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process List and Process Control Block (PCB)
 Explanation on what a process list is, how it's used by operating systems to manage running programs. Describe the role of PCB in storing information about processes.
@@ -672,7 +631,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Key Process Terms and States
 Explanation on terminology like processes, state transitions, and common states a process can be in.
@@ -705,7 +663,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Objective and Next Steps in Process Management
 Explanation on moving from basic concepts to understanding low-level mechanisms and scheduling policies.
@@ -728,7 +685,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiprogramming and Process States
 Background context: This concept revolves around understanding how processes behave in a multiprogramming environment, focusing on their states (CPU-bound, I/O-bound) and how these affect system performance. The example program `process-run.py` simulates different scenarios to illustrate process scheduling and state transitions.
@@ -750,7 +706,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Order and Scheduling Behavior
 Background context: The order of processes can significantly impact the overall system performance. This is demonstrated by running `process-run.py` with different process orders, observing how switching between CPU-bound and I/O-bound processes affects the total runtime.
@@ -770,7 +725,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### I/O Handling Strategies: SWITCH ON END and SWITCH ON IO
 Background context: The `-S` flag in `process-run.py` controls the behavior of the system when an I/O operation is initiated. `SWITCH ON END` means that the system waits until the process has finished its I/O before switching to another, while `SWITCH ON IO` allows for preemptive switching.
@@ -789,7 +743,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immediate vs. Later I/O Handling
 Background context: The `-I` flag in `process-run.py` determines how processes are handled after an I/O operation is completed. `-I IORUNLATER` means the process that initiated the I/O remains blocked, while `-I IORUNIMMEDIATE` allows it to be run immediately.

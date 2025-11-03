@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 2.2.1.1 Examples of IEEE Representations
 
 ---
 
-**Rating: 8/10**
 
 #### IEEE Floating-Point Representation Overview
 Background context: The text explains how single and double precision floating-point numbers are represented according to the IEEE standard. Singles occupy 32 bits, with 1 bit for sign, 8 bits for exponent (biased by 127), and 23 bits for the fractional mantissa. Doubles occupy 64 bits, with 1 bit for sign, 11 bits for exponent (biased by 1023), and 52 bits for the fractional mantissa.
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Normalized Single Precision Floating-Point Representation
 Background context: For normalized numbers in singles, the exponent range is from 1 to 254 after bias adjustment. The mantissa is stored as a fractional part of the number.
@@ -53,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### IEEE Double Precision Representation Overview
 Background context: Doubles occupy 64 bits, with 1 bit for the sign, 11 bits for the exponent (biased by 1023), and 52 bits for the fractional mantissa. The bias is larger than that of singles.
@@ -77,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Python Sage for Symbolic Computation
 Background context: Sage is a powerful package for symbolic computation and numerical simulation. It combines multiple computer algebra systems with visualization tools.
@@ -106,7 +101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importing SymPy and Declaring Variables
 Background context: This concept covers how to import SymPy functions and declare variables for symbolic computation. The `symbols` function is used to define symbols that can be manipulated using SymPy's mathematical operations.
@@ -248,7 +242,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reproducibility and Program Validity
 Background context explaining why reproducibility is important in scientific computing. A scientific program should ensure its correctness, clarity, usability, and robustness over time.
@@ -270,7 +263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Program Validity and Usability
 Background context on ensuring a program's correctness, readability, robustness, and ease of use. 
@@ -300,7 +292,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Calculate Volume of Sphere (Vol.py)
 Background context: You need to modify the existing program to calculate and print the volume of a sphere instead of an area.
@@ -324,7 +315,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Change Program to Read from File and Write to Another
 Background context: This task involves reading data from one file, processing it, and writing the results to another file.
@@ -349,7 +339,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Machine Precision
 Background context: This topic explores the precision limits of floating-point numbers and how they affect calculations.
@@ -379,7 +368,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determining Machine Precision
 Background context explaining the process of determining machine precision. This is crucial for understanding floating-point arithmetic limitations in computers.
@@ -404,7 +392,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Double-Precision Floating-Point Precision Determination
 Background context explaining the need to determine precision for specific data types, such as double-precision floats.
@@ -427,7 +414,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Animations with Visual
 Background context: The text mentions that creating animations using Visual involves repeatedly plotting the same 2D graph but at slightly different times, giving the illusion of motion. This is done within a loop where individual plot objects are updated.
@@ -450,7 +436,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Independent Variable and Dependent Variable Placement
 Background context: The text mentions that the independent variable \( x \) should typically be placed along the abscissa (horizontal axis) while the dependent variable \( y = f(x) \) is plotted along the ordinate (vertical axis).
@@ -474,7 +459,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### NumPy and Matplotlib Basics
 Background context: The provided text discusses how to use NumPy for creating arrays based on a range of values, and Matplotlib for plotting those arrays. It also explains some common commands used in Matplotlib.

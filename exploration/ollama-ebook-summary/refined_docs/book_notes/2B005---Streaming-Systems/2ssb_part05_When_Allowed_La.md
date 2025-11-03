@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** When Allowed Lateness i.e. Garbage Collection
 
 ---
 
-**Rating: 8/10**
 
 #### Allowed Lateness Concept
 Background context: In out-of-order stream processing systems, late data is a significant challenge. The allowed lateness concept helps manage this by setting a limit on how late records can be and still be processed. This is critical for maintaining system efficiency and managing resources effectively.
@@ -108,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Discarding Accumulation Mode
 Discarding accumulation mode is where every time a pane is materialized, any stored state is discarded. This means each successive pane is independent from any that came before it. This approach can be useful when the downstream consumer performs its own aggregation.
@@ -196,7 +193,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event Time vs Processing Time
 Background context: Understanding event time versus processing time is crucial for robust stream processing. Event time refers to when events occur, while processing time refers to when they are observed by your data processing system.

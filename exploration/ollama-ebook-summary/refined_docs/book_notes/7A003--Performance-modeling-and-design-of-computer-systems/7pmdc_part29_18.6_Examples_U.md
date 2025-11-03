@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 29)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 18.6 Examples Using Classed Networks
 
 ---
 
-**Rating: 8/10**
 
 #### Classed Network of Queues Overview
 In a classed network of queues, jobs are distributed among servers based on their classes. Each server can be in one of several states, and the probability distribution of these states is derived using Theorem 18.1.
@@ -23,7 +21,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Probability Calculation
 The state probability for a specific configuration of jobs at the servers is calculated using the formula provided by Theorem 18.1.
@@ -46,7 +43,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load and Utilization Calculation
 The load at each server is calculated using the arrival rate divided by the service rate. This gives us the utilization factor, which represents how busy a server is.
@@ -74,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Expected Time at Servers for Route 2 Packets
@@ -100,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Probability of Job Classes at Server i
 We use Theorem 18.1 to find the probability that there are exactly s jobs of class 1 and t jobs of class 2 at server i.
@@ -121,7 +115,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CPU-Bound and I/O-Bound Jobs Example
 This example describes a system with two types of jobs: CPU-bound and I/O-bound. CPU-bound jobs arrive according to a Poisson process at a rate of 0.2 jobs/sec, while I/O-bound jobs arrive at a rate of 0.25 jobs/sec.
@@ -148,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Time in System for CPU-bound Jobs (TC)
 Background context: The expected time in system for CPU-bound jobs is calculated using two methods. Method 1 involves breaking down the routes and solving the resulting equations, while Method 2 uses a more direct approach involving the expected number of visits to each device.
@@ -183,7 +175,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Time in System for I/O-bound Jobs (TI)
 Background context: The expected time in system for I/O-bound jobs is calculated using the same principles as for CPU-bound jobs but with different routing probabilities and arrival rates.
@@ -217,7 +208,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Number of Jobs at Server 1 (N_1)
 Background context: The expected number of jobs at server 1 is calculated using the utilization factor and arrival rate.
@@ -257,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Number of Jobs at Server 2 (N_2)
 Background context: The expected number of jobs at server 2 is calculated similarly to the expected number of jobs at server 1, but with different arrival rates and utilization factors.
@@ -299,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Response Time for Jobs of Type 1 and 2
 Background context: This problem involves a classed queueing network with two types of jobs (type 1 and type 2) being processed at a single server. The arrival rates and service requirements differ between job types, which affects the mean response time.
@@ -345,7 +333,6 @@ The mean response time \( T_2 \) for type 2 jobs is:
 
 ---
 
-**Rating: 8/10**
 
 #### Quick and Slow Customers in a Single Queue
 Background context: This scenario involves analyzing the number of quick customers and slow customers in a single queue with varying arrival rates, service times, and visit patterns.
@@ -386,7 +373,6 @@ Therefore, the average number of quick and slow customers in the system is:
 
 ---
 
-**Rating: 8/10**
 
 #### Class-Based Service Rates in a Jackson Network
 Background context: This problem explores the concept of class-dependent service rates in a Jackson network, where each job type (class) may have a different service rate.
@@ -413,7 +399,6 @@ The limiting probabilities can be found by solving these balance equations, but 
 
 ---
 
-**Rating: 8/10**
 
 #### Distribution of Job Classes in a Jackson Network
 Background context: This problem deals with the probability distribution of job classes at different servers within a Jackson network. The provided formula is for two classes and needs to be generalized.
@@ -434,7 +419,6 @@ where \( \binom{s_1 + s_2 + \cdots + s_l}{s_1, s_2, \ldots, s_l} \) is the multi
 
 ---
 
-**Rating: 8/10**
 
 #### Example of a Closed Batch Network
 Background context: The example given in the text involves a batch network with three servers and two jobs circulating among them. The goal is to determine the probability distribution of the state of the system, specifically the number of jobs at each server.
@@ -446,7 +430,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Product Form Analysis for Closed Networks
 Background context: The product form analysis is a method used to derive the limiting probability distribution in closed networks. Unlike open networks, which have a simple product-form solution, closed networks require additional steps to compute the normalizing constant.
@@ -458,7 +441,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CTMC Representation
 Background context: A Continuous-Time Markov Chain (CTMC) is used to model the state transitions in closed queueing networks.
@@ -470,7 +452,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving for Limiting Probabilities
 Background context: Once the CTMC is defined, solving for the limiting probabilities involves setting up and solving a set of simultaneous equations.
@@ -482,7 +463,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differentiating Between Open and Closed Networks
 Background context: The primary difference lies in the number of jobs that can enter or leave an open network versus a closed one.

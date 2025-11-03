@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Deploying Docker Containers in AWS Using Elastic Kubernetes Service
 
 ---
 
-**Rating: 8/10**
 
 #### IAM Role for EKS Control Plane
 The following code snippet creates an IAM role specifically for the EKS control plane, allowing it to assume roles necessary for cluster management. The role is attached with a managed policy that provides required permissions.
@@ -47,7 +45,6 @@ data "aws_iam_policy_document" "cluster_assume_role" {
 
 ---
 
-**Rating: 8/10**
 
 #### Creating an IAM Role for EKS Node Group
 Background context: To enable managed node groups, you need to create an IAM role that the EC2 instances can assume. This role should have necessary permissions.
@@ -91,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing the Deployed Application
 Background context: After deploying an application using Terraform with EKS, it's essential to verify its functionality. This involves testing the application via a URL provided by the service endpoint.
@@ -110,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using kubectl to Inspect Kubernetes Cluster
 Background context: After deploying an application using Terraform on EKS, you can use `kubectl` to inspect various components of your Kubernetes cluster such as nodes, deployments, pods, and services. This involves authenticating to the EKS cluster using AWS CLI commands.
@@ -137,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Off-the-Shelf Production-Grade Kubernetes Modules
 Background context: The use of off-the-shelf production-grade Kubernetes modules, such as those found in the Gruntwork Infrastructure as Code Library, can simplify deploying EKS clusters and Kubernetes applications. These modules help ensure consistency and reduce the risk of configuration errors.
@@ -160,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Multiple Providers Sparingly
 Background context: While it is possible to use multiple providers in a single Terraform module, doing so is generally discouraged due to issues related to dependency ordering and isolation. Each provider should ideally be isolated in its own module.
@@ -181,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Multiple AWS Regions, Accounts, and Clouds
 Background context: To support deployment across multiple AWS regions, accounts, or other clouds, you can use multiple provider blocks in your Terraform code. Each block is configured with the appropriate region, assume_role, or cloud-specific settings.
@@ -207,7 +199,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Production-Grade Infrastructure Checklist
 
@@ -231,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Production-Grade Infrastructure Modules
 

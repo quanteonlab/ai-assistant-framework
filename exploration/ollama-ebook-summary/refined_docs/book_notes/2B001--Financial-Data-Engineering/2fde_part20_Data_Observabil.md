@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Data Observability
 
 ---
 
-**Rating: 8/10**
 
 #### Observability Engineering Definition
 Background context explaining the concept. Charity Majors, Liz Fong-Jones, and George Miranda (Observability Engineering, O’Reilly, 2022) describe a software system as observable if you can:
@@ -126,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monitoring's Role in Financial Data Engineering Lifecycle
 Monitoring is crucial for ensuring the reliability, performance, security, and compliance of financial data infrastructures. It covers various types such as metric, event, log, and trace monitoring to track application activities and diagnose potential issues.
@@ -188,7 +185,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Workflow-Oriented Software Architectures (WOSA)
 Background context: As companies grow, their technological stacks increase in size and complexity. This creates numerous interdependencies among system components, requiring organized software transactions into structured workflows that can be defined, coordinated, managed, monitored, and scaled following a specific business logic.

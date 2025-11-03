@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Deadly Triad
 
 ---
 
-**Rating: 8/10**
 
 #### The Deadly Triad
 Background context explaining the deadly triad. The danger of instability and divergence arises when combining function approximation, bootstrapping, and oﬄ-policy training. These elements together create a high risk for algorithm failure in reinforcement learning tasks.
@@ -23,7 +21,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Function Approximation
 Background context explaining function approximation. It is crucial for scaling methods to large problems, but it introduces complexity when used with bootstrapping and oﬄ-policy training, which can lead to instability if not handled carefully.
@@ -40,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bootstrapping
 Background context explaining the role of bootstrapping. Bootstrapping involves updating targets using existing estimates rather than relying solely on actual rewards or complete returns, which can make algorithms more efficient but also riskier in terms of stability.
@@ -57,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Oﬄ-Policy Training
 Background context explaining oﬄ-policy training. This involves updating on a distribution of transitions different from that produced by the target policy, which is common in model-free reinforcement learning methods like Q-learning.
@@ -75,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avoiding Instability
 Background context explaining how to mitigate the dangers of the deadly triad. Various strategies can be employed to avoid instability, including choosing appropriate algorithms or techniques that don't involve all three elements of the deadly triad.
@@ -92,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Value of Bootstrapping
 Background context explaining why bootstrapping is valuable despite its risks. Bootstrapping provides significant computational benefits but can introduce instability, making it a double-edged sword in reinforcement learning.
@@ -109,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Oﬄ-Policy Learning for Parallelism
 Background context explaining oﬄ-policy learning in the context of parallel policy learning. This type of learning is crucial when multiple policies need to be learned simultaneously, which is common in real-world scenarios.
@@ -125,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Oﬄ-Policy Learning
 Background context explaining an example scenario where oﬄ-policy learning is beneficial. The example provided involves a situation where an agent needs to predict various sensory events in parallel.
@@ -143,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Value-function Geometry Overview
 Linear value-function approximation treats a value function and its vector representation interchangeably. The space of all possible state-value functions is vast, with each function corresponding to a vector listing values for every state. However, a function approximator has far fewer parameters than the number of states.
@@ -154,7 +144,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distance Measurement Between Value Functions
 The text introduces a method for measuring the distance between two value functions using a norm that takes into account the importance of different states, often specified through an on-policy distribution µ.
@@ -167,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Subspace of Representable Functions
 In the context of linear value-function approximation, the space of representable functions by the function approximator forms a simple plane in the state-value function space. This subspace is crucial for understanding how well we can approximate complex value functions.
@@ -178,7 +166,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Closest Representable Value Function
 When the true value function \(v^{\pi}\) cannot be represented exactly, finding the closest representable value function becomes important for evaluating approximation quality. This involves minimizing the distance between the approximated and true value functions under a specific norm.
@@ -191,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Definition and Optimal Policy Search
 Background context: The policy \(\pi\) defines the probability of taking an action \(a\) given a state \(s\). The objective is to find the optimal policy \(\pi^*\) that maximizes the expected discounted reward from each state.
@@ -202,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Discounted Reward Calculation
 Background context: The expected discounted reward from a state \(s\) under policy \(\pi\) involves summing future rewards weighted by the discount rate \(\gamma\), which lies in the interval \([0,1)\). This calculation forms the basis for finding optimal policies.
@@ -217,7 +202,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Evaluation
 Background context: Policy evaluation involves computing or estimating the state-value function \(v^\pi(s)\) for a given policy \(\pi\). This is a key subproblem in solving MDPs efficiently. Algorithms like TD(\(\lambda\)) are used to approximate this value function, often as part of actor-critic methods.
@@ -228,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Curse of Dimensionality and Tabular Methods
 Background context: When the state space is finite but large, tabular methods represent value functions directly as arrays with entries corresponding to each state. However, as the dimensionality increases, these methods become computationally infeasible.
@@ -239,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parameterized Value Function Approximation
 Background context: To handle large or continuous state spaces, value functions are often approximated using parameterized models. These models allow for more flexible and scalable representations by adjusting a set of parameters.
@@ -254,7 +236,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Value Function Approximation
 Background context: When the value function is linear in both weights and features of the states, it simplifies the approximation process. This allows for efficient updates using gradient descent or other optimization techniques.
@@ -269,7 +250,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Equation and Error Vector
 Background context: The Bellman equation is a fundamental component in solving MDPs. It relates the value function to future rewards discounted by the policy. The error vector measures the discrepancy between the true value function and any approximate solution.
@@ -288,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Error Vector
 Background context: The error vector measures the discrepancy between the approximate and true value functions. Reducing this error is a key goal in approximation methods.
@@ -305,7 +284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Minimizing Mean-Squared Bellman Error (MSBE)
 Background context: The goal is to minimize the error vector's length in the d-metric by reducing the mean-squared Bellman error. This approach tries to make the value function \(v\) as close as possible to the true value function \(v^*\) by minimizing \[BE(\theta)=\sum_{s\in S}d(s)\left(B_\pi v - v\right)(s)^2.\] Note that if \(v^\pi\) is not representable, it cannot be reduced to zero. For any \(v\), the corresponding Bellman error \(B_\pi v - v\) will generally not be representable and lie outside the space of representable functions.
@@ -316,7 +294,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Projected Bellman Error (PBE)
 Background context: The third goal for approximation involves projecting the Bellman error and then minimizing its length. This is done by solving \[v = \Pi B_\pi v,\] where \(\Pi\) denotes the projection onto a representable function space. If exact solution cannot be found, the mean-squared projected Bellman error can be minimized: \[PBE(\theta) = \sum_{s\in S} d(s)\left(\Pi (B_\pi v - v)(s)\right)^2.\] The minimum is achieved at the projection fixpoint.
@@ -327,7 +304,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving the Bellman Equation
 Background context: The second goal of approximation involves solving the Bellman equation approximately: \[v^\pi = B_\pi v^\pi,\] where \(B_\pi\) is the Bellman operator defined by \[(B_\pi v)(s) = \sum_{a\in A} \pi(s, a)\left[r(s, a) + \mathbb{E}_{s'\sim p(\cdot|s,a)}v(s')\right], \quad s\in S.\] The true value function \(v^\pi\) is the unique solution to this equation. For any value function \(v \neq v^\pi\), we can ask that the Bellman equation hold approximately: \(||v - B_\pi v||\). If \(v^\pi\) is outside the representable subspace, it cannot be reduced to zero.
@@ -338,7 +314,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Objective Functions for Approximation
 Background context: The text discusses three goals for approximation:
@@ -358,7 +333,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Operator and Projection
 Background context: The Bellman operator is used to take a value function outside of the representable subspace, while the projection operator brings it back. This process helps us understand the error between the true value function and its approximation.
@@ -387,7 +361,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Projection Operator
 Background context: The projection operator is used to project a value function from the outside space back into the representable subspace. This process minimizes the error between the true value function and its approximation in terms of our norm.
@@ -425,7 +398,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Error and Vector
 Background context: The Bellman error measures the difference between the true value function and its approximation in terms of the Bellman equation. This is a key concept in understanding how well our approximations perform.
@@ -471,7 +443,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Minimizing the Bellman Error
 Background context: Methods that seek to minimize the Bellman error aim to find the best approximation of the true value function in the representable subspace. This is different from minimizing the Value Error (VE), which focuses on finding the closest linear combination.
@@ -509,7 +480,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Operator and Bellman Error
 
@@ -533,7 +503,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Projected Bellman Error
 
@@ -658,7 +627,6 @@ Semi-gradient TD methods can diverge under off-policy training or in contrived c
 
 ---
 
-**Rating: 8/10**
 
 #### TD Error and Objective Functions
 Background context: The discussion centers on using the TD error for reinforcement learning objectives. The TD error is given by \( \delta_t = R_{t+1} + \gamma V(S_{t+1}, w) - V(S_t, w) \). A common objective function involves minimizing the expected square of this error.
@@ -690,7 +658,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Naive Residual-Gradient Algorithm
 Background context: The naive residual-gradient algorithm aims to minimize the Mean Squared TD Error using stochastic gradient descent. It is derived from the objective function \( TDE(w) \).
@@ -726,7 +693,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Temporal Difference Error (TDE) Calculation
 Background context: The text calculates the TDE for two sets of value estimates, showing how different methods can yield varying results. It demonstrates calculating the squared error on transitions and episodes in a simple environment.
@@ -752,7 +718,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### True Values vs. Estimated Values for Minimizing TDE
 Background context: The text compares the TDE minimized by the naive residual-gradient algorithm with the true values in a simple environment. It demonstrates that while minimizing TDE can lead to suboptimal results, using exact values might not always be feasible.
@@ -776,7 +741,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Error Minimization
 Background context: The text introduces the concept of minimizing the Bellman error as an alternative to minimizing TDE. It explains that while achieving zero Bellman error in general is impractical, approximating it can still lead to better predictions.
@@ -802,7 +766,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deterministic Environment and Residual-Gradient Algorithm
 
@@ -838,7 +801,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Residual-Gradient Algorithm for Non-Deterministic Environments
 
@@ -874,7 +836,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence of Residual-Gradient Algorithm
 
@@ -909,7 +870,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison with Semi-Gradient Methods
 
@@ -939,7 +899,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Deterministic Environment
 
@@ -987,7 +946,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conclusion
 

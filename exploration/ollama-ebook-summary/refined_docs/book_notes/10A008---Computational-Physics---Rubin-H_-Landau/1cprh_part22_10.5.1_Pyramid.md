@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 10.5.1 Pyramid Scheme
 
 ---
 
-**Rating: 8/10**
 
 #### Discrete Wavelet Transforms (DWT)
 Discrete Wavelet Transforms decompose a signal into smooth information stored in low-frequency components and detailed information stored in high-frequency components. This is done using a series of filters that change the scale and resolution of the input signal.
@@ -36,7 +34,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decimation and Subsampling in DWT
 Decimation or subsampling involves filtering the output by a factor of 2. This reduces the number of values needed to represent the remaining signal while maintaining its key features.
@@ -55,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Processing Chirp Signal with DWT
 A practical example of applying DWT to a chirp signal involves filtering and downsampling. The chirp function y(t) = sin(60t^2) is sampled, and then passed through multiple levels of filters to decompose it into different frequency components.
@@ -91,7 +87,6 @@ These flashcards cover the key concepts in DWT with detailed explanations and ex
 
 ---
 
-**Rating: 8/10**
 
 #### Discrete Wavelet Transforms (DWT)
 Background context: The discrete wavelet transform (DWT) decomposes a signal into different frequency subbands, where each subband is further processed. This process involves dilating and analyzing the signal at multiple stages to capture both high-frequency details and low-frequency smooth components.
@@ -107,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Orthogonality Condition for Wavelet Filters
 Background context: For the wavelet transform to be orthogonal, the filter matrix must satisfy an orthogonality condition. This ensures that the transformation can reversibly reconstruct the original signal.
@@ -125,7 +119,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inverse Wavelet Transform
 Background context: The inverse wavelet transform reconstructs the original signal from its transformed coefficients. This involves upsampling and reprocessing with both low-pass and high-pass filters to recover all N values of the original signal.
@@ -140,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modifying Program to Output Input Signal
 Background context: When performing a Discrete Wavelet Transform (DWT) on signals like the chirp signal \( y(t) = \sin(60t^2) \), it's crucial to verify that the input data is correctly processed. This involves outputting and checking the original signal values before any transformations are applied.
@@ -167,7 +159,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inverse DWT and Signal Reconstruction
 
@@ -197,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Principal Components Analysis (PCA)
 
@@ -211,7 +201,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Principal Component Basis Vectors
 
@@ -225,7 +214,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Signal-to-Noise Ratio (SNR) and Principal Component Analysis (PCA)
 Background context: The SNR is a measure used to evaluate how much of the signal is present compared to noise. In practice, measurements often contain random and systematic errors leading to a small SNR. PCA is an effective technique for dealing with such scenarios by projecting data onto principal components that maximize the SNR.
@@ -236,7 +224,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Principal Component Basis Vectors in 2D Data
 Background context: In PCA, principal component basis vectors are chosen such that they maximize the SNR along one direction (PC1) while minimizing it along another direction orthogonal to PC1 (PC2). This helps isolate the signal from noise by projecting data onto these directions.
@@ -247,7 +234,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Covariance Matrix in Multidimensional Space
 Background context: When dealing with higher-dimensional data from multiple detectors (A and B), covariance matrices are used to measure correlations between datasets. The covariance matrix combines the variances of each dataset and their cross-correlations into a symmetric matrix.
@@ -258,7 +244,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Covariance Matrix Generalization to Higher Dimensions
 
@@ -308,7 +293,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Principal Component Analysis (PCA)
 
@@ -388,7 +372,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finding Principal Components Using Eigenvectors and Eigenvalues
 
@@ -446,7 +429,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Diagonalizing the Covariance Matrix
 

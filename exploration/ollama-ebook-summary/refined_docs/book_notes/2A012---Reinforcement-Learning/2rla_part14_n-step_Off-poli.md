@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** n-step Off-policy Learning
 
 ---
 
-**Rating: 8/10**
 
 #### n-step Return for Sarsa
 Background context explaining the concept. The n-step return Gt:t+n is a way to estimate the total discounted reward over n steps, combining immediate rewards and future state-action values. This method is crucial for understanding how policies can be evaluated or updated using multiple time steps of experience.
@@ -33,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Sarsa's n-step Return
 Expected Sarsa is a variant of the Sarsa algorithm that uses an expected state value function. The key difference lies in how it handles future rewards, using a weighted average over all possible actions.
@@ -64,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### O-Step Learning with Importance Sampling
 O-Step learning, particularly o-step Sarsa, is used when the policy being learned (\(\pi\)) differs from the behavior policy (\(b\)). This method accounts for this difference by using importance sampling to weight actions according to their relative probability under both policies.
@@ -103,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-step Bootstrapping for Off-policy Sarsa
 Background context: The off-policy version of \(n\)-step Expected Sarsa updates use a similar update to standard \(n\)-step Sarsa but with an adjusted importance sampling ratio. This adjustment ensures that the importance sampling only considers one less factor, specifically \( \theta_{t+1:t+n-1} \) instead of \( \theta_{t+1:t+n} \). Additionally, it uses the Expected Sarsa version of the \(n\)-step return (7.7).
@@ -115,7 +110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Per-decision Methods with Control Variates
 Background context: The multi-step off-policy methods presented earlier can be improved using per-decision importance sampling ideas, such as control variates introduced in Section 5.9. The ordinary \(n\)-step return (7.1) is written recursively to understand how it can be adjusted for off-policy learning.
@@ -132,7 +126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Off-policy State-value Prediction Algorithm
 Background context: The off-policy state-value prediction algorithm uses the modified \(n\)-step return (7.13) to adjust for importance sampling. This approach ensures that if an action has a zero probability under the target policy, its contribution is not lost entirely.
@@ -147,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Off-policy Action-value Prediction Algorithm
 Background context: For action values, the \(n\)-step return needs to be adjusted differently because the first action plays no role in importance sampling. The modified action-value \(n\)-step return (7.14) includes a control variate term to handle this.
@@ -162,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Control Variates Do Not Change Expected Value
 Background context: The control variate in the \(n\)-step return (7.13) does not change the expected value of the return because the importance sampling ratio has an expected value of one and is uncorrelated with the estimate, making the overall expected value zero.
@@ -177,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Off-policy Prediction Algorithm Pseudocode
 Background context: The pseudocode for the off-policy state-value prediction algorithm combines the modified \(n\)-step return (7.13) with the action-value update rule (7.5).
@@ -206,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Programming Exercise: Comparing Off-policy and On-policy Algorithms
 Background context: The exercise involves devising a small off-policy prediction problem to show that the off-policy learning algorithm using \(n\)-step TD update is more data-efficient than a simpler on-policy algorithm.
@@ -250,7 +239,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### 3-Step Tree Backup Update
 
@@ -265,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-Step Tree Backup Algorithm
 
@@ -286,7 +273,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pseudocode for n-Step Tree Backup
 
@@ -321,7 +307,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Off-Policy Learning Without Importance Sampling
 
@@ -336,7 +321,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-Step Tree Backup Update Details
 

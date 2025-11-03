@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.6 The Stationary Distribution Equals the Limiting Distribution
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Stationary Distribution and Limiting Probability
 The concept revolves around understanding how, as \(n \to \infty\), the probabilities of being in any state stabilize to a certain distribution. This is denoted by \(\pi_j = \lim_{n \to \infty} P^n_{ij}\), where \(P\) is the transition probability matrix and \(i, j\) are states.
@@ -20,7 +18,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Stationary Equations for Markov Chains
 The stationary equations for a finite-state discrete-time Markov chain (DTMC) involve finding a probability distribution \(\vec{\pi}\) such that \(\vec{\pi} \cdot P = \vec{\pi}\), where \(P\) is the transition matrix. This means that if the system starts in this distribution, it will remain in the same distribution after any number of transitions.
@@ -56,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Theorem for Stationary and Limiting Distribution Equivalence
 For a finite-state DTMC, the theorem states that the stationary distribution obtained by solving the stationary equations is unique and represents the limiting probabilities if these exist.
@@ -74,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Steady State for Markov Chains
 A Markov Chain is said to be stationary or in steady state if it has a unique stationary distribution \(\vec{\pi}\) and the initial state is chosen according to these stationary probabilities.
@@ -88,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Repair Facility Problem with Cost
 Background context: The repair facility problem involves a Markov chain representing whether a machine is working (W) or broken (B). Given transition probabilities and costs, we need to find the annual repair bill. 
@@ -116,7 +110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Umbrella Problem with General Probability p
 Background context: The umbrella problem involves determining the probability that a professor gets soaked given the daily probability of rain, p. We need to derive the limiting probabilities for general p using stationary equations.
@@ -147,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proof of Uniqueness of Stationary Distribution in Infinite-State DTMCs
 Background context: The second part of the proof involves proving that any stationary distribution must be equal to the limiting distribution.
@@ -174,7 +166,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stationary Equations and Limiting Probability Distribution for DTMCs
 
@@ -193,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unbounded Queue Example
 
@@ -219,7 +209,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving Stationary Equations
 
@@ -240,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determining \(\pi_0\)
 

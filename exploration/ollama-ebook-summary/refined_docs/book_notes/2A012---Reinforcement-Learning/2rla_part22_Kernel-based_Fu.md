@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Kernel-based Function Approximation
 
 ---
 
-**Rating: 8/10**
 
 #### Kernel Trick in Function Approximation
 Background context: The kernel trick allows expressing any linear parametric method as kernel regression. For example, if feature vectors \( x(s) = (x_1(s), x_2(s), \ldots, x_d(s))^T \) represent states, the inner product of these vectors can be used to form a kernel function: \( k(s, s_0) = x(s)^T x(s_0) \). This avoids explicitly working in high-dimensional feature space and instead works directly with stored training examples.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interest and Emphasis Concept
 In on-policy prediction, traditionally all states are treated equally. However, interest and emphasis can be introduced to prioritize certain states or actions based on their importance.
@@ -36,7 +33,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interest Definition
 Interest is a non-negative scalar random variable that indicates how much we care about accurately valuing specific states or state-action pairs. It can be set in any causal manner, depending on the trajectory up to time \( t \) or learned parameters at time \( t \).
@@ -52,7 +48,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Emphasis Definition
 Emphasis is another non-negative scalar random variable that multiplies the learning update, emphasizing or de-emphasizing updates at time \( t \). It influences how much weight each state update carries in the overall learning process.
@@ -70,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interest and Emphasis in MC
 Monte Carlo (MC) methods can benefit from interest and emphasis. In this context, all updates are made at the end of episodes, with \( G_t:t+n = G_t \).
@@ -93,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interest and Emphasis in TD
 TD methods can also incorporate interest and emphasis. Two-step semi-gradient TD methods will converge differently depending on whether they use these concepts.
@@ -111,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Interest and Emphasis
 Consider a four-state Markov reward process where interest is assigned only to the first state, leading to different convergence outcomes in MC and TD methods.
@@ -134,7 +126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### On-policy Prediction with Approximation
 On-policy prediction, also known as policy evaluation, is a method used to estimate the value function under a fixed policy. The goal is to generalize from limited experience data and use existing methods for supervised learning function approximation by treating each update as a training example.
@@ -150,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parameterized Function Approximation
 In parameterized function approximation, the policy is represented using a weight vector \( w \). Although the number of components in \( w \) can be large, the state space is much larger, leading to an approximate solution.
@@ -162,7 +152,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stochastic Gradient Descent (SGD)
 Stochastic gradient descent (SGD) is a popular method to find a good weight vector. It updates the weights incrementally based on each training example.
@@ -174,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-step Semi-gradient TD
 The n-step semi-gradient TD method is an extension of the semi-gradient TD algorithm that includes gradient Monte Carlo and semi-gradient TD(0) as special cases when \( n = 1 \).
@@ -186,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semi-gradient Methods
 Semi-gradient methods are not true gradient methods because the weight vector appears in the update target but is not taken into account when computing the gradient.
@@ -198,7 +185,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Function Approximation
 Linear function approximation involves representing the value estimates as sums of features times corresponding weights. For linear cases, the methods are well understood theoretically and work effectively in practice with appropriate feature selection.
@@ -210,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tile Coding
 Tile coding is a form of coarse coding that is particularly computationally efficient and flexible, making it useful for representing high-dimensional state spaces.
@@ -222,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### LSTD (Linear TD Prediction Method)
 LSTD stands for Least-Squares Temporal Difference, which is the most data-efficient linear TD prediction method but requires computation proportional to the square of the number of weights.
@@ -234,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nonlinear Methods
 Nonlinear methods include artificial neural networks trained by backpropagation and variations of SGD, which have become very popular in recent years under the name deep reinforcement learning.
@@ -248,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Semi-Gradient n-step TD Convergence
 Background context: The text discusses the convergence properties of linear semi-gradient n-step temporal difference (TD) methods. These methods are used in reinforcement learning and are known to converge under standard conditions, providing an error bound that is within a range achievable by Monte Carlo methods. As \(n\) increases, this bound approaches zero.
@@ -270,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State Aggregation in Reinforcement Learning
 Background context: The text mentions the early work on function approximation and state aggregation. State aggregation is a method where states are grouped into clusters, reducing the complexity of the problem by treating similar states as equivalent.
@@ -290,7 +271,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence of Linear TD(0)
 Background context: The text discusses the convergence properties of linear TD(0) methods. Sutton proved that in the mean, linear TD(0) converges to the minimal value error (VE) solution when feature vectors are linearly independent.
@@ -314,7 +294,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semi-Gradient TD(0)
 Background context: The text explains that semi-gradient TD(0) was first explored by Sutton as part of the linear TD(\(-\)) algorithm. This method uses a combination of on-policy and off-policy learning, making it suitable for function approximation.
@@ -336,7 +315,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Function Approximation in Reinforcement Learning
 Background context: The text highlights that function approximation has always been an integral part of reinforcement learning, with early works dating back to the 1960s and ongoing research into advanced techniques.
@@ -357,7 +335,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fourier Basis in Reinforcement Learning
 Background context explaining the use of the Fourier basis in reinforcement learning for dealing with multi-dimensional continuous state spaces. The Fourier basis is a method that allows for function approximation without the need for periodic functions.
@@ -389,7 +366,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coarse Coding in Reinforcement Learning
 Explanation of coarse coding as introduced by Hinton (1984). Coarse coding involves representing continuous variables with a set of binary indicators, which can be used to approximate functions.
@@ -426,7 +402,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tile Coding and CMAC
 Explanation of tile coding, also known as CMAC (Cerebellar Model Articulator Controller), introduced by Albus in 1971. Tile coding involves dividing the state space into tiles and using them to approximate functions.
@@ -471,7 +446,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Automatic Step-Size Adaptation Methods
 Explanation of various methods used to adapt the step-size parameter in reinforcement learning, including RMSprop and Adam. These methods help in adjusting the learning rate during training.
@@ -504,7 +478,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Barto and Anandan's ARP Algorithm
 Barto and Anandan (1985) introduced a stochastic version of Widrow et al.’s (1973) selective bootstrap algorithm called the associative reward-penalty (ARP) algorithm. This algorithm was designed to train multi-layer ANNs in reinforcement learning settings, where classifying non-linearly separable data is required.
@@ -516,7 +489,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor-Critic Algorithm by Anderson
 Anderson (1986, 1987, 1989) evaluated numerous methods for training multilayer ANNs and showed that an actor–critic algorithm outperformed single-layer ANNs in tasks such as pole-balancing and tower of Hanoi. In this approach, both the actor and critic were implemented by two-layer ANNs trained by error backpropagation.
@@ -528,7 +500,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Backpropagation and Reinforcement Learning
 Williams (1988) described several ways to combine backpropagation and reinforcement learning for training ANNs. This combination allowed for more sophisticated learning in complex environments.
@@ -540,7 +511,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuous Output Units by Gullapalli and Williams
 Gullapalli (1990) and Williams (1992) devised reinforcement learning algorithms for neuron-like units having continuous, rather than binary, outputs. This approach allowed for a broader range of applications.
@@ -552,7 +522,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequential Decision Problems by Barto, Sutton, and Watkins
 Barto, Sutton, and Watkins (1990) argued that ANNs can play significant roles in approximating functions required for solving sequential decision problems.
@@ -564,7 +533,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD-Gammon by Tesauro
 Tesauro’s TD-Gammon (Tesauro 1992, 1994) demonstrated the learning abilities of the TD( ) algorithm with function approximation using multi-layer ANNs in playing backgammon.
@@ -576,7 +544,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AlphaGo and Deep Reinforcement Learning
 The AlphaGo, AlphaGo Zero, and AlphaZero programs of Silver et al. (2016, 2017a, b) used reinforcement learning with deep convolutional ANNs in achieving impressive results with the game of Go.
@@ -588,7 +555,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### LSTD by Bradtke and Barto
 Bradtke and Barto (1993, 1994; Bradtke, Ydstie, and Barto, 1994) introduced Least-Squares Temporal Difference (LSTD), which was further developed by Boyan (1999, 2002), Nedić and Bertsekas (2003), and Yu (2010).
@@ -600,7 +566,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Locally Weighted Regression
 Atkeson, Moore, and Schaal (1997) provided a review of locally weighted learning, focusing on the use of locally weighted regression in memory-based robot learning. Atkeson (1992) discussed this method extensively.
@@ -612,7 +577,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Q-Learning with Memory-Based Approach
 Baird and Klopf (1993) introduced a novel memory-based approach and used it as the function approximation method for Q-learning applied to the pole-balancing task.
@@ -626,7 +590,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Locally Weighted Regression for Robot Control (Schaal and Atkeson, 1994)
@@ -639,7 +602,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Locally Weighted Linear Regression in Reinforcement Learning (Tadepalli and Ok, 1996)
 Locally weighted linear regression was used to learn a value function for a simulated automatic guided vehicle task, demonstrating its effectiveness in reinforcement learning environments.
@@ -651,7 +613,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Local Learning Algorithms in Pattern Recognition (Bottou and Vapnik, 1992)
 Bottou and Vapnik demonstrated that several local learning algorithms were surprisingly efficient compared to non-local ones in pattern recognition tasks. They discussed the potential of local learning on generalization.
@@ -663,7 +624,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### k-d Trees for Nearest Neighbor Search (Bentley, 1975)
 k-d trees were introduced by Bentley to improve the efficiency of nearest neighbor searches. The average running time was reported to be O(log n) for a database of n records.
@@ -675,7 +635,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Function Approximation Methods in Reinforcement Learning (Samuel, 1959)
 Function approximation methods were first used by Samuel for learning value functions. He approximated values using linear combinations of features, which was a precursor to modern reinforcement learning techniques.
@@ -689,7 +648,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Genetic Algorithm for Evolving Classifiers
 Holland’s idea was to use a genetic algorithm to evolve a set of classifiers that collectively implement an action-value function. This evolutionary approach aimed at optimizing the set of classifiers through generations.
@@ -735,7 +693,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient-Descent and ANN Methods for Function Approximation
 The authors shifted towards adapting supervised learning methods such as gradient-descent and ANNs for reinforcement learning. These methods allowed for more detailed information utilization during the learning process compared to evolutionary approaches like genetic algorithms.
@@ -753,7 +710,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Combination of Different Approaches
 Researchers have experimented with combining different approaches to function approximation, such as regression methods, decision trees, and explanation-based learning. These combined methods aim at leveraging the strengths of multiple techniques.

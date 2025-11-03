@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.1.1 Creating a storage-aware cart class
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Refactoring Cart Management for Simplicity
@@ -25,7 +23,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Subclass for Session-Aware Cart
 Background context: To address the issues with direct session handling, we create a `SessionCart` class that inherits from `Cart`. This new class will handle storing and retrieving cart data from the session state more efficiently.
@@ -44,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overriding Cart Methods for Persistence
 Background context: To maintain the integrity of the cart data, the `SessionCart` class overrides several methods from the base `Cart` class. These overridden methods ensure that any changes to the cart are persisted back to the user's session.
@@ -65,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Adding Services for Cart Management
@@ -85,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HttpContextAccessor for Session Management
 Background context: To access the current session within the `SessionCart` class, we need to use an `HttpContextAccessor`. This service is added using the `AddSingleton` method, ensuring that the same `HttpContextAccessor` object is used throughout the application.
@@ -104,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simplifying Cart Razor Page Code
 Background context: The goal here is to simplify the code where `Cart` objects are used by leveraging services. By injecting a `Cart` object into the page model constructor, we can remove the need for session management logic from handler methods, making the code cleaner and more maintainable.
@@ -130,7 +123,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing Cart Update Functionality
 
@@ -162,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Removing Items from the Cart
 
@@ -191,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Removing an Item from the Cart in the Page Model
 
@@ -212,7 +202,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Cart Functionality
 

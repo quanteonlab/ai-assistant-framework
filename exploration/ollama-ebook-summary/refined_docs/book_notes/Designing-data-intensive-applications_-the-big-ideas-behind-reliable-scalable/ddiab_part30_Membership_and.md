@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 30)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Membership and Coordination Services
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizable Atomic Operations
 Background context explaining the concept. Linearizable atomic operations allow for a sequence of operations to appear as if they were executed atomically and linearly, even when distributed across different nodes. This is crucial for ensuring that the order of operations is consistent, which prevents conflicts and ensures correctness in a distributed environment.
@@ -34,7 +32,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Locks and Ephemeral Nodes
 Background context explaining the concept. Distributed locks are used to coordinate access to shared resources in a distributed system, ensuring that only one node can modify or read certain data at any given time. Ephemeral nodes in ZooKeeper help manage these locks by automatically releasing them when a session times out.
@@ -59,7 +56,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Total Ordering of Operations
 Background context explaining the concept. Total ordering of operations ensures that all operations are processed in a strict order, which is crucial for maintaining consistency and preventing conflicts in distributed systems. ZooKeeper achieves this by assigning each operation a unique transaction ID (zxid) that monotonically increases over time.
@@ -87,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Failure Detection and Heartbeats
 Background context explaining the concept. Failure detection is a critical aspect of distributed systems, as it ensures that nodes can quickly identify when another node has failed or become unresponsive. ZooKeeper uses heartbeats to maintain long-lived sessions between clients and servers, allowing for automatic session timeouts if necessary.
@@ -122,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Change Notifications
 Background context explaining the concept. Change notifications allow clients to be notified of changes in ZooKeeper data, enabling them to react to updates without constantly polling for new information. This feature is particularly useful for maintaining state consistency and providing real-time feedback.
@@ -154,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rebalancing Partitions
 Background context explaining the concept. In distributed systems, rebalancing partitions is a common task to ensure that resources are evenly distributed among nodes as new nodes join or existing nodes fail. ZooKeeper can facilitate this process by providing atomic operations and notifications for coordinated partitioning.
@@ -184,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Discovery
 Background context explaining the concept. Service discovery is a mechanism used in distributed systems to dynamically locate services based on their names or attributes, often without knowing their actual IP addresses beforehand. While traditional DNS can be used for this purpose, consensus-based systems like ZooKeeper provide more reliable and robust solutions.
@@ -214,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Membership Services
 Background context explaining the concept. Membership services are crucial for maintaining information about which nodes are part of a distributed system, including their current state and roles. ZooKeeper has been used extensively in this role due to its ability to manage node membership, failure detection, and coordination.
@@ -245,7 +236,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Membership Service and Consensus
 Background context: The membership service is crucial for determining which nodes are active members of a cluster. Due to unbounded network delays, it's challenging to reliably detect node failures. However, combining failure detection with consensus allows nodes to agree on the current state of their membership.
@@ -257,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability
 Background context: Linearizability is a consistency model where operations appear as if they were executed one after another on a single copy of the data. This makes replicated data seem atomic, much like a variable in a single-threaded program.
@@ -269,7 +258,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causality
 Background context: Unlike linearizability, which orders all operations in one timeline, causality allows for concurrent operations by providing an ordering based on cause and effect.
@@ -281,7 +269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consensus Problems
 Background context: Achieving consensus is about making all nodes agree on what was decided and ensuring that decisions are irrevocable. Various problems, including ensuring unique usernames in concurrent registration scenarios, can be reduced to the problem of consensus.
@@ -293,7 +280,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizable Compare-and-Set Registers
 Background context: A linearizable compare-and-set (CAS) register atomically decides whether to set its value based on the current value. This operation needs to be consistent and atomic.
@@ -305,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Timestamp Ordering is Not Sufficient
 Background context: Using timestamps alone may not suffice for certain operations, such as ensuring unique usernames during concurrent registration. The problem arises because nodes might have different views of the current state.
@@ -337,7 +322,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Transaction Commit
 Background context: A database must decide whether to commit or abort a distributed transaction. This decision is crucial for ensuring data consistency and integrity.
@@ -349,7 +333,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Total Order Broadcast
 Background context: The messaging system must decide on the order in which to deliver messages. Ensuring a total order of message delivery is essential for maintaining consistency and order among nodes.
@@ -361,7 +344,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Locks and Leases
 Background context: When several clients race to acquire a lock or lease, only one can succeed. The system must decide which client gets the lock.
@@ -373,7 +355,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Membership/Coordination Service
 Background context: Given failure detectors, such as timeouts, the system needs to decide which nodes are alive and which should be considered dead due to session timeouts.
@@ -385,7 +366,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Uniqueness Constraint
 Background context: Concurrent transactions may try to create records with the same key. The system must decide which transaction should succeed and which should fail due to a uniqueness constraint.
@@ -397,7 +377,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single-Leader Database
 Background context: In a single-leader database, all decision-making power is vested in one node (the leader). This setup provides linearizability and consistency but introduces failover challenges.
@@ -409,7 +388,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consensus in Single-Leader Database
 Background context: A single-leader approach can handle decision-making but faces issues if the leader fails or becomes unreachable. Three approaches are discussed for handling this situation.
@@ -423,7 +401,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault-Tolerant Consensus Algorithms
 Background context: Even with a leader, consensus algorithms are still required for maintaining leadership and handling leadership changes. Tools like ZooKeeper can provide outsourced consensus, failure detection, and membership services.
@@ -437,7 +414,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ZooKeeper Usage for Fault-Tolerance
 Background context explaining when and why ZooKeeper is used. ZooKeeper is a service that helps applications coordinate with each other reliably, often used to manage distributed systems where consensus is required.
@@ -451,7 +427,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Theoretical Foundations of Distributed Systems
 Explanation on how theoretical papers inform practical work in distributed systems.
@@ -465,7 +440,6 @@ x??
 
 ---
 
-**Rating: 10/10**
 
 #### Part II Summary - Replication, Partitioning, Transactions, Failure Models, Consistency
 Summary of the topics covered in Part II of the book.
@@ -479,7 +453,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Practical Building Blocks for Distributed Systems
 Explanation of how to build powerful applications using heterogeneous building blocks.
@@ -493,7 +466,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### References for Further Reading
 List of key references provided in the text, highlighting their importance.
@@ -509,7 +481,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Systems of Record vs. Derived Data
 In distributed systems, data can be managed and processed by different types of data systems. A system of record is the authoritative version of your data where new data is first written and each fact is represented exactly once (typically normalized). Derived data systems transform or process existing data from a system of record to serve specific needs such as caching, indexing, materialized views, or predictive summary data.
@@ -520,7 +491,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch-Oriented Dataflow Systems (e.g., MapReduce)
 Batch-oriented dataflow systems are designed for processing large-scale datasets where tasks are divided into smaller jobs that can be executed independently. Examples include MapReduce, which processes data in parallel stages: map, shuffle, sort, and reduce. This approach is well-suited for scenarios requiring high computational power and scalability.
@@ -531,7 +501,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Streams
 Data streams are continuous flows of data that need to be processed with low latency. Unlike batch systems, stream processing deals with real-time data where each piece of data is processed as it arrives. This approach is ideal for applications requiring immediate responses or analytics on live data.
@@ -542,7 +511,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reliability and Scalability in Future Applications
 The final chapter explores ideas on building reliable, scalable, and maintainable applications using the tools and principles discussed throughout the book. It emphasizes the importance of clear dataflow management, robust error handling, and efficient resource utilization to ensure application resilience and performance.
@@ -553,7 +521,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coherent Application Architecture with Multiple Data Systems
 In complex applications, integrating multiple data systems (e.g., databases, caches, indexes) is crucial for meeting diverse access patterns and performance requirements. This involves understanding the dataflow between different components of the system to ensure seamless integration and efficient data processing.
@@ -564,7 +531,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Redundancy in Derived Data
 Derived data is considered redundant because it duplicates existing information but provides benefits such as improved read performance through denormalization or caching. However, maintaining consistency between derived data and the source of truth (system of record) is essential for avoiding discrepancies.
@@ -575,7 +541,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Clear Distinction Between Systems of Record and Derived Data
 Making a clear distinction between systems of record and derived data in system architecture can provide clarity on dataflow and dependencies. This helps manage complexity by defining inputs, outputs, and their relationships explicitly.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 2.2 Profiling Probing the gap between system capabilities and application performance
 
 ---
 
-**Rating: 8/10**
 
 #### Invalid Read of Size 4
 Valgrind reports memory errors that can be tricky to understand, especially uninitialized memory issues. The report indicates an invalid read operation at line 9, which is derived from a decision made with an uninitialized value on line 7.
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Definitive Loss
 Valgrind also reports that there are 40 bytes definitely lost in memory, which can occur when dynamically allocated memory is not properly freed.
@@ -46,7 +43,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Improving Code Portability
 Code portability refers to the ability of code to work across different compilers and operating systems without modification. It begins with choosing a language that has standards for compiler implementations, such as C, C++, or Fortran.
@@ -71,7 +67,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Three OpenMP Capabilities
 OpenMP is a widely used API for parallel programming in C, C++, and Fortran. However, it has evolved to include vectorization through SIMD directives, CPU threading from the original model, and offloading to accelerators like GPUs.
@@ -123,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Identifying Performance Limitations
 In section 3.1, the text describes possible performance limitations for applications today. Most applications are limited by memory bandwidth or a limitation that closely tracks it. A few might be limited by available floating-point operations (flops).
@@ -150,7 +144,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benchmarking for Hardware Limitations
 In section 3.2, the text mentions that benchmark programs can measure the achievable performance of hardware limitations.
@@ -178,7 +171,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Profiling Tools
 Section 3.3 discusses the process of using profiling tools to identify and address performance gaps between application and hardware capabilities.
@@ -204,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exploring with Benchmarks and Mini-Apps
 Section 2.3.1 explains that benchmarks and mini-apps are valuable resources for performance analysis, especially in high-performance computing.
@@ -236,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Planning for Parallelization
 Section 2.3 describes the planning steps required to ensure a successful parallelization project, including researching prior work and selecting appropriate tools.
@@ -266,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Data Structure Design for Parallel Applications
 Background context: The design of data structures is a crucial decision that impacts your application's performance and scalability, especially when considering parallel implementations. Changing these designs later can be challenging. Today’s hardware platforms emphasize efficient data movement, which is critical for both single-core and multi-core systems.
@@ -290,7 +279,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Algorithm Selection for Parallel Wave Simulation Code
 Background context: When implementing parallelism, evaluating algorithms is crucial. Some algorithms may not scale well with multiple cores, while others might offer better performance or scalability. Identifying these critical sections of code that could dominate run time as the problem size grows helps in making informed decisions.

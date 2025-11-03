@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Finite Markov Decision Processes. The AgentEnvironment Interface
 
 ---
 
-**Rating: 8/10**
 
 #### Agent-Environment Interface
 MDPs frame the problem of learning from interaction to achieve a goal. The agent is the decision-maker and interacts with the environment, which includes everything outside the agent.
@@ -35,7 +33,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finite Markov Decision Processes (MDPs)
 Finite MDPs are a classical formalization of sequential decision making where actions influence both immediate and future rewards. In MDPs, we estimate values for each action \( q^\ast(s, a) \) in each state \( s \), or the value of each state given optimal actions.
@@ -53,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Returns, Value Functions, and Bellman Equations
 In MDPs, returns are defined as cumulative discounted rewards over multiple time steps. The value function \( v^\ast(s) \) represents the long-term reward starting from state \( s \), while the action-value function \( q^\ast(s, a) \) gives the expected return starting from state \( s \) and taking action \( a \).
@@ -74,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-offs Between Breadth and Mathematical Tractability
 MDPs provide a mathematically idealized form for reinforcement learning, allowing precise theoretical statements. However, there's a tension between broad applicability and mathematical tractability.
@@ -90,7 +85,6 @@ x??
 
 ---
 
-**Rating: 10/10**
 
 #### Markov Decision Process (MDP) Dynamics
 
@@ -117,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Markov Property
 
@@ -144,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transition Probabilities
 
@@ -176,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Rewards
 
@@ -213,7 +204,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Rewards for State-Action-Next-State Triples
 
@@ -247,7 +237,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MDP Framework Flexibility and Applications
 The MDP framework is abstract and flexible, allowing its application to various types of problems. Time steps need not refer to fixed intervals of real time but can represent successive stages of decision making and acting. Actions can range from low-level controls (e.g., voltages applied to a robot arm) to high-level decisions (e.g., deciding whether or not to have lunch).
@@ -259,7 +248,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variety of Actions and States
 Actions within the MDP framework are versatile; they can be low-level controls such as motor voltages or high-level decisions like whether to have lunch or go to graduate school. States can take various forms—ranging from direct sensor readings to symbolic descriptions, including memory-based perceptions or subjective states.
@@ -271,7 +259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agent-Environment Boundary
 The agent-environment boundary can vary depending on context; for example, the motors and mechanical linkages of a robot or sensory hardware are typically considered part of the environment. Similarly, in a person or animal model, muscles, skeleton, and sensory organs fall within the environmental boundaries.
@@ -283,7 +270,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rewards in the MDP Framework
 Rewards are computed within an agent's physical body but are treated as external elements when modeling tasks using the MDP framework. Even if the agent knows everything about its environment, rewards remain outside its control.
@@ -295,7 +281,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agent-Environment Boundary in Complex Systems
 For complex systems like robots, multiple agents might operate at different levels, with higher-level decisions forming part of lower-level decision-making processes.
@@ -307,7 +292,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### MDP Framework Overview
@@ -324,7 +308,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bioreactor Example
 In a bioreactor application, reinforcement learning is used to control temperatures and stirring rates. The actions involve setting target temperatures and stirring rates, which are then passed to lower-level control systems. The states include thermocouple readings and symbolic inputs representing the ingredients in the vat, and the rewards measure the rate of useful chemical production.
@@ -340,7 +323,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pick-and-Place Robot Example
 For a pick-and-place robot task using reinforcement learning, actions involve controlling motor voltages directly to achieve smooth movements. States include joint angles and velocities. Rewards are +1 for successful picking and placing of objects, with additional small negative rewards for jerkiness in motion.
@@ -356,7 +338,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State and Action Representation
 In reinforcement learning tasks, states and actions often have structured representations. States can include multiple sensor readings or symbolic inputs, while actions typically involve vector targets like temperatures and stirring rates for a bioreactor.
@@ -373,7 +354,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recycling Robot MDP Example
 Background context: This example describes a mobile robot tasked with collecting empty soda cans in an office environment. The system is modeled as a finite Markov Decision Process (MDP), where states, actions, and rewards are defined to simulate the robot's decision-making process.
@@ -407,7 +387,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Different Levels of Actions in Driving
 
@@ -424,7 +403,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MDP Adequacy for All Goal-Directed Learning Tasks
 
@@ -440,7 +418,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Tasks in MDP Framework
 
@@ -460,7 +437,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transition Graph Representation of MDPs
 The dynamics of a finite Markov Decision Process (MDP) can be summarized by a transition graph. This graph consists of two types of nodes: state nodes and action nodes. Each state has a corresponding state node, which is represented as a large open circle labeled with the name of the state. Action nodes are smaller solid circles connected to their respective state nodes via lines. Taking an action from a state moves you along this line to an action node.
@@ -474,7 +450,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reward Hypothesis
 In reinforcement learning, the agent's goal is defined through a reward signal passed from the environment. At each time step \( t \), the reward \( R_t \) is a simple number in the real number space \( R \). The objective for the agent is to maximize the total cumulative reward over time.
@@ -491,7 +466,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Types of Rewards in Reinforcement Learning
 Rewards are used to shape the behavior of agents in reinforcement learning. For instance, in robot training scenarios:
@@ -506,7 +480,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Designing Reward Functions
 Designing effective reward functions is crucial in reinforcement learning. For complex tasks like playing checkers or chess:
@@ -530,7 +503,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Return Calculation for Episodic Tasks
 Episodic tasks are those where the interaction between the agent and environment can be naturally divided into episodes, each ending with a terminal state followed by a reset to a standard starting state. The return \( G_t \) is defined as the sum of rewards from time step \( t+1 \) onwards.
@@ -543,7 +515,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Terminal State
 In episodic tasks, episodes end with a special state known as the terminal state. This state signifies the completion of an episode before resetting to a standard starting state or sampling from a standard distribution of starting states for the next episode.
@@ -554,7 +525,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Continuing Tasks
 Continuing tasks do not naturally break into episodes but continue indefinitely without a clear endpoint. These tasks might involve ongoing processes or applications where the interaction does not have a defined final state.
@@ -565,7 +535,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Discounted Return for Continuing Tasks
 For continuing tasks, direct summing of rewards is problematic as there's no natural terminal state to define a final time step \( T \). Instead, discounted returns are used where future rewards are weighted by their time steps. The discounted return is defined using the discount rate \( 0 \leq \gamma \leq 1 \).
@@ -578,7 +547,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Role of Discounting in Return
 Discounting helps manage infinite returns by reducing the value of future rewards. This prevents overly long-term strategies from dominating short-term rewards and ensures that immediate actions are considered more heavily than distant ones.
@@ -589,7 +557,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Episodic vs Continuing Tasks
 Episodic tasks are naturally segmented into episodes, each ending in a terminal state. In contrast, continuing tasks do not have such natural breaks and can continue indefinitely. The choice between these affects how returns and rewards are calculated.
@@ -600,7 +567,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Key Concepts
 1. **Episodic Tasks**: Natural division into episodes with terminal states and reset to starting state.
@@ -612,7 +578,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Myopic Agents and Discounting
 Myopic agents are concerned only with maximizing immediate rewards, which can be modeled by setting \(\gamma = 0\) in the return formula. If \(\gamma < 1\), an infinite sum of reward terms can still converge to a finite value, provided that the sequence of rewards is bounded.
@@ -623,7 +588,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Discounted Return in Reinforcement Learning
 The discounted return \(G_t\) is a key concept in reinforcement learning that considers the value of future rewards. It involves summing up future rewards weighted by \(\gamma^k\), where \(0 < \gamma < 1\).
@@ -640,7 +604,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuing vs. Episodic Tasks
 In reinforcement learning, tasks can be categorized into continuing or episodic based on whether they terminate naturally or require explicit termination.
@@ -651,7 +614,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pole-Balancing Example
 The pole-balancing task involves keeping a pole upright on a cart by applying appropriate forces. It can be treated either as an episodic task where episodes end when the pole falls or as a continuing task with discounting applied to future rewards.
@@ -664,7 +626,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modified Equations for Episodic Tasks
 For episodic tasks, the return formula needs to be adjusted slightly compared to continuing tasks. The modified version of equation (3.3) should account for the natural termination of episodes.
@@ -677,7 +638,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Return Calculation with Discounting
 The discounted return at a given time step can be calculated using the recursive relationship derived from the definition of \(G_t\).
@@ -690,7 +650,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Discounted Return Calculation
 Given a sequence of rewards \(R_1, R_2, R_3, R_4, R_5\) with \(\gamma = 0.5\), we can calculate the discounted return for each time step using the provided sequence and the discounting factor.
@@ -711,7 +670,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Infinite Reward Sequence Example
 For a reward sequence where the first reward is \(R_1 = 2\) and all subsequent rewards are constant at 7 with \(\gamma = 0.9\), we can calculate the discounted returns.
@@ -733,7 +691,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proving the Discounted Return Formula
 The second equality in equation (3.10) can be proven using algebraic manipulation and properties of geometric series.
@@ -756,7 +713,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unified Notation for Episodic and Continuing Tasks
 Background context: In reinforcement learning, tasks are categorized into episodic and continuing. Episodic tasks have a finite sequence of time steps within each episode, while continuing tasks do not naturally break down into episodes. The book introduces unified notation to handle both types of tasks smoothly.
@@ -768,7 +724,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Notation for Episodes and Actions in Episodic Tasks
 Background context: In episodic tasks, each action affects a finite number of rewards during the episode. To handle this, we need to refer not only to \(S_t\) but also to \(S_{t,i}\), \(A_{t,i}\), etc., where \(i\) denotes the episode index.
@@ -780,7 +735,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unified Return Calculation
 Background context: Returns in episodic tasks can be summed over a finite number of terms, while in continuing tasks, returns sum over an infinite sequence. A unified approach is needed to handle both.
@@ -792,7 +746,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### General Return Formula
 Background context: The unified return formula can be expressed as:
@@ -808,7 +761,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Episodic and Continuing Tasks Notation
 Background context: The book uses conventions to write equations without explicitly referencing episode numbers when not needed. This helps in expressing the close parallels between episodic and continuing tasks.
@@ -822,7 +774,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policies and Value Functions
 Background context: Reinforcement learning algorithms often involve estimating value functions, which are functions of states (or state-action pairs) that estimate how good it is to be in a given state or perform an action.
@@ -836,7 +787,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Definition and Notation
 A policy is a mapping from states to probabilities of selecting each possible action. Specifically, for state \( s \) and action \( a \), if the agent is following policy \( \pi \) at time \( t \), then \( \pi(a|s) \) represents the probability that \( A_t = a \) given that \( S_t = s \). This can be seen as an ordinary function, but the notation emphasizes it defines a distribution over actions for each state.
@@ -847,7 +797,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expectation of Future Reward
 Given the current state \( S_t = s \), and actions are selected according to policy \( \pi \), we need to express the expectation of future reward \( R_{t+1} \) in terms of \( \pi \) and a four-argument function \( p(3.2) \). The four-argument function likely represents the transition dynamics.
@@ -860,7 +809,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Value Function Definition
 The value function of a state under policy \( \pi \), denoted as \( v_\pi(s) \), is defined as the expected return when starting in state \( s \) and following policy \( \pi \) thereafter. Mathematically, it can be expressed as:
@@ -875,7 +823,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action-Value Function Definition
 The action-value function for a state and an action under policy \( \pi \), denoted as \( q_\pi(s, a) \), represents the expected return starting from state \( s \), taking action \( a \), and thereafter following policy \( \pi \). It is defined as:
@@ -888,7 +835,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relationship Between Value Functions and Action-Value Function
 The value function \( v_\pi(s) \) can be expressed in terms of the action-value function \( q_\pi \). Specifically:
@@ -902,7 +848,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relationship Between Action-Value Function and Probability Distribution
 The action-value function \( q_\pi(s, a) \) can be expressed in terms of the value function \( v_\pi \) and the probability distribution given by policy \( \pi \):
@@ -916,7 +861,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Methods for Estimation
 Monte Carlo methods estimate values by averaging over many random samples of actual returns. For example, if an agent follows a policy \( \pi \) and maintains an average of the actual returns that have followed each state, then as the number of times that state is encountered approaches infinity, this average will converge to the state's value.
@@ -933,7 +877,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Value Function and Bellman Equation
 
@@ -974,7 +917,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Transition and Reward Dynamics
 
@@ -1012,7 +954,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Gridworld Example
 
@@ -1040,7 +981,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Gridworld Example with Exceptional Reward Dynamics
 
@@ -1056,7 +996,6 @@ The key features include:
 
 ---
 
-**Rating: 8/10**
 
 #### Center State Value Verification
 
@@ -1079,7 +1018,6 @@ The equation holds true, confirming the value of \(+0.7\).
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding the Impact of Constant Rewards
 
@@ -1114,7 +1052,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Impact on Episodic Tasks
 
@@ -1135,7 +1072,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Golf Example
 

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 27)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Vector Take 3 Dynamic Attribute Access
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Class Design: Dynamic Attribute Access
 Background context explaining how the Vector class was designed to allow access to vector components using shortcut letters like `x`, `y`, `z`. This design aimed to make accessing the first few components convenient, but it introduced issues with read-only attributes and consistency when setting these attributes.
@@ -173,7 +171,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing __getattr__ and __setattr__
 Background context explaining the concept. When implementing `__getattr__`, it's often necessary to also implement `__setattr__` to maintain consistent behavior within your objects. This is because accessing an attribute that doesn't exist will call `__getattr__`. If you don't handle setting attributes in `__setattr__`, it could lead to inconsistent state or unexpected behavior.
@@ -237,7 +234,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Efficient Vector Comparison
 
@@ -371,7 +367,6 @@ for item in zipped_longest:
 ```
 x??
 
-**Rating: 8/10**
 
 #### Generator Expressions and Special Methods
 

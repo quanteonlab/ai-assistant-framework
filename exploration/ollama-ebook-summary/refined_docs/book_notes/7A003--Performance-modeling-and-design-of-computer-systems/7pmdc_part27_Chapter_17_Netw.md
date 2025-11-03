@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 27)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 17 Networks of Queues and Jackson Product Form. 17.2 The Arrival Process into Each Server
 
 ---
 
-**Rating: 8/10**
 
 #### Jackson Network Definition
 A Jackson network is a general architecture of queueing networks where there are \(k\) servers, each with its own unbounded queue. Jobs at a server are served according to FCFS (First-Come-First-Served) order. The service rate for the \(i\)-th server is an exponential distribution with rate \(\mu_i\). Each server may receive arrivals from both inside and outside the network.
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Arrival Process into Each Server
 For a Jackson network, the arrival process into each server can be complex. While in acyclic networks, we saw that the arrival process is a Poisson process, this is not always true for non-acyclic (cyclic) networks.
@@ -43,7 +40,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Merging Non-Independent Poisson Processes
 In the example of Figure 17.3 with very low \(\lambda\):
@@ -61,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implications for Solving Jackson Networks
 Given that arrival processes can be complex, solving Jackson networks involves:
@@ -78,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Balance Equations for Jackson Network
 Background context: The balance equations are used to solve the steady-state probabilities of a Jackson network, which is modeled as a Continuous-Time Markov Chain (CTMC). Each state \( (n_1, n_2, ..., n_k) \) represents the number of jobs at each server and queue. The key idea is that the rate of jobs leaving a state must equal the rate entering it.
@@ -132,7 +126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### No λi’s in Balance Equations
 :p Why are there no λi’s in the balance equations?
@@ -184,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Local Balance Approach Overview
 Background context: When dealing with complex queueing networks, directly solving balance equations can be cumbersome and unhelpful. A more intuitive approach is needed to simplify this process.
@@ -211,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Components of Local Balance
 Background context: The local balance approach decomposes the left-hand side and right-hand side of a balance equation into k+1 matching components. This makes it easier to set up and verify equations.
@@ -255,7 +246,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Matching Components
 Background context: Ensuring that the local balance equations are satisfied for each component is crucial. Satisfying local balance implies global balance, but it is a stronger condition.
@@ -291,7 +281,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations and Flexibility
 Background context: The local balance approach is not precisely defined, making it a "bag of tricks" that requires experience to apply effectively. It relies on breaking down the problem in specific ways.
@@ -321,7 +310,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Guessing πn1,...,n k for A=A'/prime
 
@@ -411,7 +399,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Product Form Solution for πn1,...,nk
 
@@ -451,7 +438,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Local Balance Approach
 
@@ -486,7 +472,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Jackson Network Example: Web Server
 
@@ -540,7 +525,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Average Number of Jobs in Jackson Networks
 Background context: In a Jackson network, we need to derive the average number of jobs in each server and the total system. This is crucial for understanding the performance of queueing networks.
@@ -582,7 +566,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Response Time in Jackson Networks
 Background context: The mean response time \(E[T]\) for a job to complete its service and leave the system is crucial in understanding the performance of queueing networks. We will derive this using different methods.
@@ -620,7 +603,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Supercomputing Center with Parallel Jobs
 Background context: In a supercomputing center, jobs are parallel and require multiple servers simultaneously. We need to prove the steady-state probability distribution of the system using Jackson network theory.
@@ -655,7 +637,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cloud Service Center with I/O and CPU Farms
 Background context: In a cloud service center, requests for jobs require both CPU and I/O resources. We need to prove the steady-state probability distribution of the system using Jackson network theory.

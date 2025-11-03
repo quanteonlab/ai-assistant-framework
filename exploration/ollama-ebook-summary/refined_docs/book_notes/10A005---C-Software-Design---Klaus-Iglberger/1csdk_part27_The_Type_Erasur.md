@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 27)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Type Erasure Design Pattern Explained
 
 ---
 
-**Rating: 8/10**
 
 #### Type Erasure: Overview and Intent
 Background context explaining the concept. Type Erasure is a compound design pattern that combines External Polymorphism, Bridge, and optionally Prototype to create value-based abstractions for unrelated types with similar behavior.
@@ -133,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bridge Design Pattern Application
 
@@ -214,7 +211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Type Erasure Design Pattern: Implementation Complexity
 

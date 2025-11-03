@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Business-Law_-Text-and-Cases_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 42-4 Corporate Governance
 
 ---
 
-**Rating: 8/10**
 
 #### Exemptions for Smaller Companies
 Background context: Initially, all public companies were required to have an independent auditor file a report on management’s assessment of internal controls with the SEC. However, this requirement was later eased for smaller companies to reduce compliance costs.
@@ -19,7 +17,6 @@ This change aims to lower the compliance burden on small companies, allowing the
 
 ---
 
-**Rating: 8/10**
 
 #### Risk Management
 The process of identifying, assessing, prioritizing, and controlling risks to minimize potential losses. Effective risk management includes strategies like insurance, avoidance, reduction, transfer, or acceptance of risks.

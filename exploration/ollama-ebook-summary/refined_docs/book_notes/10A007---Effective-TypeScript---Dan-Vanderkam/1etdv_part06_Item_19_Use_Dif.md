@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 19 Use Different Variables for Different Types
 
 ---
 
-**Rating: 8/10**
 
 #### TypeScript Variable Types and Reuse
 In JavaScript, variables can be reused to hold values of different types without issues. However, TypeScript enforces type safety, leading to errors when a variable is reassigned with a value of a different type.
@@ -96,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Widening in TypeScript
 Background context explaining the concept. In TypeScript, when you initialize a variable with a constant but don't provide a type, the type checker needs to infer the most general possible type for that value. This process is known as widening.
@@ -190,7 +187,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Const Keyword and Type Narrowing
 
@@ -289,7 +285,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Const Assertion for Tuple Inference
 Background context: Sometimes, TypeScript infers array types when you expect tuple types. Using a `const` assertion can help infer tuple types instead of arrays while allowing elements to widen to their base type.
@@ -365,7 +360,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Building Objects All at Once
 Background context: It is often more efficient to build complex objects or arrays all at once rather than piecing them together incrementally. Using object spread syntax and utility libraries can make this process cleaner and type-safe.

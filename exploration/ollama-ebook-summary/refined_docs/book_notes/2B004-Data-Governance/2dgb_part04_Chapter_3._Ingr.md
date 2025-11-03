@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B004-Data-Governance_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 3. Ingredients of Data Governance People and Processes. User Hats Defined
 
 ---
 
-**Rating: 8/10**
 
 #### Data Ownership and Technical Expertise
 Background context: The passage discusses how data ownership responsibilities are often held by individuals with technical expertise rather than strictly business-oriented roles. These duties include ideation, creation, monitoring, and maintenance of the data architecture.
@@ -68,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Complexity of Data Governance
 Background context explaining the complexity involved when dealing with disparate data storage systems, different data definitions and catalogs. The process becomes almost impossible due to the sheer volume and variability of data.
@@ -128,7 +125,6 @@ The main challenges include the complexity of managing disparate data systems, e
 x??
 ---
 
-**Rating: 8/10**
 
 #### On-Premises vs. Cloud Data Strategy
 Background context: This concept discusses strategies for managing data, specifically differentiating between on-premises and cloud environments. The focus is on how curating data before moving it to a public cloud or keeping sensitive information within an organization can impact security, governance, and analytics capabilities.
@@ -407,7 +403,6 @@ public class AccessControlExample {
 ```
 x?
 
-**Rating: 8/10**
 
 #### Data Ownership and Management
 Background context: In our example, the data owner is responsible for setting up and managing pipelines, handling requests, monitoring, troubleshooting, fixing data quality issues, implementing governance policies, etc., all within a specific line of business like marketing.

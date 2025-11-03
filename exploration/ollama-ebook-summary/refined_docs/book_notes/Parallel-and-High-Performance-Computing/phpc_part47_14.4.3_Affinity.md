@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 47)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 14.4.3 Affinity is more than just process binding The full picture
 
 ---
 
-**Rating: 8/10**
 
 #### Process Affinity and MPI
 Background context: In parallel computing, process affinity allows you to control where processes run on a multi-core processor. This is particularly useful for optimizing performance by ensuring that processes remain close to specific hardware components, thus reducing latency. The `taskset` and `numactl` commands are commonly used tools on Linux systems to set this binding.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Order of Ranks
 Background context: The order in which ranks are placed can affect data locality and communication efficiency. Proper ordering ensures that processes that communicate frequently are close together.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Binding (Affinity)
 Background context: Process binding or affinity allows you to control where a process runs on multi-core processors. This is essential for optimizing performance in parallel computing.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Placement Report Output Interpretation
 Background context: The text discusses the output from the placement report, which shows how MPI ranks are distributed across NUMA domains.
@@ -56,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advanced Affinity Constraints
 Background context: The text explains how to use advanced affinity constraints with the `--map-by` option. This allows for more precise control over process placement on hardware cores.
@@ -82,7 +76,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing Different Numbers of Threads
 The script tests various numbers of threads that divide evenly into the number of processors.
@@ -112,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Affinity: Larger Simulations
 Background context discussing how affinity benefits larger simulations by reducing buffer memory requirements, consolidating domains, reducing ghost cell regions, minimizing processor contention, and utilizing underutilized components like vector units.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 31)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 10. Batch Processing
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Processing Systems Overview
 Batch processing systems take a large amount of input data, run jobs to process it, and produce some output data. These systems are often scheduled to run periodically (e.g., daily) rather than being triggered by user requests.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce Overview
 MapReduce, introduced in 2004, is a programming model used for batch processing tasks that involves splitting input data into chunks, mapping those chunks to keys and values, and then reducing them.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Pseudocode for MapReduce
 ```pseudocode
@@ -70,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce's Role in Modern Data Systems
 MapReduce was a significant step forward for achieving massive scalability on commodity hardware.
@@ -84,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sorting versus In-Memory Aggregation
 Background context explaining the trade-offs between using in-memory aggregation (Ruby script) and sorting with repeated entries (Unix pipeline). The example provided explains how to modify both approaches based on different analysis requirements.
@@ -164,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SSTables and LSM-Trees
 Background context explaining how chunks of data can be sorted in memory and written out to disk as segment files, then merged into larger sorted files. This approach is similar to mergesort, which performs well on disks due to its sequential access patterns.
@@ -178,7 +171,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Separation of Logic and Wiring
 Background context: The separation of logic from input/output wiring is another significant feature of Unix tools. This design allows for easier composition of small tools into larger systems, as the programs can focus on their core functionality without being tightly coupled to specific file paths.
@@ -202,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Processing Pipelines
 Background context: Unix tools excel at creating data processing pipelines where the output of one tool can seamlessly become the input of another. This is achieved through pipes, which connect `stdout` to `stdin`.

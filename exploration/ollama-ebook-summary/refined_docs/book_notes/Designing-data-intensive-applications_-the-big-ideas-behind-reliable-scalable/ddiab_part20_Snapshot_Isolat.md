@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Snapshot Isolation and Repeatable Read
 
 ---
 
-**Rating: 8/10**
 
 #### Read Committed Isolation
 Background context explaining the concept. Read committed isolation ensures that transactions only see committed data, preventing dirty reads but not addressing all concurrency issues. It is used by IBM DB2 and Microsoft SQL Server with `read_committed_snapshot=off` configuration.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Non-Repeatable Read (Read Skew)
 Background context explaining the concept. Non-repeatable read or read skew occurs when a transaction sees different versions of the same data during its execution.
@@ -33,7 +30,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Read Skew Example
 Background context explaining the concept. An illustration of how read skew can occur.
@@ -49,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Snapshot Isolation
 Background context explaining the concept. Snapshot isolation maintains consistency across transactions by remembering old values of data objects during write operations.
@@ -62,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Repeatable Read vs. Snapshot Isolation
 Background context explaining the concept. Repeatable read ensures that a transaction can read the same data multiple times, and it will see the same values throughout its duration.
@@ -75,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency Issues in Read Committed Isolation
 Background context explaining the concept. Even with read committed isolation, there can still be concurrency issues such as non-repeatable reads and phantom reads.
@@ -92,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consistent Snapshot Concept
 Background context: With snapshot isolation, transactions see the state of the database as it existed at a specific point in time rather than the current state during execution.
@@ -104,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of Snapshot Isolation
 Background context: Implementing snapshot isolation involves managing multiple versions of database objects to ensure consistency across different transactions.
@@ -116,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Version Concurrency Control (MVCC)
 Background context: MVCC is used in snapshot isolation to maintain multiple versions of an object, allowing transactions to see different states.
@@ -128,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of MVCC in PostgreSQL
 Background context: PostgreSQL uses MVCC for snapshot isolation, storing multiple versions of an object.
@@ -151,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Read Committed vs. Snapshot Isolation
 Background context: While both ensure no dirty reads, they differ in how they manage snapshots.
@@ -163,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transaction IDs and Multi-Version Concurrency Control (MVCC)
 Transaction IDs are assigned to each transaction started. Each write operation is tagged with the writer's transaction ID. This system allows for maintaining a snapshot of the database at any point in time, supporting transactions without blocking others.
@@ -191,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Version Objects and Garbage Collection
 In a multi-version system, objects are not deleted but marked for deletion. A garbage collection process removes these marked rows at an appropriate time to free up space.
@@ -219,7 +205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Update as Delete and Create
 An update operation in a snapshot isolation database translates into deleting the old version of the row and creating a new one. This ensures that multiple transactions can read different versions of the data simultaneously.
@@ -245,7 +230,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Indexes in Multi-Version Databases
 Indexes must handle versions of objects accurately. They point to all versions of an object, and index queries filter out non-visible versions. Old versions can be garbage collected when no longer visible.
@@ -275,7 +259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Append-Only B-Trees
 Background context explaining how append-only B-trees work, including that they are used in systems like CouchDB, Datomic, and LMDB. These systems use an append-only/copy-on-write variant of B-trees to manage updates without overwriting existing pages.
@@ -304,7 +287,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lost Update Problem
 The lost update problem occurs when two transactions concurrently read a value from the database, modify it, and write back the modified value. If this happens, one of the modifications can be lost because the second transaction overwrites the first.
@@ -336,7 +318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Write Operations
 Atomic write operations are designed to eliminate the need for read-modify-write cycles by providing a single, atomic operation that can be performed directly on the database. This is particularly useful in scenarios where updating a counter or an account balance is required.
@@ -355,7 +336,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Explicit Locking Mechanism
 Explicit locking involves application-level mechanisms where transactions explicitly lock objects that they intend to update. This ensures that only one transaction can read or write an object at a time, thereby preventing concurrent modifications.
@@ -391,7 +371,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Operations and Locking Mechanisms
 Background context: In multiplayer games or complex applications, ensuring that concurrent operations do not lead to data inconsistencies is crucial. One approach involves using atomic operations and locks to manage these scenarios.
@@ -414,7 +393,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compare-and-Set Operation
 Background context: In systems without transactions, a compare-and-set operation can be used to ensure that an update only occurs if the current value matches the expected value. This avoids lost updates by comparing and setting the new value conditionally.
@@ -432,7 +410,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Weak Isolation Levels
 Background context: Different isolation levels in databases can affect how transactions handle concurrent updates. Weak isolation levels (like Read Committed) may not enforce strict serializability, which means they are more prone to issues like dirty reads or non-repeatable reads.
@@ -457,7 +434,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conflict Resolution and Replication
 Replicated databases face unique challenges when it comes to preventing lost updates, especially with multi-leader or leaderless replication where concurrent writes are common. Traditional techniques like locks or compare-and-set rely on a single up-to-date copy of data, which is not the case in many replicated systems.
@@ -468,7 +444,6 @@ Techniques such as allowing concurrent writes to create conflicting versions (si
 
 ---
 
-**Rating: 8/10**
 
 #### Last Write Wins (LWW)
 The last write wins conflict resolution method is prone to lost updates, as it discards concurrent writes without attempting to merge them. This can be a default in many replicated databases.
@@ -488,7 +463,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dirty Writes
 Dirty writes occur when concurrent transactions write to the same objects, potentially leading to data inconsistencies. This is one type of race condition in replicated databases.
@@ -507,7 +481,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lost Updates
 Lost updates occur when a transaction is overwritten by another transaction that happens after it. This can happen in replicated databases where concurrent writes are common.
@@ -527,7 +500,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Write Skew Anomaly
 Background context: The provided text describes a scenario where two transactions, Alice and Bob, try to update their on-call status simultaneously. Both transactions check that there are at least two doctors currently on call before proceeding. Since snapshot isolation is used, both checks return 2, allowing both transactions to proceed and commit, resulting in no doctor being on call despite the requirement.
@@ -538,7 +510,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Characterizing Write Skew
 Background context: The text explains write skew as an anomaly distinct from dirty writes or lost updates. It occurs when multiple transactions read the same objects and then update some of those objects concurrently.
@@ -549,7 +520,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preventing Write Skew
 Background context: The text outlines various strategies to prevent write skew, including serializable isolation levels and explicit locking of dependent rows.
@@ -567,7 +537,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Explicit Locking
 Background context: The provided code snippet demonstrates how to explicitly lock rows to prevent write skew in a database transaction.
@@ -584,7 +553,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generalization of Lost Update Problem
 Background context: The text explains that write skew is a generalization of the lost update problem, where multiple transactions read and potentially update different but related objects.
@@ -597,7 +565,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Write Skew in Database Transactions
 Background context: Write skew is a specific type of transaction anomaly where concurrent transactions can make changes to different rows that should logically be part of the same transaction. This issue often arises when an application performs read-write operations based on the results of previous reads, which may not reflect the current state of the database due to concurrency issues.
@@ -620,7 +587,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Meeting Room Booking System Example
 Background context: This example illustrates how write skew can occur in a meeting room booking system where you want to ensure there are no overlapping bookings for the same room. Snapshot isolation does not prevent this issue, so serializable isolation is required.
@@ -632,7 +598,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiplayer Game Example
 Background context: In multiplayer games, write skew can occur when enforcing rules across multiple game elements (like positions on a board). Locks prevent lost updates but not write skew. Unique constraints might help in some cases, but otherwise, you are vulnerable to write skew.
@@ -644,7 +609,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Username Claiming Example
 Background context: In a system where usernames are unique and users try to claim them simultaneously, snapshot isolation can lead to conflicts because one user might read that a username is available while another user claims it before their transaction commits.
@@ -656,7 +620,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preventing Double-Spending Example
 Background context: A service that allows users to spend money or points needs to ensure that users do not spend more than they have. This can be implemented by inserting a tentative spending item and checking the balance. However, write skew can cause two concurrent transactions to mistakenly believe there is enough balance for their operations.

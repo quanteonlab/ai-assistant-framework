@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 5.5 Comparison of Rotational Representations
 
 ---
 
-**Rating: 8/10**
 
 #### Overview of Rotational Representations
 Background context: The text introduces that rotations can be represented in various ways and discusses the pros and cons of different representations.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Euler Angles Representation
 Background context: The text provides an overview of Euler angles as a way to represent rotations.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interpolation Challenges in Euler Angles
 Background context: The text highlights the challenges of interpolating rotations using Euler angles.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gimbal Lock in Euler Angles
 Background context: The text explains the condition known as "gimbal lock" and its implications for Euler angles.
@@ -54,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Axis + Angle Representation
 Background context explaining the concept. The axis+angle representation uses a unit vector (the rotation axis) and an angle of rotation. This format is denoted by the four-dimensional vector [a q] = [ax ay az q], where 'a' represents the axis of rotation, and 'q' is the angle in radians.
@@ -66,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quaternions
 Background context explaining the concept. A unit-length quaternion can represent 3D rotations similar to the axis+angle representation but with some differences. The main advantage of quaternions over axis+angle representations includes their ability to concatenate rotations via multiplication and interpolate them easily.
@@ -83,7 +76,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Translation Vector and Scale Factor Interpolation via LERP
 Background context: The translation vector and scale factor are interpolated using Linear interpolation (LERP). This method is straightforward for handling translations but does not account for the shortest path or constant speed required for rotations.
@@ -101,7 +93,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quaternion Interpolation with LERP and SLERP
 Background context: Quaternions can be interpolated using either Linear interpolation (LERP) or Spherical Linear interpolation (SLERP). LERP is used for non-rotational transformations, while SLERP is preferred for rotations to ensure smooth and constant-speed transitions.
@@ -119,7 +110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rigid Transformations and Dual Quaternions
 Background context: A rigid transformation involves both rotation and translation. To represent such transformations, dual quaternions are used, which offer benefits over the typical vector-quaternion representation, particularly in linear interpolation blending.
@@ -144,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dual Numbers and Dual Quaternions
 Background context: Dual numbers are an extension of real numbers, used in the representation of dual quaternions. A dual number \( \hat{a} = a + #b \) consists of a non-dual part \( a \) and a dual part \( b \), where \( #^2 = 0 \).
@@ -173,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Degrees of Freedom (DOF) in 3D Rotations
 Background context explaining the concept. A three-dimensional object has six degrees of freedom: three for translation and three for rotation. The DOF helps understand how different representations can describe rotations using varying numbers of parameters, but always maintaining three degrees of freedom due to constraints.
@@ -194,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parametric Equation for a Ray
 Background context explaining the concept. A ray is an infinite line extending in one direction from a starting point. The parametric equation differs slightly from that of a line by constraining the parameter \( t \) to be non-negative.
@@ -212,7 +199,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sphere Representation
 
@@ -248,7 +234,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Plane Representation
 
@@ -284,7 +269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Homogeneous Coordinates and Plane Transformations
 Background context: When a point \(P\) is written in homogeneous coordinates with \(w=1\), the equation \((L \cdot P) = 0\) can be interpreted as \((n \cdot P) = d\). These equations are satisfied for all points \(P\) that lie on the plane \(L\). Planes defined in four-element vector form can easily be transformed from one coordinate space to another. Given a matrix \(M_{A,B}\) that transforms points and (non-normal) vectors from space A to space B, we use the inverse transpose of this matrix \((M_{A,B}^{-1})^T\) for transforming normal vectors such as the plane’s \(n\)-vector.
@@ -296,7 +280,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Axis-Aligned Bounding Boxes (AABB)
 Background context: An axis-aligned bounding box (AABB) is a 3D cuboid whose six rectangular faces are aligned with the mutually orthogonal axes of a particular coordinate frame. It can be represented by a six-element vector containing the minimum and maximum coordinates along each of the three principal axes, \([xmin, ymin, zmin, xmax, ymax, zmax]\), or two points \(P_{min}\) and \(P_{max}\). This simple representation allows for efficient testing whether a point \(P\) is inside an AABB.
@@ -316,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Oriented Bounding Boxes (OBB)
 Background context: An oriented bounding box (OBB) is a cuboid that has been oriented so as to align with some logical way with the object it bounds. Usually, an OBB aligns with the local-space axes of the object. It acts like an AABB in local space but may not necessarily align with world-space axes.
@@ -340,7 +322,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Frustum Definition
 Background context: A frustum is a group of six planes that define a truncated pyramid shape. In 3D rendering, frusta are used to conveniently define the viewable region of the 3D world when rendered via a perspective projection from the point of view of a virtual camera.
@@ -364,7 +345,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Testing a Point Inside a Frustum
@@ -396,7 +376,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convex Polyhedral Regions
 Background context: A convex polyhedral region is defined by an arbitrary set of planes, all with normals pointing inward (or outward). The test for whether a point lies inside or outside this volume involves checking if it satisfies conditions for each plane. This test is similar to the frustum test but can involve more planes.

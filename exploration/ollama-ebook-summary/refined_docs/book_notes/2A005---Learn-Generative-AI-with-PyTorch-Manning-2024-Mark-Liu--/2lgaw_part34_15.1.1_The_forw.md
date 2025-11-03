@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 34)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 15.1.1 The forward diffusion process
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Denoising Diffusion Models
 
@@ -19,7 +17,6 @@ The primary objective is to generate high-resolution images by simulating the gr
 
 ---
 
-**Rating: 8/10**
 
 #### Forward Diffusion Process
 
@@ -44,7 +41,6 @@ Explanation: This equation adds a small amount of Gaussian noise \( \epsilon_t \
 
 ---
 
-**Rating: 8/10**
 
 #### Training Process of Diffusion-Based Models
 
@@ -57,7 +53,6 @@ The training process works by learning to denoise images iteratively, starting w
 
 ---
 
-**Rating: 8/10**
 
 #### CLIP Model
 
@@ -72,7 +67,6 @@ CLIP processes images and text separately:
 
 ---
 
-**Rating: 8/10**
 
 #### Reverse Diffusion Process
 Background context: The reverse diffusion process aims to denoise images by training a model to reverse the forward diffusion process. This involves gradually removing noise from an input noisy image, step-by-step, until it becomes indistinguishable from the original clean image.
@@ -117,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Skip Connections in U-Net
 Background context: Skip connections are crucial for retaining fine-grained details in the denoising process. They connect feature maps from the encoder path with corresponding feature maps in the decoder path, allowing high-level and low-level features to be combined.
@@ -144,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Skip Connections in Denoising U-Net Models
@@ -156,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scaled Dot Product Attention (SDPA) Mechanism
 The scaled dot product attention mechanism is implemented in both the final block of the contracting path and the final block of the expansive path, alongside layer normalization and residual connections. SDPA is similar to the one developed in chapter 9 but applied to image pixels.
@@ -167,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Process of Denoising U-Net Models
 The training process involves the model predicting noise in a noisy image, comparing the predicted noise with actual injected noise, and adjusting weights to minimize mean absolute error (L1 loss).

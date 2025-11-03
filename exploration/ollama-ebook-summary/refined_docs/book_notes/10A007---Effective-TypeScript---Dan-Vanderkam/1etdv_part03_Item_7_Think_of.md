@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 7 Think of Types as Sets of Values
 
 ---
 
-**Rating: 8/10**
 
 #### TypeScript Type Declarations
 TypeScript provides a way to declare types for variables, parameters, and return values. These type declarations can include various properties such as `body`, `cache`, `credentials`, etc., which are common in interfaces like `RequestInit`. Understanding these helps in writing more robust code.
@@ -83,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Type Checking as Subset Relationships
 TypeScript's type checker performs operations like checking whether one set of values is a subset of another. This helps ensure that assignments and type compatibility are correct.
@@ -181,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Keyof Operators and Type Relationships
 Background context explaining the concept of `keyof` operators and how they relate to TypeScript's type system. The `keyof` operator is used to extract keys from a type, which can be combined with logical operations like intersection (`&`) and union (`|`).
@@ -269,7 +265,6 @@ function getKey<K extends string>(val: any, key: K) {
 
 ---
 
-**Rating: 8/10**
 
 #### Thinking of Types as Sets
 Background context explaining that types can be thought of as sets, where each type represents a set of values. This approach helps understand relationships between different types such as unions and intersections.
@@ -418,7 +413,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TypeScript Types as Sets of Values
 
@@ -528,7 +522,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### JavaScript's `this` Keyword vs TypeScript's `this`
 Background context: In JavaScript, the `this` keyword can have different meanings depending on its context, such as function invocation or object methods. In TypeScript, `this` is used to refer to a type that allows for polymorphism and method chaining.
@@ -600,7 +593,6 @@ Background context: TypeScript operates in both a value space (for actual JavaSc
 It's essential to understand the difference between type space and value space because constructs that behave similarly in both spaces can have different meanings. Misunderstanding this distinction can lead to errors like treating types as values or vice versa.
 ??x
 
-**Rating: 8/10**
 
 #### Type Annotations vs. Type Assertions in TypeScript
 TypeScript allows you to assign types to variables through type annotations and type assertions, which have different implications for your codebase.
@@ -697,7 +689,6 @@ const bob = {} as Person; // No error but can lead to silent type mismatches
 x??
 ---
 
-**Rating: 8/10**
 
 #### Optional Chaining (?.)
 Background context explaining the optional chaining operator. This is a runtime check to ensure that an object is not null or undefined before accessing its properties or methods.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 31)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Additional Resources
 
 ---
 
-**Rating: 8/10**
 
 #### Data/MLOps Infrastructure
 Background context: The text discusses how data teams can build a self-sufficient infrastructure using MLOps (Machine Learning Operations) practices. This involves creating an environment where data engineers can manage and deploy models, datasets, and pipelines efficiently.
@@ -163,7 +161,6 @@ public class DataEngineer {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Importance of Security in Data Engineering
 Background context: The provided text emphasizes that security is a critical aspect of data engineering. It stresses that security should be a primary concern throughout every stage of the data engineering lifecycle, given the sensitive nature of the data handled by data engineers.
@@ -224,7 +221,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Weakness of Human Security
 Background context: Security and privacy are often compromised at the human level, making individuals a critical weak point. Negative thinking and paranoia can help mitigate these risks.

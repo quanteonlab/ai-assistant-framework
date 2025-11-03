@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Looking Deeper at On-policy Learning Interest and Emphasis
 
 ---
 
-**Rating: 8/10**
 
 #### Interest and Emphasis in On-policy Learning
 In on-policy learning, states are typically treated equally. However, sometimes certain states or state-action pairs are more important than others. The interest \( I_t \) is a non-negative scalar measure indicating how much we care about accurately valuing the state (or state-action pair) at time \( t \). It can be set in any causal way and influences the distribution used for learning.
@@ -50,7 +48,6 @@ Two-step semi-gradient TD methods without interest and emphasis will converge to
 ---
 ---
 
-**Rating: 8/10**
 
 #### Concept: Generalization in Reinforcement Learning
 Background context explaining that generalization is crucial for applying reinforcement learning to real-world problems, such as artificial intelligence and large engineering applications. This involves using function approximation methods like parameterized functions to handle larger state spaces.
@@ -154,7 +151,6 @@ Background context explaining that nonlinear methods like artificial neural netw
 Nonlinear methods, such as artificial neural networks trained by backpropagation and variations of SGD, have become very popular under the term "deep reinforcement learning." These methods can capture complex patterns and non-linear relationships in the state space, making them suitable for a wide range of tasks. Their increasing popularity stems from their ability to handle high-dimensional data and complex dynamics.
 x??
 
-**Rating: 8/10**
 
 #### Linear Semi-Gradient n-step TD Convergence
 
@@ -233,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Barto and Anandan's ARP Algorithm
 Barto and Anandan (1985) introduced a stochastic version of Widrow et al.'s (1973) selective bootstrap algorithm called the associative reward-penalty (ARP) algorithm. This method was used to train multi-layer ANNs with units consisting of ARP units, trained using a globally-broadcast reinforcement signal.
@@ -323,7 +318,6 @@ Baird and Klopf (1993) introduced a novel memory-based approach, using it as the
 Baird and Klopf introduced a memory-based approach that utilized locally weighted regression as the function approximation method in Q-learning, specifically for tasks such as pole-balancing.
 x??
 
-**Rating: 8/10**
 
 #### Holland’s Classifier System
 Holland's (1986) approach used a selective feature-match technique to generalize evaluation information across state–action pairs. Each classifier matched a subset of states having specified values for a subset of features, with the remaining features having arbitrary values ("wild cards"). These subsets were then used in a conventional state-aggregation approach to function approximation.
@@ -446,7 +440,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Episodic Semi-gradient Control
 Episodic semi-gradient control extends the ideas of semi-gradient prediction methods to action values, allowing for parametric approximation. In this method, the approximate action-value function \(\hat{q}^{\pi}(s, a; w)\) is represented as a parameterized functional form with weight vector \(w\). The update rule for the weights \(w\) in the semi-gradient Sarsa algorithm can be expressed as:

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Materials-Science-and-Engineering-An-Introduction_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** MECHANISMS OF STRENGTHENING IN METALS
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Twinning Mechanism
@@ -55,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Twinning vs. Slip Deformation
 Background context explaining the differences between twinning and slip in terms of crystallographic orientation, atomic displacement, and occurrence.
@@ -90,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Twinning in BCC Metals
 Background context explaining the specific conditions under which twinning occurs in body-centered cubic (BCC) metals.
@@ -127,7 +123,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Grain Size and Mechanical Properties
@@ -142,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hall–Petch Equation
 Explanation and application of the Hall–Petch equation, which describes how yield strength changes with grain size.
@@ -164,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Grain Boundary as a Barrier to Dislocation Motion
 Explanation of why grain boundaries act as barriers to dislocation motion in metals.
@@ -180,7 +173,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dislocation Pile-Up at Grain Boundaries
 Explanation of how dislocation pile-ups occur at grain boundaries and their effects on mechanical properties.
@@ -196,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Effect of Grain Size on Toughness
 Explanation of how grain size can also improve toughness in addition to strength.
@@ -212,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deformation Mechanisms: Slip and Twinning
 Explanation of how slip and twinning mechanisms contribute to plastic deformation in metals.
@@ -242,7 +232,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Small-Angle Grain Boundaries vs. Twin Boundaries
@@ -273,7 +262,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solid-Solution Strengthening
 Background context: Impurity atoms dissolved in a metal lattice can strengthen the material by creating lattice strains that hinder dislocation movement. High-purity metals are generally softer and weaker than their alloy counterparts.
@@ -300,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Strain Hardening
 Background context: Strain hardening, also known as work hardening or cold working, is a process where metals become harder and stronger after being plastically deformed. This phenomenon increases yield and tensile strength but decreases ductility.
@@ -325,7 +312,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ductility and Strain Hardening
 Background context: As metals undergo strain hardening, their mechanical properties change. While the yield and tensile strengths increase, ductility decreases.
@@ -352,7 +338,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Strain Hardening in Metals
@@ -384,7 +369,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stress-Strain Behavior of Low-Carbon Steel
 The stress-strain behavior of low-carbon steel changes with varying levels of cold work. As cold work increases, the yield strength and tensile strength increase, while ductility decreases.
@@ -423,7 +407,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Strain Hardening Exponent
 The strain-hardening exponent \( n \) is a critical parameter in the equation relating true stress and strain, which quantifies how well a material can undergo strain hardening.
@@ -450,7 +433,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Effect of Cold Work on Ductility
 As cold work increases, the ductility (percent elongation) of materials like 1040 steel, brass, and copper decreases.

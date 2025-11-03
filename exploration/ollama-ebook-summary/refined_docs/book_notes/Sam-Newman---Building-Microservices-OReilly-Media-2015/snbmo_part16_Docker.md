@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Docker
 
 ---
 
-**Rating: 8/10**
 
 #### Docker Overview
 Docker is a platform that simplifies container management by providing tools and abstractions to handle container creation, deployment, networking, and registry storage. It allows developers to package applications along with their dependencies into lightweight, portable containers.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### VM vs. Container Abstraction
 In traditional virtual machine (VM) environments, developers deal with full operating systems, whereas Docker abstracts away the underlying OS, focusing on application-level packaging.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Docker App Abstraction
 Docker abstracts away the underlying technology used to implement services, similar to how VM images work.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Docker for Development and Testing
 Using Docker can reduce the complexity of setting up multiple services locally by running a single VM that hosts a Docker instance.
@@ -54,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scheduling Layer Requirements
 For managing multiple Docker instances across machines, additional tools like Kubernetes or CoreOS's cluster technology are required.
@@ -66,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deployment Interface Overview
 In order to ensure uniform deployment mechanisms from development to production, a single parameterizable command-line call is recommended. This approach allows for consistency and ease of use across different environments. The command typically requires three parameters: artifact name (microservice), version, and environment.
@@ -82,7 +75,6 @@ This setup ensures that deployments are consistent and can be easily triggered v
 
 ---
 
-**Rating: 8/10**
 
 #### CI/CD Trigger Example
 The CI build service can pick up changes and trigger deployments automatically. The latest build artifact from a successful CI run is passed through the pipeline to subsequent stages.
@@ -104,7 +96,6 @@ This command deploys the `catalog` microservice in the integrated QA environment
 
 ---
 
-**Rating: 8/10**
 
 #### Deployment Automation with Fabric and Boto
 Fabric is a Python library that allows mapping command-line calls to functions. It supports tasks like SSH into remote machines, making it suitable for deploying services across cloud environments.
@@ -133,7 +124,6 @@ This script sets up a connection to an EC2 instance and uses Fabric's `Connectio
 
 ---
 
-**Rating: 8/10**
 
 #### Environment Definition Overview
 Background context: The environment definition is a YAML file that maps microservices to specific compute, network, and storage resources for different environments. It allows specifying varying resource requirements based on the environment type (e.g., development vs production) and can include credentials management.
@@ -168,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Resource Management Across Environments
 Background context: The system uses different resources (instance sizes, number of nodes) for various environments based on cost-effectiveness and testing needs. By default, load balancers are automatically created if a service has more than one instance.
@@ -200,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Puppet Configuration for Microservices
 Background context: The Puppet configuration system is used to manage the deployment of microservices, ensuring consistency and ease of updates across environments. This approach leverages conventions such as standardizing port usage.
@@ -220,7 +208,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load Balancing Strategy Across Environments
 Background context: The system automatically creates load balancers when multiple instances of a service are deployed. This helps distribute traffic efficiently and ensures high availability.

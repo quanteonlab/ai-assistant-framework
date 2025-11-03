@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 42)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** AlphaGo
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### AlphaGo's Innovation: APV-MCTS
@@ -20,7 +18,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Network in APV-MCTS
 The policy network, also known as the SL-policy network, is a 13-layer deep convolutional ANN that predicts the probability distributions over legal moves. It was trained using supervised learning with a large dataset of human expert moves.
@@ -48,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Value Network in APV-MCTS
 The value network is another 13-layer deep convolutional ANN that estimates the value or outcome of game positions. It was also trained with supervised learning and provides estimated values for nodes in the MCTS tree.
@@ -78,7 +74,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluation Function in APV-MCTS
 In APV-MCTS, nodes are evaluated using two methods: the return of rollouts and an estimated value from the value function. The final evaluation combines these two with a weighted average.
@@ -113,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action Selection in APV-MCTS
 After evaluating nodes and collecting simulation results, the most-visited edge from the root node is selected as the action. This process ensures that actions are chosen based on their frequency of occurrence during simulations.
@@ -145,7 +139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### First Stage of Training AlphaGo Policy Network
@@ -159,7 +152,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Second Stage of Training AlphaGo Policy Network
 Background context: The second stage aimed to improve the policy network's performance using reinforcement learning (RL) by playing games against different versions of itself.
@@ -176,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Value Network Training
 Background context: The value network was trained to predict the likelihood of winning from a given board state. This involved using Monte Carlo policy evaluation on data obtained from self-play games.
@@ -191,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rollout Policy Network
 Background context: A faster but less accurate rollout policy network was trained for quick action selection during game play.
@@ -208,7 +198,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Neural Network Training Pipeline and Architecture
 AlphaGo's training pipeline involves initializing a policy network with a supervised learning (SL) policy, then improving it through reinforcement learning (RL) to maximize game outcomes. A value network is also trained for predicting game outcomes from self-play data.
@@ -226,7 +215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Network Architecture
 The policy network in AlphaGo takes board position representations as input, processes them through convolutional layers, and outputs a probability distribution over legal moves. The architecture is designed to learn patterns and strategies from large datasets.
@@ -247,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Value Network Architecture
 The value network uses convolutional layers to predict the expected outcome of a game from a given position. It outputs a scalar value that represents the likelihood of winning.
@@ -268,7 +255,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Network Performance vs Training Accuracy
 The performance of policy networks in AlphaGo increases as their training accuracy improves. Different numbers of convolutional filters were tested during training.
@@ -290,7 +276,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Value Network Accuracy vs Rollout Evaluation
 The value network's accuracy was compared against different rollout policies. The mean squared error (MSE) between predicted values and actual outcomes was used to assess performance.
@@ -316,7 +301,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluation Complementarity in AlphaGo
 The value network evaluated high-performance RL policies too slow to be used in live play, while rollouts using a weaker but much faster policy added precision during specific game states. This complemented each other effectively.
@@ -327,7 +311,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AlphaGo Zero's Development from AlphaGo
 AlphaGo Zero was developed to learn entirely from self-play reinforcement learning without any human data or features beyond the basic rules of Go. It used MCTS for both training and live play.
@@ -338,7 +321,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AlphaGo Zero's MCTS Implementation
 AlphaGo Zero’s MCTS runs simulations that end at leaf nodes rather than terminal game positions, guided by the output of a deep convolutional network which provides both value and move probabilities.
@@ -349,7 +331,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AlphaGo Zero's Policy Iteration
 AlphaGo Zero implements policy iteration by interleaving evaluation with improvement, similar to how it selects moves during self-play. Each MCTS run guides the next step in the learning process.
@@ -360,7 +341,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AlphaGo Zero's Neural Network Output
 AlphaGo Zero’s deep convolutional network outputs a scalar value \( v \) estimating the win probability for the current player and a vector \( p \) of move probabilities, including pass or resign moves. These are used to direct MCTS executions.
@@ -371,7 +351,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Tree Search (MCTS) Execution in AlphaGo Zero
 AlphaGo Zero uses MCTS to explore potential moves and select actions. The latest neural network provides action probabilities, which are used by MCTS to guide its searches. After selecting a move based on these search probabilities, the game progresses to the next state.
@@ -405,7 +384,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Neural Network Architecture in AlphaGo Zero
 The neural network used by AlphaGo Zero takes raw board positions as input and passes them through multiple convolutional layers to output both a policy vector `p` (probability distribution over moves) and a value function `v` (estimated probability of the current player winning).
@@ -437,7 +415,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Process of AlphaGo Zero’s Neural Network
 AlphaGo Zero trains its neural network on randomly sampled steps from self-play games. The training updates the weights to maximize policy accuracy and minimize value function error.
@@ -485,7 +462,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two-Headed Network Architecture
 Background context: The network used by AlphaGo Zero was designed to split into two heads after a number of initial layers. One head generated move probabilities, and the other head estimated the probability of winning from the current board position.
@@ -517,7 +493,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Process of AlphaGo Zero
 Background context: The network was trained using self-play games and stochastic gradient descent. It used a mix of uniform random sampling from recent games and noise injection to encourage exploration.
@@ -568,7 +543,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AlphaGo Zero and Reinforcement Learning
 AlphaGo Zero was a groundbreaking achievement by DeepMind that demonstrated superhuman performance through reinforcement learning alone. It started from random weights and learned to play Go, discovering new move sequences and achieving an Elo rating of 5,185 in tests against the previous version, AlphaGo Master (Elo rating: 4,858). The experiment showcased that minimal domain knowledge and no human data were required for such a powerful algorithm.
@@ -579,7 +553,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AlphaZero: A General Reinforcement Learning Algorithm
 AlphaZero is an even more advanced version of DeepMind’s algorithms that extends its capabilities beyond Go to other board games like chess and shogi. Unlike AlphaGo Zero, which had knowledge specific to the game of Go, AlphaZero operates without any domain-specific knowledge. It uses a combination of Monte Carlo Tree Search (MCTS) and deep neural networks to achieve top performance across different domains.
@@ -590,7 +563,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Personalized Web Services Using Reinforcement Learning
 Personalizing web services involves delivering content tailored to individual users based on their interests and preferences inferred from their online activity history. This can be achieved through recommendation policies that use reinforcement learning to improve over time by adapting to user feedback. A contextual bandit problem formalizes this scenario, where the objective is to maximize the total number of user clicks.
@@ -601,7 +573,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Contextual Bandit Problem Formalization
 In the context of personalized web services, the contextual bandit problem formalizes how decisions are made based on user-specific contexts (features) and content to maximize overall user engagement. This involves selecting actions (content delivery) that maximize rewards (e.g., clicks) given current contexts.
@@ -614,7 +585,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Contextual Bandit Algorithm for Webpage Optimization
 Background context explaining how contextual bandits are used to optimize click-through rates on webpages. The algorithm aims to maximize CTR by selecting news stories based on user contexts (e.g., time of day, past behavior).
@@ -634,7 +604,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Off-Policy Evaluation in Marketing Campaigns
 Background context explaining the challenges of evaluating new policies without deploying them, and how off-policy evaluation methods help assess performance.
@@ -655,7 +624,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Markov Decision Problem (MDP) Formulation for Personalized Recommendations
 Background context on how MDPs can be used to model and optimize personalized recommendation systems, emphasizing the long-term benefits over greedy policies.
@@ -677,7 +645,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Greedy Optimization Algorithm
@@ -711,7 +678,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Life-Time Value (LTV) Optimization Algorithm
 Background context explaining the LTV optimization algorithm. This approach aimed to improve the number of clicks over multiple visits by using a reinforcement learning algorithm based on MDP formulation, specifically fitted Q iteration (FQI).

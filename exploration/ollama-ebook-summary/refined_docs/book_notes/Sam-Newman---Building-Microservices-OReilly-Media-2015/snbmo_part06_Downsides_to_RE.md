@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Downsides to REST Over HTTP
 
 ---
 
-**Rating: 8/10**
 
 #### REST Frameworks and Overhead
 Background context explaining the trade-offs when using REST frameworks, including potential coupling issues.
@@ -49,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HTTP Overhead
 Background context explaining the potential overhead of using REST over HTTP, especially in scenarios requiring low latency.
@@ -88,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Message Broker Overview
 Message brokers like RabbitMQ serve as intermediaries between producers and consumers of events. They handle subscriptions, ensuring that consumers are informed when an event arrives. Brokers can also manage state, such as tracking which messages a consumer has already seen.
@@ -135,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Competing Consumer Pattern in ATOM
 The Competing Consumer pattern involves bringing up multiple worker instances to compete for messages. This approach is useful for scaling the number of workers to handle a list of independent jobs, but it introduces complexity if shared state needs to be managed.
@@ -192,7 +187,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Asynchronous Architecture Complexity
@@ -225,7 +219,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Catastrophic Failover Example
 Background context: The author provides a real-world example from 2006 involving a bank's pricing system, which demonstrates the challenges of asynchronous architectures. A bug caused workers to crash repeatedly due to unhandled messages in a transacted queue.
@@ -254,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Monitoring and Correlation IDs
 Background context: The author emphasizes the importance of having good monitoring tools and using correlation IDs to trace requests across different processes. This is crucial in complex, asynchronous systems.

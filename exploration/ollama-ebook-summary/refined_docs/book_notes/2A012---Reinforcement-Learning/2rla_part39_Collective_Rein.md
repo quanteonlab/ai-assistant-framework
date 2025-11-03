@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 39)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Collective Reinforcement Learning
 
 ---
 
-**Rating: 8/10**
 
 #### Run and Twiddle Strategy
 Selfridge's "run and twiddle" strategy refers to a basic adaptive approach where an agent continues its actions if they are improving the outcome. Otherwise, it modifies its behavior or moves around to explore different strategies.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Learning in Populations
 The behavior of populations of reinforcement learning agents is explored, with each agent acting as a single-layer network attempting to maximize its reward signal.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Agent Reinforcement Learning
 The text touches on how multi-agent systems can be understood through the lens of reinforcement learning theory.
@@ -44,7 +40,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cooperative Game or Team Problem
 Background context explaining cooperative games and team problems. In multi-agent reinforcement learning, agents aim to maximize a common reward signal. This scenario is interesting because it involves evaluating collective actions rather than individual ones.
@@ -56,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Structural Credit Assignment Problem
 Explanation of the credit assignment problem in multi-agent reinforcement learning. The challenge lies in attributing the collective action and its outcomes to individual agents or groups.
@@ -68,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Competitive Game
 Explanation of competitive games in multi-agent reinforcement learning where agents have conflicting interests.
@@ -80,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Learning in Teams
 Explanation of how reinforcement learning works in team scenarios and the challenges faced by individual agents.
@@ -92,7 +84,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Noise and Lack of Information
 Explanation of how noise and incomplete state information affect individual agents' ability to learn effectively.
@@ -104,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agents as Part of Environment
 Explanation that all other agents are part of an individual agent’s environment due to shared state information.
@@ -118,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Contingent Eligibility Traces
 Contingent eligibility traces are initiated when a presynaptic input causes a postsynaptic neuron to fire. This is crucial for attributing credit or blame to an agent’s policy parameters based on their contribution to actions that lead to rewards.
@@ -147,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action Exploration in Teams
 To explore the space of collective actions effectively, team members need to exhibit variability in their actions. One way is through persistent variability in output using methods like Bernoulli-logistic units that probabilistically depend on input vectors.
@@ -174,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Team of Bernoulli-Logistic Units
 A team of Bernoulli-logistic units implementing the REINFORCE policy gradient algorithm collectively ascends the average reward gradient when interconnected to form a multilayer ANN. The reward signal is broadcast to all units, enabling them to learn from shared feedback.
@@ -205,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model-based vs. Model-free Reinforcement Learning
 Background context: The text discusses how reinforcement learning (RL) distinguishes between model-free and model-based algorithms, which is relevant to understanding animal behavior modes such as habitual versus goal-directed actions. It introduces the actor-critic algorithm within this framework.
@@ -216,7 +202,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor-Critic Hypothesis and Brain Implementation
 Background context: The text describes a hypothesis about how the brain might implement an actor-critic algorithm, specifically highlighting its relevance to habitual versus goal-directed behavior. It notes that inactivating certain regions of the striatum can affect learning modes differently.
@@ -227,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Differentiation Between DLS and DMS
 Background context: The text mentions that while both DLS and DMS are structurally similar, they play distinct roles in different behavioral modes—DLS for model-free processes (habits) and DMS for model-based processes (goals).
@@ -238,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dyna Architecture in Model-based Planning
 Background context: The Dyna architecture suggests that models can be engaged in background processes to refine or recompute value information. This is contrasted with the more immediate nature of model-free approaches, where planning happens at decision time via simulations.
@@ -249,7 +232,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Complexity of Addictive Behavior
 Addictive behavior involves more factors than Redish’s model suggests. Dopamine's role is not universal in addiction, and susceptibility varies among individuals. Additionally, chronic drug use changes brain circuits over time.
@@ -272,7 +254,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reward Prediction Error Hypothesis
 The reward prediction error hypothesis proposes that dopamine neurons signal the difference between expected and actual rewards (reward prediction errors), rather than just rewards themselves. This aligns with TD error behavior observed in reinforcement learning.
@@ -294,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor-Critic Model in the Brain
 The dorsal and ventral striatum may function like an actor and a critic, respectively. The TD error serves as a reinforcement signal for both structures, consistent with dopamine neuron activity targeting these regions.
@@ -322,7 +302,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor-Critic Learning Rule Overview
 Background context: The actor-critic learning rule is a fundamental concept in reinforcement learning, where an agent learns to take actions by balancing exploration and exploitation. In neural network implementations, this method uses two interconnected networks—the actor and critic—to improve decision-making processes.
@@ -334,7 +313,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eligibility Traces in Actor-Critic Networks
 Background context: In neural networks implementing actor-critic methods, each connection (synapse) maintains an eligibility trace that tracks its past activity. This mechanism helps in attributing credit or blame to synapses involved in learning.
@@ -375,7 +353,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reward-Modulated Spike-Timing-Dependent Plasticity (STDP)
 Background context: STDP is a biological mechanism where the timing of pre-synaptic and post-synaptic neuron firings determines synaptic changes. In reward-modulated STDP, neuromodulators like dopamine influence these changes.
@@ -409,7 +386,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dopamine System and Reinforcement Learning
 Dopamine fibers project widely to multiple parts of the brain, broadcasting reinforcement signals that can be modeled as a team problem. In this context, each agent receives the same reinforcement signal based on the activities of all members of the collection or team.
@@ -491,7 +467,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Goal Values, Decision Values, and Prediction Errors
 Background context: Hare et al. (2008) discussed the economic perspective on value-related signals, differentiating goal values, decision values, and prediction errors.
@@ -510,7 +485,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD-Error Modulation Hypothesis
 Background context: The reward prediction error hypothesis was first proposed by Montague et al. (1996), connecting dopamine neuron activity with TD errors.
@@ -531,7 +505,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Value-Dependent Learning Model
 Background context: Friston et al. (1994) presented a model where synaptic changes are mediated by TD-like errors provided by a global neuromodulatory signal.
@@ -561,7 +534,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TD Error and Honeybee Foraging Model
 Background context: Montague et al. (1995) presented a model of honeybee foraging using the Temporal Difference (TD) error. This model is based on research by Hammer, Menzel, and colleagues showing that the neuromodulator octopamine acts as a reinforcement signal in the honeybee brain. Montague et al. pointed out that dopamine likely plays a similar role in vertebrate brains.
@@ -579,7 +551,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor-Critic Architecture and Basal Ganglia
 Background context: Barto (1995a) related the actor-critic architecture to basal-ganglionic circuits. He discussed how Temporal Difference (TD) learning relates to key findings from Schultz’s group, which showed that dopamine acts as a reinforcement signal.
@@ -605,7 +576,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reward Prediction Error Hypothesis in Reinforcement Learning
 Background context: Gershman, Pesaran, and Daw (2009) studied reinforcement learning tasks decomposed into independent components with separate reward signals. Their findings from human neuroimaging data suggested that the brain exploits this kind of structure.
@@ -632,7 +602,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor-Critic Algorithms in the Basal Ganglia
 Background context: Barto (1995a) and Houk et al. (1995) were among the first to speculate about possible implementations of actor–critic algorithms in the basal ganglia. O’Doherty et al. (2004) suggested that the dorsal striatum might serve as the actor, while the ventral striatum acts as the critic during instrumental conditioning tasks.
@@ -643,7 +612,6 @@ Barto (1995a) and Houk et al. (1995) were among the first to speculate about act
 
 ---
 
-**Rating: 8/10**
 
 #### TD Errors and Dopamine Neurons
 Background context: The concept of TD errors is closely related to the phasic responses of dopamine neurons, as demonstrated by Schultz’s group. These errors represent the discrepancy between expected and actual rewards, which are crucial for learning in reinforcement learning models.
@@ -654,7 +622,6 @@ TD errors mimic the phasic responses observed in dopamine neurons. When the pred
 
 ---
 
-**Rating: 8/10**
 
 #### Actor Learning Rule in Reinforcement Learning Models
 Background context: The actor learning rule discussed here is more complex than earlier models proposed by Barto et al. (1983). It involves the use of eligibility traces to update weights, which are crucial for policy gradients and reinforcement learning algorithms.
@@ -665,7 +632,6 @@ The actor learning rule in this context is more complex as it includes full elig
 
 ---
 
-**Rating: 8/10**
 
 #### TD-like Mechanism at Synapses
 Background context: Rao and Sejnowski (2001) suggested that STDP could result from a TD-like mechanism, with non-contingent eligibility traces lasting about 10 milliseconds. This aligns with the concept of TD errors in reinforcement learning models.
@@ -676,7 +642,6 @@ Rao and Sejnowski proposed that STDP might be the result of a TD-like mechanism 
 
 ---
 
-**Rating: 8/10**
 
 #### Neuron Learning Rule Related to Bacterial Chemotaxis
 Background context: The metaphor of a neuron using a learning rule related to bacterial chemotaxis was discussed by Barto (1989). This model suggests that neurons can navigate towards attractants in the form of high-dimensional spaces representing synaptic weight values.
@@ -688,7 +653,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shimansky’s Synaptic Learning Rule
 Background context: Shimansky proposed a synaptic learning rule in 2009 that resembles Seung's hedonistic synapse concept, where each synapse acts like a chemotactic bacterium and collectively "swims" towards attractants in the high-dimensional space of synaptic weight values.
@@ -702,7 +666,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tsetlin's Work on Learning Automata
 Background context: The work of Russian mathematician and physicist M. L. Tsetlin laid the foundation for early research into learning automata, particularly in connection to bandit problems. His studies led to later works using stochastic learning automata.
@@ -713,7 +676,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Barto, Sutton, and Brouwer's Work on Associative Learning Automata
 Background context: The second phase of work began with the extension of learning automata to handle associative or contextual bandit problems. This involved developing algorithms that could consider past actions and their consequences for making better decisions.
@@ -724,7 +686,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Associative Reward-Penalty (ARP) Algorithm
 Background context: Barto and Anandan developed the ARP algorithm, which combined theory from stochastic learning automata with pattern classification. This algorithm proved a convergence result for associative learning.
@@ -735,7 +696,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Learning Nonlinear Functions Using Teams of A RP Units
 Background context: Barto, Anandan, and other researchers demonstrated that teams of ARP units could be connected into multi-layer ANNs to learn nonlinear functions. This showed the potential for reinforcement learning in more sophisticated tasks.
@@ -754,7 +714,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Williams' Contribution to Combining Backpropagation and Reinforcement Learning
 Background context: Richard S. Sutton's research, among others, showed that combining backpropagation with reinforcement learning could significantly enhance training of ANNs. Williams provided detailed mathematical analysis and broader application of these methods.

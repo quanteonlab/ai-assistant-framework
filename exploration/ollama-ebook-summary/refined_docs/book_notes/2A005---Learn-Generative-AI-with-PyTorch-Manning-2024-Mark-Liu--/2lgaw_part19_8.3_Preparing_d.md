@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.3 Preparing data to train the LSTM model. 8.3.1 Downloading and cleaning up the text
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Dictionaries
 Background context: After cleaning up the text data, we create dictionaries that map tokens to indices and vice versa.
@@ -36,7 +34,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Dictionaries for Indexing
 Background context: Once we have the dictionaries, they can be used to convert text data into a numerical format suitable for training an LSTM model.
@@ -54,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Token Indexing
 Background context: In natural language processing, tokenizing involves breaking down text into individual words or tokens. After tokenization, each unique word is assigned an index to facilitate machine learning models like LSTM networks.
@@ -75,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Training Pairs (x, y)
 Background context: In the context of training language models like LSTM networks, a common approach is to create pairs of input sequences (`x`) and their corresponding target outputs (`y`). These are used to train the model to predict the next word in a sequence based on the previous words.
@@ -102,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sliding Window Technique
 Background context: The sliding window technique is a common method for generating sequence data where each input sequence (`x`) consists of a fixed number of tokens, and the target output (`y`) is the next token after `x`.
@@ -133,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Word Embedding Layer
 Background context explaining how the `torch.nn.Embedding` layer works. It is a trainable lookup table that maps integer indexes to dense, continuous vector representations (embeddings). When you create an instance of `torch.nn.Embedding()`, you need to specify two main parameters: `num_embeddings`, the size of the vocabulary (total number of unique tokens), and `embedding_dim`, the size of each embedding vector.
@@ -149,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training the WordLSTM Model
 Explanation of how to train the `WordLSTM` model using the training data. It involves creating batches, initializing the model and optimizer, and iterating over the dataset to update the model's weights.

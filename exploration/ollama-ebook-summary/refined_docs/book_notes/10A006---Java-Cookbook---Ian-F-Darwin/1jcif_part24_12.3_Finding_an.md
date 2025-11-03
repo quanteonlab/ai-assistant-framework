@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.3 Finding and Reporting Network Addresses. Problem. Solution. 12.4 Handling Network Errors
 
 ---
 
-**Rating: 8/10**
 
 #### Finding and Reporting Network Addresses
 Background context: This section explains how to find and report network addresses using Java's `InetAddress` class. It covers methods like `getByName`, `getHostAddress`, and `getHostName`. Additionally, it mentions that these methods do not contact the remote host and thus do not throw exceptions related to network connections.
@@ -110,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### BufferedReader and PrintWriter Construction
@@ -189,7 +186,6 @@ The `Socket` object connects to the specified host and port. The output stream o
 x??
 ---
 
-**Rating: 8/10**
 
 #### Reading and Writing Text Data
 Background context: In Java, when you need to send or receive text data over a network connection using sockets, you can use `PrintWriter` for sending data and `BufferedReader` (or `InputStreamReader`) for receiving it. The provided code snippet demonstrates the process of writing a message to a socket and reading the response.

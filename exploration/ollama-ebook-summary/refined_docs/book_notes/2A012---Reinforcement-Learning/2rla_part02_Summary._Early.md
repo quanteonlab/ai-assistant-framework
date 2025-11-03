@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary. Early History of Reinforcement Learning
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Converging Probabilities in Reinforcement Learning
 
@@ -48,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Learning from Exploratory Moves
 
@@ -83,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Other Improvements in Reinforcement Learning
 
@@ -127,7 +123,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Reinforcement Learning Summary
 
@@ -177,7 +172,6 @@ x??
 
 ---
 
-**Rating: 10/10**
 
 #### Bellman Equation and Dynamic Programming
 Background context: In the mid-1950s, Richard Bellman and others extended the nineteenth-century theory to develop dynamic programming. This approach uses state variables and value functions to solve optimal control problems by defining a functional equation called the Bellman equation.
@@ -205,7 +199,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Markov Decision Processes (MDPs)
 Background context: MDPs are a discrete stochastic version of the optimal control problem introduced by Bellman in 1957b. These processes model decision-making under uncertainty, where actions lead to probabilistic transitions between states.
@@ -238,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Iteration Method
 Background context: Ronald Howard introduced policy iteration in 1960 for solving MDPs. This method alternates between policy evaluation and policy improvement steps to find an optimal policy.
@@ -269,7 +261,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Learning and Dynamic Programming Integration
 Background context: The integration of dynamic programming with reinforcement learning emerged later, particularly through the work of Chris Watkins in 1989. This work showed how to apply MDP formalism online, enabling real-time learning.
@@ -304,7 +295,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Neurodynamic Programming and Approximate Dynamic Programming
 
@@ -317,7 +307,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Learning and Optimal Control
 
@@ -330,7 +319,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Connection Between Optimal Control and Reinforcement Learning
 
@@ -343,7 +331,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Maze-Solving Machine and Model-Based Reinforcement Learning
 Background context: J.A. Deutsch (1954) described a maze-solving machine based on his behavior theory, which shares some properties with model-based reinforcement learning as discussed in Chapter 8.
@@ -354,7 +341,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Digital Simulation of Neural-Network Learning Machine
 Background context: Farley and Clark (1954) described a digital simulation of a neural-network learning machine that learned through trial and error, but their focus later shifted to supervised learning techniques in 1955.
@@ -365,7 +351,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Basic Credit-Assignment Problem
 Background context: Minsky’s paper “Steps Toward Artificial Intelligence” (1961) discussed the credit assignment problem, which involves distributing credit for success among multiple decisions that may have contributed to a successful outcome. This is crucial in complex reinforcement learning systems.
@@ -378,7 +363,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### STeLLA System
@@ -391,7 +375,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GLEE and BOXES Systems
 Background context: Michie and Chambers developed systems like GLEE (Game Learning Expectimaxing Engine) and BOXES for reinforcement learning. These were applied to tasks such as balancing a pole, which required learning from success and failure signals without prior knowledge.
@@ -418,7 +401,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Widrow's LMS Algorithm Modification
 Background context: The Least-Mean-Square (LMS) algorithm was modified by Widrow, Gupta, and Maitra to incorporate reinforcement learning from success and failure signals instead of training examples.
@@ -449,7 +431,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blackjack as a Learning Problem
 Widrow, Gupta, and Maitra analyzed this concept using the game of blackjack as an illustrative example. The objective was to develop algorithms that could learn optimal strategies based on feedback from playing the game.
@@ -461,7 +442,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Learning Automata for Reinforcement Learning
 Learning automata are low-memory, simple machines that improve the probability of reward in nonassociative selectional learning problems such as the k-armed bandit.
@@ -473,7 +453,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stochastic Learning Automata
 Stochastic learning automata update the probability of taking certain actions based on reward signals. These methods were influenced by earlier work in psychology and have applications in various fields.
@@ -485,7 +464,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Learning in Economics
 Early work in reinforcement learning in economics aimed at modeling artificial agents more closely resembling real-world individuals than traditional idealized agents.
@@ -497,7 +475,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Game Theory and Reinforcement Learning
 Game theory remains an active area of interest for both reinforcement learning researchers and economic modelers, though research in these areas developed largely independently.
@@ -509,7 +486,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Learning vs. Supervised Learning
 
@@ -522,7 +498,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Temporal-Difference Learning
 
@@ -535,7 +510,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Arthur Samuel's Checkers-Playing Program
 Background context explaining the concept. Arthur Samuel (1959) was the first to propose and implement a learning method that included temporal-difference ideas as part of his checkers-playing program, inspired by Shannon’s suggestions for using an evaluation function in chess.
@@ -546,7 +520,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sutton's Development of Temporal-Difference Learning
 Background context explaining the concept. Richard Sutton further developed Klopf’s ideas, particularly linking them to animal learning theories and developing a psychological model of classical conditioning based on temporal-difference learning in 1978.
@@ -557,7 +530,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Influence of Temporal-Difference Learning
 Background context explaining the concept. Various influential models of classical conditioning were developed using temporal-difference learning principles in the late 1970s and early 1980s, influenced by animal learning theories.
@@ -568,7 +540,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actor-Critic Architecture Development in 1983
 Background context: In 1983, a method combining temporal-difference learning with trial-and-error learning was developed and applied to Michie and Chambers’s pole-balancing problem. This approach is known as the actor-critic architecture.
@@ -608,7 +579,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sutton's Ph.D. Dissertation Contributions in 1984
 Background context: Richard Sutton’s Ph.D. dissertation from 1984 extensively studied the actor-critic architecture and introduced the TD(λ) algorithm, proving some of its convergence properties.
@@ -652,7 +622,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Integration of Reinforcement Learning Threads by Sutton and Watkins
 Background context: Richard Sutton made a key step in 1988 by separating temporal-difference learning from control, treating it as a general prediction method. In the same year, Chris Watkins developed Q-learning, bringing together the temporal-difference and optimal control threads.
@@ -696,7 +665,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Temporal-Difference Method in Tic-Tac-Toe Example
 Background context: The text mentions that the temporal-difference method used in the tic-tac-toe example is developed in Chapter 6. This method is an important part of reinforcement learning algorithms, focusing on incremental learning from experience without a complete model.
@@ -709,7 +677,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tabular Solution Methods Overview
 Background context: The text describes how tabular solution methods can find exact solutions to small-scale reinforcement learning problems by representing value functions as arrays or tables. These methods contrast with approximate methods that are more scalable but less precise.
@@ -722,7 +689,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bandit Problems
 Background context: The first chapter in Part I covers bandit problems, which are a special case of reinforcement learning with only one state. This setup simplifies the problem but still captures some fundamental concepts.
@@ -735,7 +701,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finite Markov Decision Processes (MDPs)
 Background context: Chapter 2 introduces the general problem formulation treated throughout the book—finite Markov decision processes—and covers key ideas like Bellman equations and value functions.
@@ -748,7 +713,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Three Fundamental Classes of Methods
 Background context: The next three chapters describe three fundamental classes of methods for solving finite Markov decision problems: dynamic programming, Monte Carlo methods, and temporal-difference learning. Each method has its strengths and weaknesses.
@@ -767,7 +731,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Combining Monte Carlo and Temporal-Difference Methods
 Background context: One chapter in Part I discusses how the strengths of Monte Carlo methods can be combined with temporal-difference methods via multi-step bootstrapping methods. This combination leverages both approaches to improve solution efficiency.
@@ -780,7 +743,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Temporal-Difference Learning with Model Learning
 Background context: The final chapter in Part I shows how temporal-difference learning methods can be combined with model learning and planning methods, such as dynamic programming, to provide a complete solution for tabular reinforcement learning problems.
@@ -795,7 +757,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### K-armed Bandit Problem Overview
 Background context explaining the k-armed bandit problem, its naming analogy to slot machines, and how actions relate to rewards. This introduces the idea of repeated choices among different options where each choice yields a numerical reward based on a stationary probability distribution.
@@ -822,7 +783,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Actions and Rewards
 Explanation of actions, their expected rewards (values), and how these are represented in terms of At and Qt.
@@ -849,7 +809,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Greedy Actions and Exploitation
 Explanation of greedy actions, exploitation, and their role in maximizing rewards over time.
@@ -880,7 +839,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exploring Actions
 Explanation of exploring actions and its importance in the long run.
@@ -908,7 +866,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Balancing Exploration and Exploitation
 Explanation of the tension between exploitation (choosing known good actions) and exploration (testing unknown options).
@@ -936,7 +893,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Steps and Learning Over Periods
 Explanation of time steps, their role in the k-armed bandit problem, and how rewards accumulate over these periods.

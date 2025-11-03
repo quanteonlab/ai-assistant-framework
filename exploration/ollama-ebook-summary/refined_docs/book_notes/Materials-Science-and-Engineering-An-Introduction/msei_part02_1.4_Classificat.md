@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Materials-Science-and-Engineering-An-Introduction_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 1.4 Classification of Materials
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Why Study Materials Science and Engineering?
@@ -20,7 +18,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### In-Service Conditions
 
@@ -33,7 +30,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Material Properties
 
@@ -46,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deterioration of Material Properties
 
@@ -59,7 +54,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Economic Considerations
 
@@ -72,7 +66,6 @@ x??
 
 ---
 
-**Rating: 10/10**
 
 #### Structure-Property Relationships
 
@@ -85,7 +78,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Four Components of Materials Science and Engineering
 
@@ -98,7 +90,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Paradigm Shift
 
@@ -111,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modified Paradigm
 
@@ -126,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ductile-to-Brittle Transition
 Background context: The text explains that certain metals can undergo a ductile-to-brittle transition when cooled to relatively low temperatures. This means they can fail suddenly with little or no permanent deformation.
@@ -140,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Brittle vs. Ductile Fracture
 Background context: The text contrasts brittle and ductile fractures, explaining that brittle materials fail suddenly with little or no deformation, while ductile materials deform significantly before fracturing.
@@ -154,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Classification of Materials
 Background context: The text categorizes solid materials into metals, ceramics, polymers, and composites. Advanced materials like semiconductors, biomaterials, smart materials, and nanoengineered materials are also discussed.
@@ -168,7 +155,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Metals
 Background context: The text explains that metals are composed of one or more metallic elements (e.g., iron, aluminum) and often contain nonmetallic elements (e.g., carbon, nitrogen, oxygen) in small amounts. Metal atoms are arranged in a specific crystalline structure.
@@ -184,7 +170,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stress Concentration at Hatch Corners
 Background context: The corners of hatches served as points of stress concentration, making them vulnerable to cracking.
@@ -196,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cracking Issues in Welded Structures
 Background context: The text explains how cracks in welded structures can propagate without being impeded by edges, leading to potential catastrophic failure.
@@ -208,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ductile-to-Brittle Transition Phenomenon
 Background context: The text mentions the concept of the ductile-to-brittle transition phenomenon and its importance in understanding crack formation.
@@ -220,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modern Structural Design Practices
 Background context: The text discusses how modern practices, such as rounding off window and door corners on marine and aircraft structures, address the issue of stress concentration.
@@ -232,7 +214,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Material Properties and Applications
 Background context: The text provides a chart comparing the density values of various materials, highlighting that metals are relatively dense compared to ceramics and polymers.
@@ -246,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nonlocalized Electrons in Metals
 Background context: Metallic materials have a large number of nonlocalized electrons, which are not bound to specific atoms. These free-moving electrons contribute significantly to various metal properties.
@@ -258,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Electrical Conductivity of Metals
 Background context: The high number of free electrons in metals enables them to conduct electricity efficiently.
@@ -270,7 +249,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Metal Properties and Their Applications
 Background context: Metals are excellent conductors of both heat and electricity. They are also opaque to visible light, giving them a lustrous appearance when polished.
@@ -286,7 +264,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Magnetic Properties of Metals
 Background context: Certain metals exhibit magnetic properties.
@@ -298,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stiffness of Metals
 Background context: The stiffness or elastic modulus is a measure of how stiff a material is under stress.
@@ -310,7 +286,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Strength of Metals
 Background context: The tensile strength is a measure of how strong a material can be before it breaks.
@@ -322,7 +297,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Resistance to Fracture of Metals
 Background context: The fracture toughness measures how well a material resists cracking or fracturing.
@@ -334,7 +308,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ceramic Materials Overview
 Background context: Ceramics are compounds between metallic and nonmetallic elements, typically oxides, nitrides, or carbides.
@@ -351,7 +324,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mechanical Behavior of Ceramics
 Background context: Ceramics exhibit high stiffness and strength but often lack ductility.
@@ -366,7 +338,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Material Properties
 Background context: The text provides a detailed comparison of various materials based on their stiffness, strength, and resistance to fracture.
@@ -385,7 +356,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Metals and Metal Alloys
 Background context explaining metals and metal alloys. They are familiar objects like silverware, scissors, coins, a gear, a wedding ring, and a nut and bolt (Figure 1.9). These materials conduct heat and electricity well due to their low electrical conductivity and resistance to high temperatures and harsh environments compared to ceramics and polymers.
@@ -396,7 +366,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Polymers
 Background context explaining polymers. They include familiar plastic and rubber materials such as polyethylene (PE), nylon, poly(vinyl chloride) (PVC), polycarbonate (PC), polystyrene (PS), and silicone rubber. Polymers have low densities, are not as stiff or strong as metals and ceramics but can be formed into complex shapes due to their ductility and pliability (Figure 1.4). Many polymers are chemically inert and non-magnetic.
@@ -407,7 +376,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison of Material Types
 Background context comparing metals, ceramics, and polymers in terms of thermal conductivity, electrical conductivity, resistance to high temperatures, mechanical properties (stiffness and strength), density, chemical inertness, and formability. Metals conduct heat and electricity well, ceramics resist high temperatures and harsh environments, while polymers are less stiff but can be easily formed into complex shapes.
@@ -418,7 +386,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Carbonated Beverage Container Requirements
 Background context: This section discusses the material properties required for carbonated beverage containers. The container must provide a barrier to carbon dioxide, be non-toxic and recyclable, strong enough to withstand dropping from several feet, inexpensive to produce, maintain optical clarity if transparent, and capable of being produced in different colors or adorned with labels.
@@ -437,7 +404,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Composites
 Background context: A composite is a material made from two or more different materials from the categories of metals, ceramics, and polymers. The goal of composites is to combine properties not found in any single material while incorporating the best characteristics of each component material.
@@ -451,7 +417,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fiberglass Properties
 Background context: Fiberglass is a composite material with properties derived from its components. Glass fibers are relatively strong and stiff but brittle, while the polymer is more flexible. As a result, fiberglass is stiff, strong, and flexible.
@@ -467,7 +432,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Carbon Fiber-Reinforced Polymer (CFRP) Properties
 Background context: CFRP is a composite material where carbon fibers are embedded within a polymer matrix. It is stiffer and stronger than glass fiber-reinforced materials but more expensive. Used in various applications like aircraft, high-tech sporting equipment, and automotive components.
@@ -481,7 +445,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Material Property Plotting
 Background context: The text describes a method of plotting material properties on logarithmic scales, showing how density correlates with stiffness. This plot helps in understanding the range of properties available across different types of materials.
@@ -502,7 +465,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advanced Materials
 Background context explaining advanced materials. These are traditional materials whose properties have been enhanced or newly developed, high-performance materials used in high-technology applications such as semiconductors, biomaterials, and smart/nanoengineered materials.
@@ -514,7 +476,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semiconductors
 Background context explaining semiconductors. They have electrical properties intermediate between conductors (metals) and insulators (ceramics/polymers). Their characteristics are sensitive to impurity atoms.
@@ -526,7 +487,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Biomaterials
 Background context explaining biomaterials. They replace diseased or injured body parts and must be biocompatible.
@@ -538,7 +498,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Smart Materials
 Background context explaining smart materials. These materials can sense environmental changes and respond adaptively.
@@ -550,7 +509,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nanomaterials
 Background context explaining nanomaterials. These are materials with fascinating properties, often metals, ceramics, polymers, or composites.

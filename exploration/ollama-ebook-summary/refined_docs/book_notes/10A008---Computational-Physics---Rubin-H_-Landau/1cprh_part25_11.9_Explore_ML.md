@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11.9 Explore ML Data Repositories
 
 ---
 
-**Rating: 8/10**
 
 #### Difference Between Successive Image Frames
 Background context: The technique of background subtraction involves comparing successive image frames to identify changes, which can be used for tasks such as object detection or motion analysis.
@@ -35,7 +33,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Objectives and Context of the Example Programs
 Background context: The example programs demonstrate practical applications of background subtraction and histogram calculation in image processing. These techniques are useful in various fields such as astrophysics, robotics, and security systems.
@@ -55,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Activation Function
 Background context explaining activation functions, their importance in neural networks, and how they help introduce non-linearity.
@@ -74,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training SimpleNet Class
 Background context explaining the training process in neural networks, including backpropagation for adjusting weights and biases.
@@ -117,7 +112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Regression with Keras for Hubble Data
 Background context: This concept involves fitting a linear regression model to the Hubble data using the Keras library in Python. The goal is to understand how to use Keras for simple linear regression and visualize the results.
@@ -129,7 +123,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training and Visualization of Linear Regression Model
 Background context: After training the model on the Hubble data, this section visualizes the learned function against the original data points.
@@ -164,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Operators and Inner Products
 Background context: Operators in Dirac notation, such as \( O = |\phi\rangle \langle \psi| \), are represented by matrices. The inner product of two states is denoted as:
@@ -206,7 +198,6 @@ Properties include:
 
 ---
 
-**Rating: 8/10**
 
 #### Example of a Simple Quantum Program
 Background context: Here is an example using Python and Cirq to create a simple quantum circuit with two qubits. We will apply the Hadamard gate to both qubits, followed by a CNOT gate.

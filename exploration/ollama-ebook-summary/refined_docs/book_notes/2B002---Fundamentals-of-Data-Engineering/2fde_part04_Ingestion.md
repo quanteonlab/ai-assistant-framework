@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Ingestion
 
 ---
 
-**Rating: 8/10**
 
 #### Compatibility and Performance of Storage Solutions
 
@@ -186,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch versus Streaming
 
@@ -345,7 +342,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Appropriate Tools for Use Case
 Background context: The choice between using managed services like Amazon Kinesis, Google Cloud Pub/Sub, and Dataflow or setting up your own instances of Kafka, Flink, Spark, Pulsar, etc., depends on various factors including cost, maintenance, and specific requirements.
@@ -469,7 +465,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Data Transformation Overview
@@ -610,7 +605,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Featurization for Machine Learning Models
 
@@ -712,7 +706,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Poor Data Quality and Organizational Silos
 Background context: The quality of data significantly affects its usability. Poor data quality, characterized by inaccuracies, inconsistencies, or missing values, can lead to incorrect insights and decisions. Additionally, organizational silos, where different teams operate independently without sharing information, hinder the effective use of analytics across an organization.
@@ -759,7 +752,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Engineer's Familiarity with ML
 Data engineers should have a foundational understanding of machine learning techniques and data processing requirements. This knowledge helps maintain efficient communication and facilitates collaboration within teams.
@@ -809,7 +801,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Principle of Least Privilege in Database Management
@@ -935,7 +926,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Discoverability
@@ -1014,7 +1004,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Data Accountability
@@ -1095,7 +1084,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Lineage
 Data lineage describes the recording of an audit trail of data through its lifecycle, tracking both the systems that process the data and the upstream data it depends on. This helps with error tracking, accountability, and debugging of data and the systems that process it.

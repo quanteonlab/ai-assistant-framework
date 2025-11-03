@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Materials-Science-and-Engineering-An-Introduction_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 2.9 Molecules
 
 ---
 
-**Rating: 8/10**
 
 #### Bonding Tetrahedron
 Background context: A bonding tetrahedron helps visualize the different types of bonds—ionic, covalent, metallic, and van der Waals—and mixed bonds such as covalent-ionic, covalent-metallic, and metallic-ionic.
@@ -37,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Covalent-Ionic Bonds
 Background context: Covalent-ionic bonds represent a mix of ionic and covalent bonding. The degree of each bond type depends on the electronegativity difference between atoms.
@@ -72,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mixed Metallic-Ionic Bonds
 Background context: Compounds containing two different metals with significant electronegativity differences show mixed metallic-ionic bonds. The more electronegative metal forms ionic bonds, while the less electronegative one forms covalent or metallic bonds.
@@ -106,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Bonding Types and Material Classification
 Background context explaining how different bonding types (ionic, covalent, metallic, van der Waals) are related to various material classifications.
@@ -133,7 +128,6 @@ The materials are classified based on their bonding types:
 
 ---
 
-**Rating: 8/10**
 
 #### Calculation of Theoretical Density for Copper
 Background context: The theoretical density \( \rho \) can be calculated using the formula \( \rho = \frac{nA}{V_C N_A} \), where \( n \) is the number of atoms per unit cell, \( A \) is the atomic weight, \( V_C \) is the volume of the unit cell, and \( N_A \) is Avogadro's number.
@@ -151,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Crystal Systems
 Background context: The seven crystal systems are defined based on the unit cell geometry and symmetry. Each system has specific lattice parameter relationships.
@@ -163,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Cell Geometry for Different Crystal Systems
 Background context: The cubic system has the highest symmetry with equal edge lengths and right-angle interaxial angles. Other systems like triclinic have no symmetry with unequal edge lengths and non-right-angle interaxial angles.
@@ -175,7 +167,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Crystal Structure and Unit Cells
 Background context: The crystal structure is often described using unit cells, which can be more complex than those for simple structures like FCC, BCC, or HCP. This framework helps in determining atomic packing factors and densities.

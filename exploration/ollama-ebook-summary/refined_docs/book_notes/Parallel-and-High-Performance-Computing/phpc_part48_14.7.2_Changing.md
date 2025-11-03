@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 48)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 14.7.2 Changing your process affinities during run time
 
 ---
 
-**Rating: 8/10**
 
 #### Setting Affinities in Your Executable
 Background context: The text discusses embedding pinning logic into an executable to simplify process placement and affinity management. This approach can be more user-friendly than using complex mpirun commands, as it integrates affinity settings directly into the application.
@@ -56,7 +54,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Run Time Affinity Management with QUO
 Background context: The text introduces the QUO library for setting and modifying affinity at runtime. This is particularly useful when applications call libraries that use both MPI ranks and OpenMP threads, requiring dynamic adjustments to process binding.
@@ -91,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Placement and Bindings in MPI, OpenMP, and MPI+OpenMP
 Background context: The handling of process placement and bindings is a relatively new but crucial topic in parallel programming. This involves understanding how processes are assigned to specific cores or nodes in hardware architectures, which can significantly impact performance.
@@ -107,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OpenMP: Beyond the Common Core
 Background context: OpenMP is a widely-used shared-memory parallel programming API that allows for multi-threading within a single process. It offers various mechanisms for task scheduling and resource management, including affinity settings.
@@ -125,7 +120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Portable Hardware Locality (hwloc)
 Background context: hwloc is a standalone package that provides a universal hardware interface for most MPI implementations and many other parallel programming software applications. It helps in managing process placements and thread bindings efficiently.
@@ -150,7 +144,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Discovering Hardware Characteristics and Running Tests
@@ -173,7 +166,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Combining Vector Addition and Pythagorean Formula
 
@@ -196,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Setting Placement and Affinity within Applications
 
@@ -231,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Management of High-Performance Clusters
 Background context: As the number of users on high-performance computing clusters increases, it becomes necessary to manage the system to ensure efficient job execution and prevent conflicts.
@@ -241,7 +231,6 @@ Management is crucial in high-performance computing because it helps maintain or
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Schedulers: Overview
 Background context explaining the importance of batch schedulers in managing Beowulf clusters. In the late 1990s, Beowulf clusters emerged as a way to build computing clusters using commodity hardware. However, without software control and management, these clusters would not be productive resources.
@@ -263,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Managing Back-End Nodes with Queues
 Background context explaining that back-end nodes are organized into queues, each with specific policies for job size and runtime. This setup helps in efficient resource allocation.
@@ -284,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Big Job Management
 Discussing strategies for managing large jobs in a batch system, including queue management and non-work hours scheduling.
@@ -300,7 +287,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Job Submission Strategies
 Discussing strategies for submitting multiple jobs in an efficient manner, including the use of shell scripts and job dependencies.
@@ -321,7 +307,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Checkpointing for Long-Running Jobs
 Explaining the importance of checkpointing for long-running batch jobs to optimize resource usage.
@@ -350,7 +335,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -364,7 +348,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Running Applications on Allocated Nodes
 Once nodes are allocated, you can run applications as required.
@@ -382,7 +365,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transitioning to Batch Scripts
 Batch scripts are useful for running jobs without user interaction, allowing automation and resubmission in case of failures.
@@ -410,7 +392,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Scheduler Overview
 Slurm is a popular batch scheduler used for managing parallel computing jobs. It helps organize and manage compute resources efficiently by scheduling jobs to run at specific times and on designated nodes. The options provided allow for precise control over job execution, resource allocation, and output redirection.
@@ -429,7 +410,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Job Naming and Output Files
 Slurm allows you to name your jobs and direct their output (both standard out and error) to specific files. This is useful for tracking job progress and debugging.
@@ -447,7 +427,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OverSubscription and Exclusive Use
 OverSubscription allows more tasks than available nodes, while exclusive use ensures that only one job can be run per node. These options are useful for optimizing resource utilization.

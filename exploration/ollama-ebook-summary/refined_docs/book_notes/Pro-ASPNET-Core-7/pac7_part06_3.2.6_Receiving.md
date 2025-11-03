@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3.2.6 Receiving form data
 
 ---
 
-**Rating: 8/10**
 
 #### Linking Action Methods Using Tag Helpers
 Background context: In ASP.NET Core, tag helpers are used to generate dynamic HTML elements. The `asp-action` attribute is a tag helper that generates a URL for an action method based on the configuration of the application.
@@ -20,7 +18,6 @@ For example, when you use `asp-action="RsvpForm"`, it will generate a URL like `
 
 ---
 
-**Rating: 8/10**
 
 #### Using Tag Helpers to Create Forms
 Background context: ASP.NET Core provides tag helpers that simplify form creation and data binding. The `form` element with the `asp-action` attribute helps in submitting forms directly to an action method.
@@ -43,7 +40,6 @@ The `asp-for` attribute binds the input field to the `Name` property of a `Guest
 
 ---
 
-**Rating: 8/10**
 
 #### Explanation of Dynamic URL Generation
 Background context: Tag helpers like `asp-action` dynamically generate URLs based on application configuration. This allows for flexibility in URL routing without hardcoding specific paths.
@@ -61,7 +57,6 @@ And later change your routes to include an area like `asp-area="Party"`, the lin
 
 ---
 
-**Rating: 8/10**
 
 #### ASP.NET Core Action Method for Form Handling
 Background context: The application currently only renders the form on a GET request but does not handle the form submission on a POST request. This needs to be addressed by adding an action method that can process both GET and POST requests.
@@ -94,7 +89,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### ASP.NET Core URL Routing and Tag Helpers
 Background context: The `asp-action` attribute is used in the form tag to specify which action method should handle the submission. This ensures that when URLs are updated, the generated HTML content reflects these changes.
@@ -109,7 +103,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Adding HTTP Methods to Actions
 
@@ -137,7 +130,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Binding
 
@@ -169,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### ASP.NET Core Model Binding
@@ -182,7 +173,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding a Thanks View
 Background context explaining the importance of views in ASP.NET Core, specifically how they present data to the user based on model objects.
@@ -208,7 +198,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing the Form Submission
 Background context explaining how to test form submission and view rendering in an ASP.NET Core application using a browser.
@@ -224,7 +213,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -257,7 +245,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Razor View for Displaying Responses
 Background context: In ASP.NET Core, views are created using Razor syntax, which combines HTML markup with C# code to generate dynamic content. The view file `ListResponses.cshtml` will render the filtered list of responses.
@@ -301,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding URL Routing in ASP.NET Core
 Background context: In ASP.NET Core, URLs are mapped to controller actions via routing configurations. When a user navigates to `/Home/ListResponses`, the framework looks for an action method named `ListResponses` within the `HomeController`.
@@ -323,7 +309,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Data Filtering with LINQ
 Background context: LINQ (Language Integrated Query) is used in C# for querying data. In this case, you use LINQ to filter the list of responses based on whether a guest will attend the party.
@@ -346,7 +331,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generating Dynamic Content with Razor Syntax
 Background context: Razor syntax allows embedding C# code directly into HTML, enabling dynamic content generation based on data models. In this case, you use Razor to display a table of guests who will attend the party.

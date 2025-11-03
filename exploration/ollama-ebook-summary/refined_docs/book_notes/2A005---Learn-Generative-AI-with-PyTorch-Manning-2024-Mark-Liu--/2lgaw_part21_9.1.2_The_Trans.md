@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.1.2 The Transformer architecture
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Attention Mechanism
 Background context explaining the introduction of attention mechanisms. The concept was introduced by Bahdanau, Cho, and Bengio in 2014 in their paper "Neural Machine Translation by Jointly Learning to Align and Translate."
@@ -20,7 +18,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Attention Mechanism and River Pun
 Background context about the pun relating the river's richness to its banks.
@@ -34,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transformer Architecture
 Background context explaining the architecture of the Transformer model introduced in the groundbreaking paper "Attention Is All You Need."
@@ -54,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Self-Attention Mechanism in Transformer
 Background context explaining the self-attention mechanism used in the Transformer.
@@ -71,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Encoder-Decoder Structure
 Background context explaining the encoder-decoder structure in the Transformer.
@@ -102,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decoder's Role in Translation
 Background context explaining the role of the decoder in generating translations.
@@ -139,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generator in Transformer
 Background context explaining the role of the generator in producing the final output.
@@ -164,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Subword Tokenization
 Background context explaining subword tokenization and its importance. Subword tokenization is a technique used in Natural Language Processing (NLP) to break words into smaller components or subwords, allowing for more efficient and nuanced processing of language variations and complexities.
@@ -231,7 +222,6 @@ After combining the word embedding and positional encoding into a single represe
 
 ---
 
-**Rating: 8/10**
 
 #### Multihead Self-Attention Layer
 Multihead self-attention is a mechanism used in both the encoder and decoder of the Transformer model. It allows the model to weigh the importance of different elements within the same sequence, considering various aspects or "heads" simultaneously. This parallel processing helps capture more complex relationships between words.
@@ -274,7 +264,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Feed-Forward Network in Encoder
 The feed-forward network (FFN) in each encoder layer processes every position independently. Unlike the self-attention mechanism, which operates on the entire sequence, this fully connected network treats each element as a separate input and generates its output without considering other elements' positions.
@@ -307,7 +296,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Masked Multihead Self-Attention in Decoder
 Masked multihead self-attention ensures that the model only considers past positions when generating predictions for a particular position. This is crucial for sequential tasks like language translation, where future tokens should not influence current token generation.
@@ -349,7 +337,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multihead Cross-Attention in Decoder
 The multihead cross-attention layer in the decoder allows it to integrate information from the encoder output. This mechanism is crucial for tasks like translation, where the decoder needs to reference the entire context provided by the encoder.
@@ -393,7 +380,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decoder Process Overview
 Background context: The decoding process begins when the decoder receives an input phrase, typically in French. This involves transforming the French tokens into word embeddings and positional encodings, combining them to form a single embedding. This step ensures that not only is the semantic content of the phrase understood but also that the sequential context is maintained for accurate translation or generation tasks.
@@ -414,7 +400,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Autoregressive Decoding
 Background context: The decoder operates in an autoregressive manner, generating the output sequence one token at a time. It starts with a "BOS" token to indicate the beginning of a sentence and then predicts subsequent tokens based on previously predicted tokens. This process ensures that each step is informed by all previous predictions.
@@ -442,7 +427,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Encoder-Only Transformer
 Background context: The encoder-only Transformer contains N identical encoder layers and can convert a sequence into abstract vector representations. An example provided is BERT, which uses 12 encoder layers for text classification tasks.
@@ -476,7 +460,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Decoder-Only Transformer
 Background context: The decoder-only Transformer also consists of N identical layers but uses decoder layers. An example provided is ChatGPT, which generates text based on a prompt by predicting the most likely next token.
@@ -532,7 +515,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multihead Attention Mechanism
 Multihead attention is a critical component of the Transformer architecture, enabling it to capture complex relationships within input sequences. The mechanism uses query (Q), key (K), and value (V) vectors to compute scaled dot-product attention scores across multiple heads.
@@ -550,7 +532,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Attention Function Implementation
 The attention function takes in queries (Q), keys (K), and values (V) to compute the final attention output. It involves scaling the dot product between queries and keys, applying softmax to normalize scores, and finally computing a weighted sum over the values.
@@ -589,7 +570,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MultiHeadedAttention Class Implementation
 The `MultiHeadedAttention` class implements multihead attention by splitting queries, keys, and values into multiple heads, computing attention independently for each head, and combining the results.
@@ -638,7 +618,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Position-wise Feed-Forward Network (FFN)
 A position-wise feed-forward network processes each embedding independently, making it suitable for capturing intricate features in the training data. It consists of two linear layers with a non-linear activation function in between.

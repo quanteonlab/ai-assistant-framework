@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Policy Improvement
 
 ---
 
-**Rating: 8/10**
 
 #### Value Function and Policy Evaluation
 
@@ -23,7 +21,6 @@ For a deterministic policy, this simplifies to evaluating the state value functi
 
 ---
 
-**Rating: 8/10**
 
 #### Action-Value Function and Its Approximation
 
@@ -40,7 +37,6 @@ This is the expected sum of discounted future rewards starting from state \(s\) 
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Improvement Theorem
 
@@ -61,7 +57,6 @@ Thus, the new policy is strictly better.
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Improvement Algorithm for Stochastic Policies
 
@@ -78,7 +73,6 @@ where \(p(a'|s,a)\) is the probability distribution over actions under the new p
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Policy Improvement with Stochastic Policies
 
@@ -97,7 +91,6 @@ By making \(\pi'\) greedy with respect to \(v_\pi\), we get a better policy.
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Improvement for Deterministic Policies
 
@@ -119,7 +112,6 @@ Note: Each flashcard contains only one question and provides detailed explanatio
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Iteration Overview
 Policy iteration is an algorithm for finding an optimal policy in a finite Markov Decision Process (MDP). It involves two main steps: policy evaluation and policy improvement. The process starts with an arbitrary policy, evaluates it to determine its value function, then improves the policy based on this value function, and repeats until convergence.
@@ -132,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Evaluation
 During each iteration of policy iteration, the value function for the current policy needs to be computed. This is done using iterative methods such as value iteration or policy evaluation.
@@ -151,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Improvement
 After evaluating a new policy, policy improvement involves updating the policy to maximize the expected return based on the current value function. The key idea is to choose actions that lead to higher values.
@@ -170,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Iteration Algorithm
 The complete algorithm for policy iteration consists of multiple iterations, with each iteration involving policy evaluation and policy improvement.
@@ -198,7 +187,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Jack’s Car Rental Example
 Jack manages two car rental locations. Customers arrive according to Poisson distributions with different means for requests and returns at each location. The goal is to minimize the cost of moving cars while maximizing revenue from rentals.
@@ -220,7 +208,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Iteration Overview
 Policy iteration is a method for solving Markov Decision Processes (MDPs) that alternates between policy evaluation and policy improvement steps. The policy evaluation step computes the value function of a given policy, while the policy improvement step finds an improved policy based on this value function.
@@ -232,7 +219,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence of Policy Iteration
 In some cases, policy iteration can find an optimal policy in just one iteration because the policies become fixed after the first few steps.
@@ -244,7 +230,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bug in Policy Iteration
 Policy iteration may not terminate if the policy continually switches between equally good policies.
@@ -256,7 +241,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Iteration for Action Values
 Policy iteration can be extended to consider action values (q-values) instead of state values.
@@ -268,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### -Soft Policies
 A policy is \(\epsilon\)-soft if it assigns a non-zero probability to each action in each state.
@@ -291,7 +274,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Value Iteration Algorithm
 Value iteration is an alternative to policy iteration that directly maximizes the value function.
@@ -303,7 +285,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Termination Condition for Value Iteration
 Value iteration can stop when the change in value function is small enough.
@@ -315,7 +296,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of Value Iteration for Gambler's Problem
 Implementing value iteration requires handling the state and action spaces carefully.

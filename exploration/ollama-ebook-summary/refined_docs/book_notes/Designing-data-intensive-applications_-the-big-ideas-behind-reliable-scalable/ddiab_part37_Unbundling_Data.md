@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 37)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Unbundling Databases. Composing Data Storage Technologies
 
 ---
 
-**Rating: 8/10**
 
 #### Database vs. Operating System Fundamentals
 Background context explaining how databases and operating systems manage data. Both store data but serve different purposes: filesystems manage files, while databases handle structured records.
@@ -186,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating an Index Process
 
@@ -264,7 +261,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consistent Index Creation within a Single Database
 Background context: Within a single database, creating consistent indexes is a built-in feature. This means that when data changes occur, the database ensures these changes are reflected consistently across all relevant indexes.
@@ -404,7 +400,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Unbundling Data Systems
@@ -471,7 +466,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Materialized Views and Caching
 Background context: Materialized views are essentially precomputed caches. They can be used to improve query performance by storing the results of complex queries or recursive graph queries, thus avoiding repeated computations.
@@ -601,7 +595,6 @@ class SpreadsheetCell {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Web Application Model
 Background context: The typical web application model involves deploying stateless services, where any user request can be routed to any server, and the server forgets about the request after sending a response. This state needs to be stored in databases. Over time, there has been a trend towards separating application logic from database management.
@@ -644,7 +637,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unbundling Databases and Derived Data
 Background context: Unbundling databases involves taking actions that are traditionally done within a database (like triggers or secondary index updates) and applying them to create derived datasets outside of the primary database. This includes caches, full-text search indexes, machine learning models, and analytics systems.
@@ -706,7 +698,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Dependent Joins
 Time-dependence refers to how events that occur at different times can affect derived datasets. In the context of financial services, exchange rates change over time, and these changes need to be considered when reprocessing data.
@@ -817,7 +808,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Materialized Views and Caching Overview
 Materialized views and caching are techniques that shift the boundary between write-time and read-time work. They allow for more efficient reads by precomputing some results, which comes at the cost of increased write-time effort.
@@ -951,7 +941,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Client/Server Model Transition
@@ -1029,7 +1018,6 @@ public class SSEClient {
 x??
 ---
 
-**Rating: 8/10**
 
 #### End-to-End Event Streams
 Background context: The text discusses extending stream processing and messaging ideas to end-user devices, allowing state changes to flow through an end-to-end write path from device interactions to user interfaces. This involves managing offline scenarios for devices and propagating state changes with low delay.
@@ -1096,7 +1084,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Representing Reads as Streams of Events

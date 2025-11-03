@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Financial Machine Learning
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Artificial Intelligence (AI)
@@ -144,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Regression
 Background context: Linear regression is a fundamental supervised learning technique used for predicting continuous outcomes. It models the relationship between a dependent variable (Y) and one or more independent variables (X) using a linear equation.
@@ -268,7 +265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Systemic Risk Overview
 Systemic risk refers to the risk that a market shock could lead to the failure of one or more financial institutions, which might trigger a cascade of failures and destabilize the entire financial system. The global financial crisis of 2007–2008 is an example of such a scenario.
@@ -315,7 +311,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Financial Domain Knowledge
 Financial domain knowledge is crucial for a financial data engineer, as it involves understanding various aspects of finance and financial markets. This includes knowing about different types of financial instruments, players in the market, data generation mechanisms, company reports, and financial variables and measures.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A007---Effective-TypeScript---Dan-Vanderkam_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Item 4 Get Comfortable with Structural Typing
 
 ---
 
-**Rating: 8/10**
 
 #### Structural Typing in TypeScript
 Background context explaining structural typing. TypeScript's type system is structural, meaning that it checks the structure of objects rather than their type names or interfaces. This allows for more flexible and dynamic typing but can also introduce potential issues if not handled carefully.
@@ -145,7 +143,6 @@ test('getAuthors', () => {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Duck Typing and Structural Typing in TypeScript
 
@@ -305,7 +302,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Your Editor to Interrogate and Explore the Type System
 Background context explaining the importance of using your editor for type exploration. This involves understanding how TypeScript infers types, which is crucial for writing clean and idiomatic code.

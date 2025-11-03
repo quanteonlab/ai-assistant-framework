@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Business-Law_-Text-and-Cases_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 17-2 Third Party Beneficiaries
 
 ---
 
-**Rating: 8/10**
 
 #### Assignments and Delegations - Exceptions
 Background context: There are specific scenarios where assignments or delegations cannot be made. These include statutes that prohibit assignment, contracts for personal services, performance depending on the obligor’s personal skills, and prohibitions in the contract itself.
@@ -22,7 +20,6 @@ Exceptions to the rules of assignments and delegations include:
 
 ---
 
-**Rating: 8/10**
 
 #### Usage of Trade
 
@@ -54,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Requirements for Negotiability
 Background context: For an instrument to be considered negotiable, it must meet specific criteria as outlined in UCC Article 3.

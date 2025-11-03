@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 6.4.2 Round-trip conversions of black hair images and blond hair images
 
 ---
 
-**Rating: 8/10**
 
 #### CycleGAN Discriminators
 CycleGAN consists of two discriminators and two generators. One generator converts images from domain A to domain B while the other converts images from domain B to domain A. The two discriminators classify if a given image is from a specific domain.
@@ -31,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of CycleGAN
 CycleGAN can translate images between two domains without paired examples. It uses a combination of generators and discriminators to ensure that the transformation process is both realistic and reversible.
@@ -75,7 +72,6 @@ Please let me know if there's anything else I can help with! 😊🙏
 
 ---
 
-**Rating: 8/10**
 
 #### Autoencoders vs. Variational Autoencoders
 Autoencoders (AEs) and variational autoencoders (VAEs) are both generative models used for compressing data into a lower-dimensional latent space and reconstructing it back to its original form.
@@ -96,7 +92,6 @@ An AE compresses each input into a specific point in the latent space using dete
 
 ---
 
-**Rating: 8/10**
 
 #### Building an Autoencoder for Handwritten Digits
 The goal is to create an autoencoder capable of generating handwritten digits from the MNIST dataset. The encoder compresses each 28x28 grayscale image into a 20-value deterministic vector, while the decoder reconstructs these images with minimal pixel-level error.
@@ -134,7 +129,6 @@ autoencoder = Model(input_img, decoded)
 
 ---
 
-**Rating: 8/10**
 
 #### Building a Variational Autoencoder for Face Images
 The objective is to generate human face images by using the VAE framework. The training set consists of 3x256x256 pixel eyeglasses images compressed into 100-value probabilistic vectors following a normal distribution.
@@ -176,7 +170,6 @@ vae = Model(input_img, output_img)
 
 ---
 
-**Rating: 8/10**
 
 #### Encoding Arithmetic and Interpolation with VAEs
 VAEs enable manipulation of latent vectors (encodings) to generate new images or interpolate between existing ones. This is achieved through arithmetic operations on the latent vectors.
@@ -201,7 +194,6 @@ reconstructed_image = vae.predict(new_latent_vector)
 
 ---
 
-**Rating: 8/10**
 
 #### Practical Applications of VAEs
 VAEs have practical applications such as generating realistic images, interpolating between different images, and performing encoding arithmetic. A specific example is using VAEs in an eyewear store to generate images of women wearing a new style of glasses.
@@ -217,7 +209,6 @@ Example: If you have images of men with a certain style of glasses and both men 
 
 ---
 
-**Rating: 8/10**
 
 #### Overview of AEs and VAEs
 VAEs (Variational Autoencoders) are a type of neural network used for unsupervised learning, particularly effective for tasks like image generation, compression, and denoising. They consist of an encoder and a decoder. The encoder compresses the input into a lower-dimensional representation called latent space, while the decoder reconstructs the input from this representation.
@@ -265,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### VAE Applications
 VAEs can be applied beyond image generation, including tasks like clothing, furniture, food visualization, music synthesis, and text generation. They offer flexibility in handling various types of data.

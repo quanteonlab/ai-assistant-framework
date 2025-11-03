@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Failures
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Channels and Message Delivery
@@ -73,7 +71,6 @@ class IdempotentProcess {
 x??
 ---
 
-**Rating: 8/10**
 
 ---
 #### Sharding Strategies Overview
@@ -161,7 +158,6 @@ public class ShardGateway {
 x??
 ---
 
-**Rating: 8/10**
 
 #### Range Partitioning
 Range partitioning splits data into partitions based on a continuous range of keys. This is useful for scanning ranges efficiently but can lead to imbalanced partitions if the key distribution is uneven.

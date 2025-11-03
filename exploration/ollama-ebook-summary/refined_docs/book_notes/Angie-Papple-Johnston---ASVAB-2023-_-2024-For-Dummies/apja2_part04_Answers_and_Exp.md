@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Answers and Explanations
 
 ---
 
-**Rating: 8/10**
 
 #### Order of Operations
 
@@ -40,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dividing Decimals
 
@@ -62,7 +59,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Meeting Points
 Problems involving meeting points often require setting up equations based on the distances and speeds of two objects traveling towards each other or away from each other.
@@ -90,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Irrational Numbers
 Irrational numbers cannot be represented as a simple fraction.
@@ -101,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Maintaining Balance in Equations
 Equations must remain balanced when performing algebraic operations.
@@ -114,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving Multi-Step Equations
 Background context: Multi-step equations require performing multiple inverse operations to isolate the variable. The goal is to get the variable on one side of the equation by moving terms from one side to another and using appropriate inverse operations like subtraction or addition, followed by division or multiplication.
@@ -137,7 +130,6 @@ The answer is correct as both sides are equal.
 
 ---
 
-**Rating: 8/10**
 
 #### Simplifying Algebraic Expressions
 Background context: Before evaluating or solving algebraic expressions, it's essential to simplify them. Simplification involves removing parentheses using the distributive property, combining like terms, and combining constants.

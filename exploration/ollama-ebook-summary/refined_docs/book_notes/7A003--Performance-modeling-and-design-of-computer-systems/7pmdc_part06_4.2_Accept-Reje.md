@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4.2 Accept-Reject Method
 
 ---
 
-**Rating: 8/10**
 
 #### Discrete Random Variable Generation Using Cumulative Distribution Function (CDF)
 Background context: In the discrete case, we generate a random variable \(X\) that takes on values \(x_0, x_1, \ldots, x_k\) with probabilities \(p_0, p_1, \ldots, p_k\). The cumulative distribution function (CDF) of \(X\) is given by:
@@ -58,7 +56,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generating Random Variables for Poisson Distribution from Exponential Distributions
 Background context: The Poisson distribution can be viewed as counting the number of instances of an Exponentially distributed random variable that occur by a fixed time. This provides another method to generate Poisson random variables, involving generating multiple instances of an Exponential random variable.
@@ -81,7 +78,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inverse-Transform Method for Continuous Distributions
 Background context: The inverse-transform method is a technique to generate random variables from any continuous probability distribution. It involves transforming uniform random variables into random variables with the desired distribution.
@@ -197,7 +193,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simulating M/M/1 Queue
 Background context: An M/M/1 queue is a single-server queueing system where job arrivals follow a Poisson process and service times are exponentially distributed. This problem asks you to simulate such a queue for different load levels (Arrival rates \(\lambda\)).
@@ -306,7 +301,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Measuring Mean Response Time in M/M/1 Queue
 Background context: The goal is to measure the mean response time \(E[T]\) for different load levels (Arrival rates \(\lambda\)) by simulating an M/M/1 queue and averaging over multiple runs.
@@ -447,7 +441,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Convergence in Probability
 

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 32)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.1.1 Running the example application. 12.2 Understanding the ASP.NET Core platform. 12.2.2 Understanding services
 
 ---
 
-**Rating: 8/10**
 
 #### Middleware and Request Pipeline
 The core functionality of ASP.NET Core is to process HTTP requests and generate responses. This is achieved through middleware components which form a request pipeline.
@@ -67,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ASP.NET Core Request Pipeline
 The request pipeline in ASP.NET Core is a series of middleware components that process HTTP requests. These components are chained together, and each can inspect and modify the request before passing it to the next component.
@@ -107,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Middleware Components in ASP.NET Core
@@ -120,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Services in ASP.NET Core
 Services are objects that provide functionality within a web application. Any class can be used as a service, and services managed by ASP.NET Core support dependency injection, allowing for easy access from anywhere in the application, including middleware components.
@@ -132,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Injection in Services
 Dependency injection is a design pattern used to inject dependencies into services, making them more flexible and testable. In ASP.NET Core, this enables seamless integration and sharing of services among various components.
@@ -144,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding the Entry Point
 `Program.cs` is the entry point of the ASP.NET Core platform. It is used to configure and run the application, setting up services and middleware components.
@@ -175,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ASP.NET Core Entry Point and Program.cs File
 Background context explaining that the `Program.cs` file contains the entry point for an ASP.NET Core application. It sets up services, defines routes, and starts the HTTP server. The `WebApplication.CreateBuilder(args)` method initializes the setup of the platform, while the `app.MapGet("/", () => "Hello World.");` function maps a GET request to the root URL.
@@ -195,7 +187,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### WebApplicationBuilder and Build Method
 Background context explaining that `WebApplicationBuilder` is used to configure the application, while the `Build()` method finalizes this configuration. The result of `Build()` is a `WebApplication` object.
@@ -212,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MapGet Method and Middleware Setup
 Background context explaining that `MapGet` is an extension method for the `IEndpointRouteBuilder` interface. It defines a route for handling HTTP GET requests.
@@ -228,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kestrel as the HTTP Server
 Background context explaining that Kestrel is an HTTP server used in ASP.NET Core applications. It receives HTTP requests from clients.
@@ -246,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding a Package to a Project Using `dotnet add package`
 Background context: In most .NET projects, adding dependencies is often done through command-line tools or integrated development environment (IDE) interfaces. This method allows developers to easily include third-party libraries without modifying project files directly.
@@ -284,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Custom Middleware in ASP.NET Core
 Background context: ASP.NET Core provides a flexible middleware pipeline that allows developers to create and chain custom components to handle HTTP requests and responses. This is useful for implementing cross-cutting concerns like logging, authentication, or custom behavior.
@@ -317,7 +304,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding the HttpContext Class
 Background context: The `HttpContext` class in ASP.NET Core is a powerful object that provides information about the current HTTP request and response. It contains various properties and methods that allow you to interact with the request and response objects, as well as other useful features like sessions and user details.
@@ -354,7 +340,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Custom Middleware in ASP.NET Core
 Background context: Custom middleware is a powerful feature of ASP.NET Core that allows developers to insert custom logic into the request pipeline. This can be used for various purposes, such as logging, authentication, or content transformation.
@@ -386,7 +371,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HttpContext Object in Custom Middleware
 Background context: The `HttpContext` object is a central object that holds all the information about both the incoming HTTP request and the outgoing response. It's used directly when writing custom middleware but is less commonly needed with higher-level frameworks like MVC or Razor Pages.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.3 Examples of Finite-State DTMCs
 
 ---
 
-**Rating: 8/10**
 
 #### Discrete-Time Markov Chains (DTMCs)
 Discrete-Time Markov Chains are used to model systems that evolve over discrete time steps. The key property is the *Markovian property*, which states that given the current state, future states do not depend on past states. This can be represented mathematically as:
@@ -78,7 +76,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-Step Transition Probabilities
 
@@ -181,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limiting Probability and Initial State Irrelevance
 Background context: The fact that the rows of \( \lim_{n\to\infty} P^n \) are all the same indicates that the long-term behavior of the Markov chain is independent of the initial state. This means the probability of being in a particular state after many transitions converges to a specific value, regardless of where you start.

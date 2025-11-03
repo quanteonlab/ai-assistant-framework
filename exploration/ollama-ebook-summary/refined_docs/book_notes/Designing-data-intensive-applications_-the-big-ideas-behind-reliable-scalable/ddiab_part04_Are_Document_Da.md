@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Are Document Databases Repeating History
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Hierarchical Model Overview
@@ -135,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Query Optimizers and Indexes
 
@@ -284,7 +281,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Denormalization and Joins
 Background context: To reduce the need for joins, denormalizing the data can be an effective strategy. However, this approach requires the application to handle consistency manually.
@@ -378,7 +374,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Schema-on-Read Approach
@@ -476,7 +471,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nonsimple Domains and JSON Support
 Background context: In Codd's original description of the relational model, nonsimple domains allowed values within a row to be more complex than primitive datatypes. This concept is akin to modern-day JSON documents, which can store nested structures.

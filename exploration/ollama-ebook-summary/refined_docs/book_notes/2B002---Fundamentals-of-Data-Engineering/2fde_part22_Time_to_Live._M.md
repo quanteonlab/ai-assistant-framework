@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Time to Live. Message Size. Consumer Pull and Push
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Replay
@@ -90,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Java Virtual Machine (JVM)
@@ -203,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CDC Replication and Asynchronous Considerations
 CDC (Change Data Capture) replication involves capturing changes made to a database and replicating them to another database. This method is crucial for maintaining data consistency across different systems, especially important for analytical applications that need real-time or near-real-time data.

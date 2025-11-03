@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3.2 Catching and Handling Errors
 
 ---
 
-**Rating: 8/10**
 
 #### Cluttering the Global Namespace
 Background context: The text advises against cluttering the global namespace in C++. It suggests using namespaces or a common naming prefix to avoid conflicts but cautions about overusing namespaces or nesting them too deeply. Macros should be named carefully as they cut across all scope and namespace boundaries.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Following C++ Best Practices
 Background context: The text recommends following best practices outlined in books such as the EffectiveC++ series by Scott Meyers, Effective STL, and Large-Scale C++ Software Design by John Lakos. These resources provide guidelines that can help prevent common pitfalls and maintain code quality.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Making Errors Stick Out
 Background context: The text references an article by Joel Spolsky on coding conventions that suggests writing clean code not just for neatness but also for making common errors more visible. It recommends following guidelines to make errors stand out, thereby improving error detection and handling.
@@ -39,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Catching and Handling Errors
 Background context: The text discusses various methods to catch and handle error conditions in game engines, including distinguishing between user and programmer errors. It emphasizes understanding different mechanisms for handling these errors effectively.
@@ -52,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling User Errors Gracefully
 Background context: The handling of user errors in a game or application should be designed to maintain the user's experience and allow them to continue their task without interruption. This is particularly important for user errors, where the user might make mistakes like attempting an action that cannot be performed under current conditions.
@@ -74,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Programmer Errors Promptively
 Background context: Programmer errors, which are mistakes made by developers during coding, should be handled differently from user errors. The goal is to stop the program immediately and provide detailed error messages that help in debugging.
@@ -94,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conclusion on Error Handling
 Background context: The handling of errors in a software project should be designed with both user and developer needs in mind. User errors should not disrupt gameplay, while programmer errors should prompt immediate action for debugging.
@@ -122,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Error Return Codes in Function Design
 Background context: The passage explains the use of return codes from functions to indicate success or failure, which can be Boolean values or enumerated types. This helps in distinguishing between normal results and error states.
@@ -154,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Error Return Codes vs. Exceptions
@@ -167,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exception Handling
 Background context: Exception handling is a feature of C++ that allows functions to communicate errors without knowing the specific error-handling function. It involves throwing an exception object and unwinding the call stack.
@@ -192,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stack Unwinding and Destructors
 Background context: When an exception is thrown, the stack unwinds to find a try-catch block. During this process, destructors for automatic variables are called.
@@ -220,7 +208,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overhead of Exception Handling
 Background context: While exception handling is powerful, it introduces overhead. Each function with a try-catch block needs additional information to support stack unwinding.
@@ -244,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Exceptions Safely: Sandboxing Libraries
 Background context: To safely use exception handling in libraries, one can create wrapper functions that convert exceptions into error return codes.
@@ -270,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Exception Handling and Stack Unwinding
@@ -289,7 +274,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Robustness in Software Development Due to Exceptions
 Background context: Writing robust software is challenging when exceptions are a possibility. Every function must handle the potential for stack unwinding, which can leave the program in an invalid state if not managed correctly.
@@ -311,7 +295,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exception Handling vs Status Checks
 Background context: Using RAII with exception handling can make your code easier to write and maintain. However, this pattern can also be applied without using exceptions by checking the status of resources after they are created.
@@ -335,7 +318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Assertions and Debugging
 Assertions are used to verify assumptions about a program's state or behavior at runtime. They act as "land mines" for bugs, catching issues early on when they occur. Assertions can be particularly useful during development because they help ensure that code functions correctly even after changes have been made.
@@ -347,7 +329,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing Assertions in C/C++
 In the C and C++ programming languages, assertions are often implemented using a combination of preprocessor macros and inline assembly or function calls. The standard library provides an `assert()` macro which is used to check conditions.
@@ -385,7 +366,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Assertion Control in Game Engines
 In game engines, finer-grained control over assertions is often required. This means that different build configurations may enable or disable certain types of assertions.
@@ -425,7 +405,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Assertion Removal for Performance
 Sometimes, assertions need to be removed before shipping a game to avoid performance overhead. This can be achieved by defining different build configurations that strip out assertions when necessary.
@@ -465,7 +444,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ASSERT Macro Implementation
 Background context: The `ASSERT` macro ensures that a condition is true, or else it will halt the program execution and provide debugging information. This macro is implemented in a way to handle nested if statements correctly.
@@ -485,7 +463,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Use of Different Assertion Macros
 Background context: To balance performance and debugging needs, it's recommended to use two types of assertion macros. The regular `ASSERT` is active in all builds for easy debugging, while a slower `SLOW_ASSERT` can be used during development.
@@ -512,7 +489,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Assertion Usage Guidelines
 Background context: Assertions should be used to catch bugs in the program itself and always halt the entire game when they fail. They are not intended for catching user errors.
@@ -531,7 +507,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Skipping Assertions for Non-Engineers
 Background context: Skipping assertions can reduce their effectiveness as they may be ignored by non-engineering personnel, making them ineffective in catching critical issues.
@@ -552,7 +527,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Template Specialization for Static Assertions
 
@@ -598,7 +572,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fixed-Point Notation
 Background context: Fixed-point notation allows representing fractions by choosing bits to represent the whole part and fractional part of a number. In 32-bit fixed-point representation, one sign bit is used, followed by 16 magnitude bits and 15 fraction bits. The example given stores `-173.25` as `0x8056A000`. This method has limitations in both the range of magnitudes and the precision of the fractional part.
@@ -609,7 +582,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Floating-Point Representation Overview
 Background context: A 32-bit floating-point number uses a specific format to represent both very large and very small numbers. The representation includes a sign bit, an exponent, and a mantissa (also known as the significand). The value \(v\) is calculated using the formula:
@@ -653,7 +625,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Effects on Smaller Magnitudes
 Background context: For floating-point values with magnitudes much less than one, the exponent is large but negative. This shifts the significant digits in the opposite direction, leading to a loss of precision in the fractional part.
@@ -690,7 +661,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-off between Magnitude and Precision
 
@@ -703,7 +673,6 @@ The trade-off means that while we have a fixed number of significant digits or b
 
 ---
 
-**Rating: 8/10**
 
 #### Subnormal Values
 
@@ -716,7 +685,6 @@ The gap between zero and the smallest non-zero value is known as the subnormal v
 
 ---
 
-**Rating: 8/10**
 
 #### Impact of Floating-Point Precision on Game Time Tracking
 Background context explaining how the magnitude of a game's clock variable affects its precision over time. The example uses a floating-point variable to track absolute game time in seconds.
@@ -733,7 +701,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### IEEE Floating-Point Bit Tricks
 Background context on the IEEE floating-point standard and its bit-level operations. Mentioning useful "bit tricks" can speed up certain calculations.
@@ -761,7 +728,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Primitive Data Types (C and C++)
 Background context on the standard sizes and signedness of primitive data types in C and C++. Compilers are allowed to define these types differently based on target hardware for maximum performance.
@@ -790,7 +756,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### C++11 Standard Library and <cstdint>
 Explanation of the `std::intX_t` and `std::uintX_t` types introduced in C++11, which provide standardized sized integer types. These types are declared in the `<cstdint>` header and offer a more portable way to handle fixed-size integers.
@@ -809,7 +774,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Graphics Chips and Floating-Point Usage
 Graphics chips (GPUs) typically perform math using 32-bit or 16-bit floats. CPUs/FPU units are often faster when working with single-precision floating-point values, and SIMD vector instructions operate on 128-bit registers containing four 32-bit floats each. Most games use single-precision for performance reasons.
@@ -821,7 +785,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Endianness and Data Representation Issues
 Background context: In game programming, endianness refers to the byte order used to store multi-byte numeric values. Little-endian stores the least significant byte at the lowest memory address, while big-endian does it the other way around. This can cause issues when data is transferred between systems with different default endianness.
@@ -834,7 +797,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Endianness Solution: Pre-Endian Swap
 Background context: The preferred solution to handle endianness differences is performing an endian swap before writing data. This ensures that the data file uses the correct byte order for the target system.
@@ -849,7 +811,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Endian-Swapping Floating-Point Numbers
 
@@ -882,7 +843,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Translation Units
 
@@ -900,7 +860,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Declarations, Definitions, and Linkage
 
@@ -934,7 +893,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Declaration vs. Definition in C/C++
 Background context: In C and C++, a declaration provides the compiler with information about entities (variables or functions) without allocating actual memory. A definition allocates memory for these entities.
@@ -952,7 +910,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Declaration and Definition in C++
 Background context: Understanding the difference is crucial for ensuring that entities are correctly declared and defined across multiple translation units.
@@ -981,7 +938,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linker Errors Due to Multiple Definitions
 Background context: The linker will fail if it encounters the same symbol (function or variable) defined in more than one object file.
@@ -1005,7 +961,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Function Definitions and Declarations
 Functions can be defined by writing their bodies enclosed in curly braces immediately after their signatures. Pure declarations, used for functions that need to be called across translation units, are written with a semicolon at the end.
@@ -1026,7 +981,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data and Memory Layout in C++
 Data members such as variables, instances of classes, or structs are defined by writing their data type followed by the name of the variable or instance with an optional array specifier. Variables can be declared as global using the `extern` keyword to allow use in multiple translation units.
@@ -1046,7 +1000,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Inline Functions and Compiler Decisions
@@ -1066,7 +1019,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linkage in C++
 Linkage determines how definitions are visible to different translation units. Externally linked definitions can be referenced by multiple translation units, while internally linked ones are only accessible within the same file.
@@ -1096,7 +1048,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Read-Only Data Segment (rodata)
 Background context: The read-only data segment contains constant global data that does not change during program execution. Examples include floating-point constants and globally declared `const` variables.
@@ -1107,7 +1058,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stack Frame and Function Calls
 Background context explaining how function calls are managed using stack frames. The stack frame stores return addresses, saved CPU registers, local variables, and more to ensure proper execution flow when a function is called or returns.
@@ -1125,7 +1075,6 @@ This structure ensures that when a function is called, its environment can be pr
 
 ---
 
-**Rating: 8/10**
 
 #### Recursive Function Calls and Stack Frames
 Background context explaining how recursive functions use their own stack frames to maintain private copies of local variables.
@@ -1148,7 +1097,6 @@ Each invocation of `recurse` has its own set of local variables, including the c
 
 ---
 
-**Rating: 8/10**
 
 #### Dynamic Memory Allocation and Malloc/free Functions
 Background context on how programs dynamically allocate memory at runtime using functions like `malloc`, `calloc`, and `free`.
@@ -1180,7 +1128,6 @@ In this example, `malloc` is used to allocate a block of memory for an integer a
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Allocation Methods
 Background context: A declared class or struct can be allocated (defined) in several ways:
@@ -1201,7 +1148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Alignment and Packing in Structs
 When structuring data members with different sizes, the compiler may leave "holes" or padding between them to ensure proper alignment. This is due to the natural alignment of each data type, which must be respected for efficient CPU access.
@@ -1248,7 +1194,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Aligned and Unaligned Data Access
 Background context explaining how memory controllers handle data requests based on alignment. Different microprocessors have varying tolerances for unaligned data access, which can result in performance penalties or errors.
@@ -1262,7 +1207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Class Inheritance and Memory Layout
 
@@ -1285,7 +1229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtual Functions and Polymorphism
 
@@ -1305,7 +1248,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtual Table (vTable)
 
@@ -1325,7 +1267,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Polymorphism with Virtual Functions
 
@@ -1343,7 +1284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtual Table Implementation
 

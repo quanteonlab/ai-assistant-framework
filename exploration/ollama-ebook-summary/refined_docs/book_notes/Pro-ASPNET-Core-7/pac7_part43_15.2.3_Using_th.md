@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 43)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 15.2.3 Using the configuration data in the Program.cs file. 15.2.4 Using configuration data with the options pattern
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Using Configuration Data in Program.cs
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring Services vs Pipeline
 
@@ -54,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Configuration Data with the Options Pattern
 
@@ -80,7 +76,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inspecting Configuration Settings in Middleware
 
@@ -103,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Configuration Data in ASP.NET Core
 
@@ -138,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ASPNETCORE_ENVIRONMENT Variable
 
@@ -166,7 +159,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Displaying Configuration Values
 
@@ -189,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using the IWebHostEnvironment Service
 Background context: The ASP.NET Core platform provides the `IWebHostEnvironment` service for determining the current environment, which avoids manually getting configuration settings. This method is essential for ensuring that different environments (Development, Staging, Production) are managed correctly.
@@ -213,7 +204,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Accessing the Environment within Middleware or Endpoints
 Background context: When setting up services, configuring the application's pipeline, and even within middleware components or endpoints, developers need to determine the current environment. The `WebApplication` provides the `Environment` property for this purpose.
@@ -233,7 +223,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Storing User Secrets
 Background context: During development, it's often necessary to use sensitive data such as API keys or database connection strings. To avoid storing these in source code repositories, ASP.NET Core provides the `user-secrets` service.

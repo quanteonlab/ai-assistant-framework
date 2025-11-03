@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4.4 Advanced performance models
 
 ---
 
-**Rating: 8/10**
 
 #### Memory and Performance Savings with Compressed Sparse Representations
 Background context: The chapter discusses the advantages of using compressed sparse representations for data, highlighting memory savings and improved performance. Specifically, cell-centric and material-centric data structures are compared based on their suitability for different kernels.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bandwidth-Limited Kernels and Performance Analysis
 Background context: The chapter focuses on bandwidth-limited kernels, which are crucial for understanding the limitations of most applications. By analyzing the bytes loaded and stored by the kernel, we estimate performance using the stream benchmark or roofline model.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Role of Cache Lines in Performance Models
 Background context: Traditional performance models based on bytes or words are replaced with a focus on cache lines, as this is the unit of operation for modern hardware. Estimating how much of a cache line is used can further refine performance predictions.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Impact of Hardware Changes on Performance
 Background context: Different versions of processors can have different hardware configurations that affect performance. For instance, adding more AGUs can reduce certain cycle counts.
@@ -54,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Units and Their Role
 Background context: Vector units are used not only for arithmetic operations but also for efficient data movement. The quad-load operation is particularly useful in this regard.
@@ -68,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Memory Operations and AVX Instructions
 Background context: The use of vector memory operations, particularly with AVX instructions, can significantly enhance performance for bandwidth-limited kernels. Stengel et al.'s analysis using the ECM model shows that AVX vector instructions provide a two times performance improvement over compiler-natively scheduled loops.
@@ -87,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gather/Scatter Memory Operations
 Background context: Modern vector units support gather and scatter operations, which allow for non-contiguous data loading and storing. This feature is beneficial in many real-world numerical simulation codes but still faces performance challenges.
@@ -106,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Performance Model
 Background context: A simple network performance model can be used to evaluate the time taken for data transfer between nodes in a cluster or HPC system. The formula provided gives an estimate of the total time required.
@@ -126,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reduction Operation in Parallel Computing
 Parallel computing involves distributing tasks among multiple processors to speed up execution. A reduction operation is a common task where an array's values are combined into a single value or smaller multidimensional arrays.
@@ -146,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pair-Wise Communication in Reduction Operations
 The reduction sum can be performed using a tree-like pattern, where communication hops between processors are reduced to \(\log_2N\). This helps minimize the time required for the operation when dealing with thousands of processors.
@@ -171,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronization in Parallel Computing
 All processors must synchronize at the end of a reduction operation. This can lead to many processors waiting for others, which affects overall performance.
@@ -201,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data-Oriented Design in Gaming Community
 Data-oriented design is a programming approach developed by the gaming community to optimize performance. It focuses on organizing data so that it can be processed efficiently, often leading to better memory access patterns.
@@ -225,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sparse Data Structures and Performance Models
 Sparse data structures are used when the majority of elements in a data structure are zero or null. Performance models can help analyze and optimize these structures for better efficiency.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Materials-Science-and-Engineering-An-Introduction_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4.6 Interfacial Defects
 
 ---
 
-**Rating: 8/10**
 
 #### Burgers Vector and Dislocation Types
 Background context: The Burgers vector, denoted by \( \mathbf{b} \), is a vector that describes the magnitude and direction of lattice distortion associated with a dislocation. For edge and screw dislocations, the relative orientation between the dislocation line and Burgers vector defines their nature. Edge dislocations have perpendicular orientations, while screw dislocations have parallel ones.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dislocation Nature and Direction
 Background context: The nature of a dislocation (edge, screw, or mixed) can be determined by examining the relative orientations between the dislocation line and the Burgers vector. For edge dislocations, these two vectors are perpendicular; for screw dislocations, they are parallel.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Permanent Deformation and Dislocation Motion
 Background context: The permanent deformation of most crystalline materials is caused by the motion of dislocations. The Burgers vector plays a crucial role in explaining this type of deformation.
@@ -39,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Observation of Dislocations Using Electron Microscopy
 Background context: Dislocations can be observed in crystalline materials using electron microscopic techniques. In a high-magnification transmission electron micrograph (Figure 4.7), the dark lines represent dislocations.
@@ -50,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interfacial Defects Overview
 Background context: Interfacial defects are boundaries within crystalline materials that separate regions of different crystal structures and/or orientations. These include external surfaces, grain boundaries, phase boundaries, twin boundaries, and stacking faults.
@@ -61,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### External Surfaces in Materials
 Background context: The external surface of a crystal is the most obvious interfacial defect. Surface atoms have higher energy due to incomplete bonding, leading to increased surface energy which materials tend to minimize by reducing total surface area.
@@ -72,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Grain Boundaries in Polycrystalline Materials
 Background context: Grain boundaries separate small grains or crystals within polycrystalline materials, causing some atomic mismatch and crystallographic misalignment between adjacent grains. These boundaries can be further classified as small-angle (low-angle) or high-angle grain boundaries.
@@ -83,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Small-Angle Grain Boundaries
 Background context: Small-angle grain boundaries are formed by aligning edge dislocations, leading to a tilt boundary where the angle of misorientation (\( \theta \)) is typically on the order of a few degrees. These can be described using arrays of dislocations.
@@ -94,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Twist Grain Boundaries
 Background context: High-angle grain boundaries, where the angle of misorientation is parallel to the boundary, are described using screw dislocations. These boundaries have an irregular atomic arrangement and increased interfacial or grain boundary energy.
@@ -105,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Catalysts and Surface Defects
 Background context: A catalyst is a substance that speeds up the rate of a chemical reaction without participating in the reaction itself. One type of catalyst exists as a solid, where reactant molecules are adsorbed onto the catalytic surface. Adsorption sites on a catalyst are normally surface defects associated with planes of atoms.
@@ -117,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adsorption Sites on Catalyst Surfaces
 Background context: Surface defects act as adsorption sites for molecular species. These defects include ledges, kinks, terraces, vacancies, and individual adatoms (adsorbed atoms). Adsorption is the process where molecules of a gas or liquid adhere to a solid surface.
@@ -129,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application of Catalysts in Catalytic Converters
 Background context: One important use of catalysts is in catalytic converters, which reduce exhaust gas pollutants such as carbon monoxide (CO), nitrogen oxides (NOx), and unburned hydrocarbons. The NOx dissociates into N and O atoms, while the O2 dissociates into its atomic species.
@@ -142,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functionality of Surface Defects
 Background context: Surface defects on (Ce0.5Zr0.5)O2 act as adsorption sites for atomic and molecular species, facilitating dissociation, combination, and oxidation reactions.
@@ -155,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Twinning Mechanism in Materials
@@ -167,7 +152,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stacking Faults in Metals
 Stacking faults occur in face-centered cubic (FCC) metals when there is an interruption in the close-packed ABCABC sequence of planes. These defects are essential to understanding crystallographic imperfections and can significantly affect material properties.
@@ -178,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Domain Walls in Magnetic Materials
 Domain walls are boundaries that separate regions with different directions of magnetization in ferromagnetic and ferrimagnetic materials. These walls play a crucial role in magnetic behavior and domain structure.
@@ -189,7 +172,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Vibrations in Solids
 In solids, every atom rapidly vibrates about its lattice position. The frequency, amplitude, and energy of these vibrations vary from atom to atom at any given time. The average vibrational activity is related to the temperature of the solid.
@@ -200,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interfacial Energy of Defects
 Interfacial energy associated with defects varies depending on the type of defect (point, linear, or interfacial). External surfaces have the highest interfacial energy, while domain walls generally have the lowest.
@@ -211,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Surface Energy in Single Crystals
 Surface energy in single crystals varies with crystallographic orientation and planar density. As the planar density increases, the surface energy generally decreases due to a more compact arrangement of atoms on the surface.

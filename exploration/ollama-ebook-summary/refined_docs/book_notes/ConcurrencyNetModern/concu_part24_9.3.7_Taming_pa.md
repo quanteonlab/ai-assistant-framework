@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.3.7 Taming parallel asynchronous operations
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Async.Parallel Performance
 Background context explaining how `Async.Parallel` works and its limitations, particularly when dealing with a large number of asynchronous workflows. The Fork/Join pattern is mentioned to explain parallel execution but also highlights memory consumption as a critical factor.
@@ -44,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fork/Join Pattern in Asynchronous Programming
 Background context explaining the Fork/Join pattern, which allows execution to branch off in parallel and merge back later.
@@ -67,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throttling Concurrent Asynchronous Operations
 Background context explaining the need to manage and control the number of concurrent asynchronous operations, especially in scenarios where too many parallel tasks can lead to poor performance due to excessive memory consumption and context switching.
@@ -93,7 +89,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Throttling Asynchronous Computations
@@ -108,7 +103,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Execution with Throttling
 Background context: The `parallelWithThrottle` function combines asynchronous parallel execution with throttling, allowing a specified number of computations to run concurrently. It uses the `id` identity function as a selector to pass the results through without transformation.
@@ -123,7 +117,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Result Discriminated Union in F#
 Background context: The `Result<'TSuccess, 'TError>` type is a discriminated union introduced in F# 4.1 to handle success and error cases more elegantly than traditional exception handling. It simplifies pattern matching over results without the need for exception unwrapping.
@@ -141,7 +134,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Exceptions with `Async.Catch`
 Background context: The `Async.Catch` function in F# is used to protect asynchronous computations from exceptions by wrapping them. It returns a choice type (`Choice<'a, exn>`) that either contains the result or an exception.
@@ -156,7 +148,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Setting Concurrent Operation Limits
 Background context: The example sets a limit on the number of concurrent operations to prevent overwhelming system resources. This is crucial for managing parallelism and avoiding performance degradation due to excessive threading or network connections.
@@ -168,7 +159,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Async.ParallelWithThrottle
 Background context: The example demonstrates how to use `Async.parallelWithThrottle` to perform operations in parallel while limiting the number of concurrent tasks. This is useful for managing system resources and improving performance.
@@ -180,7 +170,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throttling Concurrent Operations
 Background context: The code snippet sets up throttled parallelism by specifying `maxConcurrentOperations` and using it with `Async.parallelWithThrottle`. This approach is essential for controlling the number of concurrent tasks to avoid overloading the system.
@@ -192,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Asynchronous Computations with Choice
 Background context: The example uses the `Choice<'T, exn>` discriminated union to handle successful computations (`Choice1Of2`) and exceptions (`Choice2Of2`). This allows for a clear separation of success and failure cases in asynchronous workflows.
@@ -204,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Result<'a> for Better Error Handling
 Background context: The text suggests replacing the `Choice` type with a more meaningful `Result<'a>` discriminated union. This provides better error handling and is idiomatic in functional programming.
@@ -216,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Throttling with Parallel Operations
 Background context: The example demonstrates throttling parallel operations by setting a limit on concurrent tasks and using `Async.parallelWithThrottle`.
@@ -228,7 +214,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Programming with F#
 Background context: The text highlights how F# supports asynchronous programming and provides an idiomatic implementation called asynchronous workflows.
@@ -240,7 +225,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Asynchronous Programming
 Background context: The example shows how asynchronous programming can improve performance by downloading multiple images concurrently.
@@ -252,7 +236,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Combinations in F#
 Background context: The text explains that computation expressions can be extended or customized to handle different types of asynchronous operations.
@@ -266,7 +249,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Error Handling in Asynchronous Programming
 Error handling is crucial in asynchronous programming to ensure robustness and maintainability of applications. In traditional imperative programming, error handling often involves try-catch blocks that can disrupt the normal program flow.
@@ -320,7 +302,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Computation and Try-Catch Blocks
 In the .NET Framework, wrapping all code that belongs to an asynchronous computation in a try-catch block helps manage exceptions. However, this can lead to lengthy boilerplate code.
@@ -360,7 +341,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Combinators for Asynchronous Operations
 Functional combinators help in building complex asynchronous functions by composing smaller and more concise operators. This approach makes the code more maintainable and performant.
@@ -387,7 +367,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exception Handling in Asynchronous Methods
 Exception handling is essential for asynchronous methods to prevent runtime failures and ensure that the application can recover gracefully from errors.
@@ -416,7 +395,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Built-In Asynchronous Combinators
 Built-in combinators like `Result<T>` or `AsyncFunc` help in managing asynchronous operations more efficiently by encapsulating error handling.
@@ -453,7 +431,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Custom Asynchronous Combinators
 Custom asynchronous combinators can be implemented to meet specific application requirements, improving performance and maintainability.
@@ -484,7 +461,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Error Handling Techniques in C#
 Background context explaining the importance of proper error handling, especially in asynchronous operations. The `try-catch` block is used to handle exceptions but can sometimes complicate code readability and maintenance. Functions like `Retry`, `Otherwise`, and `Task.Catch` are introduced as more structured ways to manage errors.
@@ -514,7 +490,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### `Task.Catch` Function
 Background context explaining the need for handling specific types of exceptions in asynchronous operations. The `Task.Catch` function allows specifying how to handle certain exception types.
@@ -541,7 +516,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Using `Task.Catch`
 Background context explaining how to use the `Task.Catch` function to handle specific exceptions in asynchronous operations, along with an example. This demonstrates handling a known exception type like `StorageException`.

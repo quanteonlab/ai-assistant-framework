@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 37)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 13.2.4 Using a catchall segment variable
 
 ---
 
-**Rating: 8/10**
 
 #### Using Optional Segments in a URL Pattern
 
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Handling Optional Segments
 
@@ -47,7 +44,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Constraining URL Segment Matching
 Background context: In ASP.NET Core, constraints are used to restrict URL segment matching, ensuring that only specific values or patterns of segments can be matched by a route. This is useful for scenarios where you need to handle only certain types of input or differentiate closely related URLs.
@@ -59,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Combining URL Constraints
 Background context: You can combine multiple constraints on a single URL segment to further restrict how paths are matched. This is useful when you need more specific patterns or values for your routes.
@@ -71,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Range Constraints
 Background context: The `range` constraint is used to match path segments based on a specific integer range. This helps in ensuring that only values within a certain numeric range are matched by the route.
@@ -83,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Applying Regular Expression Constraints
 Background context: The `regex` constraint allows the use of regular expressions to match URL segments based on complex patterns or specific values. This is particularly useful for matching only certain sets of URLs.
@@ -95,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing Constraints with Examples
 Background context: The examples provided show how constraints affect route matching. They demonstrate both successful and unsuccessful match attempts based on whether the segments conform to the defined constraints.
@@ -107,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matching Specific Values with Constraints
 Background context: Using regular expressions allows for matching specific sets of values in URL segments, which is useful when you need to handle only certain predefined URLs.
@@ -121,7 +112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fallback Routes in ASP.NET Core
 Fallback routes are a mechanism to ensure that every request is handled by some endpoint, even when no other route matches. They prevent requests from being passed further along the request pipeline by ensuring the routing system always generates a response.
@@ -142,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defining Fallback Routes with Specific Endpoints
 Fallback routes can be defined using different methods depending on what kind of response you want to generate. In the provided example, `MapFallback` is used to create a fallback that routes requests to an endpoint.
@@ -169,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fallback Route to Handle Unmatched Requests
 Fallback routes can also be used to handle specific cases where no other route matches a request. In Listing 13.23, the fallback route is set up to catch any unmatched requests.

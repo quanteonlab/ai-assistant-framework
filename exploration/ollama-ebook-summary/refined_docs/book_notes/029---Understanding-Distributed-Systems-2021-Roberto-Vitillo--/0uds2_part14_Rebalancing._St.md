@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Rebalancing. Static partitioning. Duplication
 
 ---
 
-**Rating: 8/10**
 
 #### Rebalancing
 
@@ -67,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Load Balancing
 Network load balancing involves distributing network traffic across multiple servers to manage and balance the workload. This technique is particularly useful for horizontally scaling services by creating more instances of a service and using a load balancer (LB) to route requests to these instances.
@@ -206,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### DNS Load Balancing
 Background context: DNS load balancing involves configuring a domain name system (DNS) to distribute incoming network traffic across multiple servers. This method uses DNS records that point to different IP addresses of the backend servers. When a client makes a request, it resolves the DNS record and connects to one of the available servers.

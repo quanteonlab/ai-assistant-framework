@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Types of Tests
 
 ---
 
-**Rating: 8/10**
 
 #### Service Independence and CI Builds
 Maintaining the ability to release one microservice independently from another is crucial. This requires using a technology that supports independent deployment of services, such as separating each service into its own repository and ensuring there's a CI build per microservice for separate deployment.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Automation and Platform Use
 Automation is crucial in managing microservices. Using platforms like AWS can provide significant benefits due to the extensive automation features these platforms offer.
@@ -41,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Self-Service Deployment Tools
 Creating tools that allow developers to self-service deploy any given service into different environments can greatly enhance productivity. This reduces the burden on DevOps teams and ensures consistency in deployment across various stages.
@@ -59,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuous Delivery (CD) Books Recommendation
 For more in-depth knowledge on microservices, Continuous Delivery by Jez Humble and David Farley is highly recommended. It covers topics like pipeline design and artifact management.
@@ -71,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing Microservices
 Testing in a distributed system adds complexity. Tools like Brian Marick's testing quadrant can help categorize different types of tests to balance speed and quality.
@@ -89,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Tests
 Background context: Unit tests are a type of automated test that typically checks individual units or functions in isolation. Cohn’s original model referred to these as "unit" tests, though this term can be ambiguous since it is often used interchangeably with other terms like component testing.
@@ -100,7 +93,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Tests
 Background context: Service tests, according to Mike Cohn, are a type of automated test that checks multiple functions or classes working together in an integrated manner but not involving the user interface (UI). This layer is often misunderstood and can be confused with other types of integration testing.
@@ -111,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Tests
 Background context explaining unit tests. Unit tests typically test a single function or method call and are used in test-driven design (TDD) and property-based testing. The goal is to provide very fast feedback about the functionality of code snippets in isolation.
@@ -130,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Tests
 Background context explaining service tests. Service tests are used to test individual services within a system or monolithic application by stubbing out external collaborators, allowing for isolated testing of service capabilities.
@@ -153,7 +143,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### End-to-End Tests
 Background context explaining end-to-end tests. These tests simulate the entire workflow of a system from start to finish, often driving a GUI through a browser or mimicking other user interactions.
@@ -189,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-Offs in Testing
 Background context explaining trade-offs between different types of tests. The pyramid model illustrates that as test scope increases, so does the confidence level and complexity.
@@ -238,7 +226,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Broken Functionality Detection
 Background context: The text discusses how broken functionality detection is crucial for maintaining software quality. It mentions that finding and fixing broken functionality faster leads to more efficient development processes.
@@ -250,7 +237,6 @@ A team can ensure they detect broken functionality faster by using a combination
 
 ---
 
-**Rating: 8/10**
 
 #### Feedback Cycles Improvement
 Background context: The text suggests that feedback cycles are crucial for efficient development. It mentions that smaller-scoped tests provide quicker feedback on what exactly broke.
@@ -262,7 +248,6 @@ A team can improve their feedback cycles by writing more unit tests and fewer en
 
 ---
 
-**Rating: 8/10**
 
 #### Test Snow Cone
 Background context: The text describes a common anti-pattern known as the test snow cone, where there are few small-scoped tests but many large-scoped ones.
@@ -274,7 +259,6 @@ A test snow cone structure has too many end-to-end and service tests, leading to
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing Service Tests
 Background context: The text discusses the implementation of service tests, which aim to test a slice of functionality across an entire service while stubbing out collaborators.
@@ -286,7 +270,6 @@ To implement service tests, you need to create instances of services and stub ou
 
 ---
 
-**Rating: 8/10**
 
 #### Stubbing Downstream Collaborators
 Background context: The text explains how to mock or stub collaborators in a test environment.
@@ -298,7 +281,6 @@ To fake downstream collaborators, you can create a stub service that responds wi
 
 ---
 
-**Rating: 8/10**
 
 #### Stub vs Mock Approach
 
@@ -312,7 +294,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stubbing vs Mocking in Service Tests
 
@@ -326,7 +307,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing a Stub Service
 
@@ -350,7 +330,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing Service Interactions
 
@@ -366,7 +345,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### End-to-End Testing in Microservices
 Background context explaining the concept: In a microservice architecture, end-to-end tests are crucial for ensuring that all services interact correctly when deployed together. Mike Cohn's testing pyramid highlights their importance by placing them at the top due to their broad coverage of the system.
@@ -394,7 +372,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deployment Strategy for End-to-End Tests
 Background context explaining the concept: When deploying a new version of one service in a microservice system, it's essential to test its interaction with other services. This involves running end-to-end tests that require multiple service deployments.
@@ -431,7 +408,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fan-In Pipeline Model
 Background context explaining the concept: The fan-in model is a strategy where multiple pipelines contribute to a single end-to-end test stage. This ensures that every change in any service triggers the execution of comprehensive integration tests.
@@ -468,7 +444,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Different Service Versions
 Background context explaining the concept: When deploying a new version of a service, it's crucial to decide whether to test against production versions or new development versions. This decision affects the reliability and speed of testing.
@@ -499,7 +474,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Redundancy in Testing
 Background context explaining the concept: While end-to-end tests are essential, they can sometimes overlap with other testing methods. Managing this redundancy is crucial to avoid unnecessary work and ensure efficient deployment.

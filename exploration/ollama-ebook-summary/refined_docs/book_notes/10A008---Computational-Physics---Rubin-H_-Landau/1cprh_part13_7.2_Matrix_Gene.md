@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 7.2 Matrix Generalities
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix Notation and Linear Equation Solution
 
@@ -46,7 +44,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Derivatives
 
@@ -98,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Eigenvalue Problem
 
@@ -160,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix Storage and Processing
 
@@ -209,7 +204,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Processing Time and Complexity
 
@@ -274,7 +268,6 @@ These flashcards cover key concepts from the provided text. Each card focuses on
 
 ---
 
-**Rating: 8/10**
 
 #### Importing NumPy
 Background context: To use NumPy functions and features, you must first import the NumPy package into your Python program. This is a fundamental step to perform numerical operations efficiently.
@@ -422,7 +415,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dot Product vs Element-by-Element Multiplication
 For operations like matrix multiplication and element-wise (Hadamard) product, NumPy provides specific functions. The `dot` function computes the dot product of two arrays, whereas the `*` operator performs an element-by-element multiplication.
@@ -455,7 +447,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving Matrix Equations using NumPy
 Background context: In NumPy, you can solve matrix equations such as \(Ax = b\) using linear algebra functions provided by NumPy's `linalg` module. The `solve` function is used to find the solution vector \(x\).
@@ -485,7 +476,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Matrix Inverse Calculation in NumPy
 Background context: Another way to solve a matrix equation like \(Ax = b\) is by calculating the inverse of matrix \(A\) (denoted as \(A^{-1}\)) and then using it to find the solution. This can be done using `numpy.linalg.inv`.

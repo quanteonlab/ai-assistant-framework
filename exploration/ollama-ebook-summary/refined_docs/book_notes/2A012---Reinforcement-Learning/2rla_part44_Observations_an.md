@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 44)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Observations and State
 
 ---
 
-**Rating: 8/10**
 
 #### Discounting vs. Average Reward Setting for Hierarchical Policies
 
@@ -30,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two Parts of the Option Model for Average Reward Setting
 
@@ -52,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partial Observability and Function Approximation
 
@@ -70,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Changes Needed for Partial Observability
 
@@ -91,7 +86,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Environmental Interaction Sequence
 Background context: The passage describes an environmental interaction that alternates between actions and observations without explicit states or rewards, forming a sequence of \(A_0, O_1, A_1, O_2, \ldots\). This is represented as:
@@ -105,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Markov State in Reinforcement Learning
 Background context: The passage explains that a state is useful if it has the Markov property. This means that given the current history and action, the probability of the next observation depends only on this information.
@@ -119,7 +112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Predicting Future Observations
 Background context: The passage explains that the Markov state is not only useful for predicting future observations but also for making predictions about any test sequence.
@@ -133,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Computational Considerations for States
 Background context: The passage discusses the need to compactly summarize history. While the identity function satisfies Markov conditions, it can grow too large and not recur in continuing tasks.
@@ -147,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### State-Update Function
@@ -165,7 +155,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partially Observable Markov Decision Processes (POMDPs)
 Background context explaining the concept. In POMDPs, the environment has a latent state \(X_t\) that generates observations but is not directly observable by the agent. The natural Markov state for an agent in this scenario is called a belief state \(S_t\), which represents the distribution over possible hidden states given the history.
@@ -184,7 +173,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partially Observable State Representation (PSRs)
 Background context: The concept revolves around handling partial observability in reinforcement learning by grounding the semantics of agent states in predictions about future observations and actions. This approach uses a Markov state defined as a vector of probabilities for "core" tests, which is updated via a state-update function \( u \) analogous to Bayes rule but grounded in observable data.
@@ -195,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Markov State in PSRs
 Background context: A Markov state is defined as a vector of probabilities for "core" tests (17.6), and this vector is updated by a function \( u \) similar to Bayes rule but grounded in observable data. This makes it easier to learn because the model can focus on these probabilistic predictions rather than direct observations.
@@ -206,7 +193,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Approximate States
 Background context: To handle partial observability, approximate states can be used instead of exact Markov states. The simplest example is using just the latest observation \( S_t = O_t \), but this approach cannot handle hidden state information. A more complex method involves using a kth-order history approach where \( S_t = O_{t},A_{t-1},O_{t-1},\ldots,A_{t-k} \) for some \( k > 1 \).
@@ -217,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### kth-Order History Approximate States
 Background context: For a more complex method to handle partial observability, a kth-order history can be used where the current approximate state \( S_t \) includes the latest observation and action along with the last \( k-1 \) observations and actions. This approach uses a state-update function that shifts new data in and old data out.
@@ -228,7 +213,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Markov Property Approximation
 Background context: When the Markov property is only approximately satisfied, long-term prediction performance can degrade significantly because one-step predictions defining the Markov property become inaccurate. This affects longer-term tests, generalized value functions (GVFs), and state-update functions. There are no useful theoretical guarantees at present for approximations in this area.
@@ -239,7 +223,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Approximate State in Reinforcement Learning
 Background context: To approach artificial intelligence ambitiously, it is essential to embrace approximation even for states. This means using an approximate notion of state that plays the same role as before but may not be Markov. The simplest example is using just the latest observation \( S_t = O_t \), which cannot handle hidden state information.
@@ -252,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Prediction Approach for State Learning
 
@@ -265,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scale and Computation Resources
 
@@ -278,7 +259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agent-Driven Prediction Selection
 
@@ -291,7 +271,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### POMDP and PSR Approaches with Approximate States
 

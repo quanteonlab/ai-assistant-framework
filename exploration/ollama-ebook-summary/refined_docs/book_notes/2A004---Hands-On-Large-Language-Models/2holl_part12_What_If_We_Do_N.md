@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** What If We Do Not Have Labeled Data
 
 ---
 
-**Rating: 8/10**
 
 #### Zero-shot Classification Overview
 Background context: Zero-shot classification is a method used when labeled data for training a classifier is unavailable. Instead, we use descriptions of labels and embeddings to classify documents without explicit label training.
@@ -112,7 +110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Text Classification Techniques Overview
 Background context: In this section, we explore various techniques for performing text classification tasks. This includes using both generative and representation language models to classify textual data based on sentiment (positive or negative reviews).
@@ -214,7 +211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load Dataset from Hugging Face
 Background context: The text starts by loading a dataset named "maartengr/arxiv_nlp" from the Hugging Face datasets library. This is typically used for tasks involving NLP data, such as text clustering and classification.

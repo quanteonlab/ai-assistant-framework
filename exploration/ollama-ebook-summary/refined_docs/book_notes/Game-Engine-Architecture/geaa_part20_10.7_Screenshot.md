@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Game-Engine-Architecture_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 10.7 Screenshots and Movie Capture
 
 ---
 
-**Rating: 8/10**
 
 #### Screenshot Capture
 
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### In-Game Profiling Overview
 Games are real-time systems, and maintaining high frame rates (30FPS or 60FPS) is crucial. Profiling helps ensure that code runs efficiently within budget by measuring performance.
@@ -31,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hierarchical Profiling
 In computer programs written in imperative languages, functions call each other hierarchically. A function can call multiple functions, creating a nested structure.
@@ -43,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### In-Game Profiler Display
 In-game profilers often provide an ahead-of-display (AOD) showing execution times for each code block. This data can include raw cycles, microsecond timings, and percentage relative to the frame.
@@ -60,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Timeline Mode Example
 In games like Uncharted: The Lost Legacy, the timeline mode visualizes when various operations occur across multiple CPU cores.
@@ -72,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Call Stack and Function Hierarchy
 Understanding how functions call each other is crucial for debugging and profiling. When you set a breakpoint, the call stack shows the sequence of function calls leading up to the point where execution pauses.
@@ -91,7 +84,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inclusive and Exclusive Execution Times
 In profiling, inclusive execution time measures the total time spent in a function including all its child functions. Exclusive execution time only includes the time spent directly within the function itself.
@@ -113,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Profiling Game Loops
 Profiling a game loop involves measuring the execution time of each major phase to identify bottlenecks. This is particularly useful in games where the main loop can be complex.
@@ -140,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Profile Macro Implementation
 A profile macro can be implemented as a class that starts and stops the timer to record execution times.
@@ -169,7 +159,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coarse-Level Profiling in Game Loops
 For simpler game engines, you can use coarse-level profiling to get an overview of the performance without delving into deep function hierarchies.
@@ -197,7 +186,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### In-Game Profiling Overview
@@ -225,7 +213,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hierarchical Profiling with Sample Bins
 Background context: The text suggests a hierarchical approach to profiling by declaring sample bins. Each bin can have a parent bin, allowing for more detailed and organized profiling data.
@@ -244,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Nested Function Calls in Profiling
 Background context: The text points out a limitation of the simple profiling approach when dealing with nested function calls. It explains that functions can be called by multiple parent functions, leading to inaccurate profiling data.
@@ -266,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Function Call Frequency in Profiling
 Background context: The text mentions the importance of tracking how many times a function is called per frame, as this can significantly affect performance metrics.
@@ -299,7 +284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Frame Rate and Execution Time Measurement
 Background context: The team wanted to measure how long each frame took to execute and graph performance statistics over time. They used a spreadsheet with two columns - one for frame numbers and another for actual game time measured in seconds.
@@ -317,7 +301,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### In-Game Memory Stats and Leak Detection
 Background context: Game engines need to track memory usage, especially for PC games that have minimum system requirements due to limited hardware capabilities.
@@ -335,7 +318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Different Flavors of Memory and Allocators
 Background context: Game engines face challenges in accurately tracking memory usage due to different types of memory (e.g., main RAM vs. video RAM) and various allocators.
@@ -360,7 +342,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### In-Game Memory Tracking Tools
 Background context: Professional game teams often develop custom in-engine tools to provide detailed and accurate memory information.
@@ -381,7 +362,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Out-of-Memory Conditions and Developer Feedback
 Background context: When games run out of memory on target hardware, they need to provide clear feedback to developers.

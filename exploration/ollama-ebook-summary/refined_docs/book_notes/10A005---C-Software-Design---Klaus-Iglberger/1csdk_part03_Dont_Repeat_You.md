@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Dont Repeat Yourself
 
 ---
 
-**Rating: 8/10**
 
 #### Separation of Concerns in Design Patterns
 This chapter introduces the concept of separation of concerns through design patterns, specifically focusing on how to manage dependencies and changeability in software systems. The goal is to ensure that different aspects of a system can be developed, modified, or tested independently from each other.
@@ -116,7 +114,6 @@ The example shows how the current design can handle varying tax rates through ov
 This scenario illustrates that changing the tax rate requires altering multiple files (e.g., `CppBook.cpp` and `ConferenceTicket.cpp`). This tight coupling makes it difficult to maintain the codebase, as any change in the tax rate necessitates updates across multiple locations.
 ??x
 
-**Rating: 8/10**
 
 #### Single Responsibility Principle (SRP)
 Background context: The SRP advises that a class, function, or module should have only one reason to change. This means each responsibility should exist only once within the system, making changes easier and more efficient.
@@ -188,7 +185,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Segregation of Interfaces to Avoid Artificial Coupling
 Background context: In the provided document, we see that a `Document` class is responsible for both exporting documents as JSON and serializing them. This combination creates coupling between orthogonal aspects (JSON export and serialization), which can lead to unnecessary dependencies in functions like `exportDocument()`. The Interface Segregation Principle (ISP) suggests that interfaces should be fine-grained, and no client should be forced to depend on methods it does not use.

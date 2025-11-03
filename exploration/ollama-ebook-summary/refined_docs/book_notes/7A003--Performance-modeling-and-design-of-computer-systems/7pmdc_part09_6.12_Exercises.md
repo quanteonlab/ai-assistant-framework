@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 6.12 Exercises
 
 ---
 
-**Rating: 8/10**
 
 #### Professors and Students
 Background context: This problem deals with calculating the average number of students a professor has over time given specific admission patterns. It can be solved using Little's Law, which relates the average number of customers \( N \) in a system to the arrival rate \( \lambda \) and the average time spent in the system \( W \).
@@ -255,7 +253,6 @@ These solutions walk through each problem step-by-step, applying the relevant op
 [End of Solutions] 😊💬
 ```
 
-**Rating: 8/10**
 
 #### Asymptotic Bounds for Closed Systems
 In closed systems, asymptotic bounds provide estimates of system performance as a function of the multiprogramming level \(N\). These bounds are derived from operational laws and help predict how changes in the system will affect performance. The key theorems include:
@@ -340,7 +337,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Knee of X and E[R] Curves
 Background context explaining that the "knee" of the \(X\) (throughput) and \(E[R]\) (mean response time) curves occurs at a point denoted by \(N^*\), where \(N^* = \frac{D + E[Z]}{D_{max}}\). This point represents the multiprogramming level beyond which there must be some queueing in the system.

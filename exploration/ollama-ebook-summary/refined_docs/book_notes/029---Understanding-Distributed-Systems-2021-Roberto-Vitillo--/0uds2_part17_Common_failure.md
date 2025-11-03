@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Common failure causes. Risk management
 
 ---
 
-**Rating: 8/10**
 
 #### Single Point of Failure (SPoF)
 Background context: A single point of failure is a component that, if it fails, will bring down the entire system. This issue is particularly prominent in distributed systems where having a critical component as a singular point can lead to catastrophic failures.
@@ -175,7 +173,6 @@ public class RiskManager {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Timeout Mechanism for Network Calls
 Timeouts are crucial when making network calls to prevent indefinite blocking and resource leaks. Without a timeout, your application might hang indefinitely if the network call fails or is slow to respond.
@@ -292,7 +289,6 @@ public void logNetworkCallMetrics(HttpResponse response) {
 ```
 x??
 
-**Rating: 9/10**
 
 #### Exponential Backoff and Random Jitter
 Background context: When a network request fails or times out, it is important to handle retries intelligently. Exponential backoff is a common strategy where each retry has an exponentially increasing delay before the next attempt. However, this can lead to simultaneous retries from multiple clients, causing load spikes and further degrading service performance.

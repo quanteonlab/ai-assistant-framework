@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 28)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12 Training a Transformer to generate text
 
 ---
 
-**Rating: 8/10**
 
 #### Tokenization Process
 Background context: Text data needs to be transformed into a format that can be processed by neural networks. In this case, the text is tokenized (split into words), and each unique word is mapped to an index using a dictionary.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Text Generation with Autoregressive Approach
 Background context: After training, the GPT model can generate text autoregressively, meaning it predicts the next word based on the current and previous words.
@@ -50,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Architecture of a GPT Model for Text Generation
 GPT models, including the one we are constructing, follow a specific architecture that allows them to generate coherent text. This model is based on the Transformer architecture with an emphasis on self-attention mechanisms and feed-forward networks.
@@ -76,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Data Preparation
 To train the GPT model, we need to prepare the training data by tokenizing the raw text and converting it into sequences of integers. Each unique word or token in the input text is assigned a different integer.
@@ -116,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training the GPT Model
 Once we have prepared the training data, the next step is to train the model. This involves feeding batches of sequences into the model and adjusting the weights through backpropagation.
@@ -157,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generating Text Using the Model
 After training, the GPT model can generate text based on a prompt. The process involves converting the input text into indexes, feeding it to the model, and iteratively predicting the next token.
@@ -203,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Text Tokenization and Indexing
 Background context: The process of converting raw text into a numerical form is essential for training machine learning models. In this case, we are using word-level tokenization to break down the text from three Hemingway novels into tokens (words or punctuation marks) and assigning each token a unique index.
@@ -233,7 +225,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequence Length for Training Data
 Background context: The sequence length is a crucial hyperparameter in training text generation models. In this case, we are setting the maximum sequence length to 128 indexes per sequence. This choice allows capturing long-range dependencies while keeping the model manageable.
@@ -262,7 +253,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Process Overview
 Background context: The training process for a GPT model involves feeding input sequences into the model and using the output to calculate loss, which guides the learning process. This is an iterative process that aims to minimize the cross-entropy loss between predicted probabilities and ground truth.
@@ -299,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cross-Entropy Loss Calculation
 Background context: Cross-entropy loss is a common metric used to evaluate the performance of probabilistic classifiers. In this case, it helps measure how well the GPT model predicts the next token in the sequence.
@@ -338,7 +327,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Input and Output Sequences for Training
 Background context explaining how input and output sequences are created for training. The input sequence is shifted one token to the right to serve as the output, creating pairs of (input, output) used as training data.
@@ -373,7 +361,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Training Process Overview
 Background context explaining the training process, including forward passes, loss computation, and parameter adjustment.
@@ -419,7 +406,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Tokenizing Text for Training
 Background context explaining the importance of tokenization and indexing text before feeding it into a GPT model. Emphasizes word-level tokenization due to its simplicity and efficiency.
@@ -453,7 +439,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tokenizing Text
 Background context: Before feeding the text into the GPT model, it is crucial to tokenize the text. This process involves breaking down the raw text into smaller units (tokens) that can be processed by the model. In this case, the text is broken down into individual characters, which are then used for training.
@@ -475,7 +460,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding UNK Token for Unknown Tokens
 Background context: The inclusion of a special "UNK" token is crucial to handle unknown words in the prompt. This ensures that the model can process any new word not included in its vocabulary.
@@ -500,7 +484,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mapping Tokens to Indexes
 Background context: After tokenizing and cleaning the text, mapping tokens to indexes helps in preparing the data for training. This involves counting the frequency of each token and assigning unique indices.

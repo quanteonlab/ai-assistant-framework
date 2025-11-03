@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Contract-Law-For-Dummies_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Part IV Performing the Contract or Breaching It
 
 ---
 
-**Rating: 8/10**
 
 #### Changes Made After Formation
 The text mentions that forming a contract is relatively straightforward, but performing it can be more challenging, often leading to disputes over nonperformance. This section will explore whether changes made after the formation of the contract are enforceable.
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluating Contract Modifications During Performance
 
@@ -71,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Consuming Performances and Risk Management
 Background context: When one performance takes time (such as providing a service), it often needs to be completed first according to the rule of simultaneous performance. This rule is particularly challenging for service providers who need payment before their services are fully utilized.

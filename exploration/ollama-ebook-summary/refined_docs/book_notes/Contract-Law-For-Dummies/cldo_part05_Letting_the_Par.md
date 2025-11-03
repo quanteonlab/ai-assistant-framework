@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Contract-Law-For-Dummies_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Letting the Parties Determine the Remedies for Breach
 
 ---
 
-**Rating: 8/10**
 
 #### Contracting Around Default Rules
 Parties have the freedom to modify or waive certain default rules set by contract law through specific provisions in their agreement. This includes setting liquidated damages and limiting available remedies.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Intended Beneficiary
 Background context: An intended third-party beneficiary is someone explicitly intended by both contracting parties to benefit from a promise made within the contract. The Restatement (Second) of Contracts provides specific criteria for determining if a party is an intended beneficiary.
@@ -35,7 +32,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ten Essential Questions in Contract Analysis
 Background context: Analyzing contracts often requires asking specific questions to ensure that all key issues are addressed. These questions help in identifying potential risks and ensuring compliance.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 35)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 22.7 Readings
 
 ---
 
-**Rating: 8/10**
 
 #### Network of PS Servers with Probabilistic Routing
 
@@ -56,7 +54,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/BP/1/PS Queue Simulation
 Background context: The chapter discusses simulating an M/G/1/FCFS queue with a Bounded Pareto( k, p, α) service time distribution. Here, we need to understand how this changes when using PS (Probabilistic Service) scheduling instead of FCFS.
@@ -117,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tandem Network of PS Servers
 Background context: The chapter discusses the product form solution for tandem networks of PS (Probabilistic Service) servers. The goal is to prove that the proposed πn1,n2,m1,m2 satisfies the local balance equations.
@@ -161,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Inspection Paradox
 
@@ -191,7 +186,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/G/1 Queue
 
@@ -222,7 +216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tagged Job Technique
 
@@ -253,7 +246,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Time in Queue for M/G/1
 
@@ -289,7 +281,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/1 Queue Example
 
@@ -322,7 +313,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/D/1 Queue Example
 
@@ -355,7 +345,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/Ek/1 Queue Example
 
@@ -389,7 +378,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/G/1 Utilization and Mean Waiting Time
 
@@ -421,7 +409,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### General Service Time Distributions
 
@@ -450,7 +437,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Traffic Intensity \( \rho \)
 

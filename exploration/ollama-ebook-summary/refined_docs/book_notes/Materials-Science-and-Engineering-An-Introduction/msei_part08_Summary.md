@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Materials-Science-and-Engineering-An-Introduction_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Interplanar Spacing and Lattice Parameter Computations
 Background context: In X-ray diffraction, the spacing between atomic planes (interplanar spacing) can be calculated using Bragg's law. The lattice parameter of a crystal is also determined from these calculations.
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lattice Parameter Determination
 Background context: The lattice parameter \(a\) can be determined from the interplanar spacing using the formula:
@@ -46,7 +43,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Crystal Structures in Metals
 Background context: Common metals can exist in one or more of the following crystal structures:
@@ -67,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Polymorphism and Allotropy
 Background context: Polymorphism refers to the ability of a specific material to have more than one crystal structure. Allotropy specifically applies to elemental solids having different crystalline forms.
@@ -82,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Crystallographic Points and Directions
 Background context: Crystallographic points, directions, and planes are specified using indexing schemes based on a coordinate system defined by the unit cell for a specific crystal structure.
@@ -98,7 +92,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### X-ray Diffractometry
 Background context: X-ray diffractometry is used to determine crystal structures and interplanar spacings. When an x-ray beam interacts with a series of parallel atomic planes, diffraction (constructive interference) occurs.
@@ -120,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Noncrystalline Solids
 Background context: Noncrystalline or amorphous solids lack a systematic and regular arrangement of atoms over relatively large atomic distances.
@@ -139,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Cell Edge Length for FCC
 Background context: The face-centered cubic (FCC) structure is a common crystal lattice where atoms are located at each corner and the center of each face. The unit cell edge length can be derived from the atomic radius \(R\).
@@ -162,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Packing Factor (APF)
 Background context: The atomic packing factor (APF) measures the fraction of the unit cell volume occupied by atoms. It provides insight into how efficiently the atoms are packed in different crystal structures.
@@ -181,7 +171,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Cell Edge Length for BCC
 Background context: The body-centered cubic (BCC) structure is a common lattice where there is an atom at each corner and one in the center of the cube.
@@ -204,7 +193,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Theoretical Density of a Metal
 Background context: The theoretical density (\(\rho\)) of a metal can be calculated from the number of atoms in a unit cell and the atomic weight.
@@ -230,7 +218,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Point Index Reference
 Background context: The point index (\(q\)) references a lattice plane or direction vector in terms of its position relative to an axis.
@@ -257,7 +244,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Allotropy
 Allotropes are different forms of a chemical element that differ in their atomic arrangements but have the same chemical composition. For example, diamond and graphite are allotropes of carbon.
@@ -269,7 +255,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Anisotropy
 Anisotropic materials exhibit different properties along different axes.
@@ -281,7 +266,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Packing Factor (APF)
 Atomic packing factor refers to the fraction of volume occupied by atoms within a crystal structure.
@@ -295,7 +279,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bragg's Law
 Bragg’s law describes the condition for constructive interference of waves in a crystal, leading to diffraction.
@@ -309,7 +292,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Crystalline Materials
 Crystalline materials have a well-defined, periodic arrangement of atoms.
@@ -321,7 +303,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Crystal Structure
 Crystal structure refers to the precise arrangement of atoms in a crystal.
@@ -353,7 +334,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Crystal System
 Crystal systems classify materials based on the symmetry of their unit cells.
@@ -365,7 +345,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Diffraction
 Diffraction is the bending of waves around obstacles or through openings.
@@ -380,7 +359,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Isotropic Materials
 Isotropic materials exhibit the same properties in all directions.
@@ -393,7 +371,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lattice Parameters
 Lattice parameters define the size and shape of a unit cell in a crystal structure.
@@ -435,7 +412,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Miller Indices
 Miller indices indicate the orientation of crystal planes.
@@ -450,7 +426,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Polycrystalline Materials
 Polycrystalline materials consist of multiple crystallites or grains.
@@ -464,7 +439,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Polymorphism
 Polymorphs are different crystal structures of the same chemical composition.
@@ -478,7 +452,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single Crystal
 Single crystals consist of a large or even an infinite number of atoms all aligned in the same periodic fashion.
@@ -492,7 +465,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Cell
 Unit cell is the smallest repeating unit that defines a crystal’s structure.

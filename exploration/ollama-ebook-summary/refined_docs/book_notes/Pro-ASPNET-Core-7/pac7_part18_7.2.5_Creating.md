@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 7.2.5 Creating a repository
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Configuring Entity Framework Core in SportsStore
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Repository Interface and Implementation Class
 A repository pattern is used to abstract data access, making it easier to change storage mechanisms later. The `IStoreRepository` interface defines the contract for accessing product data.
@@ -47,7 +44,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding `IQueryable<T>` vs. `IEnumerable<T>`
 `IQueryable<T>` is used in repository interfaces because it allows efficient querying of data directly from the database, whereas `IEnumerable<T>` retrieves all objects first and then filters them.
@@ -65,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating an Implementation of the Repository Interface
 The `EFStoreRepository` class implements the `IStoreRepository` interface, mapping to the database's `Products` property.
@@ -90,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding the Repository Service to `Program.cs`
 Services are created in ASP.NET Core to manage dependencies. The repository service is added as a scoped service so each HTTP request gets its own instance.
@@ -108,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating a Database Migration Using Entity Framework Core
 Background context: Entity Framework Core can generate database schema from model classes using migrations. Migrations are used to handle changes in your data models without manually writing SQL commands. This is particularly useful for maintaining a consistent and up-to-date database schema.
@@ -123,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Seed Data and Migrations
 Background context: To populate the database with sample data, seed data is created using classes. This helps in providing initial data for testing and demonstration purposes. The `EnsurePopulated` method ensures that the database has the initial data.
@@ -159,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preparing the HomeController
 Background context: The `HomeController` class is responsible for handling HTTP requests and displaying views related to products. To ensure that the controller can access the repository, dependency injection is used.
@@ -182,7 +173,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Injection in Action
 Background context: Dependency injection allows the `HomeController` to access the application’s data through an interface (`IStoreRepository`) without knowing which specific implementation is used. This makes it easier to switch implementations (e.g., from Entity Framework to another storage solution) without modifying the controller.
@@ -207,7 +197,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unit Testing with Mock Objects
 Background context: To verify that the `HomeController` is correctly accessing the repository, a unit test can be written using mock objects. A mock repository is created to simulate data and behavior.

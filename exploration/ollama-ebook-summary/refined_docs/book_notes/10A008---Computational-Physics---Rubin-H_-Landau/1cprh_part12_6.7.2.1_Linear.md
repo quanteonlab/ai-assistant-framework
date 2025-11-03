@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 6.7.2.1 Linear Quadratic Fit Assessment. 6.8 Nonlinear Fit to a Resonance
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Quadratic Fit Assessment
 
@@ -43,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Fitting with Nonlinear Functions
 
@@ -105,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Nonlinear Fit to a Resonance
 
@@ -147,7 +143,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bisection Method Implementation
 Background context: The bisection method is a root-finding algorithm that repeatedly bisects an interval and then selects a subinterval in which a root must lie for further processing. It is particularly useful when you have a continuous function over a closed interval \([a, b]\) where the function changes sign.
@@ -188,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Newton-Raphson Method Implementation
 Background context: The Newton-Raphson method is an iterative method for finding the roots of a real-valued function. It uses the derivative to approximate the function near a root and converges quickly if the initial guess is close enough.
@@ -222,7 +216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Formulation of Equations
 The nine unknowns (angles and tensions) are treated as a vector \(y\):
@@ -253,7 +246,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Newton-Raphson Method for Solving Nonlinear Equations
 The problem is solved using the Newton-Raphson method, which involves guessing a solution and then linearizing the nonlinear equations around that guess. The Jacobian matrix \(J\) of the system is used to solve for corrections \(\Delta y\):

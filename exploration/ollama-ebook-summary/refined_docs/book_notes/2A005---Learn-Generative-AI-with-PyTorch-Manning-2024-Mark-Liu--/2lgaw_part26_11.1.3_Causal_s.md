@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 26)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11.1.3 Causal self-attention in GPT-2
 
 ---
 
-**Rating: 8/10**
 
 #### Sequence Training for GPT-2
 Background context: In training a generative pretrained Transformer like GPT-2, the input sequences are fixed in length and shifted right by one token to form the output. The model uses causal self-attention, where future tokens are masked during training.
@@ -29,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Word Embedding and Positional Encoding
 Background context: GPT-2 uses word embedding to transform each token into a vector representation that captures its meaning. Additionally, positional encoding adds information about the position of tokens in a sequence.
@@ -63,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Self-Attention Mechanism
 Background context: GPT-2 employs causal self-attention where the model can only attend to previous tokens in a sequence during training. This is achieved by masking future tokens.
@@ -89,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Self-Attention Mechanism in GPT-2
 Background context: In GPT-2, causal self-attention is a key mechanism that ensures the model can only attend to tokens that have come before it in the sequence. This is crucial for generating text coherently and ensuring that predictions are causally dependent on previously generated content.
@@ -122,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Input Embedding in GPT-2
 Background context: In GPT-2, the input embedding is a combination of word embeddings and positional encoding. This ensures that each token in the sequence has both semantic information (from word embeddings) and positional information.
@@ -151,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Masking Future Tokens in Causal Self-Attention
 Background context: In GPT-2's causal self-attention mechanism, future tokens are masked to ensure that the model can only attend to past tokens. This is crucial for generating coherent text where predictions at any step depend only on what has been generated so far.
@@ -184,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Query, Key, and Value Vectors
 Background context: In this section, we learn how to transform an input embedding matrix using a linear layer to generate query (Q), key (K), and value (V) vectors. This is a fundamental step in the causal self-attention mechanism used in models like GPT-2.
@@ -223,7 +215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Splitting into Parallel Heads
 Background context: To increase model capacity and enable parallel processing, we split the query, key, and value vectors into 25 parallel heads. Each head processes a different part of the input independently.
@@ -277,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Calculating Scaled Attention Scores
 Background context: After splitting the input into multiple heads, we calculate the scaled attention scores. These scores are computed as the dot product of queries (Q) and keys (K), normalized by the square root of the key dimension size.
@@ -315,7 +305,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Masking Future Tokens in Attention Mechanism
 Background context explaining the concept. In causal self-attention, we want to ensure that predictions for a token are only influenced by previous tokens and not future ones. This is achieved by applying a triangular lower-triangular matrix mask to the scaled attention scores.
@@ -336,7 +325,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Calculating Masked Attention Weights with Softmax
 Background context explaining the concept. After applying the mask to the scaled attention scores, we apply the softmax function on the masked values to get the actual attention weights. This ensures that only information from previous tokens influences the current token's prediction.
@@ -356,7 +344,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Splits Q, K, and V into Heads
 Background context explaining the concept. In a multi-head attention mechanism, we split the query (Q), key (K), and value (V) matrices into multiple heads to parallelize computations.
@@ -383,7 +370,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Self-Attention Mechanism
 Causal self-attention is a key component of Transformer models, including GPT-2. It allows each position in a sequence to attend over all previous positions but not to any future positions, which is crucial for tasks like language modeling where the order of tokens matters.
@@ -402,7 +388,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Attention Vector Calculation
 After calculating the attention scores in each head, we need to compute the context vector by taking a weighted sum of the value vectors using these scores. The formula is:
@@ -434,7 +419,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GELU Activation Function
 The GELU activation function is used in the feed-forward network of Transformer models. It stands for Gaussian Error Linear Unit and its formula is:
@@ -453,7 +437,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Building GPT-2XL from Scratch
 Building a Transformer model like GPT-2 involves several steps, including tokenization and stacking multiple decoder blocks. GPT-2 uses byte pair encoding (BPE) for subword tokenization.
@@ -471,7 +454,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison with Rectified Linear Unit (ReLU) Activation Function
 Background context: The comparison between the GELU and ReLU activation functions highlights the advantages of using GELU in neural networks, particularly its differentiability everywhere. This property aids in more effective optimization during training.
@@ -483,7 +465,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GELU Function Implementation
 
@@ -663,7 +644,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causal Self-Attention Mechanism
 Background context: The text explains how the input embedding passes through three neural networks to obtain query (Q), key (K), and value (V) vectors, which are then split into multiple heads. These heads calculate masked self-attention weights.
@@ -692,7 +672,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Constructing the Decoder Block
 Background context: The text describes how a decoder block is constructed, consisting of two sublayers: causal self-attention with layer normalization and residual connection, followed by a feed-forward network.
@@ -723,7 +702,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Input Embedding Construction
 Background context: The input to the model consists of sequences of indexes corresponding to tokens in the vocabulary. These indices are passed through word embeddings and positional encodings, which are then added together to form the input embedding.
@@ -744,7 +722,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Layer Normalization and Residual Connections
 Background context: After passing the input embedding through 48 decoder blocks, layer normalization is applied to the output. This ensures that the model can process inputs of varying scales and maintains stability.
@@ -771,7 +748,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Text Generation and Softmax Function
 Background context: After obtaining the logits, a softmax function is applied to these logits to generate a probability distribution over the unique tokens in the vocabulary. This distribution is used to predict the next token in a sequence.
@@ -802,7 +778,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Parameter Count
 Background context: The model has been instantiated and the number of parameters in its main body is calculated. This helps understand the scale and complexity of the model.

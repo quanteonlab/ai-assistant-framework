@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 57)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** B.7 Chapter 7 OpenMP that performs
 
 ---
 
-**Rating: 8/10**
 
 #### Auto-Vectorizing Loops in C++
 Background context: The multi-material code from section 4.3 can be auto-vectorized to improve performance on CPU architectures that support vectorization.
@@ -24,7 +22,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Getting Maximum Value in an Array with OpenMP Reduction
 Background context: An OpenMP reduction clause can be used to find the maximum value in an array. This can be implemented both manually and using a high-level approach.
@@ -109,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Timer Statistics to Stream Triad Bandwidth Measurement Code
 Background context: The goal is to measure both bandwidth and timing for a specific operation, such as triad operations in memory. This helps in understanding the efficiency of different implementations.
@@ -144,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Converting High-Level OpenMP to Hybrid MPI+OpenMP Example
 Background context: The task is to adapt an existing high-level OpenMP example to a hybrid model that combines both OpenMP and MPI for better parallelism across multiple nodes.
@@ -181,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluating GPU Performance Based on Flop/Dollar Ratio
 Background context: The goal is to evaluate the cost-effectiveness of different GPUs based on their performance in floating-point operations per dollar.
@@ -212,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Measuring Stream Bandwidth on a GPU
 Background context: Stream bandwidth measures the memory transfer rate, which is crucial for evaluating the performance of different GPUs and comparing their efficiency.
@@ -275,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pinned Memory Allocation in CUDA
 Background context explaining why pinned memory is useful. Pinned memory allows for faster data transfer between host and device because it resides in system memory that can be directly accessed by the GPU, avoiding the bottleneck of data transfer through the PCI bus.
@@ -299,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Improvement with Pinned Memory
 Background context discussing the performance improvement when using pinned memory compared to traditional memory allocation methods.
@@ -323,7 +314,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HIPifying the CUDA Reduction Example
 Background context explaining what HIP is and how to convert a CUDA example to HIP.
@@ -362,7 +352,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Initializing Arrays a and b in SYCL
 Background context explaining how to initialize arrays on the GPU using SYCL.

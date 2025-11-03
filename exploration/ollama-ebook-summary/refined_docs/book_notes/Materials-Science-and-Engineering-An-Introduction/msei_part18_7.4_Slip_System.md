@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Materials-Science-and-Engineering-An-Introduction_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 7.4 Slip Systems
 
 ---
 
-**Rating: 8/10**
 
 #### Strain Fields Around Dislocations
 
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Slip Systems for Face-Centered Cubic (FCC) Metals
 
@@ -31,7 +28,6 @@ For example, for FCC crystals, the {111} family of planes has the densest atomic
 
 ---
 
-**Rating: 8/10**
 
 #### Slip System for Simple Cubic Crystal
 Background context: In a simple cubic crystal structure, slip occurs along specific planes and directions. The resolved shear stress determines which system is most favorable to operate.
@@ -51,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Resolved Shear Stress and Slip
 Background context: The resolved shear stress (𝜏R) is a critical component in understanding how slip occurs. It depends on the applied stress, orientation of the slip plane normal, and the slip direction relative to the stress.
@@ -75,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Critical Resolved Shear Stress
 Background context: The critical resolved shear stress (𝜏crss) represents the minimum shear stress required to initiate slip. It is a material property and determines when yielding occurs.
@@ -98,7 +92,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Slip in a Single Crystal
 Background context: In single crystals, deformation occurs along preferred slip systems. The most favorable slip system has the highest resolved shear stress, which initiates plastic deformation when it reaches the critical value.
@@ -114,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Slip Lines in Single Crystals
 Background context: Macroscopically, slip in a single crystal manifests as small steps on the surface of the specimen. These steps are called slip lines and form due to dislocation movement along preferred slip planes and directions.
@@ -128,7 +120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Problem: Resolved Shear Stress
 Background context: The example problem demonstrates the calculation of resolved shear stress for a specific orientation in BCC iron. It involves using the given angles to compute the stress necessary to initiate yielding.
@@ -166,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Resolved Shear Stress and Critical Resolved Shear Stress
 Background context: The critical resolved shear stress (𝜏crss) is the minimum shear stress required to initiate slip, while the resolved shear stress (𝜏R) depends on the orientation of the applied stress relative to the slip plane and direction.
@@ -186,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Calculation of Yield Strength for a Polycrystalline Material
 Background context: The text explains how to calculate the yield strength \(\sigma_y\) of a material under slip, using specific crystallographic directions and angles. It includes formulas from Equations 7.2 and 7.4.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Performance Tests
 
 ---
 
-**Rating: 8/10**
 
 #### Canary Releasing Overview
 Canary releasing is a deployment strategy where a new software version is gradually introduced to a small subset of production traffic. This allows for real-world performance verification and risk management before full-scale rollout. The goal is to ensure that the new version performs as expected, covering both functional and nonfunctional aspects.
@@ -39,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Canary Releasing vs. Blue/Green Deployment
 Canary releasing and blue/green deployment are both strategies for reducing the risk of software deployments, but they differ in their approach. In canary releasing, new versions are gradually introduced to a small subset of production traffic, allowing detailed monitoring and adjustments before full-scale rollout. This method allows for extended coexistence of different versions.
@@ -74,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Traffic Shadowing in Canary Releasing
 In canary releasing, traffic shadowing is a technique where production traffic is mirrored and directed to the canary version. This method ensures that both versions see identical requests but only the production results are exposed externally, reducing the risk of customer impact if something goes wrong during testing.
@@ -99,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coexistence of Different Service Versions
 In a canary release, different versions of services coexist for an extended period. This approach allows for thorough testing in the live environment before fully committing to the new version. However, it also means tying up more hardware resources and requiring sophisticated traffic routing mechanisms.
@@ -135,7 +130,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits and Considerations of Canary Releasing
 Canary releasing provides real-world testing with minimal risk, allowing for detailed monitoring before full-scale deployment. It requires more complex setup and planning compared to other methods like blue/green deployments but offers greater flexibility and insight into the new version's performance.
@@ -169,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blue/Green Deployment
 Background context: A blue/green deployment involves deploying a new version of software in an environment that is identical to production. Once testing is complete, traffic is directed from the old (blue) environment to the new (green) one. This approach ensures no downtime and allows for quick rollbacks if necessary.
@@ -180,7 +173,6 @@ A blue/green deployment involves deploying a new version of software in an envir
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-offs Based on Service Durability Requirements
 Background context: When designing and evolving a microservice-based system, it is important to consider different service level requirements for various services. This allows for more tailored design decisions where some services might require higher durability while others can tolerate more downtime without negatively impacting the core business.
@@ -196,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fine-grained Nature of Microservices in Designing Trade-offs
 Background context: The fine-grained nature of microservices allows for detailed trade-offs between different services. Each service can be optimized based on its specific requirements, leading to a more efficient and scalable system design.
@@ -211,7 +202,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Tests and Network Boundaries
 Background context: As microservices increase network boundaries, performance testing becomes more critical. It is important to track down sources of latency in call chains with multiple synchronous calls.
@@ -241,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Regular Performance Testing
 Background context: The text emphasizes the importance of regularly performing performance tests to ensure that your system's behavior under load closely mimics production conditions. This helps in identifying potential bottlenecks and ensuring that the results are indicative of what you can expect on live systems.
@@ -255,7 +244,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges in Making Performance Environment Production-Like
 Background context: The text highlights the challenges of making your performance testing environment as similar to the production environment as possible. These challenges include acquiring enough data and using comparable infrastructure, which can be resource-intensive.
@@ -272,7 +260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Frequency of Performance Testing
 Background context: The text suggests running performance tests regularly, but acknowledges that it may not be feasible to do so with every code commit. Instead, teams often run a subset daily and a larger set weekly.
@@ -304,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Visualizing System Behavior
 Background context: The text recommends using the same tools in performance testing environments for visualizing system behavior as those used in production. This ensures consistency and ease of comparison between test results and actual production data.
@@ -320,7 +306,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Holistic Approach to Testing
 Background context: The passage outlines a comprehensive strategy for testing systems, emphasizing fast feedback loops and the separation of test types. It also introduces consumer-driven contracts as an alternative to end-to-end tests.
@@ -332,7 +317,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consumer-Driven Contracts
 Background context: The text suggests using consumer-driven contracts as a means to reduce the need for extensive end-to-end testing, thereby improving collaboration between teams.
@@ -344,7 +328,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-Offs Between Testing Efforts
 Background context: The passage mentions the importance of understanding the trade-offs between putting more effort into testing to detect issues faster versus minimizing downtime.
@@ -356,7 +339,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monitoring Microservice Systems
 Background context: The text discusses the challenges of monitoring microservice-based systems due to their complex nature compared to monolithic applications.
@@ -368,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Monitoring Scenario
 Background context: The passage uses an example of a Friday afternoon system failure to illustrate the complexity of monitoring fine-grained systems.
@@ -382,7 +363,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scaling to Multiple Servers
 Background context: As loads increase, we may need to scale our service to multiple servers. This introduces the complexity of monitoring across different hosts.
@@ -417,7 +397,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Log Management and Analysis
 Background context: Logs are crucial for diagnosing issues, especially when they are spread across multiple servers.
@@ -441,7 +420,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load Balancer Considerations
 Background context: With a load balancer distributing requests, monitoring becomes more complex as issues may appear on different servers.
@@ -475,7 +453,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Load Balancer Aggregation and Health Monitoring
 Background context: For tasks like response time tracking, we can gather some aggregation for free by monitoring at the load balancer itself. However, it's crucial to monitor the load balancer as well since its misbehavior can cause issues. A healthy service configuration helps in removing unhealthy nodes from our application.
@@ -495,7 +472,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Central Log Aggregation Using Logstash
 Background context: As the number of hosts increases, manual log retrieval becomes impractical. Specialized systems like Logstash can parse logs in various formats and forward them for centralized analysis using tools like Kibana.
@@ -515,7 +491,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Metric Tracking Across Services
 Background context: In complex environments, understanding system behavior requires collecting and analyzing metrics from multiple services. Metrics can help in identifying issues such as sudden increases in CPU load or error rates.
@@ -536,7 +511,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Aggregation Across Samples
 Graphite allows aggregation across different samples. This means you can view metrics at various granularities: from the entire system, down to specific service groups or individual instances.
@@ -548,7 +522,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Metrics
 Operating systems and supporting subsystems like Nginx or Varnish provide useful metrics such as response times or cache hit rates. Additionally, it's recommended that custom services also expose their own metrics.
@@ -573,7 +546,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Metrics Library: Codahale's Metrics
 Background on the use of metrics libraries, specifically mentioning Codahale’s Metrics library for Java applications. Explain its functionality and how it supports various types of metrics.
@@ -602,7 +574,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synthetic Monitoring
 Explanation of synthetic monitoring, which involves simulating user interactions to determine if a service is healthy. Discusses the limitations and benefits compared to traditional monitoring.
@@ -634,7 +605,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synthetic Transactions and Semantic Monitoring
 Background context: The passage discusses using synthetic transactions for semantic monitoring to ensure that systems behave as expected. This method differs from alerting on lower-level metrics, which provides more detailed diagnostics but can be noisy. 
@@ -645,7 +615,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semantic Monitoring vs Alerting on Lower-Level Metrics
 Background context: The text contrasts using synthetic transactions for semantic monitoring against relying solely on alerting on lower-level metrics, arguing that the former provides better overall indicators of system health because it focuses on end-to-end behavior. 
@@ -656,7 +625,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementing Semantic Monitoring
 Background context: The passage suggests leveraging existing end-to-end tests to implement semantic monitoring, as these tests already provide the necessary hooks to launch and check results. However, care must be taken regarding data requirements and potential side effects.
@@ -667,7 +635,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Correlation IDs and Call Tracing
 Background context: The text highlights the importance of traceability when diagnosing issues across multiple services, especially with complex interactions where an error might not be immediately obvious in logs.
@@ -678,7 +645,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Code for Correlation IDs
 Background context: The passage mentions using correlation IDs to trace call chains, which is crucial for diagnosing issues in complex systems. 
@@ -720,7 +686,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Correlation IDs for Tracking Call Chains
 
@@ -750,7 +715,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Enforcing the Use of Correlation IDs
 
@@ -791,7 +755,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Log Aggregation and Visualization
 
@@ -839,7 +802,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Zipkin for Tracing
 
@@ -887,7 +849,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Cascade Cascading Failures
 Background context explaining the scenario where network connections between services fail, even though individual services are healthy. This can lead to hidden issues that synthetic monitoring and visibility into integration points help uncover.
@@ -924,7 +885,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monitoring Response Time and Error Rates
 Background context explaining the importance of tracking response times and error rates as basic metrics to understand service performance. Mentioning tools like Hystrix that can help manage these aspects effectively.
@@ -971,7 +931,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consideration of Audience and Data Use Cases
 Background context explaining how different types of data need to be presented in ways that are relevant to their intended audience. Highlighting the differences between immediate alerts for support teams versus long-term trends for capacity planning.
@@ -1019,7 +978,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unification of Metrics Collection
 Background context explaining the shift towards unified event processing systems that can handle both business metrics (e.g., orders, revenue) and operational metrics (e.g., response times, errors). Highlighting tools like Riemann and Suro that facilitate this unification.
@@ -1044,7 +1002,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Monitoring Advice
 Background context summarizing key points for effective monitoring, including tracking response times, error rates, and application-level metrics. Emphasizing the importance of standardization and aggregation.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Guideline 5 Design for Extension. The Open-Closed Principle
 
 ---
 
-**Rating: 9/10**
 
 #### Design for Testability
 Background context: Tests are crucial to protect against accidental breaking of code. Ensuring testability involves designing functions and classes that can be easily tested, often by separating concerns and reducing coupling.
@@ -110,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Open-Closed Principle (OCP)
 Background context explaining the concept of the Open-Closed Principle. The OCP advises designing software such that it is easy to make necessary extensions while keeping the existing codebase closed for modification.
@@ -213,7 +210,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Separation of Concerns
 Background context: The text discusses how separating concerns can resolve issues related to dependencies and maintainability. It mentions that by grouping serialization logic into its own component, it ensures that no document type depends on serialization, thus adhering to the Single Responsibility Principle (SRP) and Object Change Propagation (OCP).
@@ -273,7 +269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compile-Time Extensibility Overview
 Compile-time extensibility refers to the ability of software to be extended through means that are resolved during compilation. This contrasts with runtime polymorphism, which allows for dynamic behavior changes at execution time.
@@ -394,7 +389,6 @@ x??
 
 These flashcards cover key concepts related to compile-time extensibility in C++, including function overloading and template specialization as means of extending standard library algorithms.
 
-**Rating: 8/10**
 
 #### Design for Extension
 Background context explaining the importance of designing for extension. The C++ Standard Library is noted as an example, highlighting extensibility and the YAGNI (You Aren't Gonna Need It) principle.
@@ -526,7 +520,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Robert C. Martin and Clean Architecture
 Background context: The reference is to a book titled "Clean Architecture" by Robert C. Martin, published by Addison-Wesley in 2017. This book discusses principles of software architecture that are independent of technology.
@@ -638,7 +631,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### C++ Editions and Philosophies
 Background context: This section discusses different editions of books on C++, specifically mentioning Bjarne Stroustrup's "The C++ Programming Language" (3rd ed., 2000) and John Lakos's "Large-Scale C++ Software Development." These works are noted for their insights into the language and its usage in large-scale software development. Additionally, it references articles like "constexpr ALL the things" by Ben Deane and Jason Turner at CppCon 2017.

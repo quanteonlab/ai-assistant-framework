@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A001---AI-Engineering_-Building-Applications-with-Foundation-Models-OReilly-Media-2025Chip-Huyen--_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Input Filtering and Guardrails
 Background context: The text discusses methods for filtering inputs that might be controversial or inappropriate, as well as implementing guardrails to manage both input and output. This is crucial to ensure the safety and appropriateness of AI outputs.
@@ -20,7 +18,6 @@ For example, you might have a list of keywords that are blocked outright, known 
 
 ---
 
-**Rating: 8/10**
 
 #### Output Guardrails
 Background context: The text mentions the importance of not only filtering inputs but also managing outputs. This involves checking for potentially harmful content such as personally identifiable information (PII) or toxic information.
@@ -51,7 +48,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Anomaly Detection for Inputs
 Background context: The text suggests using anomaly detection to identify unusual prompts. This can help in recognizing patterns that might indicate a malicious or inappropriate attempt.
@@ -83,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prompt Engineering for AI Communication
 Background context: The text explains the importance of prompt engineering, which involves crafting instructions to achieve desired outcomes from AI models. It highlights that simple changes in prompts can significantly affect model responses.
@@ -104,7 +99,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Security Risks and Prompt Attacks
 Background context: The text discusses security risks associated with AI, particularly the potential for prompt attacks where bad actors manipulate prompts to elicit harmful or malicious responses from models.
@@ -142,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Contextual Information for Tasks
 Background context: The text emphasizes the importance of providing relevant context to AI models when performing tasks. While instructions are crucial, they must be complemented with pertinent background information.
@@ -174,7 +167,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RAG (Retrieval-Augmented Generation)
 Background context explaining the concept of RAG. It enhances a model's generation by retrieving relevant information from external memory sources like internal databases, user chat sessions, or the internet.
@@ -188,7 +180,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Retrieval-Augmented Generation (RAG)
 Background context explaining RAG, its purpose, and how it works. It allows models to use only relevant information for each query, reducing input tokens while potentially improving performance.
@@ -200,7 +191,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Efficiency in Models
 Background context on how models use context efficiently. The longer the context, the higher the likelihood that the model focuses on irrelevant parts.
@@ -212,7 +202,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Future of Context Length and Efficiency
 Background on efforts to expand context length while making models use it more efficiently. This includes potential mechanisms like retrieval-like or attention-like systems.
@@ -226,7 +215,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RAG System Overview
 Background context explaining the concept. RAG stands for Retrieval-Augmented Generation, which is a method used to improve the knowledge base of language models by combining them with an external memory source.
@@ -238,7 +226,6 @@ The two main components of a RAG system are the retriever, which retrieves infor
 
 ---
 
-**Rating: 8/10**
 
 #### Indexing Data
 Background context explaining the concept. Indexing data is crucial for efficient retrieval in an RAG system. How you index data depends on how you want to retrieve it later.
@@ -248,7 +235,6 @@ The two main steps involved in indexing data are processing data so that it can 
 
 ---
 
-**Rating: 8/10**
 
 #### Document Splitting for Retrieval
 Background context explaining the concept. To avoid long context issues, each document is split into manageable chunks.
@@ -258,7 +244,6 @@ To handle the length of documents in an RAG system, each document is split into 
 
 ---
 
-**Rating: 8/10**
 
 #### Retriever Training
 Background context explaining the concept. There are different approaches to training a retriever: it can be trained together with the generative model or separately.
@@ -268,7 +253,6 @@ The retriever in an RAG system can be trained either end-to-end along with the g
 
 ---
 
-**Rating: 8/10**
 
 #### Retrieval Algorithms
 Background context explaining the concept. Traditional retrieval algorithms developed for information retrieval systems can also be used in RAG.
@@ -278,7 +262,6 @@ Retrieval algorithms commonly used in RAG include those designed for traditional
 
 ---
 
-**Rating: 8/10**
 
 #### Example RAG Workflow
 Background context explaining the concept. An example of how an RAG system works involves using external memory like company documents, where each document is split into chunks.
@@ -288,7 +271,6 @@ An RAG system processes user queries by splitting documents into workable chunks
 
 ---
 
-**Rating: 8/10**
 
 #### Terminology Clarification
 Background context explaining the concept. The term "document" in the RAG system refers both to full documents and their chunks.
@@ -298,7 +280,6 @@ The term "document" is used to refer to both full documents and their chunks in 
 
 ---
 
-**Rating: 8/10**
 
 #### Sparse Versus Dense Retrieval
 Background context: In information retrieval, algorithms can be categorized into sparse versus dense based on how data is represented. Sparse retrievers use vectors with mostly zero values, while dense retrievers utilize vectors where most of the values are non-zero.
@@ -423,7 +404,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Term Frequency (TF)
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -444,7 +424,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inverse Document Frequency (IDF)
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -466,7 +445,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TF-IDF
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -496,7 +474,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Elasticsearch and Inverted Index
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -518,7 +495,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### BM25 (Best Matching Algorithm)
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -544,7 +520,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tokenization
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -576,7 +551,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### NLP Packages for Tokenization
 Classical Natural Language Processing (NLP) packages like NLTK, spaCy, and Stanford’s CoreNLP provide functionalities for tokenizing text. This process involves breaking down a stream of character sequences into meaningful elements or tokens that are used in further analysis.
@@ -596,7 +570,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Embedding-Based Retrieval
 Embedding-based retrieval aims to rank documents based on how closely their meanings align with the query. This approach is also known as semantic retrieval and involves converting both queries and documents into vector representations (embeddings) for efficient similarity comparisons.
@@ -642,7 +615,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Databases in Semantic Retrieval
 Vector databases are crucial for embedding-based retrieval as they store embeddings and facilitate efficient search operations. These systems need to be capable of fast vector indexing and searching to return the most relevant documents quickly.
@@ -684,7 +656,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Vector Search Overview
@@ -697,7 +668,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Naive k-Nearest Neighbors (k-NN)
 The simplest approach to vector search involves computing similarity scores between the query embedding and all vectors in the database, then ranking them based on these scores. While precise, this method is computationally intensive.
@@ -748,7 +718,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Approximate Nearest Neighbor (ANN)
 For large datasets, exact k-NN is impractical. Instead, approximate nearest neighbor algorithms are used to balance between speed and accuracy.
@@ -762,7 +731,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Locality-Sensitive Hashing (LSH)
 LSH is a powerful algorithm for vector search that uses hashing to speed up similarity searches. It trades some accuracy for efficiency by ensuring similar vectors are hashed into the same buckets.
@@ -823,7 +791,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hierarchical Navigable Small World (HNSW)
 HNSW is an ANN algorithm that constructs a multi-layered graph where nodes represent vectors and edges connect similar vectors. This allows for efficient nearest-neighbor searches by traversing the graph.
@@ -884,7 +851,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Product Quantization
 Product quantization reduces the dimensionality of vectors by decomposing them into subvectors and then approximating these subvectors using lower-dimensional representations. This makes distance computations faster.
@@ -951,7 +917,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Product Quantization and IVF
 
@@ -969,7 +934,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Databases
 
@@ -986,7 +950,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Retrieval Evaluation Metrics
 
@@ -1005,7 +968,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ranking Metrics in Retrieval Systems
 Background context: For ranking relevant documents, metrics like NDCG (Normalized Discounted Cumulative Gain), MAP (Mean Average Precision), and MRR (Mean Reciprocal Rank) are used. These help ensure that more relevant documents are ranked higher.
@@ -1030,7 +992,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Embedding Evaluation for Semantic Retrieval
 Background context: For semantic retrieval, embeddings need to be evaluated both independently and for specific tasks. Independent evaluation checks if similar documents have closer embeddings, while task-specific evaluation assesses the embeddings' performance in real-world scenarios.
@@ -1054,7 +1015,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-offs in Retrieval Systems
 Background context: There are trade-offs between indexing and querying processes. More detailed indexes improve retrieval accuracy but slow down indexing and increase memory consumption.
@@ -1074,7 +1034,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Indexing Trade-offs
@@ -1108,7 +1067,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ANN-Benchmarks
 Background context explaining that ANN-Benchmarks is used to compare different approximate nearest neighbor algorithms across multiple datasets and metrics.
@@ -1163,7 +1121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RAG System Evaluation
 Background context explaining that a Retrieval-Augmented Generation (RAG) system should be evaluated at multiple levels, including retrieval quality, final outputs, and embeddings.
@@ -1210,7 +1167,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hybrid Search
 Background context explaining the use of hybrid search in RAG systems to combine term-based retrieval and embedding-based retrieval.

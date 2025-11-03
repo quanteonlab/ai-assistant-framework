@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Inputs and Outputs of a Trained Transformer LLM
 
 ---
 
-**Rating: 8/10**
 
 #### Overview of Transformer Models
 Background context: The Transformer model, introduced in 2017, revolutionized natural language processing by addressing some limitations of previous models like Recurrent Neural Networks (RNNs). It uses self-attention mechanisms to process entire sequences without relying on sequential processing.
@@ -113,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Autoregressive Models
 Autoregressive models are a type of model used in machine learning for tasks like text generation, where the model generates tokens one by one based on its previous predictions. This is in contrast to other models that might use fixed input representations.
@@ -381,7 +378,6 @@ x??
 
 These flashcards cover key concepts in autoregressive models, their components, and how they operate during text generation.
 
-**Rating: 8/10**
 
 #### Structure of Phi3Model
 Background context explaining the structure and components of the model. Key elements include nested layers, `model`, `lm_head`, embeddings matrix (`embed_tokens`), Transformer decoder layers, and attention/feedforward neural network (mlp) blocks.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3.4 Further explorations
 
 ---
 
-**Rating: 8/10**
 
 #### Interactive Commands to Monitor Processor Frequencies and Power Consumption
 Background context: To monitor processor frequencies and power consumption, several interactive commands are mentioned in the text. These include using `lscpu`, `grep`, and `watch` for Linux-based systems, as well as specialized tools like Intel® Power Gadget.
@@ -41,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Limits and Profiling Overview
 Background context: This section discusses various performance limits and profiling techniques for applications. Key topics include memory usage, peak flops, memory bandwidth, and tools like MemSTATS, Intel Advisor, Valgrind, Callgrind, and likwid.
@@ -69,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Roofline Model
 Background context: The roofline model is a performance model that helps in understanding the relationship between arithmetic intensity and peak performance. It includes concepts like machine balance, which determines whether an application is CPU-bound or memory-bound.
@@ -92,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### STREAM Benchmark and Roofline Toolkit
 Background context: The STREAM benchmark measures memory bandwidth, while the Roofline toolkit helps in understanding performance bottlenecks by analyzing arithmetic intensity. These tools are essential for optimizing parallel applications.
@@ -113,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data-Oriented Design and Performance Models
 Background context: The chapter emphasizes the importance of data-oriented design, where data structures and their layout significantly impact application performance. It introduces simple performance models to predict how data usage affects overall performance.
@@ -144,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simple Performance Models
 Background context: Simple performance models can predict application performance based on data structures and algorithms. These models consider memory bandwidth, flops, integer operations, instructions, and instruction types.
@@ -172,7 +165,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data-Oriented Design Overview
 Background context explaining the goal of designing data structures that lead to good performance, focusing on how data is laid out for efficient CPU and cache usage. This approach considers the way modern CPUs operate, including instruction and data caching mechanisms.
@@ -184,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Array-Based Data Layout
 Explains why arrays are preferred over structures for better cache usage in various scenarios. Describes how contiguous data leads to efficient cache and CPU operations.
@@ -196,7 +187,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inlining Subroutines
 Describes how subroutines are inlined rather than traversing a deep call hierarchy to reduce function call overhead and improve performance.
@@ -208,7 +198,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Allocation Control
 Explains the importance of controlling memory allocation to avoid undirected reallocation, which can degrade performance.
@@ -220,7 +209,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Impact on Parallelization
 Discusses the challenges faced when introducing parallelism with large data structures or classes, particularly in shared memory programming.

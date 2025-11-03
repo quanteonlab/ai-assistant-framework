@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 6.3.2 Auto-vectorization The easy way to vectorization speedup most of the time
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Optimized Libraries for Vectorization
@@ -31,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Auto-Vectorization Overview
 Background context: Auto-vectorization is recommended for most programmers because it requires the least amount of programming effort. However, compilers may sometimes fail to recognize opportunities for vectorization due to guessing at array lengths and cache levels.
@@ -49,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compiler Feedback for Vectorization
 Background context: The GCC compiler can provide feedback on whether it has successfully vectorized a loop. The following example shows how to compile and check the vectorization using GCC.
@@ -73,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Verifying Vectorization with likwid Tool
 Background context: The `likwid` tool can help verify the vectorization by analyzing performance counters. This ensures that the compiler is generating the correct type of vector instructions.
@@ -99,7 +94,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Restrict Keyword for Vectorization
 Background context: The `restrict` keyword helps the compiler avoid generating multiple versions of a function due to potential aliasing. This ensures that vectorized code is optimized correctly.
@@ -128,7 +122,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Aliasing and Compiler Optimization
 Background context explaining the concept. The strict aliasing rule is a compiler optimization that assumes pointers do not point to overlapping memory regions, potentially allowing for more aggressive optimizations. However, this can lead to incorrect code when aliases are present.
@@ -167,7 +160,6 @@ The `restrict` keyword is portable across architectures and compilers, making it
 
 ---
 
-**Rating: 8/10**
 
 #### Loop Vectorization in C
 Background context explaining the concept. Loop vectorization involves transforming loops into SIMD (Single Instruction Multiple Data) operations, which can significantly improve performance by processing multiple data elements simultaneously.
@@ -223,7 +215,6 @@ This combination of pragmas helps the compiler understand how to best optimize a
 
 ---
 
-**Rating: 8/10**
 
 #### Compiler Optimization Flags and Vectorization
 Background context explaining the concept. The `-fstrict-aliasing` flag is an optimization that tells the compiler to aggressively generate code based on the assumption that there are no aliasing issues in memory. This can lead to more efficient code but might break existing code that relies on pointer overlap.
@@ -318,7 +309,6 @@ These pragmas provide the compiler with more detailed information about how you 
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Vectorization Optimization with GCC
@@ -343,7 +333,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Private Clause and Restrict Attribute
 Background context explaining the importance of properly defining variable scopes to enable vectorization. The example uses `#pragma omp simd private` and `restrict` attribute to ensure variables are not shared across iterations and to avoid false dependencies.
@@ -359,7 +348,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variable Declaration within Loop Scope
 Background context explaining the importance of declaring variables inside loop scopes for better optimization and to avoid global variable interference. The example demonstrates how declaring variables inside the loop can further simplify the code.
@@ -379,7 +367,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Mass Sum Calculation Using a Reduction Loop
@@ -407,7 +394,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional Mask Implementation in Vectorized Loops
 Background context: In vectorized loops, a conditional statement can be implemented using masks. Each vector lane has its own copy of the reduction variable (e.g., `summer`), and these will be combined at the end of the loop. The Intel compiler is known to recognize sum reductions and automatically vectorize loops without explicit OpenMP SIMD pragmas.
@@ -436,7 +422,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vectorization Report and Compiler Flags
 Background context: The provided example uses an Intel compiler with specific flags to enable vectorization reports, which help in understanding where the compiler has or hasn't vectorized the code. In this case, the inner loop was not vectorized due to output dependence.
@@ -455,7 +440,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Flow Dependency
 Flow dependency occurs when a variable within the loop is read after being written, known as a read-after-write (RAW). This can cause the compiler to be conservative in vectorization decisions because subsequent iterations might write to the same location as a prior iteration.
@@ -473,7 +457,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Anti-Flow Dependency
 Anti-flow dependency occurs when a variable within the loop is written after being read, known as a write-after-read (WAR). This can also affect vectorization decisions because the compiler needs to ensure that subsequent writes do not overwrite earlier reads.
@@ -491,7 +474,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Output Dependency
 Output dependency occurs when a variable is written to more than once within a loop. This can affect vectorization because the compiler needs to ensure that multiple writes do not interfere with each other, leading to conservative decisions.
@@ -509,7 +491,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loop Vectorization and Aliasing Issues
 The compiler vectorizes the outer loop but creates two versions to test which one to use at runtime due to potential aliasing issues between `x` and `xnew`.
@@ -528,7 +509,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using #pragma omp simd to Guide the Compiler
 Adding `#pragma omp simd` before the loop can guide the compiler and help with vectorization. However, this might not fully resolve aliasing issues.
@@ -547,7 +527,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vectorization Overhead and Speedup Estimation
 The vectorized loop report provides an estimated speedup, but it is only potential. The actual performance gain depends on factors such as cache level, array length, and bandwidth limitations.
@@ -570,7 +549,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Unaligned Data and Speedup Estimation
 The vector cost summary provides scalar costs, vector costs, and estimated potential speedup. The actual performance gain is highly dependent on cache level, array length, and bandwidth limitations.
@@ -593,7 +571,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Intrinsics for Troublesome Loops
 Explanation of vector intrinsics as an alternative to auto-vectorization when certain loops do not vectorize well despite hints. These intrinsics provide more control but are less portable across different architectures.
@@ -604,7 +581,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### GCC Vector Extensions for Kahan Sum
@@ -660,7 +636,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vector Load Operation
 Background context: The code snippet demonstrates loading four values from a standard array into a vector variable. This operation is crucial for starting the parallel processing of multiple values using vector intrinsics.
@@ -677,7 +652,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Vectorized Kahan Sum Implementation
 
@@ -700,7 +674,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kahan Sum Logic
 

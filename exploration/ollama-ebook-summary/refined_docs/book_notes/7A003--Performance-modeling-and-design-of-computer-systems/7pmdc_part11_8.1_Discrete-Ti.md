@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.1 Discrete-Time versus Continuous-Time Markov Chains
 
 ---
 
-**Rating: 8/10**
 
 #### Closed Systems
 Background context: For closed systems, we can approximate and bound the values of throughput, \( X \), and the expected response time, \( E[R] \). The approximations developed are independent of the distribution of service times but require that the system is closed. When the multiprogramming level \( N \) is much higher than \( N^* \), we have a tight bound on \( X \) and \( E[R] \). Also, when \( N = 1 \), we have a tight bound. However, for intermediate values of \( N \), we can only approximate \( X \) and \( E[R] \).
@@ -17,7 +15,6 @@ When the multiprogramming level \( N \) is much higher than a critical value \( 
 
 ---
 
-**Rating: 8/10**
 
 #### Open Systems
 Background context: In open systems, it is more challenging to derive performance metrics such as the mean number of jobs \( E[N_i] \) at a server in a queueing network. We cannot calculate \( E[T] \) (mean response time) without knowing \( E[N] \), which we do not yet know how to compute.
@@ -28,7 +25,6 @@ In open systems, it is difficult to derive performance metrics like mean number 
 
 ---
 
-**Rating: 9/10**
 
 #### Markov Chain Analysis
 Background context: Markov chain analysis is a powerful tool for deriving performance metrics such as the mean number of jobs at each server and their full distribution. It can be applied not only to queueing networks but also to more complex systems, provided certain distributions (Exponential or Geometric) are used.
@@ -39,7 +35,6 @@ Markov chain analysis is useful because it enables us to determine the mean numb
 
 ---
 
-**Rating: 8/10**
 
 #### Memoryless Property (Exponential Distribution)
 Background context: The Exponential distribution has the Markovian property (memoryless property), meaning that the remaining time until an event occurs (like service completion or job arrival) is independent of how long we have waited so far. This property allows for exact modeling of certain queueing systems.
@@ -50,7 +45,6 @@ When a distribution is memoryless, the remaining time until an event occurs is i
 
 ---
 
-**Rating: 8/10**
 
 #### Non-Markovian Workloads
 Background context: While some systems can be modeled using Markov chains with memoryless properties (Exponential or Geometric), other distributions do not have this property. However, these non-memoryless distributions can often be approximated by mixtures of Exponential distributions, which still allows for analysis through Markov chain methods.
@@ -61,7 +55,6 @@ Yes, even though some workload distributions do not have the memoryless property
 
 ---
 
-**Rating: 8/10**
 
 #### Summary
 Background context: The text discusses the limitations and capabilities of Markov chains in analyzing both closed and open queueing systems. It highlights that while certain distributions (Exponential or Geometric) enable precise modeling, other non-Markovian distributions can still be approximated for analysis.
@@ -74,7 +67,6 @@ Key points include the limitations of analyzing open systems, the usefulness of 
 
 ---
 
-**Rating: 8/10**
 
 #### Discrete-Time Markov Chains (DTMCs) vs. Continuous-Time Markov Chains (CTMCs)
 Background context: DTMCs and CTMCs are two types of stochastic processes used to model systems over time. The primary difference between them is that DTMCs operate in discrete-time steps, while CTMCs can model events happening at any point in continuous time.
@@ -85,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Discrete-Time Markov Chains (DTMCs)
 Background context: A DTMC is defined as a stochastic process \(\{X_n, n=0,1,2,...\}\) where \(X_n\) denotes the state at time step \(n\). The key properties are stationarity and the Markovian property. Stationarity ensures that transition probabilities do not change over time, while the Markovian property states that future states depend only on the current state.
@@ -98,7 +89,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transition Probability Matrix
 Background context: The transition probability matrix, denoted by \(P\), for a DTMC has entries \(P_{ij}\) representing the probability of moving to state \(j\) in one step from state \(i\). This matrix is crucial in understanding how states transition over time.
@@ -111,7 +101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Repair Facility Problem
 Background context: This problem involves a machine that can either be working or broken. The states and transition probabilities are given explicitly in this example, illustrating how to model real-world scenarios using DTMCs.
@@ -124,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Program Analysis Problem
 Background context: The program analysis problem involves tracking different types of instructions in a program, which can be modeled using DTMCs to understand their behavior over time.
@@ -137,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### n-Step Transition Probabilities
 Background context: The transition probability matrix \( P \) represents the probabilities of moving from one state to another in a single step. When we consider the \( n \)-step transition probabilities, denoted as \( P^n_{ij} \), it gives the probability of transitioning from state \( i \) to state \( j \) in exactly \( n \) steps.
@@ -158,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Repair Facility Problem Example
 Background context: The repair facility problem uses a general transition probability matrix \( P \):
@@ -184,7 +170,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limiting Probabilities
 Background context: The limiting probabilities represent the long-term behavior of a discrete-time Markov chain (DTMC). As \( n \) approaches infinity, the entries in \( P^n \) approach these values. For example, if we start with state 0 and want to find the probability of being in state 1 after many steps, this is given by the corresponding entry in the steady-state matrix.

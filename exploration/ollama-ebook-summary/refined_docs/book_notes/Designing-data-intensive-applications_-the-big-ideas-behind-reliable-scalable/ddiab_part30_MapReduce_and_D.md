@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 30)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** MapReduce and Distributed Filesystems
 
 ---
 
-**Rating: 8/10**
 
 #### File Representation in Unix and Research OSes
 Background context: Unix traditionally represented everything as files, but the BSD sockets API diverged from this convention. In contrast, research operating systems like Plan 9 and Inferno use file-like representations for network connections.
@@ -118,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HDFS Deployment Scale
 HDFS has scaled well, with the largest deployments running on tens of thousands of machines and combined storage capacity reaching hundreds of peta-bytes. This scale is achievable due to lower costs compared to dedicated storage appliances when using commodity hardware and open source software.
@@ -209,7 +206,6 @@ cat logs | awk '{print $7}' | sort | uniq -c | sort -nr
 ```
 x??
 
-**Rating: 8/10**
 
 #### MapReduce Overview
 MapReduce allows for distributed parallel processing of large datasets across many machines without explicitly handling parallelism. The mapper and reducer operate on one record at a time, allowing the framework to manage data movement between machines.
@@ -291,7 +287,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Equi-Joins in Databases
 Equi-joins are a common type of join where records from two tables are associated based on identical values in specific fields. These joins are fundamental in relational database operations and are widely used for combining data from multiple sources.
@@ -409,7 +404,6 @@ public void map(LongWritable key, Text value, Context context) throws IOExceptio
 ```
 x??
 
-**Rating: 8/10**
 
 #### User Activity Event Join
 Background context explaining the concept. In this example, we're discussing how to join user activity events with user profile information within a batch processing environment. The goal is to correlate specific actions (events) with users' profiles without embedding detailed profile data into every event record.
@@ -507,7 +501,6 @@ public class JoinReducer extends Reducer<Text, InputType1, Text, OutputType2> {
 x??
 ---
 
-**Rating: 8/10**
 
 ---
 #### Sort-Merge Join Explanation

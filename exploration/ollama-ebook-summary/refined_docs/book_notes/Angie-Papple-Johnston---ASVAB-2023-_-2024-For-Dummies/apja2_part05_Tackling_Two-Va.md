@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Tackling Two-Variable Equations. Substitution. Combining equations
 
 ---
 
-**Rating: 8/10**
 
 #### Example Problem with Substitution Method
 Background context: An example problem shows how the substitution method can be used in a simple two-variable system of equations where one equation is easily solved for one variable.
@@ -33,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Factoring Algebra Expressions
 Factoring involves breaking down a product (result of multiplication) into its original factors. This process is useful for simplifying expressions and solving equations.
@@ -44,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving Inequalities: Basic Rules
 Background context: Inequalities involve expressions where one side is not equal to the other. The goal is to find values that make the inequality true.
@@ -61,7 +57,6 @@ So, \(x\) must be less than \(-\frac{5}{4}\).
 
 ---
 
-**Rating: 8/10**
 
 #### Solving Inequalities with Negative Numbers
 Background context: When solving inequalities involving multiplication or division by negative numbers, the inequality sign reverses.

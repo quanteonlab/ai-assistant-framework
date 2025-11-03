@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 1B001---Proofs---Jay-Cumming_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Sets. Definitions
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of a Set
 Background context: A set is an unordered collection of distinct objects, called elements. Sets are fundamental to mathematics and can contain any type of object.
@@ -117,7 +115,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proving \(A = B\)
 Background context: To prove that two sets \(A\) and \(B\) are equal, we need to show that every element of \(A\) is also an element of \(B\) (i.e., \(A \subseteq B\)), and every element of \(B\) is also an element of \(A\) (i.e., \(B \subseteq A\)). This means proving both inclusions.
@@ -204,7 +201,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proposition 3.15 - Alternative Proof Using Subsets and Power Sets
 Background context: This proof is an alternative way to demonstrate that if \(P(A) \subseteq P(B)\), then \(A \subseteq B\). The original proof used a direct approach, but this one relies on the properties of sets and their power sets.
@@ -293,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Set Equality Proof: (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ
 Background context explaining the concept of set equality and operations. The proof involves understanding how complements, unions, and intersections interact with each other.

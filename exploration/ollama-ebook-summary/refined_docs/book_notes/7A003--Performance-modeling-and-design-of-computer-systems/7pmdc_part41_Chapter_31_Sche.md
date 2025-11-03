@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 41)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 31 Scheduling Non-Preemptive Size-Based Policies. 31.1 Priority Queueing
 
 ---
 
-**Rating: 8/10**
 
 #### Non-Preemptive Priority Queueing
 Background context: In non-preemptive priority queueing, once a job starts running, it cannot be interrupted even if a higher-priority job arrives. This is common in scenarios where jobs are time-sensitive or resource-intensive and should not be interrupted.
@@ -90,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Non-Preemptive Priority M/G/1 Queue Overview
 This section discusses the performance of a non-preemptive priority queueing system where jobs are classified into different priorities. The server's utilization (\(\rho\)) is required to be less than 1, and the average time in the system for each job class \(k\) (E[T(k)]) is derived.
@@ -154,7 +151,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SJF vs. FCFS Scheduling
 Background context explaining the comparison between Shortest Job First (SJF) and First Come First Serve (FCFS) scheduling policies, particularly in non-preemptive scenarios with size-based policies.

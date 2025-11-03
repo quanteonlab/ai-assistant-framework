@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 36)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 25.9 Exercises
 
 ---
 
-**Rating: 8/10**
 
 #### Z-Transform of Sums of Discrete Random Variables
 In this problem, we are dealing with discrete independent random variables \(X\) and \(Y\), and their sum \(Z = X + Y\). The z-transform is a useful tool to analyze such sums.
@@ -128,7 +126,6 @@ x??
 
 Each of these flashcards covers a key concept related to probability distributions, transformations, and queuing theory. They provide both theoretical explanations and practical examples where relevant.
 
-**Rating: 8/10**
 
 #### Deriving πM/G/1 i for M/G/1 Queue
 
@@ -273,7 +270,6 @@ This expression simplifies to the final form:
 
 The flashcards cover the derivation of \(\pi_{M/G/1}^i\) using an embedded DTMC, the z-transforms for the number of jobs in the system and service time distribution, and how to find \( \pi_0 \) through L'Hopital's rule. The key is understanding the transition probabilities and their implications on the queue behavior.
 
-**Rating: 8/10**
 
 #### Concept: Transform Analysis for N(z)
 Background context explaining how we derive \(\hat{N}(z)\) using known formulas and substitutions. The relevant equations are (26.5), (26.6), and (26.7).

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 37)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11.3.4 Optimizing OpenMP for GPUs
 
 ---
 
-**Rating: 8/10**
 
 #### Optimizing Stencil Kernel with OpenMP
 The stencil kernel optimization involves setting up the initial data and then executing the computation using `#pragma omp target` to execute on the GPU.
@@ -22,7 +20,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimizing a Loop with SIMD Directive
 The loop optimization uses `#pragma omp distribute parallel for simd` to exploit SIMD (Single Instruction, Multiple Data) capabilities, which can significantly speed up the stencil computation.
@@ -47,7 +44,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Profiling and Time Distribution Analysis
@@ -62,7 +58,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kernel Optimization - Collapse Clauses
 Background context: The goal is to optimize the Stencil computation by reducing the overhead associated with parallel loops. The original code has two nested for-loops, which can be combined into a single loop using OpenMP's `collapse` clause.
@@ -84,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Improvement - Combined Effect of Optimizations
 Background context: After applying the `collapse` clause, the performance improved significantly. The run time is now faster than the CPU version and closer to the PGI OpenACC compiler's output.
@@ -104,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Work Directives Splitting Strategy
 Background context: The text suggests splitting the parallel work directives across two loop levels to potentially improve performance. It includes specific examples using `#pragma omp distribute` and `#pragma omp parallel for simd`.
@@ -138,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### New Scan Reduction Type
 Background context: The `scan` reduction type is a new feature in OpenMP 5.0 designed to handle the scan (prefix sum) operation efficiently, which is crucial for many parallel algorithms but can be complex to implement manually.
@@ -162,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preventing Race Conditions with OpenMP Atomic
 Background context: When multiple threads access a common variable concurrently, race conditions can occur. OpenMP provides an atomic directive to ensure safe concurrent updates to shared variables.
@@ -182,7 +173,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Operations in OpenMP
 Background context: Overlapping data transfer and computation can significantly improve performance by reducing idle time. OpenMP provides asynchronous operations that allow you to specify tasks that should not wait for previous tasks to complete before starting.
@@ -209,7 +199,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Directive-Based GPU Programming Overview
 Background context: This section explains the shift from prescriptive directives to descriptive clauses in directive-based GPU programming. It discusses how traditional OpenMP uses prescriptive directives, but for GPUs, this approach has led to complex and hardware-specific implementations. The text introduces a new philosophy that aligns with the OpenACC language, which emphasizes descriptive directives to give compilers more freedom in generating efficient code.
@@ -225,7 +214,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loop Clauses in Directive-Based Programming
 Background context: The text mentions that for loops can be seen as either independent or concurrent clauses. These clauses inform the compiler about dependencies between loop iterations, allowing more efficient parallel execution.
@@ -246,7 +234,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OpenMP and Its Evolution
 Background context: The text discusses how OpenMP has traditionally used prescriptive directives, which are less flexible but ensure consistent behavior across different implementations. However, for GPUs, this approach leads to complex and hardware-specific directives.
@@ -268,7 +255,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exploration and Testing New Functionality
 Background context: The text emphasizes the importance of testing new functionality in small examples before incorporating it into larger applications.
@@ -295,7 +281,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hands-On Experience with Exercises
 Background context: The text encourages practical experience through exercises to enhance understanding.

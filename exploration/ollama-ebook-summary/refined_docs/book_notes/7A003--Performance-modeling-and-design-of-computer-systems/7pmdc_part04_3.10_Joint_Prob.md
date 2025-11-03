@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3.10 Joint Probabilities and Independence
 
 ---
 
-**Rating: 8/10**
 
 #### Variance of Bernoulli Distribution
 Background context: The variance of a random variable \(X\) can be calculated using the formula \(\text{Var}(X) = E[(X - \mu)^2]\), where \(\mu\) is the expected value. For a Bernoulli distribution, which models a binary outcome with probability \(p\), we have two possible outcomes: 0 and 1.
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Law of Total Probability for Discrete Random Variables
 The Law of Total Probability extends to random variables, allowing us to break down complex problems into simpler sub-problems. For discrete random variables \(X\) and partitioning events \(Y = y\), we have:
@@ -43,7 +40,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional Expectation and Linearity of Expectation for Discrete Random Variables
 The theorem states that the expected value of a random variable \(X\) can be computed by summing the conditional expectations given each possible value of another random variable \(Y\), weighted by the probability of those values. For discrete random variables, we have:
@@ -64,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearity of Expectation
 One of the most powerful theorems in probability, it states that for any random variables \(X\) and \(Y\), the expected value of their sum is equal to the sum of their individual expected values:
@@ -85,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Central Limit Theorem (CLT)
 Background context: The Central Limit Theorem is a fundamental theorem in probability theory that states, under certain conditions, the sum of a large number of independent and identically distributed (i.i.d.) random variables will tend to be normally distributed.

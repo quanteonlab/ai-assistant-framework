@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Part II. Distributed Data
 
 ---
 
-**Rating: 8/10**
 
 #### Nonuniform Memory Access (NUMA)
 Background context explaining NUMA. The architecture of large machines often involves non-uniform memory access, where different CPUs have closer and faster access to certain parts of memory compared to others. This can impact performance if not properly managed.
@@ -22,7 +20,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shared-Memory Architecture
 Background context on shared-memory architecture, including its limitations such as cost growth and scalability issues. It is commonly used when needing to scale within a single machine.
@@ -55,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shared-Disk Architecture
 Background context on shared-disk architectures, which use multiple machines with independent CPUs and RAM but share data across an array of disks connected via a fast network. This approach can handle some data warehousing workloads but has limitations due to contention and locking overhead.
@@ -75,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shared-Nothing Architecture
 Background context on shared-nothing architectures, which involve distributing tasks across multiple nodes that operate independently. This approach is popular due to its flexibility in price/performance ratio and ability to handle multi-region deployments.
@@ -115,7 +110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Replication vs. Partitioning
 Background context on replication and partitioning as common ways to distribute data across multiple nodes, often used together for redundancy and performance improvements.
@@ -160,7 +154,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Replication Basics
 Replication involves keeping a copy of the same data on multiple machines connected via a network. This is done to reduce latency, increase availability, and scale out read throughput.
@@ -175,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single-Leader Replication
 In this approach, one replica is designated as the leader. All writes must be sent to the leader, which then replicates them to other followers.
@@ -202,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronous vs. Asynchronous Replication
 Synchronous replication waits until the follower confirms receipt of a write before reporting success to the client, ensuring up-to-date and consistent data. Asynchronous replication sends the message without waiting.
@@ -239,7 +230,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-offs in Replication
 There are trade-offs to consider when setting up replication, such as choosing between synchronous or asynchronous methods, handling failed replicas, and ensuring data consistency.
@@ -265,7 +255,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Leader and Follower Configuration
 Background context: In a distributed database system, leader-based replication is often used where one node (the leader) handles all write operations and other nodes (followers) handle read operations. This configuration can be either synchronous or asynchronous.
@@ -277,7 +266,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semi-Synchronous Replication
 Background context: Semi-synchronous replication is a type of leader-based replication where the leader waits for at least one follower to confirm receipt of a write before returning confirmation to the client.
@@ -289,7 +277,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Setting Up New Followers
 Background context: When adding a new follower, it's crucial that the new node has an up-to-date copy of the leader’s data.
@@ -301,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Node Outages
 Background context: Nodes in a distributed system can fail due to hardware issues or maintenance.
@@ -313,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Catch-Up Recovery for Follower Failure
 Background context: When a follower node crashes, it can recover by replaying logs of received data changes.
@@ -325,7 +310,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Leader Failure: Failover Process
 Background context: If the leader fails, a new leader needs to be elected to maintain system availability.
@@ -339,7 +323,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges with Failover in Asynchronous Replication
 Background context: In asynchronous replication, if a new leader is chosen after some writes from the old leader have not yet been replicated, these writes might be lost or cause conflicts.
@@ -351,7 +334,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Database Replication Setup
 Background context: Different databases have different methods for setting up and managing followers.

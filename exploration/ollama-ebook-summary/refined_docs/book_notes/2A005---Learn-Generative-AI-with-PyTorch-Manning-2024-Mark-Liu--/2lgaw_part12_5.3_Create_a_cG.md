@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 5.3 Create a cGAN. 5.3.3 Weight initialization and the gradient penalty function
 
 ---
 
-**Rating: 8/10**
 
 #### Wasserstein Distance and Gradient Penalty
 Background context: These concepts are crucial for stabilizing the training process in WGANs.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient Penalty Calculation
 Background context: The gradient penalty is used in WGAN to ensure the critic's output is smooth and that the generator cannot fool the critic easily.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Critic Network Overview
 Background context: The critic network is a crucial component of conditional generative adversarial networks (cGANs) that evaluates input images based on their representations. It consists of convolutional layers that help extract features from the input data.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### LeakyReLU Activation Function
 Background context: The critic network uses a combination of Conv2d layers followed by an InstanceNorm2d layer and a LeakyReLU activation function to process input images.
@@ -54,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generator Network Overview
 Background context: The generator network's role in cGANs is to create data instances with conditional information (such as images with or without eyeglasses), based on the input noise vector.
@@ -66,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tanh Activation Function Usage
 
@@ -79,7 +72,6 @@ The Tanh activation function is used because it maps the pixel values of the gen
 
 ---
 
-**Rating: 8/10**
 
 #### Weights Initialization Function
 
@@ -101,7 +93,6 @@ def weights_init(m):
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient Penalty Calculation
 
@@ -132,7 +123,6 @@ def GP(critic, real, fake):
 
 ---
 
-**Rating: 8/10**
 
 #### Optimizer Setup for Critic and Generator
 
@@ -150,7 +140,6 @@ opt_critic = torch.optim.Adam(critic.parameters(), lr=lr, betas=(0.0, 0.9))
 
 ---
 
-**Rating: 8/10**
 
 #### Critic's Objective Function
 
@@ -173,7 +162,6 @@ def loss_fn(critic, real, fake):
 
 ---
 
-**Rating: 8/10**
 
 #### Gradient Penalty Calculation
 Background context: After presenting the interpolated images to the critic network and obtaining ratings, the next step is to calculate the gradient penalty. This involves measuring how well the gradients of the critic's output are aligned with expectations.
@@ -218,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training cGAN Using Wasserstein Distance
 Background context: The next step is to train the conditional GAN (cGAN) using the Wasserstein distance. This approach aims to minimize the Wasserstein distance between the generated image distribution and the real image distribution.
@@ -273,7 +260,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Creating Data with Labels for Training
 
@@ -286,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training the Critic and Generator
 
@@ -305,7 +290,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training the Generator
 
@@ -329,7 +313,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training the cGAN
 

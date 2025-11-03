@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Contract-Law-For-Dummies_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Finding Exceptions to the Statute
 
 ---
 
-**Rating: 8/10**
 
 #### Part Performance and Restitution
 Background context: Part performance can sometimes be used as an exception to the statute of frauds if it shows that one party has relied on the agreement sufficiently. If the court finds no enforceability, restitution can be sought for the value of that part performance.
@@ -25,7 +23,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Rules
 Immutable rules cannot be changed by the parties and always apply to contracts. Examples include fundamental principles of contract law such as offer, acceptance, and consideration.
@@ -37,7 +34,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Expressio Unius Est Exclusionis Alterius
@@ -61,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Looking Beyond Contract Language
 Courts often go beyond the literal wording of a contract to understand the true intentions of the parties. This involves examining past experiences and practices that may not be explicitly stated in the contract.
@@ -86,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Objective Meaning from Outside the Contract
 

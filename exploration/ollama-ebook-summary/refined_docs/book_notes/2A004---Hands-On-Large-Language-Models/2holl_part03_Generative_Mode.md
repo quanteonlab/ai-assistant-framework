@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Generative Models Decoder-Only Models
 
 ---
 
-**Rating: 8/10**
 
 #### BERT Architecture and Its Usage
 Background context explaining the concept. BERT (Bidirectional Encoder Representations from Transformers) is an encoder-only architecture that has been widely used for various language tasks, including classification, clustering, and semantic search. The key feature of BERT models is their ability to extract representations without needing fine-tuning on specific tasks.
@@ -71,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of "Large Language Models"
 Background context explaining the evolving definition of large language models. The term tends to be constrained by current technology, but it's arbitrary and may evolve with new releases.
@@ -147,7 +144,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Detecting Customer Reviews Sentiment
 Background context: This task involves determining whether a customer review is positive or negative. It's a supervised classification problem where labeled data is used for training and validation.

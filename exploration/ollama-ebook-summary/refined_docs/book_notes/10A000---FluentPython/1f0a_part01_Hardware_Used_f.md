@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Hardware Used for Timings
 
 ---
 
-**Rating: 8/10**
 
 #### Generators
 Generators are a powerful feature of Python that allow you to create iterators in a very simple way. They provide a simple means of creating iterable objects and can be used for producing an endless sequence of values or processing large datasets without loading everything into memory at once.
@@ -175,7 +173,6 @@ class MyClass(metaclass=MyMeta):
 ```
 x??
 
-**Rating: 8/10**
 
 #### Python Data Model Introduction
 Python's consistency is one of its best qualities. After working with Python, you can make informed guesses about new features due to this consistency. However, if you come from another object-oriented language like Java or C++, certain syntax may seem odd at first.
@@ -365,7 +362,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Special Methods and Dunder Naming Conventions
 

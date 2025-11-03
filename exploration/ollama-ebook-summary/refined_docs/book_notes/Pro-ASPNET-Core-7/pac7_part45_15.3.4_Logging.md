@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 45)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 15.3.4 Logging HTTP requests and responses
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Adding Logging Middleware to ASP.NET Core Application
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring Logging in `appsettings.Development.json`
 Background context: The configuration of log levels is specified in the `appsettings.Development.json` file. This helps control what types of logs are generated and at which severity level they should be recorded.
@@ -52,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HTTP Logging Middleware in Action
 Background context: The `UseHttpLogging()` method adds middleware that generates logs for every HTTP request and response. These logs provide detailed information about the requests, including headers, status codes, and more.
@@ -96,7 +92,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Customizing HTTP Logging Fields
 Background context: The `AddHttpLogging` method allows for custom configuration of the fields included in the logs. By default, it includes various request and response details. However, you can customize which fields are logged to reduce log size or focus on specific aspects.
@@ -117,7 +112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Middleware for Static Content
 Background context: In web applications, static content such as HTML, CSS, and JavaScript files are often served from a dedicated folder. ASP.NET Core provides middleware to handle these requests efficiently.
@@ -132,7 +126,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Configuring Static File Middleware Options
 Background context: The `UseStaticFiles` method allows customization through a `StaticFileOptions` object, which provides several properties to control how static files are served.
@@ -156,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple Instances of Middleware in ASP.NET Core
 Background context: A single application can have multiple instances of middleware components, each serving different URL paths and file locations. This allows for more granular control over how requests are handled.
@@ -176,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Static Files Middleware Configuration
 Static files middleware is used to serve static content like HTML, CSS, and JavaScript directly from a specified folder without going through the entire ASP.NET Core pipeline. This setup can be useful for serving custom templates or third-party libraries.

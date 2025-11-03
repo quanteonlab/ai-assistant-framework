@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Graph Queries in SQL
 
 ---
 
-**Rating: 8/10**
 
 #### Graph Database Basics
 Background context explaining graph databases, their uses, and how they differ from traditional relational databases. Graph databases use vertices (nodes) to represent entities and edges to represent relationships between them.
@@ -44,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Querying Graph Databases
 Background context on how to write and execute queries in a graph database. It involves understanding vertex, edge relationships, and patterns.
@@ -75,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Property Graph Model Overview
 The property graph model represents data using vertices (nodes) and edges (relationships). Each vertex can have properties, and each edge connects two vertices with a label indicating their relationship.
@@ -87,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Query Languages in Graph Databases
 Graph databases support high-level declarative languages like Cypher and SPARQL, but fundamentally build upon the older language Datalog, which is a subset of Prolog. Datalog uses rules to define new predicates based on existing data or other rules.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 25)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 12.8 URI URL or URN. Problem. Solution. 12.9 Program TFTP UDP Client
 
 ---
 
-**Rating: 8/10**
 
 #### Reading Request Setup
 Background context: The `readFile` method sets up and sends a read request to a TFTP server. It involves converting filenames and modes into bytes, then sending them over the network. Java handles byte order naturally for you.
@@ -104,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Introduction to Sockets
@@ -204,7 +201,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ServerSocket Basics
 In Java, `ServerSocket` is used to create a socket-based server that waits for client connections. It represents one end of a connection and is typically instantiated with just the port number. The server listens on the specified port for incoming client connections.
@@ -385,7 +381,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network Interface Discovery and Address Retrieval
 This section discusses how to list network interfaces on a machine, retrieve their display names, and get their associated IP addresses. The `NetworkInterface` class provides methods like `getDisplayName()` for interface name retrieval and `getInetAddresses()` for getting the IP addresses.

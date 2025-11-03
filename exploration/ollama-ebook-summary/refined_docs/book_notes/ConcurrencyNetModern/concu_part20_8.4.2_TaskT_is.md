@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.4.2 TaskT is a monadic container
 
 ---
 
-**Rating: 8/10**
 
 #### Async/Await Basics
 Background context explaining the async/await functionality in C#. It enables writing asynchronous code that doesn’t block the current thread, allowing for non-blocking I/O operations and better resource utilization.
@@ -24,7 +22,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Continuation with `ContinueWith`
 Background context explaining how continuations work and the role of `ContinueWith` in asynchronous programming.
@@ -43,7 +40,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Lambdas
 Background context explaining how anonymous methods can be marked `async` and the benefits of using asynchronous lambdas.
@@ -65,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronization Context
 Background context explaining how synchronization contexts work in async/await methods, allowing direct UI updates without extra work.
@@ -88,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Chaining Tasks
 Background context explaining how tasks can be chained together using async/await without having to drill through results manually.
@@ -112,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Anonymous Asynchronous Lambdas
 
@@ -132,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task<T> as a Monadic Container
 
@@ -158,7 +150,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using `Bind` and `Map` Operators
 
@@ -175,7 +166,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task Bind Operator
 Background context: The `Task.Bind` operator is used to bind an asynchronous operation, which unwraps the result of a `Task`. This is essential for chaining asynchronous operations together where you want to use the result of one task as input to another.
@@ -195,7 +185,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task Map Operator
 Background context: The `Task.Map` operator is used to map the result of a previous operation asynchronously. It's useful for transforming the output of an asynchronous operation without disrupting its execution flow.
@@ -215,7 +204,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Select and SelectMany Operators
 Background context: `Select` and `SelectMany` are operators that help in transforming asynchronous sequences. They enable a LINQ-like pattern for handling asynchronous operations, similar to how `Select` and `SelectMany` work with regular collections.
@@ -234,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Task-Based Asynchronous Programming (TAP) Overview
 Background context: The provided text discusses implementing asynchronous programming using C#. TAP, or Task-based Asynchronous Pattern, allows for efficient handling of I/O-bound and CPU-bound operations without blocking the UI thread. It provides a rich set of tools to manage asynchronous tasks effectively.
@@ -253,7 +240,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Processing with TAP
 Background context: The text explains how parallel processing can be achieved using TAP in C#. It mentions the use of `Select` and `Tap` (a function composition library) to process multiple tasks concurrently, optimizing performance by leveraging all available cores.
@@ -270,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stock Data Analysis with TAP
 Background context: The example provided shows an implementation of a program that downloads historical stock data from Google Finance, processes it into `StockData` objects, and then analyzes the results. This is done asynchronously to improve performance and responsiveness.
@@ -287,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Analyzing Stock Data
 Background context: The `AnalyzeStockHistory` function orchestrates downloading and analyzing multiple stocks' historical data in parallel using TAP. It measures the time taken for processing.
@@ -314,7 +298,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous I/O Operations Using TAP Pattern
 Background context: The provided text discusses how to perform asynchronous operations for downloading and processing stock history using the Task-based Asynchronous Pattern (TAP) in C#. The code uses `GetResponseAsync()` and `ReadToEndAsync()` methods to handle long-running I/O operations asynchronously. The data is then parsed into a structured format, such as an object of type `StockData`, utilizing LINQ and running computationally intensive tasks on the ThreadPool.
@@ -331,7 +314,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parsed Data into Structured Format
 Background context: After reading the CSV data asynchronously, it is parsed using LINQ and a function `ConvertStockHistory()` to transform the raw data into an understandable structure. The transformation runs on the ThreadPool using `Task.Run()`, ensuring that CPU-intensive tasks are offloaded from the main thread.
@@ -347,7 +329,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Method Return Type and Task Handling
 Background context: The method `ProcessStockHistory()` is marked as `async` to handle asynchronous operations, returning a `Task<Tuple<string, StockData[]>>`. This return type indicates that the method performs an asynchronous operation and ultimately returns a value.
@@ -367,7 +348,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lazy Collection of Asynchronous Operations
 Background context: The method processes the historical data asynchronously and one at a time. This approach ensures that each operation is handled efficiently without overwhelming the system resources.
@@ -383,7 +363,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Web Request to Retrieve Stock History
 Background context: The example uses a web request to retrieve stock history from Google Finance using an endpoint. This method is asynchronous, allowing the application to handle other tasks while waiting for the response.
@@ -400,7 +379,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### High-Level Architecture of a Scalable Service
 Background context: The example demonstrates how an application can handle multiple concurrent requests efficiently by leveraging asynchronous programming. This architecture is scalable as it can optimize local hardware resources, reducing thread usage and maintaining system responsiveness.
@@ -428,7 +406,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Programming Model for Downloading Data
 Asynchronous programming allows operations to run concurrently, improving overall performance. In this model, database queries and network requests are processed without blocking threads, allowing other tasks to proceed simultaneously.
@@ -447,7 +424,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Cancellation
 In asynchronous operations, it is often necessary to terminate long-running tasks prematurely. The .NET Framework provides a cooperative cancellation mechanism using `CancellationToken` and `CancellationTokenSource`.
@@ -468,7 +444,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cancellation Token in Asynchronous Methods
 Methods that support cancellation use `CancellationToken` to monitor the state of a task. The `ThrowIfCancellationRequested()` method can be used to stop execution if cancellation is pending.
@@ -494,7 +469,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Registering Callbacks for Cancellation
 You can register a callback to execute when a cancellation is requested. This allows for custom actions such as logging or notifying listeners.
@@ -515,7 +489,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cooperative Cancellation with Linked Tokens
 Cooperative cancellation can be applied to multiple reasons by creating a composite `CancellationToken`. This is useful when combining multiple cancellation sources.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.2.2 The asynchronous workflow in action Azure Blob storage paralleloperations
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Workflow Overview
 Asynchronous workflow is a feature in F# that allows for non-blocking I/O operations, enabling concurrent processing of requests. This approach contrasts with synchronous I/O, which processes one request at a time and blocks until the result is available.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronous vs Asynchronous I/O Operations
 Synchronous I/O processes one request at a time, blocking until the result is available before processing the next request. In contrast, asynchronous I/O can handle multiple requests concurrently, improving overall execution speed.
@@ -38,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### F# Asynchronous Workflow Example: Azure Blob Storage
 This example demonstrates using an F# asynchronous workflow for downloading images from Azure Blob storage. The program benefits from a FileSystemWatcher that triggers events when files change locally.
@@ -84,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronous vs Asynchronous Execution Speed
 The asynchronous version of the program can download more images in the same amount of time compared to the synchronous version because it processes multiple requests concurrently.
@@ -100,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Synchronous vs Asynchronous Program Execution
@@ -117,7 +111,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Program Execution
 The asynchronous version of a program allows multiple operations to run in parallel, which is particularly useful for I/O-bound tasks like downloading images. This approach can significantly reduce the overall execution time by overlapping I/O operations.
@@ -144,7 +137,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Workflows in F#
 In F#, asynchronous workflows allow for a more structured and readable approach to handling asynchronous operations. They are particularly useful when dealing with I/O-bound tasks that can benefit from parallelism.
@@ -164,7 +156,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 #### F# Asynchronous Workflow Overview
 Background context explaining the concept. The F# asynchronous workflow is a mechanism to handle non-blocking computations and provide an illusion of sequential execution through syntactic sugar. It integrates well with functional programming paradigms, offering cleaner code and improved readability compared to traditional callback-based asynchronous programming.
@@ -193,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Workflow Syntax and Semantics
 Explanation: The F# asynchronous workflow is built around the polymorphic data type `Async<'a>`, which represents an arbitrary computation that will be executed at some point in the future. This type requires explicit commands to start its execution.
@@ -217,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Workflow Constructors
 Explanation: The `async { ... }` expression is a key constructor for defining asynchronous workflows. Other constructors like `use!`, `do!`, and `return!` are used to manage resources, perform side effects, and return results.
@@ -252,7 +241,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Difference Between Synchronous and Asynchronous Workflows
 Explanation: Synchronous workflows execute all their steps sequentially, blocking the current thread until each step completes. Asynchronous workflows, on the other hand, allow non-blocking execution by scheduling tasks in a separate thread or fiber, maintaining a linear control flow through syntactic sugar.
@@ -283,7 +271,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Execution Model and Continuations
 The asynchronous execution model in F# revolves around continuations, where an asynchronous expression preserves a function's capability to act as a callback. This allows for complex operations to be broken down into simpler, sequential-looking parts that can be executed asynchronously.
@@ -295,7 +282,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Workflow Benefits
 Asynchronous workflows in F# offer several benefits such as simpler code that looks sequential, built-in cancellation support, and easy error handling. They are designed for asynchronous compositional semantics and can be parallelized easily.
@@ -313,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Computation Expressions Overview
 Computation expressions in F# are a powerful feature that allows you to define custom computational contexts, making code more readable and reducing redundancy. They utilize monadic operators like `Bind` and `Return` to sequence operations.
@@ -326,7 +311,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Computation Expressions
 Asynchronous workflows in F# are built on top of computation expressions. An asynchronous workflow is syntactic sugar interpreted by the compiler as a series of asynchronous calls, allowing for non-blocking behavior and easier parallelization.
@@ -339,7 +323,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monadic Operators in Asynchronous Workflows
 In the context of asynchronous workflows, monadic operators like `Bind` and `Return` are redefined. The `async.Bind` operator takes an asynchronous result and a continuation function, while `async.Return` wraps a value into an asynchronous operation.
@@ -357,7 +340,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Computation Expressions Overview
 Asynchronous computation expressions enable writing asynchronous code in a more synchronous, fluent style. The compiler transforms `let` and `do` bindings into calls to `Bind`, which unwraps values from computation types and executes continuations. 
@@ -368,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Delay Operation in Computation Expressions
 The `Delay` operation wraps an expression that returns an asynchronous value (`Async<'a>`). It ensures that the actual execution of this asynchronous computation is deferred until it's needed. This means side effects can be controlled and only executed at the appropriate time within the asynchronous workflow.
@@ -379,7 +360,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bind Operation in Computation Expressions
 The `Bind` operation transforms a `let` binding and continues with a continuation based on the result of an asynchronous computation (`M<'a>`). It starts the operation, providing a continuation for when it completes, thus avoiding waiting for results synchronously. 
@@ -390,7 +370,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AsyncRetryBuilder Implementation
 An example of building a custom computation expression named `AsyncRetryBuilder` is provided. This builder retries an asynchronous task up to a specified maximum number (`max`) times with a delay between each retry before aborting if it fails continuously.
@@ -419,7 +398,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using AsyncRetryBuilder in Practice
 The `AsyncRetryBuilder` is used to create a function that connects asynchronously to an Azure Blob service and retries the connection a few times if it fails initially. This ensures the code does not abort immediately on failure but tries again with a delay.

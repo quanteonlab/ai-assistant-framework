@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Contract-Law-For-Dummies_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Forming a Contract Promises Offers and Mutual Assent
 
 ---
 
-**Rating: 8/10**
 
 #### Contract Performance vs Formation
 Background context: The text distinguishes between contract formation and performance. Formation occurs when Joe makes an offer, and Mary accepts it; performance happens later when Joe tries to retrieve the bicycle the next day.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Acceptance by Promise or Performance
 Background context: In some cases, an offer can be accepted either by a promise (bilateral contract) or through performance alone. The key point is that once an offeree begins performing, both parties are bound as if they had formed a bilateral contract.
@@ -31,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determining Consideration Presence
 Background context explaining that determining whether a promise is enforceable involves identifying consideration, which is what each party stands to gain from the exchange. This concept helps distinguish formal agreements with mutual benefits (consideration) from informal or social promises without such benefits.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 4.6 Further explorations. 4.6.2 Exercises
 
 ---
 
-**Rating: 8/10**
 
 #### Reduction Operation in Parallel Computing
 In parallel computing, a reduction operation is an operation where a multidimensional array from 1 to N dimensions is reduced to at least one dimension smaller and often to a scalar value. This operation is commonly used in computer science and involves cooperation among processors to complete the task.
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pair-Wise Reduction with Tree-Like Pattern
 A reduction operation can also be performed using a pair-wise fashion in a tree-like pattern. In such a scenario, the number of communication hops required for an array of size \(N\) to complete the reduction would typically be \(\log_2 N\).
@@ -31,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronization in Reduction Operations
 All processors must synchronize at a reduction operation call. This synchronization can lead to delays when many processors are waiting for others to complete their part of the computation.
@@ -43,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data-Oriented Design (DOD)
 Data-oriented design focuses on structuring code around data rather than operations. This approach is particularly useful in gaming development for building performance into program design.
@@ -55,7 +50,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example References for Data-Oriented Design
 References such as "Data-oriented design (or why you might be shooting yourself in the foot with OOP)" by Noel Llopis and "Data-oriented design and C++" by Mike Acton and Insomniac Games provide valuable insights into implementing data-oriented design principles.
@@ -67,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data-Oriented Design
 Data-oriented design emphasizes organizing data in a way that aligns with the computational requirements of the application, often leading to better performance and more efficient use of memory.
@@ -82,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Algorithms and Patterns
 Parallel algorithms are well-defined computational procedures that emphasize concurrency to solve problems, while parallel patterns are common, concurrent code fragments used in various scenarios.
@@ -99,7 +91,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Algorithm Analysis for Parallel Computing Applications
 Algorithm analysis involves evaluating the performance of different algorithms using simple models like counting loads and stores. More complex models can provide insights into cache behavior at a low level.
@@ -118,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reduction
 A reduction operation combines elements of an array into a single value through repeated application of a binary operation (e.g., summing all elements).
@@ -147,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prefix Scan
 A prefix scan (also known as a scan or reduction) operates on an array to produce a new array where each element is the result of applying a binary operation to all previous elements.
@@ -174,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ghost Cell Updates
 Ghost cells are used to handle boundary conditions in simulations by replicating cell values across boundaries. This approach simplifies the implementation of algorithms but requires careful memory management.
@@ -204,7 +192,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Algorithmic Complexity
@@ -225,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Big O Notation
 Explanation of Big O notation and its significance in algorithmic analysis. This notation helps describe the worst-case scenario performance of an algorithm, which is crucial for understanding scalability.

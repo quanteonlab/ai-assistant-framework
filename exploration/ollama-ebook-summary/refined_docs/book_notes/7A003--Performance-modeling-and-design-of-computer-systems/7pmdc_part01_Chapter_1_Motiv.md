@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 1 Motivating Examples of the Power of Analytical Modeling. 1.1 What Is Queueing Theory
 
 ---
 
-**Rating: 8/10**
 
 #### Queueing Theory Overview
 Queueing theory is the study of what happens when you have lots of jobs, scarce resources, and consequently long queues and delays. It deals with predicting system performance metrics like mean delay or delay variability, and finding ways to improve these metrics through better system designs.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application Examples in Queueing Theory
 Queueing theory applies broadly in various scenarios, from real-world examples like banks and supermarkets to computer systems involving CPUs, disks, routers, memory, databases, and server farms.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Predictive Goals in Queueing Theory
 The predictive goals in queueing theory include predicting mean delay, delay variability, probability of exceeding Service Level Agreements (SLAs), and other performance metrics such as the number of jobs queuing or servers utilized.
@@ -46,7 +42,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Goals Beyond Prediction
 Beyond just prediction, queueing theory also aims to find better system designs by deploying smarter scheduling policies or routing strategies to reduce delays.
@@ -58,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stochastic Modeling in Queueing Theory
 Queueing theory uses stochastic modeling and analysis, which represents job service demands and interarrival times as random variables. For instance, the CPU requirements of processes might follow a Pareto distribution, while arrival processes may be modeled by Poisson distributions.
@@ -70,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Markovian Assumptions in Queueing Theory
 Markovian assumptions, such as assuming exponential service demands or Poisson arrival processes, simplify analysis but may not always accurately represent real-world systems.
@@ -86,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Workload Models
 Workload models can significantly impact the accuracy of performance predictions. Making simplifying assumptions about the workload can lead to inaccurate results and poor system designs if the assumptions do not fit reality.
@@ -98,7 +90,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Integrating Measured Workloads
 Incorporating actual workload distributions into queueing models can improve accuracy, especially in cases where simplifying assumptions break down.
@@ -110,7 +101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Common Workload Assumptions in Queueing Literature
 Much of queueing literature relies on Markovian assumptions such as exponential service times or Poisson arrival processes due to their analytical tractability.
@@ -122,7 +112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Alternative Methods for Handling Non-Markovian Workloads
 To address non-Markovian workloads, advanced methods like phase-type distributions and matrix-analytic methods can be used.
@@ -140,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Queueing Theory as a Predictive Tool
 
@@ -185,7 +173,6 @@ The CPU speed should be increased by more than double. Doubling both the arrival
 
 ---
 
-**Rating: 8/10**
 
 #### Counterintuitive System Design with Queueing Theory
 
@@ -229,7 +216,6 @@ The CPU speed should be increased by more than double. Doubling both the arrival
 
 ---
 
-**Rating: 8/10**
 
 #### Processor-Sharing Service Order
 Background context: In this scenario, we consider a CPU employing a processor-sharing (PS) service order rather than first-come, first-served (FCFS). The concept remains similar to FCFS but distributes the service time among multiple jobs.
@@ -242,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Describing the Concepts
 These examples highlight how the choice between using many slow or one fast machine depends on various factors such as job size variability and system load. The same principle applies to resource allocation in broader contexts like power management in data centers, where the goal is efficient use of resources to minimize response times.
@@ -253,7 +238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Describing the Concepts
 The examples also illustrate how the non-preemptible nature of jobs impacts the choice between a single fast server and multiple slow servers, with preemptive jobs providing more flexibility in scheduling.
@@ -266,7 +250,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Queueing Theory Application in Resource Management
 Queueing theory is used to optimize resource management, such as bandwidth allocation or task assignment in server farms. The performance can be influenced by factors like job size variability and cost considerations.
@@ -296,7 +279,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shortest-Queue Task Assignment Policy
 The shortest-queue policy routes each job to the host with the fewest jobs currently processing, which can help in minimizing overall response times.
@@ -326,7 +308,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Job Size and Workload Properties
@@ -341,7 +322,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preemptive vs Non-preemptive Servers
 Background context explaining that in preemptive systems like Processor-Sharing (PS), jobs are served on a time-sharing basis, whereas non-preemptive systems serve jobs until completion. Discusses the impact of server type on task assignment policies.
@@ -355,7 +335,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Processor-Sharing Servers
 Background context explaining how jobs are served on a time-sharing basis in Processor-Sharing (PS) servers compared to FCFS servers. Discusses the effectiveness of Shortest-Queue policy under PS.
@@ -373,7 +352,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/G/2 Queue
 Background context explaining the complexity of analyzing queues using queueing theory. The M/G/2 queue involves a single queue and two servers where job sizes follow a general distribution.
@@ -397,7 +375,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Analytical Modeling Limitations
 Background context explaining that while analytical modeling like queueing theory is powerful, it still faces limitations with certain problems. There are simple problems where exact solutions are hard to derive or approximate solutions are not very accurate.
@@ -419,7 +396,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Single-Server Network Overview
@@ -447,7 +423,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Order: First-Come-First-Served (FCFS)
 In queueing theory, jobs are served in the order they arrive. This is denoted as FCFS.
@@ -469,7 +444,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Metrics in Single-Server Network
 
@@ -519,7 +493,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relationship Between Arrival and Service Rates
 
@@ -542,7 +515,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deterministic Interarrival and Service Times
 

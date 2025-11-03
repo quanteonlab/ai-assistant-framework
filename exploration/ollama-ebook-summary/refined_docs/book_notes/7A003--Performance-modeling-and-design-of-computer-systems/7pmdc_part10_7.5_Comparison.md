@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 10)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 7.5 Comparison of Closed and Open Networks. 7.6 Readings. 7.7 Exercises
 
 ---
 
-**Rating: 8/10**
 
 #### Modifying Closed vs Open Networks
 Background context: The text discusses the differences between closed and open networks, focusing on how bounds derived for closed networks may not apply directly to open networks. Specifically, it mentions that the upper bound \(X \leq \frac{1}{D_{max}}\) holds true for both cases but is tighter for closed networks.
@@ -135,7 +133,6 @@ Thus, the conclusion is that no single online algorithm can minimize mean slowdo
 ??x
 ---
 
-**Rating: 8/10**
 
 #### Discrete-Time Markov Chains (DTMCs)
 Discrete-time Markov chains are used to model systems that evolve over discrete time steps. The key property is the Markovian property, which states that future behavior depends only on the current state and not on the sequence of events that preceded it.
@@ -230,7 +227,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Closed Systems Overview
 Background context: In closed systems, we can approximate and bound throughput \(X\) and expected response time \(E[R]\). These approximations are independent of job service times' distribution but depend on the system being closed. When the multiprogramming level \(N\) is much higher than \(N^*\), we get a tight bound for both \(X\) and \(E[R]\). For \(N=1\), there's also a tight bound, but intermediate values of \(N\) only allow approximations.

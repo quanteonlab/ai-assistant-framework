@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 36)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 15.5.2 Text-to-image generation with DALL-E 2
 
 ---
 
-**Rating: 8/10**
 
 #### CLIP Model and Prior Vectors
 Background context: The CLIP model converts text embeddings into prior vectors that represent images in a latent space. These prior vectors guide the image generation process by providing initial conditions to the U-Net denoiser.
@@ -25,7 +23,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pretrained Large Language Models (LLMs)
 Background context explaining the concept of pretrained large language models, their capabilities and limitations. The GPT series by OpenAI is a notable example showcasing extensive NLP tasks such as producing life-like text, images, speech, and code.
@@ -90,7 +87,6 @@ Pretrained LLMs have various potential applications in businesses such as genera
 
 ---
 
-**Rating: 8/10**
 
 #### Text Generation Tasks with OpenAI API
 Background context: The example covers various text generation tasks such as question-answering, summarization, and creative writing using the GPT-3.5 turbo model.

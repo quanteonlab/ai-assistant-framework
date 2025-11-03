@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 7.13 Finding an Object in a Collection. Problem. Solution. Discussion
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Sorting a Set and Printing
@@ -132,7 +130,6 @@ The `Arrays.sort()` method sorts the array in ascending order. The `Arrays.binar
 x??
 ---
 
-**Rating: 8/10**
 
 #### `toString()` Method for Object Formatting
 Background context explaining that when you pass an object to methods like `System.out.println()`, Java automatically calls its `toString()` method. The default implementation in `java.lang.Object` provides a class name and hash code, which might not be very useful.
@@ -267,7 +264,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reflexivity of equals()
 Background context explaining the reflexive property of the `equals()` method. This means that any object must be equal to itself. The contract for this is defined as `x.equals(x)  must be true`.
@@ -409,7 +405,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing `equals()` Method Symmetry and Reflexivity
 
@@ -549,7 +544,6 @@ public int hashCode() {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Nonpublic Classes and Inner Classes
 Background context explaining that nonpublic classes can be defined within another class's source file but are not public or protected. Inner classes, on the other hand, are classes defined inside another class and come with various types such as named and anonymous inner classes.

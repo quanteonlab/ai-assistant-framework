@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 45)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 29.2 Readings. Chapter 30 Preemptive Non-Size-Based Policies
 
 ---
 
-**Rating: 8/10**
 
 #### LCFS Mean Queueing Time Derivation
 
@@ -104,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Motivation Behind Processor-Sharing (PS)
@@ -117,7 +114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Processor-Sharing (PS) - Quantum Size
 Explanation on how a quantum size approaching zero leads to the PS abstraction in CPU scheduling.
@@ -129,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison Between PS and FCFS
 Explanation on when PS might perform worse than FCFS.
@@ -150,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### M/G/1/PS vs. M/G/1/FCFS
 Explanation on whether M/G/1/PS outperforms M/G/1/FCFS in a stochastic setting.
@@ -164,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distribution of Jobs' Ages in M/G/1/PS System
 Background context: The age of a job is defined as the total service it has received so far. In an M/G/1/PS system, jobs are worked on simultaneously under preemptive sharing policy (PS). This means that when a new job arrives, all jobs currently being served are "interrupted" and receive some additional service time before returning to their original PS mode.
@@ -189,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Response Time in M/G/1/PS and M/M/1/FCFS Systems
 Background context: The mean response time (MRT) for both the M/G/1/PS and M/M/1/FCFS systems can be compared. For an M/M/1/FCFS system, the mean response time is given by \( \frac{1}{\lambda(1-\rho)} \), where \( \lambda \) is the arrival rate and \( \rho = \frac{\lambda}{\mu} \) (utilization factor). In an M/G/1/PS system, the mean response time can be derived similarly but with a different formula.
@@ -208,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Job Size and Arrival Process
 Background context: In queueing theory, the size of a job is a critical parameter. For an M/G/1/PS system, jobs arrive according to a Poisson process with rate \( \lambda \). The sizes of these jobs are assumed to be independent and identically distributed (i.i.d.) random variables with probability density function (pdf) \( f(s) \).
@@ -240,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inspection Paradox and Job Ages in M/G/1/PS
 Background context: In the M/G/1/PS system, due to preemptive sharing, an arriving job observes all jobs with i.i.d. ages that follow the equilibrium distribution. This is a consequence of the inspection paradox, which states that when observing a random sample from a population, it appears more common for larger elements to be observed.
@@ -266,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Response Time in M/G/1/PS System
 Background context: The response time \( T(x) \) for a job of size \( x \) in an M/G/1/PS system is defined as the total time from arrival to completion. It has been shown that every job in this system experiences the same expected slowdown, which can be calculated using Little's Law.
@@ -293,7 +282,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Number of Jobs in System with Size Between x and x+h
 
@@ -305,7 +293,6 @@ No. Although original job sizes are drawn from a distribution density \(f(·)\),
 
 ---
 
-**Rating: 8/10**
 
 #### Using Job's Age for Probability Calculation
 
@@ -331,7 +318,6 @@ where \(E[S]\) is the expected service time.
 
 ---
 
-**Rating: 8/10**
 
 #### Intuition Behind Theorem 30.4
 
@@ -343,7 +329,6 @@ The intuition is that an arrival sees \(\frac{\rho}{1 - \rho}\) jobs in the syst
 
 ---
 
-**Rating: 8/10**
 
 #### M/G/1/PS Queue and Response Time
 
@@ -355,7 +340,6 @@ The expected length of a busy period started by a job of size \(x\) for the M/G/
 
 ---
 
-**Rating: 8/10**
 
 #### Variances and Higher Moments
 
@@ -367,7 +351,6 @@ The variance of the response time under M/G/1/PS cannot be easily expressed in a
 
 ---
 
-**Rating: 8/10**
 
 #### Implications for Fairness
 
@@ -379,7 +362,6 @@ M/G/1/PS is considered a fair scheduling policy because all jobs experience the 
 
 ---
 
-**Rating: 8/10**
 
 #### Expressing (30.3) as a Summation
 To derive the formula for the average queue length of an FCFS system, we start with equation (30.3). The goal is to express it as a summation form.

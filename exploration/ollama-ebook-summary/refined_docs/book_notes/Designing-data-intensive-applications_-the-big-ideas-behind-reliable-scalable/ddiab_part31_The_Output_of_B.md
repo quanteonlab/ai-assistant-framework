@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 31)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The Output of Batch Workflows
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Processing Workflow Output
 
@@ -85,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recovery from Bugs and Human Fault Tolerance
 
@@ -159,7 +156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce vs MPP Databases
 MapReduce introduced a framework for processing large datasets using parallel computing, but it wasn't entirely new. It focused on running arbitrary programs over distributed files, whereas MPP databases were already handling complex SQL queries efficiently.
@@ -225,7 +221,6 @@ This contrasts with MPP databases where the schema must be carefully designed be
 ??x
 ---
 
-**Rating: 8/10**
 
 #### Hadoop for ETL Processes
 Hadoop is often used to implement Extract, Transform, Load (ETL) processes. Data from transaction processing systems can be dumped into a distributed filesystem in raw form and then processed using MapReduce jobs to clean up that data, transform it into a relational format, and import it into an MPP data warehouse for analytics.
@@ -400,7 +395,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Beyond MapReduce Overview
@@ -453,7 +447,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Operator Flexibility in Dataflow Engines
 Background context explaining how dataflow engines like Tez and Spark offer more flexible operation compared to MapReduce. Key points include operators not being confined to map-reduce roles, ability for sorting, partitioning, and skipping stages based on requirements.
@@ -549,7 +542,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault Tolerance Mechanisms
 

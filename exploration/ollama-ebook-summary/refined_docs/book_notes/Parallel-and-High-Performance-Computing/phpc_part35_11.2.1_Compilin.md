@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 35)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11.2.1 Compiling OpenACC code
 
 ---
 
-**Rating: 8/10**
 
 #### OpenACC and OpenMP Overview
 Background context: The text discusses how to use directives and pragmas (specifically, OpenACC) to offload work to a GPU. This allows developers to leverage GPU power without significant changes to their application code.
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Offloading Work to a GPU
 
@@ -39,7 +36,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### `kernels` Pragma for Compiler Autoparallelization
 Background context explaining that the `kernels` pragma allows auto-parallelization of a code block by the compiler, often used to get feedback on sections of code.
@@ -71,7 +67,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compiler’s Decision on Loop Parallelization
 The compiler's output provides information about which loops it can or cannot parallelize based on the current code and data dependencies.
@@ -94,7 +89,6 @@ x?
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Restrict Attribute Usage
@@ -111,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Loop Pragma in OpenACC
 The `parallel` and `loop` pragmas together allow for more fine-grained control over parallelization. The `parallel` pragma opens a parallel region, while the `loop` pragma distributes work within that region.
@@ -127,7 +120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Parallel Loop Construct Overview
@@ -140,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Using Parallel Loops in Stream Triad
 
@@ -169,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reducing Data Movement with Parallel Loops
 
@@ -191,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Explanation of Compiler Output for Parallel Loops
 
@@ -216,7 +205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Impact of Data Movement
 
@@ -236,7 +224,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Structured Data Region
 Background context: The structured data region is a way to manage memory for blocks of code that are executed on the device. It allows specifying how data should be copied, created, or preserved during execution.
@@ -260,7 +247,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Loops in OpenACC
 Background context: The `#pragma acc parallel loop` directive is used to parallelize loops for execution on GPU devices. This directive allows OpenACC to optimize and distribute loop iterations across multiple threads or blocks, enhancing performance.
@@ -280,7 +266,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Present Clause in OpenACC
 Background context: The `present` clause within a data region is used to indicate that there should be no data copies between the host and device for specific arrays. This reduces overhead and ensures efficient execution.
@@ -297,7 +282,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Dynamic Data Regions Using `enter data` and `exit data`
@@ -318,7 +302,6 @@ The code snippet demonstrates how to initialize arrays on both the host and devi
 
 ---
 
-**Rating: 8/10**
 
 #### Allocating Data Only on the Device Using `acc_malloc`
 When working with large arrays, it's more efficient to allocate them only on the device and use device pointers within OpenACC regions. The `acc_malloc` function allocates memory on the device and returns a pointer that can be used in OpenACC directives.
@@ -353,7 +336,6 @@ The `deviceptr` clause informs the compiler that a pointer points to memory alre
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Memory Management with Dynamic Data Regions
 Dynamic data regions allow explicit control over when data is transferred to the device and when it can be freed, reducing overhead and improving performance.
@@ -375,7 +357,6 @@ This deletes the device copies.
 
 ---
 
-**Rating: 8/10**
 
 #### Device Memory Management with `acc_malloc` and `free`
 Using `acc_malloc` for dynamic memory allocation on the device and `free` for deallocation is a common pattern in OpenACC programming. This ensures that memory is managed efficiently, avoiding unnecessary data transfers.

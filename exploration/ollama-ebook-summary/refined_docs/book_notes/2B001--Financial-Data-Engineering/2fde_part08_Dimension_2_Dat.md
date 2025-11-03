@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Dimension 2 Data Outliers
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Data Mining Techniques
 Background context explaining that techniques such as Pearson correlation, z-score, percentile analysis, and Mahalanobis distance are traditionally employed for data quality management. These methods help in detecting erroneous records.
@@ -80,7 +78,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Biases in Financial Data
 
@@ -313,7 +310,6 @@ x??
 These examples should help illustrate the different biases and granularities in financial datasets. If you have any further questions or need more detailed explanations, feel free to ask! 
 ```
 
-**Rating: 8/10**
 
 #### Network Reconstruction and Link Prediction Methods
 Background context: To test the code quickly online, researchers have proposed network reconstruction and link prediction methods to infer and construct the network structure at a bank-to-bank level. These methods are crucial for ensuring the integrity of financial networks by identifying potential connections that might not be explicitly stated in the data.

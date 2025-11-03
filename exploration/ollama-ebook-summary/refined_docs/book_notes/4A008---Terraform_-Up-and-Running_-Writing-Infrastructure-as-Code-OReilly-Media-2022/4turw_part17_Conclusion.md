@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 4A008---Terraform_-Up-and-Running_-Writing-Infrastructure-as-Code-OReilly-Media-2022_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Conclusion
 
 ---
 
-**Rating: 8/10**
 
 #### Terraform Resource Movement and Immutability
 Terraform will perform actions based on changes detected between the desired state and the current state. In this case, `aws_security_group.instance` has been moved to `aws_security_group.cluster_instance`. When you update a resource that is immutable (unchangeable), Terraform will destroy the old resource and create a new one.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Plan Command in Terraform
 The `plan` command is used to preview the actions that will be taken by Terraform based on changes detected between the current state and the desired state. In this case, no actions are required as there are no resources to add, change, or destroy.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Parameters in Resources
 Many resources have parameters that are immutable, meaning once they are set, they cannot be changed without Terraform deleting the old resource and creating a new one. This is important to consider when planning updates to your infrastructure using Terraform.
@@ -39,7 +35,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Plan Output Interpretation
 The plan output indicates that there are no actions required as the desired state matches the current state without any changes. However, this does not mean no further changes will be made; you should still use the `plan` command for future updates.
@@ -50,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Plan Command Usage
 The `plan` command is used to get a preview of what Terraform intends to do before applying any changes. It helps you understand if your configurations are correct and if there will be any actions taken by Terraform.
@@ -61,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Flexibility of Terraform Language
 Terraform includes many tools like variables, modules, `count`, `for_each`, `for`, `create_before_destroy` strategies, and built-in functions that provide a lot of flexibility and expressive power to the language. This allows you to handle complex configurations more effectively.
@@ -72,7 +65,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conclusion on Modules Handling Secrets
 The next chapter will cover how to create modules that handle secrets and sensitive data in a safe and secure manner. This is crucial as it helps ensure that sensitive information is not exposed during the infrastructure deployment process.
@@ -85,7 +77,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Do Not Store Secrets in Plain Text
 Background context explaining why storing secrets in plain text is a bad practice. The text emphasizes the importance of keeping sensitive data secure and provides examples of potential risks if secrets are not managed properly.
@@ -102,7 +93,6 @@ x??
 
 ---
 
-**Rating: 10/10**
 
 #### Secrets Management Basics
 Background context explaining the importance of managing secrets securely. The text highlights that storing secrets in plain text is a major security risk.
@@ -117,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Poor Secret Management
 Background context explaining a bad practice of storing secrets directly in code and checking them into version control. The text provides an example of incorrect Terraform configuration.
@@ -148,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Proper Secret Management Techniques
 Background context explaining the importance of using tools to manage secrets securely. The text mentions that proper secret management involves not storing secrets in plain text.
@@ -186,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Storing Secrets: File-Based Strategy
 Background context: The text explains that file-based secret stores use encrypted files stored in version control systems. Managing these keys securely is crucial to prevent unauthorized access.
@@ -204,7 +191,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Storing Secrets: Centralized Strategy
 Background context: The text describes centralized secret stores as web services that handle the encryption and storage of secrets using a data store such as MySQL or DynamoDB.
@@ -221,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Key Management Services (KMS)
 Background context: The text explains how KMS services provided by cloud providers like AWS, GCP, and Azure are used to securely store encryption keys.

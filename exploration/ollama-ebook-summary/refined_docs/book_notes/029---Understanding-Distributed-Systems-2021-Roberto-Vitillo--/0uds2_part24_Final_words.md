@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Final words
 
 ---
 
-**Rating: 8/10**
 
 #### Key Concepts for Learning Distributed Systems
 This section discusses how to continue learning after finishing the book, emphasizing the importance of studying industry papers and specific systems like Azure Storage. It also provides recommendations for further reading and practical guidance for system design interviews.

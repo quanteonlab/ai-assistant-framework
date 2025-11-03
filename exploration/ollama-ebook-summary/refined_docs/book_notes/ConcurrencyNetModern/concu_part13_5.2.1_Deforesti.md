@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 5.2.1 Deforesting one of many advantages to folding
 
 ---
 
-**Rating: 8/10**
 
 #### Fold Function for Data Aggregation
 Background context: The `fold` function is a higher-order function that iteratively combines elements of a sequence. It's used to accumulate results by applying a binary operator (or function) over each element of the sequence, starting from an initial value and updating this accumulator in each iteration.
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Execution with PLINQ
 Background context: PLINQ is a parallel implementation of LINQ in .NET, allowing for concurrent processing. It can significantly speed up the execution of data operations on large sequences by utilizing multiple threads.
@@ -35,7 +32,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Filter Function Using Fold in F#
 Background context: The `filter` function is used to select elements from a sequence based on a predicate. In functional programming languages like F#, this can be implemented using `fold`, which iteratively checks each element against the predicate and accumulates matching items.
@@ -51,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Length Function Using Fold in F#
 Background context: The `length` function calculates the number of elements in a sequence. In functional programming, this can be implemented using `fold`, which iteratively counts each element.
@@ -66,7 +61,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Aggregation and Reduction with PLINQ
 
@@ -122,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lazy Collections vs. Eager Data Structures
 
@@ -148,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### K-Means Clustering Algorithm
 
@@ -189,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### PLINQ and Fold Functions
 
@@ -213,7 +204,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GetNearestCentroid Function
 Background context: The `GetNearestCentroid` function is a critical part of the k-means clustering algorithm. It determines which centroid a given data point belongs to by comparing its distances to all centroids and selecting the closest one.
@@ -235,7 +225,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### UpdateCentroids Function
 Background context: The `UpdateCentroids` function is responsible for recalculating the centroids based on the data points that have been assigned to each cluster. This step ensures that the algorithm converges towards more accurate clustering.
@@ -265,7 +254,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Processing with PLINQ
 Background context: The `UpdateCentroids` function leverages PLINQ for parallel processing. This approach significantly speeds up the computation by distributing the workload across multiple threads.
@@ -284,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence Condition
 Background context: The k-means clustering algorithm continues to iterate until a convergence condition is met. This means that no further changes occur in the cluster assignments or centroid positions.
@@ -298,7 +285,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GroupBy Function and Key Computation
 Background context: The `GroupBy` function is a powerful tool in LINQ that allows for grouping elements of an iterable based on a specified key. In this case, the key is computed by the `GetNearestCentroid` function, which determines the nearest centroid to each data point.
@@ -313,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Select and Aggregation for Centroid Calculation
 Background context: The `Select` function is used after `GroupBy` to transform each group (set of points) into a new value. Here, it calculates the center of each cluster by summing up the coordinates of the points in that cluster.
@@ -336,7 +321,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of UpdateCentroids Without Aggregate
 Background context: The `UpdateCentroids` function without the use of `Aggregate` uses imperative loops to calculate the center of centroids for each cluster. This approach involves mutable shared variables, making it less elegant and harder to understand compared to using PLINQ's `Aggregate`.
@@ -364,7 +348,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Comparison of K-Means Algorithms
 Background context: The performance benchmark compares sequential LINQ, parallel PLINQ, and a variant with a tailored partitioner. Parallel PLINQ shows significant improvement over the sequential version.
@@ -380,7 +363,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### ParallelExecutionMode in PLINQ
@@ -402,7 +384,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Custom Partitioner in PLINQ
 Background context: In the k-means algorithm, a custom partitioner was used to avoid creating parallelism with overly fine granularity. The `Partitioner.Create` method allows for static or dynamic partitioning strategies based on the input data and available cores.
@@ -419,7 +400,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Reduction Function Implementation
 
@@ -444,7 +424,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Second Variant of the `Reduce` Function
 
@@ -472,7 +451,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Associativity and Commutativity in Aggregations
 
@@ -491,7 +469,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Associativity and Commutativity
 

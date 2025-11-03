@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 3. Designing Good Data Architecture. Enterprise Architecture Defined
 
 ---
 
-**Rating: 8/10**
 
 #### What Is Data Architecture?
 Background context: The term "data architecture" can sometimes be confusing due to its various definitions across different sources. However, it is a subset of enterprise architecture and focuses on how data flows through an organization's systems.
@@ -108,7 +106,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gartner's Definition of Enterprise Architecture
 Gartner defines enterprise architecture (EA) as a discipline for proactively and holistically leading enterprise responses to disruptive forces by identifying and analyzing the execution of change toward desired business vision and outcomes. EA provides recommendations for adjusting policies and projects to achieve targeted business outcomes.
@@ -164,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Enterprise Architecture and Data Architecture Overview
 Background context: The provided text discusses enterprise architecture, emphasizing its role in balancing flexibility and trade-offs. It introduces data architecture as a subset of enterprise architecture, focusing on defining it based on established frameworks such as TOGAF and DAMA DMBOK. The objective is to understand how these definitions align with practical implementations.
@@ -237,7 +233,6 @@ Technical architecture includes:
 
 This dual approach ensures both the business operations are aligned with strategic goals, and the technical infrastructure supports efficient data management.
 
-**Rating: 8/10**
 
 ---
 #### Concept of Good Data Architecture
@@ -299,7 +294,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Plan for Failure
 Background context: The text emphasizes the inevitability of failures and stresses the importance of planning for them to ensure robustness. Key terms include availability, reliability, recovery time objective (RTO), and recovery point objective (RPO).
@@ -401,7 +395,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scalability: Scaling Up and Down
 Background context explaining the concept. In data systems, scalability encompasses two main capabilities—scaling up to handle significant quantities of data and scaling down when load decreases or ceases. These abilities are crucial for managing extreme loads temporarily and cutting costs during periods of low activity.

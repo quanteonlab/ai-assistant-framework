@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 27)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.7.1 Additional reading
 
 ---
 
-**Rating: 8/10**
 
 #### Communicator Groups in MPI
 Background context on how MPI communicator groups can be used to perform specialized operations within subgroups, such as row or column communicators. This is essential when you want to optimize communication patterns specific to your application’s requirements.
@@ -31,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronized Timers vs. Unsynchronized Timers
 Removing barriers for synchronized timers can affect performance measurements by introducing variability.
@@ -62,7 +59,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Converting High-level OpenMP to Hybrid MPI Plus OpenMP Example
 Converting high-level OpenMP to hybrid MPI plus OpenMP involves integrating both paradigms for better parallelism.
@@ -85,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Key Concepts in MPI Programming
 Key concepts in MPI programming include point-to-point communication, collective operations, ghost exchanges, and combining MPI with OpenMP for more parallelism.
@@ -103,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to GPU Programming
 The following chapters will cover the basics of GPU programming, starting from understanding GPU architecture and its benefits. You'll explore programming models, languages like OpenACC and OpenCL, and more advanced GPU languages.
@@ -122,7 +116,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison Between GPUs and CPUs
 Explain the differences between GPUs and CPUs, focusing on their respective strengths in handling parallel vs. sequential tasks. Mention the price range of high-end GPUs and why they might not replace CPUs in all applications due to specialized operations better suited for CPUs.
@@ -135,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Modeling Before GPU Implementation
 Background context: Developing an initial performance model and analysis is essential before implementing a GPU solution. This helps manage programmers' expectations and ensures they allocate sufficient time and effort for the project. Incorrect assumptions can lead to abandoned efforts when applications run slower than expected after porting.
@@ -146,7 +138,6 @@ Developers should create a simple performance model and analysis before implemen
 
 ---
 
-**Rating: 8/10**
 
 #### Why GPUs are Important for High-Performance Computing (HPC)
 Background context: Understanding why GPUs are essential for HPC involves recognizing their ability to perform a massive number of parallel operations, which surpasses that of conventional CPUs. This is due to the design of GPUs to handle large numbers of threads simultaneously.
@@ -158,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Systems That Utilize GPU Acceleration
 Background context: Many modern computing systems incorporate GPUs not just for graphical processing, but also for general-purpose computing due to their high-performance capabilities.
@@ -170,7 +160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Measuring Actual Performance with Micro-Benchmarks
 Background context: While the theoretical performance gives an upper limit, actual performance can vary based on factors like memory bandwidth and communication overhead. Micro-benchmark applications are used to measure real-world performance.
@@ -184,7 +173,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Applications Benefiting from GPU Acceleration
 Background context: Certain types of applications are better suited for GPU acceleration due to their parallel nature and data-intensive requirements.
@@ -202,7 +190,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Goals for Achieving Performance Gains with GPUs
 Background context: To effectively port an application to run on a GPU, it is important to understand the goals of achieving performance gains. This includes optimizing code for parallel execution and understanding memory hierarchies.

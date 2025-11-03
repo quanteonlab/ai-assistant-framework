@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 9 Ergodicity Theory. 9.2 Finite-State DTMCs
 
 ---
 
-**Rating: 8/10**
 
 #### Limiting Distribution vs. Stationary Distribution
 Background context: In discussing DTMCs (Discrete-Time Markov Chains), we have defined both a limiting probability and a stationary distribution. The limiting probability πj is the long-term probability of being in state j, given by \(\pi_j = \lim_{n \to \infty} P^n_{ij}\). On the other hand, a stationary distribution \(\vec{\pi} = (\pi_0, \pi_1, \pi_2, ...)\) is a vector that satisfies \(\vec{\pi} \cdot P = \vec{\pi}\), where \(P\) is the transition matrix. Theorems 8.6 and 8.8 state that if the limiting distribution exists, it is unique and equals the stationary distribution.
@@ -66,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Averages and Stationary Distribution
 Background context: The concept revolves around understanding how much time is spent in each state of a Discrete-Time Markov Chain (DTMC) over an extended period. For a DTMC, there are certain states that must be visited with some frequency.
@@ -137,7 +134,6 @@ Yes, as stated in Theorem 9.4, for a finite-state DTMC, if it is both aperiodic 
 
 ??x
 
-**Rating: 8/10**
 
 #### Understanding Pn·/vectore Convergence
 
@@ -254,7 +250,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Finite-State Markov Chain Limiting Probabilities
 
@@ -321,7 +316,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limiting Distribution and Time Averages
 
@@ -393,7 +387,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Recurrent and Transient States
 The provided text defines recurrent and transient states. A state \(j\) is considered recurrent if the probability \(f_j\) that a Markov chain starting from state \(j\) returns to state \(j\) is 1, meaning it will be visited infinitely often with probability 1. Conversely, a state \(j\) is transient if \(f_j < 1\), indicating there's some non-zero chance of never returning.
@@ -473,7 +466,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summation of Probabilities for Recurrent States
 In a Markov chain, the state \( j \) is recurrent if and only if the probability of returning to state \( j \) starting from any state is 1. This can be mathematically expressed as:
@@ -562,7 +554,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Number of Visits to State 0
 
@@ -650,7 +641,6 @@ No, aperiodicity, irreducibility, and recurrence alone do not guarantee the exis
 
 These flashcards cover the key concepts in the text, focusing on the expected number of visits, simplification techniques, and conditions for recurrence and transience in random walks.
 
-**Rating: 8/10**
 
 #### Positive Recurrence vs. Null Recurrence
 
@@ -726,7 +716,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ergodicity and Ergodic Theorem for Markov Chains
 Background context: The ergodic theory of Markov chains deals with the long-term behavior of discrete-time Markov chains (DTMCs). For a DTMC to be ergodic, it must satisfy three key properties: aperiodicity, irreducibility, and positive recurrence. These properties ensure that the chain will exhibit certain desirable behaviors over time.

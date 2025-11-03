@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 5.7 MC Variance Reduction
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Integration for N-Dimensional Integrals
 Background context: When performing multidimensional integrations, especially with a large number of dimensions (N), traditional numerical integration methods can become computationally expensive or impractical. The Monte Carlo method offers an alternative that is more efficient as the dimensionality increases.
@@ -54,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Error Analysis in High-Dimensional Integration
 Background context: The relative error in Monte Carlo integration decreases as \(1/\sqrt{N}\), which means that the method is more advantageous for higher dimensions compared to traditional methods like Simpson's rule, where the number of points per dimension would decrease with increasing dimensionality.
@@ -100,7 +97,6 @@ x??
 
 ---
 
-**Rating: 10/10**
 
 #### 10-Dimensional Monte Carlo Integration Implementation
 Background context: To evaluate a high-dimensional integral using Monte Carlo, we need to generate random samples in the multidimensional space and compute their function values. This process is particularly useful for large dimensions where traditional methods become computationally expensive.
@@ -144,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Comparison with Analytic Solution
 Background context: After performing the Monte Carlo integration, it is important to check if the numerical result matches the known analytic solution. This ensures the correctness and accuracy of the method.
@@ -179,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Integration Overview
 Background context: Monte Carlo integration is a numerical method for estimating definite integrals using random sampling. It's particularly useful when traditional methods like Simpson's rule or Gaussian quadrature are difficult to apply due to high dimensions or complex functions.
@@ -191,7 +185,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### 10D Monte Carlo Integration with Random Sampling
 Background context: Performing Monte Carlo integration in higher dimensions (such as 10D) requires careful sampling techniques due to the curse of dimensionality. The goal is to estimate the integral by averaging over many trials.
@@ -224,7 +217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variance Reduction in Monte Carlo Integration
 Background context: Variance reduction techniques aim to improve the accuracy of Monte Carlo integration by reducing the variance of the random samples. This is crucial for functions with rapid variations.
@@ -259,7 +251,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance Sampling in Monte Carlo Integration
 Background context: Importance sampling is a method to improve the efficiency of Monte Carlo integration by focusing on regions where the integrand has higher values. This technique involves sampling from a distribution that matches the shape of the integrand.
@@ -293,7 +284,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Graphical Representation of Monte Carlo Integration
 Background context: The provided code demonstrates a graphical approach to Monte Carlo integration using the von Neumann rejection method. This method involves plotting the function and randomly generating points within a bounding box.
@@ -329,7 +319,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gaussian Quadrature vs. Monte Carlo Integration
 Background context: Gaussian quadrature is a deterministic method for numerical integration that uses weighted sums of function values at specific points. In contrast, Monte Carlo methods rely on random sampling.
@@ -356,13 +345,11 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Concepts
 
 ---
 
-**Rating: 8/10**
 
 #### Key Points Recap
 - **Monte Carlo Integration**: Uses random sampling to estimate integrals.
@@ -383,7 +370,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quantum Bound States I
 Background context: The problem involves finding the energies of a particle bound within a 1D square well. The potential \( V(x) \) is defined as:
@@ -405,7 +391,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bisection Search Algorithm
 Background context: The bisection search algorithm is a reliable but slow trial-and-error method that finds roots of functions by repeatedly dividing intervals in half and selecting subintervals where the function changes sign.
@@ -436,7 +421,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bisection Search in Practice: Finding Bound States Energies
 Background context: Given the function \( \sqrt{10 - E_B} \tan(\sqrt{10 - E_B}) - \sqrt{E_B} = 0 \) for even wave functions, and \( \sqrt{10 - E_B} \cot(\sqrt{10 - E_B}) - \sqrt{E_B} = 0 \) for odd wave functions. The algorithm starts with an interval where the function changes sign.

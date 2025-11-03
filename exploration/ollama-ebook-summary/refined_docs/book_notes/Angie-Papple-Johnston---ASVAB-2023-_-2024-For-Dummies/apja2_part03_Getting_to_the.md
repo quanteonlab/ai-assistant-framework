@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Getting to the Root of the Problem. Other roots
 
 ---
 
-**Rating: 8/10**
 
 #### Rate as Division
 Background context: In a rate, you can generally think of "per" as a division sign. For example, if someone drives 141 miles in 3 hours and needs to find the average speed, you want the rate of speed in miles per hour.
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving Partially and Guessing the Rest
 
@@ -40,7 +37,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Process of Elimination
 
@@ -59,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finding the Average
 
@@ -81,7 +76,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Large Number Division
 

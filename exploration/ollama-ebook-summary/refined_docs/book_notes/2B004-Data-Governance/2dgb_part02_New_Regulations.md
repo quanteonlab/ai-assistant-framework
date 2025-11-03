@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B004-Data-Governance_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** New Regulations and Laws Around the Treatment of Data. Improving Data Quality
 
 ---
 
-**Rating: 8/10**
 
 #### Data-Driven Decision Making Goals and Questions
 Data-driven decision making involves setting clear, measurable objectives at the outset. You should create a list of high-value questions that are relevant to your goals. This approach helps ensure that you focus on the right data points and insights.
@@ -102,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Governance as a Strategic Process
 Data governance is not merely about control but involves addressing strategic needs such as providing knowledge workers with insights from various sources through a structured "data shopping" process. This enhances collaboration and access to data across different business units, making it easier for employees to find the necessary information.
@@ -217,7 +214,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Theft
 Data governance addresses the risk of data theft, which is particularly critical in industries where data serves as a product or a key factor for generating value. For example, an electronics manufacturer's supply chain may contain sensitive information about parts, suppliers, and prices that can be exploited by competitors.
@@ -316,7 +312,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Fine-Grained Access Control
@@ -413,7 +408,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Audit Logs and Their Uses
 Audit logs are essential for verifying compliance with policies by regulators. They provide a detailed record of data operations, including creation, manipulation, sharing, access, expiration, and deletion. These logs serve as evidence that policies are being followed and can be used as forensic tools.

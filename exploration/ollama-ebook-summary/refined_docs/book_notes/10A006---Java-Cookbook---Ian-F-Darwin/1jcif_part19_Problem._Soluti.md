@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Problem. Solution. Discussion
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -117,7 +115,6 @@ In this example:
 
 ---
 
-**Rating: 8/10**
 
 #### Method References Overview
 Method references in Java 8 allow you to reference an instance or static method directly, making your code more concise and readable. They are particularly useful when dealing with functional interfaces (interfaces with a single abstract method).
@@ -227,7 +224,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Importance of Using Readers and Writers for Textual Data
 Background context explaining the concept. Java provides two sets of classes for reading and writing: `InputStreams/OutputStreams` for bytes, and `Readers/Writers` for textual data. Older languages often assumed that a byte was equivalent to a character (a letter, digit, or other linguistic element), but modern international requirements necessitate handling Unicode.
@@ -304,7 +300,6 @@ try {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Reading Characters One at a Time
 Background context explaining the concept. The `read()` method of the `Reader` class is defined to return an `int` so that it can use `-1` (EOF) to indicate the end of the file. This allows handling of characters as integers, even when casting them back to `char`.

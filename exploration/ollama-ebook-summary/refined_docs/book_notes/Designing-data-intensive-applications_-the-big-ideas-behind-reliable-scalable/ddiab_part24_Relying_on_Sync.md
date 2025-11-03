@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Relying on Synchronized Clocks
 
 ---
 
-**Rating: 8/10**
 
 #### Robust Software Design for Clocks
 Background context explaining the necessity of designing robust software to handle faulty network conditions and incorrect clock behavior gracefully. The text emphasizes that while networks are generally reliable, software should anticipate faults and manage them appropriately.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Clock Monitoring and Cluster Management
 Background context explaining how monitoring clock offsets between nodes is essential to detect and manage incorrect clocks in a cluster. Nodes that drift too far from others should be identified and removed to prevent data loss or other issues.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Timestamps for Ordering Events
 Background context explaining why relying on time-of-day clocks to order events can be dangerous in a distributed system. Example given involves a database with multi-leader replication, where timestamps may not correctly reflect causality.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Timestamp Inconsistency
 Background context includes an example where client B’s timestamp is earlier than client A’s despite causally later events.
@@ -56,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Last Write Wins (LWW) Conflict Resolution Strategy
@@ -72,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Causality Tracking Mechanisms in Distributed Systems
 Background context on why LWW alone is insufficient for distinguishing between sequentially ordered writes and concurrent writes. Introduction of causality tracking mechanisms like version vectors.
@@ -119,7 +112,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Logical Clocks for Event Ordering
 Background context on the limitations of physical clocks and why logical clocks are a safer alternative. Explanation that logical clocks focus on relative ordering rather than time-of-day or elapsed seconds.
@@ -161,7 +153,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TrueTime API in Spanner
 Background context: Google's TrueTime API is designed for distributed systems where precise time information is critical, particularly in applications requiring strong consistency and accurate timestamps. It provides explicit confidence intervals around the local clock reading.
@@ -181,7 +172,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronized Clocks for Global Snapshots
 Background context: Snapshot isolation is a technique used in distributed databases to support both fast read-write transactions and long-running read-only transactions without locking. It requires monotonically increasing transaction IDs to determine visibility of writes.
@@ -204,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monotonically Increasing Transaction IDs in Distributed Systems
 Background context: In distributed databases, maintaining a monotonically increasing transaction ID that reflects causality is crucial for snapshot isolation. However, generating such an ID across multiple nodes and data centers requires coordination to ensure the order of transactions.
@@ -237,7 +226,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Sequence Number Generators (Snowflake)
 Background context: Distributed systems require unique IDs for transactions and other operations. Snowflake is a popular example of such a generator used by Twitter, which allocates blocks of ID space to different nodes in a scalable way. However, these sequences do not guarantee causal ordering due to the time scale at which block allocations occur.
@@ -248,7 +236,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Timestamps for Transaction IDs (Spanner Example)
 Background context: Spanner uses clock confidence intervals to ensure transaction timestamps reflect causality, which is crucial in distributed systems with small and rapid transactions. The TrueTime API provides these confidence intervals, allowing Spanner to determine order without ambiguity.
@@ -259,7 +246,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Clock Synchronization for Distributed Transactions
 Background context: Clock synchronization is critical in distributed systems to ensure accurate timestamps and proper ordering of transactions. Spanner uses TrueTime API confidence intervals to mitigate uncertainty caused by clock inaccuracies. Google maintains minimal clock uncertainty through GPS receivers or atomic clocks in each datacenter.
@@ -270,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lease Management in Distributed Systems
 Background context: In distributed systems with single leaders per partition, nodes must frequently check their leadership status using leases. A lease is akin to a timeout lock and allows only one node to be the leader at any time. Nodes renew their leases periodically to maintain leadership.
@@ -283,7 +268,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Garbage Collection Pauses
 Garbage collection (GC) is a feature in many programming language runtimes, like the Java Virtual Machine (JVM). It periodically stops all running threads to reclaim memory. These "stop-the-world" GC pauses can last for several minutes and significantly impact lease management.
@@ -310,7 +294,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### I/O Pauses and GC Pauses
 I/O pauses can occur due to various reasons, including network filesystems or block devices like Amazon’s EBS. Additionally, garbage collection (GC) may cause delays as it pauses the execution of threads to clean up unused memory.
@@ -323,7 +306,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Paging Mechanism
 Paging occurs when the operating system allows swapping of pages from memory to disk. This can cause delays during simple memory accesses, especially under high memory pressure.
@@ -338,7 +320,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thrashing
 Thrashing occurs when a system spends most of its time swapping pages between disk and memory, leading to poor performance and minimal actual work being done.
@@ -353,7 +334,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Systems Challenges
 In distributed systems, nodes must handle the possibility of arbitrary pauses without shared memory. Context switches in these environments are more unpredictable compared to single-machine scenarios.
@@ -372,7 +352,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Safety-Critical Embedded Devices
 Background context: Real-time systems are most commonly used in safety-critical embedded devices, such as cars, where delays could be catastrophic.
@@ -384,7 +363,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Testing and Measurement
 Background context: Extensive testing and measurement are necessary to ensure that real-time guarantees are being met in a system.
@@ -396,7 +374,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Node Restarting Strategy
 Background context: A strategy is proposed where nodes are restarted periodically, limiting long-lived object accumulation.
@@ -408,7 +385,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Uncertainty in Distributed Systems
 Background context: In distributed systems, nodes cannot be sure about the state or behavior of other nodes. They can only make guesses based on messages received through an unreliable network with variable delays. Partial failures and unreliable clocks further complicate the situation.
@@ -433,7 +409,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asymmetric Faults in Distributed Systems
 Background context: An asymmetric fault occurs when a node can receive messages but not send them, leading other nodes to mistakenly declare it as faulty.
@@ -469,7 +444,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Majority Decisions in Distributed Systems
 Background context: In distributed systems, decisions often rely on majority consensus. If a node does not hear from others within a timeout period or if it notices discrepancies, it may take actions based on the majority view.
@@ -518,7 +492,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Long Garbage Collection Pauses
 Background context: In distributed systems, a node might experience long pauses during garbage collection. This can affect its ability to respond to messages in a timely manner.
@@ -561,7 +534,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GC Paused Nodes and Quorum Decisions
 Background context: This concept explains how garbage collection (GC) pauses can affect a node's operation within a distributed system, leading to scenarios where nodes may incorrectly declare each other as dead. It emphasizes the importance of quorums in making decisions about the state of nodes.
@@ -584,7 +556,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Quorum Voting Mechanism
 Background context: The use of quorums in distributed systems ensures that decisions are made based on the agreement of a majority of nodes. This prevents single-node failures from causing system-wide issues.
@@ -606,7 +577,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Node Failures and Split Brain
 Background context: In distributed systems, split brain occurs when nodes diverge into two separate groups that think they are the primary node. This can lead to data corruption or service failures.
@@ -628,7 +598,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Quorums in Consensus Algorithms
 Background context: Quorums are crucial in ensuring that decisions made by distributed systems are consistent and reliable, even when some nodes fail. This is particularly important for consensus algorithms where agreement among multiple nodes is necessary.
@@ -653,7 +622,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed System Reliability Through Redundancy
 Background context: In a distributed system, relying on a single node can lead to failure and downtime. Therefore, implementing redundancy through quorums helps ensure that the system remains operational even when some nodes fail.
@@ -678,7 +646,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Lock Implementation Bug
 Background context: In a distributed system, ensuring exclusive access to a resource (like a file) by a single client at a time is crucial. An incorrect implementation of locking can lead to data corruption when a lease expires but the client continues to believe it has valid access.
@@ -689,7 +656,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fencing Tokens Concept
 Background context: To prevent such issues in distributed systems where a resource (like storage) is accessed under lock, fencing tokens are used. These tokens ensure that writes occur only in the order of increasing numbers, thus preventing overlapping writes from different clients.

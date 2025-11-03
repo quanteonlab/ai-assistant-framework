@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Decorator-Enhanced Strategy Pattern
 
 ---
 
-**Rating: 8/10**
 
 #### Decorator-Enhanced Strategy Pattern
 Background context explaining the concept. The traditional strategy pattern used in Example 10-6 has repetitive function names and a hardcoded list of promotions, which can lead to bugs if new promotional strategies are added without updating this list.
@@ -87,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Command Pattern Overview
 Background context explaining the Command pattern. The goal is to decouple an object that invokes an operation (the Invoker) from the provider object that implements it (the Receiver). This pattern encapsulates a request as an object, thereby allowing you to parameterize clients with different requests.
@@ -192,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Tarek Ziadé's "Expert Python Programming"

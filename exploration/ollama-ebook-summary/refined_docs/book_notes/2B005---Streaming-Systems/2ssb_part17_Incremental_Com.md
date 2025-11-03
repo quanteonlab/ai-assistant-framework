@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Incremental Combining
 
 ---
 
-**Rating: 8/10**
 
 #### Raw Grouping vs Incremental Combining
 
@@ -99,7 +97,6 @@ PCollection<KV<Team, Integer>> totals = input
 The `Sum.integersPerKey()` automatically manages the accumulation and merging of sums.
 x??
 
-**Rating: 8/10**
 
 #### Raw Grouping Method Limitations
 Background context explaining that raw grouping requires buffering all inputs before processing. This means no partial processing is possible, making it inflexible for streaming data.
@@ -244,7 +241,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conversion Attribution Overview
 Conversion attribution is a technique widely used in advertising to provide concrete feedback on the effectiveness of advertisements. It involves attributing specific advertisement impressions to user actions that result in goals being achieved, such as making a purchase or signing up for a mailing list.

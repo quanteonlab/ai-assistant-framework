@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Tailored Service Template
 
 ---
 
-**Rating: 8/10**
 
 #### Heroku's 12 Factors
 Explanation of the Heroku design principles and their relevance to creating applications that work well on Heroku. These factors can be adapted for other contexts as well.
@@ -30,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trade-offs in Microservices
 Explanation of the trade-offs involved in microservice architectures, including decisions about data storage and technology stacks.
@@ -54,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Practices Definition and Role
 Background context explaining what practices are, their purpose, and how they relate to principles. Practices ensure that principles are being carried out through detailed, task-oriented guidance. They often reflect technology-specific requirements and can change more frequently than principles.
@@ -66,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Practices
 An example was provided about how a principle (delivery teams controlling the full lifecycle) can be underpinned by a practice (deploying services into isolated AWS accounts). This illustrates how practices provide concrete steps that align with broader principles.
@@ -87,7 +82,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Combining Principles and Practices
 The text suggests that for a smaller group or single team, combining principles and practices might be acceptable. However, larger organizations may need different sets of practices due to varying technologies and working practices, as long as they align with common principles.
@@ -99,7 +93,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real-World Example
 A real-world example provided by Evan Bottcher shows how goals, principles, and practices interact. Practices change more frequently than principles over time.
@@ -111,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Required Standard
 Identifying what constitutes a "good citizen" service is key to maintaining system manageability. This involves defining required standards for services to ensure they do not bring down the entire system.
@@ -125,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monitoring System Health
 Background context explaining the importance of monitoring system health. It's essential to have a cohesive view across services rather than just service-specific views for effective system-wide diagnosis and trend analysis.
@@ -146,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interface Consistency Across Services
 Background context explaining the importance of standardizing interfaces across services for better integration and maintainability. Using too many different integration styles can lead to complexity and maintenance issues.
@@ -168,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Architectural Safety in Microservices
 Background context explaining the importance of ensuring services are resilient against failures from downstream calls. This involves using techniques like connection pools, circuit breakers, and proper handling of HTTP response codes.
@@ -195,7 +184,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Clear Interface Definitions
 Background context explaining that picking a few well-defined interface technologies helps in integrating new consumers and maintaining system consistency. The number of different integration styles should be kept to a minimum for simplicity.
@@ -219,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exemplars
 Exemplars are real-world services that demonstrate best practices and can be used as a reference for developers. The purpose is to encourage others to follow established guidelines without deviating too far.
@@ -233,7 +220,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Templates
 Service templates are pre-configured frameworks designed to streamline the implementation of services according to a set of predefined standards or best practices.
@@ -277,7 +263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real-World vs. Perfect Examples
 Exemplars should be real-world services that have proven successful, rather than artificially perfect examples.
@@ -293,7 +278,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Fault Tolerance and Service Design at Netflix
@@ -323,7 +307,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sidecar Services in Netflix Architecture
 Netflix employs sidecar services to enhance fault tolerance. These services communicate locally with a JVM using appropriate libraries, ensuring that the failure of one component does not bring down the entire system.
@@ -349,7 +332,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Centralized vs. Distributed Practices in Service Templates
 Netflix's approach to service templates is decentralized, promoting collective responsibility among teams. This avoids centralizing control over implementation details, which can otherwise be detrimental to team morale and productivity.
@@ -369,7 +351,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coupling Risks in Shared Code
 The potential for coupling between services increases when shared code is used carelessly. Netflix mitigates this by either manually copying the service template into each service or treating it as a binary dependency, ensuring that each service remains isolated.
@@ -391,7 +372,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Technical Debt
 Background context: Technical debt is a term used to describe shortcuts or compromises made during software development that can impact the system's long-term maintainability and stability. The concept is based on the analogy of financial debt, where immediate gains are sacrificed for future costs.
@@ -403,7 +383,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Governance and Leading from the Center
 Background context: Governance in software development ensures that enterprise objectives are met by setting direction, prioritizing tasks, making decisions, and monitoring performance against agreed-upon goals. Architects play a crucial role in ensuring technical vision alignment.
@@ -415,7 +394,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Architect's Responsibilities
 Background context: Architects have a wide range of responsibilities including ensuring technical vision, guiding development principles, managing trade-offs, and leading teams. They must balance technical innovation with practical constraints.
@@ -427,7 +405,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Autonomy for Teams
 Autonomy involves finding the right balance between standardizing processes and enabling team members to make decisions about their specific parts of the system. This empowers teams but also requires clear guidelines.
@@ -446,7 +423,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Governance in Microservices
 Governance ensures that the implementation of the system aligns with the overall technical vision. This includes setting standards, policies, and procedures to maintain consistency and quality across services.
@@ -467,7 +443,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### What Makes a Good Service
 Background context: The text emphasizes the importance of loose coupling and high cohesion when designing microservices for MusicCorp. These principles are crucial in ensuring that changes to one service do not necessitate altering other parts of the system.
@@ -478,7 +453,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loose Coupling
 Background context: Loose coupling is critical for microservices to operate independently without affecting each other when changes are made. Tight coupling can hinder the agility of deploying new features or fixing bugs in one service, impacting others.
@@ -489,7 +463,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Avoiding Tight Coupling
 Background context: The text warns against common mistakes like picking integration styles that tightly bind services, leading to a situation where changes inside one service require corresponding changes in its consumers. This tight coupling is detrimental to the agility of microservices.
@@ -500,7 +473,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limiting Chatty Communication
 Background context: Excessive communication between services can lead to tight coupling. The text suggests limiting the number of different types of calls from one service to another to maintain loose coupling and avoid performance issues.
@@ -511,7 +483,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conclusion of Flashcards for Microservices Introduction
 These flashcards cover key concepts around defining and designing microservices, focusing on loose coupling and high cohesion. Understanding these principles is crucial for implementing a successful microservices architecture at MusicCorp.
@@ -519,7 +490,6 @@ These flashcards cover key concepts around defining and designing microservices,
 
 ---
 
-**Rating: 8/10**
 
 #### High Cohesion
 Background context explaining the importance of high cohesion. This principle emphasizes that related behavior should be grouped together to facilitate easier and quicker changes, reducing deployment risks.
@@ -530,7 +500,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bounded Context (Concept)
 Background context explaining bounded contexts as introduced by Eric Evans in Domain-Driven Design. The concept helps define boundaries within a domain where models are specific to that context, ensuring loose coupling between different parts of a system.
@@ -541,7 +510,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Explicit Interfaces in Bounded Contexts
 Background context explaining the importance of explicit interfaces between bounded contexts. These interfaces ensure that communication is clear and controlled, reducing complexity and potential errors.
@@ -552,7 +520,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Warehouse Bounded Context Example
 Background context explaining how the warehouse can be considered a bounded context within MusicCorp. This example illustrates the concept with practical details.
@@ -563,7 +530,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shared vs Hidden Models in Bounded Contexts
 Background context explaining shared models (visible to external contexts) versus hidden models (internal to a bounded context).
@@ -574,7 +540,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Context Boundaries
 Background context explaining why defining clear boundaries is crucial for managing complexity and ensuring modularity in software systems.
@@ -587,7 +552,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shared Model Between Contexts
 Background context explaining that different departments (finance and warehouse) need to share some information but not all. The finance department needs stock level information for accurate accounting, while internal details like storage locations remain hidden.
@@ -610,7 +574,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Internal and External Concerns
 Explanation that internal concerns within a context are separate from the shared models used by external contexts.

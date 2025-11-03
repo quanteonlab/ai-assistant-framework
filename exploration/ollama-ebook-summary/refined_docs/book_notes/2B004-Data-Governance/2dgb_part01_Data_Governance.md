@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B004-Data-Governance_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Data Governance Framework
 
 ---
 
-**Rating: 8/10**
 
 #### Securing Data
 Background context explaining the concept. With increasing security threats and breaches, organizations are concerned about protecting their sensitive data from unauthorized access or exposure.
@@ -78,7 +76,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Risk Management in Cloud Data Governance
 Background context: The text discusses the importance of managing risks associated with data exposure, security breaches, and unauthorized access to sensitive information. It emphasizes the need for additional protection mechanisms like encryption and robust access management policies.
@@ -150,7 +147,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Discovery and Assessment
 Background context: A critical step in data governance is understanding what data assets you have within your cloud environment. This process involves identifying each asset, tracing its origin and lineage, and documenting metadata such as creator name, size, record count (for structured data), and last update time.
@@ -349,7 +345,6 @@ public class EncryptionAtRest {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Regulatory Compliance and Data Governance
 
@@ -446,7 +441,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Governance Overview
 Data governance involves managing and governing data assets to ensure their quality, security, and appropriate use within an organization. As big data analytics has grown, so too has the need for robust data governance strategies to prevent misuse and ensure compliance with regulations and best practices.

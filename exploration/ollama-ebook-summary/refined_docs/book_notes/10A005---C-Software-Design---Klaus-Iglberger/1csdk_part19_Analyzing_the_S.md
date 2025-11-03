@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Analyzing the Shortcomings of the stdfunction Solution
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Comparison of Strategy Implementations
 
@@ -138,7 +136,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loose Coupling in Design Patterns
 Background context explaining the importance of loose coupling and how std::function aids in achieving this. The example given is within the context of the Strategy design pattern, where std::function acts as a compilation firewall to protect from implementation details but offers flexibility.
@@ -293,7 +290,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rule of 5 and Virtual Destructors
 
@@ -554,7 +550,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SOLID Principles and Command Design Pattern
 SOLID is an acronym for five design principles intended to make software designs more understandable, flexible, and maintainable. The command pattern is a behavioral design pattern that turns a request into a stand-alone object that contains all information about the request. This transformation allows you to pass requests explicitly as parameters, queue or log them, and store them.
@@ -740,7 +735,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adapter Design Pattern
 Background context explaining the concept. The Adapter design pattern is a classic GoF (Gang of Four) pattern aimed at standardizing interfaces and adding functionality non-intrusively to existing inheritance hierarchies.
@@ -823,7 +817,6 @@ In this implementation, `Pages` is an adapter that adapts the interface of `Open
 x??
 ---
 
-**Rating: 8/10**
 
 #### Adapter Design Pattern Overview
 The Adapter design pattern is used to allow objects with incompatible interfaces to collaborate. It works by converting the interface of a class into another interface clients expect. The primary use case involves integrating third-party implementations or adapting existing APIs to fit new requirements without modifying the original code.

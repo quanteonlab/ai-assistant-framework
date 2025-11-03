@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 42)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Trust but Verify
 
 ---
 
-**Rating: 8/10**
 
 #### Coordination-Avoiding Data Systems
 Dataflow systems can provide data management services without requiring coordination among nodes, ensuring strong integrity guarantees. This approach offers better performance and fault tolerance compared to systems that require synchronous coordination.
@@ -30,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Weak Timeliness Guarantees in Coordination-Avoiding Systems
 Coordination-avoiding systems like dataflow systems may have weaker timeliness guarantees because they cannot be linearizable without introducing coordination. However, these systems can still provide strong integrity guarantees.
@@ -54,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transactions in Coordination-Avoiding Systems
 Even though coordination-avoiding systems avoid synchronous cross-region coordination, they can still use serializable transactions to maintain derived state at a smaller scale where it works well. These transactions are not required for heterogeneous distributed transactions like XA transactions.
@@ -78,7 +74,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### System Model Assumptions
 The correctness and integrity of systems are often based on certain assumptions about failures, such as process crashes, machine power loss, network delays, etc. These assumptions form the basis of what we call system models.
@@ -103,7 +98,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault Probabilities vs. Binary Approach
 Traditional system models often take a binary approach towards faults, assuming some things can happen and others cannot. However, in reality, it is more about probabilities: certain types of failures are more likely to occur than others.
@@ -129,7 +123,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Software Bugs and Database Integrity
 Even well-regarded databases like MySQL and PostgreSQL have bugs. These bugs can affect the integrity of data, especially in less mature software or when developers do not use database features like foreign key or uniqueness constraints.
@@ -155,7 +148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ACID Consistency and Transaction Integrity
 ACID consistency requires that a transaction transforms the database from one consistent state to another. However, this is only valid if transactions are free from bugs.
@@ -186,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Corruption and Auditability
 Background context explaining that data corruption is inevitable due to hardware and software limitations. The importance of having mechanisms to detect and fix data corruption.
@@ -197,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Self-Validating or Self-Auditing Systems
 Explanation on the importance of self-validating or self-auditing systems in maintaining data integrity, especially when relying on technology such as ACID databases. Discuss how these systems continually check their own integrity to avoid blind trust issues.
@@ -208,7 +198,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Designing for Auditaibility in Databases
 Explanation on how transactional operations can make it difficult to determine their exact meaning after they occur, highlighting the importance of designing systems that allow for clear tracking and auditing of changes. Discuss potential challenges in maintaining this level of transparency.
@@ -219,7 +208,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event Sourcing Approach
 Background context explaining event sourcing. The idea is to represent user input as a single immutable event and derive state updates from it, making the dataflow deterministic and repeatable.
@@ -246,7 +234,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deterministic Dataflow for Integrity Checking
 Explanation of why a deterministic and well-defined dataflow is important. It allows for reproducibility, debugging, and integrity checks across systems.
@@ -269,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### End-to-End Integrity Checks
 Explanation of why end-to-end integrity checks are important in distributed systems. They help ensure that no corruption goes unnoticed and reduce the risk of damage from changes or new technologies.
@@ -296,7 +282,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transaction Log Tamper-Proofing
 Background context: Ensuring that transaction logs are tamper-proof is crucial for maintaining data integrity. One method involves periodically signing the log with a Hardware Security Module (HSM), but this does not guarantee that the correct transactions were recorded.
@@ -317,7 +302,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Merkle Trees for Integrity Checking
 Background context: Cryptographic auditing and integrity checking often rely on Merkle trees. These are tree structures of hashes that can be used to efficiently prove the presence or absence of a record in a dataset.
@@ -345,7 +329,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Integrity-Checking and Auditing Algorithms
 Background context: The use of integrity-checking and auditing algorithms, such as those used in certificate transparency and distributed ledgers, is expected to become more prevalent in data systems. These techniques ensure that data has not been tampered with or altered without detection.
@@ -383,7 +366,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Errors and Recourse in Data-Driven Decisions
 Errors in data-driven decisions can be particularly problematic because they are often probabilistic. Even if the overall probability distribution is correct, individual cases might still be wrong. This makes it difficult to provide recourse when a decision is incorrect due to erroneous data.
@@ -404,7 +386,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Systems Thinking
 
@@ -417,7 +398,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Behavioral Data as Core Asset
 Background context: The text discusses how behavioral data collected from user interactions on a service can be seen as its core asset, particularly when targeted advertising pays for these services. This viewpoint challenges the idea that such data is merely "data exhaust," or waste material.

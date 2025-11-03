@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 7.8.2 Kahan summation implementation with OpenMP threading
 
 ---
 
-**Rating: 8/10**
 
 #### Super-linear Speedup
 Background context: Chapter 7 discusses performance enhancements using OpenMP, focusing on scenarios where the speedup is better than ideal scaling. This phenomenon can occur due to cache effects and optimizations that take advantage of smaller data sizes fitting into higher cache levels.
@@ -17,7 +15,6 @@ Super-linear speedup refers to a situation in parallel computing where the perfo
 
 ---
 
-**Rating: 8/10**
 
 #### Kahan Summation Implementation
 Background context: The Kahan summation algorithm is designed to improve the accuracy of floating-point summations by keeping track of lost low-order bits. Implementing this in a parallel environment requires careful handling due to loop-carried dependencies. The provided code demonstrates an OpenMP implementation that splits the task among threads, ensuring correct accumulation.
@@ -183,7 +180,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Range Calculation
 Background context: Each thread in the parallel implementation must determine its range of work within the array. This ensures that each thread processes a unique subset of the data.
@@ -260,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OpenMP Implementation of Prefix Scan Algorithm
 Background context: The prefix scan operation is important for algorithms with irregular data, as it allows parallel computation by determining starting locations for each thread's portion of the data. This implementation uses OpenMP to distribute the workload among multiple threads effectively.
@@ -329,7 +324,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Threaded Implementation Phases
 Background context: The prefix scan operation can be divided into three phases, each addressing a different aspect of the computation. These phases ensure that data is processed in parallel while maintaining correct results.
@@ -350,7 +344,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### OpenMP Directives Used
 Background context: The `PrefixScan` function uses several OpenMP directives to manage thread synchronization and data processing. These include `#pragma omp barrier`, which ensures that all threads reach certain points, and `#pragma omp simd`, which helps optimize the loop for parallel execution.
@@ -366,7 +359,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Analysis
 Background context: The provided analysis indicates that the `PrefixScan` function scales well with an increasing number of threads. For a Skylake Gold 6152 architecture, it peaks at about 44 threads, achieving 9.4 times faster performance compared to the serial version.
@@ -383,7 +375,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Profiling Tools for OpenMP
 Background context: Robust OpenMP implementations require specialized tools to detect thread race conditions and identify performance bottlenecks. Common tools include Valgrind, Call Graph (cachegrind), Allinea/ARM Map, and Intel Inspector.
@@ -404,7 +395,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Finding Thread Race Conditions with Intel® Inspector
 Intel® Inspector is essential for detecting and pinpointing thread race conditions, which are critical for ensuring a robust production-quality application. Memory errors can cause applications to break as they scale, so catching these issues early helps prevent future problems.

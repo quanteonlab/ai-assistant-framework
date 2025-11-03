@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Databases
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Message Concept
@@ -55,7 +53,6 @@ Ingestion time is the moment when an event is received by a system, whereas proc
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Ingestion Time
@@ -122,7 +119,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### NoSQL Databases Overview
 Background context explaining the limitations of relational databases and the rise of nonrelational or NoSQL databases. Discuss the term "NoSQL" and its origins, emphasizing that it stands for not only SQL and refers to a class of databases abandoning traditional relational database management systems (RDBMS) paradigms.
@@ -181,7 +177,6 @@ A NoSQL database might be chosen over an RDBMS when there are specific needs tha
 
 These characteristics make NoSQL databases particularly appealing for modern web and mobile applications that require high scalability and flexibility.
 
-**Rating: 8/10**
 
 #### Document Databases Overview
 Background context explaining the concept. Document databases store data as structured JSON-like documents, where each document is a collection of fields and nested sub-documents. These databases support flexible schema and are optimized for querying based on specific properties.
@@ -275,7 +270,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rapid Scan Databases
 Rapid scan databases support rapid scans of massive amounts of data but do not support complex queries. They typically use a single index (the row key) for lookups, making them inefficient for complex querying scenarios.
@@ -369,7 +363,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Series Databases Overview
 Time-series databases are specialized for handling data generated at regular intervals or events, often used in IoT and log-based applications. They handle high write volumes and support fast read/write operations through memory buffering.
@@ -461,7 +454,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Webhooks
 Background context: Webhooks are a simple event-based data-transmission pattern where, when specific events happen in the source system, this triggers a call to an HTTP endpoint hosted by the data consumer. This is often referred to as "reverse APIs" because the connection goes from the source system to the data sink, rather than the typical API model which moves in the opposite direction.

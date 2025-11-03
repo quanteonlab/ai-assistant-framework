@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 26)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 13.4 Returning Object Information Across a Network Connection. Problem. Solution. 13.5 Handling Multiple Clients
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Network Object Transfer
@@ -96,7 +94,6 @@ try {
 x??
 ---
 
-**Rating: 8/10**
 
 ---
 #### Handling Multiple Clients with Threads
@@ -206,7 +203,6 @@ This approach also uses a loop in the `run()` method to continuously read from t
 x??
 ---
 
-**Rating: 8/10**
 
 ---
 #### Echo Server Threaded Design
@@ -330,7 +326,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Network-Based Logging Overview
 Background context explaining network-based logging. Discusses the challenges of obtaining debugging output from server-side containers and the benefits of using a logging mechanism that can send messages to a remote machine for immediate display.

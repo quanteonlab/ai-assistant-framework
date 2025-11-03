@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A003---Generative-Deep-Learning_-Teaching-Machines-To-Paint-Write-Compose-and-Play-OReilly-Media-2023David-Foster--_processed (Part 8)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Building the CNN
 
 ---
 
-**Rating: 8/10**
 
 #### Dropout Layers Usage
 
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Normalization
 
@@ -32,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convolutional Layers in CNN
 
@@ -55,7 +51,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### LeakyReLU Activation
 
@@ -68,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Flatten Layer
 
@@ -81,7 +75,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dense Layer
 
@@ -94,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Summary
 
@@ -109,7 +101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convolutional Neural Network (CNN)
 Background context: A convolutional neural network is a type of deep learning model used primarily for image recognition and classification tasks. CNNs are designed to automatically and adaptively learn spatial hierarchies of features from input images through layers such as convolution, pooling, and fully connected layers.
@@ -122,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Architecture Improvement
 Background context: The original multilayer perceptron (MLP) model was improved by incorporating Conv2D, BatchNormalization, LeakyReLU, Dropout, and Dense layers to form a more robust CNN. This change led to an increase in the accuracy of predictions from 49.0% to 71.5%.
@@ -141,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Normalization
 Background context: Batch normalization is a technique used to normalize the input layer by adjusting and scaling the activations. It speeds up learning and improves generalization.
@@ -157,7 +146,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dropout Layer
 Background context: The dropout layer randomly sets a fraction of input units to 0 at each update during training time, which helps prevent overfitting.
@@ -171,7 +159,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### LeakyReLU Activation Function
 Background context: The LeakyReLU activation function is used as an alternative to the ReLU function. While ReLU can cause "dead" neurons by always outputting zero for negative inputs, LeakyReLU allows a small, non-zero gradient when the input is negative.
@@ -192,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Evaluation and Training
 Background context: The model was compiled and trained in the same way as before. After training, the evaluate method was used to determine its accuracy on a holdout set.
@@ -204,7 +190,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Flexibility and Experimentation in Model Design
 Background context: Deep neural networks are completely flexible by design, allowing for experimental approaches to architecture with no fixed rules.
@@ -216,7 +201,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Image Generation Using Convolutional Neural Networks
 Background context: The next chapter will explore using these building blocks to design a network that can generate images.
@@ -230,7 +214,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Variational Autoencoder (VAE)
@@ -290,7 +273,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generative Adversarial Network (GAN)
 Background context: Generative Adversarial Networks (GANs) are a type of generative model that consists of two neural networks, a generator \( G \) and a discriminator \( D \), competing against each other. The generator creates samples from a latent space to generate realistic data, while the discriminator evaluates these generated samples along with real data and provides feedback on their authenticity.
@@ -347,7 +329,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Autoregressive Models (LSTMs and PixelCNN)
 Background context: Autoregressive models are a class of generative models that treat the generation process as a sequence prediction problem. These models can be particularly effective in generating text or images by predicting each element in the sequence conditionally on all previous elements.
@@ -418,7 +399,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Normalizing Flow Models (RealNVP)
 Background context: Normalizing flow models are a family of generative models that transform a simple distribution into a more complex one while preserving tractability. RealNVP is an example of such a model, which uses invertible transformations to achieve this.
@@ -458,7 +438,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Energy-Based Models (EBMs)
 Background context: Energy-based models are a family of models that train a scalar energy function \( E(\mathbf{x}) \) to score the validity of a given input. The lower the energy, the more likely the input is considered valid.
@@ -502,7 +481,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Diffusion Models
 Background context: Diffusion models are based on the idea of iteratively adding noise to an image and then training a model to remove this noise. This process allows for transforming pure noise into realistic samples, making them powerful for generating high-quality images.

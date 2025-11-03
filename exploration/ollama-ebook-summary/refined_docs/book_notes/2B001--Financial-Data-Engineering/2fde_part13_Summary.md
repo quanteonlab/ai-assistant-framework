@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B001--Financial-Data-Engineering_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Summary
 
 ---
 
-**Rating: 8/10**
 
 #### Data Poisoning Attack
 Data poisoning is a type of attack where data is intentionally ingested to alter the performance or behavior of a machine learning model. It can occur through various means such as malware, SQL injection, and direct data manipulation.
@@ -133,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Modeling Process Overview
 
@@ -155,7 +152,6 @@ The answer with detailed explanations:
 
 ---
 
-**Rating: 8/10**
 
 #### ACID Properties and Financial Standards
 
@@ -282,7 +278,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Non-negative Constraint for Account Balance
 In financial applications, ensuring that an account balance remains non-negative is crucial to prevent inconsistencies. This constraint typically falls under the responsibility of DSS engineers who establish and implement data consistency checks, constraints, and validations based on business requirements both at the DSS level as well as within the applications interacting with it.
@@ -344,7 +339,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CAP Theorem
 Background context explaining the CAP theorem. According to the CAP theorem, a distributed data storage system (DSS) can guarantee at most two out of the following three features: Consistency, Availability, and Partition Tolerance during a network partition.

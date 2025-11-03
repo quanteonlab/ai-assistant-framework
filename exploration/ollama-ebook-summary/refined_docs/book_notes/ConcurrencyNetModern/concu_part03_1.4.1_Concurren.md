@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 1.4.1 Concurrency hazards
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Concurrency Foundations
 Background context explaining the concept. The text highlights that sequential programming is inefficient for modern multicore processors, and parallel execution through multithreading maximizes computational resources. It also mentions that hardware trends predict more cores rather than faster clock speeds, necessitating a shift towards parallel programming.
@@ -48,7 +46,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Mastering Concurrency for Scalability
 Background context explaining the concept. The text emphasizes that mastering concurrency is essential for building scalable programs, and companies are increasingly looking for engineers with expertise in this area due to its potential cost savings.
@@ -90,7 +87,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benefits of Functional Programming for Concurrency
 Background context explaining the concept. The text mentions that functional programming (FP) is particularly well-suited for concurrency due to its immutable data and declarative nature, making it easier to write correct parallel computations.
@@ -117,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency as the Future of Programming
 Background context explaining the concept. The text states that concurrency and parallelism are essential for rapid responsiveness and speedy execution in software applications, aligning with hardware trends towards more cores rather than faster processors.
@@ -147,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determinism in Parallel Execution
 Background context: In sequential programming, determinism is a critical aspect where programs return identical results from one run to the next. However, when dealing with parallel execution, external factors like operating system schedulers and cache coherence can influence timing and order of access for threads, leading to non-deterministic behavior.
@@ -176,7 +170,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Safety
 Background context: Ensuring thread safety is crucial when multiple threads access shared data simultaneously. A method or function is considered thread-safe if it can handle concurrent calls from different threads without corrupting the state.
@@ -204,7 +197,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency Hazards
 Background context: Concurrent programming introduces risks such as data races when multiple threads concurrently access shared memory without proper synchronization. These hazards can lead to program failures or incorrect behavior.
@@ -233,7 +225,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency in Multicore Programming
 Background context: Leveraging multicore processors effectively requires understanding how to divide tasks into smaller units that can run concurrently. This involves designing programs to take full advantage of available cores while ensuring correctness.
@@ -259,7 +250,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Side Effects in Concurrent Programming
 Background context: Side effects occur when methods modify data outside their local scope or communicate with external systems. In concurrent programming, these effects can lead to unpredictable behavior if not managed carefully.
@@ -285,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Race Condition
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -303,7 +292,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mutual Exclusion Locks
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -316,7 +304,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deadlock Scenario
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -329,7 +316,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency Hazards: Performance Decline
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -342,7 +328,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Code for Mutual Exclusion Locks
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -368,7 +353,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Code for Deadlock
 Background context explaining the concept. Include any relevant formulas or data here.
@@ -424,7 +408,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Contention and Lock Overhead
@@ -455,7 +438,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deadlock
 Background context: Deadlocks occur when a cycle of tasks exists in which each task is blocked while waiting for another to proceed. Because all tasks are waiting, they get stuck indefinitely.
@@ -496,7 +478,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lack of Composition
 Background context: Functional programming (FP) values composition, which involves breaking down problems into smaller, manageable pieces and then combining them to solve complex problems. Locks disrupt this process by making code less modular.
@@ -526,7 +507,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sharing of State Evolution
 Background context: Real-world programs often require sharing state among tasks for coordination. Immutable data and separate copies can avoid race conditions but may not always be practical. Proper synchronization is necessary to manage shared state effectively.
@@ -567,7 +547,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Quicksort Example
 Background context: The quicksort algorithm can be efficiently parallelized by dividing the array and sorting subarrays concurrently. However, improper handling of shared resources can lead to performance issues.
@@ -604,7 +583,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### QuickSort Algorithm Overview
 Background context: The QuickSort algorithm, invented by Tony Hoare in 1960, is a Divide and Conquer strategy that recursively partitions an array into smaller sub-arrays based on a pivot element. This allows for efficient sorting of large datasets.
@@ -625,7 +603,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pivot Selection in QuickSort
 Background context: In the QuickSort algorithm, selecting a good pivot element is crucial for performance. A common choice is to use the median of the array as the pivot.
@@ -647,7 +624,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partitioning in QuickSort
 Background context: The partition step of the QuickSort algorithm rearranges elements such that all elements less than the pivot come before it, and all elements greater than or equal to it come after.
@@ -682,7 +658,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallelizing QuickSort with F# and TPL
 Background context: The Microsoft Task Parallel Library (TPL) introduced in .NET 4.0 can be used to parallelize the QuickSort algorithm, making it more efficient for large datasets.
@@ -726,7 +701,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### QuickSort Algorithm Steps
 Background context: The QuickSort algorithm consists of three main steps:
@@ -755,7 +729,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### QuickSort Algorithm Overview
@@ -768,7 +741,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequential QuickSort Implementation in F#
 Background context: The sequential implementation of Quicksort uses recursion to divide the array into smaller parts based on a pivot element. Each recursive call processes a part of the array.
@@ -788,7 +760,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Over-Parallelization Problem in QuickSort
 Background context explaining why over-parallelizing can be a problem, especially in algorithms like QuickSort that involve recursive partitions. The key issue is creating too many tasks relative to the number of cores available, leading to increased overhead and slower performance.
@@ -802,7 +773,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recursive Parallelization Threshold
 Explanation on how setting a threshold for recursive parallelization helps optimize QuickSort performance by reducing unnecessary task creation and minimizing overhead.
@@ -866,7 +836,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Depth Parameter and Task Creation
 Explanation of how the `depth` parameter controls task creation in recursive calls.
@@ -894,7 +863,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequential Execution
 Explanation of how sequential execution within the recursive calls can help optimize QuickSort performance.
@@ -912,7 +880,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Selecting Number of Tasks for QuicksortParallelWithDepth
 Background context explaining the concept. The selection of tasks' number is crucial when dealing with varying task runtimes, such as those found in quicksort. In `quicksortParallelWithDepth`, the depth argument influences how many subtasks are created, which can exceed the core count.
@@ -929,7 +896,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Benchmarking in F#
 Background context explaining the concept. The F# REPL (Read-Evaluate-Print-Loop) is used to run portions of code without going through the full compilation step. It's ideal for prototyping and data analysis because it allows direct code execution and performance measurement.
@@ -946,7 +912,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Quicksort Performance
 Background context explaining the concept. The performance of parallel quicksort varies based on array size and core count. For small arrays, overhead from thread creation can outweigh benefits, while larger arrays benefit significantly.
@@ -961,7 +926,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Programming for Concurrency
 Background context explaining the concept. Functional programming minimizes side effects through immutability, which simplifies concurrency management and avoids race conditions and deadlocks.
@@ -986,7 +950,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Management in Concurrency
 Background context explaining the concept. Threads are virtual CPU entities that can run on physical CPUs for a limited time, allowing context switching to prevent any single thread from monopolizing resources.
@@ -1014,7 +977,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determinism in Functional Programming
 Background context explaining the concept. Functional programming emphasizes immutability, ensuring deterministic execution even with shared state. This is in contrast to imperative and object-oriented programming where mutable states can lead to nondeterministic behavior.

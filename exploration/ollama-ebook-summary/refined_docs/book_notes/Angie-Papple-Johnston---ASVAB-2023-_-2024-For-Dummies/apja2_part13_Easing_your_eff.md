@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Easing your effort Pulleys and gears
 
 ---
 
-**Rating: 8/10**
 
 #### Levers and Mechanical Advantage
 Levers are simple machines that work by using a fulcrum to reduce resistance and multiply the effect of effort. The mechanical advantage (MA) of a lever is determined by:
@@ -46,7 +44,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inclined Plane
 An inclined plane, also known as a ramp, is another simple machine that makes moving an object easier. It spreads the work over a longer distance, reducing the force needed to do the work.
@@ -72,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Torque in Action
 Background context: Torque is a twisting or turning force that tends to cause rotation around an axis. It’s commonly used in everyday scenarios like opening doors, steering cars, and even pedal bikes.
@@ -95,7 +91,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### State of Equilibrium
 
@@ -108,7 +103,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Momentum Calculation
 

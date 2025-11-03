@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Materials-Science-and-Engineering-An-Introduction_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** RECOVERY RECRYSTALLIZATION AND GRAIN GROWTH. 7.12 Recrystallization
 
 ---
 
-**Rating: 8/10**
 
 #### Strain Hardening Mechanism
 Strain hardening, or work hardening, involves the plastic deformation of a metal at temperatures below its recrystallization temperature. This results in an increase in dislocation density and changes in grain shape.
@@ -20,7 +18,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recovery Process
 During recovery, some of the stored internal strain energy is relieved through dislocation motion without an externally applied stress. This process involves enhanced atomic diffusion at elevated temperatures.
@@ -34,7 +31,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recrystallization Process
 Recrystallization follows recovery when a sufficient amount of strain energy has been relieved. It involves the formation of new grains with a more regular shape, leading to an overall reduction in dislocation density.
@@ -50,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Grain Growth
 After recrystallization, grain growth may occur if heat treatment is continued at elevated temperatures. This process involves the coalescence of small grains to form larger grains, which can lead to an increase in strength but a decrease in ductility.
@@ -66,7 +61,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Dislocations and Strengthening Mechanisms
 
@@ -79,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recrystallization Process
 
@@ -92,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Formation of New Grain Structure
 
@@ -105,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Stages of Recrystallization
 
@@ -118,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Impact on Mechanical Properties
 
@@ -131,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time and Temperature Dependence
 
@@ -144,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Influence of Cold Work
 
@@ -157,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Grain Boundary Motion
 
@@ -170,7 +157,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Effect of Impurity Atoms
 
@@ -183,7 +169,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Cold-Worked Grain Structure
@@ -205,7 +190,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Annealing Influence on Tensile Strength and Ductility
 Background context: The provided graph shows the influence of different annealing temperatures on the tensile strength and ductility of a brass alloy after an hour of annealing. It also indicates how grain size changes with temperature.
@@ -224,7 +208,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recrystallization in Ceramics
 Background context: The text poses a question about the possibility of recrystallization in ceramic materials. 
@@ -243,7 +226,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Diameter Reduction Procedure for Brass Rod
 Background context: The text describes a procedure to reduce the diameter of a brass rod through cold working while maintaining specific mechanical properties and final dimensions.
@@ -275,7 +257,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Yield Strength and Ductility Adjustment Through Deformation
@@ -288,7 +269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ductility and Cold Work Relationship
 Background context: The text explains the relationship between ductility and cold work deformation, noting that for deformations greater than 23 percent CW, ductilities exceeding 8 percent EL (engineering strain) are possible.
@@ -300,7 +280,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Grain Growth in Polycrystalline Materials
 Background context: The text explains the phenomenon of grain growth, which occurs due to the reduction in energy as grains increase in size and is driven by atomic diffusion.
@@ -312,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Grain Size and Time Relationship
 Background context: The text presents Equation 7.9 to describe how grain size changes with time during heat treatment.
@@ -326,7 +304,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Grain Growth Rate at Different Temperatures
 Background context: The text demonstrates how grain growth rate varies with temperature through a plot of logarithm of grain size versus logarithm of time for different temperatures.
@@ -338,7 +315,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dislocation Motion and Slip Mechanisms
 
@@ -351,7 +327,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Slip Systems
 
@@ -364,7 +339,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Resolved Shear Stress
 
@@ -377,7 +351,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Critical Resolved Shear Stress
 
@@ -390,7 +363,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single Crystal Tensile Deformation
 
@@ -403,7 +375,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Polycrystalline Deformation
 
@@ -416,7 +387,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Twinning Mechanism
 
@@ -429,7 +399,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dislocation Mobility and Strengthening
 
@@ -442,7 +411,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Grain Boundaries as Strengthening Mechanisms
 
@@ -455,7 +423,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solid-Solution Strengthening
 
@@ -468,7 +435,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Strain Hardening
 
@@ -481,7 +447,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recovery Process
 
@@ -494,7 +459,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Grain Growth
 

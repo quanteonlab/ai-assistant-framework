@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 22)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Fixed Windows
 
 ---
 
-**Rating: 8/10**
 
 #### Streaming Joins and Their Functionality
 
@@ -92,7 +90,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Fixed Windows and Temporal Validity Joins
@@ -216,7 +213,6 @@ TUMBLE(Left.Time, INTERVAL '5' MINUTE) = TUMBLE(Right.Time, INTERVAL '5' MINUTE)
 ```
 x??
 
-**Rating: 8/10**
 
 #### Temporal Validity Windows
 Temporal validity windows are used to handle situations where data slices time into regions wherein a given value is valid. This concept is crucial in systems that require real-time processing of time-varying data, such as financial currency conversion rates.
@@ -320,7 +316,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Validity Windows Overview
 Background context: The concept of validity windows is crucial for handling temporal data, ensuring that each piece of input data only affects a specific time range. This mechanism is particularly useful when dealing with financial or real-time data where historical accuracy is paramount.
@@ -420,7 +415,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Temporal Validity Windows
 Background context: Temporal validity windows are a crucial concept when dealing with time-varying data. They represent intervals during which certain values are valid or applicable. This is particularly useful in financial applications where exchange rates, for instance, can change over time.
@@ -523,7 +517,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Validity Windowed Conversion Rate Relation
 Background context: The validity windowed conversion rate relation is crucial for understanding how exchange rates evolve over time, especially when dealing with out-of-order data. This concept involves maintaining a valid range (window) of times during which an exchange rate is applicable.
@@ -704,7 +697,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Out-of-Order Event Handling
@@ -783,7 +775,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Temporal Validity Join and Windowed Joins
 
@@ -873,7 +864,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MapReduce Concept Introduction
 Background context explaining how large-scale data processing started with MapReduce. It was introduced by Google engineers to simplify complex data processing tasks by abstracting away scalability and fault-tolerance issues.

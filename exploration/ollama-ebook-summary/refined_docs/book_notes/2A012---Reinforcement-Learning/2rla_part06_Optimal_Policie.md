@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Optimal Policies and Optimal Value Functions
 
 ---
 
-**Rating: 8/10**
 
 #### Value of a State in MDPs
 Background context explaining the concept. In reinforcement learning, the value of a state \( v^\pi(s) \) is defined as the expected sum of rewards an agent can obtain starting from state \( s \) and following policy \( \pi \). The value function takes into account both the immediate reward and the discounted future rewards.
@@ -76,7 +74,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Action Value of an MDP
 Background context explaining the concept. The action value \( q^\pi(s, a) \) is defined as the expected return starting from state \( s \), taking action \( a \), and then following policy \( \pi \). This concept helps in understanding how valuable it is to take certain actions in specific states.
@@ -138,7 +135,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimal Policies and Value Functions
 Background context explaining the concept. In a finite MDP, an optimal policy is defined as one where the expected return from any state under this policy is at least as good as or better than that of any other policy.
@@ -215,7 +211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimal Value Functions in Golf Example
 Background context explaining the concept. In a specific example of golf, the optimal value function \( q^\star(s, \text{driver}) \) is used to determine the best action (using driver or putter) at each state.
@@ -268,7 +263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimal Value Function and Bellman Equation
 Background context explaining the optimal value function \( v^\star \) and its self-consistency condition given by the Bellman equation. The special form of this equation without reference to any specific policy is called the Bellman optimality equation.
@@ -280,7 +274,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Optimality Equation for \( q^\star \)
 Background context discussing the Bellman optimality equation for action-value functions. The equation is provided and explains that it considers the expected return given the best action.
@@ -293,7 +286,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Backup Diagrams for \( v^\star \) and \( q^\star \)
 Background context explaining backup diagrams used to illustrate the Bellman optimality equations. These diagrams represent future states and actions, differentiating them from backup diagrams in non-optimal policies by marking choice points with maximum values instead of expected values.
@@ -307,7 +299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Uniqueness of Solution in Bellman Optimality Equation
 Background context discussing that the Bellman optimality equation has a unique solution for finite MDPs. This is due to the system of equations representing all states, which can be solved using various methods.
@@ -320,7 +311,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### One-Step Search and Greedy Policies
 Background context: The concept of one-step search involves using a single step to evaluate actions based on their immediate consequences, leading to optimal policies when combined with the optimal value function. Greedy policies are those that select actions based solely on short-term benefits without considering future outcomes.
@@ -334,7 +324,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimal Action-Value Function (q\*)
 Background context: The action-value function \( q^\ast(s, a) \) extends the state value function by considering both states and actions. It provides immediate feedback on which actions are optimal in each state without needing knowledge of future states.
@@ -348,7 +337,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solving Gridworld Example
 Background context: The gridworld example demonstrates how solving Bellman's optimality equation can yield an optimal policy. In this scenario, each state has specific transitions and rewards that lead to the optimal path.
@@ -362,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Optimality Equations for Recycling Robot
 Background context: The Bellman optimality equations provide a way to find the optimal policy by ensuring that each action in a state leads to an expected reward equal to the maximum possible value of being in any subsequent state.
@@ -384,7 +371,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Optimality Equation for Two-State MDP
 
@@ -403,7 +389,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimal State-Value Function for Golf Example
 
@@ -416,7 +401,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimal Action-Value Function for Putting in Golf
 
@@ -429,7 +413,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bellman Equation for Q-Values in Recycling Robot
 
@@ -446,7 +429,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relationship Between V-Values and Q-Values
 
@@ -462,7 +444,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relationship Between Q-Values and V-Values
 
@@ -480,7 +461,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exercise 3.27 - Equation for \(\pi^\star\) in terms of \(q^\star\)
 Background context: This exercise asks you to derive an equation expressing the optimal policy \(\pi^\star\) directly from the optimal action-value function \(q^\star\).
@@ -495,7 +475,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exercise 3.28 - Equation for \(\pi^\star\) in terms of \(v^\star\) and the four-argument p
 Background context: This exercise requires expressing the optimal policy \(\pi^\star\) using both the value function \(v^\star(s)\) and a custom-defined four-argument transition probability function \(p\).
@@ -510,7 +489,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exercise 3.29 - Bellman Equations for Value Functions
 Background context: This exercise involves rewriting the four Bellman equations (for \(v^\pi\), \(v^\star\), \(q^\pi\), and \(q^\star\)) using a three-argument function \(p(s', r | s, a)\) and a two-argument function \(r(s, a)\).
@@ -542,7 +520,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimality and Approximation - Computational Constraints
 Background context: This section discusses the practical challenges in finding optimal policies due to computational constraints. Even with a complete model of the environment’s dynamics, solving for an optimal policy can be computationally prohibitive.
@@ -571,7 +548,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tabular vs Parameterized Approximations
 Background context: This section highlights the difference between tabular methods, which use exact representations for value functions and policies, and parameterized approximations used when states are numerous.
@@ -599,7 +575,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Online Learning and Approximations
 Background context: This section emphasizes the role of online learning in approximating optimal policies. By focusing on frequently encountered states, agents can make good decisions without needing to compute less relevant actions.
@@ -630,7 +605,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Agent's Knowledge and Control
 Reinforcement learning (RL) involves an agent interacting with its environment. The agent has full control over everything inside, including its actions and state transitions, but it only partially controls what happens outside. This setup is formalized using policies that dictate how the agent selects actions based on the states.
@@ -648,7 +622,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Definition
 A policy is defined as a stochastic rule that determines the agent's actions. It maps states to probabilities of choosing each possible action.
@@ -661,7 +634,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Markov Decision Process (MDP)
 An MDP formalizes the RL setup where the environment’s dynamics are well-defined. It involves a finite set of states, actions, rewards, and transition probabilities.
@@ -683,7 +655,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Return in Reinforcement Learning
 The return \(G_t\) is a function of future rewards that the agent aims to maximize. It can be defined either undiscouted (for episodic tasks) or discounted (for continuing tasks).
@@ -703,7 +674,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Value Functions
 Value functions are used to assess the quality of a policy. The value function for state \(s\) and action \(a\), denoted by \(V(s)\) or \(Q(s,a)\), represents the expected return starting from that state (or state-action pair) given that the agent follows a particular policy.
@@ -722,7 +692,6 @@ x??
 
 ---
 
-**Rating: 10/10**
 
 #### Optimal Value Functions
 The optimal value functions represent the best possible expected return achievable from each state (or state-action pair) across all policies. They are unique for a given MDP, but there can be multiple optimal policies.
@@ -748,7 +717,6 @@ x??
 
 ---
 
-**Rating: 10/10**
 
 #### Bellman Optimality Equations
 The Bellman optimality equations are a set of consistency conditions that the optimal value functions must satisfy. They allow for the calculation of these optimal values.
@@ -767,7 +735,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Learning Problem Types
 Reinforcement learning problems can be categorized based on the level of knowledge initially available. Problems with complete knowledge assume an agent has a perfect model of the environment, while problems with incomplete knowledge do not.
@@ -789,7 +756,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Markov Decision Processes (MDPs)
 Background context explaining the concept. MDPs are a framework used to model decision making processes where outcomes are partly random and partly under the control of a decision maker. They are widely used in reinforcement learning, artificial intelligence, and optimal control problems.
@@ -811,7 +777,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reinforcement Learning and MDPs
 Background context explaining the concept. Reinforcement learning (RL) involves training agents to make decisions by performing actions in an environment to achieve goals. RL extends MDPs by focusing on approximation and incomplete information for realistically large problems.
@@ -826,7 +791,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Approximation Methods
 Background context explaining the concept. In reinforcement learning, exact solutions are often infeasible for large state spaces, so approximation methods must be used to find near-optimal policies.
@@ -841,7 +805,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unified View of Learning Machines
 Background context explaining the concept. Andreae's (1969b) work described a unified view of learning machines, which includes discussions on reinforcement learning using MDP formalism.
@@ -855,7 +818,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Witten and Corbin's Work
 Background context explaining the concept. Witten and Corbin (1973) experimented with a reinforcement learning system that used MDPs to analyze it.
@@ -869,7 +831,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Werbos's Contributions
 Background context explaining the concept. Werbos (1977) suggested approximate solution methods for stochastic optimal control problems, which are closely related to modern reinforcement learning.
@@ -883,7 +844,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Watkins (1989) and Q-learning Algorithm
 
@@ -910,7 +870,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Episodic vs. Continuing Tasks
 
@@ -923,7 +882,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pole-Balancing Example
 
@@ -936,7 +894,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Long-Term Reward and Action-Value Functions
 
@@ -966,7 +923,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reward Hypothesis
 
@@ -981,7 +937,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Policy Evaluation (Prediction)
 Background context explaining how policy evaluation is used to compute the state-value function \(v_{\pi}\) for an arbitrary policy \(\pi\). The formula given in equation (4.3) shows that:
@@ -995,7 +950,6 @@ The purpose of policy evaluation is to compute the state-value function \(v_{\pi
 
 ---
 
-**Rating: 8/10**
 
 #### Iterative Policy Evaluation
 Background context explaining iterative policy evaluation, which is an algorithm used to find the state-value function \(v_{\pi}\) for a given policy \(\pi\) using the Bellman equation. The update rule (4.5) shows how new values are computed based on old ones:
@@ -1010,7 +964,6 @@ The update rule for iterative policy evaluation uses the Bellman equation to imp
 
 ---
 
-**Rating: 8/10**
 
 #### In-Place Iterative Policy Evaluation
 Background context explaining the in-place version of iterative policy evaluation where updates are done "in place" without using additional storage for old and new values. This is implemented by overwriting the old value with the new one as soon as it is computed.
@@ -1023,7 +976,6 @@ The new value is immediately overwritten on the old one. This approach converges
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence of Iterative Policy Evaluation
 Background context explaining that iterative policy evaluation converges under certain conditions, specifically when \(\gamma < 1\) or when eventual termination is guaranteed. The sequence \(\{v^k\}\) converges to \(v_{\pi}\) as \(k \to \infty\).
@@ -1037,7 +989,6 @@ The sequence of approximations \(\{v^k\}\) will converge to the true value funct
 
 ---
 
-**Rating: 8/10**
 
 #### Pseudocode for Iterative Policy Evaluation
 Background context explaining that iterative policy evaluation can be implemented using a loop, where each state's value is updated based on its successor states and immediate rewards. The algorithm also includes a stopping criterion based on convergence threshold \(\epsilon\).

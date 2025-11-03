@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Many-to-One and Many-to-Many Relationships
 
 ---
 
-**Rating: 8/10**
 
 #### Why Store IDs Instead of Text Strings
 Background context: The text discusses why it is advantageous to store IDs instead of plain-text strings for entities like regions and industries. Storing an ID has several benefits, including consistency, avoiding ambiguity, ease of updating, localization support, and better search capabilities.
@@ -32,7 +30,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advantages of Using IDs Over Text Strings
 Background context: The text elaborates on the advantages of using unique identifiers (IDs) for entities instead of storing their textual descriptions in multiple places.
@@ -58,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Document Model Limitations in Supporting Joins
 Background context: The text points out that document databases often lack support for joins, necessitating application-level workarounds. This can lead to increased complexity and performance overhead.
@@ -83,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Many-to-Many Relationships and New Features
 Background context: The text discusses how adding new features to an application can introduce many-to-many relationships, which are more complex to manage in a document database.
@@ -107,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Query Execution in Relational Model
 The relational model simplified querying and updating by laying out all data openly in tables. A query optimizer automatically decided how to execute a query and which indexes to use, making the process more efficient and flexible.
@@ -119,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Query Optimizers in Relational Databases
 Background context: The text explains how query optimizers work in relational databases and why developers rarely need to think about them. It highlights that new indexes can be declared without changing queries, making it easier for developers to add features to applications.
@@ -131,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relational Databases vs. Document Databases
 Background context: The text compares relational databases and document databases, focusing on their data models. It highlights advantages of both systems, such as schema flexibility in document databases versus better support for joins in relational databases.
@@ -148,7 +140,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations of Document Databases
 Background context: The text points out limitations in document databases, such as the inability to refer directly to nested items within a document. It also mentions that many-to-many relationships can be less appealing in certain applications.
@@ -167,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault-Tolerance and Concurrency Handling
 Background context: The text briefly mentions that comparison between relational databases and document databases includes fault-tolerance properties and handling of concurrency, which are discussed in later chapters.
@@ -185,7 +175,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Denormalization and Joins
 Background context: The need to reduce joins can sometimes be addressed by denormalizing data, which involves adding redundant copies of data. However, this approach requires additional application code to ensure consistency among these redundant copies.
@@ -224,7 +213,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Emulating Joins in Application Code
 Background context: In some cases, the application can emulate joins by making multiple requests to the database. However, this approach shifts complexity from the database to the application and typically results in slower performance compared to a join performed by the specialized database code.
@@ -258,7 +246,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Schema Flexibility in Document Models
 Background context: Many document databases allow for flexible schemas, meaning that documents can contain arbitrary fields. This flexibility comes at the cost of requiring application code to handle unknown or changing structures.
@@ -278,7 +265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Downtime in Schema Changes
 Background context: Relational databases often have downtime during schema changes due to the need to copy data or ensure consistency across all transactions.
@@ -297,7 +283,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Schema-on-Read Approach
@@ -309,7 +294,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Locality for Queries
 Background context: Document databases store documents as single continuous strings (e.g., JSON, XML). This allows for better performance when large parts of a document need to be accessed simultaneously. However, this advantage is only useful if the entire document needs to be read at once.
@@ -320,7 +304,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Document Database Write Operations
 Background context: Writing to documents in a database can be challenging due to the nature of the data being stored as strings. Full rewriting of the document is typically required for updates, except when changes do not alter the encoded size of the document. This can be wasteful on large documents.
@@ -331,7 +314,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Limitations of Document Databases
 Background context: The performance of document databases can be limited due to their write operations requiring full document rewriting and the need to load entire documents even when only small parts are accessed. These limitations reduce the usefulness of document databases in certain scenarios.

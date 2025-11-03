@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 33)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 17.7 Performance Timing. Problem. Solution. Discussion
 
 ---
 
-**Rating: 8/10**
 
 #### Profiling Tools and Performance Measurement
 Background context explaining the importance of profiling tools and performance measurement. Discuss the evolution from Oracle JDK to VisualVM and Java Flight Recorder, highlighting their respective roles in performance analysis.
@@ -137,7 +135,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Timing Program Execution
@@ -202,7 +199,6 @@ protected void doClass(String className) {
 x??
 ---
 
-**Rating: 8/10**
 
 #### Annotations Overview
 Annotations provide additional information beyond what source code conveys. They can be used both at compile-time and runtime.
@@ -356,7 +352,6 @@ public class SubClass extends SuperClass {
 
 By using `@Override`, you can avoid potential runtime issues and keep your codebase clean.
 
-**Rating: 8/10**
 
 ---
 #### Annotation Interface Overview

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Operating-Systems_-Three-Easy-Pieces_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 5. Process API
 
 ---
 
-**Rating: 8/10**
 
 #### Fork() System Call
 Background context: The `fork()` system call is a fundamental mechanism for process creation in Unix systems. It creates an exact copy of the calling process, and both processes continue execution from the point where `fork()` was called.
@@ -21,7 +19,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parent and Child Processes
 Background context: In the context of `fork()`, the original process is known as the parent, while the new process created by `fork()` is called the child. The behavior of these processes can be different based on how they handle the return value from `fork()`.
@@ -43,7 +40,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wait() System Call
 Background context: The `wait()` system call is used by processes to wait for their children to complete. This function blocks until the child process has terminated and then returns with the PID of the terminated process.
@@ -59,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Program Analysis
 Background context: The example provided in the text demonstrates how `fork()` and related system calls work. It prints a message from both parent and child processes, showing their unique PIDs.
@@ -96,7 +91,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interlude Summary
 Background context: This interlude focuses on practical aspects of Unix systems, particularly the use of system calls for process creation (`fork()`, `exec()`), and control (`wait()`). Understanding these concepts is crucial for developing efficient and effective applications.
@@ -114,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fork and Process ID (PID)
 Fork is a system call that creates a new process as a copy of the calling process. After forking, both processes have their own private memory space but share the same code segment. The parent receives the PID of the child process, while the child receives 0 upon successful fork execution.
@@ -135,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wait System Call
 The `wait()` system call allows a parent to wait for its children to complete execution. It pauses the parent's execution until one of its children terminates, and then returns the status of that child.
@@ -151,7 +143,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Creation and Execution Determinism
 When a process creates a child using `fork()`, two processes are created in the system. The order of execution between these processes is determined by the CPU scheduler, which can cause non-deterministic behavior unless explicitly managed.
@@ -174,7 +165,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Deterministic Output with `wait()`
 Using `wait()` in the parent process can make the output more deterministic by ensuring that the parent waits for the child to complete before printing its own message.
@@ -199,7 +189,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Creation and Synchronization Using fork() and wait()
 Background context: In this section, we explore how processes are created using the `fork()` system call and synchronized with the parent process using the `wait()` system call. The `fork()` function creates a new child process that is an exact copy of the calling (parent) process.
@@ -244,7 +233,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronization Using wait()
 Background context: The `wait()` function in this example waits for the termination of the child process before proceeding further. This ensures that the parent does not print its message until after the child has completed execution.
@@ -260,7 +248,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### exec() System Call Overview
 Background context: The `exec()` system calls are used in this example to replace the current process image with a new one. Specifically, the child process uses `execvp()` to run the `wc` command on the file "p3.c", which counts lines, words, and bytes.
@@ -276,7 +263,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple exec() Variants on Linux
 Background context: On Linux, there are multiple variants of the `exec()` system call available. These include `execl`, `execlp()`, `execle()`, `execv()`, `execvp()`, and `execvpe()`. Each variant has slightly different behavior in terms of argument passing and environment handling.
@@ -294,7 +280,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exec() and Process Transformation
 Background context: The `exec()` function is used to replace an existing process image with a new one, effectively transforming the current program into another without creating a new process. This is useful for running different code or modifying environments without spawning additional processes.
@@ -306,7 +291,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fork() and Exec() in Shell Design
 Background context: In UNIX systems, `fork()` and `exec()` are combined to build an effective shell interface that can manipulate environments before running commands. The separation allows for features like redirection of output.
@@ -318,7 +302,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example Code for Redirection
 Background context: The text mentions an example program that demonstrates redirection using file operations.
@@ -349,7 +332,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File Descriptor Redirection in p4.c
 Background context: The provided C program `p4.c` demonstrates how to redirect file descriptors to a new file. Specifically, it uses the `fork()` and `execvp()` functions to create a child process that redirects its standard output (STDOUT) to a file named `p4.output`. This redirection is achieved by closing the original file descriptor for STDOUT and opening the new file with appropriate permissions.
@@ -372,7 +354,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Executing Commands in Child Process
 Background context: After closing and reassigning the standard output to a new file, the program uses `execvp()` to execute another command (`wc` in this case) within the child process. This effectively replaces the current process image with that of `wc`, which is a utility for counting lines, words, and characters.
@@ -392,7 +373,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fork and Wait in p4.c
 Background context: The `fork()` system call is used to create a new process that is an exact copy of the calling process. In this program, after creating a child process, the parent waits for its termination using `wait(NULL)`. This ensures that the parent does not continue execution until the child has finished.
@@ -422,7 +402,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process API Overview
 Background context: The program `p4.c` illustrates the use of basic process management functions like `fork()` and `execvp()`. These functions are part of the Process API, which allows for creating, managing, and manipulating processes within a Unix-like operating system.
@@ -454,7 +433,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Man Pages
 
@@ -477,7 +455,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Signals Subsystem
 
@@ -511,7 +488,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Control and Users
 
@@ -545,7 +521,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Superuser (Root)
 
@@ -569,7 +544,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fork()
 The `fork()` system call is used in Unix systems to create a new process. The parent process creates the child process, which becomes a nearly identical copy of its parent.
@@ -595,7 +569,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wait()
 The `wait()` system call allows a parent to wait for its child to complete execution. This is useful when managing process lifecycle, ensuring that parents are aware of the status of their children.
@@ -622,7 +595,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exec()
 The `exec()` family of system calls allows a child to break free from its similarity to its parent and execute an entirely new program. This enables dynamic execution without needing to rewrite the code in memory.
@@ -642,7 +614,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Signal Handling
 Signals are used to handle asynchronous events, allowing processes to stop, continue, or terminate. They provide a mechanism for managing process control in response to external conditions.
@@ -669,7 +640,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Control in Unix
 Processes can be controlled using signals, which are asynchronous notifications. This allows for dynamic management and coordination of processes.
@@ -706,7 +676,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiprocessor System Design by Melvin E. Conway
 Background context: This early paper from 1963 discusses how to design multiprocessing systems and is credited as one of the first places where the `fork()` function was mentioned in relation to spawning new processes.
@@ -731,7 +700,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Programming Semantics for Multiprogrammed Computations by Dennis and Van Horn
 Background context: This classic paper from 1966 outlines the basics of multiprogrammed computer systems. It had significant influence on Project MAC, Multics, and eventually UNIX.
@@ -752,7 +720,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hints for Computer Systems Design by Butler Lampson
 Background context: This 1983 paper provides a set of guidelines on how to design computer systems. It is considered essential reading for anyone involved in system design.
@@ -774,7 +741,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Advanced Programming in the UNIX Environment by W. Richard Stevens and Stephen A. Rago
 Background context: This 2005 book is considered essential for understanding UNIX APIs. It covers nuances and subtleties of using these APIs.
@@ -803,7 +769,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Question 2: File Descriptor Access in Child and Parent
 Background context: The `open()` system call is used to open a file, returning a file descriptor. After forking, both the parent and child processes can access this file descriptor.
@@ -837,7 +802,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Question 3: Synchronizing Child and Parent Processes
 Background context: The `fork()` system call creates a new process that shares memory with the original. Controlling which process prints first can be done using synchronization mechanisms.
@@ -872,7 +836,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Question 4: Exec() Variants and Their Purpose
 Background context: The `exec()` family of functions replaces the current process image with a new process image. There are multiple variants to support different scenarios such as environment variables, working directory changes, and more.
@@ -903,7 +866,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Question 5: Wait() in Parent Process
 Background context: The `wait()` system call allows a process to wait for its child to terminate. It returns the ID of the child that has terminated.
@@ -944,7 +906,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Question 6: Waitpid() vs. Wait()
 Background context: The `waitpid()` function is an extension of `wait()` that allows the parent process to specify which child process (if any) should be waited on.
@@ -984,7 +945,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Question 7: Closing File Descriptors in Child Process
 Background context: When the parent closes a file descriptor, it does not affect the child's view of that file descriptor. However, if the child tries to use this closed descriptor, it will result in errors.
@@ -1043,7 +1003,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Question 8: Piping Between Child and Parent Processes
 Background context: The `pipe()` system call creates a pipe that can be used for inter-process communication. One end of the pipe (the read end) is connected to the standard output of one process, while the other end (write end) is connected to the standard input of another.
@@ -1113,7 +1072,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Basic Technique: Limited Direct Execution
 Background context explaining the basic technique of limited direct execution. This involves running a program directly on the CPU, creating a process entry, allocating memory, loading the program code into memory, setting up stack, and executing the main function.
@@ -1149,7 +1107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance and Control Challenges
 Background context explaining the challenges of implementing virtualization while maintaining performance and control. The first challenge is how to implement virtualization without adding excessive overhead, and the second is ensuring processes run efficiently yet can be controlled by the OS.
@@ -1191,7 +1148,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Direct Execution Protocol Without Limits
 Background context explaining the direct execution protocol without limits. This involves creating a process entry, allocating memory for it, loading program code into memory, setting up stack with `argc/argv`, clearing registers, and executing `callmain()` to run the main function.
@@ -1255,7 +1211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limited Direct Execution
 Background context explaining the concept of limited direct execution, where running programs directly on the CPU is achieved by virtualizing the CPU in an efficient manner while retaining control over the system. This involves a judicious use of hardware and OS support.
@@ -1310,7 +1265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Restricted Operations
 Background context explaining the need for restricted operations, such as I/O requests and access to system resources like CPU or memory. Direct execution allows processes to run natively on hardware but poses a challenge when processes request restricted actions without risking full control over the system.
@@ -1322,7 +1276,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### System Calls and Trap Instructions
 Explanation of how system calls, such as `open()` or `read()`, appear similar to typical C function calls but are actually trap instructions in disguise.
@@ -1351,7 +1304,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### User Mode vs. Kernel Mode
 Explanation of user mode and kernel mode, their roles in restricted operations, and how exceptions are handled when a process attempts unauthorized actions.
@@ -1373,7 +1325,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### System Calls Overview
@@ -1393,7 +1344,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### User Mode vs Kernel Mode
 User programs run in user mode, which restricts their access to hardware resources and privileged operations. In contrast, kernel mode provides full access to the machine's resources.
@@ -1417,7 +1367,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trap Instructions and Privilege Level Changes
 A trap instruction is used by programs to transition into the kernel, raising their privilege level to perform necessary operations. The hardware ensures that enough registers are saved so they can be restored correctly after the operation.
@@ -1438,7 +1387,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Return-From-Trap Instruction
 After performing the necessary operations, the OS uses a return-from-trap instruction to switch back from kernel mode to user mode. This restores the program's state and ensures it continues execution as expected.
@@ -1461,7 +1409,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Trap Handling Mechanism
@@ -1474,7 +1421,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### System Call Handling Process
 The process involves creating an entry in the trap table, handling traps within the OS context, performing the required work, and then returning to user mode.
@@ -1511,7 +1457,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### User Mode vs Kernel Mode Transition
 Transitions between user and kernel modes are crucial for security. The hardware ensures that certain operations (like modifying trap tables) can only be performed in kernel mode.
@@ -1551,7 +1496,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### System Call Number Mechanism
 System calls are identified by a number assigned during the boot process. User code places this number in specific locations and relies on the OS to interpret it.
@@ -1585,7 +1529,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Security Considerations with User Inputs
 Handling user inputs securely is crucial to prevent attacks. The OS must validate all arguments passed during system calls.
@@ -1621,7 +1564,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Kernel Memory Security Risks
 Background context explaining the risks associated with improper handling of kernel memory. This includes the potential for user programs to read sensitive data, such as other processes' memory contents.
@@ -1634,7 +1576,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limited Direct Execution (LDE) Protocol
 Background context explaining the LDE protocol, which is used for transitioning between user and kernel modes. The protocol involves privileged instructions for setting up trap tables and switching execution contexts.
@@ -1663,7 +1604,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Switching Between Processes
 Background context explaining the challenges of switching between processes, particularly the difficulty when the OS is not running on the CPU. The cooperative approach involves processes periodically yielding control to the OS.
@@ -1697,7 +1637,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Misbehaving Processes
 Background context explaining the necessity for operating systems to manage processes that misbehave, either maliciously or due to bugs. This involves trapping errors and handling exceptions.
@@ -1724,7 +1663,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Cooperative Scheduling vs. Non-Cooperative Systems
 
@@ -1738,7 +1676,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Timer Interrupts
 
@@ -1752,7 +1689,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Privileged Operations for Timer Management
 
@@ -1766,7 +1702,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of Safeguarding Against Rogue Processes
 
@@ -1780,7 +1715,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept of System Call Mechanism
 
@@ -1796,7 +1730,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interrupt Handling and Context Switching
 Background context: When a computer system encounters an interrupt, it temporarily stops executing the current process to handle the interrupt. This can be due to various reasons such as timer interrupts or explicit system calls. The hardware plays a crucial role by saving enough state information so that execution can resume correctly after the interrupt is handled.
@@ -1814,7 +1747,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switching Mechanism
 Background context: A context switch is a process managed by the operating system where it saves the state of one process and restores another. This mechanism allows multiple processes to share the same CPU time efficiently.
@@ -1832,7 +1764,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switching Steps
 Background context: After handling an interrupt, the operating system needs to decide whether to continue executing the current process or switch to another. This decision is made by a scheduler, and if a switch occurs, a context switch is performed.
@@ -1850,7 +1781,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scheduler and Decision Making
 Background context: The scheduler is responsible for deciding whether to continue running the current process or switch to another. This decision can be made cooperatively via system calls or non-cooperatively via timer interrupts.
@@ -1872,7 +1802,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Return-from-Trap Instruction
 Background context: After saving and restoring contexts, the system resumes execution by executing a return-from-trap instruction. This instruction allows the CPU to resume the correct process's execution as if no interrupt had occurred.
@@ -1890,7 +1819,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Context Switching and Interrupt Handling
 Background context: This section covers how interrupts are handled by saving the state of the current process, allowing the system to switch processes when necessary. The key steps involve hardware saving state information and the operating system managing these transitions.
@@ -1912,7 +1840,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switch Overview
 The context switch is a process where an operating system switches between processes or threads. This involves saving and restoring register states to ensure smooth transitions.
@@ -1924,7 +1851,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Timer Interrupt Context Switch
 When a timer interrupt occurs, it causes the current process execution to be paused, its register state saved onto its kernel stack, and control is passed to the operating system's kernel mode.
@@ -1949,7 +1875,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switch Mechanism in Detail
 When a context switch is performed, the operating system saves the current process's state into its structure and restores another process's state from its own structure.
@@ -1990,7 +1915,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Context Switch Code Example (xv6)
 The provided code snippet demonstrates how a context switch is implemented in xv6, an operating system.
@@ -2030,7 +1954,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switch and Stack Pointer
 During a context switch, the stack pointer (`esp`) is changed to point to the kernel stack of the process being switched to.
@@ -2049,7 +1972,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Timer Interrupt During System Call
 When a system call is being processed, a timer interrupt can occur. The operating system must handle this situation carefully to ensure that the system remains responsive and that no data is lost due to unprocessed interrupts.
@@ -2063,7 +1985,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Multiple Interrupts
 In scenarios where one interrupt is being handled, another interrupt can occur. This situation requires careful management by the operating system to prevent loss of critical data and ensure proper scheduling.
@@ -2091,7 +2012,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switches and System Calls Performance
 Understanding how long a context switch or system call takes is crucial for optimizing performance. Tools like `lmbench` can measure these times, giving insights into the efficiency of kernel operations.
@@ -2105,7 +2025,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Disabling Interrupts During Handling
 To prevent multiple interrupts from overlapping, one strategy is to disable interrupts temporarily during interrupt processing. However, this needs to be done carefully to avoid deadlocks or resource starvation.
@@ -2127,7 +2046,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency and Synchronization
 Concurrency in operating systems involves managing multiple activities running concurrently, especially on multiprocessors. Locking schemes are used to protect shared resources from simultaneous access.
@@ -2154,7 +2072,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Restricted User Mode and Kernel Mode Execution
 
@@ -2169,7 +2086,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### System Calls
 
@@ -2184,7 +2100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Trap Table
 
@@ -2199,7 +2114,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Return-From-Trap Instruction
 
@@ -2214,7 +2128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Switching
 
@@ -2229,7 +2142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Timer Interrupt
 
@@ -2244,7 +2156,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtualizing the CPU
 
@@ -2259,7 +2170,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Atlas Computer
@@ -2271,7 +2181,6 @@ The Atlas computer, developed at Manchester University from 1962 to 1964, is con
 
 ---
 
-**Rating: 8/10**
 
 #### One-Level Storage System
 Background context explaining Kilburn et al.'s paper on the "One-Level Storage System," which introduced key concepts of time-sharing and the clock routine for managing user processes.
@@ -2299,7 +2208,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Operating Systems and Hardware Performance
 Background context explaining Ousterhout's paper on the relationship between operating system performance and hardware.
@@ -2330,7 +2238,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Measurement Homework for Operating Systems
 Background context explaining the purpose and objectives of measurement homeworks, which involve writing code to measure OS or hardware performance.
@@ -2362,7 +2269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Timer Precision and Accuracy
 Background context explaining the concept. `gettimeofday()` returns time in microseconds since 1970 but is not precise to the microsecond. You need to measure back-to-back calls of `gettimeofday()` to determine its precision.
@@ -2394,7 +2300,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using `rdtsc` for High Precision Timers
 Background context explaining the concept. `rdtsc` instruction is available on x86 machines and can provide higher precision than `gettimeofday()`.
@@ -2425,7 +2330,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Measuring Context Switch Cost
 Background context explaining the concept. `lmbench` measures context-switch cost by using Unix pipes between two processes.
@@ -2465,7 +2369,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ensuring Processes Run on the Same CPU
 Background context explaining the concept. To accurately measure context switch costs, ensure both processes are running on the same CPU using system calls like `schedsetaffinity()`.

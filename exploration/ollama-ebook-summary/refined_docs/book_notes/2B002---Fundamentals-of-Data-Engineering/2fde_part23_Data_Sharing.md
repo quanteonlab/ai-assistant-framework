@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Data Sharing
 
 ---
 
-**Rating: 8/10**
 
 #### Webhook Ingestion Architecture
 Webhook-based data ingestion architectures are critical for handling real-time or event-driven data. They involve receiving and processing incoming events, often using serverless functions, managed services, stream-processing frameworks, and storage solutions.
@@ -91,7 +89,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Secure Data Movement within VPC
 Background context: Moving data between different locations can introduce security vulnerabilities. It is crucial to ensure that data remains secure during transit and at rest. Use secure endpoints for internal movement, and consider using a VPN or dedicated private connection when moving data between cloud and on-premises networks.
@@ -155,7 +152,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of True Orchestration
 In data engineering, ingestion is a critical step that often involves complex and interdependent processes. As data complexity grows, simple cron jobs may not suffice; true orchestration becomes necessary to manage and coordinate these tasks effectively.

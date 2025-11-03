@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 41)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** The End-to-End Argument for Databases
 
 ---
 
-**Rating: 8/10**
 
 #### Fraud Risk Assessment Using Partitioned Databases
 
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Partition Joins in Databases
 
@@ -52,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ensuring Correctness in Stateful Systems
 
@@ -75,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges with Transactional Consistency
 
@@ -110,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Application Bugs and Data Safety
@@ -136,7 +130,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exactly-Once Execution of Operations
 Background context explaining the challenge of ensuring operations are executed exactly once, and the risk of processing a message twice. This is crucial in scenarios like billing systems where double charging customers is undesirable.
@@ -170,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Idempotence and Its Implementation
 Background context explaining that making operations idempotent is one effective way to achieve exactly-once execution. However, this requires careful implementation to handle metadata and fencing during failovers.
@@ -202,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Duplicate Suppression Across Network Layers
@@ -240,7 +231,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Transaction Handling and Idempotency in Databases
 Database transactions, especially non-idempotent ones like money transfers, can lead to issues if a transaction is retried. An example of a non-idempotent transaction in Example 12-1 involves transferring $11 from one account to another within a single database connection.
@@ -275,7 +265,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### HTTP POST Retries and Web Server Handling
 HTTP POST requests can fail due to network issues, leading to duplicate transactions. For instance, a user might retry a transaction after receiving an error message due to a weak cellular connection.
@@ -321,7 +310,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unique Operation Identifier for Idempotency
 
@@ -339,7 +327,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Relational Database Uniqueness Constraint
 
@@ -363,7 +350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event Sourcing
 
@@ -383,7 +369,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### End-to-End Argument
 
@@ -401,7 +386,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### End-to-End Solution for Data Integrity and Security
 In many data systems, a single solution does not cover all potential issues. Network-level checksums can detect packet corruption but fail to catch software bugs or disk errors. Similarly, encryption mechanisms like WiFi passwords protect against snooping but do not guard against attacks elsewhere on the internet.
@@ -423,7 +407,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Low-Level Reliability Mechanisms vs. End-to-End Correctness
 Low-level reliability mechanisms like TCP's duplicate suppression and Ethernet checksums are crucial but not sufficient to ensure end-to-end correctness. They reduce the probability of higher-level issues, such as packet reordering in HTTP requests. However, they do not address application-specific faults.
@@ -441,7 +424,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault-Tolerance Mechanisms in Data Systems
 Fault-tolerance mechanisms are essential for maintaining data integrity and security. However, implementing these mechanisms at the application level can be complex and error-prone. Transactions provide a high-level abstraction that simplifies handling various issues like concurrent writes and crashes but may not cover all cases.
@@ -459,7 +441,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Need for Application-Specific Fault-Tolerance Abstractions
 Given the complexity of implementing fault-tolerance mechanisms at the application level, it is beneficial to explore abstractions that make it easier to provide specific end-to-end correctness properties while maintaining good performance and operational characteristics in a large-scale distributed environment.
@@ -477,7 +458,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conclusion on End-to-End Correctness
 Ensuring end-to-end correctness in data systems requires addressing issues at multiple levels, from the low-level network and transport layers to application-specific measures. While low-level mechanisms are useful for reducing higher-level faults, they do not cover all possible sources of corruption or application-specific issues. Fault-tolerance abstractions that simplify fault handling while maintaining performance and operational characteristics could be a valuable solution.
@@ -495,7 +475,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Uniqueness Constraints and Consensus
 
@@ -510,7 +489,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Uniqueness Checking via Partitioning
 
@@ -523,7 +501,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Multi-Master Replication for Uniqueness
 
@@ -536,7 +513,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Uniqueness in Log-based Messaging
 
@@ -567,7 +543,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Partition Request Processing
 
@@ -589,7 +564,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-partition Data Processing
 Background context: The idea of using multiple differently partitioned stages is similar to what we discussed on page 514. This concept ties into concurrency control, which ensures that operations can be performed concurrently without conflicts.
@@ -612,7 +586,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linearizability
 Background context: Transactions are typically linearizable, which means that a writer waits until a transaction is committed and then its writes become immediately visible to all readers. This property contrasts with operations split across multiple stages of stream processors.
@@ -634,7 +607,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous Consumers in Streams Processing
 Background context: In stream processing, consumers of a log are asynchronous by design. The sender does not wait for messages to be processed by consumers before sending another message.
@@ -661,7 +633,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Timeliness vs. Integrity
 Background context: The discussion differentiates between timeliness, which ensures users see an up-to-date state of data, and integrity, which guarantees absence of corruption or data loss.
@@ -686,7 +657,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Read-After-Write Consistency
 Background context: This is a weaker timeliness property where reads immediately reflect the latest writes.
@@ -708,7 +678,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Integrity Checks and Repair
 Background context: Violations of integrity are permanent and require explicit checking and repair, unlike timeliness violations that can be resolved by retrying operations.
@@ -730,7 +699,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ACID Transactions
 Background context: Atomicity, durability, and integrity are key components of ACID transactions. These properties ensure that operations are consistent and reliable.
@@ -774,7 +742,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Timeliness vs. Integrity in Data Systems
@@ -786,7 +753,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ACID Transactions and Dataflow Systems
 ACID transactions provide both timeliness (e.g., linearizability) and integrity (e.g., atomic commit) guarantees. However, in dataflow systems, these guarantees are decoupled. Timeliness is not guaranteed unless explicitly built into the system, whereas integrity is central and can be maintained through mechanisms like exactly-once or effectively-once semantics.
@@ -797,7 +763,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Exactly-Once Semantics
 Exactly-once semantics ensure that an event is processed at most once and never more than once. This mechanism is crucial for maintaining the integrity of a data system in the face of faults. If an event is lost, or if it takes effect twice, the integrity could be violated.
@@ -808,7 +773,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault Tolerance Mechanisms
 Fault tolerance mechanisms like reliable stream processing systems can maintain the integrity of a data system without requiring distributed transactions and atomic commit protocols. These systems use mechanisms such as immutable messages, deterministic derivation functions, client-generated request IDs, and end-to-end duplicate suppression to ensure correct state updates.
@@ -819,7 +783,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Representing Content as Single Messages
 In event sourcing, representing the content of write operations as single messages can be written atomically. This approach fits well with maintaining integrity in stream processing systems. By deriving all other state updates from a single message and passing client-generated request IDs through these processes, end-to-end duplicate suppression and idempotence are enabled.
@@ -830,7 +793,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Compensating Transactions
 Compensating transactions are used when two or more concurrent operations need to correct a mistake. The idea is that if an error occurs due to concurrency, one of the operations can make adjustments afterward to resolve the issue.
@@ -861,7 +823,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimistic Concurrency Control (OCC)
 Optimistic concurrency control involves writing data first, then validating it afterward to prevent issues caused by concurrent operations.

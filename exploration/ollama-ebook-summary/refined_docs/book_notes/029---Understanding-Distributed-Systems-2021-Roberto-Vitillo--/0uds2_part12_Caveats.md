@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 12)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Caveats
 
 ---
 
-**Rating: 8/10**
 
 #### Token Validation Mechanisms
 Background context: When an internal service receives a request with a security token attached to it, it needs a way to validate the token and obtain the principal's identity and its roles. The validation process differs depending on the type of token used.
@@ -207,7 +205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CQRS Pattern
 Background context explaining the CQRS pattern. This pattern separates read and write paths to optimize queries and updates, respectively. In a microservice architecture, data stores might not be well suited for specific types of queries or might not scale under high read loads.
@@ -378,7 +375,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Broadcast Messaging
 Broadcast messaging allows a producer to write a message to a publish-subscribe channel, which is then broadcasted to all consumers. This pattern is used for notifying a group of processes about a specific event. We have previously encountered this when discussing log-based transactions.

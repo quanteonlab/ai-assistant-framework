@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Rollout Algorithms
 
 ---
 
-**Rating: 8/10**
 
 #### Heuristic Search and Decision-Time Planning
 Heuristic search is a method of focusing memory and computational resources on the current decision, which allows it to be highly effective. The updates can be ordered to focus on the current state and its likely successors, leading to improved decision-making. A limiting case involves using methods similar to heuristic search to construct a search tree and perform one-step updates from bottom up.
@@ -110,7 +108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Tree Search (MCTS) Overview
 Monte Carlo Tree Search is a decision-time planning method that enhances rollout algorithms by accumulating value estimates from simulations to focus on more promising trajectories. This technique has been particularly successful in improving computer Go capabilities, moving from weak amateur levels to grandmaster levels.
@@ -223,7 +220,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Tree Search (MCTS) Overview
 
@@ -409,7 +405,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expansion Step in MCTS
 Background context: In Monte Carlo Tree Search (MCTS), expansion is a crucial step where new nodes are added to the tree. This happens when exploring unvisited actions from a selected node, leading to deeper exploration of the state space.
@@ -584,7 +579,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Monte Carlo Tree Search (MCTS) Overview
 Monte Carlo Tree Search is a method for planning and learning with tabular methods that start from the root state. It benefits from online, incremental, sample-based value estimation and policy improvement. MCTS saves action-value estimates attached to tree edges and updates them using reinforcement learning's sample updates.
@@ -635,7 +629,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Asynchronous and Parallel Processes
 Async processes allow for natural computation without waiting, enhancing efficiency. Resources can be shared arbitrarily based on task needs.
@@ -726,7 +719,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Update Types: Sample vs Expected Updates
 Background context explaining the concept. The distinction between sample and expected updates is crucial for understanding reinforcement learning methods. Sample updates use a single trajectory to improve value functions, while expected updates rely on distributions of possible trajectories.
@@ -862,7 +854,6 @@ while (!targetReached) {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Action Values vs. State Values vs. Afterstate Values
 Background context explaining that these are different types of values estimated in reinforcement learning (RL). State values (\(V(s)\)) represent the expected return from a state, while action values (\(Q(s,a)\)) represent the expected return starting from state \(s\) and taking action \(a\). Afterstate values are not commonly used but can refer to the value of the next state in some contexts.

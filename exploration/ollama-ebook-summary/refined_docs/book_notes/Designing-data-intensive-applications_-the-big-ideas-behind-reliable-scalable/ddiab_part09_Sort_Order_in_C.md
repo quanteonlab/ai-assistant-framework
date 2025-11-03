@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Sort Order in Column Storage
 
 ---
 
-**Rating: 8/10**
 
 #### Bitwise AND Operation on Bitmaps
 
@@ -181,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Column-Oriented Storage
 
@@ -214,7 +211,6 @@ Using materialized views can improve read performance by caching precomputed agg
 ---
 Note: The flashcards have been created based on key concepts from the provided text while adhering to the specified format.
 
-**Rating: 8/10**
 
 #### Evolvability: Making Change Easy
 Background context explaining the concept of evolvability. Changes in applications over time, including adding or modifying features and adapting to new requirements or business circumstances.
@@ -433,7 +429,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Encoding and Decoding Overview
 Background context: When writing data to a file or sending it over the network, data needs to be converted from an in-memory representation into a sequence of bytes. This process is called encoding (or serialization), and the reverse process is decoding (parsing, deserialization, unmarshalling). Encoding helps in making the data self-contained and transferable.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 1)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** How to Contact Us
 
 ---
 
-**Rating: 8/10**
 
 #### Distributed Systems Challenges (Chapter 8)
 Background context: Chapter 8 discusses common issues and challenges faced when designing and implementing distributed systems. These include but are not limited to, network latency, data inconsistency, system failures, and complex fault tolerance mechanisms.
@@ -24,7 +22,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Achieving Consistency and Consensus (Chapter 9)
 Background context: Chapter 9 delves into the complexities of ensuring data consistency and achieving consensus in a distributed system. This involves understanding concepts like CAP theorem, Paxos algorithm, and Raft consensus protocol.
@@ -65,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Derived Data in Heterogeneous Systems (Chapter 10)
 Background context: Chapter 10 discusses how derived data is generated from multiple datasets in heterogeneous systems. This often involves integrating databases, caches, and indexes to provide a unified view of the data.
@@ -96,7 +92,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch and Stream Processing (Chapter 10 & Chapter 11)
 Background context: Chapters 10 and 11 detail techniques for processing large volumes of data both in batch mode and real-time streaming scenarios.
@@ -138,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Building Reliable, Scalable, and Maintainable Applications (Chapter 12)
 Background context: Chapter 12 discusses strategies for building robust distributed applications that are reliable, scalable, and maintainable. This involves leveraging the concepts from earlier chapters to design resilient systems.
@@ -174,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### O'Reilly Safari (References and Further Reading)
 Background context: The book provides a wealth of references to explore topics in more depth, utilizing various resources like conference presentations, research papers, blog posts, etc.
@@ -195,7 +188,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Terminology and Approach (Chapter 1)
@@ -230,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Models and Query Languages (Chapter 2)
 Background context explaining the concept. Different data models (e.g., relational, document-oriented) offer various query languages for data manipulation. Understanding these differences is key to choosing the right model for specific applications.
@@ -275,7 +266,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Storage Engines and Data Layout (Chapter 3)
 Background context explaining the concept. Different storage engines optimize data layout for specific workloads, affecting performance and scalability.
@@ -320,7 +310,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reliability, Scalability, and Maintainability of Data Systems
 Background context: The chapter emphasizes the importance of building reliable, scalable, and maintainable data systems. It highlights that modern applications are often data-intensive rather than compute-intensive, necessitating a different approach to system design.
@@ -337,7 +326,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data-Intensive Applications
 Background context: The text explains that modern applications often need to handle large volumes of data efficiently. These applications typically rely on common building blocks like databases, caches, and search indexes.
@@ -356,7 +344,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Combining Tools in Data Systems
 Background context: Modern applications often require a combination of different tools to meet their diverse needs. Traditional categories like databases and message queues are becoming less distinct as new tools emerge that can serve multiple roles.
@@ -372,7 +359,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Designing Data Systems
 Background context: When designing a data system or service, many complex issues arise related to correctness, performance, and scalability.
@@ -390,7 +376,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application of Data Systems
 Background context: The chapter describes the architecture where multiple tools are combined to form a composite data system. This approach hides implementation details from clients through APIs.

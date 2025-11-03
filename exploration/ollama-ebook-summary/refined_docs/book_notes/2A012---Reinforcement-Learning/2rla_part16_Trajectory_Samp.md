@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Trajectory Sampling
 
 ---
 
-**Rating: 8/10**
 
 #### Sample vs. Expected Updates
 
@@ -75,7 +73,6 @@ x??
 
 These flashcards cover the key concepts from the provided text, providing context and relevant explanations.
 
-**Rating: 8/10**
 
 #### Real-time Dynamic Programming (RTDP)
 Real-time dynamic programming is a method that uses on-policy trajectory sampling to update values. It closely relates to conventional value-iteration algorithms and illustrates some advantages of this approach, particularly for large problems where focusing on states with high occurrence can be counterproductive.
@@ -212,7 +209,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RTDP for Episodic Tasks
 Background context: RTDP (Real-time Dynamic Programming) is particularly useful for episodic tasks with exploring starts. It is an asynchronous value-iteration algorithm that converges to optimal policies for discounted finite MDPs and under certain conditions, it also works for undiscounted cases.
@@ -312,7 +308,6 @@ The `runRTDP` method illustrates how RTDP updates the value function based on sa
 ??x
 ---
 
-**Rating: 8/10**
 
 #### State Space and Episodes
 Background context: The task involves driving a car around turns on a racetrack to cross the finish line as quickly as possible. States are defined by zero-speed positions at the start, and goal states are those that can be reached within one time step of crossing the finish line from inside the track.
@@ -414,7 +409,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Background Planning vs. Decision-Time Planning

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 31)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 9.6.2 Reducing energy use with GPUs
 
 ---
 
-**Rating: 8/10**
 
 #### Plotting Power and Utilization Data
 Background context: This concept explains how to plot power consumption and GPU utilization data using Python and matplotlib. The collected data helps in visualizing energy usage over time, which is useful for optimization purposes.
@@ -70,7 +68,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Real Power Usage Rate vs Nominal Specification
 Background context: The text explicitly mentions that GPUs consume less power than their nominal specifications, with a specific example given for a V100 GPU. This difference is highlighted through integration under the curve method to calculate energy usage.
@@ -93,7 +90,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Energy Consumption and Utilization Example
 Background context: The provided text gives an example of integrating the area under a power curve for the CloverLeaf problem running on a V100 GPU. It shows how to calculate energy usage by integrating the power consumption over time.
@@ -117,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Efficiency and Energy Savings
 Background context: The text discusses the trade-offs between running multiple jobs on different numbers of processors and the associated energy savings. It introduces Amdahl's Law to explain how parallel efficiency decreases as more processors are added, but also mentions potential cost savings from reduced run times.
@@ -130,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimizing GPU Usage for Large Job Suites
 
@@ -143,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cost Optimization with Cloud Computing
 
@@ -156,7 +149,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Preemptible Resources in Cloud Computing
 
@@ -169,7 +161,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cloud Computing Hardware Flexibility
 
@@ -184,7 +175,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Thread Divergence in GPUs
 Background context: GPUs use SIMD (Single Instruction, Multiple Data) and SIMT (Single Instruction, Multiple Threads) architectures. While small amounts of branching can be handled, large variations in branch paths can lead to inefficiencies.
@@ -205,7 +195,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### GPU Architecture Evolution and Innovations
 Background context: GPUs have evolved beyond their original purpose of graphics processing to support a wide range of applications, including machine learning and general computation. Continuous innovation is necessary to keep up with the changing demands of these fields.
@@ -224,7 +213,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Roofline Model for GPU Performance Analysis
 Background context: The Roofline model is a visual tool that helps analyze and predict the performance of algorithms on different architectures by showing the theoretical limits of arithmetic intensity.

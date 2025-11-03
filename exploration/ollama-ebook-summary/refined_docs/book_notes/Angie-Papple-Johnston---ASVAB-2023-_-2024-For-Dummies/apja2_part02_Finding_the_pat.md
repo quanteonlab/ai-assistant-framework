@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Angie-Papple-Johnston---ASVAB-2023-_-2024-For-Dummies_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Finding the pattern
 
 ---
 
-**Rating: 8/10**
 
 #### Variety of Mathematical Concepts
 Background context: The subtest covers multiple mathematical concepts, such as operations with fractions, solving inequalities, and finding exponents. Each concept is usually tested only once or twice.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mental Gear Shifting
 Background context: The subtest requires quick mental shifts between different mathematical ideas. Being familiar with various concepts helps in handling diverse questions efficiently.
@@ -28,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prime Factorization
 Background context: The prime factorization of a number expresses the number as a product of its prime factors. This concept is essential for solving problems related to divisibility and simplification.
@@ -40,7 +36,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Square Root
 
@@ -53,7 +48,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Problem-Solving with Order of Operations
 To solve a problem like \( 3 \times (5 + 2) - 6^2 + 8 \), you follow these steps:
@@ -76,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Median Concept
 Background context explaining the median. The median is the middle value in a set of ordered numbers, and it can be found by arranging numbers from smallest to largest.
@@ -88,7 +81,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dividing with Percents
 Background context: When dividing percents, first convert them to decimals or fractions and then apply the division operation. This process is often used in financial calculations, such as determining interest rates or discounts.

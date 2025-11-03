@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3.15 Sum of a Random Number of Random Variables
 
 ---
 
-**Rating: 8/10**
 
 #### Normal Approximation for Sum of Uniform Random Variables
 Background context: The provided text explains how to use the normal approximation to estimate probabilities when dealing with sums of uniform random variables. Specifically, it uses the properties of the normal distribution and the Central Limit Theorem (CLT).
@@ -51,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sum of a Random Number of Random Variables
 Background context: The text discusses how to handle scenarios where the number of random variables to be summed is itself a random variable. Specifically, it introduces the concept of \( S = \sum_{i=1}^N X_i \) where \( N \) and \( X_i \) are i.i.d. random variables.
@@ -76,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Calculating Expected Value and Variance for Sum of Random Variables
 Background context: The provided text explains how to calculate the expected value \( E[S] \) and variance \( Var(S|N=n) \) when summing a random number of i.i.d. variables.
@@ -114,7 +110,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variance Proof
 Background context: The variance formula can be derived using the linearity of expectation. The goal is to prove that \(\text{Var}(X) = E[X^2] - (E[X])^2\).
@@ -168,7 +163,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Assessing Risk
 Background context: The problem involves calculating the probability that a flight will have enough seats for all passengers who show up, given that some people might not show up with certain probability. This is an example of a binomial distribution where each passenger independently has a probability \(p\) of showing up.
@@ -228,7 +222,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Practice with Conditional Expectation
 Background context: The problem involves computing the conditional expectation \(E[X | Y \neq 1]\), where \(X\) and \(Y\) are jointly distributed random variables. This is a common operation in probability theory to understand how the value of one variable depends on another.
@@ -276,7 +269,6 @@ Would you like to go through another problem or need further explanations on any
 
 ---
 
-**Rating: 8/10**
 
 #### Eric and Timmy's Meeting Probability
 Background context: Eric and Timmy each arrive at a time uniformly distributed between 2 and 3 pm. Each waits for 15 minutes.
@@ -296,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Variance of Geometric Distribution
 
@@ -341,7 +332,6 @@ Finally, the variance is:
 
 ---
 
-**Rating: 8/10**
 
 #### Expectation via Conditioning
 
@@ -369,7 +359,6 @@ For \( k > 1 \), the solution involves more complex algebra, but can be approxim
 
 ---
 
-**Rating: 8/10**
 
 #### Napster – Brought to You by the RIAA
 
@@ -391,7 +380,6 @@ Thus, for \( n = 50 \):
 
 ---
 
-**Rating: 8/10**
 
 #### Example: Exponential Distribution
 Background context: The exponential distribution is commonly used for modeling the time between events in a Poisson process. Its CDF is given by \( F_X(x) = 1 - e^{-\lambda x} \). We can use the inverse-transform method to generate samples from this distribution.
@@ -410,7 +398,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CDF of Exponential Distribution
 Background context: The CDF of an exponential distribution is \( F_X(x) = 1 - e^{-\lambda x} \).
@@ -424,7 +411,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inverse of Exponential CDF
 Background context: The inverse of the CDF for an exponential distribution can be derived to find the value of \( x \) that corresponds to a given uniform random variable \( u \).

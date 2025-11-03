@@ -1,12 +1,10 @@
 # High-Quality Flashcards: ConcurrencyNetModern_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3.3.1 Functional data structure for data parallelism. 3.3.3 Immutability in C
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Data Structures for Data Parallelism
 Background context explaining how immutable data structures facilitate safe and efficient parallel processing. PLINQ is a higher-level abstraction that promotes functional purity, allowing thread-safe operations without side effects.
@@ -28,7 +26,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Implications of Immutability
 
@@ -56,7 +53,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutability in C#
 
@@ -109,7 +105,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shallow vs. Deep Immutability
 
@@ -184,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Class in C#
 Background context: In C#, making a class immutable means that once an object is created, its state cannot be changed. The constructor initializes the state of the object, and any methods that update properties should return new instances rather than modifying the existing one.
@@ -255,7 +249,6 @@ Person olderJohn = new Person("John", "Doe", 43, newAddress);
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Class in F#
 Background context: In F#, immutability is the default behavior. Variables are replaced with identifiers that bind to values using the `let` keyword. After this binding, the value cannot change. F# provides immutable collections and constructs like tuples and records, which help in building functional programming paradigms.
@@ -317,7 +310,6 @@ let person = { First="John"; Last="Doe"; Age=42 }
 
 ---
 
-**Rating: 8/10**
 
 #### Records in F# vs C#
 Background context: In functional programming languages like F#, records provide a convenient way to create immutable classes. These records can be considered as read-only properties of fields, which helps in creating immutable objects. Unlike traditional classes, record types do not require manual implementation of constructors and property getters.
@@ -345,7 +337,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Classes in F#
 Background context: The ability to create immutable classes is a key feature of functional programming. In F#, records can be used to implement such classes by leveraging their read-only properties.
@@ -360,7 +351,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Lists: Head and Tail
 Background context: In functional programming, lists are a fundamental data structure used for storing collections of items. These lists are recursive and consist of two parts: the head (or Cons) which holds a value and references to other Cons elements via a Next pointer; and the tail, which represents the rest of the list.
@@ -375,7 +365,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Structural Sharing in Functional Lists
 Background context: Functional lists can efficiently manage memory by using structural sharing, where modifications to a list do not change the existing structure but instead return a new one with updates. This minimizes memory usage and enhances performance.
@@ -393,7 +382,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional Lists and Performance
 
@@ -415,7 +403,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Random Access vs. Linear Traversal
 
@@ -442,7 +429,6 @@ x??
 
 ---
 
-**Rating: 10/10**
 
 #### Big O Notation and Time Complexity
 
@@ -469,7 +455,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Programs and Complexity
 
@@ -500,7 +485,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutability and Thread Safety
 
@@ -533,7 +517,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable Lists and Functional Data Structures in F#
 Background context: In functional programming, immutable data structures are preferred to ensure that once a value is assigned, it cannot be changed. This approach simplifies reasoning about program correctness and enables more optimizations by the compiler. F# supports this through its powerful type system and pattern matching capabilities.
@@ -553,7 +536,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mapping over an Immutable List in F#
 Background context: Functional programming emphasizes immutability and functional transformations, such as mapping over a collection. The `map` function applies a transformation to each element of the list without changing the original list.
@@ -572,7 +554,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Filtering an Immutable List in F#
 Background context: Similar to mapping, filtering is another common functional transformation. The `filter` function takes a predicate `p` and a list, returning a new list with only elements that satisfy the predicate.
@@ -592,7 +573,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Functional List Implementation in C#
 Background context: The provided text describes a functional list data structure implemented in C#. This implementation emphasizes immutability and uses pattern matching for operations. The `FList<T>` class defines methods to create, manipulate, and traverse lists without altering the original state.
@@ -604,7 +584,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Constructor for FList<T>
 Background context: The `FList<T>` class has both public and private constructors. Public static methods like `Cons` allow creating non-empty lists, while the private constructor is used by these methods to enforce immutability.
@@ -625,7 +604,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutability in Functional Lists
 Background context: The text explains that immutability is a key aspect of functional programming, ensuring no state changes occur after an object is created. This is demonstrated by the `FList<T>` class's use of private constructors and public methods.
@@ -645,7 +623,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lazy Evaluation in Functional Lists (Using F#)
 Background context: The text mentions lazy evaluation and provides an example of a lazy list implementation in F#. Lazy lists defer computation until necessary, improving performance by avoiding unnecessary operations.
@@ -663,7 +640,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lazy List Implementation in F#
 Background context: The text explains how lazy evaluation is used to implement a list structure in F#. This implementation delays the evaluation of elements until they are needed, which can improve performance.
@@ -681,7 +657,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Immutable B-tree Representation in F#
 Background context: The text describes how to build an immutable binary tree (B-tree) using discriminated unions (DU) and recursion in F#. The goal is to represent a tree where each node can have zero or two child nodes, maintaining balance properties.
@@ -700,7 +675,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tree Structure and Node Properties
 Background context: The text provides a detailed description of tree structures, including definitions for key properties such as root, leaves, and siblings. It explains how nodes are connected and used to represent hierarchical data.

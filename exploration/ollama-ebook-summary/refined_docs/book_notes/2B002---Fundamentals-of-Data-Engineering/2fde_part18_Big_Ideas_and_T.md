@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B002---Fundamentals-of-Data-Engineering_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Big Ideas and Trends in Storage
 
 ---
 
-**Rating: 8/10**
 
 #### Data Lakehouse Architecture
 A data lakehouse combines elements of both data lakes and data warehouses, aiming to balance the flexibility of a lake with the structured querying capabilities of a warehouse. This architecture supports automated metadata management and table history, ensuring seamless update and delete operations without exposing the complexity of underlying file and storage management.
@@ -49,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Catalog
 A data catalog is a centralized metadata store for all data across an organization. It integrates with various systems and abstractions, working across operational and analytics data sources while providing lineage and presentation of data relationships.
@@ -178,7 +175,6 @@ class SocialLayer {
 This pseudocode outlines how a social layer can be integrated into a data catalog, providing users with collaborative tools.
 ??x
 
-**Rating: 8/10**
 
 #### Colocation of Compute and Storage
 Colocation is a method used to improve database performance by placing compute and storage resources close together. This proximity allows for faster, lower-latency disk reads and higher bandwidth compared to remote access.
@@ -266,7 +262,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### AWS EMR with S3 and HDFS
 AWS Elastic MapReduce (EMR) allows engineers to use temporary Hadoop Distributed File System (HDFS) clusters for processing large datasets. The system can reference both Amazon Simple Storage Service (S3) and local HDFS as filesystems. A common pattern is to:

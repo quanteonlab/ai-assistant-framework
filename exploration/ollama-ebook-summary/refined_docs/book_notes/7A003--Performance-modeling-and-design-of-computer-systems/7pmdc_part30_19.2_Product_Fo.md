@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 30)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 19.2 Product Form Solution
 
 ---
 
-**Rating: 8/10**
 
 #### Difference Between Open and Closed Jackson Networks
 Background context explaining the difference between open and closed Jackson networks. The key distinction is that for a closed network, there are no outside arrivals or departures: \(r_i = 0\) and \(P_{i,out} = 0\) for all \(i\).
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Local Balance Equations for Closed Networks
 Explanation on the local balance equations that equate the rate of leaving a state due to a departure from server \(i\) with the rate of entering the state due to an arrival at server \(i\).
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determining λi for Closed Networks
 Explanation on how to determine \(\lambda_i\) in closed networks using simultaneous rate equations.
@@ -49,7 +45,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Utilizing Product Form Solution in Closed Networks
 Explanation on using the product form solution \(π_{n1,...,nk} = C · ρ_{n1}^1·ρ_{n2}^2...ρ_{nk}^k\) to find the limiting probabilities.
@@ -69,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Determining the Normalizing Constant in Closed Networks
 Explanation on how to determine the normalizing constant \(C\) when using the product form solution.
@@ -89,7 +83,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example: Determining Limiting Probabilities in a Closed Network
 Detailed example on calculating the limiting probabilities for a specific closed network.
@@ -139,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limiting Probabilities and Performance Metrics
 Background context: In analyzing a closed system, determining performance metrics such as the number of jobs at servers and utilization is crucial. The limiting probabilities provide these values by summing certain terms.
@@ -153,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Value Analysis (MVA)
 Background context: Mean Value Analysis is a method used for analyzing closed product form networks. It focuses on calculating mean metrics rather than individual distributions and involves recursive relationships between systems with different numbers of jobs.
@@ -167,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Arrival Theorem
 Background context: The Arrival Theorem provides a way to understand how an arrival in a network with \( M \) jobs sees the system. It states that this distribution is equivalent to the steady-state distribution of a similar system but with one fewer job.
@@ -185,7 +175,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Limiting Probabilities for Closed Jackson Networks
 For closed Jackson networks, limiting probabilities can be expressed as:
@@ -207,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concept: Derivation of Mean Response Time
 The mean response time in a closed system can be derived using the Arrival Theorem and limiting probabilities.
@@ -228,7 +216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Probability of Observing a State
 Background context explaining how the probability that job \( x \) observes state \( (n_1, n_2, ..., n_k) \), where \( \sum_{j=1}^k n_j = M-1 \), can be derived as a ratio of rates.
@@ -241,7 +228,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Independence of \( p_j \) from \( M \)
 Background context explaining why the probability \( p_j \) is independent of \( M \). The key is to use the visit rate per job completion, denoted by \( V_j \), and the total job completion rate, \( X(M) \).
@@ -255,7 +241,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Response Time in Closed Networks
 Background context explaining how the mean response time can be derived using Little’s Law and iterative methods. The key is understanding the relationship between \( E[T(M)_{j}] \) and \( E[T(M-1)_{j}] \).
@@ -270,7 +255,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Iterative Derivation of Mean Response Time
 Background context explaining how to iteratively derive the mean response time using the formula derived previously. The key is starting with a single job system to build up to more complex systems.
@@ -283,7 +267,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Constant C
 Background context explaining how to determine the constant \( C \) that normalizes the probability density. The key is understanding that this constant ensures the total probability sums to 1 across all possible states.
@@ -296,7 +279,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Little's Law Application
 Background context explaining how to apply Little's Law in queueing systems. This involves understanding the relationship between arrival rate, number of jobs, and average time spent by a job at a server.
@@ -332,7 +314,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recurrence Relation for Expected Time in System
 Background context on deriving the recurrence relation for the expected time a job spends in the system using Mean Value Analysis (MVA). This involves breaking down the problem into smaller subproblems and solving them iteratively.
@@ -360,7 +341,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example: MV A in a Closed System with Two Servers
 Background context on applying Mean Value Analysis to a closed system with two servers where the second server is twice as fast. This involves calculating expected job counts at each server.
@@ -408,7 +388,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Number of Jobs at Servers in a Closed Jackson Network
 
@@ -458,7 +437,6 @@ This value is derived from the balance of probabilities in the network.
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Class Product Form Networks (MV A)
 
@@ -477,7 +455,6 @@ MV A was developed by Reiser and Lavenberg [147] and is a powerful method for so
 
 ---
 
-**Rating: 8/10**
 
 #### Closed Jackson Network
 
@@ -508,7 +485,6 @@ This value is calculated by balancing the probabilities and using the given tran
 
 ---
 
-**Rating: 8/10**
 
 #### Load-Dependent Service Rates in Open Jackson Networks
 
@@ -530,7 +506,6 @@ Using the balance equations, we get a recurrence relation for \(P_n\).
 
 ---
 
-**Rating: 8/10**
 
 #### Load-Dependent Service Rates in Open Jackson Networks (Cont.)
 
@@ -552,7 +527,6 @@ These probabilities will not be in closed form but can be solved using the local
 
 ---
 
-**Rating: 8/10**
 
 #### Load-Dependent Service Rates in Open Jackson Networks (Product Form)
 
@@ -574,7 +548,6 @@ This solution can be checked by making the service rate constant at each server.
 
 ---
 
-**Rating: 8/10**
 
 #### M/M/m Servers in a Jackson Network
 
@@ -596,7 +569,6 @@ These probabilities can be solved using the M/M/m queueing model.
 
 ---
 
-**Rating: 8/10**
 
 #### Closed Interactive Jackson Networks
 

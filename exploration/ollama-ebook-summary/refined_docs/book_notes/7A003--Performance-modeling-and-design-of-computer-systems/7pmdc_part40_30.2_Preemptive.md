@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 40)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 30.2 Preemptive-LCFS
 
 ---
 
-**Rating: 8/10**
 
 #### Expressing (30.3) as a Summation
 Background context: The expression (30.3) is being converted into a summation form to simplify its analysis, particularly for the M/G/1/FCFS queue.
@@ -94,7 +92,6 @@ E[\text{Time until job gets back processor}] = E[\text{Length of busy period}] =
 
 This result holds because the service order does not affect the mean length of the busy period in an M/G/1 system, as long as it is work-conserving.
 
-**Rating: 8/10**
 
 #### PLCFS vs PS
 Background context explaining the difference between PLCFS and PS. The key point is that both policies have the same expected performance but PLCFS has fewer preemptions, leading to less wasted time.
@@ -184,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### FB Scheduling and Exponential Workloads
 Background context explaining the concept. The problem states that for an M/G/1 server with an Exponential job size distribution, both Foreground-Background (FB) and Processor-Sharing (PS) have equal mean response times under certain conditions.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 11)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 5.4.4 Checking for null values
 
 ---
 
-**Rating: 8/10**
 
 #### Nullable Types in C#
 Nullable types allow you to indicate the possibility of a value being null. In C#, you can use the `?` suffix to make a reference type nullable, such as `string?`, which means it can hold any string or `null`.
@@ -25,7 +23,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Null Conditional Operator in C#
 The null conditional operator (`?.`) in C# allows you to safely access members of an object without causing a runtime exception if the object is null. The operator returns `null` if it encounters a null reference, and otherwise, it accesses the member as usual.
@@ -47,7 +44,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using String Interpolation in C#
 Background context: C# supports string interpolation, which allows you to embed expressions inside string literals. This makes it easier to create formatted strings by directly using variables and constants within the string template.
@@ -64,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Object Initializers in C#
 Background context: Object initializers allow you to create and initialize an object using a more concise syntax. This is particularly useful when creating objects and setting their properties at the same time, reducing the number of lines required.
@@ -83,7 +78,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pattern Matching in C#
 Pattern matching is a feature introduced in C# that simplifies complex conditional logic by allowing developers to match values against patterns. This can include checking for specific types, ranges, and more within switch statements or if/else blocks.
@@ -108,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Extension Methods in C#
 Extension methods allow you to add methods to existing classes without modifying their source code. They are particularly useful when working with third-party libraries where you don't have access to the original class definition.
@@ -138,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Applying Extension Methods
 In the provided example, an extension method was added to the `ShoppingCart` class. The method calculates the total price of all products in the cart.

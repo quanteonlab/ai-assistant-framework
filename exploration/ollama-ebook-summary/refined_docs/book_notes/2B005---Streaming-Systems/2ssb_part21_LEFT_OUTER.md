@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2B005---Streaming-Systems_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** LEFT OUTER
 
 ---
 
-**Rating: 8/10**
 
 #### Full Outer Join Concept
 Background context explaining full outer joins and their relevance to streaming data. A full outer join combines all records from both tables, showing matches as well as non-matches with nulls for unmatched rows on one side or the other.
@@ -94,7 +92,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### RIGHT OUTER JOIN Concept
@@ -179,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Filtered INNER Join vs. SEMI Join
 

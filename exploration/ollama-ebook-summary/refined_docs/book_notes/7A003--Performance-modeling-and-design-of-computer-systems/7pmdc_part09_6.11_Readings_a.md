@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 9)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 6.11 Readings and Further Topics Related to Littles Law
 
 ---
 
-**Rating: 8/10**
 
 #### Total Service Demand per Job Visit (D)
 Background context: The total service demand on device \(i\) for all visits of a single job is denoted as \(D_i\). This can be defined as the ratio of the virtual visit time \(V_i\) to the sum of the service times \(S(j)_i\) required by each visit \(j\) of the job to server \(i\).
@@ -23,7 +21,6 @@ This method is practical because it avoids tracking individual job visits, which
 
 ---
 
-**Rating: 8/10**
 
 #### Bottleneck Law (ρi)
 Background context: The Bottleneck Law is a key principle for understanding the utilization of devices in a system. It relates the arrival rate \(X\) of jobs per second to the expected total service demand per visit \(E[D_i]\).
@@ -42,7 +39,6 @@ This formula effectively measures how much of each second the device spends hand
 
 ---
 
-**Rating: 8/10**
 
 #### Proof of Bottleneck Law
 Background context: The proof involves using Little’s law and assuming that the number of visits a job makes to a device is independent of its service demand.
@@ -57,7 +53,6 @@ Thus, the utilization (\(\rho_i\)) of device \(i\) is given by the product of th
 
 ---
 
-**Rating: 8/10**
 
 #### Practical Determination of Utilization
 Background context: The practical determination of utilization involves measuring the busy time at a device during an observation period and counting system completions.
@@ -72,7 +67,6 @@ where \(X\) is the arrival rate of jobs per second.
 
 ---
 
-**Rating: 10/10**
 
 #### Little's Law Introduction
 
@@ -90,7 +84,6 @@ This law holds true for any queueing system that is in steady state and does not
 
 ---
 
-**Rating: 8/10**
 
 #### Professor and Students
 
@@ -115,7 +108,6 @@ So, the professor will have an average of 3 students at any given time.
 
 ---
 
-**Rating: 8/10**
 
 #### Measurements Gone Wrong
 
@@ -150,7 +142,6 @@ Thus, David's answer of "5" is not consistent with the actual number of jobs in 
 
 ---
 
-**Rating: 8/10**
 
 #### More Practice Manipulating Operational Laws
 
@@ -202,7 +193,6 @@ Thus, \( E\left[\frac{N_{cpu}}{Q}\right] = 0.8 \).
 
 ---
 
-**Rating: 8/10**
 
 #### Response Time Law for Closed Systems
 
@@ -240,7 +230,6 @@ Thus, we can conclude that:
 
 ---
 
-**Rating: 8/10**
 
 #### Mean Slowdown
 
@@ -274,7 +263,6 @@ Thus:
 
 ---
 
-**Rating: 8/10**
 
 #### Asymptotic Bounds for Closed Systems
 Background context: In this section, we explore how to use operational laws to estimate performance metrics such as system throughput (X) and expected response time (E[R]) for closed systems. We derive asymptotic bounds that provide estimates of these metrics based on the multiprogramming level \(N\).
@@ -318,7 +306,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Bottleneck Law
 Background context: The bottleneck law states that the system throughput \(X\) is related to the service demand on the device with the highest utilization. Over a long observation period \(T\), the total service demand \(D_i\) for device \(i\) is given by:
@@ -351,7 +338,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Response Time Law for Closed Interactive Systems
 Background context: For an ergodic closed interactive system with \(N\) terminals (users), the expected response time \(E[R]\) can be calculated using:
@@ -389,7 +375,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Utilization Law
 Background context: The utilization law provides a way to determine the utilization \(\rho_i\) of a server \(i\). For a single server:

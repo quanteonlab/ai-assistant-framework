@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A003---Generative-Deep-Learning_-Teaching-Machines-To-Paint-Write-Compose-and-Play-OReilly-Media-2023David-Foster--_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Using Code Examples
 
 ---
 
-**Rating: 8/10**
 
 #### Added Chapter Goals
 Background context: Each chapter now begins with clear, concise goals that outline the key topics covered in each section.
@@ -17,7 +15,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recommended Resources
 Background context: The book recommends several resources for further reading, including "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" by Aurélien Géron and "Deep Learning with Python" by François Chollet. It also suggests checking arXiv and Papers with Code for the latest developments.
@@ -31,7 +28,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 
@@ -45,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Data and Observations
 Training data consists of many examples from which the model learns. Each example is called an observation, and observations are made up of features that describe them.
@@ -57,7 +52,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Features in Different Domains
 For image generation, individual pixel values are features; for text generation, words or groups of letters might be used as features.
@@ -69,7 +63,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Desirable Properties of Generative Models
 A good generative model should capture the underlying distribution of the training data and be able to sample from this distribution to generate new instances.
@@ -81,7 +74,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Probabilistic Nature of Generative Models
 Generative models must include a random component to allow for variability in generated outputs.
@@ -93,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generative vs. Discriminative Modeling
 
@@ -106,7 +97,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generative Modeling Process
 
@@ -119,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Conditional Generative Models
 
@@ -132,7 +121,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Discriminative Model Process
 
@@ -145,7 +133,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Generative Model Objective
 
@@ -158,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Discriminative vs Generative Modeling
 
@@ -173,7 +159,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recent Advancements in Generative Modeling
 
@@ -186,7 +171,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Applications of Generative Models
 
@@ -199,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Generative Modeling in Practice
 
@@ -219,7 +202,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Theoretical Importance of Generative Modeling
 Background context explaining the concept. For completeness, we should also be concerned with training models that capture a more complete understanding of the data distribution beyond any particular label. This is undoubtedly a more difficult problem to solve due to the high dimensionality of the space of feasible outputs and the relatively small number of creations belonging to the dataset.
@@ -234,7 +216,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application of Generative Models in Reinforcement Learning
 Background context explaining the concept. In reinforcement learning (RL), we often train agents to optimize a goal through trial and error. A traditional approach might involve running many experiments, but an alternative is training the agent using a generative model of the environment.

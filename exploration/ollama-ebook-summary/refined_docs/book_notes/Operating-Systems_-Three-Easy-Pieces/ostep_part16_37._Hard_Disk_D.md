@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Operating-Systems_-Three-Easy-Pieces_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 37. Hard Disk Drives
 
 ---
 
-**Rating: 8/10**
 
 #### Atomic Write Guarantee
 When writing data to a disk, the only guarantee provided by manufacturers is that a single 512-byte write operation is atomic. This means it either completes entirely or not at all. If power loss occurs during an operation larger than 512 bytes, only part of it may complete (known as a "torn write").
@@ -17,7 +15,6 @@ If a large write operation is interrupted by a power failure, only a portion of 
 
 ---
 
-**Rating: 8/10**
 
 #### Disk Scheduling and Performance
 Disk scheduling is used to improve performance by optimizing the way requests are processed. Accessing blocks near each other in the drive’s address space is faster than accessing distant ones. Sequential access (reading or writing contiguous blocks) is generally faster than random access due to mechanical limitations.
@@ -28,7 +25,6 @@ Disk scheduling enhances performance by managing how read and write requests are
 
 ---
 
-**Rating: 8/10**
 
 #### Sectors and Bytes
 Background context: Each sector on a track is 512 bytes in size, although this can vary. The sectors are addressed by numbers starting from 0.
@@ -40,7 +36,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Disk Head and Read/Write Process
 Background context: The disk head reads or writes data to the surface by sensing or inducing changes in magnetic patterns. There is one disk head per surface.
@@ -52,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Disk Drive Model: Multiple Tracks
 Background context: Modern disks have many tracks. The text describes a more realistic model with three tracks, each containing sectors.
@@ -64,7 +58,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Transfer
 Background context explaining the transfer phase. Once the desired sector is beneath the read/write head, the actual reading or writing of data takes place.
@@ -76,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Disk Cache (Track Buffer)
 Background context explaining the role of a cache in hard drives. It temporarily stores read or written data to improve response time and performance.
@@ -88,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Write Back Caching vs. Write Through
 Background context explaining write caching methods and their implications. Write back caching can improve performance but may lead to data integrity issues if not handled correctly.
@@ -118,7 +109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### I/O Time Calculation
 
@@ -147,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Random Workload on Cheetah 15K.5
 
@@ -181,7 +170,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Disk Performance: Random vs. Sequential Workloads
 
@@ -194,7 +182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Disk Scheduling: SSTF
 
@@ -207,7 +194,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Elevator Algorithm (SCAN)
 Background context: To mitigate the starvation problem, the elevator algorithm was developed. It operates by servicing requests in order across the disk, ensuring that all regions of the disk are eventually served.
@@ -219,7 +205,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Disk Scheduling Algorithms
 
@@ -232,7 +217,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Disk Scheduling Implementation Challenges
 
@@ -245,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The It Depends Principle
 
@@ -260,7 +243,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Disk Scheduling Basics
 Background context: Modern disk systems use sophisticated schedulers to manage I/O requests efficiently. These schedulers often aim to minimize seek time and optimize data access. One common goal is to service requests in a Shortest Pending Time First (SPTF) order.
@@ -272,7 +254,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple Outstanding Requests
 Background context: Modern disks can handle multiple outstanding requests, which allows for more efficient scheduling and reduced overhead.
@@ -307,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### I/O Merging
 Background context: Disk schedulers merge similar adjacent requests to reduce the number of physical disk operations, thereby reducing overhead.
@@ -353,7 +333,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Work-Conserving vs. Non-Work-Conserving Approaches
 Background context: Disk schedulers can adopt either a work-conserving or non-work-conserving approach. In the former, the disk processes as many requests as possible immediately; in the latter, it may wait for new requests to arrive before servicing any.
@@ -392,7 +371,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Disk Drive Modeling
 Background context: The paper "An Introduction to Disk Drive Modeling" by Ruemmler and Wilkes provides a fundamental overview of disk operations, including the impact of rotational speed on seek and transfer times.
@@ -415,7 +393,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Disk Scheduling Revisited
 Background context: The paper "Disk Scheduling Revisited" by Seltzer et al. revisits the importance of rotational latency in disk scheduling, contrasting it with contemporary approaches.
@@ -427,7 +404,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hard Disk Drives Homework (Simulation)
 Background context: This homework uses the `disk.py` simulation to explore how different parameters affect disk performance, such as seek rate and rotation rate.
@@ -454,7 +430,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Request Stream -a 10,11,12,13
 Background context: Analyzing how different scheduling policies handle specific request sequences can reveal their strengths and weaknesses.
@@ -499,7 +474,6 @@ For example, if the workload shows frequent access to outer tracks:
 
 ---
 
-**Rating: 8/10**
 
 #### Disk Density per Zone (-z)
 Background context: Different density zones affect how data is read and written. Understanding these differences can help optimize scheduling policies.
@@ -541,7 +515,6 @@ Run the command multiple times with different random seeds to get a more accurat
 
 ---
 
-**Rating: 8/10**
 
 #### Scheduling Window and Performance
 Background context: The scheduling window determines how many requests the disk can examine at once. This parameter affects both performance and fairness.
@@ -576,7 +549,6 @@ The optimal window size depends on the workload. For random workloads, larger wi
 
 ---
 
-**Rating: 8/10**
 
 #### Greedy Scheduling Policies
 Background context: Greedy policies make decisions based on immediate benefits rather than overall optimization. Evaluating such policies helps understand their limitations.
@@ -615,7 +587,6 @@ This example highlights the limitations of greedy approaches and the need for mo
 
 ---
 
-**Rating: 8/10**
 
 #### Reliability Evaluation
 Background context: The reliability of a RAID system depends on how many disk failures it can handle. In the fail-stop fault model, an entire disk failure is assumed. More complex failure modes are considered later.
@@ -626,7 +597,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance Evaluation
 Background context: Evaluating performance is complex because it depends on the specific workload. Before performing detailed evaluations, one should consider typical workloads to understand how different RAID levels handle various tasks.
@@ -637,7 +607,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simple Striping Example
 Background context: A simple example of striping involves distributing blocks across a 4-disk array in a round-robin fashion. Each disk stores a sequential block starting from the first.
@@ -656,7 +625,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Large Chunk Size and Performance
 The text discusses how large chunk sizes can reduce intra-file parallelism but decrease positioning time.
@@ -677,7 +645,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequential Bandwidth (S) Calculation
 
@@ -723,7 +690,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Steady-State Throughput: Random Reads
 Background context explaining the benefits and performance implications of random reads in mirrored RAID-1. Random reads can achieve full bandwidth as they are distributed across all disks.
@@ -742,7 +708,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parity Calculation Using XOR
 Explanation about how XOR is used in calculating parity blocks. XOR returns 0 if there are an even number of 1's and 1 if there are an odd number of 1's.
@@ -757,7 +722,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Parity Calculation
 Explanation about using XOR to calculate parity for a specific data set.
@@ -774,7 +738,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Applying XOR to Block-level Data
 Explanation about how XOR is applied to larger data blocks for parity calculation.
@@ -792,7 +755,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RAID-5 with Rotated Parity
 Background context: To address the small-write problem, Patterson, Gibson, and Katz introduced RAID-5. In contrast to RAID-4, which has a static parity block on one disk, RAID-5 rotates the parity block across multiple disks in each stripe.
@@ -807,7 +769,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Random Write Performance Comparison
 Background context: The text highlights that random write performance improves significantly with RAID-5 due to parallelism in writing operations.
@@ -836,7 +797,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance under Failure
 RAID systems handle failures differently; some may have a hot spare available, which affects both read and write operations during reconstruction.
@@ -847,7 +807,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fault Tolerance Models
 RAID systems use fault tolerance models like parity, mirroring, or erasure coding to ensure data integrity and availability. More realistic fault models consider latent sector errors or block corruption.
@@ -863,7 +822,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Consistent-Update Problem
 The consistent-update problem in Software RAID occurs when multiple processes try to update the same block of data simultaneously, leading to potential inconsistencies if not properly handled.
@@ -874,7 +832,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Latent Sector Errors
 Latent sector errors refer to unexpected data corruption due to physical defects on a disk, which is an important consideration in fault models.
@@ -885,7 +842,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Data Integrity and Fault Handling Techniques
 Advanced techniques like row-diagonal parity can handle double disk failures, providing better fault tolerance than traditional RAID-5.
@@ -898,7 +854,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequential vs Random Workloads in RAID
 Background context: Different workloads (sequential vs. random) have different impacts on RAID performance, and understanding these differences is crucial for optimizing storage systems.
@@ -917,7 +872,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Persistent Storage and Devices
 Background context: The text introduces persistent storage devices, such as hard disk drives or solid-state storage devices. Unlike memory, which loses its contents when there is a power loss, these devices store information permanently (or for a long time). Managing these devices requires extra care because they contain user data that needs to be protected.
@@ -928,7 +882,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process and Address Space Abstractions
 Background context: The text discusses two key operating system abstractions—the process and address space— which allow programs to run in isolated environments with their own CPU and memory resources, making programming easier.
@@ -939,7 +892,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File Abstraction
 Background context: Files are described as linear arrays of bytes that can be read or written. Each file has a low-level name, often referred to as an inode number, which is typically unknown to users.
@@ -950,7 +902,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Directory Abstraction
 Background context: Directories contain lists of (user-readable name, low-level name) pairs, mapping user-friendly names to their corresponding inode numbers. This allows for easier file management and access by users.
@@ -961,7 +912,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File System Responsibilities
 Background context: The text explains that while the OS manages the storage of data on persistent devices, the responsibility of the file system is merely to store and retrieve files without understanding their content (e.g., whether they are images, text, or code).
@@ -972,7 +922,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File System Interface Operations
 Explanation of basic file system interface operations such as creating, accessing, and deleting files.
@@ -984,7 +933,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File Creation Using `open` and `creat`
 Background context: The `open` system call is used to create or open files. It takes several flags to define what actions should be taken, such as creating a file if it does not exist (`O_CREAT`), ensuring that the file can only be written to (`O_WRONLY`), and truncating the file if it already exists (`O_TRUNC`). The third parameter specifies permissions.
@@ -998,7 +946,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File Descriptors
 Background context: A file descriptor is an integer returned by the `open` system call. It is a private per-process identifier and allows programs to read or write files using the corresponding file descriptor, provided they have permission.
@@ -1014,7 +961,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reading Files Using File Descriptors
 Background context: After creating or opening a file using `open` or `creat`, you can read from it using functions like `read`. The process involves specifying the file descriptor and the buffer where data will be stored.
@@ -1030,7 +976,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Writing Files Using File Descriptors
 Background context: Similarly, you can write to files using the file descriptor returned by `open` or `creat`. The `write` function is used for this purpose.
@@ -1046,7 +991,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Truncating Files Using `O_TRUNC`
 Background context: The `O_TRUNC` flag in `open` or `creat` causes an existing file to be truncated to a length of zero bytes when opened for writing.
@@ -1060,7 +1004,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Permissions with `open` and `creat`
 Background context: The third parameter of `open` specifies permissions. For instance, `S_IRUSR|S_IWUSR` makes the file readable and writable by the owner.
@@ -1076,7 +1019,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File Descriptors in Linux
 In Unix-like operating systems, including Linux, each file or open resource has an associated number called a file descriptor. These descriptors are used to refer to open files, pipes, terminals, and other resources. The first three file descriptors (0, 1, and 2) have special default values: standard input (stdin), standard output (stdout), and standard error (stderr).
@@ -1098,7 +1040,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The `open()` System Call
 The `open()` system call is used to open a file and return an associated file descriptor. This call takes two parameters: the path of the file (as a string) and flags that specify the mode in which the file should be opened.
@@ -1119,7 +1060,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The `read()` System Call
 The `read()` system call reads a specified number of bytes from a file descriptor into a buffer. It requires three arguments: the file descriptor, a pointer to the buffer where data will be stored, and the size of the buffer.
@@ -1141,7 +1081,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The `write()` System Call
 The `write()` system call writes a specified number of bytes from a buffer to a file descriptor. It takes three parameters: the file descriptor, a pointer to the buffer containing the data, and the size of the buffer.
@@ -1163,7 +1102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding File Descriptors for Standard Streams
 In Unix-like systems, standard input (stdin), standard output (stdout), and standard error (stderr) are represented by file descriptors 0, 1, and 2, respectively. These streams are automatically opened when a process starts.
@@ -1190,7 +1128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File Reading and Writing Overview
 Background context: This section discusses how a program reads from or writes to a file using system calls like `read()`, `write()`, and `close()`. These operations are fundamental for handling files in a Unix-like operating system.
@@ -1215,7 +1152,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sequential vs Random File Access
 Background context: So far, file access has been described as sequential, where programs read or write data from the beginning to the end of a file. However, sometimes it is necessary to access files in random locations.
@@ -1238,7 +1174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Open FileTable and Current Offset Tracking
 Background context: Each process maintains an open file table that tracks file descriptors, current offsets, read/write permissions, and other relevant details. This abstraction allows for managing multiple files efficiently.
@@ -1263,7 +1198,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Open File Table Concept
 Background context: The open file table is a data structure used by the xv6 operating system to keep track of all currently opened files. Each entry in this table represents an open file and contains relevant information such as file descriptors, offsets, and locks.
@@ -1275,7 +1209,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File Descriptors
 Background context: File descriptors are used to identify open files. They allow multiple handles (descriptors) to refer to the same file.
@@ -1287,7 +1220,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple File Descriptors
 Background context: A process can have multiple file descriptors pointing to the same or different files.
@@ -1303,7 +1235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Read Operation Example
 Background context: The `read()` system call reads data from an open file.
@@ -1318,7 +1249,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File Access Example
 Background context: The provided example illustrates how a process reads data from a file using multiple `read()` calls.
@@ -1336,7 +1266,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File Descriptor Allocation
 Background context: The `open()` function allocates a new file descriptor for each open file.
@@ -1352,7 +1281,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summary of Concepts
 Background context: This flashcard summarizes key concepts related to the file system, including open file tables, file descriptors, and read/write operations.
@@ -1373,7 +1301,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### fork() and Shared File Table Entries
 When a parent process creates a child using `fork()`, both processes can share the same open file table entry for files they have opened. This sharing allows them to maintain their own independent current offsets while accessing the same file.
@@ -1401,7 +1328,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### fsync() Function
 Explanation: The `fsync()` function is part of Unix and provides a mechanism for forcing data to be written to persistent storage immediately. By default, operating systems buffer writes to improve performance but this buffering can delay actual disk writes.
@@ -1424,7 +1350,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Renaming Files with rename()
 Explanation: The `rename()` function allows a file to be renamed or moved from one directory to another in a single atomic operation. This means the renaming process is completed as an indivisible unit, preventing any partial states that could arise if the system were to crash during the operation.
@@ -1445,7 +1370,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Directory Changes and fsync()
 Explanation: Renaming a file can also affect the directory entries. When you rename a file, it is not only important to ensure that the actual file data is written to disk but also that the file’s metadata (such as its name) in the directory entry is updated.
@@ -1479,7 +1403,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File Metadata and Inodes
 
@@ -1513,7 +1436,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File Atomic Update
 
@@ -1537,7 +1459,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### stat() System Call
 
@@ -1565,7 +1486,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Removing Files
 Background context explaining how files are managed and removed. The `rm` command is used to remove files, but the underlying system call is `unlink()`. This leads us to question why `unlink()` is named as such instead of simply `remove` or `delete`.
@@ -1580,7 +1500,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Making Directories
 Background context explaining how directories are created, read, and deleted using system calls like `mkdir()`. Directories cannot be written to directly; only their contents can be updated. The `mkdir()` function creates a new directory with the specified name.
@@ -1597,7 +1516,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Directory Entries
 Background context explaining what entries are stored in a directory. An empty directory has two special entries: "." (current directory) and ".." (parent directory). These are referred to as dot and dot-dot, respectively.
@@ -1620,7 +1538,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding the `struct dirent`
 Background context: The `struct dirent` is a structure used by functions like `readdir()` to store information about each entry in a directory. It contains various fields such as filename and inode number.
@@ -1639,7 +1556,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hard Links with `link()`
 Background context: A hard link is an alternative filename that points to the same inode as another file. The `link()` function creates a new name for an existing file, sharing its contents.
@@ -1662,7 +1578,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hard Links in File Systems
 Background context explaining how hard links work and their relationship to file system inodes. Include explanations of how `ln` is used, what happens when files are created, and how directory entries function.
@@ -1690,7 +1605,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unlink() Function in File Systems
 Background context explaining how `unlink()` works and its role in managing file references and inodes. Include details on the reference count and when a file is truly deleted.
@@ -1728,7 +1642,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File System Operations and Inodes
 Background context explaining inodes and their role in managing file data within the operating system. Include details on how files are stored and referenced.
@@ -1774,7 +1687,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hard Links and Inodes
 
@@ -1787,7 +1699,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inode Number and Links
 
@@ -1804,7 +1715,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Changing File Permissions
 Background context on how to change file permissions using the `chmod` command.
@@ -1831,7 +1741,6 @@ Here, `7` means full permissions (`rw-`, or rwx), `5` is read and execute for th
 
 ---
 
-**Rating: 8/10**
 
 #### Execute Bit for Regular Files
 Background context on the execute bit specifically for regular files.
@@ -1865,7 +1774,6 @@ Setting the execute bit (`7` if you want full permissions) allows the file to be
 
 ---
 
-**Rating: 8/10**
 
 #### Superuser for File Systems
 Superusers, also known as root users or administrators, are individuals who have elevated privileges to manage file systems. These users can access and modify any file on the system regardless of standard permissions.
@@ -1893,7 +1801,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Execute Bit for Directories
 The execute bit (often represented as 'x' in permissions) on directories has a special meaning. It allows users to change into the directory and, if combined with write permission ('w'), also enables them to create files within it.
@@ -1916,7 +1823,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TOCTTOU (Time Of Check To Time Of Use)
 The TOCTTOU problem refers to a security vulnerability where the validity of data is checked at one point in time, but an operation is performed based on that check at a different point in time. This can lead to inconsistencies if the state of the system changes between these two points.
@@ -1943,7 +1849,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### TOCTTOU Bug
 Background context: A TOCTTOU (Time of Check to Time of Use) bug occurs when a program checks for certain properties of a file or directory but fails to update those properties before using them. This can be exploited by an attacker to change the target file between the check and use, leading to unintended behavior.
@@ -1954,7 +1859,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mail Service Example
 Background context: A mail service running as root appends incoming messages to a user's inbox file. However, due to a TOCTTOU bug, an attacker can switch the inbox file to point to a sensitive file like `/etc/passwd` between the check and update step.
@@ -1965,7 +1869,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Solutions to TOCTTOU Bug
 Background context: There are no simple solutions to the TOCTTOU problem. One approach is to reduce services requiring root privileges, and another is to use flags like `ONOFOLLOW` or transactional file systems. However, these solutions have their limitations.
@@ -1979,7 +1882,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### System Calls for File Access
 Background context: This concept explains how processes request access to files using system calls. It covers important functions like `open()`, `read()`, `write()`, and `lseek()`.
@@ -1999,7 +1901,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File Descriptors and Open File Table
 Background context: This concept explains how file descriptors are used to track file access. It emphasizes the importance of file descriptors in managing file operations.
@@ -2029,7 +1930,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Random Access with lseek()
 Background context: This concept explains how processes can perform random access within a file using the `lseek()` function. It emphasizes the flexibility of file operations.
@@ -2049,7 +1949,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Directory Entries and i-Numbers
 Background context: This concept explains how directories are organized in a file system, including their structure and special entries.
@@ -2077,7 +1976,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### fsync() and Forced Updates
 Background context: When working with persistent media, ensuring data is written to disk can be crucial for maintaining file integrity. However, forcing updates using `fsync()` or related calls comes with challenges that can impact performance.
@@ -2089,7 +1987,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Hard Links and Symbolic Links
 Background context: In Unix-like systems, multiple human-readable names for the same underlying file can be achieved using hard links or symbolic (symlinks). Each method has its strengths and weaknesses.
@@ -2101,7 +1998,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File System Permissions
 Background context: Most file systems offer mechanisms for sharing files with precise access controls. These controls can range from basic permissions bits to more sophisticated access control lists (ACLs).
@@ -2117,7 +2013,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### File System Interfaces in UNIX Systems
 Background context: The file system interface in Unix systems is fundamental, but mastering it requires understanding the intricacies involved.
@@ -2129,7 +2024,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Interlude: Files and Directories in Operating Systems
 Background context: This interlude revisits the basics of files and directories, reinforcing key concepts.
@@ -2141,7 +2035,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### References for Further Reading
 Background context: Various references provide deeper insights into specific aspects of operating systems, including file systems.
@@ -2160,7 +2053,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### stat() System Call
 Background context: The `stat()` system call is a fundamental interface for retrieving information about files and directories. It provides detailed metadata such as file size, permissions, ownership, etc., which are crucial for various file operations.
@@ -2185,7 +2077,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Listing Files
 Background context: The task involves creating a program to list files and directories within a specified directory. This requires understanding how to use the `opendir()`, `readdir()`, and `closedir()` functions to navigate through directories.
@@ -2218,7 +2109,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tail Command
 Background context: The `tail` command is used to display the last few lines of a file. This involves seeking to the end of the file and reading backward until the desired number of lines are printed.
@@ -2270,7 +2160,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Recursive Search
 Background context: The task involves creating a program that recursively searches the file system starting from a given directory and lists all files and directories. This requires understanding recursion and how to traverse a filesystem.

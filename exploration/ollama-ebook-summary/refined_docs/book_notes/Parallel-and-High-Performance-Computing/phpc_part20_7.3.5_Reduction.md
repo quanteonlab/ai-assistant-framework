@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Parallel-and-High-Performance-Computing_processed (Part 20)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 7.3.5 Reduction example of a global sum using OpenMP threading
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Cold Cache vs Warm Cache
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Performance of OpenMP Examples
 Background context: The example examines how OpenMP can improve performance by adding parallelization pragmas at different levels (loop level). It compares serial and parallel runtimes to calculate speedup and efficiency.
@@ -33,7 +30,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Parallel Efficiency
 Background context: The text explains how to calculate the parallel efficiency, which is a measure of how well the parallel execution uses all available resources.
@@ -47,7 +43,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simple Loop-Level OpenMP
 Background context: The example shows how to introduce simple OpenMP pragmas at the loop level to parallelize computations, leading to significant performance improvements.
@@ -72,7 +67,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### First Touch Optimization
 Background context: The example demonstrates how adding first-touch optimizations can further improve performance by ensuring that data is allocated close to the threads using it, thus reducing cache misses.
@@ -102,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### High-Level vs. Low-Level OpenMP Design
 Background context: To reduce the overhead associated with thread management, a high-level design approach is recommended. This involves structuring parallelism at a higher abstraction level to minimize the number of threads and thus reduce startup costs.
@@ -114,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reduction Example with Global Sum Using OpenMP Threading
 Background context: A common pattern in parallel programming is the reduction operation, which calculates a scalar result from an array. In OpenMP, this can be handled efficiently using a `reduction` clause.
@@ -136,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Potential Issues with Loop-Level OpenMP
 Background context: Not all loops can be effectively parallelized using OpenMP. The loop must meet specific criteria such as having a canonical form, meaning it adheres to traditional implementation patterns.
@@ -148,7 +139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fine-Grained vs. Coarse-Grained Parallelization
 Background context: The type of parallelism can significantly impact performance and synchronization needs. Fine-grained parallelism involves multiple processors or threads operating on small blocks of code with frequent synchronization, while coarse-grained involves larger blocks with infrequent synchronization.
@@ -162,7 +152,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Variable Scope and OpenMP
@@ -190,7 +179,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Firstprivate and Lastprivate Clauses
 Explanation of how `firstprivate` and `lastprivate` clauses modify variable behavior in OpenMP. These clauses allow for more control over shared variables' initial states before parallel execution starts or final values after it ends, respectively.
@@ -218,7 +206,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Shared Variables in OpenMP
 Explanation of how shared variables are managed in OpenMP, especially within parallel regions. Unlike private variables which have no state between iterations, shared variables retain their values across threads unless explicitly managed with reduction clauses or other directives.
@@ -242,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reduction Clauses in OpenMP
 Explanation of reduction clauses, which are used to manage variables across multiple iterations or threads to prevent data races. The `reduction` clause is particularly useful for summing values, finding minimums, maximums, etc., in parallel regions.
@@ -266,7 +252,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### High-Level OpenMP Introduction
 Background context: The central high-level OpenMP strategy aims to improve on standard loop-level parallelism by minimizing fork/join overhead and memory latency. Reduction of thread wait times is another major motivating factor for high-level OpenMP implementations.
@@ -284,7 +269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Efficient High-Level OpenMP Implementation
 Background context: Implementing high-level OpenMP involves a series of steps including merging parallel regions, reducing synchronization overhead, and making arrays and variables private to optimize performance.
@@ -295,7 +279,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Steps for High-Level OpenMP Implementation
 Background context: The steps involve reducing thread start-up time by merging parallel regions, minimizing synchronization costs with nowait clauses, making variables private when possible, and thoroughly checking code for race conditions after each step.
@@ -306,7 +289,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### High-Level OpenMP with Nowait Clauses
 Background context: Adding nowait clauses to for or do loops allows threads to proceed without waiting for others, minimizing synchronization costs. Figure 7.10 illustrates this concept through an analogy of a cheetah and a hawk.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 7A003--Performance-modeling-and-design-of-computer-systems_processed (Part 26)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 18.5 Product Form Theorems
 
 ---
 
-**Rating: 8/10**
 
 #### State Transition and Arrival/Departure Rates
 Background context: The passage describes state transitions within a classed network of queues, focusing on arrival and departure rates. It discusses how an arriving job can join or leave based on its class and the current state.
@@ -86,7 +84,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Expected Time in System for CPU-bound Jobs (Method 1)
 Background context: The expected time in system for CPU-bound jobs is calculated using a recursive approach considering different paths through the network. This involves understanding routing probabilities and how jobs traverse between devices.
@@ -169,7 +166,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Motivation for Closed Queueing Networks
 Background context explaining the need to analyze closed queueing networks. In an open network, jobs can enter and leave the system, whereas a closed network has a fixed number of jobs that cycle through servers without external input or output.

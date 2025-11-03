@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 15)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8.3 Providing Callbacks via Interfaces. Problem. Solution. Discussion
 
 ---
 
-**Rating: 8/10**
 
 #### Default Methods in Interfaces
 Default methods allow adding functionality to interfaces without breaking existing implementations. They provide backward compatibility while enhancing interface capabilities.
@@ -139,7 +137,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Adding Items to a Building Management System
 Background context: The provided Java program demonstrates adding various items like lights and computer components to a building management system. This showcases polymorphism and abstract methods usage in Java.
@@ -233,7 +230,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Typesafe Enumerations in Java
 Background context explaining that Java introduced a more type-safe and flexible way to handle enums compared to C. Java enums are implemented as classes, subclassed from `java.lang.Enum`. They offer better readability and safety than using `final int` constants or custom enum classes.

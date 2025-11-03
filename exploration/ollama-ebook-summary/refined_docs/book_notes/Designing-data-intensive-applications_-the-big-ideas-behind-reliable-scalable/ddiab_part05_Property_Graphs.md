@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable_processed (Part 5)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Property Graphs
 
 ---
 
-**Rating: 8/10**
 
 #### Many-to-Many Relationships and Data Models
 
@@ -205,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Graph Representation and Querying
 Background context: This section discusses how to represent data using graphs, specifically focusing on property graphs. It also introduces Cypher as a query language for Neo4j graph databases, highlighting its declarative nature and suitability for representing complex relationships between entities.
@@ -289,7 +286,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SQL Query for Intersecting Sets
 Background context explaining how SQL queries can be used to intersect sets of vertices based on specific conditions. This involves joining tables and filtering results based on vertex properties.

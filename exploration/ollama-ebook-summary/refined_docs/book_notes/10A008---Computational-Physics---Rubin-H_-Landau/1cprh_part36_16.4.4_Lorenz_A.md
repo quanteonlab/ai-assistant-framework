@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 36)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 16.4.4 Lorenz Attractors
 
 ---
 
-**Rating: 8/10**
 
 #### Lorenz Attractors Background
 In 1961, Edward Lorenz simplified atmospheric convection models to predict weather patterns. He accidentally used the truncated value `0.506` instead of `0.506127`, leading to vastly different results that initially seemed like numerical errors but later revealed chaotic behavior.
@@ -31,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lorenz Attractors: ODE Solver
 To simulate the Lorenz attractor equations, we need to modify our Ordinary Differential Equation (ODE) solver to handle three simultaneous equations:
@@ -82,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Duffing Oscillator
 
@@ -118,7 +114,6 @@ This function `duffing_ode` takes the current state and time as input and return
 
 ---
 
-**Rating: 8/10**
 
 #### Ising Model Overview
 Background context: The Ising model is a mathematical model of ferromagnetism in statistical mechanics. It consists of atoms that have only two possible states, "up" and "down", with neighboring atoms tending to have the same state due to an exchange energy \( J \). This model provides insights into the thermal behavior of magnetic systems.
@@ -129,7 +124,6 @@ The Ising model describes the thermal behavior of a magnetic system where each p
 
 ---
 
-**Rating: 8/10**
 
 #### Hamiltonian Formulation
 Background context: The Hamiltonian for the Ising model describes the total energy of a system. It includes both spin–spin interactions and interactions with an external magnetic field.
@@ -142,7 +136,6 @@ where \( s_i \) represents the spin state of particle \( i \), and constants inc
 
 ---
 
-**Rating: 8/10**
 
 #### Spin Configuration
 Background context: The spin configuration of the Ising model is described by a quantum state vector, with each particle having two possible states.
@@ -153,7 +146,6 @@ A configuration in the Ising model is represented by a quantum state vector \( |
 
 ---
 
-**Rating: 8/10**
 
 #### Energy Calculation
 Background context: The energy of the system in a given state is calculated as the expectation value of the Hamiltonian over all spin configurations. For the Ising model, this involves summing up the interaction terms between spins and with an external magnetic field.
@@ -166,7 +158,6 @@ where \( s_i \) are the spin states of particles, and constants include \( J \),
 
 ---
 
-**Rating: 8/10**
 
 #### Spin Alignment
 Background context: The alignment of spins in the Ising model depends on the sign of the exchange energy \( J \). If \( J > 0 \), neighboring spins tend to align, leading to ferromagnetic behavior. Conversely, if \( J < 0 \), neighbors have opposite spins, resulting in antiferromagnetic behavior.
@@ -181,7 +172,6 @@ For both cases, the ground state energy depends on whether the temperature is hi
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Simulation
 Background context: Given the computational complexity of examining all possible configurations, statistical methods are used to simulate the Ising model. Techniques like Monte Carlo simulations and the Metropolis algorithm can be employed to sample spin states efficiently.

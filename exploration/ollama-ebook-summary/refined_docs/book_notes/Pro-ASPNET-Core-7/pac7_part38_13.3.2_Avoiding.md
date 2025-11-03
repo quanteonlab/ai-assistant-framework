@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 38)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 13.3.2 Avoiding ambiguous route exceptions
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Custom Constraints in Routing
@@ -35,7 +33,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ambiguous Route Resolution
 Background context: Ambiguity in routing occurs when two or more routes have the same score and cannot be distinguished by the routing system. This can lead to errors if not handled properly.
@@ -58,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Order of Routes
 Background context: The order in which routes are defined can influence how requests are routed. By setting the `Order` property, you can prioritize certain routes over others.
@@ -83,7 +79,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Breaking Route Ambiguity
 Background context explaining how route ambiguity can occur and why it's important to resolve it. Mention that ASP.NET Core uses URL routing, which requires careful handling of overlapping routes.
@@ -109,7 +104,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Middleware Component for Endpoint Selection
 Background context explaining that not all middleware components generate responses, and some are used for features like session handling or response enhancement. Discuss how routing works differently in ASP.NET Core.
@@ -133,7 +127,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Displaying Endpoint Selection in Middleware
 Explanation of using `WithDisplayName` to give routes descriptive names, making it easier for developers to identify selected endpoints. Discuss the use case and benefits.
@@ -159,7 +152,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Routes and URL Matching
@@ -191,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Injection Basics
 Dependency injection is a design pattern that allows components to access shared services without needing to know which implementation classes are being used. Services are typically used for common tasks such as logging or database interaction.
@@ -218,7 +209,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Lifecycles in ASP.NET Core
 Services can be registered with different lifecycles: transient, scoped, and singleton. Transient services are created every time they are requested, scoped services live for the duration of a request (or lifetime scope), and singleton services have only one instance per application.
@@ -251,7 +241,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Managing Service Instantiation
 Sometimes, you may need to manage when a class is instantiated, or use a factory method to create instances. ASP.NET Core provides the `ActivatorUtilities` class for this purpose.
@@ -270,7 +259,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Defining Services for Different Lifecycles
 Services can be defined to have different lifecycles: transient (per-request), scoped, and singleton. Understanding these helps in managing the scope and lifetime of services appropriately.

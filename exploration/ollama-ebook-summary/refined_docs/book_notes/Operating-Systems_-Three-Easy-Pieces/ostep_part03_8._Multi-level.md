@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Operating-Systems_-Three-Easy-Pieces_processed (Part 3)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 8. Multi-level Feedback
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Level Feedback Queue (MLFQ) Overview
 Background context explaining MLFQ. It is designed to address two primary challenges: optimizing turnaround time by prioritizing shorter jobs, and ensuring responsive behavior for interactive users by minimizing response time.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Learning from History in Scheduling
 Explanation on how MLFQ and similar systems use historical data to improve future decisions.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Priority Adjustment Algorithm: Time Slice Rules
 Background context: The rules for changing priorities involve time slices. Jobs that use up their full slice lose priority, while those that relinquish early stay in place.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Priority Adjustment Algorithm: Time Slice Rules (Continued)
 Background context: The rules for changing priorities involve time slices. Jobs that use up their full slice lose priority, while those that relinquish early stay in place.
@@ -54,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Priority Levels and Queues
 Background context: The number of queues and their priorities are key to understanding MLFQ. Typically, there are multiple queues with different priority levels.
@@ -66,7 +60,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Gaming the Scheduler
 Background context: The text discusses how a smart user can exploit the current scheduling algorithm to gain more CPU time by issuing an I/O operation before their time slice is over, thereby relinquishing the CPU and remaining in the same queue. This can allow them to monopolize the CPU when done correctly.
@@ -77,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Problem with Current Scheduling
 Background context: The current scheduling algorithm can lead to starvation, where long-running jobs do not get sufficient CPU time due to shorter, more interactive jobs continuously using the CPU.
@@ -88,7 +80,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Priority Boost Rule
 Background context: To address the issue of long-running jobs starving and interactive jobs being properly handled, a new rule is introduced to periodically boost the priority of all jobs. This ensures that even if a job becomes more interactive over time, it will still be treated appropriately by the scheduler.
@@ -99,7 +90,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Behavior of Priority Boost
 Background context: The priority boost rule is illustrated through an example where a long-running job competes with two short-running interactive jobs. Without the priority boost, the long-running job gets starved. With the priority boost every 50 ms, the long-running job makes some progress.
@@ -110,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Code Example for Priority Boost
 Background context: The priority boost rule can be implemented by periodically moving all jobs to the top queue. Below is a simple implementation of this concept in pseudocode.
@@ -143,7 +132,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Descriptions Differentiation
 - **Gaming the Scheduler**: Focuses on user manipulation techniques.
@@ -154,7 +142,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Slice Scheduling Considerations
 Background context: The document discusses the challenge of setting the time slice (S) parameter for scheduling algorithms, particularly in the context of the Multi-Level Feedback Queue (MLFQ). If set too high, long-running jobs could starve; if set too low, interactive jobs may not get enough CPU time.
@@ -165,7 +152,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Voo-Doo Constants and MLFQ
 Background context: John Ousterhout referred to certain parameters in systems as "voo-doo constants" because their correct values seemed to require some form of black magic. In the case of the Multi-Level Feedback Queue (MLFQ), setting the time slice S correctly is challenging.
@@ -176,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Addressing Gaming with New Rules
 Background context: The text mentions that rules 4a and 4b allowed jobs to retain their priority by relinquishing the CPU before the time slice expired. To prevent gaming of the scheduler, a new rule was implemented to ensure better accounting of CPU usage at each level.
@@ -187,7 +172,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Rule 2: Round-Robin Scheduling for Equal Priorities
 When two processes have the same priority, they are scheduled using round-robin with a predefined time slice.
@@ -199,7 +183,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Historical Context and Usage
 Many operating systems, including BSD UNIX derivatives, Solaris, and Windows NT, use variations of MLFQ as their base scheduler.
@@ -213,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### MLFQ Scheduler Simulation
 The `mlfq.py` program allows you to experiment with the Multi-Level Feedback Queue (MLFQ) scheduler.
@@ -225,7 +207,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tickets Represent Your Share
 Background context explaining the concept. Underlying lottery scheduling is one very basic concept: tickets, which are used to represent the share of a resource that a process should receive. The percent of tickets that a process has represents its share of the system resource in question.
@@ -264,7 +245,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pseudocode for Stride Scheduling
 
@@ -286,7 +266,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CFS Scheduling Overview
 The Completely Fair Scheduler (CFS) divides CPU time fairly among all competing processes without a fixed time slice. It aims for minimal scheduling overhead to maximize efficiency and scalability.
@@ -309,7 +288,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CFS Basic Operation
 CFS operates by continuously updating each process's CPU usage based on its execution time slices, aiming for an equal share among all processes.
@@ -343,7 +321,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtual Runtime (vruntime)
 Background context explaining virtual runtime. CFS uses a simple counting-based technique known as vruntime to manage process scheduling fairly while balancing performance and fairness. Each process accumulates vruntime based on its run time, and the scheduler picks the process with the lowest vruntime for the next execution.
@@ -360,7 +337,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Scheduling Decisions and Fairness vs. Performance
 Explanation of how CFS decides when to switch between processes, balancing fairness with performance.
@@ -377,7 +353,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SchedLatency Parameter
 Explanation and use of the `schedlatency` parameter in CFS, determining the maximum amount of time one process can run before being interrupted.
@@ -392,7 +367,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Context Timer Interrupts and Scheduling Decisions
 Explanation of how CFS uses periodic timer interrupts for scheduling decisions.
@@ -413,7 +387,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Process Priority and Weighting in CFS
 
@@ -457,7 +430,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtual Run Time Calculation in CFS
 
@@ -489,7 +461,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Red-Black Trees in CFS
 
@@ -533,7 +504,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### CFS and Process Management
 
@@ -547,7 +517,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Virtual Runtime (vruntime)
 
@@ -561,7 +530,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Sleeping Processes
 
@@ -575,7 +543,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Red-Black Tree Operations
 
@@ -589,7 +556,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Starvation Prevention
 
@@ -603,7 +569,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### I/O and Sleeping Processes
 
@@ -617,7 +582,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Other Features of CFS
 
@@ -633,7 +597,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Red-Black Tree Usage in CFS
 Background context explaining how red-black trees are used in CFS to improve scheduling efficiency. Modern systems have thousands of active processes, making simple lists inefficient for frequent job retrieval.
@@ -661,7 +624,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Access Patterns and Frequency of Usage
 Explanation of how choosing a data structure depends on understanding access patterns and frequency of usage.
@@ -694,7 +656,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Completely Fair Scheduler (CFS)
 Detailed explanation of CFS, including how it works and its importance.
@@ -721,7 +682,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### I/O Performance Issues
 Explanation of how fair-share schedulers handle I/O, mentioning potential issues.
@@ -745,7 +705,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### General-Purpose Schedulers
 Explanation of general-purpose schedulers like MLFQ (Multi-Level Feedback Queue).
@@ -777,7 +736,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Completely Fair Scheduler (CFS)
 
@@ -795,7 +753,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Fair Share Scheduler
 
@@ -808,7 +765,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Introduction to Multiprocessor Systems
 Background context explaining the rise of multiprocessor systems and their integration into various computing devices. Discuss the motivation behind multicore processors due to limitations in single-core performance improvements.
@@ -819,7 +775,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Application and OS Challenges with Multiprocessing
 Discuss the challenges faced by both applications and operating systems when dealing with multiple CPUs. Explain why typical applications may not benefit from additional processors and how this necessitates rewriting applications for parallel execution.
@@ -830,7 +785,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance of Concurrency Knowledge for Understanding Multiprocessor Scheduling
 Explain the logical relationship between concurrency and multiprocessor scheduling, highlighting why understanding concurrency is crucial before diving into advanced topics like multiprocessor scheduling.
@@ -841,7 +795,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiprocessor Architecture Basics
 Explain the key difference between single-CPU and multi-CPU hardware architectures, particularly focusing on the role of cache memory and how data sharing works differently across processors.
@@ -852,7 +805,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges for Operating System in Multiprocessor Scheduling
 Discuss the new scheduling challenges faced by operating systems when dealing with multiple CPUs, such as maintaining cache coherence and ensuring fair distribution of tasks among cores.
@@ -863,7 +815,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Overview of Multiprocessor Scheduling Techniques
 Describe the basic principles of extending single-processor scheduling ideas to multi-core systems. Discuss whether existing techniques can be applied directly or if new approaches are necessary.
@@ -874,7 +825,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Cache Coherence in Multiprocessor Systems
 Provide an example scenario illustrating how data sharing and cache coherence can be managed in a multiprocessor system to ensure correct operation and performance.
@@ -898,7 +848,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache and Main Memory Hierarchy
 Background context explaining how caches help processors access data faster by keeping frequently accessed data close to the CPU. Caches are smaller, faster memories that hold copies of popular data found in main memory.
@@ -910,7 +859,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Locality of Reference
 Background context explaining that caches work based on the principle of locality, which can be temporal or spatial.
@@ -924,7 +872,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Hierarchy in Single CPU Systems
 Background context explaining how caches are used in single-CPU systems to speed up data access by storing frequently accessed data.
@@ -936,7 +883,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Contention in Multiprocessor Systems
 Background context explaining the complexity of caching when multiple CPUs share a single main memory.
@@ -948,7 +894,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Handling Cache Coherence in Multiprocessor Systems
 Background context explaining that multiple CPUs accessing shared memory can lead to coherence issues unless managed properly.
@@ -960,7 +905,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Cache Coherence Issue
 Background context illustrating an example where cache coherence issues arise in multiprocessor systems.
@@ -1013,7 +957,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Coherence Overview
 Cache coherence is a crucial aspect of computer architecture, especially in multi-processor systems. It ensures that all caches within a system maintain a consistent view of shared memory. The problem of cache coherence arises because each processor can have its own private copy of data from main memory, leading to potential inconsistencies if not managed properly.
@@ -1026,7 +969,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Synchronization and Locks
 Even though hardware provides mechanisms like bus snooping to manage cache coherence, software (and operating systems) still need to use synchronization primitives such as locks when accessing shared data.
@@ -1039,7 +981,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Concurrency and Shared Data Access
 In multi-processor systems where shared data is accessed concurrently, mutual exclusion primitives like locks are essential for maintaining correctness.
@@ -1052,7 +993,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Pseudocode for Queue Removal with Locks
 Here’s an example of how to safely remove an element from a shared linked list using locks.
@@ -1085,7 +1025,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Simple List Delete Code Issues
 Background context explaining the potential problems associated with the simple list delete code. This section discusses how issues like double-free and incorrect value return can occur when not handled properly, such as freeing the same head element twice or returning the same data multiple times.
@@ -1112,7 +1051,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Mutex Locking in Multiprocessor Environments
 Background context explaining how using mutex locking can solve issues but also introduces performance overhead. The text discusses how inserting a mutex at the beginning and end of critical sections ensures correct execution but can reduce overall system performance, especially with increasing numbers of CPUs.
@@ -1144,7 +1082,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Affinity in Multiprocessor Systems
 Background context explaining cache affinity, where processes tend to run faster on the same CPU if their state is already cached there. The text discusses why it's beneficial for schedulers to consider keeping processes on the same CPU to avoid performance degradation due to frequent state reloads.
@@ -1171,7 +1108,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SQMS Cache Affinity Problem
 Background context: In Single Queue Multiprocessor Scheduling (SQMS), each job is placed into a globally shared queue and scheduled across processors. This can lead to poor cache affinity as jobs frequently change between processors, which reduces performance due to increased cache misses.
@@ -1183,7 +1119,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Queue Multiprocessor Scheduling Overview
 MQMS (Multi-Queue Multiprocessor Scheduling) is inherently more scalable as the number of CPUs grows, leading to an increase in the number of queues. This setup reduces lock and cache contention but introduces a new challenge: load imbalance.
@@ -1210,7 +1145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Migration as a Solution
 Migration is the process of moving jobs between CPUs to achieve balanced load distribution. This technique helps in addressing the issue of load imbalance by dynamically redistributing tasks.
@@ -1248,7 +1182,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Work Stealing Technique
 Work stealing is a technique used to balance load among multiple queues. In this approach, a queue that has fewer jobs will occasionally peek at another (target) queue to see how full it is. If the target queue is notably more full, the source queue can "steal" one or more jobs from the target to help balance load.
@@ -1278,7 +1211,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linux Multiprocessor Schedulers Overview
 The Linux community has developed several multiprocessor schedulers over time. These include the O(1) scheduler, Completely Fair Scheduler (CFS), and BFS (Bounded-Fifo Scheduler). Each of these schedulers offers different approaches to managing multiple queues.
@@ -1294,7 +1226,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Single Queue Multiprocessor Scheduling
 Single queue multiprocessor scheduling (SQMS) is simpler to build and balances load well. However, it inherently has difficulty scaling to many processors and maintaining cache affinity among tasks.
@@ -1309,7 +1240,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multiple Queue Multiprocessor Scheduling
 Multiple queue multiprocessor scheduling (MQMS) scales better and handles cache affinity well. However, it has trouble with load imbalance and is more complicated than single-queue approaches.
@@ -1339,7 +1269,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Spin Lock Alternatives for Shared-Memory Multiprocessors
 Background context: This concept discusses different locking mechanisms used in shared-memory multiprocessor systems. The paper by Thomas E. Anderson examines how various spin lock alternatives perform and scale under different conditions.
@@ -1370,7 +1299,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linux Scalability to Many Cores
 Background context: This paper discusses the challenges faced by the Linux operating system when scaling to many-core systems. It highlights issues related to resource management, task scheduling, and overall system performance.
@@ -1399,7 +1327,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cilk-5 Multithreaded Language
 Background context: "The Implementation of the Cilk-5 Multithreaded Language" discusses a lightweight language and runtime for writing parallel programs. It highlights the work-stealing paradigm, which is a key technique for efficient load balancing in parallel computing.
@@ -1424,7 +1351,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache Coherence Protocols
 Background context: This paper, "Using Cache Memory To Reduce Processor-Memory Trafﬁc," introduces the concept of using bus snooping to build cache coherence protocols. The protocol helps in maintaining data consistency across multiple processors.
@@ -1448,7 +1374,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Memory Consistency and Cache Coherence
 Background context: This paper provides a detailed overview of memory consistency models and cache coherence protocols. It is essential for understanding how data integrity is maintained in distributed systems.
@@ -1470,7 +1395,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Cache-Affinity Scheduling
 Background context: This paper evaluates the performance of cache-affinity scheduling in shared-memory multiprocessor systems. Cache affinity aims to keep frequently accessed data close to the processor that uses it, reducing memory traffic and improving performance.
@@ -1494,7 +1418,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Multi-Job Simulation on Multiple CPUs
 Background context: The next step involves running multiple jobs on a multi-CPU system to see how the scheduler handles concurrent tasks, especially with round-robin scheduling.
@@ -1509,7 +1432,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Random Workload Performance
 Background context: The text encourages experimenting with random workloads to predict performance based on different configurations.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A000---FluentPython_processed (Part 18)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Flawed Typing and Strong Testing
 
 ---
 
-**Rating: 8/10**
 
 #### Forward References and Annotations in Python
 
@@ -127,7 +125,6 @@ In general, type hints should be used as one of many tools in a CI pipeline, alo
 
 x??
 
-**Rating: 8/10**
 
 #### Gradual Typing Concept
 Background context: The idea of gradual typing refers to a system that supports both dynamically typed and statically typed programming. Python is an example of such a language, where you can gradually introduce type hints while keeping other parts of your codebase dynamically typed.
@@ -345,7 +342,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Type Hints in Python: Understanding the Trade-offs
 Background context explaining why type hints exist and their benefits. The primary goal is to enhance readability and maintainability of code, particularly in large projects where manual inspection can be error-prone.

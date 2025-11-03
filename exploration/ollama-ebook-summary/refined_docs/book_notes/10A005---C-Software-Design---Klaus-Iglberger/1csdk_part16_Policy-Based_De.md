@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 16)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Policy-Based Design
 
 ---
 
-**Rating: 8/10**
 
 #### Strategy Design Pattern Overview
 Explanation: The Strategy design pattern is a behavioral design pattern that allows an algorithm’s behavior to be selected at runtime. It decouples an algorithm from the client that uses it, allowing different algorithms to be used interchangeably.
@@ -165,7 +163,6 @@ x??
 
 ---
 
-**Rating: 9/10**
 
 #### Inheritance vs. Composition
 Inheritance is often overvalued and misunderstood, especially when it comes to reusability and decoupling. While inheritance can simplify certain aspects of software design, it has significant limitations that make it less preferable compared to composition.
@@ -333,7 +330,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Favor Composition Over Inheritance
 Background context explaining the preference for composition over inheritance, focusing on tight coupling issues with inheritance and how composition can enable design patterns like Command. The Pragmatic Programmer advocates using "Has-A" relationships instead of "Is-A" when possible to improve code flexibility and maintainability.

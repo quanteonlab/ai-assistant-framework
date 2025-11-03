@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A012---Reinforcement-Learning_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Semi-gradient Methods
 
 ---
 
-**Rating: 8/10**
 
 #### Diﬀerential Semi-gradient n-step Sarsa Overview
 Diﬀerential semi-gradient n-step Sarsa generalizes the traditional n-step bootstrapping method for function approximation. It involves an update based on a diﬀerential form of the n-step return, which accounts for multiple rewards over several steps rather than just one step.
@@ -126,7 +124,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Semi-gradient Sarsa Introduction
 Background context: The first exploration of semi-gradient Sarsa with function approximation was by Rummery and Niranjan (1994). Linear semi-gradient Sarsa with \(\epsilon\)-greedy action selection does not converge in the usual sense but enters a bounded region near the best solution. Precup and Perkins (2003) showed convergence under differentiable action selection settings.
@@ -177,7 +174,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance Sampling in Function Approximation
 Importance sampling is a technique that addresses the first part of the challenge in off-policy learning, which involves changing the update targets. However, it does not address the second part related to the distribution of updates.
@@ -283,7 +279,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Importance Sampling in Reinforcement Learning Algorithms
 
@@ -383,7 +378,6 @@ These definitions ensure that the algorithm can handle both types of tasks appro
 ??x
 ---
 
-**Rating: 8/10**
 
 #### Problematic Transition Example
 
@@ -510,7 +504,6 @@ public class ParameterUpdate {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Off-Policy Training vs On-Policy Training Divergence
 
@@ -569,7 +562,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Independence and Feature Vectors
 Background context: The feature vectors, \(\{x(s):s\in S\}\), are linearly independent. This property is crucial for ensuring that the task can be handled favorably with linear function approximation.
@@ -632,7 +624,6 @@ x??
 ---
 These flashcards cover key concepts from the provided text, focusing on the instability of semi-gradient algorithms and the importance of using appropriate update distributions for stability in reinforcement learning methods.
 
-**Rating: 8/10**
 
 #### The Deadly Triad
 Background context explaining the dangerous combination of elements that can lead to instability and divergence. Function approximation, bootstrapping, and off-policy training are the three elements that form this deadly triad.

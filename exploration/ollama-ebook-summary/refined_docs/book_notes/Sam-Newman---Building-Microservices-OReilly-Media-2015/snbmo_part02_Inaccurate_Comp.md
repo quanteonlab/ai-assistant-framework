@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Inaccurate Comparisons
 
 ---
 
-**Rating: 8/10**
 
 #### No Silver Bullet: Microservices Complexity
 
@@ -25,7 +23,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### The Evolutionary Architect
 
@@ -42,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Challenges for Architects
 
@@ -59,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Redefining Architecture
 
@@ -78,7 +73,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Long-Term Planning and Flexibility in Architectural Design
 Background context explaining the concept. The text stresses the importance of designing software frameworks that can grow and change with user needs, rather than creating a fixed product.
@@ -108,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ensuring User and Developer Happiness
 Background context explaining the concept. The text underscores the need for IT architects to create systems that are not only user-friendly but also developer-friendly, promoting a harmonious environment.
@@ -138,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Enforcing Corrective Actions in Architectural Planning
 Background context explaining the concept. The text explains that while architects should be flexible, they must also have mechanisms to correct deviations from their plans.
@@ -170,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Service Zones and Boundaries
 In the context of architecting systems, service zones or boundaries represent coarse-grained groups of services. The primary focus as an architect should be on how these services communicate with each other rather than diving into the internal details of each zone.
@@ -190,7 +181,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Microservices and Team Autonomy
 Microservices allow teams within an organization to have autonomy in choosing the best technology stack for their services. This approach is particularly useful when teams need flexibility and can operate independently.
@@ -213,7 +203,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Inter-Service Communication Standards
 Effective inter-service communication is crucial in microservices architectures. Using consistent protocols can simplify integration, whereas varied protocols may complicate the development process.

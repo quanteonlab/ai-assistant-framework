@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Materials-Science-and-Engineering-An-Introduction_processed (Part 17)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 6.12 DesignSafety Factors
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Error Bars and Tensile Strength Data
@@ -29,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Design Safety Factors and Structural Applications
 Background context: The text discusses design safety factors, which are employed to ensure that structures can handle unanticipated failures. For critical applications like aircraft or bridge components, traditional methods of reducing stress by a safety factor may not be sufficient.
@@ -44,7 +41,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Design Stress and Safe Stress Concepts
 Background context: The text explains how design stress (𝜎d) and safe stress (𝜎w) are determined. Design stress is based on the calculated maximum load multiplied by a factor of safety, while safe stress is derived from the yield strength divided by a factor of safety.
@@ -61,7 +57,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Factor of Safety in Design Stress
 Background context: The factor of safety \( N \) is used to determine safe stress. It involves dividing the yield strength (\(\sigma_y\)) by a factor of safety.
@@ -79,7 +74,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Factor of Safety (N) Determination for Structural Design
@@ -95,7 +89,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Safe Stress Computation
 
@@ -122,7 +115,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Design Example for Support-Post Diameter
 
@@ -166,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Specification for Pressurized Cylindrical Tube
 
@@ -210,7 +201,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Yield Strength and Selection of Suitable Alloys
 
@@ -235,7 +225,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Nature of Applied Load and Its Impact on Material Testing
@@ -248,7 +237,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Engineering Stress
 Background context: Engineering stress is defined as the instantaneous load divided by the original specimen cross-sectional area.
@@ -268,7 +256,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Definition of Engineering Strain
 Background context: Engineering strain is expressed as the change in length (in the direction of load application) divided by the original length.
@@ -288,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Elastic Deformation in Materials
 Background context: When a material is stressed first, it undergoes elastic or nonpermanent deformation. For most materials, stress and strain are proportional up to the point of yielding.
@@ -308,7 +294,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Yield Strength and Tensile Strength
 Background context: The yield strength is indicative of the stress at which plastic deformation begins. For tensile loading, the maximum point on the engineering stress-strain curve represents the tensile strength.
@@ -333,7 +318,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Ductility of Materials
 Background context: Ductility measures the degree to which a material plastically deforms before fracture. It is quantitatively measured in terms of percent elongation and reduction in area.
@@ -362,7 +346,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modulus of Elasticity
 Background context: The modulus of elasticity (E) is the slope of the linear elastic region in the stress-strain curve. It represents how stiff a material is.
@@ -386,7 +369,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Poisson's Ratio
 Background context: Poisson’s ratio (\(\nu\)) is the negative ratio of transverse and longitudinal strains. It helps describe how a material will deform under load.
@@ -410,7 +392,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modulus of Resilience
 Background context: The modulus of resilience is the strain energy per unit volume required to stress a material to the point of yielding. It is represented by the area under the elastic portion of the stress-strain curve.
@@ -435,7 +416,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### True Stress and True Strain
 Background context: True stress (\(\sigma_T\)) is defined as the instantaneous applied load divided by the instantaneous cross-sectional area. True strain (\(\epsilon_T\)) is the natural logarithm of the ratio of instantaneous and original specimen lengths.
@@ -464,7 +444,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Factors Affecting Measured Material Properties
 Background context: Various factors can lead to scatter in measured material properties, including test method, specimen fabrication procedure variations, operator bias, apparatus calibration, and inhomogeneities or compositional variations.
@@ -499,7 +478,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Safe Stress in Design
 Background context: Safe stress (\(\sigma_w\)) is dependent on the yield strength and factor of safety. It ensures that a material can safely withstand applied loads without failing.
@@ -523,7 +501,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Instantaneous Specimen Length Parameters
 Background context explaining the different length parameters used in material testing. These parameters are essential for measuring deformation and strain during load application.
@@ -548,7 +525,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Strain Values
 Background context explaining the various strain values used in material testing, including transverse and longitudinal strains. These are fundamental to understanding the behavior of materials under stress.
@@ -574,7 +550,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### True Strain and True Stress
 Background context explaining the concepts of true strain and true stress, which are more accurate measures compared to engineering strain and stress in material testing.
@@ -598,7 +573,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Modulus of Elasticity (E)
 Background context explaining the modulus of elasticity, including its definition and significance in material testing.
@@ -623,7 +597,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Yield Strength
 Background context explaining the yield strength and its significance in material testing, including how it is measured and what it represents.

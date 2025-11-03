@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 13)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 7.7 Eschewing Duplicates with a Set. Problem. Solution. 7.8 Structuring Data in a Linked List
 
 ---
 
-**Rating: 8/10**
 
 #### Set Interface Overview
 Background context: The `Set` interface is a part of Java's Collection framework and provides an unordered collection with unique elements. It does not allow duplicate values, unlike the `List` which maintains order but allows duplicates.
@@ -133,7 +131,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linked List Implementation Issues
 Background context: The provided Java code snippet shows an incomplete implementation of a linked list. It includes methods for accessing elements and converting to arrays but does not use `java.util.LinkedList`. This example is intended to highlight common issues and differences from using the standard library's implementation.
@@ -222,7 +219,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Natural Ordering and Comparable Interface
 Background context explaining that the `Comparable` interface allows objects to be sorted based on their natural ordering, which should be consistent with the `equals()` method. The `compareTo()` method is used for comparison.

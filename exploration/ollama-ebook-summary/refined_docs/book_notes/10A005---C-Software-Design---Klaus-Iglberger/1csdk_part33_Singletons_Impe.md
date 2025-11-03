@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A005---C-Software-Design---Klaus-Iglberger_processed (Part 33)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Singletons Impede Changeability and Testability
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Singleton Pattern Overview
@@ -143,7 +141,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dependency Inversion Principle (DIP)
 Background context: The Dependency Inversion Principle states that high-level modules should not depend on low-level modules, but both should depend on abstractions. This principle helps ensure that the architecture is flexible and maintainable by decoupling concrete implementations from their clients.
@@ -258,7 +255,6 @@ public class Widget {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Dependency Inversion via `std::pmr::memory_resource` Abstraction
 Background context: The example illustrates how to use the `std::pmr::memory_resource` abstraction from C++17 to achieve dependency inversion, which helps manage global state and initialization order issues. This pattern is applied in a database scenario where the `Database` class acts as a Singleton but becomes an implementation detail.
@@ -366,7 +362,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Global State Management
 Background context: The text discusses managing global state, specifically through a `set_persistence_interface()` function. This function is used to set up persistence for various operations but poses limitations when called arbitrarily throughout testing.
@@ -462,7 +457,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Singleton Pattern Overview
@@ -617,7 +611,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### RAII in C++
 RAII stands for Resource Acquisition Is Initialization, which is a programming pattern used to manage resources like memory. The intent of RAII is not to reduce dependencies but to automate cleanup and encapsulate responsibility by ensuring that resources are acquired as soon as an object is created and released when the object is destroyed.

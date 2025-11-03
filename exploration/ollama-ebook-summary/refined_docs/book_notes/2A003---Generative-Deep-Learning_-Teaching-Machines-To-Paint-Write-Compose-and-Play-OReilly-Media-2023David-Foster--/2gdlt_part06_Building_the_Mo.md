@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A003---Generative-Deep-Learning_-Teaching-Machines-To-Paint-Write-Compose-and-Play-OReilly-Media-2023David-Foster--_processed (Part 6)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Building the Model
 
 ---
 
-**Rating: 8/10**
 
 #### Scaling Image Data
 Background context explaining the need to scale image data. The pixel values are usually between 0 and 255, but for neural networks, it is beneficial to have them scaled between 0 and 1.
@@ -26,7 +24,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### One-Hot Encoding of Labels
 Background context explaining why one-hot encoding is necessary for labels. The original labels are integers ranging from 0 to 9, but they need to be transformed into a binary format suitable for multi-class classification problems.
@@ -46,7 +43,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Building an MLP Model Sequentially
 Background context explaining how to define a simple multi-layer perceptron model using Keras. The Sequential model is used for stacking layers in a linear fashion.
@@ -75,7 +71,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Building an MLP Model Functionally
 Background context explaining the flexibility offered by Keras' functional API. While Sequential models are straightforward, they become limited when you need more complex architectures.
@@ -116,7 +111,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Input Layer
 The Input layer serves as an entry point into the network, specifying the shape of each data element to expect. The batch size is not explicitly defined since it can accept any number of images simultaneously.
@@ -134,7 +128,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Flatten Layer
 The Flatten layer is used to convert multidimensional input into a flat vector. This is necessary because subsequent layers like Dense require flattened inputs.
@@ -152,7 +145,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dense Layer
 The Dense layer is crucial in neural networks. It contains units that are fully connected to the previous layer, meaning each unit is connected to every unit from the previous layer.
@@ -170,7 +162,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Activation Functions: ReLU (Rectified Linear Unit)
 ReLU is defined such that it outputs 0 for negative inputs and equals the input for positive values. It helps in introducing non-linearity to the network.
@@ -195,7 +186,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Activation Functions: LeakyReLU
 LeakyReLU is similar to ReLU but returns a small negative value for inputs less than 0, ensuring the gradient is always non-zero.
@@ -222,7 +212,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Softmax Activation Function
 The softmax function converts logits into probabilities by exponentiating and normalizing them to sum up to 1, making it suitable for multi-class classification problems.
@@ -246,7 +235,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ReLU Activation Function
 Background context: The Rectified Linear Unit (ReLU) activation function is widely used in deep neural networks due to its simplicity and effectiveness. It helps encourage stable training by avoiding issues like vanishing gradients.
@@ -267,7 +255,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Leaky ReLU Activation Function
 Background context: The Leaky Rectified Linear Unit (LeakyReLU) is a modification of the standard ReLU function. It allows small, non-zero gradients for negative inputs to help mitigate the “dying ReLU” problem.
@@ -288,7 +275,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sigmoid Activation Function
 Background context: The sigmoid activation function is useful when you need to scale the output between 0 and 1. It is particularly applicable for binary classification problems.
@@ -309,7 +295,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Softmax Activation Function
 Background context: The softmax function normalizes the output to ensure that the total sum of the outputs is 1. It is commonly used in multiclass classification problems.
@@ -332,7 +317,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Dense Layer with Activation in Keras
 Background context: In Keras, you can define activation functions within or outside the `Dense` layer. This flexibility allows for more modular and readable code.
@@ -358,7 +342,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Summary in Keras
 Background context: The `model.summary()` method provides information about the shape and number of parameters in each layer of a neural network, helping to understand the architecture.
@@ -397,7 +380,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Dense Layer Parameters Calculation
@@ -424,7 +406,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Model Compilation with Optimizers and Loss Functions
 Background context explaining the role of model compilation, optimizers, and loss functions in training a neural network. The `compile` method sets up these components for the model.
@@ -450,7 +431,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loss Functions in Neural Networks
 Background context explaining different types of loss functions and their use cases. The three most commonly used loss functions are:
@@ -476,7 +456,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Optimizers and Their Use in Training
 Background context explaining the role of optimizers in training neural networks. Adam (Adaptive Moment Estimation) is a popular optimizer that adapts learning rates based on historical gradients.
@@ -502,7 +481,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Batch Size and Epochs
 Background context explaining the roles of batch size and epochs in training a neural network. The batch size determines how many observations are passed through the network at each step, while the number of epochs determines how many times the full dataset is shown to the network during training.
@@ -519,7 +497,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Steps Process
 Explanation on how the training process works, including initialization of weights and backpropagation to update weights after each batch. This involves passing batches of images through the network, calculating errors, and adjusting weights.
@@ -542,7 +519,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Epochs in Training
 Explanation on the concept of epochs and how they relate to the training process. An epoch is a complete pass through the entire dataset.
@@ -559,7 +535,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training Output
 Explanation on what Keras outputs during training, including loss and accuracy metrics.
@@ -582,7 +557,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Evaluating Model Performance
 Explanation on how to evaluate a model's performance using the test set in Keras.
@@ -601,7 +575,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Viewing Predictions
 Explanation on predicting outcomes using a trained neural network and viewing predictions for specific images.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A004---Hands-On-Large-Language-Models_processed (Part 14)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Adding a Special Lego Block
 
 ---
 
-**Rating: 8/10**
 
 #### Reranking Initial Topic Representations
 
@@ -127,7 +125,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Unsupervised Learning and Text Clustering
 Background context explaining how unsupervised learning methods, particularly clustering, are applied to textual data. This involves grouping similar texts together based on semantic content without prior labels.
@@ -203,7 +200,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Temperature Parameter Control
 Background context: The `temperature` parameter controls the randomness or creativity of the generated text. A higher temperature allows less probable tokens to be chosen, leading to more diverse outputs. Conversely, a lower temperature makes the output more deterministic.

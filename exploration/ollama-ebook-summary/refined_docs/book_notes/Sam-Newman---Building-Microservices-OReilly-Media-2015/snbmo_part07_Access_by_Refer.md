@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Sam-Newman---Building-Microservices-OReilly-Media-2015_processed (Part 7)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Access by Reference
 
 ---
 
-**Rating: 8/10**
 
 #### Services as State Machines
 Background context: The core idea of services being state machines is crucial for microservices architecture. Each service owns its bounded context and handles all logic related to that context, ensuring coherence. This approach helps manage state changes effectively by centralizing decision-making within the respective service.
@@ -41,7 +39,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reactive Extensions (Rx)
 Background context: Reactive extensions are a mechanism for composing and reacting to multiple calls in an observable manner. They help manage asynchronous operations and handle concurrent calls more efficiently, making the code easier to reason about.
@@ -72,7 +69,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### DRY and Code Reuse in Microservices
 Background context: The DRY principle, or don't repeat yourself, is crucial for maintaining a clean and maintainable codebase. In microservices, it's essential to avoid duplicating behavior and knowledge across services while ensuring that the system remains cohesive.
@@ -104,7 +100,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### DRY Principle in Microservices
 Background context explaining the importance of DRY (Don't Repeat Yourself) principle and how it leads to reusability. However, it also mentions potential pitfalls when used incorrectly in microservice architectures.
@@ -118,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Coupling in Microservices
 Explanation of the dangers of too much coupling between microservices, especially when shared common domain objects or libraries are used.
@@ -135,7 +129,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Client Libraries in Microservices
 Explanation of the pros and cons of creating client libraries for microservices, especially regarding logic leakage and technology constraints.
@@ -151,7 +144,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Client Library Approach and Its Pitfalls
 
@@ -173,7 +165,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Client Library vs. Client Code Independence
 
@@ -186,7 +177,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Passing Domain Entities by Reference
 
@@ -208,7 +198,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Managing Memory and State Consistency
 
@@ -235,7 +224,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Resource Referencing vs. Including Full Data
 In scenarios where services need to interact, it's often debated whether to send full data or just a reference. The decision hinges on performance, coupling, and the freshness of data.
@@ -267,7 +255,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Event-Based Collaboration and Entity Updates
 When using event-based collaboration, it's crucial to understand not only that something has happened but also what exactly changed. This approach requires careful handling of entity states.
@@ -307,7 +294,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Caching and Freshness of Data
 Caching is a common solution to reduce the load on services by storing recent data. However, managing cache freshness can be complex.
@@ -339,7 +325,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Reducing Coupling with Dumb Services
 In some architectures, dumb services are preferred over smart services that handle more logic. This can reduce coupling and simplify service interactions.
@@ -380,7 +365,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Defer Breaking Changes as Long as Possible
@@ -399,7 +383,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tolerant Reader Pattern
 Background context: A tolerant reader is designed to ignore changes it doesn't care about, allowing the service provider to modify internal structures without breaking external consumers. This pattern aligns with Martin Fowler's principle of building services that can tolerate changes in their input/output.
@@ -421,7 +404,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Postel's Law (Robustness Principle)
 Background context: This principle, also known as the robustness principle or "Be conservative in what you do, be liberal in what you accept from others," is a fundamental guideline for designing and interacting with systems that can tolerate changes. It applies particularly well to RESTful APIs where services might evolve over time.
@@ -448,7 +430,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Catch Breaking Changes Early
 Background context: It is essential to detect breaking changes early in a service's lifecycle. Consumer-driven contracts and running tests with client libraries can help identify these issues before they affect consumers.
@@ -460,7 +441,6 @@ To catch breaking changes early, use consumer-driven contracts as described in C
 
 ---
 
-**Rating: 8/10**
 
 #### Use Semantic Versioning
 Background context: Semantic versioning is a specification that helps clients understand what changes will be backward compatible with their applications. The version number format (MAJOR.MINOR.PATCH) provides clear expectations.
@@ -478,7 +458,6 @@ If our helpdesk application works with customer service v1.2.0, it can safely up
 
 ---
 
-**Rating: 8/10**
 
 #### Coexist Different Endpoints
 Background context: Coexisting different versions of endpoints allows gradual migration of consumers while maintaining the ability to release microservices independently.
@@ -490,7 +469,6 @@ To handle coexistence, deploy a new version of the service that exposes both old
 
 ---
 
-**Rating: 8/10**
 
 #### Transforming Requests for Coexisting Endpoints
 Background context: When coexisting different endpoint versions, a transformation layer can help manage transitions smoothly.
@@ -502,7 +480,6 @@ Transforming requests involves mapping older API calls to newer ones. For exampl
 
 ---
 
-**Rating: 8/10**
 
 #### URI vs Header for Routing Requests
 Background context: Deciding between using URIs or request headers for routing requests can impact design choices based on how clients interact with services.

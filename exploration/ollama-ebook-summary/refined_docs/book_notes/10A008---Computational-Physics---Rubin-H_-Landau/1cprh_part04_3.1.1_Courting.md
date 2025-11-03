@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 4)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 3.1.1 Courting Disaster Subtractive Cancelation. 3.1.2 Subtractive Cancelation Exercises
 
 ---
 
-**Rating: 8/10**
 
 #### Subtractive Cancelation and its Impact on Accuracy
 
@@ -38,7 +36,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Alternating Series Summation and Subtractive Cancelation
 
@@ -69,7 +66,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Summation of Series
 
@@ -122,7 +118,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Summation of Simple Series and Subtractive Cancelation
 
@@ -163,7 +158,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Error Propagation from Functions
 Background context: The basic rule of error propagation involves adding uncertainties when evaluating a function. For small errors, the relative change in the function's value can be approximated using its derivative.
@@ -184,7 +178,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Accumulation of Round-Off Errors
 Background context: When performing calculations with many steps, round-off errors can accumulate and be modeled as a random walk. The total distance \( R \) covered in \( N \) steps is approximately:
@@ -203,7 +196,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Convergence of Algorithms
 Background context: The performance of algorithms is crucial in computational physics. Both algorithmic errors (decreasing as a power law) and round-off errors (growing slowly but randomly) need to be considered.
@@ -222,7 +214,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Analyzing Numerical Integration Errors
 Background context: In numerical integration, such as Simpson's rule, understanding how errors behave is crucial to determine the number of points required for desired precision.
@@ -238,7 +229,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Example of Different Errors
 Background context: Analyzing both approximation and round-off errors can help in optimizing algorithms. For instance, if the approximation error is \( \epsilon_{app} = \frac{1}{N^2} \) and the round-off error is \( \epsilon_{ro} = \sqrt{N \epsilon_m} \), their sum determines the overall error.
@@ -269,7 +259,6 @@ These flashcards cover the key concepts from the provided text, each focusing on
 
 ---
 
-**Rating: 8/10**
 
 #### Double-Precision Calculation Error Estimation
 
@@ -283,7 +272,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Algorithmic Implementation for \(\sin(x)\)
 
@@ -313,7 +301,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Precision and Convergence of the Algorithm
 
@@ -327,7 +314,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Using Trigonometric Identities
 
@@ -341,7 +327,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Tolerance Level and Machine Precision
 

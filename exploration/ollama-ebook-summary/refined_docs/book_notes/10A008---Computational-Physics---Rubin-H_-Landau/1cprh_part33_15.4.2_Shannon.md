@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 33)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 15.4.2 Shannon Entropy. 15.5.2 PredatorPrey Chaos
 
 ---
 
-**Rating: 8/10**
 
 #### Lyapunov Exponent and Chaotic Behavior
 
@@ -42,7 +40,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Lotka–Volterra Model
 
@@ -75,7 +72,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Chaotic Behavior in Lotka–Volterra Model
 
@@ -106,7 +102,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Damped Oscillations and Equilibrium in LVM-II
 Background context: When the prey limitation is included, both populations exhibit damped oscillations around their equilibrium values. The phase-space plot spirals inward towards a single limit cycle with little variation in prey numbers as they approach the equilibrium state.
@@ -117,7 +112,6 @@ Both the prey and predator populations show damped oscillatory behavior as they 
 
 ---
 
-**Rating: 8/10**
 
 #### Lotka-Volterra Model - Cycles and Periodic Behavior
 
@@ -342,7 +336,6 @@ These periodic cycles ensure that neither species goes extinct while maintaining
 
 ---
 
-**Rating: 8/10**
 
 #### Numerical Simulation of Lotka-Volterra Model
 

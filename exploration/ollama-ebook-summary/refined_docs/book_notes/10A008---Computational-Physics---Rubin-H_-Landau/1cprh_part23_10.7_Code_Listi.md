@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 23)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 10.7 Code Listings
 
 ---
 
-**Rating: 8/10**
 
 #### Calculating the Covariance Matrix
 Background context: The covariance matrix is a key step in PCA. It measures how much each variable changes with respect to another.
@@ -27,7 +25,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Computing Unit Eigenvectors and Eigenvalues
 Background context: After calculating the covariance matrix, we compute its eigenvalues and eigenvectors. These are used to identify the principal components in the data.
@@ -49,7 +46,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Principal Components
 Background context: The eigenvector with the largest eigenvalue is considered the first principal component. It points in the direction of maximum variance in the data.
@@ -74,7 +70,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Training a Simple Network
 
@@ -106,7 +101,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Loss Function and Optimization for Neural Networks
 Background context explaining how loss functions are used to optimize neural networks, including the concept of minimizing the loss function. The provided formulas (11.7) illustrate that an extremum in the loss occurs when partial derivatives with respect to weights and biases are zero.
@@ -123,7 +117,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Partial Derivatives in Loss Function
 Background context explaining how partial derivatives are computed for weights and biases in the loss function. The provided formulas (11.8) through (11.13) illustrate the process of using the chain rule to compute these derivatives.

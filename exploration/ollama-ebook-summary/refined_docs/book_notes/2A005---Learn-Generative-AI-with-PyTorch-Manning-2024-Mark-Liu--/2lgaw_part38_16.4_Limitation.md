@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A005---Learn-Generative-AI-with-PyTorch-Manning-2024-Mark-Liu--_processed (Part 38)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 16.4 Limitations and ethical concerns of LLMs. 16.4.2 Ethical concerns for LLMs
 
 ---
 
-**Rating: 8/10**
 
 #### LangChain Library
 Background context: LangChain is a Python library designed to simplify the use of LLMs in various applications by abstracting away the complexities of interacting with different models.
@@ -26,7 +24,6 @@ print(response)
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations of LLMs - Lack of True Understanding and Reasoning
 Background context: Despite their impressive capabilities, LLMs still have limitations such as the lack of true understanding and reasoning. These models can generate coherent text but often make factual errors or fail to grasp complex concepts due to their inability to understand the content deeply.
@@ -40,7 +37,6 @@ Another example involves a LinkedIn article by David Johnston where LLMs, includ
 
 ---
 
-**Rating: 8/10**
 
 #### Ethical Concerns - Bias and Discrimination
 Background context: LLMs can perpetuate biases present in their training data, leading to stereotypical or discriminatory outputs. This is a significant ethical concern as these biases can reinforce harmful stereotypes.
@@ -54,7 +50,6 @@ For example, using a more diverse dataset that includes various demographics can
 
 ---
 
-**Rating: 8/10**
 
 #### Ethical Concerns - Misinformation and Manipulation
 Background context: LLMs’ ability to generate realistic text poses risks of misinformation, propaganda, and manipulation. This concern necessitates robust content moderation systems and responsible use guidelines.
@@ -68,7 +63,6 @@ For instance, implementing automatic fact-checking mechanisms within the LLM out
 
 ---
 
-**Rating: 8/10**
 
 #### Ethical Concerns - Privacy
 Background context: The vast datasets used to train LLMs raise privacy concerns, as sensitive information might be revealed in model outputs. Additionally, LLMs could be used maliciously in cyberattacks.

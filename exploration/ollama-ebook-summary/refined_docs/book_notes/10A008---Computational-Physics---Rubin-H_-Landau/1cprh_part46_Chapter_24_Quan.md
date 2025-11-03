@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 46)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Chapter 24 Quantum Wave Packets and EM Waves. 24.1 TimeDependent Schrodinger Equation
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Dependent Schrödinger Equation
 Background context: In this problem, we are dealing with an electron confined to a 1D region of atomic size. The electron starts with both defined momentum and position, making it necessary to solve the time-dependent Schrödinger equation rather than the time-independent eigenvalue problem.
@@ -50,7 +48,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time-Dependent Schrödinger Equation Solution
 Background context: The time-dependent Schrödinger equation is used to describe the evolution of a quantum system over time, especially when both position and momentum are defined. Unlike the time-independent eigenvalue problem, we need to solve for the wave function in terms of both space and time.
@@ -91,7 +88,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Wave Packet in Quantum Mechanics
 Background context: A wave packet is a quantum state that combines the properties of multiple plane waves. It can be represented as a superposition of Gaussian and plane wave components. In this problem, the electron starts with both defined momentum and position, making it a wave packet.
@@ -117,7 +113,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Confinement Potential in the Problem
 Background context: The problem involves an electron confined to a small region, similar in size to an atom. This confinement is achieved using a potential \(V(x)\), which needs to be known or defined for solving the Schrödinger equation.
@@ -139,7 +134,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Time Evolution of Wave Function
 Background context: The wave function \(\psi(x,t)\) must be evolved over time according to the time-dependent Schrödinger equation, which includes both spatial and temporal derivatives.
@@ -182,7 +176,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Split-Time Algorithm for Solving Schrödinger's Equation
 The time-dependent Schrödinger equation can be solved using both implicit (large-matrix) and explicit (leapfrog) methods. A significant challenge is to conserve probability, \(\int_{-\infty}^{+\infty} dx \psi^*(x,t)\psi(x,t)\), at a high level of precision throughout the computation.
@@ -226,7 +219,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Implementation of Split-Time Algorithm
 The program `HarmosAnimate.py` solves the motion of a wave packet inside a harmonic oscillator potential. Another program, `Slit.py`, is used to solve for the motion of a Gaussian wave packet passing through a slit.
@@ -281,7 +273,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Probability Conservation Check
 After running the program for about 5000 steps, we output the probability density after every 200 steps. We then make a surface plot of probability versus position versus time.
@@ -310,7 +301,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Special Schrödinger Algorithm for 2D Systems
 

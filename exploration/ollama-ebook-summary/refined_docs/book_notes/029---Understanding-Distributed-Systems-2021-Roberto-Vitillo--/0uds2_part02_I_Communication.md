@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** I Communication
 
 ---
 
-**Rating: 8/10**
 
 #### Link Layer
 Background context explaining the link layer. Network protocols like Ethernet or Wi-Fi operate at this layer, providing an interface to underlying network hardware. Switches at this layer forward Ethernet packets based on their destination MAC address.
@@ -187,7 +185,6 @@ public class ServiceAPI {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Reliability Mechanism in TCP
 Background context: In TCP, reliability is achieved through segment numbering and acknowledgment. Segments are numbered sequentially so that the receiver can detect missing or duplicate segments. Each transmitted segment must be acknowledged by the receiver to ensure its successful delivery. If an acknowledgment is not received within a certain time, a timer triggers retransmission.
@@ -326,7 +323,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Encryption in TLS
 Background context: Encryption is a crucial aspect of TLS, ensuring that data transmitted between a client and a server remains confidential. This confidentiality is achieved through the use of encryption keys negotiated during the initial handshake.

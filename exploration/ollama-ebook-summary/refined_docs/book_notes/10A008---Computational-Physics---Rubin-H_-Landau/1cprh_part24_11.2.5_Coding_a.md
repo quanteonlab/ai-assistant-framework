@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A008---Computational-Physics---Rubin-H_-Landau_processed (Part 24)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 11.2.5 Coding and Running A Simple Network. 11.3 A Graphical Deep Net
 
 ---
 
-**Rating: 8/10**
 
 #### Loss Function and Weight Adjustment
 Background context: In neural networks, the loss function measures how well the network is performing. The goal during training is to minimize this loss by adjusting the weights of the network. The provided example focuses on a single weight adjustment for the first hidden layer node \(h1\).
@@ -22,7 +20,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Weight Update Using Stochastic Gradient Descent
 Background context: To adjust weights in a neural network, we use optimization techniques like stochastic gradient descent. The formula for updating the weight is:
@@ -37,7 +34,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Plotting Loss Over Learning Trials
 Background context: After running a simple network, plotting the loss over learning trials helps visualize how the model is improving. The example provided shows that the initial loss was 0.164 and reduced to 0.002 after several iterations.
@@ -59,7 +55,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Calculating Mass Excess for Hydrogen Isotopes
 Background context: In nuclear physics, the mass excess of an element gives the difference between its actual atomic mass and the sum of its constituent masses. This can be calculated using TensorFlow to handle tensor operations.
@@ -98,7 +93,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Sparse Matrices and TensorFlow
 Background context: In machine learning, especially when dealing with large datasets, sparse matrices are often used to save memory. A sparse matrix is a matrix where most of the elements are zero. In such cases, using standard dense matrices can be inefficient due to excessive storage requirements.
@@ -145,7 +139,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Linear Fit to Hubble’s Data using TensorFlow
 Background context: In 1924, Edwin Hubble fit a straight line through his data on the recessional velocities of nebulae versus their distances from Earth. Using modern tools like TensorFlow, we can repeat this fitting process and see how well it aligns with historical methods.

@@ -1,12 +1,10 @@
 # High-Quality Flashcards: Pro-ASPNET-Core-7_processed (Part 2)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 1.1.4 Understanding the utility frameworks
 
 ---
 
-**Rating: 8/10**
 
 #### ASP.NET Core Design Patterns
 Background context: The author discusses design patterns, highlighting their importance and flexibility. He emphasizes that while these patterns are valuable, they should be adapted as necessary to fit specific project needs.
@@ -18,7 +16,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Razor Pages Overview
 Background context: The text explains that one drawback of the MVC framework is its extensive setup before an application starts producing content. However, Razor Pages aim to speed up development by combining code and content into self-contained pages.
@@ -30,7 +27,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Blazor
 Background context: The text explains that the rise of JavaScript client-side frameworks can be a challenge for C# developers. Blazor aims to bridge this gap by allowing C# to be used on the client side.
@@ -42,7 +38,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Two Versions of Blazor: Server vs. WebAssembly
 Background context: The text details two versions of Blazor—Blazor Server and Blazor WebAssembly. Blazor Server uses persistent HTTP connections to execute C# code on the server, while Blazor WebAssembly runs C# code directly in the browser.
@@ -54,7 +49,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Limitations of Both Versions of Blazor
 Background context: The text notes that neither version of Blazor is suitable for every project due to specific limitations.
@@ -68,7 +62,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 ---
 #### Entity Framework Core Overview
@@ -81,7 +74,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### ASP.NET Core Identity Overview
 ASP.NET Core Identity is a framework provided by Microsoft for handling authentication and authorization in ASP.NET Core applications. It provides mechanisms for user validation, role-based access control, and password management.
@@ -93,7 +85,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding the ASP.NET Core Platform
 The ASP.NET Core platform includes low-level features necessary for handling HTTP requests and responses, such as an integrated HTTP server, middleware components, URL routing, and the Razor view engine. These core functionalities support higher-level frameworks like ASP.NET Core MVC.
@@ -105,7 +96,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SignalR Overview
 SignalR is a library developed by Microsoft that simplifies adding real-time web functionality to applications. It enables bidirectional communication between the client and server over HTTP. While it isn’t covered in detail in this book, it’s worth noting as it provides the foundation for Blazor Server applications.
@@ -117,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Blazor Server Framework Overview
 Blazor is a framework for building interactive web UIs with .NET. The server framework in particular enables the execution of C# code on the server and pushes updates directly to the browser. While SignalR forms its foundation, it isn’t covered extensively here.
@@ -131,7 +120,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Prerequisites for Following Examples
 To understand and follow the examples in this book, you should have a basic understanding of web development concepts, familiarity with HTML and CSS, and knowledge of C#. No prior experience with client-side development like JavaScript is required as the focus is on server-side development using ASP.NET Core.

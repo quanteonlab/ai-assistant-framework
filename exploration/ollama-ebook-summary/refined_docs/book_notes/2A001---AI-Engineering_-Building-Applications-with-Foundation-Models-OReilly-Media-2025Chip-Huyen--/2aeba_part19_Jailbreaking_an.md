@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 2A001---AI-Engineering_-Building-Applications-with-Foundation-Models-OReilly-Media-2025Chip-Huyen--_processed (Part 19)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** Jailbreaking and Prompt Injection
 
 ---
 
-**Rating: 8/10**
 
 #### Direct Manual Prompt Hacking
 
@@ -19,7 +17,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Indirect Prompt Injection
 
@@ -32,7 +29,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### SQL Injection Vulnerability
 Background context: SQL injection is a technique used by attackers to insert malicious SQL statements into input fields on web pages. This can lead to unauthorized data access, deletion, or modification.
@@ -51,7 +47,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Privacy Violation via Language Models
 Background context: Privacy violations can occur when language models are trained on private or sensitive datasets. Attackers can extract this information through prompts designed to elicit specific responses.
@@ -69,7 +64,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Divergence Attack
 
@@ -101,7 +95,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Filtering PII Data Requests
 Background context: Filters can be implemented to block requests that ask for personally identifiable information (PII) data and responses containing such data.
@@ -114,7 +107,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Understanding Prompt Attacks and Defenses
 Background context: The text discusses various aspects of prompt attacks on AI systems, particularly language models. It highlights the importance of understanding potential vulnerabilities and implementing robust defenses at different levels—model, prompt, and system.
@@ -146,7 +138,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Instruction Hierarchy for Model-Level Defense
 Background context: The text introduces the concept of an instruction hierarchy to prioritize system prompts over user and model-generated outputs. This helps in mitigating prompt injection attacks by ensuring higher-priority instructions are followed.
@@ -177,7 +168,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### System-Level Defense Practices
 Background context: The text discusses various system-level practices to ensure safety, such as isolation of generated code and strict command approval mechanisms.

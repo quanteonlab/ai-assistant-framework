@@ -1,12 +1,10 @@
 # High-Quality Flashcards: 10A006---Java-Cookbook---Ian-F-Darwin_processed (Part 21)
 
-**Rating threshold:** >= 8/10
 
 **Starting Chapter:** 10.14 ReadingWriting Binary Data. Solution
 
 ---
 
-**Rating: 8/10**
 
 #### Avoid Mixing Line-Based Display and toString()
 Background context: The passage discusses a common pitfall where developers use `toString()` to mix formatting with line-based display, which can lead to issues across different platforms due to differences in newline handling. This is particularly relevant for programmers coming from languages like C, where the newline character `\n` has a specific meaning.
@@ -105,7 +103,6 @@ try (FileInputStream fis = new FileInputStream("binaryfile.dat")) {
 ??x
 ---
 
-**Rating: 8/10**
 
 #### getResource() and getResourceAsStream()
 Background context: The `getResource()` and `getResourceAsStream()` methods are used to retrieve resources from the classpath. These methods are particularly useful for accessing configuration files, templates, or other non-code assets that may be packaged with an application.
@@ -243,7 +240,6 @@ try {
 ```
 x??
 
-**Rating: 8/10**
 
 #### Checking File Properties
 Background context: This section describes how to use Java NIO.2 (java.nio.file) package to check various properties of files and directories on a filesystem.
@@ -422,7 +418,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Constructing a Path Object
 Background context: In Java, you can construct a `Path` object using various methods. One of these methods is `Path.of(String, String...)`, which constructs a path from given elements.
@@ -545,7 +540,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Path Construction and File Creation
 Background context: The provided text discusses how to construct a `Path` object using `Path.of()` method, which is used for file or directory paths. It also mentions that while constructing a `Path`, no changes are made to the disk; however, creating a file with `Files.createFile()` does modify the filesystem by actually creating a file.
@@ -633,7 +627,6 @@ x??
 
 ---
 
-**Rating: 8/10**
 
 #### Temporary File Management
 Background context explaining the concept of managing temporary files and their deletion. The `createTempFile()` method creates a temporary file that is automatically deleted when the JVM exits, unless an exception occurs or the program terminates abnormally.
