@@ -8,6 +8,28 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
+def safe_print(text: str) -> None:
+    """Safely print text, handling Unicode encoding errors on Windows."""
+    try:
+        print(text)
+    except UnicodeEncodeError:
+        # Fallback: encode to ASCII with error replacement
+        safe_text = text.encode('ascii', 'replace').decode('ascii')
+        print(safe_text)
+    except Exception as e:
+        # Ultimate fallback: print a simple message
+        print(f"[Print Error] Could not display text: {type(e).__name__}")
+
+def safe_format_title(title: str, max_length: int = 50) -> str:
+    """Safely format a title for display, handling Unicode issues."""
+    try:
+        if len(title) > max_length:
+            return title[:max_length] + "..."
+        return title
+    except Exception:
+        # Fallback for any string processing errors
+        return "[Title with special characters]"
+
 class Config:
     """Centralized access to configuration parameters."""
 
@@ -84,8 +106,8 @@ def make_api_request(api_base: str, endpoint: str, payload: Dict[str, Any]) -> O
     full_url = urljoin(api_base + "/", endpoint)
 
     try:
-        # Add 5 minute timeout per request to prevent hanging
-        response = requests.post(full_url, json=payload, timeout=300)
+        # Add 10 minute timeout per request to prevent hanging
+        response = requests.post(full_url, json=payload, timeout=600)
         response.raise_for_status()
         return response.json()
 
@@ -294,6 +316,44 @@ def sanitize_filename(text: str, max_length: int = 50) -> str:
 
     return text
 
+def generate_book_prefix(book_name: str, max_length: int = 5) -> str:
+    """
+    Generate a short prefix from book name for use in filenames.
+
+    Args:
+        book_name: Full book name
+        max_length: Maximum length of prefix (default: 5)
+
+    Returns:
+        A shortened prefix string
+    """
+    # Remove common words and artifacts
+    name = book_name.lower()
+    name = re.sub(r'[<>:"/\\|?*\-_]', ' ', name)
+
+    # Remove common book-related words
+    remove_words = ['the', 'an', 'a', 'and', 'or', 'for', 'to', 'of', 'in', 'processed', 'part']
+    words = name.split()
+    words = [w for w in words if w not in remove_words and len(w) > 0]
+
+    # Try to create meaningful abbreviation
+    if len(words) == 0:
+        # Fallback to first max_length chars of original name
+        return re.sub(r'[^a-z0-9]', '', book_name.lower())[:max_length]
+
+    if len(words) == 1:
+        # Single word - take first max_length chars
+        return words[0][:max_length]
+
+    # Multiple words - take first letter of each word, then fill with chars from first word
+    prefix = ''.join(w[0] for w in words[:max_length])
+
+    # If prefix is too short, add more letters from first word
+    if len(prefix) < max_length and len(words[0]) > 1:
+        prefix += words[0][1:max_length - len(prefix)]
+
+    return prefix[:max_length]
+
 def extract_individual_flashcards(flashcards_output: str) -> List[Tuple[str, str]]:
     """
     Extract individual flashcards from the combined output.
@@ -333,7 +393,7 @@ def process_csv_for_flashcards(input_file: str, config: Config, api_base: str,
                                min_length: int = 200, save_training_data: bool = True,
                                chapters_per_file: int = 3, max_text_size: int = 50000,
                                enable_rating: bool = False, rating_threshold: int = 8,
-                               rating_model: str = None):
+                               rating_model: str = None, relevancy_target: str = None):
     """
     Process CSV input files and generate flashcards split across multiple files.
 
@@ -363,18 +423,33 @@ def process_csv_for_flashcards(input_file: str, config: Config, api_base: str,
     # Get flashcard prompt
     flashcard_prompt = config.get_prompt('flashcards')
 
+    # Output files
+    base_name = os.path.splitext(os.path.basename(input_file))[0]
+
+    # Generate short book prefix (max 5 chars) for filenames
+    book_prefix = generate_book_prefix(base_name, max_length=5)
+
+    # Create book-specific folder with full book name
+    book_folder = os.path.join(output_dir, base_name)
+    os.makedirs(book_folder, exist_ok=True)
+    print(f"Book folder: {book_folder}")
+    print(f"Book prefix: '{book_prefix}' (for filenames)")
+
     # Get rating prompt and model if rating is enabled
     rating_prompt = None
     actual_rating_model = rating_model or model
     if enable_rating:
         rating_prompt = config.get_prompt('flashcard_rating')
-        high_quality_dir = os.path.join(output_dir, "high_quality")
-        os.makedirs(high_quality_dir, exist_ok=True)
-        print(f"Rating enabled: High-quality flashcards (>= {rating_threshold}/10) will be saved to: {high_quality_dir}")
+        # Add relevancy target context if provided
+        if relevancy_target:
+            rating_prompt = f"Focus area for this book: {relevancy_target}\n\n{rating_prompt}"
+        # High quality flashcards go in the same book folder with _hq_ prefix
+        print(f"Rating enabled: High-quality flashcards (>= {rating_threshold}/10) will be saved with 'hq_' prefix")
+        if relevancy_target:
+            print(f"Relevancy target: {relevancy_target}")
 
-    # Output files
-    base_name = os.path.splitext(os.path.basename(input_file))[0]
-    training_csv_file = os.path.join(output_dir, "flashcards_training_data.csv")
+    # Create book-specific training data file to prevent single massive CSV
+    training_csv_file = os.path.join(book_folder, f"{base_name}_training_data.csv")
 
     # Check if training CSV exists to determine if we need to write headers
     training_csv_exists = os.path.exists(training_csv_file)
@@ -419,17 +494,24 @@ def process_csv_for_flashcards(input_file: str, config: Config, api_base: str,
             hq_current_file_text_size = 0
 
             for idx, row in enumerate(reader):
-                text = next((row[key] for key in row if key.lower() == "text"), "").strip()
-                clean = sanitize_text(text)
-                title = next((row[key] for key in row if key.lower() == "title"), "").strip()
+                try:
+                    text = next((row[key] for key in row if key.lower() == "text"), "").strip()
+                    clean = sanitize_text(text)
+                    title = next((row[key] for key in row if key.lower() == "title"), "").strip()
 
-                if not clean:
-                    continue
+                    if not clean:
+                        continue
 
-                # Check if this section is relevant for flashcards
-                if not is_relevant_for_flashcards(title, text, min_text_length=min_length):
+                    # Check if this section is relevant for flashcards
+                    if not is_relevant_for_flashcards(title, text, min_text_length=min_length):
+                        skipped_count += 1
+                        safe_title = safe_format_title(title)
+                        safe_print(f"Skipping entry {idx + 1}: {safe_title} (non-relevant section)")
+                        continue
+                except Exception as entry_error:
+                    safe_print(f"[ERROR] Failed to process entry {idx + 1}: {type(entry_error).__name__}: {entry_error}")
+                    safe_print(f"Continuing with next entry...")
                     skipped_count += 1
-                    print(f"Skipping entry {idx + 1}: {title[:50]}... (non-relevant section)")
                     continue
 
                 # Detect new chapter (title changed from previous)
@@ -470,11 +552,11 @@ def process_csv_for_flashcards(input_file: str, config: Config, api_base: str,
                     if title not in chapters_in_current_file:
                         chapters_in_current_file.append(title)
 
-                    # Generate descriptive filename with first chapter
-                    first_chapter = sanitize_filename(chapters_in_current_file[0])
+                    # Generate descriptive filename with first chapter (max 15 chars)
+                    first_chapter = sanitize_filename(chapters_in_current_file[0], max_length=15)
                     current_output_file = os.path.join(
-                        output_dir,
-                        f"{base_name}_part{current_file_num:02d}_{first_chapter}.md"
+                        book_folder,
+                        f"{book_prefix}_part{current_file_num:02d}_{first_chapter}.md"
                     )
 
                     md_out = open(current_output_file, "w", encoding='utf-8')
@@ -482,140 +564,188 @@ def process_csv_for_flashcards(input_file: str, config: Config, api_base: str,
                     md_out.write(f"# Flashcards: {base_name} (Part {current_file_num})\n\n")
                     md_out.write(f"**Starting Chapter:** {chapters_in_current_file[0]}\n\n")
                     md_out.write("---\n\n")
-                    print(f"\nStarting new file: {os.path.basename(current_output_file)}")
+                    safe_print(f"\nStarting new file: {os.path.basename(current_output_file)}")
 
-                print(f"Processing entry {idx + 1}: {title[:50]}...")
-                processed_count += 1
+                try:
+                    safe_title = safe_format_title(title)
+                    safe_print(f"Processing entry {idx + 1}: {safe_title}...")
+                    processed_count += 1
 
-                # Track chapters for filename generation
-                if title not in chapters_in_current_file:
-                    chapters_in_current_file.append(title)
+                    # Track chapters for filename generation
+                    if title not in chapters_in_current_file:
+                        chapters_in_current_file.append(title)
 
-                # Accumulate text size
-                current_file_text_size += len(clean)
+                    # Accumulate text size
+                    current_file_text_size += len(clean)
 
-                # Generate flashcards
-                start_time = time.time()
-                flashcards = generate_flashcards(api_base, model, clean, flashcard_prompt)
-                elapsed_time = time.time() - start_time
+                    # Generate flashcards
+                    start_time = time.time()
+                    flashcards = generate_flashcards(api_base, model, clean, flashcard_prompt)
+                    elapsed_time = time.time() - start_time
 
-                if flashcards:
-                    # Write to markdown output file
-                    md_out.write(flashcards)
-                    md_out.write("\n\n")
+                    if flashcards:
+                        # Write to markdown output file
+                        md_out.write(flashcards)
+                        md_out.write("\n\n")
 
-                    if verbose:
-                        print(flashcards)
+                        if verbose:
+                            print(flashcards)
 
-                    print(f"  Generated in {elapsed_time:.2f}s")
+                        safe_print(f"  Generated in {elapsed_time:.2f}s")
 
-                    # Rate the flashcard if rating is enabled
-                    usefulness_rating = 0
-                    if enable_rating and rating_prompt:
-                        rating_start = time.time()
-                        usefulness_rating = rate_flashcard(api_base, actual_rating_model, flashcards, rating_prompt)
-                        rating_time = time.time() - rating_start
-                        print(f"  Usefulness rating: {usefulness_rating}/10 (rated in {rating_time:.2f}s)")
-
-                        # If rating meets threshold, save to high-quality folder
-                        if usefulness_rating >= rating_threshold:
-                            # Check if we need to start a new high-quality file
-                            should_create_new_hq_file = False
-                            is_new_hq_chapter = title not in hq_chapters_in_current_file
-
-                            if is_new_hq_chapter and len(hq_chapters_in_current_file) > 0:
-                                if len(hq_chapters_in_current_file) >= chapters_per_file:
-                                    should_create_new_hq_file = True
-                                elif hq_current_file_text_size >= max_text_size:
-                                    should_create_new_hq_file = True
-
-                            if should_create_new_hq_file:
-                                if hq_md_out:
-                                    hq_md_out.close()
-                                hq_current_file_num += 1
-                                hq_chapters_in_current_file = []
-                                hq_current_file_text_size = 0
-                                hq_md_out = None
-
-                            # Open new high-quality file if needed
-                            if hq_md_out is None:
-                                if title not in hq_chapters_in_current_file:
-                                    hq_chapters_in_current_file.append(title)
-
-                                first_chapter = sanitize_filename(hq_chapters_in_current_file[0])
-                                hq_current_output_file = os.path.join(
-                                    high_quality_dir,
-                                    f"{base_name}_hq_part{hq_current_file_num:02d}_{first_chapter}.md"
-                                )
-
-                                hq_md_out = open(hq_current_output_file, "w", encoding='utf-8')
-                                hq_md_out.write(f"# High-Quality Flashcards: {base_name} (Part {hq_current_file_num})\n\n")
-                                hq_md_out.write(f"**Rating threshold:** >= {rating_threshold}/10\n\n")
-                                hq_md_out.write(f"**Starting Chapter:** {hq_chapters_in_current_file[0]}\n\n")
-                                hq_md_out.write("---\n\n")
-
-                            # Track chapter
-                            if title not in hq_chapters_in_current_file:
-                                hq_chapters_in_current_file.append(title)
-
-                            # Write to high-quality file
-                            hq_md_out.write(f"**Rating: {usefulness_rating}/10**\n\n")
-                            hq_md_out.write(flashcards)
-                            hq_md_out.write("\n\n")
-                            hq_current_file_text_size += len(clean)
-
-                    # Save to training data CSV (one row per flashcard)
-                    if save_training_data and training_writer:
-                        timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-
-                        # Extract individual flashcards
+                        # Extract individual flashcards for rating and saving
                         individual_flashcards = extract_individual_flashcards(flashcards)
+                        safe_print(f"  Extracted {len(individual_flashcards)} individual flashcard(s)")
 
-                        # Create input excerpt (first 200 chars)
-                        input_excerpt = clean[:200] + '...' if len(clean) > 200 else clean
+                        # Save to training data CSV (one row per flashcard with individual ratings)
+                        if save_training_data and training_writer:
+                            timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+                            input_excerpt = clean[:200] + '...' if len(clean) > 200 else clean
 
-                        # Write one row per flashcard
-                        for flashcard_title, flashcard_content in individual_flashcards:
-                            row_data = [
-                                base_name,
-                                title,  # chapter_title
-                                flashcard_title,
-                                flashcard_content,
-                                len(flashcard_content),
-                                input_excerpt,
-                                model,
-                                timestamp,
-                                str(usefulness_rating) if enable_rating else ''
-                            ]
-                            training_writer.writerow(row_data)
-                else:
-                    print(f"  Failed to generate flashcards")
+                            # Process each flashcard individually
+                            for flashcard_title, flashcard_content in individual_flashcards:
+                                try:
+                                    # Rate each individual flashcard if rating is enabled
+                                    usefulness_rating = 0
+                                    if enable_rating and rating_prompt:
+                                        rating_start = time.time()
+                                        usefulness_rating = rate_flashcard(api_base, actual_rating_model, flashcard_content, rating_prompt)
+                                        rating_time = time.time() - rating_start
+                                        safe_title = safe_format_title(flashcard_title)
+                                        safe_print(f"    Flashcard '{safe_title}' rating: {usefulness_rating}/10 (rated in {rating_time:.2f}s)")
 
-                previous_title = title
+                                    # If rating meets threshold, save to high-quality folder
+                                    if usefulness_rating >= rating_threshold:
+                                        # Check if we need to start a new high-quality file
+                                        should_create_new_hq_file = False
+                                        is_new_hq_chapter = title not in hq_chapters_in_current_file
+
+                                        if is_new_hq_chapter and len(hq_chapters_in_current_file) > 0:
+                                            if len(hq_chapters_in_current_file) >= chapters_per_file:
+                                                should_create_new_hq_file = True
+                                            elif hq_current_file_text_size >= max_text_size:
+                                                should_create_new_hq_file = True
+
+                                        if should_create_new_hq_file:
+                                            if hq_md_out:
+                                                hq_md_out.close()
+                                            hq_current_file_num += 1
+                                            hq_chapters_in_current_file = []
+                                            hq_current_file_text_size = 0
+                                            hq_md_out = None
+
+                                        # Open new high-quality file if needed
+                                        try:
+                                            if hq_md_out is None:
+                                                if title not in hq_chapters_in_current_file:
+                                                    hq_chapters_in_current_file.append(title)
+
+                                                # Generate filename with shortened chapter name (max 15 chars)
+                                                first_chapter = sanitize_filename(hq_chapters_in_current_file[0], max_length=15)
+                                                hq_current_output_file = os.path.join(
+                                                    book_folder,
+                                                    f"{book_prefix}_hq_part{hq_current_file_num:02d}_{first_chapter}.md"
+                                                )
+
+                                                hq_md_out = open(hq_current_output_file, "w", encoding='utf-8')
+                                                hq_md_out.write(f"# High-Quality Flashcards: {base_name} (Part {hq_current_file_num})\n\n")
+                                                hq_md_out.write(f"**Rating threshold:** >= {rating_threshold}/10\n\n")
+                                                hq_md_out.write(f"**Starting Chapter:** {hq_chapters_in_current_file[0]}\n\n")
+                                                hq_md_out.write("---\n\n")
+
+                                            # Track chapter
+                                            if title not in hq_chapters_in_current_file:
+                                                hq_chapters_in_current_file.append(title)
+
+                                            # Write to high-quality file
+                                            hq_md_out.write(f"**Rating: {usefulness_rating}/10**\n\n")
+                                            hq_md_out.write(flashcard_content)
+                                            hq_md_out.write("\n\n---\n\n")
+                                            hq_current_file_text_size += len(flashcard_content)
+                                        except Exception as hq_error:
+                                            safe_print(f"  [WARNING] Failed to write high-quality flashcard: {hq_error}")
+                                            safe_print(f"  Continuing with next chapter...")
+                                            # Close file handle if open
+                                            if hq_md_out:
+                                                try:
+                                                    hq_md_out.close()
+                                                except:
+                                                    pass
+                                                hq_md_out = None
+
+                                    # Write one row per flashcard with its individual rating
+                                    row_data = [
+                                        base_name,
+                                        title,  # chapter_title
+                                        flashcard_title,
+                                        flashcard_content,
+                                        len(flashcard_content),
+                                        input_excerpt,
+                                        model,
+                                        timestamp,
+                                        str(usefulness_rating) if enable_rating else ''
+                                    ]
+                                    training_writer.writerow(row_data)
+                                    
+                                except Exception as flashcard_error:
+                                    safe_print(f"    [ERROR] Failed to process flashcard: {type(flashcard_error).__name__}: {flashcard_error}")
+                                    safe_print(f"    Continuing with next flashcard...")
+                                    # Still try to write the row with default values
+                                    try:
+                                        row_data = [
+                                            base_name,
+                                            title,  # chapter_title
+                                            safe_format_title(flashcard_title),
+                                            flashcard_content if 'flashcard_content' in locals() else '',
+                                            len(flashcard_content) if 'flashcard_content' in locals() else 0,
+                                            input_excerpt,
+                                            model,
+                                            timestamp,
+                                            '0'  # Default rating on error
+                                        ]
+                                        training_writer.writerow(row_data)
+                                    except Exception as write_error:
+                                        safe_print(f"    [ERROR] Could not write error row to CSV: {write_error}")
+                                        # Continue to next flashcard
+                    else:
+                        safe_print(f"  Failed to generate flashcards")
+
+                    # Update previous_title for next iteration
+                    previous_title = title
+                    
+                except Exception as generation_error:
+                    safe_print(f"[ERROR] Failed to process entry {idx + 1}: {type(generation_error).__name__}: {generation_error}")
+                    safe_print(f"Continuing with next entry...")
+                    # Close any open file handles and continue
+                    if md_out:
+                        try:
+                            md_out.flush()
+                        except:
+                            pass
 
             # Close the last file
             if md_out:
                 md_out.close()
-                print(f"\n  Completed file: {current_output_file}")
+                safe_print(f"\n  Completed file: {current_output_file}")
 
             # Close high-quality file if it was opened
             if hq_md_out:
                 hq_md_out.close()
-                print(f"\n  Completed high-quality file: {hq_current_output_file}")
+                safe_print(f"\n  Completed high-quality file: {hq_current_output_file}")
 
-            print(f"\n--- Summary ---")
-            print(f"Processed: {processed_count} sections")
-            print(f"Skipped: {skipped_count} non-relevant sections")
-            print(f"Files created: {current_file_num}")
+            safe_print(f"\n--- Summary ---")
+            safe_print(f"Processed: {processed_count} sections")
+            safe_print(f"Skipped: {skipped_count} non-relevant sections")
+            safe_print(f"Files created: {current_file_num}")
             if enable_rating:
-                print(f"High-quality files created: {hq_current_file_num if hq_md_out or hq_current_file_num > 1 else 0}")
+                safe_print(f"High-quality files created: {hq_current_file_num if hq_md_out or hq_current_file_num > 1 else 0}")
 
         finally:
             if training_csv_out:
                 training_csv_out.close()
 
     if save_training_data:
-        print(f"Training data appended to: {training_csv_file}")
+        safe_print(f"Training data appended to: {training_csv_file}")
 
 # -----------------------------
 # Help Display
@@ -670,11 +800,12 @@ def display_help():
     - Flashcards will be saved in markdown format
     - Each flashcard follows the format: #### Header, :p prompt, ??x answer x??
     - Flashcards are separated by ---
-    - Training data is saved to flashcards_training_data.csv (aggregable across runs)
+    - Training data is saved to <book_name>_training_data.csv (one per book)
 
     Training Data Export:
-    - By default, inputs and outputs are saved to flashcards_training_data.csv
-    - This CSV is aggregable - multiple runs append to the same file
+    - By default, inputs and outputs are saved to <book_name>_training_data.csv
+    - Each book gets its own training data file to prevent massive CSVs
+    - Multiple runs on the same book append to the same book-specific file
     - Useful for fine-tuning models in the future
     - Columns: source_file, title, input_text, input_length, flashcards_output,
                output_length, model, timestamp, elapsed_time_seconds
@@ -725,6 +856,7 @@ def main():
     parser.add_argument('--enable-rating', action='store_true', help='Enable flashcard usefulness rating (1-10 scale)')
     parser.add_argument('--rating-threshold', type=int, default=8, help='Minimum rating for high-quality folder (default: 8)')
     parser.add_argument('--rating-model', help='Model to use for rating (default: same as generation model)')
+    parser.add_argument('--relevancy-target', help='Target focus for relevancy evaluation (e.g., "programming techniques")')
     parser.add_argument('--no-training-data', action='store_true', help='Disable saving training data to CSV')
     parser.add_argument('--help', action='store_true', help='Show help message and exit')
     parser.add_argument('-v', '--verbose', action='store_true', help='Display flashcards as they are generated')
@@ -753,11 +885,12 @@ def main():
     enable_rating = args.enable_rating
     rating_threshold = args.rating_threshold
     rating_model = args.rating_model
+    relevancy_target = getattr(args, 'relevancy_target', None)
 
     # Process the CSV
     process_csv_for_flashcards(input_file, config, api_base, model, output_dir, args.verbose,
                               min_length, save_training_data, chapters_per_file, max_text_size,
-                              enable_rating, rating_threshold, rating_model)
+                              enable_rating, rating_threshold, rating_model, relevancy_target)
 
 if __name__ == "__main__":
     main()

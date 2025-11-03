@@ -66,20 +66,27 @@ prompts:
     prompt: |
       Rate the following flashcard on a scale of 1-10 based on how technically useful and important it is for long-term retention as an engineer or technical professional.
 
+      When evaluating relevancy, prioritize the focus area specified for this book (if provided above).
+      For example:
+      - If the focus is "programming techniques", prioritize practical coding patterns and best practices
+      - If the focus is "mathematical concepts", prioritize theorems, proofs, and problem-solving methods
+      - If the focus is "system design patterns", prioritize architecture and scalability concepts
+
       Consider:
       - Technical depth and accuracy
       - Practical applicability in real-world engineering
+      - Relevance to the book's focus area (if specified above)
       - Fundamental concepts vs trivial facts
       - Long-term value for career development
       - Core concepts that build foundational knowledge
 
       Rating scale:
-      10: Critical foundational concept every engineer must know
-      8-9: Highly valuable technical knowledge with broad applicability
-      6-7: Useful technical information worth remembering
+      10: Critical foundational concept every engineer must know, highly relevant to focus area
+      8-9: Highly valuable technical knowledge with broad applicability to the focus area
+      6-7: Useful technical information worth remembering, reasonably relevant
       4-5: Moderately useful, somewhat niche or context-specific
       2-3: Low technical value, trivial or overly specific
-      1: Not useful for technical professionals
+      1: Not useful for technical professionals, or completely irrelevant to focus area
 
       Respond with ONLY a single number from 1-10, nothing else.
 

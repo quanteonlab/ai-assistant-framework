@@ -7,7 +7,7 @@ This script orchestrates the processing of multiple books from an orchestration 
 It tracks status, supports resume capability, and processes books sequentially.
 
 Orchestration CSV Format:
-    book_filename,pipeline_type,status,started_at,completed_at,output_folder,error_message
+    book_filename,pipeline_type,status,started_at,completed_at,output_folder,error_message,relevancy_target
 
 Pipeline Types:
     - ONLYFLASHCARDS: Direct PDF/EPUB to flashcards
@@ -88,7 +88,7 @@ def print_status(text: str, status: str = "INFO"):
 class BookOrchestrator:
     """Orchestrates processing of multiple books from CSV."""
 
-    def __init__(self, orchestration_csv: str, input_folder: str = "in", timeout_hours: float = 2.0):
+    def __init__(self, orchestration_csv: str, input_folder: str = "in", timeout_hours: float = 4.0):
         """
         Initialize the orchestrator.
 
@@ -108,7 +108,8 @@ class BookOrchestrator:
             'started_at',
             'completed_at',
             'output_folder',
-            'error_message'
+            'error_message',
+            'relevancy_target'
         ]
 
         # Ensure input folder exists
@@ -201,7 +202,7 @@ class BookOrchestrator:
         else:
             print_status("No rows in PROCESSING state found", "INFO")
 
-    def process_book(self, book_filename: str, pipeline_type: str, output_folder: str) -> str:
+    def process_book(self, book_filename: str, pipeline_type: str, output_folder: str, relevancy_target: str = None) -> str:
         """
         Process a single book using the specified pipeline.
 
@@ -209,6 +210,7 @@ class BookOrchestrator:
             book_filename: Name of the PDF/EPUB file
             pipeline_type: Type of pipeline (ONLYFLASHCARDS, SUMMARIZEDFLASHCARDS)
             output_folder: Output directory for results
+            relevancy_target: Target focus for relevancy filtering (e.g., "programming techniques")
 
         Returns:
             Status string: 'COMPLETED', 'TIMEOUTCOMPLETED', or 'ERROR'
@@ -232,6 +234,9 @@ class BookOrchestrator:
                 str(book_path),
                 "-o", output_folder
             ]
+            # Add relevancy target if provided
+            if relevancy_target:
+                cmd.extend(["--relevancy-target", relevancy_target])
         elif pipeline_type == 'SUMMARIZEDFLASHCARDS':
             # Future: Add summary pipeline
             print_status("SUMMARIZEDFLASHCARDS pipeline not yet implemented", "ERROR")
@@ -371,6 +376,7 @@ class BookOrchestrator:
             book_filename = row['book_filename']
             pipeline_type = row.get('pipeline_type', 'ONLYFLASHCARDS').upper()
             output_folder = row.get('output_folder', 'flashcards')
+            relevancy_target = row.get('relevancy_target', '')
 
             print_header(f"Processing Book {processed_count + 1}/{total_count}")
 
@@ -379,7 +385,7 @@ class BookOrchestrator:
             self.update_row_status(rows, next_idx, 'PROCESSING', started_at=started_at)
 
             # Process the book
-            status = self.process_book(book_filename, pipeline_type, output_folder)
+            status = self.process_book(book_filename, pipeline_type, output_folder, relevancy_target)
 
             # Re-read rows (they may have changed during processing)
             rows = self.read_orchestration()
@@ -448,6 +454,7 @@ Orchestration CSV Format:
   completed_at: Timestamp when processing finished
   output_folder: Where to save output (default: flashcards)
   error_message: Error details if failed or timed out
+  relevancy_target: Target focus for relevancy evaluation (e.g., "programming techniques")
         """
     )
 
@@ -485,8 +492,8 @@ Orchestration CSV Format:
     parser.add_argument(
         '--timeout',
         type=float,
-        default=2.0,
-        help='Timeout in hours for each book processing (default: 2.0 hours)'
+        default=4.0,
+        help='Timeout in hours for each book processing (default: 4.0 hours)'
     )
 
     args = parser.parse_args()

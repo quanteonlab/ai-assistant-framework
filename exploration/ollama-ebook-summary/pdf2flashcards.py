@@ -200,6 +200,9 @@ def run_flashcard_generation(csv_file: str, output_dir: str, args: argparse.Name
     if args.no_training_data:
         cmd.append("--no-training-data")
 
+    if args.relevancy_target:
+        cmd.extend(["--relevancy-target", args.relevancy_target])
+
     try:
         # Run flashcard.py
         result = subprocess.run(
@@ -229,13 +232,14 @@ def run_flashcard_generation(csv_file: str, output_dir: str, args: argparse.Name
         print_error(f"Error running flashcard.py: {e}")
         return False
 
-def run_flashcard_rating(output_dir: str, args: argparse.Namespace) -> bool:
+def run_flashcard_rating(output_dir: str, args: argparse.Namespace, book_basename: str = None) -> bool:
     """
     Run rate_flashcards.py to rate unrated flashcards in the training data.
 
     Args:
-        output_dir: Directory containing flashcards_training_data.csv
+        output_dir: Directory containing training data CSV
         args: Command-line arguments
+        book_basename: Base name of the book (for finding the training data file)
 
     Returns:
         True if successful, False otherwise
@@ -250,11 +254,21 @@ def run_flashcard_rating(output_dir: str, args: argparse.Namespace) -> bool:
         print_warning(f"Rating script not found: {rating_script}")
         return False
 
-    # Check if training data exists
-    training_csv = Path(output_dir) / "flashcards_training_data.csv"
+    # Find training data file (try book-specific first, then fall back to generic)
+    if book_basename:
+        training_csv = Path(output_dir) / f"{book_basename}_training_data.csv"
+    else:
+        training_csv = Path(output_dir) / "flashcards_training_data.csv"
+
     if not training_csv.exists():
-        print_warning(f"Training data not found: {training_csv}")
-        return False
+        # Try to find any *_training_data.csv file in the directory
+        training_files = list(Path(output_dir).glob("*_training_data.csv"))
+        if training_files:
+            training_csv = training_files[0]
+            print_warning(f"Using found training data: {training_csv.name}")
+        else:
+            print_warning(f"Training data not found: {training_csv}")
+            return False
 
     # Build command
     cmd = [
@@ -274,6 +288,9 @@ def run_flashcard_rating(output_dir: str, args: argparse.Namespace) -> bool:
         cmd.append("-v")
 
     cmd.extend(["--output", output_dir])
+
+    if args.relevancy_target:
+        cmd.extend(["--relevancy-target", args.relevancy_target])
 
     try:
         # Run rate_flashcards.py
@@ -348,9 +365,9 @@ Output Structure:
   |-- mybook_part01_Chapter_One.md
   |-- mybook_part02_Chapter_Four.md
   |-- high_quality/                    # Flashcards rated >= threshold (default 8/10)
-  |   |-- mybook_part01.md             # Consolidated high-quality flashcards
-  |   +-- mybook_part02.md             # Split every 2000 lines
-  +-- flashcards_training_data.csv     # All flashcards with ratings (1-10)
+  |   |-- mybook_hq_part01.md          # Consolidated high-quality flashcards
+  |   +-- mybook_hq_part02.md          # Split every 2000 lines
+  +-- mybook_training_data.csv         # All flashcards with ratings (1-10)
         """
     )
 
@@ -380,6 +397,8 @@ Output Structure:
                        help='Minimum rating for high-quality folder (default: 8)')
     parser.add_argument('--rating-model',
                        help='Model to use for rating (default: same as generation model)')
+    parser.add_argument('--relevancy-target',
+                       help='Target focus for relevancy evaluation (e.g., "programming techniques")')
 
     # Post-processing rating options (enabled by default)
     parser.add_argument('--disable-post-rating', action='store_false', dest='enable_post_rating', default=True,
@@ -434,9 +453,12 @@ Output Structure:
         print_error("Failed to generate flashcards")
         sys.exit(1)
 
+    # Extract book name for training data file reference
+    book_basename = os.path.splitext(os.path.basename(csv_file))[0]
+
     # Step 3: Rate unrated flashcards (optional)
     if args.enable_post_rating:
-        rating_success = run_flashcard_rating(args.output, args)
+        rating_success = run_flashcard_rating(args.output, args, book_basename)
         if not rating_success:
             print_warning("Flashcard rating step had issues, but continuing...")
 
@@ -448,11 +470,12 @@ Output Structure:
 
     # Final summary
     print_header("Pipeline Complete!")
+
     print(f"[OK] Input: {args.input_file}")
     print(f"[OK] Output: {args.output}/")
     if args.enable_rating or args.enable_post_rating:
         print(f"[OK] High-quality flashcards (>={args.rating_threshold}/10): {args.output}/high_quality/")
-    print(f"[OK] Training data: {args.output}/flashcards_training_data.csv")
+    print(f"[OK] Training data: {args.output}/{book_basename}_training_data.csv")
     print()
 
 if __name__ == "__main__":

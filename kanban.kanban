@@ -5,28 +5,10 @@
       "title": "TODO",
       "cards": [
         {
-          "id": "6db4e349-2785-4e63-8d6b-22f51f4b6733",
-          "listId": "17d897d3-c0e0-4b20-903d-f55876465ae0",
-          "title": "Add the following premiere books",
-          "description": "Angular\n\nMicrservices\n\n",
-          "labels": [],
-          "checkboxes": [],
-          "comments": []
-        },
-        {
           "id": "76bb8763-29f2-4179-bc49-72aa1dce22e4",
           "listId": "17d897d3-c0e0-4b20-903d-f55876465ae0",
-          "title": "Different mdels",
+          "title": "Models Modificationa and Optimization",
           "description": "Support for different models for flashcards and book summaries",
-          "labels": [],
-          "checkboxes": [],
-          "comments": []
-        },
-        {
-          "id": "f212de24-1df6-455f-b4da-c24a95d485be",
-          "listId": "17d897d3-c0e0-4b20-903d-f55876465ae0",
-          "title": "Cleanup Repository",
-          "description": "There is bunch of useless files that are not being used or have any purpose show them to me for removal consideration",
           "labels": [],
           "checkboxes": [],
           "comments": []
@@ -38,8 +20,57 @@
       "title": "Doing",
       "cards": [
         {
-          "id": "d4f4f9df-3f42-4991-91f1-cda462b95343",
+          "id": "7b3690da-3c25-4d6e-ac71-2296f252348e",
           "listId": "0a9895c8-1a30-4fc3-b2c3-63e119d8c8e3",
+          "title": "Orchestration Improvements",
+          "description": "Automated target for orchestration\nThena lso have more status to refer:\nPENDING_COMPLETE: Completes",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        }
+      ]
+    },
+    {
+      "id": "11ee3eed-919c-4888-b219-3be98d9e930c",
+      "title": "Done",
+      "cards": [
+        {
+          "id": "f212de24-1df6-455f-b4da-c24a95d485be",
+          "listId": "11ee3eed-919c-4888-b219-3be98d9e930c",
+          "title": "Cleanup Repository",
+          "description": "There is bunch of useless files that are not being used or have any purpose show them to me for removal consideration and then remove exclude in and out files.\n\nReorganize the books into properly, Point straight from mastery to here. Remove from the book?\n\nalso reorganize and move flashcards/high_quality into inside of root folder like this automated_docs /book_notes, keep flashcards there\n(automated_docs as a new folder)\n\n",
+          "labels": [],
+          "checkboxes": [
+            {
+              "id": "9ba76128-15c9-4130-9857-ef10d0669309",
+              "title": "clean overall architecture",
+              "checked": true
+            },
+            {
+              "id": "d4d81578-07a8-4944-ba2d-0306f98d7c77",
+              "title": "ensre code removal",
+              "checked": true
+            },
+            {
+              "id": "f97c25ef-4e2a-4c81-8e08-5e89b629e94a",
+              "title": "Refactor books for obsidian",
+              "checked": true
+            }
+          ],
+          "comments": []
+        },
+        {
+          "id": "6db4e349-2785-4e63-8d6b-22f51f4b6733",
+          "listId": "11ee3eed-919c-4888-b219-3be98d9e930c",
+          "title": "Add the following premiere books",
+          "description": "Angular\n\nMicrservices\n\n",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "d4f4f9df-3f42-4991-91f1-cda462b95343",
+          "listId": "11ee3eed-919c-4888-b219-3be98d9e930c",
           "title": "Create an Orchestration Csv",
           "description": "On the orchestration the idea is to have the different books, and keep track of what had been analyzed and what not. the program should go one by one completing all the books listed on the csv, and keeping track and updating it statuses\n\nThe target pipeline should be marked e.g. SUMMARIZEDFLASHCARDS means book summary  + flashcard process. or ONLYFLASHCARDS means straight flashcards from the book support\nKeep track as well as the csv of the row is doing the prcessing, so that it doesnt do a double job on that csv row. and when broken and started again, continues from last row",
           "labels": [],
@@ -50,13 +81,7 @@
               "comment": "On the orchestration the idea is to have the different books, and keep track of what had been analyzed and what not.\n"
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "11ee3eed-919c-4888-b219-3be98d9e930c",
-      "title": "Done",
-      "cards": [
+        },
         {
           "id": "9260a0a1-a77b-4503-b449-0ce8464b0ea0",
           "listId": "11ee3eed-919c-4888-b219-3be98d9e930c",

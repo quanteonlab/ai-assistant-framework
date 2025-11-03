@@ -15,7 +15,85 @@ Usage:
 import csv
 import sys
 import argparse
+import os
+import re
+import requests
 from pathlib import Path
+
+
+def generate_relevancy_target(book_filename: str, api_base: str = None, model: str = None) -> str:
+    """
+    Generate a relevancy target description for a book using local LLM.
+
+    Args:
+        book_filename: Name of the book file
+        api_base: Ollama API base URL (default from env or http://localhost:11434/api)
+        model: Model to use (default from env or qwen2.5:latest)
+
+    Returns:
+        String description without ending punctuation
+    """
+    if api_base is None:
+        api_base = os.getenv('OLLAMA_API_BASE', 'http://localhost:11434/api')
+
+    if model is None:
+        model = os.getenv('OLLAMA_MODEL', 'qwen2.5:latest')
+
+    # Extract book title from filename (remove extension and clean up)
+    book_title = Path(book_filename).stem
+    # Clean up common patterns in filenames
+    book_title = re.sub(r'^\d+[A-Z]?\d*\s*-+\s*', '', book_title)  # Remove prefixes like "2A001 -"
+    book_title = re.sub(r'_', ' ', book_title)  # Replace underscores with spaces
+
+    prompt = f"""Based on the book title: "{book_title}"
+
+Generate a brief relevancy target description (5-10 words) that describes the main technical focus areas or topics this book covers.
+
+Focus on: key technical concepts, programming techniques, methodologies, or domain-specific knowledge.
+
+Format: Return ONLY the description without any punctuation at the end (no periods, commas, etc.)
+
+Examples:
+- "LLM implementation techniques and practical applications"
+- "Distributed systems concepts and design patterns"
+- "Python programming techniques and idioms"
+
+Description:"""
+
+    try:
+        # Make request to Ollama API
+        response = requests.post(
+            f"{api_base}/generate",
+            json={
+                "model": model,
+                "prompt": prompt,
+                "stream": False
+            },
+            timeout=30
+        )
+
+        if response.status_code == 200:
+            result = response.json()
+            relevancy_target = result.get('response', '').strip()
+
+            # Remove any trailing punctuation
+            relevancy_target = re.sub(r'[.,;:!?]+$', '', relevancy_target)
+
+            # If response is too long, truncate
+            if len(relevancy_target) > 100:
+                relevancy_target = ' '.join(relevancy_target.split()[:10])
+
+            return relevancy_target if relevancy_target else ''
+        else:
+            print(f"[WARN] LLM API returned status {response.status_code}, skipping relevancy generation")
+            return ''
+
+    except requests.RequestException as e:
+        print(f"[WARN] Failed to generate relevancy target: {e}")
+        return ''
+    except Exception as e:
+        print(f"[WARN] Unexpected error generating relevancy target: {e}")
+        return ''
 
 
 def get_existing_books(orchestration_csv: str):
@@ -32,12 +110,12 @@ def get_existing_books(orchestration_csv: str):
     return existing_books
 
 
-def add_book_to_orchestration(book_filename: str, pipeline_type: str, output_folder: str, orchestration_csv: str, force: bool = False):
+def add_book_to_orchestration(book_filename: str, pipeline_type: str, output_folder: str, orchestration_csv: str, force: bool = False, auto_generate_relevancy: bool = True):
     """Add a book to the orchestration CSV."""
 
     # Read existing rows
     rows = []
-    fieldnames = ['book_filename', 'pipeline_type', 'status', 'started_at', 'completed_at', 'output_folder', 'error_message']
+    fieldnames = ['book_filename', 'pipeline_type', 'status', 'started_at', 'completed_at', 'output_folder', 'error_message', 'relevancy_target']
 
     csv_path = Path(orchestration_csv)
     if csv_path.exists():
@@ -58,11 +136,28 @@ def add_book_to_orchestration(book_filename: str, pipeline_type: str, output_fol
                 # Update existing row
                 rows[idx]['pipeline_type'] = pipeline_type
                 rows[idx]['output_folder'] = output_folder
+
+                # Generate relevancy target if empty and auto-generation is enabled
+                if auto_generate_relevancy and not rows[idx].get('relevancy_target', '').strip():
+                    print(f"[INFO] Generating relevancy target for: {book_filename}")
+                    relevancy = generate_relevancy_target(book_filename)
+                    if relevancy:
+                        rows[idx]['relevancy_target'] = relevancy
+                        print(f"  Relevancy: {relevancy}")
+
                 print(f"[UPDATE] Updated: {book_filename}")
                 break
 
     # Add new book if not exists
     if not book_exists:
+        # Generate relevancy target if auto-generation is enabled
+        relevancy_target = ''
+        if auto_generate_relevancy:
+            print(f"[INFO] Generating relevancy target for: {book_filename}")
+            relevancy_target = generate_relevancy_target(book_filename)
+            if relevancy_target:
+                print(f"  Relevancy: {relevancy_target}")
+
         new_row = {
             'book_filename': book_filename,
             'pipeline_type': pipeline_type,
@@ -70,7 +165,8 @@ def add_book_to_orchestration(book_filename: str, pipeline_type: str, output_fol
             'started_at': '',
             'completed_at': '',
             'output_folder': output_folder,
-            'error_message': ''
+            'error_message': '',
+            'relevancy_target': relevancy_target
         }
         rows.append(new_row)
         print(f"[ADD] Added: {book_filename}")
@@ -87,7 +183,7 @@ def add_book_to_orchestration(book_filename: str, pipeline_type: str, output_fol
     return True
 
 
-def scan_and_add_books(input_folder: str, pipeline_type: str, output_folder: str, orchestration_csv: str):
+def scan_and_add_books(input_folder: str, pipeline_type: str, output_folder: str, orchestration_csv: str, auto_generate_relevancy: bool = True):
     """
     Scan the input folder for PDF/EPUB files and add any that aren't in orchestration CSV.
 
@@ -96,6 +192,7 @@ def scan_and_add_books(input_folder: str, pipeline_type: str, output_folder: str
         pipeline_type: Default pipeline type
         output_folder: Default output folder
         orchestration_csv: Path to orchestration CSV
+        auto_generate_relevancy: Whether to automatically generate relevancy targets
 
     Returns:
         Number of books added
@@ -132,7 +229,7 @@ def scan_and_add_books(input_folder: str, pipeline_type: str, output_folder: str
             continue
 
         # Add the book
-        if add_book_to_orchestration(book_filename, pipeline_type, output_folder, orchestration_csv, force=False):
+        if add_book_to_orchestration(book_filename, pipeline_type, output_folder, orchestration_csv, force=False, auto_generate_relevancy=auto_generate_relevancy):
             added_count += 1
 
     return added_count
@@ -210,7 +307,16 @@ Examples:
         help='Force update existing books'
     )
 
+    parser.add_argument(
+        '--no-auto-relevancy',
+        action='store_true',
+        help='Disable automatic relevancy target generation (LLM will not be called)'
+    )
+
     args = parser.parse_args()
+
+    # Determine if auto-relevancy generation should be enabled
+    auto_generate_relevancy = not args.no_auto_relevancy
 
     # Handle scan mode
     if args.scan:
@@ -219,7 +325,8 @@ Examples:
             args.input_folder,
             args.pipeline,
             args.output,
-            args.orchestration
+            args.orchestration,
+            auto_generate_relevancy
         )
         print(f"\n[OK] Added {added_count} new books to orchestration")
         return
@@ -232,7 +339,7 @@ Examples:
 
     added_count = 0
     for book in args.books:
-        if add_book_to_orchestration(book, args.pipeline, args.output, args.orchestration, args.force):
+        if add_book_to_orchestration(book, args.pipeline, args.output, args.orchestration, args.force, auto_generate_relevancy):
             added_count += 1
 
     print(f"\n[OK] Added {added_count}/{len(args.books)} books to orchestration")
