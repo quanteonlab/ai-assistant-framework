@@ -393,7 +393,8 @@ def process_csv_for_flashcards(input_file: str, config: Config, api_base: str,
                                min_length: int = 200, save_training_data: bool = True,
                                chapters_per_file: int = 3, max_text_size: int = 50000,
                                enable_rating: bool = False, rating_threshold: int = 8,
-                               rating_model: str = None, relevancy_target: str = None):
+                               rating_model: str = None, relevancy_target: str = None,
+                               start_from_part: int = None):
     """
     Process CSV input files and generate flashcards split across multiple files.
 
@@ -415,6 +416,8 @@ def process_csv_for_flashcards(input_file: str, config: Config, api_base: str,
         enable_rating: Enable flashcard rating (default: False)
         rating_threshold: Minimum rating for high-quality folder (default: 8)
         rating_model: Model to use for rating (default: same as generation model)
+        relevancy_target: Target focus for relevancy evaluation
+        start_from_part: Resume from this part number (for timeout recovery)
     """
 
     # Create output directory if it doesn't exist
@@ -493,6 +496,17 @@ def process_csv_for_flashcards(input_file: str, config: Config, api_base: str,
             hq_chapters_in_current_file = []
             hq_current_file_text_size = 0
 
+            # Handle resume from specific part (timeout recovery)
+            if start_from_part is not None and start_from_part > 1:
+                current_file_num = start_from_part
+                hq_current_file_num = start_from_part
+                print(f"\n{'='*70}")
+                print(f"  RESUMING FROM PART {start_from_part}")
+                print(f"{'='*70}")
+                print(f"Skipping already processed parts 1 through {start_from_part - 1}")
+                print(f"Starting generation from part {start_from_part}")
+                print()
+
             for idx, row in enumerate(reader):
                 try:
                     text = next((row[key] for key in row if key.lower() == "text"), "").strip()
@@ -545,6 +559,14 @@ def process_csv_for_flashcards(input_file: str, config: Config, api_base: str,
                     chapters_in_current_file = []
                     current_file_text_size = 0
                     md_out = None
+
+                # Skip processing if resuming and haven't reached start part yet
+                if start_from_part is not None and current_file_num < start_from_part:
+                    # Just count chapters to maintain proper file numbering
+                    if is_new_chapter:
+                        previous_title = title
+                    skipped_count += 1
+                    continue
 
                 # Open new file if needed
                 if md_out is None:
@@ -857,6 +879,7 @@ def main():
     parser.add_argument('--rating-threshold', type=int, default=8, help='Minimum rating for high-quality folder (default: 8)')
     parser.add_argument('--rating-model', help='Model to use for rating (default: same as generation model)')
     parser.add_argument('--relevancy-target', help='Target focus for relevancy evaluation (e.g., "programming techniques")')
+    parser.add_argument('--start-from-part', type=int, help='Resume from specific part number (for timeout recovery)')
     parser.add_argument('--no-training-data', action='store_true', help='Disable saving training data to CSV')
     parser.add_argument('--help', action='store_true', help='Show help message and exit')
     parser.add_argument('-v', '--verbose', action='store_true', help='Display flashcards as they are generated')
@@ -886,11 +909,13 @@ def main():
     rating_threshold = args.rating_threshold
     rating_model = args.rating_model
     relevancy_target = getattr(args, 'relevancy_target', None)
+    start_from_part = getattr(args, 'start_from_part', None)
 
     # Process the CSV
     process_csv_for_flashcards(input_file, config, api_base, model, output_dir, args.verbose,
                               min_length, save_training_data, chapters_per_file, max_text_size,
-                              enable_rating, rating_threshold, rating_model, relevancy_target)
+                              enable_rating, rating_threshold, rating_model, relevancy_target,
+                              start_from_part)
 
 if __name__ == "__main__":
     main()

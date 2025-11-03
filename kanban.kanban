@@ -23,9 +23,20 @@
           "id": "7b3690da-3c25-4d6e-ac71-2296f252348e",
           "listId": "0a9895c8-1a30-4fc3-b2c3-63e119d8c8e3",
           "title": "Orchestration Improvements",
-          "description": "Automated target for orchestration\nThena lso have more status to refer:\nPENDING_COMPLETE: Completes",
+          "description": "Automated target for orchestration\nThena also have more status to refer:\nCOMPLETE_TIMEOUT: continues from the timeout, read and infer which is the last flashcard markdown chapter to infer which is the last chapter that created flashcards for. (form the total remainin that can be infered from out/[bookname] and continues creating flashcards from there\n\n\nRedo high quality cards. ",
           "labels": [],
-          "checkboxes": [],
+          "checkboxes": [
+            {
+              "id": "bbd73372-f374-4ee8-87e6-6d41b5115e3a",
+              "title": "Automated Target Orchestration",
+              "checked": false
+            },
+            {
+              "id": "2e6f975f-09aa-4d9d-9c29-acd2b1dc3b9e",
+              "title": "Complete Timeoutfeature",
+              "checked": false
+            }
+          ],
           "comments": []
         }
       ]
