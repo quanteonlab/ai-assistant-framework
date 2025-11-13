@@ -109,7 +109,7 @@ x??
 Background context: The Mersenne Twister pseudorandom number generator algorithm was designed to improve upon the linear congruential algorithm by having a very long period, high-order dimensional equidistribution, negligible serial correlation, and passing numerous statistical randomness tests. It is faster than many other generators and has been implemented in various forms.
 
 Wikipedia provides several benefits of Mersenne Twister:
-1. A colossal period of \(2^{19937} - 1\).
+1. A colossal period of $2^{19937} - 1$.
 2. High-dimensional equidistribution.
 3. Passes stringent Diehard tests.
 4. Fast implementation available, including SIMD optimizations.
@@ -135,7 +135,7 @@ public class MersenneTwister {
 }
 ```
 Key features:
-- Extremely long period (\(2^{19937} - 1\)).
+- Extremely long period ($2^{19937} - 1$).
 - High-dimensional equidistribution.
 - Passes stringent Diehard tests.
 - Fast implementation available, including SIMD optimizations.
@@ -890,7 +890,7 @@ Background context: Efficient memory management is crucial for optimizing perfor
 
 :p What is a way to save memory by utilizing free list pointers inside free memory blocks?
 ??x
-By placing free list pointers directly within the free memory blocks, we can reduce overhead. If each element is smaller than a pointer, 16-bit indices (for example) can replace full pointer values in a linked list if the pool contains no more than \(2^{16} = 65,536\) elements.
+By placing free list pointers directly within the free memory blocks, we can reduce overhead. If each element is smaller than a pointer, 16-bit indices (for example) can replace full pointer values in a linked list if the pool contains no more than $2^{16} = 65,536$ elements.
 ??x
 
 ---
@@ -968,7 +968,7 @@ These flashcards cover key aspects of memory management and alignment techniques
 #### Address Alignment and Masking
 Background context: In memory management, aligning addresses to specific boundaries (e.g., 16-byte) is crucial for optimization purposes. The alignment process involves shifting an address up by a certain number of bytes and then stripping off the least-significant bits. This is achieved using bitwise operations.
 
-Formula: To align an address `addr` to an L-byte boundary, you shift it up by \( \log_2(L) \) bits and then mask off those bits with a bitmask that has 1s in the least-significant \( \log_2(L) \) positions.
+Formula: To align an address `addr` to an L-byte boundary, you shift it up by $\log_2(L)$ bits and then mask off those bits with a bitmask that has 1s in the least-significant $\log_2(L)$ positions.
 
 Example:
 ```c
@@ -984,7 +984,7 @@ addr &= mask;              // addr now aligned to a 16-byte boundary
 
 :p What is the formula for aligning an address to a specific L-byte boundary?
 ??x
-The formula involves shifting the address by \( \log_2(L) \) bits and then using a bitmask with the least-significant \( \log_2(L) \) bits set to 0. This can be achieved in C++/C like so:
+The formula involves shifting the address by $\log_2(L)$ bits and then using a bitmask with the least-significant $\log_2(L)$ bits set to 0. This can be achieved in C++/C like so:
 ```c++
 size_t addr = /* some address */;
 size_t L = 16; // Desired alignment

@@ -89,9 +89,9 @@ async function getData() {
     let response = await fetch("/api/people");
     if (response.ok) {
         let jsonData = await response.json();
-        displayData(...jsonData.map(item => `${item.surname}, ${item.firstname}`));
+        displayData(...jsonData.map(item => `${item.surname},${item.firstname}`));
     } else {
-        displayData(`Error: ${response.status}: ${response.statusText}`);
+        displayData(`Error: ${response.status}:${response.statusText}`);
     }
 }
 
@@ -198,7 +198,7 @@ async function login() {
     if (response.ok) {
         displayData("Logged in");
     } else {
-        displayData(`Error: ${response.status}: ${response.statusText}`);
+        displayData(`Error: ${response.status}:${response.statusText}`);
     }
 }
 ```
@@ -218,9 +218,9 @@ async function getData() {
     let response = await fetch("/api/people");
     if (response.ok) {
         let jsonData = await response.json();
-        displayData(...jsonData.map(item => `${item.surname}, ${item.firstname}`));
+        displayData(...jsonData.map(item => `${item.surname},${item.firstname}`));
     } else {
-        displayData(`Error: ${response.status}: ${response.statusText}`);
+        displayData(`Error: ${response.status}:${response.statusText}`);
     }
 }
 
@@ -229,7 +229,7 @@ async function logout() {
     if (response.ok) {
         displayData("Logged out");
     } else {
-        displayData(`Error: ${response.status}: ${response.statusText}`);
+        displayData(`Error: ${response.status}:${response.statusText}`);
     }
 }
 ```

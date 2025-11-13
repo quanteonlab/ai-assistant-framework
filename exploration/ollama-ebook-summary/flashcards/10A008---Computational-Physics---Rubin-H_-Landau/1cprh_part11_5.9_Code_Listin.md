@@ -199,22 +199,19 @@ x??
 ---
 
 #### Quantum Bound States I
-Background context: The problem involves finding the energies of a particle bound within a 1D square well. The potential \( V(x) \) is defined as:
-\[ V(x) = \begin{cases} 
+Background context: The problem involves finding the energies of a particle bound within a 1D square well. The potential $V(x)$ is defined as:
+$$V(x) = \begin{cases} 
 -10, & \text{for } |x| \leq a \\
 0, & \text{for } |x| > a
-\end{cases} \]
+\end{cases}$$
 
-The energies of the bound states \( E_B < 0 \) are solutions to transcendental equations given by:
-\[ \sqrt{10 - E_B} \tan(\sqrt{10 - E_B}) = \sqrt{E_B} \quad (\text{even}), \]
-\[ \sqrt{10 - E_B} \cot(\sqrt{10 - E_B}) = \sqrt{E_B} \quad (\text{odd}). \]
-
-:p What are the transcendental equations used to find the bound states energies in a 1D square well?
+The energies of the bound states $E_B < 0$ are solutions to transcendental equations given by:
+$$\sqrt{10 - E_B} \tan(\sqrt{10 - E_B}) = \sqrt{E_B} \quad (\text{even}),$$
+$$\sqrt{10 - E_B} \cot(\sqrt{10 - E_B}) = \sqrt{E_B} \quad (\text{odd}).$$:p What are the transcendental equations used to find the bound states energies in a 1D square well?
 ??x
 The transcendental equations used to find the bound state energies in a 1D square well are:
-\[ \sqrt{10 - E_B} \tan(\sqrt{10 - E_B}) = \sqrt{E_B} \quad (\text{even}), \]
-\[ \sqrt{10 - E_B} \cot(\sqrt{10 - E_B}) = \sqrt{E_B} \quad (\text{odd}). \]
-x??
+$$\sqrt{10 - E_B} \tan(\sqrt{10 - E_B}) = \sqrt{E_B} \quad (\text{even}),$$
+$$\sqrt{10 - E_B} \cot(\sqrt{10 - E_B}) = \sqrt{E_B} \quad (\text{odd}).$$x??
 
 ---
 
@@ -223,7 +220,7 @@ Background context: The bisection search algorithm is a reliable but slow trial-
 
 :p What is the basis of the bisection algorithm?
 ??x
-The basis of the bisection algorithm involves starting with an interval \([x_-, x_+]\) where \(f(x_-)\) and \(f(x_+)\) have opposite signs. The algorithm repeatedly divides this interval in half, choosing the subinterval where the function changes sign until a root is found within a desired precision.
+The basis of the bisection algorithm involves starting with an interval $[x_-, x_+]$ where $f(x_-)$ and $f(x_+)$ have opposite signs. The algorithm repeatedly divides this interval in half, choosing the subinterval where the function changes sign until a root is found within a desired precision.
 
 ```python
 def bisection(f, a, b, tol):
@@ -248,21 +245,21 @@ x??
 ---
 
 #### Bisection Search in Practice: Finding Bound States Energies
-Background context: Given the function \( \sqrt{10 - E_B} \tan(\sqrt{10 - E_B}) - \sqrt{E_B} = 0 \) for even wave functions, and \( \sqrt{10 - E_B} \cot(\sqrt{10 - E_B}) - \sqrt{E_B} = 0 \) for odd wave functions. The algorithm starts with an interval where the function changes sign.
+Background context: Given the function $\sqrt{10 - E_B} \tan(\sqrt{10 - E_B}) - \sqrt{E_B} = 0 $ for even wave functions, and$\sqrt{10 - E_B} \cot(\sqrt{10 - E_B}) - \sqrt{E_B} = 0$ for odd wave functions. The algorithm starts with an interval where the function changes sign.
 
 :p How do you apply the bisection search to find bound state energies?
 ??x
-To apply the bisection search, start by finding an initial interval \([a, b]\) where \( f(a) < 0 \) and \( f(b) > 0 \). For example:
-1. Evaluate \(f(0)\) and \(f(10)\):
-   - If \(f(0) = 3\) (positive) and \(f(10) = -2\) (negative), then choose the interval \([0, 10]\).
+To apply the bisection search, start by finding an initial interval $[a, b]$ where $ f(a) < 0 $ and $ f(b) > 0 $. For example:
+1. Evaluate $f(0)$ and $f(10)$:
+   - If $f(0) = 3 $(positive) and $ f(10) = -2 $(negative), then choose the interval$[0, 10]$.
    
-2. Compute the midpoint \(c = (a + b) / 2\). Check if \(f(c)\) is close to zero or changes sign.
+2. Compute the midpoint $c = (a + b) / 2 $. Check if $ f(c)$ is close to zero or changes sign.
 
 3. Repeat this process:
-   - If \(f(a) * f(c) < 0\), then the root lies between \(a\) and \(c\).
-   - Otherwise, it lies between \(c\) and \(b\).
+   - If $f(a) * f(c) < 0 $, then the root lies between $ a $and$ c$.
+   - Otherwise, it lies between $c $ and$b$.
 
-4. Continue until \(|b - a|\) is less than the desired tolerance.
+4. Continue until $|b - a|$ is less than the desired tolerance.
 
 Example in Python:
 ```python
@@ -298,7 +295,7 @@ Background context: The bisection method is a root-finding algorithm that repeat
 
 :p What is the basic idea behind the bisection method?
 ??x
-The basic idea is to repeatedly halve the interval where the root might exist based on the sign changes of the function. This ensures that if \( f(a) \cdot f(b) < 0 \), there must be at least one zero in the interval [a, b]. 
+The basic idea is to repeatedly halve the interval where the root might exist based on the sign changes of the function. This ensures that if $f(a) \cdot f(b) < 0$, there must be at least one zero in the interval [a, b]. 
 ```python
 def bisection(f, a, b, tol):
     plus = b
@@ -320,7 +317,7 @@ x??
 ---
 
 #### Bisection Example Problem Setup
-Background context: For the given function \( f(E) = \sqrt{10 - E} \tan(\sqrt{10 - E}) - \sqrt{E} \), plotting or creating a table can help identify approximate values at which \( f(EB) = 0 \). This step is crucial for determining initial intervals.
+Background context: For the given function $f(E) = \sqrt{10 - E} \tan(\sqrt{10 - E}) - \sqrt{E}$, plotting or creating a table can help identify approximate values at which $ f(EB) = 0$. This step is crucial for determining initial intervals.
 
 :p How should you approach identifying zeros of the function?
 ??x
@@ -368,7 +365,7 @@ x??
 ---
 
 #### Handling Tan Function Singularities
-Background context: The function \( f(E) \) involves the tangent function, which has singularities. These can cause numerical issues and need careful handling.
+Background context: The function $f(E)$ involves the tangent function, which has singularities. These can cause numerical issues and need careful handling.
 
 :p How can you handle the singularities of the tan function?
 ??x
@@ -377,7 +374,7 @@ One way is to use an equivalent form of the equation that avoids these singulari
 def g(E):
     return np.sqrt(E) * np.cot(np.sqrt(10 - E)) - np.sqrt(10 - E)
 ```
-Using \( \tan(x) = 1 / \cot(x) \), we can rewrite the function to avoid singularities.
+Using $\tan(x) = 1 / \cot(x)$, we can rewrite the function to avoid singularities.
 x??
 
 ---
@@ -428,7 +425,7 @@ def newton_raphson(f, df_dx, initial_guess, tol, max_iter):
     
     return "Failed to converge"
 ```
-Here, \( \Delta x = -\frac{f(x)}{f'(x)} \).
+Here, $\Delta x = -\frac{f(x)}{f'(x)}$.
 x??
 
 ---

@@ -377,7 +377,7 @@ x??
 ---
 
 #### Intersection of Sets
-Sets theory provides a way to find common elements between two or more sets. This operation is denoted by \( S \cap Z \) and can be performed using Python's set operators.
+Sets theory provides a way to find common elements between two or more sets. This operation is denoted by $S \cap Z$ and can be performed using Python's set operators.
 
 :p What is the method to perform intersection on two mutable sets `s` and `z`?
 ??x

@@ -48,12 +48,12 @@ Background context: The performance bound of linear TD(λ) approaches the minimu
 :p What is the performance bound equation for linear TD(λ)?
 
 ??x
-For the continuing discounted case, the asymptotic error \( VE(w_1) \) is bounded by:
+For the continuing discounted case, the asymptotic error $VE(w_1)$ is bounded by:
 
-\[ VE(w_1) \leq \frac{1 - \lambda}{1 - \lambda_{\text{min}}} \cdot min_w VE(w). \]
+$$VE(w_1) \leq \frac{1 - \lambda}{1 - \lambda_{\text{min}}} \cdot min_w VE(w).$$
 
 Where:
-- \( \lambda_{\text{min}} \) is the minimum allowed value of λ.
+- $\lambda_{\text{min}}$ is the minimum allowed value of λ.
 - The bound approaches the minimum error as λ approaches 1, but in practice, a value of λ=1 often results in poorer performance.
 
 ```java
@@ -76,10 +76,7 @@ Background context: The λ-return's error term can be approximated as the sum of
 
 ??x
 The error term in the off-line λ-return algorithm (in brackets in equation 12.4) can be written as:
-
-\[ G_t = \sum_{n=1}^{h-t} \lambda^{n-1} G_{t+t+n} + \lambda^{h-t} G_{t:h}, \]
-
-where \( G_{t:h} \) is the truncated λ-return, and it can be expressed using a single fixed weight vector. This sum of TD errors for a single fixed weight vector is equivalent to the error term in the off-line λ-return algorithm.
+$$G_t = \sum_{n=1}^{h-t} \lambda^{n-1} G_{t+t+n} + \lambda^{h-t} G_{t:h},$$where $ G_{t:h}$ is the truncated λ-return, and it can be expressed using a single fixed weight vector. This sum of TD errors for a single fixed weight vector is equivalent to the error term in the off-line λ-return algorithm.
 
 ```java
 // Pseudocode for approximating λ-return:
@@ -108,11 +105,8 @@ Background context: The off-line λ-return algorithm is limited because it uses 
 :p Explain how the truncated λ-return approximates the off-line λ-return for time t up to some later horizon h?
 
 ??x
-The truncated λ-return \( G_{t:h} \) is defined as:
-
-\[ G_{t:h} = (1 - \lambda)^{h-t-1} \sum_{n=1}^{h-t} \lambda^{n-1} G_{t+t+n} + \lambda^{h-t-1} G_{t:h}, \]
-
-where \( 0 \leq t < h \leq T \). This equation approximates the off-line λ-return by truncating the sequence after a certain number of steps, using estimated values for rewards beyond that horizon. It plays a similar role to the original T in the definition of the λ-return but is more practical as it depends on fewer future rewards.
+The truncated λ-return $G_{t:h}$ is defined as:
+$$G_{t:h} = (1 - \lambda)^{h-t-1} \sum_{n=1}^{h-t} \lambda^{n-1} G_{t+t+n} + \lambda^{h-t-1} G_{t:h},$$where $0 \leq t < h \leq T$. This equation approximates the off-line λ-return by truncating the sequence after a certain number of steps, using estimated values for rewards beyond that horizon. It plays a similar role to the original T in the definition of the λ-return but is more practical as it depends on fewer future rewards.
 
 ```java
 // Pseudocode for calculating truncated lambda return:
@@ -140,7 +134,7 @@ Background context: The off-line λ-return algorithm is approximated by an n-ste
 :p Describe how the n-step truncated λ-return algorithms update weights in comparison to earlier n-step methods?
 
 ??x
-In the n-step truncated λ-return algorithms (known as TTD(λ)), weight updates are delayed by n steps. They take into account the first n rewards but include all k-step returns for \( 1 \leq k \leq n \), weighted geometrically, similar to Figure 12.2. This is a natural extension of the earlier n-step methods from Chapter 7.
+In the n-step truncated λ-return algorithms (known as TTD(λ)), weight updates are delayed by n steps. They take into account the first n rewards but include all k-step returns for $1 \leq k \leq n$, weighted geometrically, similar to Figure 12.2. This is a natural extension of the earlier n-step methods from Chapter 7.
 
 ```java
 // Pseudocode for updating weights in n-step truncated TD(λ):
@@ -168,25 +162,17 @@ x??
 #### Concept of n-step TD(λ) Algorithm
 Background context: The n-step TD(λ) algorithm is a generalization of the single-step temporal difference (TD) learning method, where updates are based on the return from λ-weighted combinations of immediate rewards and bootstrapped value estimates.
 Relevant formulas: 
-- \(G^{t:t+n} = \sum_{k=0}^{n-1} (\lambda^k G^{t+k+1}) + \lambda^n v(S_{t+n}, w_{t+n-1})\)
-- The update rule is defined by:
-  \[
-  w_{t+n} = w_{t+n-1} + \alpha \left( G^{t:t+n} - V(S_t, w_{t+n-1}) \right) \nabla V(S_t, w_{t+n-1})
-  \]
-:p What is the key difference between n-step TD and single-step TD in terms of updating?
+- $G^{t:t+n} = \sum_{k=0}^{n-1} (\lambda^k G^{t+k+1}) + \lambda^n v(S_{t+n}, w_{t+n-1})$- The update rule is defined by:
+$$w_{t+n} = w_{t+n-1} + \alpha \left( G^{t:t+n} - V(S_t, w_{t+n-1}) \right) \nabla V(S_t, w_{t+n-1})$$:p What is the key difference between n-step TD and single-step TD in terms of updating?
 ??x
-The key difference lies in how updates are made. In n-step TD, an update is based on the return from λ-weighted combinations of immediate rewards and bootstrapped value estimates over a horizon of \(n\) steps. This allows for a smoother estimate of the return compared to single-step TD, which relies only on the next reward.
+The key difference lies in how updates are made. In n-step TD, an update is based on the return from λ-weighted combinations of immediate rewards and bootstrapped value estimates over a horizon of $n$ steps. This allows for a smoother estimate of the return compared to single-step TD, which relies only on the next reward.
 x??
 
 #### Concept of Online n-step TD(λ) Algorithm
 Background context: The online version of the n-step TD(λ) algorithm involves redoing updates as new data is gathered during an episode. This allows for more frequent and potentially better updates by incorporating newly available information.
 Relevant formulas:
-- \(G^{t:t+n} = \sum_{k=0}^{n-1} (\lambda^k G^{t+k+1}) + \lambda^n v(S_{t+n}, w_{t+n-1})\)
-- The update rule is given by:
-  \[
-  w_{t+n} = w_{t+n-1} + \alpha \left( G^{t:t+n} - V(S_t, w_{t+n-1}) \right) \nabla V(S_t, w_{t+n-1})
-  \]
-:p How does the online n-step TD(λ) algorithm differ from its offline counterpart?
+- $G^{t:t+n} = \sum_{k=0}^{n-1} (\lambda^k G^{t+k+1}) + \lambda^n v(S_{t+n}, w_{t+n-1})$- The update rule is given by:
+$$w_{t+n} = w_{t+n-1} + \alpha \left( G^{t:t+n} - V(S_t, w_{t+n-1}) \right) \nabla V(S_t, w_{t+n-1})$$:p How does the online n-step TD(λ) algorithm differ from its offline counterpart?
 ??x
 The key difference is that in the online version, updates are continuously redone as new data becomes available during an episode. This allows for more frequent and potentially better updates because they incorporate newly acquired information.
 x??
@@ -194,32 +180,14 @@ x??
 #### Concept of Redoing Updates: Online n-step TD(λ) Algorithm Implementation
 Background context: The implementation of the online n-step TD(λ) algorithm involves multiple passes over each episode, where at every time step, all previous updates are redone with an extended horizon. This process generates a sequence of weight vectors.
 Relevant formulas:
-- For \(h = 1\): 
-  \[
-  w_1^1 = w_1^0 + \alpha \left( G^{0:1} - V(S_0, w_1^0) \right) \nabla V(S_0, w_1^0)
-  \]
-- For \(h = 2\):
-  \[
-  w_2^1 = w_2^0 + \alpha \left( G^{0:2} - V(S_0, w_2^0) \right) \nabla V(S_0, w_2^0)
-  \]
-  \[
-  w_2^2 = w_2^1 + \alpha \left( G^{1:2} - V(S_1, w_2^1) \right) \nabla V(S_1, w_2^1)
-  \]
-:p How does the algorithm proceed for each horizon \(h\) in a single episode?
+- For $h = 1$: 
+  $$w_1^1 = w_1^0 + \alpha \left( G^{0:1} - V(S_0, w_1^0) \right) \nabla V(S_0, w_1^0)$$- For $ h = 2$:
+  $$w_2^1 = w_2^0 + \alpha \left( G^{0:2} - V(S_0, w_2^0) \right) \nabla V(S_0, w_2^0)$$$$w_2^2 = w_2^1 + \alpha \left( G^{1:2} - V(S_1, w_2^1) \right) \nabla V(S_1, w_2^1)$$:p How does the algorithm proceed for each horizon $ h$ in a single episode?
 ??x
-For each horizon \(h\), the algorithm proceeds as follows:
+For each horizon $h$, the algorithm proceeds as follows:
 - At time step 0 with horizon 1: 
-  \[
-  w_1^1 = w_1^0 + \alpha \left( G^{0:1} - V(S_0, w_1^0) \right) \nabla V(S_0, w_1^0)
-  \]
-- At time step 2 with horizon 2:
-  \[
-  w_2^1 = w_2^0 + \alpha \left( G^{0:2} - V(S_0, w_2^0) \right) \nabla V(S_0, w_2^0)
-  \]
-  \[
-  w_2^2 = w_2^1 + \alpha \left( G^{1:2} - V(S_1, w_2^1) \right) \nabla V(S_1, w_2^1)
-  \]
-x??
+  $$w_1^1 = w_1^0 + \alpha \left( G^{0:1} - V(S_0, w_1^0) \right) \nabla V(S_0, w_1^0)$$- At time step 2 with horizon 2:
+$$w_2^1 = w_2^0 + \alpha \left( G^{0:2} - V(S_0, w_2^0) \right) \nabla V(S_0, w_2^0)$$$$w_2^2 = w_2^1 + \alpha \left( G^{1:2} - V(S_1, w_2^1) \right) \nabla V(S_1, w_2^1)$$x??
 
 ---
 
@@ -261,7 +229,7 @@ In the true online TD(λ) algorithm, the diagonal weight vectors (wt t) are rena
 
 :p Why are the diagonal weight vectors renamed as wt instead of using the subscripted form?
 ??x
-The diagonal weight vectors are renamed from \( w^t_t \) to simply \( w_t \) for simplicity and ease of notation. This change does not alter the underlying values but makes the algorithm easier to understand and implement.
+The diagonal weight vectors are renamed from $w^t_t $ to simply$w_t$ for simplicity and ease of notation. This change does not alter the underlying values but makes the algorithm easier to understand and implement.
 
 For example:
 ```
@@ -278,19 +246,19 @@ x??
 ---
 
 #### Weight Update Equation for True Online TD(λ)
-The weight update equation in true online TD(λ) involves computing each new diagonal weight vector \( w_{t+1} \) based on the previous one and eligibility traces.
+The weight update equation in true online TD(λ) involves computing each new diagonal weight vector $w_{t+1}$ based on the previous one and eligibility traces.
 
 :p What is the formula for updating the weight vectors in the true online TD(λ) algorithm?
 ??x
 The weight update equation for true online TD(λ) is given by:
-\[ w_{t+1} = w_t + \alpha \lambda t z_t (z_t - x_t^T w_t) \]
+$$w_{t+1} = w_t + \alpha \lambda t z_t (z_t - x_t^T w_t)$$
 
 Where:
-- \( w_t \) is the current diagonal weight vector.
-- \( \alpha > 0 \) is the step size.
-- \( \lambda \in [0, 1] \) is the trace decay rate.
-- \( z_t = \rho z_{t-1} + (1 - \rho) x_t^T w_t \).
-- \( x_t = x(S_t) \), where \( S_t \) is the state at time step \( t \).
+- $w_t$ is the current diagonal weight vector.
+- $\alpha > 0$ is the step size.
+- $\lambda \in [0, 1]$ is the trace decay rate.
+- $z_t = \rho z_{t-1} + (1 - \rho) x_t^T w_t$.
+- $x_t = x(S_t)$, where $ S_t$is the state at time step $ t$.
 
 This formula ensures that weight updates are computed efficiently, leveraging the previous diagonal weight vector and eligibility traces.
 x??

@@ -292,20 +292,17 @@ x??
 ---
 
 #### Fletcher Checksum Function
-Explanation of the Fletcher checksum, which involves computing two check bytes \(s_1\) and \(s_2\). Provide an example with formulas.
+Explanation of the Fletcher checksum, which involves computing two check bytes $s_1 $ and$s_2$. Provide an example with formulas.
 :p How is the Fletcher checksum computed?
 ??x
-The Fletcher checksum computes two check bytes \(s_1\) and \(s_2\) as follows:
-- Initialize both \(s_1 = 0\) and \(s_2 = 0\).
-- For each byte \(d_i\):
-  - Update \(s_1 = (s_1 + d_i) \mod 255\)
-  - Update \(s_2 = (s_2 + s_1) \mod 255\)
-
-For example, given a block of bytes:
+The Fletcher checksum computes two check bytes $s_1 $ and$s_2$ as follows:
+- Initialize both $s_1 = 0 $ and$s_2 = 0$.
+- For each byte $d_i$:
+  - Update $s_1 = (s_1 + d_i) \mod 255 $- Update $ s_2 = (s_2 + s_1) \mod 255$ For example, given a block of bytes:
 ```binary
 Data:   36 5e c4 cd ba 14 8a 92 ecef 2c 3a 40 be f6 66
 ```
-Computing \(s_1\) and \(s_2\):
+Computing $s_1 $ and$s_2$:
 ```java
 public void computeFletcherChecksum(byte[] data) {
     int s1 = 0, s2 = 0;
@@ -327,22 +324,22 @@ x??
 ---
 
 #### Fletcher Checksum Overview
-Fletcher checksum is a widely used method for detecting single-bit and double-bit errors, as well as many burst errors. It operates by treating the data block \(D\) as a large binary number and dividing it by an agreed-upon value (often denoted as \(k\)). The remainder of this division is the checksum.
+Fletcher checksum is a widely used method for detecting single-bit and double-bit errors, as well as many burst errors. It operates by treating the data block $D $ as a large binary number and dividing it by an agreed-upon value (often denoted as$k$). The remainder of this division is the checksum.
 
 Fletcher checksums are efficient to compute because they use simple bitwise operations, making them popular in networking applications.
 :p What is Fletcher checksum used for?
 ??x
-Fletcher checksum is primarily used to detect single-bit and double-bit errors, along with many burst errors. It works by treating a data block as a large binary number and performing division by an agreed-upon value \(k\), where the remainder serves as the checksum.
+Fletcher checksum is primarily used to detect single-bit and double-bit errors, along with many burst errors. It works by treating a data block as a large binary number and performing division by an agreed-upon value $k$, where the remainder serves as the checksum.
 x??
 
 ---
 #### Cyclic Redundancy Check (CRC)
-Cyclic redundancy check (CRC) is another commonly used method for error detection in data blocks. It involves treating the data block as a large binary number and dividing it by a predefined polynomial, often denoted as \(P(x)\). The remainder of this division is the CRC value.
+Cyclic redundancy check (CRC) is another commonly used method for error detection in data blocks. It involves treating the data block as a large binary number and dividing it by a predefined polynomial, often denoted as $P(x)$. The remainder of this division is the CRC value.
 
 The implementation of CRC can be efficient due to specialized hardware support.
 :p What does CRC do?
 ??x
-Cyclic Redundancy Check (CRC) detects errors in data blocks by treating them as large binary numbers and dividing them by a predefined polynomial \(P(x)\). The remainder obtained from this division is the CRC value. This method is often used in networking due to its efficient implementation.
+Cyclic Redundancy Check (CRC) detects errors in data blocks by treating them as large binary numbers and dividing them by a predefined polynomial $P(x)$. The remainder obtained from this division is the CRC value. This method is often used in networking due to its efficient implementation.
 x??
 
 ---
@@ -357,12 +354,12 @@ x??
 
 ---
 #### Disk Layout for Checksums: Single per Sector
-One approach is storing one checksum per disk sector or block. For example, given a data block \(D\), its corresponding checksum \(C(D)\) can be stored alongside the original data.
+One approach is storing one checksum per disk sector or block. For example, given a data block $D $, its corresponding checksum $ C(D)$ can be stored alongside the original data.
 
 This layout ensures simplicity but might require larger sectors to accommodate both data and checksum.
 :p How should checksums be stored on disk in this approach?
 ??x
-In this approach, one checksum is stored per sector or block. For a data block \(D\), its corresponding checksum \(C(D)\) is stored alongside the original data. This layout simplifies implementation but may require larger sectors (e.g., 520 bytes instead of 512 bytes) to include both data and checksum.
+In this approach, one checksum is stored per sector or block. For a data block $D $, its corresponding checksum $ C(D)$ is stored alongside the original data. This layout simplifies implementation but may require larger sectors (e.g., 520 bytes instead of 512 bytes) to include both data and checksum.
 x??
 
 ---
@@ -372,7 +369,7 @@ Another approach involves packing multiple checksums into a single sector, follo
 This method works on all disks but can be less efficient due to the need for additional read and write operations when updating specific blocks.
 :p How does the packed checksum layout work?
 ??x
-In this approach, checksums are stored together with their corresponding data blocks in sectors. For example, a sector might contain \(n\) checksums followed by \(n\) data blocks, repeated as necessary. While this method works on all disks and is simpler to implement, it can be less efficient for updating specific blocks because it requires reading, modifying, and writing entire checksum sectors.
+In this approach, checksums are stored together with their corresponding data blocks in sectors. For example, a sector might contain $n $ checksums followed by$n$ data blocks, repeated as necessary. While this method works on all disks and is simpler to implement, it can be less efficient for updating specific blocks because it requires reading, modifying, and writing entire checksum sectors.
 x??
 
 ---
@@ -493,15 +490,10 @@ Disk space is consumed by storing checksums, reducing available storage for user
 :p How much disk space is used by checksums in the described scenario?
 ??x
 In this case, an 8-byte checksum is stored for every 4 KB (or 4096 bytes) of user data. Therefore, the overhead percentage can be calculated as follows:
-
-\[
-\text{Overhead Percentage} = \left( \frac{\text{Checksum Size}}{\text{Data Block Size}} \right) \times 100
-\]
+$$\text{Overhead Percentage} = \left( \frac{\text{Checksum Size}}{\text{Data Block Size}} \right) \times 100$$
 
 For 8 bytes per 4 KB:
-\[
-\text{Overhead Percentage} = \left( \frac{8}{4096} \right) \times 100 = 0.19\%
-\]
+$$\text{Overhead Percentage} = \left( \frac{8}{4096} \right) \times 100 = 0.19\%$$
 
 This means that for every 4 KB of data, 0.19% is used by checksums.
 

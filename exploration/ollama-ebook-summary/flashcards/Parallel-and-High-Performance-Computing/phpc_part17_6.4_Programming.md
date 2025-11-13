@@ -322,9 +322,9 @@ For complex projects where multiple compiler flags need to be managed, a CMake m
 To utilize the `FindVector.cmake` module in your main CMakeLists.txt, you would include it and set up a conditional to apply verbose vectorization flags if necessary. Here is an example:
 ```cmake
 if(CMAKE_VECTOR_VERBOSE)
-    set(VECTOR_C_FLAGS "${VECTOR_C_FLAGS} ${VECTOR_C_VERBOSE}")
+    set(VECTOR_C_FLAGS "${VECTOR_C_FLAGS}${VECTOR_C_VERBOSE}")
 endif()
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${VECTOR_C_FLAGS}")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}${VECTOR_C_FLAGS}")
 ```
 This code checks for a `CMAKE_VECTOR_VERBOSE` variable and applies the appropriate flags if it is true.
 x??

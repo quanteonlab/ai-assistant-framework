@@ -89,7 +89,7 @@ addCounter(document.body);
 After compiling with the source map option enabled, you will get an `index.js` file and an `index.js.map` file:
 
 ```shell
-$ tsc index.ts
+$tsc index.ts
 ```
 
 These files can be used by your debugger to show you the original TypeScript code during debugging sessions.
@@ -118,8 +118,7 @@ The debugger will pause execution at the correct line of TypeScript, showing you
 
 Here’s an example setup:
 
-```shell
-$ tsc index.ts  # Generates index.js and index.js.map
+```shell$ tsc index.ts  # Generates index.js and index.js.map
 ```
 
 In Chrome DevTools:
@@ -145,13 +144,12 @@ Here’s an example of how to do this:
 1. **Compile the TypeScript code:**
 
    ```shell
-   $ tsc bedtime.ts  # Generates bedtime.js and bedtime.js.map
+   $tsc bedtime.ts  # Generates bedtime.js and bedtime.js.map
    ```
 
 2. **Run the compiled JavaScript with Node's `--inspect-brk` flag:**
 
-   ```shell
-   $ node --inspect-brk bedtime.js
+   ```shell$ node --inspect-brk bedtime.js
    Debugger listening on ws://127.0.0.1:9229/587c380b-fdb4-48df-8c09-a83f36d8a2e7
    For help, see: https://nodejs.org/en/docs/inspector
    ```
@@ -186,8 +184,7 @@ main();
 After compiling and running with `--inspect-brk`, you can set a breakpoint in the TypeScript source code within your browser’s debugger:
 
 ```shell
-$ tsc bedtime.ts  # Generates bedtime.js and bedtime.js.map
-$ node --inspect-brk bedtime.js  # Debugger starts
+$tsc bedtime.ts  # Generates bedtime.js and bedtime.js.map$ node --inspect-brk bedtime.js  # Debugger starts
 ```
 
 In Chrome DevTools:
@@ -416,7 +413,7 @@ You can use the `typescript-json-schema` package to convert TypeScript interface
 
 2. Generate the JSON Schema from this type using `typescript-json-schema`:
    ```
-   $ npx typescript-json-schema --schema api.ts '*' > api.schema.json
+   $npx typescript-json-schema --schema api.ts '*' > api.schema.json
    ```
 
 3. Load and validate the schema at runtime:
@@ -474,8 +471,7 @@ Here’s a step-by-step guide:
    ```
 
 2. Generate JSON Schema using `typescript-json-schema`:
-   ```
-   $ npx typescript-json-schema --schema api.ts '*' > api.schema.json
+   ```$ npx typescript-json-schema --schema api.ts '*' > api.schema.json
    ```
 
 3. Use the generated schema for validation:

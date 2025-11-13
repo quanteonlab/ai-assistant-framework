@@ -89,7 +89,7 @@ elseif (CMAKE_C_COMPILER_ID MATCHES "GNU")
 endif (CMAKE_C_COMPILER_ID MATCHES "XL")
 
 if (CMAKE_OPENMPACCEL_VERBOSE)
-    set(OpenACC_C_FLAGS "${OpenACC_C_FLAGS} ${OpenACC_C_VERBOSE}")
+    set(OpenACC_C_FLAGS "${OpenACC_C_FLAGS}${OpenACC_C_VERBOSE}")
 endif (CMAKE_OPENMPACCEL_VERBOSE)
 
 # Add target properties with compile and link flags

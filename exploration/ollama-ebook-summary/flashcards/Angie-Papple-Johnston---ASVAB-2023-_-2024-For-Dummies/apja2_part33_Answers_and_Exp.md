@@ -14,11 +14,11 @@ x??
 
 ---
 #### Force Calculation
-Background context explaining Newton's second law of motion which states that force equals mass times acceleration (\(F = m \times a\)). This relationship helps determine how much force is exerted on an object.
+Background context explaining Newton's second law of motion which states that force equals mass times acceleration ($F = m \times a$). This relationship helps determine how much force is exerted on an object.
 
 :p How do you calculate the force exerted on an object?
 ??x
-You calculate the force using the formula \(F = m \times a\), where \(m\) is the mass of the object and \(a\) is its acceleration.
+You calculate the force using the formula $F = m \times a $, where $ m $is the mass of the object and$ a$ is its acceleration.
 x??
 
 ---

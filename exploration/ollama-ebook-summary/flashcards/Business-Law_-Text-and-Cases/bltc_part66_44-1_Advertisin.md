@@ -520,7 +520,7 @@ x??
 ---
 
 #### Comcast’s Deposit Policy and FCRA Violation
-Background context: The case involves a dispute over whether Comcast violated the Fair Credit Reporting Act (FCRA) by pulling Santangelo's credit report after he paid a $50 deposit to avoid such an inquiry. According to Comcast's Risk Management Policy, a $50 deposit was required in some circumstances, but Santangelo argues that this policy does not justify a subsequent credit check.
+Background context: The case involves a dispute over whether Comcast violated the Fair Credit Reporting Act (FCRA) by pulling Santangelo's credit report after he paid a $50 deposit to avoid such an inquiry. According to Comcast's Risk Management Policy, a$50 deposit was required in some circumstances, but Santangelo argues that this policy does not justify a subsequent credit check.
 
 :p What is the core issue in this case regarding FCRA and the deposit policy?
 ??x
@@ -570,13 +570,13 @@ x??
 ---
 
 #### Legal Consequences
-Background context: If the court finds that Comcast violated the FCRA willfully, Santangelo could be entitled to recover attorney's fees and either actual damages or statutory damages between $100 and $1,000. A mere negligence would limit his recovery to attorney’s fees and actual damages.
+Background context: If the court finds that Comcast violated the FCRA willfully, Santangelo could be entitled to recover attorney's fees and either actual damages or statutory damages between $100 and$1,000. A mere negligence would limit his recovery to attorney’s fees and actual damages.
 
 :p What are the potential legal consequences if Comcast is found to have violated the FCRA?
 ??x
 If the court finds that Comcast violated the FCRA willfully, Santangelo could be entitled to recover:
 - Attorney's fees
-- Either actual damages or statutory damages between $100 and $1,000
+- Either actual damages or statutory damages between $100 and$1,000
 
 If the violation was merely negligent, he would only be able to recover:
 - Attorney's fees

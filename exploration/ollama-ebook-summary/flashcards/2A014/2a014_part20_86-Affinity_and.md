@@ -23,18 +23,17 @@ Affinity represents the similarity between a user's preferences (encoded as a ve
 
 The p-sale, or probability of sale, is derived from the affinity score by applying a logistic function (sigmoid). This transformation takes into account additional factors such as the overall popularity of the product and the user's purchasing behavior. The formula for calculating the p-sale is:
 
-\[ P(u, p) = \text{sigmoid}(u^T p) \]
+$$P(u, p) = \text{sigmoid}(u^T p)$$
 
-Where \( u \) is the row vector representing a user’s preferences, \( p \) is the column vector representing a product’s characteristics, and \( \text{sigmoid} \) is the logistic function defined as:
-\[ \text{sigmoid}(x) = \frac{1}{1 + e^{-x}} \]
-
-:p What is the formula for calculating the probability of sale in Matrix Factorization?
+Where $u $ is the row vector representing a user’s preferences,$p $ is the column vector representing a product’s characteristics, and$\text{sigmoid}$ is the logistic function defined as:
+$$\text{sigmoid}(x) = \frac{1}{1 + e^{-x}}$$:p What is the formula for calculating the probability of sale in Matrix Factorization?
 ??x
 The formula for calculating the probability of sale (p-sale) in Matrix Factorization is:
+$$
 
-\[ P(u, p) = \text{sigmoid}(u^T p) \]
+P(u, p) = \text{sigmoid}(u^T p)$$
 
-Where \( u \) represents a user's preferences and \( p \) represents a product’s characteristics. The dot product \( u^T p \) measures the similarity between the vectors, and the sigmoid function maps this similarity score to a probability score between 0 and 1.
+Where $u $ represents a user's preferences and$p $ represents a product’s characteristics. The dot product $ u^T p$ measures the similarity between the vectors, and the sigmoid function maps this similarity score to a probability score between 0 and 1.
 
 The code for applying the logistic function in Java could look like this:
 ```java
@@ -55,13 +54,13 @@ Alternating Least Squares is an optimization algorithm used to train matrices in
 The ALS method works by iteratively solving for the user and product matrices until convergence.
 :p How does Alternating Least Squares (ALS) work?
 ??x
-Alternating Least Squares (ALS) is an optimization algorithm used in Matrix Factorization to train two matrices: one representing users' preferences (\( U \)) and another representing products' characteristics (\( V \)). The method alternates between fixing the user matrix and solving for the product matrix, then fixing the product matrix and solving for the user matrix.
+Alternating Least Squares (ALS) is an optimization algorithm used in Matrix Factorization to train two matrices: one representing users' preferences ($U $) and another representing products' characteristics ($ V$). The method alternates between fixing the user matrix and solving for the product matrix, then fixing the product matrix and solving for the user matrix.
 
 The ALS loss function is convex, meaning there is a single global minimum. This property allows for fast convergence when either matrix is fixed during each iteration. Here’s an example of how it works:
 
-1. Initialize \( U \) and \( V \).
-2. Fix \( V \), solve for \( U \).
-3. Fix \( U \), solve for \( V \).
+1. Initialize $U $ and$V$.
+2. Fix $V $, solve for $ U$.
+3. Fix $U $, solve for $ V$.
 4. Repeat steps 2-3 until convergence.
 
 The code for a single iteration in Java might look like this:
@@ -135,34 +134,34 @@ Factorization Machines consist of three main components:
 2. **Interaction Effects**: These model the interaction between pairs of features.
 3. **Linear and Non-linear Terms**: The non-linear terms allow for more complex interactions.
 
-The overall prediction \( P \) can be expressed as:
-\[ P(x) = w_0 + \sum_{i=1}^{n} w_i x_i + \sum_{i=1}^{n} \sum_{j=i+1}^{n} \langle v_i, v_j \rangle x_i x_j \]
+The overall prediction $P$ can be expressed as:
+$$P(x) = w_0 + \sum_{i=1}^{n} w_i x_i + \sum_{i=1}^{n} \sum_{j=i+1}^{n} \langle v_i, v_j \rangle x_i x_j$$
 
 Where:
-- \( w_0 \) is the bias term.
-- \( w_i \) are the main effect weights for feature \( i \).
-- \( v_i \) are the factorized vectors representing the interaction between features.
-- \( \langle v_i, v_j \rangle \) is the dot product of the factorized vectors.
+- $w_0$ is the bias term.
+- $w_i $ are the main effect weights for feature$i$.
+- $v_i$ are the factorized vectors representing the interaction between features.
+- $\langle v_i, v_j \rangle$ is the dot product of the factorized vectors.
 
 :p How does Factorization Machines model interactions?
 ??x
 Factorization Machines model interactions by using factorized vectors to represent the combined influence of pairs or higher-order combinations of features. This allows for a more expressive and flexible representation compared to simple linear models.
 
 The interaction term in the FM model is given by:
-\[ \sum_{i=1}^{n} \sum_{j=i+1}^{n} \langle v_i, v_j \rangle x_i x_j \]
+$$\sum_{i=1}^{n} \sum_{j=i+1}^{n} \langle v_i, v_j \rangle x_i x_j$$
 
-Where \( v_i \) and \( v_j \) are factorized vectors for features \( i \) and \( j \), respectively, and \( x_i \) and \( x_j \) are the values of these features. The dot product \( \langle v_i, v_j \rangle \) captures the interaction between features.
+Where $v_i $ and$v_j $ are factorized vectors for features$ i $ and $ j $, respectively, and $ x_i$and $ x_j$ are the values of these features. The dot product $\langle v_i, v_j \rangle$ captures the interaction between features.
 
 :p What is the formula for the prediction in Factorization Machines?
 ??x
 The overall prediction in a Factorization Machine can be expressed as:
-\[ P(x) = w_0 + \sum_{i=1}^{n} w_i x_i + \sum_{i=1}^{n} \sum_{j=i+1}^{n} \langle v_i, v_j \rangle x_i x_j \]
+$$P(x) = w_0 + \sum_{i=1}^{n} w_i x_i + \sum_{i=1}^{n} \sum_{j=i+1}^{n} \langle v_i, v_j \rangle x_i x_j$$
 
 Where:
-- \( w_0 \) is the bias term.
-- \( w_i \) are the main effect weights for feature \( i \).
-- \( v_i \) are the factorized vectors representing the interaction between features.
-- \( \langle v_i, v_j \rangle \) is the dot product of the factorized vectors.
+- $w_0$ is the bias term.
+- $w_i $ are the main effect weights for feature$i$.
+- $v_i$ are the factorized vectors representing the interaction between features.
+- $\langle v_i, v_j \rangle$ is the dot product of the factorized vectors.
 
 This formula includes both main effects and interaction effects, making FM a flexible model that can handle complex interactions between features.
 
@@ -335,16 +334,16 @@ Doubly robust estimation (DRE) is a method that combines two models: one that mo
 
 The structural equations for a doubly robust estimator with propensity score weighting and outcome model are as follows:
 
-\[ \Theta = \sum w_i Y_i - f(X) + \sum w_ip_i (1 - p_i) f^*(X_i) - f^* (X_i) \]
+$$\Theta = \sum w_i Y_i - f(X) + \sum w_ip_i (1 - p_i) f^*(X_i) - f^* (X_i)$$
 
 Where:
-- \(Y_i\) is the outcome,
-- \(X_i\) are covariates,
-- \(T_i\) is the treatment,
-- \(p_i\) is the propensity score,
-- \(w_i\) is the weight,
-- \(f(X)\) is the outcome model, and
-- \(f^*(X)\) is the estimated outcome model.
+- $Y_i$ is the outcome,
+- $X_i$ are covariates,
+- $T_i$ is the treatment,
+- $p_i$ is the propensity score,
+- $w_i$ is the weight,
+- $f(X)$ is the outcome model, and
+- $f^*(X)$ is the estimated outcome model.
 
 :p What is doubly robust estimation (DRE)?
 ??x

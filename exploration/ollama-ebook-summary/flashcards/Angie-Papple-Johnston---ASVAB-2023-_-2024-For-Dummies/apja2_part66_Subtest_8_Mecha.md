@@ -35,11 +35,11 @@ x??
 ---
 
 #### First-Class Lever for Lifting an Anvil
-Background context: In a first-class lever, the effort is applied between the fulcrum (pivot point) and the load. The mechanical advantage of a first-class lever can be calculated as \( \text{MA} = \frac{\text{Effort Arm}}{\text{Load Arm}} \).
+Background context: In a first-class lever, the effort is applied between the fulcrum (pivot point) and the load. The mechanical advantage of a first-class lever can be calculated as $\text{MA} = \frac{\text{Effort Arm}}{\text{Load Arm}}$.
 
 :p What effort must be used to lift a 30-pound anvil using a first-class lever if the effort arm is twice the length of the load arm?
 ??x
-The effort required would be 15 pounds since \( \text{MA} = 2 \) (Effort Arm/Load Arm).
+The effort required would be 15 pounds since $\text{MA} = 2$ (Effort Arm/Load Arm).
 x??
 
 ---
@@ -55,11 +55,11 @@ x??
 ---
 
 #### Ramp Effort Calculation
-Background context: The effort required to move an object up a ramp can be calculated using the formula \( \text{Effort} = \frac{\text{Load}}{\sin(\theta)} \), where \( \theta \) is the angle of inclination. However, for simple cases like this, we often use the ratio of height to length.
+Background context: The effort required to move an object up a ramp can be calculated using the formula $\text{Effort} = \frac{\text{Load}}{\sin(\theta)}$, where $\theta$ is the angle of inclination. However, for simple cases like this, we often use the ratio of height to length.
 
 :p How much effort is required to move a 400-pound object up an 8-foot high ramp that is 16 feet long?
 ??x
-The effort required is 200 pounds since \( \frac{400}{16} = 25 \) (assuming the effort arm is the length of the ramp).
+The effort required is 200 pounds since $\frac{400}{16} = 25$ (assuming the effort arm is the length of the ramp).
 x??
 
 ---
@@ -79,7 +79,7 @@ Background context: Pressure is calculated as force divided by area. Here, the p
 
 :p What psi does the heel exert if a 130-pound person stands on one heel with heels measuring 1-inch square?
 ??x
-The pressure exerted is \( \frac{130}{1} = 130 \) psi.
+The pressure exerted is $\frac{130}{1} = 130$ psi.
 x??
 
 ---

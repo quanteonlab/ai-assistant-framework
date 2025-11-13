@@ -249,7 +249,7 @@ CUDA_LIB=`which nvcc | sed -e 's./bin/nvcc..'`/lib
 CUDA_LIB64=`which nvcc | sed -e 's./bin/nvcc..'`/lib64
 
 percent.o : percent.cu
-    ${NVCC} ${NVCC_FLAGS} -c $< -o $@
+    ${NVCC}${NVCC_FLAGS} -c $< -o$@
 
 StreamTriad: StreamTriad.o timer.o
     ${CXX} -o $@ $^ -L${CUDA_LIB} -lcudart
@@ -269,12 +269,12 @@ Background context: A pattern rule is a make utility specification that provides
 The pattern rule specifies how to convert any file with a .cu extension into an object file. In this case, it uses `NVCC` to compile `.cu` files into object files (`percent.o : percent.cu`). The general form of a pattern rule is:
 ```
 %.o : %.cu
-    ${NVCC} ${NVCC_FLAGS} -c $< -o $@
+    ${NVCC}${NVCC_FLAGS} -c $< -o$@
 ```
 Here, `$<` represents the dependency file (`.cu`), and `$@` represents the target object file (`percent.o`).
 ```makefile
 percent.o : percent.cu
-    ${NVCC} ${NVCC_FLAGS} -c $< -o $@
+    ${NVCC}${NVCC_FLAGS} -c $< -o$@
 ```
 x??
 
@@ -1290,7 +1290,7 @@ You can use the `hipify-perl` script by linking Makefile.perl to Makefile and ad
 ln -s Makefile.perl Makefile
 
 percent.cc :  percent.cu
-    hipify-perl $^ > $@
+    hipify-perl $^ >$@
 ```
 x??
 
@@ -1314,7 +1314,7 @@ if(NOT DEFINED HIP_PATH)
     endif()
 endif()
 
-set(CMAKE_MODULE_PATH "${HIP_PATH}/cmake" ${CMAKE_MODULE_PATH})
+set(CMAKE_MODULE_PATH "${HIP_PATH}/cmake"${CMAKE_MODULE_PATH})
 find_package(HIP REQUIRED)
 if(HIP_FOUND)
     message(STATUS "Found HIP: " ${HIP_VERSION})

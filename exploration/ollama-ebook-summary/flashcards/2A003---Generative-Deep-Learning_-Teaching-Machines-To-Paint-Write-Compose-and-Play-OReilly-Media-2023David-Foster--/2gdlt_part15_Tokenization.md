@@ -865,7 +865,7 @@ Background context: The text explains the role of the embedding layer in convert
 
 :p What is the purpose of the Embedding Layer in this model?
 ??x
-The Embedding Layer converts each integer token (word) into a dense vector of length 100. This allows the model to learn meaningful representations for words that can be updated during training through backpropagation. The number of weights learned by the embedding layer is \(10,000 \times 100 = 1,000,000\).
+The Embedding Layer converts each integer token (word) into a dense vector of length 100. This allows the model to learn meaningful representations for words that can be updated during training through backpropagation. The number of weights learned by the embedding layer is $10,000 \times 100 = 1,000,000$.
 
 ```python
 embedding_layer = layers.Embedding(input_dim=10000, output_dim=100)

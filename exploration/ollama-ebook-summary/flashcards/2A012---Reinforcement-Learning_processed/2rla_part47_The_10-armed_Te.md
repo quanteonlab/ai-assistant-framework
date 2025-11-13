@@ -9,18 +9,14 @@ Background context explaining how action values are estimated using sample avera
 
 :p What is the sample-average method used for estimating action values?
 ??x
-The sample-average method estimates the true value \( q^*(a) \) of an action by taking the average of all the rewards received when that action was chosen up to time step \( t-1 \).
+The sample-average method estimates the true value $q^*(a)$ of an action by taking the average of all the rewards received when that action was chosen up to time step $t-1$.
 
-\[
-Q_t(a) = \frac{\sum_{i=1}^{t-1} R_i A_i=a}{\sum_{i=1}^{t-1} I(A_i=a)}
-\]
+$$Q_t(a) = \frac{\sum_{i=1}^{t-1} R_i A_i=a}{\sum_{i=1}^{t-1} I(A_i=a)}$$
 
 Where:
-- \( R_i \): The reward received at time step \( i \)
-- \( A_i \): The action taken at time step \( i \)
-- \( I(\cdot) \): An indicator function that returns 1 if the condition is true, and 0 otherwise
+- $R_i $: The reward received at time step $ i $-$ A_i $: The action taken at time step$ i $-$ I(\cdot)$: An indicator function that returns 1 if the condition is true, and 0 otherwise
 
-By the law of large numbers, as the number of samples increases, \( Q_t(a) \) converges to the true value \( q^*(a) \).
+By the law of large numbers, as the number of samples increases, $Q_t(a)$ converges to the true value $q^*(a)$.
 x??
 
 ---
@@ -30,35 +26,31 @@ Background context on how actions are selected using the greedy approach. The fo
 
 :p How does the greedy action selection method work?
 ??x
-The greedy action selection method chooses one of the actions with the highest estimated value \( Q_t(a) \). If there are multiple such actions, a tie-breaking rule (e.g., random selection among them) is used. The formal definition is:
+The greedy action selection method chooses one of the actions with the highest estimated value $Q_t(a)$. If there are multiple such actions, a tie-breaking rule (e.g., random selection among them) is used. The formal definition is:
 
-\[
-A_t = \arg\max_a Q_t(a)
-\]
+$$A_t = \arg\max_a Q_t(a)$$
 
 Where:
-- \( A_t \): Action selected at time step \( t \)
+- $A_t $: Action selected at time step $ t$
 x??
 
 ---
 
-#### Near-Greedy or \(\epsilon\)-Greedy Action Selection Method
-Explanation of the \(\epsilon\)-greedy method, which balances exploration and exploitation by selecting a greedy action most of the time but occasionally choosing random actions.
+#### Near-Greedy or $\epsilon$-Greedy Action Selection Method
+Explanation of the $\epsilon$-greedy method, which balances exploration and exploitation by selecting a greedy action most of the time but occasionally choosing random actions.
 
-:p What is an \(\epsilon\)-greedy action selection method?
+:p What is an $\epsilon$-greedy action selection method?
 ??x
-The \(\epsilon\)-greedy method selects one of the actions with the highest estimated value \( Q_t(a) \) with probability \( 1 - \epsilon \). With a small probability \( \epsilon \), it randomly chooses among all actions. The formal definition is:
+The $\epsilon $-greedy method selects one of the actions with the highest estimated value $ Q_t(a)$with probability $1 - \epsilon$. With a small probability $\epsilon$, it randomly chooses among all actions. The formal definition is:
 
-\[
-A_t = 
+$$A_t = 
 \begin{cases} 
 \arg\max_a Q_t(a) & \text{with probability } 1-\epsilon \\
 a & \text{uniformly at random from the set of actions otherwise}
-\end{cases}
-\]
+\end{cases}$$
 
 Where:
-- \( A_t \): Action selected at time step \( t \)
+- $A_t $: Action selected at time step $ t$
 x??
 
 ---
@@ -68,7 +60,7 @@ Background context on the testbed used to compare different action-value methods
 
 :p What is the 10-armed testbed?
 ??x
-The 10-armed testbed is a set of 2000 randomly generated 10-armed bandit problems. In each problem, action values \( q^*(a) \) are selected from a normal distribution with mean zero and unit variance. The actual rewards for each action are then sampled from a normal distribution centered around the true value \( q^*(a) \). This setup is used to numerically compare different learning methods over 1000 time steps, repeating this process for 2000 independent runs.
+The 10-armed testbed is a set of 2000 randomly generated 10-armed bandit problems. In each problem, action values $q^*(a)$ are selected from a normal distribution with mean zero and unit variance. The actual rewards for each action are then sampled from a normal distribution centered around the true value $q^*(a)$. This setup is used to numerically compare different learning methods over 1000 time steps, repeating this process for 2000 independent runs.
 
 For example:
 - Each run involves selecting actions and recording rewards.
@@ -78,15 +70,15 @@ x??
 ---
 
 #### Performance Comparison on 10-Armed Testbed
-Comparison between greedy methods and \(\epsilon\)-greedy methods on the 10-armed testbed. The sample-average technique is used to estimate action values.
+Comparison between greedy methods and $\epsilon$-greedy methods on the 10-armed testbed. The sample-average technique is used to estimate action values.
 
 :p How did the different methods perform on the 10-armed testbed?
 ??x
-On the 10-armed testbed, the performance of greedy and \(\epsilon\)-greedy methods was compared using the sample-average technique for estimating action values. The results showed that while the greedy method improved faster initially, it achieved a lower long-term average reward per step (about 1) compared to the optimal possible value (around 1.55). In contrast, \(\epsilon\)-greedy methods, especially with small \(\epsilon\) like \(0.01\), performed better by ensuring that all actions were sampled sufficiently.
+On the 10-armed testbed, the performance of greedy and $\epsilon $-greedy methods was compared using the sample-average technique for estimating action values. The results showed that while the greedy method improved faster initially, it achieved a lower long-term average reward per step (about 1) compared to the optimal possible value (around 1.55). In contrast, $\epsilon $-greedy methods, especially with small $\epsilon $ like$0.01$, performed better by ensuring that all actions were sampled sufficiently.
 
 For instance:
 - A greedy method selected the action with the highest estimated value.
-- An \(\epsilon\)-greedy method selected an action with probability \( 1 - \epsilon \) or a random action otherwise.
+- An $\epsilon $-greedy method selected an action with probability $1 - \epsilon$ or a random action otherwise.
 x??
 
 ---
@@ -167,11 +159,11 @@ x??
 
 #### Step-size Parameter and Sample Averages
 
-Background context: The step-size parameter, denoted by \(\alpha\), is crucial for updating the average reward estimates in multi-armed bandit problems. In the stationary case, sample averages are used to estimate action values. However, in nonstationary environments, a constant step-size parameter can be employed to give more weight to recent rewards.
+Background context: The step-size parameter, denoted by $\alpha$, is crucial for updating the average reward estimates in multi-armed bandit problems. In the stationary case, sample averages are used to estimate action values. However, in nonstationary environments, a constant step-size parameter can be employed to give more weight to recent rewards.
 
-:p What is the role of the step-size parameter \(\alpha\) in updating the average reward estimates?
+:p What is the role of the step-size parameter $\alpha$ in updating the average reward estimates?
 ??x
-The step-size parameter \(\alpha\) controls how much weight is given to new observations versus previous estimates. In nonstationary environments, a constant \(\alpha\) can ensure that more recent rewards have a higher influence on the updated estimates.
+The step-size parameter $\alpha $ controls how much weight is given to new observations versus previous estimates. In nonstationary environments, a constant$\alpha$ can ensure that more recent rewards have a higher influence on the updated estimates.
 ```java
 // Pseudocode for updating Q(a) with a constant step-size parameter alpha
 for each action a:
@@ -183,19 +175,19 @@ x??
 
 #### Exponential Recency-Weighted Average
 
-Background context: In nonstationary environments, the use of a constant step-size parameter \(\alpha\) can result in an exponential recency-weighted average. This method adjusts the weights on past rewards so that more recent rewards have higher influence.
+Background context: In nonstationary environments, the use of a constant step-size parameter $\alpha$ can result in an exponential recency-weighted average. This method adjusts the weights on past rewards so that more recent rewards have higher influence.
 
-:p How does the constant step-size parameter \(\alpha\) affect the averaging process in a nonstationary environment?
+:p How does the constant step-size parameter $\alpha$ affect the averaging process in a nonstationary environment?
 ??x
-The constant step-size parameter \(\alpha\) (where \(0 < \alpha \leq 1\)) ensures that more recent rewards are given higher weight compared to older rewards. This is achieved through an exponential decay, where the influence of each past reward decreases exponentially as the time since its observation increases.
+The constant step-size parameter $\alpha $(where $0 < \alpha \leq 1$) ensures that more recent rewards are given higher weight compared to older rewards. This is achieved through an exponential decay, where the influence of each past reward decreases exponentially as the time since its observation increases.
 
 For example, the update rule for a new sample average can be written as:
-\[ Q_{n+1} = \alpha (R_n - Q_n) + Q_n \]
+$$Q_{n+1} = \alpha (R_n - Q_n) + Q_n$$
 
-This results in \(Q_{n+1}\) being a weighted sum of past rewards and the initial estimate:
-\[ Q_{n+1} = \sum_{i=1}^{n} (\alpha(1-\alpha)^{n-i}) R_i + (1-\alpha)^n Q_1 \]
+This results in $Q_{n+1}$ being a weighted sum of past rewards and the initial estimate:
+$$Q_{n+1} = \sum_{i=1}^{n} (\alpha(1-\alpha)^{n-i}) R_i + (1-\alpha)^n Q_1$$
 
-The weights decay exponentially according to \( (1 - \alpha)^{n-i} \), ensuring that more recent rewards have a higher impact.
+The weights decay exponentially according to $(1 - \alpha)^{n-i}$, ensuring that more recent rewards have a higher impact.
 ```java
 // Pseudocode for updating Q(a) with a constant step-size parameter alpha
 for each action a:
@@ -210,15 +202,13 @@ x??
 
 Background context: For the sample-average method and other methods using variable step-size parameters, certain conditions must be met to ensure convergence. These conditions are derived from stochastic approximation theory.
 
-:p What are the two conditions required for a sequence of step-size parameters \(\alpha_n(a)\) to ensure convergence with probability 1?
+:p What are the two conditions required for a sequence of step-size parameters $\alpha_n(a)$ to ensure convergence with probability 1?
 ??x
-For a sequence of step-size parameters \(\alpha_n(a)\), the following two conditions must be met:
+For a sequence of step-size parameters $\alpha_n(a)$, the following two conditions must be met:
 
 1. The sum of the step-size parameters over all steps should diverge:
-\[ \sum_{n=1}^{\infty} \alpha_n(a) = \infty \]
-
-2. The sum of the squares of the step-size parameters should converge to a finite value:
-\[ \sum_{n=1}^{\infty} \alpha_n^2(a) < \infty \]
+$$\sum_{n=1}^{\infty} \alpha_n(a) = \infty$$2. The sum of the squares of the step-size parameters should converge to a finite value:
+$$\sum_{n=1}^{\infty} \alpha_n^2(a) < \infty$$
 
 These conditions ensure that steps are large enough initially to overcome initial conditions and random fluctuations, but small enough eventually to guarantee convergence.
 ```java
@@ -240,15 +230,15 @@ Background context: To demonstrate the difficulties that sample-average methods 
 To demonstrate the challenges faced by sample-average methods in nonstationary environments, follow these steps:
 
 1. **Experiment Setup**:
-   - Use a modified 10-armed testbed where all action values \(q^*(a)\) start equal and then change independently over time.
+   - Use a modified 10-armed testbed where all action values $q^*(a)$ start equal and then change independently over time.
    - Add a normally distributed increment with mean zero and standard deviation of 0.01 to each action value at every step.
 
 2. **Comparison**:
    - Implement an action-value method using sample averages, which update the estimates based on past rewards without any step-size parameter adjustment.
-   - Implement another action-value method using a constant step-size parameter \(\alpha = 0.1\), where each reward influences the estimate according to this fixed rate.
+   - Implement another action-value method using a constant step-size parameter $\alpha = 0.1$, where each reward influences the estimate according to this fixed rate.
 
 3. **Parameter Settings**:
-   - Set the exploration parameter \(\epsilon\) (or \(\epsilon = 1 - \alpha\)) to \(0.1\).
+   - Set the exploration parameter $\epsilon $(or $\epsilon = 1 - \alpha $) to $0.1$.
    - Run both methods for a large number of steps, say 10,000 steps, and record their performances.
 
 4. **Plotting**:

@@ -10,41 +10,35 @@ Background context: A delay-line filter, as described in the provided text, is a
 
 :p Describe how a delay-line filter works.
 ??x
-A delay-line filter processes an input signal by introducing time delays at different points along a line. Each tap on the delay line outputs a version of the input signal that is delayed by a specific amount, which can be scaled with coefficients \(c_n\). The output from each tap is then summed to form the total response function.
+A delay-line filter processes an input signal by introducing time delays at different points along a line. Each tap on the delay line outputs a version of the input signal that is delayed by a specific amount, which can be scaled with coefficients $c_n$. The output from each tap is then summed to form the total response function.
 
-For example, if we denote the input signal as \(f(t)\), and the delays are given by \(\tau n\) where \(\tau\) is the characteristic delay time of the filter, the transfer function can be described as:
+For example, if we denote the input signal as $f(t)$, and the delays are given by $\tau n $ where $\tau$ is the characteristic delay time of the filter, the transfer function can be described as:
+$$h(t) = \sum_{n=0}^{N} c_n \delta(t - n\tau)$$
 
-\[ h(t) = \sum_{n=0}^{N} c_n \delta(t - n\tau) \]
+In the frequency domain, the Fourier transform of this impulse response leads to a transfer function $H(\omega)$:
 
-In the frequency domain, the Fourier transform of this impulse response leads to a transfer function \(H(\omega)\):
-
-\[ H(\omega) = \sum_{n=0}^{N} c_n e^{-in\omega\tau} \]
-
-:p Explain the formula for the transfer function in the delay-line filter.
+$$H(\omega) = \sum_{n=0}^{N} c_n e^{-in\omega\tau}$$:p Explain the formula for the transfer function in the delay-line filter.
 ??x
-The transfer function \(H(\omega)\) of a delay-line filter is given by:
+The transfer function $H(\omega)$ of a delay-line filter is given by:
+$$H(\omega) = \sum_{n=0}^{N} c_n e^{-in\omega\tau}$$
 
-\[ H(\omega) = \sum_{n=0}^{N} c_n e^{-in\omega\tau} \]
-
-This equation represents how the filter responds to different frequency components. The term \(e^{-in\omega\tau}\) indicates a phase shift due to each tap, and the coefficients \(c_n\) scale the contribution of each delayed version of the input signal.
+This equation represents how the filter responds to different frequency components. The term $e^{-in\omega\tau}$ indicates a phase shift due to each tap, and the coefficients $c_n$ scale the contribution of each delayed version of the input signal.
 
 :p How does the output from an analog signal processed by a delay-line filter look?
 ??x
-If a continuous time signal \(f(t)\) is fed into a digital filter constructed with a delay line, the output will be a discrete sum:
+If a continuous time signal $f(t)$ is fed into a digital filter constructed with a delay line, the output will be a discrete sum:
+$$g(t) = \sum_{n=0}^{N} c_n f(t - n\tau)$$
 
-\[ g(t) = \sum_{n=0}^{N} c_n f(t - n\tau) \]
-
-This means that each delayed version of the input signal is scaled by the corresponding coefficient \(c_n\) and summed to form the final output.
+This means that each delayed version of the input signal is scaled by the corresponding coefficient $c_n$ and summed to form the final output.
 
 :p What are some practical applications of delay-line filters?
 ??x
-Delay-line filters can be used in various applications, such as noise filtering, where different time delays help in separating frequency components. In digital signal processing, they can be used to implement specific filter responses for different frequency ranges by adjusting the coefficients \(c_n\) and the delay times \(\tau\).
+Delay-line filters can be used in various applications, such as noise filtering, where different time delays help in separating frequency components. In digital signal processing, they can be used to implement specific filter responses for different frequency ranges by adjusting the coefficients $c_n $ and the delay times$\tau$.
 
 :p How does a delay-line filter compare with an ideal low-pass filter?
 ??x
-A delay-line filter approximates the behavior of an ideal low-pass filter. The ideal low-pass filter allows frequencies below a cutoff frequency \(\omega_c\) to pass through while blocking higher frequencies. In the time domain, this is represented by a sinc function:
-
-\[ \text{Fourier transform of } H(\omega) = \text{sinc}(t/2\omega_c) \]
+A delay-line filter approximates the behavior of an ideal low-pass filter. The ideal low-pass filter allows frequencies below a cutoff frequency $\omega_c$ to pass through while blocking higher frequencies. In the time domain, this is represented by a sinc function:
+$$\text{Fourier transform of } H(\omega) = \text{sinc}(t/2\omega_c)$$
 
 In practice, implementing such an ideal filter requires sampling at infinite points, which is impractical. Therefore, delay-line filters use finite sampling and window functions to approximate the desired behavior.
 
@@ -60,31 +54,25 @@ A windowed sinc filter is a practical implementation of a low-pass filter that u
 
 :p How does the Fourier transform of a rectangular pulse relate to the ideal low-pass filter?
 ??x
-The Fourier transform of a rectangular pulse in frequency space corresponds to the sinc function in time space. Specifically, for a rectangular function \( \text{rect}(\omega/2\omega_c) \), its Fourier transform is given by:
+The Fourier transform of a rectangular pulse in frequency space corresponds to the sinc function in time space. Specifically, for a rectangular function $\text{rect}(\omega/2\omega_c)$, its Fourier transform is given by:
 
-\[ \mathcal{F}\{\text{rect}(\omega/2\omega_c)\} = 2\omega_c \cdot \text{sinc}(t/\tau) \]
-
-where \(\tau = 1/(2\omega_c)\).
+$$\mathcal{F}\{\text{rect}(\omega/2\omega_c)\} = 2\omega_c \cdot \text{sinc}(t/\tau)$$where $\tau = 1/(2\omega_c)$.
 
 :p What is the time-domain representation of a sinc filter?
 ??x
 The time-domain representation of a sinc filter, which is used in discrete transforms, is:
 
-\[ h[i] = \frac{\sin(2\pi\omega_c (i - M/2))}{\pi(i - M/2)} \]
-
-where \(M\) is the number of samples, and \(\omega_c\) is the cutoff frequency.
+$$h[i] = \frac{\sin(2\pi\omega_c (i - M/2))}{\pi(i - M/2)}$$where $ M $ is the number of samples, and $\omega_c$ is the cutoff frequency.
 
 :p Why are sinc filters non-causal?
 ??x
-Sinc filters are inherently non-causal because they require information from negative time values to compute their output. In practice, this means that we cannot start processing a signal until \(t=0\), violating causality.
+Sinc filters are inherently non-causal because they require information from negative time values to compute their output. In practice, this means that we cannot start processing a signal until $t=0$, violating causality.
 
 :p How do you practically implement a sinc filter for finite sampling?
 ??x
 To practically implement a sinc filter with finite sampling, the infinite impulse response is truncated and windowed. The formula for the discrete-time filter kernel becomes:
 
-\[ h[i] = \frac{\sin(2\pi\omega_c (i - M/2))}{\pi(i - M/2)} \cdot w[i] \]
-
-where \(w[i]\) is a window function, such as the Hamming window.
+$$h[i] = \frac{\sin(2\pi\omega_c (i - M/2))}{\pi(i - M/2)} \cdot w[i]$$where $ w[i]$ is a window function, such as the Hamming window.
 
 :p What are Gibb's overshoots and how do they affect sinc filters?
 ??x
@@ -93,54 +81,51 @@ Gibb’s overshoots occur when truncating the sinc function. These overshoots ma
 :p How can you reduce Gibb's overshoots in sinc filters?
 ??x
 To reduce Gibb’s overshoots, two methods are commonly used: increasing the length of the sampling interval or applying smooth tapering through window functions. For example, using the Hamming window function:
-
-\[ w[i] = 0.54 - 0.46 \cos\left(\frac{2\pi i}{M}\right) \]
+$$w[i] = 0.54 - 0.46 \cos\left(\frac{2\pi i}{M}\right)$$
 
 This smoothes out the truncation and reduces overshoots.
 
 :p What is an example of a smooth tapering window function?
 ??x
 An example of a smooth tapering window function, such as the Hamming window, is defined as:
-
-\[ w[i] = 0.54 - 0.46 \cos\left(\frac{2\pi i}{M}\right) \]
+$$w[i] = 0.54 - 0.46 \cos\left(\frac{2\pi i}{M}\right)$$
 
 This function tapers smoothly to zero at the edges, reducing abrupt truncation effects.
 
 :p How does the final filter kernel look after applying a Hamming window?
 ??x
 After applying the Hamming window, the final filter kernel becomes:
-
-\[ h[i] = \frac{\sin(2\pi\omega_c (i - M/2))}{\pi(i - M/2)} \cdot \left(0.54 - 0.46 \cos\left(\frac{2\pi i}{M}\right)\right) \]
+$$h[i] = \frac{\sin(2\pi\omega_c (i - M/2))}{\pi(i - M/2)} \cdot \left(0.54 - 0.46 \cos\left(\frac{2\pi i}{M}\right)\right)$$
 
 This results in a filter that approximates the ideal rectangular response more closely, with reduced overshoots and rounded corners.
 
 ---
 
 #### Fast Fourier Transform (FFT) Introduction
-Background context: The Fast Fourier Transform is an algorithm that reduces the computational complexity of computing the Discrete Fourier Transform (DFT). In the DFT, the computation involves \( N^2 \) multiplications and additions, which can be computationally expensive for large values of \( N \). The FFT algorithm reduces this to approximately \( N \log_2 N \), significantly improving efficiency.
+Background context: The Fast Fourier Transform is an algorithm that reduces the computational complexity of computing the Discrete Fourier Transform (DFT). In the DFT, the computation involves $N^2 $ multiplications and additions, which can be computationally expensive for large values of$N $. The FFT algorithm reduces this to approximately$ N \log_2 N$, significantly improving efficiency.
 
 :p What is the primary purpose of the Fast Fourier Transform (FFT)?
 ??x
-The primary purpose of the FFT is to reduce the computational complexity of computing the Discrete Fourier Transform from \( O(N^2) \) to \( O(N \log_2 N) \). This allows for faster processing and analysis of large datasets.
+The primary purpose of the FFT is to reduce the computational complexity of computing the Discrete Fourier Transform from $O(N^2)$ to $O(N \log_2 N)$. This allows for faster processing and analysis of large datasets.
 x??
 
 ---
 
 #### Periodicity in DFT Definition
-Background context: The periodicity property of the DFT can be used to reduce the number of computations required. For a given signal, its DFT can be expressed using complex exponentials \( Z_k = e^{-2\pi i k/N} \).
+Background context: The periodicity property of the DFT can be used to reduce the number of computations required. For a given signal, its DFT can be expressed using complex exponentials $Z_k = e^{-2\pi i k/N}$.
 
 :p How does the periodicity property help in reducing computational steps?
 ??x
 The periodicity property helps by recognizing that many terms in the DFT computation repeat due to the cyclic nature of the complex exponential function. By leveraging this, fewer unique multiplications are required.
 
-For example, for \( N = 8 \), we have:
+For example, for $N = 8$, we have:
 ```plaintext
 Y0 = Z^0 * (y0 + y1 + y2 + y3 + y4 + y5 + y6 + y7)
 Y1 = Z^0 * (y0) + Z^1 * (y1) + Z^2 * (y2) + Z^3 * (y3) - Z^0 * (y4) - Z^1 * (y5) - Z^2 * (y6) - Z^3 * (y7)
 ...
 ```
 
-The complex exponential \( Z_k \) values repeat every 8 terms, allowing for fewer unique multiplications.
+The complex exponential $Z_k$ values repeat every 8 terms, allowing for fewer unique multiplications.
 
 x??
 
@@ -151,7 +136,7 @@ Background context: The butterfly operation is a fundamental component of the FF
 
 :p What is the butterfly operation?
 ??x
-The butterfly operation is a computational step used in the FFT algorithm to combine intermediate results (in the form of \( y_p \pm y_q \)) from two input elements, thus reducing the number of operations required for DFT computation. It groups terms into sums and differences of the \( y_k \) values.
+The butterfly operation is a computational step used in the FFT algorithm to combine intermediate results (in the form of $y_p \pm y_q $) from two input elements, thus reducing the number of operations required for DFT computation. It groups terms into sums and differences of the $ y_k$ values.
 
 For example, using the butterfly operation:
 ```plaintext
@@ -169,9 +154,9 @@ x??
 #### Example DFT Computation
 Background context: The DFT can be computed using a compact form involving complex exponentials, and the FFT algorithm optimizes this process by leveraging symmetries.
 
-:p How is the DFT computed for \( N = 8 \)?
+:p How is the DFT computed for $N = 8$?
 ??x
-For \( N = 8 \), we use the properties of complex exponentials to simplify the computation:
+For $N = 8$, we use the properties of complex exponentials to simplify the computation:
 
 ```plaintext
 Y0 = Z^0 * (y0 + y4) + Z^0 * (y1 + y5) + Z^0 * (y2 + y6) + Z^0 * (y3 + y7)
@@ -179,7 +164,7 @@ Y1 = Z^0 * (y0 - y4) + Z^1 * (y1 - y5) + Z^2 * (y2 - y6) + Z^3 * (y3 - y7)
 ...
 ```
 
-Here, \( Z_k \) values repeat every 8 terms due to periodicity. The complex exponentials are simplified and reused:
+Here, $Z_k$ values repeat every 8 terms due to periodicity. The complex exponentials are simplified and reused:
 
 ```plaintext
 Z0 = exp(0) = 1
@@ -196,7 +181,7 @@ x??
 ---
 
 #### FFT Algorithm Steps
-Background context: The FFT algorithm divides the input data into smaller groups and transforms them recursively until all data points are transformed. This reduces the computational complexity to \( O(N \log_2 N) \).
+Background context: The FFT algorithm divides the input data into smaller groups and transforms them recursively until all data points are transformed. This reduces the computational complexity to $O(N \log_2 N)$.
 
 :p What are the main steps in the FFT algorithm?
 ??x
@@ -223,12 +208,12 @@ Background context explaining the butterfly operation, which is a fundamental co
 
 :p What is the purpose of the butterfly operation in FFT?
 ??x
-The purpose of the butterfly operation in FFT is to reduce the number of complex multiplications needed during the transformation process. By using Z-transforms (where \(Z\) is a complex root of unity), it efficiently combines input data pairs into new transformed outputs, thereby significantly decreasing computational complexity.
+The purpose of the butterfly operation in FFT is to reduce the number of complex multiplications needed during the transformation process. By using Z-transforms (where $Z$ is a complex root of unity), it efficiently combines input data pairs into new transformed outputs, thereby significantly decreasing computational complexity.
 
 For example:
-- For two inputs \(yp\) and \(yq\):
-  - The output includes \((yp + Zyq)\) and \((yp - Zyq)\).
-  - Here, \(Z\) is a complex number where \(Z = e^{-2\pi i k / N}\), with \(N\) being the total number of points in the DFT.
+- For two inputs $yp $ and$yq$:
+  - The output includes $(yp + Zyq)$ and $(yp - Zyq)$.
+  - Here, $Z $ is a complex number where$Z = e^{-2\pi i k / N}$, with $ N$ being the total number of points in the DFT.
 
 In pseudocode:
 ```java

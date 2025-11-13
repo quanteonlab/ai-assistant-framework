@@ -191,7 +191,7 @@ x??
 ---
 
 #### Priority Boost Mechanism
-Background context: The text introduces a mechanism called "priority boost" where after a certain period \( S \), all jobs are moved to the topmost queue to ensure that CPU-bound processes do not starve and interactive processes get proper treatment.
+Background context: The text introduces a mechanism called "priority boost" where after a certain period $S$, all jobs are moved to the topmost queue to ensure that CPU-bound processes do not starve and interactive processes get proper treatment.
 
 :p How does the priority boost mechanism work?
 ??x
@@ -205,7 +205,7 @@ Background context: The text highlights the issue of starvation where long-runni
 
 :p What problem does the priority boost rule solve?
 ??x
-The priority boost rule addresses the problem of starvation, ensuring that even long-running, CPU-bound jobs will receive some CPU time by moving them to the topmost queue after a certain period \( S \). This ensures that interactive processes are also treated properly once they receive a priority boost.
+The priority boost rule addresses the problem of starvation, ensuring that even long-running, CPU-bound jobs will receive some CPU time by moving them to the topmost queue after a certain period $S$. This ensures that interactive processes are also treated properly once they receive a priority boost.
 x??
 
 ---
@@ -213,15 +213,15 @@ x??
 #### Example Scenario with Priority Boost
 Background context: The text provides an example where a long-running job competes for CPU time with two short-lived, interactive jobs. Without priority boosting, the long-running job gets starved. With priority boosting every 50 ms, the long-running job is guaranteed to make some progress.
 
-:p How does moving all jobs to the highest priority queue after \( S \) seconds help in this scenario?
+:p How does moving all jobs to the highest priority queue after $S$ seconds help in this scenario?
 ??x
-By moving all jobs to the topmost queue after a certain period \( S \), the long-running job is guaranteed to receive CPU time periodically. This ensures that it makes some progress, even if only briefly. The interactive jobs will also get their share of CPU time when they are boosted.
+By moving all jobs to the topmost queue after a certain period $S$, the long-running job is guaranteed to receive CPU time periodically. This ensures that it makes some progress, even if only briefly. The interactive jobs will also get their share of CPU time when they are boosted.
 x??
 
 ---
 
 #### Code Example for Priority Boost
-Background context: The text does not provide specific code but suggests a simple rule where all jobs are moved to the topmost queue after every \( S \) seconds.
+Background context: The text does not provide specific code but suggests a simple rule where all jobs are moved to the topmost queue after every $S$ seconds.
 
 :p How can we implement the priority boost in pseudocode?
 ??x
@@ -234,7 +234,7 @@ function prioritizeJobs():
         for each job in system:
             moveJobToTopmostQueue(job)
 ```
-This function waits for a fixed time \( S \), then moves all jobs to the topmost queue, ensuring that they get some CPU time.
+This function waits for a fixed time $S$, then moves all jobs to the topmost queue, ensuring that they get some CPU time.
 x??
 
 ---

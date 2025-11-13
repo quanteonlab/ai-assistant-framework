@@ -83,22 +83,24 @@ x??
 
 Background context explaining the concept. The provided text discusses a specific type of distribution, known as the Pareto distribution, which is observed in various real-world workloads such as job lifetimes on UNIX systems. The distribution is characterized by a power-law behavior and has certain properties that make it interesting for modeling.
 
-The probability that a job's lifetime exceeds \( x \) seconds given that its lifetime exceeds 1 second can be expressed as:
-\[ P\{Job size > x | Job size > 1\} = \frac{1}{x}. \]
+The probability that a job's lifetime exceeds $x$ seconds given that its lifetime exceeds 1 second can be expressed as:
+$$P\{Job size > x | Job size > 1\} = \frac{1}{x}.$$
 
 This implies the following distribution function:
-\[ F(x) = 1 - \frac{1}{x^{\alpha}}, \quad x \geq 1, \]
-where \( \alpha \) ranges from approximately 0.8 to 1.2 across different machines.
+$$
+
+F(x) = 1 - \frac{1}{x^{\alpha}}, \quad x \geq 1,$$where $\alpha$ ranges from approximately 0.8 to 1.2 across different machines.
 
 The failure rate (or hazard function) of the Pareto distribution is given by:
-\[ r(x) = \frac{f(x)}{F(x)} = \frac{\alpha x^{-\alpha-1}}{(1 - x^{-\alpha})} = \frac{\alpha}{x}, \quad x \geq 1. \]
+$$r(x) = \frac{f(x)}{F(x)} = \frac{\alpha x^{-\alpha-1}}{(1 - x^{-\alpha})} = \frac{\alpha}{x}, \quad x \geq 1.$$
 
-Notice that the failure rate decreases with \( x \), making it a decreasing failure rate (DFR) distribution.
+Notice that the failure rate decreases with $x$, making it a decreasing failure rate (DFR) distribution.
 
 :p What is the failure rate of the Pareto distribution?
 ??x
 The failure rate of the Pareto distribution is given by:
-\[ r(x) = \frac{\alpha}{x}. \]
+$$r(x) = \frac{\alpha}{x}.$$
+
 This indicates that older jobs have a higher probability of surviving another second, as their failure rate decreases with time. This can be visualized in C/Java code as follows:
 
 ```java
@@ -119,64 +121,54 @@ x??
 
 ---
 
-#### Mean and Variance for Pareto Distribution with \(\alpha \leq 1\)
+#### Mean and Variance for Pareto Distribution with $\alpha \leq 1 $ Background context explaining the concept. The provided text discusses how to calculate the mean and variance of a Pareto distribution when$\alpha \leq 1$. For such values, these moments are infinite, which has implications for modeling job lifetimes.
 
-Background context explaining the concept. The provided text discusses how to calculate the mean and variance of a Pareto distribution when \( \alpha \leq 1 \). For such values, these moments are infinite, which has implications for modeling job lifetimes.
+For a Pareto distribution with $0 < \alpha \leq 1$:
+$$E[Lifetime] = \infty.$$
 
-For a Pareto distribution with \( 0 < \alpha \leq 1 \):
-\[ E[Lifetime] = \infty. \]
 The second and higher moments of the lifetime are also infinite:
-\[ E[ith moment of Lifetime] = \infty, \quad i=2,3,\ldots. \]
+$$
 
-:p For a Pareto distribution with \(\alpha \leq 1\), what is the mean and variance?
+E[ith moment of Lifetime] = \infty, \quad i=2,3,\ldots.$$:p For a Pareto distribution with $\alpha \leq 1$, what is the mean and variance?
 ??x
-For \( 0 < \alpha \leq 1 \):
+For $0 < \alpha \leq 1$:
 - The expected lifetime (mean) is infinite:
-  \[ E[Lifetime] = \infty. \]
-- Higher moments of the lifetime are also infinite, implying that both the second moment (variance) and higher-order moments do not exist in finite form.
+  $$E[Lifetime] = \infty.$$- Higher moments of the lifetime are also infinite, implying that both the second moment (variance) and higher-order moments do not exist in finite form.
 
 x??
 
 ---
 
-#### Mean and Variance for Pareto Distribution with \(\alpha > 1\)
+#### Mean and Variance for Pareto Distribution with $\alpha > 1 $ Background context explaining the concept. The text states that when$\alpha > 1$, both the expected lifetime and the expected remaining lifetime are finite, but higher moments of the lifetime remain infinite.
 
-Background context explaining the concept. The text states that when \( \alpha > 1 \), both the expected lifetime and the expected remaining lifetime are finite, but higher moments of the lifetime remain infinite.
-
-For a Pareto distribution with \( \alpha > 1 \):
+For a Pareto distribution with $\alpha > 1$:
 - The expected lifetime (mean) is finite:
-  \[ E[Lifetime] = \int_1^\infty x f(x) dx < \infty. \]
-- The expected remaining lifetime given an age of \( a \) is also finite, but higher moments are still infinite.
+  $$E[Lifetime] = \int_1^\infty x f(x) dx < \infty.$$- The expected remaining lifetime given an age of $ a$ is also finite, but higher moments are still infinite.
 
-:p For a Pareto distribution with \(\alpha > 1\), what changes in the mean and variance?
+:p For a Pareto distribution with $\alpha > 1$, what changes in the mean and variance?
 ??x
-For \( \alpha > 1 \):
+For $\alpha > 1$:
 - Both the expected lifetime (mean) and the expected remaining lifetime are finite:
-  \[ E[Lifetime] = \int_1^\infty x f(x) dx < \infty. \]
-- Higher moments of the lifetime, such as the second moment (variance), remain infinite.
+  $$E[Lifetime] = \int_1^\infty x f(x) dx < \infty.$$- Higher moments of the lifetime, such as the second moment (variance), remain infinite.
 
 x??
 
 ---
 
-#### Probability of a Job Living Beyond Age \( b \) Given it Has Survived to Age \( a \)
+#### Probability of a Job Living Beyond Age $b $ Given it Has Survived to Age$a $ Background context explaining the concept. The provided text explains how to calculate the probability that a job with CPU age$ a $ will survive to a CPU age $ b $, where $ b > a$.
 
-Background context explaining the concept. The provided text explains how to calculate the probability that a job with CPU age \( a \) will survive to a CPU age \( b \), where \( b > a \).
-
-For a Pareto distribution with \( \alpha = 1 \):
-\[ P\{Life > b | Life \geq a, a > 1\} = \frac{a}{b}. \]
+For a Pareto distribution with $\alpha = 1$:
+$$P\{Life > b | Life \geq a, a > 1\} = \frac{a}{b}.$$
 
 This means that if we consider all the jobs currently of age 1 second, half of them will live to an age of at least 2 seconds. Similarly:
-- The probability that a job of age 1 second uses more than \( T \) seconds of CPU is given by:
-  \[ P\{Life > T | Life \geq 1\} = \frac{1}{T}. \]
-- The probability that a job of age \( T \) seconds lives to be at least \( 2T \) seconds old is:
-  \[ P\{Life \geq 2T | Life \geq T, T > 0\} = \frac{T}{2T} = \frac{1}{2}. \]
-
-:p Under the Pareto distribution with \(\alpha = 1\), what is the probability that a job of CPU age \( a \) lives to CPU age \( b \)?
+- The probability that a job of age 1 second uses more than $T$ seconds of CPU is given by:
+$$P\{Life > T | Life \geq 1\} = \frac{1}{T}.$$- The probability that a job of age $ T $ seconds lives to be at least $2T$ seconds old is:
+$$P\{Life \geq 2T | Life \geq T, T > 0\} = \frac{T}{2T} = \frac{1}{2}.$$:p Under the Pareto distribution with $\alpha = 1 $, what is the probability that a job of CPU age $ a $ lives to CPU age $ b$?
 ??x
-For a Pareto distribution with \( \alpha = 1 \):
-\[ P\{Life > b | Life \geq a, a > 1\} = \frac{a}{b}. \]
-This means that the probability of a job surviving from age \( a \) to age \( b \) is directly proportional to the ratio of the initial age \( a \) to the final age \( b \).
+For a Pareto distribution with $\alpha = 1$:
+$$P\{Life > b | Life \geq a, a > 1\} = \frac{a}{b}.$$
+
+This means that the probability of a job surviving from age $a $ to age$b $ is directly proportional to the ratio of the initial age$ a $ to the final age $b$.
 
 x??
 
@@ -187,19 +179,17 @@ x??
 Background context explaining the concept. The provided text discusses how real-world data often exhibit finite minimum and maximum values, which cannot be accurately modeled by an unbounded Pareto distribution. To address this, a bounded Pareto distribution is introduced.
 
 A Bounded Pareto distribution has the density function:
-\[ f(x) = \frac{\alpha k^\alpha x^{-\alpha-1}}{1 - (k/p)^{\alpha}}, \quad for \; k \leq x \leq p, \]
-where \( 0 < \alpha < 2 \).
+$$f(x) = \frac{\alpha k^\alpha x^{-\alpha-1}}{1 - (k/p)^{\alpha}}, \quad for \; k \leq x \leq p,$$where $0 < \alpha < 2$.
 
-The factor \( \frac{k^\alpha}{1 - (k/p)^\alpha} \) is a normalization constant ensuring that the integral of the density function between \( k \) and \( p \) equals 1.
+The factor $\frac{k^\alpha}{1 - (k/p)^\alpha}$ is a normalization constant ensuring that the integral of the density function between $ k $ and $p$ equals 1.
 
 :p What is the Bounded Pareto distribution?
 ??x
 A Bounded Pareto distribution has the following properties:
 - It models real-world data with finite minimum and maximum values.
 - The density function is defined as:
-\[ f(x) = \frac{\alpha k^\alpha x^{-\alpha-1}}{1 - (k/p)^{\alpha}}, \quad for \; k \leq x \leq p, \]
-where \( 0 < \alpha < 2 \).
-- The normalization factor ensures that the integral of the density function between \( k \) and \( p \) equals 1.
+$$f(x) = \frac{\alpha k^\alpha x^{-\alpha-1}}{1 - (k/p)^{\alpha}}, \quad for \; k \leq x \leq p,$$where $0 < \alpha < 2$.
+- The normalization factor ensures that the integral of the density function between $k $ and$p$ equals 1.
 
 x??
 

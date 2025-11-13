@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "book_notes/2A012---Reinforcement-Learning/2rla_part38_Neural_ActorCri.md",
+                "file": "book_notes/10A006---Java-Cookbook---Ian-F-Darwin/1jcif_part16_8.6_Avoiding_NP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2rla_part38_Neural_ActorCri"
+              "title": "1jcif_part16_8.6_Avoiding_NP"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 234.5
+    "width": 291.5
   },
   "right": {
     "id": "d21b0302512c5ac0",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "book_notes/2A012---Reinforcement-Learning/2rla_part38_Neural_ActorCri.md",
+                "file": "book_notes/10A006---Java-Cookbook---Ian-F-Darwin/1jcif_part16_8.6_Avoiding_NP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2rla_part38_Neural_ActorCri"
+              "title": "Backlinks for 1jcif_part16_8.6_Avoiding_NP"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "book_notes/2A012---Reinforcement-Learning/2rla_part38_Neural_ActorCri.md",
+                "file": "book_notes/10A006---Java-Cookbook---Ian-F-Darwin/1jcif_part16_8.6_Avoiding_NP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2rla_part38_Neural_ActorCri"
+              "title": "Outgoing links from 1jcif_part16_8.6_Avoiding_NP"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "book_notes/2A012---Reinforcement-Learning/2rla_part38_Neural_ActorCri.md",
+                "file": "book_notes/10A006---Java-Cookbook---Ian-F-Darwin/1jcif_part16_8.6_Avoiding_NP.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2rla_part38_Neural_ActorCri"
+              "title": "Outline of 1jcif_part16_8.6_Avoiding_NP"
             }
           }
         ]
@@ -171,31 +171,32 @@
   },
   "active": "8f642d2ec2209bbd",
   "lastOpenFiles": [
-    "book_notes/2A012---Reinforcement-Learning/2rla_part37_Dopamine.md",
-    "book_notes/2A012---Reinforcement-Learning/2rla_part40_Applications_an.md",
-    "book_notes/2A012---Reinforcement-Learning/2rla_part36_Summary.md",
-    "book_notes/2A012---Reinforcement-Learning/2rla_part25_Gradient-TD_Met.md",
-    "book_notes/2A012---Reinforcement-Learning/2rla_part27_Summary.md",
-    "book_notes/Game-Engine-Architecture/geaa_part12_5.5_Comparison.md",
+    "book_notes/10A006---Java-Cookbook---Ian-F-Darwin/1jcif_part13_7.7_Eschewing_D.md",
+    "book_notes/10A006---Java-Cookbook---Ian-F-Darwin/1jcif_part02_1.7_Automating.md",
+    "book_notes/Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable/ddiab_part05_Property_Graphs.md",
+    "book_notes/Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable/ddiab_part08_B-Trees.md",
+    "book_notes/029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--/0uds2_part11_Practical_consi.md",
+    "book_notes/029---Understanding-Distributed-Systems-2021-Roberto-Vitillo--/0uds2_part01_Coordination.md",
+    "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part18_7.4_Slip_System.md",
+    "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part17_6.12_DesignSafe.md",
+    "book_notes/Game-Engine-Architecture/geaa_part20_10.7_Screenshot.md",
+    "book_notes/Game-Engine-Architecture/geaa_part19_10.2_Debug_Draw.md",
+    "book_notes/Game-Engine-Architecture/geaa_part18_9.5_Game_Engine.md",
+    "book_notes/Game-Engine-Architecture/geaa_part17_8.5_Measuring_a.md",
+    "book_notes/Game-Engine-Architecture/geaa_part16_8_The_Game_Loop.md",
     "book_notes/Game-Engine-Architecture/geaa_part15_7.2_The_Resourc.md",
-    "book_notes/Game-Engine-Architecture/geaa_part23_11.3_Advanced_L.md",
-    "book_notes/Game-Engine-Architecture/geaa_part24_12_Animation_Sy.md",
-    "book_notes/Game-Engine-Architecture/geaa_part26_12.7_Post-Proce.md",
-    "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part08_Summary.md",
-    "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part02_1.4_Classificat.md",
-    "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part03_Learning_Object.md",
-    "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part13_5.5_Factors_Tha.md",
-    "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part11_4.10_Microscopi.md",
-    "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part09_4.3_Impurities.md",
-    "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part07_3.12_Close-Pack.md",
-    "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part06_CRYSTALLOGRAPHI.md",
-    "book_notes/Materials-Science-and-Engineering-An-Introduction/msei_part01_List_of_Symbols.md",
-    "book_notes/ConcurrencyNetModern/concu_part23_9.3.4_Mapping_a.md",
-    "book_notes/ConcurrencyNetModern/concu_part12_4.3.5_The_decla.md",
-    "book_notes/Contract-Law-For-Dummies/cldo_part03_Finding_Excepti.md",
-    "book_notes/Contract-Law-For-Dummies/cldo_part01_Forming_a_Contr.md",
-    "book_notes/2B005---Streaming-Systems/2ssb_part13_Other_Systems.md",
-    "book_notes/2B005---Streaming-Systems/2ssb_part11_Variations_on_S.md",
-    "book_notes/2B005---Streaming-Systems/2ssb_part05_When_Allowed_La.md"
+    "book_notes/Game-Engine-Architecture/geaa_part14_6.4_Strings.md",
+    "book_notes/Game-Engine-Architecture/geaa_part13_6_Engine_Suppor.md",
+    "book_notes/Game-Engine-Architecture/geaa_part12_5.5_Comparison.md",
+    "book_notes/Game-Engine-Architecture/geaa_part07_4.2_Implicit_Pa.md",
+    "book_notes/Game-Engine-Architecture/geaa_part08_4.6_Thread_Sync.md",
+    "book_notes/Game-Engine-Architecture/geaa_part09_4.9_Lock-Free_C.md",
+    "book_notes/Game-Engine-Architecture/geaa_part10_4.10_SIMDVector.md",
+    "book_notes/Game-Engine-Architecture/geaa_part11_5.3_Matrices.md",
+    "book_notes/Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable/ddiab_part03_Summary.md",
+    "book_notes/Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable/ddiab_part02_How_Important_I.md",
+    "book_notes/Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable/ddiab_part01_How_to_Contact.md",
+    "book_notes/Designing-data-intensive-applications_-the-big-ideas-behind-reliable-scalable/ddiab_part07_B-Trees.md",
+    "book_notes/sampleindentation"
   ]
 }

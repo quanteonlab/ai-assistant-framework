@@ -93,8 +93,7 @@ x??
 #### Discrete Fourier Transform (DFT) using Complex Numbers
 Background context: The DFT is a fundamental tool for analyzing signals, transforming them from the time domain to the frequency domain. It decomposes a signal into its constituent frequencies. For complex numbers, the transform can be computed more efficiently and accurately.
 Relevant formulas:
-- \( Y[k] = \sum_{n=0}^{N-1} y[n] e^{-j\frac{2\pi kn}{N}} \)
-where \( y[n] \) is the signal in the time domain, and \( Y[k] \) represents the frequency domain components.
+- $Y[k] = \sum_{n=0}^{N-1} y[n] e^{-j\frac{2\pi kn}{N}}$ where $y[n]$ is the signal in the time domain, and $Y[k]$ represents the frequency domain components.
 
 :p What is the DFT using complex numbers?
 ??x
@@ -134,7 +133,7 @@ x??
 #### Discrete Fourier Transform (DFT) using Real Numbers
 Background context: The DFT can also be computed for real-valued signals by separating the transform into its real and imaginary parts. This approach is useful when dealing with signals that are purely real.
 Relevant formulas:
-- \( Y[k] = \sum_{n=0}^{N-1} y[n] \sin\left(\frac{2\pi kn}{N}\right) \)
+- $Y[k] = \sum_{n=0}^{N-1} y[n] \sin\left(\frac{2\pi kn}{N}\right)$
 This formula specifically handles the computation of the imaginary part of the DFT for real-valued signals.
 
 :p What is the DFT using real numbers?
@@ -167,14 +166,13 @@ x??
 ---
 
 #### Fast Fourier Transform (FFT) for Complex Numbers
-Background context: The FFT is an efficient algorithm to compute the DFT, reducing the complexity from \( O(N^2) \) to \( O(N\log N) \). This method takes advantage of symmetries in the DFT to speed up the computation.
+Background context: The FFT is an efficient algorithm to compute the DFT, reducing the complexity from $O(N^2)$ to $O(N\log N)$. This method takes advantage of symmetries in the DFT to speed up the computation.
 Relevant formulas:
-- Butterfly operation: \( y[j] = y[i] - tempr \)
-- Twiddle factors: \( wstpr, wstpi \)
+- Butterfly operation: $y[j] = y[i] - tempr $- Twiddle factors:$ wstpr, wstpi$
 
 :p What is the FFT for complex numbers?
 ??x
-The FFT for complex numbers is an efficient algorithm that reduces the complexity of computing the DFT from \( O(N^2) \) to \( O(N\log N) \). It uses a divide-and-conquer approach and exploits symmetries in the DFT.
+The FFT for complex numbers is an efficient algorithm that reduces the complexity of computing the DFT from $O(N^2)$ to $O(N\log N)$. It uses a divide-and-conquer approach and exploits symmetries in the DFT.
 ```python
 # FFT.py
 from numpy import *
@@ -238,7 +236,7 @@ x??
 #### Wavelet Analysis Introduction
 Wavelet analysis is a method for analyzing non-stationary signals, which are signals whose forms change over time. Unlike Fourier analysis, wavelets provide both frequency and time localization information, making them suitable for signals with varying frequencies as time progresses.
 
-Background context: Fourier analysis works well for stationary signals where the form of the signal does not change over time. However, it fails to provide temporal resolution, meaning it cannot pinpoint when specific frequencies occur in a non-stationary signal like \( y(t) \).
+Background context: Fourier analysis works well for stationary signals where the form of the signal does not change over time. However, it fails to provide temporal resolution, meaning it cannot pinpoint when specific frequencies occur in a non-stationary signal like $y(t)$.
 
 :p What is wavelet analysis used for?
 ??x
@@ -250,10 +248,10 @@ x??
 #### Signal Representation by Wavelets
 In wavelet analysis, a signal is represented as a sum of wavelets, which are localized in both time and frequency. Each wavelet is centered at a different point in time and can oscillate for a finite period.
 
-Background context: The given signal \( y(t) \) changes its frequency components over time:
-- For \( 0 \leq t \leq 2 \), it consists of only one sine wave.
-- For \( 2 \leq t \leq 8 \), it consists of two sine waves with different frequencies.
-- For \( 8 \leq t \leq 12 \), it consists of three sine waves.
+Background context: The given signal $y(t)$ changes its frequency components over time:
+- For $0 \leq t \leq 2$, it consists of only one sine wave.
+- For $2 \leq t \leq 8$, it consists of two sine waves with different frequencies.
+- For $8 \leq t \leq 12$, it consists of three sine waves.
 
 :p How does wavelet analysis differ from Fourier analysis in representing non-stationary signals?
 ??x
@@ -267,10 +265,7 @@ Four possible mother wavelets are shown: Morlet (real part), Mexican hat, Daub4 
 
 Background context: The provided formulas represent different types of wavelets:
 - **Morlet**: A complex-valued wavelet that is an oscillating Gaussian.
-  \[
-  \Psi(t) = e^{2\pi i t}e^{-t^2 / (2\sigma^2)} = (\cos(2\pi t) + i\sin(2\pi t))e^{-t^2 / (2\sigma^2)}
-  \]
-- **Mexican hat**: A second derivative of a Gaussian, which forms a wave packet.
+  $$\Psi(t) = e^{2\pi i t}e^{-t^2 / (2\sigma^2)} = (\cos(2\pi t) + i\sin(2\pi t))e^{-t^2 / (2\sigma^2)}$$- **Mexican hat**: A second derivative of a Gaussian, which forms a wave packet.
 
 :p What are the different types of mother wavelets mentioned?
 ??x
@@ -280,13 +275,13 @@ x??
 
 ---
 #### Wavelet Transform Example
-To understand how to use these wavelets for analysis, consider the signal \( y(t) \). The goal is to decompose this signal into its constituent wavelets.
+To understand how to use these wavelets for analysis, consider the signal $y(t)$. The goal is to decompose this signal into its constituent wavelets.
 
 Background context: Each wavelet will be centered at a different time point and will provide information about the frequency content of the signal at that specific time.
 
 :p How do we apply wavelets to analyze the given signal?
 ??x
-We use wavelets to decompose the signal \( y(t) \) into its constituent parts by translating and scaling each mother wavelet. This allows us to get both frequency and time information for different segments of the signal.
+We use wavelets to decompose the signal $y(t)$ into its constituent parts by translating and scaling each mother wavelet. This allows us to get both frequency and time information for different segments of the signal.
 
 For example, using a Morlet wavelet:
 - Translate it across the entire range of the signal.

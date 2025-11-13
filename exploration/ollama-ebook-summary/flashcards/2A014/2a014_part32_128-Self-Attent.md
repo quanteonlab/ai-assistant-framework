@@ -21,19 +21,18 @@ Self-attention is a mechanism in transformers where every element in the sequenc
 
 Formally, self-attention can be defined as:
 
-\[ \text{self\_attention}(Q, K, V) = \text{softmax}\left( \frac{QK^T}{\sqrt{d_k}} \right)V \]
+$$\text{self\_attention}(Q, K, V) = \text{softmax}\left( \frac{QK^T}{\sqrt{d_k}} \right)V$$
 
-Where \( Q \), \( K \), and \( V \) are the query, key, and value matrices respectively.
+Where $Q $, $ K $, and$ V$ are the query, key, and value matrices respectively.
 
 :p What is self-attention in transformers?
 ??x
 Self-attention in transformers allows each element of a sequence to attend to all other elements. It computes an attention score for every pair of tokens based on their queries and keys, and then combines these scores with values (e.g., word embeddings) to compute a weighted sum that represents the context of the token.
 
 Example:
-Given a sentence "The cat sat on the mat", if we have query \( Q \), key \( K \), and value \( V \) matrices for each token:
+Given a sentence "The cat sat on the mat", if we have query $Q $, key $ K $, and value$ V$ matrices for each token:
 
-\[ 
-Q = \begin{bmatrix}
+$$Q = \begin{bmatrix}
 q_{1} \\
 q_{2} \\
 q_{3} \\
@@ -45,22 +44,15 @@ V = \begin{bmatrix}
 v_{1} \\
 v_{2} \\
 v_{3} \\
-\end{bmatrix}
-\]
+\end{bmatrix}$$
 
-The attention scores \( S \) can be calculated as:
+The attention scores $S$ can be calculated as:
+$$S = \text{softmax}\left( \frac{QK^T}{\sqrt{d_k}} \right)$$
 
-\[ 
-S = \text{softmax}\left( \frac{QK^T}{\sqrt{d_k}} \right)
-\]
-
-Where \( d_k \) is the dimension of keys.
+Where $d_k$ is the dimension of keys.
 
 Then, the output is computed as:
-
-\[ 
-O = SV
-\]
+$$O = SV$$
 
 The attention mechanism helps the model capture long-range dependencies and contextual information within the sequence.
 ??x
@@ -74,30 +66,24 @@ Skip-addition in transformers refers to adding the input vector back to the fina
 Skip-addition, also known as residual connections, involves adding the original input vector back to the output after processing it through a layer (such as self-attention or feed-forward). This mechanism helps stabilize training and enables the model to learn more complex functions by stacking multiple layers.
 
 Example:
-Assume \( X \) is the input tensor, and \( F(X) \) represents a combination of self-attention and feed-forward layers. The output after skip-addition would be:
-
-\[ 
-Y = X + F(X)
-\]
+Assume $X $ is the input tensor, and$F(X)$ represents a combination of self-attention and feed-forward layers. The output after skip-addition would be:
+$$Y = X + F(X)$$
 
 This addition allows the gradient to flow more smoothly through deeper layers.
 
 :p How does skip-addition work in transformers?
 ??x
-Skip-addition works by adding the original input vector \( X \) back to the final output of a layer, such as self-attention or feed-forward. This helps stabilize training and enables the model to capture long-range dependencies effectively.
+Skip-addition works by adding the original input vector $X$ back to the final output of a layer, such as self-attention or feed-forward. This helps stabilize training and enables the model to capture long-range dependencies effectively.
 
 Example:
-Given an input tensor \( X \), after passing through self-attention and feed-forward layers:
+Given an input tensor $X$, after passing through self-attention and feed-forward layers:
 
-\[ 
-Y = F(X)
-\]
+$$Y = F(X)$$
 
 The skip-addition operation adds the original input back to this output:
+$$
 
-\[ 
-Z = X + Y
-\]
+Z = X + Y$$
 
 This mechanism helps in mitigating vanishing gradients, making it easier to train deeper networks.
 
@@ -106,12 +92,9 @@ This mechanism helps in mitigating vanishing gradients, making it easier to trai
 A feed-forward layer in transformers is a simple multilayer perceptron (MLP) that processes each position independently. It typically consists of two linear transformations with an activation function between them.
 
 Formally:
+$$\text{feed\_forward}(x) = \sigma(W_2 \cdot \text{ReLU}(W_1 x + b_1) + b_2)$$
 
-\[ 
-\text{feed\_forward}(x) = \sigma(W_2 \cdot \text{ReLU}(W_1 x + b_1) + b_2)
-\]
-
-Where \( W_1 \), \( W_2 \), and biases \( b_1 \), \( b_2 \) are learnable parameters, and \( \sigma \) is the activation function (e.g., ReLU or GeLU).
+Where $W_1 $, $ W_2 $, and biases$ b_1 $,$ b_2 $ are learnable parameters, and $\sigma$ is the activation function (e.g., ReLU or GeLU).
 
 :p What is a feed-forward layer in transformers?
 ??x
@@ -144,11 +127,9 @@ public class FeedForwardLayer {
 ??x
 A feed-forward layer in transformers processes each position independently using two linear transformations with an activation function (e.g., ReLU or GeLU) between them. It typically follows the structure:
 
-\[ 
-\text{feed\_forward}(x) = \sigma(W_2 \cdot \text{ReLU}(W_1 x + b_1) + b_2)
-\]
+$$\text{feed\_forward}(x) = \sigma(W_2 \cdot \text{ReLU}(W_1 x + b_1) + b_2)$$
 
-Where \( W_1 \), \( W_2 \) are weight matrices, and \( b_1 \), \( b_2 \) are biases. The activation function (e.g., ReLU or GeLU) introduces nonlinearity.
+Where $W_1 $, $ W_2 $ are weight matrices, and $ b_1 $,$ b_2$ are biases. The activation function (e.g., ReLU or GeLU) introduces nonlinearity.
 
 Example:
 ```java
@@ -178,9 +159,9 @@ This structure allows the model to learn complex transformations of each positio
 
 #### Self-Attention Mechanism Overview
 Self-attention is a mechanism where each element in a sequence considers every other element. This is achieved by learning four weight matrices per head, typically denoted as Q (query), K (key), O (output), and V (value). The attention process involves the following steps:
-1. Compute the query matrix \( QE^\prime \) from the input vectors using the query weights.
-2. Compute the key matrix \( KE^\prime \) from the positional embeddings.
-3. Form the attention matrix by computing the dot product between the query and key matrices: \( A = QE^\prime \cdot (KE^\prime)^T \).
+1. Compute the query matrix $QE^\prime$ from the input vectors using the query weights.
+2. Compute the key matrix $KE^\prime$ from the positional embeddings.
+3. Form the attention matrix by computing the dot product between the query and key matrices: $A = QE^\prime \cdot (KE^\prime)^T$.
 4. Apply a softmax function to each row of the attention matrix to get the attention vector.
 
 :p What is the self-attention mechanism?

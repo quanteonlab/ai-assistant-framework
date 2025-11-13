@@ -372,12 +372,12 @@ Layer normalization is a technique that normalizes the inputs to each layer by s
 
 The formula for layer normalization is:
 
-\[ \text{layer\_norm}(x) = \frac{x - \mu}{\sqrt{\sigma^2 + \epsilon}} \cdot \gamma + \beta \]
+$$\text{layer\_norm}(x) = \frac{x - \mu}{\sqrt{\sigma^2 + \epsilon}} \cdot \gamma + \beta$$
 
 Where:
-- \( x \) is the input tensor.
-- \( \mu \) and \( \sigma^2 \) are mean and variance over the hidden units, respectively.
-- \( \gamma \) and \( \beta \) are learnable parameters that adjust the normalized output.
+- $x$ is the input tensor.
+- $\mu $ and$\sigma^2$ are mean and variance over the hidden units, respectively.
+- $\gamma $ and$\beta$ are learnable parameters that adjust the normalized output.
 
 :p How does layer normalization stabilize training in deep neural networks?
 
@@ -585,10 +585,7 @@ x??
 Layer normalization is a technique used to stabilize and speed up training of deep neural networks, similar to batch normalization but applied at the neuron level. It normalizes the activations for each sample in a batch (or across all samples if not using batching).
 
 The formula for layer normalization is:
-\[
-\text{Normalized}(x) = \gamma \left( \frac{x - \mu}{\sqrt{\sigma^2 + \epsilon}} \right) + \beta
-\]
-where \( x \) is the input tensor, \( \mu \) and \( \sigma^2 \) are the mean and variance of the elements in the last dimension (embedding dimension), respectively. \( \gamma \) and \( \beta \) are learned parameters.
+$$\text{Normalized}(x) = \gamma \left( \frac{x - \mu}{\sqrt{\sigma^2 + \epsilon}} \right) + \beta$$where $ x $is the input tensor,$\mu $ and$\sigma^2 $ are the mean and variance of the elements in the last dimension (embedding dimension), respectively.$\gamma $ and$\beta$ are learned parameters.
 
 :p What does layer normalization do to the activations?
 ??x
@@ -697,7 +694,7 @@ x??
 Background context explaining how variance is calculated without Bessel’s correction (unbiased=False) for compatibility with GPT-2 normalization layers and TensorFlow defaults. This approach can lead to a biased estimate of variance but is practical for large embedding dimensions.
 :p Why is the unbiased parameter set to False when calculating variance in LLMs?
 ??x
-The unbiased parameter is set to False when calculating variance in LLMs to maintain compatibility with GPT-2 normalization layers and TensorFlow's default behavior. This approach uses \( \frac{1}{n} \) for division instead of \( \frac{1}{n-1} \), which results in a biased estimate but ensures consistency with the pretrained model weights.
+The unbiased parameter is set to False when calculating variance in LLMs to maintain compatibility with GPT-2 normalization layers and TensorFlow's default behavior. This approach uses $\frac{1}{n}$ for division instead of $\frac{1}{n-1}$, which results in a biased estimate but ensures consistency with the pretrained model weights.
 x??
 
 ---
@@ -757,13 +754,10 @@ x??
 Background context: In this section, we delve into implementing a specific activation function called the Gaussian Error Linear Unit (GELU). This function is crucial for certain neural network architectures, particularly in large language models (LLMs), where it offers better performance compared to traditional activation functions like ReLU. The GELU function smoothly transitions through zero and introduces non-linearity that can aid optimization during training.
 
 The exact mathematical definition of the GELU function is given by:
-\[ \text{GELU}(x) = x \cdot \Phi(x) \]
-where \( \Phi(x) \) is the cumulative distribution function (CDF) of the standard Gaussian distribution. However, a computationally cheaper approximation is often used in practice.
+$$\text{GELU}(x) = x \cdot \Phi(x)$$where $\Phi(x)$ is the cumulative distribution function (CDF) of the standard Gaussian distribution. However, a computationally cheaper approximation is often used in practice.
 
 The implementation of this approximation can be expressed as:
-\[ \text{GELU}(x) \approx 0.5 \cdot x \cdot (1 + \tanh(\sqrt{\frac{2}{\pi}} \cdot (x + 0.044715 \cdot x^3))) \]
-
-:p How can we implement the GELU activation function in PyTorch?
+$$\text{GELU}(x) \approx 0.5 \cdot x \cdot (1 + \tanh(\sqrt{\frac{2}{\pi}} \cdot (x + 0.044715 \cdot x^3)))$$:p How can we implement the GELU activation function in PyTorch?
 ??x
 We can implement the GELU activation function as a custom PyTorch module:
 
@@ -837,7 +831,7 @@ Background context: The plot generated from the previous example visually compar
 ??x
 By comparing the outputs of the GELU and ReLU functions:
 
-- **ReLU Function**: It behaves linearly for positive values (outputs x directly) and is zero for negative values. This means it has a discontinuous gradient at \( x = 0 \), which can lead to certain limitations in optimization during training.
+- **ReLU Function**: It behaves linearly for positive values (outputs x directly) and is zero for negative values. This means it has a discontinuous gradient at $x = 0$, which can lead to certain limitations in optimization during training.
 
 - **GELU Function**: It is smooth, non-linear, and introduces non-zero gradients even for negative inputs. The introduction of these non-zero gradients allows the model to make more nuanced adjustments during training, potentially leading to better performance and stability compared to ReLU.
 
@@ -1497,14 +1491,14 @@ x??
 To understand the memory requirements of a GPTModel with 163 million parameters, we calculate the total size of the model by multiplying the number of parameters by the size of each parameter (4 bytes for a 32-bit float). This gives us an idea of how much storage is needed for such models.
 
 The formula used to compute the memory requirement in megabytes (MB) is as follows:
-\[ \text{Total Size} = \frac{\text{total_params} \times 4}{1024 \times 1024} \]
-
-:p How do you calculate the total size of a GPTModel with 163 million parameters in megabytes?
+$$\text{Total Size} = \frac{\text{total_params} \times 4}{1024 \times 1024}$$:p How do you calculate the total size of a GPTModel with 163 million parameters in megabytes?
 ??x
 To calculate the total size of a GPTModel with 163 million parameters, we use the formula:
-\[ \text{Total Size (MB)} = \frac{\text{total_params} \times 4}{1024 \times 1024} \]
+$$\text{Total Size (MB)} = \frac{\text{total_params} \times 4}{1024 \times 1024}$$
+
 Where `total_params` is 163,000,000. Plugging in the values, we get:
-\[ \text{Total Size (MB)} = \frac{163,000,000 \times 4}{1024 \times 1024} \approx 621.83 \]
+$$\text{Total Size (MB)} = \frac{163,000,000 \times 4}{1024 \times 1024} \approx 621.83$$
+
 So, the total size of the model is approximately 621.83 MB.
 
 This calculation helps us understand the significant storage capacity required to accommodate even relatively small language models like GPT-2.
@@ -1516,22 +1510,24 @@ x??
 To implement larger GPT models such as GPT-2 medium, large, and XL, we can use the existing `GPTModel` class but with different configurations. Specifically, for each model size, we change the number of embeddings dimensions, transformer blocks, and multi-head attention heads.
 
 The total number of parameters in a GPT model is calculated using the formula:
-\[ \text{Total Parameters} = (V + H) \times D \]
+$$\text{Total Parameters} = (V + H) \times D$$
+
 Where `V` is the vocabulary size, `H` is the number of hidden layers (transformer blocks), and `D` is the embedding dimension.
 
 :p How do you calculate the total number of parameters in a GPT-2 medium model?
 ??x
 To calculate the total number of parameters in a GPT-2 medium model, we use the formula:
-\[ \text{Total Parameters} = (V + H) \times D \]
+$$\text{Total Parameters} = (V + H) \times D$$
+
 Where `V` is the vocabulary size, `H` is the number of hidden layers (transformer blocks), and `D` is the embedding dimension.
 
 For example, for GPT-2 medium with 1024-dimensional embeddings, 24 transformer blocks, and 16 multi-head attention heads:
-\[ \text{Total Parameters} = (V + 24) \times 1024 \]
+$$\text{Total Parameters} = (V + 24) \times 1024$$
 
 Assuming a typical vocabulary size of 50,257 for the English language, we get:
-\[ \text{Total Parameters} = (50,257 + 24) \times 1024 \]
-\[ \text{Total Parameters} \approx 50,281 \times 1024 \]
-\[ \text{Total Parameters} \approx 51,369,824 \]
+$$\text{Total Parameters} = (50,257 + 24) \times 1024$$
+$$\text{Total Parameters} \approx 50,281 \times 1024$$
+$$\text{Total Parameters} \approx 51,369,824$$
 
 This calculation provides us with the total number of parameters for a GPT-2 medium model.
 x??

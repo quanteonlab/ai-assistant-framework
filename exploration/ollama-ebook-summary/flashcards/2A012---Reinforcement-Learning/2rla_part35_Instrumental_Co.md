@@ -330,7 +330,7 @@ Explanation of how exploration works in reinforcement learning algorithms.
 Exploration in reinforcement learning involves methods for the agent to try out different actions when it is uncertain which ones will lead to better outcomes. This helps the agent discover new strategies and improve its performance over time.
 
 Popular methods include:
-- **Epsilon-Greedy**: With probability \( \epsilon \), choose a random action; otherwise, take the best known action.
+- **Epsilon-Greedy**: With probability $\epsilon$, choose a random action; otherwise, take the best known action.
 - **Upper Confidence Bound (UCB)**: Balances exploration and exploitation by considering both the mean reward of an action and the uncertainty about its true value.
 
 These methods are crucial because they ensure that the agent does not get stuck in suboptimal solutions too quickly.
@@ -353,7 +353,7 @@ Explanation of how cats select actions based on their current state and instinct
 
 : How did Thorndike's cats select actions when placed in puzzle boxes?
 ??x
-Thorndike observed that the cats selected actions from those they instinctively perform given their current situation. This is akin to specifying action sets \( A(s) \) in reinforcement learning formalisms, where available actions depend on the state of the environment.
+Thorndike observed that the cats selected actions from those they instinctively perform given their current situation. This is akin to specifying action sets $A(s)$ in reinforcement learning formalisms, where available actions depend on the state of the environment.
 
 For example:
 - In a constrained space, a cat might scratch, claw, or bite with great energy.
@@ -385,7 +385,7 @@ Explanation of how Thorndike's observations align with modern reinforcement lear
 
 : How do Thorndike’s observations about cat behavior in puzzle boxes relate to reinforcement learning?
 ??x
-Thorndike observed that cats selected actions based on their instinctual responses to the current situation, which is similar to specifying admissible action sets \( A(s) \) for each state. This approach reduces the complexity of the search space by focusing only on relevant actions.
+Thorndike observed that cats selected actions based on their instinctual responses to the current situation, which is similar to specifying admissible action sets $A(s)$ for each state. This approach reduces the complexity of the search space by focusing only on relevant actions.
 
 Additionally, Thorndike’s findings hint at a form of context-specific ordering in action selection, suggesting that animals might have some level of deliberate exploration guided by their instinctual responses rather than purely random behavior.
 
@@ -531,7 +531,7 @@ x??
 Background context: Implementing TD learning with eligibility traces involves updating value functions based on the difference between expected and actual rewards, weighted by eligibility traces.
 :p How can TD learning be implemented using eligibility traces?
 ??x
-TD learning updates value functions using a combination of on-policy updates and predictions. Eligibility traces \( \eta(s, a) \) are used to weight the impact of past state-action pairs in the update process.
+TD learning updates value functions using a combination of on-policy updates and predictions. Eligibility traces $\eta(s, a)$ are used to weight the impact of past state-action pairs in the update process.
 
 ```java
 public class TDLearning {
@@ -569,9 +569,8 @@ Background context: The actor–critic architecture is a type of reinforcement l
 :p How does the actor-critic architecture function?
 ??x
 In the actor-critic framework, the actor updates its policy based on feedback from the critic. The critic evaluates the current policy by predicting the return (cumulative reward) of actions taken under that policy using Temporal Difference (TD) learning. The TD error is a key component here; it acts as an immediate evaluation signal for the actor, even when rewards are delayed.
-For example, if the action-value function \(Q(s, a)\) is being used to predict returns:
-\[ V(s_t) = Q(s_t, a_t) + \alpha [R_{t+1} + \gamma V(s_{t+1}) - Q(s_t, a_t)] \]
-where \(\alpha\) is the learning rate, and \(\gamma\) is the discount factor.
+For example, if the action-value function $Q(s, a)$ is being used to predict returns:
+$$V(s_t) = Q(s_t, a_t) + \alpha [R_{t+1} + \gamma V(s_{t+1}) - Q(s_t, a_t)]$$where $\alpha $ is the learning rate, and$\gamma$ is the discount factor.
 ??x
 The actor receives updates from the critic based on this TD error. Here’s a simplified pseudocode to illustrate:
 ```python
@@ -675,7 +674,7 @@ x??
 Background context: Expectancy theory explains how S–S associations are formed, similar to model-based algorithms used in machine learning. The theory posits that the appearance of one stimulus (S) triggers an expectation about another stimulus (S0) coming next.
 :p How does expectancy theory explain animal behavior?
 ??x
-Expectancy theory suggests that animals form expectations based on past experiences with S–S associations, where a particular state \( S \) leads to another state \( S_0 \). This is analogous to how model-based algorithms predict future states given current ones. For example:
+Expectancy theory suggests that animals form expectations based on past experiences with S–S associations, where a particular state $S $ leads to another state$S_0$. This is analogous to how model-based algorithms predict future states given current ones. For example:
 ```java
 // Pseudocode for simple expectancy model
 public void updateExpectation(State currentState, State nextState) {

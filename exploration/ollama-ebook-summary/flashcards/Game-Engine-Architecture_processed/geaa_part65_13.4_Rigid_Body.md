@@ -239,15 +239,17 @@ x??
 ---
 
 #### Formula for Center of Mass
-Background context: The position vector \( \mathbf{r}_{CM} \) of the center of mass can be calculated using the formula provided.
+Background context: The position vector $\mathbf{r}_{CM}$ of the center of mass can be calculated using the formula provided.
 
 :p What is the formula to calculate the center of mass?
 ??x
 The formula to calculate the center of mass is:
-\[ \mathbf{r}_{CM} = \frac{\sum_i m_i \mathbf{r}_i}{\sum_i m_i} \]
-Where \( m_i \) represents the mass of each infinitesimal piece, and \( \mathbf{r}_i \) is the position vector of that piece. In limit form, this becomes an integral:
-\[ \mathbf{r}_{CM} = \frac{\int_V \rho(\mathbf{r})\mathbf{r}\, dV}{\int_V \rho(\mathbf{r})\,dV} \]
-Where \( \rho(\mathbf{r}) \) is the density of the body.
+$$\mathbf{r}_{CM} = \frac{\sum_i m_i \mathbf{r}_i}{\sum_i m_i}$$
+
+Where $m_i $ represents the mass of each infinitesimal piece, and$\mathbf{r}_i$ is the position vector of that piece. In limit form, this becomes an integral:
+$$\mathbf{r}_{CM} = \frac{\int_V \rho(\mathbf{r})\mathbf{r}\, dV}{\int_V \rho(\mathbf{r})\,dV}$$
+
+Where $\rho(\mathbf{r})$ is the density of the body.
 x??
 
 ---
@@ -300,19 +302,17 @@ x??
 ---
 
 #### Linear Velocity and Acceleration
-Background context explaining linear velocity and acceleration. These are vector quantities that describe how the position of a rigid body's center of mass (CM) changes with time. The linear velocity \( \mathbf{v}(t) \) is the first derivative of the position vector \( \mathbf{r}(t) \), and linear acceleration \( \mathbf{a}(t) \) is the second derivative:
-\[ \mathbf{v}(t) = \frac{d\mathbf{r}(t)}{dt} = \dot{\mathbf{r}}(t) \]
-\[ \mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt} = \ddot{\mathbf{r}}(t) \]
-
-:p What is the linear velocity of a rigid body, and how is it calculated?
+Background context explaining linear velocity and acceleration. These are vector quantities that describe how the position of a rigid body's center of mass (CM) changes with time. The linear velocity $\mathbf{v}(t)$ is the first derivative of the position vector $\mathbf{r}(t)$, and linear acceleration $\mathbf{a}(t)$ is the second derivative:
+$$\mathbf{v}(t) = \frac{d\mathbf{r}(t)}{dt} = \dot{\mathbf{r}}(t)$$
+$$\mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt} = \ddot{\mathbf{r}}(t)$$:p What is the linear velocity of a rigid body, and how is it calculated?
 ??x
-The linear velocity \( \mathbf{v}(t) \) of a rigid body is the rate at which its center of mass (CM) moves. It can be calculated as the first derivative of the position vector with respect to time:
-\[ \mathbf{v}(t) = \frac{d\mathbf{r}(t)}{dt} = \dot{\mathbf{r}}(t) \]
+The linear velocity $\mathbf{v}(t)$ of a rigid body is the rate at which its center of mass (CM) moves. It can be calculated as the first derivative of the position vector with respect to time:
+$$\mathbf{v}(t) = \frac{d\mathbf{r}(t)}{dt} = \dot{\mathbf{r}}(t)$$
 
-This means that each component of the velocity is the derivative of the corresponding component of the position. For instance, if we have a 3D position vector \( \mathbf{r}(t) = [x(t), y(t), z(t)] \), then:
-\[ v_x(t) = \frac{dx(t)}{dt} = \dot{x}(t) \]
-\[ v_y(t) = \frac{dy(t)}{dt} = \dot{y}(t) \]
-\[ v_z(t) = \frac{dz(t)}{dt} = \dot{z}(t) \]
+This means that each component of the velocity is the derivative of the corresponding component of the position. For instance, if we have a 3D position vector $\mathbf{r}(t) = [x(t), y(t), z(t)]$, then:
+$$v_x(t) = \frac{dx(t)}{dt} = \dot{x}(t)$$
+$$v_y(t) = \frac{dy(t)}{dt} = \dot{y}(t)$$
+$$v_z(t) = \frac{dz(t)}{dt} = \dot{z}(t)$$
 
 Thus, the velocity vector is a derivative of the position vector with respect to time.
 x??
@@ -320,46 +320,41 @@ x??
 ---
 #### Linear Acceleration
 Background context explaining linear acceleration. It is the first derivative of linear velocity and the second derivative of position:
-\[ \mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt} = \ddot{\mathbf{r}}(t) \]
-
-:p What is the formula for calculating the linear acceleration of a rigid body?
+$$\mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt} = \ddot{\mathbf{r}}(t)$$:p What is the formula for calculating the linear acceleration of a rigid body?
 ??x
-The linear acceleration \( \mathbf{a}(t) \) of a rigid body can be calculated as the first derivative of its linear velocity with respect to time, or equivalently, the second derivative of its position vector:
-\[ \mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt} = \ddot{\mathbf{r}}(t) \]
+The linear acceleration $\mathbf{a}(t)$ of a rigid body can be calculated as the first derivative of its linear velocity with respect to time, or equivalently, the second derivative of its position vector:
+$$\mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt} = \ddot{\mathbf{r}}(t)$$
 
 This means that each component of the acceleration is the derivative of the corresponding component of the velocity, which in turn is the derivative of the position. For example:
-\[ a_x(t) = \frac{dv_x(t)}{dt} = \ddot{x}(t) \]
-\[ a_y(t) = \frac{dv_y(t)}{dt} = \ddot{y}(t) \]
-\[ a_z(t) = \frac{dv_z(t)}{dt} = \ddot{z}(t) \]
+$$a_x(t) = \frac{dv_x(t)}{dt} = \ddot{x}(t)$$
+$$a_y(t) = \frac{dv_y(t)}{dt} = \ddot{y}(t)$$
+$$a_z(t) = \frac{dv_z(t)}{dt} = \ddot{z}(t)$$
 
 Thus, the acceleration vector is obtained by differentiating the velocity vector with respect to time.
 x??
 
 ---
 #### Force and Momentum
-Background context explaining force and momentum. A force \( \mathbf{F} \) is a vector that causes an object's center of mass to accelerate or decelerate. The relationship between force, mass, and acceleration is given by Newton’s Second Law:
-\[ \mathbf{F}(t) = m\ddot{\mathbf{r}}(t) \]
-where \( m \) is the mass of the body.
+Background context explaining force and momentum. A force $\mathbf{F}$ is a vector that causes an object's center of mass to accelerate or decelerate. The relationship between force, mass, and acceleration is given by Newton’s Second Law:
+$$\mathbf{F}(t) = m\ddot{\mathbf{r}}(t)$$where $ m$ is the mass of the body.
 
 When multiple forces are applied to a rigid body, their net effect can be found by summing up all force vectors:
-\[ \mathbf{F}_{net} = \sum_{i=1}^{N} \mathbf{F}_i \]
+$$\mathbf{F}_{net} = \sum_{i=1}^{N} \mathbf{F}_i$$
 
-Linear momentum \( \mathbf{p}(t) \) is the product of mass and linear velocity, denoted as:
-\[ \mathbf{p}(t) = m\mathbf{v}(t) \]
+Linear momentum $\mathbf{p}(t)$ is the product of mass and linear velocity, denoted as:
+$$\mathbf{p}(t) = m\mathbf{v}(t)$$
+
 If mass is constant, Newton’s Second Law simplifies to:
-\[ \mathbf{F} = m\mathbf{a} \]
-
-:p What does the force-mass-acceleration relationship state?
+$$\mathbf{F} = m\mathbf{a}$$:p What does the force-mass-acceleration relationship state?
 ??x
-Newton's Second Law of Motion states that the force \( \mathbf{F}(t) \) acting on an object is directly proportional to its mass \( m \) and its acceleration \( \ddot{\mathbf{r}}(t) \):
-\[ \mathbf{F}(t) = m\ddot{\mathbf{r}}(t) \]
+Newton's Second Law of Motion states that the force $\mathbf{F}(t)$ acting on an object is directly proportional to its mass $ m $ and its acceleration $\ddot{\mathbf{r}}(t)$:
+$$\mathbf{F}(t) = m\ddot{\mathbf{r}}(t)$$
 
 This law can be understood as the net force applied to a body will result in an acceleration proportional to the mass of the object. If multiple forces are acting on a rigid body, their vector sum gives the net force:
-\[ \mathbf{F}_{net} = \sum_{i=1}^{N} \mathbf{F}_i \]
+$$\mathbf{F}_{net} = \sum_{i=1}^{N} \mathbf{F}_i$$
 
-When the mass \( m \) is constant, this simplifies to the familiar form:
-\[ \mathbf{F} = m\mathbf{a} \]
-x??
+When the mass $m$ is constant, this simplifies to the familiar form:
+$$\mathbf{F} = m\mathbf{a}$$x??
 
 ---
 #### Solving Equations of Motion
@@ -369,8 +364,8 @@ Background context explaining that solving equations of motion involves determin
 ??x
 The central problem in rigid body dynamics is to solve for the motion (position, velocity, and acceleration) of a rigid body given a set of known forces acting on it. This involves using Newton's laws and other principles of mechanics to predict how the object will move.
 
-For example, if we have a force vector \( \mathbf{F} \) applied to a body with mass \( m \), we can determine its acceleration by:
-\[ \mathbf{a}(t) = \frac{\mathbf{F}}{m} \]
+For example, if we have a force vector $\mathbf{F}$ applied to a body with mass $m$, we can determine its acceleration by:
+$$\mathbf{a}(t) = \frac{\mathbf{F}}{m}$$
 
 Using this acceleration and initial conditions (position, velocity), we can integrate these to find the position and velocity as functions of time.
 x??
@@ -380,19 +375,18 @@ x??
 #### Force as a Function
 Background context: In linear dynamics, forces can vary based on time, position, or velocity. The general form of force includes these variables and is related to acceleration through Newton's second law.
 
-Formula: \[ F(t, r(t), v(t), ...) = ma(t) \]
+Formula:
+$$
+
+F(t, r(t), v(t), ...) = ma(t)$$
 
 In one-dimensional motion, the spring force and damping force are specific examples:
-- Spring force: \( F(t, x(t)) = -kx(t) \)
-- Damping force: \( F(t, v(t)) = -bv(t) \)
-
-:p What is the general form of a force in linear dynamics?
+- Spring force:$F(t, x(t)) = -kx(t)$- Damping force:$ F(t, v(t)) = -bv(t)$:p What is the general form of a force in linear dynamics?
 ??x
-The general form of a force in linear dynamics includes time \( t \), position \( r(t) \), and velocity \( v(t) \) as variables. It is related to acceleration by Newton's second law, \( F = ma \).
+The general form of a force in linear dynamics includes time $t $, position $ r(t)$, and velocity $ v(t)$ as variables. It is related to acceleration by Newton's second law,$ F = ma$.
 
 For example:
-- Spring force: \( F(t, x(t)) = -kx(t) \)
-- Damping force: \( F(t, v(t)) = -bv(t) \)
+- Spring force: $F(t, x(t)) = -kx(t)$- Damping force:$ F(t, v(t)) = -bv(t)$
 
 This form allows the force to depend on various physical parameters.
 x??
@@ -403,19 +397,17 @@ x??
 Background context: An ODE is an equation involving a function of one independent variable and its derivatives. In game physics, ODEs are used to model motion under the influence of forces.
 
 Formula for ODE:
-\[ \frac{d^n x}{dt^n} = f(t, x(t), \frac{dx(t)}{dt}, \frac{d^2x(t)}{dt^2}, ..., \frac{d^{n-1}x(t)}{dt^{n-1}}) \]
+$$\frac{d^n x}{dt^n} = f(t, x(t), \frac{dx(t)}{dt}, \frac{d^2x(t)}{dt^2}, ..., \frac{d^{n-1}x(t)}{dt^{n-1}})$$
 
 Example in one dimension:
-\[ \ddot{r}(t) = \frac{1}{m} F(t, r(t), \dot{r}(t)) \]
-
-:p What is an ordinary differential equation (ODE)?
+$$\ddot{r}(t) = \frac{1}{m} F(t, r(t), \dot{r}(t))$$:p What is an ordinary differential equation (ODE)?
 ??x
 An ODE is an equation involving a function of one independent variable and its derivatives. In the context of game physics, it models how position changes over time due to forces.
 
 For example, in one dimension:
-\[ \ddot{r}(t) = \frac{1}{m} F(t, r(t), \dot{r}(t)) \]
+$$\ddot{r}(t) = \frac{1}{m} F(t, r(t), \dot{r}(t))$$
 
-This equation describes how acceleration \( \ddot{r}(t) \) is a function of position and velocity.
+This equation describes how acceleration $\ddot{r}(t)$ is a function of position and velocity.
 x??
 
 ---
@@ -424,18 +416,18 @@ x??
 Background context: In some cases, ODEs can be solved analytically to find simple closed-form functions for position and velocity. However, in most game physics scenarios, this is not possible due to the complexity of forces involved.
 
 Example of analytical solution:
-\[ \ddot{y}(t) = g \]
-\[ \dot{y}(t) = gt + v_0 \]
-\[ y(t) = \frac{1}{2}gt^2 + v_0t + y_0 \]
-
-:p What is an example of when analytical solutions can be used in game physics?
+$$\ddot{y}(t) = g$$
+$$\dot{y}(t) = gt + v_0$$
+$$y(t) = \frac{1}{2}gt^2 + v_0t + y_0$$:p What is an example of when analytical solutions can be used in game physics?
 ??x
 An example of when analytical solutions are used in game physics is the vertical motion of a projectile under constant gravity. The equations:
-\[ \ddot{y}(t) = g \]
+$$\ddot{y}(t) = g$$
+
 Integrating once gives:
-\[ \dot{y}(t) = gt + v_0 \]
+$$\dot{y}(t) = gt + v_0$$
+
 And integrating again yields:
-\[ y(t) = \frac{1}{2}gt^2 + v_0t + y_0 \]
+$$y(t) = \frac{1}{2}gt^2 + v_0t + y_0$$
 
 These equations describe the position of a projectile as functions of time, assuming constant gravitational acceleration.
 x??
@@ -446,14 +438,14 @@ x??
 Background context: In linear dynamics for game physics, forces are used to determine velocity and position over time. This involves solving ODEs that relate force to acceleration.
 
 Formula:
-\[ \ddot{r}(t) = \frac{1}{m} F(t, r(t), \dot{r}(t)) \]
+$$\ddot{r}(t) = \frac{1}{m} F(t, r(t), \dot{r}(t))$$
 
 In game development, due to the complexity of forces and interactions, analytical solutions are rarely feasible. Instead, numerical methods like Euler or Runge-Kutta are often used.
 
 :p How does linear dynamics apply in game physics?
 ??x
-Linear dynamics applies in game physics by determining velocity \( v(t) \) and position \( r(t) \) from the net force \( F_{net}(t) \). The key equation is:
-\[ \ddot{r}(t) = \frac{1}{m} F(t, r(t), \dot{r}(t)) \]
+Linear dynamics applies in game physics by determining velocity $v(t)$ and position $r(t)$ from the net force $F_{net}(t)$. The key equation is:
+$$\ddot{r}(t) = \frac{1}{m} F(t, r(t), \dot{r}(t))$$
 
 This ODE needs to be solved numerically in most cases due to the complexity of real-world forces. For example, using Euler's method for a simple position update:
 ```java
@@ -478,10 +470,10 @@ The method works as follows:
 - To find the new velocity, we use the current velocity plus the net force acting on the object divided by its mass times the time delta (Δt).
 
 Formulas for explicit Euler:
-\[ r(t_2) = r(t_1) + v(t_1)\Delta t \]
-\[ v(t_2) = v(t_1) + \frac{F_{net}(t)}{m}\Delta t \]
+$$r(t_2) = r(t_1) + v(t_1)\Delta t$$
+$$v(t_2) = v(t_1) + \frac{F_{net}(t)}{m}\Delta t$$
 
-Here, \( r(t) \) represents the position, \( v(t) \) represents the velocity, \( F_{net} \) is the net force acting on the object, and \( m \) is the mass of the object. The time delta \( \Delta t \) is a constant that denotes the duration of each frame in the simulation.
+Here,$r(t)$ represents the position,$ v(t)$ represents the velocity,$ F_{net}$ is the net force acting on the object, and $ m $ is the mass of the object. The time delta $\Delta t$ is a constant that denotes the duration of each frame in the simulation.
 
 C/Java pseudocode for explicit Euler:
 ```java
@@ -505,8 +497,8 @@ Background context explaining how linear extrapolation is used in the explicit E
 The explicit Euler method uses linear extrapolation to approximate the position and velocity at the next time step based on the current values.
 
 In the context of game physics, this means:
-- For position: The change in position over the time step \( \Delta t \) is estimated as the product of the current velocity and \( \Delta t \).
-- For velocity: The change in velocity over the time step \( \Delta t \) is estimated using the net force acting on the object, its mass, and \( \Delta t \).
+- For position: The change in position over the time step $\Delta t $ is estimated as the product of the current velocity and$\Delta t$.
+- For velocity: The change in velocity over the time step $\Delta t $ is estimated using the net force acting on the object, its mass, and$\Delta t$.
 
 Graphically, this can be visualized as taking the slope (velocity) at one point in time and extending it linearly to predict the position or velocity at the next time point.
 
@@ -537,12 +529,11 @@ Background context explaining the explicit Euler method as an approximation of a
 ??x
 The explicit Euler method can be interpreted as approximating a derivative by using finite differences instead of infinitesimally small ones.
 
-By definition, any derivative \( \frac{dr}{dt} \) is the quotient of two infinitely small differences. The explicit Euler method approximates this by using the quotient of two finite differences:
-- \( dr \) becomes \( \Delta r \)
-- \( dt \) becomes \( \Delta t \)
+By definition, any derivative $\frac{dr}{dt}$ is the quotient of two infinitely small differences. The explicit Euler method approximates this by using the quotient of two finite differences:
+- $dr $ becomes$\Delta r $-$ dt $becomes$\Delta t$
 
 Therefore, the change in position over time can be estimated as:
-\[ \frac{dr}{dt} \approx \frac{\Delta r}{\Delta t} = v(t_1) \]
+$$\frac{dr}{dt} \approx \frac{\Delta r}{\Delta t} = v(t_1)$$
 
 This approximation works well when the velocity is roughly constant during the time step.
 
@@ -562,18 +553,18 @@ x??
 ---
 
 #### Time Stepping and Constant Time Delta
-Background context explaining the importance of time stepping and a constant time delta \( \Delta t \) in game physics simulations. This ensures consistency across frames.
-:p What is the role of time stepping with a constant time delta \( \Delta t \)?
+Background context explaining the importance of time stepping and a constant time delta $\Delta t$ in game physics simulations. This ensures consistency across frames.
+:p What is the role of time stepping with a constant time delta $\Delta t$?
 ??x
-Time stepping with a constant time delta \( \Delta t \) is crucial for maintaining consistency and predictability in game physics simulations.
+Time stepping with a constant time delta $\Delta t$ is crucial for maintaining consistency and predictability in game physics simulations.
 
 In numerical integration, such as using the explicit Euler method, we solve differential equations at discrete intervals. The duration of each interval (time step) is typically kept constant to ensure that all calculations are performed under the same conditions across different frames.
 
-A constant time delta \( \Delta t \) helps:
+A constant time delta $\Delta t$ helps:
 - Maintain a consistent simulation speed regardless of the underlying hardware or rendering frame rate.
 - Ensure accurate and stable physics behavior, as small changes in position and velocity can accumulate over multiple steps if the time step is not constant.
 
-C/Java pseudocode for managing time stepping with constant \( \Delta t \):
+C/Java pseudocode for managing time stepping with constant $\Delta t$:
 ```java
 // Pseudocode for setting up a simulation loop with constant deltaTime
 void setupSimulationLoop(double frameRate) {
@@ -593,27 +584,27 @@ x??
 ---
 
 #### Convergence of Numerical Solutions
-Convergence is a critical property that assesses whether as the time step \(\Delta t\) approaches zero, the numerical solution gets closer to the real solution. This concept ensures the accuracy of the numerical method over time.
+Convergence is a critical property that assesses whether as the time step $\Delta t$ approaches zero, the numerical solution gets closer to the real solution. This concept ensures the accuracy of the numerical method over time.
 
 :p What does convergence mean in the context of numerical solutions?
 ??x
-In the context of numerical solutions, convergence means that as the time step \(\Delta t\) tends toward zero, the approximate solution provided by the numerical method gets arbitrarily close to the exact solution. This ensures that the errors are minimized and the numerical results become more accurate.
+In the context of numerical solutions, convergence means that as the time step $\Delta t$ tends toward zero, the approximate solution provided by the numerical method gets arbitrarily close to the exact solution. This ensures that the errors are minimized and the numerical results become more accurate.
 x??
 
 ---
 
 #### Order of Numerical Methods
-The order of a numerical method is determined by how the error in the approximation scales with \(\Delta t\). Typically, this error can be expressed as \(O(\Delta t^{n+1})\) for some integer \(n\).
+The order of a numerical method is determined by how the error in the approximation scales with $\Delta t $. Typically, this error can be expressed as $ O(\Delta t^{n+1})$for some integer $ n$.
 
 :p What does "order" mean when discussing numerical methods?
 ??x
-The "order" of a numerical method refers to how the error in the approximation scales with respect to \(\Delta t\). Specifically, if the error is proportional to \(O(\Delta t^{n+1})\), we say that the method is of order \(n\). This means that as \(\Delta t\) becomes smaller, the error decreases at a rate determined by this power.
+The "order" of a numerical method refers to how the error in the approximation scales with respect to $\Delta t $. Specifically, if the error is proportional to $ O(\Delta t^{n+1})$, we say that the method is of order $ n$. This means that as $\Delta t$ becomes smaller, the error decreases at a rate determined by this power.
 
 For example:
-- A first-order method has an error term of \(O(\Delta t^2)\).
-- A second-order method has an error term of \(O(\Delta t^3)\).
+- A first-order method has an error term of $O(\Delta t^2)$.
+- A second-order method has an error term of $O(\Delta t^3)$.
 
-The order helps in understanding how quickly the numerical solution approaches the exact solution as \(\Delta t\) decreases.
+The order helps in understanding how quickly the numerical solution approaches the exact solution as $\Delta t$ decreases.
 x??
 
 ---
@@ -637,18 +628,16 @@ The explicit Euler method is an approximation technique for solving ordinary dif
 
 :p What is the explicit Euler method, and how does it work?
 ??x
-The explicit Euler method is a simple numerical integration technique used to approximate solutions of ordinary differential equations (ODEs). The method works by using the slope at the current point to estimate the value at the next point. Mathematically, for a function \(r(t)\), the explicit Euler method can be expressed as:
+The explicit Euler method is a simple numerical integration technique used to approximate solutions of ordinary differential equations (ODEs). The method works by using the slope at the current point to estimate the value at the next point. Mathematically, for a function $r(t)$, the explicit Euler method can be expressed as:
 
-\[ r(t_{2}) = r(t_{1}) + \dot{r}(t_{1})\Delta t \]
+$$r(t_{2}) = r(t_{1}) + \dot{r}(t_{1})\Delta t$$where:
+- $r(t_1)$ is the value of the function at time $t_1$.
+- $\dot{r}(t_1)$ is the derivative (slope) of the function at time $t_1$.
+- $\Delta t$ is the time step.
 
-where:
-- \( r(t_1) \) is the value of the function at time \( t_1 \).
-- \( \dot{r}(t_1) \) is the derivative (slope) of the function at time \( t_1 \).
-- \( \Delta t \) is the time step.
+For example, if we want to approximate the position $r(t_2)$ from $r(t_1)$, and we know the velocity $ v = \dot{r}$at $ t_1$, we can use:
 
-For example, if we want to approximate the position \( r(t_2) \) from \( r(t_1) \), and we know the velocity \( v = \dot{r} \) at \( t_1 \), we can use:
-
-\[ r(t_2) = r(t_1) + v(t_1) \Delta t \]
+$$r(t_2) = r(t_1) + v(t_1) \Delta t$$
 
 This method is easy to implement but is not particularly accurate for large time steps, as it accumulates errors over time.
 
@@ -664,24 +653,26 @@ x??
 ---
 
 #### Convergence of Explicit Euler Method
-For the explicit Euler method, we can analyze its convergence by comparing it to the infinite Taylor series expansion. The error is typically proportional to \(\Delta t^2\).
+For the explicit Euler method, we can analyze its convergence by comparing it to the infinite Taylor series expansion. The error is typically proportional to $\Delta t^2$.
 
 :p How does the explicit Euler method converge?
 ??x
-The explicit Euler method converges as \(\Delta t\) approaches zero. This means that the numerical solution gets closer to the exact solution of the differential equation.
+The explicit Euler method converges as $\Delta t$ approaches zero. This means that the numerical solution gets closer to the exact solution of the differential equation.
 
 To see this mathematically, consider the infinite Taylor series expansion for the exact solution:
-\[ r(t_2) = r(t_1) + \dot{r}(t_1)\Delta t + \frac{1}{2}\ddot{r}(t_1)\Delta t^2 + \frac{1}{6}r^{(3)}(t_1)\Delta t^3 + \ldots \]
+$$r(t_2) = r(t_1) + \dot{r}(t_1)\Delta t + \frac{1}{2}\ddot{r}(t_1)\Delta t^2 + \frac{1}{6}r^{(3)}(t_1)\Delta t^3 + \ldots$$
 
 The explicit Euler method approximates this by:
-\[ r(t_2) = r(t_1) + \dot{r}(t_1)\Delta t \]
+$$r(t_2) = r(t_1) + \dot{r}(t_1)\Delta t$$
 
 Thus, the error is represented by the remaining terms in the Taylor series expansion after subtracting the approximate equation from the exact one:
-\[ E = \frac{1}{2}\ddot{r}(t_1)\Delta t^2 + \frac{1}{6}r^{(3)}(t_1)\Delta t^3 + \ldots \]
+$$
 
-This error is \(O(\Delta t^2)\), indicating that the method is first-order accurate.
+E = \frac{1}{2}\ddot{r}(t_1)\Delta t^2 + \frac{1}{6}r^{(3)}(t_1)\Delta t^3 + \ldots$$
 
-In summary, as \(\Delta t\) gets smaller, the explicit Euler method’s approximation becomes more accurate.
+This error is $O(\Delta t^2)$, indicating that the method is first-order accurate.
+
+In summary, as $\Delta t$ gets smaller, the explicit Euler method’s approximation becomes more accurate.
 x??
 
 ---
@@ -699,7 +690,8 @@ The regular Verlet method achieves its accuracy by combining forward and backwar
 :p What is the formula for the regular Verlet method?
 ??x
 The formula for the regular Verlet method can be derived from Taylor series expansions:
-\[ r(t_1 + \Delta t) = 2r(t_1) - r(t_1 - \Delta t) + a(t_1)\Delta t^2 + O(\Delta t^4). \]
+$$r(t_1 + \Delta t) = 2r(t_1) - r(t_1 - \Delta t) + a(t_1)\Delta t^2 + O(\Delta t^4).$$
+
 This equation directly calculates the position at the next time step in terms of the current and previous positions, with acceleration as input.
 
 ```java
@@ -718,12 +710,12 @@ The velocity Verlet method is a four-step process that divides the time step to 
 :p How does the velocity Verlet method work?
 ??x
 The velocity Verlet method works through these steps:
-1. Calculate \( r(t_1 + \Delta t) = r(t_1) + v(t_1)\Delta t + \frac{1}{2}a(t_1)\Delta t^2 \).
-2. Calculate \( v(t_1 + \frac{1}{2}\Delta t) = v(t_1) + \frac{1}{2}a(t_1)\Delta t \).
-3. Determine \( a(t_1 + \Delta t) = 1/mF(t_1 + \Delta t, r(t_1 + \Delta t), v(t_1 + \frac{1}{2}\Delta t)) \).
-4. Calculate \( v(t_1 + \Delta t) = v(t_1 + \frac{1}{2}\Delta t) + \frac{1}{2}a(t_1 + \Delta t)\Delta t \).
+1. Calculate $r(t_1 + \Delta t) = r(t_1) + v(t_1)\Delta t + \frac{1}{2}a(t_1)\Delta t^2$.
+2. Calculate $v(t_1 + \frac{1}{2}\Delta t) = v(t_1) + \frac{1}{2}a(t_1)\Delta t$.
+3. Determine $a(t_1 + \Delta t) = 1/mF(t_1 + \Delta t, r(t_1 + \Delta t), v(t_1 + \frac{1}{2}\Delta t))$.
+4. Calculate $v(t_1 + \Delta t) = v(t_1 + \frac{1}{2}\Delta t) + \frac{1}{2}a(t_1 + \Delta t)\Delta t$.
 
-The force function in the third step depends on the next time step's position and velocity, \( r(t_2) \) and \( v(t_2) \). If the force is not velocity-dependent, this method provides a more accurate result compared to simple Verlet.
+The force function in the third step depends on the next time step's position and velocity, $r(t_2)$ and $v(t_2)$. If the force is not velocity-dependent, this method provides a more accurate result compared to simple Verlet.
 
 ```java
 // Pseudocode for velocity Verlet method
@@ -750,34 +742,31 @@ x??
 ---
 
 #### Orientation and Angular Speed
-Background context: In two dimensions, every rigid body is treated as a thin sheet of material (plane lamina), with all linear motion occurring in the xy-plane and all rotations about the z-axis. The orientation of such a body is described by an angle \( q \) measured relative to some reference position.
+Background context: In two dimensions, every rigid body is treated as a thin sheet of material (plane lamina), with all linear motion occurring in the xy-plane and all rotations about the z-axis. The orientation of such a body is described by an angle $q$ measured relative to some reference position.
 Relevant formulas:
-- Angular speed: \( w(t) = \frac{dq(t)}{dt} = \dot{q}(t) \)
-- Orientation function: \( q(t) \)
+- Angular speed: $w(t) = \frac{dq(t)}{dt} = \dot{q}(t)$- Orientation function:$ q(t)$
 
 :p What does the orientation of a rigid body in 2D describe?
 ??x
-The orientation describes how the body is rotated relative to some reference position. It is typically measured as an angle \( q(t) \) in radians, which varies with time.
+The orientation describes how the body is rotated relative to some reference position. It is typically measured as an angle $q(t)$ in radians, which varies with time.
 
 ---
 
 #### Angular Speed and Acceleration
 Background context: Angular speed measures the rate at which a rigid body's rotation changes over time. In 2D, this is represented by scalar values.
 Relevant formulas:
-- Angular speed: \( w(t) = \frac{dq(t)}{dt} = \dot{q}(t) \)
-- Angular acceleration: \( a(t) = \frac{dw(t)}{dt} = \dot{w}(t) = \ddot{q}(t) \)
+- Angular speed: $w(t) = \frac{dq(t)}{dt} = \dot{q}(t)$- Angular acceleration:$ a(t) = \frac{dw(t)}{dt} = \dot{w}(t) = \ddot{q}(t)$
 
 :p What is the difference between angular speed and angular acceleration?
 ??x
-Angular speed measures how fast the angle of rotation changes, while angular acceleration measures the rate at which this change in angular speed occurs. Angular speed is represented as \( w(t) \), whereas angular acceleration is given by \( a(t) \).
+Angular speed measures how fast the angle of rotation changes, while angular acceleration measures the rate at which this change in angular speed occurs. Angular speed is represented as $w(t)$, whereas angular acceleration is given by $ a(t)$.
 
 ---
 
 #### Moment of Inertia
 Background context: The moment of inertia is the rotational equivalent of mass, describing how difficult it is to change the angular speed of a body about an axis.
 Relevant formulas:
-- Angular momentum: \( L = Iw \)
-Where \( I \) is the moment of inertia and \( w \) is the angular velocity.
+- Angular momentum: $L = Iw $ Where$I $ is the moment of inertia and$w$ is the angular velocity.
 
 :p What does the moment of inertia represent in rotational dynamics?
 ??x
@@ -788,8 +777,7 @@ The moment of inertia represents how difficult it is to change the angular speed
 #### Angular Dynamics in Two Dimensions
 Background context: To fully describe the motion of a rigid body, we combine linear and angular dynamics. Linear motion affects the center of mass, while angular motion describes how the body rotates.
 Relevant formulas:
-- Linear velocity: \( v(t) = \frac{dr(t)}{dt} = \dot{r}(t) \)
-- Angular speed: \( w(t) = \frac{dq(t)}{dt} = \dot{q}(t) \)
+- Linear velocity: $v(t) = \frac{dr(t)}{dt} = \dot{r}(t)$- Angular speed:$ w(t) = \frac{dq(t)}{dt} = \dot{q}(t)$
 
 :p How does the study of angular dynamics in two dimensions work?
 ??x
@@ -800,19 +788,18 @@ Angular dynamics in 2D involves analyzing both linear and rotational motions. Li
 #### Rotational Motion About Z-Axis
 Background context: In 2D, the axis of rotation is always along the z-axis.
 Relevant formulas:
-- Angular speed: \( w(t) = \frac{dq(t)}{dt} \)
-- Angular acceleration: \( a(t) = \frac{dw(t)}{dt} \)
+- Angular speed: $w(t) = \frac{dq(t)}{dt}$- Angular acceleration:$ a(t) = \frac{dw(t)}{dt}$
 
 :p What are the characteristics of rotational motion about the z-axis in 2D?
 ??x
-Rotational motion about the z-axis in 2D is characterized by changes in angle \( q(t) \), which affect the orientation. Angular speed and acceleration describe how quickly this angle changes over time, with angular speed being represented as \( w(t) \) and acceleration as \( a(t) \).
+Rotational motion about the z-axis in 2D is characterized by changes in angle $q(t)$, which affect the orientation. Angular speed and acceleration describe how quickly this angle changes over time, with angular speed being represented as $ w(t)$and acceleration as $ a(t)$.
 
 ---
 #### Torque and Its Calculation
-Background context explaining that torque is a rotational force produced when a force is applied off-center to a rigid body. The formula for calculating torque, \(N = \vec{r} \times \vec{F}\), where \(\vec{r}\) is the position vector from the center of mass and \(\vec{F}\) is the force vector.
+Background context explaining that torque is a rotational force produced when a force is applied off-center to a rigid body. The formula for calculating torque, $N = \vec{r} \times \vec{F}$, where $\vec{r}$ is the position vector from the center of mass and $\vec{F}$ is the force vector.
 :p How do you calculate torque when a force is applied off-center to a rigid body?
 ??x
-To calculate torque, use the cross product formula \(N = \vec{r} \times \vec{F}\), where \(\vec{r}\) represents the position vector from the center of mass to the point of application of the force, and \(\vec{F}\) is the force vector. The result will be a vector directed perpendicular to both \(\vec{r}\) and \(\vec{F}\).
+To calculate torque, use the cross product formula $N = \vec{r} \times \vec{F}$, where $\vec{r}$ represents the position vector from the center of mass to the point of application of the force, and $\vec{F}$ is the force vector. The result will be a vector directed perpendicular to both $\vec{r}$ and $\vec{F}$.
 
 For example:
 ```java
@@ -824,12 +811,11 @@ x??
 
 ---
 #### Relationship Between Torque and Angular Acceleration
-Background context explaining that torque is related to angular acceleration in the same way force is related to linear acceleration. The formula \(N_{net} = I\ddot{w}\) shows this relationship, where \(I\) is the moment of inertia and \(\ddot{w}\) is the angular acceleration.
+Background context explaining that torque is related to angular acceleration in the same way force is related to linear acceleration. The formula $N_{net} = I\ddot{w}$ shows this relationship, where $I$ is the moment of inertia and $\ddot{w}$ is the angular acceleration.
 :p How does torque relate to angular acceleration?
 ??x
 Torque relates to angular acceleration in much the same way that force relates to linear acceleration. The equation for this relationship is given by:
-\[ N_{net} = I\ddot{w} \]
-where \(N_{net}\) is the net torque, and \(I\) is the moment of inertia about the axis of rotation.
+$$N_{net} = I\ddot{w}$$where $ N_{net}$is the net torque, and $ I$ is the moment of inertia about the axis of rotation.
 
 For example, if you have a rigid body with a known moment of inertia and you want to calculate its angular acceleration given an applied torque:
 ```java
@@ -841,12 +827,11 @@ x??
 
 ---
 #### Calculation of Angular Equations of Motion
-Background context explaining that the equations of motion for a rigid body can be broken down into linear and angular components. The equations \(N_{net} = I\ddot{w}\) and \(F_{net} = m\ddot{v}\) are used to solve for rotational and translational motion, respectively.
+Background context explaining that the equations of motion for a rigid body can be broken down into linear and angular components. The equations $N_{net} = I\ddot{w}$ and $F_{net} = m\ddot{v}$ are used to solve for rotational and translational motion, respectively.
 :p How do you calculate the net torque on a rigid body?
 ??x
-To calculate the net torque (\(N_{net}\)) on a rigid body, use the equation:
-\[ N_{net} = I\ddot{w} \]
-where \(I\) is the moment of inertia and \(\ddot{w}\) is the angular acceleration.
+To calculate the net torque ($N_{net}$) on a rigid body, use the equation:
+$$N_{net} = I\ddot{w}$$where $ I $ is the moment of inertia and $\ddot{w}$ is the angular acceleration.
 
 For example:
 ```java
@@ -859,12 +844,14 @@ x??
 
 ---
 #### Solving Angular Equations of Motion in Two Dimensions
-Background context explaining that the two-dimensional case involves solving a pair of ordinary differential equations for angular and linear motion using numerical integration techniques. The equations are \(N_{net} = I\ddot{w}\) for angular acceleration and \(F_{net} = m\ddot{v}\) for linear acceleration.
+Background context explaining that the two-dimensional case involves solving a pair of ordinary differential equations for angular and linear motion using numerical integration techniques. The equations are $N_{net} = I\ddot{w}$ for angular acceleration and $F_{net} = m\ddot{v}$ for linear acceleration.
 :p How do you solve the angular equations of motion in two dimensions?
 ??x
 To solve the angular equations of motion in two dimensions, use numerical integration techniques like Euler's method. The pair of ordinary differential equations (ODEs) to solve are:
-\[ N_{net} = I\ddot{w} \]
-\[ F_{net} = m\ddot{v} \]
+$$N_{net} = I\ddot{w}$$
+$$
+
+F_{net} = m\ddot{v}$$
 
 For example, using the explicit Euler method:
 ```java
@@ -883,7 +870,7 @@ x??
 Background context explaining that when multiple forces are applied to a rigid body, the torques produced by each force can be summed. The net torque is then used in equations of motion.
 :p How do you sum torque vectors?
 ??x
-When two or more forces are applied to a rigid body, the torque vectors produced by each force can be summed. This sum gives the net torque (\(N_{net}\)) which is used in equations of motion.
+When two or more forces are applied to a rigid body, the torque vectors produced by each force can be summed. This sum gives the net torque ($N_{net}$) which is used in equations of motion.
 
 For example:
 ```java
@@ -907,12 +894,13 @@ The velocity Verlet method improves accuracy by incorporating both position and 
 
 ---
 #### Step 1: Position Calculation
-The first step in applying the velocity Verlet method involves calculating the position \(q(t_1 + \Delta t)\) based on the current position \(q(t_1)\), velocity \(w(t_1)\), and acceleration \(a(t_1)\).
+The first step in applying the velocity Verlet method involves calculating the position $q(t_1 + \Delta t)$ based on the current position $q(t_1)$, velocity $ w(t_1)$, and acceleration $ a(t_1)$.
 
 :p What is the formula for position calculation using the velocity Verlet method?
 ??x
 The formula for position calculation is:
-\[ q(t_1 + \Delta t) = q(t_1) + w(t_1) \Delta t + \frac{1}{2} a(t_1) (\Delta t)^2 \]
+$$q(t_1 + \Delta t) = q(t_1) + w(t_1) \Delta t + \frac{1}{2} a(t_1) (\Delta t)^2$$
+
 This equation takes into account the initial position, velocity, and acceleration over the time step to predict the new position.
 ??x
 
@@ -922,20 +910,22 @@ After calculating the position, the next step is to find the velocity at half a 
 
 :p What is the formula for calculating velocity at half a time step using the velocity Verlet method?
 ??x
-The formula for calculating velocity at half a time step \(w(t_1 + \frac{1}{2} \Delta t)\) is:
-\[ w(t_1 + \frac{1}{2} \Delta t) = w(t_1) + \frac{1}{2} a(t_1) \Delta t \]
+The formula for calculating velocity at half a time step $w(t_1 + \frac{1}{2} \Delta t)$ is:
+$$w(t_1 + \frac{1}{2} \Delta t) = w(t_1) + \frac{1}{2} a(t_1) \Delta t$$
+
 This equation updates the velocity based on half of the time step and the current acceleration.
 ??x
 
 ---
 #### Step 3: Acceleration Calculation at Final Time Step
-The next part involves calculating the final acceleration at \(t_1 + \Delta t\), which is also needed to complete one full cycle of the method.
+The next part involves calculating the final acceleration at $t_1 + \Delta t$, which is also needed to complete one full cycle of the method.
 
 :p What is the formula for calculating the final acceleration using the velocity Verlet method?
 ??x
 The formula for calculating the final acceleration is:
-\[ a(t_1 + \Delta t) = I^{-1} F_{net}(t_2, q(t_2), w(t_2)) \]
-Here \(I\) is the moment of inertia tensor and \(F_{net}\) represents the net force. This step updates the acceleration based on the forces acting at the end of the time step.
+$$a(t_1 + \Delta t) = I^{-1} F_{net}(t_2, q(t_2), w(t_2))$$
+
+Here $I $ is the moment of inertia tensor and$F_{net}$ represents the net force. This step updates the acceleration based on the forces acting at the end of the time step.
 ??x
 
 ---
@@ -944,8 +934,9 @@ The last step in applying the velocity Verlet method involves updating the final
 
 :p What is the formula for calculating the final velocity using the velocity Verlet method?
 ??x
-The formula for calculating the final velocity \(w(t_1 + \Delta t)\) is:
-\[ w(t_1 + \Delta t) = w(t_1 + \frac{1}{2} \Delta t) + \frac{1}{2} a(t_1 + \Delta t) \Delta t \]
+The formula for calculating the final velocity $w(t_1 + \Delta t)$ is:
+$$w(t_1 + \Delta t) = w(t_1 + \frac{1}{2} \Delta t) + \frac{1}{2} a(t_1 + \Delta t) \Delta t$$
+
 This equation updates the velocity by combining the half-time velocity and the final acceleration over the full time step.
 ??x
 
@@ -955,34 +946,31 @@ The inertia tensor is a 3x3 matrix that describes the rotational mass of a rigid
 
 :p What does the inertia tensor represent for a rigid body?
 ??x
-The inertia tensor \(I\) represents the rotational mass distribution of a rigid body about its three principal axes. Its diagonal elements (Ixx, Iyy, Izz) are the moments of inertia, and off-diagonal elements (products of inertia) describe how mass is distributed asymmetrically.
+The inertia tensor $I$ represents the rotational mass distribution of a rigid body about its three principal axes. Its diagonal elements (Ixx, Iyy, Izz) are the moments of inertia, and off-diagonal elements (products of inertia) describe how mass is distributed asymmetrically.
 ??x
 
 ---
 #### Orientation in 3D Using Euler Angles
-In two dimensions, orientation can be described by a single angle \(\theta\). However, in three dimensions, rotations about each axis are represented using Euler angles \([q_x, q_y, q_z]\).
+In two dimensions, orientation can be described by a single angle $\theta $. However, in three dimensions, rotations about each axis are represented using Euler angles $[q_x, q_y, q_z]$.
 
 :p How is the orientation of a rigid body typically represented in three dimensions?
 ??x
-Orientation in 3D is often represented using three Euler angles \([q_x, q_y, q_z]\), each corresponding to rotation about one of the Cartesian axes. This representation can be problematic due to gimbal lock issues and complexity.
+Orientation in 3D is often represented using three Euler angles $[q_x, q_y, q_z]$, each corresponding to rotation about one of the Cartesian axes. This representation can be problematic due to gimbal lock issues and complexity.
 ??x
 
 ---
 #### Simplified Inertia Tensor for Games
-Due to computational limitations, game physics engines often simplify the 3-element vector \([I_{xx}, I_{yy}, I_{zz}]\) derived from the full inertia tensor matrix.
+Due to computational limitations, game physics engines often simplify the 3-element vector $[I_{xx}, I_{yy}, I_{zz}]$ derived from the full inertia tensor matrix.
 
 :p How is the inertia tensor typically represented in game physics?
 ??x
-In game physics, the inertia tensor is simplified into a 3-element vector \([I_{xx}, I_{yy}, I_{zz}]\) to reduce computational complexity. This simplification helps manage performance while still providing useful approximations for physical simulations.
+In game physics, the inertia tensor is simplified into a 3-element vector $[I_{xx}, I_{yy}, I_{zz}]$ to reduce computational complexity. This simplification helps manage performance while still providing useful approximations for physical simulations.
 ??x
 
 #### Quaternion Representation of Orientation
-Background context: The orientation of a body is often represented using either a 3×3 rotation matrix \( R \) or a unit quaternion \( q \). This chapter will use the quaternion form exclusively. A quaternion is a four-element vector, where its x-, y-, and z-components represent the scaled sine of the half-angle along an axis of rotation, and the w-component represents the cosine of the half-angle.
+Background context: The orientation of a body is often represented using either a 3×3 rotation matrix $R $ or a unit quaternion$q$. This chapter will use the quaternion form exclusively. A quaternion is a four-element vector, where its x-, y-, and z-components represent the scaled sine of the half-angle along an axis of rotation, and the w-component represents the cosine of the half-angle.
 Formula: 
-\[ q = [q_x, q_y, q_z, q_w] \]
-where
-\[ q = [u \sin(\frac{\theta}{2}), \cos(\frac{\theta}{2})] \]
-and \( u \) is a unit vector along the axis of rotation.
+$$q = [q_x, q_y, q_z, q_w]$$where$$q = [u \sin(\frac{\theta}{2}), \cos(\frac{\theta}{2})]$$and $ u$ is a unit vector along the axis of rotation.
 
 :p How is a body's orientation typically represented in this chapter?
 ??x
@@ -1008,14 +996,13 @@ x??
 ---
 
 #### Angular Velocity in Three Dimensions
-Background context: In three-dimensional space, angular velocity is represented as a vector \( \omega(t) \). This vector can be decomposed into its unit-length axis of rotation and the rotational speed about that axis.
+Background context: In three-dimensional space, angular velocity is represented as a vector $\omega(t)$. This vector can be decomposed into its unit-length axis of rotation and the rotational speed about that axis.
 Formula:
-\[ \omega(t) = w_u(t)u = \dot{q}(t) u \]
-where \( u \) is the unit vector defining the axis of rotation, and \( w_u \) is the angular velocity along this axis.
+$$\omega(t) = w_u(t)u = \dot{q}(t) u$$where $ u $ is the unit vector defining the axis of rotation, and $ w_u$ is the angular velocity along this axis.
 
 :p What is angular velocity in three dimensions?
 ??x
-Angular velocity in three-dimensional space is represented as a vector \( \omega(t) \). This vector can be decomposed into two parts: the unit-length axis of rotation \( u \), and the rotational speed about that axis, which is given by \( w_u = \dot{q}(t)u \).
+Angular velocity in three-dimensional space is represented as a vector $\omega(t)$. This vector can be decomposed into two parts: the unit-length axis of rotation $ u$, and the rotational speed about that axis, which is given by $ w_u = \dot{q}(t)u$.
 ```java
 public class AngularVelocity {
     public Vector3f omega;
@@ -1031,16 +1018,14 @@ x??
 ---
 
 #### Angular Momentum in Three Dimensions
-Background context: Unlike angular velocity which can change even without external torques, angular momentum \( L(t) \) remains constant if there are no net external forces acting on the body. The rotational equivalent of linear momentum, it is a three-element vector.
+Background context: Unlike angular velocity which can change even without external torques, angular momentum $L(t)$ remains constant if there are no net external forces acting on the body. The rotational equivalent of linear momentum, it is a three-element vector.
 Formula:
-\[ L(t) = I . (t) p(t) = m v(t) \]
-where \( I \) is the inertia tensor and not a scalar but a 3×3 matrix.
+$$L(t) = I . (t) p(t) = m v(t)$$where $ I$ is the inertia tensor and not a scalar but a 3×3 matrix.
 
 :p What is angular momentum in three dimensions?
 ??x
 Angular momentum in three-dimensional space is defined as the rotational equivalent of linear momentum. It remains constant if there are no net external forces acting on the body, represented by:
-\[ L(t) = I . (t) p(t) \]
-where \( I \) is a 3×3 matrix representing the inertia tensor.
+$$L(t) = I . (t) p(t)$$where $ I$ is a 3×3 matrix representing the inertia tensor.
 
 ```java
 public class AngularMomentum {
@@ -1057,11 +1042,10 @@ x??
 ---
 
 #### Matrix Multiplication for Angular Momentum
-Background context: The angular momentum \( \mathbf{L} \) of a rigid body is computed using matrix multiplication involving the moment of inertia tensor \( \mathbf{I} \) and the angular velocity vector \( \boldsymbol{\omega} \).
+Background context: The angular momentum $\mathbf{L}$ of a rigid body is computed using matrix multiplication involving the moment of inertia tensor $\mathbf{I}$ and the angular velocity vector $\boldsymbol{\omega}$.
 
 Relevant formula:
-\[ 
-\mathbf{L}(t) = 
+$$\mathbf{L}(t) = 
 \begin{bmatrix}
 L_x(t) \\
 L_y(t) \\
@@ -1076,12 +1060,9 @@ I_{zx} & I_{zy} & I_{zz}
 w_x(t) \\
 w_y(t) \\
 w_z(t)
-\end{bmatrix}
-\]
-
-:p How is the angular momentum \( \mathbf{L} \) computed?
+\end{bmatrix}$$:p How is the angular momentum $\mathbf{L}$ computed?
 ??x
-Angular momentum is calculated by multiplying the moment of inertia tensor \( \mathbf{I} \) with the angular velocity vector \( \boldsymbol{\omega} \). This matrix multiplication gives us the components of the angular momentum for each axis.
+Angular momentum is calculated by multiplying the moment of inertia tensor $\mathbf{I}$ with the angular velocity vector $\boldsymbol{\omega}$. This matrix multiplication gives us the components of the angular momentum for each axis.
 
 ```java
 public class AngularMomentum {
@@ -1104,20 +1085,15 @@ x??
 ---
 
 #### Torque in Three Dimensions
-Background context: Torque is calculated as the cross product of the radial position vector \( \mathbf{r} \) and the force vector \( \mathbf{F} \). In three dimensions, torque \( \boldsymbol{\tau} \) is related to angular momentum \( \mathbf{L} \).
+Background context: Torque is calculated as the cross product of the radial position vector $\mathbf{r}$ and the force vector $\mathbf{F}$. In three dimensions, torque $\boldsymbol{\tau}$ is related to angular momentum $\mathbf{L}$.
 
 Relevant formula:
-\[ 
-\boldsymbol{\tau} = \mathbf{r} \times \mathbf{F}
-\]
-Equation (13.8):
-\[ 
-\boldsymbol{\tau}(t) = \frac{\mathrm{d}\mathbf{L}}{\mathrm{d}t}(t)
-\]
+$$\boldsymbol{\tau} = \mathbf{r} \times \mathbf{F}$$
 
-:p How is torque calculated in three dimensions?
+Equation (13.8):
+$$\boldsymbol{\tau}(t) = \frac{\mathrm{d}\mathbf{L}}{\mathrm{d}t}(t)$$:p How is torque calculated in three dimensions?
 ??x
-Torque is calculated as the cross product of the radial position vector \( \mathbf{r} \) and the force vector \( \mathbf{F} \). This results in a vector that represents the rate of change of angular momentum with respect to time.
+Torque is calculated as the cross product of the radial position vector $\mathbf{r}$ and the force vector $\mathbf{F}$. This results in a vector that represents the rate of change of angular momentum with respect to time.
 
 ```java
 public class TorqueCalculation {
@@ -1131,20 +1107,14 @@ x??
 ---
 
 #### Differential Equations for Angular Motion in 3D
-Background context: Unlike linear motion and two-dimensional angular motion, solving the differential equations of three-dimensional angular motion involves directly calculating the angular momentum \( \mathbf{L} \).
+Background context: Unlike linear motion and two-dimensional angular motion, solving the differential equations of three-dimensional angular motion involves directly calculating the angular momentum $\mathbf{L}$.
 
 Relevant formulas:
-Angular velocity \( \boldsymbol{\omega} \) is not conserved and must be calculated from \( \mathbf{L} \).
-\[ 
-\boldsymbol{\tau}(t) = \frac{\mathrm{d}\mathbf{I}}{\mathrm{d}t}(t)
-\]
-\[ 
-\frac{\mathrm{d}\mathbf{L}}{\mathrm{d}t}(t) = \mathbf{I}\cdot\dot{\boldsymbol{\omega}}(t)
-\]
-
-:p How are the differential equations for three-dimensional angular motion different from linear and two-dimensional cases?
+Angular velocity $\boldsymbol{\omega}$ is not conserved and must be calculated from $\mathbf{L}$.
+$$\boldsymbol{\tau}(t) = \frac{\mathrm{d}\mathbf{I}}{\mathrm{d}t}(t)$$
+$$\frac{\mathrm{d}\mathbf{L}}{\mathrm{d}t}(t) = \mathbf{I}\cdot\dot{\boldsymbol{\omega}}(t)$$:p How are the differential equations for three-dimensional angular motion different from linear and two-dimensional cases?
 ??x
-In three dimensions, the differential equations of motion differ because we directly solve for angular momentum \( \mathbf{L} \) instead of the angular velocity \( \boldsymbol{\omega} \). The orientation is described using quaternions due to the non-conservation of angular velocity.
+In three dimensions, the differential equations of motion differ because we directly solve for angular momentum $\mathbf{L}$ instead of the angular velocity $\boldsymbol{\omega}$. The orientation is described using quaternions due to the non-conservation of angular velocity.
 
 ```java
 public class AngularMotionEquationSolver {
@@ -1158,20 +1128,13 @@ x??
 ---
 
 #### Orientation and Quaternions in Three Dimensions
-Background context: The orientation of a rigid body is represented by a quaternion \( \mathbf{q} \). The derivative of this quaternion is related to the angular velocity vector through a specific equation.
+Background context: The orientation of a rigid body is represented by a quaternion $\mathbf{q}$. The derivative of this quaternion is related to the angular velocity vector through a specific equation.
 
 Relevant formula:
-\[ 
-\frac{\mathrm{d}\mathbf{q}}{\mathrm{d}t}(t) = \frac{1}{2}(\boldsymbol{\omega}_q(t))\cdot\mathbf{q}(t)
-\]
-
-:p How is the orientation of a rigid body represented in three dimensions?
+$$\frac{\mathrm{d}\mathbf{q}}{\mathrm{d}t}(t) = \frac{1}{2}(\boldsymbol{\omega}_q(t))\cdot\mathbf{q}(t)$$:p How is the orientation of a rigid body represented in three dimensions?
 ??x
-The orientation of a rigid body is typically represented by a quaternion \( \mathbf{q} \). The derivative of this quaternion with respect to time is given by:
-\[ 
-\frac{\mathrm{d}\mathbf{q}}{\mathrm{d}t}(t) = \frac{1}{2}(\boldsymbol{\omega}_q(t))\cdot\mathbf{q}(t)
-\]
-where \( \boldsymbol{\omega}_q(t) \) is the angular velocity vector represented as a quaternion.
+The orientation of a rigid body is typically represented by a quaternion $\mathbf{q}$. The derivative of this quaternion with respect to time is given by:
+$$\frac{\mathrm{d}\mathbf{q}}{\mathrm{d}t}(t) = \frac{1}{2}(\boldsymbol{\omega}_q(t))\cdot\mathbf{q}(t)$$where $\boldsymbol{\omega}_q(t)$ is the angular velocity vector represented as a quaternion.
 
 ```java
 public class OrientationUpdate {
@@ -1189,77 +1152,67 @@ x??
 In both angular (3D) and linear motion, we describe the dynamics of a body using ordinary differential equations (ODEs). For linear motion, these are often referred to as Newton's second law, while for rotational motion, they involve moments.
 
 For linear motion:
-\[
-N_{net}(t) = \dot{p}(t)
-\]
-\[
-F_{net}(t) = m_1 \dot{v}(t) 
-\]
+$$N_{net}(t) = \dot{p}(t)$$
+$$
 
-Where \( N_{net} \) and \( F_{net} \) are the net forces, \( p \) is momentum, and \( v \) is velocity.
+F_{net}(t) = m_1 \dot{v}(t)$$
+
+Where $N_{net}$ and $F_{net}$ are the net forces,$p $ is momentum, and$v$ is velocity.
 
 For angular motion in 3D:
-\[
-\dot{L}(t) = N_{net}(t)
-\]
-\[
-I_1 \omega(t) = m_1 v(t)
-\]
+$$\dot{L}(t) = N_{net}(t)$$
+$$
 
-Where \( L \) is the angular momentum, \( I_1 \) is the moment of inertia, and \( \omega \) is the angular velocity.
+I_1 \omega(t) = m_1 v(t)$$
+
+Where $L $ is the angular momentum,$I_1 $ is the moment of inertia, and$\omega$ is the angular velocity.
 
 For linear motion:
-\[
-v(t) = \dot{r}(t)
-\]
+$$v(t) = \dot{r}(t)$$
 
 And for orientation using quaternions:
-\[
-q(t) = q(t-1) + 0.5 \cdot ( \omega(t-1) \otimes q(t-1)) \cdot dt
-\]
-Where \( \otimes \) denotes quaternion multiplication, and \( dt \) is the time step.
+$$q(t) = q(t-1) + 0.5 \cdot ( \omega(t-1) \otimes q(t-1)) \cdot dt$$
+
+Where $\otimes $ denotes quaternion multiplication, and$dt$ is the time step.
 
 :p What are the ODEs for linear motion in terms of force and velocity?
 ??x
 The ODEs for linear motion describe how forces affect the momentum and thus the velocities of objects. The key equations are:
-\[
-N_{net}(t) = \dot{p}(t)
-\]
+$$N_{net}(t) = \dot{p}(t)$$
+
 This states that the net external force equals the rate of change of linear momentum.
 
 For a simple object, this can be written as:
-\[
-F_{net}(t) = m_1 \dot{v}(t)
-\]
-Where \( F_{net} \) is the total net force and \( v(t) \) is the velocity.
+$$
+
+F_{net}(t) = m_1 \dot{v}(t)$$
+
+Where $F_{net}$ is the total net force and $v(t)$ is the velocity.
 
 :p What are the ODEs for angular motion in terms of moment and angular velocity?
 ??x
 The ODEs for rotational motion describe how torques (or moments) affect the angular momentum and thus the angular velocities. The key equations are:
-\[
-\dot{L}(t) = N_{net}(t)
-\]
+$$\dot{L}(t) = N_{net}(t)$$
+
 This states that the time rate of change of angular momentum is equal to the net external torque.
 
 For a rigid body, this can be written as:
-\[
-I_1 \omega(t) = m_1 v(t)
-\]
-Where \( I_1 \) is the moment of inertia tensor and \( \omega(t) \) is the angular velocity vector.
+$$
+
+I_1 \omega(t) = m_1 v(t)$$
+
+Where $I_1 $ is the moment of inertia tensor and$\omega(t)$ is the angular velocity vector.
 
 :p How does the explicit Euler method approximate the solution for angular motion in 3D?
 ??x
 The explicit Euler method approximates the solution to the ODEs for angular motion in 3D as follows:
+$$L(t_2) = L(t_1) + N_{net}(t_1) \cdot \Delta t$$
 
-\[
-L(t_2) = L(t_1) + N_{net}(t_1) \cdot \Delta t
-\]
 This updates the angular momentum by adding the torque times the time step.
 
 For quaternions, the orientation update is:
-\[
-q(t_2) = q(t_1) + 0.5 \cdot ( \omega(t_1) \otimes q(t_1)) \cdot dt
-\]
+$$q(t_2) = q(t_1) + 0.5 \cdot ( \omega(t_1) \otimes q(t_1)) \cdot dt$$
+
 This updates the quaternion using an angular velocity and the current quaternion.
 
 :p How does one renormalize a quaternion to prevent errors?
@@ -1267,39 +1220,35 @@ This updates the quaternion using an angular velocity and the current quaternion
 Quaternions must be renormalized periodically because floating-point arithmetic can introduce small errors that accumulate over time. The process of renormalization involves normalizing the quaternion to ensure it remains a unit quaternion, which is essential for representing orientation accurately.
 
 The normalization step is:
-\[
-q(t) \leftarrow \frac{q(t)}{\| q(t) \| }
-\]
-Where \( \| q(t) \| \) is the magnitude of the quaternion.
+$$q(t) \leftarrow \frac{q(t)}{\| q(t) \| }$$
+
+Where $\| q(t) \|$ is the magnitude of the quaternion.
 
 :p What are potential and kinetic energy in the context of rigid body dynamics?
 ??x
-In rigid body dynamics, potential and kinetic energy describe the total mechanical energy of a system. Potential energy (\( V \)) represents the stored energy due to position relative to a force field (e.g., gravity). Kinetic energy (\( T \)) is associated with motion.
+In rigid body dynamics, potential and kinetic energy describe the total mechanical energy of a system. Potential energy ($V $) represents the stored energy due to position relative to a force field (e.g., gravity). Kinetic energy ($ T$) is associated with motion.
 
 The formulas for these are:
-\[
-T_{linear} = \frac{1}{2} m_1 v^2
-\]
-This is the kinetic energy from linear motion. It can also be written in terms of momentum \( p \):
-\[
-T_{linear} = \frac{1}{2} p \cdot v
-\]
+$$T_{linear} = \frac{1}{2} m_1 v^2$$
+
+This is the kinetic energy from linear motion. It can also be written in terms of momentum $p$:
+$$T_{linear} = \frac{1}{2} p \cdot v$$
 
 For rotational motion:
-\[
-T_{angular} = \frac{1}{2} L \cdot .
-\]
-Where \( L \) is the angular momentum and \( . \) denotes the dot product.
+$$
+
+T_{angular} = \frac{1}{2} L \cdot .$$
+
+Where $L $ is the angular momentum and$.$ denotes the dot product.
 
 :p What is energy conservation in a physics simulation?
 ??x
 Energy conservation in a physics simulation means that if no external work is done on the system, the total mechanical energy (potential + kinetic) remains constant. This principle helps verify the correctness of physical simulations by ensuring that energy is neither gained nor lost within the isolated system.
 
 If energy is conserved:
-\[
-E = V + T
-\]
-Where \( E \) is the total energy, \( V \) is potential energy, and \( T \) is kinetic energy. This conservation law holds unless there are external forces doing work on or taking work from the system.
+$$E = V + T$$
+
+Where $E $ is the total energy,$V $ is potential energy, and$T$ is kinetic energy. This conservation law holds unless there are external forces doing work on or taking work from the system.
 
 :p What is impulsive collision response in rigid body dynamics?
 ??x
@@ -1335,26 +1284,25 @@ The `resolvePenetration` function would calculate and apply necessary forces or 
 Background context explaining that in real-time rigid body dynamics simulations, collisions are often modeled using Newton's law of restitution. This involves simplifying assumptions about the nature and duration of the collision force. The assumption is that the collision force acts over an infinitesimally short period of time, turning it into what we call an impulse.
 
 Formulas:
-- \(\Delta p = m\Delta v\) (Change in momentum)
-- \(p1 + p2 = p'1 + p'2\) or \(m1v1 + m2v2 = m'1v'1 + m'2v'2\) (Conservation of linear momentum)
+- $\Delta p = m\Delta v$(Change in momentum)
+- $p1 + p2 = p'1 + p'2 $ or$m1v1 + m2v2 = m'1v'1 + m'2v'2$(Conservation of linear momentum)
 
 :p What is the collision force simplified to in this context?
 ??x
-The collision force is approximated as an impulse, which acts over an infinitesimally short period and causes a sudden change in velocities. This can be represented by \(\Delta p = m\Delta v\), where \(\Delta p\) is the change in momentum.
+The collision force is approximated as an impulse, which acts over an infinitesimally short period and causes a sudden change in velocities. This can be represented by $\Delta p = m\Delta v $, where $\Delta p$ is the change in momentum.
 x??
 
 ---
 
 #### Coefficient of Restitution
-Background context explaining that the nature of complex submolecular interactions during collisions is approximated using the coefficient of restitution, denoted as \(e\). This coefficient describes how much energy is lost during a collision.
+Background context explaining that the nature of complex submolecular interactions during collisions is approximated using the coefficient of restitution, denoted as $e$. This coefficient describes how much energy is lost during a collision.
 
 Formulas:
-- For perfectly elastic collisions: \(e = 1\)
-- For perfectly inelastic (plastic) collisions: \(e = 0\)
+- For perfectly elastic collisions: $e = 1 $- For perfectly inelastic (plastic) collisions:$ e = 0$
 
-:p What does the coefficient of restitution (\(e\)) represent?
+:p What does the coefficient of restitution ($e$) represent?
 ??x
-The coefficient of restitution (\(e\)) represents how much energy is lost during a collision. It ranges from 0 to 1, with 1 indicating a perfectly elastic collision (no energy loss) and 0 indicating a perfectly inelastic collision where kinetic energy is completely lost.
+The coefficient of restitution ($e$) represents how much energy is lost during a collision. It ranges from 0 to 1, with 1 indicating a perfectly elastic collision (no energy loss) and 0 indicating a perfectly inelastic collision where kinetic energy is completely lost.
 x??
 
 ---
@@ -1363,24 +1311,20 @@ x??
 Background context explaining that all collision analysis is based around the idea that linear momentum is conserved.
 
 Formulas:
-- \(m1v1 + m2v2 = m'1v'1 + m'2v'2\)
-
-:p What does conservation of linear momentum imply for two colliding bodies?
+- $m1v1 + m2v2 = m'1v'1 + m'2v'2$:p What does conservation of linear momentum imply for two colliding bodies?
 ??x
-Conservation of linear momentum implies that the total linear momentum before a collision is equal to the total linear momentum after the collision. This can be mathematically expressed as \(m1v1 + m2v2 = m'1v'1 + m'2v'2\).
+Conservation of linear momentum implies that the total linear momentum before a collision is equal to the total linear momentum after the collision. This can be mathematically expressed as $m1v1 + m2v2 = m'1v'1 + m'2v'2$.
 x??
 
 ---
 
 #### Kinetic Energy Conservation and Loss
-Background context explaining that while kinetic energy is not always conserved, it can be accounted for by introducing an additional term \(T_{lost}\).
+Background context explaining that while kinetic energy is not always conserved, it can be accounted for by introducing an additional term $T_{lost}$.
 
 Formulas:
-- \(\frac{1}{2}m_1v_1^2 + \frac{1}{2}m_2v_2^2 = \frac{1}{2}m'1v'1^2 + \frac{1}{2}m'2v'2^2 + T_{lost}\)
-
-:p How is kinetic energy accounted for during collision analysis?
+- $\frac{1}{2}m_1v_1^2 + \frac{1}{2}m_2v_2^2 = \frac{1}{2}m'1v'1^2 + \frac{1}{2}m'2v'2^2 + T_{lost}$:p How is kinetic energy accounted for during collision analysis?
 ??x
-Kinetic energy is not always conserved, but it can be accounted for by introducing an additional term \(T_{lost}\), which represents the energy lost due to heat and sound. This means that \(\frac{1}{2}m_1v_1^2 + \frac{1}{2}m_2v_2^2 = \frac{1}{2}m'1v'1^2 + \frac{1}{2}m'2v'2^2 + T_{lost}\).
+Kinetic energy is not always conserved, but it can be accounted for by introducing an additional term $T_{lost}$, which represents the energy lost due to heat and sound. This means that $\frac{1}{2}m_1v_1^2 + \frac{1}{2}m_2v_2^2 = \frac{1}{2}m'1v'1^2 + \frac{1}{2}m'2v'2^2 + T_{lost}$.
 x??
 
 ---
@@ -1389,11 +1333,11 @@ x??
 Background context explaining that the impulse vector must be normal to both surfaces at the point of contact. This means the impulse is perpendicular to the surfaces.
 
 Formulas:
-- \(\hat{p} = \hat{p}_n\), where \(\hat{n}\) is the unit vector normal to both surfaces
+- $\hat{p} = \hat{p}_n $, where $\hat{n}$ is the unit vector normal to both surfaces
 
 :p What are the characteristics of the impulse in a collision?
 ??x
-The impulse in a collision is characterized by being normal (perpendicular) to both surfaces at the point of contact. This can be represented as \(\hat{p} = \hat{p}_n\), where \(\hat{n}\) is the unit vector normal to both surfaces.
+The impulse in a collision is characterized by being normal (perpendicular) to both surfaces at the point of contact. This can be represented as $\hat{p} = \hat{p}_n $, where $\hat{n}$ is the unit vector normal to both surfaces.
 x??
 
 ---
@@ -1403,18 +1347,13 @@ x??
 Background context: When two bodies collide, an impulse is transferred between them. The impulses are equal in magnitude but opposite in direction. This concept helps in determining the post-collision velocities of the bodies.
 
 Formulae:
-- \[
-p'_{1} = p_{1} + \hat{p}
-\]
-- \[
-p'_{2} = p_{2} - \hat{p}
-\]
+-$$p'_{1} = p_{1} + \hat{p}$$-$$p'_{2} = p_{2} - \hat{p}$$
 
-Where \(p'\) represents the post-collision momentum, and \(p\) represents the pre-collision momentum. The impulse \(\hat{p}\) is a vector quantity.
+Where $p'$ represents the post-collision momentum, and $ p $ represents the pre-collision momentum. The impulse $\hat{p}$ is a vector quantity.
 
 :p What are the post-collision momenta of two bodies after an impulse exchange in a collision?
 ??x
-After a collision, body 1's new momentum (\(p'_{1}\)) is its initial momentum (\(p_{1}\)) plus the impulse \(\hat{p}\). Body 2's new momentum (\(p'_{2}\)) is its initial momentum (\(p_{2}\)) minus the same impulse \(\hat{p}\).
+After a collision, body 1's new momentum ($p'_{1}$) is its initial momentum ($ p_{1}$) plus the impulse $\hat{p}$. Body 2's new momentum ($ p'_{2}$) is its initial momentum ($ p_{2}$) minus the same impulse $\hat{p}$.
 
 Example code to calculate post-collision velocities:
 ```java
@@ -1436,18 +1375,16 @@ x??
 
 #### Coefficient of Restitution
 
-Background context: The coefficient of restitution (\(\#e\)) measures how much kinetic energy is conserved in a collision. It relates the relative velocities before and after the collision.
+Background context: The coefficient of restitution ($\#e$) measures how much kinetic energy is conserved in a collision. It relates the relative velocities before and after the collision.
 
 Formula:
-- \[
-(v'_{2} - v'_{1}) = e (v_{2} - v_{1})
-\]
+- $$(v'_{2} - v'_{1}) = e (v_{2} - v_{1})$$
 
-Where \(v'\) represents the velocity after collision, and \(e\) is the coefficient of restitution.
+Where $v'$ represents the velocity after collision, and $e$ is the coefficient of restitution.
 
 :p How is the coefficient of restitution defined?
 ??x
-The coefficient of restitution (\(e\)) is defined as the ratio of the relative velocities of two bodies just after to just before a collision. It quantifies how "bouncy" or "inelastic" a collision is, with \(e = 1\) indicating a perfectly elastic collision and \(e < 1\) indicating an inelastic one.
+The coefficient of restitution ($e $) is defined as the ratio of the relative velocities of two bodies just after to just before a collision. It quantifies how "bouncy" or "inelastic" a collision is, with $ e = 1 $indicating a perfectly elastic collision and$ e < 1$ indicating an inelastic one.
 
 Example calculation:
 ```java
@@ -1464,23 +1401,19 @@ x??
 
 #### Impulse in Terms of Velocities
 
-Background context: The impulse \(\hat{p}\) can be expressed in terms of the relative velocities and masses of the bodies involved.
+Background context: The impulse $\hat{p}$ can be expressed in terms of the relative velocities and masses of the bodies involved.
 
 Formula:
-- \[
-\hat{p} = \frac{(e + 1)(v_{2,n} - v_{1,n})}{\frac{1}{m_1} + \frac{1}{m_2}} n
-\]
+-$$\hat{p} = \frac{(e + 1)(v_{2,n} - v_{1,n})}{\frac{1}{m_1} + \frac{1}{m_2}} n$$
 
-Where \(n\) is a unit vector normal to the surface, and \(v_{i,n}\) represents the velocity component of body \(i\) in the direction of \(n\).
+Where $n $ is a unit vector normal to the surface, and$v_{i,n}$ represents the velocity component of body $i$ in the direction of $n$.
 
 :p How can the impulse be calculated using velocities?
 ??x
-The impulse \(\hat{p}\) can be calculated as:
-- \[
-\hat{p} = \frac{(e + 1)(v_{2,n} - v_{1,n})}{\frac{1}{m_1} + \frac{1}{m_2}} n
-\]
+The impulse $\hat{p}$ can be calculated as:
+-$$\hat{p} = \frac{(e + 1)(v_{2,n} - v_{1,n})}{\frac{1}{m_1} + \frac{1}{m_2}} n$$
 
-This formula takes into account the masses and relative velocities in the direction of the normal vector \(n\).
+This formula takes into account the masses and relative velocities in the direction of the normal vector $n$.
 
 Example calculation:
 ```java
@@ -1498,28 +1431,18 @@ x??
 
 #### Perfectly Elastic and Inelastic Collisions
 
-Background context: When the coefficient of restitution is one (\(e = 1\)), the collision is perfectly elastic. If \(m_2\) is effectively infinite, as in a collision with an immovable object like a concrete driveway, the impulse simplifies to a reflection.
+Background context: When the coefficient of restitution is one ($e = 1 $), the collision is perfectly elastic. If $ m_2$ is effectively infinite, as in a collision with an immovable object like a concrete driveway, the impulse simplifies to a reflection.
 
 Formula:
-- For \(e = 1\) and large \(m_2\):
-  \[
-  \hat{p} = -2 m_1 (v_{1,n})
-  \]
-- New velocity of body 1:
-  \[
-  v'_{1} = v_{1,n} - 2 m_1 (v_{1,n}) / m_1
-  \]
-
-:p How does the impulse change in a perfectly elastic collision with an immovable object?
+- For $e = 1 $ and large$m_2$:
+  $$\hat{p} = -2 m_1 (v_{1,n})$$- New velocity of body 1:
+$$v'_{1} = v_{1,n} - 2 m_1 (v_{1,n}) / m_1$$:p How does the impulse change in a perfectly elastic collision with an immovable object?
 ??x
 In a perfectly elastic collision with an effectively infinite mass, such as a concrete driveway, the impulse is:
-- \[
-\hat{p} = -2 m_1 (v_{1,n})
-\]
+-$$\hat{p} = -2 m_1 (v_{1,n})$$
+
 And the new velocity of body 1 becomes:
-- \[
-v'_{1} = v_{1,n} - 2 (v_{1,n}) = -v_{1,n}
-\]
+-$$v'_{1} = v_{1,n} - 2 (v_{1,n}) = -v_{1,n}$$
 
 This reflects the velocity vector about the normal, which is expected behavior for a perfectly elastic collision with an immovable object.
 
@@ -1540,18 +1463,13 @@ x??
 Background context: A penalty force acts like a stiff damped spring between contact points of interpenetrating bodies. It provides an effective and flexible way to handle collision response.
 
 Formula:
-- \[
-\text{Spring constant } k
-\]
-- \[
-\text{Damping coefficient } b
-\]
+-$$\text{Spring constant } k$$-$$\text{Damping coefficient } b$$
 
-When \(b = 0\), the collision is perfectly elastic; as \(b\) increases, the collision becomes more plastic.
+When $b = 0 $, the collision is perfectly elastic; as$ b$ increases, the collision becomes more plastic.
 
 :p What are penalty forces and how do they work in collision response?
 ??x
-Penalty forces simulate collisions using a model that treats interpenetrating bodies like two objects connected by a stiff damped spring. The spring constant (\(k\)) controls the duration of the interpenetration, while the damping coefficient (\(b\)) acts somewhat like the restitution coefficient.
+Penalty forces simulate collisions using a model that treats interpenetrating bodies like two objects connected by a stiff damped spring. The spring constant ($k $) controls the duration of the interpenetration, while the damping coefficient ($ b$) acts somewhat like the restitution coefficient.
 
 Example code to apply penalty force:
 ```java
@@ -1631,21 +1549,21 @@ x??
 
 #### Linear Sliding Friction
 
-Background context explaining the concept. The weight of an object due to gravity, \( G = mg \), is always directed downward. When this object slides on an inclined surface making an angle \( \theta \) with the horizontal, the component of the gravitational force acting normal to the surface is given by \( F_N = mg \cos(\theta) \). The frictional force \( f \) opposing this motion is proportional to this normal force and can be expressed as \( f = \mu N \), where \( \mu \) (coefficient of friction) is a constant.
+Background context explaining the concept. The weight of an object due to gravity, $G = mg $, is always directed downward. When this object slides on an inclined surface making an angle $\theta $ with the horizontal, the component of the gravitational force acting normal to the surface is given by$F_N = mg \cos(\theta)$. The frictional force $ f$opposing this motion is proportional to this normal force and can be expressed as $ f = \mu N$, where $\mu$ (coefficient of friction) is a constant.
 
-The component of the gravitational force acting tangentially on the surface, which tends to make the object accelerate down the plane, is given by \( F_T = mg \sin(\theta) \). In the presence of sliding friction, the net tangential force is:
+The component of the gravitational force acting tangentially on the surface, which tends to make the object accelerate down the plane, is given by $F_T = mg \sin(\theta)$. In the presence of sliding friction, the net tangential force is:
 
-\[ F_{net} = F_T - f = mg (\sin(\theta) - \mu \cos(\theta)) \]
+$$F_{net} = F_T - f = mg (\sin(\theta) - \mu \cos(\theta))$$
 
 If this expression equals zero, the object will either move at a constant speed or remain stationary. If it's greater than zero, the object accelerates down the surface; if less than zero, the object decelerates and eventually comes to rest.
 
-:p What is the formula for calculating the net tangential force in terms of the angle \( \theta \) and coefficient of friction \( \mu \)?
+:p What is the formula for calculating the net tangential force in terms of the angle $\theta $ and coefficient of friction$\mu$?
 ??x
 The net tangential force is calculated using the equation:
 
-\[ F_{net} = mg (\sin(\theta) - \mu \cos(\theta)) \]
+$$F_{net} = mg (\sin(\theta) - \mu \cos(\theta))$$
 
-This formula accounts for both the gravitational component pulling the object down the slope and the frictional force opposing this motion. When \( \sin(\theta) - \mu \cos(\theta) = 0 \), the forces balance, and no net acceleration occurs.
+This formula accounts for both the gravitational component pulling the object down the slope and the frictional force opposing this motion. When $\sin(\theta) - \mu \cos(\theta) = 0$, the forces balance, and no net acceleration occurs.
 x??
 
 ---
@@ -1685,7 +1603,7 @@ Background context explaining the concept. In simulated systems, friction and ot
 ??x
 Friction plays a crucial role in bringing moving objects to rest by continuously opposing their motion and dissipating their kinetic energy as heat or other forms of energy. In the absence of external forces (like thrust), an object will slow down due to the frictional force, eventually coming to a stop.
 
-The net tangential force equation provided earlier (\( F_{net} = mg (\sin(\theta) - \mu \cos(\theta)) \)) shows how both gravity and friction influence motion. As \( \sin(\theta) - \mu \cos(\theta) \) approaches zero, the object's speed decreases until it stops.
+The net tangential force equation provided earlier ($F_{net} = mg (\sin(\theta) - \mu \cos(\theta))$) shows how both gravity and friction influence motion. As $\sin(\theta) - \mu \cos(\theta)$ approaches zero, the object's speed decreases until it stops.
 
 To handle this in a simulation, one must carefully implement forces that account for friction at each time step to accurately model real-world physics.
 x??
@@ -1803,8 +1721,7 @@ An unconstrained rigid body has six degrees of freedom: three for translation an
 ??x
 An unconstrained rigid body can move in three dimensions by translating along the X, Y, and Z axes and can rotate about the same axes. The six DOFs encompass both translation and rotation:
 
-- Translation: \( \Delta x, \Delta y, \Delta z \)
-- Rotation: \( \theta_x, \theta_y, \theta_z \)
+- Translation: $\Delta x, \Delta y, \Delta z $- Rotation:$\theta_x, \theta_y, \theta_z$
 
 ```c++
 // Example of defining rigid body properties
@@ -1936,14 +1853,13 @@ x??
 Explanation: In the context of creating realistic rag doll physics, powered constraints are used to simulate the behavior of joints like elbows. These constraints allow for a blend between natural motion and animated inputs by applying forces that mimic the physical properties of real-world joints.
 
 Relevant formula: The torque exerted by a rotational spring is given by:
-\[ N = k (q - q_{rest}) \]
-where \( N \) is the torque, \( k \) is the spring constant, \( q \) is the current angle, and \( q_{rest} \) is the rest angle.
+$$N = k (q - q_{rest})$$where $ N $is the torque,$ k $is the spring constant,$ q $ is the current angle, and $ q_{rest}$ is the rest angle.
 
 :p What is the role of a powered constraint in simulating joint behavior?
 ??x
 A powered constraint helps simulate the behavior of joints like elbows by applying forces that mimic the physical properties of real-world joints. It allows for a blend between natural motion (due to gravity and collisions) and animated inputs, making the rag doll's movements more realistic.
 
-For example, consider an elbow modeled as a rotational spring with a rest angle \( q_{rest} \). When this rest angle is adjusted dynamically to match the animated skeleton's elbow joint angle, the spring will exert a torque that tends to bring the actual angle back into alignment. This ensures that the rigid bodies of the rag doll track the motion of the animated skeleton under normal conditions but allow for divergence if external forces are introduced.
+For example, consider an elbow modeled as a rotational spring with a rest angle $q_{rest}$. When this rest angle is adjusted dynamically to match the animated skeleton's elbow joint angle, the spring will exert a torque that tends to bring the actual angle back into alignment. This ensures that the rigid bodies of the rag doll track the motion of the animated skeleton under normal conditions but allow for divergence if external forces are introduced.
 
 ```java
 // Pseudocode for adjusting rest angle in a powered constraint
@@ -1959,7 +1875,7 @@ Explanation: The example provided describes an elbow joint that acts like a limi
 
 :p How does a powered constraint simulate the behavior of an elbow joint?
 ??x
-A powered constraint simulates the behavior of an elbow joint by modeling it as a rotational spring. The spring exerts a torque proportional to its deflection from a predefined rest angle, \( q_{rest} \). As the external system (like the animation system) changes the rest angle to match the animated skeleton's elbow joint angle, the spring finds itself out of equilibrium and applies a torque that tends to bring the actual angle back into alignment.
+A powered constraint simulates the behavior of an elbow joint by modeling it as a rotational spring. The spring exerts a torque proportional to its deflection from a predefined rest angle, $q_{rest}$. As the external system (like the animation system) changes the rest angle to match the animated skeleton's elbow joint angle, the spring finds itself out of equilibrium and applies a torque that tends to bring the actual angle back into alignment.
 
 This ensures that under normal conditions without external forces, the rigid bodies of the rag doll will exactly track the motion of the animated skeleton. However, if other forces are introduced (like when the lower arm hits an obstacle), these forces play into the overall motion, allowing the elbow joint to diverge from the animated motion in a somewhat realistic manner.
 

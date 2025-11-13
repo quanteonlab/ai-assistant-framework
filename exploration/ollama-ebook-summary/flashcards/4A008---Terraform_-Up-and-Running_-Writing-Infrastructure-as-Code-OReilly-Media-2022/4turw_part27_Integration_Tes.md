@@ -88,7 +88,7 @@ Here’s how the command looks:
 ??x
 You can run all the tests by executing the following command in your terminal:
 ```sh
-$ ruby web-server-test.rb
+$ruby web-server-test.rb
 ```
 This command runs all the test methods defined in `web-server-test.rb` and provides a summary of the results.
 x??
@@ -420,8 +420,7 @@ Terratest provides the flexibility to skip specific test stages by setting corre
 By setting these variables, you can control which stages should be executed during testing.
 
 Example command to skip specific test stages:
-```sh
-$ SKIP_teardown_db=true \
+```sh$ SKIP_teardown_db=true \
   SKIP_teardown_app=true \
   go test -timeout 30m -run 'TestHelloWorldAppStageWithStages'
 ```

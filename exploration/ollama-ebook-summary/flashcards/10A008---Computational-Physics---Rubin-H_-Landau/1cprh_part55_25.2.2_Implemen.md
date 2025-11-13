@@ -9,9 +9,8 @@ Background context explaining the concept. In 1844, J.Scott Russell observed an 
 :p Explain the key observations made by Russell regarding the solitary waves he witnessed?
 ??x
 Russell noted that when the boat suddenly stopped, the water in front of it did not stop but continued to move as a large solitary wave. The wave maintained its original shape and speed while traveling through the canal for several miles before dissipating.
-The equations provided indicate that the velocity \(c\) of these waves is related to the depth of the water \(h\) and the amplitude \(A\) by the formula:
-\[ c^2 = g(h + A) \]
-where \(g\) is the acceleration due to gravity.
+The equations provided indicate that the velocity $c $ of these waves is related to the depth of the water$h $ and the amplitude$A$ by the formula:
+$$c^2 = g(h + A)$$where $ g$ is the acceleration due to gravity.
 
 This relationship shows that higher-amplitude waves travel faster than lower-amplitude ones, a behavior not observed in linear systems.
 x??
@@ -20,18 +19,19 @@ x??
 
 #### Continuity Equation
 Background context explaining the concept. The continuity equation describes conservation of mass for fluid motion:
-\[ \frac{\partial \rho(x,t)}{\partial t} + \nabla \cdot j = 0 \]
-where \(\rho(x,t)\) is the mass density, \(v(x,t)\) is the velocity, and \(j = \rho v\) is the mass current. The divergence term describes how the current spreads out in a region of space.
+$$\frac{\partial \rho(x,t)}{\partial t} + \nabla \cdot j = 0$$where $\rho(x,t)$ is the mass density,$ v(x,t)$ is the velocity, and $j = \rho v$ is the mass current. The divergence term describes how the current spreads out in a region of space.
 
-For one-dimensional flow in the \(x\)-direction with constant velocity \(v = c\), the continuity equation simplifies to:
-\[ \frac{\partial \rho}{\partial t} + c \frac{\partial \rho}{\partial x} = 0. \]
+For one-dimensional flow in the $x $-direction with constant velocity $ v = c$, the continuity equation simplifies to:
+$$\frac{\partial \rho}{\partial t} + c \frac{\partial \rho}{\partial x} = 0.$$
+
 This is known as the advection equation.
 :p Explain what the continuity equation describes and give its simplified form for one-dimensional flow?
 ??x
 The continuity equation describes how changes in mass density within a region of space arise from the flow of current into or out of that region.
 
-For one-dimensional flow with constant velocity \(v = c\), the continuity equation simplifies to:
-\[ \frac{\partial \rho}{\partial t} + c \frac{\partial \rho}{\partial x} = 0. \]
+For one-dimensional flow with constant velocity $v = c$, the continuity equation simplifies to:
+$$\frac{\partial \rho}{\partial t} + c \frac{\partial \rho}{\partial x} = 0.$$
+
 This form shows how density changes over time and space due to advection.
 x??
 
@@ -39,36 +39,33 @@ x??
 
 #### Advection Equation
 Background context explaining the concept. The advection equation describes the horizontal transport of a quantity from one region of space to another as a result of a flow's velocity field. It can be written in first-derivative form:
-\[ \frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} = 0, \]
-where \(u\) is the quantity being advected and \(c\) is its constant speed.
+$$\frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} = 0,$$where $ u $ is the quantity being advected and $ c$ is its constant speed.
 
-Any function of the form \(u(x,t) = f(x - ct)\) is a traveling wave solution to this equation.
+Any function of the form $u(x,t) = f(x - ct)$ is a traveling wave solution to this equation.
 :p What is the advection equation and what does it represent?
 ??x
 The advection equation represents the horizontal transport of a quantity from one region of space to another due to the velocity field. It can be written as:
-\[ \frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} = 0, \]
-where \(u\) is the advected quantity and \(c\) is its constant speed.
+$$\frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} = 0,$$where $ u $ is the advected quantity and $ c$ is its constant speed.
 
-Any function of the form \(u(x,t) = f(x - ct)\) is a traveling wave solution to this equation.
+Any function of the form $u(x,t) = f(x - ct)$ is a traveling wave solution to this equation.
 x??
 
 ---
 
 #### Burgers' Equation
 Background context explaining the concept. Burgers' equation is given by:
-\[ \frac{\partial u}{\partial t} + \epsilon u \frac{\partial u}{\partial x} = 0, \]
-and can be written in its conservative form as:
-\[ \frac{\partial u}{\partial t} + \epsilon \frac{\partial (u^2/2)}{\partial x} = 0. \]
+$$\frac{\partial u}{\partial t} + \epsilon u \frac{\partial u}{\partial x} = 0,$$and can be written in its conservative form as:
+$$\frac{\partial u}{\partial t} + \epsilon \frac{\partial (u^2/2)}{\partial x} = 0.$$
 
-This equation describes wave behavior with the speed \(c\) proportional to the amplitude of the wave.
+This equation describes wave behavior with the speed $c$ proportional to the amplitude of the wave.
 :p What is Burgers' Equation and how does it differ from the advection equation?
 ??x
 Burgers' equation is:
-\[ \frac{\partial u}{\partial t} + \epsilon u \frac{\partial u}{\partial x} = 0, \]
-which differs from the advection equation in that the speed \(c\) of the wave depends on the amplitude of the wave. In contrast, the advection equation assumes a constant speed.
+$$\frac{\partial u}{\partial t} + \epsilon u \frac{\partial u}{\partial x} = 0,$$which differs from the advection equation in that the speed $ c$ of the wave depends on the amplitude of the wave. In contrast, the advection equation assumes a constant speed.
 
 The conservative form is:
-\[ \frac{\partial u}{\partial t} + \epsilon \frac{\partial (u^2/2)}{\partial x} = 0. \]
+$$\frac{\partial u}{\partial t} + \epsilon \frac{\partial (u^2/2)}{\partial x} = 0.$$
+
 This form emphasizes that the speed depends on the local amplitude.
 x??
 
@@ -83,11 +80,13 @@ The Lax-Wendroff algorithm uses the following steps:
 :p What is the Lax-Wendroff algorithm and how does it work for solving Burgers' equation?
 ??x
 The Lax-Wendroff algorithm works by expressing the first-order time derivative in terms of spatial derivatives using Burger's equation:
-\[ \frac{\partial u}{\partial t} = -\epsilon \frac{\partial (u^2/2)}{\partial x}. \]
+$$\frac{\partial u}{\partial t} = -\epsilon \frac{\partial (u^2/2)}{\partial x}.$$
+
 Then, it uses a Taylor expansion to substitute higher-order time derivatives into the equation.
 
 The resulting algorithm is:
-\[ u(x,t+\Delta t) = u(x,t) - \Delta t \epsilon \frac{\partial (u^2 / 2)}{\partial x} + \frac{(\Delta t)^2}{2} \epsilon^2 \frac{\partial}{\partial x} [u \frac{\partial (u^2 / 2)}{\partial x}]. \]
+$$u(x,t+\Delta t) = u(x,t) - \Delta t \epsilon \frac{\partial (u^2 / 2)}{\partial x} + \frac{(\Delta t)^2}{2} \epsilon^2 \frac{\partial}{\partial x} [u \frac{\partial (u^2 / 2)}{\partial x}].$$
+
 This approach retains second-order differences and improves the stability and accuracy of the solution.
 x??
 
@@ -185,7 +184,7 @@ Background context: The Korteweg-de Vries (KdV) equation is solved using a finit
 
 :p How does the algorithm predict u(x,t) at future times?
 ??x
-The algorithm predicts \(u(x,t)\) at future times by updating it based on solutions from present and past times. The initial condition provides the starting values for all positions, and forward differences are used to approximate the time derivative.
+The algorithm predicts $u(x,t)$ at future times by updating it based on solutions from present and past times. The initial condition provides the starting values for all positions, and forward differences are used to approximate the time derivative.
 
 ```java
 public class KdvEquationSolver {
@@ -210,7 +209,7 @@ Background context: The truncation error for the KdV equation is related to time
 
 :p What are the truncation error and stability conditions for the KdV equation algorithm?
 ??x
-The truncation error for the KdV equation algorithm is related to third-order terms in time and second-order terms in space, leading to an overall error of \( \mathcal{O}((\Delta t)^3) + \mathcal{O}(\Delta t (\Delta x)^2) \). The stability condition ensures that small perturbations do not lead to large errors by limiting the ratio \(\frac{\Delta t}{\Delta x}\), specifically requiring \( \frac{\Delta t \Delta x [|\beta| |u| + 4 \mu (\Delta x)^2]}{1} \leq 1 \).
+The truncation error for the KdV equation algorithm is related to third-order terms in time and second-order terms in space, leading to an overall error of $\mathcal{O}((\Delta t)^3) + \mathcal{O}(\Delta t (\Delta x)^2)$. The stability condition ensures that small perturbations do not lead to large errors by limiting the ratio $\frac{\Delta t}{\Delta x}$, specifically requiring $\frac{\Delta t \Delta x [|\beta| |u| + 4 \mu (\Delta x)^2]}{1} \leq 1$.
 
 ```java
 public class KdvEquationSolver {
@@ -232,18 +231,18 @@ x??
 
 #### Initial Condition Setup for Soliton Simulation
 
-Background context: This section covers how to set up and simulate a soliton wave using Python, specifically focusing on the initial condition given by equation (25.35). The code will solve the Korteweg-de Vries (KdV) equation with parameters \(\epsilon = 0.2\) and \(\mu = 0.1\).
+Background context: This section covers how to set up and simulate a soliton wave using Python, specifically focusing on the initial condition given by equation (25.35). The code will solve the Korteweg-de Vries (KdV) equation with parameters $\epsilon = 0.2 $ and$\mu = 0.1$.
 
 :p How do you set up the initial condition for a soliton simulation using Python?
 
 ??x
-To set up the initial condition, we need to define a 2D array `u` where the first index corresponds to position \( x \) and the second to time \( t \). With the chosen parameters, the maximum value of \( x \) is calculated as \( 130 \times \Delta x = 52 \).
+To set up the initial condition, we need to define a 2D array `u` where the first index corresponds to position $x $ and the second to time$t $. With the chosen parameters, the maximum value of$ x $is calculated as$130 \times \Delta x = 52$.
 
-The initial condition at \( t = 0 \) can be assigned by evaluating equation (25.35):
+The initial condition at $t = 0$ can be assigned by evaluating equation (25.35):
 
-\[ u(x,t=0)=\frac{1}{2}\left[ 1-\tanh\left(\frac{x-25}{5}\right)\right] \]
+$$u(x,t=0)=\frac{1}{2}\left[ 1-\tanh\left(\frac{x-25}{5}\right)\right]$$
 
-We initialize the time to \( t = 0 \) and assign values to `u[i,1]`. For subsequent time steps, we use (25.31) to advance the time but ensure that we do not go beyond the limits of the array.
+We initialize the time to $t = 0$ and assign values to `u[i,1]`. For subsequent time steps, we use (25.31) to advance the time but ensure that we do not go beyond the limits of the array.
 
 Here’s a pseudocode snippet for setting up initial conditions:
 
@@ -264,7 +263,7 @@ for i in range(131):
 ```
 
 In this setup:
-- We initialize a 2D array `u` with dimensions \(131 \times 3\) to accommodate the maximum position and time.
+- We initialize a 2D array `u` with dimensions $131 \times 3$ to accommodate the maximum position and time.
 - The initial condition is assigned by evaluating equation (25.35) at each spatial point.
 
 x??
@@ -280,16 +279,10 @@ Background context: This part of the text explains how to advance the simulation
 ??x
 To advance the time, we use equation (25.31) but must handle boundary conditions carefully to avoid index out-of-bounds errors. Specifically:
 
-1. For \( i = 3 \) to \( 129 \), compute `u[i,2]` using:
-   \[ u[i+1,2] - 2u[i,2] + u[i-1,2] = \mu (u[i+1,1] - 2u[i,1] + u[i-1,1]) \]
-
-2. To handle the missing values at \( i=1 \) and \( i=131 \), we assume:
-   \[ u[1,2] = 1 \]
-   \[ u[131,2] = 0 \]
-
-3. For the edge cases where `i+2` or `i-2` would exceed bounds (i.e., `i=130` for \( i-2 \) and `i=2` for \( i+2 \)), we approximate by setting:
-   - For \( i = 130 \), set \( u[130,2] = u[129,1] \)
-   - For \( i = 2 \), set \( u[2,2] = u[3,1] \)
+1. For $i = 3 $ to$129$, compute `u[i,2]` using:
+   $$u[i+1,2] - 2u[i,2] + u[i-1,2] = \mu (u[i+1,1] - 2u[i,1] + u[i-1,1])$$2. To handle the missing values at $ i=1 $ and $ i=131$, we assume:
+   $$u[1,2] = 1$$$$u[131,2] = 0$$3. For the edge cases where `i+2` or `i-2` would exceed bounds (i.e., `i=130` for $ i-2 $ and `i=2` for $ i+2$), we approximate by setting:
+   - For $i = 130 $, set $ u[130,2] = u[129,1]$- For $ i = 2$, set $ u[2,2] = u[3,1]$
 
 Here’s the pseudocode for advancing time:
 
@@ -322,26 +315,19 @@ Background context: This section discusses how to approximate the continuum limi
 :p How does one derive the sine-Gordon equation from a chain of coupled pendulums?
 
 ??x
-To derive the sine-Gordon equation from a chain of coupled pendulums, we start with the linearized version of the wave equation for small \( k \alpha \) (ka ≪ 1). The goal is to approximate the discrete system as a continuous medium.
+To derive the sine-Gordon equation from a chain of coupled pendulums, we start with the linearized version of the wave equation for small $k \alpha$ (ka ≪ 1). The goal is to approximate the discrete system as a continuous medium.
 
 The key steps are:
-1. **Linearization and Traveling Wave Assumption**: Assume a traveling wave solution with frequency \(\omega\) and wavelength \(\lambda\):
-   \[ \theta_j(t) = A e^{i (\omega t - k x_j)} \]
-   where \(k = 2\pi / \lambda\).
+1. **Linearization and Traveling Wave Assumption**: Assume a traveling wave solution with frequency $\omega $ and wavelength$\lambda$:
+   $$\theta_j(t) = A e^{i (\omega t - k x_j)}$$where $ k = 2\pi / \lambda$.
 
 2. **Discrete to Continuous Limitation**: As the wavelength is much larger than the distance between pendulums, we can approximate:
-   \[ \theta_{j+1} \approx \theta_j + \frac{\partial \theta}{\partial x} \Delta x \]
+   $$\theta_{j+1} \approx \theta_j + \frac{\partial \theta}{\partial x} \Delta x$$3. **Second Order Discretization**:
+$$(\theta_{j+1} - 2\theta_j + \theta_{j-1}) \approx \frac{\partial^2 \theta}{\partial x^2} (\Delta x)^2 = \frac{\partial^2 \theta}{\partial x^2} a^2$$4. **Differential Equation Transformation**: Substituting these into the original equation, we get:
+$$\frac{\partial^2 \theta}{\partial t^2} - \frac{\epsilon a^2}{I} \frac{\partial^2 \theta}{\partial x^2} = g L I \sin(\theta)$$5. **Standard Form of Sine-Gordon Equation**: By choosing appropriate units, we can simplify to the standard form:
+$$\frac{1}{c^2} \frac{\partial^2 \theta}{\partial t^2} - \frac{\partial^2 \theta}{\partial x^2} = \sin(\theta)$$
 
-3. **Second Order Discretization**:
-   \[ (\theta_{j+1} - 2\theta_j + \theta_{j-1}) \approx \frac{\partial^2 \theta}{\partial x^2} (\Delta x)^2 = \frac{\partial^2 \theta}{\partial x^2} a^2 \]
-
-4. **Differential Equation Transformation**: Substituting these into the original equation, we get:
-   \[ \frac{\partial^2 \theta}{\partial t^2} - \frac{\epsilon a^2}{I} \frac{\partial^2 \theta}{\partial x^2} = g L I \sin(\theta) \]
-
-5. **Standard Form of Sine-Gordon Equation**: By choosing appropriate units, we can simplify to the standard form:
-   \[ \frac{1}{c^2} \frac{\partial^2 \theta}{\partial t^2} - \frac{\partial^2 \theta}{\partial x^2} = \sin(\theta) \]
-
-Where \( c^2 = \frac{I}{mg L} \).
+Where $c^2 = \frac{I}{mg L}$.
 
 Here’s a simplified code snippet to illustrate the transformation:
 
@@ -368,7 +354,7 @@ print(sine_gordon_eq)
 
 In this code:
 - We use SymPy to define the symbols and functions.
-- The `c_squared` variable represents the speed of wave propagation in units where \( I \), \( m \), and \( g \) are normalized.
+- The `c_squared` variable represents the speed of wave propagation in units where $I $, $ m $, and$ g$ are normalized.
 
 x??
 
@@ -381,28 +367,20 @@ Background context: This section explains how dispersion affects wave propagatio
 :p What is the dispersion relation for a linearized chain of pendulums?
 
 ??x
-The dispersion relation describes the relationship between the angular frequency \(\omega\) and the wavenumber \(k\) for waves propagating in a linearized chain of coupled pendulums. The key steps are:
+The dispersion relation describes the relationship between the angular frequency $\omega $ and the wavenumber$k$ for waves propagating in a linearized chain of coupled pendulums. The key steps are:
 
 1. **Wave Equation Derivation**: Start with the wave equation:
-   \[ \frac{\partial^2 \theta}{\partial t^2} + \omega_0^2 \theta = \epsilon I (\theta_{j+1} - 2\theta_j + \theta_{j-1}) \]
-   where \(\omega_0 = \sqrt{\frac{mgL}{I}}\) is the natural frequency of a single pendulum.
+$$\frac{\partial^2 \theta}{\partial t^2} + \omega_0^2 \theta = \epsilon I (\theta_{j+1} - 2\theta_j + \theta_{j-1})$$where $\omega_0 = \sqrt{\frac{mgL}{I}}$ is the natural frequency of a single pendulum.
 
 2. **Traveling Wave Assumption**: Assume:
-   \[ \theta_j(t) = A e^{i (\omega t - k x_j)} \]
-
-3. **Substitute into the Equation**: Substitute this traveling wave assumption into the original equation to get the dispersion relation:
-   \[ \omega^2 - \omega_0^2 + 2\epsilon I (1 - \cos(k a)) = 0 \]
-
-4. **Dispersion Relation**: The resulting relation is:
-   \[ \omega^2 = \omega_0^2 - 2\epsilon I (1 - \cos(k a)) \]
-   
-5. **Wave Speeds and Cutoff Frequencies**:
-   - For \( ka \ll 1 \), we have \(\cos(ka) \approx 1\) leading to \(\omega \approx \omega_0\).
-   - This shows that for small \( k \alpha \), waves propagate at the natural frequency.
+$$\theta_j(t) = A e^{i (\omega t - k x_j)}$$3. **Substitute into the Equation**: Substitute this traveling wave assumption into the original equation to get the dispersion relation:
+$$\omega^2 - \omega_0^2 + 2\epsilon I (1 - \cos(k a)) = 0$$4. **Dispersion Relation**: The resulting relation is:
+$$\omega^2 = \omega_0^2 - 2\epsilon I (1 - \cos(k a))$$5. **Wave Speeds and Cutoff Frequencies**:
+   - For $ka \ll 1 $, we have $\cos(ka) \approx 1 $ leading to$\omega \approx \omega_0$.
+   - This shows that for small $k \alpha$, waves propagate at the natural frequency.
    - The dispersion relation limits the range of frequencies:
-     \[ \omega_0 \leq \omega \leq \omega^* \]
-     where \(\omega^*\) is determined by the limit of \(\cos(ka)\):
-     \[ (\omega^*)^2 = \omega_0^2 + 4\epsilon I \]
+     $$\omega_0 \leq \omega \leq \omega^*$$where $\omega^*$ is determined by the limit of $\cos(ka)$:
+     $$(\omega^*)^2 = \omega_0^2 + 4\epsilon I$$
 
 Here’s a Python code snippet to illustrate this:
 
@@ -422,7 +400,7 @@ print(dispersion_relation)
 
 In this code:
 - We use SymPy to define the symbols and equation.
-- The dispersion relation is derived using the natural frequency \(\omega_0\) and the parameter \(\epsilon\).
+- The dispersion relation is derived using the natural frequency $\omega_0 $ and the parameter$\epsilon$.
 
 x???
 --- 
@@ -436,8 +414,8 @@ Background context: This section explains how to simulate solitons in a numerica
 ??x
 Periodic boundary conditions ensure that the wave continues to propagate without reflecting at the edges. In practice, this means treating the first point as the last point and vice versa. For a 1D array `u` representing the spatial points:
 
-- At \( i = 0 \), you use \( u[130] \).
-- At \( i = 130 \), you use \( u[0] \).
+- At $i = 0 $, you use $ u[130]$.
+- At $i = 130 $, you use $ u[0]$.
 
 This is crucial to simulate continuous wave behavior over a finite computational domain. Here’s how it can be handled in code:
 
@@ -478,8 +456,8 @@ Background context: This section describes how to solve the Korteweg-de Vries (K
 Solving the Korteweg-de Vries (KdV) equation numerically involves discretizing both space and time and then implementing a numerical scheme like finite differences. Here’s an example using NumPy:
 
 1. **Discretize Space and Time**:
-   - Define spatial grid points \( x_j \).
-   - Define time steps \( t_n \).
+   - Define spatial grid points $x_j$.
+   - Define time steps $t_n$.
 
 2. **Initial Condition**: Set the initial condition for the KdV equation.
 
@@ -612,8 +590,7 @@ Background context: This section focuses on ensuring numerical stability in simu
 Ensuring numerical stability in soliton simulations involves several key considerations:
 
 1. **Time Step Selection**: The Courant-Friedrichs-Lewy (CFL) condition is crucial for explicit schemes:
-   \[ dt < C \cdot dx / c \]
-   where \(c\) is the wave speed and \(C\) is a stability constant, typically around 0.5.
+   $$dt < C \cdot dx / c$$where $ c $ is the wave speed and $ C$ is a stability constant, typically around 0.5.
 
 2. **Spatial Resolution**: High spatial resolution can help capture detailed behavior but requires more computational resources. A balance between accuracy and efficiency is needed.
 
@@ -662,7 +639,7 @@ print(u)
 ```
 
 In this code:
-- The time step \( dt \) is chosen to satisfy the CFL condition.
+- The time step $dt$ is chosen to satisfy the CFL condition.
 - A single soliton is simulated over a grid with periodic boundary conditions.
 
 x???
@@ -683,8 +660,7 @@ Here’s how you can use symmetry properties:
 2. **Symmetry Group Actions**: Symmetries can help in constructing initial conditions or verifying the solution.
 
 For instance, the conservation of energy can be checked by computing:
-\[ E = \int u^3 dx \]
-and ensuring this value remains constant over time.
+$$E = \int u^3 dx$$and ensuring this value remains constant over time.
 
 Here’s an example:
 
@@ -731,7 +707,7 @@ print(f"Final Energy: {energy_final}")
 ```
 
 In this code:
-- The time step \( dt \) is chosen to satisfy the CFL condition.
+- The time step $dt$ is chosen to satisfy the CFL condition.
 - A single soliton is simulated over a grid with periodic boundary conditions.
 - Conservation of energy is checked by computing and comparing the initial and final energies.
 

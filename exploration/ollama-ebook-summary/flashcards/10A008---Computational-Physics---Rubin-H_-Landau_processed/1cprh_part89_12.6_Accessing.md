@@ -7,14 +7,13 @@
 #### Half Adder Circuit Implementation
 
 Background context: A half adder is a digital circuit that performs addition of two single-bit binary numbers. It outputs the sum and carry bit. The operation can be mathematically represented as:
-- Sum = \( q0 \oplus q1 \)
-- Carry = \( q0 \land q1 \)
+- Sum = $q0 \oplus q1 $- Carry =$ q0 \land q1$
 
 However, in this implementation using quantum circuits, we only focus on generating the sum output using a Toffoli gate followed by a CNOT gate. The carry bit is not explicitly generated but can be inferred from the state of the qubits.
 
 :p What is the role of the Toffoli and CNOT gates in the half adder circuit?
 ??x
-The Toffoli gate acts as a controlled-controlled-NOT (CCNOT) gate, which flips the target qubit if both control qubits are |1>. In this case, it effectively performs the AND operation on \(q0\) and \(q1\). The CNOT gate then performs an XOR operation between \(q0\) and \(q1\) to get the sum.
+The Toffoli gate acts as a controlled-controlled-NOT (CCNOT) gate, which flips the target qubit if both control qubits are |1>. In this case, it effectively performs the AND operation on $q0 $ and$q1 $. The CNOT gate then performs an XOR operation between$ q0 $and$ q1$ to get the sum.
 
 ```python
 # CirqHalfAdder.py: Cirq circuit for half adder
@@ -42,14 +41,11 @@ x??
 #### Full Adder Circuit Implementation
 
 Background context: A full adder is an extension of a half adder that adds three bits (two inputs and one carry input). It produces a sum bit and a carry-out bit. The operation can be mathematically represented as:
-- Sum = \( q0 \oplus q1 \oplus Cin \)
-- Carry Out = \( (q0 \land q1) \lor (q0 \land Cin) \lor (q1 \land Cin) \)
-
-However, in this implementation using quantum circuits, we only focus on generating the sum and carry-out bits. The code provided uses Toffoli gates to implement these operations.
+- Sum =$q0 \oplus q1 \oplus Cin $- Carry Out =$(q0 \land q1) \lor (q0 \land Cin) \lor (q1 \land Cin)$ However, in this implementation using quantum circuits, we only focus on generating the sum and carry-out bits. The code provided uses Toffoli gates to implement these operations.
 
 :p How does the Full Adder circuit use Toffoli gates?
 ??x
-The Full Adder circuit uses a Toffoli gate for the first stage where \(q0\) and \(q1\) are used as control qubits to generate an intermediate carry-out bit. This is followed by another Toffoli gate using \(q1\) and the intermediate carry-out bit as controls to generate the final carry-out bit.
+The Full Adder circuit uses a Toffoli gate for the first stage where $q0 $ and$q1 $ are used as control qubits to generate an intermediate carry-out bit. This is followed by another Toffoli gate using$q1$ and the intermediate carry-out bit as controls to generate the final carry-out bit.
 
 ```python
 # FullAdder.py: Cirq full adder program
@@ -77,11 +73,11 @@ x??
 
 #### Verifying Additions with Half and Full Adders
 
-Background context: To verify the operations of half and full adders, we can input different combinations of \(q0\) and \(q1\) (and optionally \(Cin\)) and observe the output.
+Background context: To verify the operations of half and full adders, we can input different combinations of $q0 $ and$q1 $(and optionally $ Cin$) and observe the output.
 
 :p How would you verify the addition 1 + 1 using the provided half adder circuit?
 ??x
-To verify the addition 1 + 1 with the half adder, we set both qubits \(q0\) and \(q1\) to |1>. The expected sum is |0> (since \(1 \oplus 1 = 0\)) and a carry-out of |1> (since \(1 \land 1 = 1\)). Running the circuit with these inputs should reflect this.
+To verify the addition 1 + 1 with the half adder, we set both qubits $q0 $ and$q1 $ to |1>. The expected sum is |0> (since$1 \oplus 1 = 0 $) and a carry-out of |1> (since$1 \land 1 = 1$). Running the circuit with these inputs should reflect this.
 
 ```python
 # CirqHalfAdder.py: Cirq circuit for half adder
@@ -107,9 +103,9 @@ x??
 
 Background context: The exercise involves testing different inputs to ensure that the half adder correctly performs addition.
 
-:p What values of \(q0\) and \(q1\) would you test for adding 1 + 0 in the half adder circuit?
+:p What values of $q0 $ and$q1$ would you test for adding 1 + 0 in the half adder circuit?
 ??x
-For adding 1 + 0, we set \(q0\) to |1> and \(q1\) to |0>. The expected sum is |1> (since \(1 \oplus 0 = 1\)) and a carry-out of |0> (since no carry is generated).
+For adding 1 + 0, we set $q0 $ to |1> and$q1 $ to |0>. The expected sum is |1> (since$1 \oplus 0 = 1$) and a carry-out of |0> (since no carry is generated).
 
 ```python
 # CirqHalfAdder.py: Cirq circuit for half adder
@@ -135,9 +131,9 @@ x??
 
 Background context: The exercise involves testing different inputs to ensure that the full adder correctly performs addition.
 
-:p What values of \(q0\), \(q1\), and \(Cin\) would you test for adding 1 + 0 with a carry-in of 1 in the full adder circuit?
+:p What values of $q0 $, $ q1 $, and$ Cin$ would you test for adding 1 + 0 with a carry-in of 1 in the full adder circuit?
 ??x
-For adding 1 + 0 with a carry-in of 1, we set \(q0\) to |1>, \(q1\) to |0>, and \(Cin\) (corresponding to \(q2\)) to |1>. The expected sum is |0> (since \(1 \oplus 0 \oplus 1 = 0\)) and a carry-out of |1> (since the intermediate carry is generated from \(1 \land 0 = 0\) but \(0 \land 1 = 0\) and \(1 \land 1 = 1\)).
+For adding 1 + 0 with a carry-in of 1, we set $q0 $ to |1>,$q1 $ to |0>, and$Cin $(corresponding to$ q2 $) to |1>. The expected sum is |0> (since$1 \oplus 0 \oplus 1 = 0 $) and a carry-out of |1> (since the intermediate carry is generated from$1 \land 0 = 0 $ but $0 \land 1 = 0$ and $1 \land 1 = 1$).
 
 ```python
 # FullAdder.py: Cirq full adder program
@@ -161,22 +157,22 @@ x??
 ---
 
 #### CNOT Gate Implementation
-Background context explaining the concept of a CNOT gate and its implementation. The CNOT (Controlled-NOT) gate is one of the most fundamental gates in quantum computing, which flips the state of the target qubit if the control qubit is in the \(|1\rangle\) state.
+Background context explaining the concept of a CNOT gate and its implementation. The CNOT (Controlled-NOT) gate is one of the most fundamental gates in quantum computing, which flips the state of the target qubit if the control qubit is in the $|1\rangle$ state.
 
 The logic of a CNOT gate can be represented as follows:
-- If the control qubit (\(q_0\)) is \(|1\rangle\), then the target qubit (\(q_1\)) will flip its state.
-- Otherwise, if the control qubit is \(|0\rangle\), the target qubit remains unchanged.
+- If the control qubit ($q_0 $) is $|1\rangle $, then the target qubit ($ q_1$) will flip its state.
+- Otherwise, if the control qubit is $|0\rangle$, the target qubit remains unchanged.
 
 In the provided code snippet:
 ```python
 circuit.append(cirq.CNOT(q1, q2)) # Append CNOT to q1 , q2 
 circuit.append(cirq.CNOT(q0, q1)) # Append CNOT to q0 , q1 
 ```
-Two CNOT gates are being applied in the circuit. The first one targets \(q_2\) with \(q_1\) as control, and the second one targets \(q_1\) with \(q_0\) as control.
+Two CNOT gates are being applied in the circuit. The first one targets $q_2 $ with$q_1 $ as control, and the second one targets$ q_1 $ with $q_0$ as control.
 
 :p What is a CNOT gate and how does it work?
 ??x
-A CNOT (Controlled-NOT) gate in quantum computing flips the state of the target qubit if the control qubit is in the \(|1\rangle\) state. The gates are applied to the circuit by specifying which qubits act as controls and targets.
+A CNOT (Controlled-NOT) gate in quantum computing flips the state of the target qubit if the control qubit is in the $|1\rangle$ state. The gates are applied to the circuit by specifying which qubits act as controls and targets.
 
 Here's how the logic works:
 ```python
@@ -248,23 +244,23 @@ The composer is a graphical tool where you can drag and drop quantum gates to cr
 ```plaintext
 H q[0] q[1]
 ```
-This creates a Hadamard gate on \(q[0]\) and another on \(q[1]\).
+This creates a Hadamard gate on $q[0]$ and another on $q[1]$.
 
 x??
 
 ---
 
 #### Generating Bell State Using IBM Quantum Composer
-Background context explaining the generation of a specific quantum state, the Bell state (\(\left| \beta_{00} \right\rangle\)), using the IBM Quantum Composer. A Bell state is an entangled state which can be created using operations like Hadamard and CNOT gates.
+Background context explaining the generation of a specific quantum state, the Bell state ($\left| \beta_{00} \right\rangle$), using the IBM Quantum Composer. A Bell state is an entangled state which can be created using operations like Hadamard and CNOT gates.
 
-The provided example shows how to generate the \(\left| \beta_{00} \right\rangle\) state in the IBM Quantum Composer:
+The provided example shows how to generate the $\left| \beta_{00} \right\rangle$ state in the IBM Quantum Composer:
 - It starts with a circuit creation process.
 - Eliminates unused qubits and registers.
 - Applies necessary quantum gates (Hadamard, CNOT) to achieve the desired state.
 
-:p How is the Bell state (\(\left| \beta_{00} \right\rangle\)) generated using IBM Quantum Composer?
+:p How is the Bell state ($\left| \beta_{00} \right\rangle$) generated using IBM Quantum Composer?
 ??x
-The Bell state \(\left| \beta_{00} \right\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)\) is generated using the IBM Quantum Composer by following these steps:
+The Bell state $\left| \beta_{00} \right\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)$ is generated using the IBM Quantum Composer by following these steps:
 
 1. **Initialize Circuit**: Start a new circuit with four qubits and one classical register.
    ```plaintext
@@ -287,7 +283,7 @@ The Bell state \(\left| \beta_{00} \right\rangle = \frac{1}{\sqrt{2}}(|00\rangle
      CNOT q[0], q[1]
      ```
 
-4. **Final State**: The resulting circuit will generate the Bell state \(\left| \beta_{00} \right\rangle\).
+4. **Final State**: The resulting circuit will generate the Bell state $\left| \beta_{00} \right\rangle$.
 
 Here's a step-by-step process in text format:
 ```plaintext
@@ -306,7 +302,7 @@ x??
 
 #### Quantum Circuit Basics
 
-Background context explaining the concept. The Hadamard gate \(H\) and controlled-NOT (CNOT) gate are fundamental quantum gates used to manipulate qubits. In this example, a 2-qubit circuit is created where \(q[0]\) undergoes a Hadamard transformation followed by a CNOT operation with \(q[1]\) as the target.
+Background context explaining the concept. The Hadamard gate $H $ and controlled-NOT (CNOT) gate are fundamental quantum gates used to manipulate qubits. In this example, a 2-qubit circuit is created where$q[0]$ undergoes a Hadamard transformation followed by a CNOT operation with $q[1]$ as the target.
 
 :p What does the sequence of gates applied in the circuit do?
 ??x
@@ -321,7 +317,7 @@ Background context explaining the concept. IBM Quantum uses a reversed Dirac not
 
 :p What is the significance of the order in IBM Quantum’s notation?
 ??x
-In IBM Quantum's notation, a state like \(|01\rangle\) means that the first qubit (rightmost) is in state 0 and the second qubit (leftmost) is in state 1. This differs from traditional Dirac notation where states are ordered from left to right.
+In IBM Quantum's notation, a state like $|01\rangle$ means that the first qubit (rightmost) is in state 0 and the second qubit (leftmost) is in state 1. This differs from traditional Dirac notation where states are ordered from left to right.
 x??
 
 ---

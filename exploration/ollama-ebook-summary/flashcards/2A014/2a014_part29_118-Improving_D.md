@@ -165,8 +165,9 @@ Formulate item representations where the distance between them serves as a measu
 Calculate pairwise distances between all retrieved items using a chosen metric.
 Evaluate affinity scores to better estimate returns.
 Solve an optimization problem to find weights for each item. The objective function is:
-\[ \text{Maximize } w^T r - \lambda w^T C w \]
-Where \( w \) represents the weights, \( r \) the relevance score vector, and \( C \) the covariance matrix capturing diversity. \( \lambda \) balances these two metrics.
+$$\text{Maximize } w^T r - \lambda w^T C w$$
+
+Where $w $ represents the weights,$r $ the relevance score vector, and$C $ the covariance matrix capturing diversity.$\lambda$ balances these two metrics.
 
 :p How does portfolio optimization work in recommendation systems?
 ??x
@@ -189,12 +190,13 @@ Multiobjective functions are used to enhance diversity by incorporating multiple
 
 In the fashion recommender example, two latent spaces were utilized: one for personalized clothes and another for images of clothing.
 A simple multiobjective function is:
-\[ s_i = \alpha \times (1 - d_i) + 1 - \alpha \times a_i \]
-Where \( \alpha \) represents the weighting between image similarity and personalization, \( d_i \) is the image distance, and \( a_i \) is the personalization score.
+$$s_i = \alpha \times (1 - d_i) + 1 - \alpha \times a_i$$
+
+Where $\alpha $ represents the weighting between image similarity and personalization,$d_i $ is the image distance, and$a_i$ is the personalization score.
 
 :p How does multiobjective ranking help in recommendation systems?
 ??x
-Multiobjective ranking helps by balancing multiple criteria to ensure recommendations are both relevant and diverse. By using a function like \( s_i = \alpha \times (1 - d_i) + 1 - \alpha \times a_i \), the system can prioritize items that satisfy multiple conditions, such as image similarity and personalization.
+Multiobjective ranking helps by balancing multiple criteria to ensure recommendations are both relevant and diverse. By using a function like $s_i = \alpha \times (1 - d_i) + 1 - \alpha \times a_i$, the system can prioritize items that satisfy multiple conditions, such as image similarity and personalization.
 ```java
 // Pseudo-code for applying multiobjective ranking
 public double rankRecommendations(List<Item> items, double alpha, List<Double> distances, List<Double> personalizations) {
@@ -216,7 +218,7 @@ x??
 Predicate pushdown is an optimization technique used in databases to filter data early in the retrieval process. This reduces the amount of data processed later in query execution.
 
 In recommendation systems, predicate pushdown can be applied by filtering items based on specific features (e.g., color) before full scoring.
-For example, if you want a diverse set of at least three colors, perform top- \( k \) searches for each color and then rank the union of these sets.
+For example, if you want a diverse set of at least three colors, perform top- $k$ searches for each color and then rank the union of these sets.
 
 :p How does predicate pushdown help in recommendation systems?
 ??x
@@ -269,7 +271,7 @@ x??
 Note: These flashcards cover the key concepts in a detailed and educational manner, providing context and explanations rather than purely memorization. Code examples are provided where relevant to illustrate the logic behind each concept.
 
 #### Sharding Strategy
-Sharding is a method to divide and conquer by distributing data across multiple machines. It can reduce runtime complexity from O(N * M) to O(N * M / k), where \(k\) represents the number of machines.
+Sharding is a method to divide and conquer by distributing data across multiple machines. It can reduce runtime complexity from O(N * M) to O(N * M / k), where $k$ represents the number of machines.
 :p How does sharding help in speeding up recommendation systems?
 ??x
 Sharding helps by dividing the workload among multiple machines, allowing parallel processing and thus reducing the overall computation time. Each machine handles a portion of the data, and when recommendations are needed for a user, each machine computes its part independently before results are combined.

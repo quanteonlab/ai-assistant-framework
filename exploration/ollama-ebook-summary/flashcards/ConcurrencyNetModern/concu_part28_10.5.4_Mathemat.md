@@ -119,7 +119,7 @@ x??
 
 Background context: A monoid is a binary associative operation with an identity, providing a way to combine values of the same type. This concept is essential for understanding how data can be processed in parallel. The associative property allows computations to be divided into chunks that can be computed independently and then recomposed.
 
-Formula: \( (a \cdot b) \cdot c = a \cdot (b \cdot c) \)
+Formula: $(a \cdot b) \cdot c = a \cdot (b \cdot c)$
 
 :p What is a monoid?
 ??x
@@ -132,7 +132,7 @@ x??
 
 Background context: The associative property is crucial for monoids as it allows computations to be grouped without changing the result. This property enables parallel processing by breaking down a problem into smaller, independent parts.
 
-Formula: \( (a \cdot b) \cdot c = a \cdot (b \cdot c) \)
+Formula: $(a \cdot b) \cdot c = a \cdot (b \cdot c)$
 
 :p What does the associative property enable in programming?
 ??x

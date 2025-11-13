@@ -166,7 +166,7 @@ namespace WebApp.Validation
                     && product.Price > decimal.Parse(Price))
                 {
                     return new ValidationResult(
-                        ErrorMessage ?? $"{Phrase} products cannot cost more than ${Price}");
+                        ErrorMessage ?? $"{Phrase} products cannot cost more than${Price}");
                 }
             }
             return ValidationResult.Success;

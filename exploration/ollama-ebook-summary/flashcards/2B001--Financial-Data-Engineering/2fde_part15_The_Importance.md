@@ -147,7 +147,7 @@ x??
 ---
 
 #### Pair-Wise Comparisons and Computational Complexity
-Background context: In record linkage, when comparing two large datasets for matching, a brute-force approach involves comparing each element in one dataset with every element in another. This leads to an exponential increase in computational complexity as the size of the datasets grows. The number of comparisons is \(O(x^2)\), where \(x\) is the number of records in the datasets.
+Background context: In record linkage, when comparing two large datasets for matching, a brute-force approach involves comparing each element in one dataset with every element in another. This leads to an exponential increase in computational complexity as the size of the datasets grows. The number of comparisons is $O(x^2)$, where $ x$ is the number of records in the datasets.
 :p What issue does this approach face when dealing with large datasets?
 ??x
 This approach faces significant scalability issues, especially as the number of records increases. With two datasets each containing 500k records, there would be 250 billion comparisons needed, which at a processing rate of one million per second still takes about 69 hours. For one million records in each dataset, it would take around 11 days.
@@ -557,11 +557,10 @@ Background context explaining accuracy. It measures the overall correctness of c
 Accuracy measures the ability of the system to make correct classifications (both matches and non-matches) out of all possible classifications.
 
 Formula:
-\[ \text{Accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{FP} + \text{FN} + \text{TN}} \]
+$$\text{Accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{FP} + \text{FN} + \text{TN}}$$
 
 For the given data in Table 4-9:
-\[ \text{Accuracy} = \frac{3 + 1}{5 + 0 + 1 + 1} = \frac{4}{7} \approx 0.8 \]
-x??
+$$\text{Accuracy} = \frac{3 + 1}{5 + 0 + 1 + 1} = \frac{4}{7} \approx 0.8$$x??
 
 ---
 #### Precision
@@ -571,11 +570,10 @@ Background context explaining precision. It measures the ability of a system to 
 Precision measures the proportion of true positive predictions out of all positive predictions (i.e., both TP and FP).
 
 Formula:
-\[ \text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} \]
+$$\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}}$$
 
 For the given data in Table 4-9:
-\[ \text{Precision} = \frac{3}{3 + 0} = 1 \]
-x??
+$$\text{Precision} = \frac{3}{3 + 0} = 1$$x??
 
 ---
 #### Recall
@@ -585,11 +583,10 @@ Background context explaining recall. It measures the ability of a system to det
 Recall (or Sensitivity) measures the proportion of actual positives that were identified correctly by the system.
 
 Formula:
-\[ \text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} \]
+$$\text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}}$$
 
 For the given data in Table 4-9:
-\[ \text{Recall} = \frac{3}{3 + 1} = 0.75 \]
-x??
+$$\text{Recall} = \frac{3}{3 + 1} = 0.75$$x??
 
 ---
 #### F1 Score
@@ -599,11 +596,10 @@ Background context explaining F1 score. It is a harmonic mean of precision and r
 The F1 score provides a balanced measure that takes into account both precision (how many selected items are relevant) and recall (how many relevant items were selected).
 
 Formula:
-\[ \text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} \]
+$$\text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$$
 
 For the given data in Table 4-9:
-\[ \text{F1 Score} = 2 \times \frac{1 \times 0.75}{1 + 0.75} = \frac{1.5}{1.75} \approx 0.857 \]
-x??
+$$\text{F1 Score} = 2 \times \frac{1 \times 0.75}{1 + 0.75} = \frac{1.5}{1.75} \approx 0.857$$x??
 
 #### Link Tables
 Link tables are used to match datasets by mapping identifiers between them. This method is particularly useful for financial applications where data might change over time, requiring maintenance and updating of link statuses.
@@ -885,32 +881,28 @@ x??
 #### Matching Weight and Likelihood Ratios
 Background context explaining the concept. Include any relevant formulas or data here.
 
-The likelihood ratio \(R\) is used to determine whether a pair of records should be matched (considered a true match) or not (considered a non-match). This is based on the agreement patterns observed in the attribute values of the two records.
+The likelihood ratio $R$ is used to determine whether a pair of records should be matched (considered a true match) or not (considered a non-match). This is based on the agreement patterns observed in the attribute values of the two records.
 
 For example, if we consider three attributes: market capitalization, exchange market, and name, then:
 - The likelihood ratio for full agreement on all attributes can be written as:
-  \[
-  R = P(\text{agree on capitalization}, \text{agree on name}, \text{agree on exchange} | s \in M) / P(\text{agree on capitalization}, \text{agree on name}, \text{agree on exchange} | s \in U)
-  \]
+$$R = P(\text{agree on capitalization}, \text{agree on name}, \text{agree on exchange} | s \in M) / P(\text{agree on capitalization}, \text{agree on name}, \text{agree on exchange} | s \in U)$$- The likelihood ratio for agreement on all attributes but the exchange can be written as:
+$$
 
-- The likelihood ratio for agreement on all attributes but the exchange can be written as:
-  \[
-  R = P(\text{agree on capitalization}, \text{agree on name}, \text{disagree on exchange} | s \in M) / P(\text{agree on capitalization}, \text{agree on name}, \text{disagree on exchange} | s \in U)
-  \]
+R = P(\text{agree on capitalization}, \text{agree on name}, \text{disagree on exchange} | s \in M) / P(\text{agree on capitalization}, \text{agree on name}, \text{disagree on exchange} | s \in U)$$
 
-The ratio \(R\) is referred to as the matching weight.
+The ratio $R$ is referred to as the matching weight.
 
 A decision rule based on these ratios is proposed by Fellegi and Sunter:
-- If \(R \geq t_{\text{upper}}\), then call the pair a link (match).
-- If \(R \leq t_{\text{lower}}\), then call the pair a non-link (non-match).
-- If \(t_{\text{lower}} < R < t_{\text{upper}}\), then call the pair a potential link.
+- If $R \geq t_{\text{upper}}$, then call the pair a link (match).
+- If $R \leq t_{\text{lower}}$, then call the pair a non-link (non-match).
+- If $t_{\text{lower}} < R < t_{\text{upper}}$, then call the pair a potential link.
 
 :p What is the decision rule based on likelihood ratios proposed by Fellegi and Sunter?
 ??x
-The decision rule based on likelihood ratios proposed by Fellegi and Sunter involves setting thresholds \(t_{\text{upper}}\) and \(t_{\text{lower}}\) to classify pairs of records as matches, non-matches, or potential matches. Specifically:
-- If the ratio \(R \geq t_{\text{upper}}\), then call the pair a link (match).
-- If the ratio \(R \leq t_{\text{lower}}\), then call the pair a non-link (non-match).
-- If \(t_{\text{lower}} < R < t_{\text{upper}}\), then call the pair a potential link.
+The decision rule based on likelihood ratios proposed by Fellegi and Sunter involves setting thresholds $t_{\text{upper}}$ and $t_{\text{lower}}$ to classify pairs of records as matches, non-matches, or potential matches. Specifically:
+- If the ratio $R \geq t_{\text{upper}}$, then call the pair a link (match).
+- If the ratio $R \leq t_{\text{lower}}$, then call the pair a non-link (non-match).
+- If $t_{\text{lower}} < R < t_{\text{upper}}$, then call the pair a potential link.
 
 This rule helps in making decisions on whether pairs of records should be considered matches or not based on their likelihood ratios.
 x??

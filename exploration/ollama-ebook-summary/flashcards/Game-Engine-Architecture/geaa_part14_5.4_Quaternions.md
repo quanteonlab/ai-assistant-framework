@@ -79,21 +79,16 @@ x??
 ---
 
 #### Unit Quaternion Representation
-Background context: A unit quaternion can be visualized as a three-dimensional vector plus a fourth scalar coordinate. The vector part \( \mathbf{q}_V \) is the unit axis of rotation scaled by the sine of the half-angle of the rotation, while the scalar part \( q_S \) is the cosine of the half-angle. This representation allows us to describe 3D rotations compactly.
+Background context: A unit quaternion can be visualized as a three-dimensional vector plus a fourth scalar coordinate. The vector part $\mathbf{q}_V $ is the unit axis of rotation scaled by the sine of the half-angle of the rotation, while the scalar part$q_S$ is the cosine of the half-angle. This representation allows us to describe 3D rotations compactly.
 
 :p How can a unit quaternion be represented mathematically?
 ??x
 A unit quaternion can be written as:
-\[ \mathbf{q} = [q_V, q_S] = [\sin(\theta/2) \mathbf{a}, \cos(\theta/2)] \]
-where \( \mathbf{a} \) is a unit vector along the axis of rotation and \( \theta \) is the angle of rotation.
+$$\mathbf{q} = [q_V, q_S] = [\sin(\theta/2) \mathbf{a}, \cos(\theta/2)]$$where $\mathbf{a}$ is a unit vector along the axis of rotation and $\theta$ is the angle of rotation.
 
 The quaternion can also be expressed as a simple four-element vector:
-\[ \mathbf{q} = [q_x, q_y, q_z, q_w] \]
-where
-\[ q_x = q_V \cdot x = a_x \sin(\theta/2), \quad q_y = q_V \cdot y = a_y \sin(\theta/2) \]
-\[ q_z = q_V \cdot z = a_z \sin(\theta/2), \quad q_w = q_S = \cos(\theta/2) \]
-
-x??
+$$\mathbf{q} = [q_x, q_y, q_z, q_w]$$where$$q_x = q_V \cdot x = a_x \sin(\theta/2), \quad q_y = q_V \cdot y = a_y \sin(\theta/2)$$
+$$q_z = q_V \cdot z = a_z \sin(\theta/2), \quad q_w = q_S = \cos(\theta/2)$$x??
 
 ---
 
@@ -102,7 +97,7 @@ Background context: Quaternions support operations such as magnitude and vector 
 
 :p What is an important operation performed on quaternions?
 ??x
-One of the most important operations on quaternions is multiplication. Given two quaternions \( \mathbf{p} \) and \( \mathbf{q} \) representing rotations \( P \) and \( Q \), respectively, their product \( \mathbf{pq} \) represents the composite rotation (i.e., rotation \( Q \) followed by rotation \( P \)).
+One of the most important operations on quaternions is multiplication. Given two quaternions $\mathbf{p}$ and $\mathbf{q}$ representing rotations $ P $ and $ Q $, respectively, their product $\mathbf{pq}$ represents the composite rotation (i.e., rotation $ Q $ followed by rotation $P$).
 
 x??
 
@@ -113,18 +108,14 @@ Background context: The multiplication of quaternions is crucial for combining r
 
 :p How is quaternion multiplication defined?
 ??x
-Given two unit quaternions \( \mathbf{p} = [q_V^p, q_S^p] \) and \( \mathbf{q} = [q_V^q, q_S^q] \), their product \( \mathbf{pq} \) is defined as:
-\[ \mathbf{pq} = [(p_S q_V + q_S p_V + p_V \cdot q_V), (p_S q_S - p_V \cdot q_V)] \]
+Given two unit quaternions $\mathbf{p} = [q_V^p, q_S^p]$ and $\mathbf{q} = [q_V^q, q_S^q]$, their product $\mathbf{pq}$ is defined as:
+$$\mathbf{pq} = [(p_S q_V + q_S p_V + p_V \cdot q_V), (p_S q_S - p_V \cdot q_V)]$$
 
 This can be expanded to the four-element vector form:
-\[ \mathbf{pq} = [q_x, q_y, q_z, q_w] \]
-where
-\[ q_x = p_S^q x + q_S^p x + (a_x^p a_x^q + a_y^p a_y^q + a_z^p a_z^q) \sin(\theta/2) \]
-\[ q_y = p_S^q y + q_S^p y + (a_x^p a_y^q + a_y^p a_z^q + a_z^p a_x^q) \sin(\theta/2) \]
-\[ q_z = p_S^q z + q_S^p z + (a_x^p a_z^q + a_y^p a_x^q + a_z^p a_y^q) \sin(\theta/2) \]
-\[ q_w = p_S^q \cos(\theta/2) - q_S^p \cos(\theta/2) + (a_x^p a_x^q - a_y^p a_y^q - a_z^p a_z^q) \sin(\theta/2) \]
-
-x??
+$$\mathbf{pq} = [q_x, q_y, q_z, q_w]$$where$$q_x = p_S^q x + q_S^p x + (a_x^p a_x^q + a_y^p a_y^q + a_z^p a_z^q) \sin(\theta/2)$$
+$$q_y = p_S^q y + q_S^p y + (a_x^p a_y^q + a_y^p a_z^q + a_z^p a_x^q) \sin(\theta/2)$$
+$$q_z = p_S^q z + q_S^p z + (a_x^p a_z^q + a_y^p a_x^q + a_z^p a_y^q) \sin(\theta/2)$$
+$$q_w = p_S^q \cos(\theta/2) - q_S^p \cos(\theta/2) + (a_x^p a_x^q - a_y^p a_y^q - a_z^p a_z^q) \sin(\theta/2)$$x??
 
 ---
 
@@ -133,16 +124,14 @@ Background context: The inverse of a quaternion is defined as another quaternion
 
 :p What are the conjugate and inverse of a quaternion?
 ??x
-The conjugate \( \mathbf{q}^* \) of a quaternion \( \mathbf{q} = [q_V, q_S] = [\sin(\theta/2) \mathbf{a}, \cos(\theta/2)] \) is defined as:
-\[ \mathbf{q}^* = [-\mathbf{q}_V, q_S] \]
+The conjugate $\mathbf{q}^*$ of a quaternion $\mathbf{q} = [q_V, q_S] = [\sin(\theta/2) \mathbf{a}, \cos(\theta/2)]$ is defined as:
+$$\mathbf{q}^* = [-\mathbf{q}_V, q_S]$$
 
-The inverse \( \mathbf{q}^{-1} \) of a quaternion \( \mathbf{q} \) can be calculated using the conjugate and the magnitude (norm) of the quaternion. Since unit quaternions always have a norm of 1, their inverse is identical to their conjugate:
-\[ \mathbf{q}^{-1} = \frac{\mathbf{q}^*}{\|\mathbf{q}\|} = -\mathbf{q}_V + q_S \]
+The inverse $\mathbf{q}^{-1}$ of a quaternion $\mathbf{q}$ can be calculated using the conjugate and the magnitude (norm) of the quaternion. Since unit quaternions always have a norm of 1, their inverse is identical to their conjugate:
+$$\mathbf{q}^{-1} = \frac{\mathbf{q}^*}{\|\mathbf{q}\|} = -\mathbf{q}_V + q_S$$
 
-For unit quaternions (\( \|\mathbf{q}\| = 1 \)):
-\[ \mathbf{q}^{-1} = \mathbf{q}^* \]
-
-x??
+For unit quaternions ($\|\mathbf{q}\| = 1$):
+$$\mathbf{q}^{-1} = \mathbf{q}^*$$x??
 
 ---
 
@@ -152,9 +141,10 @@ Background context explaining how to invert a quaternion and why it is faster th
 :p What does inverting a quaternion entail, and why is it generally faster than inverting a 3x3 matrix?
 
 ??x
-Inverting a quaternion involves finding its multiplicative inverse such that when multiplied by the original quaternion, the result is the identity quaternion. The formula for inverting a quaternion \( q = [w, x, y, z] \) is given by:
-\[ q^{-1} = \frac{[w, -x, -y, -z]}{w^2 + x^2 + y^2 + z^2}. \]
-However, if the quaternion is normalized (i.e., its magnitude is 1), the inverse simplifies to \( q^{-1} = [w, -x, -y, -z] \). This makes the inversion process much faster compared to inverting a 3x3 matrix.
+Inverting a quaternion involves finding its multiplicative inverse such that when multiplied by the original quaternion, the result is the identity quaternion. The formula for inverting a quaternion $q = [w, x, y, z]$ is given by:
+$$q^{-1} = \frac{[w, -x, -y, -z]}{w^2 + x^2 + y^2 + z^2}.$$
+
+However, if the quaternion is normalized (i.e., its magnitude is 1), the inverse simplifies to $q^{-1} = [w, -x, -y, -z]$. This makes the inversion process much faster compared to inverting a 3x3 matrix.
 
 Since division by squared magnitude is avoided when the quaternion is normalized, the operation becomes more efficient. This can be leveraged for optimization in game engines and other applications where quaternions are used extensively.
 x??
@@ -167,12 +157,13 @@ Background context explaining how to find the conjugate and inverse of a product
 :p How does the conjugate and inverse operation work for the product of two quaternions?
 
 ??x
-The conjugate of a quaternion product \( (pq) \) is equal to the reverse product of their individual conjugates:
-\[ (pq)^* = q^*p^*. \]
-Similarly, the inverse of a quaternion product is the reverse product of their individual inverses:
-\[ (pq)^{-1} = q^{-1}p^{-1}. \]
+The conjugate of a quaternion product $(pq)$ is equal to the reverse product of their individual conjugates:
+$$(pq)^* = q^*p^*.$$
 
-These properties are analogous to transposing or inverting matrix products. For example, if you have two quaternions \( p \) and \( q \), to find the conjugate of their product, you first conjugate each quaternion and then reverse the order:
+Similarly, the inverse of a quaternion product is the reverse product of their individual inverses:
+$$(pq)^{-1} = q^{-1}p^{-1}.$$
+
+These properties are analogous to transposing or inverting matrix products. For example, if you have two quaternions $p $ and$q$, to find the conjugate of their product, you first conjugate each quaternion and then reverse the order:
 ```java
 public class Quaternion {
     public double w, x, y, z;
@@ -190,8 +181,9 @@ public class Quaternion {
 :p How can these properties be used in practice?
 
 ??x
-These properties are particularly useful when dealing with complex operations involving multiple quaternions. For instance, if you have a sequence of rotations represented by quaternions \( q_1 \), \( q_2 \), and \( q_3 \), the overall rotation can be computed as:
-\[ (q_3 q_2 q_1)^* = q_1^* q_2^* q_3^*. \]
+These properties are particularly useful when dealing with complex operations involving multiple quaternions. For instance, if you have a sequence of rotations represented by quaternions $q_1 $, $ q_2 $, and$ q_3$, the overall rotation can be computed as:
+$$(q_3 q_2 q_1)^* = q_1^* q_2^* q_3^*.$$
+
 This means you can reverse the order of operations when needing to compute the conjugate or inverse.
 
 In practice, these properties allow for efficient computation and manipulation of quaternion sequences. For example, if you need to apply a series of rotations, you can directly multiply the quaternions in their given order without worrying about reversing any steps.
@@ -206,13 +198,15 @@ Background context explaining how to rotate vectors using quaternions. Include t
 
 ??x
 To apply a quaternion rotation to a vector, first represent the vector as a quaternion with its scalar term equal to zero:
-\[ \mathbf{v} = [0, v_x, v_y, v_z]. \]
-Then, rotate the vector by multiplying it with the quaternion \( q \) and then post-multiplying it by the inverse of the quaternion \( q^{-1} \):
-\[ \mathbf{v'} = q \mathbf{v} q^{-1}. \]
-Alternatively, since quaternions are always unit length, this can be written as:
-\[ \mathbf{v'} = q \mathbf{v} q^*. \]
+$$\mathbf{v} = [0, v_x, v_y, v_z].$$
 
-This process ensures that the vector is transformed correctly according to the rotation represented by \( q \). Here's a simple implementation in Java:
+Then, rotate the vector by multiplying it with the quaternion $q $ and then post-multiplying it by the inverse of the quaternion$q^{-1}$:
+$$\mathbf{v'} = q \mathbf{v} q^{-1}.$$
+
+Alternatively, since quaternions are always unit length, this can be written as:
+$$\mathbf{v'} = q \mathbf{v} q^*.$$
+
+This process ensures that the vector is transformed correctly according to the rotation represented by $q$. Here's a simple implementation in Java:
 
 ```java
 public class Quaternion {
@@ -246,13 +240,12 @@ public class VectorRotationExample {
 :p How does this process work in practice?
 
 ??x
-In practice, the process works by converting the vector into a quaternion with a zero scalar part. Then, it uses the multiplication of quaternions to rotate the vector according to the given rotation represented by \( q \). The result is extracted from the resulting quaternion form.
+In practice, the process works by converting the vector into a quaternion with a zero scalar part. Then, it uses the multiplication of quaternions to rotate the vector according to the given rotation represented by $q$. The result is extracted from the resulting quaternion form.
 
 For example, consider rotating an aircraft's forward vector in world space. Assuming the positive z-axis always points toward the front of an object:
-1. Represent the forward unit vector as a quaternion: \( [0, 0, 0, 1] \).
-2. Use the aircraft’s orientation quaternion \( q \) to rotate this vector into world space using the formula:
-\[ \mathbf{v'} = q \mathbf{v} q^*. \]
-3. Extract the rotated vector from the resulting quaternion.
+1. Represent the forward unit vector as a quaternion: $[0, 0, 0, 1]$.
+2. Use the aircraft’s orientation quaternion $q$ to rotate this vector into world space using the formula:
+$$\mathbf{v'} = q \mathbf{v} q^*.$$3. Extract the rotated vector from the resulting quaternion.
 
 This method is efficient and avoids complex matrix operations, making it well-suited for real-time applications in games.
 x??
@@ -265,10 +258,11 @@ Background context explaining how to concatenate rotations using quaternions. In
 :p How can you concatenate multiple rotations represented by quaternions?
 
 ??x
-Concatenating multiple rotations involves multiplying the corresponding quaternions together. The order of multiplication is crucial because quaternion multiplications do not commute, meaning \( pq \neq qp \). For three distinct rotations represented by quaternions \( q_1, q_2, q_3 \), you can find the composite rotation quaternion \( q_{net} \) as follows:
-\[ q_{net} = q_3 q_2 q_1. \]
-To apply this to a vector (or any point), you would premultiply the vector by \( q_{net} \):
-\[ v' = q_{net} v q^*_{net}. \]
+Concatenating multiple rotations involves multiplying the corresponding quaternions together. The order of multiplication is crucial because quaternion multiplications do not commute, meaning $pq \neq qp $. For three distinct rotations represented by quaternions $ q_1, q_2, q_3 $, you can find the composite rotation quaternion$ q_{net}$ as follows:
+$$q_{net} = q_3 q_2 q_1.$$
+
+To apply this to a vector (or any point), you would premultiply the vector by $q_{net}$:
+$$v' = q_{net} v q^*_{net}.$$
 
 The key is that quaternion operations must be performed in reverse order of application:
 ```java
@@ -304,14 +298,14 @@ public class QuaternionConcatenationExample {
 :p Why is the order of multiplication important in quaternion concatenation?
 
 ??x
-The order of multiplication is crucial because quaternion multiplications are non-commutative. This means that \( q_3 q_2 q_1 \) does not equal \( q_1 q_2 q_3 \). The correct order ensures that each rotation is applied in the intended sequence.
+The order of multiplication is crucial because quaternion multiplications are non-commutative. This means that $q_3 q_2 q_1 $ does not equal$q_1 q_2 q_3$. The correct order ensures that each rotation is applied in the intended sequence.
 
-For example, if you have three rotations represented by quaternions \( q_1, q_2, \) and \( q_3 \), to apply them in this specific sequence, you would concatenate the quaternions as:
-\[ q_{net} = q_3 q_2 q_1. \]
+For example, if you have three rotations represented by quaternions $q_1, q_2,$ and $q_3$, to apply them in this specific sequence, you would concatenate the quaternions as:
+$$q_{net} = q_3 q_2 q_1.$$
 
-To apply these rotations to a vector \( v \):
-1. Premultiply the vector by \( q_{net} \).
-2. Post-multiply the result by the conjugate of \( q_{net} \).
+To apply these rotations to a vector $v$:
+1. Premultiply the vector by $q_{net}$.
+2. Post-multiply the result by the conjugate of $q_{net}$.
 
 The resulting quaternion will represent the composite rotation, and extracting the rotated vector is straightforward.
 x??
@@ -321,43 +315,42 @@ x??
 #### Quaternion-Matrix Equivalence
 Background context: In 3D graphics and game engines, it is often necessary to convert between a quaternion representation of rotations and a matrix representation. This allows for flexible manipulation and interpolation of orientations.
 
-The conversion from a rotation matrix \( R \) to a quaternion \( q = [q_V, q_S] = [x, y, z, w] \) is described in the text. The formula provided involves checking the trace (diagonal elements sum) of the matrix for efficient computation.
+The conversion from a rotation matrix $R $ to a quaternion$q = [q_V, q_S] = [x, y, z, w]$ is described in the text. The formula provided involves checking the trace (diagonal elements sum) of the matrix for efficient computation.
 :p How can you convert a 3×3 rotation matrix to a quaternion?
 ??x
-To convert a 3×3 rotation matrix \( R \) to a quaternion, we need to evaluate its trace and use specific formulas based on the sign of the trace. Here's how it is done:
+To convert a 3×3 rotation matrix $R$ to a quaternion, we need to evaluate its trace and use specific formulas based on the sign of the trace. Here's how it is done:
 
-If the trace \( trace = R[0][0] + R[1][1] + R[2][2] > 0 \), then:
-\[ s = \sqrt{trace + 1} \]
-\[ q_3 = s * 0.5 \]
-\[ t = 0.5 / s \]
-\[ q_0 = (R[2][1] - R[1][2]) * t \]
-\[ q_1 = (R[0][2] - R[2][0]) * t \]
-\[ q_2 = (R[1][0] - R[0][1]) * t \]
+If the trace $trace = R[0][0] + R[1][1] + R[2][2] > 0$, then:
+$$s = \sqrt{trace + 1}$$
+$$q_3 = s * 0.5$$
+$$t = 0.5 / s$$
+$$q_0 = (R[2][1] - R[1][2]) * t$$
+$$q_1 = (R[0][2] - R[2][0]) * t$$
+$$q_2 = (R[1][0] - R[0][1]) * t$$
 
-If the trace \( trace < 0 \), we choose the axis with the largest negative value and proceed similarly:
-\[ i = argmax_{i} (-R[i][i]) \]
-\[ j, k = next(i) \]
-\[ s = \sqrt{(R[i][j] - R[j][j] - R[k][k]) + 1} \]
-\[ q_i = s * 0.5 \]
-\[ t = 0.5 / s if(s != 0), else 0.5 \]
-\[ q_3 = (R[k][j] - R[j][k]) * t \]
-\[ q_j = (R[j][i] + R[i][j]) * t \]
-\[ q_k = (R[k][i] + R[i][k]) * t \]
+If the trace $trace < 0$, we choose the axis with the largest negative value and proceed similarly:
+$$i = argmax_{i} (-R[i][i])$$
+$$j, k = next(i)$$
+$$s = \sqrt{(R[i][j] - R[j][j] - R[k][k]) + 1}$$
+$$q_i = s * 0.5$$
+$$t = 0.5 / s if(s != 0), else 0.5$$
+$$q_3 = (R[k][j] - R[j][k]) * t$$
+$$q_j = (R[j][i] + R[i][j]) * t$$
+$$q_k = (R[k][i] + R[i][k]) * t$$
 
 This code assumes a row-major matrix in C/C++.
 x??
 
 ---
 #### Quaternion Notational Convention
-Background context: Quaternions are written as \( [x, y, z, w] \) for this book. This differs from the academic convention of writing quaternions as \( [w, x, y, z] \). The reason is to align with common vector notation where homogeneous vectors are written as \( [x, y, z, 1] \).
+Background context: Quaternions are written as $[x, y, z, w]$ for this book. This differs from the academic convention of writing quaternions as $[w, x, y, z]$. The reason is to align with common vector notation where homogeneous vectors are written as $[x, y, z, 1]$.
 
 :p How does the notational convention for quaternions in this book differ from the academic one?
 ??x
-The notational convention for quaternions in this book writes them as \( [x, y, z, w] \), whereas the academic convention typically uses \( [w, x, y, z] \). This difference is due to consistency with homogeneous vector notation where a 4D vector is represented as \( [x, y, z, 1] \).
+The notational convention for quaternions in this book writes them as $[x, y, z, w]$, whereas the academic convention typically uses $[w, x, y, z]$. This difference is due to consistency with homogeneous vector notation where a 4D vector is represented as $[x, y, z, 1]$.
 
 For example:
-- In this book: \( q = [0.707, 0, 0, 0.707] \)
-- In the academic convention: \( q = [0.707, 0, 0, 0.707] \) would be written as \( q = [0.707, 0, 0, 0.707] \)
+- In this book: $q = [0.707, 0, 0, 0.707]$- In the academic convention:$ q = [0.707, 0, 0, 0.707]$would be written as $ q = [0.707, 0, 0, 0.707]$
 
 This notation ensures that quaternions are easily compatible with vector operations and transformations.
 x??
@@ -366,24 +359,21 @@ x??
 #### Rotational Linear Interpolation (LERP)
 Background context: Rotational linear interpolation is used to smoothly transition between two rotations in the game engine's animation or camera systems. It allows for natural-looking transitions between orientations.
 
-Given two quaternions \( q_A \) and \( q_B \) representing rotations A and B, respectively, an intermediate quaternion \( q_{LERP} \) can be found by linearly interpolating between them using a parameter \( b \).
+Given two quaternions $q_A $ and$q_B $ representing rotations A and B, respectively, an intermediate quaternion$q_{LERP}$ can be found by linearly interpolating between them using a parameter $b$.
 
 The formula is:
-\[ q_{LERP} = LERP(q_A, q_B, b) = (1 - b)q_A + bq_B \]
-where the magnitude of the interpolated quaternion needs to be normalized.
+$$q_{LERP} = LERP(q_A, q_B, b) = (1 - b)q_A + bq_B$$where the magnitude of the interpolated quaternion needs to be normalized.
 
 :p How can you perform rotational linear interpolation between two quaternions?
 ??x
-To perform rotational linear interpolation (LERP) between two quaternions \( q_A \) and \( q_B \), we use a parameter \( b \) that represents the fraction of the way from \( q_A \) to \( q_B \). The formula is:
-\[ q_{LERP} = LERP(q_A, q_B, b) = (1 - b)q_A + bq_B \]
+To perform rotational linear interpolation (LERP) between two quaternions $q_A $ and$q_B $, we use a parameter$ b $that represents the fraction of the way from$ q_A $ to $ q_B$. The formula is:
+$$q_{LERP} = LERP(q_A, q_B, b) = (1 - b)q_A + bq_B$$
 
 However, since this is a quaternion, we need to ensure that the result is normalized. Here's the detailed process:
 
-1. Compute the linear combination of \( q_A \) and \( q_B \):
-\[ (1 - b)q_A + bq_B \]
-
-2. Normalize the resulting quaternion:
-\[ j(1 - b)q_A + bq_Bj = normalize0 BBB@2 664(1 - b)q_{Ax} + bq_{Bx} (1 - b)q_{Ay} + bq_{By} (1 - b)q_{Az} + bq_{Bz} (1 - b)q_{Aw} + bq_{Bw}3 775T1 CCCA. \]
+1. Compute the linear combination of $q_A $ and$q_B$:
+$$(1 - b)q_A + bq_B$$2. Normalize the resulting quaternion:
+$$j(1 - b)q_A + bq_Bj = normalize0 BBB@2 664(1 - b)q_{Ax} + bq_{Bx} (1 - b)q_{Ay} + bq_{By} (1 - b)q_{Az} + bq_{Bz} (1 - b)q_{Aw} + bq_{Bw}3 775T1 CCCA.$$
 
 Here's a C++ function to perform this operation:
 
@@ -631,7 +621,7 @@ Background context: A rigid transformation involves both rotation and translatio
 
 :p What is a dual quaternion, and why is it useful for representing rigid transformations?
 ??x
-A dual quaternion is a mathematical object that combines an ordinary quaternion with dual numbers. Dual numbers consist of a non-dual part and a dual part, represented as \( \hat{a} = a + #b \), where \( #^2 = 0 \). This structure allows for the representation of both rotational and translational components of rigid transformations.
+A dual quaternion is a mathematical object that combines an ordinary quaternion with dual numbers. Dual numbers consist of a non-dual part and a dual part, represented as $\hat{a} = a + #b $, where $#^2 = 0$. This structure allows for the representation of both rotational and translational components of rigid transformations.
 
 Dual quaternions offer benefits such as constant-speed linear interpolation blending, which is similar to using LERP for translations and SLERP for rotations. This makes dual quaternions useful for representing complex rigid transformations in a coordinate-invariant manner.
 
@@ -668,15 +658,14 @@ x??
 ---
 
 #### Dual Numbers and Dual Quaternions
-Background context: Dual numbers are an extension of real numbers, used in the representation of dual quaternions. A dual number \( \hat{a} = a + #b \) consists of a non-dual part \( a \) and a dual part \( b \), where \( #^2 = 0 \).
+Background context: Dual numbers are an extension of real numbers, used in the representation of dual quaternions. A dual number $\hat{a} = a + #b $ consists of a non-dual part$a $ and a dual part$ b $, where $#^2 = 0$.
 
 :p What is a dual number, and how is it used in the context of dual quaternions?
 ??x
-A dual number \( \hat{a} = a + #b \) consists of a non-dual part \( a \) and a dual part \( b \), where \( #^2 = 0 \). In the context of dual quaternions, these numbers are used to represent both rotational and translational components in a single mathematical object.
+A dual number $\hat{a} = a + #b $ consists of a non-dual part$a $ and a dual part$ b $, where $#^2 = 0$. In the context of dual quaternions, these numbers are used to represent both rotational and translational components in a single mathematical object.
 
 A dual quaternion can be represented as:
-\[ \hat{q} = q_a + #q_b \]
-where \( q_a \) and \( q_b \) are ordinary quaternions. This structure allows for the representation of rigid transformations, providing benefits such as constant-speed linear interpolation blending.
+$$\hat{q} = q_a + #q_b$$where $ q_a $ and $ q_b$ are ordinary quaternions. This structure allows for the representation of rigid transformations, providing benefits such as constant-speed linear interpolation blending.
 
 In code:
 ```java
@@ -694,11 +683,9 @@ x??
 
 #### Degrees of Freedom (DOF) in 3D Rotations
 Background context explaining the concept. A three-dimensional object has six degrees of freedom: three for translation and three for rotation. The DOF helps understand how different representations can describe rotations using varying numbers of parameters, but always maintaining three degrees of freedom due to constraints.
-Relevant formula: \( NDOF = Nparameters - Nconstraints \)
-
-:p What is the relationship between the number of floating-point parameters and degrees of freedom in 3D rotations?
+Relevant formula:$NDOF = Nparameters - Nconstraints$:p What is the relationship between the number of floating-point parameters and degrees of freedom in 3D rotations?
 ??x
-The relationship is described by the equation \( NDOF = Nparameters - Nconstraints \). This means that while different representations use varying numbers of parameters (e.g., Euler angles, axis+angle, quaternions, or a 3×3 matrix), constraints reduce the effective number of degrees of freedom to three.
+The relationship is described by the equation $NDOF = Nparameters - Nconstraints$. This means that while different representations use varying numbers of parameters (e.g., Euler angles, axis+angle, quaternions, or a 3×3 matrix), constraints reduce the effective number of degrees of freedom to three.
 
 For example:
 - **Euler Angles**: 3 parameters with no constraints.
@@ -712,35 +699,31 @@ x??
 ---
 
 #### Parametric Equations for Lines
-Background context explaining the concept. A parametric equation can represent an infinite line, a ray, or a line segment. The position vector \( P(t) \) is defined as starting at point \( P_0 \) and moving along a direction vector \( u \) by distance \( t \).
+Background context explaining the concept. A parametric equation can represent an infinite line, a ray, or a line segment. The position vector $P(t)$ is defined as starting at point $ P_0 $ and moving along a direction vector $ u $ by distance $t$.
 
 Relevant formulas:
-- For a line: \( P(t) = P_0 + tu \)
-- For a ray: \( P(t) = P_0 + tu, t \geq 0 \)
-- For a line segment: \( P(t) = P_0 + tu, 0 \leq t \leq L \)
+- For a line: $P(t) = P_0 + tu $- For a ray:$ P(t) = P_0 + tu, t \geq 0 $- For a line segment:$ P(t) = P_0 + tu, 0 \leq t \leq L$
 
 :p What is the parametric equation for an infinite line?
 ??x
-The parametric equation for an infinite line starting at point \( P_0 \) and moving in the direction of unit vector \( u \) is given by:
-\[ P(t) = P_0 + tu, \text{ where } -\infty < t < \infty. \]
+The parametric equation for an infinite line starting at point $P_0 $ and moving in the direction of unit vector$u$ is given by:
+$$P(t) = P_0 + tu, \text{ where } -\infty < t < \infty.$$
 
-This means that as \( t \) varies over all real numbers, point \( P \) traces out every possible point on the line.
+This means that as $t $ varies over all real numbers, point$P$ traces out every possible point on the line.
 x??
 
 ---
 
 #### Parametric Equation for a Ray
-Background context explaining the concept. A ray is an infinite line extending in one direction from a starting point. The parametric equation differs slightly from that of a line by constraining the parameter \( t \) to be non-negative.
+Background context explaining the concept. A ray is an infinite line extending in one direction from a starting point. The parametric equation differs slightly from that of a line by constraining the parameter $t$ to be non-negative.
 
 Relevant formula:
-- For a ray: \( P(t) = P_0 + tu, t \geq 0 \)
-
-:p What is the parametric equation for a ray?
+- For a ray:$P(t) = P_0 + tu, t \geq 0$:p What is the parametric equation for a ray?
 ??x
-The parametric equation for a ray starting at point \( P_0 \) and extending in the direction of unit vector \( u \) is given by:
-\[ P(t) = P_0 + tu, \text{ where } t \geq 0. \]
+The parametric equation for a ray starting at point $P_0 $ and extending in the direction of unit vector$u$ is given by:
+$$P(t) = P_0 + tu, \text{ where } t \geq 0.$$
 
-This means that as \( t \) varies from zero to infinity, point \( P \) traces out every possible point on the ray.
+This means that as $t $ varies from zero to infinity, point$P$ traces out every possible point on the ray.
 x??
 
 ---
@@ -749,39 +732,33 @@ x??
 Background context explaining the concept. A line segment is a finite portion of an infinite line, bounded by two points. The parametric equation can be expressed in two ways: one using distance along the direction vector and another using a normalized parameter.
 
 Relevant formulas:
-1. \( P(t) = P_0 + tu, 0 \leq t \leq L \)
-2. \( P(t) = P_0 + tL, 0 \leq t \leq 1 \)
-
-Here, \( L = P_1 - P_0 \), and \( u = (1/L)L \).
+1.$P(t) = P_0 + tu, 0 \leq t \leq L $2.$ P(t) = P_0 + tL, 0 \leq t \leq 1 $Here,$ L = P_1 - P_0 $, and$ u = (1/L)L$.
 
 :p What is the parametric equation for a line segment?
 ??x
-The parametric equation for a line segment between points \( P_0 \) and \( P_1 \) can be expressed in two ways:
+The parametric equation for a line segment between points $P_0 $ and$P_1$ can be expressed in two ways:
 1. Using distance along the direction vector: 
-   \[ P(t) = P_0 + tu, \text{ where } 0 \leq t \leq L, \]
-   Here, \( L = P_1 - P_0 \), and \( u = (1/L)(P_1 - P_0) \).
+   $$P(t) = P_0 + tu, \text{ where } 0 \leq t \leq L,$$
+
+Here,$L = P_1 - P_0 $, and $ u = (1/L)(P_1 - P_0)$.
 
 2. Using a normalized parameter:
-   \[ P(t) = P_0 + tL, \text{ where } 0 \leq t \leq 1. \]
+   $$P(t) = P_0 + tL, \text{ where } 0 \leq t \leq 1.$$
 
-In the second format, the parameter \( t \) is normalized between zero and one, making it particularly convenient for various applications.
+In the second format, the parameter $t$ is normalized between zero and one, making it particularly convenient for various applications.
 x??
 
 ---
 
 #### Line Segment Representation
 
-Background context: The parametric equation of a line segment can be represented using a normalized parameter \( t \). This allows for efficient computation and handling of points along the segment.
+Background context: The parametric equation of a line segment can be represented using a normalized parameter $t$. This allows for efficient computation and handling of points along the segment.
 
 :p What is the parametric equation of a line segment?
 ??x
 The parametric equation of a line segment is given by:
 
-\[
-P(t) = C + (L - C)t, \quad 0 \leq t \leq 1
-\]
-
-where \( P(t) \) represents any point on the line segment, \( C \) is the start point, and \( L \) is the end point. The parameter \( t \) is normalized to lie between 0 and 1.
+$$P(t) = C + (L - C)t, \quad 0 \leq t \leq 1$$where $ P(t)$ represents any point on the line segment,$ C $ is the start point, and $ L $ is the end point. The parameter $ t$ is normalized to lie between 0 and 1.
 
 ```java
 public class LineSegment {
@@ -799,15 +776,13 @@ x??
 
 #### Sphere Representation
 
-Background context: A sphere is typically defined by its center point \( C \) and radius \( r \), packed into a four-element vector. This representation benefits from efficient SIMD (Single Instruction, Multiple Data) vector processing.
+Background context: A sphere is typically defined by its center point $C $ and radius$r$, packed into a four-element vector. This representation benefits from efficient SIMD (Single Instruction, Multiple Data) vector processing.
 
 :p How can a sphere be represented efficiently?
 ??x
 A sphere can be represented as a 4-element vector containing the coordinates of its center and its radius:
 
-\[
-[C_x, C_y, C_z, r]
-\]
+$$[C_x, C_y, C_z, r]$$
 
 This allows for compact storage and efficient computation using SIMD instructions. For example, in C/Java, you might define a `Sphere` class like this:
 
@@ -833,17 +808,12 @@ x??
 
 #### Plane Representation
 
-Background context: A plane can be represented in two forms: the traditional equation \( Ax + By + Cz + D = 0 \) or in point-normal form. The normal vector and distance from the origin are key components.
+Background context: A plane can be represented in two forms: the traditional equation $Ax + By + Cz + D = 0$ or in point-normal form. The normal vector and distance from the origin are key components.
 
 :p How is a plane typically defined mathematically?
 ??x
 A plane can be defined using the equation:
-
-\[
-Ax + By + Cz + D = 0
-\]
-
-where \( A, B, \) and \( C \) form a normal vector to the plane. Alternatively, it can also be represented in point-normal form by specifying a point \( P_0 \) on the plane and a unit normal vector \( n \).
+$$Ax + By + Cz + D = 0$$where $ A, B,$and $ C$form a normal vector to the plane. Alternatively, it can also be represented in point-normal form by specifying a point $ P_0 $ on the plane and a unit normal vector $n$.
 
 ```java
 public class Plane {
@@ -871,10 +841,10 @@ Background context: A plane can be packed into a four-element vector for efficie
 
 :p How is a plane represented as a vector?
 ??x
-A plane can be represented in a 4-element vector \( L = [n_x, n_y, n_z, d] \), where:
+A plane can be represented in a 4-element vector $L = [n_x, n_y, n_z, d]$, where:
 
-- \( n_x, n_y, n_z \) are components of the normalized normal vector.
-- \( d \) is the distance from the origin.
+- $n_x, n_y, n_z$ are components of the normalized normal vector.
+- $d$ is the distance from the origin.
 
 This representation allows for compact storage and efficient computation using SIMD instructions. Here’s how you might define a `Plane` class in Java:
 
@@ -900,28 +870,21 @@ x??
 ---
 
 #### Homogeneous Coordinates and Plane Transformations
-Background context: When a point \(P\) is written in homogeneous coordinates with \(w=1\), the equation \((L \cdot P) = 0\) can be interpreted as \((n \cdot P) = d\). These equations are satisfied for all points \(P\) that lie on the plane \(L\). Planes defined in four-element vector form can easily be transformed from one coordinate space to another. Given a matrix \(M_{A,B}\) that transforms points and (non-normal) vectors from space A to space B, we use the inverse transpose of this matrix \((M_{A,B}^{-1})^T\) for transforming normal vectors such as the plane’s \(n\)-vector.
+Background context: When a point $P $ is written in homogeneous coordinates with$w=1 $, the equation$(L \cdot P) = 0 $ can be interpreted as$(n \cdot P) = d $. These equations are satisfied for all points$ P $that lie on the plane$ L $. Planes defined in four-element vector form can easily be transformed from one coordinate space to another. Given a matrix$ M_{A,B}$that transforms points and (non-normal) vectors from space A to space B, we use the inverse transpose of this matrix $(M_{A,B}^{-1})^T$ for transforming normal vectors such as the plane’s $n$-vector.
 
 :p What is the equation used to describe a point lying on a plane in homogeneous coordinates?
 ??x
-The equation \((L \cdot P) = 0\) describes a point \(P\) lying on a plane \(L\) when \(w=1\). This can be rewritten as \((n \cdot P) = d\), where \(n\) is the normal vector of the plane and \(d\) is its distance from the origin.
+The equation $(L \cdot P) = 0 $ describes a point$P $ lying on a plane$ L $ when $ w=1 $. This can be rewritten as $(n \cdot P) = d$, where $ n $is the normal vector of the plane and$ d$ is its distance from the origin.
 x??
 
 ---
 #### Axis-Aligned Bounding Boxes (AABB)
-Background context: An axis-aligned bounding box (AABB) is a 3D cuboid whose six rectangular faces are aligned with the mutually orthogonal axes of a particular coordinate frame. It can be represented by a six-element vector containing the minimum and maximum coordinates along each of the three principal axes, \([xmin, ymin, zmin, xmax, ymax, zmax]\), or two points \(P_{min}\) and \(P_{max}\). This simple representation allows for efficient testing whether a point \(P\) is inside an AABB.
+Background context: An axis-aligned bounding box (AABB) is a 3D cuboid whose six rectangular faces are aligned with the mutually orthogonal axes of a particular coordinate frame. It can be represented by a six-element vector containing the minimum and maximum coordinates along each of the three principal axes,$[xmin, ymin, zmin, xmax, ymax, zmax]$, or two points $ P_{min}$and $ P_{max}$. This simple representation allows for efficient testing whether a point $ P$ is inside an AABB.
 
 :p How can you test if a point lies within an AABB?
 ??x
-To test if a point \(P\) lies within an AABB, check the conditions:
-- \(Px \geq xmin\)
-- \(Px \leq xmax\)
-- \(Py \geq ymin\)
-- \(Py \leq ymax\)
-- \(Pz \geq zmin\)
-- \(Pz \leq zmax\)
-
-If all these conditions are true, the point is inside the AABB.
+To test if a point $P$ lies within an AABB, check the conditions:
+- $Px \geq xmin $-$ Px \leq xmax $-$ Py \geq ymin $-$ Py \leq ymax $-$ Pz \geq zmin $-$ Pz \leq zmax$ If all these conditions are true, the point is inside the AABB.
 x??
 
 ---
@@ -930,7 +893,7 @@ Background context: An oriented bounding box (OBB) is a cuboid that has been ori
 
 :p How can you test if a point lies within an OBB?
 ??x
-To test if a point \(P\) lies within an OBB, first transform the point into the OBB's "aligned" coordinate system using its transformation matrix. Then use the AABB intersection test as described for testing points inside an AABB.
+To test if a point $P$ lies within an OBB, first transform the point into the OBB's "aligned" coordinate system using its transformation matrix. Then use the AABB intersection test as described for testing points inside an AABB.
 
 ```java
 // P: Point in world space
@@ -942,26 +905,24 @@ boolean isInAABB = (transformedPoint.x >= xmin && transformedPoint.x <= xmax &&
                     transformedPoint.z >= zmin && transformedPoint.z <= zmax);
 ```
 
-If the transformed point satisfies all conditions of the AABB test, then \(P\) lies within the OBB.
+If the transformed point satisfies all conditions of the AABB test, then $P$ lies within the OBB.
 x??
 
 ---
 #### Frustum Definition
 Background context: A frustum is a group of six planes that define a truncated pyramid shape. In 3D rendering, frusta are used to conveniently define the viewable region of the 3D world when rendered via a perspective projection from the point of view of a virtual camera.
 
-Four of the planes bound the edges of the screen space, while the other two represent the near and far clipping planes (i.e., they define the minimum and maximum \(z\) coordinates possible for any visible point). A convenient representation of a frustum is an array of six planes, each represented in point-normal form.
+Four of the planes bound the edges of the screen space, while the other two represent the near and far clipping planes (i.e., they define the minimum and maximum $z$ coordinates possible for any visible point). A convenient representation of a frustum is an array of six planes, each represented in point-normal form.
 
 :p How can you describe a frustum using mathematical objects?
 ??x
 A frustum can be described as a group of six planes. Each plane can be represented in point-normal form, i.e., one point and one normal vector per plane. The frustum includes four planes that bound the edges of screen space (left, right, bottom, top) and two additional planes representing the near and far clipping planes.
 
 Example planes:
-- \(L_1: n_{x1} \cdot P + d_{x1} = 0\)
-- \(L_2: n_{y1} \cdot P + d_{y1} = 0\)
-- \(L_3: n_{z1} \cdot P + d_{z1} = 0\) (near plane)
-- \(L_4: n_{z2} \cdot P + d_{z2} = 0\) (far plane)
+- $L_1: n_{x1} \cdot P + d_{x1} = 0 $-$ L_2: n_{y1} \cdot P + d_{y1} = 0 $-$ L_3: n_{z1} \cdot P + d_{z1} = 0$(near plane)
+- $L_4: n_{z2} \cdot P + d_{z2} = 0$(far plane)
 
-Where \(P = [x, y, z, w]\) is a point in homogeneous coordinates.
+Where $P = [x, y, z, w]$ is a point in homogeneous coordinates.
 x??
 
 ---

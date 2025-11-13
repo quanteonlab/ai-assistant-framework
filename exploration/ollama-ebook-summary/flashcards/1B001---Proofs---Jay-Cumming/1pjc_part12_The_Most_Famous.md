@@ -14,7 +14,7 @@ Proof by contradiction involves assuming the negation of the statement you want 
 2. Derive from this assumption something logically impossible or contradictory.
 3. Conclude that your initial assumption must be false, thus proving the original statement.
 
-Example: To show \( A \setminus (B \cap A) = \emptyset \), assume for contradiction that \( A \setminus (B \cap A) \neq \emptyset \). This means there exists an element in \( A \setminus (B \cap A) \).
+Example: To show $A \setminus (B \cap A) = \emptyset $, assume for contradiction that $ A \setminus (B \cap A) \neq \emptyset $. This means there exists an element in$ A \setminus (B \cap A)$.
 
 ```java
 // Pseudocode to illustrate the logic:
@@ -27,17 +27,17 @@ x??
 ---
 
 #### Proof by Contradiction for Set Theory
-In set theory, proof by contradiction can help prove statements like \( A \setminus (B \cap A) = \emptyset \). The goal is to show that assuming the opposite leads to a logical impossibility.
+In set theory, proof by contradiction can help prove statements like $A \setminus (B \cap A) = \emptyset$. The goal is to show that assuming the opposite leads to a logical impossibility.
 
-:p How do you prove \( A \setminus (B \cap A) = \emptyset \) using proof by contradiction?
+:p How do you prove $A \setminus (B \cap A) = \emptyset$ using proof by contradiction?
 ??x
-Assume for contradiction that \( A \setminus (B \cap A) \neq \emptyset \). This means there exists some element \( x \in A \) such that \( x \notin B \cap A \).
+Assume for contradiction that $A \setminus (B \cap A) \neq \emptyset $. This means there exists some element $ x \in A $ such that $ x \notin B \cap A$.
 
-- By the definition of intersection, if \( x \notin B \cap A \), then \( x \notin B \) or \( x \notin A \).
-- But we know \( x \in A \) by our assumption.
-- Therefore, \( x \notin B \), which contradicts \( x \in A \).
+- By the definition of intersection, if $x \notin B \cap A $, then $ x \notin B $ or $ x \notin A$.
+- But we know $x \in A$ by our assumption.
+- Therefore, $x \notin B $, which contradicts $ x \in A$.
 
-Thus, the initial assumption that \( A \setminus (B \cap A) \neq \emptyset \) is false.
+Thus, the initial assumption that $A \setminus (B \cap A) \neq \emptyset$ is false.
 
 ```java
 // Pseudocode to illustrate the logic:
@@ -50,13 +50,13 @@ x??
 ---
 
 #### Proof by Contradiction for Integer Equations
-Proofs often involve showing the non-existence of certain integers. For example, proving that there are no integers \( m \) and \( n \) such that \( 15m + 35n = 1 \).
+Proofs often involve showing the non-existence of certain integers. For example, proving that there are no integers $m $ and$n $ such that$15m + 35n = 1$.
 
-:p How do you prove that there do not exist integers \( m \) and \( n \) for which \( 15m + 35n = 1 \)?
+:p How do you prove that there do not exist integers $m $ and$n $ for which$15m + 35n = 1$?
 ??x
-Assume for contradiction that there are integers \( m \) and \( n \) such that \( 15m + 35n = 1 \).
+Assume for contradiction that there are integers $m $ and$n $ such that$15m + 35n = 1$.
 
-- Since \( 15m + 35n = 15(m + 2.33n) \), we can see that the left side is a multiple of 5.
+- Since $15m + 35n = 15(m + 2.33n)$, we can see that the left side is a multiple of 5.
 - The right side, 1, is not a multiple of 5.
 
 This leads to a contradiction because a number cannot be both a multiple of 5 and not a multiple of 5 at the same time.
@@ -99,44 +99,44 @@ x??
 
 ---
 #### Contradiction in Euclid's Proof
-Background context explaining how contradiction is used in Euclid's proof. By assuming there are only finitely many primes and constructing a number \( (p_1 \cdot p_2 \cdot ... \cdot p_k) + 1 \), the proof shows that this number must be either prime or divisible by new primes, contradicting the initial assumption.
+Background context explaining how contradiction is used in Euclid's proof. By assuming there are only finitely many primes and constructing a number $(p_1 \cdot p_2 \cdot ... \cdot p_k) + 1$, the proof shows that this number must be either prime or divisible by new primes, contradicting the initial assumption.
 :p What role does contradiction play in Euclid's proof?
 ??x
-Contradiction plays a crucial role in Euclid's proof. By assuming there are only finitely many primes and constructing \( N = (p_1 \cdot p_2 \cdot ... \cdot p_k) + 1 \), the proof demonstrates that this number must be either prime or divisible by new primes, which cannot be on the original list of primes, thus leading to a contradiction.
+Contradiction plays a crucial role in Euclid's proof. By assuming there are only finitely many primes and constructing $N = (p_1 \cdot p_2 \cdot ... \cdot p_k) + 1$, the proof demonstrates that this number must be either prime or divisible by new primes, which cannot be on the original list of primes, thus leading to a contradiction.
 
 This is achieved through the following logic:
-- Assume \( p_1, p_2, ..., p_k \) are all the primes.
-- Construct \( N = (p_1 \cdot p_2 \cdot ... \cdot p_k) + 1 \).
-- Show that \( N \) cannot be divisible by any of \( p_1, p_2, ..., p_k \), implying it must be a new prime or composed of primes not on the original list.
+- Assume $p_1, p_2, ..., p_k$ are all the primes.
+- Construct $N = (p_1 \cdot p_2 \cdot ... \cdot p_k) + 1$.
+- Show that $N $ cannot be divisible by any of$p_1, p_2, ..., p_k$, implying it must be a new prime or composed of primes not on the original list.
 
 This contradiction invalidates the initial assumption.
 x??
 
 ---
 #### Prime Construction in Euclid's Proof
-Background context explaining how to construct a number that cannot be part of the assumed finite set of primes. The constructed number is \( N = (p_1 \cdot p_2 \cdot ... \cdot p_k) + 1 \), which must either be prime or composed of new primes.
+Background context explaining how to construct a number that cannot be part of the assumed finite set of primes. The constructed number is $N = (p_1 \cdot p_2 \cdot ... \cdot p_k) + 1$, which must either be prime or composed of new primes.
 :p How does one construct a number in Euclid's proof?
 ??x
-To construct a number that cannot be part of the assumed finite set of primes, one uses \( N = (p_1 \cdot p_2 \cdot ... \cdot p_k) + 1 \). Here, \( p_1, p_2, ..., p_k \) represent all known prime numbers.
+To construct a number that cannot be part of the assumed finite set of primes, one uses $N = (p_1 \cdot p_2 \cdot ... \cdot p_k) + 1 $. Here, $ p_1, p_2, ..., p_k$ represent all known prime numbers.
 
 The construction is as follows:
-- Multiply all the assumed primes together: \( P = p_1 \cdot p_2 \cdot ... \cdot p_k \).
-- Add one to this product: \( N = P + 1 \).
+- Multiply all the assumed primes together: $P = p_1 \cdot p_2 \cdot ... \cdot p_k$.
+- Add one to this product: $N = P + 1$.
 
-This number \( N \) must be either a new prime or composed of new primes, since it cannot be divisible by any of the assumed primes. This leads to a contradiction because if \( N \) is composite, its factors must be different from the known primes.
+This number $N $ must be either a new prime or composed of new primes, since it cannot be divisible by any of the assumed primes. This leads to a contradiction because if$N$ is composite, its factors must be different from the known primes.
 x??
 
 ---
 #### Modular Arithmetic in Euclid's Proof
-Background context explaining the use of modular arithmetic to rigorously prove that \( (p_1 \cdot p_2 \cdot ... \cdot p_k) + 1 \) cannot be divisible by any of the assumed primes. This step is crucial for making the proof rigorous.
+Background context explaining the use of modular arithmetic to rigorously prove that $(p_1 \cdot p_2 \cdot ... \cdot p_k) + 1$ cannot be divisible by any of the assumed primes. This step is crucial for making the proof rigorous.
 :p How does modular arithmetic support Euclid's proof?
 ??x
-Modular arithmetic supports Euclid's proof by rigorously showing that \( (p_1 \cdot p_2 \cdot ... \cdot p_k) + 1 \) cannot be divisible by any of the assumed primes. Specifically, if we consider \( N = (p_1 \cdot p_2 \cdot ... \cdot p_k) + 1 \), then for each prime \( p_i \):
-- \( N \mod p_i = ((p_1 \cdot p_2 \cdot ... \cdot p_k) \mod p_i) + 1 \mod p_i \).
-- Since \( p_i \) divides \( (p_1 \cdot p_2 \cdot ... \cdot p_k) \), the term \( (p_1 \cdot p_2 \cdot ... \cdot p_k) \mod p_i = 0 \).
-- Therefore, \( N \mod p_i = 1 \).
+Modular arithmetic supports Euclid's proof by rigorously showing that $(p_1 \cdot p_2 \cdot ... \cdot p_k) + 1 $ cannot be divisible by any of the assumed primes. Specifically, if we consider$N = (p_1 \cdot p_2 \cdot ... \cdot p_k) + 1 $, then for each prime$ p_i$:
+- $N \mod p_i = ((p_1 \cdot p_2 \cdot ... \cdot p_k) \mod p_i) + 1 \mod p_i$.
+- Since $p_i $ divides$(p_1 \cdot p_2 \cdot ... \cdot p_k)$, the term $(p_1 \cdot p_2 \cdot ... \cdot p_k) \mod p_i = 0$.
+- Therefore, $N \mod p_i = 1$.
 
-This means \( N \) leaves a remainder of 1 when divided by any \( p_i \), implying it is not divisible by any of the assumed primes. Hence, either \( N \) is a new prime or composed of new primes.
+This means $N $ leaves a remainder of 1 when divided by any$p_i $, implying it is not divisible by any of the assumed primes. Hence, either$ N$ is a new prime or composed of new primes.
 x??
 
 ---
@@ -145,23 +145,23 @@ x??
 Euclid provided a proof that there are infinitely many prime numbers. The core idea is to show that assuming a finite number of primes leads to a contradiction.
 
 Background context: 
-- Euclid’s method involves constructing a new number \(N+1\) which cannot be divided by any of the known primes.
-- If we assume there are only finitely many primes, say \(p_1, p_2, \ldots, p_k\), then consider \(N = p_1 \times p_2 \times \cdots \times p_k + 1\).
-- This number \(N+1\) is shown to be either prime or divisible by a new prime not in the original list.
+- Euclid’s method involves constructing a new number $N+1$ which cannot be divided by any of the known primes.
+- If we assume there are only finitely many primes, say $p_1, p_2, \ldots, p_k $, then consider $ N = p_1 \times p_2 \times \cdots \times p_k + 1$.
+- This number $N+1$ is shown to be either prime or divisible by a new prime not in the original list.
 
 :p What does Euclid's proof demonstrate about primes?
 ??x
-Euclid’s proof demonstrates that assuming there are only finitely many primes leads to a contradiction. Specifically, if you multiply all known primes and add one, \(N+1\), this number is either itself a new prime or divisible by a prime not in the original list.
+Euclid’s proof demonstrates that assuming there are only finitely many primes leads to a contradiction. Specifically, if you multiply all known primes and add one,$N+1$, this number is either itself a new prime or divisible by a prime not in the original list.
 
 For example:
-- Suppose we have primes \(2, 3, 5\). Then consider \(N = 2 \times 3 \times 5 + 1 = 31\).
-- Since 31 is prime and not among \(2, 3, 5\), it shows there are more primes.
+- Suppose we have primes $2, 3, 5 $. Then consider $ N = 2 \times 3 \times 5 + 1 = 31$.
+- Since 31 is prime and not among $2, 3, 5$, it shows there are more primes.
 
 The proof by contradiction:
-Assume the set of primes: \(p_1, p_2, \ldots, p_k\) is exhaustive.
-Then construct \(N = p_1 \times p_2 \times \cdots \times p_k + 1\).
-- If \(N+1\) is prime, we have a new prime not in the original list.
-- If \(N+1\) is composite, none of \(p_i\) can divide it (proof by contradiction using modular arithmetic).
+Assume the set of primes: $p_1, p_2, \ldots, p_k$ is exhaustive.
+Then construct $N = p_1 \times p_2 \times \cdots \times p_k + 1$.
+- If $N+1$ is prime, we have a new prime not in the original list.
+- If $N+1 $ is composite, none of$p_i$ can divide it (proof by contradiction using modular arithmetic).
 
 ```java
 public class EuclidsProof {
@@ -183,22 +183,22 @@ x??
 ---
 
 #### Modulo Arithmetic in Euclid's Proof
-Modular arithmetic is used to show that \(N+1\) cannot be divided by any of the primes.
+Modular arithmetic is used to show that $N+1$ cannot be divided by any of the primes.
 
 Background context:
-- For any integer \(a\) and \(b\), \(ajb\) if and only if \(b \equiv 0 \pmod{a}\).
-- In this proof, it’s shown that for a prime \(p_i\), since \(N = p_1 \times p_2 \times \cdots \times p_k\), we have \(N \equiv 0 \pmod{p_i}\).
+- For any integer $a $ and$b $, $ ajb $if and only if$ b \equiv 0 \pmod{a}$.
+- In this proof, it’s shown that for a prime $p_i $, since $ N = p_1 \times p_2 \times \cdots \times p_k $, we have$ N \equiv 0 \pmod{p_i}$.
 
 :p How does modular arithmetic help in the proof?
 ??x
-Modular arithmetic helps by showing that for any prime \(p_i\) in the set, \(N = p_1 \times p_2 \times \cdots \times p_k \equiv 0 \pmod{p_i}\). Therefore, when we consider \(N+1\), it follows that:
-\[ N + 1 \equiv 1 \pmod{p_i} \]
-This means no prime \(p_i\) can divide \(N+1\).
+Modular arithmetic helps by showing that for any prime $p_i $ in the set,$ N = p_1 \times p_2 \times \cdots \times p_k \equiv 0 \pmod{p_i}$. Therefore, when we consider $ N+1$, it follows that:
+$$N + 1 \equiv 1 \pmod{p_i}$$
 
-For example, if the primes are \(2, 3, 5\):
-- \(N = 2 \times 3 \times 5 = 30\)
-- Then \(N + 1 = 31\).
-- Since \(31 \equiv 1 \pmod{2}\), \(31 \equiv 1 \pmod{3}\), and \(31 \equiv 1 \pmod{5}\), no prime divides 31.
+This means no prime $p_i $ can divide$N+1$.
+
+For example, if the primes are $2, 3, 5$:
+- $N = 2 \times 3 \times 5 = 30 $- Then $ N + 1 = 31$.
+- Since $31 \equiv 1 \pmod{2}$,$31 \equiv 1 \pmod{3}$, and $31 \equiv 1 \pmod{5}$, no prime divides 31.
 
 ```java
 public class ModuloExample {
@@ -225,19 +225,19 @@ x??
 The proof uses contradiction to show that assuming a finite list of primes leads to a new prime.
 
 Background context:
-- Assume \(p_1, p_2, \ldots, p_k\) is the complete list of primes.
-- Construct \(N = p_1 \times p_2 \times \cdots \times p_k + 1\).
-- If \(N+1\) is prime, we have a contradiction.
-- If \(N+1\) is composite, none of the primes can divide it. Hence, there must be another prime.
+- Assume $p_1, p_2, \ldots, p_k$ is the complete list of primes.
+- Construct $N = p_1 \times p_2 \times \cdots \times p_k + 1$.
+- If $N+1$ is prime, we have a contradiction.
+- If $N+1$ is composite, none of the primes can divide it. Hence, there must be another prime.
 
 :p What role does contradiction play in Euclid's proof?
 ??x
 Contradiction plays a crucial role by assuming that the list of all primes is finite and then showing this assumption leads to a logical impossibility. Specifically:
 
-1. Assume \(p_1, p_2, \ldots, p_k\) are all the primes.
-2. Construct \(N = p_1 \times p_2 \times \cdots \times p_k + 1\).
-3. Show that none of \(p_i\) can divide \(N+1\) (using modular arithmetic).
-4. Conclude that either \(N+1\) is prime or it must be divisible by a new prime not in the original list, contradicting the assumption.
+1. Assume $p_1, p_2, \ldots, p_k$ are all the primes.
+2. Construct $N = p_1 \times p_2 \times \cdots \times p_k + 1$.
+3. Show that none of $p_i $ can divide$N+1$(using modular arithmetic).
+4. Conclude that either $N+1$ is prime or it must be divisible by a new prime not in the original list, contradicting the assumption.
 
 ```java
 public class ContradictionExample {
@@ -263,14 +263,14 @@ x??
 Euclid’s proof is significant because it establishes the infinitude of prime numbers using a clever contradiction argument.
 
 Background context:
-- It uses a finite list assumption and shows that constructing \(N+1\) leads to either finding a new prime or contradicting the original assumption.
+- It uses a finite list assumption and shows that constructing $N+1$ leads to either finding a new prime or contradicting the original assumption.
 - This method has been influential in number theory and continues to inspire similar proofs.
 
 :p Why is Euclid's proof significant?
 ??x
 Euclid’s proof is significant because it provides a clear, elegant way of demonstrating that there are infinitely many prime numbers. The key aspects include:
 
-1. **Innovative Proof Technique**: By assuming a finite list of primes and showing that constructing \(N+1\) necessarily leads to either finding a new prime or contradicting the assumption.
+1. **Innovative Proof Technique**: By assuming a finite list of primes and showing that constructing $N+1$ necessarily leads to either finding a new prime or contradicting the assumption.
 2. **Historical Impact**: As one of the oldest known proofs, it has had a profound impact on mathematics and continues to inspire new techniques in number theory.
 
 This method showcases the power of contradiction as a proof technique in mathematics.
@@ -280,11 +280,11 @@ x??
 ---
 
 #### Pythagorean Theorem Proof
-Background context: The Pythagorean theorem states that for a right triangle with legs \(a\) and \(b\), and hypotenuse \(c\), the relationship \(a^2 + b^2 = c^2\) holds. This was proven by placing four copies of the same triangle within an \((a+b) \times (a+b)\) square.
+Background context: The Pythagorean theorem states that for a right triangle with legs $a $ and$b $, and hypotenuse $ c $, the relationship$ a^2 + b^2 = c^2 $holds. This was proven by placing four copies of the same triangle within an$(a+b) \times (a+b)$ square.
 
 :p How did the Pythagoreans prove the Pythagorean theorem?
 ??x
-The Pythagoreans proved the theorem by strategically placing triangles in two different configurations within a larger square. In one configuration, the non-triangle area is composed of \(a^2\) and \(b^2\). In another configuration, this same area forms \(c^2\). Since both configurations represent the same non-triangle area, we can equate them: \(a^2 + b^2 = c^2\).
+The Pythagoreans proved the theorem by strategically placing triangles in two different configurations within a larger square. In one configuration, the non-triangle area is composed of $a^2 $ and$b^2 $. In another configuration, this same area forms $ c^2 $. Since both configurations represent the same non-triangle area, we can equate them:$ a^2 + b^2 = c^2$.
 ```java
 // Pseudocode for visualizing triangle placement in a square
 public class PythagoreanProof {
@@ -307,29 +307,28 @@ Background context: The theorem is not only significant for its own merits but a
 
 :p What does the text say about Pythagoras' personal beliefs and their impact on his school?
 ??x
-The text states that despite having proven the theorem which hinted at the existence of irrational numbers, Pythagoras lived and died believing that all numbers were rational. This belief was so strong that after his death, when one of his students, Hippasus, proved that \(\sqrt{2}\) is irrational, other Pythagoreans responded by killing him to prevent this knowledge from spreading.
+The text states that despite having proven the theorem which hinted at the existence of irrational numbers, Pythagoras lived and died believing that all numbers were rational. This belief was so strong that after his death, when one of his students, Hippasus, proved that $\sqrt{2}$ is irrational, other Pythagoreans responded by killing him to prevent this knowledge from spreading.
 
 x??
 
 ---
 
-#### Proof of Irrationality of \(\sqrt{2}\)
-Background context: The proof of the irrationality of \(\sqrt{2}\) was a significant event in mathematical history. It challenged the belief that all numbers could be expressed as ratios of integers, leading to the discovery of irrational numbers.
+#### Proof of Irrationality of $\sqrt{2}$ Background context: The proof of the irrationality of $\sqrt{2}$ was a significant event in mathematical history. It challenged the belief that all numbers could be expressed as ratios of integers, leading to the discovery of irrational numbers.
 
 :p What is the story behind Hippasus' proof and its impact?
 ??x
-The story goes that when Hippasus discovered that \(\sqrt{2}\) is irrational, the other Pythagoreans were so horrified by this revelation that they killed him. They made a pact to never reveal his discovery, believing it would shatter their belief in a rational universe. However, history has proven them wrong as the proof of \(\sqrt{2}\)'s irrationality became widely known and is now one of the most famous proofs.
+The story goes that when Hippasus discovered that $\sqrt{2}$ is irrational, the other Pythagoreans were so horrified by this revelation that they killed him. They made a pact to never reveal his discovery, believing it would shatter their belief in a rational universe. However, history has proven them wrong as the proof of $\sqrt{2}$'s irrationality became widely known and is now one of the most famous proofs.
 
 x??
 
 ---
 
 #### Proof by Contradiction
-Background context: The Pythagoreans' method for proving the theorem involved using contradiction, specifically by comparing two configurations to show that \(a^2 + b^2 = c^2\). Similarly, Hippasus used a proof by contradiction to prove \(\sqrt{2}\) is irrational.
+Background context: The Pythagoreans' method for proving the theorem involved using contradiction, specifically by comparing two configurations to show that $a^2 + b^2 = c^2 $. Similarly, Hippasus used a proof by contradiction to prove $\sqrt{2}$ is irrational.
 
 :p What was the core logic of Hippasus' proof?
 ??x
-Hippasus proved that \(\sqrt{2}\) is irrational using proof by contradiction. He assumed \(\sqrt{2}\) is rational, meaning it can be expressed as a fraction \(p/q\) in its simplest form where \(p\) and \(q\) are integers with no common factors other than 1. By squaring both sides of the equation \(\sqrt{2} = p/q\), he derived that 2 must divide \(p^2\). This implies 2 divides \(p\). Repeating similar steps, 2 also divides \(q\). But this contradicts the initial assumption that \(p\) and \(q\) have no common factors. Therefore, \(\sqrt{2}\) cannot be expressed as a ratio of integers, proving it is irrational.
+Hippasus proved that $\sqrt{2}$ is irrational using proof by contradiction. He assumed $\sqrt{2}$ is rational, meaning it can be expressed as a fraction $p/q$ in its simplest form where $p$ and $q$ are integers with no common factors other than 1. By squaring both sides of the equation $\sqrt{2} = p/q$, he derived that 2 must divide $ p^2$. This implies 2 divides $ p$. Repeating similar steps, 2 also divides $ q$. But this contradicts the initial assumption that $ p$and $ q$have no common factors. Therefore,$\sqrt{2}$ cannot be expressed as a ratio of integers, proving it is irrational.
 ```java
 // Pseudocode for proof by contradiction
 public class IrrationalProof {
@@ -348,80 +347,79 @@ public class IrrationalProof {
 ```
 x??
 
-#### Proof of Irrationality of \(\sqrt{2}\) by Contradiction
-The proof starts with an assumption that \(\sqrt{2}\) is rational, which means it can be expressed as a fraction \(p/q\) where \(p\) and \(q\) are integers with no common factors other than 1. The goal is to derive a contradiction from this assumption.
-:p What does the initial step in proving the irrationality of \(\sqrt{2}\) involve?
+#### Proof of Irrationality of $\sqrt{2}$ by Contradiction
+The proof starts with an assumption that $\sqrt{2}$ is rational, which means it can be expressed as a fraction $p/q$ where $p$ and $q$ are integers with no common factors other than 1. The goal is to derive a contradiction from this assumption.
+:p What does the initial step in proving the irrationality of $\sqrt{2}$ involve?
 ??x
-The initial step involves assuming that \(\sqrt{2}\) can be expressed as a fraction \(p/q\) where \(p\) and \(q\) are integers with no common factors other than 1, i.e., the fraction is in its simplest form. This assumption leads to further algebraic manipulations to derive a contradiction.
+The initial step involves assuming that $\sqrt{2}$ can be expressed as a fraction $p/q$ where $p$ and $q$ are integers with no common factors other than 1, i.e., the fraction is in its simplest form. This assumption leads to further algebraic manipulations to derive a contradiction.
 x??
 
 ---
 
-#### Contradiction Proof of \(\sqrt{2}\) via Squaring
-The proof proceeds by squaring both sides of the equation \(p^2 = 2q^2\), leading to an expression that shows \(2\) divides both \(p\) and \(q\). This contradicts the initial assumption.
+#### Contradiction Proof of $\sqrt{2}$ via Squaring
+The proof proceeds by squaring both sides of the equation $p^2 = 2q^2 $, leading to an expression that shows $2 $ divides both$p $ and$q$. This contradicts the initial assumption.
 :p What contradiction is derived in this step?
 ??x
-A contradiction is derived because if \(\sqrt{2} = p/q\) where \(p\) and \(q\) have no common factors, squaring both sides of the equation leads to showing that 2 divides both \(p\) and \(q\), which contradicts the initial assumption.
+A contradiction is derived because if $\sqrt{2} = p/q $ where$p $ and$ q $ have no common factors, squaring both sides of the equation leads to showing that 2 divides both $ p $ and $q$, which contradicts the initial assumption.
 x??
 
 ---
 
-#### Geometric Proof of Irrationality of \(\sqrt{2}\)
-This proof uses a geometric argument involving areas of squares. It assumes two squares with side lengths \(p\) and \(q\) such that their total area equals twice the area of another square with side length \(p\). The contradiction arises when it is shown that there are smaller integers \(a\) and \(b\) that can represent the same ratio, which contradicts the initial assumption.
-:p What geometric method is used to prove \(\sqrt{2}\) is irrational?
+#### Geometric Proof of Irrationality of $\sqrt{2}$ This proof uses a geometric argument involving areas of squares. It assumes two squares with side lengths $p$ and $q$ such that their total area equals twice the area of another square with side length $p$. The contradiction arises when it is shown that there are smaller integers $ a$and $ b$ that can represent the same ratio, which contradicts the initial assumption.
+:p What geometric method is used to prove $\sqrt{2}$ is irrational?
 ??x
-A geometric method involving areas of squares is used. It assumes two squares with side lengths \(p\) and \(q\), such that their total area equals twice the area of another square with side length \(p\). The contradiction arises when it is shown that there are smaller integers \(a\) and \(b\) that can represent the same ratio, which contradicts the initial assumption.
+A geometric method involving areas of squares is used. It assumes two squares with side lengths $p $ and$q $, such that their total area equals twice the area of another square with side length $ p $. The contradiction arises when it is shown that there are smaller integers$ a $and$ b$ that can represent the same ratio, which contradicts the initial assumption.
 x??
 
 ---
 
 #### Derivation of Smaller Integers
-In the geometric proof, the areas of squares help derive smaller integers \(a\) and \(b\) such that the area relationships still hold. This step shows that if \(\sqrt{2} = p/q\), then there exist smaller integers \(a\) and \(b\) satisfying the same relationship.
-:p How are smaller integers \(a\) and \(b\) derived in the proof?
+In the geometric proof, the areas of squares help derive smaller integers $a $ and$b $ such that the area relationships still hold. This step shows that if$\sqrt{2} = p/q $, then there exist smaller integers $ a $and$ b$ satisfying the same relationship.
+:p How are smaller integers $a $ and$b$ derived in the proof?
 ??x
-Smaller integers \(a\) and \(b\) are derived by analyzing the overlap of squares. Specifically, if the area relationships hold for \(p^2 = 2q^2\), then the differences in areas lead to \(a^2 + b^2 = p^2 - q^2 = 2q^2 - q^2 = q^2\). This shows that there are smaller integers \(a\) and \(b\) satisfying \(a^2 = 2b^2\), which contradicts the initial assumption.
+Smaller integers $a $ and$b $ are derived by analyzing the overlap of squares. Specifically, if the area relationships hold for$p^2 = 2q^2 $, then the differences in areas lead to $ a^2 + b^2 = p^2 - q^2 = 2q^2 - q^2 = q^2 $. This shows that there are smaller integers$ a $and$ b $satisfying$ a^2 = 2b^2$, which contradicts the initial assumption.
 x??
 
 ---
 
 #### Contradiction via Algebraic Manipulation
-The algebraic manipulation in both proofs involves showing that if \(\sqrt{2}\) is rational, then there must exist smaller integers than those assumed initially. This contradiction implies that \(\sqrt{2}\) cannot be expressed as a ratio of two integers.
+The algebraic manipulation in both proofs involves showing that if $\sqrt{2}$ is rational, then there must exist smaller integers than those assumed initially. This contradiction implies that $\sqrt{2}$ cannot be expressed as a ratio of two integers.
 :p What does the final step show in these proofs?
 ??x
-The final step shows that if \(\sqrt{2} = p/q\), where \(p\) and \(q\) are assumed to be the smallest integers, then smaller integers \(a\) and \(b\) can still satisfy the same relationship. This contradiction implies that \(\sqrt{2}\) cannot be expressed as a ratio of two integers.
+The final step shows that if $\sqrt{2} = p/q $, where $ p $and$ q $are assumed to be the smallest integers, then smaller integers$ a $and$ b $can still satisfy the same relationship. This contradiction implies that$\sqrt{2}$ cannot be expressed as a ratio of two integers.
 x??
 
 ---
 
 #### Pythagorean Irrationality and Real Numbers
 
-In ancient mathematics, the discovery that the hypotenuse of a right triangle with legs 1 and 1 (i.e., \(\sqrt{2}\)) is not a ratio of integers led to significant insights. This irrational number was shown to be the solution to the polynomial equation \(x^2 - 2 = 0\), which has integer coefficients.
+In ancient mathematics, the discovery that the hypotenuse of a right triangle with legs 1 and 1 (i.e.,$\sqrt{2}$) is not a ratio of integers led to significant insights. This irrational number was shown to be the solution to the polynomial equation $ x^2 - 2 = 0$, which has integer coefficients.
 
-:p What does this theorem reveal about \(\sqrt{2}\)?
+:p What does this theorem reveal about $\sqrt{2}$?
 ??x
-This theorem reveals that \(\sqrt{2}\) is an irrational number, meaning it cannot be expressed as a ratio of integers. It is the solution to the polynomial equation \(x^2 - 2 = 0\), making it an algebraic number.
+This theorem reveals that $\sqrt{2}$ is an irrational number, meaning it cannot be expressed as a ratio of integers. It is the solution to the polynomial equation $x^2 - 2 = 0$, making it an algebraic number.
 x??
 
 ---
 
 #### Algebraic vs Transcendental Numbers
 
-The theorem on \(\sqrt{2}\) paved the way for understanding that not all irrational numbers are rational roots of polynomials with integer coefficients. Joseph Liouville's proof in 1844 demonstrated a specific irrational number, \(0.\overline{1}0\overline{0}00\overline{0}0000000100 \cdots\) (where the pattern continues indefinitely), which is not the root of any polynomial with integer coefficients. These numbers are classified as transcendental.
+The theorem on $\sqrt{2}$ paved the way for understanding that not all irrational numbers are rational roots of polynomials with integer coefficients. Joseph Liouville's proof in 1844 demonstrated a specific irrational number,$0.\overline{1}0\overline{0}00\overline{0}0000000100 \cdots$(where the pattern continues indefinitely), which is not the root of any polynomial with integer coefficients. These numbers are classified as transcendental.
 
 :p What does Liouville's proof show about certain irrational numbers?
 ??x
-Liouville's proof shows that there exist irrational numbers, like \(0.\overline{1}0\overline{0}00\overline{0}0000000100 \cdots\), which are not the roots of any polynomial with integer coefficients. These numbers are transcendental.
+Liouville's proof shows that there exist irrational numbers, like $0.\overline{1}0\overline{0}00\overline{0}0000000100 \cdots$, which are not the roots of any polynomial with integer coefficients. These numbers are transcendental.
 x??
 
 ---
 
 #### Number System Expansion
 
-From natural numbers \(N\) to integers \(Z\), rationals \(Q\), reals \(R\), and beyond, the number system has expanded over time. Each step added new types of numbers to address gaps in solving equations with existing numbers.
+From natural numbers $N $ to integers$Z $, rationals$ Q $, reals$ R$, and beyond, the number system has expanded over time. Each step added new types of numbers to address gaps in solving equations with existing numbers.
 
 :p What is the historical progression of number systems from basic counting?
 ??x
-The historical progression starts with natural numbers \(N\) for counting, extends to integers \(Z\) which include negatives and zero, then to rationals \(Q\) (ratios of integers), followed by reals \(R\) including irrational numbers. Further extensions like complex numbers, quaternions, hyperreals, etc., address different mathematical needs.
+The historical progression starts with natural numbers $N $ for counting, extends to integers$Z $ which include negatives and zero, then to rationals$ Q $(ratios of integers), followed by reals $ R$ including irrational numbers. Further extensions like complex numbers, quaternions, hyperreals, etc., address different mathematical needs.
 x??
 
 ---
@@ -433,11 +431,11 @@ This proposition states that every natural number is interesting based on unique
 :p Can you give a few examples from the proof of Proposition 7.7?
 ??x
 Sure, here are some examples:
-- \(1\) is the smallest natural number.
-- \(2\) is the only even prime number.
-- \(3\) is the smallest odd prime number.
-- \(4\) is the largest number of colors needed to color a typical map (four-color theorem).
-- \(5\) is the smallest degree of a general polynomial that cannot be solved in radicals.
+- $1$ is the smallest natural number.
+- $2$ is the only even prime number.
+- $3$ is the smallest odd prime number.
+- $4$ is the largest number of colors needed to color a typical map (four-color theorem).
+- $5$ is the smallest degree of a general polynomial that cannot be solved in radicals.
 
 These examples illustrate the unique properties of each natural number, supporting the claim that every natural number is interesting.
 x??
@@ -457,11 +455,11 @@ x??
 
 #### Polynomial Roots and Integer Coefficients
 
-The text mentions that while \(p^2\) is not a ratio of integers, it is a root of the polynomial equation \(x^2 - 2 = 0\). This emphasizes the distinction between rational numbers (like \(\frac{a}{b}\)) and irrational roots like \(\sqrt{2}\).
+The text mentions that while $p^2 $ is not a ratio of integers, it is a root of the polynomial equation$x^2 - 2 = 0 $. This emphasizes the distinction between rational numbers (like $\frac{a}{b}$) and irrational roots like $\sqrt{2}$.
 
 :p What does this example illustrate about polynomials with integer coefficients?
 ??x
-This example illustrates that even though a number like \(p^2\) is not expressible as a ratio of integers, it can still be a root of a polynomial equation with integer coefficients, specifically \(x^2 - 2 = 0\).
+This example illustrates that even though a number like $p^2 $ is not expressible as a ratio of integers, it can still be a root of a polynomial equation with integer coefficients, specifically$x^2 - 2 = 0$.
 x??
 
 ---
@@ -475,7 +473,7 @@ For example:
 - 6 = 1 + 2 + 3
 - 28 = 1 + 2 + 4 + 7 + 14
 
-To verify if a number \( n \) is perfect, you can sum its proper divisors and check if it equals \( n \).
+To verify if a number $n $ is perfect, you can sum its proper divisors and check if it equals$n$.
 
 ```java
 public boolean isPerfect(int num) {
@@ -538,7 +536,7 @@ x??
 Background context explaining the proof that all natural numbers are interesting using contradiction.
 :p How can we prove that every natural number is interesting?
 ??x
-We can use proof by contradiction. Assume there exists at least one uninteresting natural number, \( n \). By definition, this means \( n \) is the smallest uninteresting number. However, if \( n \) is uninteresting, then having it as the smallest uninteresting number makes it interesting! This contradiction implies that no such uninteresting number can exist, hence every natural number must be interesting.
+We can use proof by contradiction. Assume there exists at least one uninteresting natural number, $n $. By definition, this means $ n $ is the smallest uninteresting number. However, if $ n$ is uninteresting, then having it as the smallest uninteresting number makes it interesting! This contradiction implies that no such uninteresting number can exist, hence every natural number must be interesting.
 
 Here’s how you might structure the proof:
 
@@ -564,7 +562,7 @@ x??
 Background context explaining the difference between proof methods and their use in this example.
 :p How does induction compare with proof by contradiction in proving that all natural numbers are interesting?
 ??x
-Induction is typically used to prove statements about all natural numbers, but in this case, a proof by contradiction works well. Induction involves showing a base case and an inductive step where if \( P(k) \) is true, then \( P(k+1) \) must also be true.
+Induction is typically used to prove statements about all natural numbers, but in this case, a proof by contradiction works well. Induction involves showing a base case and an inductive step where if $P(k)$ is true, then $P(k+1)$ must also be true.
 
 However, using contradiction here, we assume the opposite of what we want to prove (i.e., that there exists an uninteresting number), and show this assumption leads to a logical inconsistency. This method helps focus on the specific case (the smallest uninteresting number), making it more straightforward in some scenarios.
 
@@ -823,26 +821,26 @@ x??
 
 ---
 #### Fundamental Theorem of Arithmetic - Proof by Minimal Counterexample
-The fundamental theorem of arithmetic states that every integer \( n \geq 2 \) is either prime or a product of primes. This proof uses a minimal counterexample to show this assertion.
+The fundamental theorem of arithmetic states that every integer $n \geq 2$ is either prime or a product of primes. This proof uses a minimal counterexample to show this assertion.
 :p What is the theorem we are proving using minimal counterexample?
 ??x
-We are proving the Fundamental Theorem of Arithmetic, which asserts that every integer \( n \geq 2 \) is either prime or a product of primes.
+We are proving the Fundamental Theorem of Arithmetic, which asserts that every integer $n \geq 2$ is either prime or a product of primes.
 x??
 
 ---
 #### Proof Steps for Fundamental Theorem of Arithmetic - Minimal Counterexample
-In the proof, we first assume there exists a minimal counterexample \( N \), an integer at least 2 which is neither prime nor a product of primes. Then, since \( N \) is composite, it can be expressed as \( ab \). Given that \( a \) and \( b \) are smaller than \( N \), they must satisfy the theorem by minimality.
-:p What does the proof assume about the minimal counterexample \( N \)?
+In the proof, we first assume there exists a minimal counterexample $N $, an integer at least 2 which is neither prime nor a product of primes. Then, since $ N $ is composite, it can be expressed as $ ab $. Given that$ a $ and $ b $ are smaller than $ N$, they must satisfy the theorem by minimality.
+:p What does the proof assume about the minimal counterexample $N$?
 ??x
-The proof assumes that there exists a minimal counterexample \( N \geq 2 \) which is neither prime nor a product of primes. This means both \( a \) and \( b \), where \( N = ab \), must satisfy the theorem because they are smaller than \( N \).
+The proof assumes that there exists a minimal counterexample $N \geq 2 $ which is neither prime nor a product of primes. This means both$a $ and$ b $, where $ N = ab$, must satisfy the theorem because they are smaller than $ N$.
 x??
 
 ---
 #### Contradiction in Fundamental Theorem Proof
-Given that \( a \) and \( b \) are composite, their factors also factorize \( N \). This leads to a contradiction since \( N \) was assumed to be a counterexample.
-:p What is the contradiction derived from assuming \( N \) as a minimal counterexample?
+Given that $a $ and$b $ are composite, their factors also factorize$ N $. This leads to a contradiction since $ N$ was assumed to be a counterexample.
+:p What is the contradiction derived from assuming $N$ as a minimal counterexample?
 ??x
-The contradiction arises because if both \( a \) and \( b \) are composite, then they can each be factored further into primes. This means their product \( N = ab \) would also be a product of primes, contradicting the assumption that \( N \) is not a product of primes.
+The contradiction arises because if both $a $ and$b $ are composite, then they can each be factored further into primes. This means their product$ N = ab $ would also be a product of primes, contradicting the assumption that $N$ is not a product of primes.
 x??
 
 ---
@@ -858,15 +856,15 @@ x??
 Reductio ad absurdum, or proof by contradiction, is used here to assume the negation of the theorem and derive a logical inconsistency. In this case, assuming there exists a minimal counterexample leads to a contradiction when analyzing its factors.
 :p What technique does the proof use to prove the Fundamental Theorem of Arithmetic?
 ??x
-The proof uses reductio ad absurdum (proof by contradiction) by assuming that not every integer \( n \geq 2 \) is either prime or a product of primes, leading to a minimal counterexample. This assumption ultimately results in a contradiction.
+The proof uses reductio ad absurdum (proof by contradiction) by assuming that not every integer $n \geq 2$ is either prime or a product of primes, leading to a minimal counterexample. This assumption ultimately results in a contradiction.
 x??
 
 ---
 #### Minimal Counterexample Logic
-In the proof, if we assume there exists a smallest counterexample \( N \), then both factors \( a \) and \( b \) (where \( N = ab \)) must be smaller than \( N \). Since they are smaller, by minimality, they must satisfy the theorem. This leads to a contradiction.
+In the proof, if we assume there exists a smallest counterexample $N $, then both factors $ a $ and $ b $ (where $ N = ab $) must be smaller than$ N$. Since they are smaller, by minimality, they must satisfy the theorem. This leads to a contradiction.
 :p How do you handle the minimal counterexample in this proof?
 ??x
-You handle the minimal counterexample by assuming it exists and then showing that its factors (which are smaller) also must satisfy the theorem. However, their product \( N \) cannot be a counterexample if both factors are prime or products of primes, leading to a contradiction.
+You handle the minimal counterexample by assuming it exists and then showing that its factors (which are smaller) also must satisfy the theorem. However, their product $N$ cannot be a counterexample if both factors are prime or products of primes, leading to a contradiction.
 x??
 
 ---

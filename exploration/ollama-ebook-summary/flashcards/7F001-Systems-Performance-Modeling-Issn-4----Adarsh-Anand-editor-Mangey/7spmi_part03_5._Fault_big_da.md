@@ -82,10 +82,7 @@ Background context: This concept explains how the maintenance effort of an Open 
 :p What is the differential equation representing the OSS maintenance effort over time?
 ??x
 The differential equation given in the text represents the gradual increase in maintenance effort due to ongoing operations of the OSS:
-\[
-\frac{dZ_t}{dt} = \beta_t (\alpha - Z_t) f(g)
-\]
-where \( \beta_t \) is the effort expenditure rate at time \( t \), and \( \alpha \) represents the estimated maintenance effort during a specified version period. The function \( f(g) \) is not explicitly defined but seems to be some form of factor or multiplier.
+$$\frac{dZ_t}{dt} = \beta_t (\alpha - Z_t) f(g)$$where $\beta_t $ is the effort expenditure rate at time$t $, and$\alpha $ represents the estimated maintenance effort during a specified version period. The function$f(g)$ is not explicitly defined but seems to be some form of factor or multiplier.
 
 x??
 ```plaintext
@@ -100,10 +97,7 @@ Background context: To account for irregular continuous fluctuations in the main
 :p What is the SDE derived from the classical software reliability model?
 ??x
 The SDE considering Brownian motion is given by:
-\[
-\frac{dZ_t}{dt} = \beta_t + \sigma \nu_t (\alpha - Z_t) f(g)
-\]
-where \( \sigma \) is a positive value representing the level of irregular continuous fluctuation, and \( \nu_t \) is standardized Gaussian white noise due to development environment factors.
+$$\frac{dZ_t}{dt} = \beta_t + \sigma \nu_t (\alpha - Z_t) f(g)$$where $\sigma $ is a positive value representing the level of irregular continuous fluctuation, and$\nu_t$ is standardized Gaussian white noise due to development environment factors.
 
 x??
 ```plaintext
@@ -118,10 +112,7 @@ Background context: To better model real-world scenarios, the SDE is further ext
 :p What is the Itô-type SDE derived from the previous equation?
 ??x
 The Itô-type SDE derived from the previous equation is:
-\[
-dZ_t = \left( \beta_t - \frac{1}{2} \sigma^2/C8/C9 (\alpha - Z_t) / C8/C9 \right) dt + \sigma (\alpha - Z_t) / C8/C9 dw_t
-\]
-where \( w_t \) is a one-dimensional Wiener process, representing the white noise.
+$$dZ_t = \left( \beta_t - \frac{1}{2} \sigma^2/C8/C9 (\alpha - Z_t) / C8/C9 \right) dt + \sigma (\alpha - Z_t) / C8/C9 dw_t$$where $ w_t$ is a one-dimensional Wiener process, representing the white noise.
 
 x??
 ```plaintext
@@ -136,10 +127,7 @@ Background context: To account for unexpected irregular situations due to extern
 :p What is the jump-diffusion equation provided in the text?
 ??x
 The jump-diffusion equation is given by:
-\[
-dZ_{jt} = \left( \beta_t - \frac{1}{2} \sigma^2/C8/C9 (\alpha - Z_{jt}) / C8/C9 \right) dt + \sigma (\alpha - Z_{jt}) / C8/C9 dw_t + dP\sum Y_{t,\lambda}(i=1)(V_i - 1)
-\]
-where \( P\sum Y_{t,\lambda} \) represents the Poisson point process, and \( V_i \) is the range of the i-th jump.
+$$dZ_{jt} = \left( \beta_t - \frac{1}{2} \sigma^2/C8/C9 (\alpha - Z_{jt}) / C8/C9 \right) dt + \sigma (\alpha - Z_{jt}) / C8/C9 dw_t + dP\sum Y_{t,\lambda}(i=1)(V_i - 1)$$where $ P\sum Y_{t,\lambda}$represents the Poisson point process, and $ V_i$ is the range of the i-th jump.
 
 x??
 ```plaintext
@@ -149,19 +137,14 @@ This equation models both continuous changes (diffusion) and discrete jumps in t
 ---
 
 #### NHPP for OSS Effort Expenditure Function
-Background context: The model assumes that \( \beta_t \), the mean value function, is derived from non-homogeneous Poisson process (NHPP) models. This provides a way to predict and understand the maintenance effort expenditure over time.
+Background context: The model assumes that $\beta_t$, the mean value function, is derived from non-homogeneous Poisson process (NHPP) models. This provides a way to predict and understand the maintenance effort expenditure over time.
 
 :p What are the equations representing the NHPP for OSS effort expenditure?
 ??x
 The equations representing the NHPP for OSS effort expenditure are:
-\[
-\dot{R}^*t = \alpha - R^*t
-\]
-and
-\[
-R^*(t) = 1 - e^{-bt}
-\]
-where \( a = \alpha \) is the expected cumulative number of latent faults, and \( b = \beta \) is the detection rate per fault.
+$$\dot{R}^*t = \alpha - R^*t$$and$$
+
+R^*(t) = 1 - e^{-bt}$$where $ a = \alpha $ is the expected cumulative number of latent faults, and $ b = \beta$ is the detection rate per fault.
 
 x??
 ```plaintext
@@ -176,15 +159,9 @@ Background context: To account for delays in jump occurrences, a time-delay jump
 :p What are the equations representing the time-delay jump-diffusion processes?
 ??x
 The time-delay jump-diffusion process models are given by:
-1. For \( t \geq 0 \):
-\[
-dZ_{fj,t} = \left( \beta_t - \frac{1}{2} \sigma^2/C8/C9 (\alpha - Z_{fj,t}) / C8/C9 \right) dt + \sigma (\alpha - Z_{fj,t}) / C8/C9 dw_t + d\sum P Y_{t,\lambda_1}(i=0)(V_1 i - 1)
-\]
-2. For \( t \geq 0, t' \geq t_1 \):
-\[
-dZ_{fj,t} = \left( \beta_t - \frac{1}{2} \sigma^2/C8/C9 (\alpha - Z_{fj,t}) / C8/C9 \right) dt + \sigma (\alpha - Z_{fj,t}) / C8/C9 dw_t + d\sum P Y_{t,\lambda_1}(i=0)(V_1 i - 1) + d\sum P Y_{t',\lambda_2}(i=0)(V_2 i - 1)
-\]
-where \( Y_{t,\lambda_1} \) and \( Y_{t',\lambda_2} \) are Poisson point processes with parameters \( \lambda_1 \) and \( \lambda_2 \), respectively, at different operation times.
+1. For $t \geq 0$:
+$$dZ_{fj,t} = \left( \beta_t - \frac{1}{2} \sigma^2/C8/C9 (\alpha - Z_{fj,t}) / C8/C9 \right) dt + \sigma (\alpha - Z_{fj,t}) / C8/C9 dw_t + d\sum P Y_{t,\lambda_1}(i=0)(V_1 i - 1)$$2. For $ t \geq 0, t' \geq t_1$:
+$$dZ_{fj,t} = \left( \beta_t - \frac{1}{2} \sigma^2/C8/C9 (\alpha - Z_{fj,t}) / C8/C9 \right) dt + \sigma (\alpha - Z_{fj,t}) / C8/C9 dw_t + d\sum P Y_{t,\lambda_1}(i=0)(V_1 i - 1) + d\sum P Y_{t',\lambda_2}(i=0)(V_2 i - 1)$$where $ Y_{t,\lambda_1}$and $ Y_{t',\lambda_2}$are Poisson point processes with parameters $\lambda_1$ and $\lambda_2$, respectively, at different operation times.
 
 x??
 ```plaintext
@@ -199,64 +176,63 @@ Background context: The provided text describes flexible jump diffusion process 
 :p What are the key components of the flexible jump diffusion process models described?
 ??x
 The key components include:
-- Continuous drift term represented by \( Z_{fjet}(t) \) and \( Z_{fjst}(t) \)
-- Jump terms represented by specific upgrade times \( t_k \), where \( k = 1,2,...,K \)
+- Continuous drift term represented by $Z_{fjet}(t)$ and $Z_{fjst}(t)$- Jump terms represented by specific upgrade times $ t_k$, where $ k = 1,2,...,K$
 
 Formulas for the continuous part are given in equations (5.12) to (5.17):
-\[ Z_{fjet}(t) = \alpha - e^{-\beta(t - \sigma w_t)} - X \sum_{i=1}^{Y} T_k \lambda_k \log V_k \]
-\[ Z_{fjst}(t) = (\alpha - 1 + \beta t) \cdot e^{-\beta(t - \sigma w_t)} - X \sum_{i=1}^{Y} T_k \lambda_k \log V_k \]
+$$Z_{fjet}(t) = \alpha - e^{-\beta(t - \sigma w_t)} - X \sum_{i=1}^{Y} T_k \lambda_k \log V_k$$
+$$
 
-where \( \alpha, \beta, b, a, \sigma_1 \) are parameters to be estimated.
+Z_{fjst}(t) = (\alpha - 1 + \beta t) \cdot e^{-\beta(t - \sigma w_t)} - X \sum_{i=1}^{Y} T_k \lambda_k \log V_k$$where $\alpha, \beta, b, a, \sigma_1$ are parameters to be estimated.
 
 :p How do the jump terms in equations (5.16) and (5.17) differ from those in (5.12) and (5.13)?
 ??x
-The jump terms in equations (5.16) and (5.17) incorporate specific upgrade times \( t_k \), where:
-\[ Z_{fjet}(t) = \alpha - e^{-\beta(t - \sigma w_t)} - X \sum_{k=1}^{K} T_k \lambda_k \sum_{i=1}^{Y} \log V_k \]
-\[ Z_{fjst}(t) = (\alpha - 1 + \beta t) \cdot e^{-\beta(t - \sigma w_t)} - X \sum_{k=1}^{K} T_k \lambda_k \sum_{i=1}^{Y} \log V_k \]
+The jump terms in equations (5.16) and (5.17) incorporate specific upgrade times $t_k$, where:
+$$Z_{fjet}(t) = \alpha - e^{-\beta(t - \sigma w_t)} - X \sum_{k=1}^{K} T_k \lambda_k \sum_{i=1}^{Y} \log V_k$$
+$$
 
-The primary difference is the inclusion of \( K \) specific upgrade times, each with its own jump size and timing.
+Z_{fjst}(t) = (\alpha - 1 + \beta t) \cdot e^{-\beta(t - \sigma w_t)} - X \sum_{k=1}^{K} T_k \lambda_k \sum_{i=1}^{Y} \log V_k$$
+
+The primary difference is the inclusion of $K$ specific upgrade times, each with its own jump size and timing.
 
 :p What method is used for estimating the drift term parameters?
 ??x
-The maximum likelihood method is used to estimate several unknown parameters (\( \alpha, \beta, b, \sigma_1 \)) in equations (5.16) and (5.17). The joint probability distribution function \( P(t_1, y_1; t_2, y_2; ... ; t_K, y_K) \) is defined as:
-\[ P(t_1, y_1; t_2, y_2; ... ; t_K, y_K) = Pr[Z_{t_i} \leq y_i | Z_{t_0} = 0] \]
+The maximum likelihood method is used to estimate several unknown parameters ($\alpha, \beta, b, \sigma_1 $) in equations (5.16) and (5.17). The joint probability distribution function $ P(t_1, y_1; t_2, y_2; ... ; t_K, y_K)$ is defined as:
+$$P(t_1, y_1; t_2, y_2; ... ; t_K, y_K) = Pr[Z_{t_i} \leq y_i | Z_{t_0} = 0]$$
 
-The likelihood function \( \lambda \) is constructed using the probability density:
-\[ \lambda = p(t_1, y_1; t_2, y_2; ... ; t_K, y_K) \]
+The likelihood function $\lambda$ is constructed using the probability density:
+$$\lambda = p(t_1, y_1; t_2, y_2; ... ; t_K, y_K)$$
 
 The logarithmic likelihood function is then used to find the estimates of parameters by maximizing it.
 
 :p What approach does the text suggest for estimating jump terms?
 ??x
 The genetic algorithm (GA) approach is suggested for estimating unknown parameters in the jump terms. The key steps are:
-1. Define \( \gamma, \mu, \tau \) as unknown parameters.
+1. Define $\gamma, \mu, \tau$ as unknown parameters.
 2. Structure the fitness function using error between estimated and actual data.
 
-For example, the error function \( F_i \) is defined as:
-\[ F_i = \sum_{k=0}^{K} (Z_j(i) - y_i)^2 \]
-
-where \( Z_j(i) \) is the cumulative software operation effort at time \( i \) based on jump diffusion process, and \( y_i \) is the actual cumulative effort.
+For example, the error function $F_i$ is defined as:
+$$F_i = \sum_{k=0}^{K} (Z_j(i) - y_i)^2$$where $ Z_j(i)$is the cumulative software operation effort at time $ i$based on jump diffusion process, and $ y_i$ is the actual cumulative effort.
 
 :p How does the likelihood function λ for actual effort data be derived?
 ??x
-The likelihood function \( \lambda \) for the actual effort data \( (t_k, y_k), k=1,2,...,K \) is constructed from the joint probability distribution function:
-\[ \lambda = p(t_1, y_1; t_2, y_2; ... ; t_K, y_K) \]
+The likelihood function $\lambda $ for the actual effort data$(t_k, y_k), k=1,2,...,K$ is constructed from the joint probability distribution function:
+$$\lambda = p(t_1, y_1; t_2, y_2; ... ; t_K, y_K)$$
 
 The logarithmic likelihood function is used for estimation and maximization:
-\[ L = \log \lambda \]
-To maximize \( L \), the following equations are solved:
-\[ \frac{\partial L}{\partial \alpha} = 0 \]
-\[ \frac{\partial L}{\partial \beta} = 0 \]
-\[ \frac{\partial L}{\partial b} = 0 \]
-\[ \frac{\partial L}{\partial \sigma_1} = 0 \]
+$$
 
-:p How is the fitness function structured in the genetic algorithm approach?
+L = \log \lambda$$
+
+To maximize $L$, the following equations are solved:
+$$\frac{\partial L}{\partial \alpha} = 0$$
+$$\frac{\partial L}{\partial \beta} = 0$$
+$$\frac{\partial L}{\partial b} = 0$$
+$$\frac{\partial L}{\partial \sigma_1} = 0$$:p How is the fitness function structured in the genetic algorithm approach?
 ??x
-The fitness function in the genetic algorithm (GA) approach is structured based on the error between estimated and actual data. Specifically, it uses a minimization of the following error function \( F_i \):
-\[ F_i = \sum_{k=0}^{K} (Z_j(i) - y_i)^2 \]
-where:
-- \( Z_j(i) \) is the cumulative software operation effort at time \( i \).
-- \( y_i \) is the actual cumulative effort.
+The fitness function in the genetic algorithm (GA) approach is structured based on the error between estimated and actual data. Specifically, it uses a minimization of the following error function $F_i$:
+$$F_i = \sum_{k=0}^{K} (Z_j(i) - y_i)^2$$where:
+- $Z_j(i)$ is the cumulative software operation effort at time $i$.
+- $y_i$ is the actual cumulative effort.
 
 This function helps in evaluating how well the model fits the data, guiding the GA to find optimal parameter values. 
 
@@ -264,10 +240,10 @@ This function helps in evaluating how well the model fits the data, guiding the 
 Note: The provided code examples and pseudocode are for illustrative purposes only and may not directly relate to the exact content of the text.
 
 #### Parameter Estimation Using Deep Learning for Jump Terms
-Background context: The text discusses the estimation of unknown parameters in jump diffusion process models using a deep learning approach. Specifically, it focuses on estimating parameters related to jump terms, such as \(\lambda_1, \mu_1,\) and \(\tau_1\) for \(Y_t\), and similar parameters for another term \(Y_{t'}\). The goal is to use a deep feedforward neural network to estimate these parameters.
+Background context: The text discusses the estimation of unknown parameters in jump diffusion process models using a deep learning approach. Specifically, it focuses on estimating parameters related to jump terms, such as $\lambda_1, \mu_1,$ and $\tau_1$ for $Y_t$, and similar parameters for another term $ Y_{t'}$. The goal is to use a deep feedforward neural network to estimate these parameters.
 :p What is the main objective of using deep learning in this context?
 ??x
-The primary objective is to estimate the unknown parameters related to jump terms in the jump diffusion process models. These parameters, such as \(\lambda_1, \mu_1,\) and \(\tau_1\), are estimated by training a deep feedforward neural network on input data sets that include various features like date, time, product name, version details, etc.
+The primary objective is to estimate the unknown parameters related to jump terms in the jump diffusion process models. These parameters, such as $\lambda_1, \mu_1,$ and $\tau_1$, are estimated by training a deep feedforward neural network on input data sets that include various features like date, time, product name, version details, etc.
 x??
 
 ---
@@ -293,9 +269,8 @@ x??
 
 #### Deep Learning Structure and Hidden Layers
 Background context: The deep learning structure includes hidden layers with pretraining units. The output layer compresses the characteristics of the data.
-:p What does \(zll=1,2,...,L\) represent in the context of this model?
-??x
-\(zll=1,2,...,L\) represents the pretraining units in the hidden layer of the deep feedforward neural network. These units are responsible for extracting and representing features from the input data before they are compressed into a more manageable form by the output layer.
+:p What does $zll=1,2,...,L$ represent in the context of this model?
+??x $zll=1,2,...,L$ represents the pretraining units in the hidden layer of the deep feedforward neural network. These units are responsible for extracting and representing features from the input data before they are compressed into a more manageable form by the output layer.
 x??
 
 ---

@@ -23,7 +23,7 @@
           "id": "7b3690da-3c25-4d6e-ac71-2296f252348e",
           "listId": "0a9895c8-1a30-4fc3-b2c3-63e119d8c8e3",
           "title": "Orchestration Improvements",
-          "description": "Automated target for orchestration\nThena also have more status to refer:\nCOMPLETE_TIMEOUT: continues from the timeout, read and infer which is the last flashcard markdown chapter to infer which is the last chapter that created flashcards for. (form the total remainin that can be infered from out/[bookname] and continues creating flashcards from there\n\n\nRedo high quality cards. ",
+          "description": "Automated target for orchestration\nThena also have more status to refer:\nCOMPLETE_TIMEOUT: continues from the timeout, read and infer which is the last flashcard markdown chapter to infer which is the last chapter that created flashcards for. (form the total remainin that can be infered from out/[bookname] and continues creating flashcards from there\n\n\nREFILTER: Using the markdown flashcards already created, again, it recalculates the usefulness score based on the instructions (relevancy_target) on orchestration csv and redos the filtering into book_notes\n\n\nRedo high quality cards. ",
           "labels": [],
           "checkboxes": [
             {

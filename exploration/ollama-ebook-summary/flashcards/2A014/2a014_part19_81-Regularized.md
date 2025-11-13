@@ -40,10 +40,7 @@ In matrix factorization, the loss function often used is the observed mean squar
 :p What is the primary loss function for matrix factorization?
 ??x
 The primary loss function in matrix factorization is the observed mean square error (OMSE), which quantifies the difference between the predicted and actual values. The formula for OMSE can be expressed as:
-\[
-\text{OMSE} = \frac{1}{2N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2
-\]
-where \( y_i \) is the true value and \( \hat{y}_i \) is the predicted value for instance \( i \), and \( N \) is the number of instances.
+$$\text{OMSE} = \frac{1}{2N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2$$where $ y_i $ is the true value and $\hat{y}_i $ is the predicted value for instance$i $, and$ N$ is the number of instances.
 x??
 
 ---
@@ -55,11 +52,8 @@ Regularization helps prevent overfitting by adding a penalty term to the loss fu
 ??x
 Regularization plays a crucial role in matrix factorization by preventing overfitting. By adding a penalty term to the loss function (e.g., L2 norm for weights), it ensures that the model doesn't rely too heavily on any single feature, leading to better generalization.
 
-For example, with L2 regularization, the loss function \( J \) can be modified as follows:
-\[
-J = \text{OMSE} + \lambda \|W\|_F^2
-\]
-where \( W \) are the matrix factors and \( \lambda \) is the regularization parameter controlling the strength of the penalty.
+For example, with L2 regularization, the loss function $J$ can be modified as follows:
+$$J = \text{OMSE} + \lambda \|W\|_F^2$$where $ W $ are the matrix factors and $\lambda$ is the regularization parameter controlling the strength of the penalty.
 
 Gramian weight constraints further ensure that the matrix elements remain small, contributing to better model stability.
 x??
@@ -89,7 +83,7 @@ Matrix factorization models decompose a user-item interaction matrix into lower-
 
 :p How can you implement a basic matrix factorization model?
 ??x
-A basic matrix factorization model involves decomposing the user-item interaction matrix \( \mathbf{R} \) into two lower-dimensional matrices: one representing user factors (\( U \)) and another representing item factors (\( V^T \)). The goal is to minimize the difference between the actual ratings and the predicted ratings.
+A basic matrix factorization model involves decomposing the user-item interaction matrix $\mathbf{R}$ into two lower-dimensional matrices: one representing user factors ($U $) and another representing item factors ($ V^T$). The goal is to minimize the difference between the actual ratings and the predicted ratings.
 
 Here’s a simple implementation in pseudocode:
 
@@ -245,10 +239,8 @@ Background context: Dimension reduction techniques like matrix factorization (MF
 
 :p What is the mathematical representation of matrix factorization (MF)?
 ??x
-Matrix factorization (MF) decomposes the user-item interaction matrix \( A \in \mathbb{R}^{m \times n} \) into two lower-dimensional matrices, representing latent factors for users (\( U \)) and items (\( V \)). The decomposition can be represented as:
-\[ A \sim U \times V^T \]
-
-```python
+Matrix factorization (MF) decomposes the user-item interaction matrix $A \in \mathbb{R}^{m \times n}$ into two lower-dimensional matrices, representing latent factors for users ($U $) and items ($ V$). The decomposition can be represented as:
+$$A \sim U \times V^T$$```python
 import numpy as np
 
 def matrix_factorization(R, k, iterations=100):
@@ -291,12 +283,10 @@ x??
 ---
 
 #### Nonnegative Matrix Factorization (NMF)
-Background context: Nonnegative matrix factorization decomposes the nonnegative user-item interaction matrix \( A \in \mathbb{R}^{m \times n}_{+} \) into two nonnegative matrices, representing latent factors for users (\( W \)) and items (\( H \)). The decomposition can be represented as:
-\[ A \approx W \times H \]
-
-:p What is the purpose of using NMF in recommendation systems?
+Background context: Nonnegative matrix factorization decomposes the nonnegative user-item interaction matrix $A \in \mathbb{R}^{m \times n}_{+}$ into two nonnegative matrices, representing latent factors for users ($W $) and items ($ H$). The decomposition can be represented as:
+$$A \approx W \times H$$:p What is the purpose of using NMF in recommendation systems?
 ??x
-The purpose of using NMF in recommendation systems is to decompose the nonnegative user-item interaction matrix into two nonnegative matrices, \( W \) and \( H \). This ensures that the latent factors are interpretable and nonnegative, which can provide meaningful insights into user behavior and item characteristics. The decomposition helps reduce dimensionality while preserving the positive nature of the interactions.
+The purpose of using NMF in recommendation systems is to decompose the nonnegative user-item interaction matrix into two nonnegative matrices,$W $ and$H$. This ensures that the latent factors are interpretable and nonnegative, which can provide meaningful insights into user behavior and item characteristics. The decomposition helps reduce dimensionality while preserving the positive nature of the interactions.
 
 ```python
 import numpy as np
@@ -399,21 +389,17 @@ Multidimensional scaling (MDS) is a popular technique for generating isometric e
 
 The optimization problem formulated as a constrained optimization problem aims to minimize the difference between the pairwise distances in the high-dimensional space and the corresponding distances in the lower-dimensional embedding. Mathematically, it can be represented as:
 
-Minimize \( \sum_{i,j} d_{ij} - \|x_i - x_j\|^2 \)
-
-Here, \( d_{ij} \) denotes the pairwise distances in the high-dimensional space, and \( x_i \) and \( x_j \) represent points in the lower-dimensional embedding.
+Minimize $\sum_{i,j} d_{ij} - \|x_i - x_j\|^2 $ Here,$d_{ij}$ denotes the pairwise distances in the high-dimensional space, and $ x_i $ and $x_j$ represent points in the lower-dimensional embedding.
 
 :p What is the optimization problem formulation for MDS?
 ??x
 The optimization problem for MDS can be formulated as minimizing the difference between the pairwise distances in the high-dimensional space and the corresponding distances in the lower-dimensional embedding. Mathematically, this is expressed as:
 
-\[
-\min \sum_{i,j} d_{ij} - \|x_i - x_j\|^2
-\]
+$$\min \sum_{i,j} d_{ij} - \|x_i - x_j\|^2$$
 
 Where:
-- \( d_{ij} \) represents the pairwise distances between points in high-dimensional space.
-- \( x_i \) and \( x_j \) are points in the lower-dimensional embedding.
+- $d_{ij}$ represents the pairwise distances between points in high-dimensional space.
+- $x_i $ and$x_j$ are points in the lower-dimensional embedding.
 
 This minimization ensures that the distances are preserved as accurately as possible.
 x??
@@ -447,13 +433,11 @@ x??
 #### Nonlinear Locally Metrizable Embeddings
 Nonlinear locally metrizable embeddings are a method to represent user-item interaction matrices in a lower-dimensional space where local distances between nearby items are preserved. The goal is to maintain the local structure of the data, which helps in providing more accurate and diverse recommendations.
 
-Mathematically, for any \( x_i, x_j \in X \), we aim to have:
-
-\( d_Y(f(x_i), f(x_j)) \approx d_X(x_i, x_j) \)
+Mathematically, for any $x_i, x_j \in X $, we aim to have:$ d_Y(f(x_i), f(x_j)) \approx d_X(x_i, x_j)$
 
 Where:
-- \( X = \{x_1, x_2, ..., x_n\} \) is the set of items in high-dimensional space.
-- \( Y = \{y_1, y_2, ..., y_n\} \) is the set of items in lower-dimensional space.
+- $X = \{x_1, x_2, ..., x_n\}$ is the set of items in high-dimensional space.
+- $Y = \{y_1, y_2, ..., y_n\}$ is the set of items in lower-dimensional space.
 
 :p What are nonlinear locally metrizable embeddings used for?
 ??x
@@ -469,13 +453,11 @@ Autoencoders are a popular approach to generating nonlinear locally metrizable e
 
 The objective is to minimize the difference between the input data and the reconstructed data, capturing the underlying structure of the data in the embedding space:
 
-\[
-\min_{\theta,\varphi} \sum_{i=1}^n \| x_i - g_\varphi(f_\theta(x_i)) \|^2
-\]
+$$\min_{\theta,\varphi} \sum_{i=1}^n \| x_i - g_\varphi(f_\theta(x_i)) \|^2$$
 
 Where:
-- \( f_\theta \) denotes the encoder network with parameters \( \theta \).
-- \( g_\varphi \) denotes the decoder network with parameters \( \varphi \).
+- $f_\theta $ denotes the encoder network with parameters$\theta$.
+- $g_\varphi $ denotes the decoder network with parameters$\varphi$.
 
 :p What is an autoencoder used for in recommendation systems?
 ??x
@@ -501,15 +483,13 @@ x??
 #### UMAP for Nonlinear Locally Metrizable Embeddings
 UMAP (Uniform Manifold Approximation and Projection) is another approach used to generate nonlinear locally metrizable embeddings. It attempts to fit a minimal manifold that preserves density in local neighborhoods, making it useful for finding low-dimensional representations in complex and high-dimensional latent spaces.
 
-The optimization problem can be formulated as a cost function \( C \) measuring the difference between pairwise similarities in the high-dimensional space and corresponding similarities in the lower-dimensional embedding:
+The optimization problem can be formulated as a cost function $C$ measuring the difference between pairwise similarities in the high-dimensional space and corresponding similarities in the lower-dimensional embedding:
 
-\[
-C_Y = \sum_{i,j} p_{ij} * \log \frac{p_{ij}}{q_{ij}}
-\]
+$$C_Y = \sum_{i,j} p_{ij} * \log \frac{p_{ij}}{q_{ij}}$$
 
 Where:
-- \( p_{ij} \) denotes the pairwise similarities in the high-dimensional space.
-- \( q_{ij} \) denotes the pairwise similarities in the lower-dimensional space.
+- $p_{ij}$ denotes the pairwise similarities in the high-dimensional space.
+- $q_{ij}$ denotes the pairwise similarities in the lower-dimensional space.
 
 :p What is UMAP used for?
 ??x

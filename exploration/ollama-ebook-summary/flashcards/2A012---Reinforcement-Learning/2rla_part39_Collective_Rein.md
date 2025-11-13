@@ -338,7 +338,7 @@ Background context explaining the concept. This section describes how dopamine s
 ??x
 Dopamine signals can influence reward prediction errors, which are thought to be a key mechanism in model-free learning processes. However, these signals also show the influence of model-based information. In the context of addiction, this means that while natural rewards might decrease their impact as they become more predictable (thus reducing reward prediction errors), addictive drugs can create a situation where such errors cannot be reduced.
 
-For instance, cocaine administration leads to a transient increase in dopamine levels, which increases the reward prediction error (\(\Delta V\)) for states associated with drug use. This increase prevents the error-correcting feature of TD learning from reducing the value of these states over time.
+For instance, cocaine administration leads to a transient increase in dopamine levels, which increases the reward prediction error ($\Delta V$) for states associated with drug use. This increase prevents the error-correcting feature of TD learning from reducing the value of these states over time.
 
 The mechanism can be illustrated as:
 ```java
@@ -375,9 +375,9 @@ Background context explaining the concept. This section discusses whether addict
 ??x
 The self-destructive behavior linked to drug addiction is distinct from normal learning processes. While natural rewards, like food and water, are essential for survival and are processed through standard learning mechanisms (model-free), addictive drugs can co-opt these mechanisms in ways that lead to harmful behaviors.
 
-For example, addictive substances may increase dopamine levels transiently but do so without the reduction mechanism seen with naturally reinforcing events. This means that the reward prediction error (\(\Delta V\)) does not decrease as the drug becomes more predictable, leading to persistent seeking behavior despite negative consequences.
+For example, addictive substances may increase dopamine levels transiently but do so without the reduction mechanism seen with naturally reinforcing events. This means that the reward prediction error ($\Delta V$) does not decrease as the drug becomes more predictable, leading to persistent seeking behavior despite negative consequences.
 
-A model by Redish (2004) suggests that cocaine administration leads to a transient increase in dopamine, which increases the TD error (\(\Delta V\)). This increase is not corrected over time because it prevents \(\Delta V\) from becoming negative for states associated with drug administration. In contrast, natural rewards lead to decreasing errors as they become predicted.
+A model by Redish (2004) suggests that cocaine administration leads to a transient increase in dopamine, which increases the TD error ($\Delta V $). This increase is not corrected over time because it prevents $\Delta V$ from becoming negative for states associated with drug administration. In contrast, natural rewards lead to decreasing errors as they become predicted.
 
 The key difference can be visualized through:
 ```java
@@ -920,10 +920,9 @@ Background context: Reinforcement learning (RL) is a computational framework use
 Reinforcement learning (RL) models help explain how organisms learn to make decisions based on rewards and punishments, contributing to our understanding of the neural mechanisms involved in decision-making.
 
 The Q-learning algorithm is a popular RL method where an agent learns a policy telling what action to take under what circumstances. It updates its value function using the formula:
+$$V(s) \leftarrow V(s) + \alpha [R + \gamma \max_{a'} V(s') - V(s)]$$
 
-\[ V(s) \leftarrow V(s) + \alpha [R + \gamma \max_{a'} V(s') - V(s)] \]
-
-Here, \( s \) is the state, \( R \) is the reward, and \( \gamma \) is the discount factor.
+Here,$s $ is the state,$R $ is the reward, and$\gamma$ is the discount factor.
 
 ??x
 Reinforcement learning helps model how organisms learn by receiving rewards and punishments. For example, Q-learning updates its value function based on the immediate reward and future expected rewards.
@@ -937,10 +936,9 @@ Background context: The reward prediction error (RPE) hypothesis explains how do
 :p What is the reward prediction error hypothesis?
 ??x
 The reward prediction error (RPE) hypothesis suggests that dopaminergic neurons encode the difference between expected and received rewards, which helps guide learning processes. The formula for RPE can be expressed as:
+$$\Delta V(s, a) = r - V(s')$$
 
-\[ \Delta V(s, a) = r - V(s') \]
-
-Where \( \Delta V(s, a) \) is the prediction error, \( r \) is the reward, and \( V(s') \) is the predicted value of the next state.
+Where $\Delta V(s, a)$ is the prediction error,$r $ is the reward, and$V(s')$ is the predicted value of the next state.
 
 ??x
 The RPE hypothesis explains how dopamine neurons signal errors in expected rewards. This helps guide learning by adjusting the values associated with actions based on their outcomes.
@@ -990,10 +988,9 @@ Background context: The reward prediction error hypothesis was first proposed by
 The TD-error modulation hypothesis suggests that dopamine neurons signal prediction errors, which are critical for learning. It proposes a connection between these errors and Hebbian-like synaptic plasticity in the brain.
 
 Formally, this can be expressed as:
+$$\Delta V(s) = \alpha [r - \gamma V(s')]$$
 
-\[ \Delta V(s) = \alpha [r - \gamma V(s')] \]
-
-Where \( r \) is the reward, \( V(s') \) is the value of the next state, and \( \gamma \) is the discount factor.
+Where $r $ is the reward,$ V(s')$ is the value of the next state, and $\gamma$ is the discount factor.
 
 ??x
 The TD-error modulation hypothesis proposes that dopamine neurons signal prediction errors to guide learning. This connection helps explain how the brain updates its values based on differences between expected and actual rewards.
@@ -1261,7 +1258,7 @@ Background context: The actor learning rule discussed here is more complex than 
 
 :p How does the actor learning rule differ from early models?
 ??x
-The actor learning rule in this context is more complex as it includes full eligibility traces of \((A_t - \pi(A_t|S_t,\theta))x(S_t)\) rather than just \(A_t \times x(S_t)\). This improvement incorporates the policy gradient theory and contributions from Williams (1986, 1992), which enhanced the ability to implement a policy-gradient method in neural network models.
+The actor learning rule in this context is more complex as it includes full eligibility traces of $(A_t - \pi(A_t|S_t,\theta))x(S_t)$ rather than just $A_t \times x(S_t)$. This improvement incorporates the policy gradient theory and contributions from Williams (1986, 1992), which enhanced the ability to implement a policy-gradient method in neural network models.
 
 ---
 

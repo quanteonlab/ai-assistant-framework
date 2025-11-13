@@ -42,7 +42,7 @@ Background context: The Statute of Frauds requires certain contracts to be in wr
 
 :p Can Midstate Plastic, Inc. enforce a deal for the full $800 with GamesCo?
 ??x
-No, Midstate Plastic, Inc. cannot enforce an oral agreement for the full $800 because such agreements are subject to the Statute of Frauds, which requires written evidence for contracts involving the sale of goods over a certain value (typically $500 or more in most states).
+No, Midstate Plastic, Inc. cannot enforce an oral agreement for the full $800 because such agreements are subject to the Statute of Frauds, which requires written evidence for contracts involving the sale of goods over a certain value (typically$500 or more in most states).
 
 To enforce the deal:
 ```plaintext

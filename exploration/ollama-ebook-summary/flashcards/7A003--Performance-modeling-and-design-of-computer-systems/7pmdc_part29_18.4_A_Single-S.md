@@ -7,17 +7,17 @@
 #### Notation and Modeling for Classed Jackson Networks
 Background context: The provided text introduces notation and modeling for a classed Jackson network, which is an extension of the basic Jackson network with additional features. It defines various quantities such as arrival rates (both total and per-class), service rates, utilization, and routing probabilities.
 
-:p What are the definitions of \( r_i \) and \( \lambda_i \)?
+:p What are the definitions of $r_i $ and$\lambda_i$?
 ??x
-\( r_i \) is the arrival rate to server \( i \) from outside the network. On the other hand, \( \lambda_i \) represents the total arrival rate to server \( i \), which includes both inside and outside arrivals.
+$r_i $ is the arrival rate to server$i $ from outside the network. On the other hand,$\lambda_i $ represents the total arrival rate to server$i$, which includes both inside and outside arrivals.
 
 For per-class rates:
-- \( r_i(c) \) denotes the arrival rate of class \( c \) jobs to server \( i \) from outside the network.
-- \( \lambda_i(c) \) is the total arrival rate of class \( c \) jobs to server \( i \).
+- $r_i(c)$ denotes the arrival rate of class $ c $ jobs to server $i$ from outside the network.
+- $\lambda_i(c)$ is the total arrival rate of class $ c $ jobs to server $i$.
 
 The relationships between these quantities are given by:
-\[ r_i = \sum_{c=1}^l r_i(c) \]
-\[ \lambda_i = \sum_{c=1}^l \lambda_i(c) \]
+$$r_i = \sum_{c=1}^l r_i(c)$$
+$$\lambda_i = \sum_{c=1}^l \lambda_i(c)$$
 
 This notation is crucial for understanding the flow of different classes of packets through the network.
 
@@ -25,21 +25,21 @@ This notation is crucial for understanding the flow of different classes of pack
 ---
 
 #### Deriving Total Arrival Rates
-Background context: The text discusses how to derive total arrival rates \( \lambda_j \) into server \( j \). However, it notes that we cannot directly solve for \( \lambda_j \), but can compute per-class arrival rates \( \lambda_j(c) \).
+Background context: The text discusses how to derive total arrival rates $\lambda_j $ into server$j $. However, it notes that we cannot directly solve for$\lambda_j $, but can compute per-class arrival rates $\lambda_j(c)$.
 
-:p How do you compute the total arrival rate \( \lambda_j \)?
+:p How do you compute the total arrival rate $\lambda_j$?
 ??x
-To compute the total arrival rate \( \lambda_j \), which is the sum of all per-class arrival rates into server \( j \):
+To compute the total arrival rate $\lambda_j $, which is the sum of all per-class arrival rates into server $ j$:
 
-\[ \lambda_j = \sum_{c=1}^l \lambda_j(c) \]
+$$\lambda_j = \sum_{c=1}^l \lambda_j(c)$$
 
 Where:
-- \( \lambda_j(c) \) is the arrival rate of class \( c \) jobs into server \( j \), which can be determined by solving a system of simultaneous equations.
-The equation for \( \lambda_j(c) \) is given by:
+- $\lambda_j(c)$ is the arrival rate of class $ c $ jobs into server $j$, which can be determined by solving a system of simultaneous equations.
+The equation for $\lambda_j(c)$ is given by:
 
-\[ \lambda_j(c) = r_j(c) + \sum_{i=1}^k \sum_{c'=1}^l \lambda_i(c') P(c')(c)_ij \]
+$$\lambda_j(c) = r_j(c) + \sum_{i=1}^k \sum_{c'=1}^l \lambda_i(c') P(c')(c)_ij$$
 
-Here, \( P(c')(c)_ij \) represents the probability that a job at server \( i \) of class \( c' \) next moves to server \( j \) and becomes a class \( c \) job.
+Here,$P(c')(c)_ij $ represents the probability that a job at server$i $ of class$c'$ next moves to server $j$ and becomes a class $ c$ job.
 
 ??x
 ---
@@ -47,35 +47,33 @@ Here, \( P(c')(c)_ij \) represents the probability that a job at server \( i \) 
 #### State Space of CTMC for Classed Networks
 Background context: The text explains how to model the state space for continuous-time Markov chains (CTMC) in classed networks. It highlights that knowing just the number of jobs at each server is insufficient; we need additional information about the classes of these jobs.
 
-:p What is the definition of the state \( z_i \)?
+:p What is the definition of the state $z_i$?
 ??x
-The state of server \( i \), denoted as \( z_i \), consists of the class and order of the packets in the queue. Specifically:
+The state of server $i $, denoted as $ z_i$, consists of the class and order of the packets in the queue. Specifically:
 
-\[ z_i = (c(1)_i, c(2)_i, ..., c(n_i)_i) \]
+$$z_i = (c(1)_i, c(2)_i, ..., c(n_i)_i)$$
 
 Where:
-- \( n_i \) is the number of jobs at server \( i \).
-- \( c(j)_i \) denotes the class of the \( j \)-th job in the queue at server \( i \), with \( c(1)_i \) being the class of the first (serving) job, and so on.
+- $n_i $ is the number of jobs at server$i$.
+- $c(j)_i $ denotes the class of the$j $-th job in the queue at server$ i $, with$ c(1)_i$ being the class of the first (serving) job, and so on.
 
 The state of the network is then represented as:
 
-\[ z = (z_1, z_2, ..., z_k) \]
-
-??x
+$$z = (z_1, z_2, ..., z_k)$$??x
 ---
 
 #### Single-Server Classed Network
 Background context: The text introduces a single-server classed network to understand the behavior of such networks. It considers an M/M/1 queue with multiple classes of packets.
 
-:p What is the limiting probability \( \pi(c(1)_1, c(2)_1, ..., c(n_1)_1) \)?
+:p What is the limiting probability $\pi(c(1)_1, c(2)_1, ..., c(n_1)_1)$?
 ??x
-The limiting probability that the state of the system at server 1 is \( (c(1)_1, c(2)_1, ..., c(n_1)_1) \) can be guessed as:
+The limiting probability that the state of the system at server 1 is $(c(1)_1, c(2)_1, ..., c(n_1)_1)$ can be guessed as:
 
-\[ \pi(c(1)_1, c(2)_1, ..., c(n_1)_1) = \frac{\lambda_1^{(c(1)_1)} \lambda_1^{(c(2)_1)} ... \lambda_1^{(c(n_1)_1)}}{(\mu_1)^{n_1} (1 - \rho_1)} \]
+$$\pi(c(1)_1, c(2)_1, ..., c(n_1)_1) = \frac{\lambda_1^{(c(1)_1)} \lambda_1^{(c(2)_1)} ... \lambda_1^{(c(n_1)_1)}}{(\mu_1)^{n_1} (1 - \rho_1)}$$
 
 Where:
-- \( \lambda_1^{(c(i)_1)} \) is the arrival rate for class \( c(i)_1 \).
-- \( \rho_1 = \frac{\lambda_1}{\mu_1} \).
+- $\lambda_1^{(c(i)_1)}$ is the arrival rate for class $c(i)_1$.
+- $\rho_1 = \frac{\lambda_1}{\mu_1}$.
 
 This formula accounts for the probability of having specific classes in a given order at the head of the queue.
 
@@ -83,18 +81,18 @@ This formula accounts for the probability of having specific classes in a given 
 ---
 
 #### Proof of Limiting Probability Formula
-Background context: The text provides an outline to prove that the guessed limiting probability \( \pi(c(1)_1, c(2)_1, ..., c(n_1)_1) \) satisfies the balance equations for a single-server classed network.
+Background context: The text provides an outline to prove that the guessed limiting probability $\pi(c(1)_1, c(2)_1, ..., c(n_1)_1)$ satisfies the balance equations for a single-server classed network.
 
 :p How do you verify that the guessed formula satisfies the balance equations?
 ??x
-To verify, we need to show that the rate of leaving the state \( (c(1)_1, c(2)_1, ..., c(n_1)_1) \) equals the rate of entering this state.
+To verify, we need to show that the rate of leaving the state $(c(1)_1, c(2)_1, ..., c(n_1)_1)$ equals the rate of entering this state.
 
 Leaving the state:
 - Occurs due to an arrival or a departure.
 - The probability is computed as the sum over all possible transitions from one state to another.
 
 Entering the state:
-- Occurs when a new job arrives in any position, maintaining the order and class specified by \( (c(1)_1, c(2)_1, ..., c(n_1)_1) \).
+- Occurs when a new job arrives in any position, maintaining the order and class specified by $(c(1)_1, c(2)_1, ..., c(n_1)_1)$.
 
 The balance equations can be verified by ensuring that these rates are equal, which involves detailed combinatorial arguments and calculations.
 
@@ -108,17 +106,18 @@ The balance equations can be verified by ensuring that these rates are equal, wh
 :p What is the mechanism described for transitioning from one state to another in an M/M/1 classed queue?
 ??x
 The mechanism involves two main ways:
-1. **Arrival of a New Job:** If the system is in state \((c(1)1, c(2)1, ..., c(n_1 - 1)1)\), and a job of class \(c(n_1)1\) arrives, it joins the end of the queue.
-2. **Departure from the Queue:** If the system is in state \((c, c(1)1, c(2)1, ..., c(n_1)1)\) where the head of the queue has class \(c\), and a departure occurs, this job leaves the system.
+1. **Arrival of a New Job:** If the system is in state $(c(1)1, c(2)1, ..., c(n_1 - 1)1)$, and a job of class $ c(n_1)1$ arrives, it joins the end of the queue.
+2. **Departure from the Queue:** If the system is in state $(c, c(1)1, c(2)1, ..., c(n_1)1)$ where the head of the queue has class $c$, and a departure occurs, this job leaves the system.
 
 The rate of leaving due to a departure from the queue can be derived as follows:
-\[ \text{Rate Leave} = \pi(c(1)1, c(2)1, ..., c(n_1 - 1)1) \cdot \lambda_1 + \sum_{c} \pi(c, c(1)1, c(2)1, ..., c(n_1)1) \cdot \mu_1 \]
+$$\text{Rate Leave} = \pi(c(1)1, c(2)1, ..., c(n_1 - 1)1) \cdot \lambda_1 + \sum_{c} \pi(c, c(1)1, c(2)1, ..., c(n_1)1) \cdot \mu_1$$
 
 The rate of entering is:
-\[ \text{Rate Enter} = \pi(c(1)1, c(2)1, ..., c(n_1 - 1)1) \cdot \lambda_1 / (c(n_1)1) + \sum_{c} \pi(c, c(1)1, c(2)1, ..., c(n_1)1) \cdot \mu_1 \]
+$$\text{Rate Enter} = \pi(c(1)1, c(2)1, ..., c(n_1 - 1)1) \cdot \lambda_1 / (c(n_1)1) + \sum_{c} \pi(c, c(1)1, c(2)1, ..., c(n_1)1) \cdot \mu_1$$
 
-By substituting and simplifying using the guess from equation \(18.2\), it is shown that:
-\[ \text{Rate Leave} = \text{Rate Enter} \]
+By substituting and simplifying using the guess from equation $18.2$, it is shown that:
+$$\text{Rate Leave} = \text{Rate Enter}$$
+
 This confirms the consistency of rates leaving and entering, ensuring balance in the system.
 
 ??x
@@ -139,23 +138,22 @@ x??
 
 #### Product Form Theorem for Classed Networks
 
-**Background context:** This theorem generalizes the concept of product form solutions to classed networks of queues with multiple servers. It provides a formula for calculating the limiting probabilities \( \pi(z1, z2, ..., zk) \), where each server \(i\) can be in different states \(zi\).
+**Background context:** This theorem generalizes the concept of product form solutions to classed networks of queues with multiple servers. It provides a formula for calculating the limiting probabilities $\pi(z1, z2, ..., zk)$, where each server $ i$can be in different states $ zi$.
 
 :p What does Theorem 18.1 state about the limiting probabilities in a classed network of queues?
 ??x
-Theorem 18.1 states that for a classed network with \(k\) servers, the limiting probabilities are given by:
-\[ \pi(z_1, z_2, ..., z_k) = \frac{1}{\prod_{i=1}^k P(\text{state at server } i \text{ is } z_i)} \]
+Theorem 18.1 states that for a classed network with $k$ servers, the limiting probabilities are given by:
+$$\pi(z_1, z_2, ..., z_k) = \frac{1}{\prod_{i=1}^k P(\text{state at server } i \text{ is } z_i)}$$
 
 Where:
-- \(z_i = (c(1)i, c(2)i, ..., c(ni)i)\)
-- Each server behaves like an M/M/1 queue with specific states.
-- The probability \(P(\text{state at server } i \text{ is } z_i)\) can be computed by summing over all other states.
+- $z_i = (c(1)i, c(2)i, ..., c(ni)i)$- Each server behaves like an M/M/1 queue with specific states.
+- The probability $P(\text{state at server } i \text{ is } z_i)$ can be computed by summing over all other states.
 
-The key formula for the probability of state \(zi\) at server \(i\) is:
-\[ P(\text{state at server } i \text{ is } z_i) = (1 - \rho_i) \cdot \frac{\lambda_i^{n_i} / (\mu_i^{n_i})}{\sum_{j=0}^{\infty} \left( \frac{\lambda_j}{\mu_j} \right)^j} \]
+The key formula for the probability of state $zi $ at server$i$ is:
+$$P(\text{state at server } i \text{ is } z_i) = (1 - \rho_i) \cdot \frac{\lambda_i^{n_i} / (\mu_i^{n_i})}{\sum_{j=0}^{\infty} \left( \frac{\lambda_j}{\mu_j} \right)^j}$$
 
 Where:
-- \( \rho_i = \frac{\lambda_i}{\mu_i} \) is the traffic intensity for server \(i\).
+- $\rho_i = \frac{\lambda_i}{\mu_i}$ is the traffic intensity for server $i$.
 
 ??x
 The answer involves understanding that the product form solution applies to classed networks, allowing us to calculate the limiting probabilities by breaking down the network into individual servers and using their specific states.
@@ -189,11 +187,11 @@ x??
 
 :p How is the number of jobs in each queue distributed according to Corollary 18.2?
 ??x
-Corollary 18.2 states that in a classed network, the probability distribution of \(n_i\) jobs at server \(i\) follows:
-\[ P(n_{ij} \text{ jobs at server } i) = (1 - \rho_i)^{\rho_i^{n_i}} / (1 - \rho_i) \]
+Corollary 18.2 states that in a classed network, the probability distribution of $n_i $ jobs at server$i$ follows:
+$$P(n_{ij} \text{ jobs at server } i) = (1 - \rho_i)^{\rho_i^{n_i}} / (1 - \rho_i)$$
 
 Where:
-- \( \rho_i = \frac{\lambda_i}{\mu_i} \) is the traffic intensity for each server.
+- $\rho_i = \frac{\lambda_i}{\mu_i}$ is the traffic intensity for each server.
 - The formula simplifies to a product form solution, where each server's state probability is independent of others.
 
 ??x
@@ -235,12 +233,11 @@ The state probability for a specific configuration of jobs at the servers is cal
 
 :p How do we calculate the joint probability of job distributions across multiple servers?
 ??x
-We use the product rule, where the joint probability \( P \) that specific numbers of jobs are present at each server can be broken down into individual probabilities for each server. Each term in this product accounts for the arrival and service rates as well as the utilization (load) factor.
+We use the product rule, where the joint probability $P$ that specific numbers of jobs are present at each server can be broken down into individual probabilities for each server. Each term in this product accounts for the arrival and service rates as well as the utilization (load) factor.
 
 Example calculation:
-\[
-P{Distribution of jobs is (n1,n2,...,nk)} = \prod_{i=1}^{k} P{\text{state at server } i \text{ is } zi}
-\]
+$$P{Distribution of jobs is (n1,n2,...,nk)} = \prod_{i=1}^{k} P{\text{state at server } i \text{ is } zi}$$
+
 This can be further broken down using individual class probabilities:
 
 ```java
@@ -259,14 +256,12 @@ In this example, we have a network with specific routes and packet arrival rates
 We associate each route with a unique class of packets and define relevant parameters such as outside arrival rate, transition probabilities between servers, and total arrival rates for each server per class.
 
 For instance:
-- Class 1: Route 1 with an outside arrival rate of \( r_1(1) = 3 \) pkts/sec.
-- Class 2: Route 2 with an outside arrival rate of \( r_1(2) = 4 \) pkts/sec.
+- Class 1: Route 1 with an outside arrival rate of $r_1(1) = 3$ pkts/sec.
+- Class 2: Route 2 with an outside arrival rate of $r_1(2) = 4$ pkts/sec.
 - And so on.
 
 The transition probabilities and total arrival rates can be calculated as follows:
-\[
-λ_i(c) = r_i(c) + ∑_{j} λ_j(c)P(c)_{ij}
-\]
+$$λ_i(c) = r_i(c) + ∑_{j} λ_j(c)P(c)_{ij}$$
 
 Given the specific routes, we can derive these values directly for simplicity in this example:
 
@@ -284,11 +279,10 @@ The load at each server is calculated using the arrival rate divided by the serv
 
 :p How do we determine the load at each server in the network?
 ??x
-We calculate the load (utilization) \( ρ_i \) for each server as follows:
-\[
-ρ_i = \frac{λ_i}{μ_i}
-\]
-Where \( λ_i \) is the total arrival rate into server \( i \), and \( μ_i \) is the service rate of server \( i \).
+We calculate the load (utilization)$ρ_i$ for each server as follows:
+$$ρ_i = \frac{λ_i}{μ_i}$$
+
+Where $λ_i $ is the total arrival rate into server$i $, and$μ_i $ is the service rate of server$i$.
 
 Using the given values from the example, we can compute:
 
@@ -308,22 +302,21 @@ x??
 We are given a system where packets follow different routes through servers with specific arrival rates and service times. The expected time spent by each packet type at a server can be determined using Little's Law.
 
 For route 2, the packets visit servers 1, 3, and 4. We need to calculate the expected time spent at each of these servers and sum them up.
-:p What is \( E[T \text{ for packets on route 2} ] \)?
+:p What is $E[T \text{ for packets on route 2} ]$?
 ??x
 The total expected time a packet spends on route 2 is calculated as follows:
 
-1. Calculate the expected number of packets \(E[Ni]\) at server i using \(E[Ni] = \frac{\rho_i}{1 - \rho_i}\).
-2. Use Little's Law to find the expected time \(E[Ti] = E[Ni] / \lambda_i\).
+1. Calculate the expected number of packets $E[Ni]$ at server i using $E[Ni] = \frac{\rho_i}{1 - \rho_i}$.
+2. Use Little's Law to find the expected time $E[Ti] = E[Ni] / \lambda_i$.
 
 For route 2, we have:
-- Server 1: \(E[N1] = \frac{0.7}{0.3} = \frac{7}{3}\), so \(E[T1] = \frac{7/3}{7} = \frac{1}{3} \text{ sec}\).
+- Server 1: $E[N1] = \frac{0.7}{0.3} = \frac{7}{3}$, so $ E[T1] = \frac{7/3}{7} = \frac{1}{3} \text{ sec}$.
 - Server 2 and Server 4 are not part of the route, so they do not contribute to the time.
-- Server 3: \(E[N3] = 9\), so \(E[T3] = \frac{9}{18} = \frac{1}{2} \text{ sec}\).
-- Server 4: \(E[N4] = 9\), so \(E[T4] = \frac{9}{9} = 1 \text{ sec}\).
+- Server 3: $E[N3] = 9 $, so $ E[T3] = \frac{9}{18} = \frac{1}{2} \text{ sec}$.
+- Server 4: $E[N4] = 9 $, so $ E[T4] = \frac{9}{9} = 1 \text{ sec}$.
 
 Summing these times, we get:
-\[ E[T \text{ for packets on route 2}] = E[T1] + E[T3] + E[T4] = \frac{1}{3} + \frac{1}{2} + 1 = \frac{2 + 3 + 6}{6} = \frac{11}{6} \text{ sec}. \]
-x??
+$$E[T \text{ for packets on route 2}] = E[T1] + E[T3] + E[T4] = \frac{1}{3} + \frac{1}{2} + 1 = \frac{2 + 3 + 6}{6} = \frac{11}{6} \text{ sec}.$$x??
 ---
 
 ---
@@ -331,18 +324,18 @@ x??
 We use Theorem 18.1 to find the probability that there are exactly s jobs of class 1 and t jobs of class 2 at server i.
 
 The formula given by the theorem is:
-\[ P(\text{Server } i \text{ has } s \text{ jobs of class 1 and } t \text{ jobs of class 2}) = \binom{s+t}{s} \left( \frac{\lambda_i^{(1)}}{\lambda_i} \right)^s \left( \frac{\lambda_i^{(2)}}{\lambda_i} \right)^t \rho_i^{s+t}(1-\rho_i), \]
-where \( \rho_i = \frac{\lambda_i}{\mu_i} \) and \( \lambda_i = \lambda_i^{(1)} + \lambda_i^{(2)} \).
+$$
+
+P(\text{Server } i \text{ has } s \text{ jobs of class 1 and } t \text{ jobs of class 2}) = \binom{s+t}{s} \left( \frac{\lambda_i^{(1)}}{\lambda_i} \right)^s \left( \frac{\lambda_i^{(2)}}{\lambda_i} \right)^t \rho_i^{s+t}(1-\rho_i),$$where $\rho_i = \frac{\lambda_i}{\mu_i}$ and $\lambda_i = \lambda_i^{(1)} + \lambda_i^{(2)}$.
 
 Simplifying, we get:
-\[ P(\text{Server } i \text{ has } s \text{ jobs of class 1 and } t \text{ jobs of class 2}) = \binom{s+t}{s} \left( \frac{\lambda_i^{(1)}}{\lambda_i^{(1)} + \lambda_i^{(2)}} \right)^s \left( \frac{\lambda_i^{(2)}}{\lambda_i^{(1)} + \lambda_i^{(2)}} \right)^t \rho_i^{s+t}(1-\rho_i). \]
+$$P(\text{Server } i \text{ has } s \text{ jobs of class 1 and } t \text{ jobs of class 2}) = \binom{s+t}{s} \left( \frac{\lambda_i^{(1)}}{\lambda_i^{(1)} + \lambda_i^{(2)}} \right)^s \left( \frac{\lambda_i^{(2)}}{\lambda_i^{(1)} + \lambda_i^{(2)}} \right)^t \rho_i^{s+t}(1-\rho_i).$$
 
-The right factor represents the probability that there are \( s + t \) jobs at server i, and the left factor represents the conditional probability given these total jobs.
+The right factor represents the probability that there are $s + t$ jobs at server i, and the left factor represents the conditional probability given these total jobs.
 :p What is the right factor in ( 18.5)?
 ??x
-The right factor is just the probability that there are \( s + t \) jobs at server i, which can be expressed as:
-\[ P(\text{Server } i \text{ has } s + t \text{ jobs}) = \rho_i^{s+t} (1 - \rho_i). \]
-x??
+The right factor is just the probability that there are $s + t$ jobs at server i, which can be expressed as:
+$$P(\text{Server } i \text{ has } s + t \text{ jobs}) = \rho_i^{s+t} (1 - \rho_i).$$x??
 ---
 
 ---
@@ -373,16 +366,12 @@ x??
 Background context: The expected time in system for CPU-bound jobs is calculated using two methods. Method 1 involves breaking down the routes and solving the resulting equations, while Method 2 uses a more direct approach involving the expected number of visits to each device.
 
 Relevant formulas:
-- \( E[TC] = 0.3E[T| \text{leaves after visiting 1}] + 0.65E[T| \text{loops back to 1}] + 0.05E[T| \text{loops back to 1 via 2}] \)
-- \( E[TC] = E[VC_1]·E[T_1] + E[VC_2]·E[T_2] \)
-
-:p What is the expected time in system of CPU-bound jobs?
+- $E[TC] = 0.3E[T| \text{leaves after visiting 1}] + 0.65E[T| \text{loops back to 1}] + 0.05E[T| \text{loops back to 1 via 2}]$-$ E[TC] = E[VC_1]·E[T_1] + E[VC_2]·E[T_2]$:p What is the expected time in system of CPU-bound jobs?
 ??x
-The answer: The expected time in system for CPU-bound jobs, calculated using Method 1, is \(3.117\). This involves solving the equations for the expected number of visits to each device and then multiplying by their respective times.
+The answer: The expected time in system for CPU-bound jobs, calculated using Method 1, is $3.117$. This involves solving the equations for the expected number of visits to each device and then multiplying by their respective times.
 
 Method 2 uses the expected number of visits at each device:
-- \( E[VC_1] = 1 + 0.65E[VC_1] + 1.0E[VC_2] \)
-- \( E[VC_2] = 0.05E[VC_1] \)
+- $E[VC_1] = 1 + 0.65E[VC_1] + 1.0E[VC_2]$-$ E[VC_2] = 0.05E[VC_1]$
 
 These equations can be solved to find the expected number of visits, which are then multiplied by the time spent at each device.
 
@@ -406,17 +395,15 @@ x??
 Background context: The average number of CPU-bound jobs at server 1 is calculated using the formula derived from the traffic split and utilization.
 
 Relevant formulas:
-- \( E[NC_1] = \frac{\rho_1}{1 - \rho_1}·\lambda_{C1} \)
+- $E[NC_1] = \frac{\rho_1}{1 - \rho_1}·\lambda_{C1}$
 
 :p How do you find the average number of CPU-bound jobs at server 1?
 ??x
 The answer: The average number of CPU-bound jobs at server 1 can be found using the formula:
-\[ E[NC_1] = \frac{\rho_1}{1 - \rho_1}·\lambda_{C1} \]
-where \( \rho_1 \) is the utilization factor and \( \lambda_{C1} \) is the arrival rate of CPU-bound jobs.
+$$E[NC_1] = \frac{\rho_1}{1 - \rho_1}·\lambda_{C1}$$where $\rho_1 $ is the utilization factor and$\lambda_{C1}$ is the arrival rate of CPU-bound jobs.
 
-This formula accounts for the fraction of jobs that are CPU-bound at server 1, adjusted by the total number of jobs in the system. The calculation involves finding \( \rho_1 \), which is:
-\[ \rho_1 = \frac{\lambda_1}{\mu_1} \]
-and then using it to find \( E[NC_1] \).
+This formula accounts for the fraction of jobs that are CPU-bound at server 1, adjusted by the total number of jobs in the system. The calculation involves finding $\rho_1$, which is:
+$$\rho_1 = \frac{\lambda_1}{\mu_1}$$and then using it to find $ E[NC_1]$.
 
 ```java
 public class AverageJobsAtServer {
@@ -443,18 +430,19 @@ x??
 Background context: The expected number of visits to device 2 by CPU-bound jobs is calculated using the given equations and their solutions.
 
 Relevant formulas:
-- \( E[VC_2] = 0.05E[VC_1] \)
+- $E[VC_2] = 0.05E[VC_1]$
 
 :p How do you find the expected number of visits to device 2 for CPU-bound jobs?
 ??x
-The answer: The expected number of visits to device 2 by CPU-bound jobs, \( E[VC_2] \), is found using the equation:
-\[ E[VC_2] = 0.05E[VC_1] \]
-This equation directly relates the expected number of visits at device 1 (denoted as \( VC_1 \)) to the expected number of visits at device 2.
+The answer: The expected number of visits to device 2 by CPU-bound jobs, $E[VC_2]$, is found using the equation:
+$$E[VC_2] = 0.05E[VC_1]$$
 
-To solve for \( E[VC_1] \), we first need to solve:
-\[ E[VC_1] = 1 + 0.65E[VC_1] + 1.0E[VC_2] \]
+This equation directly relates the expected number of visits at device 1 (denoted as $VC_1$) to the expected number of visits at device 2.
 
-Given that \( E[VC_2] = 0.05E[VC_1] \), we substitute and solve the equation for \( E[VC_1] \).
+To solve for $E[VC_1]$, we first need to solve:
+$$E[VC_1] = 1 + 0.65E[VC_1] + 1.0E[VC_2]$$
+
+Given that $E[VC_2] = 0.05E[VC_1]$, we substitute and solve the equation for $ E[VC_1]$.
 
 ```java
 public class ExpectedVisitsCalculation {
@@ -477,15 +465,16 @@ x??
 Background context: The expected time in system for I/O-bound jobs is calculated using the same principles as for CPU-bound jobs but with different routing probabilities and arrival rates.
 
 Relevant formulas:
-- \( E[TI] = 0.25E[T_1] + 0.95E[T_2] \)
+- $E[TI] = 0.25E[T_1] + 0.95E[T_2]$
 
 :p How do you find the expected time in system for I/O-bound jobs?
 ??x
-The answer: The expected time in system for I/O-bound jobs, \( E[TI] \), is found using:
-\[ E[TI] = 0.25E[T_1] + 0.95E[T_2] \]
+The answer: The expected time in system for I/O-bound jobs, $E[TI]$, is found using:
+$$E[TI] = 0.25E[T_1] + 0.95E[T_2]$$
+
 This formula combines the expected times spent at each device based on their routing probabilities.
 
-The expected times \( E[T_1] \) and \( E[T_2] \) can be calculated using similar methods as for CPU-bound jobs, but with different parameters.
+The expected times $E[T_1]$ and $E[T_2]$ can be calculated using similar methods as for CPU-bound jobs, but with different parameters.
 
 ```java
 public class ExpectedTimeCalculation {
@@ -509,20 +498,16 @@ x??
 Background context: The expected number of jobs at server 1 is calculated using the utilization factor and arrival rate.
 
 Relevant formulas:
-- \( \rho_1 = \frac{\lambda_1}{\mu_1} \)
-- \( E[N_1] = \frac{\rho_1}{1 - \rho_1} \)
-
-:p How do you find the expected number of jobs at server 1?
+- $\rho_1 = \frac{\lambda_1}{\mu_1}$-$ E[N_1] = \frac{\rho_1}{1 - \rho_1}$:p How do you find the expected number of jobs at server 1?
 ??x
-The answer: The expected number of jobs at server 1, \( E[N_1] \), is found using:
-\[ E[N_1] = \frac{\lambda_1}{\mu_1 - \lambda_1} \]
-This formula uses the utilization factor \( \rho_1 \):
-\[ \rho_1 = \frac{\lambda_1}{\mu_1} \]
+The answer: The expected number of jobs at server 1,$E[N_1]$, is found using:
+$$E[N_1] = \frac{\lambda_1}{\mu_1 - \lambda_1}$$
 
-Given the values for \( \lambda_1 \) and \( \mu_1 \), we can calculate:
-\[ E[N_1] = \frac{0.7325}{1 - 0.7325} \approx 0.578 \]
+This formula uses the utilization factor $\rho_1$:
+$$\rho_1 = \frac{\lambda_1}{\mu_1}$$
 
-```java
+Given the values for $\lambda_1 $ and$\mu_1$, we can calculate:
+$$E[N_1] = \frac{0.7325}{1 - 0.7325} \approx 0.578$$```java
 public class ExpectedNumberJobs {
     public static double calculateExpectedJobs() {
         // Define values for lambda_1 and mu_1
@@ -547,18 +532,16 @@ x??
 Background context: The expected number of jobs at server 2 is calculated similarly to the expected number of jobs at server 1, but with different arrival rates and utilization factors.
 
 Relevant formulas:
-- \( \rho_2 = \frac{\lambda_2}{\mu_2} \)
-- \( E[N_2] = \frac{\rho_2}{1 - \rho_2} \)
-
-:p How do you find the expected number of jobs at server 2?
+- $\rho_2 = \frac{\lambda_2}{\mu_2}$-$ E[N_2] = \frac{\rho_2}{1 - \rho_2}$:p How do you find the expected number of jobs at server 2?
 ??x
-The answer: The expected number of jobs at server 2, \( E[N_2] \), is found using:
-\[ E[N_2] = \frac{\lambda_2}{\mu_2 - \lambda_2} \]
-This formula uses the utilization factor \( \rho_2 \):
-\[ \rho_2 = \frac{\lambda_2}{\mu_2} \]
+The answer: The expected number of jobs at server 2,$E[N_2]$, is found using:
+$$E[N_2] = \frac{\lambda_2}{\mu_2 - \lambda_2}$$
 
-Given the values for \( \lambda_2 \) and \( \mu_2 \), we can calculate:
-\[ E[N_2] = \frac{0.6583}{1 - 0.6583} \approx 1.9265 \]
+This formula uses the utilization factor $\rho_2$:
+$$\rho_2 = \frac{\lambda_2}{\mu_2}$$
+
+Given the values for $\lambda_2 $ and$\mu_2$, we can calculate:
+$$E[N_2] = \frac{0.6583}{1 - 0.6583} \approx 1.9265$$
 
 ```java
 public class ExpectedNumberJobs {

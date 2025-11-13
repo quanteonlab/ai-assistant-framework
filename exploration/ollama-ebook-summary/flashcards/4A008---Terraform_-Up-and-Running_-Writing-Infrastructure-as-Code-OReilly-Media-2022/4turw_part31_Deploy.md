@@ -13,7 +13,7 @@ The `terraform fmt` command automatically reformats your Terraform code to match
 
 Example usage:
 ```bash
-$ terraform fmt
+$terraform fmt
 ```
 This command should be integrated into the commit process to ensure that any code committed adheres to the chosen coding conventions.
 x??
@@ -28,8 +28,7 @@ Background context: Automated tests, including unit, integration, end-to-end, an
 Running `terraform plan` before applying a configuration provides a "diff" showing what changes will be made to the infrastructure. This step allows you to review and understand the implications of your changes before making them, which can help catch errors early.
 
 Example usage:
-```bash
-$ terraform plan
+```bash$ terraform plan
 ```
 You should integrate this command into your code review process, such as using tools like Atlantis, which automatically runs `terraform plan` on commits and adds the output as a comment to pull requests.
 x??
@@ -65,8 +64,7 @@ Using `git tag` to create a versioned release of your Terraform code allows you 
 
 Example usage:
 ```bash
-$ git tag -a "v0.0.6" -m "Updated hello-world-example text"
-$ git push --follow-tags
+$git tag -a "v0.0.6" -m "Updated hello-world-example text"$ git push --follow-tags
 ```
 This command creates a Git tag for the commit and pushes it along with any associated tags, ensuring that you can always revert to this exact version of your code.
 x??
@@ -141,7 +139,7 @@ Background context: If you are certain that a lock has been left behind accident
 You can forcibly release an accidentally leftover lock using the `terraform force-unlock <LOCK_ID>` command. This command requires providing the ID of the lock obtained from the error message that indicates the state is locked.
 ```bash
 # Example usage
-$ terraform force-unlock 1234567890abcdef12345678
+$terraform force-unlock 1234567890abcdef12345678
 ```
 x??
 
@@ -176,8 +174,7 @@ Background context: In case a deployment fails and internet connectivity is rest
 ??x
 You can use the `terraform state push` command with the path to your state file after successfully restoring internet connectivity. For example, if you have an errored state file named `errored.tfstate`, you would execute:
 
-```bash
-$ terraform state push errored.tfstate
+```bash$ terraform state push errored.tfstate
 ```
 This ensures that your state information is not lost and can be used in future deployments.
 x??

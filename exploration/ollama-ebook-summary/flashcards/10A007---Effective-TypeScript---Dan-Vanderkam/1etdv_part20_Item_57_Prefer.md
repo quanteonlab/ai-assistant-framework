@@ -185,7 +185,7 @@ Background context on how to use `PgTyped` to generate types from SQL queries in
 
 :p How does one configure and run `PgTyped` for generating types?
 ??x
-One configures `PgTyped` by creating a configuration file (e.g., `pgtyped.config.json`) that tells the tool how to connect to the database, then runs the command `$ npx pgtyped -c pgtyped.config.json` to generate the types.
+One configures `PgTyped` by creating a configuration file (e.g., `pgtyped.config.json`) that tells the tool how to connect to the database, then runs the command `$npx pgtyped -c pgtyped.config.json` to generate the types.
 x??
 
 ---
@@ -387,7 +387,7 @@ function processShape(shape: Shape) {
             break;
         default:
             const exhaustiveCheck: never = shape;  // Direct assignment to `never`
-            throw new Error(`Missed a case: ${exhaustiveCheck}`);
+            throw new Error(`Missed a case:${exhaustiveCheck}`);
     }
 }
 ```

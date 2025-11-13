@@ -29,11 +29,11 @@ Background context explaining approximation errors and their sources. These aris
 
 :p What is an example of an approximation error?
 ??x
-Approximation errors occur when simplifications are made to mathematical models for computational feasibility. For example, the Taylor series expansion of \( \sin(x) \) is given by:
-\[ \sin(x) = \sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{(2n-1)!} x^{2n-1} \]
+Approximation errors occur when simplifications are made to mathematical models for computational feasibility. For example, the Taylor series expansion of $\sin(x)$ is given by:
+$$\sin(x) = \sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{(2n-1)!} x^{2n-1}$$
+
 However, in practice, it may be approximated as:
-\[ \sin(x) \approx \sum_{n=1}^{N} \frac{(-1)^{n-1}}{(2n-1)!} x^{2n-1} + O\left(\frac{x^{2N+1}}{(2N+1)!}\right) \]
-where \( N \) is the number of terms used, and \( O\left(\frac{x^{2N+1}}{(2N+1)!}\right) \) represents the approximation error. If \( x \) and \( N \) are close in value, this error can be large.
+$$\sin(x) \approx \sum_{n=1}^{N} \frac{(-1)^{n-1}}{(2n-1)!} x^{2n-1} + O\left(\frac{x^{2N+1}}{(2N+1)!}\right)$$where $ N $ is the number of terms used, and $ O\left(\frac{x^{2N+1}}{(2N+1)!}\right)$represents the approximation error. If $ x$and $ N$ are close in value, this error can be large.
 x??
 
 ---
@@ -43,9 +43,8 @@ Background context explaining round-off errors and their origins from finite pre
 
 :p What is an example of a round-off error?
 ??x
-Round-off errors arise due to the limited number of digits used to store floating-point numbers. For instance, if your computer stores only four decimal places, it would represent \( \frac{1}{3} \) as 0.3333 and \( \frac{2}{3} \) as 0.6667. Performing a simple calculation like:
-\[ 2\left(\frac{1}{3}\right) - \frac{2}{3} = 2(0.3333) - 0.6667 = 0.6666 - 0.6667 = -0.0001 \neq 0 \]
-shows that the result is not exactly zero, even though it should be.
+Round-off errors arise due to the limited number of digits used to store floating-point numbers. For instance, if your computer stores only four decimal places, it would represent $\frac{1}{3}$ as 0.3333 and $\frac{2}{3}$ as 0.6667. Performing a simple calculation like:
+$$2\left(\frac{1}{3}\right) - \frac{2}{3} = 2(0.3333) - 0.6667 = 0.6666 - 0.6667 = -0.0001 \neq 0$$shows that the result is not exactly zero, even though it should be.
 x??
 
 ---
@@ -74,8 +73,7 @@ An analytical approach to understanding the impact of subtractive cancelation on
 ??x
 Subtractive cancelation affects the accuracy by introducing significant errors when two nearly equal numbers are subtracted. This is because the least significant parts of both numbers contribute most to the error, which can be magnified if the operands are large.
 The formula provided in the text shows how the relative error in the result increases with:
-\[ \text{error} = 1 + \frac{\epsilon_b - \epsilon_c}{b/a} \]
-where \( \epsilon_b \) and \( \epsilon_c \) are the relative errors of b and c, respectively.
+$$\text{error} = 1 + \frac{\epsilon_b - \epsilon_c}{b/a}$$where $\epsilon_b $ and$\epsilon_c$ are the relative errors of b and c, respectively.
 x??
 
 ---
@@ -85,9 +83,8 @@ Exploring how subtractive cancelation affects solutions to quadratic equations.
 
 :p How can subtractive cancelation affect the solutions to a quadratic equation?
 ??x
-Subtractive cancelation in solving quadratic equations occurs when \(b^2 \gg 4ac\). The standard form of the solution:
-\[ x_{1,2} = -\frac{b \pm \sqrt{b^2 - 4ac}}{2a} \]
-can lead to large relative errors if \(b\) is much larger than both \(2a\sqrt{c}\) and \(2a\sqrt{c}\), causing the square root term to nearly cancel with the linear term.
+Subtractive cancelation in solving quadratic equations occurs when $b^2 \gg 4ac$. The standard form of the solution:
+$$x_{1,2} = -\frac{b \pm \sqrt{b^2 - 4ac}}{2a}$$can lead to large relative errors if $ b $ is much larger than both $2a\sqrt{c}$ and $2a\sqrt{c}$, causing the square root term to nearly cancel with the linear term.
 This can be demonstrated by:
 ```java
 public class QuadraticEquation {
@@ -115,7 +112,8 @@ Exploring the effect of subtractive cancelation in series summation, particularl
 :p How does subtractive cancelation affect the summation of a series with alternating signs?
 ??x
 Subtractive cancelation can significantly impact the accuracy of summing a series with alternating signs. For example, consider:
-\[ S = \sum_{n=1}^{2N} (-1)^n \frac{n}{n+1} \]
+$$S = \sum_{n=1}^{2N} (-1)^n \frac{n}{n+1}$$
+
 Summing even and odd terms separately or directly combining the series can mitigate this effect.
 
 In C/Java, this can be demonstrated by:
@@ -155,10 +153,12 @@ Exploring different summation techniques to avoid subtractive cancelation.
 :p How can we avoid the effects of subtractive cancelation in numerical summation?
 ??x
 To avoid subtractive cancelation, one can rearrange or combine series terms. For example:
-\[ S(1) = \sum_{n=1}^{N} (-1)^n n / (n+1) \]
-can be rewritten as:
-\[ S(3) = \sum_{n=1}^{N} 1 / ((2n)(2n+1)) \]
-which avoids the subtraction of nearly equal terms and can provide more accurate results.
+$$
+
+S(1) = \sum_{n=1}^{N} (-1)^n n / (n+1)$$can be rewritten as:
+$$
+
+S(3) = \sum_{n=1}^{N} 1 / ((2n)(2n+1))$$which avoids the subtraction of nearly equal terms and can provide more accurate results.
 
 In C/Java, this can be demonstrated by:
 ```java
@@ -192,10 +192,11 @@ Exploring the numerical issues in summing simple series.
 :p How can we avoid subtractive cancelation when summing a simple series?
 ??x
 To avoid subtractive cancelation, it is important to rearrange or combine terms. For example:
-\[ S_{up} = \sum_{n=1}^{N} 1/n \]
-and
-\[ S_{down} = \sum_{n=N}^{1} 1/n \]
-both give the same analytical result but can have different numerical results due to round-off errors.
+$$
+
+S_{up} = \sum_{n=1}^{N} 1/n$$and$$
+
+S_{down} = \sum_{n=N}^{1} 1/n$$both give the same analytical result but can have different numerical results due to round-off errors.
 
 In C/Java, this can be demonstrated by:
 ```java
@@ -223,19 +224,19 @@ x??
 #### Round-Off Error in Division
 
 Background context explaining how round-off errors arise from division operations. The formula given is:
-\[ c = \frac{a}{b} \Rightarrow ac = bc(1 + \epsilon_b) (c(1 + \epsilon_c)) \]
+$$c = \frac{a}{b} \Rightarrow ac = bc(1 + \epsilon_b) (c(1 + \epsilon_c))$$
 
 This simplifies to:
-\[ a = 1 + \epsilon_b (1 - \epsilon_c) \approx 1 + |\epsilon_b| + |\epsilon_c|. \]
+$$a = 1 + \epsilon_b (1 - \epsilon_c) \approx 1 + |\epsilon_b| + |\epsilon_c|.$$
 
-Here, we have ignored the very small \(\epsilon^2\) terms and added the absolute values of the errors. This same rule applies for multiplication.
+Here, we have ignored the very small $\epsilon^2$ terms and added the absolute values of the errors. This same rule applies for multiplication.
 
 :p How does round-off error propagate in a simple division operation?
 ??x
-The round-off error propagates by adding the absolute values of individual errors in the operands. For example, if we divide \(a\) by \(b\), the error \(\epsilon_a\) in \(a\) and \(\epsilon_b\) in \(b\) combine to give an overall relative error.
+The round-off error propagates by adding the absolute values of individual errors in the operands. For example, if we divide $a $ by$b $, the error $\epsilon_a $ in$a $ and$\epsilon_b $ in$b$ combine to give an overall relative error.
 
 For a division:
-\[ c = \frac{a}{b} \Rightarrow ac \approx bc(1 + \epsilon_b)(1 - \epsilon_c) \approx 1 + |\epsilon_b| + |\epsilon_c|. \]
+$$c = \frac{a}{b} \Rightarrow ac \approx bc(1 + \epsilon_b)(1 - \epsilon_c) \approx 1 + |\epsilon_b| + |\epsilon_c|.$$
 
 This means the total relative error is approximately the sum of individual errors.
 x??
@@ -244,26 +245,25 @@ x??
 
 #### General Model for Error Propagation in Functions
 
-The text extends the basic rule to functions \(f(x)\). The key formula given is:
-\[ \Delta f = f(x) - f(x_c) \approx \frac{df}{dx} f(x_c)(x - x_c) \]
+The text extends the basic rule to functions $f(x)$. The key formula given is:
+$$\Delta f = f(x) - f(x_c) \approx \frac{df}{dx} f(x_c)(x - x_c)$$
 
 Specifically, for the function:
-\[ f(x) = \sqrt{1 + x}, \quad \frac{df}{dx} = \frac{1}{2\sqrt{1 + x}}. \]
+$$f(x) = \sqrt{1 + x}, \quad \frac{df}{dx} = \frac{1}{2\sqrt{1 + x}}.$$
 
 This leads to an approximation of the error:
-\[ \Delta f \approx \frac{1}{2\sqrt{1 + x_c}} (x - x_c) = \frac{x - x_c}{2(1 + x)}. \]
+$$\Delta f \approx \frac{1}{2\sqrt{1 + x_c}} (x - x_c) = \frac{x - x_c}{2(1 + x)}.$$
 
-If we evaluate this expression for \(x = \pi/4\) and assume an error in the fourth place, a similar relative error of about \(1.5 \times 10^{-4}\) is obtained.
+If we evaluate this expression for $x = \pi/4 $ and assume an error in the fourth place, a similar relative error of about$1.5 \times 10^{-4}$ is obtained.
 
 :p How does the general model estimate the error in evaluating a function?
 ??x
-The general model estimates the error in evaluating a function by approximating the change in the function value due to small changes in the input. For a function \(f(x)\), the error \(\Delta f\) can be estimated using the derivative of the function:
-\[ \Delta f \approx \frac{df}{dx} f(x_c)(x - x_c). \]
+The general model estimates the error in evaluating a function by approximating the change in the function value due to small changes in the input. For a function $f(x)$, the error $\Delta f $ can be estimated using the derivative of the function:
+$$\Delta f \approx \frac{df}{dx} f(x_c)(x - x_c).$$
 
-For example, for \(f(x) = \sqrt{1 + x}\):
-\[ \frac{df}{dx} = \frac{1}{2\sqrt{1 + x}}, \]
-and the error approximation is:
-\[ \Delta f \approx \frac{x - x_c}{2(1 + x)}. \]
+For example, for $f(x) = \sqrt{1 + x}$:
+$$\frac{df}{dx} = \frac{1}{2\sqrt{1 + x}},$$and the error approximation is:
+$$\Delta f \approx \frac{x - x_c}{2(1 + x)}.$$
 
 This method helps in understanding how small changes in input values affect the function's output.
 x??
@@ -275,18 +275,19 @@ x??
 The text provides a useful model for approximating how round-off errors accumulate over multiple steps of a calculation. It uses the analogy of a random walk to describe the error propagation.
 
 The key formula given is:
-\[ R \approx \sqrt{N} \epsilon_m, \]
-where \(R\) is the total relative error after \(N\) steps and \(\epsilon_m\) is the machine precision error per step.
+$$
+
+R \approx \sqrt{N} \epsilon_m,$$where $ R $ is the total relative error after $ N $ steps and $\epsilon_m$ is the machine precision error per step.
 
 :p How does round-off error accumulate over multiple steps in a calculation?
 ??x
-Round-off errors accumulate over multiple steps of a calculation by following a random walk model. Each step introduces an error proportional to the machine precision \(\epsilon_m\). After \(N\) steps, the total relative error can be approximated as:
-\[ \epsilon_{ro} \approx \sqrt{N} \epsilon_m. \]
+Round-off errors accumulate over multiple steps of a calculation by following a random walk model. Each step introduces an error proportional to the machine precision $\epsilon_m $. After $ N$steps, the total relative error can be approximated as:
+$$\epsilon_{ro} \approx \sqrt{N} \epsilon_m.$$
 
 This formula indicates that the overall error increases with the square root of the number of steps.
 
-For example, if a calculation involves 1000 steps and each step introduces an error of \(10^{-6}\), the total relative error would be approximately:
-\[ \epsilon_{ro} \approx \sqrt{1000} \times 10^{-6} \approx 0.032\%. \]
+For example, if a calculation involves 1000 steps and each step introduces an error of $10^{-6}$, the total relative error would be approximately:
+$$\epsilon_{ro} \approx \sqrt{1000} \times 10^{-6} \approx 0.032\%.$$
 
 This shows that even small errors can accumulate significantly over many steps.
 x??
@@ -298,25 +299,22 @@ x??
 The text distinguishes between algorithmic error, which decreases with the number of terms used, and round-off error, which increases due to machine precision limits.
 
 Key formulas given are:
-\[ \epsilon_{app} \approx \alpha N^{-\beta}, \]
-and
-\[ \epsilon_{ro} \approx \sqrt{N} \epsilon_m. \]
+$$\epsilon_{app} \approx \alpha N^{-\beta},$$and$$\epsilon_{ro} \approx \sqrt{N} \epsilon_m.$$
 
 The total error is the sum of these two types:
-\[ \epsilon_{tot} = \epsilon_{app} + \epsilon_{ro}. \]
+$$\epsilon_{tot} = \epsilon_{app} + \epsilon_{ro}.$$
 
-The goal is to find \(N\) such that the algorithmic and round-off errors balance, minimizing the total error.
+The goal is to find $N$ such that the algorithmic and round-off errors balance, minimizing the total error.
 
 :p How do you determine the best number of steps for an algorithm?
 ??x
 To determine the best number of steps for an algorithm, you need to balance the algorithmic error and the round-off error. The general form is:
-\[ \epsilon_{tot} = \alpha N^{-\beta} + \sqrt{N} \epsilon_m. \]
+$$\epsilon_{tot} = \alpha N^{-\beta} + \sqrt{N} \epsilon_m.$$
 
-You want to find \(N\) such that these two errors are comparable. Typically, this involves plotting:
-\[ \log_{10} \left| \frac{A(N) - A(2N)}{A(2N)} \right| \]
-versus \(\log_{10} N\).
+You want to find $N$ such that these two errors are comparable. Typically, this involves plotting:
+$$\log_{10} \left| \frac{A(N) - A(2N)}{A(2N)} \right|$$versus $\log_{10} N$.
 
-If the error decreases rapidly at first but then starts to increase due to round-off errors, you can find the optimal \(N\) where these two errors balance.
+If the error decreases rapidly at first but then starts to increase due to round-off errors, you can find the optimal $N$ where these two errors balance.
 
 For example:
 ```java
@@ -347,41 +345,44 @@ x??
 #### Example Error Calculation
 
 The text provides an example where both types of errors are known:
-\[ \epsilon_{app} \approx \frac{1}{N^2}, \quad \epsilon_{ro} \approx \sqrt{N} \epsilon_m. \]
+$$\epsilon_{app} \approx \frac{1}{N^2}, \quad \epsilon_{ro} \approx \sqrt{N} \epsilon_m.$$
 
 Combining these, the total error is:
-\[ \epsilon_{tot} = \frac{1}{N^2} + \sqrt{N} \epsilon_m. \]
+$$\epsilon_{tot} = \frac{1}{N^2} + \sqrt{N} \epsilon_m.$$
 
-To minimize this total error, solve for \(N\):
-\[ \frac{d \epsilon_{tot}}{dN} = -\frac{2}{N^3} + \frac{1}{2\sqrt{N} \epsilon_m} = 0. \]
+To minimize this total error, solve for $N$:
+$$\frac{d \epsilon_{tot}}{dN} = -\frac{2}{N^3} + \frac{1}{2\sqrt{N} \epsilon_m} = 0.$$
+
 This simplifies to:
-\[ N^{5/2} = 4 \epsilon_m, \]
+$$
 
-For double-precision (\(\epsilon_m \approx 10^{-15}\)):
-\[ N^{5/2} \approx 4 \times 10^{-15}, \]
-giving \(N \approx 10^99\).
+N^{5/2} = 4 \epsilon_m,$$
+
+For double-precision ($\epsilon_m \approx 10^{-15}$):
+$$N^{5/2} \approx 4 \times 10^{-15},$$giving $ N \approx 10^99$.
 
 :p How do you calculate the optimal number of steps for an algorithm when both approximation and round-off errors are known?
 ??x
-To find the optimal number of steps \(N\) when both approximation error and round-off error are known, follow these steps:
+To find the optimal number of steps $N$ when both approximation error and round-off error are known, follow these steps:
 
 Given:
-\[ \epsilon_{app} \approx \frac{1}{N^2}, \quad \epsilon_{ro} \approx \sqrt{N} \epsilon_m. \]
+$$\epsilon_{app} \approx \frac{1}{N^2}, \quad \epsilon_{ro} \approx \sqrt{N} \epsilon_m.$$
 
 The total error is:
-\[ \epsilon_{tot} = \frac{1}{N^2} + \sqrt{N} \epsilon_m. \]
+$$\epsilon_{tot} = \frac{1}{N^2} + \sqrt{N} \epsilon_m.$$
 
-To minimize this, take the derivative with respect to \(N\) and set it to zero:
-\[ \frac{d \epsilon_{tot}}{dN} = -\frac{2}{N^3} + \frac{1}{2 \sqrt{N} \epsilon_m} = 0. \]
+To minimize this, take the derivative with respect to $N$ and set it to zero:
+$$\frac{d \epsilon_{tot}}{dN} = -\frac{2}{N^3} + \frac{1}{2 \sqrt{N} \epsilon_m} = 0.$$
 
 Solving this equation gives:
-\[ N^{5/2} = 4 \epsilon_m. \]
+$$
 
-For double-precision (\(\epsilon_m \approx 10^{-15}\)):
-\[ N^{5/2} \approx 4 \times 10^{-15}, \]
-so \(N \approx 10^99\).
+N^{5/2} = 4 \epsilon_m.$$
 
-Thus, the optimal number of steps is about \(10^99\) to balance both types of errors.
+For double-precision ($\epsilon_m \approx 10^{-15}$):
+$$N^{5/2} \approx 4 \times 10^{-15},$$so $ N \approx 10^99$.
+
+Thus, the optimal number of steps is about $10^99$ to balance both types of errors.
 x?? 
 
 --- 

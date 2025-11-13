@@ -495,16 +495,18 @@ x??
 ---
 
 #### Classical Conditioning Model Overview
-Rescorla and Wagner developed a model to explain classical conditioning, where associative strengths of stimulus components change according to specific formulas. The model includes step-size parameters (\(\alpha_A\), \(\alpha_X\)) that depend on the identities of CS components and the US.
+Rescorla and Wagner developed a model to explain classical conditioning, where associative strengths of stimulus components change according to specific formulas. The model includes step-size parameters ($\alpha_A $, $\alpha_X$) that depend on the identities of CS components and the US.
 :p What is the Rescorla-Wagner model used for?
 ??x
 The Rescorla-Wagner model explains how associative strengths between stimuli and unconditioned stimuli (US) change over successive trials. It uses formulas to describe the changes in associative strength, which are crucial for understanding classical conditioning processes.
 
 The key equations are:
-\[ V_A = \alpha_A Y(R_Y - V_{AX}) \]
-\[ V_X = \alpha_X Y(R_Y - V_{AX}) \]
+$$V_A = \alpha_A Y(R_Y - V_{AX})$$
+$$
 
-Here, \(V_A\) and \(V_X\) represent the associative strengths of stimulus components A and X respectively. The step-size parameters \(\alpha_A\), \(\alpha_X\) depend on the identities of CS components and the US (Y). \(R_Y\) is the asymptotic level of associative strength that the US can support.
+V_X = \alpha_X Y(R_Y - V_{AX})$$
+
+Here,$V_A $ and$V_X $ represent the associative strengths of stimulus components A and X respectively. The step-size parameters$\alpha_A $, $\alpha_X $ depend on the identities of CS components and the US (Y).$ R_Y$ is the asymptotic level of associative strength that the US can support.
 
 This model accounts for blocking, where adding a new component to an already conditioned compound does not significantly increase its associative strength.
 x??
@@ -512,14 +514,11 @@ x??
 ---
 
 #### Aggregate Associative Strength
-The Rescorla-Wagner model assumes that the aggregate associative strength (\(V_{AX}\)) is equal to the sum of individual associative strengths (\(V_A + V_X\)). This means:
-\[ V_{AX} = V_A + V_X \]
+The Rescorla-Wagner model assumes that the aggregate associative strength ($V_{AX}$) is equal to the sum of individual associative strengths ($ V_A + V_X$). This means:
+$$V_{AX} = V_A + V_X$$:p What does $ V_{AX}$ represent in the Rescorla-Wagner model?
+??x $V_{AX}$ represents the total associative strength between a compound CS (consisting of components A and X) and an unconditioned stimulus (US). It is calculated as the sum of the individual associative strengths ($V_A $ and$V_X$) of each component.
 
-:p What does \(V_{AX}\) represent in the Rescorla-Wagner model?
-??x
-\(V_{AX}\) represents the total associative strength between a compound CS (consisting of components A and X) and an unconditioned stimulus (US). It is calculated as the sum of the individual associative strengths (\(V_A\) and \(V_X\)) of each component.
-
-\[ V_{AX} = V_A + V_X \]
+$$V_{AX} = V_A + V_X$$
 
 This concept is crucial for understanding how multiple stimuli are combined in classical conditioning.
 x??
@@ -527,25 +526,25 @@ x??
 ---
 
 #### Response Generation Mechanism
-The Rescorla-Wagner model assumes that larger values of associative strength (\(V_s\)) lead to stronger or more likely conditioned responses (CRs). Negative values indicate no CR. The response generation mechanism can be thought of as mapping \(V_s\) to CRs, but the exact mapping depends on experimental details.
+The Rescorla-Wagner model assumes that larger values of associative strength ($V_s $) lead to stronger or more likely conditioned responses (CRs). Negative values indicate no CR. The response generation mechanism can be thought of as mapping $ V_s$ to CRs, but the exact mapping depends on experimental details.
 :p How does the Rescorla-Wagner model map associative strengths to CRs?
 ??x
-The Rescorla-Wagner model maps higher values of associative strength (\(V_s\)) to stronger or more likely conditioned responses (CRs). Conversely, negative values of \(V_s\) mean that there will be no CR.
+The Rescorla-Wagner model maps higher values of associative strength ($V_s $) to stronger or more likely conditioned responses (CRs). Conversely, negative values of $ V_s$ mean that there will be no CR.
 
-This mapping is context-dependent and not explicitly defined in the model. Instead, it assumes a general principle: larger \(V_s\) leads to stronger or more likely CRs.
+This mapping is context-dependent and not explicitly defined in the model. Instead, it assumes a general principle: larger $V_s$ leads to stronger or more likely CRs.
 x??
 
 ---
 
 #### Blocking Phenomenon
-Blocking occurs when adding a new component to an already conditioned compound CS produces little or no increase in associative strength because the error (\(R_Y - V_{AX}\)) has already been reduced. The US is predicted nearly perfectly, so introducing a new CS does not significantly change the prediction.
+Blocking occurs when adding a new component to an already conditioned compound CS produces little or no increase in associative strength because the error ($R_Y - V_{AX}$) has already been reduced. The US is predicted nearly perfectly, so introducing a new CS does not significantly change the prediction.
 :p What causes blocking according to the Rescorla-Wagner model?
 ??x
-Blocking occurs when adding a new component to an already conditioned compound CS produces little or no increase in associative strength because the error (\(R_Y - V_{AX}\)) has been reduced. The US is predicted nearly perfectly, so introducing a new CS does not significantly change the prediction.
+Blocking occurs when adding a new component to an already conditioned compound CS produces little or no increase in associative strength because the error ($R_Y - V_{AX}$) has been reduced. The US is predicted nearly perfectly, so introducing a new CS does not significantly change the prediction.
 
 In mathematical terms:
-- As long as \(V_{AX} < R_Y\), the prediction error is positive.
-- Over successive trials, associative strengths increase until \(V_{AX} = R_Y\).
+- As long as $V_{AX} < R_Y$, the prediction error is positive.
+- Over successive trials, associative strengths increase until $V_{AX} = R_Y$.
 - When adding a new component to an already conditioned compound, the error is close to zero, so no significant increase in associative strength occurs.
 
 This mechanism explains why prior learning can block the acquisition of responses to new components.
@@ -557,11 +556,11 @@ x??
 To transition from Rescorla-Wagner's model to the Temporal Difference (TD) model, we need to recast their model using linear function approximation. The key idea is that classical conditioning can be viewed as predicting the "magnitude of the US" based on the CS presented.
 :p How does the Rescorla-Wagner model relate to the TD model?
 ??x
-The Rescorla-Wagner model and the Temporal Difference (TD) model are closely related in their approach to understanding classical conditioning. The TD model uses linear function approximation, where the associative strengths \(w\) can be seen as predicting the magnitude of the US.
+The Rescorla-Wagner model and the Temporal Difference (TD) model are closely related in their approach to understanding classical conditioning. The TD model uses linear function approximation, where the associative strengths $w$ can be seen as predicting the magnitude of the US.
 
 In the context of state transitions:
-- A trial-type or state \(s\) is described by a feature vector \(x(s)\).
-- The aggregate associative strength for state \(s\) is given by \( \hat{v}(s, w) = w^T x(s) \).
+- A trial-type or state $s $ is described by a feature vector$x(s)$.
+- The aggregate associative strength for state $s $ is given by$\hat{v}(s, w) = w^T x(s)$.
 
 This transition helps in understanding how classical conditioning can be generalized using machine learning concepts.
 
@@ -571,26 +570,26 @@ x??
 ---
 
 #### State Representation
-In the Rescorla-Wagner model, each trial type or state \(s\) is represented by a feature vector \(x(s)\), where:
-\[ x_i(s) = \begin{cases} 
+In the Rescorla-Wagner model, each trial type or state $s $ is represented by a feature vector$x(s)$, where:
+$$x_i(s) = \begin{cases} 
 1 & \text{if CS } i \text{ is present on the trial} \\
 0 & \text{otherwise}
-\end{cases} \]
+\end{cases}$$
 
-The associative strengths are stored in a vector \(w\) of dimension \(d\), and the aggregate strength for state \(s\) is calculated as:
-\[ \hat{v}(s, w) = w^T x(s) \]
+The associative strengths are stored in a vector $w $ of dimension$d $, and the aggregate strength for state$ s$is calculated as:
+$$\hat{v}(s, w) = w^T x(s)$$
 
 This representation allows us to generalize the model across different states.
 :p How does the Rescorla-Wagner model represent each trial in terms of CS components?
 ??x
-Each trial type or state \(s\) is represented by a feature vector \(x(s)\), where:
-\[ x_i(s) = \begin{cases} 
+Each trial type or state $s $ is represented by a feature vector$x(s)$, where:
+$$x_i(s) = \begin{cases} 
 1 & \text{if CS } i \text{ is present on the trial} \\
 0 & \text{otherwise}
-\end{cases} \]
+\end{cases}$$
 
-This means that for each component of the compound CS, the feature vector \(x(s)\) contains a 1 if the CS is present and a 0 otherwise. The associative strengths are stored in a vector \(w\) of dimension \(d\), where:
-\[ \hat{v}(s, w) = w^T x(s) \]
+This means that for each component of the compound CS, the feature vector $x(s)$ contains a 1 if the CS is present and a 0 otherwise. The associative strengths are stored in a vector $ w $ of dimension $d$, where:
+$$\hat{v}(s, w) = w^T x(s)$$
 
 This representation allows us to calculate the aggregate associative strength for any given trial state.
 x??
@@ -601,10 +600,7 @@ x??
 Background context: The Rescorla–Wagner model is a significant mechanism for explaining classical conditioning and associative learning. It describes how animals update their expectations based on the prediction error, which can be viewed as an error-correction supervised learning rule similar to the Least Mean Square (LMS) or Widrow-Hoără algorithm.
 
 Formula: 
-- Temporal change in associative strength \( w_{t+1} = w_t + \alpha t x(S_t) \)
-- Prediction error \( \delta_t = R_t - \hat{v}(S_t, w_t) \)
-
-:p What is the Rescorla–Wagner model?
+- Temporal change in associative strength $w_{t+1} = w_t + \alpha t x(S_t)$- Prediction error $\delta_t = R_t - \hat{v}(S_t, w_t)$:p What is the Rescorla–Wagner model?
 ??x
 The Rescorla–Wagner model is a computational framework that explains how associative strengths are updated based on prediction errors in classical conditioning. It uses a simple mechanism to adjust the strength of stimulus associations by comparing actual outcomes with expected ones.
 x??
@@ -612,28 +608,27 @@ x??
 ---
 
 #### Temporal Update and Prediction Error
-Background context: In the Rescorla–Wagner model, the state \( S_t \) at trial \( t \) influences the associative strength update through a function \( x(S_t) \), which is used to adjust only those components of the associative strengths that are present during the current trial.
+Background context: In the Rescorla–Wagner model, the state $S_t $ at trial$t $ influences the associative strength update through a function$x(S_t)$, which is used to adjust only those components of the associative strengths that are present during the current trial.
 
 Formula:
-- Update rule: \( w_{t+1} = w_t + \alpha t x(S_t) \)
-- Prediction error: \( \delta_t = R_t - \hat{v}(S_t, w_t) \)
+- Update rule: $w_{t+1} = w_t + \alpha t x(S_t)$- Prediction error:$\delta_t = R_t - \hat{v}(S_t, w_t)$
 
 :p What is the function of the prediction error in the Rescorla–Wagner model?
 ??x
-The prediction error (\( \delta_t \)) serves as a measure of surprise or discrepancy between the actual outcome \( R_t \) and the expected outcome given by the current associative strengths (\( \hat{v}(S_t, w_t) \)). This value guides the update in associative strength.
+The prediction error ($\delta_t $) serves as a measure of surprise or discrepancy between the actual outcome $ R_t $and the expected outcome given by the current associative strengths ($\hat{v}(S_t, w_t)$). This value guides the update in associative strength.
 x??
 
 ---
 
 #### Update Mechanism
-Background context: The model updates the associative strength vector \( w_t \) to \( w_{t+1} \) based on a step-size parameter \( \alpha \), prediction error \( \delta_t \), and an input function \( x(S_t) \) that selects which associations are updated during each trial.
+Background context: The model updates the associative strength vector $w_t $ to$w_{t+1}$ based on a step-size parameter $\alpha$, prediction error $\delta_t $, and an input function $ x(S_t)$ that selects which associations are updated during each trial.
 
 Formula:
-- Update rule: \( w_{t+1} = w_t + \alpha t x(S_t) \)
+- Update rule: $w_{t+1} = w_t + \alpha t x(S_t)$
 
 :p How is the associative strength vector updated in the Rescorla–Wagner model?
 ??x
-The associative strength vector is updated by adding a value proportional to the prediction error (\( \delta_t \)) and the input function \( x(S_t) \), scaled by the step-size parameter \( \alpha \). This means only those components of the associative strengths that are present during the current trial \( S_t \) are adjusted.
+The associative strength vector is updated by adding a value proportional to the prediction error ($\delta_t $) and the input function $ x(S_t)$, scaled by the step-size parameter $\alpha $. This means only those components of the associative strengths that are present during the current trial $ S_t$ are adjusted.
 x??
 
 ---
@@ -642,7 +637,7 @@ x??
 Background context: The Rescorla–Wagner model provides a mechanism to explain blocking, where previously learned associations can interfere with new learning if they share common elements.
 
 Formula:
-- Update rule: \( w_{t+1} = w_t + \alpha t x(S_t) \)
+- Update rule: $w_{t+1} = w_t + \alpha t x(S_t)$
 
 :p How does the Rescorla–Wagner model account for blocking in classical conditioning?
 ??x
@@ -655,11 +650,11 @@ x??
 Background context: The Rescorla–Wagner model is conceptually similar to the LMS learning rule used in machine learning for curve-fitting or regression tasks. Both adjust parameters based on prediction errors.
 
 Formula:
-- LMS update: \( w_{t+1} = w_t + \alpha t x(S_t) \)
+- LMS update: $w_{t+1} = w_t + \alpha t x(S_t)$
 
 :p How does the Rescorla–Wagner model relate to the Least Mean Square (LMS) learning rule?
 ??x
-The Rescorla–Wagner model and the LMS learning rule share a similar structure where both adjust parameters based on prediction errors. However, in the LMS rule, the step-size parameter \( \alpha \) is constant and not stimulus-dependent, whereas in the Rescorla–Wagner model, it may vary with the input vector.
+The Rescorla–Wagner model and the LMS learning rule share a similar structure where both adjust parameters based on prediction errors. However, in the LMS rule, the step-size parameter $\alpha$ is constant and not stimulus-dependent, whereas in the Rescorla–Wagner model, it may vary with the input vector.
 x??
 
 ---
@@ -679,7 +674,7 @@ In the TD model, time steps are used to represent individual states within or be
 
 :p How does the TD model represent time steps differently from the Rescorla–Wagner model?
 ??x
-The TD model represents each step \( t \) as a state, rather than an entire trial. Each state corresponds to details of how stimuli are represented at that specific time point. This allows for more detailed analysis of stimulus presentations and their associative strengths within a trial.
+The TD model represents each step $t$ as a state, rather than an entire trial. Each state corresponds to details of how stimuli are represented at that specific time point. This allows for more detailed analysis of stimulus presentations and their associative strengths within a trial.
 
 For example:
 ```java
@@ -698,16 +693,15 @@ x??
 ---
 
 #### TD Error Calculation
-The TD error (\( \delta_t \)) in the TD model is crucial for updating associative strengths. It combines future prediction targets with current predictions.
+The TD error ($\delta_t$) in the TD model is crucial for updating associative strengths. It combines future prediction targets with current predictions.
 
-:p What is the formula for calculating the TD error \( \delta_t \) in the TD model?
+:p What is the formula for calculating the TD error $\delta_t$ in the TD model?
 ??x
-The TD error \( \delta_t \) in the TD model is calculated as:
-\[ \delta_t = R_{t+1} + \alpha \hat{v}(S_{t+1}, w^t) - \hat{v}(S_t, w^t) \]
-where:
-- \( R_{t+1} \) is the prediction target at time \( t+1 \),
-- \( \alpha \) is the discount factor (between 0 and 1),
-- \( \hat{v}(S_{t+1}, w^t) \) and \( \hat{v}(S_t, w^t) \) are the aggregate associative strengths at times \( t+1 \) and \( t \), respectively.
+The TD error $\delta_t$ in the TD model is calculated as:
+$$\delta_t = R_{t+1} + \alpha \hat{v}(S_{t+1}, w^t) - \hat{v}(S_t, w^t)$$where:
+- $R_{t+1}$ is the prediction target at time $t+1$,
+- $\alpha$ is the discount factor (between 0 and 1),
+- $\hat{v}(S_{t+1}, w^t)$ and $\hat{v}(S_t, w^t)$ are the aggregate associative strengths at times $ t+1 $ and $t$, respectively.
 
 This formula captures the difference between the predicted value and the actual reward, adjusted by a discount factor.
 x??
@@ -715,16 +709,15 @@ x??
 ---
 
 #### Eligibility Traces in TD Model
-Eligibility traces (\( z_t \)) are vectors used to update associative strengths. They track how stimuli influence learning over time intervals.
+Eligibility traces ($z_t$) are vectors used to update associative strengths. They track how stimuli influence learning over time intervals.
 
 :p How are eligibility traces updated in the TD model?
 ??x
-Eligibility traces \( z_t \) are updated according to:
-\[ z_{t+1} = \delta_t + \epsilon z_t + x(S_t) \]
-where:
-- \( \delta_t \) is the TD error,
-- \( \epsilon \) is the eligibility trace decay parameter, and
-- \( x(S_t) \) is the feature vector of state \( S_t \).
+Eligibility traces $z_t$ are updated according to:
+$$z_{t+1} = \delta_t + \epsilon z_t + x(S_t)$$where:
+- $\delta_t$ is the TD error,
+- $\epsilon$ is the eligibility trace decay parameter, and
+- $x(S_t)$ is the feature vector of state $S_t$.
 
 This update allows for persistent representations of stimuli that can influence learning over time intervals.
 
@@ -751,16 +744,15 @@ x??
 ---
 
 #### Associative Strength Update in TD Model
-The associative strength vector \( w \) is updated using the TD error and eligibility traces.
+The associative strength vector $w$ is updated using the TD error and eligibility traces.
 
-:p How does the associative strength vector \( w \) get updated in the TD model?
+:p How does the associative strength vector $w$ get updated in the TD model?
 ??x
-The associative strength vector \( w \) is updated according to:
-\[ w^{t+1} = w^t + \alpha \delta_t z_t \]
-where:
-- \( \delta_t \) is the TD error,
-- \( z_t \) is the eligibility trace vector, and
-- \( \alpha \) is the learning rate.
+The associative strength vector $w$ is updated according to:
+$$w^{t+1} = w^t + \alpha \delta_t z_t$$where:
+- $\delta_t$ is the TD error,
+- $z_t$ is the eligibility trace vector, and
+- $\alpha$ is the learning rate.
 
 This update rule incorporates the influence of the TD error on the associative strength over time intervals.
 
@@ -837,7 +829,7 @@ Background context: The text describes how the Temporal Difference (TD) model of
 ??x
 In this scenario, the TD model reduces to the Rescorla–Wagner model with a few key distinctions:
 1. The meaning of `t` differs: In the Rescorla–Wagner model, `t` represents a trial number, whereas in the TD model, it denotes a time step.
-2. The prediction target \( R_t \) in the TD model has a one-time-step lead over its counterpart in the Rescorla–Wagner model.
+2. The prediction target $R_t$ in the TD model has a one-time-step lead over its counterpart in the Rescorla–Wagner model.
 
 The core of this distinction lies in how the models handle the timing and interpretation of variables during learning processes.
 
@@ -1108,7 +1100,7 @@ In higher-order conditioning, the TD model updates associative strengths based o
 - CSB is trained to predict a US, increasing its strength.
 - CSA pairs with CSB without the US present, acquiring its own associative strength due to its predictive relationship with CSB.
 
-The key update occurs because of the formula: \( \Delta w = \alpha [v(S_{t+1}, w_t) - v(S_t, w_t)] \), where the difference between predicted future state values drives learning updates. This temporal difference (TD error) is similar to receiving a US, allowing the model to simulate higher-order conditioning without direct reinforcement.
+The key update occurs because of the formula:$\Delta w = \alpha [v(S_{t+1}, w_t) - v(S_t, w_t)]$, where the difference between predicted future state values drives learning updates. This temporal difference (TD error) is similar to receiving a US, allowing the model to simulate higher-order conditioning without direct reinforcement.
 
 ```java
 public class HigherOrderConditioning {
@@ -1136,9 +1128,9 @@ Background context: In higher-order conditioning, extinction occurs for the seco
 
 :p How does the TD model explain extinction in higher-order conditioning?
 ??x
-The TD model explains extinction through the temporal difference error: \( \Delta w = \alpha [v(S_{t+1}, w_t) - v(S_t, w_t)] \). As CSB's associative strength decreases because it no longer predicts the US, this decrease propagates to CSA, reducing its own associative strength.
+The TD model explains extinction through the temporal difference error: $\Delta w = \alpha [v(S_{t+1}, w_t) - v(S_t, w_t)]$. As CSB's associative strength decreases because it no longer predicts the US, this decrease propagates to CSA, reducing its own associative strength.
 
-This process mimics animal experiments where extinction trials disrupt the predictive relationship between a secondary reinforcer and the primary reinforcement (US), leading to decreased conditioned responses. The TD model captures this by updating \( \hat{v}(S_t, w_t) \) based on its predictions of future states, aligning with experimental observations.
+This process mimics animal experiments where extinction trials disrupt the predictive relationship between a secondary reinforcer and the primary reinforcement (US), leading to decreased conditioned responses. The TD model captures this by updating $\hat{v}(S_t, w_t)$ based on its predictions of future states, aligning with experimental observations.
 
 ```java
 public class Extinction {
@@ -1154,7 +1146,7 @@ public class Extinction {
     private void setV_CS_t(double v) { this.v = v; }
 }
 ```
-Here, \( \hat{v}(S_{t+1}, w_t) - \hat{v}(S_t, w_t) \) drives the update when CSB's strength drops below a threshold. This reduction in CSB’s strength directly impacts CSA, illustrating how the model handles extinction.
+Here, $\hat{v}(S_{t+1}, w_t) - \hat{v}(S_t, w_t)$ drives the update when CSB's strength drops below a threshold. This reduction in CSB’s strength directly impacts CSA, illustrating how the model handles extinction.
 
 x??
 
@@ -1162,11 +1154,11 @@ x??
 
 #### Temporal Difference (TD) Error and Its Role
 
-Background context: The TD error \( \Delta w = \alpha [v(S_{t+1}, w_t) - v(S_t, w_t)] \) plays a crucial role in the model’s ability to simulate higher-order conditioning. It reflects the difference between predicted future state values and current state values.
+Background context: The TD error $\Delta w = \alpha [v(S_{t+1}, w_t) - v(S_t, w_t)]$ plays a crucial role in the model’s ability to simulate higher-order conditioning. It reflects the difference between predicted future state values and current state values.
 
 :p What does the TD error signify in this context?
 ??x
-The TD error signifies the discrepancy between the predicted value of the next state \( \hat{v}(S_{t+1}, w_t) \) and the actual observed value \( v(S_t, w_t) \). In higher-order conditioning experiments, it effectively simulates the occurrence of a US by updating associative strengths based on predictive relationships.
+The TD error signifies the discrepancy between the predicted value of the next state $\hat{v}(S_{t+1}, w_t)$ and the actual observed value $v(S_t, w_t)$. In higher-order conditioning experiments, it effectively simulates the occurrence of a US by updating associative strengths based on predictive relationships.
 
 For instance:
 - If CSB has learned to predict the US with high strength (vCSB), then its prediction error when the US fails to occur will decrease its value.

@@ -12,7 +12,7 @@ Background context explaining how data is transferred between CPU and GPU using 
 ??x
 The formula for calculating theoretical PCI bandwidth involves multiplying the number of lanes by the transfer rate per lane (in gigatransfers per second or GT/s) and then applying an overhead factor to convert to gigabytes per second (GB/s). The formula can be expressed as:
 
-\[ \text{Theoretical Bandwidth (GB/s)} = (\text{Number of Lanes}) \times (\text{Transfer Rate (GT/s)}) \times (\text{Overhead Factor}) \times \frac{\text{Byte}}{\text{Bit (8)}} \]
+$$\text{Theoretical Bandwidth (GB/s)} = (\text{Number of Lanes}) \times (\text{Transfer Rate (GT/s)}) \times (\text{Overhead Factor}) \times \frac{\text{Byte}}{\text{Bit (8)}}$$
 
 For a Gen3 x16 PCI system, with 16 lanes and an 8 GT/s transfer rate, the overhead factor is typically around 0.985.
 
@@ -90,7 +90,7 @@ Explanation of how bandwidth is calculated from the time it takes to copy an arr
 
 :p How is the achieved bandwidth calculated in the micro-benchmark?
 ??x
-The achieved bandwidth is calculated by dividing the number of bytes transferred (which depends on the data type) by the total time taken for multiple transfers. Specifically, if `N` elements are copied and each element has 4 bytes (as they are floats), then the number of bytes (`byte_size`) is \(4 \times N\). The average transfer time over 1,000 trials is used to compute the bandwidth.
+The achieved bandwidth is calculated by dividing the number of bytes transferred (which depends on the data type) by the total time taken for multiple transfers. Specifically, if `N` elements are copied and each element has 4 bytes (as they are floats), then the number of bytes (`byte_size`) is $4 \times N$. The average transfer time over 1,000 trials is used to compute the bandwidth.
 
 ```c
 for(int j=0; j<n_experiments; j++) {
@@ -104,10 +104,10 @@ for(int j=0; j<n_experiments; j++) {
 }
 ```
 
-Here, `byte_size` is calculated as \(4 \times \text{array\_size}\), and the bandwidth in gigabytes per second (GB/s) is computed by dividing this value by the total time taken (`copy_time`) and converting to gigabytes.
+Here, `byte_size` is calculated as $4 \times \text{array\_size}$, and the bandwidth in gigabytes per second (GB/s) is computed by dividing this value by the total time taken (`copy_time`) and converting to gigabytes.
 
 ??x
-The code calculates the achieved bandwidth for different array sizes, where `byte_size` accounts for the number of bytes transferred, and `copy_time` records the average transfer time. The bandwidth is then calculated as \( \frac{\text{byte\_size}}{\text{time (in seconds)}} \).
+The code calculates the achieved bandwidth for different array sizes, where `byte_size` accounts for the number of bytes transferred, and `copy_time` records the average transfer time. The bandwidth is then calculated as $\frac{\text{byte\_size}}{\text{time (in seconds)}}$.
 
 ```c
 double byte_size = 4.0 * array_size;

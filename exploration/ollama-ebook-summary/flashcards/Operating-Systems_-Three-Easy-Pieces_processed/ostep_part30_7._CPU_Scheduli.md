@@ -33,16 +33,16 @@ x??
 Background context: To compare different scheduling policies, we need metrics. One common metric used here is turnaround time (Tturnaround).
 
 Turnaround time formula:
-\[ T_{\text{turnaround}} = T_{\text{completion}} - T_{\text{arrival}} \]
+$$T_{\text{turnaround}} = T_{\text{completion}} - T_{\text{arrival}}$$
 
-Given the assumptions that all jobs arrive at the same time (\( T_{\text{arrival}} = 0 \)), we can simplify this to \( T_{\text{turnaround}} = T_{\text{completion}} \).
+Given the assumptions that all jobs arrive at the same time ($T_{\text{arrival}} = 0 $), we can simplify this to $ T_{\text{turnaround}} = T_{\text{completion}}$.
 
 :p What is the definition of turnaround time in scheduling?
 ??x
 The turnaround time of a job is defined as the time at which the job completes minus the time at which the job arrived in the system. Formally, it can be represented as:
-\[ T_{\text{turnaround}} = T_{\text{completion}} - T_{\text{arrival}} \]
+$$T_{\text{turnaround}} = T_{\text{completion}} - T_{\text{arrival}}$$
 
-Given that all jobs arrive at the same time (initially assumed to be \(0\) for simplicity), this reduces to \( T_{\text{turnaround}} = T_{\text{completion}} \).
+Given that all jobs arrive at the same time (initially assumed to be $0 $ for simplicity), this reduces to$T_{\text{turnaround}} = T_{\text{completion}}$.
 x??
 
 ---
@@ -202,13 +202,10 @@ x??
 Background context: The Shortest Job First (SJF) scheduling algorithm can suffer from the convoy problem, where late-arriving jobs must wait for earlier jobs to complete before they can run. This results in increased average turnaround times and poor performance.
 
 Formula for average turnaround time:
-\[ \text{Average Turnaround Time} = \frac{(100 + (110 - 10) + (120 - 10))}{3} \]
-
-:p What is the average turnaround time for jobs A, B, and C under SJF with late arrivals?
+$$\text{Average Turnaround Time} = \frac{(100 + (110 - 10) + (120 - 10))}{3}$$:p What is the average turnaround time for jobs A, B, and C under SJF with late arrivals?
 ??x
 The average turnaround time is calculated as follows:
-\[ \frac{(100 + (110 - 10) + (120 - 10))}{3} = \frac{100 + 100 + 110}{3} = \frac{310}{3} = 103.33 \text{ seconds} \]
-x??
+$$\frac{(100 + (110 - 10) + (120 - 10))}{3} = \frac{100 + 100 + 110}{3} = \frac{310}{3} = 103.33 \text{ seconds}$$x??
 
 ---
 
@@ -229,9 +226,9 @@ x??
 Background context: With the introduction of time-shared machines, users expect interactive performance. The response time is defined as the time from when a job arrives in the system until it is first scheduled.
 
 Formula for response time:
-\[ T_{\text{response}} = T_{\text{firstrun}} - T_{\text{arrival}} \]
+$$
 
-:p What is the definition of response time?
+T_{\text{response}} = T_{\text{firstrun}} - T_{\text{arrival}}$$:p What is the definition of response time?
 ??x
 Response time is defined as the time from when a job arrives in a system to the first time it is scheduled.
 
@@ -246,7 +243,7 @@ Background context: The example provided shows a comparison between SJF with lat
 :p What is the average turnaround time for jobs under STCF in the given example?
 ??x
 The average turnaround time for jobs A, B, and C under STCF is calculated as follows:
-\[ \frac{(120 - 0) + (20 - 10) + (30 - 10)}{3} = \frac{120 + 10 + 20}{3} = \frac{150}{3} = 50 \text{ seconds} \]
+$$\frac{(120 - 0) + (20 - 10) + (30 - 10)}{3} = \frac{120 + 10 + 20}{3} = \frac{150}{3} = 50 \text{ seconds}$$
 x??
 
 ---

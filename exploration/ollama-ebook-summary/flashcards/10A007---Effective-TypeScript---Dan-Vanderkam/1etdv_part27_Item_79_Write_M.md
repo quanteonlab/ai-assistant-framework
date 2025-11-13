@@ -190,7 +190,7 @@ class Person {
   }
   
   getName(): string {
-    return `${this.first} ${this.last}`;
+    return `${this.first}${this.last}`;
   }
 }
 

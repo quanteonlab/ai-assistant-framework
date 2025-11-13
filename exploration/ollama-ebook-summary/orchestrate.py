@@ -11,6 +11,7 @@ Orchestration CSV Format:
 
 Pipeline Types:
     - ONLYFLASHCARDS: Direct PDF/EPUB to flashcards
+    - CHINESE_FLASHCARDS: Chinese language flashcards with difficulty rating
     - SUMMARIZEDFLASHCARDS: Book summary + flashcard generation (future)
 
 Status Values:
@@ -19,6 +20,7 @@ Status Values:
     - COMPLETED: Successfully processed
     - TIMEOUTCOMPLETED: Timed out but may have partial results (will skip on re-run)
     - COMPLETE_TIMEOUT: Resume from timeout (will continue from last flashcard)
+    - REFILTER: Re-evaluate existing flashcards with new relevancy target
     - ERROR: Failed with error (will skip on re-run)
 
 Usage:
@@ -176,14 +178,14 @@ class BookOrchestrator:
         Find the next row that needs processing.
 
         Skips: COMPLETED, TIMEOUTCOMPLETED, ERROR, PROCESSING
-        Processes: PENDING, COMPLETE_TIMEOUT
+        Processes: PENDING, COMPLETE_TIMEOUT, REFILTER
 
         Returns:
             Index of next pending row, or None if all done
         """
         for idx, row in enumerate(rows):
             status = row.get('status', '').strip().upper()
-            if not status or status == 'PENDING' or status == 'COMPLETE_TIMEOUT':
+            if not status or status == 'PENDING' or status == 'COMPLETE_TIMEOUT' or status == 'REFILTER':
                 return idx
         return None
 
@@ -204,7 +206,7 @@ class BookOrchestrator:
         else:
             print_status("No rows in PROCESSING state found", "INFO")
 
-    def process_book(self, book_filename: str, pipeline_type: str, output_folder: str, relevancy_target: str = None, is_resume: bool = False) -> str:
+    def process_book(self, book_filename: str, pipeline_type: str, output_folder: str, relevancy_target: str = None, is_resume: bool = False, is_refilter: bool = False) -> str:
         """
         Process a single book using the specified pipeline.
 
@@ -214,6 +216,7 @@ class BookOrchestrator:
             output_folder: Output directory for results
             relevancy_target: Target focus for relevancy filtering (e.g., "programming techniques")
             is_resume: Whether this is a resume from timeout (uses resume_flashcards.py)
+            is_refilter: Whether this is a re-filter operation (uses refilter_flashcards.py)
 
         Returns:
             Status string: 'COMPLETED', 'TIMEOUTCOMPLETED', or 'ERROR'
@@ -230,9 +233,23 @@ class BookOrchestrator:
         print_status(f"Output: {output_folder}", "INFO")
         if is_resume:
             print_status(f"Mode: RESUME from timeout", "INFO")
+        if is_refilter:
+            print_status(f"Mode: REFILTER with new relevancy target", "INFO")
 
-        # Build command based on whether this is a resume or fresh start
-        if is_resume:
+        # Build command based on operation type
+        if is_refilter:
+            # Use refilter_flashcards.py to re-evaluate existing flashcards
+            cmd = [
+                sys.executable,
+                str(self.script_dir / "refilter_flashcards.py"),
+                book_filename
+            ]
+            # Relevancy target is required for re-filtering
+            if relevancy_target:
+                cmd.extend(["--relevancy-target", relevancy_target])
+            else:
+                print_status("Warning: Re-filtering without relevancy target", "WARNING")
+        elif is_resume:
             # Use resume_flashcards.py for timeout recovery
             cmd = [
                 sys.executable,
@@ -253,6 +270,15 @@ class BookOrchestrator:
             # Add relevancy target if provided
             if relevancy_target:
                 cmd.extend(["--relevancy-target", relevancy_target])
+        elif pipeline_type == 'CHINESE_FLASHCARDS':
+            cmd = [
+                sys.executable,
+                str(self.script_dir / "chinese_flashcards.py"),
+                str(book_path),
+                "-o", output_folder
+            ]
+            # Chinese flashcards use difficulty rating (threshold default is 6 for advanced learners)
+            # No relevancy target needed for language learning
         elif pipeline_type == 'SUMMARIZEDFLASHCARDS':
             # Future: Add summary pipeline
             print_status("SUMMARIZEDFLASHCARDS pipeline not yet implemented", "ERROR")
@@ -354,6 +380,7 @@ class BookOrchestrator:
             'COMPLETED': 0,
             'TIMEOUTCOMPLETED': 0,
             'COMPLETE_TIMEOUT': 0,
+            'REFILTER': 0,
             'ERROR': 0,
             'PROCESSING': 0
         }
@@ -370,6 +397,7 @@ class BookOrchestrator:
         print(f"Total books: {total_count}")
         print(f"  PENDING: {status_counts.get('PENDING', 0)}")
         print(f"  COMPLETE_TIMEOUT: {status_counts.get('COMPLETE_TIMEOUT', 0)} (will resume from last flashcard)")
+        print(f"  REFILTER: {status_counts.get('REFILTER', 0)} (will re-evaluate existing flashcards)")
         print(f"  COMPLETED: {status_counts.get('COMPLETED', 0)} (will skip)")
         print(f"  TIMEOUTCOMPLETED: {status_counts.get('TIMEOUTCOMPLETED', 0)} (will skip - partial results may exist)")
         print(f"  ERROR: {status_counts.get('ERROR', 0)} (will skip)")
@@ -397,8 +425,9 @@ class BookOrchestrator:
             relevancy_target = row.get('relevancy_target', '')
             current_status = row.get('status', '').strip().upper()
 
-            # Check if this is a resume from timeout
+            # Check if this is a resume from timeout or a refilter operation
             is_resume = current_status == 'COMPLETE_TIMEOUT'
+            is_refilter = current_status == 'REFILTER'
 
             print_header(f"Processing Book {processed_count + 1}/{total_count}")
 
@@ -407,7 +436,7 @@ class BookOrchestrator:
             self.update_row_status(rows, next_idx, 'PROCESSING', started_at=started_at)
 
             # Process the book
-            status = self.process_book(book_filename, pipeline_type, output_folder, relevancy_target, is_resume)
+            status = self.process_book(book_filename, pipeline_type, output_folder, relevancy_target, is_resume, is_refilter)
 
             # Re-read rows (they may have changed during processing)
             rows = self.read_orchestration()
@@ -470,7 +499,7 @@ Examples:
 
 Orchestration CSV Format:
   book_filename: Name of PDF/EPUB file in the 'in/' folder
-  pipeline_type: ONLYFLASHCARDS or SUMMARIZEDFLASHCARDS
+  pipeline_type: ONLYFLASHCARDS, CHINESE_FLASHCARDS, or SUMMARIZEDFLASHCARDS
   status: PENDING, PROCESSING, COMPLETED, TIMEOUTCOMPLETED, or ERROR
   started_at: Timestamp when processing started
   completed_at: Timestamp when processing finished

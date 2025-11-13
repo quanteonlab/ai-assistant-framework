@@ -132,22 +132,28 @@ This section describes how to calculate the theoretical maximum floating-point o
 :p How do we calculate the theoretical FLOPS of a mid-2017 MacBook Pro with an Intel Core i7-7920HQ processor?
 ??x
 To calculate the theoretical FLOPS, we use the formula: 
-\[ \text{FT} = C_v \times f_c \times I_c \]
+$$\text{FT} = C_v \times f_c \times I_c$$
+
 Where:
-- \( C_v \) is the number of virtual cores (considering hyperthreads),
-- \( f_c \) is the clock rate,
-- \( I_c \) is the operations per cycle, including FMA instructions.
+- $C_v$ is the number of virtual cores (considering hyperthreads),
+- $f_c$ is the clock rate,
+- $I_c$ is the operations per cycle, including FMA instructions.
 
 For a dual-core processor with 2 hyperthreads (4 physical cores):
-\[ C_v = Ch \times HT = (4 \text{ physical cores} \times 2 \text{ hyperthreads}) = 8 \]
-The turbo boost clock rate \( f_c \) is 3.7 GHz, and the operations per cycle \( I_c \) can be calculated as:
-\[ I_c = \frac{\text{Vector Width (VW)}}{\text{Word Size (Wbits)}} \times FMA \]
+$$C_v = Ch \times HT = (4 \text{ physical cores} \times 2 \text{ hyperthreads}) = 8$$
+
+The turbo boost clock rate $f_c $ is 3.7 GHz, and the operations per cycle$I_c$ can be calculated as:
+$$I_c = \frac{\text{Vector Width (VW)}}{\text{Word Size (Wbits)}} \times FMA$$
+
 For a 256-bit vector unit with a word size of 64 bits:
-\[ I_c = \left(\frac{256}{64}\right) \times 2 = 8 \]
+$$
+
+I_c = \left(\frac{256}{64}\right) \times 2 = 8$$
 
 Thus, the theoretical maximum flops is:
-\[ FT = (8 \text{ virtual cores}) \times (3.7 \text{ GHz}) \times (8 \text{ Flops/Cycle}) = 236.8 \text{ GFLOPS} \]
-x??
+$$
+
+FT = (8 \text{ virtual cores}) \times (3.7 \text{ GHz}) \times (8 \text{ Flops/Cycle}) = 236.8 \text{ GFLOPS}$$x??
 
 ---
 #### Memory Bandwidth Calculation
@@ -156,20 +162,26 @@ This section explains how to calculate the theoretical memory bandwidth of a sys
 :p How do we calculate the theoretical memory bandwidth for a system with dual-socket motherboards?
 ??x
 To calculate the theoretical memory bandwidth (BT), use the formula:
-\[ BT = MTR \times Mc \times Tw \times Ns \]
+$$
+
+BT = MTR \times Mc \times Tw \times Ns$$
+
 Where:
-- \( MTR \) is the data transfer rate in millions of transfers per second (MT/s),
-- \( Mc \) is the number of memory channels,
-- \( Tw \) is the memory transfer width in bits,
-- \( Ns \) is the number of sockets.
+- $MTR$ is the data transfer rate in millions of transfers per second (MT/s),
+- $Mc$ is the number of memory channels,
+- $Tw$ is the memory transfer width in bits,
+- $Ns$ is the number of sockets.
 
 For a dual-socket motherboard:
-- The memory transfer width \( Tw \) is 64 bits, and since there are 8 bits per byte, 8 bytes are transferred.
-- If DDR memory is used, the data transfer rate (MTR) can be derived from the clock rate. DDR memory performs transfers at both ends of the cycle for two transactions per cycle. This means that if the memory bus clock rate is \( x \text{ MHz} \), the MTR would be \( 2x \).
+- The memory transfer width $Tw$ is 64 bits, and since there are 8 bits per byte, 8 bytes are transferred.
+- If DDR memory is used, the data transfer rate (MTR) can be derived from the clock rate. DDR memory performs transfers at both ends of the cycle for two transactions per cycle. This means that if the memory bus clock rate is $x \text{ MHz}$, the MTR would be $2x$.
 - If there are 4 memory channels and 1 socket:
-\[ BT = (MTR \times Mc \times Tw \times Ns) \]
+$$BT = (MTR \times Mc \times Tw \times Ns)$$
+
 For example, with a transfer rate of 3200 MT/s, 4 memory channels, 64 bits transfer width, and 1 socket:
-\[ BT = (3200 \text{ MT/s} \times 4 \times 8/8 \times 1) = 12800 \text{ MB/s} \]
+$$
+
+BT = (3200 \text{ MT/s} \times 4 \times 8/8 \times 1) = 12800 \text{ MB/s}$$
 
 Thus, the theoretical memory bandwidth for this configuration is 12800 MB/s.
 x??
@@ -183,15 +195,18 @@ This section provides background on how cache hierarchies have evolved to manage
 The memory hierarchy has grown deeper with the addition of multiple levels of cache, designed to bridge the speed gap between processing units and main memory. Modern processors use a multi-level cache system (L1, L2, L3) to store frequently accessed data closer to the CPU cores.
 
 The general formula for calculating theoretical memory bandwidth is:
-\[ BT = MTR \times Mc \times Tw \times Ns \]
+$$
+
+BT = MTR \times Mc \times Tw \times Ns$$
+
 Where:
-- \( MTR \) is the data transfer rate in millions of transfers per second (MT/s),
-- \( Mc \) is the number of memory channels,
-- \( Tw \) is the memory transfer width in bits,
-- \( Ns \) is the number of sockets.
+- $MTR$ is the data transfer rate in millions of transfers per second (MT/s),
+- $Mc$ is the number of memory channels,
+- $Tw$ is the memory transfer width in bits,
+- $Ns$ is the number of sockets.
 
 For example, a system with 3200 MT/s DDR memory, 4 memory channels, and 64-bit transfer width:
-\[ BT = (3200 \text{ MT/s} \times 4 \times 8/8 \times 1) = 12800 \text{ MB/s} \]
+$$BT = (3200 \text{ MT/s} \times 4 \times 8/8 \times 1) = 12800 \text{ MB/s}$$
 
 This evolution helps in improving overall system performance by reducing the latency and increasing the throughput of data access.
 x??
@@ -293,10 +308,7 @@ Background context: The STREAM benchmark includes four variants: copy, scale, ad
 :p What are the four variants in the STREAM Benchmark?
 ??x
 The four variants in the STREAM Benchmark are:
-1. Copy: \(a(i) = b(i)\)
-2. Scale: \(a(i) = q * b(i)\)
-3. Add: \(a(i) = b(i) + c(i)\)
-4. Triad: \(a(i) = b(i) + q * c(i)\)
+1. Copy:$a(i) = b(i)$2. Scale:$ a(i) = q * b(i)$3. Add:$ a(i) = b(i) + c(i)$4. Triad:$ a(i) = b(i) + q * c(i)$
 
 Each variant measures the bandwidth under different conditions of arithmetic operations.
 x??
@@ -493,23 +505,23 @@ x??
 #### Machine Balance Calculation
 Background context: The machine balance is a critical concept that helps understand how efficiently the hardware utilizes its computational power and memory bandwidth. It is calculated by dividing the floating-point operations per second (FLOPs) by the memory bandwidth.
 
-The theoretical machine balance \( MB_T \) can be computed using:
-\[ MB_T = \frac{FT}{BT} = \frac{236.8 \, \text{GFlops/s}}{34.1 \, \text{GiB/s} \times (8 \, \text{bytes/word})} \]
-where \( FT \) is the theoretical peak floating-point operations per second and \( BT \) is the memory bandwidth in GiB/s.
+The theoretical machine balance $MB_T$ can be computed using:
+$$MB_T = \frac{FT}{BT} = \frac{236.8 \, \text{GFlops/s}}{34.1 \, \text{GiB/s} \times (8 \, \text{bytes/word})}$$where $ FT $ is the theoretical peak floating-point operations per second and $ BT$ is the memory bandwidth in GiB/s.
 
 Empirically, it can be calculated using:
-\[ MB_E = \frac{FE}{BE} = \frac{264.4 \, \text{GFlops/s}}{22 \, \text{GiB/s} \times (8 \, \text{bytes/word})} \]
-
-:p How do you calculate the machine balance?
+$$MB_E = \frac{FE}{BE} = \frac{264.4 \, \text{GFlops/s}}{22 \, \text{GiB/s} \times (8 \, \text{bytes/word})}$$:p How do you calculate the machine balance?
 ??x
 The machine balance is calculated by dividing the floating-point operations per second (FLOPs) by the memory bandwidth. It helps determine whether your application is flop-bound or bandwidth-bound.
 
 For theoretical calculation:
-\[ MB_T = \frac{236.8 \, \text{GFlops/s}}{34.1 \times 8 \, \text{GiB/s}} \approx 56 \, \text{Flops/word} \]
+$$
+
+MB_T = \frac{236.8 \, \text{GFlops/s}}{34.1 \times 8 \, \text{GiB/s}} \approx 56 \, \text{Flops/word}$$
 
 For empirical calculation:
-\[ MB_E = \frac{264.4 \, \text{GFlops/s}}{22 \times 8 \, \text{GiB/s}} \approx 96 \, \text{Flops/word} \]
-x??
+$$
+
+MB_E = \frac{264.4 \, \text{GFlops/s}}{22 \times 8 \, \text{GiB/s}} \approx 96 \, \text{Flops/word}$$x??
 
 ---
 #### Roofline Model
@@ -868,20 +880,14 @@ Background context: Calculating energy savings between parallel and serial runs 
 :p How do you calculate the energy savings from a parallel run compared to a serial run?
 ??x
 To calculate the energy savings, use the following formula:
-
-\[
-\text{Energy Savings} = \frac{\text{Energy in Serial Run} - \text{Energy in Parallel Run}}{\text{Energy in Serial Run}}
-\]
+$$\text{Energy Savings} = \frac{\text{Energy in Serial Run} - \text{Energy in Parallel Run}}{\text{Energy in Serial Run}}$$
 
 For example:
 - Serial Energy: 212747.7787
 - Parallel Energy: 151590.4909
 
 The energy savings calculation would be:
-
-\[
-\frac{(212747.7787 - 151590.4909)}{212747.7787} = \frac{61157.2878}{212747.7787} = 0.287
-\]
+$$\frac{(212747.7787 - 151590.4909)}{212747.7787} = \frac{61157.2878}{212747.7787} = 0.287$$
 
 This results in a 28.7% energy savings.
 x??

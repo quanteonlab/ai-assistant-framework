@@ -9,15 +9,14 @@ Critical resolved shear stress is a crucial parameter in understanding dislocati
 
 Background context:
 In metals, dislocation motion plays a significant role in plastic deformation and strengthening. The resolved shear stress (τR) experienced by dislocations along their slip systems is crucial for their motion. For a single crystal stressed in tension with an angle λ between the tensile axis and the slip direction, and an angle φ between the tensile axis and the normal to the slip plane, the resolved shear stress τR can be calculated using Equation 7.2:
-\[ \tau_R = \sigma \cos\phi \cos\lambda \]
+$$\tau_R = \sigma \cos\phi \cos\lambda$$
 
 The critical resolved shear stress (τcrss) is defined as the maximum value of this resolved shear stress that allows dislocations to move. This value is essential because it determines whether plastic deformation will occur.
 
 :p What is the formula for calculating the critical resolved shear stress?
 ??x
 The formula for the critical resolved shear stress, τcrss, is derived from the resolved shear stress (τR) equation:
-\[ \tau_{\text{crss}} = \sigma_y (\cos\phi \cos\lambda)_{\max} \]
-where \( \sigma_y \) is the yield strength of the material. This value represents the minimum stress required for dislocation motion to occur.
+$$\tau_{\text{crss}} = \sigma_y (\cos\phi \cos\lambda)_{\max}$$where $\sigma_y$ is the yield strength of the material. This value represents the minimum stress required for dislocation motion to occur.
 
 x??
 
@@ -25,7 +24,7 @@ x??
 
 #### Grain Growth and Average Grain Size
 Grain growth is an essential process in materials science, particularly after heat treatment or during long-term use under elevated temperatures. The average grain size (d) can be determined using Equation 7.7:
-\[ d = d_0 + K t^{n} \]
+$$d = d_0 + K t^{n}$$
 
 Background context:
 When a metal undergoes grain growth, the average grain size increases over time due to the tendency of smaller grains to grow at the expense of larger ones. The initial average grain size (d0) serves as the starting point for this process.
@@ -35,8 +34,7 @@ The equation includes material constants K and n, where K depends on the diffusi
 :p What is the formula used to calculate the average grain size during grain growth?
 ??x
 The formula for calculating the average grain size (d) during grain growth is given by:
-\[ d = d_0 + K t^{n} \]
-where \( d_0 \) is the initial average grain size, K is a material constant dependent on diffusion rates, t is the time over which grain growth occurs, and n is the grain size exponent.
+$$d = d_0 + K t^{n}$$where $ d_0$ is the initial average grain size, K is a material constant dependent on diffusion rates, t is the time over which grain growth occurs, and n is the grain size exponent.
 
 x??
 
@@ -47,15 +45,12 @@ The Hall-Petch equation describes how the yield strength of metals increases wit
 
 Background context:
 The Hall-Petch equation relates the yield strength (σy) to the average grain size (d):
-\[ \sigma_y = \sigma_0 + k_y d^{-1/2} \]
-
-where \( \sigma_0 \) is a material constant representing the residual stress, and \( k_y \) is another material constant related to the dislocation density.
+$$\sigma_y = \sigma_0 + k_y d^{-1/2}$$where $\sigma_0 $ is a material constant representing the residual stress, and$k_y$ is another material constant related to the dislocation density.
 
 :p What equation describes the relationship between yield strength and grain size?
 ??x
 The Hall-Petch equation describes the relationship between yield strength (σy) and average grain size (d):
-\[ \sigma_y = \sigma_0 + k_y d^{-1/2} \]
-where \( \sigma_0 \) is a material constant representing the residual stress, and \( k_y \) is another material constant related to the dislocation density.
+$$\sigma_y = \sigma_0 + k_y d^{-1/2}$$where $\sigma_0 $ is a material constant representing the residual stress, and$k_y$ is another material constant related to the dislocation density.
 
 x??
 
@@ -66,15 +61,12 @@ Percent cold work quantifies the extent of deformation in materials subjected to
 
 Background context:
 Cold working refers to the process of deforming a material at temperatures below its recrystallization temperature, typically room temperature or lower. The percent cold work (percentCW) can be calculated using Equation 7.8:
-\[ \text{percentCW} = \left( \frac{A_0 - A_d}{A_0} \right) \times 100 \]
-
-where \( A_0 \) is the initial cross-sectional area of the specimen, and \( A_d \) is its cross-sectional area after deformation.
+$$\text{percentCW} = \left( \frac{A_0 - A_d}{A_0} \right) \times 100$$where $ A_0 $ is the initial cross-sectional area of the specimen, and $ A_d$ is its cross-sectional area after deformation.
 
 :p How is percent cold work calculated?
 ??x
 The formula for calculating percent cold work (percentCW) is:
-\[ \text{percentCW} = \left( \frac{A_0 - A_d}{A_0} \right) \times 100 \]
-where \( A_0 \) is the initial cross-sectional area of the specimen, and \( A_d \) is its cross-sectional area after deformation.
+$$\text{percentCW} = \left( \frac{A_0 - A_d}{A_0} \right) \times 100$$where $ A_0 $ is the initial cross-sectional area of the specimen, and $ A_d$ is its cross-sectional area after deformation.
 
 x??
 

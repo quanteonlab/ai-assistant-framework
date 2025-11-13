@@ -5,57 +5,55 @@
 ---
 
 #### Proof Strategy for Inequalities
-Background context explaining how to prove inequalities using algebraic manipulation. The example provided shows a step-by-step approach to proving \( \sqrt{x} \geq \sqrt{y} \) given that \( x \geq y \).
+Background context explaining how to prove inequalities using algebraic manipulation. The example provided shows a step-by-step approach to proving $\sqrt{x} \geq \sqrt{y}$ given that $x \geq y$.
 
-:p How do we prove \( \sqrt{x} \geq \sqrt{y} \) for positive numbers \( x \) and \( y \)?
+:p How do we prove $\sqrt{x} \geq \sqrt{y}$ for positive numbers $ x $ and $y$?
 ??x
-To prove \( \sqrt{x} \geq \sqrt{y} \), start with the given inequality \( x \geq y \). Subtracting \( y \) from both sides, we get \( x - y \geq 0 \).
+To prove $\sqrt{x} \geq \sqrt{y}$, start with the given inequality $ x \geq y$. Subtracting $ y$from both sides, we get $ x - y \geq 0$.
 
 Next, rewrite this expression using algebraic manipulation. Notice that:
-\[ x - y = (\sqrt{x})^2 - (\sqrt{y})^2 = (\sqrt{x} - \sqrt{y})(\sqrt{x} + \sqrt{y}) \]
+$$x - y = (\sqrt{x})^2 - (\sqrt{y})^2 = (\sqrt{x} - \sqrt{y})(\sqrt{x} + \sqrt{y})$$
 
-Since \( x \geq y \), we have \( x - y \geq 0 \). Therefore:
-\[ (\sqrt{x} - \sqrt{y})(\sqrt{x} + \sqrt{y}) \geq 0 \]
+Since $x \geq y $, we have $ x - y \geq 0$. Therefore:
+$$(\sqrt{x} - \sqrt{y})(\sqrt{x} + \sqrt{y}) \geq 0$$
 
-Because both \( \sqrt{x} \) and \( \sqrt{y} \) are positive, \( \sqrt{x} + \sqrt{y} > 0 \). Dividing both sides of the inequality by \( \sqrt{x} + \sqrt{y} \), we get:
-\[ \sqrt{x} - \sqrt{y} \geq 0 \]
+Because both $\sqrt{x}$ and $\sqrt{y}$ are positive,$\sqrt{x} + \sqrt{y} > 0 $. Dividing both sides of the inequality by $\sqrt{x} + \sqrt{y}$, we get:
+$$\sqrt{x} - \sqrt{y} \geq 0$$
 
 This implies:
-\[ \sqrt{x} \geq \sqrt{y} \]
-??x
+$$\sqrt{x} \geq \sqrt{y}$$??x
 
 ---
 
 #### Difference of Squares in Inequalities
-Background context explaining how to use the difference of squares technique when dealing with inequalities. The example provided shows a step-by-step approach to factoring \( x - y = (\sqrt{x})^2 - (\sqrt{y})^2 \).
+Background context explaining how to use the difference of squares technique when dealing with inequalities. The example provided shows a step-by-step approach to factoring $x - y = (\sqrt{x})^2 - (\sqrt{y})^2$.
 
-:p How do we factorize \( x - y \) in the context of proving \( \sqrt{x} \geq \sqrt{y} \)?
+:p How do we factorize $x - y $ in the context of proving$\sqrt{x} \geq \sqrt{y}$?
 ??x
-To factorize \( x - y \), recognize that it can be expressed as a difference of squares:
-\[ x - y = (\sqrt{x})^2 - (\sqrt{y})^2 \]
+To factorize $x - y$, recognize that it can be expressed as a difference of squares:
+$$x - y = (\sqrt{x})^2 - (\sqrt{y})^2$$
 
 Using the algebraic identity for the difference of squares, we get:
-\[ x - y = (\sqrt{x} - \sqrt{y})(\sqrt{x} + \sqrt{y}) \]
+$$x - y = (\sqrt{x} - \sqrt{y})(\sqrt{x} + \sqrt{y})$$
 
-Given that \( x \geq y \), it follows that \( x - y \geq 0 \). Since both \( \sqrt{x} \) and \( \sqrt{y} \) are positive, the term \( \sqrt{x} + \sqrt{y} \) is also positive. Therefore:
-\[ (\sqrt{x} - \sqrt{y})(\sqrt{x} + \sqrt{y}) \geq 0 \]
+Given that $x \geq y $, it follows that $ x - y \geq 0 $. Since both$\sqrt{x}$ and $\sqrt{y}$ are positive, the term $\sqrt{x} + \sqrt{y}$ is also positive. Therefore:
+$$(\sqrt{x} - \sqrt{y})(\sqrt{x} + \sqrt{y}) \geq 0$$
 
-Since \( \sqrt{x} + \sqrt{y} > 0 \), we can divide both sides of the inequality by \( \sqrt{x} + \sqrt{y} \):
-\[ \sqrt{x} - \sqrt{y} \geq 0 \]
+Since $\sqrt{x} + \sqrt{y} > 0 $, we can divide both sides of the inequality by $\sqrt{x} + \sqrt{y}$:
+$$\sqrt{x} - \sqrt{y} \geq 0$$
 
 This implies:
-\[ \sqrt{x} \geq \sqrt{y} \]
-??x
+$$\sqrt{x} \geq \sqrt{y}$$??x
 
 ---
 
 #### AM-GM Inequality
-Background context explaining the Arithmetic Mean-Geometric Mean (AM-GM) inequality. The theorem states that for positive integers \( x \) and \( y \), their arithmetic mean is at least as large as their geometric mean.
+Background context explaining the Arithmetic Mean-Geometric Mean (AM-GM) inequality. The theorem states that for positive integers $x $ and$y$, their arithmetic mean is at least as large as their geometric mean.
 
 :p What does the AM-GM inequality state?
 ??x
-The AM-GM inequality states that for any two positive real numbers \( x \) and \( y \):
-\[ \frac{x + y}{2} \geq \sqrt{xy} \]
+The AM-GM inequality states that for any two positive real numbers $x $ and$y$:
+$$\frac{x + y}{2} \geq \sqrt{xy}$$
 
 This means that the arithmetic mean of two numbers is always greater than or equal to their geometric mean.
 ??x
@@ -63,33 +61,33 @@ This means that the arithmetic mean of two numbers is always greater than or equ
 ---
 
 #### Proof of AM-GM Inequality
-Background context explaining how to prove the AM-GM inequality using algebraic manipulation. The example provided shows a step-by-step approach to proving \( \frac{x + y}{2} \geq \sqrt{xy} \).
+Background context explaining how to prove the AM-GM inequality using algebraic manipulation. The example provided shows a step-by-step approach to proving $\frac{x + y}{2} \geq \sqrt{xy}$.
 
-:p How do we prove the AM-GM inequality for positive numbers \( x \) and \( y \)?
+:p How do we prove the AM-GM inequality for positive numbers $x $ and$y$?
 ??x
-To prove the AM-GM inequality for positive numbers \( x \) and \( y \), start with the expression:
-\[ \frac{x + y}{2} \geq \sqrt{xy} \]
+To prove the AM-GM inequality for positive numbers $x $ and$y$, start with the expression:
+$$\frac{x + y}{2} \geq \sqrt{xy}$$
 
 First, square both sides to eliminate the square root:
-\[ \left( \frac{x + y}{2} \right)^2 \geq xy \]
+$$\left( \frac{x + y}{2} \right)^2 \geq xy$$
 
 Expanding the left-hand side, we get:
-\[ \frac{(x + y)^2}{4} \geq xy \]
+$$\frac{(x + y)^2}{4} \geq xy$$
 
 Multiplying both sides by 4 to clear the fraction:
-\[ (x + y)^2 \geq 4xy \]
+$$(x + y)^2 \geq 4xy$$
 
 Expanding the left-hand side:
-\[ x^2 + 2xy + y^2 \geq 4xy \]
+$$x^2 + 2xy + y^2 \geq 4xy$$
 
 Rearranging terms, we get:
-\[ x^2 - 2xy + y^2 \geq 0 \]
+$$x^2 - 2xy + y^2 \geq 0$$
 
 This can be factored as:
-\[ (x - y)^2 \geq 0 \]
+$$(x - y)^2 \geq 0$$
 
 Since the square of any real number is non-negative, it follows that:
-\[ (x - y)^2 \geq 0 \]
+$$(x - y)^2 \geq 0$$
 
 Thus, we have proved the AM-GM inequality.
 ??x
@@ -108,17 +106,12 @@ x??
 ---
 #### Factoring the Expression
 
-Background context: In the text, the expression \(2\sqrt{xy} \leq x + y\) was transformed step-by-step until it became clear and then reversed to form a valid proof.
+Background context: In the text, the expression $2\sqrt{xy} \leq x + y$ was transformed step-by-step until it became clear and then reversed to form a valid proof.
 
-:p How did the expression \(2\sqrt{xy} \leq x + y\) transform during the scratch work?
+:p How did the expression $2\sqrt{xy} \leq x + y$ transform during the scratch work?
 ??x
 The expression started as:
-1. \(2\sqrt{xy} \leq x + y\)
-2. Squared both sides: \(4xy \leq (x + y)^2\)
-3. Rearranged terms: \(0 \leq x^2 - 2xy + y^2\)
-4. Factored the quadratic expression: \(0 \leq (x - y)^2\)
-
-This final form is true because the square of any real number is non-negative.
+1.$2\sqrt{xy} \leq x + y $2. Squared both sides:$4xy \leq (x + y)^2 $3. Rearranged terms:$0 \leq x^2 - 2xy + y^2 $4. Factored the quadratic expression:$0 \leq (x - y)^2$ This final form is true because the square of any real number is non-negative.
 x??
 
 ---
@@ -134,16 +127,13 @@ x??
 ---
 #### Example of Proof Construction
 
-Background context: The text provides an example where \(0 \leq (x - y)^2\) was used as a known true statement to construct a proof for \(2\sqrt{xy} \leq x + y\).
+Background context: The text provides an example where $0 \leq (x - y)^2 $ was used as a known true statement to construct a proof for$2\sqrt{xy} \leq x + y$.
 
 :p How does the proof start and end in this example?
 ??x
 The proof starts with:
-- \(0 \leq (x - y)^2\)
-And ends with:
-- \(2\sqrt{xy} \leq x + y\)
-
-By reversing the steps, each intermediate step is justified.
+- $0 \leq (x - y)^2$ And ends with:
+- $2\sqrt{xy} \leq x + y$ By reversing the steps, each intermediate step is justified.
 x??
 
 ---
@@ -181,7 +171,7 @@ x??
 ---
 
 #### Perfect Numbers
-Perfect numbers are integers that equal the sum of their proper divisors (excluding the number itself). For example, 6 and 28 are perfect numbers since \(6 = 3 + 2 + 1\) and \(28 = 14 + 7 + 4 + 2 + 1\).
+Perfect numbers are integers that equal the sum of their proper divisors (excluding the number itself). For example, 6 and 28 are perfect numbers since $6 = 3 + 2 + 1 $ and$28 = 14 + 7 + 4 + 2 + 1$.
 
 :p What is a perfect number?
 ??x
@@ -245,7 +235,7 @@ When proving something by cases, if two cases are essentially the same (just wit
 
 :p How can we handle redundant cases in a proof?
 ??x
-To handle redundant cases in a proof, you can use "without loss of generality" (wlog). For example, if proving that \( n \cdot m \) is even when one variable is even and the other is odd, you can assume without loss of generality that \( n \) is even and \( m \) is odd. The proof for the second case will be identical.
+To handle redundant cases in a proof, you can use "without loss of generality" (wlog). For example, if proving that $n \cdot m $ is even when one variable is even and the other is odd, you can assume without loss of generality that$n $ is even and$m$ is odd. The proof for the second case will be identical.
 x??
 
 ---
@@ -302,7 +292,7 @@ x??
 In ring theory, primality definitions differ from those in integers. A prime element p in a general ring satisfies pjab implies pja or pjb.
 :p How does the definition of a prime number change in rings?
 ??x
-The traditional definition of a prime number (only positive divisors are 1 and p) applies specifically to the ring of integers. In a general ring, an element \(p\) is called prime if it satisfies \(p \mid ab\) implies \(p \mid a\) or \(p \mid b\). This differs from the integer case.
+The traditional definition of a prime number (only positive divisors are 1 and p) applies specifically to the ring of integers. In a general ring, an element $p $ is called prime if it satisfies$p \mid ab $ implies$ p \mid a $ or $p \mid b$. This differs from the integer case.
 x??
 
 ---
@@ -325,230 +315,222 @@ x??
 
 ---
 #### Even and Odd Integers Sum Property
-An even integer plus an odd integer is always odd. This can be expressed as: \(2k + (2m+1) = 2(k+m) + 1\), where \(k\) and \(m\) are integers.
+An even integer plus an odd integer is always odd. This can be expressed as: $2k + (2m+1) = 2(k+m) + 1 $, where $ k $and$ m$ are integers.
 
 :p What property does the sum of an even and an odd integer have?
 ??x
-The sum of an even and an odd integer is always odd. This can be proven by expressing any even number as \(2k\) and any odd number as \(2m+1\), where \(k\) and \(m\) are integers. Adding them together yields \(2k + (2m+1) = 2(k+m) + 1\), which is in the form of an odd integer.
+The sum of an even and an odd integer is always odd. This can be proven by expressing any even number as $2k $ and any odd number as$2m+1 $, where $ k $and$ m $are integers. Adding them together yields$2k + (2m+1) = 2(k+m) + 1$, which is in the form of an odd integer.
 x??
 
 ---
 #### Product of Two Even Integers
-The product of two even integers is always even. This can be expressed as: \((2k)(2m) = 4km = 2(2km)\), where \(k\) and \(m\) are integers.
+The product of two even integers is always even. This can be expressed as: $(2k)(2m) = 4km = 2(2km)$, where $ k$and $ m$ are integers.
 
 :p What property does the product of two even integers have?
 ??x
-The product of two even integers is always even. This can be proven by expressing any even number as \(2k\) and another even number as \(2m\). Multiplying them together yields \((2k)(2m) = 4km = 2(2km)\), which is in the form of an even integer.
+The product of two even integers is always even. This can be proven by expressing any even number as $2k $ and another even number as$2m $. Multiplying them together yields $(2k)(2m) = 4km = 2(2km)$, which is in the form of an even integer.
 x??
 
 ---
 #### Product of Two Odd Integers
-The product of two odd integers is always odd. This can be expressed as: \((2k+1)(2m+1) = 4km + 2k + 2m + 1 = 2(2km + k + m) + 1\), where \(k\) and \(m\) are integers.
+The product of two odd integers is always odd. This can be expressed as: $(2k+1)(2m+1) = 4km + 2k + 2m + 1 = 2(2km + k + m) + 1 $, where $ k $and$ m$ are integers.
 
 :p What property does the product of two odd integers have?
 ??x
-The product of two odd integers is always odd. This can be proven by expressing any odd number as \(2k+1\) and another odd number as \(2m+1\). Multiplying them together yields \((2k+1)(2m+1) = 4km + 2k + 2m + 1 = 2(2km + k + m) + 1\), which is in the form of an odd integer.
+The product of two odd integers is always odd. This can be proven by expressing any odd number as $2k+1 $ and another odd number as$2m+1 $. Multiplying them together yields $(2k+1)(2m+1) = 4km + 2k + 2m + 1 = 2(2km + k + m) + 1$, which is in the form of an odd integer.
 x??
 
 ---
 #### Product of Even and Odd Integers
-The product of an even integer and an odd integer is always even. This can be expressed as: \((2k)(2m+1) = 4km + 2k = 2(2km + k)\), where \(k\) and \(m\) are integers.
+The product of an even integer and an odd integer is always even. This can be expressed as: $(2k)(2m+1) = 4km + 2k = 2(2km + k)$, where $ k$and $ m$ are integers.
 
 :p What property does the product of an even integer and an odd integer have?
 ??x
-The product of an even integer and an odd integer is always even. This can be proven by expressing any even number as \(2k\) and any odd number as \(2m+1\). Multiplying them together yields \((2k)(2m+1) = 4km + 2k = 2(2km + k)\), which is in the form of an even integer.
+The product of an even integer and an odd integer is always even. This can be proven by expressing any even number as $2k $ and any odd number as$2m+1 $. Multiplying them together yields $(2k)(2m+1) = 4km + 2k = 2(2km + k)$, which is in the form of an even integer.
 x??
 
 ---
 #### Squaring Even Integers
-When you square an even integer, the result is always even. This can be expressed as: \((2k)^2 = 4k^2 = 2(2k^2)\), where \(k\) is an integer.
+When you square an even integer, the result is always even. This can be expressed as: $(2k)^2 = 4k^2 = 2(2k^2)$, where $ k$ is an integer.
 
 :p What property does squaring an even integer have?
 ??x
-Squaring an even integer results in an even number. This can be proven by expressing any even number as \(2k\). Squaring it yields \((2k)^2 = 4k^2 = 2(2k^2)\), which is in the form of an even integer.
+Squaring an even integer results in an even number. This can be proven by expressing any even number as $2k $. Squaring it yields $(2k)^2 = 4k^2 = 2(2k^2)$, which is in the form of an even integer.
 x??
 
 ---
 #### Even and Odd Integer Property
-If \(n\) is an even integer, then \(-n\) is also an even integer.
+If $n $ is an even integer, then$-n$ is also an even integer.
 
-:p If \(n\) is an even integer, what can be said about \(-n\)?
+:p If $n $ is an even integer, what can be said about$-n$?
 ??x
-If \(n\) is an even integer, then \(-n\) is also an even integer. This property holds because the negation of any even number (which is in the form \(2k\)) remains an even number when negated (\(2k \rightarrow -2k = 2(-k)\)).
+If $n $ is an even integer, then$-n $ is also an even integer. This property holds because the negation of any even number (which is in the form$2k $) remains an even number when negated ($2k \rightarrow -2k = 2(-k)$).
 x??
 
 ---
 #### Odd Integer Property
-If \(n\) is an odd integer, then \(-n\) is also an odd integer.
+If $n $ is an odd integer, then$-n$ is also an odd integer.
 
-:p If \(n\) is an odd integer, what can be said about \(-n\)?
+:p If $n $ is an odd integer, what can be said about$-n$?
 ??x
-If \(n\) is an odd integer, then \(-n\) is also an odd integer. This property holds because the negation of any odd number (which is in the form \(2k+1\)) remains an odd number when negated (\(2k+1 \rightarrow -(2k+1) = -2k-1 = 2(-k-1)+1\)).
+If $n $ is an odd integer, then$-n $ is also an odd integer. This property holds because the negation of any odd number (which is in the form$2k+1 $) remains an odd number when negated ($2k+1 \rightarrow -(2k+1) = -2k-1 = 2(-k-1)+1$).
 x??
 
 ---
 #### Even Integer Property
-If \(n\) is an even integer, then \((-1)^n = 1\).
+If $n $ is an even integer, then$(-1)^n = 1$.
 
-:p If \(n\) is an even integer, what can be said about \((-1)^n\)?
+:p If $n $ is an even integer, what can be said about$(-1)^n$?
 ??x
-If \(n\) is an even integer, then \((-1)^n = 1\). This property holds because raising \(-1\) to any even power results in 1. For example, if \(n = 2k\) (where \(k\) is an integer), then \((-1)^{2k} = ((-1)^2)^k = 1^k = 1\).
+If $n $ is an even integer, then$(-1)^n = 1 $. This property holds because raising $-1 $ to any even power results in 1. For example, if$n = 2k $(where$ k $is an integer), then$(-1)^{2k} = ((-1)^2)^k = 1^k = 1$.
 x??
 
 ---
 #### Proof of Even Squared
-If \(n\) is odd, then \(n^2 + 4n + 9\) is even.
+If $n $ is odd, then$n^2 + 4n + 9$ is even.
 
-:p If \(n\) is an odd integer, what can be said about the expression \(n^2 + 4n + 9\)?
+:p If $n $ is an odd integer, what can be said about the expression$n^2 + 4n + 9$?
 ??x
-If \(n\) is an odd integer, then \(n^2 + 4n + 9\) is even. This can be proven by expressing any odd number as \(2k+1\). Substituting this into the expression yields:
-\[
-(2k+1)^2 + 4(2k+1) + 9 = 4k^2 + 4k + 1 + 8k + 4 + 9 = 4k^2 + 12k + 14 = 2(2k^2 + 6k + 7)
-\]
-which is in the form of an even integer.
+If $n $ is an odd integer, then$n^2 + 4n + 9 $ is even. This can be proven by expressing any odd number as$2k+1$. Substituting this into the expression yields:
+$$(2k+1)^2 + 4(2k+1) + 9 = 4k^2 + 4k + 1 + 8k + 4 + 9 = 4k^2 + 12k + 14 = 2(2k^2 + 6k + 7)$$which is in the form of an even integer.
 x??
 
 ---
 #### Proof of Odd Cubed
-If \(n\) is odd, then \(n^3\) is odd.
+If $n $ is odd, then$n^3$ is odd.
 
-:p If \(n\) is an odd integer, what can be said about \(n^3\)?
+:p If $n $ is an odd integer, what can be said about$n^3$?
 ??x
-If \(n\) is an odd integer, then \(n^3\) is also odd. This can be proven by expressing any odd number as \(2k+1\). Cubing this yields:
-\[
-(2k+1)^3 = 8k^3 + 12k^2 + 6k + 1
-\]
-which simplifies to an expression of the form \(2m+1\) (where \(m\) is some integer), thus proving it is odd.
+If $n $ is an odd integer, then$n^3 $ is also odd. This can be proven by expressing any odd number as$2k+1$. Cubing this yields:
+$$(2k+1)^3 = 8k^3 + 12k^2 + 6k + 1$$which simplifies to an expression of the form $2m+1 $(where $ m$ is some integer), thus proving it is odd.
 x??
 
 ---
 #### Even Integer Property
-If \(n\) is even, then \(n+1\) is odd.
+If $n $ is even, then$n+1$ is odd.
 
-:p If \(n\) is an even integer, what can be said about \(n+1\)?
+:p If $n $ is an even integer, what can be said about$n+1$?
 ??x
-If \(n\) is an even integer, then \(n+1\) is odd. This property holds because adding 1 to any even number (which is in the form \(2k\)) results in an odd number (\(2k + 1 = 2k + 1\)).
+If $n $ is an even integer, then$n+1 $ is odd. This property holds because adding 1 to any even number (which is in the form$2k $) results in an odd number ($2k + 1 = 2k + 1$).
 x??
 
 ---
 #### Proof of Divisibility by 30
-Given integers \(m\) and \(n\), prove that if \(m^3 - n^3\) is divisible by 30, then \(m-n\) must be even.
+Given integers $m $ and$n $, prove that if$ m^3 - n^3 $is divisible by 30, then$ m-n$ must be even.
 
-:p Given integers \(m\) and \(n\), what can be said about the divisibility of \(m^3 - n^3\) by 30?
+:p Given integers $m $ and$n $, what can be said about the divisibility of $ m^3 - n^3$ by 30?
 ??x
-Given integers \(m\) and \(n\), if \(m^3 - n^3\) is divisible by 30, then \(m-n\) must be even. This can be proven using properties of divisibility and factorization:
-1. Factorize the expression: \(m^3 - n^3 = (m-n)(m^2 + mn + n^2)\).
-2. For this product to be divisible by 30, both factors \((m-n)\) and \((m^2 + mn + n^2)\) must have certain properties:
-   - Since 30 = 2 * 3 * 5, the expression \(m^3 - n^3\) must be divisible by 2, 3, and 5.
-   - For divisibility by 2: If either factor is even, it ensures overall divisibility. Since \((m-n)\) can be checked directly for parity (even or odd), if \((m-n)\) is odd, then \(m^2 + mn + n^2\) must include a factor of 2 to ensure the product is divisible by 2.
-   - For other primes like 3 and 5, similar checks apply. The key point here is that for \(m^3 - n^3\) to be divisible by 30, either \((m-n)\) or some combination within \(m^2 + mn + n^2\) must ensure divisibility by these numbers.
+Given integers $m $ and$n $, if $ m^3 - n^3 $is divisible by 30, then$ m-n$ must be even. This can be proven using properties of divisibility and factorization:
+1. Factorize the expression:$m^3 - n^3 = (m-n)(m^2 + mn + n^2)$.
+2. For this product to be divisible by 30, both factors $(m-n)$ and $(m^2 + mn + n^2)$ must have certain properties:
+   - Since 30 = 2 * 3 * 5, the expression $m^3 - n^3$ must be divisible by 2, 3, and 5.
+   - For divisibility by 2: If either factor is even, it ensures overall divisibility. Since $(m-n)$ can be checked directly for parity (even or odd), if $(m-n)$ is odd, then $m^2 + mn + n^2$ must include a factor of 2 to ensure the product is divisible by 2.
+   - For other primes like 3 and 5, similar checks apply. The key point here is that for $m^3 - n^3 $ to be divisible by 30, either$(m-n)$ or some combination within $m^2 + mn + n^2$ must ensure divisibility by these numbers.
 x??
 
 ---
 
 #### Prove n^2 ≡ 0 (mod 4) or n^2 ≡ 1 (mod 4)
-This problem asks to prove that for every integer \(n\), the square of \(n\) is congruent either to 0 modulo 4 or to 1 modulo 4. This can be proven by considering the possible remainders when an integer is divided by 4.
-:p Prove that for any integer \(n\), either \(n^2 \equiv 0 \pmod{4}\) or \(n^2 \equiv 1 \pmod{4}\).
+This problem asks to prove that for every integer $n $, the square of $ n$ is congruent either to 0 modulo 4 or to 1 modulo 4. This can be proven by considering the possible remainders when an integer is divided by 4.
+:p Prove that for any integer $n $, either $ n^2 \equiv 0 \pmod{4}$or $ n^2 \equiv 1 \pmod{4}$.
 ??x
-To prove this, we can consider the possible remainders when an integer \(n\) is divided by 4. There are four cases to consider:
-- If \(n \equiv 0 \pmod{4}\), then \(n^2 \equiv 0 \pmod{4}\).
-- If \(n \equiv 1 \pmod{4}\), then \(n^2 \equiv 1 \pmod{4}\).
-- If \(n \equiv 2 \pmod{4}\), then \(n^2 \equiv 4 \equiv 0 \pmod{4}\).
-- If \(n \equiv 3 \pmod{4}\), then \(n^2 \equiv 9 \equiv 1 \pmod{4}\).
+To prove this, we can consider the possible remainders when an integer $n$ is divided by 4. There are four cases to consider:
+- If $n \equiv 0 \pmod{4}$, then $ n^2 \equiv 0 \pmod{4}$.
+- If $n \equiv 1 \pmod{4}$, then $ n^2 \equiv 1 \pmod{4}$.
+- If $n \equiv 2 \pmod{4}$, then $ n^2 \equiv 4 \equiv 0 \pmod{4}$.
+- If $n \equiv 3 \pmod{4}$, then $ n^2 \equiv 9 \equiv 1 \pmod{4}$.
 
-Thus, in all cases, \(n^2\) is congruent to either 0 or 1 modulo 4.
+Thus, in all cases, $n^2$ is congruent to either 0 or 1 modulo 4.
 x??
 
 ---
 
 #### Prove a² + b² = c² implies one of a or b divisible by 3
-This problem asks to prove that if three integers satisfy the relationship \(a^2 + b^2 = c^2\), then at least one of \(a\) or \(b\) is divisible by 3. This can be proven by considering the possible remainders when an integer is divided by 3.
-:p Prove that if three integers a, b, and c satisfy \(a^2 + b^2 = c^2\), then at least one of a or b is divisible by 3.
+This problem asks to prove that if three integers satisfy the relationship $a^2 + b^2 = c^2 $, then at least one of $ a $or$ b$ is divisible by 3. This can be proven by considering the possible remainders when an integer is divided by 3.
+:p Prove that if three integers a, b, and c satisfy $a^2 + b^2 = c^2$, then at least one of a or b is divisible by 3.
 ??x
 To prove this, we need to consider the possible remainders when an integer is divided by 3. There are only three cases: 0, 1, and 2. We will check what happens in each case:
 
-- If \(a \equiv 0 \pmod{3}\) or \(b \equiv 0 \pmod{3}\), then the statement holds.
-- If both \(a\) and \(b\) are not divisible by 3 (i.e., \(a \equiv 1, 2 \pmod{3}\)), we need to check their squares:
-  - \(1^2 \equiv 1 \pmod{3}\)
-  - \(2^2 \equiv 4 \equiv 1 \pmod{3}\)
+- If $a \equiv 0 \pmod{3}$ or $b \equiv 0 \pmod{3}$, then the statement holds.
+- If both $a $ and$b $ are not divisible by 3 (i.e.,$ a \equiv 1, 2 \pmod{3}$), we need to check their squares:
+  - $1^2 \equiv 1 \pmod{3}$-$2^2 \equiv 4 \equiv 1 \pmod{3}$ So, if both $a$ and $b$ are not divisible by 3, then:
+$$a^2 + b^2 \equiv 1 + 1 = 2 \pmod{3}$$
 
-So, if both \(a\) and \(b\) are not divisible by 3, then:
-\[ a^2 + b^2 \equiv 1 + 1 = 2 \pmod{3} \]
-However, \(c^2\) can only be congruent to 0 or 1 modulo 3. Therefore, it's impossible for both \(a\) and \(b\) to not be divisible by 3 while satisfying the equation.
+However,$c^2 $ can only be congruent to 0 or 1 modulo 3. Therefore, it's impossible for both$a $ and$ b$ to not be divisible by 3 while satisfying the equation.
 
-Thus, at least one of \(a\) or \(b\) must be divisible by 3.
+Thus, at least one of $a $ or$b$ must be divisible by 3.
 x??
 
 ---
 
 #### Prove n is even if and only if n² is even
-This problem asks to prove that a number \(n\) is even if and only if its square \(n^2\) is even. This involves proving two statements: (a) If \(n\) is even, then \(n^2\) is even; and (b) If \(n^2\) is even, then \(n\) is even.
+This problem asks to prove that a number $n $ is even if and only if its square$n^2 $ is even. This involves proving two statements: (a) If$n $ is even, then$n^2 $ is even; and (b) If$n^2 $ is even, then$n$ is even.
 :p Prove that n is even if and only if n² is even.
 ??x
 To prove this, we need to show two things:
-1. **(a) If \(n\) is even, then \(n^2\) is even:**
-   - Assume \(n = 2k\) for some integer \(k\).
-   - Then, \(n^2 = (2k)^2 = 4k^2 = 2(2k^2)\).
-   - Since \(2k^2\) is an integer, \(n^2\) is even.
+1. **(a) If $n $ is even, then$n^2$ is even:**
+   - Assume $n = 2k $ for some integer$k$.
+   - Then, $n^2 = (2k)^2 = 4k^2 = 2(2k^2)$.
+   - Since $2k^2 $ is an integer,$ n^2$ is even.
 
-2. **(b) If \(n^2\) is even, then \(n\) is even:**
-   - Assume \(n^2 = 2m\) for some integer \(m\).
-   - We need to show that \(n = 2k\) for some integer \(k\).
-   - By the division algorithm, \(n = 2q + r\) where \(r \in \{0, 1, 2\}\) and \(q\) is an integer.
-     - If \(r = 0\), then \(n = 2q\) which means \(n\) is even.
-     - If \(r = 1\), then \(n^2 = (2q + 1)^2 = 4q^2 + 4q + 1 = 2(2q^2 + 2q) + 1\).
-       This implies \(2m = 2(2q^2 + 2q) + 1\) which is a contradiction because the right side is odd.
-     - If \(r = 2\), then \(n^2 = (2q + 2)^2 = 4(q+1)(q+1)\).
-       This means \(n^2\) is even, but since we assumed \(n^2 = 2m\), it implies that \(r = 0\).
+2. **(b) If $n^2 $ is even, then$n$ is even:**
+   - Assume $n^2 = 2m $ for some integer$m$.
+   - We need to show that $n = 2k $ for some integer$k$.
+   - By the division algorithm, $n = 2q + r $ where$r \in \{0, 1, 2\}$ and $q$ is an integer.
+     - If $r = 0 $, then $ n = 2q $which means$ n$ is even.
+     - If $r = 1 $, then $ n^2 = (2q + 1)^2 = 4q^2 + 4q + 1 = 2(2q^2 + 2q) + 1$.
+       This implies $2m = 2(2q^2 + 2q) + 1$ which is a contradiction because the right side is odd.
+     - If $r = 2 $, then $ n^2 = (2q + 2)^2 = 4(q+1)(q+1)$.
+       This means $n^2 $ is even, but since we assumed$n^2 = 2m $, it implies that$ r = 0$.
 
-Thus, in all cases, if \(n^2\) is even, then \(n\) must be even.
+Thus, in all cases, if $n^2 $ is even, then$n$ must be even.
 x??
 
 ---
 
 #### Prove gcd(a; b) = d if and only if a|b
-This problem asks to prove that the greatest common divisor (gcd) of two positive integers \(a\) and \(b\) being equal to \(d\) implies that \(a\) divides \(b\), and vice versa. This involves proving two statements: (a) If \(a | b\), then \(d = a\); and (b) If \(d = a\), then \(a | b\).
+This problem asks to prove that the greatest common divisor (gcd) of two positive integers $a $ and$b $ being equal to$d $ implies that$a $ divides$b $, and vice versa. This involves proving two statements: (a) If $ a | b $, then$ d = a $; and (b) If$ d = a $, then$ a | b$.
 :p Prove that gcd(a, b) = d if and only if a|b.
 ??x
 To prove this, we need to show two things:
-1. **(a) If \(a | b\), then \(d = a\):**
-   - By definition, the gcd of \(a\) and \(b\) is the largest positive integer that divides both \(a\) and \(b\).
-   - Since \(a | b\), \(a\) is a common divisor of \(a\) and \(b\).
-   - Therefore, \(d \geq a\). Also, since \(d = \gcd(a, b)\) must divide both \(a\) and \(b\), and \(a | b\), it follows that \(d\) cannot be greater than \(a\).
-   - Hence, \(d = a\).
+1. **(a) If $a | b $, then $ d = a$:**
+   - By definition, the gcd of $a $ and$b $ is the largest positive integer that divides both$ a $ and $b$.
+   - Since $a | b $, $ a $is a common divisor of$ a $and$ b$.
+   - Therefore, $d \geq a $. Also, since $ d = \gcd(a, b)$must divide both $ a$and $ b $, and $ a | b$, it follows that $ d$cannot be greater than $ a$.
+   - Hence, $d = a$.
 
-2. **(b) If \(d = a\), then \(a | b\):**
-   - Assume \(\gcd(a, b) = d = a\).
-   - By the definition of gcd, both \(a\) and \(b\) are divisible by \(a\).
-   - Therefore, \(a | b\).
+2. **(b) If $d = a $, then $ a | b$:**
+   - Assume $\gcd(a, b) = d = a$.
+   - By the definition of gcd, both $a $ and$b $ are divisible by$a$.
+   - Therefore, $a | b$.
 
-Thus, in all cases, if \(\gcd(a, b) = d\), then either \(d = a\) or \(a | b\), and vice versa.
+Thus, in all cases, if $\gcd(a, b) = d $, then either $ d = a $or$ a | b$, and vice versa.
 x??
 
 ---
 
 #### Prove 3|4n-1 for every n ∈ N
-This problem asks to prove that the expression \(4n - 1\) is divisible by 3 for every natural number \(n\). This can be proven using modular arithmetic or a fact about powers of integers.
-:p Prove that 3 divides \(4^n - 1\) for every positive integer n in two different ways. First, prove it using modular arithmetic. Second, prove it using the fact (which you do not have to prove) that \(x^n - y^n = (x - y)(x^{n-1} + x^{n-2}y + \cdots + xy^{n-2} + y^{n-1})\) for any real numbers x and y.
+This problem asks to prove that the expression $4n - 1 $ is divisible by 3 for every natural number$n$. This can be proven using modular arithmetic or a fact about powers of integers.
+:p Prove that 3 divides $4^n - 1 $ for every positive integer n in two different ways. First, prove it using modular arithmetic. Second, prove it using the fact (which you do not have to prove) that$x^n - y^n = (x - y)(x^{n-1} + x^{n-2}y + \cdots + xy^{n-2} + y^{n-1})$ for any real numbers x and y.
 ??x
 **Using Modular Arithmetic:**
-To prove that \(3 | 4^n - 1\) using modular arithmetic, we can use the fact that \(4 \equiv 1 \pmod{3}\).
+To prove that $3 | 4^n - 1 $ using modular arithmetic, we can use the fact that$4 \equiv 1 \pmod{3}$.
 
-1. Consider \(4^n \pmod{3}\):
-   - Since \(4 \equiv 1 \pmod{3}\), it follows that \(4^n \equiv 1^n \equiv 1 \pmod{3}\).
-2. Therefore, \(4^n - 1 \equiv 1 - 1 \equiv 0 \pmod{3}\).
+1. Consider $4^n \pmod{3}$:
+   - Since $4 \equiv 1 \pmod{3}$, it follows that $4^n \equiv 1^n \equiv 1 \pmod{3}$.
+2. Therefore, $4^n - 1 \equiv 1 - 1 \equiv 0 \pmod{3}$.
 
-This shows that \(4^n - 1\) is divisible by 3.
+This shows that $4^n - 1$ is divisible by 3.
 
 **Using the Polynomial Fact:**
-We can also use the fact that for any integer \(x\), \(x^n - y^n = (x - y)(x^{n-1} + x^{n-2}y + \cdots + xy^{n-2} + y^{n-1})\).
+We can also use the fact that for any integer $x $, $ x^n - y^n = (x - y)(x^{n-1} + x^{n-2}y + \cdots + xy^{n-2} + y^{n-1})$.
 
-1. Set \(x = 4\) and \(y = 1\):
-   - Then, \(4^n - 1 = (4 - 1)(4^{n-1} + 4^{n-2} \cdot 1 + \cdots + 4 \cdot 1^{n-2} + 1^{n-1})\).
+1. Set $x = 4 $ and$y = 1$:
+   - Then, $4^n - 1 = (4 - 1)(4^{n-1} + 4^{n-2} \cdot 1 + \cdots + 4 \cdot 1^{n-2} + 1^{n-1})$.
 2. Simplify the expression:
-   - \(4^n - 1 = 3(4^{n-1} + 4^{n-2} + \cdots + 4 + 1)\).
+   - $4^n - 1 = 3(4^{n-1} + 4^{n-2} + \cdots + 4 + 1)$.
 
-Since this expression is a multiple of 3, it follows that \(3 | 4^n - 1\).
+Since this expression is a multiple of 3, it follows that $3 | 4^n - 1$.
 x??
 
 ---
@@ -663,10 +645,10 @@ x??
 ---
 
 #### Definition of Subset
-Background context: The definition explains what it means for one set to be a subset of another. A set \(A\) is a subset of a set \(B\) if every element in \(A\) is also an element of \(B\). This is denoted as \(A \subseteq B\).
+Background context: The definition explains what it means for one set to be a subset of another. A set $A $ is a subset of a set$B $ if every element in$ A $ is also an element of $ B $. This is denoted as $ A \subseteq B$.
 :p What does the notation "A  B" signify?
 ??x
-The notation "A  B" signifies that every element of set \(A\) is also an element of set \(B\), meaning \(A\) is a subset of \(B\). This can be formally stated as: if for all elements \(x \in A\), it follows that \(x \in B\).
+The notation "A  B" signifies that every element of set $A $ is also an element of set$B $, meaning$ A $is a subset of$ B $. This can be formally stated as: if for all elements$ x \in A $, it follows that$ x \in B$.
 x??
 
 ---
@@ -681,23 +663,23 @@ x??
 ---
 
 #### Proper Subset
-Background context: If \(A \subseteq B\) and \(A \neq B\), then \(A\) is called a proper subset of \(B\). The notation for this is "A  B".
+Background context: If $A \subseteq B $ and$A \neq B $, then$ A $is called a proper subset of$ B$. The notation for this is "A  B".
 :p How do we denote that one set is a proper subset of another?
 ??x
-To denote that one set is a proper subset of another, we use the symbol "A  B". This means \(A\) is a subset of \(B\) but not equal to \(B\).
+To denote that one set is a proper subset of another, we use the symbol "A  B". This means $A $ is a subset of$B $ but not equal to$B$.
 x??
 
 ---
 
 #### Direct Proof of Subset Inclusion
 Background context: A direct proof of subset inclusion involves assuming an arbitrary element from one set and showing that it must also be in another set.
-:p How do you prove that set \(A\) is a subset of set \(B\) directly?
+:p How do you prove that set $A $ is a subset of set$B$ directly?
 ??x
-To prove that set \(A\) is a subset of set \(B\), follow these steps:
-1. Assume \(x \in A\).
-2. Show that \(x \in B\).
+To prove that set $A $ is a subset of set$B$, follow these steps:
+1. Assume $x \in A$.
+2. Show that $x \in B$.
 
-The proof follows the logical structure: "If \(x \in A\), then \(x \in B\)."
+The proof follows the logical structure: "If $x \in A $, then $ x \in B$."
 Here is an example of such a proof:
 
 ```java
@@ -720,48 +702,38 @@ x??
 
 #### Example Proof of Subset Inclusion
 Background context: The example provided demonstrates proving that one set is a subset of another. It uses the definition and properties of divisibility to show that all multiples of 12 are also multiples of 3.
-:p Prove that \( \{n \in Z : 12 | n\} \subseteq \{n \in Z : 3 | n\}\).
+:p Prove that $\{n \in Z : 12 | n\} \subseteq \{n \in Z : 3 | n\}$.
 ??x
-To prove that \( \{n \in Z : 12 | n\} \subseteq \{n \in Z : 3 | n\} \), assume an arbitrary element \( x \) is in the set \( \{n \in Z : 12 | n\} \). This means:
-- \( x \in Z \)
-- There exists some integer \( k \) such that \( x = 12k \).
+To prove that $\{n \in Z : 12 | n\} \subseteq \{n \in Z : 3 | n\}$, assume an arbitrary element $ x$is in the set $\{n \in Z : 12 | n\}$. This means:
+- $x \in Z $- There exists some integer$ k $such that$ x = 12k$.
 
-By the definition of divisibility (Definition 2.8), we know that if \( 12 | x \), then \( x = 12k \) for some \( k \in Z \). Since \( 12k \) can be rewritten as \( 3(4k) \):
-- There exists an integer \( m = 4k \) such that \( x = 3m \).
+By the definition of divisibility (Definition 2.8), we know that if $12 | x $, then $ x = 12k $ for some $ k \in Z $. Since$12k $ can be rewritten as$3(4k)$:
+- There exists an integer $m = 4k $ such that$x = 3m$.
 
 Therefore, by the definition of divisibility (Definition 2.8 again), we have:
-- \( 3 | x \).
+- $3 | x$.
 
-Thus, if \( x \in \{n \in Z : 12 | n\} \), then \( x \in \{n \in Z : 3 | n\} \). This shows that every element of the first set is also an element of the second set, hence:
-\[ \{n \in Z : 12 | n\} \subseteq \{n \in Z : 3 | n\}. \]
-x??
+Thus, if $x \in \{n \in Z : 12 | n\}$, then $ x \in \{n \in Z : 3 | n\}$. This shows that every element of the first set is also an element of the second set, hence:
+$$\{n \in Z : 12 | n\} \subseteq \{n \in Z : 3 | n\}.$$x??
 
 ---
 
 #### Proof by Cases
 Background context: In some cases, proving subset inclusion involves considering multiple distinct possibilities for an element. This is done using a proof by cases.
-:p Prove that \( A = \{-1, 3\} \subseteq B = \{x \in R : x^3 - 3x^2 - x + 3 = 0\} \).
+:p Prove that $A = \{-1, 3\} \subseteq B = \{x \in R : x^3 - 3x^2 - x + 3 = 0\}$.
 ??x
-To prove that \( A = \{-1, 3\} \subseteq B = \{x \in R : x^3 - 3x^2 - x + 3 = 0\} \), we need to show that both \(-1\) and \(3\) are elements of set \(B\). This involves checking each case separately.
+To prove that $A = \{-1, 3\} \subseteq B = \{x \in R : x^3 - 3x^2 - x + 3 = 0\}$, we need to show that both $-1 $ and $3$ are elements of set $B$. This involves checking each case separately.
 
 Proof:
-Assume \( x \in A \).
-- Case 1: \( x = -1 \)
-  - Verify if \((-1)^3 - 3(-1)^2 - (-1) + 3 = 0\):
-    \[
-    -1 - 3 + 1 + 3 = 0
-    \]
-  - Since the equation holds, \(-1\) is in \(B\).
+Assume $x \in A$.
+- Case 1: $x = -1 $- Verify if$(-1)^3 - 3(-1)^2 - (-1) + 3 = 0$:
+    $$-1 - 3 + 1 + 3 = 0$$- Since the equation holds,$-1 $ is in$B$.
 
-- Case 2: \( x = 3 \)
-  - Verify if \(3^3 - 3(3)^2 - 3 + 3 = 0\):
-    \[
-    27 - 27 - 3 + 3 = 0
-    \]
-  - Since the equation holds, \(3\) is in \(B\).
+- Case 2: $x = 3 $- Verify if$3^3 - 3(3)^2 - 3 + 3 = 0$:
+    $$27 - 27 - 3 + 3 = 0$$- Since the equation holds,$3 $ is in$B$.
 
-Since both elements of set \(A\) are in set \(B\), it follows that:
-\[ A \subseteq B. \]
+Since both elements of set $A $ are in set$B$, it follows that:
+$$A \subseteq B.$$
 x??
 
 ---

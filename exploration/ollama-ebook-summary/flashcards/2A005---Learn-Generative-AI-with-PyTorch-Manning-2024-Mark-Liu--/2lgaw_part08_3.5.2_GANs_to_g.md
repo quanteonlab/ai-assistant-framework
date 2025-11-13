@@ -223,9 +223,8 @@ x??
 
 Background context: In this chapter, you will delve into building and training GANs to generate high-resolution color images. GANs consist of two networks: a generator that creates images from random noise, and a discriminator that evaluates the quality of these images. The goal is to train both networks in an adversarial manner, where the generator tries to fool the discriminator by generating more realistic images.
 
-Relevant formula: The training process involves updating the generator \(G\) and the discriminator \(D\). The objective functions for each network are:
-- For the generator: Minimize \(\mathbb{E}_{z \sim p(z)} [ D(G(z)) ]\)
-- For the discriminator: Maximize \(\mathbb{E}_{x \sim p_{data}} [ D(x) ] + \mathbb{E}_{z \sim p(z)} [ 1 - D(G(z)) ]\)
+Relevant formula: The training process involves updating the generator $G $ and the discriminator$D$. The objective functions for each network are:
+- For the generator: Minimize $\mathbb{E}_{z \sim p(z)} [ D(G(z)) ]$- For the discriminator: Maximize $\mathbb{E}_{x \sim p_{data}} [ D(x) ] + \mathbb{E}_{z \sim p(z)} [ 1 - D(G(z)) ]$
 
 :p What are the two main components of a Generative Adversarial Network (GAN)?
 ??x

@@ -133,13 +133,11 @@ These flashcards cover various aspects of animation systems and action state mac
 #### Flat Weighted Average Approach
 Background context explaining the flat weighted average approach. This method involves maintaining a list of all active animation clips and blending them together using blend weights to produce the final pose. The equation for calculating the weighted average of a set of vectors is provided.
 
-Formula: \( v_{\text{avg}} = \frac{\sum_{i=0}^{N-1} w_i v_i}{\sum_{i=0}^{N-1} w_i} \)
+Formula: $v_{\text{avg}} = \frac{\sum_{i=0}^{N-1} w_i v_i}{\sum_{i=0}^{N-1} w_i}$
 
 If the weights are normalized, meaning they sum to one, the equation can be simplified:
 
-\[ v_{\text{avg}} = \sum_{i=0}^{N-1} w_i v_i \]
-
-:p What is the flat weighted average approach used for in animation systems?
+$$v_{\text{avg}} = \sum_{i=0}^{N-1} w_i v_i$$:p What is the flat weighted average approach used for in animation systems?
 ??x
 The flat weighted average approach is used to blend multiple active animation clips into a final pose by assigning each clip a blend weight that indicates its contribution. This method involves maintaining a list of all active clips and calculating a weighted average for each joint's pose.
 
@@ -339,15 +337,15 @@ Background context explaining the concept of transitioning between different ani
 
 :p What is the process for smoothly transitioning from walking to jumping?
 ??x
-To achieve a smooth transition from walking to jumping, we use a weighted average approach where the character's movement is blended between walk and jump states. Initially, the weight distribution among clips A, B, C (representing the walk state) should be maintained as \(w_A = 0.2\), \(w_B = 0.3\), and \(w_C = 0.5\). For the jump state, represented by clips D and E, we aim for \(w_D = 0.33\) and \(w_E = 0.66\).
+To achieve a smooth transition from walking to jumping, we use a weighted average approach where the character's movement is blended between walk and jump states. Initially, the weight distribution among clips A, B, C (representing the walk state) should be maintained as $w_A = 0.2 $, $ w_B = 0.3 $, and$ w_C = 0.5 $. For the jump state, represented by clips D and E, we aim for$ w_D = 0.33 $and$ w_E = 0.66$.
 
-The blend factor \(l\) is used to transition between these states. By setting the weights as follows:
-\[ w_A = (1 - l)(0.2), \]
-\[ w_D = l(0.33), \]
-\[ w_B = (1 - l)(0.3), \]
-\[ w_E = l(0.66). \]
+The blend factor $l$ is used to transition between these states. By setting the weights as follows:
+$$w_A = (1 - l)(0.2),$$
+$$w_D = l(0.33),$$
+$$w_B = (1 - l)(0.3),$$
+$$w_E = l(0.66).$$
 
-This ensures that when \(l = 0\), the character is in a walk state, and when \(l = 1\), the character transitions to a jump state. The relative weights within each group remain correct during the transition.
+This ensures that when $l = 0 $, the character is in a walk state, and when$ l = 1$, the character transitions to a jump state. The relative weights within each group remain correct during the transition.
 
 ```java
 // Pseudocode for setting up the transition
@@ -369,7 +367,7 @@ Background context explaining the importance of logical groupings of clips withi
 ??x
 To manage transitions between different animations (like walking to jumping), it's crucial for the animation system to recognize and handle groups of clips logically. Although internally all clip states might be stored in a single, flat array, externally these need to be grouped.
 
-For example, if we want to transition from walk (clips A, B, C) to jump (clips D, E), the system must "know" that \(A, B,\) and \(C\) form one group, while \(D\) and \(E\) form another. This requires additional metadata to be maintained.
+For example, if we want to transition from walk (clips A, B, C) to jump (clips D, E), the system must "know" that $A, B,$ and $C$ form one group, while $D$ and $E$ form another. This requires additional metadata to be maintained.
 
 ```java
 // Pseudocode for managing clip groups
@@ -404,8 +402,7 @@ Background context explaining the use of blend trees in animation systems, which
 A binary Linear-Interpolation (LERP) blend is represented by a binary expression tree. Each node in the tree represents a blend operation, and leaf nodes are the inputs to these operators.
 
 For instance, if we have two clips D and E, a binary LERP blend can be expressed as:
-
-\[ \text{Output} = l \times (\text{ClipD}) + (1 - l) \times (\text{ClipE}). \]
+$$\text{Output} = l \times (\text{ClipD}) + (1 - l) \times (\text{ClipE}).$$
 
 This expression tree helps in managing complex blends by breaking them down into smaller, manageable operations.
 
@@ -480,14 +477,14 @@ x??
 ---
 
 #### Binary LERP Blend Trees
-Background context: In Section 12.6.1, a binary linear interpolation (LERP) blend takes two input poses and blends them together into a single output pose. The blend weight \( b \) controls the percentage of the second input pose that should appear at the output, while \( (1 - b) \) specifies the percentage of the first input pose.
+Background context: In Section 12.6.1, a binary linear interpolation (LERP) blend takes two input poses and blends them together into a single output pose. The blend weight $b $ controls the percentage of the second input pose that should appear at the output, while$(1 - b)$ specifies the percentage of the first input pose.
 
 :p What is a binary LERP blend tree?
 ??x
-A binary LERP blend tree represents how two input poses are blended using a linear interpolation with a blend weight \( b \). The formula for the output pose can be represented as:
-\[ \text{Output Pose} = (1 - b) \times \text{Pose 1} + b \times \text{Pose 2} \]
+A binary LERP blend tree represents how two input poses are blended using a linear interpolation with a blend weight $b$. The formula for the output pose can be represented as:
+$$\text{Output Pose} = (1 - b) \times \text{Pose 1} + b \times \text{Pose 2}$$
 
-The tree structure ensures that at any given point, only two poses are directly blended together. If we have a blend weight \( b \), the output is computed as follows:
+The tree structure ensures that at any given point, only two poses are directly blended together. If we have a blend weight $b$, the output is computed as follows:
 ```java
 public Pose lerpBlend(double b, Pose pose1, Pose pose2) {
     return (1 - b) * pose1 + b * pose2;
@@ -498,11 +495,11 @@ x??
 ---
 
 #### Generalized One-Dimensional Blend Trees
-Background context: In Section 12.6.3.1, a generalized one-dimensional LERP blend allows placing an arbitrary number of clips along a linear scale. A blend factor \( b \) specifies the desired blend along this scale.
+Background context: In Section 12.6.3.1, a generalized one-dimensional LERP blend allows placing an arbitrary number of clips along a linear scale. A blend factor $b$ specifies the desired blend along this scale.
 
 :p How does a generalized one-dimensional LERP blend work?
 ??x
-A generalized one-dimensional LERP blend works by using multiple input poses (clips) placed along a linear scale defined by the blend factor \( b \). For any specific value of \( b \), this can be converted into a binary blend tree. The output pose is calculated based on the two closest clips.
+A generalized one-dimensional LERP blend works by using multiple input poses (clips) placed along a linear scale defined by the blend factor $b $. For any specific value of $ b$, this can be converted into a binary blend tree. The output pose is calculated based on the two closest clips.
 
 The generalized tree structure ensures that even with many inputs, it can always be transformed into a binary blend:
 ```java
@@ -517,11 +514,11 @@ x??
 ---
 
 #### Two-Dimensional LERP Blend Trees
-Background context: In Section 12.6.3.2, a two-dimensional LERP blend can be realized by cascading the results of two binary LERP blends. Given a desired two-dimensional blend point \( b = [bx, by] \), this kind of blend can be represented in tree form.
+Background context: In Section 12.6.3.2, a two-dimensional LERP blend can be realized by cascading the results of two binary LERP blends. Given a desired two-dimensional blend point $b = [bx, by]$, this kind of blend can be represented in tree form.
 
 :p How is a two-dimensional LERP blend implemented?
 ??x
-A two-dimensional LERP blend is implemented by cascading the results of two binary LERP blends. The blend point \( b = [bx, by] \) defines the desired output position on the 2D plane.
+A two-dimensional LERP blend is implemented by cascading the results of two binary LERP blends. The blend point $b = [bx, by]$ defines the desired output position on the 2D plane.
 
 The implementation involves creating a tree where each dimension's blend is computed separately and then combined:
 ```java
@@ -538,13 +535,13 @@ x??
 ---
 
 #### Additive Blend Trees
-Background context: Section 12.6.5 described additive blending, a binary operation where a single blend weight \( b \) controls the amount of an additive animation that should appear in the output.
+Background context: Section 12.6.5 described additive blending, a binary operation where a single blend weight $b$ controls the amount of an additive animation that should appear in the output.
 
 :p How does additive blending work?
 ??x
-Additive blending combines an additive clip with a regular skeletal pose using a binary tree structure. The blend weight \( b \) determines the effect of the additive clip on the final pose:
-- When \( b = 0 \), no additive effect.
-- When \( b = 1 \), full additive effect.
+Additive blending combines an additive clip with a regular skeletal pose using a binary tree structure. The blend weight $b$ determines the effect of the additive clip on the final pose:
+- When $b = 0$, no additive effect.
+- When $b = 1$, full additive effect.
 
 The implementation ensures that one input is always a difference (additive) pose and the other is a regular pose. If multiple additive animations are needed, cascaded binary trees are used:
 ```java
@@ -592,7 +589,7 @@ Background context: In animation state machines, smooth transitions between diff
 
 :p How does cross-fading work in the context of blend trees?
 ??x
-Cross-fading between blend trees involves introducing a transient binary LERP (Linear Interpolation) node between the roots of the current and destination blend trees. The blend factor, denoted as \( l \), starts at 0 when the transition begins and ramps up to 1 by the end of the transition period.
+Cross-fading between blend trees involves introducing a transient binary LERP (Linear Interpolation) node between the roots of the current and destination blend trees. The blend factor, denoted as $l$, starts at 0 when the transition begins and ramps up to 1 by the end of the transition period.
 
 The process can be described with the following pseudocode:
 

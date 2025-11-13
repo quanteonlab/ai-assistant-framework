@@ -9,20 +9,16 @@
 **Background context:** The Lotka-Volterra model (LVM) describes the dynamics of biological systems where two species interact, one as a predator and the other as prey. The model consists of differential equations that describe how the population sizes of the predator and prey change over time.
 
 The basic form of the LVM is given by:
-\[
-\frac{dp}{dt} = \alpha p - \beta pP
-\]
-\[
-\frac{dP}{dt} = -\gamma P + \delta pP
-\]
+$$\frac{dp}{dt} = \alpha p - \beta pP$$
+$$\frac{dP}{dt} = -\gamma P + \delta pP$$
 
 Where:
-- \(p\) represents the prey population.
-- \(P\) represents the predator population.
-- \(\alpha\) is the growth rate of the prey in the absence of predators.
-- \(\beta\) is the rate at which the prey are consumed by the predators.
-- \(\gamma\) is the death rate of the predators in the absence of food (prey).
-- \(\delta\) is the efficiency of turning consumed prey into predator offspring.
+- $p$ represents the prey population.
+- $P$ represents the predator population.
+- $\alpha$ is the growth rate of the prey in the absence of predators.
+- $\beta$ is the rate at which the prey are consumed by the predators.
+- $\gamma$ is the death rate of the predators in the absence of food (prey).
+- $\delta$ is the efficiency of turning consumed prey into predator offspring.
 
 :p What is the question about this concept?
 ??x
@@ -30,33 +26,22 @@ Compute the equilibrium values for the prey and predator populations in the Lotk
 x??
 
 To find the equilibrium, set both differential equations to zero:
-\[
-0 = \alpha p - \beta pP
-\]
-\[
-0 = -\gamma P + \delta pP
-\]
+$$0 = \alpha p - \beta pP$$
+$$0 = -\gamma P + \delta pP$$
 
-From the first equation, \(p(\alpha - \beta P) = 0\), we get two solutions: \(p = 0\) or \(\alpha - \beta P = 0\). Since \(p = 0\) means no prey, which would imply no predators, a non-trivial solution is:
-\[
-P = \frac{\alpha}{\beta}
-\]
+From the first equation,$p(\alpha - \beta P) = 0 $, we get two solutions: $ p = 0 $or$\alpha - \beta P = 0 $. Since $ p = 0$means no prey, which would imply no predators, a non-trivial solution is:
+$$P = \frac{\alpha}{\beta}$$
 
-From the second equation, \(P(-\gamma + \delta p) = 0\), we get two solutions: \(P = 0\) or \(\delta p - \gamma = 0\). Since \(P = 0\) means no predators, which would imply no prey, a non-trivial solution is:
-\[
-p = \frac{\gamma}{\delta}
-\]
+From the second equation,$P(-\gamma + \delta p) = 0 $, we get two solutions: $ P = 0 $or$\delta p - \gamma = 0 $. Since $ P = 0$means no predators, which would imply no prey, a non-trivial solution is:
+$$p = \frac{\gamma}{\delta}$$
 
 Thus, the equilibrium population values are:
-- Prey: \(p^* = \frac{\gamma}{\delta}\)
-- Predator: \(P^* = \frac{\alpha}{\beta}\)
-
-:p What is the question about this concept?
+- Prey:$p^* = \frac{\gamma}{\delta}$- Predator:$ P^* = \frac{\alpha}{\beta}$:p What is the question about this concept?
 ??x
 What does the non-trivial solution for the prey and predator populations represent in the Lotka-Volterra model?
 x??
 
-The non-trivial solution represents a stable equilibrium state where both the prey and predator populations coexist without extinction. The values \(\frac{\gamma}{\delta}\) and \(\frac{\alpha}{\beta}\) are the population sizes at which the growth rates of both species balance each other.
+The non-trivial solution represents a stable equilibrium state where both the prey and predator populations coexist without extinction. The values $\frac{\gamma}{\delta}$ and $\frac{\alpha}{\beta}$ are the population sizes at which the growth rates of both species balance each other.
 
 :p What is the question about this concept?
 ??x
@@ -64,20 +49,12 @@ How do you find the equilibrium points for the Lotka-Volterra model using differ
 x??
 
 To find the equilibrium points, set the time derivatives to zero:
-\[
-0 = \alpha p - \beta pP
-\]
-\[
-0 = -\gamma P + \delta pP
-\]
+$$0 = \alpha p - \beta pP$$
+$$0 = -\gamma P + \delta pP$$
 
-From these equations, solve for \(p\) and \(P\). The solutions are:
-- Prey: \(p^* = 0\) or \(p^* = \frac{\gamma}{\delta}\)
-- Predator: \(P^* = 0\) or \(P^* = \frac{\alpha}{\beta}\)
-
-The non-trivial solution (coexistence) is:
-- Prey: \(p^* = \frac{\gamma}{\delta}\)
-- Predator: \(P^* = \frac{\alpha}{\beta}\)
+From these equations, solve for $p $ and$P$. The solutions are:
+- Prey: $p^* = 0 $ or$p^* = \frac{\gamma}{\delta}$- Predator:$ P^* = 0 $or$ P^* = \frac{\alpha}{\beta}$ The non-trivial solution (coexistence) is:
+- Prey:$p^* = \frac{\gamma}{\delta}$- Predator:$ P^* = \frac{\alpha}{\beta}$
 
 ---
 
@@ -93,7 +70,7 @@ x??
 
 Periodic behavior in the Lotka-Volterra model arises from the oscillatory nature of predator and prey populations. The model shows that as the prey population grows, there is more food for predators, leading to an increase in the predator population. As the predator population increases, it starts consuming more prey, which leads to a decrease in the prey population. This cycle repeats, creating periodic fluctuations.
 
-To visualize this behavior, you can use numerical methods like Runge-Kutta (rk4) to simulate the model over time and plot the populations of prey (\(p\)) and predators (\(P\)) against time or each other.
+To visualize this behavior, you can use numerical methods like Runge-Kutta (rk4) to simulate the model over time and plot the populations of prey ($p $) and predators ($ P$) against time or each other.
 
 :p What is the question about this concept?
 ??x
@@ -166,7 +143,7 @@ for t in arange(Tmin, Tmax + 1, h):
 
 ```
 
-This code sets up the Lotka-Volterra model and simulates its behavior over time. The prey (\(p\)) and predator (\(P\)) populations are plotted against each other and also shown over time to visualize the periodic cycles.
+This code sets up the Lotka-Volterra model and simulates its behavior over time. The prey ($p $) and predator ($ P$) populations are plotted against each other and also shown over time to visualize the periodic cycles.
 
 --- 
 #### Cycles in Predator-Prey Dynamics
@@ -187,7 +164,7 @@ In ecological terms, periodic solutions signify that both species exhibit natura
 Explain how periodic cycles in predator-prey dynamics are observed and interpreted in the Lotka-Volterra model.
 x??
 
-Periodic cycles in predator-prey dynamics within the Lotka-Volterra model are observed as oscillations between the populations of prey (\(p\)) and predators (\(P\)). These cycles arise from the mutual interaction where an increase in one population stimulates growth in the other, but this increase eventually leads to resource depletion, causing a decline.
+Periodic cycles in predator-prey dynamics within the Lotka-Volterra model are observed as oscillations between the populations of prey ($p $) and predators ($ P$). These cycles arise from the mutual interaction where an increase in one population stimulates growth in the other, but this increase eventually leads to resource depletion, causing a decline.
 
 Interpreting these periodic cycles:
 - **Resource Availability:** The model shows that prey availability is crucial for predator survival.
@@ -318,7 +295,7 @@ Numerical simulation of the Lotka-Volterra model involves using a numerical meth
 
 Here’s how you can set up a simulation:
 
-1. **Define Parameters:** Set initial conditions for the prey (\(p\)) and predator (\(P\)) populations.
+1. **Define Parameters:** Set initial conditions for the prey ($p $) and predator ($ P$) populations.
 2. **Model Equations:** Define the differential equations that describe their interaction.
 3. **Numerical Method:** Use an appropriate numerical method (e.g., Runge-Kutta) to solve these equations over time.
 4. **Plot Results:** Visualize the results to observe periodic behavior and coexistence.
@@ -402,21 +379,21 @@ x??
 
 Parameter changes in the Lotka-Volterra model can significantly impact the coexistence and stability of predator and prey populations. Specifically, small adjustments to parameters like growth rates or interaction terms can lead to different dynamics:
 
-1. **Growth Rate \( r \) for Prey:**
-   - **Increase \( r \):** If the growth rate of prey increases, the prey population grows faster initially but might face greater pressure from predators if the predation term is not adjusted.
-   - **Decrease \( r \):** A decrease in \( r \) can lead to slower prey population growth and potentially more stable coexistence with predator populations.
+1. **Growth Rate $r$ for Prey:**
+   - **Increase $r$:** If the growth rate of prey increases, the prey population grows faster initially but might face greater pressure from predators if the predation term is not adjusted.
+   - **Decrease $r $:** A decrease in $ r$ can lead to slower prey population growth and potentially more stable coexistence with predator populations.
 
-2. **Death Rate \( a \) for Predators:**
-   - **Increase \( a \):** Higher death rates among predators can reduce their numbers faster, leading to less predation pressure on the prey.
-   - **Decrease \( a \):** Lower death rates mean that predators live longer and can exert greater predation pressure, potentially destabilizing coexistence.
+2. **Death Rate $a$ for Predators:**
+   - **Increase $a$:** Higher death rates among predators can reduce their numbers faster, leading to less predation pressure on the prey.
+   - **Decrease $a$:** Lower death rates mean that predators live longer and can exert greater predation pressure, potentially destabilizing coexistence.
 
-3. **Predation Rate \( b \) (or Interaction Term):**
-   - **Increase \( b \):** A higher predation rate means more efficient conversion of prey into predator biomass, which can lead to faster oscillations or even collapse of the prey population.
-   - **Decrease \( b \):** Lower predation rates result in less frequent encounters and reduced predation pressure, promoting coexistence.
+3. **Predation Rate $b$ (or Interaction Term):**
+   - **Increase $b$:** A higher predation rate means more efficient conversion of prey into predator biomass, which can lead to faster oscillations or even collapse of the prey population.
+   - **Decrease $b$:** Lower predation rates result in less frequent encounters and reduced predation pressure, promoting coexistence.
 
-4. **Conversion Efficiency \( c \) (or Interaction Term):**
-   - **Increase \( c \):** Higher conversion efficiency means that more prey are converted into predator biomass, potentially leading to faster oscillations.
-   - **Decrease \( c \):** Lower conversion efficiency can lead to more stable coexistence as less prey is consumed.
+4. **Conversion Efficiency $c$ (or Interaction Term):**
+   - **Increase $c$:** Higher conversion efficiency means that more prey are converted into predator biomass, potentially leading to faster oscillations.
+   - **Decrease $c$:** Lower conversion efficiency can lead to more stable coexistence as less prey is consumed.
 
 These parameter changes can alter the stability and periodicity of cycles in the Lotka-Volterra model. For instance:
 - **Stable Equilibrium:** Small parameter changes might maintain a stable equilibrium where both populations coexist.
@@ -437,16 +414,10 @@ In this section, we explore a driven pendulum that is not restricted to small di
 
 The equation governing the chaotic pendulum motion is given by:
 
-\[
-- \omega_0^2 \sin(\theta) - \alpha \frac{d\theta}{dt} + f \cos(\omega t) = I \frac{d^2\theta}{dt^2}
-\]
+$$- \omega_0^2 \sin(\theta) - \alpha \frac{d\theta}{dt} + f \cos(\omega t) = I \frac{d^2\theta}{dt^2}$$
 
 Where:
-- \( \omega_0 = \sqrt{\frac{mgL}{I}} \)
-- \( \alpha = \frac{\beta}{I} \)
-- \( f = \frac{\tau_0}{I} \)
-
-:p What is the governing equation for the motion of a chaotic pendulum?
+- $\omega_0 = \sqrt{\frac{mgL}{I}}$-$\alpha = \frac{\beta}{I}$-$ f = \frac{\tau_0}{I}$:p What is the governing equation for the motion of a chaotic pendulum?
 ??x
 The given equation governs the motion of a driven and damped pendulum. It includes gravitational, frictional, and external torques, leading to complex behaviors.
 
@@ -468,27 +439,21 @@ x??
 ---
 
 #### Natural Frequency of Pendulum
-The natural frequency \( \omega_0 \) is the oscillation frequency for small displacements when only gravitational torque acts on the pendulum.
+The natural frequency $\omega_0$ is the oscillation frequency for small displacements when only gravitational torque acts on the pendulum.
 
 Given by:
-
-\[
-\omega_0 = \sqrt{\frac{mgL}{I}}
-\]
+$$\omega_0 = \sqrt{\frac{mgL}{I}}$$
 
 Where:
-- \( m \) is mass
-- \( g \) is acceleration due to gravity
-- \( L \) is length of the pendulum
-- \( I \) is moment of inertia
+- $m$ is mass
+- $g$ is acceleration due to gravity
+- $L$ is length of the pendulum
+- $I$ is moment of inertia
 
 :p What formula represents the natural frequency of a pendulum for small displacements?
 ??x
-The formula for the natural frequency \( \omega_0 \) of a pendulum when only gravitational torque acts on it is:
-
-\[
-\omega_0 = \sqrt{\frac{mgL}{I}}
-\]
+The formula for the natural frequency $\omega_0$ of a pendulum when only gravitational torque acts on it is:
+$$\omega_0 = \sqrt{\frac{mgL}{I}}$$
 
 This equation describes how the natural frequency depends on the mass, length, and moment of inertia of the pendulum.
 x??
@@ -496,19 +461,16 @@ x??
 ---
 
 #### Frictional Torque Parameter
-The parameter \( \alpha \) represents the strength of friction. It is defined as:
-
-\[
-\alpha = \frac{\beta}{I}
-\]
+The parameter $\alpha$ represents the strength of friction. It is defined as:
+$$\alpha = \frac{\beta}{I}$$
 
 Where:
-- \( \beta \) is a constant related to friction
-- \( I \) is the moment of inertia
+- $\beta$ is a constant related to friction
+- $I$ is the moment of inertia
 
-:p What does the parameter \( \alpha \) represent in the chaotic pendulum equation?
+:p What does the parameter $\alpha$ represent in the chaotic pendulum equation?
 ??x
-The parameter \( \alpha \) represents the strength of friction in the chaotic pendulum. It quantifies how much friction affects the motion by dampening the angular velocity.
+The parameter $\alpha$ represents the strength of friction in the chaotic pendulum. It quantifies how much friction affects the motion by dampening the angular velocity.
 
 ```python
 # Example calculation for alpha
@@ -523,19 +485,16 @@ x??
 ---
 
 #### External Driving Torque Parameter
-The parameter \( f \) represents the strength of an external driving torque and is given by:
-
-\[
-f = \frac{\tau_0}{I}
-\]
+The parameter $f$ represents the strength of an external driving torque and is given by:
+$$f = \frac{\tau_0}{I}$$
 
 Where:
-- \( \tau_0 \) is the magnitude of the external driving torque
-- \( I \) is the moment of inertia
+- $\tau_0$ is the magnitude of the external driving torque
+- $I$ is the moment of inertia
 
-:p What does the parameter \( f \) represent in the chaotic pendulum equation?
+:p What does the parameter $f$ represent in the chaotic pendulum equation?
 ??x
-The parameter \( f \) represents the strength of an external driving torque. It quantifies how much an externally applied force affects the motion of the pendulum.
+The parameter $f$ represents the strength of an external driving torque. It quantifies how much an externally applied force affects the motion of the pendulum.
 
 ```python
 # Example calculation for f
@@ -551,50 +510,37 @@ x??
 
 #### Chaotic Pendulum Equation in Standard ODE Form
 The given equation is a second-order, time-dependent, nonlinear differential equation. We can convert it into two first-order simultaneous equations using the standard ODE form:
-
-\[
-\begin{align*}
+$$\begin{align*}
 \frac{d\theta}{dt} &= \omega \\
 \frac{d\omega}{dt} &= - \omega_0^2 \sin(\theta) - \alpha \omega + f \cos(\omega t)
-\end{align*}
-\]
+\end{align*}$$
 
 Where:
-- \( \omega = \frac{d\theta}{dt} \)
-
-:p How can the chaotic pendulum equation be converted into a set of first-order ODEs?
+- $\omega = \frac{d\theta}{dt}$:p How can the chaotic pendulum equation be converted into a set of first-order ODEs?
 ??x
 The given second-order nonlinear differential equation can be converted into two first-order simultaneous equations:
-
-\[
-\begin{align*}
+$$\begin{align*}
 \frac{d\theta}{dt} &= \omega \\
 \frac{d\omega}{dt} &= - \omega_0^2 \sin(\theta) - \alpha \omega + f \cos(\omega t)
-\end{align*}
-\]
+\end{align*}$$
 
 Where:
-- \( \omega = \frac{d\theta}{dt} \)
-
-This conversion helps in solving the equation using numerical methods.
+- $\omega = \frac{d\theta}{dt}$ This conversion helps in solving the equation using numerical methods.
 x??
 
 ---
 
 #### Driving Frequency and Its Impact
-The driving frequency \( \omega \) is a parameter that influences the external torque applied to the pendulum:
-
-\[
-f = \tau_0 \cos(\omega t)
-\]
+The driving frequency $\omega$ is a parameter that influences the external torque applied to the pendulum:
+$$f = \tau_0 \cos(\omega t)$$
 
 Where:
-- \( \tau_0 \) is the magnitude of the external driving torque
-- \( \omega \) is the driving frequency
+- $\tau_0$ is the magnitude of the external driving torque
+- $\omega$ is the driving frequency
 
-:p What does the driving frequency \( \omega \) represent in the chaotic pendulum equation?
+:p What does the driving frequency $\omega$ represent in the chaotic pendulum equation?
 ??x
-The driving frequency \( \omega \) represents the frequency at which an external force is applied to the pendulum. It influences how the external torque oscillates and can lead to complex behaviors such as chaos.
+The driving frequency $\omega$ represents the frequency at which an external force is applied to the pendulum. It influences how the external torque oscillates and can lead to complex behaviors such as chaos.
 
 ```python
 # Example calculation for f with a specific omega value
@@ -617,49 +563,44 @@ x??
 ---
 
 #### Free Pendulum Oscillations
-Background context explaining the concept. In the absence of friction and external torque, Newton's second law for a simple pendulum takes the form: \( \frac{d^2\theta}{dt^2} = -\omega_0^2 \sin(\theta) \). For small angular displacements, this simplifies to the familiar linear equation of simple harmonic motion with frequency \(\omega_0\): 
-\[ \frac{d^2\theta}{dt^2} \approx -\omega_0^2 \theta \Rightarrow \theta(t) = \theta_0 \sin(\omega_0 t + \phi). \]
-
-:p What is the equation for free pendulum oscillations when ignoring friction and external torque?
+Background context explaining the concept. In the absence of friction and external torque, Newton's second law for a simple pendulum takes the form:$\frac{d^2\theta}{dt^2} = -\omega_0^2 \sin(\theta)$. For small angular displacements, this simplifies to the familiar linear equation of simple harmonic motion with frequency $\omega_0$: 
+$$\frac{d^2\theta}{dt^2} \approx -\omega_0^2 \theta \Rightarrow \theta(t) = \theta_0 \sin(\omega_0 t + \phi).$$:p What is the equation for free pendulum oscillations when ignoring friction and external torque?
 ??x
 The equation of motion for a simple, frictionless, undriven pendulum is:
-\[ \frac{d^2\theta}{dt^2} = -\omega_0^2 \sin(\theta). \]
-This is a nonlinear differential equation. For small angles, it can be approximated as:
-\[ \frac{d^2\theta}{dt^2} \approx -\omega_0^2 \theta. \]
+$$\frac{d^2\theta}{dt^2} = -\omega_0^2 \sin(\theta).$$
 
-x??
+This is a nonlinear differential equation. For small angles, it can be approximated as:
+$$\frac{d^2\theta}{dt^2} \approx -\omega_0^2 \theta.$$x??
 
 #### Approximation of Sinθ
-Background context: When the angle \(\theta\) is small, we approximate \(\sin(\theta) \approx \theta\). This linearization leads to simple harmonic motion with a period \(T = 2\pi/\omega_0\).
+Background context: When the angle $\theta $ is small, we approximate$\sin(\theta) \approx \theta $. This linearization leads to simple harmonic motion with a period $ T = 2\pi/\omega_0$.
 
-:p Why can we approximate \(\sin(\theta)\) as \(\theta\) for small angles?
+:p Why can we approximate $\sin(\theta)$ as $\theta$ for small angles?
 ??x
 For small angles, the sine function can be approximated by its argument:
-\[ \sin(\theta) \approx \theta. \]
+$$\sin(\theta) \approx \theta.$$
+
 This approximation simplifies the differential equation of motion to a linear form.
 
 x??
 
 #### Nonlinear Pendulum Period Calculation
-Background context: The exact solution for the nonlinear pendulum involves expressing energy as constant and solving for the period using elliptic integrals. The period \(T\) is given by:
-\[ T = 4\pi \int_0^{\theta_m} d\theta \left[\sin^2\left(\frac{\theta_m}{2}\right) - \sin^2\left(\frac{\theta}{2}\right)\right]^{1/2}. \]
-
-:p How is the period \(T\) of a nonlinear pendulum calculated?
+Background context: The exact solution for the nonlinear pendulum involves expressing energy as constant and solving for the period using elliptic integrals. The period $T$ is given by:
+$$T = 4\pi \int_0^{\theta_m} d\theta \left[\sin^2\left(\frac{\theta_m}{2}\right) - \sin^2\left(\frac{\theta}{2}\right)\right]^{1/2}.$$:p How is the period $ T$ of a nonlinear pendulum calculated?
 ??x
-The period \(T\) of a nonlinear pendulum can be expressed as:
-\[ T = 4T_0 \int_0^{\theta_m} d\theta \left[\sin^2\left(\frac{\theta_m}{2}\right) - \sin^2\left(\frac{\theta}{2}\right)\right]^{1/2}, \]
-where \(T_0 = 2\pi/\omega_0\) is the period of small oscillations. This integral represents an elliptic integral of the first kind.
+The period $T$ of a nonlinear pendulum can be expressed as:
+$$T = 4T_0 \int_0^{\theta_m} d\theta \left[\sin^2\left(\frac{\theta_m}{2}\right) - \sin^2\left(\frac{\theta}{2}\right)\right]^{1/2},$$where $ T_0 = 2\pi/\omega_0$ is the period of small oscillations. This integral represents an elliptic integral of the first kind.
 
 x??
 
 #### Example Rk4 Program for Free Pendulum
-Background context: The task involves modifying a Runge-Kutta 4th order (rk4) program to solve the nonlinear pendulum equation. Start with \(\theta = 0\) and \(\dot{\theta}(0) \neq 0\).
+Background context: The task involves modifying a Runge-Kutta 4th order (rk4) program to solve the nonlinear pendulum equation. Start with $\theta = 0 $ and$\dot{\theta}(0) \neq 0$.
 
 :p How would you modify an rk4 program for free oscillations of a realistic pendulum?
 ??x
 To modify an RK4 program for solving the nonlinear pendulum equation, start by defining the system of first-order differential equations:
-\[ \frac{d\theta}{dt} = y(1), \]
-\[ \frac{dy(1)}{dt} = -\omega_0^2 \sin(\theta) - \alpha y(1). \]
+$$\frac{d\theta}{dt} = y(1),$$
+$$\frac{dy(1)}{dt} = -\omega_0^2 \sin(\theta) - \alpha y(1).$$
 
 Here is a pseudocode example for the RK4 method:
 
@@ -686,21 +627,19 @@ function rk4(f, g, theta0, omega0, alpha, fc, omega_t, dt, t_max):
     return thetai, yi
 ```
 
-In this example, `f` and `g` are functions that implement \(\frac{d\theta}{dt}\) and \(\frac{dy(1)}{dt}\).
+In this example, `f` and `g` are functions that implement $\frac{d\theta}{dt}$ and $\frac{dy(1)}{dt}$.
 
 x??
 
 #### Free Pendulum Implementation and Test
-Background context: The task is to modify the RK4 program to solve the nonlinear pendulum equation. Start with \(\theta = 0\) and \(\dot{\theta}(0) \neq 0\).
+Background context: The task is to modify the RK4 program to solve the nonlinear pendulum equation. Start with $\theta = 0 $ and$\dot{\theta}(0) \neq 0$.
 
 :p What are the initial conditions for testing the free pendulum implementation?
 ??x
 For testing the free pendulum implementation, start with:
-\[ \theta(0) = 0 \]
-and 
-\[ \dot{\theta}(0) \neq 0. \]
+$$\theta(0) = 0$$and$$\dot{\theta}(0) \neq 0.$$
 
-This means that the pendulum starts at \(\theta = 0\) but has some initial angular velocity.
+This means that the pendulum starts at $\theta = 0$ but has some initial angular velocity.
 
 x??
 
@@ -708,26 +647,26 @@ x??
 
 #### Gradual Increase of Initial Angular Velocity
 
-Background context: The task involves gradually increasing the initial angular velocity (\(\dot{\theta}(0)\)) to study its effect on nonlinear dynamics, particularly focusing on how it changes the behavior of a pendulum. This is important for understanding the transition from linear to highly nonlinear regimes.
+Background context: The task involves gradually increasing the initial angular velocity ($\dot{\theta}(0)$) to study its effect on nonlinear dynamics, particularly focusing on how it changes the behavior of a pendulum. This is important for understanding the transition from linear to highly nonlinear regimes.
 
-:p What happens when you gradually increase \(\dot{\theta}(0)\) in the context of studying a pendulum's motion?
+:p What happens when you gradually increase $\dot{\theta}(0)$ in the context of studying a pendulum's motion?
 
 ??x
-When you gradually increase \(\dot{\theta}(0)\), the importance of nonlinear effects becomes more pronounced. Initially, the system behaves nearly harmonically with a frequency close to that of simple harmonic motion (\(\omega_0 = 2\pi/T_0\)). However, as \(\dot{\theta}(0)\) increases, the period \(T\) of oscillation changes and deviates from the linear case.
+When you gradually increase $\dot{\theta}(0)$, the importance of nonlinear effects becomes more pronounced. Initially, the system behaves nearly harmonically with a frequency close to that of simple harmonic motion ($\omega_0 = 2\pi/T_0 $). However, as $\dot{\theta}(0)$ increases, the period $T$ of oscillation changes and deviates from the linear case.
 x??
 
 ---
 
 #### Testing Linear Case
 
-Background context: The first step involves testing the program for the linear case where \(\sin \theta \approx \theta\). This helps verify that the solution is indeed harmonic with a frequency \(\omega_0 = 2\pi/T_0\) and that the frequency of oscillation is independent of amplitude.
+Background context: The first step involves testing the program for the linear case where $\sin \theta \approx \theta $. This helps verify that the solution is indeed harmonic with a frequency $\omega_0 = 2\pi/T_0$ and that the frequency of oscillation is independent of amplitude.
 
 :p What must be verified in the linear case?
 
 ??x
 In the linear case, you need to verify two key properties:
 1. The solution should exhibit harmonic motion.
-2. The frequency of oscillation should be \(\omega_0 = 2\pi/T_0\) and independent of the amplitude.
+2. The frequency of oscillation should be $\omega_0 = 2\pi/T_0$ and independent of the amplitude.
 This verification is crucial for ensuring that your numerical model correctly handles the linear approximation.
 
 To test this, you can use a simple harmonic oscillator equation with known initial conditions:
@@ -747,12 +686,12 @@ x??
 
 #### Determining Period by Counting Amplitude Passes
 
-Background context: The algorithm for determining the period \(T\) involves counting the time it takes for three successive passes through \(\theta = 0\). This method accounts for cases where oscillation is not symmetric about the origin.
+Background context: The algorithm for determining the period $T $ involves counting the time it takes for three successive passes through$\theta = 0$. This method accounts for cases where oscillation is not symmetric about the origin.
 
 :p How do you devise an algorithm to determine the period of the pendulum's oscillation?
 
 ??x
-To determine the period \(T\) of the pendulum, count the time it takes for three successive passes through \(\theta = 0\). This method handles non-symmetric oscillations effectively:
+To determine the period $T $ of the pendulum, count the time it takes for three successive passes through$\theta = 0$. This method handles non-symmetric oscillations effectively:
 ```java
 // Pseudocode for determining the period T
 double startTime = System.currentTimeMillis();
@@ -770,48 +709,47 @@ x??
 
 #### Observing Period Change with Increasing Energy
 
-Background context: For a realistic pendulum, observe how the period \(T\) changes as initial energy increases. Plot your observations and compare them to theoretical predictions.
+Background context: For a realistic pendulum, observe how the period $T$ changes as initial energy increases. Plot your observations and compare them to theoretical predictions.
 
 :p How do you test the change in period with increasing initial energy for a pendulum?
 
 ??x
 To test the change in period with increasing initial energy:
 1. Gradually increase the initial kinetic energy.
-2. Measure the time it takes for three successive passes through \(\theta = 0\).
+2. Measure the time it takes for three successive passes through $\theta = 0$.
 3. Plot the observed periods against the initial energies.
 
-Use the following formula to calculate the theoretical period \(T_0\) of a simple harmonic oscillator:
-\[ T_0 = 2\pi \sqrt{\frac{l}{g}} \]
-where \(l\) is the length of the pendulum and \(g\) is gravitational acceleration. Compare your observations with this model.
+Use the following formula to calculate the theoretical period $T_0$ of a simple harmonic oscillator:
+$$T_0 = 2\pi \sqrt{\frac{l}{g}}$$where $ l $ is the length of the pendulum and $ g$ is gravitational acceleration. Compare your observations with this model.
 x??
 
 ---
 
 #### Separatrix and Transition to Rotational Motion
 
-Background context: As initial kinetic energy approaches \(2mgL\), the motion transitions from oscillatory to rotational (over-the-top or "running"). This phenomenon can be observed by testing how close you can get to the separatrix, which corresponds to an infinite period.
+Background context: As initial kinetic energy approaches $2mgL$, the motion transitions from oscillatory to rotational (over-the-top or "running"). This phenomenon can be observed by testing how close you can get to the separatrix, which corresponds to an infinite period.
 
 :p What is a separatrix in the context of pendulum dynamics?
 
 ??x
-A separatrix in pendulum dynamics refers to the boundary between oscillatory and rotational motion. As the initial kinetic energy approaches \(2mgL\), the motion transitions from simple harmonic oscillation (back-and-forth) to continuous rotation ("over-the-top" or "running"). This transition corresponds to an infinite period.
+A separatrix in pendulum dynamics refers to the boundary between oscillatory and rotational motion. As the initial kinetic energy approaches $2mgL$, the motion transitions from simple harmonic oscillation (back-and-forth) to continuous rotation ("over-the-top" or "running"). This transition corresponds to an infinite period.
 
 To test this:
 1. Gradually increase the initial energy until you see the pendulum perform a full loop.
-2. Measure the time taken for the pendulum to return to \(\theta = 0\) and observe if it shows rotational behavior.
+2. Measure the time taken for the pendulum to return to $\theta = 0$ and observe if it shows rotational behavior.
 x??
 
 ---
 
 #### Converting Numerical Data to Sound
 
-Background context: The task involves converting numerical data of position \(x(t)\) and velocity \(v(t)\) into sound. This helps in hearing the difference between harmonic motion (boring) and anharmonic motion containing overtones.
+Background context: The task involves converting numerical data of position $x(t)$ and velocity $v(t)$ into sound. This helps in hearing the difference between harmonic motion (boring) and anharmonic motion containing overtones.
 
 :p How do you convert your pendulum's numerical data to sound?
 
 ??x
 To convert your pendulum's numerical data into sound:
-1. Collect time series data of \(x(t)\).
+1. Collect time series data of $x(t)$.
 2. Map this data to a frequency or amplitude spectrum.
 3. Use software like Java Applets (though they are now outdated) to visualize and play the sound.
 
@@ -833,17 +771,18 @@ x??
 
 #### Phase Space Analysis
 
-Background context: Phase space analysis involves plotting the position \(x(t)\) against velocity \(v(t)\) over time. This visualization can reveal complex behaviors that appear simple in time-domain plots.
+Background context: Phase space analysis involves plotting the position $x(t)$ against velocity $v(t)$ over time. This visualization can reveal complex behaviors that appear simple in time-domain plots.
 
 :p What is phase space, and how does it help in analyzing pendulum motion?
 
 ??x
-Phase space is a graphical representation where each point corresponds to the state of the system (position \(x\) and velocity \(v\)). For a pendulum:
-- The abscissa (horizontal axis) represents position \(\theta\).
-- The ordinate (vertical axis) represents velocity \(v\).
+Phase space is a graphical representation where each point corresponds to the state of the system (position $x $ and velocity$v$). For a pendulum:
+- The abscissa (horizontal axis) represents position $\theta$.
+- The ordinate (vertical axis) represents velocity $v$.
 
 Analyzing phase space helps in understanding complex behaviors, such as strange attractors. For a simple harmonic oscillator:
-\[ x(t) = A \sin(\omega t), \quad v(t) = \frac{dx}{dt} = \omega A \cos(\omega t) \]
+$$x(t) = A \sin(\omega t), \quad v(t) = \frac{dx}{dt} = \omega A \cos(\omega t)$$
+
 These equations describe closed elliptical orbits when plotted in phase space.
 
 To visualize this:
@@ -863,10 +802,10 @@ x??
 
 Background context: As initial conditions change, the pendulum's behavior transitions from simple harmonic to highly nonlinear. This includes observing changes in period and the transition to rotational motion.
 
-:p How does the nonlinear pendulum behave as initial energy approaches 2 \(m g L\)?
+:p How does the nonlinear pendulum behave as initial energy approaches 2 $m g L$?
 
 ??x
-As initial energy approaches \(2mgL\):
+As initial energy approaches $2mgL$:
 1. The period of oscillation increases significantly.
 2. The motion transitions from simple harmonic oscillation to rotational ("over-the-top" or "running").
 3. Beyond this point, the pendulum performs a full loop, exhibiting rotational behavior.
@@ -883,7 +822,7 @@ Background context: The provided text discusses various types of motion in phase
 
 :p Describe the characteristics of periodic (not necessarily harmonic) oscillations with closed figures.
 ??x
-Periodic oscillations with closed figures, as described in the text, involve motions where \((x,v)\) coordinates repeat themselves over time. The key characteristic is that the system returns to its initial state after a certain period due to the restoring force leading to clockwise motion.
+Periodic oscillations with closed figures, as described in the text, involve motions where $(x,v)$ coordinates repeat themselves over time. The key characteristic is that the system returns to its initial state after a certain period due to the restoring force leading to clockwise motion.
 
 These can be seen in Figures 16.3 and 16.4, which illustrate various closed orbits representing different energy levels.
 x??
@@ -974,10 +913,7 @@ Background context: Modelocking occurs when an external driving force overpowers
 Modelocking is a phenomenon where the magnitude of the driving force is larger than that for a limit cycle (16.14), causing the external force to overpower natural oscillations, resulting in steady-state motion at the frequency of the driver.
 
 This can occur for both linear and nonlinear systems. In nonlinear systems, the driving torque may lock onto an overtone, leading to a rational relation between the driving frequency and the natural frequency:
-\[
-\omega = \frac{n}{m} \cdot \omega_0
-\]
-where \(n\) and \(m\) are integers.
+$$\omega = \frac{n}{m} \cdot \omega_0$$where $ n $ and $ m$ are integers.
 x??
 
 ---

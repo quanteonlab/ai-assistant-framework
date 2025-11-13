@@ -190,16 +190,10 @@ Background context explaining the concept. In this problem, you need to determin
 ??x
 The cost of each apple can be found by dividing the total cost by the number of apples.
 
-\[
+$$
 \text{Cost per apple} = \frac{\$3}{15}
-\]
-
-Performing the division:
-
-\[
-\frac{3}{15} = 0.20 \, \text{dollars} = 20 \, \text{cents}
-\]
-x??
+$$Performing the division:
+$$\frac{3}{15} = 0.20 \, \text{dollars} = 20 \, \text{cents}$$x??
 
 ---
 
@@ -208,17 +202,10 @@ Background context explaining the concept. You need to find the average number o
 :p What is the average number of soldiers in a company?
 ??x
 To find the average, first calculate the total number of soldiers:
-
-\[
-70 (\text{Alpha}) + 70 (\text{Charlie}) + 44 (\text{Bravo}) + 84 (\text{Delta}) = 268 \, \text{soldiers}
-\]
+$$70 (\text{Alpha}) + 70 (\text{Charlie}) + 44 (\text{Bravo}) + 84 (\text{Delta}) = 268 \, \text{soldiers}$$
 
 Next, divide by the number of companies (which is 4):
-
-\[
-\frac{268}{4} = 67 \, \text{soldiers per company}
-\]
-x??
+$$\frac{268}{4} = 67 \, \text{soldiers per company}$$x??
 
 ---
 
@@ -227,12 +214,9 @@ Background context explaining the concept. You need to sum up all individual cos
 :p How much total money did Terry spend at the art supply store?
 ??x
 To find the total amount spent, add up the cost of each item:
-
-\[
+$$
 \$32.50 (\text{paints}) + \$112.20 (\text{canvas}) + \$17.25 (\text{paintbrushes}) = \$162.95
-\]
-
-The closest answer is:
+$$The closest answer is:
 x??
 
 ---
@@ -242,22 +226,14 @@ Background context explaining the concept. You need to calculate the total cost 
 :p How much does it cost to mail a 5-ounce letter?
 ??x
 First, determine the base cost and the additional costs:
-
-\[
+$$
 \text{Cost of first ounce} = \$0.49
-\]
+$$For the remaining four ounces (since each additional ounce costs$0.21):
 
-For the remaining four ounces (since each additional ounce costs $0.21):
-
-\[
-4 \times 0.21 = 0.84 \, \text{dollars}
-\]
+$$4 \times 0.21 = 0.84 \, \text{dollars}$$
 
 Adding these together:
-
-\[
-0.49 + 0.84 = 1.33
-\]
+$$0.49 + 0.84 = 1.33$$
 
 Thus, the total cost is:
 x??
@@ -269,17 +245,10 @@ Background context explaining the concept. You need to calculate the distance co
 :p How far did Joe run if he made three complete trips around a pentagon-shaped track with sides each measuring 1,760 feet?
 ??x
 First, find the total length of one trip:
-
-\[
-5 \times 1760 = 8800 \, \text{feet}
-\]
+$$5 \times 1760 = 8800 \, \text{feet}$$
 
 Then multiply by three to get the total distance for three trips:
-
-\[
-3 \times 8800 = 26400 \, \text{feet}
-\]
-x??
+$$3 \times 8800 = 26400 \, \text{feet}$$x??
 
 ---
 
@@ -288,17 +257,10 @@ Background context explaining the concept. You need to find the average score by
 :p What was Mike’s average score?
 ??x
 First, calculate the total score for both:
-
-\[
-157 (\text{Mike's first game}) + 175 (\text{Mike's second game}) = 332 \, \text{points}
-\]
+$$157 (\text{Mike's first game}) + 175 (\text{Mike's second game}) = 332 \, \text{points}$$
 
 Then divide by the number of games (which is 2):
-
-\[
-\frac{332}{2} = 166
-\]
-x??
+$$\frac{332}{2} = 166$$x??
 
 ---
 
@@ -307,32 +269,19 @@ Background context explaining the concept. You need to calculate the remaining m
 :p How much did Billy have left if he had 15 quarters, 15 dimes, 22 nickels, and 12 pennies?
 ??x
 First, convert each denomination to dollars:
-
-\[
-15 \times 0.25 = 3.75 \, \text{dollars} (\text{quarters})
-\]
-\[
-15 \times 0.10 = 1.50 \, \text{dollars} (\text{dimes})
-\]
-\[
-22 \times 0.05 = 1.10 \, \text{dollars} (\text{nickels})
-\]
-\[
-12 \times 0.01 = 0.12 \, \text{dollars} (\text{pennies})
-\]
+$$15 \times 0.25 = 3.75 \, \text{dollars} (\text{quarters})$$
+$$15 \times 0.10 = 1.50 \, \text{dollars} (\text{dimes})$$
+$$22 \times 0.05 = 1.10 \, \text{dollars} (\text{nickels})$$
+$$12 \times 0.01 = 0.12 \, \text{dollars} (\text{pennies})$$
 
 Adding these together:
-
-\[
-3.75 + 1.50 + 1.10 + 0.12 = 6.47 \, \text{dollars}
-\]
+$$3.75 + 1.50 + 1.10 + 0.12 = 6.47 \, \text{dollars}$$
 
 Subtract the cost of lunch ($5.52):
 
-\[
+$$
 6.47 - 5.52 = 0.95 \, \text{dollars} = \$0.95
-\]
-x??
+$$x??
 
 ---
 
@@ -341,20 +290,11 @@ Background context explaining the concept. You need to calculate the total numbe
 :p How many total hot dogs do Jack and Jeff eat in 12 minutes?
 ??x
 Calculate the number of hot dogs each person eats:
-
-\[
-\text{Jack: } 3 \, \text{hot dogs/minute} \times 12 \, \text{minutes} = 36 \, \text{hot dogs}
-\]
-\[
-\text{Jeff: } 2 \, \text{hot dogs/minute} \times 12 \, \text{minutes} = 24 \, \text{hot dogs}
-\]
+$$\text{Jack: } 3 \, \text{hot dogs/minute} \times 12 \, \text{minutes} = 36 \, \text{hot dogs}$$
+$$\text{Jeff: } 2 \, \text{hot dogs/minute} \times 12 \, \text{minutes} = 24 \, \text{hot dogs}$$
 
 Adding these together:
-
-\[
-36 + 24 = 60 \, \text{hot dogs}
-\]
-x??
+$$36 + 24 = 60 \, \text{hot dogs}$$x??
 
 ---
 
@@ -363,17 +303,10 @@ Background context explaining the concept. You need to find out how far a platoo
 :p How far will your platoon go if you march for 3 hours at 6 miles per hour?
 ??x
 Use the formula:
-
-\[
-\text{Distance} = \text{Speed} \times \text{Time}
-\]
+$$\text{Distance} = \text{Speed} \times \text{Time}$$
 
 Substitute the values:
-
-\[
-6 \, \text{miles/hour} \times 3 \, \text{hours} = 18 \, \text{miles}
-\]
-x??
+$$6 \, \text{miles/hour} \times 3 \, \text{hours} = 18 \, \text{miles}$$x??
 
 ---
 
@@ -382,11 +315,7 @@ Background context explaining the concept. You need to find out how far a convoy
 :p How many meters will your convoy travel if it has to travel a straight line across 4.7 grid squares, with each square equaling 1,000 meters?
 ??x
 First, multiply the number of grid squares by the distance per square:
-
-\[
-4.7 \times 1000 = 4700 \, \text{meters}
-\]
-x??
+$$4.7 \times 1000 = 4700 \, \text{meters}$$x??
 
 ---
 
@@ -396,14 +325,11 @@ Background context: In this problem, we need to determine the total distance run
 
 :p How many total miles will the friends have run if all 11 soldier friends complete the challenge?
 ??x
-The total miles run can be calculated by multiplying the number of soldiers by the distance each soldier runs.
-\[ \text{Total Miles} = \text{Number of Soldiers} \times \text{Distance per Soldier} \]
-\[ \text{Total Miles} = 11 \times 26 \]
+The total miles run can be calculated by multiplying the number of soldiers by the distance each soldier runs.$$\text{Total Miles} = \text{Number of Soldiers} \times \text{Distance per Soldier}$$
+$$\text{Total Miles} = 11 \times 26$$
 
 To solve:
-- \( 11 \times 26 = 286 \)
-
-So, the total miles run by all friends is 286 miles.
+- $11 \times 26 = 286$ So, the total miles run by all friends is 286 miles.
 ??x
 The answer is (C) 286 miles.
 
@@ -411,19 +337,17 @@ The answer is (C) 286 miles.
 
 #### Restaurant Gratuity Calculation
 
-Background context: Diane takes a client to an expensive restaurant and needs to calculate the gratuity added by the restaurant. The gratuity rate is 15%, and the total meal cost is $195 ($85 + $110).
+Background context: Diane takes a client to an expensive restaurant and needs to calculate the gratuity added by the restaurant. The gratuity rate is 15%, and the total meal cost is $195 ($85 +$110).
 
 :p How much does the restaurant add as a gratuity?
 ??x
 The gratuity can be calculated using the formula:
-\[ \text{Gratuity} = \text{Total Meal Cost} \times \text{Gratuity Rate} \]
-\[ \text{Total Meal Cost} = 85 + 110 = 195 \]
-\[ \text{Gratuity} = 195 \times 0.15 \]
+$$\text{Gratuity} = \text{Total Meal Cost} \times \text{Gratuity Rate}$$
+$$\text{Total Meal Cost} = 85 + 110 = 195$$
+$$\text{Gratuity} = 195 \times 0.15$$
 
 To solve:
-- \( 195 \times 0.15 = 29.25 \)
-
-So, the restaurant adds $29.25 as a gratuity.
+- $195 \times 0.15 = 29.25 $ So, the restaurant adds$29.25 as a gratuity.
 ??x
 The answer is (B) $29.25.
 
@@ -431,21 +355,17 @@ The answer is (B) $29.25.
 
 #### Fraction of Land Given by Farmer Beth
 
-Background context: Farmer Beth agrees to give her buyer $96,000 worth of land from her 320-acre farm, where the price per acre is $3,000.
+Background context: Farmer Beth agrees to give her buyer $96,000 worth of land from her 320-acre farm, where the price per acre is$3,000.
 
 :p What fraction of Farmer Beth’s land is the buyer getting?
 ??x
 To find the fraction of land given by the buyer:
 1. Calculate the total value of 320 acres.
-\[ \text{Total Value} = 320 \times 3000 = 960,000 \]
+$$\text{Total Value} = 320 \times 3000 = 960,000$$2. Determine how many acres correspond to$96,000.
+$$\text{Acres Given} = \frac{96000}{3000} = 32$$3. Find the fraction of land given:
+$$\text{Fraction} = \frac{\text{Acres Given}}{\text{Total Acres}} = \frac{32}{320} = \frac{1}{10}$$
 
-2. Determine how many acres correspond to $96,000.
-\[ \text{Acres Given} = \frac{96000}{3000} = 32 \]
-
-3. Find the fraction of land given:
-\[ \text{Fraction} = \frac{\text{Acres Given}}{\text{Total Acres}} = \frac{32}{320} = \frac{1}{10} \]
-
-So, the buyer is getting \( \frac{1}{10} \) of Farmer Beth’s land.
+So, the buyer is getting $\frac{1}{10}$ of Farmer Beth’s land.
 ??x
 The answer is (B) 1/10.
 
@@ -453,14 +373,12 @@ The answer is (B) 1/10.
 
 #### Distance Calculation Using Scale
 
-Background context: The distance from Kansas City to Denver on a map where 1 inch equals 3 miles, and the map shows the distance as \(192\frac{1}{2}\) inches. We need to convert this to real-world miles.
+Background context: The distance from Kansas City to Denver on a map where 1 inch equals 3 miles, and the map shows the distance as $192\frac{1}{2}$ inches. We need to convert this to real-world miles.
 
 :p How far is the round trip from Kansas City to Denver in miles?
 ??x
 To find the actual distance:
-\[ \text{Actual Distance} = 3 \times (192 + \frac{1}{2}) \]
-- First, add the fractional part: \(192 + \frac{1}{2} = 192.5\)
-- Then multiply by 3: \(192.5 \times 3 = 577.5\) miles
+$$\text{Actual Distance} = 3 \times (192 + \frac{1}{2})$$- First, add the fractional part:$192 + \frac{1}{2} = 192.5 $- Then multiply by 3:$192.5 \times 3 = 577.5$ miles
 
 So, the round trip is 577.5 miles.
 ??x
@@ -470,19 +388,17 @@ The answer is (B) 577.5 miles.
 
 #### Percentage Increase Calculation
 
-Background context: Mr. Cameron purchased a shirt for $20 and sold it for $26. We need to determine the percentage increase in price.
+Background context: Mr. Cameron purchased a shirt for $20 and sold it for$26. We need to determine the percentage increase in price.
 
 :p By what percentage did he increase the price?
 ??x
 To find the percentage increase:
-\[ \text{Increase} = 26 - 20 = 6 \]
-\[ \text{Percentage Increase} = \left( \frac{\text{Increase}}{\text{Original Price}} \right) \times 100 \]
-\[ \text{Percentage Increase} = \left( \frac{6}{20} \right) \times 100 \]
+$$\text{Increase} = 26 - 20 = 6$$
+$$\text{Percentage Increase} = \left( \frac{\text{Increase}}{\text{Original Price}} \right) \times 100$$
+$$\text{Percentage Increase} = \left( \frac{6}{20} \right) \times 100$$
 
 To solve:
-- \( \frac{6}{20} \times 100 = 30\% \)
-
-So, the price was increased by 30%.
+- $\frac{6}{20} \times 100 = 30\%$ So, the price was increased by 30%.
 ??x
 The answer is (C) 30.
 
@@ -495,16 +411,16 @@ Background context: In the military, a person spends their time on various activ
 :p How many hours per day does this discretionary time amount to?
 ??x
 The total time in a day is 24 hours.
-- Time spent sleeping and eating: \( \frac{1}{4} = 6 \) hours
-- Time spent standing at attention: \( \frac{1}{12} = 2 \) hours
-- Time spent exercising: \( \frac{1}{6} = 4 \) hours
-- Time spent working: \( \frac{2}{5} = 9.6 \) hours
+- Time spent sleeping and eating:$\frac{1}{4} = 6$ hours
+- Time spent standing at attention:$\frac{1}{12} = 2$ hours
+- Time spent exercising:$\frac{1}{6} = 4$ hours
+- Time spent working:$\frac{2}{5} = 9.6$ hours
 
 Total time accounted for:
-\[ 6 + 2 + 4 + 9.6 = 21.6 \]
+$$6 + 2 + 4 + 9.6 = 21.6$$
 
 Discretionary time:
-\[ 24 - 21.6 = 2.4 \] hours per day.
+$$24 - 21.6 = 2.4$$hours per day.
 
 So, the discretionary time is 2.4 hours.
 ??x
@@ -514,16 +430,16 @@ The answer is (C) 2.4 hours.
 
 #### Percentage Difference in Carpet Prices
 
-Background context: The designer’s carpet costs $15 per square yard, while the outlet-store carpet costs $12.50 per square yard. We need to find out how much more expensive the designer's carpet is as a percentage.
+Background context: The designer’s carpet costs $15 per square yard, while the outlet-store carpet costs$12.50 per square yard. We need to find out how much more expensive the designer's carpet is as a percentage.
 
 :p As a percentage, how much more expensive is the designer’s carpet?
 ??x
 To calculate the price difference:
-\[ \text{Price Difference} = 15 - 12.50 = 2.50 \]
+$$\text{Price Difference} = 15 - 12.50 = 2.50$$
 
 Percentage increase over the outlet-store carpet:
-\[ \left( \frac{\text{Difference}}{\text{Outlet Price}} \right) \times 100 \]
-\[ \left( \frac{2.50}{12.50} \right) \times 100 = 20\% \]
+$$\left( \frac{\text{Difference}}{\text{Outlet Price}} \right) \times 100$$
+$$\left( \frac{2.50}{12.50} \right) \times 100 = 20\%$$
 
 So, the designer’s carpet costs 20 percent more than the outlet-store carpet.
 ??x
@@ -537,17 +453,18 @@ Background context: Steve and his 3 children are painting a fence. We need to de
 
 :p How many days will it take Steve and the children to paint the fence?
 ??x
-Assume \( x \) hours per day for each person.
+Assume $x$ hours per day for each person.
 - Steve works 56 hours in total, so:
-\[ 7 \times x = 56 \]
-Solving for \( x \):
-\[ x = 8 \] hours per day.
+$$7 \times x = 56$$
+
+Solving for $x$:
+$$x = 8$$hours per day.
 
 Total working time by all (Steve + 3 children):
-\[ 4 \times 7x = 28x = 224 \text{ hours} \]
+$$4 \times 7x = 28x = 224 \text{ hours}$$
 
 Number of days:
-\[ \frac{224}{28} = 8 \div 2.5 = 2.5 \] days.
+$$\frac{224}{28} = 8 \div 2.5 = 2.5$$days.
 
 So, it will take them 2.5 days.
 ??x
@@ -562,18 +479,24 @@ Background context: We need to find the width of a rectangular vegetable garden 
 :p What is the width of a rectangular vegetable garden whose perimeter is 150 feet and length is 50 feet?
 ??x
 The formula for the perimeter of a rectangle:
-\[ P = 2 \times (L + W) \]
-Where \( P \) is the perimeter, \( L \) is the length, and \( W \) is the width.
+$$
+
+P = 2 \times (L + W)$$
+
+Where $P $ is the perimeter,$L $ is the length, and$W$ is the width.
 
 Given:
-- Perimeter (\(P\)) = 150 feet
-- Length (\(L\)) = 50 feet
+- Perimeter ($P$) = 150 feet
+- Length ($L$) = 50 feet
 
 Substitute into the formula:
-\[ 150 = 2 \times (50 + W) \]
-Simplify and solve for \( W \):
-\[ 75 = 50 + W \]
-\[ W = 25 \text{ feet} \]
+$$150 = 2 \times (50 + W)$$
+
+Simplify and solve for $W$:
+$$75 = 50 + W$$
+$$
+
+W = 25 \text{ feet}$$
 
 So, the width is 25 feet.
 ??x
@@ -583,20 +506,20 @@ The answer is (B) 25 feet.
 
 #### Cost to Carpet a Room
 
-Background context: We need to determine the cost of carpeting a room that is 10 feet wide and 12 feet long at $12.51 per square yard.
+Background context: We need to determine the cost of carpeting a room that is 10 feet wide and 12 feet long at$12.51 per square yard.
 
 :p What will it cost to carpet a room 10 feet wide and 12 feet long if carpet costs $12.51 per square yard?
 ??x
 First, calculate the area in square feet:
-\[ \text{Area} = 10 \times 12 = 120 \text{ square feet} \]
+$$\text{Area} = 10 \times 12 = 120 \text{ square feet}$$
 
 Convert to square yards (1 square yard = 9 square feet):
-\[ \text{Square Yards} = \frac{120}{9} = 13.33 \text{ square yards} \]
+$$\text{Square Yards} = \frac{120}{9} = 13.33 \text{ square yards}$$
 
 Cost:
-\[ \text{Total Cost} = 13.33 \times 12.51 = 166.67 \]
+$$\text{Total Cost} = 13.33 \times 12.51 = 166.67$$
 
-So, the cost is approximately $166.67.
+So, the cost is approximately$166.67.
 ??x
 The answer is (not directly provided in options, but it would be close to $166.67).
 
@@ -610,15 +533,11 @@ Background context: The problem involves calculating the fraction of land given 
 ??x
 To find the fraction:
 1. Calculate the total value of 320 acres.
-\[ \text{Total Value} = 320 \times 3000 = 960,000 \]
+$$\text{Total Value} = 320 \times 3000 = 960,000$$2. Determine how many acres correspond to$96,000.
+$$\text{Acres Given} = \frac{96000}{3000} = 32$$3. Find the fraction of land given:
+$$\text{Fraction} = \frac{\text{Acres Given}}{\text{Total Acres}} = \frac{32}{320} = \frac{1}{10}$$
 
-2. Determine how many acres correspond to $96,000.
-\[ \text{Acres Given} = \frac{96000}{3000} = 32 \]
-
-3. Find the fraction of land given:
-\[ \text{Fraction} = \frac{\text{Acres Given}}{\text{Total Acres}} = \frac{32}{320} = \frac{1}{10} \]
-
-So, the buyer is getting \( \frac{1}{10} \) of Farmer Beth’s land.
+So, the buyer is getting $\frac{1}{10}$ of Farmer Beth’s land.
 ??x
 The answer is (B) 1/10.
 

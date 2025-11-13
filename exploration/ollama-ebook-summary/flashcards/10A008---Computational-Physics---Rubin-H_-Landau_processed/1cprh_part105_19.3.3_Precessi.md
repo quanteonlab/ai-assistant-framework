@@ -12,9 +12,8 @@ Background context: The effective potential, which is crucial for understanding 
 ??x
 To create a rapidly precessing orbit, the massive particle must move between two turning points. This is indicated by the horizontal line in the potential well shown in Figure 19.4. The energy and initial conditions for this orbit should be such that the effective potential allows the particle to oscillate between these two points, leading to a rapid precession.
 
-For a more detailed analysis, we can use the concept of an effective potential \(V_{\text{eff}}(r)\) in polar coordinates:
-\[ V_{\text{eff}}(r) = - \frac{\ell^2}{2r^2} + \frac{\ell^2 - 2GM r}{2r^2}, \]
-where \(\ell\) is the angular momentum per unit mass, and \(rs = 2GM\) is the Schwarzschild radius. The turning points are where \(V_{\text{eff}}(r) = E\), with \(E\) being the energy of the particle.
+For a more detailed analysis, we can use the concept of an effective potential $V_{\text{eff}}(r)$ in polar coordinates:
+$$V_{\text{eff}}(r) = - \frac{\ell^2}{2r^2} + \frac{\ell^2 - 2GM r}{2r^2},$$where $\ell $ is the angular momentum per unit mass, and$rs = 2GM $ is the Schwarzschild radius. The turning points are where$V_{\text{eff}}(r) = E $, with $ E$ being the energy of the particle.
 
 The particle will precess when it moves between these turning points.
 x??
@@ -27,23 +26,22 @@ Background context: Mercury follows a nearly perfect elliptical orbit around the
 
 :p What is the significance of the Schwarzschild metric in the context of planetary orbits?
 ??x
-The Schwarzschild metric describes spacetime around a spherically symmetric mass \(M\) with no other matter present, and it is given by:
-\[ ds^2 = \left(1 - \frac{r_s}{r}\right) dt^2 - \frac{1}{1 - r_s/r} dr^2 - r^2 d\theta^2 - r^2 \sin^2 \theta d\phi^2, \]
-where \(r_s = 2GM\) is the Schwarzschild radius.
+The Schwarzschild metric describes spacetime around a spherically symmetric mass $M$ with no other matter present, and it is given by:
+$$ds^2 = \left(1 - \frac{r_s}{r}\right) dt^2 - \frac{1}{1 - r_s/r} dr^2 - r^2 d\theta^2 - r^2 \sin^2 \theta d\phi^2,$$where $ r_s = 2GM$ is the Schwarzschild radius.
 
 In this metric, a time-like trajectory for a massive particle can be described by:
-\[ \left(\frac{d\tau}{dt}\right)^2 = g_{\mu\nu} dx^\mu dx^\nu. \]
+$$\left(\frac{d\tau}{dt}\right)^2 = g_{\mu\nu} dx^\mu dx^\nu.$$
 
-For a planar orbit with \(\theta = \pi/2\), the equation simplifies to:
-\[ \left(\frac{d\tau}{dt}\right)^2 = \left(1 - \frac{r_s}{r}\right) - \frac{\dot{r}^2}{1 - r_s/r} - r^2 \dot{\phi}^2. \]
+For a planar orbit with $\theta = \pi/2$, the equation simplifies to:
+$$\left(\frac{d\tau}{dt}\right)^2 = \left(1 - \frac{r_s}{r}\right) - \frac{\dot{r}^2}{1 - r_s/r} - r^2 \dot{\phi}^2.$$
 
 Using the constants of motion, we can rewrite this as:
-\[ \frac{d\tau}{dt} = \frac{1}{e (1 - r_s/r)}, \quad \frac{d\phi}{dt} = \frac{L e r^2}{(1 - r_s/r)}. \]
+$$\frac{d\tau}{dt} = \frac{1}{e (1 - r_s/r)}, \quad \frac{d\phi}{dt} = \frac{L e r^2}{(1 - r_s/r)}.$$
 
 Substituting these into the geodesic equation, we get:
-\[ \left(\frac{dr}{d\tau}\right)^2 = \frac{r^4 L^2 [(1 - r_s/R)(1 + L^2 / R^2) - (1 - r_s/r)(1 + L^2 / r^2)]}{e^2 (1 - r_s/r)^2}. \]
+$$\left(\frac{dr}{d\tau}\right)^2 = \frac{r^4 L^2 [(1 - r_s/R)(1 + L^2 / R^2) - (1 - r_s/r)(1 + L^2 / r^2)]}{e^2 (1 - r_s/r)^2}.$$
 
-The mass of Mercury does not enter into the calculation, although its distance from the Sun does. This is consistent with Newtonian mechanics, where the mass \(m\) cancels out in the equations of motion.
+The mass of Mercury does not enter into the calculation, although its distance from the Sun does. This is consistent with Newtonian mechanics, where the mass $m$ cancels out in the equations of motion.
 
 ```java
 public class MercuryOrbit {
@@ -66,15 +64,14 @@ Background context: The precession of Mercury's orbit is a key test case for Gen
 
 :p What differential equation describes the relationship between distance and angle in an orbit around the Sun according to GR?
 ??x
-The differential equation that relates distance \(r\) and angle \(\phi\) for an orbit in General Relativity is:
-\[ \left( \frac{dr}{d\phi} \right)^2 = r^4 L^2 \left[ (1 - r_s/R)(1 + L^2 / R^2) - (1 - r_s/r)(1 + L^2 / r^2) \right], \]
-where:
-- \(r\) is the radial distance from the Sun.
-- \(L = Rv/c\) is the angular momentum per unit mass.
-- \(e\) is the specific energy, and it is related to the energy \(E\).
-- \(r_s = 2GM\) is the Schwarzschild radius.
+The differential equation that relates distance $r $ and angle$\phi$ for an orbit in General Relativity is:
+$$\left( \frac{dr}{d\phi} \right)^2 = r^4 L^2 \left[ (1 - r_s/R)(1 + L^2 / R^2) - (1 - r_s/r)(1 + L^2 / r^2) \right],$$where:
+- $r$ is the radial distance from the Sun.
+- $L = Rv/c$ is the angular momentum per unit mass.
+- $e $ is the specific energy, and it is related to the energy$E$.
+- $r_s = 2GM$ is the Schwarzschild radius.
 
-This equation describes how the particle's trajectory changes with respect to the angle \(\phi\) in a planar orbit around the Sun.
+This equation describes how the particle's trajectory changes with respect to the angle $\phi$ in a planar orbit around the Sun.
 
 ```java
 public class MercuryOrbit {
@@ -97,14 +94,10 @@ Background context: In General Relativity, the perihelion precession of Mercury'
 :p What is the formula for calculating the perihelion precession per revolution?
 ??x
 The formula for calculating the perihelion precession per revolution is:
-\[
-Δ𝜙=2√ \frac{R}{r_s} \int_{u^-}^{1} \frac{du}{\sqrt{(u-u^+)(u-u^-)(u-1)}}
-\]
-where \( u^- = -b - \sqrt{b^2 - 4ac}/2a \) and \( u^+ = -b + \sqrt{b^2 - 4ac}/2a \), with:
-\[
-a = \frac{r_s}{R}, \quad b = a-1, \quad c = b + r_s L^2
-\]
-Here, \( r_s \) is the Schwarzschild radius and \( R \) is a reference distance. The integral computes the change in angle per revolution due to gravitational effects.
+$$Δ𝜙=2√ \frac{R}{r_s} \int_{u^-}^{1} \frac{du}{\sqrt{(u-u^+)(u-u^-)(u-1)}}$$where $ u^- = -b - \sqrt{b^2 - 4ac}/2a $ and $ u^+ = -b + \sqrt{b^2 - 4ac}/2a$, with:
+$$a = \frac{r_s}{R}, \quad b = a-1, \quad c = b + r_s L^2$$
+
+Here,$r_s $ is the Schwarzschild radius and$R$ is a reference distance. The integral computes the change in angle per revolution due to gravitational effects.
 
 ??x
 The answer with detailed explanations.
@@ -130,20 +123,15 @@ x??
 
 #### Numerical Calculation of Perihelion Precession
 
-Background context: The numerical values of the Schwarzschild radius \( r_s \), apoapsis distance \( R_a \), and periapsis distance \( R_p \) are provided. Using these, we can compute the perihelion precession.
+Background context: The numerical values of the Schwarzschild radius $r_s $, apoapsis distance $ R_a $, and periapsis distance$ R_p$ are provided. Using these, we can compute the perihelion precession.
 
 :p Compute the perihelion precession using the given parameters.
 ??x
 Given:
-\[
-r_s = 2950 \text{ m}, \quad r_a = 69.82 \times 10^9 \text{ m}, \quad r_p = 46.00 \times 10^9 \text{ m}
-\]
+$$r_s = 2950 \text{ m}, \quad r_a = 69.82 \times 10^9 \text{ m}, \quad r_p = 46.00 \times 10^9 \text{ m}$$
 
 Using the formula:
-\[
-Δ𝜙=2√ \frac{R}{r_s} \int_{u^-}^{1} \frac{du}{\sqrt{(u-u^+)(u-u^-)(u-1)}}
-\]
-with \( R = r_a \).
+$$Δ𝜙=2√ \frac{R}{r_s} \int_{u^-}^{1} \frac{du}{\sqrt{(u-u^+)(u-u^-)(u-1)}}$$with $ R = r_a$.
 
 We need to solve for the precession angle using the provided values. The code `PrecessHg.py` by G.He can be used, but we will calculate it manually.
 
@@ -181,10 +169,7 @@ Background context: Interstellar travel through wormholes is a key theme in the 
 :p What is the metric used to describe the cylindrical wormhole?
 ??x
 The metric used to describe the cylindrical wormhole is given by:
-\[
-ds^2 = -dt^2 + d𝓁^2 + r^2(d𝜃^2 + \sin^2(𝜃) d𝜙^2)
-\]
-where \( r(\𝓁) = \sqrt{\rho^2 + \ell^2} \), and \( ρ \) is the radius of the wormhole's throat. This metric describes a spherically symmetric space.
+$$ds^2 = -dt^2 + d𝓁^2 + r^2(d𝜃^2 + \sin^2(𝜃) d𝜙^2)$$where $ r(\𝓁) = \sqrt{\rho^2 + \ell^2}$, and $ρ$ is the radius of the wormhole's throat. This metric describes a spherically symmetric space.
 
 ??x
 The answer with detailed explanations.
@@ -213,10 +198,7 @@ Background context: The movie "Interstellar" visualizes a wormhole connecting tw
 :p What is the metric used to describe the transition through the wormhole?
 ??x
 The metric used to describe the transition through the wormhole is given by the Schwarzschild metric:
-\[
-ds^2 = - \left( 1 - \frac{r_s}{r} \right) dr^2 + d𝓁^2 + r^2(d𝜃^2 + \sin^2(𝜃) d𝜙^2)
-\]
-where \( r_s \) is the Schwarzschild radius and \( r \) becomes an outward coordinate instead of proper distance \( l \).
+$$ds^2 = - \left( 1 - \frac{r_s}{r} \right) dr^2 + d𝓁^2 + r^2(d𝜃^2 + \sin^2(𝜃) d𝜙^2)$$where $ r_s $ is the Schwarzschild radius and $ r $ becomes an outward coordinate instead of proper distance $ l$.
 
 ??x
 The answer with detailed explanations.
@@ -235,14 +217,14 @@ x??
 ---
 
 #### Wormhole Derivative Calculation
-To understand how to calculate the derivative needed for the wormhole's spatial metric, we use SymPy, a Python library for symbolic mathematics. The specific calculation involves finding \(\frac{dr}{dL}\) for constructing the Ellis wormhole, which connects an upper and lower space.
+To understand how to calculate the derivative needed for the wormhole's spatial metric, we use SymPy, a Python library for symbolic mathematics. The specific calculation involves finding $\frac{dr}{dL}$ for constructing the Ellis wormhole, which connects an upper and lower space.
 
-:p What is the process of calculating the derivative \(\frac{dr}{dL}\) using SymPy?
+:p What is the process of calculating the derivative $\frac{dr}{dL}$ using SymPy?
 ??x
 The process involves defining symbols, substituting values, differentiating, and simplifying expressions. Here's a step-by-step breakdown:
 1. Define necessary symbolic variables.
-2. Substitute given values into these variables to form an equation for \(r\).
-3. Differentiate the equation with respect to \(L\) to find \(\frac{dr}{dL}\).
+2. Substitute given values into these variables to form an equation for $r$.
+3. Differentiate the equation with respect to $L $ to find$\frac{dr}{dL}$.
 4. Simplify the resulting expression.
 
 Here is the code snippet:
@@ -264,14 +246,14 @@ n_simplified = simplify(dr_dL)
 print(n_simplified)
 ```
 
-This code calculates the derivative \(\frac{dr}{dL}\), which is essential for constructing the wormhole's spatial metric.
+This code calculates the derivative $\frac{dr}{dL}$, which is essential for constructing the wormhole's spatial metric.
 
 x??
 
 #### Integration to Find Wormhole Radius
 The integration step involves calculating the integral of a function derived from the derivative calculation. This integral helps determine the radius at different points along the wormhole's axis.
 
-:p What is the process to find the integral of the function \(\sqrt{1 - n^2}\) from \(L = 0\) to \(L = lp\)?
+:p What is the process to find the integral of the function $\sqrt{1 - n^2}$ from $L = 0$ to $L = lp$?
 ??x
 To find the integral, you first need to define the variable and the integrand. Then use SymPy's `integrate` function to perform the integration.
 
@@ -294,7 +276,7 @@ integral_result = integrate(sqrt(1 - n_simplified**2), (L, 0, lp))
 print(integral_result)
 ```
 
-This code calculates the integral which represents the cumulative effect of \(n\) over the range of \(L\).
+This code calculates the integral which represents the cumulative effect of $n $ over the range of$L$.
 
 x??
 
@@ -305,7 +287,7 @@ The visualization process involves using VPython within a Jupyter notebook to pl
 ??x
 Visualization in VPython involves defining functions and plotting objects based on mathematical expressions derived from the wormhole equations. Here are the key steps:
 
-1. **Define the Functions**: Create a function to compute \(z\) (the z-coordinate for rings) and another to find the radius at different points.
+1. **Define the Functions**: Create a function to compute $z$(the z-coordinate for rings) and another to find the radius at different points.
 2. **Plotting Rings**: Use VPython's `ring` object to plot rings in 3D space, representing the wormhole connections.
 
 Here is an example of how this can be done:
@@ -363,18 +345,18 @@ This code creates a visual representation of the wormhole by plotting rings at d
 x??
 
 #### Calculation of Wormhole Ring Positions
-The calculation involves determining the position \(z\) and radius \(r\) of rings along the wormhole's axis. This is crucial for understanding the spatial distribution of the wormhole in a 3D space.
+The calculation involves determining the position $z $ and radius$r$ of rings along the wormhole's axis. This is crucial for understanding the spatial distribution of the wormhole in a 3D space.
 
 :p How are the positions and radii of rings calculated to visualize the Ellis wormhole?
 ??x
-To calculate the positions and radii of rings, we use numerical integration and mathematical expressions derived from the equations governing the wormhole. The process involves defining functions for \(z\) (position) and radius at different points along the wormhole's axis.
+To calculate the positions and radii of rings, we use numerical integration and mathematical expressions derived from the equations governing the wormhole. The process involves defining functions for $z$(position) and radius at different points along the wormhole's axis.
 
 Here is a detailed breakdown:
 
 1. **Define Functions**:
    - `f(x)`: Function to compute the z-coordinate based on the arctangent and logarithmic terms.
    - `trapezoid(Func, A, B, N)`: Trapezoidal rule for numerical integration.
-   - `radiuss(L)`: Function to compute the radius at a given point \(L\).
+   - `radiuss(L)`: Function to compute the radius at a given point $L$.
 
 2. **Plotting Rings**:
    - Use VPython's `ring` object to plot rings in 3D space.
@@ -439,10 +421,10 @@ The visualization process involves creating rings at specific positions along th
 To plot the rings representing the Ellis wormhole, you need to define the position and radius for each ring and use VPython's `ring` object. Here is a step-by-step guide:
 
 1. **Define the Position Function**:
-   - Use numerical integration (trapezoidal rule) to compute the z-coordinate \(z\) based on the function derived from the arctangent and logarithmic terms.
+   - Use numerical integration (trapezoidal rule) to compute the z-coordinate $z$ based on the function derived from the arctangent and logarithmic terms.
    
 2. **Define the Radius Function**:
-   - Calculate the radius at a given point \(L\).
+   - Calculate the radius at a given point $L$.
 
 3. **Plot the Rings**:
    - Use VPython's `ring` object to plot rings at specific z-coordinates.
@@ -502,16 +484,16 @@ This code creates a visual representation of the wormhole by plotting rings at s
 x??
 
 #### Numerical Integration for Wormhole Visualization
-The numerical integration step involves using the trapezoidal rule to approximate the integral of a function that describes the position \(z\) of the wormhole's rings. This is necessary because the exact solution might be complex or not easily integrable analytically.
+The numerical integration step involves using the trapezoidal rule to approximate the integral of a function that describes the position $z$ of the wormhole's rings. This is necessary because the exact solution might be complex or not easily integrable analytically.
 
 :p How does the trapezoidal rule help in visualizing the Ellis wormhole?
 ??x
-The trapezoidal rule helps approximate the integral of a function, which gives us the position \(z\) for the rings along the wormhole's axis. This numerical method is used when an exact solution cannot be obtained easily or is too complex to compute analytically.
+The trapezoidal rule helps approximate the integral of a function, which gives us the position $z$ for the rings along the wormhole's axis. This numerical method is used when an exact solution cannot be obtained easily or is too complex to compute analytically.
 
 Here’s how it works:
 
 1. **Define the Function**: The function `f(x)` computes the z-coordinate based on the arctangent and logarithmic terms.
-2. **Trapezoidal Rule Integration**: Use the `trapezoid` function to approximate the integral of \(f(x)\) over a range.
+2. **Trapezoidal Rule Integration**: Use the `trapezoid` function to approximate the integral of $f(x)$ over a range.
 
 Here is an example implementation:
 
@@ -562,17 +544,17 @@ The radius function `radiuss(L)` is crucial for determining the size of rings at
 
 :p How does the radius function `radiuss(L)` work to determine the size of rings?
 ??x
-The radius function `radiuss(L)` calculates the radius of each ring based on its position \(L\) along the wormhole's axis. This function uses mathematical expressions derived from the equations governing the wormhole structure.
+The radius function `radiuss(L)` calculates the radius of each ring based on its position $L$ along the wormhole's axis. This function uses mathematical expressions derived from the equations governing the wormhole structure.
 
 Here is a detailed explanation and implementation:
 
-1. **Input Parameter**: The input parameter \(L\) represents the axial position of the ring.
+1. **Input Parameter**: The input parameter $L$ represents the axial position of the ring.
 2. **Mathematical Expressions**:
    - `ro`: Fixed radius of the cylinder.
    - `a`: Half-height of the inner cylinder.
    - `M`: Mass of the black hole.
 3. **Calculation Steps**:
-   - Compute \(xx\): A scaled and shifted variable based on \(L\).
+   - Compute $xx $: A scaled and shifted variable based on $ L$.
    - Calculate `p` using the arctangent function.
    - Calculate `q` using a logarithmic term.
    - Sum these terms to get the final radius.
@@ -591,7 +573,7 @@ def radiuss(L):
     return r
 ```
 
-This function `radiuss(L)` computes the radius at each point \(L\) and ensures that the rings are correctly sized to represent the wormhole structure.
+This function `radiuss(L)` computes the radius at each point $L$ and ensures that the rings are correctly sized to represent the wormhole structure.
 
 x??
 
@@ -600,11 +582,11 @@ The position function `f(x)` is essential for determining the z-coordinate of ri
 
 :p How does the position function `f(x)` work to determine the z-coordinate of rings?
 ??x
-The position function \( f(x) \) determines the z-coordinate of each ring along the wormhole's axis. This function uses a combination of arctangent and logarithmic terms to compute these coordinates accurately. Here’s how it works:
+The position function $f(x)$ determines the z-coordinate of each ring along the wormhole's axis. This function uses a combination of arctangent and logarithmic terms to compute these coordinates accurately. Here’s how it works:
 
-1. **Input Parameter**: The input parameter \( x \) is used as a variable in the mathematical expressions.
+1. **Input Parameter**: The input parameter $x$ is used as a variable in the mathematical expressions.
 2. **Mathematical Expressions**:
-   - `arctan` term: Involves scaling and shifting \( x \).
+   - `arctan` term: Involves scaling and shifting $x$.
    - `log` term: Also involves scaling.
 
 Here is an example implementation:

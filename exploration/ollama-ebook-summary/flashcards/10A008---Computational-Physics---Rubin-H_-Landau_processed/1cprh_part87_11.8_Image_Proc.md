@@ -189,8 +189,9 @@ x??
 
 #### Activation Function and Neuron Implementation
 Activation functions are crucial for introducing non-linearity into neural networks, allowing them to model complex patterns. The sigmoid function is one such activation function defined as:
-\[ f(x) = \frac{1}{1 + e^{-x}} \]
-This function maps any input value \( x \) to a range between 0 and 1.
+$$f(x) = \frac{1}{1 + e^{-x}}$$
+
+This function maps any input value $x$ to a range between 0 and 1.
 
 :p What is the purpose of the `f` function in Neuron.py?
 ??x
@@ -287,8 +288,7 @@ x??
 K-means clustering is a method of vector quantization, widely used for cluster analysis. The goal of k-means is to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean, serving as a prototype of the cluster. This results in a partitioning of the data space into Voronoi cells.
 
 The algorithm aims to minimize the within-cluster sum of squares (WCSS), defined as:
-\[ \text{WCSS} = \sum_{i=1}^{k}\sum_{x_j \in C_i} \| x_j - \mu_i \|^2 \]
-where \( k \) is the number of clusters, \( C_i \) is the set of points in cluster \( i \), and \( \mu_i \) is the mean (centroid) of the points in cluster \( i \).
+$$\text{WCSS} = \sum_{i=1}^{k}\sum_{x_j \in C_i} \| x_j - \mu_i \|^2$$where $ k $is the number of clusters,$ C_i $ is the set of points in cluster $ i $, and$\mu_i $ is the mean (centroid) of the points in cluster$i$.
 
 :p What is KMeans clustering used for?
 ??x
@@ -343,8 +343,7 @@ x??
 A perceptron is a type of linear classifier that makes its predictions based on a linear predictor function combining a set of weighted inputs. It outputs either 0 or 1 depending on whether the input satisfies a threshold value.
 
 The decision boundary for a single-input perceptron can be represented by:
-\[ y = w_0 + w_1x \]
-where \( w_0 \) and \( w_1 \) are the weights, and \( x \) is the input. If \( y > 0 \), then the output is 1; otherwise, it is 0.
+$$y = w_0 + w_1x$$where $ w_0 $ and $ w_1 $ are the weights, and $ x $ is the input. If $ y > 0$, then the output is 1; otherwise, it is 0.
 
 :p What is a perceptron used for?
 ??x
@@ -418,11 +417,11 @@ This code plots individual data points according to their class labels. Points w
 x??
 
 #### Hubble's Data Fitting Using TensorFlow
-TensorFlow is a powerful machine learning library used for various tasks, including fitting data to mathematical models. In this context, we use TensorFlow to fit linear regression on Hubble's data, which involves finding the best-fit line \( y = mx + b \) where \( m \) and \( b \) are parameters to be optimized.
+TensorFlow is a powerful machine learning library used for various tasks, including fitting data to mathematical models. In this context, we use TensorFlow to fit linear regression on Hubble's data, which involves finding the best-fit line $y = mx + b $ where$m $ and$b$ are parameters to be optimized.
 
 :p What is the objective of using TensorFlow in this code snippet?
 ??x
-The objective is to fit a linear model to Hubble’s data by minimizing the squared error between predicted values (using the line equation) and actual values. TensorFlow provides tools for gradient descent optimization, which iteratively adjusts the parameters \( m \) and \( b \) until the loss function (mean squared error) is minimized.
+The objective is to fit a linear model to Hubble’s data by minimizing the squared error between predicted values (using the line equation) and actual values. TensorFlow provides tools for gradient descent optimization, which iteratively adjusts the parameters $m $ and$b$ until the loss function (mean squared error) is minimized.
 ??x
 
 ```python
@@ -470,7 +469,7 @@ plt.show()
 x??
 
 #### K-Means Clustering with Pandas and Scikit-Learn
-K-means clustering is a popular unsupervised machine learning algorithm used to find distinct clusters in data by partitioning the dataset into \( k \) groups. This code snippet demonstrates how to use Pandas for reading tabular data and Scikit-learn's KMeans for performing clustering.
+K-means clustering is a popular unsupervised machine learning algorithm used to find distinct clusters in data by partitioning the dataset into $k$ groups. This code snippet demonstrates how to use Pandas for reading tabular data and Scikit-learn's KMeans for performing clustering.
 
 :p What does this code do?
 ??x
@@ -631,7 +630,7 @@ weight: [448.52048]
 bias : [-34.726036]
 ```
 
-The learned linear function is \( y_{learned} = r \times weight + bias \).
+The learned linear function is $y_{learned} = r \times weight + bias$.
 
 ```python
 y_learned = r * weight + bias

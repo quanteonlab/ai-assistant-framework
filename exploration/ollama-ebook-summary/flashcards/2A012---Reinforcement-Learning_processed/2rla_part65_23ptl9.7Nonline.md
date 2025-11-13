@@ -79,9 +79,9 @@ x??
 Radial basis functions are a generalization of coarse coding to continuous-valued features. Each feature can take any value in the interval [0, 1], reflecting various degrees of presence.
 :p What is a radial basis function (RBF)?
 ??x
-A radial basis function is a type of feature that smoothly varies and is differentiable, unlike binary features. It depends on the distance between the state \(s\) and the center state \(c_i\), with an optional width parameter \(\sigma_i\). The Gaussian response formula is given by:
+A radial basis function is a type of feature that smoothly varies and is differentiable, unlike binary features. It depends on the distance between the state $s $ and the center state$c_i $, with an optional width parameter$\sigma_i$. The Gaussian response formula is given by:
 
-\[ x_i(s) = e^{-\frac{\| s - c_i \|^2}{2\sigma_i^2}} \]
+$$x_i(s) = e^{-\frac{\| s - c_i \|^2}{2\sigma_i^2}}$$
 
 This function provides a smooth transition, making it suitable for continuous state spaces.
 
@@ -177,15 +177,16 @@ x??
 ---
 
 #### SGD Step-Size Parameter Calculation
-Background context: The step-size parameter \( \alpha \) for setting up linear Stochastic Gradient Descent (SGD) methods can be estimated based on experience. A useful rule of thumb is to set it as \( \alpha = 1 / (\Delta E[x^T x'] - 1) \), where \( x \) and \( x' \) are random feature vectors chosen from the same distribution as the input vectors used in SGD.
+Background context: The step-size parameter $\alpha $ for setting up linear Stochastic Gradient Descent (SGD) methods can be estimated based on experience. A useful rule of thumb is to set it as$\alpha = 1 / (\Delta E[x^T x'] - 1)$, where $ x$and $ x'$ are random feature vectors chosen from the same distribution as the input vectors used in SGD.
 :p How do you determine the step-size parameter for linear SGD based on experience?
 ??x
-To determine the step-size parameter \( \alpha \) for linear SGD, we use a rule of thumb: \( \alpha = 1 / (\Delta E[x^T x'] - 1) \), where \( x \) and \( x' \) are random feature vectors sampled from the same distribution as those used in training. This formula helps ensure that learning proceeds appropriately without being too aggressive or too conservative.
+To determine the step-size parameter $\alpha $ for linear SGD, we use a rule of thumb:$\alpha = 1 / (\Delta E[x^T x'] - 1)$, where $ x$and $ x'$ are random feature vectors sampled from the same distribution as those used in training. This formula helps ensure that learning proceeds appropriately without being too aggressive or too conservative.
 
 For instance, if you suspect that the noise requires about 10 presentations with the same feature vector before near-asymptotic learning, this indicates a gradual update process.
 ??x
-To illustrate, suppose \( \Delta E[x^T x'] = 50 \). Using the rule of thumb, we set:
-\[ \alpha = \frac{1}{50 - 1} = \frac{1}{49} \]
+To illustrate, suppose $\Delta E[x^T x'] = 50$. Using the rule of thumb, we set:
+$$\alpha = \frac{1}{50 - 1} = \frac{1}{49}$$
+
 This value is chosen to ensure that learning updates are gradual yet effective.
 
 ```java
@@ -202,35 +203,34 @@ x??
 ---
 
 #### Tile Coding for State Space Transformation
-Background context: To handle a seven-dimensional continuous state space, tile coding is used to transform the input into binary feature vectors. This approach helps in estimating a state value function \( \hat{v}(s, w) \approx v^*(s) \). Eight tilings are made per dimension for stripe tilings, and 21 pairs of dimensions are tiled conjunctively with rectangular tiles.
+Background context: To handle a seven-dimensional continuous state space, tile coding is used to transform the input into binary feature vectors. This approach helps in estimating a state value function $\hat{v}(s, w) \approx v^*(s)$. Eight tilings are made per dimension for stripe tilings, and 21 pairs of dimensions are tiled conjunctively with rectangular tiles.
 :p How many total tilings are created using tile coding?
 ??x
 Given the setup:
-- 7 dimensions each tiled in 8 ways (stripe tiling): \( 7 \times 8 = 56 \) tilings.
-- Each pair of 7 dimensions is tiled conjunctively, and there are 21 such pairs: \( 21 \times 2 = 42 \) tilings.
+- 7 dimensions each tiled in 8 ways (stripe tiling): $7 \times 8 = 56$ tilings.
+- Each pair of 7 dimensions is tiled conjunctively, and there are 21 such pairs: $21 \times 2 = 42$ tilings.
 
 Thus, the total number of tilings is:
-\[ 56 + 42 = 98 \]
-??x
+$$56 + 42 = 98$$??x
 To verify, let's count step-by-step:
 
 - Number of dimensions: 7.
 - Stripe tiling per dimension: 8.
-- Number of pair combinations: \( \binom{7}{2} = 21 \).
+- Number of pair combinations:$\binom{7}{2} = 21$.
 - Each pair gets 2 tilings.
 
 Hence:
-\[ 7 \times 8 + 21 \times 2 = 56 + 42 = 98 \]
-x??
+$$7 \times 8 + 21 \times 2 = 56 + 42 = 98$$x??
 
 ---
 
 #### Step-Size for Tile Coding
-Background context: Given the total of 98 tilings, if you want learning to be gradual and take about 10 presentations with the same feature vector before near-asymptotic learning, use \( \alpha = 1 / (\Delta E[x^T x'] - 1) \). Here, \( \Delta E[x^T x'] \approx 98 \).
+Background context: Given the total of 98 tilings, if you want learning to be gradual and take about 10 presentations with the same feature vector before near-asymptotic learning, use $\alpha = 1 / (\Delta E[x^T x'] - 1)$. Here,$\Delta E[x^T x'] \approx 98$.
 :p What step-size parameter should you use?
 ??x
-Given the context, if \( \Delta E[x^T x'] \approx 98 \), we set:
-\[ \alpha = \frac{1}{98 - 1} = \frac{1}{97} \]
+Given the context, if $\Delta E[x^T x'] \approx 98$, we set:
+$$\alpha = \frac{1}{98 - 1} = \frac{1}{97}$$
+
 This value ensures that learning proceeds gradually.
 
 ```java
@@ -284,13 +284,11 @@ x??
 ---
 
 #### Activation Functions in Artificial Neural Networks
-Background context: In ANNs, activation functions are used to introduce nonlinearity into the network. Commonly used S-shaped or sigmoid functions include the logistic function \( f(x) = \frac{1}{1 + e^{-x}} \), and rectifier nonlinearities like \( f(x) = max(0, x) \). A step function might be represented as \( f(x) = 1 \text{ if } x > \theta, \text{ else } 0 \).
+Background context: In ANNs, activation functions are used to introduce nonlinearity into the network. Commonly used S-shaped or sigmoid functions include the logistic function $f(x) = \frac{1}{1 + e^{-x}}$, and rectifier nonlinearities like $ f(x) = max(0, x)$. A step function might be represented as $ f(x) = 1 \text{ if } x > \theta, \text{ else } 0$.
 :p What are some common activation functions used in ANNs?
 ??x
 Commonly used activation functions in artificial neural networks include:
-- Sigmoid or logistic function: \( f(x) = \frac{1}{1 + e^{-x}} \)
-- Rectifier nonlinearity (ReLU): \( f(x) = max(0, x) \)
-- Step function: \( f(x) = 1 \text{ if } x > \theta, \text{ else } 0 \)
+- Sigmoid or logistic function: $f(x) = \frac{1}{1 + e^{-x}}$- Rectifier nonlinearity (ReLU):$ f(x) = max(0, x)$- Step function:$ f(x) = 1 \text{ if } x > \theta, \text{ else } 0$
 
 These functions introduce nonlinearity, allowing ANNs to model complex relationships.
 ??x
@@ -320,7 +318,7 @@ Background context explaining the concept. Feedforward artificial neural network
 
 :p What does the universal approximation property state about feedforward ANNs?
 ??x
-The universal approximation theorem states that an artificial neural network with a single hidden layer containing a finite number of neurons can approximate any continuous function on a compact subset of \(\mathbb{R}^n\), given that the activation functions are non-constant, bounded, and monotonically-increasing (such as the sigmoid function). This theorem holds for various nonlinear activation functions beyond just sigmoids.
+The universal approximation theorem states that an artificial neural network with a single hidden layer containing a finite number of neurons can approximate any continuous function on a compact subset of $\mathbb{R}^n$, given that the activation functions are non-constant, bounded, and monotonically-increasing (such as the sigmoid function). This theorem holds for various nonlinear activation functions beyond just sigmoids.
 x??
 
 ---
@@ -346,7 +344,7 @@ Background context explaining the concept. ANNs typically learn through a stocha
 ??x
 The basic idea behind training ANNs using a stochastic gradient method involves adjusting the network’s weights in directions aimed at minimizing (or maximizing, depending on the objective) the performance error. Specifically, it involves estimating the partial derivatives of an objective function with respect to each weight and updating these weights proportionally.
 
-For example, if you want to minimize the loss function \(L\), the gradient descent update rule would be:
+For example, if you want to minimize the loss function $L$, the gradient descent update rule would be:
 ```python
 for i in range(num_weights):
     weight[i] -= learning_rate * dL/dweight[i]
@@ -363,8 +361,9 @@ Background context explaining the concept. In supervised learning, the objective
 :p What is the typical form of the objective function in supervised learning for ANNs?
 ??x
 In supervised learning, the objective function typically measures the expected error or loss over a set of labeled training examples. Common choices include mean squared error (MSE) for regression tasks and cross-entropy loss for classification tasks. For example, in binary classification using logistic regression:
-\[ L(y, \hat{y}) = -y \log(\hat{y}) - (1-y) \log(1-\hat{y}) \]
-Where \( y \) is the true label and \( \hat{y} \) is the predicted probability.
+$$L(y, \hat{y}) = -y \log(\hat{y}) - (1-y) \log(1-\hat{y})$$
+
+Where $y $ is the true label and$\hat{y}$ is the predicted probability.
 x??
 
 ---
@@ -381,7 +380,7 @@ The Q-learning update rule for an ANN might look like:
 ```python
 Q(state, action) += alpha * (reward + gamma * max(Q(next_state)) - Q(state, action))
 ```
-Where \( \alpha \) is the learning rate, and \( \gamma \) is the discount factor.
+Where $\alpha $ is the learning rate, and$\gamma$ is the discount factor.
 x??
 
 ---
@@ -462,8 +461,7 @@ The primary purpose of the dropout method is to prevent overfitting. By randomly
 In essence, when a unit is dropped out, its connections are also temporarily removed, effectively reducing the size of the network for that particular training iteration. The weights associated with the connections are then adjusted by multiplying them with the dropout probability during backpropagation to approximate the effect of having multiple thinned networks.
 
 This can be represented as:
-\[ \text{Adjusted Weight} = \text{Original Weight} \times p \]
-where \( p \) is the probability that a unit was retained (1 - dropout rate).
+$$\text{Adjusted Weight} = \text{Original Weight} \times p$$where $ p$ is the probability that a unit was retained (1 - dropout rate).
 
 The idea is to ensure that each hidden unit learns features that are useful for a wide variety of input distributions, making the network more versatile and less prone to overfitting.
 
@@ -522,16 +520,14 @@ Background context explaining the concept. Batch normalization normalizes the ou
 ??x
 Batch normalization improves the training process by stabilizing the learning process, which can lead to faster convergence and better generalization performance. It works by normalizing the inputs to each layer such that they have a mean of zero and unit variance across mini-batches.
 
-This is achieved by using the following formula for each input \( x \):
-\[ \hat{x} = \frac{x - \mu_\text{batch}}{\sqrt{\sigma^2_\text{batch} + \epsilon}} \]
-where:
-- \( \mu_\text{batch} \) is the mean of the mini-batch,
-- \( \sigma^2_\text{batch} \) is the variance of the mini-batch, and
-- \( \epsilon \) is a small constant to avoid division by zero.
+This is achieved by using the following formula for each input $x$:
+$$\hat{x} = \frac{x - \mu_\text{batch}}{\sqrt{\sigma^2_\text{batch} + \epsilon}}$$where:
+- $\mu_\text{batch}$ is the mean of the mini-batch,
+- $\sigma^2_\text{batch}$ is the variance of the mini-batch, and
+- $\epsilon$ is a small constant to avoid division by zero.
 
 The normalized values are then scaled and shifted:
-\[ y = \gamma \hat{x} + \beta \]
-where \( \gamma \) and \( \beta \) are learnable parameters that allow for scaling and shifting of the normalized values.
+$$y = \gamma \hat{x} + \beta$$where $\gamma $ and$\beta$ are learnable parameters that allow for scaling and shifting of the normalized values.
 
 Example:
 ```java
@@ -578,8 +574,7 @@ Deep residual learning works by making it easier to learn complex functions over
 This is achieved by adding shortcut connections or skip connections around blocks of layers, which effectively adds the input to the output of these layers after applying an activation function. This allows gradient signals from later layers to flow directly back to earlier layers without being modified by intermediate layers.
 
 The architecture can be represented as:
-\[ y = f(x) + x \]
-where \( f(x) \) is a residual block and \( x \) is the input.
+$$y = f(x) + x$$where $ f(x)$is a residual block and $ x$ is the input.
 
 Example:
 ```java
@@ -713,9 +708,8 @@ x??
 
 Background context explaining the concept. The method aims to improve the efficiency of linear function approximation by directly solving for the fixed point without iterative updates, which can be more computationally expensive.
 
-Formula: 
-\[ w_{TD} = A^{-1} b \]
-where \( A = E[\langle x_t (x_t - x_{t+1})^T \rangle] \) and \( b = E[R_{t+1} x_t] \).
+Formula:
+$$w_{TD} = A^{-1} b$$where $ A = E[\langle x_t (x_t - x_{t+1})^T \rangle]$and $ b = E[R_{t+1} x_t]$.
 
 :p What is the primary goal of the Least-Squares TD algorithm?
 ??x
@@ -726,29 +720,27 @@ The primary goal is to directly compute the weights that satisfy the TD fixed po
 #### LSTD Algorithm and Formulas
 
 Formula: 
-\[ A_{t} = \sum_{k=0}^{t-1} x_k (x_k - x_{k+1})^T + \epsilon I \]
-\[ b_t = \sum_{k=0}^{t-1} R_{k+1} x_k \]
+$$A_{t} = \sum_{k=0}^{t-1} x_k (x_k - x_{k+1})^T + \epsilon I$$
+$$b_t = \sum_{k=0}^{t-1} R_{k+1} x_k$$
 
-Where \( I \) is the identity matrix, and \( \epsilon I \) ensures that \( A_t \) is always invertible.
+Where $I $ is the identity matrix, and$\epsilon I $ ensures that$A_t$ is always invertible.
 
-:p What are the formulas used to estimate \( A_t \) and \( b_t \)?
+:p What are the formulas used to estimate $A_t $ and$b_t$?
 ??x
 The formulas used are:
-\[ A_{t} = \sum_{k=0}^{t-1} x_k (x_k - x_{k+1})^T + \epsilon I \]
-\[ b_t = \sum_{k=0}^{t-1} R_{k+1} x_k \]
+$$A_{t} = \sum_{k=0}^{t-1} x_k (x_k - x_{k+1})^T + \epsilon I$$
+$$b_t = \sum_{k=0}^{t-1} R_{k+1} x_k$$
 
-Where \( \epsilon I \) ensures that the matrix is always invertible.
+Where $\epsilon I$ ensures that the matrix is always invertible.
 
 ---
 
 #### LSTD Inverse Computation
 
 The algorithm computes the inverse of a sum of outer products incrementally using the Sherman-Morrison formula:
-\[ A_t^{-1} = (A_{t-1} - \frac{A_{t-1} x_t (x_t^T A_{t-1})}{(1 + x_t^T A_{t-1} x_t)}) \]
-
-:p What is the Sherman-Morrison formula used for in LSTD?
+$$A_t^{-1} = (A_{t-1} - \frac{A_{t-1} x_t (x_t^T A_{t-1})}{(1 + x_t^T A_{t-1} x_t)})$$:p What is the Sherman-Morrison formula used for in LSTD?
 ??x
-The Sherman-Morrison formula is used to incrementally update the inverse of a matrix that is a sum of outer products. It allows maintaining and updating the inverse with only \( O(d^2) \) computations.
+The Sherman-Morrison formula is used to incrementally update the inverse of a matrix that is a sum of outer products. It allows maintaining and updating the inverse with only $O(d^2)$ computations.
 
 ---
 
@@ -772,7 +764,7 @@ This pseudocode shows how to incrementally update the necessary values without r
 
 :p What is the computational complexity of the LSTD algorithm?
 ??x
-The computational complexity of LSTD, especially with incremental updates using the Sherman-Morrison formula, is \( O(d^2) \). This makes it more computationally efficient than semi-gradient TD(0), which has a complexity of \( O(d) \).
+The computational complexity of LSTD, especially with incremental updates using the Sherman-Morrison formula, is $O(d^2)$. This makes it more computationally efficient than semi-gradient TD(0), which has a complexity of $ O(d)$.
 
 ---
 
@@ -786,16 +778,16 @@ Advantages:
 
 Disadvantages:
 - Higher computational cost due to matrix operations.
-- Potential issues with choosing \( \epsilon \).
+- Potential issues with choosing $\epsilon$.
 - Does not allow forgetting, which can be problematic in dynamic environments like reinforcement learning and GPI.
 
 #### On-policy Prediction with Approximation LSTD (Least Squared Temporal Difference)
 
-Background context: This section discusses on-policy prediction using approximate least squared temporal difference (LSTD) methods. The algorithm aims to estimate a state value function, \( \hat{v} = w^T x(\cdot) \pi v \), where \( x:S \rightarrow \mathbb{R}^{d_s} \) is the feature representation, and \( \pi \) is the policy. The method involves updating weights using transitions from episodes.
+Background context: This section discusses on-policy prediction using approximate least squared temporal difference (LSTD) methods. The algorithm aims to estimate a state value function, $\hat{v} = w^T x(\cdot) \pi v $, where $ x:S \rightarrow \mathbb{R}^{d_s}$is the feature representation, and $\pi$ is the policy. The method involves updating weights using transitions from episodes.
 
 :p What does LSTD (Least Squared Temporal Difference) aim to estimate in this context?
 ??x
-LSTD aims to estimate a state value function, \( \hat{v} = w^T x(\cdot) \pi v \), which approximates the true value of states under policy \( \pi \). The feature representation \( x:S \rightarrow \mathbb{R}^{d_s} \) maps states into a vector space, and the weights \( w \) are updated using transitions from episodes.
+LSTD aims to estimate a state value function, $\hat{v} = w^T x(\cdot) \pi v $, which approximates the true value of states under policy $\pi $. The feature representation $ x:S \rightarrow \mathbb{R}^{d_s}$maps states into a vector space, and the weights $ w$ are updated using transitions from episodes.
 x??
 
 ---
@@ -817,7 +809,7 @@ Background context: The nearest neighbor method is a simple memory-based functio
 
 :p How does the nearest neighbor method approximate the value of a query state?
 ??x
-The nearest neighbor method approximates the value of a query state \( s \) by finding the training example whose state \( s' \) is closest to \( s \), and using the target value of that example as the approximate value for \( s \).
+The nearest neighbor method approximates the value of a query state $s $ by finding the training example whose state$s'$ is closest to $ s $, and using the target value of that example as the approximate value for $ s$.
 x??
 
 ---
@@ -857,11 +849,11 @@ x??
 
 #### Addressing the Curse of Dimensionality
 
-Background context: Memory-based methods require memory proportional to the dimensionality \( k \) of the state space, unlike parametric methods which may need exponential memory for a tabular approach.
+Background context: Memory-based methods require memory proportional to the dimensionality $k$ of the state space, unlike parametric methods which may need exponential memory for a tabular approach.
 
 :p How do memory-based methods help address the curse of dimensionality?
 ??x
-Memory-based methods help address the curse of dimensionality by requiring memory that scales linearly with the number of examples stored, rather than exponentially in the dimensions \( k \) of the state space. This makes them more efficient and scalable compared to tabular or parametric approaches.
+Memory-based methods help address the curse of dimensionality by requiring memory that scales linearly with the number of examples stored, rather than exponentially in the dimensions $k$ of the state space. This makes them more efficient and scalable compared to tabular or parametric approaches.
 x??
 
 ---

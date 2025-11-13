@@ -48,15 +48,14 @@ x??
 ---
 
 #### Value Network in AlphaGo
-The value network in AlphaGo plays a crucial role in evaluating states. It outputs an estimated value for each board position using a 13-layer deep convolutional ANN. The formula for updating the value of a state node \( s \) combines both rollout returns and learned value functions.
+The value network in AlphaGo plays a crucial role in evaluating states. It outputs an estimated value for each board position using a 13-layer deep convolutional ANN. The formula for updating the value of a state node $s$ combines both rollout returns and learned value functions.
 
 :p What is the formula used to update the value function in APV-MCTS?
 ??x
-The formula used to update the value function in APV-MCTS for a newly added node \( s \) is:
-\[ v(s) = (1 - \alpha)v_\text{✓}(s) + \alpha G \]
-where \( G \) is the return from the rollout and \( \alpha \) controls the mixing of the values derived from both methods.
+The formula used to update the value function in APV-MCTS for a newly added node $s$ is:
+$$v(s) = (1 - \alpha)v_\text{✓}(s) + \alpha G$$where $ G $ is the return from the rollout and $\alpha$ controls the mixing of the values derived from both methods.
 
-This formula ensures that the value function \( v(s) \) is a blend of the current estimate \( v_\text{✓}(s) \) from the learned value network and the actual outcome \( G \) from simulations. This hybrid approach helps in refining the model over time by incorporating real outcomes while leveraging prior knowledge.
+This formula ensures that the value function $v(s)$ is a blend of the current estimate $v_\text{✓}(s)$ from the learned value network and the actual outcome $G$ from simulations. This hybrid approach helps in refining the model over time by incorporating real outcomes while leveraging prior knowledge.
 
 x??
 
@@ -137,7 +136,7 @@ Background context: The second stage involved using policy gradient reinforcemen
 
 :p How did DeepMind train the RL policy network in the second stage?
 ??x
-DeepMind trained the RL policy network through policy gradient reinforcement learning, where weights were updated at each time step to maximize expected outcome. The process involved playing games between the current RL policy network \( p_{\rho} \) and a randomly selected previous iteration of the same network.
+DeepMind trained the RL policy network through policy gradient reinforcement learning, where weights were updated at each time step to maximize expected outcome. The process involved playing games between the current RL policy network $p_{\rho}$ and a randomly selected previous iteration of the same network.
 
 ```java
 // Pseudocode for updating weights in RL training
@@ -444,11 +443,11 @@ x??
 ---
 
 #### Policy Vector and MCTS Search Probabilities
-Background context: The policy vector \( p \) represents the move probabilities output by the neural network. These are compared to the search probabilities from MCTS to adjust the network's parameters.
+Background context: The policy vector $p$ represents the move probabilities output by the neural network. These are compared to the search probabilities from MCTS to adjust the network's parameters.
 
-:p How do the policy vector \( p \) and search probabilities relate in AlphaGo Zero?
+:p How do the policy vector $p$ and search probabilities relate in AlphaGo Zero?
 ??x
-The policy vector \( p \) guides the Monte Carlo Tree Search (MCTS) exploration, with moves being selected based on these probabilities. The neural network's policy vector is updated to better match the MCTS-generated search probabilities, ensuring that the model learns from the most promising actions.
+The policy vector $p$ guides the Monte Carlo Tree Search (MCTS) exploration, with moves being selected based on these probabilities. The neural network's policy vector is updated to better match the MCTS-generated search probabilities, ensuring that the model learns from the most promising actions.
 
 ```pseudocode
 function updatePolicy(network, monteCarloProbabilities):
@@ -461,11 +460,11 @@ x??
 ---
 
 #### Win Probability Estimation and Error Minimization
-Background context: The value function \( v \) estimates the probability of winning from each position. It is trained to minimize error between its predictions and actual game outcomes.
+Background context: The value function $v$ estimates the probability of winning from each position. It is trained to minimize error between its predictions and actual game outcomes.
 
 :p How does the neural network estimate win probabilities in AlphaGo Zero?
 ??x
-The value function \( v \) outputs a scalar representing the estimated probability of the current player winning. The network is trained to reduce the difference between this predicted value and the actual game winner, thereby improving its accuracy over time.
+The value function $v$ outputs a scalar representing the estimated probability of the current player winning. The network is trained to reduce the difference between this predicted value and the actual game winner, thereby improving its accuracy over time.
 
 ```pseudocode
 def trainValueFunction(data):
@@ -505,7 +504,7 @@ Background context explaining how the network produced move probabilities.
 
 :p How did the network produce move probabilities?
 ??x
-The network's first head, after the split, fed into 362 output units to produce move probabilities \( p \) for each of the 192+1 possible stone placements (plus pass).
+The network's first head, after the split, fed into 362 output units to produce move probabilities $p$ for each of the 192+1 possible stone placements (plus pass).
 x??
 
 ---
@@ -514,7 +513,7 @@ Background context explaining how the network estimated win probability.
 
 :p How did the network estimate the win probability?
 ??x
-The network's second head, after the split, fed into a single output unit to produce an estimate of the scalar \( v \), representing the probability that the current player would win from the current board position.
+The network's second head, after the split, fed into a single output unit to produce an estimate of the scalar $v$, representing the probability that the current player would win from the current board position.
 x??
 
 ---
@@ -738,11 +737,11 @@ These data sets included various customer features such as time since last visit
 ---
 
 #### -Greedy Policy Implementation
-Background context explaining the concept. The greedy optimization algorithm implemented an \(-greedy policy that selected with probability \(1-\) the offer predicted by the RF to have the highest click probability, and otherwise selected other offers uniformly at random.
-:p How was the \(-greedy policy defined in the greedy optimization approach?
+Background context explaining the concept. The greedy optimization algorithm implemented an $-greedy policy that selected with probability \(1-$ the offer predicted by the RF to have the highest click probability, and otherwise selected other offers uniformly at random.
+:p How was the$-greedy policy defined in the greedy optimization approach?
 ??x
 The \(-greedy policy in the greedy optimization approach was defined as follows:
-- With probability \(1-\), select the offer predicted by the RF algorithm to have the highest click probability.
+- With probability \(1-$, select the offer predicted by the RF algorithm to have the highest click probability.
 - Otherwise, select other offers uniformly at random.
 
 This policy balanced exploration and exploitation by leveraging the RF model's predictions while still allowing for some randomness.

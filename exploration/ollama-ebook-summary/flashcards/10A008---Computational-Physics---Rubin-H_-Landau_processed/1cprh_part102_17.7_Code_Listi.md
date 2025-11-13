@@ -5,11 +5,10 @@
 ---
 
 #### Green's Function and Path Integrals in Thermodynamics
-Background context: The text discusses how Green's functions in quantum mechanics can be related to path integrals, similar to those used in thermodynamics. The limit as \(\tau \to \infty\) is crucial for projecting the ground-state wave function.
+Background context: The text discusses how Green's functions in quantum mechanics can be related to path integrals, similar to those used in thermodynamics. The limit as $\tau \to \infty$ is crucial for projecting the ground-state wave function.
 
-:p What does \(G(x, -i\tau, x_0 = x, 0)\) represent and how is it related to path integrals?
-??x
-\(G(x, -i\tau, x_0 = x, 0)\) represents a Green's function in quantum mechanics, which, as \(\tau \to \infty\), can be interpreted as a path integral over all possible paths. This is analogous to the partition function \(Z\) in thermodynamics.
+:p What does $G(x, -i\tau, x_0 = x, 0)$ represent and how is it related to path integrals?
+??x $G(x, -i\tau, x_0 = x, 0)$ represents a Green's function in quantum mechanics, which, as $\tau \to \infty$, can be interpreted as a path integral over all possible paths. This is analogous to the partition function $ Z$ in thermodynamics.
 
 ```java
 // Pseudocode for calculating G(x, -iτ)
@@ -27,7 +26,7 @@ Background context: The time-dependent Schrödinger equation is transformed into
 
 :p How does transforming the time-dependent Schrödinger equation help in understanding path integrals?
 ??x
-Transforming the time-dependent Schrödinger equation to a heat diffusion equation via \(i\frac{\partial \psi}{\partial (-i\tau)} = -\frac{1}{2m}\nabla^2 \psi\) helps because the path integral approach, often associated with thermodynamics, can be applied. Each path is weighted by a Boltzmann factor.
+Transforming the time-dependent Schrödinger equation to a heat diffusion equation via $i\frac{\partial \psi}{\partial (-i\tau)} = -\frac{1}{2m}\nabla^2 \psi$ helps because the path integral approach, often associated with thermodynamics, can be applied. Each path is weighted by a Boltzmann factor.
 
 ```java
 // Pseudocode for transforming Schrödinger to diffusion equation
@@ -62,7 +61,7 @@ Background context: To avoid repeated simulations, a delta function can be inser
 
 :p What is the "time-saving trick" mentioned in the text?
 ??x
-The time-saving trick involves inserting a delta function into the probability integral to fix the initial position \(x_0\), thereby integrating over all paths starting from that specific point. This allows computing the wavefunction dependence on \(x\) without repeating the entire simulation.
+The time-saving trick involves inserting a delta function into the probability integral to fix the initial position $x_0 $, thereby integrating over all paths starting from that specific point. This allows computing the wavefunction dependence on $ x$ without repeating the entire simulation.
 
 ```java
 // Pseudocode for Time-Saving Trick
@@ -96,11 +95,11 @@ x??
 ---
 
 #### Harmonic Oscillator Potential
-Background context: The harmonic oscillator potential \( V(x) = \frac{1}{2} x^2 \) is used as a model in the text.
+Background context: The harmonic oscillator potential $V(x) = \frac{1}{2} x^2$ is used as a model in the text.
 
 :p What is the form of the harmonic oscillator potential discussed?
 ??x
-The harmonic oscillator potential discussed has the form \( V(x) = \frac{1}{2} x^2 \).
+The harmonic oscillator potential discussed has the form $V(x) = \frac{1}{2} x^2$.
 x??
 
 ---
@@ -110,7 +109,7 @@ Background context: The text explains how to evaluate the wave function by consi
 
 :p How does the system equilibrate to its ground state?
 ??x
-The system equilibrates to its ground state over time. When the difference \( t_b - t_a \) is large (e.g., 20T), the system has enough time to decay to its ground state, resulting in a wave function that resembles the expected Gaussian distribution.
+The system equilibrates to its ground state over time. When the difference $t_b - t_a$ is large (e.g., 20T), the system has enough time to decay to its ground state, resulting in a wave function that resembles the expected Gaussian distribution.
 x??
 
 ---
@@ -121,17 +120,14 @@ Background context: The text outlines the steps for constructing paths and calcu
 :p What are the explicit steps to construct a path and evaluate its energy?
 ??x
 The explicit steps are:
-1. Construct a grid of N time steps, each of length \(\epsilon\).
-2. Construct a grid of M space points separated by steps of size \(\delta\).
-3. Assign any \( x \) or \( t \) values between lattice points to the closest lattice point.
-4. Associate a position \( x_j \) with each time \( \tau_j \), subject to boundary conditions that initial and final positions always remain at \( x_N = x_0 = x \).
+1. Construct a grid of N time steps, each of length $\epsilon$.
+2. Construct a grid of M space points separated by steps of size $\delta$.
+3. Assign any $x $ or$t$ values between lattice points to the closest lattice point.
+4. Associate a position $x_j $ with each time$\tau_j $, subject to boundary conditions that initial and final positions always remain at $ x_N = x_0 = x$.
 5. Choose a path consisting of straight-line links connecting the lattice points, corresponding to the classical trajectory.
 
-The energy \(\mathcal{E}\) is evaluated by summing the kinetic and potential energies for each link:
-\[
-\mathcal{E}(x_0, x_1, \ldots, x_N) \approx N \sum_{j=1}^{N}[ \frac{m}{2} (x_j - x_{j-1}/\epsilon)^2 + V(x_j + x_{j-1}/2)].
-\]
-x??
+The energy $\mathcal{E}$ is evaluated by summing the kinetic and potential energies for each link:
+$$\mathcal{E}(x_0, x_1, \ldots, x_N) \approx N \sum_{j=1}^{N}[ \frac{m}{2} (x_j - x_{j-1}/\epsilon)^2 + V(x_j + x_{j-1}/2)].$$x??
 
 ---
 
@@ -141,8 +137,8 @@ Background context: The text details the steps involved in implementing the Metr
 :p What are the key steps of the Metropolis algorithm as described?
 ??x
 The key steps of the Metropolis algorithm include:
-1. Starting at \( j = 0 \), evaluate the energy by summing the kinetic and potential energies for each link.
-2. Begin a sequence of repeated steps in which a random position \( x_j \) associated with time \( t_j \) is changed to the position \( x'_j \).
+1. Starting at $j = 0$, evaluate the energy by summing the kinetic and potential energies for each link.
+2. Begin a sequence of repeated steps in which a random position $x_j $ associated with time$t_j $ is changed to the position$x'_j$.
 3. Use the Metropolis algorithm to weigh the changed position with the Boltzmann factor.
 4. For each lattice point, establish a running sum representing the squared modulus of the wave function at that point.
 
@@ -156,7 +152,7 @@ Background context: The text specifies how to construct paths and enforce bounda
 
 :p What are the boundary conditions for constructing paths?
 ??x
-The boundary conditions for constructing paths specify that the initial and final positions of the path must always remain at \( x_N = x_0 = x \). This ensures that the wave function is properly normalized and consistent with the physical constraints of the problem.
+The boundary conditions for constructing paths specify that the initial and final positions of the path must always remain at $x_N = x_0 = x$. This ensures that the wave function is properly normalized and consistent with the physical constraints of the problem.
 x??
 
 ---
@@ -166,10 +162,9 @@ Background context: The text provides a formula for calculating the summed energ
 
 :p What is the formula used to calculate the summed energy of a path?
 ??x
-The formula used to calculate the summed energy \(\mathcal{E}\) of a path in the harmonic oscillator system is:
-\[
-\mathcal{E}(x_0, x_1, \ldots, x_N) \approx N \sum_{j=1}^{N}[ \frac{m}{2} (x_j - x_{j-1}/\epsilon)^2 + V(x_j + x_{j-1}/2)].
-\]
+The formula used to calculate the summed energy $\mathcal{E}$ of a path in the harmonic oscillator system is:
+$$\mathcal{E}(x_0, x_1, \ldots, x_N) \approx N \sum_{j=1}^{N}[ \frac{m}{2} (x_j - x_{j-1}/\epsilon)^2 + V(x_j + x_{j-1}/2)].$$
+
 This formula sums the kinetic and potential energies for each link in the path.
 x??
 
@@ -215,8 +210,9 @@ Background context: The text provides an equation for estimating energy without 
 :p How do we estimate the energy from the wave function?
 ??x
 To estimate the energy, we can use the formula:
-\[ E = \frac{\langle \psi | H |\psi \rangle}{\langle \psi | \psi \rangle} \]
-where \( \psi(x) = \sqrt{|\psi(x)|^2} \). For simplicity, since there are no sign changes in the ground state wave function, we can ignore phase factors.
+$$
+
+E = \frac{\langle \psi | H |\psi \rangle}{\langle \psi | \psi \rangle}$$where $\psi(x) = \sqrt{|\psi(x)|^2}$. For simplicity, since there are no sign changes in the ground state wave function, we can ignore phase factors.
 x??
 
 ---
@@ -225,9 +221,9 @@ x??
 
 Background context: The text explores how making ℏ larger affects the simulation.
 
-:p How does increasing \( \hbar \) affect the path integration simulation?
+:p How does increasing $\hbar$ affect the path integration simulation?
 ??x
-Increasing \( \hbar \) allows for greater fluctuations around the classical trajectory. To achieve this, we decrease the value of the exponent in the Boltzmann factor. This exploration helps determine if such changes make the calculation more robust in finding the classical trajectory.
+Increasing $\hbar$ allows for greater fluctuations around the classical trajectory. To achieve this, we decrease the value of the exponent in the Boltzmann factor. This exploration helps determine if such changes make the calculation more robust in finding the classical trajectory.
 x??
 
 ---
@@ -250,8 +246,7 @@ Background context: The text provides the time-independent Schrödinger equation
 :p What is the time-independent Schrödinger equation given in the text?
 ??x
 The time-independent Schrödinger equation for a particle in a uniform gravitational field is:
-\[ -\frac{\hbar^2}{2m} \frac{d^2 \psi(x)}{dx^2} + mxg \psi(x) = E \psi(x) \]
-with the boundary condition \( \psi(x \leq 0) = 0 \).
+$$-\frac{\hbar^2}{2m} \frac{d^2 \psi(x)}{dx^2} + mxg \psi(x) = E \psi(x)$$with the boundary condition $\psi(x \leq 0) = 0$.
 x??
 
 ---
@@ -263,12 +258,10 @@ Background context: The text suggests a change of variables to simplify solving 
 :p How do we convert the given Schrödinger equation into dimensionless form?
 ??x
 To convert the Schrödinger equation into dimensionless form, we use:
-\[ z = \left( \frac{2g m^2}{\hbar^2} \right)^{1/3} x \]
-and
-\[ z_E = \left( \frac{2 \hbar^2}{m g^2} \right)^{1/3} E \]
+$$z = \left( \frac{2g m^2}{\hbar^2} \right)^{1/3} x$$and$$z_E = \left( \frac{2 \hbar^2}{m g^2} \right)^{1/3} E$$
+
 The resulting equation is:
-\[ \frac{d^2 \psi}{dz^2} - (z - z_E) \psi(z) = 0 \]
-x??
+$$\frac{d^2 \psi}{dz^2} - (z - z_E) \psi(z) = 0$$x??
 
 ---
 
@@ -279,8 +272,7 @@ Background context: The text provides the analytical solution for the quantum bo
 :p What is the analytical solution to the Schrödinger equation for the quantum bouncer?
 ??x
 The analytical solution to the Schrödinger equation for the quantum bouncer, in terms of Airy functions, is:
-\[ \psi(z) = N_n Ai (z - z_E) \]
-where \( N_n \) is a normalization constant. The boundary condition \( \psi(0) = 0 \) implies that allowed energies correspond to zeros of Airy functions with negative arguments.
+$$\psi(z) = N_n Ai (z - z_E)$$where $ N_n $ is a normalization constant. The boundary condition $\psi(0) = 0$ implies that allowed energies correspond to zeros of Airy functions with negative arguments.
 x??
 
 ---
@@ -288,8 +280,7 @@ x??
 #### Quantum Bouncer Wavefunction Comparison
 Background context: The text describes a comparison between an analytical solution and a path integration (quantum Monte Carlo) approach for solving the wavefunction of a quantum bouncer. The analytical solution uses the Airy function, while the numerical method simulates multiple particle trajectories.
 The time-dependent solution is given by:
-\[ \psi(z,t)=\sum_{n=1}^{\infty}C_n N_n \text{Ai}(z-z_n)e^{-iE_nt/\hbar}, \]
-where \(C_n\) are constants, and \(N_n\) represents the normalization factor for each eigenfunction.
+$$\psi(z,t)=\sum_{n=1}^{\infty}C_n N_n \text{Ai}(z-z_n)e^{-iE_nt/\hbar},$$where $ C_n $ are constants, and $ N_n$ represents the normalization factor for each eigenfunction.
 
 :p How do you compare the analytical Airy function solution with the quantum Monte Carlo simulation of a quantum bouncer?
 ??x
@@ -324,9 +315,7 @@ x??
 #### Quantum Bouncer Trajectory Selection
 Background context: For the quantum Monte Carlo simulation of a quantum bouncer, trajectories that start above the potential well's floor are selected to ensure they do not penetrate into negative x-values.
 The boundary condition is set such that:
-\[ |\psi(0)|^2 \approx 0. \]
-
-:p How does trajectory selection work in the context of simulating the quantum bouncer?
+$$|\psi(0)|^2 \approx 0.$$:p How does trajectory selection work in the context of simulating the quantum bouncer?
 ??x
 Trajectories starting above the potential well's floor are chosen because a particle cannot penetrate through the infinite potential barrier at negative x-values. This ensures that all simulated trajectories remain within the physical region where the wavefunction is non-zero.
 x??
@@ -334,46 +323,42 @@ x??
 ---
 
 #### Action for a Particle in Free Fall
-Background context: The problem requires showing that the action \(S\) for a particle undergoing free fall is an extremum only under specific conditions on its trajectory parameters.
+Background context: The problem requires showing that the action $S$ for a particle undergoing free fall is an extremum only under specific conditions on its trajectory parameters.
 
-The action \(S\) for a particle's trajectory is given by:
-\[ S = \int_{t_0}^{t} L dt, \]
-where \(L\) is the Lagrangian. For a quadratic dependence of distance and time, the distance \(d\) is described as:
-\[ d = \alpha t + \beta t^2. \]
-
-:p Show that the action \(S\) for a particle in free fall is an extremum only when \(\alpha = 0\) and \(\beta = g/2\).
+The action $S$ for a particle's trajectory is given by:
+$$S = \int_{t_0}^{t} L dt,$$where $ L $ is the Lagrangian. For a quadratic dependence of distance and time, the distance $ d$ is described as:
+$$d = \alpha t + \beta t^2.$$:p Show that the action $ S $ for a particle in free fall is an extremum only when $\alpha = 0 $ and$\beta = g/2$.
 ??x
-To show that the action \(S\) is an extremum, we start by writing the Lagrangian \(L\) for the system:
-\[ L = T - V, \]
-where \(T\) is the kinetic energy and \(V\) is the potential energy. For a particle in free fall, the potential energy is zero (assuming we set the reference level at \(y=0\)), and the kinetic energy is:
-\[ T = \frac{1}{2} m v^2 = \frac{1}{2} m \left(\frac{d}{dt}\right)^2. \]
+To show that the action $S $ is an extremum, we start by writing the Lagrangian$L$ for the system:
+$$L = T - V,$$where $ T $ is the kinetic energy and $ V $ is the potential energy. For a particle in free fall, the potential energy is zero (assuming we set the reference level at $ y=0$), and the kinetic energy is:
+$$T = \frac{1}{2} m v^2 = \frac{1}{2} m \left(\frac{d}{dt}\right)^2.$$
 
 Given the distance as a function of time:
-\[ d(t) = \alpha t + \beta t^2, \]
-the velocity \(v\) is:
-\[ v = \frac{dd}{dt} = \alpha + 2\beta t. \]
+$$d(t) = \alpha t + \beta t^2,$$the velocity $ v$ is:
+$$v = \frac{dd}{dt} = \alpha + 2\beta t.$$
 
 The Lagrangian then becomes:
-\[ L = \frac{1}{2} m (\alpha + 2\beta t)^2. \]
+$$
 
-The action \(S\) is the integral of the Lagrangian over time:
-\[ S = \int_{t_0}^{t_f} L dt = \int_{t_0}^{t_f} \frac{1}{2} m (\alpha + 2\beta t)^2 dt. \]
+L = \frac{1}{2} m (\alpha + 2\beta t)^2.$$
 
-To find the conditions under which \(S\) is an extremum, we use the Euler-Lagrange equation:
-\[ \frac{\partial L}{\partial d} - \frac{d}{dt}\left(\frac{\partial L}{\partial v}\right) = 0. \]
+The action $S$ is the integral of the Lagrangian over time:
+$$S = \int_{t_0}^{t_f} L dt = \int_{t_0}^{t_f} \frac{1}{2} m (\alpha + 2\beta t)^2 dt.$$
 
-Since there are no explicit \(t\) terms in \(L\), the first term is zero, and we focus on the second term:
-\[ \frac{d}{dt}\left(m (\alpha + 2\beta t)(1)\right) = m (2\beta). \]
+To find the conditions under which $S$ is an extremum, we use the Euler-Lagrange equation:
+$$\frac{\partial L}{\partial d} - \frac{d}{dt}\left(\frac{\partial L}{\partial v}\right) = 0.$$
 
-For the action to be an extremum, this must equal zero. Thus,
-\[ 2\beta = 0 \implies \beta = 0. \]
+Since there are no explicit $t $ terms in$L$, the first term is zero, and we focus on the second term:
+$$\frac{d}{dt}\left(m (\alpha + 2\beta t)(1)\right) = m (2\beta).$$
 
-However, for a free fall scenario where \(d(t) = \frac{1}{2} g t^2\) (ignoring linear terms), we have:
-\[ d(t) = \alpha t + \frac{g}{2} t^2. \]
-Thus,
-\[ \beta = \frac{g}{2}. \]
+For the action to be an extremum, this must equal zero. Thus,$$2\beta = 0 \implies \beta = 0.$$
 
-Therefore, the action \(S\) is an extremum only when \(\alpha = 0\) and \(\beta = g/2\).
+However, for a free fall scenario where $d(t) = \frac{1}{2} g t^2$(ignoring linear terms), we have:
+$$d(t) = \alpha t + \frac{g}{2} t^2.$$
+
+Thus,$$\beta = \frac{g}{2}.$$
+
+Therefore, the action $S $ is an extremum only when$\alpha = 0 $ and$\beta = g/2$.
 x??
 
 ---
@@ -382,30 +367,31 @@ x??
 Background context: The problem involves modifying a given trajectory for a mass attached to a harmonic oscillator to ensure it agrees with the exact solution at specific times, while differing elsewhere. The goal is to verify that only the known analytic form yields a minimum action.
 
 The motion of the mass can be described as:
-\[ x(t) = 10 \cos(2\pi t). \]
-
-:p Propose a modified trajectory for a harmonic oscillator and show it gives a different but valid path.
+$$x(t) = 10 \cos(2\pi t).$$:p Propose a modified trajectory for a harmonic oscillator and show it gives a different but valid path.
 ??x
 A proposed modification could include an adjustable parameter to account for small deviations from the exact solution. For example, we can propose:
-\[ x(t) = 10 \cos(2\pi t + \phi), \]
-where \(\phi\) is an adjustable phase shift.
+$$x(t) = 10 \cos(2\pi t + \phi),$$where $\phi$ is an adjustable phase shift.
 
-To verify that only this known analytic form yields a minimum action, we would compute the action for different values of \(\phi\) and find that it deviates from the true solution when \(\phi \neq 0\).
+To verify that only this known analytic form yields a minimum action, we would compute the action for different values of $\phi $ and find that it deviates from the true solution when$\phi \neq 0$.
 
-The action \(S\) for the modified trajectory can be computed as:
-\[ S = \int_{t_0}^{t_f} L dt, \]
-where
-\[ L = T - V = \frac{1}{2} m (\dot{x})^2 - \frac{1}{2} k x^2. \]
+The action $S$ for the modified trajectory can be computed as:
+$$S = \int_{t_0}^{t_f} L dt,$$where$$
 
-For the given form \(x(t) = 10 \cos(2\pi t + \phi)\), we can compute:
-\[ \dot{x}(t) = -10 \cdot 2\pi \sin(2\pi t + \phi). \]
-Thus,
-\[ L = \frac{1}{2} m (40\pi^2 \sin^2(2\pi t + \phi)) - \frac{1}{2} k (10 \cos(2\pi t + \phi))^2. \]
+L = T - V = \frac{1}{2} m (\dot{x})^2 - \frac{1}{2} k x^2.$$
+
+For the given form $x(t) = 10 \cos(2\pi t + \phi)$, we can compute:
+$$\dot{x}(t) = -10 \cdot 2\pi \sin(2\pi t + \phi).$$
+
+Thus,$$
+
+L = \frac{1}{2} m (40\pi^2 \sin^2(2\pi t + \phi)) - \frac{1}{2} k (10 \cos(2\pi t + \phi))^2.$$
 
 The action is then:
-\[ S = \int_{t_0}^{t_f} \left[ m (40\pi^2 \sin^2(2\pi t + \phi)) - k (100 \cos^2(2\pi t + \phi)) \right] dt. \]
+$$
 
-Only when \(\phi = 0\) does this reduce to the known analytic form, yielding a minimum action.
+S = \int_{t_0}^{t_f} \left[ m (40\pi^2 \sin^2(2\pi t + \phi)) - k (100 \cos^2(2\pi t + \phi)) \right] dt.$$
+
+Only when $\phi = 0$ does this reduce to the known analytic form, yielding a minimum action.
 x??
 
 ---
@@ -413,33 +399,40 @@ x??
 #### Simple Harmonic Oscillator Area Computation
 Background context: The task involves computing the area of periodic orbits for both a simple harmonic oscillator and a nonlinear oscillator.
 
-The energy \(E(p, q)\) is given by:
-\[ E(p, q) = \frac{p^2}{2m} + \frac{1}{2} m \omega^2 q^2. \]
+The energy $E(p, q)$ is given by:
+$$E(p, q) = \frac{p^2}{2m} + \frac{1}{2} m \omega^2 q^2.$$
 
 For the area of the periodic orbit:
-\[ A(E) = \oint p dq = 2 \int_{q_{\text{min}}}^{q_{\text{max}}} p dq. \]
+$$
 
-:p Compute the area \(A(E)\) for a simple harmonic oscillator using its analytic or numeric solution.
+A(E) = \oint p dq = 2 \int_{q_{\text{min}}}^{q_{\text{max}}} p dq.$$:p Compute the area $ A(E)$ for a simple harmonic oscillator using its analytic or numeric solution.
 ??x
 For a simple harmonic oscillator, the energy is:
-\[ E(p, q) = \frac{p^2}{2m} + \frac{1}{2} m \omega^2 q^2. \]
+$$E(p, q) = \frac{p^2}{2m} + \frac{1}{2} m \omega^2 q^2.$$
 
-Solving for \(p\):
-\[ p = \pm \sqrt{2m(E - \frac{1}{2} m \omega^2 q^2)}. \]
+Solving for $p$:
+$$p = \pm \sqrt{2m(E - \frac{1}{2} m \omega^2 q^2)}.$$
 
 The period of the oscillator is:
-\[ T = 2\pi/\omega. \]
+$$
+
+T = 2\pi/\omega.$$
 
 The area enclosed by one orbit can be computed as:
-\[ A(E) = 2 \int_{-q_{\text{max}}}^{q_{\text{max}}} p dq. \]
-Where \( q_{\text{max}} \) is the maximum displacement where \(p = 0\):
-\[ q_{\text{max}}^2 = \frac{E}{m \omega^2}. \]
+$$
 
-Thus,
-\[ A(E) = 4 m \int_0^{q_{\text{max}}} \sqrt{E - \frac{1}{2} m \omega^2 q^2} dq. \]
+A(E) = 2 \int_{-q_{\text{max}}}^{q_{\text{max}}} p dq.$$
+
+Where $q_{\text{max}}$ is the maximum displacement where $p = 0$:
+$$q_{\text{max}}^2 = \frac{E}{m \omega^2}.$$
+
+Thus,$$
+
+A(E) = 4 m \int_0^{q_{\text{max}}} \sqrt{E - \frac{1}{2} m \omega^2 q^2} dq.$$
+
 This integral can be solved analytically or numerically.
 
-For a nonlinear oscillator \( V(x) = k x^p \), the solution would involve numerical integration to determine the area enclosed by the orbit.
+For a nonlinear oscillator $V(x) = k x^p$, the solution would involve numerical integration to determine the area enclosed by the orbit.
 x??
 
 ---
@@ -715,7 +708,7 @@ Background context: The energy calculation involves updating the total system en
 :p How does the algorithm calculate the new energy `Enew` when flipping a spin?
 ??x
 The new energy `Enew` is calculated by considering the interactions of the selected spin with its nearest neighbors and updating the total system energy. The formula used to update the energy is:
-\[ E_{\text{new}} = E_{\text{old}} + 2 \cdot (s_{ip[xg],yg} + s_{im[xg],yg} + s_{xg,ip[yg]} + s_{xg,im[yg]}) \cdot s_{xg,yg} \]
+$$E_{\text{new}} = E_{\text{old}} + 2 \cdot (s_{ip[xg],yg} + s_{im[xg],yg} + s_{xg,ip[yg]} + s_{xg,im[yg]}) \cdot s_{xg,yg}$$
 
 Here's a detailed explanation:
 - `sp[ip[xg],yg]`, `sp[im[xg],yg]`, `sp[xg,ip[yg]]`, and `sp[xg,im[yg]]` represent the interaction energies with nearest neighbors.
@@ -771,10 +764,10 @@ Background context: The Metropolis-Hastings criterion is used to decide whether 
 :p What is the Metropolis-Hastings criterion for accepting or rejecting a spin flip?
 ??x
 The Metropolis-Hastings criterion determines whether to accept a proposed move by comparing the change in energy (`deltaS`) with a random number. The formula is:
-\[ \text{Accept} = \begin{cases}
+$$\text{Accept} = \begin{cases}
 1 & \text{if } \Delta S \leq 0 \\
 \exp(-\Delta S) & \text{otherwise}
-\end{cases} \]
+\end{cases}$$
 
 The acceptance probability ensures that configurations with lower energy are more likely to be accepted, while higher energy configurations may still be accepted with a small probability.
 
@@ -824,7 +817,7 @@ Background context: The energy of a path is calculated using the sum of squared 
 :p How does the algorithm calculate the total energy of a given path?
 ??x
 The total energy of a path is calculated by iterating through the path and computing the difference between adjacent points, then squaring these differences and summing them up. The formula used is:
-\[ \text{Energy} = \sum_{i=0}^{N-2} (path[i+1] - path[i])^2 + (path[N-1]^2) \]
+$$\text{Energy} = \sum_{i=0}^{N-2} (path[i+1] - path[i])^2 + (path[N-1]^2)$$
 
 Example code for calculating energy:
 ```python
@@ -944,8 +937,9 @@ Background context: This section calculates the energy of a particle's path usin
 :p What is the function `energy(arr)` used for?
 ??x
 The function `energy(arr)` computes the energy of a given path by iterating through the path array and summing up the contributions from both kinetic and potential energies. It uses the formula:
-\[ E = \sum_{i=0}^{N-1} 0.5 \cdot \left( \frac{\Delta x_i}{dt} \right)^2 + g \cdot \frac{x_i + x_{i+1}}{2} \]
-where \( \Delta x_i = x_{i+1} - x_i \).
+$$
+
+E = \sum_{i=0}^{N-1} 0.5 \cdot \left( \frac{\Delta x_i}{dt} \right)^2 + g \cdot \frac{x_i + x_{i+1}}{2}$$where $\Delta x_i = x_{i+1} - x_i$.
 
 Code example:
 ```python
@@ -1042,69 +1036,60 @@ x??
 ---
 
 #### Concept: Large-Scale Simulations vs. Theoretical Limitations
-Background context: While MD’s solution of Newton’s laws is conceptually simple, practical computations often involve approximations due to the large number of particles involved (typically up to \(10^9\) particles in a finite region). This limitation is managed by ignoring internal molecular structures and using effective potentials like Lennard-Jones.
+Background context: While MD’s solution of Newton’s laws is conceptually simple, practical computations often involve approximations due to the large number of particles involved (typically up to $10^9$ particles in a finite region). This limitation is managed by ignoring internal molecular structures and using effective potentials like Lennard-Jones.
 :p Why are practical MD simulations limited to around 10^9 particles?
 ??x
-Practical MD simulations face computational limitations due to the need to solve approximately \(10^{24}\) equations of motion for a realistic system, which is computationally infeasible. Therefore, approximations such as using effective potentials and ignoring internal molecular structures are necessary.
+Practical MD simulations face computational limitations due to the need to solve approximately $10^{24}$ equations of motion for a realistic system, which is computationally infeasible. Therefore, approximations such as using effective potentials and ignoring internal molecular structures are necessary.
 x??
 
 ---
 
 #### Lennard-Jones Potential
-Background context: The Lennard-Jones potential is used to model the interactions between atoms or molecules. It consists of two parts: a long-range attractive term \(1/r^6\) and a short-range repulsive term \(1/r^{12}\). This effective potential provides a balance that mimics the behavior of real molecules.
+Background context: The Lennard-Jones potential is used to model the interactions between atoms or molecules. It consists of two parts: a long-range attractive term $1/r^6 $ and a short-range repulsive term$1/r^{12}$. This effective potential provides a balance that mimics the behavior of real molecules.
 :p What are the components of the Lennard-Jones potential?
 ??x
-The Lennard-Jones potential consists of two parts: an attractive term \(\propto 1/r^6\) and a repulsive term \(\propto 1/r^{12}\). The change from repulsion to attraction occurs at \(r = \sigma\), with the minimum potential at \(r = 2^{1/6} \sigma = 1.1225 \sigma\).
+The Lennard-Jones potential consists of two parts: an attractive term $\propto 1/r^6 $ and a repulsive term$\propto 1/r^{12}$. The change from repulsion to attraction occurs at $ r = \sigma$, with the minimum potential at $ r = 2^{1/6} \sigma = 1.1225 \sigma$.
 x??
 
 ---
 
 #### Parameters of Lennard-Jones Potential
-Background context: The parameters for the Lennard-Jones potential include \(\epsilon\) (interaction strength) and \(\sigma\) (length scale), which are deduced by fitting to data. These constants can be measured in natural units.
-:p What do the symbols \(\epsilon\) and \(\sigma\) represent in the Lennard-Jones potential?
-??x
-\(\epsilon\) represents the strength of the interaction, while \(\sigma\) determines the length scale. Both are derived by fitting the potential to experimental or theoretical data.
+Background context: The parameters for the Lennard-Jones potential include $\epsilon $(interaction strength) and $\sigma$(length scale), which are deduced by fitting to data. These constants can be measured in natural units.
+:p What do the symbols $\epsilon $ and$\sigma$ represent in the Lennard-Jones potential?
+??x $\epsilon $ represents the strength of the interaction, while$\sigma$ determines the length scale. Both are derived by fitting the potential to experimental or theoretical data.
 x??
 
 ---
 
 #### Simulation Implementation in Natural Units
 Background context: To simplify simulations and avoid under- and overflows, it is useful to measure all variables in the natural units of these constants. The inter-particle potential and force take specific forms when using the Lennard-Jones potential.
-:p How are the parameters \(\epsilon\) and \(\sigma\) used in the Lennard-Jones potential?
+:p How are the parameters $\epsilon $ and$\sigma$ used in the Lennard-Jones potential?
 ??x
-The parameters \(\epsilon\) and \(\sigma\) are used to define the strength of interaction and the length scale, respectively. In natural units, the potential and force take the forms:
-\[
-u(r) = 4[1/r^6 - 1/r^{12}], \quad f(r) = 48r[1/r^{12} - 0.5/r^6]
-\]
-x??
+The parameters $\epsilon $ and$\sigma$ are used to define the strength of interaction and the length scale, respectively. In natural units, the potential and force take the forms:
+$$u(r) = 4[1/r^6 - 1/r^{12}], \quad f(r) = 48r[1/r^{12} - 0.5/r^6]$$x??
 
 ---
 
 #### Force Calculation in MD
 Background context: Forces on each molecule are calculated from the sum of two-body potentials between all pairs of molecules.
-:p What is the formula for calculating the force \(F_i\) acting on a molecule \(i\)?
+:p What is the formula for calculating the force $F_i $ acting on a molecule$i$?
 ??x
-The force \(F_i\) acting on molecule \(i\) is given by:
-\[
-F_i(r_0, \ldots, r_{N-1}) = -\nabla_r U(r_0, r_1, \ldots, r_{N-1})
-\]
-Where the potential energy \(U\) between all pairs of molecules is:
-\[
-U(r_0, r_1, \ldots, r_{N-1}) = \sum_{i < j} u(r_{ij})
-\]
-And the force on molecule \(i\) from molecule \(j\) is:
-\[
-f_{ij} = -\frac{d}{dr_{ij}}u(r_{ij}) \left( x_i - x_j \right)\hat{e}_x + \left( y_i - y_j \right)\hat{e}_y + \left( z_i - z_j \right)\hat{e}_z
-\]
-x??
+The force $F_i $ acting on molecule$i$ is given by:
+$$F_i(r_0, \ldots, r_{N-1}) = -\nabla_r U(r_0, r_1, \ldots, r_{N-1})$$
+
+Where the potential energy $U$ between all pairs of molecules is:
+$$U(r_0, r_1, \ldots, r_{N-1}) = \sum_{i < j} u(r_{ij})$$
+
+And the force on molecule $i $ from molecule$j$ is:
+$$f_{ij} = -\frac{d}{dr_{ij}}u(r_{ij}) \left( x_i - x_j \right)\hat{e}_x + \left( y_i - y_j \right)\hat{e}_y + \left( z_i - z_j \right)\hat{e}_z$$x??
 
 ---
 
 #### Concept: Cutoff Radius in MD Simulations
-Background context: Practical computations often "cut off" the potential when molecules are far apart, meaning \(u(r_{ij} > r_{cut}) = 0\). This leads to a discontinuity in the derivative at \(r_{cut}\), potentially violating energy conservation.
+Background context: Practical computations often "cut off" the potential when molecules are far apart, meaning $u(r_{ij} > r_{cut}) = 0 $. This leads to a discontinuity in the derivative at $ r_{cut}$, potentially violating energy conservation.
 :p Why do simulations use a cutoff radius?
 ??x
-Simulations use a cutoff radius to avoid infinite forces and computational costs by setting the potential to zero for distances greater than \(r_{cut}\). However, this can introduce small inaccuracies due to the discontinuity in derivatives at \(r_{cut}\).
+Simulations use a cutoff radius to avoid infinite forces and computational costs by setting the potential to zero for distances greater than $r_{cut}$. However, this can introduce small inaccuracies due to the discontinuity in derivatives at $ r_{cut}$.
 x??
 
 ---
@@ -1119,10 +1104,10 @@ x??
 ---
 
 #### Molecular Dynamics Simulations and Dipole-Dipole Attraction
-Background context: In molecular dynamics (MD) simulations, molecules can induce dipoles in each other through dipole-dipole attraction. This attraction behaves like \(1/r^6\) and is responsible for binding neutral, inert elements such as argon.
+Background context: In molecular dynamics (MD) simulations, molecules can induce dipoles in each other through dipole-dipole attraction. This attraction behaves like $1/r^6$ and is responsible for binding neutral, inert elements such as argon.
 :p What is the nature of dipole-dipole attraction between molecules during MD simulations?
 ??x
-Dipole-dipole attraction during MD simulations is a weak force that acts like \(1/r^6\). It arises when one molecule becomes more positive on one side and negative on the other, attracting the opposite charge in an adjacent molecule. This interaction continues to fluctuate in synchronization as long as the molecules stay close to each other.
+Dipole-dipole attraction during MD simulations is a weak force that acts like $1/r^6$. It arises when one molecule becomes more positive on one side and negative on the other, attracting the opposite charge in an adjacent molecule. This interaction continues to fluctuate in synchronization as long as the molecules stay close to each other.
 ```java
 // Pseudocode for calculating dipole-dipole force
 public class Dipole {
@@ -1135,16 +1120,15 @@ x??
 ---
 
 #### Equipartition Theorem and Kinetic Energy in MD Simulations
-Background context: According to the equipartition theorem, each degree of freedom of a molecule at thermal equilibrium has an average energy of \( \frac{k_B T}{2} \). This concept is used to relate simulation results with thermodynamic quantities.
+Background context: According to the equipartition theorem, each degree of freedom of a molecule at thermal equilibrium has an average energy of $\frac{k_B T}{2}$. This concept is used to relate simulation results with thermodynamic quantities.
 :p How does the equipartition theorem help us understand kinetic energy in MD simulations?
 ??x
-The equipartition theorem tells us that each degree of freedom of a molecule at thermal equilibrium has an average energy of \( \frac{k_B T}{2} \). For translational motion, which involves three degrees of freedom (one for each spatial dimension), the total kinetic energy is given by:
+The equipartition theorem tells us that each degree of freedom of a molecule at thermal equilibrium has an average energy of $\frac{k_B T}{2}$. For translational motion, which involves three degrees of freedom (one for each spatial dimension), the total kinetic energy is given by:
 
-\[ KE = \frac{1}{2} \langle N-1 \sum_{i=0}^{N-1} v_i^2 \rangle \]
+$$KE = \frac{1}{2} \langle N-1 \sum_{i=0}^{N-1} v_i^2 \rangle$$
 
 The time average of this kinetic energy can be related to temperature as follows:
-
-\[ \langle KE \rangle = \frac{3}{2} k_B T \Rightarrow T = \frac{2 \langle KE \rangle}{3 k_B N} \]
+$$\langle KE \rangle = \frac{3}{2} k_B T \Rightarrow T = \frac{2 \langle KE \rangle}{3 k_B N}$$
 
 This equation helps us determine the temperature from simulation data.
 ```java
@@ -1173,19 +1157,17 @@ x??
 Background context: The pressure of a system can be calculated using the Virial theorem, which relates it to kinetic and potential energy. This is particularly useful in MD simulations.
 :p How do you calculate the pressure of a system using the Virial theorem?
 ??x
-The pressure \( P \) of a system can be determined by an adaptation of the Virial theorem:
-
-\[ PV = Nk_B T + W_3, \quad W = \langle N-1 \sum_{i<j} r_{ij} \cdot f_{ij} \rangle \]
+The pressure $P$ of a system can be determined by an adaptation of the Virial theorem:
+$$PV = Nk_B T + W_3, \quad W = \langle N-1 \sum_{i<j} r_{ij} \cdot f_{ij} \rangle$$
 
 Where:
-- \( W \) is the average of force times interparticle distances.
-- For an ideal gas, \( W \) vanishes, leading to the ideal gas law.
+- $W$ is the average of force times interparticle distances.
+- For an ideal gas,$W$ vanishes, leading to the ideal gas law.
 
 For general cases:
+$$P = \frac{\rho}{3N}(2\langle KE\rangle + W)$$
 
-\[ P = \frac{\rho}{3N}(2\langle KE\rangle + W) \]
-
-Here, \( \rho = N/V \) is the density of particles. This equation helps relate pressure with kinetic and potential energies.
+Here,$\rho = N/V$ is the density of particles. This equation helps relate pressure with kinetic and potential energies.
 ```java
 // Pseudocode for calculating system pressure using Virial theorem
 public class PressureCalculator {
@@ -1267,13 +1249,12 @@ Background context: To avoid artificial surface effects in MD simulations with a
 Periodic boundary conditions (PBCs) are used to minimize the limitations imposed by having a finite number of particles in an MD simulation. By replicating the simulation box infinitely, PBCs ensure that each particle interacts with all others and their images as if they were part of an infinite system.
 
 The logic behind PBCs is that when a particle exits one side of the box, its image enters from the opposite side. This maintains balance and ensures continuous properties at the edges. The equations for handling periodic boundary conditions are:
-
-\[ x \Rightarrow \begin{cases} 
+$$x \Rightarrow \begin{cases} 
 x + L_x, & \text{if } x \leq 0 \\
 x - L_x, & \text{if } x > L_x
-\end{cases} \]
+\end{cases}$$
 
-Where \( L_x \) is the size of the box along the x-axis.
+Where $L_x$ is the size of the box along the x-axis.
 
 ```java
 // Pseudocode for handling periodic boundary conditions

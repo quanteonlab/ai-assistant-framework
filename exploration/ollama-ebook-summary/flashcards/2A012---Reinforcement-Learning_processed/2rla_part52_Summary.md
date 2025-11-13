@@ -19,11 +19,8 @@ Background context: In asynchronous value iteration, states are updated in any o
 
 :p What is the analogous update formula for action values q(s, a) in asynchronous dynamic programming?
 ??x
-The analogous update formula for action values \(q_{k+1}(s, a)\) in asynchronous dynamic programming can be derived similarly to the value iteration update. For example:
-
-\[ q_{k+1}(s, a) \leftarrow (1 - \alpha_k) q_k(s, a) + \alpha_k [r(s, a) + \gamma v_k(\text{next state})] \]
-
-where \(v_k(\text{next state})\) is the value of the next state evaluated using the current policy.
+The analogous update formula for action values $q_{k+1}(s, a)$ in asynchronous dynamic programming can be derived similarly to the value iteration update. For example:
+$$q_{k+1}(s, a) \leftarrow (1 - \alpha_k) q_k(s, a) + \alpha_k [r(s, a) + \gamma v_k(\text{next state})]$$where $ v_k(\text{next state})$ is the value of the next state evaluated using the current policy.
 
 x??
 
@@ -36,11 +33,9 @@ Background context: Asynchronous DP algorithms are designed to update values in 
 ??x
 Asynchronous DP allows flexibility by updating state values in a non-systematic manner, using available information from other states. The algorithm can update any state at any time, which means that some states may be updated multiple times while others are updated rarely or not at all.
 
-For example, an asynchronous value iteration might update only one state \(s_k\) on each step \(k\), applying the standard value iteration update rule:
+For example, an asynchronous value iteration might update only one state $s_k $ on each step$k$, applying the standard value iteration update rule:
 
-\[ v_{k+1}(s_k) \leftarrow (1 - \alpha_k) v_k(s_k) + \alpha_k [r(s_k, a) + \gamma \max_{a'} v_k(s')] \]
-
-where \(a\) and \(s'\) are chosen according to the policy.
+$$v_{k+1}(s_k) \leftarrow (1 - \alpha_k) v_k(s_k) + \alpha_k [r(s_k, a) + \gamma \max_{a'} v_k(s')]$$where $ a $ and $ s'$ are chosen according to the policy.
 
 x??
 
@@ -88,18 +83,18 @@ x??
 
 #### Generalized Policy Iteration (GPI)
 Background context explaining the concept. In reinforcement learning, GPI refers to the interaction between policy evaluation and policy improvement processes. These processes are interleaved at a fine grain level, where updates can occur even within a single state before switching back. Both processes continue to update all states until convergence is achieved.
-The ultimate goal of GPI is to achieve an optimal value function \(V^\star\) and an optimal policy \(\pi^\star\). The process involves driving the current value function or policy toward one of two goals: making the policy greedy with respect to the value function, or making the value function consistent with the policy.
+The ultimate goal of GPI is to achieve an optimal value function $V^\star $ and an optimal policy$\pi^\star$. The process involves driving the current value function or policy toward one of two goals: making the policy greedy with respect to the value function, or making the value function consistent with the policy.
 :p What is generalized policy iteration (GPI)?
 ??x
-Generalized Policy Iteration (GPI) in reinforcement learning refers to the interaction between policy evaluation and policy improvement processes. These processes are interleaved at a fine grain level, where updates can occur even within a single state before switching back. Both processes continue to update all states until convergence is achieved. The ultimate goal of GPI is to achieve an optimal value function \(V^\star\) and an optimal policy \(\pi^\star\). The process involves driving the current value function or policy toward one of two goals: making the policy greedy with respect to the value function, or making the value function consistent with the policy.
+Generalized Policy Iteration (GPI) in reinforcement learning refers to the interaction between policy evaluation and policy improvement processes. These processes are interleaved at a fine grain level, where updates can occur even within a single state before switching back. Both processes continue to update all states until convergence is achieved. The ultimate goal of GPI is to achieve an optimal value function $V^\star $ and an optimal policy$\pi^\star$. The process involves driving the current value function or policy toward one of two goals: making the policy greedy with respect to the value function, or making the value function consistent with the policy.
 x??
 
 ---
 #### Policy Evaluation
-Policy evaluation is a key component in GPI. It involves updating the value function for a given policy \(\pi\) until it stabilizes. The goal is to ensure that the value function \(V_\pi(s)\) correctly represents the expected return under policy \(\pi\).
+Policy evaluation is a key component in GPI. It involves updating the value function for a given policy $\pi $ until it stabilizes. The goal is to ensure that the value function$V_\pi(s)$ correctly represents the expected return under policy $\pi$.
 :p What is policy evaluation?
 ??x
-Policy evaluation is a key component in GPI, involving the process of updating the value function for a given policy \(\pi\) until it stabilizes. The goal is to ensure that the value function \(V_\pi(s)\) correctly represents the expected return under policy \(\pi\). This is typically done using iterative methods such as the TD(0) or Monte Carlo methods.
+Policy evaluation is a key component in GPI, involving the process of updating the value function for a given policy $\pi $ until it stabilizes. The goal is to ensure that the value function$V_\pi(s)$ correctly represents the expected return under policy $\pi$. This is typically done using iterative methods such as the TD(0) or Monte Carlo methods.
 x??
 
 ---
@@ -107,15 +102,15 @@ x??
 Policy improvement involves making a policy greedy with respect to the current value function. The goal is to ensure that every state-action pair in the new policy is optimal, given the current value function.
 :p What is policy improvement?
 ??x
-Policy improvement involves making a policy \(\pi\) greedy with respect to the current value function \(V\). The goal is to ensure that every state-action pair in the new policy is optimal, given the current value function. This can be achieved by setting the action probabilities for each state according to the highest expected return.
+Policy improvement involves making a policy $\pi $ greedy with respect to the current value function$V$. The goal is to ensure that every state-action pair in the new policy is optimal, given the current value function. This can be achieved by setting the action probabilities for each state according to the highest expected return.
 x??
 
 ---
 #### Convergence of GPI
-Convergence occurs when both the evaluation process and the improvement process stabilize. At this point, no further changes are produced, indicating that the value function \(V\) and policy \(\pi\) have reached optimality.
+Convergence occurs when both the evaluation process and the improvement process stabilize. At this point, no further changes are produced, indicating that the value function $V $ and policy$\pi$ have reached optimality.
 :p What happens when both processes in GPI stabilize?
 ??x
-When both the evaluation process and the improvement process stabilize in GPI, it indicates that the value function \(V\) and policy \(\pi\) have reached optimality. The value function stabilizes only when it is consistent with the current policy, and the policy stabilizes only when it is greedy with respect to the current value function. This implies that both processes converge to an optimal solution.
+When both the evaluation process and the improvement process stabilize in GPI, it indicates that the value function $V $ and policy$\pi$ have reached optimality. The value function stabilizes only when it is consistent with the current policy, and the policy stabilizes only when it is greedy with respect to the current value function. This implies that both processes converge to an optimal solution.
 x??
 
 ---
@@ -130,11 +125,11 @@ x??
 
 ---
 #### Efficiency of Dynamic Programming (DP)
-Dynamic programming methods are efficient compared to other methods for solving Markov Decision Processes (MDPs). The worst-case time complexity of DP is polynomial in the number of states and actions, \(O(n^k)\), where \(n\) denotes the number of states and \(k\) denotes the number of actions. This makes DP exponentially faster than direct policy search, which would require examining each of the \(\text{k}^\text{n}\) policies.
+Dynamic programming methods are efficient compared to other methods for solving Markov Decision Processes (MDPs). The worst-case time complexity of DP is polynomial in the number of states and actions,$O(n^k)$, where $ n$denotes the number of states and $ k$denotes the number of actions. This makes DP exponentially faster than direct policy search, which would require examining each of the $\text{k}^\text{n}$ policies.
 
 :p How do dynamic programming methods compare to direct policy search in terms of efficiency?
 ??x
-Dynamic programming (DP) methods are more efficient than direct policy search for solving MDPs. Direct policy search must examine every possible policy, which grows exponentially with the number of states and actions, making it impractical even for relatively small state spaces. In contrast, DP has a polynomial time complexity in \(n\) (number of states) and \(k\) (number of actions), making it feasible to solve MDPs with millions of states on modern computers.
+Dynamic programming (DP) methods are more efficient than direct policy search for solving MDPs. Direct policy search must examine every possible policy, which grows exponentially with the number of states and actions, making it impractical even for relatively small state spaces. In contrast, DP has a polynomial time complexity in $n $(number of states) and $ k$(number of actions), making it feasible to solve MDPs with millions of states on modern computers.
 
 ```java
 // Pseudocode for a simple value iteration algorithm
@@ -286,7 +281,7 @@ Dynamic Programming (DP) methods, as well as reinforcement learning methods in g
 ??x
 Backup diagrams provide a visual representation of how updates to value functions and policies occur step-by-step during the execution of DP algorithms. Each "backup" operation involves evaluating the current policy or updating the policy based on the updated values, reflecting the iterative nature of DP methods.
 
-For example, in a backup diagram, you might see a state \( s \) being backed up using its successor states' value estimates to update its own value function.
+For example, in a backup diagram, you might see a state $s$ being backed up using its successor states' value estimates to update its own value function.
 x??
 
 ---
@@ -298,8 +293,8 @@ GPI is a framework that revolves around two interacting processes: policy evalua
 ??x
 Generalized Policy Iteration (GPI) is a framework where two main processes interact to iteratively improve policies and value functions until an optimal solution is reached. The two interacting processes are:
 
-1. **Policy Evaluation:** This process updates the value function \( V \) for a given policy \( \pi \).
-2. **Policy Improvement:** This process updates the policy \( \pi \) based on the updated value function \( V \).
+1. **Policy Evaluation:** This process updates the value function $V $ for a given policy$\pi$.
+2. **Policy Improvement:** This process updates the policy $\pi $ based on the updated value function$V$.
 
 These two steps continue in an iterative manner until both the value function and the policy converge to their optimal forms.
 
@@ -355,7 +350,7 @@ For example, consider updating a state's value using the expected value from its
 ```java
 V[s] = ∑_a π(s,a) [R(s,a) + γ V[s']];  // Bellman expectation equation
 ```
-where \( R(s,a) \) is the immediate reward and \( V[s'] \) is an estimated future value.
+where $R(s,a)$ is the immediate reward and $V[s']$ is an estimated future value.
 
 This concept extends to policy evaluation where current policies use predicted values:
 ```java
@@ -473,7 +468,7 @@ Background context: Foundational work on using linear programming for reinforcem
 The key advantage of using a linear programming approach in reinforcement learning is that it provides a structured way to handle large state spaces by formulating MDPs as linear programs, which can be solved efficiently for optimal policies.
 
 Example:
-Formulate an MDP with states \(S\), actions \(A\), and rewards \(R(s,a)\) using linear constraints and objectives.
+Formulate an MDP with states $S $, actions $ A $, and rewards$ R(s,a)$ using linear constraints and objectives.
 ```java
 // Define variables: value of each state v[s] for s in S
 maximize sum_{s in S} v[s]
@@ -533,11 +528,11 @@ x??
 ---
 
 #### Prediction Problem in Monte Carlo Methods
-The prediction problem in Monte Carlo methods involves computing value functions \( v_\pi \) and \( q_\pi \) for a given policy \( \pi \). These estimates are based on the returns from episodes.
+The prediction problem in Monte Carlo methods involves computing value functions $v_\pi $ and$q_\pi $ for a given policy$\pi$. These estimates are based on the returns from episodes.
 
 :p What is the goal of the prediction problem in Monte Carlo methods?
 ??x
-The goal is to accurately estimate the value functions \( v_\pi \) and \( q_\pi \) using returns from complete episodes. This helps in understanding how good a given policy is.
+The goal is to accurately estimate the value functions $v_\pi $ and$q_\pi$ using returns from complete episodes. This helps in understanding how good a given policy is.
 x??
 
 ---
@@ -547,7 +542,7 @@ After estimating values, the next step is to improve the policy by selecting act
 
 :p How does policy improvement work in Monte Carlo methods?
 ??x
-Policy improvement involves using the estimated value functions \( v_\pi \) and \( q_\pi \) to select better policies. Actions with higher expected returns are chosen over time.
+Policy improvement involves using the estimated value functions $v_\pi $ and$q_\pi$ to select better policies. Actions with higher expected returns are chosen over time.
 x??
 
 ---
@@ -566,12 +561,12 @@ x??
 Background context: This section introduces Monte Carlo methods for estimating state-value functions, specifically focusing on two approaches: first-visit MC and every-visit MC. The primary idea is to use experience (returns) collected while following a given policy to estimate the value of states.
 :p What are the two types of Monte Carlo methods discussed for state-value function estimation?
 ??x
-The two types of Monte Carlo methods discussed are the first-visit MC method and the every-visit MC method. Both aim to estimate the value of a state \( v_{\pi}(s) \) by averaging returns from episodes, but they differ in how they handle multiple visits to states during an episode.
+The two types of Monte Carlo methods discussed are the first-visit MC method and the every-visit MC method. Both aim to estimate the value of a state $v_{\pi}(s)$ by averaging returns from episodes, but they differ in how they handle multiple visits to states during an episode.
 x??
 
 ---
 #### First-Visit Monte Carlo Method
-Background context: The first-visit MC method estimates \( v_{\pi}(s) \) as the average of the returns following the first visit to a state within each episode. This method is widely used due to its simplicity and robustness.
+Background context: The first-visit MC method estimates $v_{\pi}(s)$ as the average of the returns following the first visit to a state within each episode. This method is widely used due to its simplicity and robustness.
 :p What does the first-visit MC method do differently from other methods when estimating state values?
 ??x
 The first-visit MC method only includes the return that follows the first visit to a state in an episode, while ignoring any subsequent visits. This means it averages returns across different episodes where the state appears for the first time.
@@ -579,7 +574,7 @@ x??
 
 ---
 #### Every-Vist Monte Carlo Method
-Background context: The every-visit MC method estimates \( v_{\pi}(s) \) as the average of all returns following each visit to a state, regardless of whether it is the first or any subsequent visit within an episode. This approach can be more powerful when used with function approximation and eligibility traces.
+Background context: The every-visit MC method estimates $v_{\pi}(s)$ as the average of all returns following each visit to a state, regardless of whether it is the first or any subsequent visit within an episode. This approach can be more powerful when used with function approximation and eligibility traces.
 :p How does the every-visit MC method differ from the first-visit MC method in its estimation process?
 ??x
 The every-visit MC method includes all returns associated with a state, including those that occur after repeated visits within an episode. This contrasts with the first-visit MC method, which only considers the return following the initial visit to a state.
@@ -587,10 +582,10 @@ x??
 
 ---
 #### Convergence of Monte Carlo Methods
-Background context: Both first-visit and every-visit MC methods converge to \( v_{\pi}(s) \) as the number of visits or first visits to the state increases. First-visit MC converges by averaging independent, identically distributed estimates, while every-visit MC also converges but with a different rate.
+Background context: Both first-visit and every-visit MC methods converge to $v_{\pi}(s)$ as the number of visits or first visits to the state increases. First-visit MC converges by averaging independent, identically distributed estimates, while every-visit MC also converges but with a different rate.
 :p What is the convergence property of both Monte Carlo methods discussed?
 ??x
-Both first-visit and every-visit MC methods converge to \( v_{\pi}(s) \) as the number of visits (or first visits for first-visit MC) increases. First-visit MC converges by averaging independent, identically distributed estimates with finite variance, while every-visit MC converges quadratically.
+Both first-visit and every-visit MC methods converge to $v_{\pi}(s)$ as the number of visits (or first visits for first-visit MC) increases. First-visit MC converges by averaging independent, identically distributed estimates with finite variance, while every-visit MC converges quadratically.
 x??
 
 ---
@@ -665,7 +660,7 @@ This policy aims to maximize the probability of winning based on the given state
 Background context: To find the state-value function for this policy, a Monte Carlo approach was used. This involved simulating many games and averaging the returns following each state.
 :p How is the state-value function estimated using the Monte Carlo method in this scenario?
 ??x
-The state-value function \( V(s) \) is estimated by simulating multiple episodes (games) and computing the average return for each state \( s \). The returns are the rewards obtained after a game ends, which can be +1 (win), -1 (lose), or 0 (draw).
+The state-value function $V(s)$ is estimated by simulating multiple episodes (games) and computing the average return for each state $s$. The returns are the rewards obtained after a game ends, which can be +1 (win), -1 (lose), or 0 (draw).
 
 Monte Carlo evaluation involves averaging these outcomes to estimate the value of each state:
 ```python
@@ -738,7 +733,7 @@ Background context: The problem of estimating q⇡(s, a) focuses on finding the 
 
 :p What does q⇡(s, a) represent?
 ??x
-q⇡(s, a) represents the expected return when starting from state \( s \), taking action \( a \), and then following policy \( \pi \). It is essentially the value of a specific state-action pair under policy \( \pi \).
+q⇡(s, a) represents the expected return when starting from state $s $, taking action $ a $, and then following policy$\pi $. It is essentially the value of a specific state-action pair under policy $\pi$.
 x??
 
 ---
@@ -859,7 +854,7 @@ x??
 Background context: The policy improvement theorem states that if we improve a policy by making it greedy with respect to its current action-value function, the resulting policy is at least as good as the original. This ensures convergence to an optimal policy.
 :p How does the policy improvement theorem apply in Monte Carlo control?
 ??x
-The policy improvement theorem applies when improving a policy \(\pi_k\) by making it greedy based on the current value function \(q_{\pi_k}\). The resulting policy \(\pi_{k+1}\) is uniformly better or just as good as \(\pi_k\):
+The policy improvement theorem applies when improving a policy $\pi_k $ by making it greedy based on the current value function$q_{\pi_k}$. The resulting policy $\pi_{k+1}$ is uniformly better or just as good as $\pi_k$:
 ```java
 // Pseudocode for Policy Improvement Step
 public void improve(PolicyEvaluationResult evaluation, Policy pi) {
@@ -897,14 +892,14 @@ x??
 To make policy evaluation practical, we must remove the assumption that it operates on an infinite number of episodes. In practice, both dynamic programming (DP) methods and Monte Carlo (MC) methods converge asymptotically to the true value function.
 
 Two main approaches are used:
-1. Approximate \( q_{\pi_k} \) in each policy evaluation and ensure that error bounds are sufficiently small.
+1. Approximate $q_{\pi_k}$ in each policy evaluation and ensure that error bounds are sufficiently small.
 2. Proceed with value updates without expecting them to be close until many steps have passed.
 
 Value iteration is an extreme form of this second approach, performing only one iteration of policy evaluation between each step of policy improvement. The in-place version of value iteration alternates between policy improvement and evaluation for individual states.
 :p What are the two main approaches to handle the infinite episodes assumption in Monte Carlo methods?
 ??x
 The two main approaches to handle the infinite episodes assumption in Monte Carlo methods are:
-1. Approximate \( q_{\pi_k} \) in each policy evaluation and ensure that error bounds are sufficiently small.
+1. Approximate $q_{\pi_k}$ in each policy evaluation and ensure that error bounds are sufficiently small.
 2. Proceed with value updates without expecting them to be close until many steps have passed.
 
 These approaches help make the algorithm practical by allowing for a finite number of episodes, although they may not achieve exact convergence but can still provide useful results.
@@ -1030,7 +1025,7 @@ Monte Carlo ES is applied by randomly selecting starting conditions for simulate
 ??x
 To solve Blackjack using Monte Carlo ES, we simulate games from random starting conditions (e.g., dealing cards randomly) and apply a predefined initial policy. Here is a simplified approach:
 
-1. **Initialize**: Start with an action-value function \( Q(s,a) = 0 \) for all state-action pairs.
+1. **Initialize**: Start with an action-value function $Q(s,a) = 0$ for all state-action pairs.
 2. **Simulation Loop**:
    - Play a game using the current policy.
    - Update the action-value function based on the episode's returns.

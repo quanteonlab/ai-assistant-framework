@@ -216,7 +216,7 @@ Background context: The text details the financial success and critical acclaim 
 
 :p What was the performance of "Interstellar" at the box office?
 ??x
-"Interstellar" had a worldwide gross over $677 million (and $773 million with subsequent re-releases), making it the tenth-highest-grossing film of 2014.
+"Interstellar" had a worldwide gross over $677 million (and$773 million with subsequent re-releases), making it the tenth-highest-grossing film of 2014.
 
 This indicates the film's significant commercial success and lasting impact.
 x??
@@ -823,7 +823,7 @@ for idx, result in enumerate(results.results):
 ```
 Output shows that the reranker is more confident about the first result:
 0 0.1698185 It has also received praise from many astronomers for its scien- tific accuracy and portrayal of theoretical astrophysics
-1 0.07004896 The film had a worldwide gross over $677 million (and $773 mil- lion with subsequent re-releases), making it the tenth-highest grossing film of 2014
+1 0.07004896 The film had a worldwide gross over $677 million (and$773 mil- lion with subsequent re-releases), making it the tenth-highest grossing film of 2014
 2 0.0043994132 Caltech theoretical physicist and 2017 Nobel laureate in Phys- ics[4] Kip Thorne was an executive producer, acted as a scientific consultant, and wrote a tie-in book, The Science of Interstellar
 x??
 

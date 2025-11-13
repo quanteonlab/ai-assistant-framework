@@ -9,12 +9,12 @@ Euler’s rule is a basic method for solving ordinary differential equations (OD
 
 :p What does Euler's rule do?
 ??x
-Euler's rule uses the derivative function \( f(t, y) \) evaluated at the initial point to linearly extrapolate the value of \( y \) over a small time step \( h \). The error in this method is approximately \( \mathcal{O}(h^2) \).
+Euler's rule uses the derivative function $f(t, y)$ evaluated at the initial point to linearly extrapolate the value of $ y $ over a small time step $ h $. The error in this method is approximately $\mathcal{O}(h^2)$.
 
 The formula for Euler’s rule is:
-\[ y_{n+1} \approx y_n + h f(t_n, y_n) \]
+$$y_{n+1} \approx y_n + h f(t_n, y_n)$$
 
-This means that the new value of \( y \), denoted as \( y_{n+1} \), can be calculated by adding a small step size \( h \) times the derivative at time \( t_n \).
+This means that the new value of $y $, denoted as $ y_{n+1}$, can be calculated by adding a small step size $ h$times the derivative at time $ t_n$.
 
 Code Example (Python):
 ```python
@@ -51,7 +51,7 @@ The second-order Runge-Kutta algorithm, also known as the midpoint method, is a 
 Euler’s rule uses only one evaluation of the derivative function at the start of the interval, which can introduce significant errors over multiple steps. In contrast, RK2 evaluates the derivative at both the beginning and midpoint of the interval, leading to a more accurate approximation.
 
 The key formula for RK2 is:
-\[ y_{n+1} = y_n + h f\left(t_n + \frac{h}{2}, y_n + \frac{h}{2} f(t_n, y_n)\right) \]
+$$y_{n+1} = y_n + h f\left(t_n + \frac{h}{2}, y_n + \frac{h}{2} f(t_n, y_n)\right)$$
 
 This involves an additional evaluation at the midpoint, which requires a bit more computational effort but results in better accuracy.
 
@@ -72,15 +72,10 @@ When applying the Runge-Kutta second-order method (RK2) to a specific problem li
 :p How does RK2 apply to the mass-spring system in this context?
 ??x
 For a mass-spring system described by the differential equation:
-
-\[ \ddot{y}(t) = -\frac{k}{m} y(t)^p + \frac{F_{ext}(t)}{m} \]
+$$\ddot{y}(t) = -\frac{k}{m} y(t)^p + \frac{F_{ext}(t)}{m}$$
 
 RK2 can be applied as follows:
-1. Calculate \( k1 = h f(t_n, y_n) \)
-2. Use the midpoint value to calculate \( k2 = h f(t_n + 0.5h, y_n + 0.5k1) \)
-3. Update the position using \( y_{n+1} = y_n + k2 \)
-
-Here, \( f(t, y) \) is the function representing the force on the mass.
+1. Calculate $k1 = h f(t_n, y_n)$2. Use the midpoint value to calculate $ k2 = h f(t_n + 0.5h, y_n + 0.5k1)$3. Update the position using $ y_{n+1} = y_n + k2$Here,$ f(t, y)$ is the function representing the force on the mass.
 
 Example for an oscillator:
 ```python
@@ -109,7 +104,7 @@ Euler’s rule is straightforward but has a higher error rate compared to method
 Euler's rule is simpler but less accurate, as it uses only one derivative evaluation per step. RK2, on the other hand, provides a better approximation by evaluating the function at multiple points within each time step.
 
 The key differences are:
-1. **Accuracy**: Euler’s rule has an error of \( \mathcal{O}(h^2) \), while RK2 is \( \mathcal{O}(h^3) \).
+1. **Accuracy**: Euler’s rule has an error of $\mathcal{O}(h^2)$, while RK2 is $\mathcal{O}(h^3)$.
 2. **Complexity**: Euler's rule requires fewer evaluations, but RK2 involves evaluating the function at multiple points.
 3. **Stability and Precision**: RK2 generally provides more stable results over long integration periods.
 
@@ -142,32 +137,19 @@ x??
 
 Background context: The fourth-order Runge-Kutta method is a widely used technique for solving ordinary differential equations (ODEs). It provides high accuracy and a good balance between computational cost and precision. The method involves approximating the solution using intermediate slopes to improve the accuracy of the approximation.
 
-The RK4 method approximates \(y(t)\) at the next time step by considering four evaluations of the function \(f(t, y)\):
-- \(k_1 = h \cdot f(t_n, y_n)\)
-- \(k_2 = h \cdot f(t_n + \frac{h}{2}, y_n + \frac{k_1}{2})\)
-- \(k_3 = h \cdot f(t_n + \frac{h}{2}, y_n + \frac{k_2}{2})\)
-- \(k_4 = h \cdot f(t_n + h, y_n + k_3)\)
-
-The new value of \(y\) at the next time step is given by:
-\[ y_{n+1} = y_n + \frac{h}{6}(k_1 + 2k_2 + 2k_3 + k_4) \]
-
-:p What is the formula for calculating the new position using RK4?
+The RK4 method approximates $y(t)$ at the next time step by considering four evaluations of the function $f(t, y)$:
+- $k_1 = h \cdot f(t_n, y_n)$-$ k_2 = h \cdot f(t_n + \frac{h}{2}, y_n + \frac{k_1}{2})$-$ k_3 = h \cdot f(t_n + \frac{h}{2}, y_n + \frac{k_2}{2})$-$ k_4 = h \cdot f(t_n + h, y_n + k_3)$The new value of $ y$ at the next time step is given by:
+$$y_{n+1} = y_n + \frac{h}{6}(k_1 + 2k_2 + 2k_3 + k_4)$$:p What is the formula for calculating the new position using RK4?
 ??x
-The formula for updating \(y\) in the Runge-Kutta fourth-order method involves a weighted average of four slopes evaluated at different points within the interval:
-\[ y_{n+1} = y_n + \frac{h}{6}(k_1 + 2k_2 + 2k_3 + k_4) \]
-where
-- \(k_1 = h \cdot f(t_n, y_n)\)
-- \(k_2 = h \cdot f\left(t_n + \frac{h}{2}, y_n + \frac{k_1}{2}\right)\)
-- \(k_3 = h \cdot f\left(t_n + \frac{h}{2}, y_n + \frac{k_2}{2}\right)\)
-- \(k_4 = h \cdot f(t_n + h, y_n + k_3)\)
-
-This formula effectively approximates the function using a parabolic interpolation between the initial and final points of the interval.
+The formula for updating $y$ in the Runge-Kutta fourth-order method involves a weighted average of four slopes evaluated at different points within the interval:
+$$y_{n+1} = y_n + \frac{h}{6}(k_1 + 2k_2 + 2k_3 + k_4)$$where
+- $k_1 = h \cdot f(t_n, y_n)$-$ k_2 = h \cdot f\left(t_n + \frac{h}{2}, y_n + \frac{k_1}{2}\right)$-$ k_3 = h \cdot f\left(t_n + \frac{h}{2}, y_n + \frac{k_2}{2}\right)$-$ k_4 = h \cdot f(t_n + h, y_n + k_3)$ This formula effectively approximates the function using a parabolic interpolation between the initial and final points of the interval.
 x??
 
 ---
 #### Runge-Kutta-Fehling (RK45) Method
 
-Background context: The RK45 method is an adaptive step-size version of the fourth-order Runge-Kutta method. It dynamically adjusts the step size \(h\) based on the estimated error to balance accuracy and computational efficiency.
+Background context: The RK45 method is an adaptive step-size version of the fourth-order Runge-Kutta method. It dynamically adjusts the step size $h$ based on the estimated error to balance accuracy and computational efficiency.
 
 The RK45 method uses the following steps:
 1. Perform one full 4th order Runge-Kutta step.
@@ -177,7 +159,7 @@ The RK45 method uses the following steps:
 
 :p What is the primary purpose of the RK45 method?
 ??x
-The primary purpose of the RK45 method is to achieve higher accuracy by dynamically adjusting the step size \(h\) during integration. It uses a combination of 4th and 5th order Runge-Kutta steps to estimate the error, allowing it to use larger steps when the solution changes slowly and smaller steps where rapid changes are expected.
+The primary purpose of the RK45 method is to achieve higher accuracy by dynamically adjusting the step size $h$ during integration. It uses a combination of 4th and 5th order Runge-Kutta steps to estimate the error, allowing it to use larger steps when the solution changes slowly and smaller steps where rapid changes are expected.
 
 This adaptive approach helps in achieving better precision while potentially reducing computational time by using more efficient step sizes.
 x??
@@ -188,20 +170,19 @@ x??
 Background context: The Adams-Bashforth-Moulton predictor-corrector rule is a method for solving ODEs that uses information from the previous two steps to predict and correct the next value. It can be seen as an improvement over simpler methods like Euler's, which only use one previous step.
 
 The method consists of:
-1. **Predictor Step**: Use the Adams-Bashforth formula to estimate \(y_{n+1}\).
+1. **Predictor Step**: Use the Adams-Bashforth formula to estimate $y_{n+1}$.
 2. **Corrector Step**: Improve the prediction using the Adams-Moulton formula based on the predicted value and the exact values from two previous steps.
 
 :p What are the main steps in the Adams-Bashforth-Moulton method?
 ??x
 The main steps in the Adams-Bashforth-Moulton predictor-corrector method are:
-1. **Predictor Step**: Use the Adams-Bashforth formula to predict \(y_{n+1}\).
+1. **Predictor Step**: Use the Adams-Bashforth formula to predict $y_{n+1}$.
 2. **Corrector Step**: Improve the prediction using the Adams-Moulton formula, which incorporates the predicted value and exact values from previous steps.
 
 The formulas for these steps can be expressed as follows:
 - Predictor (Adams-Bashforth):
-  \[ y_{p} = y_n + h f(t_n, y_n) + \frac{h^2}{12}(5f(t_n, y_n) - 6f(t_{n-1}, y_{n-1}) + f(t_{n-2}, y_{n-2})) \]
-- Corrector (Adams-Moulton):
-  \[ y_{n+1} = y_n + \frac{h}{12}(5f(t_{n+1}, y_p) - 6f(t_n, y_n) + f(t_{n-1}, y_{n-1})) \]
+  $$y_{p} = y_n + h f(t_n, y_n) + \frac{h^2}{12}(5f(t_n, y_n) - 6f(t_{n-1}, y_{n-1}) + f(t_{n-2}, y_{n-2}))$$- Corrector (Adams-Moulton):
+$$y_{n+1} = y_n + \frac{h}{12}(5f(t_{n+1}, y_p) - 6f(t_n, y_n) + f(t_{n-1}, y_{n-1}))$$
 
 These steps help in achieving higher accuracy by leveraging the information from multiple previous steps.
 x??
@@ -223,44 +204,37 @@ x??
 ---
 
 #### Picking Appropriate k and m Values for Harmonic Oscillator
-Background context: When solving differential equations for a harmonic oscillator, it is important to choose values of \(k\) (spring constant) and \(m\) (mass) such that the period \(T = \frac{2\pi}{\omega}\) is a nice number to work with. A common choice is \(T = 1\), which simplifies calculations.
+Background context: When solving differential equations for a harmonic oscillator, it is important to choose values of $k $(spring constant) and $ m $(mass) such that the period$ T = \frac{2\pi}{\omega}$is a nice number to work with. A common choice is $ T = 1$, which simplifies calculations.
 
-:p How should you pick appropriate \(k\) and \(m\) values for the harmonic oscillator?
+:p How should you pick appropriate $k $ and$m$ values for the harmonic oscillator?
 ??x
-To ensure the period \(T = 1\), you can set \(\omega = 2\pi\). For a simple harmonic oscillator, the angular frequency \(\omega\) is given by:
+To ensure the period $T = 1 $, you can set $\omega = 2\pi $. For a simple harmonic oscillator, the angular frequency $\omega$ is given by:
+$$\omega = \sqrt{\frac{k}{m}}$$
 
-\[ \omega = \sqrt{\frac{k}{m}} \]
+Set $\omega = 2\pi$ to get:
+$$2\pi = \sqrt{\frac{k}{m}}$$
 
-Set \(\omega = 2\pi\) to get:
+Square both sides and solve for $k/m$:
 
-\[ 2\pi = \sqrt{\frac{k}{m}} \]
+$$(2\pi)^2 = \frac{k}{m}$$
 
-Square both sides and solve for \(k/m\):
+$$k = m(2\pi)^2$$
 
-\[ (2\pi)^2 = \frac{k}{m} \]
+For example, if you choose $m = 1$, then:
 
-\[ k = m(2\pi)^2 \]
-
-For example, if you choose \(m = 1\), then:
-
-\[ k = (2\pi)^2 \approx 39.478 \]
-
-??x
+$$k = (2\pi)^2 \approx 39.478$$??x
 
 ---
 
 #### Choosing Step Size for Numerical Integration
-Background context: When numerically integrating the differential equations of a harmonic oscillator using methods like Runge-Kutta, it is essential to choose an initial step size \(h\) and make it smaller until the solution looks smooth, has a constant period over many cycles, and agrees with the analytical result. A good starting point is \(h \approx \frac{T}{5}\), where \(T\) is the period.
+Background context: When numerically integrating the differential equations of a harmonic oscillator using methods like Runge-Kutta, it is essential to choose an initial step size $h $ and make it smaller until the solution looks smooth, has a constant period over many cycles, and agrees with the analytical result. A good starting point is$h \approx \frac{T}{5}$, where $ T$ is the period.
 
 :p How should you determine and adjust the step size for numerical integration of a harmonic oscillator?
 ??x
 Start with an initial step size:
+$$h = \frac{T}{5}$$where $ T $ is set to 1 based on your choice of $\omega $. For example, if $\omega = 2\pi $, then $ T = 1$:
 
-\[ h = \frac{T}{5} \]
-
-where \(T\) is set to 1 based on your choice of \(\omega\). For example, if \(\omega = 2\pi\), then \(T = 1\):
-
-\[ h = \frac{1}{5} = 0.2 \]
+$$h = \frac{1}{5} = 0.2$$
 
 Make the step size smaller until:
 
@@ -268,7 +242,7 @@ Make the step size smaller until:
 - The period remains constant for a large number of cycles
 - It agrees with the analytical result
 
-Continue refining \(h\) (e.g., try 0.1, 0.05) to achieve these criteria.
+Continue refining $h$(e.g., try 0.1, 0.05) to achieve these criteria.
 
 ??x
 
@@ -281,10 +255,7 @@ Background context: For accurate comparison, ensure that initial conditions for 
 ??x
 Ensure identical initial conditions:
 
-- Zero displacement: \(y(0) = 0\)
-- Nonzero velocity: \(y'(0) \neq 0\)
-
-Plot both the numeric (Runge-Kutta) and analytical solutions. If they agree closely, you can conclude that your numerical solution is accurate.
+- Zero displacement:$y(0) = 0 $- Nonzero velocity:$ y'(0) \neq 0$ Plot both the numeric (Runge-Kutta) and analytical solutions. If they agree closely, you can conclude that your numerical solution is accurate.
 
 If they match well but not perfectly, it might indicate agreement to about two decimal places.
 
@@ -299,7 +270,7 @@ Background context: A harmonic oscillator should be isochronous, meaning its per
 ??x
 Change the initial velocity while keeping zero displacement and check that the period remains constant. This ensures that small changes in initial conditions do not affect the period significantly, confirming the isochronous nature.
 
-For example, if you start with \(y(0) = 0\) and different \(y'(0)\), observe whether the period of oscillation remains approximately the same.
+For example, if you start with $y(0) = 0 $ and different$y'(0)$, observe whether the period of oscillation remains approximately the same.
 
 ??x
 
@@ -343,8 +314,7 @@ Construct a table comparing:
 
 - Equation number (Eqn. no.)
 - Method used (e.g., rk4, rk45)
-- Initial step size \(h\)
-- Number of function evaluations (FLOPs)
+- Initial step size $h$- Number of function evaluations (FLOPs)
 - Computation time in milliseconds
 - Relative error
 
@@ -360,31 +330,28 @@ For example:
 ---
 
 #### Numerical Study of Nonlinear Oscillations
-Background context: Investigate the behavior of nonlinear oscillators by varying parameters \(p\) or \(\alpha x\). This study helps understand how nonlinearity affects the solutions and periods.
+Background context: Investigate the behavior of nonlinear oscillators by varying parameters $p $ or$\alpha x$. This study helps understand how nonlinearity affects the solutions and periods.
 
 :p How should you numerically study anharmonic oscillations?
 ??x
-Vary the parameter \(p\) for potential (8.5) or \(\alpha x\) for potential (8.2):
+Vary the parameter $p $ for potential (8.5) or$\alpha x$ for potential (8.2):
 
-- For potential (8.5): \(0 < p \leq 12\)
-- For potential (8.2): \(0 \leq \alpha x \leq 2\)
-
-Ensure that the solution remains periodic with constant amplitude and period regardless of nonlinearity. Check maximum speed occurs at \(x=0\) and zero velocity at maximum \(|x|\).
+- For potential (8.5):$0 < p \leq 12 $- For potential (8.2):$0 \leq \alpha x \leq 2 $ Ensure that the solution remains periodic with constant amplitude and period regardless of nonlinearity. Check maximum speed occurs at$x=0 $ and zero velocity at maximum$|x|$.
 
 ??x
 
 ---
 
 #### Verifying Energy Conservation
-Background context: For harmonic oscillators, energy conservation should hold true; the maximum speed should occur at \(x = 0\), and zero velocity at the maximum \(|x|\) points.
+Background context: For harmonic oscillators, energy conservation should hold true; the maximum speed should occur at $x = 0 $, and zero velocity at the maximum $|x|$ points.
 
 :p How can you verify that the solution remains periodic with constant amplitude and period?
 ??x
 Check for:
 
 - Periodic behavior regardless of initial conditions.
-- Maximum speed occurs at \(x=0\).
-- Zero velocity at the maximum \(|x|\).
+- Maximum speed occurs at $x=0$.
+- Zero velocity at the maximum $|x|$.
 
 These checks ensure energy conservation is maintained throughout the oscillations.
 
@@ -394,7 +361,7 @@ These checks ensure energy conservation is maintained throughout the oscillation
 Background context: The task is to verify that nonharmonic oscillators are nonisochronous, meaning vibrations with different amplitudes have different periods. This can be observed by examining the period of oscillation for various initial amplitudes.
 :p Verify that nonharmonic oscillators are nonisochronous.
 ??x
-This means showing that the period \(T\) of oscillation depends on the amplitude \(A\). For a given potential, if different initial amplitudes result in different periods, then the oscillator is nonisochronous. This can be demonstrated by plotting the position versus time for various initial amplitudes as shown in Figure 8.7.
+This means showing that the period $T $ of oscillation depends on the amplitude$A$. For a given potential, if different initial amplitudes result in different periods, then the oscillator is nonisochronous. This can be demonstrated by plotting the position versus time for various initial amplitudes as shown in Figure 8.7.
 ```java
 // Pseudocode to simulate oscillations and plot period vs amplitude
 public class OscillationSimulation {
@@ -421,10 +388,10 @@ x??
 ---
 
 #### Shape of Oscillations for Different Parameters
-Background context: The task involves understanding why the shapes of oscillations change with different \(p\) or \(\alpha\). This can be observed by comparing oscillations under various potentials.
-:p Explain why the shapes of oscillations change for different \(p\) or \(\alpha\).
+Background context: The task involves understanding why the shapes of oscillations change with different $p $ or$\alpha$. This can be observed by comparing oscillations under various potentials.
+:p Explain why the shapes of oscillations change for different $p $ or$\alpha$.
 ??x
-The shape of oscillation changes because different values of \(p\) (or \(\alpha\)) alter the potential function, leading to different forces acting on the mass. For example, a higher \(p\) means the force is more nonlinear and thus affects the trajectory differently.
+The shape of oscillation changes because different values of $p $(or $\alpha $) alter the potential function, leading to different forces acting on the mass. For example, a higher $ p$ means the force is more nonlinear and thus affects the trajectory differently.
 ```java
 // Pseudocode to simulate and plot shapes for different p or alpha values
 public class OscillationShapeSimulation {
@@ -451,11 +418,12 @@ x??
 ---
 
 #### Determining Period by Recording Times
-Background context: The task involves devising an algorithm to determine the period \(T\) of oscillation by recording times at which the mass passes through the origin. At least three time points are necessary due to potential asymmetry in the motion.
-:p Devise an algorithm to determine the period \(T\) of the oscillation by recording times at which the mass passes through the origin.
+Background context: The task involves devising an algorithm to determine the period $T$ of oscillation by recording times at which the mass passes through the origin. At least three time points are necessary due to potential asymmetry in the motion.
+:p Devise an algorithm to determine the period $T$ of the oscillation by recording times at which the mass passes through the origin.
 ??x
-Record the times \(t_1, t_2,\) and \(t_3\) when the mass passes through the origin. The period \(T\) can be approximated as:
-\[ T \approx (t_3 - t_1)/2 \]
+Record the times $t_1, t_2,$ and $t_3$ when the mass passes through the origin. The period $T$ can be approximated as:
+$$T \approx (t_3 - t_1)/2$$
+
 If there is significant asymmetry, additional points may be needed to refine the estimate.
 ```java
 // Pseudocode for determining period by recording times at origin
@@ -474,7 +442,7 @@ x??
 Background context: The task involves constructing a graph of the deduced period as a function of initial amplitude. This helps in understanding how the period changes with different amplitudes.
 :p Construct a graph of the deduced period as a function of initial amplitude.
 ??x
-Create a plot where the x-axis represents the initial amplitude and the y-axis represents the deduced period \(T\). Plot the data points obtained from the simulations.
+Create a plot where the x-axis represents the initial amplitude and the y-axis represents the deduced period $T$. Plot the data points obtained from the simulations.
 ```java
 // Pseudocode to construct a period vs amplitude graph
 public class PeriodVsAmplitudeGraph {
@@ -499,10 +467,10 @@ x??
 ---
 
 #### Verifying Oscillatory but Non-Harmonic Motion
-Background context: The task is to verify that the motion of a nonharmonic oscillator becomes oscillatory with an energy \(E \approx k/6\alpha^2\) or for \(p > 6\), but not harmonic.
-:p Verify that the motion is oscillatory but not harmonic as the energy approaches \(k/6\alpha^2\) or for \(p > 6\).
+Background context: The task is to verify that the motion of a nonharmonic oscillator becomes oscillatory with an energy $E \approx k/6\alpha^2 $ or for$p > 6$, but not harmonic.
+:p Verify that the motion is oscillatory but not harmonic as the energy approaches $k/6\alpha^2 $ or for$p > 6$.
 ??x
-For values of \(p > 6\) or when the energy is close to \(k/6\alpha^2\), the potential becomes steeper, and the motion starts to deviate from simple harmonic behavior. The oscillations become more complex due to the nonlinear nature of the force.
+For values of $p > 6 $ or when the energy is close to$k/6\alpha^2$, the potential becomes steeper, and the motion starts to deviate from simple harmonic behavior. The oscillations become more complex due to the nonlinear nature of the force.
 ```java
 // Pseudocode to verify oscillatory but non-harmonic motion
 public class OscillationVerification {
@@ -523,11 +491,10 @@ x??
 
 ---
 
-#### Separation from Oscillatory Motion to Translational for Large \(E\)
-Background context: The task involves verifying that when the energy of an anharmonic oscillator reaches a certain threshold, the motion separates from oscillatory behavior and becomes translational. This is seen by observing how close you can get to this separatrix.
-:p Verify that for the anharmonic oscillator with \(E = k/6\alpha^2\), the motion separates from oscillatory to translational.
+#### Separation from Oscillatory Motion to Translational for Large $E$ Background context: The task involves verifying that when the energy of an anharmonic oscillator reaches a certain threshold, the motion separates from oscillatory behavior and becomes translational. This is seen by observing how close you can get to this separatrix.
+:p Verify that for the anharmonic oscillator with $E = k/6\alpha^2$, the motion separates from oscillatory to translational.
 ??x
-For high energies, the potential no longer confines the particle within a bounded region. Instead, the particle moves freely in one direction, resembling translational motion rather than oscillation. This can be observed by simulating the motion and noting the transition at \(E = k/6\alpha^2\).
+For high energies, the potential no longer confines the particle within a bounded region. Instead, the particle moves freely in one direction, resembling translational motion rather than oscillation. This can be observed by simulating the motion and noting the transition at $E = k/6\alpha^2$.
 ```java
 // Pseudocode to verify separation from oscillatory motion to translational
 public class OscillationToTranslational {
@@ -550,8 +517,8 @@ x??
 ---
 
 #### Energy Conservation Verification
-Background context: The task involves verifying that energy is conserved in the simulation, unless friction is explicitly included. This can be checked by plotting the potential energy \(V(x)\), kinetic energy \(KE(t) = \frac{1}{2}mv^2\), and total energy \(E(t) = V(x) + KE(t)\).
-:p Plot the potential energy \(PE(t) = V[x(t)]\), kinetic energy \(KE(t) = \frac{1}{2}mv^2\), and total energy \(E(t) = PE(t) + KE(t)\) for 50 periods.
+Background context: The task involves verifying that energy is conserved in the simulation, unless friction is explicitly included. This can be checked by plotting the potential energy $V(x)$, kinetic energy $ KE(t) = \frac{1}{2}mv^2$, and total energy $ E(t) = V(x) + KE(t)$.
+:p Plot the potential energy $PE(t) = V[x(t)]$, kinetic energy $ KE(t) = \frac{1}{2}mv^2$, and total energy $ E(t) = PE(t) + KE(t)$ for 50 periods.
 ??x
 Plot these three energies over time to observe their behavior. For a conservative system, the total energy should remain constant. The potential and kinetic energies should fluctuate but sum up to a nearly constant value if no external forces are applied.
 ```java
@@ -605,9 +572,10 @@ x??
 
 #### Precision Assessment via Energy Conservation
 Background context: The task involves assessing the numerical precision of the simulation by checking how well energy is conserved over a long period. This can be done using the formula:
-\[ -\log_{10} \left| \frac{E(t) - E(0)}{E(0)} \right| \]
+$$-\log_{10} \left| \frac{E(t) - E(0)}{E(0)} \right|$$
+
 This checks the number of decimal places of precision.
-:p Verify the long-term stability by plotting \( -\log_{10} \left| \frac{E(t) - E(0)}{E(0)} \right|\) for a large number of periods.
+:p Verify the long-term stability by plotting $-\log_{10} \left| \frac{E(t) - E(0)}{E(0)} \right|$ for a large number of periods.
 ??x
 Plot this quantity to check if energy is conserved over time. Ideally, it should stay close to zero, indicating high precision.
 ```java
@@ -641,11 +609,10 @@ x??
 
 ---
 
-#### Average Kinetic Energy Exceeds Potential Energy for Large \(p\)
-Background context: The task involves observing that the average kinetic energy of a particle bound by a large-p oscillator exceeds its potential energy, due to the Virial theorem.
+#### Average Kinetic Energy Exceeds Potential Energy for Large $p$ Background context: The task involves observing that the average kinetic energy of a particle bound by a large-p oscillator exceeds its potential energy, due to the Virial theorem.
 :p Observe that the average of the kinetic energy over time exceeds the average potential energy.
 ??x
-For large values of \(p\), the oscillator's motion becomes predominantly translational, leading to an average kinetic energy that is greater than the average potential energy. This follows from the Virial theorem: \(\langle KE \rangle = \frac{p}{2} \langle PE \rangle\).
+For large values of $p $, the oscillator's motion becomes predominantly translational, leading to an average kinetic energy that is greater than the average potential energy. This follows from the Virial theorem: $\langle KE \rangle = \frac{p}{2} \langle PE \rangle$.
 ```java
 // Pseudocode to observe the relationship between average kinetic and potential energies
 public class KineticPotentialEnergyAnalysis {
@@ -685,17 +652,15 @@ x??
 Background context: In real-world scenarios, friction plays a significant role and cannot be ignored. The simplest models for friction are static, kinetic, and viscous friction. These models help in understanding how friction affects the oscillatory motion of an object.
 
 Relevant formulas:
-- Static friction: \( F(\text{static}) = -\mu_s N \)
-- Kinetic friction: \( F(\text{kinetic}) = -\mu_k N |v| \)
-- Viscous friction: \( F(\text{viscous}) = -b v \)
+- Static friction: $F(\text{static}) = -\mu_s N $- Kinetic friction:$ F(\text{kinetic}) = -\mu_k N |v|$- Viscous friction:$ F(\text{viscous}) = -b v$
 
 :p How does the inclusion of friction affect the motion of a harmonic oscillator?
 ??x
-The inclusion of friction, particularly viscous friction, affects the oscillatory motion by causing the amplitude to decay over time. For different values of the damping coefficient \( b \), the behavior differs:
+The inclusion of friction, particularly viscous friction, affects the oscillatory motion by causing the amplitude to decay over time. For different values of the damping coefficient $b$, the behavior differs:
 
-- Underdamped: \( b < 2m\omega_0 \) - Oscillations occur within a decaying envelope.
-- Critically damped: \( b = 2m\omega_0 \) - The system returns to equilibrium without oscillating, but in finite time.
-- Overdamped: \( b > 2m\omega_0 \) - The system returns to equilibrium without oscillating, but the process is slower.
+- Underdamped: $b < 2m\omega_0$ - Oscillations occur within a decaying envelope.
+- Critically damped: $b = 2m\omega_0$ - The system returns to equilibrium without oscillating, but in finite time.
+- Overdamped: $b > 2m\omega_0$ - The system returns to equilibrium without oscillating, but the process is slower.
 
 To simulate this, you can modify your code as follows:
 ```java
@@ -720,11 +685,9 @@ x??
 Background context: Real-world oscillators are often influenced by external forces that vary over time. These external forces can lead to phenomena like resonance and beats.
 
 Relevant formulas:
-\[ F_{\text{ext}}(t) = F_0 \sin(\omega t) \]
-
-:p How does adding a time-dependent external force affect the behavior of an oscillating system?
+$$F_{\text{ext}}(t) = F_0 \sin(\omega t)$$:p How does adding a time-dependent external force affect the behavior of an oscillating system?
 ??x
-Adding a time-dependent external force \( F_{\text{ext}}(t) = F_0 \sin(\omega t) \) can significantly alter the behavior of an oscillating system, leading to phenomena like resonance and beats. When the frequency of the driving force is close to but not exactly equal to the natural frequency of the oscillator, the amplitude of the oscillation will vary over time due to interference.
+Adding a time-dependent external force $F_{\text{ext}}(t) = F_0 \sin(\omega t)$ can significantly alter the behavior of an oscillating system, leading to phenomena like resonance and beats. When the frequency of the driving force is close to but not exactly equal to the natural frequency of the oscillator, the amplitude of the oscillation will vary over time due to interference.
 
 To simulate this in your code, you would need to modify the right-hand side function of your ODE solver:
 ```java
@@ -751,15 +714,14 @@ x??
 Background context: In stable physical systems, if an external sinusoidal force is applied at the natural frequency of the system, resonance can occur. This means the system absorbs energy from the external force leading to increasing amplitude over time.
 
 Relevant formulas:
-\[ x \approx x_0 \sin(\omega t) + x_0 \sin(\omega_0 t) = (2x_0 \cos(\frac{\omega - \omega_0}{2}t)) \sin\left(\frac{\omega + \omega_0}{2}t\right) \]
-
-:p What is the difference between resonance and beats in nonlinear oscillators?
+$$x \approx x_0 \sin(\omega t) + x_0 \sin(\omega_0 t) = (2x_0 \cos(\frac{\omega - \omega_0}{2}t)) \sin\left(\frac{\omega + \omega_0}{2}t\right)$$:p What is the difference between resonance and beats in nonlinear oscillators?
 ??x
 Resonance occurs when an external sinusoidal force drives a system at its natural frequency, leading to increasing amplitude due to energy absorption. Beats occur when the driving frequency is close but not equal to the natural frequency, causing interference that results in an envelope of slowly varying amplitude.
 
 For example:
-\[ x \approx x_0 \sin(\omega t) + x_0 \sin(\omega_0 t) = (2x_0 \cos(\frac{\omega - \omega_0}{2}t)) \sin\left(\frac{\omega + \omega_0}{2}t\right) \]
-Here, the amplitude varies slowly with a beat frequency of \( \frac{\omega - \omega_0}{2} \).
+$$x \approx x_0 \sin(\omega t) + x_0 \sin(\omega_0 t) = (2x_0 \cos(\frac{\omega - \omega_0}{2}t)) \sin\left(\frac{\omega + \omega_0}{2}t\right)$$
+
+Here, the amplitude varies slowly with a beat frequency of $\frac{\omega - \omega_0}{2}$.
 
 To simulate this in your code:
 ```java
@@ -786,14 +748,13 @@ x??
 Background context: To simulate a damped harmonic oscillator, you need to account for the forces acting on it. This includes the restoring force of the spring and possibly friction.
 
 Relevant formulas:
-- Restoring force: \( F_{\text{rest}} = -k x \)
-- Viscous friction: \( F_{\text{visc}} = -b v \)
+- Restoring force: $F_{\text{rest}} = -k x $- Viscous friction:$ F_{\text{visc}} = -b v$
 
 :p How can you simulate a damped harmonic oscillator in your program?
 ??x
 To simulate a damped harmonic oscillator, you need to include the restoring force and viscous friction forces. The equation of motion for such an oscillator is given by:
 
-\[ m \frac{d^2 x}{dt^2} = -k x - b \frac{dx}{dt} \]
+$$m \frac{d^2 x}{dt^2} = -k x - b \frac{dx}{dt}$$
 
 In code, this can be implemented as follows:
 ```java
@@ -818,12 +779,9 @@ x??
 Background context: In some scenarios, the static and kinetic frictions can be combined. The system must stop if the restoring force is less than or equal to the static friction force.
 
 Relevant formulas:
-- Static friction: \( F(\text{static}) = -\mu_s N \)
-- Kinetic friction: \( F(\text{kinetic}) = -\mu_k N |v| \)
-
-:p How does including both static and kinetic friction affect the motion of an oscillator?
+- Static friction:$F(\text{static}) = -\mu_s N $- Kinetic friction:$ F(\text{kinetic}) = -\mu_k N |v|$:p How does including both static and kinetic friction affect the motion of an oscillator?
 ??x
-Including both static and kinetic friction affects the motion such that if the oscillator stops (i.e., velocity is zero), it will not move again unless the restoring force exceeds the static friction. The simulation must check this condition each time \( v = 0 \).
+Including both static and kinetic friction affects the motion such that if the oscillator stops (i.e., velocity is zero), it will not move again unless the restoring force exceeds the static friction. The simulation must check this condition each time $v = 0$.
 
 For example:
 ```java
@@ -852,38 +810,35 @@ x??
 
 #### Lowering F0 to Match Natural Restoring Force for Beating
 
-Background context: To observe beating phenomena, it is necessary to adjust the driving force \(F_0\) close to the natural restoring force of the system. This ensures that the natural and forced oscillations are near resonance, leading to the characteristic modulation in amplitude observed as beating.
+Background context: To observe beating phenomena, it is necessary to adjust the driving force $F_0$ close to the natural restoring force of the system. This ensures that the natural and forced oscillations are near resonance, leading to the characteristic modulation in amplitude observed as beating.
 
-:p What should you do with \(F_0\) to enable beating?
+:p What should you do with $F_0$ to enable beating?
 ??x
-To observe beating, lower \(F_0\) until it is close to the magnitude of the natural restoring force of the system. This ensures that the natural and forced oscillations are nearly in resonance, leading to a modulation in amplitude observed as beating.
+To observe beating, lower $F_0$ until it is close to the magnitude of the natural restoring force of the system. This ensures that the natural and forced oscillations are nearly in resonance, leading to a modulation in amplitude observed as beating.
 x??
 
 ---
 
 #### Verifying Beat Frequency for Harmonic Oscillator
 
-Background context: The beat frequency \(f_b\) is given by \(\frac{\omega - \omega_0}{2\pi}\) where \(\omega \approx \omega_0\). This formula helps verify that the number of variations in intensity per unit time equals the difference between the driving force and natural frequencies divided by \(2\pi\).
+Background context: The beat frequency $f_b $ is given by$\frac{\omega - \omega_0}{2\pi}$ where $\omega \approx \omega_0$. This formula helps verify that the number of variations in intensity per unit time equals the difference between the driving force and natural frequencies divided by $2\pi$.
 
 :p How do you verify the beat frequency for a harmonic oscillator?
 ??x
-To verify the beat frequency, calculate the difference between the driving frequency \(\omega\) and the natural frequency \(\omega_0\). Divide this difference by \(2\pi\) to get the number of variations in intensity per unit time (the beat frequency).
+To verify the beat frequency, calculate the difference between the driving frequency $\omega $ and the natural frequency$\omega_0 $. Divide this difference by $2\pi$ to get the number of variations in intensity per unit time (the beat frequency).
 
 For example:
-\[
-f_b = \frac{\omega - \omega_0}{2\pi}
-\]
-x??
+$$f_b = \frac{\omega - \omega_0}{2\pi}$$x??
 
 ---
 
 #### Series of Runs for Increasing Driver Frequency
 
-Background context: Once you have a well-matched \(F_0\) with your system, run multiple trials by progressively increasing the driving force frequency over a range from \(\frac{\omega_0}{10}\) to \(10\omega_0\). This will help observe how the natural and forced oscillations interact at different frequencies.
+Background context: Once you have a well-matched $F_0 $ with your system, run multiple trials by progressively increasing the driving force frequency over a range from$\frac{\omega_0}{10}$ to $10\omega_0$. This will help observe how the natural and forced oscillations interact at different frequencies.
 
 :p What should you do in this step?
 ??x
-Make a series of runs by progressively increasing the driving force frequency for the range \(\frac{\omega_0}{10} \leq \omega \leq 10\omega_0\). This will allow you to observe how the natural and forced oscillations interact over different frequencies.
+Make a series of runs by progressively increasing the driving force frequency for the range $\frac{\omega_0}{10} \leq \omega \leq 10\omega_0$. This will allow you to observe how the natural and forced oscillations interact over different frequencies.
 x??
 
 ---
@@ -894,7 +849,7 @@ Background context: Plotting the maximum amplitude of oscillation versus the dri
 
 :p What should you plot?
 ??x
-Plot the maximum amplitude of oscillation as a function of the driver's frequency \(\omega\).
+Plot the maximum amplitude of oscillation as a function of the driver's frequency $\omega$.
 x??
 
 ---
@@ -923,11 +878,11 @@ x??
 
 #### Resonance Character with Increasing Exponent
 
-Background context: As the exponent \(p\) in the potential \(V(x) = k|x|^{p/p}\) is made larger and larger, the character of resonance changes. At large \(p\), the mass effectively "hits" the wall and falls out of phase with the driver, making the driver less effective at pumping energy into the system.
+Background context: As the exponent $p $ in the potential$V(x) = k|x|^{p/p}$ is made larger and larger, the character of resonance changes. At large $p$, the mass effectively "hits" the wall and falls out of phase with the driver, making the driver less effective at pumping energy into the system.
 
-:p How does increasing the exponent \(p\) affect the resonance?
+:p How does increasing the exponent $p$ affect the resonance?
 ??x
-Increasing the exponent \(p\) in the potential \(V(x) = k|x|^{p/p}\) changes the character of resonance. As \(p\) becomes large, the mass effectively "hits" the wall and falls out of phase with the driver, making the driver less effective at pumping energy into the system.
+Increasing the exponent $p $ in the potential$V(x) = k|x|^{p/p}$ changes the character of resonance. As $p$ becomes large, the mass effectively "hits" the wall and falls out of phase with the driver, making the driver less effective at pumping energy into the system.
 x??
 
 ---
@@ -1012,8 +967,7 @@ The Adams-Bashforth method is used for predicting the next value in the sequence
 :p What formula does the predictor step use?
 ??x
 The predictor step uses the following formula:
-\[ y_{k+1} = y_k + h \left( F_1 - 5F_2 + 19F_3 + 9F_4 \right) / 24 \]
-where \( y_k \) is the current value, and \( F_i \) are function evaluations at previous points.
+$$y_{k+1} = y_k + h \left( F_1 - 5F_2 + 19F_3 + 9F_4 \right) / 24$$where $ y_k $ is the current value, and $ F_i$ are function evaluations at previous points.
 
 x??
 
@@ -1023,8 +977,7 @@ The Adams-Moulton method corrects the predicted value by using a weighted combin
 :p What formula does the corrector step use?
 ??x
 The corrector step uses the following formula:
-\[ y_{k+1} = y_k + \frac{h}{24} \left( -9F_0 + 37F_1 - 59F_2 + 55F_3 \right) \]
-where \( y_k \) is the current value, and \( F_i \) are function evaluations at previous points.
+$$y_{k+1} = y_k + \frac{h}{24} \left( -9F_0 + 37F_1 - 59F_2 + 55F_3 \right)$$where $ y_k $ is the current value, and $ F_i$ are function evaluations at previous points.
 
 x??
 
@@ -1033,7 +986,7 @@ The provided code snippet includes a Python implementation of the Runge-Kutta (R
 
 :p What does this code segment do?
 ??x
-This code segment implements the fourth-order Runge-Kutta (RK4) method, which approximates the solution to a given ordinary differential equation (ODE). The RK4 method uses multiple evaluations of the function \( f(t, y) \) at different points within a time step to compute an accurate approximation.
+This code segment implements the fourth-order Runge-Kutta (RK4) method, which approximates the solution to a given ordinary differential equation (ODE). The RK4 method uses multiple evaluations of the function $f(t, y)$ at different points within a time step to compute an accurate approximation.
 
 ```python
 def rk4(t, yy, h1):

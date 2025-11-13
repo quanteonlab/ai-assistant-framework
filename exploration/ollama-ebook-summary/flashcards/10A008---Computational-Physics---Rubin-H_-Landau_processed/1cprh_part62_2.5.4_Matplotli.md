@@ -161,7 +161,7 @@ Background context: This section describes a mechanical problem involving a beam
 
 :p What is the scenario described for the first part of the exercise?
 ??x
-The scenario involves a beam of length \(L = 10\) meters and weight \(W = 400N\), resting on two supports separated by a distance \(d = 2\) meters. A box with a weight \(W_b = 800N\) starts above the left support and slides frictionlessly to the right with a velocity of \(v = 7m/s\).
+The scenario involves a beam of length $L = 10 $ meters and weight$W = 400N $, resting on two supports separated by a distance$ d = 2 $meters. A box with a weight$ W_b = 800N $starts above the left support and slides frictionlessly to the right with a velocity of$ v = 7m/s$.
 
 The task is to write a program that calculates the forces exerted on the beam by both supports as the box moves along it.
 x??
@@ -222,7 +222,7 @@ Visual is a Python module for creating graphical plots and animations. In this s
 
 :p What does `EasyVisual.py` demonstrate?
 ??x
-The script demonstrates the creation of two 2D plots using the Visual package in Python. It shows a graph curve (`gcurve`) plotting a function \(5 \times \cos(2x) \times e^{-0.4x}\) and a set of dots (`gdots`) plotted at points where the x-coordinate varies from -5 to +5.
+The script demonstrates the creation of two 2D plots using the Visual package in Python. It shows a graph curve (`gcurve`) plotting a function $5 \times \cos(2x) \times e^{-0.4x}$ and a set of dots (`gdots`) plotted at points where the x-coordinate varies from -5 to +5.
 
 ```python
 from visual.graph import *  # Import Visual
@@ -251,7 +251,7 @@ This script illustrates how to produce a single figure with multiple types of pl
 
 :p What does `3GraphVisual.py` demonstrate?
 ??x
-The script demonstrates creating a single plot that includes three different types of data representations: a curve (`gcurve`), vertical bars (`gvbars`), and dots (`gdots`). It uses these methods to visualize the functions \( \sin^2(x) \), \( \cos^2(x) \), and \( \sin(x)\cos(x) \).
+The script demonstrates creating a single plot that includes three different types of data representations: a curve (`gcurve`), vertical bars (`gvbars`), and dots (`gdots`). It uses these methods to visualize the functions $\sin^2(x)$,$\cos^2(x)$, and $\sin(x)\cos(x)$.
 
 ```python
 from visual.graph import *
@@ -329,7 +329,7 @@ This script illustrates how to plot a function using the `matplotlib` library in
 
 :p What does `EasyMatPlot.py` demonstrate?
 ??x
-The script demonstrates plotting a mathematical function \(5 \times \cos(2x) \times e^{-0.4x}\) using matplotlib's `plot` method.
+The script demonstrates plotting a mathematical function $5 \times \cos(2x) \times e^{-0.4x}$ using matplotlib's `plot` method.
 
 ```python
 import numpy as np
@@ -356,7 +356,7 @@ This script illustrates the use of the `matplotlib` and `numpy` libraries to per
 
 :p What does `PondMatPlot.py` demonstrate?
 ??x
-The script demonstrates visualizing an integral by plotting an integrand function \( x \sin^2(x) \) over the interval \([0, 2\pi]\). It then uses Monte Carlo integration via von Neumann rejection to estimate the area under the curve.
+The script demonstrates visualizing an integral by plotting an integrand function $x \sin^2(x)$ over the interval $[0, 2\pi]$. It then uses Monte Carlo integration via von Neumann rejection to estimate the area under the curve.
 
 ```python
 import numpy as np
@@ -381,7 +381,7 @@ ax.plot(x1, y1, 'c', linewidth=4)
 ax.set_xlim((0, 2 * np.pi))
 ax.set_ylim((0, 5))
 ax.set_xticks([0, np.pi, 2 * np.pi])
-ax.set_xticklabels(['0', r'$\pi$', r'2$\pi$'])
+ax.set_xticklabels(['0', r'$\pi $', r'2 $\pi$'])
 ax.set_ylabel(r'$f(x) = x\,\sin^2 x$', fontsize=20)
 ax.set_xlabel('x', fontsize=20)
 fig.patch.set_visible(False)
@@ -450,7 +450,7 @@ Background context: This example shows how to create a 3D surface plot using mat
 
 :p What is the objective of this code snippet?
 ??x
-The objective of this code snippet is to generate a 3D surface plot for a mathematical function, specifically the function \( Z = \sin(X) \cdot \cos(Y) \). This example demonstrates the use of `matplotlib` and its 3D plotting capabilities.
+The objective of this code snippet is to generate a 3D surface plot for a mathematical function, specifically the function $Z = \sin(X) \cdot \cos(Y)$. This example demonstrates the use of `matplotlib` and its 3D plotting capabilities.
 
 ```python
 import matplotlib.pyplot as plt

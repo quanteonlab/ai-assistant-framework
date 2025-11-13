@@ -121,12 +121,10 @@ end
 This script runs the web server on port 8000, and you can test it using a web browser or `curl` commands.
 
 ```sh
-$ ruby web-server.rb
+$ruby web-server.rb
 [2019-05-25 14:11:52] INFO  WEBrick 1.3.1 
 [2019-05-25 14:11:52] INFO  ruby 2.3.7 (2018-03-28) [universal.x86_64-darwin17]
-[2019-05-25 14:11:52] INFO  WEBrick::HTTPServer#start: pid=19767 port=8000
-
-$ curl localhost:8000/
+[2019-05-25 14:11:52] INFO  WEBrick::HTTPServer#start: pid=19767 port=8000$ curl localhost:8000/
 Hello, World
 ```
 
@@ -159,7 +157,7 @@ module "alb" {
 Then, you can apply this example configuration:
 
 ```sh
-$ terraform apply
+$terraform apply
 
 Apply complete. Resources: 5 added, 0 changed, 0 destroyed.
 
@@ -169,8 +167,7 @@ alb_dns_name = "hello-world-stage-477699288.us-east-2.elb.amazonaws.com"
 ```
 
 After applying the changes, you can test the ALB using tools like `curl` to ensure that it returns the expected responses:
-```sh
-$ curl -s -o /dev/null -w "%{http_code}" "hello-world-stage-477699288.us-east-2.elb.amazonaws.com"
+```sh$ curl -s -o /dev/null -w "%{http_code}" "hello-world-stage-477699288.us-east-2.elb.amazonaws.com"
 404
 ```
 
@@ -635,7 +632,7 @@ When running tests that deploy real infrastructure using Terraform, setting an e
 To ensure the test completes without being prematurely terminated, you need to use the `-timeout` flag with a longer duration. For example:
 
 ```bash
-$ go test -v -timeout 30m TestAlbExample
+$go test -v -timeout 30m TestAlbExample
 ```
 
 This command runs the `TestAlbExample` test with a timeout of 30 minutes.
@@ -651,8 +648,7 @@ After testing, it is crucial to clean up any resources created by Terraform. Thi
 ??x
 Post-testing, you need to run the `terraform destroy` command with appropriate flags to ensure all resources are destroyed:
 
-```bash
-$ go test -v -timeout 30m TestAlbExample
+```bash$ go test -v -timeout 30m TestAlbExample
 # During test:
 TestAlbExample 2019-05-26T13:32:06+01:00 command.go:53: Running command terraform with args [destroy -auto-approve -input=false -lock=false] (...) 
 TestAlbExample 2019-05-26T13:39:16+01:00 command.go:121: Destroy complete. Resources: 5 destroyed.
@@ -695,7 +691,7 @@ Running `go mod tidy` accomplishes several things:
 The command checks for any discrepancies between the `go.mod` and `go.sum` files, making sure all specified versions are correctly installed and up-to-date.
 
 ```bash
-$ go mod tidy
+$go mod tidy
 ```
 x??
 
@@ -1310,15 +1306,14 @@ Background context explaining how to run only a specific test using the `go test
 ??x
 To run a single test, such as `TestHelloWorldAppExample`, you use the `-run` argument with the name of the test:
 
-```sh
-$ go test -v -timeout 30m -run TestHelloWorldAppExample
+```sh$ go test -v -timeout 30m -run TestHelloWorldAppExample
 ```
 
 This command will only execute `TestHelloWorldAppExample`. By default, Go runs all tests in the current folder if no specific test is provided.
 
 For example:
 ```sh
-$ go test -v -timeout 30m -run TestHelloWorldAppExample
+$go test -v -timeout 30m -run TestHelloWorldAppExample
 PASS
 ok    terraform-up-and-running     204.113s
 ```
@@ -1338,8 +1333,7 @@ Background context: The text explains how to run multiple tests in parallel, ens
 ??x
 You can enable parallel test execution by setting the `GOMAXPROCS` environment variable or using the `-parallel` argument with the `go test` command. For example, to run up to two tests in parallel:
 
-```sh
-$ go test -v -timeout 30m -parallel 2
+```sh$ go test -v -timeout 30m -parallel 2
 ```
 
 This helps speed up the testing process by utilizing multiple CPU cores.

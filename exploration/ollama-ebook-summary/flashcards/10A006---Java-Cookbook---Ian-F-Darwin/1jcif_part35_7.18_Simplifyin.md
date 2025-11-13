@@ -241,9 +241,7 @@ Background context: The example shows that while there is some overhead when usi
 ??x
 The key findings from comparing array and `ArrayList` performance showed that the efficiency difference between arrays and `ArrayList` is minimal for small to medium-sized collections. The overhead in calling a "get" method compared to direct array access is significant, but manageable for typical use cases.
 ```shell
-$ java performance.Time Array  Starting class class Array 1185103928 runTime=4.310
-$ java performance.Time ArrayLst  Starting class class ArrayLst 1185103928 runTime=5.626
-$ java performance.Time ArrayVec  Starting class class ArrayVec 1185103928 runTime=6.699
+$java performance.Time Array  Starting class class Array 1185103928 runTime=4.310 $ java performance.Time ArrayLst  Starting class class ArrayLst 1185103928 runTime=5.626$ java performance.Time ArrayVec  Starting class class ArrayVec 1185103928 runTime=6.699
 ```
 These results indicate that the overhead of `ArrayList` is not totally awful compared to arrays, especially considering the convenience and flexibility provided by collections.
 x??

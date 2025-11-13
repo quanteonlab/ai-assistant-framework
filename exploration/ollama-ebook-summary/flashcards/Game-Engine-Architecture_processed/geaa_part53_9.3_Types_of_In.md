@@ -142,12 +142,12 @@ x??
 Background context: The Wii and PS3 controllers use accelerometers to estimate their orientation. This is crucial for games that require precise control, such as Super Mario Galaxy where players roll a ball by tilting the controller.
 
 Formula: 
-- For a perfectly level controller (IR sensor pointing at your TV), \( z \) acceleration should be approximately 1g.
-- For a controller held upright with IR facing up, \( y \) acceleration should show +1g and \( z \) should be 0g.
-- At 45 degrees, both \( y \) and \( z \) accelerations should read around 0.707g.
+- For a perfectly level controller (IR sensor pointing at your TV), $z$ acceleration should be approximately 1g.
+- For a controller held upright with IR facing up, $y $ acceleration should show +1g and$z$ should be 0g.
+- At 45 degrees, both $y $ and$z$ accelerations should read around 0.707g.
 
 Explanation: 
-The gravity (1g) on the \( z \)-axis is used as a reference point to determine orientation. Using inverse sine and cosine operations, pitch, yaw, and roll can be calculated based on the acceleration values from the other axes.
+The gravity (1g) on the $z$-axis is used as a reference point to determine orientation. Using inverse sine and cosine operations, pitch, yaw, and roll can be calculated based on the acceleration values from the other axes.
 
 :p How does the Wiimote use its accelerometers to estimate its orientation?
 ??x
@@ -563,12 +563,13 @@ Background context explaining how signal noise can affect in-game behaviors cont
 Analog signal filtering is employed to smooth out high-frequency noise from input devices like joysticks or triggers. This ensures that the gameplay experiences more natural and less jerky movements by filtering out unwanted fluctuations in the input values.
 
 The formula provided describes a simple discrete first-order low-pass filter implementation:
-\[ f(t) = (1 - a)f(t - \Delta t) + a u(t) \]
-Where:
-- \( a \) is determined by the frame duration (\( \Delta t \)) and a filtering constant \( RC \), as given by: 
-\[ a = \frac{\Delta t}{RC + \Delta t} \]
+$$f(t) = (1 - a)f(t - \Delta t) + a u(t)$$
 
-The parameter \( a \) controls how much the current input value influences the filtered output. A smaller \( a \) (resulting from a larger \( \Delta t \)) means more emphasis on the previous filtered value, while a larger \( a \) (from a shorter \( \Delta t \)) allows for quicker response to changes in input.
+Where:
+- $a $ is determined by the frame duration ($\Delta t $) and a filtering constant $ RC$, as given by: 
+$$a = \frac{\Delta t}{RC + \Delta t}$$
+
+The parameter $a $ controls how much the current input value influences the filtered output. A smaller$a $(resulting from a larger$\Delta t $) means more emphasis on the previous filtered value, while a larger $ a $(from a shorter$\Delta t$) allows for quicker response to changes in input.
 
 :p How is the low-pass filter implemented in practice?
 ??x
@@ -592,7 +593,7 @@ void updateFilter(float* currentInput, float* filteredOutput) {
 }
 ```
 
-This implementation ensures that each new input value is combined with the previously filtered output, weighted by \( a \), to produce a smooth and noise-reduced filtered signal. The `previousFilteredValue` variable maintains the state from the last frame, making it easy to implement in real-time applications.
+This implementation ensures that each new input value is combined with the previously filtered output, weighted by $a$, to produce a smooth and noise-reduced filtered signal. The `previousFilteredValue` variable maintains the state from the last frame, making it easy to implement in real-time applications.
 
 ??x
 ---
@@ -984,8 +985,7 @@ x??
 #### Button Tap Detection Mechanism
 Background context: The provided pseudocode and explanation describe how to detect rapid button presses (tapping) using a simple time-based approach. This method checks for button-down events at regular intervals and calculates their frequency. If the interval between events is within a predefined threshold, it considers the tapping valid.
 Relevant formulas:
-- Frequency \( f = \frac{1}{\Delta T} \)
-Where \( \Delta T \) is the time difference between consecutive button presses.
+- Frequency $f = \frac{1}{\Delta T}$ Where $\Delta T$ is the time difference between consecutive button presses.
 
 :p How do you determine if a button press sequence is valid in the provided code?
 ??x

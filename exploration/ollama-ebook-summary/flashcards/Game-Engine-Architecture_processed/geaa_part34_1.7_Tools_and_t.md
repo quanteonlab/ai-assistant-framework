@@ -1159,7 +1159,7 @@ x?
 Compiler optimizations are techniques used by compilers to improve the efficiency and speed of generated machine code. These optimizations can be local or global, and they involve a wide range of transformations on the source code.
 :p What are some examples of local optimizations?
 ??x
-Examples of local optimizations include algebraic simplification, operator strength reduction, inlining, constant folding, and loop unrolling. For example, converting \( x / 2 \) to \( x >> 1 \) because the shift operation is less expensive than integer division.
+Examples of local optimizations include algebraic simplification, operator strength reduction, inlining, constant folding, and loop unrolling. For example, converting $x / 2 $ to$x >> 1$ because the shift operation is less expensive than integer division.
 ```c++
 int result = x / 2; // Original
 int result = x >> 1; // Optimized: Shift operator has lower strength
@@ -1352,19 +1352,17 @@ HYBRID_SOURCES := src/file1.cpp src/file2.cpp  # List of .cpp files to be compil
 debug_objs := $(HYBRID_SOURCES:.cpp=.o)
 non_debug_objs := $(wildcard src/*.cpp.o)
 
-all: $(HYBRID_SOURCES:.cpp=.obj) $(HYBRID_SOURCES:.cpp=.o)
+all: $(HYBRID_SOURCES:.cpp=.obj)$(HYBRID_SOURCES:.cpp=.o)
 
 %.obj: %.cpp
-	@echo "Compiling $< in debug mode..."
-	$(CXX) -g -c $< -o $@
+	@echo "Compiling $< in debug mode..."$(CXX) -g -c $< -o$@
 
 %.o: %.cpp
-	@echo "Compiling $< in non-debug mode..."
-	$(CXX) -O3 -c $< -o $@
+	@echo "Compiling $< in non-debug mode..."$(CXX) -O3 -c $< -o$@
 
 link: $(HYBRID_SOURCES:.cpp=.obj)
 	ar rcs libdebug.a $(HYBRID_SOURCES:.cpp=.o)
-	gcc -o myapp $(HYBRID_SOURCES:.cpp=.obj) $(non_debug_objs) -L. -ldebug
+	gcc -o myapp $(HYBRID_SOURCES:.cpp=.obj)$(non_debug_objs) -L. -ldebug
 ```
 x??
 
@@ -1449,15 +1447,13 @@ HYBRID_SOURCES := src/file1.cpp src/file2.cpp  # .cpp files to be compiled in de
 debug_objs := $(HYBRID_SOURCES:.cpp=.o)
 non_debug_objs := $(wildcard src/*.cpp.o)
 
-all: $(HYBRID_SOURCES:.cpp=.obj) $(HYBRID_SOURCES:.cpp=.o)
+all: $(HYBRID_SOURCES:.cpp=.obj)$(HYBRID_SOURCES:.cpp=.o)
 
 %.obj: %.cpp
-	@echo "Compiling $< in debug mode..."
-	$(CXX) -g -c $< -o $@
+	@echo "Compiling $< in debug mode..."$(CXX) -g -c $< -o$@
 
 %.o: %.cpp
-	@echo "Compiling $< in non-debug mode..."
-	$(CXX) -O3 -c $< -o $@
+	@echo "Compiling $< in non-debug mode..."$(CXX) -O3 -c $< -o$@
 ```
 x??
 
@@ -1500,7 +1496,7 @@ The intermediate directory stores compiled object (.obj) and other intermediate 
 
 ---
 #### Using Macros
-Background context: Macros provide a way to use dynamic values that can change based on the current configuration. Common macros include $(TargetFileName), $(TargetPath), and $(ConfigurationName).
+Background context: Macros provide a way to use dynamic values that can change based on the current configuration. Common macros include $(TargetFileName),$(TargetPath), and$(ConfigurationName).
 
 :p What is a macro in Visual Studio's project properties?
 ??x
@@ -1581,7 +1577,7 @@ Background context explaining the importance of include directories in compilati
 
 :p What is the purpose of "Additional Include Directories" on the C/C++ property page?
 ??x
-The "Additional Include Directories" field lists paths to directories that will be searched when looking for #included header files. It's best to use relative paths or Visual Studio macros like $(OutDir) and $(IntDir), as this ensures that your project works correctly regardless of its location.
+The "Additional Include Directories" field lists paths to directories that will be searched when looking for #included header files. It's best to use relative paths or Visual Studio macros like $(OutDir) and$(IntDir), as this ensures that your project works correctly regardless of its location.
 ??x
 ---
 

@@ -193,7 +193,7 @@ Naive sequence embeddings treat each item in a sequence as an embedding, leading
 
 :p What is a naive approach to handling sequences in recommendations?
 ??x
-A naive approach involves treating each item in a sequence individually as an embedding, which can lead to combinatorial explosion because each item multiplies the total possible embeddings. For instance, with five-word sequences where each word has 1000 possibilities, there are \(1000^5\) combinations.
+A naive approach involves treating each item in a sequence individually as an embedding, which can lead to combinatorial explosion because each item multiplies the total possible embeddings. For instance, with five-word sequences where each word has 1000 possibilities, there are $1000^5$ combinations.
 
 To handle this:
 ```java

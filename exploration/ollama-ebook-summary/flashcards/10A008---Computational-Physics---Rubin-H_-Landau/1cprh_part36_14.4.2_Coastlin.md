@@ -9,8 +9,7 @@
 Background context: The growth of trees exhibits a regularity that can be modeled using self-affine transformations. This method involves iteratively applying different scaling and translation transformations with specific probabilities to generate complex structures similar to natural trees.
 
 Relevant formula:
-\[
-(x_{n+1}, y_{n+1}) = 
+$$(x_{n+1}, y_{n+1}) = 
 \begin{cases} 
 (0.05x_n, 0.6y_n), & \text{with 10 percent probability} \\
 (0.05x_n, -0.5y_n + 1.0), & \text{with 10 percent probability} \\
@@ -18,10 +17,7 @@ Relevant formula:
 (0.47x_n - 0.15y_n, 0.17x_n + 0.42y_n + 1.1), & \text{with 20 percent probability} \\
 (0.43x_n + 0.28y_n, -0.25x_n + 0.45y_n + 1.0), & \text{with 20 percent probability} \\
 (0.42x_n + 0.26y_n, -0.35x_n + 0.31y_n + 0.7), & \text{with 20 percent probability}
-\end{cases}
-\]
-
-:p How does the self-affine transformation for growing trees work?
+\end{cases}$$:p How does the self-affine transformation for growing trees work?
 ??x
 The self-affine transformation works by applying different scaling and translation rules to points in a plane, where each rule has a certain probability of being applied. These transformations mimic the branching structure found in natural trees.
 
@@ -73,15 +69,11 @@ x??
 Background context: The process of ballistic deposition simulates how particles are deposited randomly but stick to a surface, forming regular films. This method can be used to model various natural phenomena such as the deposition of evaporated materials.
 
 Relevant formula:
-\[
-h(r) = 
+$$h(r) = 
 \begin{cases} 
 h(r)+1, & \text{if } h(r) \geq h(r-1) \land h(r) > h(r+1) \\
 \max[h(r-1), h(r+1)], & \text{if } h(r) < h(r-1) \land h(r) < h(r+1)
-\end{cases}
-\]
-
-:p What is the objective of simulating ballistic deposition?
+\end{cases}$$:p What is the objective of simulating ballistic deposition?
 ??x
 The objective of simulating ballistic deposition is to model how particles are randomly deposited on a surface and stick to it, forming regular films that can resemble natural phenomena such as sedimentation or frost formation. This process involves generating random sites for particle landing and deciding whether to add height based on the neighboring columns.
 
@@ -165,13 +157,12 @@ Self-similarity means that the object looks similar at different levels of magni
 
 ---
 #### Concept: Perimeter and Coastline Length
-Background context explaining how the perimeter of a coastline can be determined using rulers of different lengths. The length appears as an unusual function of the ruler's size due to self-similarity, leading to empirical formulas like \( L(r) \approx Mr^{1-d_f} \).
+Background context explaining how the perimeter of a coastline can be determined using rulers of different lengths. The length appears as an unusual function of the ruler's size due to self-similarity, leading to empirical formulas like $L(r) \approx Mr^{1-d_f}$.
 
 :p What is the empirical formula for the length of a coastline based on ruler length?
 ??x
 The empirical formula for the length of a coastline based on ruler length is given by:
-\[ L(r) \approx Mr^{1-d_f} \]
-where \( M \) and \( d_f \) are empirical constants. The exponent \( 1 - d_f \) indicates how the length changes with the ruler size.
+$$L(r) \approx Mr^{1-d_f}$$where $ M $ and $ d_f $ are empirical constants. The exponent $1 - d_f$ indicates how the length changes with the ruler size.
 
 ---
 #### Concept: Box Counting Algorithm
@@ -179,9 +170,8 @@ Background context explaining the box counting algorithm to determine fractal di
 
 :p What is the formula for determining the number of segments needed to cover a line using the box counting algorithm?
 ??x
-The number of segments needed to cover a line of length \( L \) with segment size \( r \) can be described by:
-\[ N(r) = \frac{L}{r} = Cr \]
-where \( C \) is a constant. This relationship helps in understanding the scaling behavior and calculating the fractal dimension.
+The number of segments needed to cover a line of length $L $ with segment size$r$ can be described by:
+$$N(r) = \frac{L}{r} = Cr$$where $ C$ is a constant. This relationship helps in understanding the scaling behavior and calculating the fractal dimension.
 
 ---
 #### Concept: Fractal Dimension Calculation
@@ -190,17 +180,16 @@ Background context explaining how to calculate the fractal dimension from the bo
 :p How can one determine the fractal dimension using the box counting method?
 ??x
 To determine the fractal dimension using the box counting method, you can use the relationship:
-\[ \log N(r) = \log C - d_f \log r \]
-The fractal dimension \( d_f \) is then given by:
-\[ d_f = -\lim_{r \to 0} \frac{\Delta \log N(r)}{\Delta \log r} \]
+$$\log N(r) = \log C - d_f \log r$$
 
----
+The fractal dimension $d_f$ is then given by:
+$$d_f = -\lim_{r \to 0} \frac{\Delta \log N(r)}{\Delta \log r}$$---
 #### Concept: Dimension of Geometric Figures
-Background context explaining the difference between geometric figures and fractals in terms of dimension. For a rectifiable curve, the length approaches a constant as \( r \) decreases.
+Background context explaining the difference between geometric figures and fractals in terms of dimension. For a rectifiable curve, the length approaches a constant as $r$ decreases.
 
 :p How does the dimension change for a geometric figure compared to a fractal?
 ??x
-For a geometric figure (rectifiable curve), the dimension is 1, and the length approaches a constant as the segment size \( r \) decreases. For a fractal with \( d_f > 1 \), the perimeter increases without bound as \( r \) decreases.
+For a geometric figure (rectifiable curve), the dimension is 1, and the length approaches a constant as the segment size $r $ decreases. For a fractal with$d_f > 1 $, the perimeter increases without bound as$ r$ decreases.
 
 ---
 #### Concept: Scaling in Fractals
@@ -212,11 +201,11 @@ The scale of a map refers to how much real-world distance is represented by a un
 
 ---
 #### Concept: Empirical Constants
-Background context explaining the empirical constants \( M \) and \( d_f \).
+Background context explaining the empirical constants $M $ and$d_f$.
 
-:p What are the empirical constants \( M \) and \( d_f \)?
+:p What are the empirical constants $M $ and$d_f$?
 ??x
-The empirical constant \( M \) is related to the actual length of the coastline at a given scale, while \( d_f \) (the fractal dimension) characterizes how the length changes with scale. For the British coast, Mandelbrot deduced that the fractal dimension \( d_f = 1.25 \), indicating an infinite perimeter.
+The empirical constant $M $ is related to the actual length of the coastline at a given scale, while$d_f $(the fractal dimension) characterizes how the length changes with scale. For the British coast, Mandelbrot deduced that the fractal dimension$ d_f = 1.25$, indicating an infinite perimeter.
 
 ---
 #### Concept: Perimeter and Coastline Length Formula
@@ -224,9 +213,8 @@ Background context explaining the relationship between ruler size and coastline 
 
 :p What is the formula relating the length of a coastline to the scale of measurement?
 ??x
-For natural coastlines, the relationship between the length \( L \) of the coastline and the scale of measurement \( r \) can be described by:
-\[ L(r) \approx Mr^{1-d_f} \]
-where \( d_f = 1.25 \) for the British coast, making it a fractal with infinite perimeter as the scale approaches zero.
+For natural coastlines, the relationship between the length $L $ of the coastline and the scale of measurement$r$ can be described by:
+$$L(r) \approx Mr^{1-d_f}$$where $ d_f = 1.25$ for the British coast, making it a fractal with infinite perimeter as the scale approaches zero.
 
 ---
 #### Concept: Example of Fractal Dimension Calculation
@@ -235,13 +223,10 @@ Background context explaining the calculation of fractal dimension through the b
 :p How would you calculate the fractal dimension using the box counting algorithm?
 ??x
 To calculate the fractal dimension, follow these steps:
-1. Determine \( N(r) \), the number of segments needed to cover a line or area.
+1. Determine $N(r)$, the number of segments needed to cover a line or area.
 2. Use the relationship: 
-\[ \log N(r) = \log C - d_f \log r \]
-3. Solve for \( d_f \):
-\[ d_f = -\lim_{r \to 0} \frac{\Delta \log N(r)}{\Delta \log r} \]
-
----
+$$\log N(r) = \log C - d_f \log r$$3. Solve for $ d_f$:
+$$d_f = -\lim_{r \to 0} \frac{\Delta \log N(r)}{\Delta \log r}$$---
 #### Concept: Scale and Self-Similarity
 Background context explaining the concept of scale in relation to self-similarity.
 
@@ -255,25 +240,24 @@ Using different scales (high or low) helps reveal the self-similar nature of coa
 
 Background context: The coastline problem involves using box counting to determine the fractal dimension of a perimeter, not an entire figure. This method is used because coastlines exhibit self-similarity at different scales, making them a good candidate for fractal analysis.
 
-Formula: 
-\[ \log N \approx \log A + df \cdot \log s \]
+Formula:
+$$\log N \approx \log A + df \cdot \log s$$
+
 Where:
-- \( N \) is the number of boxes required to cover the coastline.
-- \( A \) is an area constant.
-- \( df \) is the fractal dimension.
-- \( s \) is the scale.
+- $N$ is the number of boxes required to cover the coastline.
+- $A$ is an area constant.
+- $df$ is the fractal dimension.
+- $s$ is the scale.
 
 Equation (14.25) provides a way to calculate the fractal dimension:
-\[ df \approx \frac{\log N_2 - \log N_1}{\log(s_2/s_1)} \]
-
-:p How do you determine the number of boxes needed to cover the coastline at different scales?
+$$df \approx \frac{\log N_2 - \log N_1}{\log(s_2/s_1)}$$:p How do you determine the number of boxes needed to cover the coastline at different scales?
 ??x
 To determine the number of boxes required, start with the largest scale and progressively use smaller boxes. Count how many boxes are needed for each size.
 
 For example:
-- Use 1 × 1 cm boxes and find \( N_1 = 24 \) at \( s_1 = 17 \).
-- Use 0.5 × 0.5 cm boxes and find \( N_2 = 51 \) at \( s_2 = 34 \).
-- Use 1 × 1 mm boxes and find \( N_3 = 406 \) at \( s_3 = 170 \).
+- Use 1 × 1 cm boxes and find $N_1 = 24 $ at$s_1 = 17$.
+- Use 0.5 × 0.5 cm boxes and find $N_2 = 51 $ at$s_2 = 34$.
+- Use 1 × 1 mm boxes and find $N_3 = 406 $ at$s_3 = 170$.
 
 x??
 
@@ -284,40 +268,41 @@ x??
 Background context: Once you have determined the number of boxes required at different scales, plotting log(N) versus log(s) should yield a straight line with a slope equal to the fractal dimension.
 
 Formula:
-\[ df \approx \frac{\log N_2 - \log N_1}{\log(s_2/s_1)} \]
-
-:p How do you calculate the fractal dimension using the box counting method?
+$$df \approx \frac{\log N_2 - \log N_1}{\log(s_2/s_1)}$$:p How do you calculate the fractal dimension using the box counting method?
 ??x
-Plot log(N) versus log(s). The slope of this line gives the fractal dimension, \( df \).
+Plot log(N) versus log(s). The slope of this line gives the fractal dimension,$df$.
 
 For example:
-- At a scale of 17 cm, \( N = 24 \).
-- At a scale of 34 cm, \( N = 51 \).
-- At a scale of 170 mm, \( N = 406 \).
+- At a scale of 17 cm, $N = 24$.
+- At a scale of 34 cm, $N = 51$.
+- At a scale of 170 mm, $N = 406$.
 
 Using these values:
-\[ df \approx \frac{\log(406) - \log(24)}{\log(170/17)} \]
-
-x??
+$$df \approx \frac{\log(406) - \log(24)}{\log(170/17)}$$x??
 
 ---
 
 #### Determining the Length of the Coastline
 
 Background context: Once you have determined the fractal dimension, you can use it to estimate the length of the coastline at different scales. The relationship is given by:
-\[ L \propto s^{df-1} \]
+$$
+
+L \propto s^{df-1}$$
 
 Formula:
-\[ L = A \cdot s^{df-1} \]
-Where \( A \) is a proportionality constant.
+$$
+
+L = A \cdot s^{df-1}$$
+
+Where $A$ is a proportionality constant.
 
 :p How do you calculate the length of the coastline using the fractal dimension and scale?
 ??x
 Using equation (14.26):
-\[ L \propto s^{0.23} \]
+$$L \propto s^{0.23}$$
 
-For example, if \( s = 17 \):
-\[ L = A \cdot 17^{0.23-1} \]
+For example, if $s = 17$:
+$$L = A \cdot 17^{0.23-1}$$
 
 If you keep making the boxes smaller and look at the coastline at higher scales, the length will increase according to the fractal dimension.
 
@@ -330,16 +315,14 @@ x??
 Background context: To ensure accurate box counting, use graph paper with square boxes and printouts of the same physical scale. If you cannot achieve this, add closely spaced horizontal and vertical lines to your coastline printout.
 
 Formula:
-\[ \log N \approx \log A + df \cdot \log s \]
-
-:p How do you determine the appropriate scales for box counting?
+$$\log N \approx \log A + df \cdot \log s$$:p How do you determine the appropriate scales for box counting?
 ??x
 1. Print out the coastline graph with the same physical scale.
 2. Place a piece of graph paper over it and look through to count boxes.
 3. If no printout is available, add closely spaced lines.
 
 For example:
-- The vertical height in the printout was 17 cm, so set \( s = 17 \) as the largest division.
+- The vertical height in the printout was 17 cm, so set $s = 17$ as the largest division.
 - Measure the vertical height of your fractal and compare it with the size of the biggest boxes on your graph paper to determine the lowest scale.
 
 x??
@@ -351,15 +334,14 @@ x??
 Background context: The concept revolves around understanding how correlated growth processes, such as those seen in plant growth or surface film deposition, can lead to fractal structures. A specific example is given where a particle's likelihood of sticking depends inversely on its distance from the last deposited particle.
 
 Relevant formulas:
-\[ \pi = c d^{-\eta} \]
+$$\pi = c d^{-\eta}$$
 
-Explanation: Here, \(c\) is a constant that sets the probability scale and \(\eta\) is a parameter which determines how strongly particles are attracted to each other. For our implementation, \(\eta = 2\), implying an inverse square relationship.
+Explanation: Here,$c $ is a constant that sets the probability scale and$\eta $ is a parameter which determines how strongly particles are attracted to each other. For our implementation,$\eta = 2$, implying an inverse square relationship.
 
 :p How does the correlated growth model work in this context?
 ??x
-In this model, the likelihood of a particle sticking (\(\pi\)) depends on its distance \(d\) from the last deposited particle. Specifically, the probability is given by:
-\[ \pi = c d^{-2} \]
-where \(c\) is a constant. This means that particles are more likely to stick closer together than farther apart.
+In this model, the likelihood of a particle sticking ($\pi $) depends on its distance $ d$from the last deposited particle. Specifically, the probability is given by:
+$$\pi = c d^{-2}$$where $ c$ is a constant. This means that particles are more likely to stick closer together than farther apart.
 
 Code Example (Pseudocode):
 ```java
@@ -434,17 +416,17 @@ Relevant steps:
 1. Use box-counting method on a known simple geometric figure (e.g., square).
 2. Draw squares around the seed particle.
 3. Count particles within each square.
-4. Compute density \(\rho\) for each box size.
+4. Compute density $\rho$ for each box size.
 
 :p How do you determine if a DLA-generated cluster is a fractal and its dimension?
 ??x
 To determine if a DLA-generated cluster is a fractal and to find its dimension, use the box-counting method:
 1. Start with a small square around the seed particle.
 2. Count the number of particles in each box as you increase the size of the boxes.
-3. Calculate the density \(\rho\) by dividing the number of particles by the number of sites available in the box.
-4. Plot the logarithm of the number of boxes \(N\) against the logarithm of the inverse box size \(\frac{1}{L}\), where \(L\) is the side length of each box.
+3. Calculate the density $\rho$ by dividing the number of particles by the number of sites available in the box.
+4. Plot the logarithm of the number of boxes $N $ against the logarithm of the inverse box size$\frac{1}{L}$, where $ L$ is the side length of each box.
 
-The slope of this plot gives the fractal dimension \(D\).
+The slope of this plot gives the fractal dimension $D$.
 
 Code Example (Pseudocode):
 ```java
@@ -470,27 +452,27 @@ x??
 ---
 
 #### Fractal Dimension Estimation for Cluster Coverage
-Background context: The fractal dimension \(d_f\) of a cluster can be estimated from an \( \log(\rho) \) vs. \( \log(L) \) plot, where \( \rho \) is the density and \( L \) is the characteristic length scale. If the cluster is fractal, then \( \rho \propto L^{d_f-2} \). This relationship implies that a straight line with slope \( d_f - 2 \) on the log-log plot corresponds to a fractal dimension of \( d_f \).
+Background context: The fractal dimension $d_f $ of a cluster can be estimated from an$\log(\rho)$ vs.$\log(L)$ plot, where $\rho$ is the density and $ L $ is the characteristic length scale. If the cluster is fractal, then $\rho \propto L^{d_f-2}$. This relationship implies that a straight line with slope $ d_f - 2$on the log-log plot corresponds to a fractal dimension of $ d_f$.
 :p How can we estimate the fractal dimension of a cluster?
 ??x
-To estimate the fractal dimension, first generate an \( \log(\rho) \) vs. \( \log(L) \) plot for the given cluster. The slope of this line will give us \( d_f - 2 \). For instance, if we find that the graph has a slope of \(-0.36\), then \( d_f = 1.66 \).
+To estimate the fractal dimension, first generate an $\log(\rho)$ vs.$\log(L)$ plot for the given cluster. The slope of this line will give us $ d_f - 2 $. For instance, if we find that the graph has a slope of $-0.36 $, then $ d_f = 1.66$.
 
 This method is based on the relationship:
-\[ \rho \propto L^{d_f-2} \]
+$$\rho \propto L^{d_f-2}$$
 
 In practice, since random numbers are involved, each generated plot might vary slightly, but the estimated fractal dimension should be similar across different trials.
 ??x
 
 ---
 #### Bifurcations in the Logistic Map
-Background context: The logistic map is a simple model used to describe population growth and can exhibit complex behaviors through bifurcations. By plotting the number of bugs against the growth parameter \( \mu \), we can generate bifurcation diagrams that show how the system's behavior changes as \( \mu \) varies.
+Background context: The logistic map is a simple model used to describe population growth and can exhibit complex behaviors through bifurcations. By plotting the number of bugs against the growth parameter $\mu $, we can generate bifurcation diagrams that show how the system's behavior changes as $\mu$ varies.
 :p How do you determine the fractal dimension for different parts of a bifurcation graph using the method applied to coastline analysis?
 ??x
 To estimate the fractal dimension for different parts of the logistic map bifurcation graph, follow these steps:
 
-1. Generate an \( \log(\rho) \) vs. \( \log(L) \) plot for each part of the bifurcation graph.
+1. Generate an $\log(\rho)$ vs.$\log(L)$ plot for each part of the bifurcation graph.
 2. Fit a straight line to each section and find its slope.
-3. The slope will give you \( d_f - 2 \), from which you can calculate the fractal dimension \( d_f = \text{slope} + 2 \).
+3. The slope will give you $d_f - 2 $, from which you can calculate the fractal dimension $ d_f = \text{slope} + 2$.
 
 This method is analogous to how we estimated the fractal dimension of Britain's coastline, where a straight line on the log-log plot indicates a self-similar structure.
 ??x
@@ -535,9 +517,9 @@ public class LifeCell {
 ---
 #### Perlin Noise for Adding Realism
 Background context: Perlin noise is a type of coherent randomness that enhances the realism in simulations. It adds both randomness and coherence, making dense regions denser and sparse regions sparser.
-:p How does the mapping function \( f(p) = 3p^2 - 2p^3 \) contribute to generating Perlin noise?
+:p How does the mapping function $f(p) = 3p^2 - 2p^3$ contribute to generating Perlin noise?
 ??x
-The mapping function \( f(p) = 3p^2 - 2p^3 \) is used to generate a smooth and coherent noise value. The shape of this function, which has an S-shape, helps in increasing the tendency for regions close to 0 or 1 to become more concentrated.
+The mapping function $f(p) = 3p^2 - 2p^3$ is used to generate a smooth and coherent noise value. The shape of this function, which has an S-shape, helps in increasing the tendency for regions close to 0 or 1 to become more concentrated.
 
 This effect can be visualized as follows:
 ```java

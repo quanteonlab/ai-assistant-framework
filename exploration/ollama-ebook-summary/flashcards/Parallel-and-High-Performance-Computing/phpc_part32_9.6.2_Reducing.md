@@ -8,12 +8,11 @@
 Background context: As computing systems advance, energy costs are becoming a significant concern. The cost of operating computers and their associated infrastructure has increased significantly over time. This is especially relevant as we approach exascale computing where power requirements need to be tightly managed.
 
 The energy consumption for an application can be estimated using the formula:
-\[ \text{Energy} = (N \, \text{Processors}) \times (R \, \text{Watts/Processor}) \times (T \, \text{hours}) \]
-
-:p What is the formula used to estimate the energy consumption of an application?
+$$\text{Energy} = (N \, \text{Processors}) \times (R \, \text{Watts/Processor}) \times (T \, \text{hours})$$:p What is the formula used to estimate the energy consumption of an application?
 ??x
 The formula for estimating energy consumption is:
-\[ \text{Energy} = (N \, \text{Processors}) \times (R \, \text{Watts/Processor}) \times (T \, \text{hours}) \]
+$$\text{Energy} = (N \, \text{Processors}) \times (R \, \text{Watts/Processor}) \times (T \, \text{hours})$$
+
 This helps in understanding how much power an application consumes over a specific period.
 
 x??
@@ -26,16 +25,17 @@ Background context: The text compares the energy consumption between a GPU-based
 :p How does the text compare the energy costs of a GPU system versus a CPU system?
 ??x
 The text compares the energy costs by using the given specifications:
-- NVIDIA V100: 12 GPUs at $11,000 each and 300 watts per GPU.
+- NVIDIA V100: 12 GPUs at$11,000 each and 300 watts per GPU.
 - Intel Skylake Gold 6152: 45 processors (CPUs) at $3,800 each and 140 watts per CPU.
 
 The energy consumption for one day is calculated as:
-\[ \text{Energy} = (N \, \text{Processors}) \times (R \, \text{Watts/Processor}) \times (T \, \text{hours}) \]
+$$\text{Energy} = (N \, \text{Processors}) \times (R \, \text{Watts/Processor}) \times (T \, \text{hours})$$
 
-For the GPU system: 
-\[ 12 \times 300 \times 24 = 86.4 \, \text{kWhrs} \]
+For the GPU system:
+$$12 \times 300 \times 24 = 86.4 \, \text{kWhrs}$$
+
 For the CPU system:
-\[ 45 \times 140 \times 24 = 151.2 \, \text{kWhrs} \]
+$$45 \times 140 \times 24 = 151.2 \, \text{kWhrs}$$
 
 The GPU system consumes less energy than the CPU system.
 
@@ -86,10 +86,10 @@ Background context: This concept explains how to calculate energy consumption ba
 :p How do you calculate the estimated energy usage for an application running on multiple CPUs?
 ??x
 To estimate the energy usage, you need to multiply the number of processors by their TDP and then by the duration of the run. The formula is:
-\[ \text{Energy} = (\text{Number of Processors}) \times (\text{TDP per Processor in W}) \times (\text{Duration in Hours}) \]
+$$\text{Energy} = (\text{Number of Processors}) \times (\text{TDP per Processor in W}) \times (\text{Duration in Hours})$$
 
 For example, if you use 45 Intel’s 22 core Xeon Gold 6152 processors for 24 hours:
-\[ \text{Energy} = (45) \times (140 \, \text{W}) \times (24 \, \text{hrs}) = 151.2 \, \text{kWhrs} \]
+$$\text{Energy} = (45) \times (140 \, \text{W}) \times (24 \, \text{hrs}) = 151.2 \, \text{kWhrs}$$
 
 This calculation helps in understanding the energy consumption of the application.
 x??
@@ -101,10 +101,10 @@ Background context: This concept explains how to calculate energy consumption ba
 :p How do you calculate the estimated energy usage for an application running on multiple GPUs?
 ??x
 To estimate the energy usage, you need to multiply the number of GPUs by their TDP and then by the duration of the run. The formula is:
-\[ \text{Energy} = (\text{Number of GPUs}) \times (\text{TDP per GPU in W}) \times (\text{Duration in Hours}) \]
+$$\text{Energy} = (\text{Number of GPUs}) \times (\text{TDP per GPU in W}) \times (\text{Duration in Hours})$$
 
 For example, if you use 12 NVIDIA Tesla V100 GPUs for 24 hours and each has a maximum TDP of 300 W:
-\[ \text{Energy} = (12) \times (300 \, \text{W}) \times (24 \, \text{hrs}) = 86.4 \, \text{kWhrs} \]
+$$\text{Energy} = (12) \times (300 \, \text{W}) \times (24 \, \text{hrs}) = 86.4 \, \text{kWhrs}$$
 
 This calculation helps in understanding the energy consumption of the application and comparing it with CPU-only versions.
 x??
@@ -253,8 +253,9 @@ Background context: The text discusses the trade-offs between running multiple j
 :p How does adding more processors affect parallel efficiency according to Amdahl’s law?
 ??x
 Amdahl's Law states that the maximum speedup achievable by using multiple processors is limited by the parts of the program that cannot be parallelized. The formula for Amdahl's Law is:
-\[ S(p) = \frac{1}{(1 - P + \frac{P}{p})} \]
-where \( S(p) \) is the speedup, \( p \) is the number of processors, and \( P \) is the fraction of the program that can be parallelized. As more processors are added, the improvement in run time decreases because a larger portion of the code must still be executed sequentially.
+$$
+
+S(p) = \frac{1}{(1 - P + \frac{P}{p})}$$where $ S(p)$ is the speedup,$ p $ is the number of processors, and $ P$ is the fraction of the program that can be parallelized. As more processors are added, the improvement in run time decreases because a larger portion of the code must still be executed sequentially.
 x??
 
 ---
@@ -295,16 +296,18 @@ x??
 
 Background context: The example provides a detailed calculation of speedup and parallel efficiency using a specific formula.
 
-:p How do you calculate the new time \( T_{new} \) when doubling the number of processors?
+:p How do you calculate the new time $T_{new}$ when doubling the number of processors?
 ??x
-To calculate the new time \( T_{new} \), you use the speedup equation:
-\[ S = \frac{T_{base}}{T_{new}} \]
-Given that the parallel efficiency is 80%, and the processor multiplier (Pmult) is a factor of 2, we can find the speedup \( S \):
-\[ S = 0.8 \times Pmult = 0.8 \times 2 = 1.6 \]
+To calculate the new time $T_{new}$, you use the speedup equation:
+$$S = \frac{T_{base}}{T_{new}}$$
+
+Given that the parallel efficiency is 80%, and the processor multiplier (Pmult) is a factor of 2, we can find the speedup $S$:
+$$S = 0.8 \times Pmult = 0.8 \times 2 = 1.6$$
 
 Then:
-\[ T_{new} = \frac{T_{base}}{S} = \frac{10}{1.6} = 6.25 \text{ hours} \]
-x??
+$$
+
+T_{new} = \frac{T_{base}}{S} = \frac{10}{1.6} = 6.25 \text{ hours}$$x??
 
 ---
 
@@ -315,9 +318,10 @@ Background context: The example calculates the total run time for a suite of job
 :p How do you calculate the total suite run time?
 ??x
 To calculate the total suite run time, multiply the new run time per job by the number of jobs in the suite. For instance:
-\[ \text{Total Suite Time} = T_{new} \times \left(\frac{\text{Number of Jobs}}{\text{Processes per Job}}\right) \]
+$$\text{Total Suite Time} = T_{new} \times \left(\frac{\text{Number of Jobs}}{\text{Processes per Job}}\right)$$
+
 Given that there are 100 jobs and each process handles 5 jobs, we have:
-\[ \text{Total Suite Time} = 6.25 \text{ hours/job} \times \left(\frac{100}{5}\right) = 125 \text{ hours} \]
+$$\text{Total Suite Time} = 6.25 \text{ hours/job} \times \left(\frac{100}{5}\right) = 125 \text{ hours}$$
 x??
 
 ---

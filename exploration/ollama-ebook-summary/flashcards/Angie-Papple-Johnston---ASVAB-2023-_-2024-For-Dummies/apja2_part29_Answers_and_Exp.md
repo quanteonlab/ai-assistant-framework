@@ -161,8 +161,7 @@ Matter Properties:
 :p What is the formula for calculating density?
 ??x
 Density is calculated by dividing the mass of an object by its volume: 
-\[ \text{Density} = \frac{\text{Mass}}{\text{Volume}} \]
-x??
+$$\text{Density} = \frac{\text{Mass}}{\text{Volume}}$$x??
 
 ---
 
@@ -222,7 +221,7 @@ Background context: Derived units in the SI system include those used to measure
 
 :p What is another name for 1 liter in terms of cubic meters?
 ??x
-Another name for 1 liter in terms of cubic meters is \(0.001\) m³, since \(1 \text{ L} = 1 \text{ dm}^3 = 0.001 \text{ m}^3\).
+Another name for 1 liter in terms of cubic meters is $0.001 $ m³, since$1 \text{ L} = 1 \text{ dm}^3 = 0.001 \text{ m}^3$.
 x??
 
 ---
@@ -233,12 +232,9 @@ Background context: The formula for density is used to determine how tightly pac
 :p How would you calculate the density of an object with mass 5 kg and volume 2 m³?
 ??x
 To calculate the density, use the formula:
-\[ \text{Density} = \frac{\text{Mass}}{\text{Volume}} \]
-Given: Mass = 5 kg, Volume = 2 m³.
+$$\text{Density} = \frac{\text{Mass}}{\text{Volume}}$$
 
-\[
-\text{Density} = \frac{5 \text{ kg}}{2 \text{ m}^3} = 2.5 \text{ kg/m}^3
-\]
+Given: Mass = 5 kg, Volume = 2 m³.$$\text{Density} = \frac{5 \text{ kg}}{2 \text{ m}^3} = 2.5 \text{ kg/m}^3$$
 x??
 
 ---

@@ -194,7 +194,7 @@ The nonlinear aspect ensures that past experiences influence current decisions, 
 ```java
 w(t+1) = w(t) + alpha * (R(t+1) - v(S(t), w(t))) * e(t),
 ```
-where \(e(t)\) is an eligibility trace vector updated at each step. This allows TD-Gammon to incorporate both immediate rewards and long-term predictions effectively.
+where $e(t)$ is an eligibility trace vector updated at each step. This allows TD-Gammon to incorporate both immediate rewards and long-term predictions effectively.
 x??
 
 ---
@@ -284,14 +284,16 @@ x??
 ---
 
 #### Learning Process and TD Rule Application
-Explanation of how Tesauro applied the nonlinear TD rule (15.1) incrementally after each move in backgammon games. The weights are updated using the update rule: 
-\[ w_{t+1} = w_t + \alpha (R_{t+1} + \hat{v}(S_{t+1}, w_t) - \hat{v}(S_t, w_t)) \cdot \hat{v}(S_t, w_t) \]
-Where \( w_t \) is the vector of all modifiable parameters, and \( e_t \) is a vector of eligibility traces.
+Explanation of how Tesauro applied the nonlinear TD rule (15.1) incrementally after each move in backgammon games. The weights are updated using the update rule:
+$$w_{t+1} = w_t + \alpha (R_{t+1} + \hat{v}(S_{t+1}, w_t) - \hat{v}(S_t, w_t)) \cdot \hat{v}(S_t, w_t)$$
+
+Where $w_t $ is the vector of all modifiable parameters, and$e_t$ is a vector of eligibility traces.
 :p How does TD-Gammon update its weights during learning?
 ??x
 TD-Gammon updates its weights using the nonlinear TD rule:
-\[ w_{t+1} = w_t + \alpha (R_{t+1} + \hat{v}(S_{t+1}, w_t) - \hat{v}(S_t, w_t)) \cdot \hat{v}(S_t, w_t) \]
-Here, \( w_t \) represents the vector of all modifiable parameters (weights), and \( e_t \) is a vector of eligibility traces. The update rule is applied incrementally after each move.
+$$w_{t+1} = w_t + \alpha (R_{t+1} + \hat{v}(S_{t+1}, w_t) - \hat{v}(S_t, w_t)) \cdot \hat{v}(S_t, w_t)$$
+
+Here,$w_t $ represents the vector of all modifiable parameters (weights), and$e_t$ is a vector of eligibility traces. The update rule is applied incrementally after each move.
 x??
 
 ---
@@ -313,10 +315,10 @@ x??
 ---
 
 #### Games as Episodes
-Explanation of treating each backgammon game as an episode with the sequence of positions acting as states \( S_0, S_1, S_2, \ldots \).
+Explanation of treating each backgammon game as an episode with the sequence of positions acting as states $S_0, S_1, S_2, \ldots$.
 :p How are games treated in TD-Gammon?
 ??x
-Games in TD-Gammon are treated as episodes where each position in the sequence acts as a state. This means that the entire game is broken down into a series of states \( S_0, S_1, S_2, \ldots \), with transitions between these states representing moves.
+Games in TD-Gammon are treated as episodes where each position in the sequence acts as a state. This means that the entire game is broken down into a series of states $S_0, S_1, S_2, \ldots$, with transitions between these states representing moves.
 x??
 
 ---
@@ -447,9 +449,8 @@ Explains the computation process from input units to hidden units, including how
 
 :p What is the formula used in the network to compute the output of a hidden unit?
 ??x
-The output \( h(j) \) of a hidden unit \( j \) is computed as:
-\[ h(j) = \frac{1}{1 + e^{-\sum_{i=1}^{424} w_{ij} x_i}} \]
-where \( x_i \) represents the value of the \( i \)-th input unit and \( w_{ij} \) is the weight of its connection to the \( j \)-th hidden unit.
+The output $h(j)$ of a hidden unit $j$ is computed as:
+$$h(j) = \frac{1}{1 + e^{-\sum_{i=1}^{424} w_{ij} x_i}}$$where $ x_i $ represents the value of the $ i $-th input unit and$ w_{ij}$is the weight of its connection to the $ j$-th hidden unit.
 
 ```java
 public class HiddenUnit {
@@ -469,9 +470,8 @@ Explains the analogous computation from hidden units to the output unit, which a
 
 :p What is the formula used in the network to compute the output of the output unit?
 ??x
-The output \( o \) of the output unit is computed as:
-\[ o = \frac{1}{1 + e^{-\sum_{j=1}^{H} w_{oj} h(j)}} \]
-where \( h(j) \) represents the value of the \( j \)-th hidden unit and \( w_{oj} \) is the weight of its connection to the output unit.
+The output $o$ of the output unit is computed as:
+$$o = \frac{1}{1 + e^{-\sum_{j=1}^{H} w_{oj} h(j)}}$$where $ h(j)$represents the value of the $ j$-th hidden unit and $ w_{oj}$ is the weight of its connection to the output unit.
 
 ```java
 public class OutputUnit {
@@ -500,12 +500,10 @@ Explains the use of the semi-gradient form of the TD(λ) algorithm for learning 
 :p What is the general update rule used in the TD-Gammon learning process?
 ??x
 The general update rule for the TD-Gammon learning process is given by:
-\[ w_{t+1} = w_t + \alpha (h R_{t+1} - h v(S_{t},w_t)) z_t \]
-where \( w_t \) is the vector of all modifiable parameters, \( \alpha \) is the learning rate, \( h R_{t+1} \) and \( h v(S_{t},w_t) \) are the predicted values for the next state and current state respectively, and \( z_t \) is a vector of eligibility traces.
+$$w_{t+1} = w_t + \alpha (h R_{t+1} - h v(S_{t},w_t)) z_t$$where $ w_t $is the vector of all modifiable parameters,$\alpha $ is the learning rate,$ h R_{t+1}$ and $h v(S_{t},w_t)$ are the predicted values for the next state and current state respectively, and $z_t$ is a vector of eligibility traces.
 
 The eligibility trace update rule is:
-\[ z_t = \rho z_{t-1} + r (h v(S_{t},w_t)) \]
-with initial condition \( z_0 = 0 \).
+$$z_t = \rho z_{t-1} + r (h v(S_{t},w_t))$$with initial condition $ z_0 = 0$.
 
 ```java
 public class TDGammonLearning {
@@ -1122,7 +1120,7 @@ Background context explaining the concept. The game often depends on a contestan
 :p What is the core method Watson uses for deciding its DD wagering?
 ??x
 Watson decides its DD bet by maximizing action values, ˆq(s, bet), which are computed using two main types of estimates: afterstate value function, ˆv(·, w), and in-category Double Jeopardy (DD) confidence, pDD. The action value for a given bet is calculated as follows:
-\[ \hat{q}(s, \text{bet}) = p_{\text{DD}} \times \hat{v}(\text{SW + bet}, ...) + (1 - p_{\text{DD}}) \times \hat{v}(\text{SW - bet}, ...) \]
+$$\hat{q}(s, \text{bet}) = p_{\text{DD}} \times \hat{v}(\text{SW + bet}, ...) + (1 - p_{\text{DD}}) \times \hat{v}(\text{SW - bet}, ...)$$
 where SW is Watson's current score, and ˆvgives the estimated value for the game state after Watson’s response to the DD clue, which can be correct or incorrect.
 x??
 

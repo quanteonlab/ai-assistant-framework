@@ -8,7 +8,7 @@
 #### Conditional Language Claim to Goods and Payment
 Background context explaining the concept. In contract law, when a party breaches their contractual obligations, the non-breaching party's remedy is typically limited to the expectation damages they would have received had the contract been fully performed. However, this does not allow for the claim of goods or services that were part of the original agreement.
 
-Example scenario: If you sell your baseball for $400 with a 30-day payment period and the buyer doesn't pay within the stipulated time, they can only be held responsible for the $400 and not the baseball. However, this limitation can be circumvented through secured transactions laws, which allow creditors to repossess property if a party defaults on their obligations.
+Example scenario: If you sell your baseball for $400 with a 30-day payment period and the buyer doesn't pay within the stipulated time, they can only be held responsible for the$400 and not the baseball. However, this limitation can be circumvented through secured transactions laws, which allow creditors to repossess property if a party defaults on their obligations.
 
 :p What is the main remedy for breach of contract in terms of expectation damages?
 ??x
@@ -473,11 +473,11 @@ x??
 
 ---
 #### Contract Completion and Restitution
-Background context: This section discusses a scenario where a contractor builds 50% of a $200,000 house and quits before completion. The owner then completes the work but refuses to pay because the contractor did not substantially perform. The contractor claims $100,000 in restitution. The discussion revolves around determining the amount of restitution based on the cost of completing the work versus the portion completed.
+Background context: This section discusses a scenario where a contractor builds 50% of a $200,000 house and quits before completion. The owner then completes the work but refuses to pay because the contractor did not substantially perform. The contractor claims$100,000 in restitution. The discussion revolves around determining the amount of restitution based on the cost of completing the work versus the portion completed.
 
 :p What is the maximum amount of restitution the contractor can claim if the owner completes the house for $110,000?
 ??x
-The maximum restitution the contractor can claim would be limited to $90,000. This is because the owner had initially agreed to pay $200,000 in total and paid an additional $110,000, meaning they overpaid by $90,000.
+The maximum restitution the contractor can claim would be limited to $90,000. This is because the owner had initially agreed to pay $200,000 in total and paid an additional $110,000, meaning they overpaid by$90,000.
 ```java
 // Pseudocode to calculate maximum restitution
 int initialContractPrice = 200000;
@@ -495,7 +495,7 @@ Background context: This part of the text explains how to handle a contract that
 
 :p How much can the contractor claim if they performed for 20 out of 30 days and had to find someone else for the remaining 10 days?
 ??x
-The contractor can claim $400, but since the owner would have paid a total of $600, and the owner had to pay an additional $25 per day for the remaining 10 days ($250), the maximum claim is $350.
+The contractor can claim $400, but since the owner would have paid a total of $600, and the owner had to pay an additional $25 per day for the remaining 10 days ($250), the maximum claim is$350.
 
 ```java
 // Pseudocode to calculate contractor's claim
@@ -519,9 +519,7 @@ Background context: This section covers the Uniform Commercial Code's Section 2-
 ??x
 The buyer should pay for the 80 shirts that were delivered at the contract rate. Since the contract rate is $20 per shirt, the buyer should pay:
 
-\[ \text{Total Payment} = 80 \times \$20 = \$1600 \]
-
-```java
+$$ \text{Total Payment} = 80 \times \$20 = \$1600 $$```java
 // Pseudocode to calculate payment amount
 int numberOfShirtsOrdered = 100;
 int agreedPricePerShirt = 20;
@@ -536,7 +534,7 @@ x??
 
 ---
 #### Expectancy of Non-Breaching Party
-Background context: This part explains that the expectancy of the non-breaching party comes before any claim by the breaching party. The example involves tutoring services where a tutor agreed to provide 14 weeks of tutoring for $420 but only provided two weeks.
+Background context: This part explains that the expectancy of the non-breaching party comes before any claim by the breaching party. The example involves tutoring services where a tutor agreed to provide 14 weeks of tutoring for$420 but only provided two weeks.
 
 :p If the student learned something from the two weeks, can she refuse to pay at all?
 ??x
@@ -556,7 +554,7 @@ x??
 ---
 
 #### Divisibility of Contracts and Entire Agreements
-Background context explaining the concept. In this scenario, you have a contract that is essentially 14 mini-contracts to provide tutoring for $30/week. You performed two of those mini-contracts, so you argue she owes you $60. However, your tutee would likely claim that each week's tutoring and payment are not necessarily equivalent and the contract was entire rather than divisible. This means if one part is breached, the entire agreement is at risk.
+Background context explaining the concept. In this scenario, you have a contract that is essentially 14 mini-contracts to provide tutoring for $30/week. You performed two of those mini-contracts, so you argue she owes you$60. However, your tutee would likely claim that each week's tutoring and payment are not necessarily equivalent and the contract was entire rather than divisible. This means if one part is breached, the entire agreement is at risk.
 :p What argument might your tutee make regarding the divisibility of the contracts?
 ??x
 The argument is based on the premise that some weeks may be more demanding, while others could be less so. Therefore, each week's tutoring and payment are not necessarily equivalent in value or effort. This suggests a whole contract (entire agreement) rather than multiple divisible parts.

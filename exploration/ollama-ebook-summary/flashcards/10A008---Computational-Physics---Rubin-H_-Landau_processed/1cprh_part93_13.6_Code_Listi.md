@@ -5,7 +5,7 @@
 ---
 
 #### 2- and 3-Body Planetary Orbits Overview
-Newton's laws of motion and his law of universal gravitation provided a revolutionary explanation for planetary motions. By assuming that the force between a planet and the sun is given by \( F_g = -\frac{GMm}{r^2} \), Newton was able to predict the elliptical orbits of planets around the sun.
+Newton's laws of motion and his law of universal gravitation provided a revolutionary explanation for planetary motions. By assuming that the force between a planet and the sun is given by $F_g = -\frac{GMm}{r^2}$, Newton was able to predict the elliptical orbits of planets around the sun.
 :p What is the main topic discussed in this section?
 ??x
 The main topic is understanding planetary orbits through Newton's laws of motion and universal gravitation. It involves solving differential equations for planet motion using numerical methods like Runge-Kutta (RK4).
@@ -14,25 +14,27 @@ The main topic is understanding planetary orbits through Newton's laws of motion
 ---
 
 #### 2-Body Planetary Orbit Equations
-The equation of motion derived from Newton's second law in Cartesian coordinates is given by \( F = ma \). For a planet, this translates to:
-\[ \frac{d^2x}{dt^2} = -\frac{GMx}{(x^2 + y^2)^{3/2}}, \quad \frac{d^2y}{dt^2} = -\frac{GMy}{(x^2 + y^2)^{3/2}}. \]
+The equation of motion derived from Newton's second law in Cartesian coordinates is given by $F = ma$. For a planet, this translates to:
+$$\frac{d^2x}{dt^2} = -\frac{GMx}{(x^2 + y^2)^{3/2}}, \quad \frac{d^2y}{dt^2} = -\frac{GMy}{(x^2 + y^2)^{3/2}}.$$
+
 These are coupled second-order ordinary differential equations.
 :p What are the equations of motion for a 2-body planetary orbit?
 ??x
 The equations of motion for a 2-body planetary orbit are:
-\[ \frac{d^2x}{dt^2} = -\frac{GMx}{(x^2 + y^2)^{3/2}}, \quad \frac{d^2y}{dt^2} = -\frac{GMy}{(x^2 + y^2)^{3/2}}. \]
-These equations describe the motion of a planet around the sun, where \( G \) is the universal gravitational constant and \( M \) is the mass of the sun.
+$$\frac{d^2x}{dt^2} = -\frac{GMx}{(x^2 + y^2)^{3/2}}, \quad \frac{d^2y}{dt^2} = -\frac{GMy}{(x^2 + y^2)^{3/2}}.$$
+
+These equations describe the motion of a planet around the sun, where $G $ is the universal gravitational constant and$M$ is the mass of the sun.
 ??x
 
 ---
 
 #### Numerical Solution Setup
 To numerically solve these differential equations using an ODE solver like RK4, we need to set initial conditions. For example:
-\[ x(0) = 0.5, \quad y(0) = 0, \quad v_x(0) = 0.0, \quad v_y(0) = 1.63. \]
-:p What are the typical initial conditions for a 2-body planetary orbit?
+$$x(0) = 0.5, \quad y(0) = 0, \quad v_x(0) = 0.0, \quad v_y(0) = 1.63.$$:p What are the typical initial conditions for a 2-body planetary orbit?
 ??x
 The typical initial conditions for a 2-body planetary orbit are:
-\[ x(0) = 0.5, \quad y(0) = 0, \quad v_x(0) = 0.0, \quad v_y(0) = 1.63. \]
+$$x(0) = 0.5, \quad y(0) = 0, \quad v_x(0) = 0.0, \quad v_y(0) = 1.63.$$
+
 These values represent the starting position and initial velocity components of a planet relative to the sun.
 ??x
 
@@ -43,7 +45,7 @@ By experimenting with different initial conditions, one can find those that prod
 :p How does one determine the initial conditions for a circular orbit?
 ??x
 To determine the initial conditions for a circular orbit:
-1. Start by setting \( v_x(0) = 0 \), which means no initial velocity in the x-direction, and adjust \( v_y(0) \) to ensure the planet moves in a circle.
+1. Start by setting $v_x(0) = 0 $, which means no initial velocity in the x-direction, and adjust $ v_y(0)$ to ensure the planet moves in a circle.
 2. The radius of the orbit should remain constant over time.
 3. The angular momentum must be conserved for circular motion.
 ??x
@@ -51,25 +53,25 @@ To determine the initial conditions for a circular orbit:
 ---
 
 #### Effect of Gravitational Force Power
-The force between two bodies can also depend on powers other than \( 1/r^2 \). For example, a power law like \( F_g = -\frac{GMm}{r^{2+\alpha}} \) with small values of \( \alpha \) causes the orbit to precess or rotate over time.
-:p What happens when the gravitational force is described by \( 1/r^{2+\alpha} \)?
+The force between two bodies can also depend on powers other than $1/r^2 $. For example, a power law like $ F_g = -\frac{GMm}{r^{2+\alpha}}$with small values of $\alpha$ causes the orbit to precess or rotate over time.
+:p What happens when the gravitational force is described by $1/r^{2+\alpha}$?
 ??x
-When the gravitational force is described by \( F_g = -\frac{GMm}{r^{2+\alpha}} \), with small values of \( \alpha \):
+When the gravitational force is described by $F_g = -\frac{GMm}{r^{2+\alpha}}$, with small values of $\alpha$:
 - The orbit will precess or rotate over time, meaning it will not remain in a fixed elliptical shape.
-- This effect is predicted by general relativity and can be observed for small \( \alpha \).
+- This effect is predicted by general relativity and can be observed for small $\alpha$.
 ??x
 
 ---
 
 #### Neptune's Discovery
 Using the known orbits of Uranus and Neptune, their masses, distances from the sun, and orbital periods, one can predict how Neptune perturbs Uranus. The key data includes:
-- Masses: \( M_{Uranus} = 4.366244 \times 10^{-5} \) Solar masses, \( M_{Neptune} = 5.151389 \times 10^{-5} \) Solar masses.
-- Distances from the sun: \( d_{Uranus} = 19.1914 \) AU, \( d_{Neptune} = 30.0611 \) AU.
-- Orbital periods: \( T_{Uranus} = 84.0110 \) years, \( T_{Neptune} = 164.7901 \) years.
+- Masses: $M_{Uranus} = 4.366244 \times 10^{-5}$ Solar masses,$ M_{Neptune} = 5.151389 \times 10^{-5}$ Solar masses.
+- Distances from the sun: $d_{Uranus} = 19.1914 $ AU,$ d_{Neptune} = 30.0611$ AU.
+- Orbital periods: $T_{Uranus} = 84.0110 $ years,$ T_{Neptune} = 164.7901$ years.
 :p How does one use the provided data to predict Neptune's influence on Uranus?
 ??x
 Using the provided data:
-- Calculate the angular velocities of both planets: \( \omega_{Uranus} = \frac{2\pi}{T_{Uranus}} \), \( \omega_{Neptune} = \frac{2\pi}{T_{Neptune}} \).
+- Calculate the angular velocities of both planets: $\omega_{Uranus} = \frac{2\pi}{T_{Uranus}}$,$\omega_{Neptune} = \frac{2\pi}{T_{Neptune}}$.
 - Use RK4 to simulate the orbits and find how Neptune perturbs Uranus over one complete orbit of Neptune.
 - The code uses these constants:
 ```python
@@ -125,7 +127,7 @@ Background context: This concept involves solving the time-independent Schrödin
 
 :p What does the `QuantumNumerov.py` script do?
 ??x
-The script solves the Schrödinger equation for bound states by applying the Numerov method. It uses a bisection search to find the energy levels where the wave function matches at \( x = 0 \).
+The script solves the Schrödinger equation for bound states by applying the Numerov method. It uses a bisection search to find the energy levels where the wave function matches at $x = 0$.
 
 Key steps in the code:
 - Define potential and parameters.
@@ -146,11 +148,11 @@ x??
 
 ---
 #### Bisection Interval Setup
-Background context: The script sets up the initial conditions and intervals for the bisection search to find the correct energy levels where the wave functions match at \( x = 0 \).
+Background context: The script sets up the initial conditions and intervals for the bisection search to find the correct energy levels where the wave functions match at $x = 0$.
 
 :p What are the `uL` and `uR` arrays used for in the script?
 ??x
-The `uL` and `uR` arrays store the values of the left and right wave functions, respectively. These are essential for applying the bisection method to find where these wave functions match at \( x = 0 \).
+The `uL` and `uR` arrays store the values of the left and right wave functions, respectively. These are essential for applying the bisection method to find where these wave functions match at $x = 0$.
 
 Code Example: 
 ```python
@@ -184,7 +186,7 @@ x??
 
 ---
 #### Bisection Method for Energy Finding
-Background context: The script uses a bisection method to find the correct energy levels where the wave functions match at \( x = 0 \). This is necessary because the Numerov method alone cannot directly determine these energy values.
+Background context: The script uses a bisection method to find the correct energy levels where the wave functions match at $x = 0$. This is necessary because the Numerov method alone cannot directly determine these energy values.
 
 :p What is the purpose of the `diff` function in the script?
 ??x
@@ -203,7 +205,7 @@ x??
 
 ---
 #### Plotting and Displaying Wave Functions
-Background context: After finding the correct energy levels, the script plots the left and right wave functions to visually verify that they match at \( x = 0 \).
+Background context: After finding the correct energy levels, the script plots the left and right wave functions to visually verify that they match at $x = 0$.
 
 :p What does the `plt.plot` function do in this context?
 ??x
@@ -221,11 +223,11 @@ x??
 ---
 
 #### Concept: Bisection Method for Finding Eigenvalues
-Background context explaining the bisection method and its application to finding eigenvalues. The given code uses a bisection algorithm to find the eigenvalue \(E\) that satisfies a specific condition related to the wave function.
+Background context explaining the bisection method and its application to finding eigenvalues. The given code uses a bisection algorithm to find the eigenvalue $E$ that satisfies a specific condition related to the wave function.
 
 :p What is the purpose of the `diff` function in the provided code?
 ??x
-The `diff` function calculates the difference between the left and right wave functions at the matching point. This helps determine how close the current estimate of \(E\) is to the actual eigenvalue by comparing the logarithmic derivatives from both sides.
+The `diff` function calculates the difference between the left and right wave functions at the matching point. This helps determine how close the current estimate of $E$ is to the actual eigenvalue by comparing the logarithmic derivatives from both sides.
 
 ```python
 def diff(E, h):
@@ -260,7 +262,7 @@ Background context explaining the iterative bisection method used to find eigenv
 
 :p How does the iterative bisection algorithm work in the given Python script?
 ??x
-The iterative bisection algorithm starts with an initial guess for \(E\) within a specified range \([E_{min}, E_{max}]\). The algorithm repeatedly narrows this interval by evaluating the difference between the left and right wave functions at the matching point. If the product of `diff(Emax, h)` and `Diff` is positive, it indicates that \(E\) lies within a smaller subinterval. The process continues until the absolute value of `Diff` is less than a specified tolerance `eps`, or a maximum number of iterations (`count_max`) is reached.
+The iterative bisection algorithm starts with an initial guess for $E $ within a specified range$[E_{min}, E_{max}]$. The algorithm repeatedly narrows this interval by evaluating the difference between the left and right wave functions at the matching point. If the product of `diff(Emax, h)` and `Diff` is positive, it indicates that $ E$ lies within a smaller subinterval. The process continues until the absolute value of `Diff` is less than a specified tolerance `eps`, or a maximum number of iterations (`count_max`) is reached.
 
 ```python
 def diff(E, h):
@@ -304,7 +306,7 @@ x??
 #### Concept: Renormalization of Wave Functions
 Background context explaining why wave functions need to be renormalized after integrating them, and how this process is implemented in the provided code.
 
-:p Why do we need to renormalize the wave functions \(Lwf\) and \(Rwf\)?
+:p Why do we need to renormalize the wave functions $Lwf $ and$Rwf$?
 ??x
 Renormalizing the wave functions ensures that they are properly scaled so that their normalization condition is satisfied. After integrating the wave function from both sides, the renormalization factor `normL` is calculated based on the initial conditions at the matching point. This factor is then applied to all points in the wave functions to ensure consistency and correct physical interpretation.
 
@@ -373,12 +375,11 @@ x??
 #### Fractals and Statistical Growth Models
 Fractals are geometric objects that exhibit self-similarity at various scales. They often do not have well-defined geometric patterns, yet can be analyzed mathematically to determine their fractal dimension, which is a non-integer value characterizing the object's complexity.
 
-The fractal dimension \(d_f\) can be determined using the relationship:
-\[ M(L) \propto L^{d_f} \]
+The fractal dimension $d_f$ can be determined using the relationship:
+$$M(L) \propto L^{d_f}$$
 
-Where \(M(L)\) is the mass and \(L\) is the length scale. For planar objects, this translates to:
-\[ \rho = \frac{M}{\text{area}} \propto L^{d_f - 2} \]
-:p What concept defines self-similar structures that appear similar at different scales?
+Where $M(L)$ is the mass and $L$ is the length scale. For planar objects, this translates to:
+$$\rho = \frac{M}{\text{area}} \propto L^{d_f - 2}$$:p What concept defines self-similar structures that appear similar at different scales?
 ??x
 Self-similarity in fractals refers to the property where a figure exhibits the same or nearly the same patterns and structures across different scales. When analyzed, these structures often have a non-integer dimension, indicating their complexity and irregularity.
 x??
@@ -391,8 +392,7 @@ The Sierpiński gasket is generated by placing dots randomly within an equilater
 :p How are the coordinates of successive points calculated in generating the Sierpiński gasket?
 ??x
 In each iteration, the next point is determined by selecting one of three vertices and placing the new dot halfway between the current dot and that vertex. Mathematically:
-\[ (x_{k+1}, y_{k+1}) = (x_k, y_k) + \frac{(a_n, b_n)}{2} \]
-where \( a_n \) and \( b_n \) are the coordinates of one of the vertices chosen randomly.
+$$(x_{k+1}, y_{k+1}) = (x_k, y_k) + \frac{(a_n, b_n)}{2}$$where $ a_n $ and $ b_n$ are the coordinates of one of the vertices chosen randomly.
 
 This process is repeated to generate numerous points that form the fractal pattern.
 x??
@@ -401,22 +401,22 @@ x??
 
 #### Measuring Fractal Dimension
 To determine the fractal dimension of an object, one can use the mass-area relationship:
-\[ \rho = C L^{d_f - 2} \]
+$$\rho = C L^{d_f - 2}$$
 
-Where \( \rho \) is the density (mass/area), and \( d_f \) is the fractal dimension. This relationship implies that a plot of log(\(\rho\)) vs. log(L) yields a straight line with slope \( d_f - 2 \).
+Where $\rho $ is the density (mass/area), and$d_f $ is the fractal dimension. This relationship implies that a plot of log($\rho $) vs. log(L) yields a straight line with slope $ d_f - 2$.
 
 :p How can you empirically determine the fractal dimension of a Sierpiński gasket?
 ??x
 To determine the fractal dimension, follow these steps:
 
 1. Generate the Sierpiński gasket using random placement rules.
-2. Plot the log(\(\rho\)) vs. log(L) for different scales (L).
+2. Plot the log($\rho$) vs. log(L) for different scales (L).
 3. Fit a straight line to the data points.
 
-The slope of this line will give you \( d_f - 2 \), and adding 2 to this value yields the fractal dimension \( d_f \).
+The slope of this line will give you $d_f - 2 $, and adding 2 to this value yields the fractal dimension $ d_f$.
 
 For example, if plotting shows a linear relationship with a slope of -0.41504:
-\[ df = 2 + (-0.41504) = 1.58496 \]
+$$df = 2 + (-0.41504) = 1.58496$$
 
 This indicates that the Sierpiński gasket has a dimension of approximately 1.58.
 x??
@@ -429,10 +429,9 @@ In constructing a non-statistical form of the Sierpiński gasket, an inverted eq
 :p How does removing the central triangle affect the density of the structure?
 ??x
 Removing the central triangle from each filled triangle affects the density as follows:
-- For a single triangle with side \( r \), the initial density is:
-  \[ \rho(L = r) \propto \frac{m}{r^2} = \frac{\rho_0}{1} \]
-- For an equilateral triangle with side length \( L = 2r \):
-  \[ \rho(L = 2r) \propto \frac{3m}{(2r)^2} = \frac{3}{4}\rho_0 \]
+- For a single triangle with side $r$, the initial density is:
+  $$\rho(L = r) \propto \frac{m}{r^2} = \frac{\rho_0}{1}$$- For an equilateral triangle with side length $ L = 2r$:
+  $$\rho(L = 2r) \propto \frac{3m}{(2r)^2} = \frac{3}{4}\rho_0$$
 
 This shows that the density decreases as the structure is refined, indicating a fractional dimension.
 x??
@@ -490,15 +489,10 @@ x??
 Background context: The concept of self-similarity is central to understanding fractals. Self-similarity means that each part of an object resembles the whole, but on a smaller scale. This can be seen in natural phenomena like ferns, where every frond looks similar to the entire plant.
 
 Formula for scaling and translation:
-\[
-(x', y') = s(x, y) = (sx, sy)
-\]
-Translation operation:
-\[
-(x', y') = (x, y) + (ax, ay)
-\]
+$$(x', y') = s(x, y) = (sx, sy)$$
 
-:p What is self-similarity in the context of fractals?
+Translation operation:
+$$(x', y') = (x, y) + (ax, ay)$$:p What is self-similarity in the context of fractals?
 ??x
 Self-similarity refers to a property where each part of an object resembles the whole. In the case of fractals like ferns, this means that every frond has a similar structure to the entire plant.
 x??
@@ -510,18 +504,16 @@ x??
 Background context: An affine transformation combines scaling, rotation, and translation in such a way that the resulting object is self-similar at different scales. These transformations are crucial for generating fractals.
 
 Formula for an affine transformation:
-\[
-(x', y') = s(x, y) + (ax, ay)
-\]
-Where \(s > 0\) denotes scaling and \((ax, ay)\) denotes translation.
+$$(x', y') = s(x, y) + (ax, ay)$$
+
+Where $s > 0 $ denotes scaling and$(ax, ay)$ denotes translation.
 
 :p What is the general form of an affine transformation?
 ??x
 The general form of an affine transformation combines scaling and translation. It can be expressed as:
-\[
-(x', y') = s(x, y) + (ax, ay)
-\]
-Where \(s\) scales the coordinates and \((ax, ay)\) translates them.
+$$(x', y') = s(x, y) + (ax, ay)$$
+
+Where $s $ scales the coordinates and$(ax, ay)$ translates them.
 x??
 
 ---
@@ -531,29 +523,22 @@ x??
 Background context: Barnsley's fern is a fractal created using an affine transformation with some randomness. This method allows for the creation of natural-looking structures like ferns.
 
 Formula for generating points in Barnsley's Fern:
-\[
-(x_{n+1}, y_{n+1}) = 
+$$(x_{n+1}, y_{n+1}) = 
 \begin{cases} 
 (0.5, 0.27y_n) & \text{with probability } 0.02 \\
 (-0.139x_n + 0.263y_n + 0.57, 0.246x_n + 0.224y_n - 0.036) & \text{with probability } 0.15 \\
 (0.17x_n - 0.215y_n + 0.408, 0.222x_n + 0.176y_n + 0.0893) & \text{with probability } 0.13 \\
 (0.781x_n + 0.034y_n + 0.1075, -0.032x_n + 0.739y_n + 0.27) & \text{with probability } 0.70 
-\end{cases}
-\]
-
-:p What is the formula for generating points in Barnsley's Fern?
+\end{cases}$$:p What is the formula for generating points in Barnsley's Fern?
 ??x
 The formula for generating points in Barnsley's Fern uses a set of affine transformations with different probabilities:
-\[
-(x_{n+1}, y_{n+1}) = 
+$$(x_{n+1}, y_{n+1}) = 
 \begin{cases} 
 (0.5, 0.27y_n) & \text{with probability } 0.02 \\
 (-0.139x_n + 0.263y_n + 0.57, 0.246x_n + 0.224y_n - 0.036) & \text{with probability } 0.15 \\
 (0.17x_n - 0.215y_n + 0.408, 0.222x_n + 0.176y_n + 0.0893) & \text{with probability } 0.13 \\
 (0.781x_n + 0.034y_n + 0.1075, -0.032x_n + 0.739y_n + 0.27) & \text{with probability } 0.70 
-\end{cases}
-\]
-x??
+\end{cases}$$x??
 
 ---
 
@@ -562,29 +547,26 @@ x??
 Background context: In Barnsley's Fern, the selection of transformations is not random but follows specific probabilities to ensure that certain shapes dominate.
 
 Formula for selecting a transformation:
-\[
-P = 
-\begin{cases} 
-2 \% & r < 0.02 \\
-15 \% & 0.02 \leq r < 0.17 \\
-13 \% & 0.17 < r \leq 0.3 \\
-70 \% & 0.3 < r < 1
-\end{cases}
-\]
+$$
 
-:p How is the transformation selected in Barnsley's Fern?
-??x
-The transformation in Barnsley's Fern is selected based on a uniform random number \(r\) between 0 and 1:
-\[
 P = 
 \begin{cases} 
 2 \% & r < 0.02 \\
 15 \% & 0.02 \leq r < 0.17 \\
 13 \% & 0.17 < r \leq 0.3 \\
 70 \% & 0.3 < r < 1
-\end{cases}
-\]
-If \(r\) falls within a specific range, the corresponding transformation is applied.
+\end{cases}$$:p How is the transformation selected in Barnsley's Fern?
+??x
+The transformation in Barnsley's Fern is selected based on a uniform random number $r$ between 0 and 1:
+$$P = 
+\begin{cases} 
+2 \% & r < 0.02 \\
+15 \% & 0.02 \leq r < 0.17 \\
+13 \% & 0.17 < r \leq 0.3 \\
+70 \% & 0.3 < r < 1
+\end{cases}$$
+
+If $r$ falls within a specific range, the corresponding transformation is applied.
 x??
 
 ---
@@ -594,28 +576,23 @@ x??
 Background context: The combined formula for generating points in Barnsley's Fern simplifies the code and makes it easier to implement.
 
 Formula for combining transformations:
-\[
-(x_{n+1}, y_{n+1}) = 
+$$(x_{n+1}, y_{n+1}) = 
 \begin{cases} 
 (0.5, 0.27y_n) & \text{if } r < 0.02 \\
 (-0.139x_n + 0.263y_n + 0.57, 0.246x_n + 0.224y_n - 0.036) & \text{if } 0.02 \leq r < 0.17 \\
 (0.17x_n - 0.215y_n + 0.408, 0.222x_n + 0.176y_n + 0.0893) & \text{if } 0.17 < r \leq 0.3 \\
 (0.781x_n + 0.034y_n + 0.1075, -0.032x_n + 0.739y_n + 0.27) & \text{if } 0.3 < r < 1 
-\end{cases}
-\]
-
-:p What is the combined formula for generating points in Barnsley's Fern?
+\end{cases}$$:p What is the combined formula for generating points in Barnsley's Fern?
 ??x
 The combined formula for generating points in Barnsley's Fern is:
-\[
-(x_{n+1}, y_{n+1}) = 
+$$(x_{n+1}, y_{n+1}) = 
 \begin{cases} 
 (0.5, 0.27y_n) & \text{if } r < 0.02 \\
 (-0.139x_n + 0.263y_n + 0.57, 0.246x_n + 0.224y_n - 0.036) & \text{if } 0.02 \leq r < 0.17 \\
 (0.17x_n - 0.215y_n + 0.408, 0.222x_n + 0.176y_n + 0.0893) & \text{if } 0.17 < r \leq 0.3 \\
 (0.781x_n + 0.034y_n + 0.1075, -0.032x_n + 0.739y_n + 0.27) & \text{if } 0.3 < r < 1 
-\end{cases}
-\]
+\end{cases}$$
+
 This formula is easier to implement in code.
 x??
 
@@ -626,16 +603,10 @@ x??
 Background context: The initial conditions for generating Barnsley's Fern are given, and the points are generated through repeated iterations.
 
 Initial point:
-\[
-(x_1, y_1) = (0.5, 0.0)
-\]
-
-:p What is the initial condition for generating Barnsley’s Fern?
+$$(x_1, y_1) = (0.5, 0.0)$$:p What is the initial condition for generating Barnsley’s Fern?
 ??x
 The initial condition for generating Barnsley's Fern is:
-\[
-(x_1, y_1) = (0.5, 0.0)
-\]
+$$(x_1, y_1) = (0.5, 0.0)$$
 This point serves as the starting point from which further points are generated through iterations.
 x??
 

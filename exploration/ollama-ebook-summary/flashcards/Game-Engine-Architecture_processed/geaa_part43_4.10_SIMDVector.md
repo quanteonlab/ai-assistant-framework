@@ -1011,7 +1011,7 @@ Background context: The Cartesian coordinate system is a way of representing poi
 ??x
 A point in Cartesian coordinates is represented by an ordered pair (or triple) of numbers indicating its location along each axis.
 
-For example, in 2D, a point P can be represented as \(P = (x, y)\), and in 3D, it would be \(P = (x, y, z)\).
+For example, in 2D, a point P can be represented as $P = (x, y)$, and in 3D, it would be $ P = (x, y, z)$.
 
 In code:
 ```java
@@ -1044,10 +1044,10 @@ x??
 ---
 
 #### Cartesian Coordinate System
-Background context explaining the Cartesian coordinate system. It uses two or three mutually perpendicular axes to specify a position in 2D or 3D space. A point \( P \) is represented by a pair or triple of real numbers, such as \( (P_x, P_y) \) for 2D and \( (P_x, P_y, P_z) \) for 3D.
+Background context explaining the Cartesian coordinate system. It uses two or three mutually perpendicular axes to specify a position in 2D or 3D space. A point $P $ is represented by a pair or triple of real numbers, such as$(P_x, P_y)$ for 2D and $(P_x, P_y, P_z)$ for 3D.
 :p What are the key features of the Cartesian coordinate system?
 ??x
-The Cartesian coordinate system uses two or three mutually perpendicular axes to specify positions in 2D or 3D space. For a point \( P \), it can be represented by a pair (2D: \( (P_x, P_y) \)) or a triple (3D: \( (P_x, P_y, P_z) \)).
+The Cartesian coordinate system uses two or three mutually perpendicular axes to specify positions in 2D or 3D space. For a point $P $, it can be represented by a pair (2D: $(P_x, P_y)$) or a triple (3D:$(P_x, P_y, P_z)$).
 ```java
 // Example of using Cartesian coordinates in pseudocode
 Point2D p2D = new Point2D(10.5, 20.0);
@@ -1058,10 +1058,10 @@ x??
 ---
 
 #### Cylindrical Coordinates
-Background context explaining the cylindrical coordinate system. It employs a vertical "height" axis \( h \), a radial axis \( r \) remaining out from the vertical, and a yaw angle \( \theta \). A point \( P \) is represented by the triple of numbers \( (P_h, P_r, P_\theta) \).
+Background context explaining the cylindrical coordinate system. It employs a vertical "height" axis $h $, a radial axis $ r $ remaining out from the vertical, and a yaw angle $\theta $. A point $ P $ is represented by the triple of numbers $(P_h, P_r, P_\theta)$.
 :p How does cylindrical coordinates represent a point?
 ??x
-In cylindrical coordinates, a point \( P \) is represented by a triple of numbers \( (P_h, P_r, P_\theta) \). This system uses a vertical "height" axis \( h \), a radial axis \( r \) remaining out from the vertical, and a yaw angle \( \theta \).
+In cylindrical coordinates, a point $P $ is represented by a triple of numbers$(P_h, P_r, P_\theta)$. This system uses a vertical "height" axis $ h$, a radial axis $ r$remaining out from the vertical, and a yaw angle $\theta$.
 ```java
 // Example of using cylindrical coordinates in pseudocode
 CylindricalPoint cp = new CylindricalPoint(10.5, 20.0, Math.PI / 4);
@@ -1071,10 +1071,10 @@ x??
 ---
 
 #### Spherical Coordinates
-Background context explaining the spherical coordinate system. It employs a pitch angle \( \phi \), a yaw angle \( \theta \) and a radial measurement \( r \). Points are therefore represented by the triple of numbers \( (P_r, P_\phi, P_\theta) \).
+Background context explaining the spherical coordinate system. It employs a pitch angle $\phi $, a yaw angle $\theta $ and a radial measurement$r $. Points are therefore represented by the triple of numbers$(P_r, P_\phi, P_\theta)$.
 :p How does spherical coordinates represent a point?
 ??x
-In spherical coordinates, points are represented by a triple of numbers \( (P_r, P_\phi, P_\theta) \). This system uses a pitch angle \( \phi \), a yaw angle \( \theta \), and a radial measurement \( r \).
+In spherical coordinates, points are represented by a triple of numbers $(P_r, P_\phi, P_\theta)$. This system uses a pitch angle $\phi $, a yaw angle $\theta $, and a radial measurement $ r$.
 ```java
 // Example of using spherical coordinates in pseudocode
 SphericalPoint sp = new SphericalPoint(10.5, Math.PI / 4, Math.PI / 3);
@@ -1087,7 +1087,7 @@ x??
 Background context explaining the difference between left-handed and right-handed coordinate systems. In a three-dimensional Cartesian system, we have two choices: right-handed (RH) and left-handed (LH). The only difference is in the direction of one axis.
 :p What are the differences between left-handed and right-handed coordinate systems?
 ??x
-In a three-dimensional Cartesian system, there are two main types: right-handed (RH) and left-handed (LH) coordinate systems. In a RH system, when you curl your right hand's fingers around the z-axis with your thumb pointing in the positive \(z\)-direction, your fingers point from the x-axis toward the y-axis. Conversely, in an LH system, the same is true using your left hand.
+In a three-dimensional Cartesian system, there are two main types: right-handed (RH) and left-handed (LH) coordinate systems. In a RH system, when you curl your right hand's fingers around the z-axis with your thumb pointing in the positive $z$-direction, your fingers point from the x-axis toward the y-axis. Conversely, in an LH system, the same is true using your left hand.
 ```java
 // Example of converting between coordinate systems in pseudocode
 public Point3D convertToRightHanded(Point3D p) {
@@ -1188,7 +1188,7 @@ Background context: Three orthogonal unit vectors are used to define directions 
 
 :p What are Cartesian basis vectors?
 ??x
-Cartesian basis vectors i, j, and k represent unit vectors along the x-, y-, and z-axes respectively. They can be expressed as \(i = (1,0,0)\), \(j = (0,1,0)\), and \(k = (0,0,1)\).
+Cartesian basis vectors i, j, and k represent unit vectors along the x-, y-, and z-axes respectively. They can be expressed as $i = (1,0,0)$,$ j = (0,1,0)$, and $ k = (0,0,1)$.
 x??
 
 ---
@@ -1198,7 +1198,7 @@ Background context: Scalars can be multiplied with vectors to scale their magnit
 
 :p How is vector multiplication by a scalar performed?
 ??x
-Multiplying a vector \(\mathbf{a} = (ax, ay, az)\) by a scalar \(s\) results in the vector \(s\mathbf{a} = (sax, say, saz)\). This operation scales the magnitude of the vector while keeping its direction unchanged.
+Multiplying a vector $\mathbf{a} = (ax, ay, az)$ by a scalar $s$ results in the vector $s\mathbf{a} = (sax, say, saz)$. This operation scales the magnitude of the vector while keeping its direction unchanged.
 
 ```java
 public class Vector {
@@ -1218,12 +1218,8 @@ Background context: Vector addition and subtraction involve summing or subtracti
 
 :p How is vector addition defined?
 ??x
-Vector addition \(\mathbf{a} + \mathbf{b}\) results in a new vector whose components are the sums of the corresponding components of \(\mathbf{a}\) and \(\mathbf{b}\):
-\[
-\mathbf{a} + \mathbf{b} = (ax + bx, ay + by, az + bz)
-\]
-
-```java
+Vector addition $\mathbf{a} + \mathbf{b}$ results in a new vector whose components are the sums of the corresponding components of $\mathbf{a}$ and $\mathbf{b}$:
+$$\mathbf{a} + \mathbf{b} = (ax + bx, ay + by, az + bz)$$```java
 public class Vector {
     public float ax, ay, az;
 
@@ -1241,10 +1237,9 @@ Background context: Nonuniform scaling allows different scales along each axis.
 
 :p How is nonuniform vector scaling achieved?
 ??x
-Nonuniform scaling of a vector \(\mathbf{a} = (ax, ay, az)\) by a scaling vector \(s = (sx, sy, sz)\) can be represented as the Hadamard product:
-\[
-s \circ \mathbf{a} = (sx \cdot ax, sy \cdot ay, sz \cdot az)
-\]
+Nonuniform scaling of a vector $\mathbf{a} = (ax, ay, az)$ by a scaling vector $s = (sx, sy, sz)$ can be represented as the Hadamard product:
+$$s \circ \mathbf{a} = (sx \cdot ax, sy \cdot ay, sz \cdot az)$$
+
 This is equivalent to multiplying each component of the vector by its corresponding scale factor.
 
 ```java
@@ -1265,12 +1260,8 @@ Background context: Vector subtraction involves subtracting the components of on
 
 :p How is vector subtraction defined?
 ??x
-Vector subtraction \(\mathbf{a} - \mathbf{b}\) results in a new vector whose components are the differences between the corresponding components of \(\mathbf{a}\) and \(\mathbf{b}\):
-\[
-\mathbf{a} - \mathbf{b} = (ax - bx, ay - by, az - bz)
-\]
-
-```java
+Vector subtraction $\mathbf{a} - \mathbf{b}$ results in a new vector whose components are the differences between the corresponding components of $\mathbf{a}$ and $\mathbf{b}$:
+$$\mathbf{a} - \mathbf{b} = (ax - bx, ay - by, az - bz)$$```java
 public class Vector {
     public float ax, ay, az;
 
@@ -1324,9 +1315,9 @@ The magnitude of a vector is its length in space. It can be calculated using the
 
 :p How do you calculate the magnitude of a vector?
 ??x
-To find the magnitude of a vector \(\mathbf{a} = (a_x, a_y, a_z)\), use the formula:
+To find the magnitude of a vector $\mathbf{a} = (a_x, a_y, a_z)$, use the formula:
 
-\[ |\mathbf{a}| = \sqrt{a_x^2 + a_y^2 + a_z^2} \]
+$$|\mathbf{a}| = \sqrt{a_x^2 + a_y^2 + a_z^2}$$
 
 In code, this can be implemented as follows:
 ```java
@@ -1343,7 +1334,7 @@ Using vector operations, we can update positions based on velocity and time.
 
 :p How do you determine a character's position for the next frame using their current position and velocity?
 ??x
-To find the next position of an AI character, scale the velocity by the frame interval \(\Delta t\) and add it to the current position. This is known as explicit Euler integration.
+To find the next position of an AI character, scale the velocity by the frame interval $\Delta t$ and add it to the current position. This is known as explicit Euler integration.
 
 ```java
 // Example in Java
@@ -1388,10 +1379,8 @@ x??
 #### Normalization and Unit Vectors
 Normalization is a process used to convert an arbitrary vector into a unit vector that points in the same direction. A unit vector has a magnitude of 1, making it very useful for various mathematical operations and computations, particularly in 3D mathematics and game programming.
 
-The formula for converting a vector \( \mathbf{v} \) with length \( |v| = v \cdot v \) to a unit vector \( \mathbf{u} \) is:
-\[ \mathbf{u} = \frac{\mathbf{v}}{|v|} \]
-
-:p What does the process of normalization involve?
+The formula for converting a vector $\mathbf{v}$ with length $|v| = v \cdot v$ to a unit vector $\mathbf{u}$ is:
+$$\mathbf{u} = \frac{\mathbf{v}}{|v|}$$:p What does the process of normalization involve?
 ??x
 The process of normalization involves converting an arbitrary vector into a unit vector that points in the same direction. This is achieved by dividing the vector by its magnitude, ensuring that the resulting vector has a length (magnitude) of 1.
 x??
@@ -1410,17 +1399,15 @@ x??
 The dot product (also known as the scalar or inner product) is an operation that takes two vectors and produces a single scalar value. It is defined by summing the products of corresponding components of the vectors.
 
 Formulas:
-\[ \mathbf{a} \cdot \mathbf{b} = axbx + ayby + azbz \]
-\[ \mathbf{a} \cdot \mathbf{b} = |a||b|\cos\theta \]
+$$\mathbf{a} \cdot \mathbf{b} = axbx + ayby + azbz$$
+$$\mathbf{a} \cdot \mathbf{b} = |a||b|\cos\theta$$
 
 The dot product is commutative and distributive over vector addition:
-\[ \mathbf{a} \cdot \mathbf{b} = \mathbf{b} \cdot \mathbf{a} \]
-\[ \mathbf{a} \cdot (\mathbf{b} + \mathbf{c}) = \mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c} \]
+$$\mathbf{a} \cdot \mathbf{b} = \mathbf{b} \cdot \mathbf{a}$$
+$$\mathbf{a} \cdot (\mathbf{b} + \mathbf{c}) = \mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c}$$
 
 The dot product also combines with scalar multiplication:
-\[ s(\mathbf{a} \cdot \mathbf{b}) = (\mathbf{a} \cdot \mathbf{b})s = s(\mathbf{a} \cdot \mathbf{b}) \]
-
-:p What is the significance of the dot product in game programming?
+$$s(\mathbf{a} \cdot \mathbf{b}) = (\mathbf{a} \cdot \mathbf{b})s = s(\mathbf{a} \cdot \mathbf{b})$$:p What is the significance of the dot product in game programming?
 ??x
 The dot product is significant in game programming because it provides a way to determine the angle between vectors and can be used for various operations, such as determining if two vectors are collinear or perpendicular. It also helps in calculating projections, which are crucial for lighting and shadow calculations.
 x??
@@ -1432,7 +1419,7 @@ Vector projection using the dot product involves finding the length of the proje
 
 :p How can we use the dot product to find the projection of a vector?
 ??x
-To find the projection of vector \( \mathbf{a} \) onto a unit vector \( \mathbf{u} \), you calculate the dot product of \( \mathbf{a} \) and \( \mathbf{u} \). This value represents the length of the projection of \( \mathbf{a} \) in the direction of \( \mathbf{u} \).
+To find the projection of vector $\mathbf{a}$ onto a unit vector $\mathbf{u}$, you calculate the dot product of $\mathbf{a}$ and $\mathbf{u}$. This value represents the length of the projection of $\mathbf{a}$ in the direction of $\mathbf{u}$.
 
 Example:
 ```java
@@ -1455,13 +1442,12 @@ x??
 The magnitude of a vector can be found by taking the square root of the dot product of the vector with itself.
 
 Formula:
-\[ |\mathbf{a}|^2 = \mathbf{a} \cdot \mathbf{a} \]
-\[ |\mathbf{a}| = \sqrt{\mathbf{a} \cdot \mathbf{a}} \]
-
-:p How can we compute the magnitude of a vector using the dot product?
+$$|\mathbf{a}|^2 = \mathbf{a} \cdot \mathbf{a}$$
+$$|\mathbf{a}| = \sqrt{\mathbf{a} \cdot \mathbf{a}}$$:p How can we compute the magnitude of a vector using the dot product?
 ??x
-The magnitude of a vector \( \mathbf{a} \) can be computed by taking the square root of the dot product of the vector with itself. This works because the cosine of zero degrees is 1, leading to:
-\[ |\mathbf{a}| = |\mathbf{a}||\mathbf{a}|\cos(0^\circ) = |\mathbf{a}|^2 \]
+The magnitude of a vector $\mathbf{a}$ can be computed by taking the square root of the dot product of the vector with itself. This works because the cosine of zero degrees is 1, leading to:
+$$|\mathbf{a}| = |\mathbf{a}||\mathbf{a}|\cos(0^\circ) = |\mathbf{a}|^2$$
+
 Taking the square root gives us the magnitude.
 
 Example in Java:
@@ -1481,7 +1467,7 @@ Dot products can be used to test if vectors are collinear or perpendicular. If t
 
 :p How can we use dot products to determine if two vectors are parallel?
 ??x
-To determine if two vectors \( \mathbf{a} \) and \( \mathbf{b} \) are parallel, you calculate their dot product. If the result is equal to one vector's magnitude times the other's (in absolute value), then they are collinear.
+To determine if two vectors $\mathbf{a}$ and $\mathbf{b}$ are parallel, you calculate their dot product. If the result is equal to one vector's magnitude times the other's (in absolute value), then they are collinear.
 
 Example:
 ```java
@@ -1497,16 +1483,13 @@ x??
 
 #### Dot Product Basics
 
-Background context explaining the dot product. The dot product of two vectors \( \mathbf{a} \) and \( \mathbf{b} \) is a scalar value given by:
-
-\[
-\mathbf{a} \cdot \mathbf{b} = j\mathbf{aj}\,j\mathbf{bj}
-\]
+Background context explaining the dot product. The dot product of two vectors $\mathbf{a}$ and $\mathbf{b}$ is a scalar value given by:
+$$\mathbf{a} \cdot \mathbf{b} = j\mathbf{aj}\,j\mathbf{bj}$$
 
 Where:
-- If the angle between them is 0 degrees: \(\mathbf{a} \cdot \mathbf{b} = ab\) (same direction).
-- If the angle between them is 180 degrees: \(\mathbf{a} \cdot \mathbf{b} = -ab\) (opposite directions).
-- If the angle between them is 90 degrees: \(\mathbf{a} \cdot \mathbf{b} = 0\) (perpendicular).
+- If the angle between them is 0 degrees:$\mathbf{a} \cdot \mathbf{b} = ab$(same direction).
+- If the angle between them is 180 degrees:$\mathbf{a} \cdot \mathbf{b} = -ab$(opposite directions).
+- If the angle between them is 90 degrees:$\mathbf{a} \cdot \mathbf{b} = 0$(perpendicular).
 
 :p What does the dot product tell us about the relationship between two vectors?
 ??x
@@ -1533,21 +1516,21 @@ The dot product's sign indicates:
 - Zero: The angle is exactly 90 degrees (perpendicular).
 
 For unit vectors, this simplifies to:
-- \( \mathbf{a} \cdot \mathbf{b} > 0 \) for angles < 90 degrees.
-- \( \mathbf{a} \cdot \mathbf{b} < 0 \) for angles > 90 degrees.
+- $\mathbf{a} \cdot \mathbf{b} > 0$ for angles < 90 degrees.
+- $\mathbf{a} \cdot \mathbf{b} < 0$ for angles > 90 degrees.
 x??
 
 ---
 
 #### Using Dot Product in Game Programming
 
-Background context explaining how the dot product can be used to determine if an enemy is in front of or behind a player. The vector \( v = E - P \), where \( E \) is the enemy's position and \( P \) is the player's position, combined with the player's facing vector \( f \).
+Background context explaining how the dot product can be used to determine if an enemy is in front of or behind a player. The vector $v = E - P $, where $ E $ is the enemy's position and $ P $ is the player's position, combined with the player's facing vector $ f$.
 
 :p How can we use the dot product to check if an enemy is in front of or behind a player?
 ??x
-By calculating the dot product \( d = v \cdot f \), where:
-- \( v = E - P \) (vector from the player to the enemy),
-- \( f \) is the direction the player is facing.
+By calculating the dot product $d = v \cdot f$, where:
+- $v = E - P$ (vector from the player to the enemy),
+- $f$ is the direction the player is facing.
 The result will be positive if the enemy is in front of the player and negative if behind.
 
 ```java
@@ -1564,14 +1547,14 @@ x??
 
 #### Finding the Height Using Dot Product
 
-Background context explaining how to find the height of a point above or below a plane using dot product. This involves defining a normal vector \( \mathbf{n} \) and calculating \( h = v \cdot n \), where \( v \) is the vector from any point on the plane to the point in question.
+Background context explaining how to find the height of a point above or below a plane using dot product. This involves defining a normal vector $\mathbf{n}$ and calculating $ h = v \cdot n $, where $ v$ is the vector from any point on the plane to the point in question.
 
 :p How can we use the dot product to find the height of a point above or below a plane?
 ??x
-To find the height \( h \) of a point \( P \) above a plane:
-1. Define a point \( Q \) that lies anywhere on the plane.
-2. Calculate the vector \( v = P - Q \).
-3. Use the dot product \( h = v \cdot n \), where \( n \) is the unit-length normal to the plane.
+To find the height $h $ of a point$P$ above a plane:
+1. Define a point $Q$ that lies anywhere on the plane.
+2. Calculate the vector $v = P - Q$.
+3. Use the dot product $h = v \cdot n $, where $ n$ is the unit-length normal to the plane.
 
 ```java
 public double calculateHeight(Vector3D p, Vector3D q, Vector3D normal) {
@@ -1587,11 +1570,7 @@ x??
 
 Background context explaining the cross product. The cross product of two vectors in 3D space yields a vector perpendicular to both, given by:
 
-\[
-\mathbf{a} \times \mathbf{b} = [(a_y b_z - a_z b_y), (a_z b_x - a_x b_z), (a_x b_y - a_y b_x)]
-\]
-
-:p What does the cross product of two vectors yield?
+$$\mathbf{a} \times \mathbf{b} = [(a_y b_z - a_z b_y), (a_z b_x - a_x b_z), (a_x b_y - a_y b_x)]$$:p What does the cross product of two vectors yield?
 ??x
 The cross product of two vectors in 3D space yields a vector that is perpendicular to both input vectors. This is useful for finding normal vectors, among other things.
 ```java
@@ -1610,12 +1589,9 @@ x??
 #### Magnitude of the Cross Product
 
 Background context explaining the magnitude of the cross product, which is equal to the area of the parallelogram formed by the vectors. The formula for the magnitude is:
+$$|\mathbf{a} \times \mathbf{b}| = |\mathbf{a}||\mathbf{b}|\sin(\theta)$$
 
-\[
-|\mathbf{a} \times \mathbf{b}| = |\mathbf{a}||\mathbf{b}|\sin(\theta)
-\]
-
-Where \( \theta \) is the angle between \( \mathbf{a} \) and \( \mathbf{b} \).
+Where $\theta $ is the angle between$\mathbf{a}$ and $\mathbf{b}$.
 
 :p What does the magnitude of the cross product represent?
 ??x
@@ -1635,13 +1611,9 @@ Background context explaining how to find the area of a triangle using the cross
 
 :p How can we use the cross product to calculate the area of a triangle?
 ??x
-To find the area of a triangle with vertices specified by position vectors \( V_1 \), \( V_2 \), and \( V_3 \):
+To find the area of a triangle with vertices specified by position vectors $V_1 $, $ V_2 $, and$ V_3$:
 
-\[
-A_{triangle} = \frac{1}{2} |(V_2 - V_1) \times (V_3 - V_1)|
-\]
-
-```java
+$$A_{triangle} = \frac{1}{2} |(V_2 - V_1) \times (V_3 - V_1)|$$```java
 public double areaOfTriangle(Vector3D v1, Vector3D v2, Vector3D v3) {
     Vector3D side1 = new Vector3D(v2).subtract(v1);
     Vector3D side2 = new Vector3D(v3).subtract(v1);
@@ -1651,10 +1623,10 @@ public double areaOfTriangle(Vector3D v1, Vector3D v2, Vector3D v3) {
 x??
 
 #### Right-Hand Rule for Cross Product
-Background context: In a right-handed coordinate system, you can use the right-hand rule to determine the direction of the cross product. Cup your fingers such that they point in the direction you’d rotate vector \( \mathbf{a} \) to move it on top of vector \( \mathbf{b} \), and the cross product ( \( \mathbf{a} \times \mathbf{b} \) ) will be in the direction of your thumb. This rule is reversed for left-handed coordinate systems, where the left-hand rule applies.
+Background context: In a right-handed coordinate system, you can use the right-hand rule to determine the direction of the cross product. Cup your fingers such that they point in the direction you’d rotate vector $\mathbf{a}$ to move it on top of vector $\mathbf{b}$, and the cross product ($\mathbf{a} \times \mathbf{b}$ ) will be in the direction of your thumb. This rule is reversed for left-handed coordinate systems, where the left-hand rule applies.
 :p What is the right-hand rule used for when calculating the cross product?
 ??x
-The right-hand rule is used to determine the direction of the cross product vector \( \mathbf{a} \times \mathbf{b} \) in a right-handed coordinate system. By aligning your right hand so that your fingers point from vector \( \mathbf{a} \) towards vector \( \mathbf{b} \), and curling them to show the direction of rotation, your thumb points in the direction of \( \mathbf{a} \times \mathbf{b} \). 
+The right-hand rule is used to determine the direction of the cross product vector $\mathbf{a} \times \mathbf{b}$ in a right-handed coordinate system. By aligning your right hand so that your fingers point from vector $\mathbf{a}$ towards vector $\mathbf{b}$, and curling them to show the direction of rotation, your thumb points in the direction of $\mathbf{a} \times \mathbf{b}$. 
 ```java
 // Pseudocode for right-hand rule implementation (not executable code)
 if (isRightHanded) {
@@ -1669,7 +1641,7 @@ x??
 Background context: When using a left-handed coordinate system, the cross product is determined by the left-hand rule. This means that the direction of the cross product changes depending on whether you are using a right-handed or left-handed coordinate system. The handedness of the coordinate system does not affect the mathematical calculations but only changes the visualization.
 :p How does the cross product differ between right- and left-handed coordinate systems?
 ??x
-The cross product \( \mathbf{a} \times \mathbf{b} \) in a right-handed coordinate system is calculated using the right-hand rule, while in a left-handed coordinate system, it uses the left-hand rule. The direction of the resulting vector changes based on this difference.
+The cross product $\mathbf{a} \times \mathbf{b}$ in a right-handed coordinate system is calculated using the right-hand rule, while in a left-handed coordinate system, it uses the left-hand rule. The direction of the resulting vector changes based on this difference.
 ```java
 // Pseudocode for determining cross product direction
 if (isRightHanded) {
@@ -1686,7 +1658,7 @@ x??
 Background context: The cross product has several key properties that are important to understand, such as non-commutativity and distributive over addition. These properties help in various applications like finding a vector perpendicular to two other vectors.
 :p What are the main properties of the cross product?
 ??x
-The cross product is not commutative (i.e., \( \mathbf{a} \times \mathbf{b} \neq \mathbf{b} \times \mathbf{a} \)), but it is anti-commutative (\( \mathbf{a} \times \mathbf{b} = -(\mathbf{b} \times \mathbf{a}) \)). It is also distributive over addition: \( \mathbf{a} \times (\mathbf{b} + \mathbf{c}) = (\mathbf{a} \times \mathbf{b}) + (\mathbf{a} \times \mathbf{c}) \). Additionally, it combines with scalar multiplication as follows: \( (s\mathbf{a}) \times \mathbf{b} = \mathbf{a} \times (s\mathbf{b}) = s(\mathbf{a} \times \mathbf{b}) \).
+The cross product is not commutative (i.e., $\mathbf{a} \times \mathbf{b} \neq \mathbf{b} \times \mathbf{a}$), but it is anti-commutative ($\mathbf{a} \times \mathbf{b} = -(\mathbf{b} \times \mathbf{a})$). It is also distributive over addition:$\mathbf{a} \times (\mathbf{b} + \mathbf{c}) = (\mathbf{a} \times \mathbf{b}) + (\mathbf{a} \times \mathbf{c})$. Additionally, it combines with scalar multiplication as follows:$(s\mathbf{a}) \times \mathbf{b} = \mathbf{a} \times (s\mathbf{b}) = s(\mathbf{a} \times \mathbf{b})$.
 ```java
 // Example of scalar multiplication and cross product combination
 public Vector3d scalarCrossProduct(double s, Vector3d a, Vector3d b) {
@@ -1700,13 +1672,11 @@ x??
 ---
 
 #### Cross Product with Cartesian Basis Vectors
-Background context: The cross product of the Cartesian basis vectors is used to determine the direction of positive rotations about the axes. Specifically, \( \mathbf{i} \times \mathbf{j} = -(\mathbf{j} \times \mathbf{i}) = \mathbf{k} \), and similarly for other combinations.
+Background context: The cross product of the Cartesian basis vectors is used to determine the direction of positive rotations about the axes. Specifically, $\mathbf{i} \times \mathbf{j} = -(\mathbf{j} \times \mathbf{i}) = \mathbf{k}$, and similarly for other combinations.
 :p What are the cross products involving the Cartesian basis vectors?
 ??x
 The cross products of the Cartesian basis vectors are:
-- \( \mathbf{i} \times \mathbf{j} = -(\mathbf{j} \times \mathbf{i}) = \mathbf{k} \)
-- \( \mathbf{j} \times \mathbf{k} = -(\mathbf{k} \times \mathbf{j}) = \mathbf{i} \)
-- \( \mathbf{k} \times \mathbf{i} = -(\mathbf{i} \times \mathbf{k}) = \mathbf{j} \)
+- $\mathbf{i} \times \mathbf{j} = -(\mathbf{j} \times \mathbf{i}) = \mathbf{k}$-$\mathbf{j} \times \mathbf{k} = -(\mathbf{k} \times \mathbf{j}) = \mathbf{i}$-$\mathbf{k} \times \mathbf{i} = -(\mathbf{i} \times \mathbf{k}) = \mathbf{j}$
 
 These cross products define the direction of positive rotations about the Cartesian axes: from x to y (about z), from y to z (about x), and from z to x (about y).
 ```java
@@ -1720,16 +1690,14 @@ x??
 ---
 
 #### Finding Local Basis Vectors Using Cross Product
-Background context: To find a matrix representing an object's orientation in a game, you can use the cross product to determine the local basis vectors. Given \( \mathbf{k}_{\text{local}} \) and assuming no roll about \( \mathbf{k}_{\text{local}} \), you can find \( \mathbf{i}_{\text{local}} \) by taking the cross product between \( \mathbf{k}_{\text{local}} \) and the world-space up vector \( \mathbf{j}_{\text{world}} \). Then, you can find \( \mathbf{j}_{\text{local}} \) by crossing \( \mathbf{i}_{\text{local}} \) and \( \mathbf{k}_{\text{local}} \).
+Background context: To find a matrix representing an object's orientation in a game, you can use the cross product to determine the local basis vectors. Given $\mathbf{k}_{\text{local}}$ and assuming no roll about $\mathbf{k}_{\text{local}}$, you can find $\mathbf{i}_{\text{local}}$ by taking the cross product between $\mathbf{k}_{\text{local}}$ and the world-space up vector $\mathbf{j}_{\text{world}}$. Then, you can find $\mathbf{j}_{\text{local}}$ by crossing $\mathbf{i}_{\text{local}}$ and $\mathbf{k}_{\text{local}}$.
 :p How do you use the cross product to find local basis vectors?
 ??x
 To find the local basis vectors, you can follow these steps:
-1. Given the object's k-local vector (direction in which the object is facing), and assuming no roll about \( \mathbf{k}_{\text{local}} \):
-2. Find \( \mathbf{i}_{\text{local}} \) by taking the cross product between \( \mathbf{k}_{\text{local}} \) and the world-space up vector \( \mathbf{j}_{\text{world}} \): 
-\[ \mathbf{i}_{\text{local}} = \text{normalize}(\mathbf{j}_{\text{world}} \times \mathbf{k}_{\text{local}}) \]
-3. Find \( \mathbf{j}_{\text{local}} \) by crossing \( \mathbf{i}_{\text{local}} \) and \( \mathbf{k}_{\text{local}} \):
-\[ \mathbf{j}_{\text{local}} = \mathbf{k}_{\text{local}} \times \mathbf{i}_{\text{local}} \]
-```java
+1. Given the object's k-local vector (direction in which the object is facing), and assuming no roll about $\mathbf{k}_{\text{local}}$:
+2. Find $\mathbf{i}_{\text{local}}$ by taking the cross product between $\mathbf{k}_{\text{local}}$ and the world-space up vector $\mathbf{j}_{\text{world}}$: 
+$$\mathbf{i}_{\text{local}} = \text{normalize}(\mathbf{j}_{\text{world}} \times \mathbf{k}_{\text{local}})$$3. Find $\mathbf{j}_{\text{local}}$ by crossing $\mathbf{i}_{\text{local}}$ and $\mathbf{k}_{\text{local}}$:
+$$\mathbf{j}_{\text{local}} = \mathbf{k}_{\text{local}} \times \mathbf{i}_{\text{local}}$$```java
 // Example of finding local basis vectors in Java
 public void findLocalBasisVectors(Vector3d kLocal, Vector3d jWorld) {
     Vector3d iLocal = normalize(jWorld.crossProduct(kLocal));
@@ -1739,14 +1707,16 @@ public void findLocalBasisVectors(Vector3d kLocal, Vector3d jWorld) {
 x??
 
 #### Finding a Unit Normal Vector to a Triangle
-Background context: To find a unit normal vector to the surface of a triangle or any plane, given three points \(P_1\), \(P_2\), and \(P_3\) on the plane, we use the cross product of vectors derived from these points. The formula for the normal vector is as follows:
-\[ n = \text{normalize}((P_2 - P_1) \times (P_3 - P_1)) \]
+Background context: To find a unit normal vector to the surface of a triangle or any plane, given three points $P_1 $, $ P_2 $, and$ P_3$on the plane, we use the cross product of vectors derived from these points. The formula for the normal vector is as follows:
+$$n = \text{normalize}((P_2 - P_1) \times (P_3 - P_1))$$
+
 The cross product results in a vector perpendicular to both input vectors, and normalizing it gives us a unit vector.
 
 :p How do you find the unit normal vector of a triangle using three given points?
 ??x
-To find the unit normal vector of a triangle with vertices \(P_1\), \(P_2\), and \(P_3\), first calculate the vectors \(\vec{v_1} = P_2 - P_1\) and \(\vec{v_2} = P_3 - P_1\). Then, compute their cross product to get a vector perpendicular to both:
-\[ n = \vec{v_1} \times \vec{v_2} \]
+To find the unit normal vector of a triangle with vertices $P_1 $, $ P_2 $, and$ P_3 $, first calculate the vectors$\vec{v_1} = P_2 - P_1 $ and$\vec{v_2} = P_3 - P_1$. Then, compute their cross product to get a vector perpendicular to both:
+$$n = \vec{v_1} \times \vec{v_2}$$
+
 Finally, normalize this result to get the unit normal vector. This process leverages the properties of the cross product and normalization.
 ```java
 Vector3D P1 = new Vector3D(x1, y1, z1);
@@ -1764,14 +1734,16 @@ x??
 ---
 
 #### Calculating Torque for Rotational Motion
-Background context: In physics simulations, a torque is a rotational force that occurs when a force \(F\) is applied off-center to an object. The torque \(\vec{N}\) is calculated using the cross product of the position vector \(\vec{r}\), from the center of mass to the point where the force is applied, and the force vector \(\vec{F}\):
-\[ \vec{N} = \vec{r} \times \vec{F} \]
+Background context: In physics simulations, a torque is a rotational force that occurs when a force $F $ is applied off-center to an object. The torque$\vec{N}$ is calculated using the cross product of the position vector $\vec{r}$, from the center of mass to the point where the force is applied, and the force vector $\vec{F}$:
+$$\vec{N} = \vec{r} \times \vec{F}$$
+
 This equation gives a pseudovector that represents both the magnitude and direction of the rotational effect.
 
 :p How do you calculate torque when applying a force off-center to an object?
 ??x
-To calculate torque \(\vec{N}\) when a force \(\vec{F}\) is applied at a point specified by position vector \(\vec{r}\), use the cross product:
-\[ \vec{N} = \vec{r} \times \vec{F} \]
+To calculate torque $\vec{N}$ when a force $\vec{F}$ is applied at a point specified by position vector $\vec{r}$, use the cross product:
+$$\vec{N} = \vec{r} \times \vec{F}$$
+
 This results in a pseudovector that indicates both the magnitude and direction of the rotational force.
 
 Here’s an example using C/Java code to compute torque:
@@ -1817,21 +1789,23 @@ x??
 ---
 
 #### Wedge Product and Exterior Algebra in 3D
-Background context: In exterior algebra (Grassman algebra), the wedge product \(\wedge\) is used to represent areas, volumes, etc., in higher dimensions. A single wedge product yields a pseudovector or bivector, while two wedge products yield a pseudoscalar or trivector.
+Background context: In exterior algebra (Grassman algebra), the wedge product $\wedge$ is used to represent areas, volumes, etc., in higher dimensions. A single wedge product yields a pseudovector or bivector, while two wedge products yield a pseudoscalar or trivector.
 
-The cross product \(A \times B\) can be seen as a special case of the wedge product:
-\[ (A \wedge B) = A \times B \]
-This represents the signed area of the parallelogram formed by vectors \(A\) and \(B\).
+The cross product $A \times B$ can be seen as a special case of the wedge product:
+$$(A \wedge B) = A \times B$$
+
+This represents the signed area of the parallelogram formed by vectors $A $ and$B$.
 
 For three dimensions, two wedge products in sequence yield a pseudoscalar or trivector. This helps calculate volumes.
 
 :p What is the wedge product and how does it relate to the cross product?
 ??x
-The wedge product \(\wedge\) is an operation used in exterior algebra that generalizes the concept of vectors and their interactions beyond simple addition and subtraction. It's particularly useful for calculating areas, volumes, etc., in higher dimensions.
+The wedge product $\wedge$ is an operation used in exterior algebra that generalizes the concept of vectors and their interactions beyond simple addition and subtraction. It's particularly useful for calculating areas, volumes, etc., in higher dimensions.
 
-For two 3D vectors \(A\) and \(B\), the cross product can be viewed as a special case:
-\[ A \times B = (A \wedge B) \]
-This wedge product represents the signed area of the parallelogram formed by the vectors. When applied to three vectors in sequence, like \(A \wedge B \wedge C\), it yields a pseudoscalar or trivector that can be used to calculate volumes.
+For two 3D vectors $A $ and$B$, the cross product can be viewed as a special case:
+$$A \times B = (A \wedge B)$$
+
+This wedge product represents the signed area of the parallelogram formed by the vectors. When applied to three vectors in sequence, like $A \wedge B \wedge C$, it yields a pseudoscalar or trivector that can be used to calculate volumes.
 
 ```java
 Vector3D A = new Vector3D(ax, ay, az);

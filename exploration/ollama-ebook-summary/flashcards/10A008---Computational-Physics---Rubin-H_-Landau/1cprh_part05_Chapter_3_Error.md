@@ -29,10 +29,12 @@ Background context: These errors occur when simplifying mathematical models to m
 
 :p What is an example of an approximation error?
 ??x
-An example is the Taylor series expansion of \(\sin(x)\), where:
-\[ \sin(x) = \sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{(2n-1)!} x^{2n-1} \]
-This infinite series can be approximated by a finite sum, say \(N\):
-\[ \sin(x) \approx \sum_{n=1}^{N} \frac{(-1)^{n-1}}{(2n-1)!} x^{2n-1} + O(x^{N+1}) \]
+An example is the Taylor series expansion of $\sin(x)$, where:
+$$\sin(x) = \sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{(2n-1)!} x^{2n-1}$$
+
+This infinite series can be approximated by a finite sum, say $N$:
+$$\sin(x) \approx \sum_{n=1}^{N} \frac{(-1)^{n-1}}{(2n-1)!} x^{2n-1} + O(x^{N+1})$$
+
 The approximation error is the difference between the actual series and the finite sum.
 x??
 
@@ -43,18 +45,18 @@ Background context: These errors arise from using a finite number of digits to s
 
 :p What is an example illustrating round-off errors?
 ??x
-An example is storing \(\frac{1}{3}\) and \(\frac{2}{3}\) with four decimal places:
-\[ 1/3 = 0.3333 \]
-\[ 2/3 = 0.6667 \]
-When performing a simple calculation like \(2(1/3) - 2/3\):
+An example is storing $\frac{1}{3}$ and $\frac{2}{3}$ with four decimal places:
+$$1/3 = 0.3333$$
+$$2/3 = 0.6667$$
+
+When performing a simple calculation like $2(1/3) - 2/3$:
 ```python
 # Python code example
 result = 2 * (1/3) - 2/3
 print(result)
 ```
 The result is:
-\[ 2(1/3) - 2/3 = 0.6666 - 0.6667 = -0.0001 \neq 0 \]
-x??
+$$2(1/3) - 2/3 = 0.6666 - 0.6667 = -0.0001 \neq 0$$x??
 
 ---
 
@@ -63,14 +65,13 @@ x??
 Subtractive cancelation occurs when two nearly equal numbers are subtracted, leading to significant loss of precision. This is a common issue in numerical computations where exact values are approximated by finite-precision arithmetic.
 
 The error in the result can be modeled as:
-\[ a_c \approx a(1 + \epsilon_a) \]
-where \( \epsilon_a \) is the relative error due to machine precision, which we assume to be of the order of machine epsilon (\(\epsilon_m\)).
+$$a_c \approx a(1 + \epsilon_a)$$where $\epsilon_a $ is the relative error due to machine precision, which we assume to be of the order of machine epsilon ($\epsilon_m$).
 
 If we apply this to subtraction:
-\[ a = b - c \Rightarrow a_c \approx b(1 + \epsilon_b) - c(1 + \epsilon_c) \]
-\[ a_c \approx b + \frac{b}{a}(\epsilon_b - \epsilon_c) \]
+$$a = b - c \Rightarrow a_c \approx b(1 + \epsilon_b) - c(1 + \epsilon_c)$$
+$$a_c \approx b + \frac{b}{a}(\epsilon_b - \epsilon_c)$$
 
-This expression shows that the error in \(a\) is a weighted average of the errors in \(b\) and \(c\), with potential magnification due to large values.
+This expression shows that the error in $a $ is a weighted average of the errors in$b $ and $ c$, with potential magnification due to large values.
 
 :p What happens when we subtract two nearly equal numbers in a calculation?
 ??x
@@ -90,14 +91,14 @@ x??
 
 #### Quadratic Equation Solutions and Subtractive Cancelation
 
-The quadratic equation \(ax^2 + bx + c = 0\) has solutions:
-\[ x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
+The quadratic equation $ax^2 + bx + c = 0$ has solutions:
+$$x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
-However, when \(b^2 \gg 4ac\), the square root term and its preceding term nearly cancel out, leading to significant loss of precision.
+However, when $b^2 \gg 4ac$, the square root term and its preceding term nearly cancel out, leading to significant loss of precision.
 
 :p How does subtractive cancelation affect the solution of a quadratic equation?
 ??x
-Subtractive cancelation affects the solution by causing large errors when the discriminant (\(b^2 - 4ac\)) is much larger than \(4ac\). This results in the subtraction of nearly equal numbers, leading to significant loss of precision.
+Subtractive cancelation affects the solution by causing large errors when the discriminant ($b^2 - 4ac $) is much larger than $4ac$. This results in the subtraction of nearly equal numbers, leading to significant loss of precision.
 
 To illustrate:
 ```java
@@ -108,7 +109,7 @@ public class QuadraticSolutions {
     }
 }
 ```
-The code above calculates the roots of the quadratic equation. If \(b^2 \gg 4ac\), the root calculation can be problematic due to subtractive cancelation.
+The code above calculates the roots of the quadratic equation. If $b^2 \gg 4ac$, the root calculation can be problematic due to subtractive cancelation.
 
 x??
 
@@ -117,7 +118,7 @@ x??
 #### Alternating Series Summation and Subtractive Cancelation
 
 When summing alternating series, especially those with large terms that nearly cancel out, significant errors can occur if not handled carefully. For example:
-\[ S(1) = \sum_{n=1}^{2N} (-1)^{n-1} \frac{n}{n+1} \]
+$$S(1) = \sum_{n=1}^{2N} (-1)^{n-1} \frac{n}{n+1}$$
 
 Summing even and odd values separately might lead to unnecessary subtractive cancelation.
 
@@ -146,18 +147,24 @@ x??
 #### Numerical Summation of Series
 
 When summing a series numerically, different methods can yield varying results due to the order in which terms are added or subtracted. For example:
-\[ S(1) = \sum_{n=1}^{2N} (-1)^{n-1} \frac{n}{n+1} \]
-\[ S(2) = -\sum_{n=1}^{N} \frac{2n-1}{2n} + \sum_{n=1}^{N} \frac{2n}{2n+1} \]
-\[ S(3) = \sum_{n=1}^{N} \frac{1}{2n(2n+1)} \]
+$$
+
+S(1) = \sum_{n=1}^{2N} (-1)^{n-1} \frac{n}{n+1}$$
+$$
+
+S(2) = -\sum_{n=1}^{N} \frac{2n-1}{2n} + \sum_{n=1}^{N} \frac{2n}{2n+1}$$
+$$
+
+S(3) = \sum_{n=1}^{N} \frac{1}{2n(2n+1)}$$
 
 These methods can yield different numerical results, especially when dealing with alternating signs and large terms.
 
 :p How do different summation techniques affect the accuracy of a series?
 ??x
 Different summation techniques can significantly affect the accuracy of a series due to issues like subtractive cancelation. For example:
-- Summing all terms directly (\(S(1)\)) may lead to significant errors when large alternating terms nearly cancel out.
-- Separating even and odd terms separately (\(S(2)\)) might still involve unnecessary subtraction, leading to potential errors.
-- Combining the series analytically (\(S(3)\)) can eliminate these issues.
+- Summing all terms directly ($S(1)$) may lead to significant errors when large alternating terms nearly cancel out.
+- Separating even and odd terms separately ($S(2)$) might still involve unnecessary subtraction, leading to potential errors.
+- Combining the series analytically ($S(3)$) can eliminate these issues.
 
 For instance:
 ```java
@@ -188,7 +195,7 @@ public class SeriesSummation {
     }
 }
 ```
-These methods illustrate how different approaches can yield varying results, with \(S(3)\) being the most accurate due to avoiding unnecessary subtractive cancelation.
+These methods illustrate how different approaches can yield varying results, with $S(3)$ being the most accurate due to avoiding unnecessary subtractive cancelation.
 
 x??
 
@@ -197,7 +204,7 @@ x??
 #### Summation of Simple Series and Subtractive Cancelation
 
 Summing simple series like:
-\[ S_{up} = \sum_{n=1}^{N} \frac{1}{n}, \quad S_{down} = \sum_{n=N}^{1} \frac{1}{n} \]
+$$S_{up} = \sum_{n=1}^{N} \frac{1}{n}, \quad S_{down} = \sum_{n=N}^{1} \frac{1}{n}$$
 
 Can lead to different numerical results due to the order of terms and subtractive cancelation.
 
@@ -225,7 +232,7 @@ public class SimpleSeriesSummation {
     }
 }
 ```
-These methods show that the order can affect accuracy, with \(S_{down}\) generally being more precise due to avoiding unnecessary subtractive cancelation.
+These methods show that the order can affect accuracy, with $S_{down}$ generally being more precise due to avoiding unnecessary subtractive cancelation.
 
 x??
 
@@ -236,7 +243,7 @@ Background context: When performing division on two numbers, represented in a co
 
 :p How does error arise from a single division of two computer-represented numbers?
 ??x
-The error arises because the computer cannot represent all real numbers precisely. In equation (3.14), \( \frac{a}{b} = 1 + \epsilon_b - \epsilon_c \) where \( \epsilon_b \) and \( \epsilon_c \) are small errors due to finite precision. Ignoring higher-order terms, the total relative error in the division is approximately \( | \epsilon_b| + | \epsilon_c| \). This same rule applies to multiplication.
+The error arises because the computer cannot represent all real numbers precisely. In equation (3.14),$\frac{a}{b} = 1 + \epsilon_b - \epsilon_c $ where$\epsilon_b $ and$\epsilon_c $ are small errors due to finite precision. Ignoring higher-order terms, the total relative error in the division is approximately$| \epsilon_b| + | \epsilon_c|$. This same rule applies to multiplication.
 
 No code examples needed for this concept.
 x??
@@ -246,16 +253,18 @@ x??
 #### Error Propagation from Functions
 Background context: The basic rule of error propagation involves adding uncertainties when evaluating a function. For small errors, the relative change in the function's value can be approximated using its derivative.
 
-:p How is the uncertainty in the evaluation of a general function \( f(x) \) estimated?
+:p How is the uncertainty in the evaluation of a general function $f(x)$ estimated?
 ??x
-The uncertainty in \( f(x) \) evaluated at \( x_c \) can be estimated by first-order Taylor expansion:
-\[ \Delta f = f(x) - f(x_c) \approx \frac{df}{dx} f(x_c) (x - x_c). \]
-For the function \( f(x) = \sqrt{1 + x} \), its derivative is:
-\[ \frac{df}{dx} = \frac{1}{2\sqrt{1+x}}. \]
-Thus, the relative error becomes:
-\[ \Delta f \approx \frac{1}{2\sqrt{1+x}} (x - x_c). \]
+The uncertainty in $f(x)$ evaluated at $x_c$ can be estimated by first-order Taylor expansion:
+$$\Delta f = f(x) - f(x_c) \approx \frac{df}{dx} f(x_c) (x - x_c).$$
 
-For \( x = \pi/4 \) and an assumed fourth-place error in \( x \), we get a similar relative error of about \( 1.5 \times 10^{-4} \).
+For the function $f(x) = \sqrt{1 + x}$, its derivative is:
+$$\frac{df}{dx} = \frac{1}{2\sqrt{1+x}}.$$
+
+Thus, the relative error becomes:
+$$\Delta f \approx \frac{1}{2\sqrt{1+x}} (x - x_c).$$
+
+For $x = \pi/4 $ and an assumed fourth-place error in$x $, we get a similar relative error of about$1.5 \times 10^{-4}$.
 
 No code examples needed for this concept.
 x??
@@ -263,16 +272,16 @@ x??
 ---
 
 #### Accumulation of Round-Off Errors
-Background context: When performing calculations with many steps, round-off errors can accumulate and be modeled as a random walk. The total distance \( R \) covered in \( N \) steps is approximately:
-\[ R \approx \sqrt{N r^2}. \]
-Similarly, the total relative error after \( N \) calculation steps each with machine precision error \( \epsilon_m \), on average, accumulates as:
-\[ \epsilon_{ro} \approx \sqrt{N \epsilon_m}. \]
+Background context: When performing calculations with many steps, round-off errors can accumulate and be modeled as a random walk. The total distance $R $ covered in$N$ steps is approximately:
+$$R \approx \sqrt{N r^2}.$$
 
-:p How does round-off error accumulate in a long sequence of calculations?
+Similarly, the total relative error after $N $ calculation steps each with machine precision error$\epsilon_m$, on average, accumulates as:
+$$\epsilon_{ro} \approx \sqrt{N \epsilon_m}.$$:p How does round-off error accumulate in a long sequence of calculations?
 ??x
-Round-off errors can be modeled as a random walk. The total relative error after \( N \) steps each with machine precision error \( \epsilon_m \), on average, is:
-\[ \epsilon_{ro} \approx \sqrt{N \epsilon_m}. \]
-This means the round-off error grows slowly and randomly with \( N \). If errors in each step are uncorrelated, this model accurately predicts their accumulation.
+Round-off errors can be modeled as a random walk. The total relative error after $N $ steps each with machine precision error$\epsilon_m$, on average, is:
+$$\epsilon_{ro} \approx \sqrt{N \epsilon_m}.$$
+
+This means the round-off error grows slowly and randomly with $N$. If errors in each step are uncorrelated, this model accurately predicts their accumulation.
 
 No code examples needed for this concept.
 x??
@@ -284,12 +293,13 @@ Background context: The performance of algorithms is crucial in computational ph
 
 :p How do you determine the best number of steps in an algorithm?
 ??x
-To determine the best number of steps, compare the approximation error \( \epsilon_{app} \approx \alpha N^{-\beta} \) with the round-off error \( \epsilon_{ro} \approx \sqrt{N \epsilon_m} \). The total error is:
-\[ \epsilon_{tot} = \epsilon_{app} + \epsilon_{ro}. \]
-The optimal number of steps occurs when these two errors are equal, i.e., \( N^{5/2} \propto 4 \epsilon_m \).
+To determine the best number of steps, compare the approximation error $\epsilon_{app} \approx \alpha N^{-\beta}$ with the round-off error $\epsilon_{ro} \approx \sqrt{N \epsilon_m}$. The total error is:
+$$\epsilon_{tot} = \epsilon_{app} + \epsilon_{ro}.$$
 
-For double precision (where \( \epsilon_m \approx 10^{-15} \)), the minimum total error occurs at:
-\[ N \approx 10^99. \]
+The optimal number of steps occurs when these two errors are equal, i.e.,$N^{5/2} \propto 4 \epsilon_m$.
+
+For double precision (where $\epsilon_m \approx 10^{-15}$), the minimum total error occurs at:
+$$N \approx 10^99.$$
 
 No code examples needed for this concept.
 x??
@@ -301,9 +311,9 @@ Background context: In numerical integration, such as Simpson's rule, understand
 
 :p How do you analyze the relative error in numerical integration using a log-log plot?
 ??x
-To analyze the relative error in numerical integration, use a log-log plot. For example, with Simpson's rule, the relative error \( \epsilon_{app} \) should show rapid decrease for small \( N \). Beyond this region, round-off errors start to dominate.
+To analyze the relative error in numerical integration, use a log-log plot. For example, with Simpson's rule, the relative error $\epsilon_{app}$ should show rapid decrease for small $N$. Beyond this region, round-off errors start to dominate.
 
-Plotting \( \log_{10}\left|\frac{A(N) - A(2N)}{A(2N)}\right| \) versus \( \log_{10}(N) \) helps identify the convergence region and the level of precision.
+Plotting $\log_{10}\left|\frac{A(N) - A(2N)}{A(2N)}\right|$ versus $\log_{10}(N)$ helps identify the convergence region and the level of precision.
 
 No code examples needed for this concept.
 x??
@@ -311,24 +321,26 @@ x??
 ---
 
 #### Example of Different Errors
-Background context: Analyzing both approximation and round-off errors can help in optimizing algorithms. For instance, if the approximation error is \( \epsilon_{app} = \frac{1}{N^2} \) and the round-off error is \( \epsilon_{ro} = \sqrt{N \epsilon_m} \), their sum determines the overall error.
+Background context: Analyzing both approximation and round-off errors can help in optimizing algorithms. For instance, if the approximation error is $\epsilon_{app} = \frac{1}{N^2}$ and the round-off error is $\epsilon_{ro} = \sqrt{N \epsilon_m}$, their sum determines the overall error.
 
 :p How do you find the optimal number of steps for an algorithm given both approximation and round-off errors?
 ??x
 Given:
-\[ \epsilon_{app} \approx \frac{1}{N^2}, \quad \epsilon_{ro} \approx \sqrt{N \epsilon_m}. \]
+$$\epsilon_{app} \approx \frac{1}{N^2}, \quad \epsilon_{ro} \approx \sqrt{N \epsilon_m}.$$
+
 The total error is:
-\[ \epsilon_{tot} = \frac{1}{N^2} + \sqrt{N \epsilon_m}. \]
+$$\epsilon_{tot} = \frac{1}{N^2} + \sqrt{N \epsilon_m}.$$
 
-To minimize this, take the derivative with respect to \( N \):
-\[ \frac{d\epsilon_{tot}}{dN} = -\frac{2}{N^3} + \frac{\epsilon_m^{1/2}}{2\sqrt{N}} = 0. \]
-Solving for \( N \) gives:
-\[ N^{5/2} = 4 \epsilon_m, \quad N = (4 \epsilon_m)^{2/5}. \]
+To minimize this, take the derivative with respect to $N$:
+$$\frac{d\epsilon_{tot}}{dN} = -\frac{2}{N^3} + \frac{\epsilon_m^{1/2}}{2\sqrt{N}} = 0.$$
 
-For double precision (\( \epsilon_m \approx 10^{-15} \)):
-\[ N = (4 \times 10^{-15})^{2/5} \approx 10^99. \]
+Solving for $N$ gives:
+$$N^{5/2} = 4 \epsilon_m, \quad N = (4 \epsilon_m)^{2/5}.$$
 
-The minimum total error is approximately \( 4 \times 10^{-6} \).
+For double precision ($\epsilon_m \approx 10^{-15}$):
+$$N = (4 \times 10^{-15})^{2/5} \approx 10^99.$$
+
+The minimum total error is approximately $4 \times 10^{-6}$.
 
 No code examples needed for this concept.
 x??

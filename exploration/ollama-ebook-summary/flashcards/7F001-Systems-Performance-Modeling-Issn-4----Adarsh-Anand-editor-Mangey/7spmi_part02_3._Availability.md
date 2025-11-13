@@ -485,17 +485,15 @@ x??
 ---
 
 #### OBU (On-Board Unit) Availability Model
-Background context: The On-Board Unit (OBU) is a critical component of vehicular cloud computing, containing various sub-components such as CU (Control Unit), GPS, GPRS, I/O Interface, and Various Sensors. The overall availability \( A_{OBU} \) of the OBU can be calculated using the formula provided below.
+Background context: The On-Board Unit (OBU) is a critical component of vehicular cloud computing, containing various sub-components such as CU (Control Unit), GPS, GPRS, I/O Interface, and Various Sensors. The overall availability $A_{OBU}$ of the OBU can be calculated using the formula provided below.
 
 The equation for the availability of the OBU is given by:
-\[ A_{OBU} = A_{CU} \times A_{GPS} \times A_{GPRS} \times A_{I/O} \times A_{Sensors}. \]
+$$A_{OBU} = A_{CU} \times A_{GPS} \times A_{GPRS} \times A_{I/O} \times A_{Sensors}.$$
 
-Each term \( A_i \) represents the availability of the \( i^{th} \) component, where \( i \in \{ CU, GPS, GPRS, I/O, Sensors \} \).
+Each term $A_i $ represents the availability of the$i^{th}$ component, where $i \in \{ CU, GPS, GPRS, I/O, Sensors \}$.
 
 The availability of each component can be calculated using:
-\[ \text{Availability} = \frac{\text{MTBF}}{\text{MTBF} + \text{MTTR}}, \]
-
-where MTBF is the Mean Time Between Failures and MTTR is the Mean Time To Repair.
+$$\text{Availability} = \frac{\text{MTBF}}{\text{MTBF} + \text{MTTR}},$$where MTBF is the Mean Time Between Failures and MTTR is the Mean Time To Repair.
 
 :p What does the equation for OBU availability represent?
 ??x
@@ -519,10 +517,8 @@ x??
 #### V2V Communication Availability Model
 Background context: Vehicle-to-Vehicle (V2V) communication involves vehicles communicating directly with each other. The availability of the V2V network is determined by the number of functioning OBUs within a specified transmission range.
 
-The formula for V2V availability \( A_{V2V} \) is:
-\[ A_{V2V} = \sum_{k=2}^{N} {N \choose k} (A_{OBU})^k \left(1 - A_{OBU}\right)^{N-k}, \]
-
-where \( N \) is the total number of OBUs in the network, and \( A_{OBU} \) can be obtained from the OBU availability equation provided earlier.
+The formula for V2V availability $A_{V2V}$ is:
+$$A_{V2V} = \sum_{k=2}^{N} {N \choose k} (A_{OBU})^k \left(1 - A_{OBU}\right)^{N-k},$$where $ N $ is the total number of OBUs in the network, and $ A_{OBU}$ can be obtained from the OBU availability equation provided earlier.
 
 :p How is V2V communication availability calculated?
 ??x
@@ -558,10 +554,10 @@ x??
 #### V2I Communication Availability Model
 Background context: Vehicle-to-Infrastructure (V2I) communication involves vehicles communicating with roadside infrastructure. The availability of the V2I network depends on the presence of at least one functioning OBU and a functional wireless network (such as 5G).
 
-The formula for V2I availability \( A_{V2I} \) is:
-\[ A_{V2I} = A_{V2V} \times A_{5G}. \]
+The formula for V2I availability $A_{V2I}$ is:
+$$A_{V2I} = A_{V2V} \times A_{5G}.$$
 
-Where \( A_{V2V} \) can be calculated using the previous equation, and \( A_{5G} \) represents the 5G network availability.
+Where $A_{V2V}$ can be calculated using the previous equation, and $A_{5G}$ represents the 5G network availability.
 
 :p What is the formula for V2I communication availability?
 ??x
@@ -575,15 +571,13 @@ double calculateV2IAvailability(double A_V2V, double A_5G) {
 x??
 
 #### 5G Network Availability Model
-Background context explaining the availability model for a 5G network. The given equation to calculate \(A_{5G}\) is:
-\[ A_{5G} = \frac{\mu_{5G}}{\mu_{5G} + \lambda_{5G}} \]
-where \(\mu_{5G}\) and \(\lambda_{5G}\) are the repair rate and failure rate of the 5G network, respectively.
+Background context explaining the availability model for a 5G network. The given equation to calculate $A_{5G}$ is:
+$$A_{5G} = \frac{\mu_{5G}}{\mu_{5G} + \lambda_{5G}}$$where $\mu_{5G}$ and $\lambda_{5G}$ are the repair rate and failure rate of the 5G network, respectively.
 
 :p What is the availability equation for a 5G network?
 ??x
-The availability \(A_{5G}\) of a 5G network can be calculated using the formula:
-\[ A_{5G} = \frac{\mu_{5G}}{\mu_{5G} + \lambda_{5G}} \]
-where \(\mu_{5G}\) is the repair rate and \(\lambda_{5G}\) is the failure rate of the 5G network.
+The availability $A_{5G}$ of a 5G network can be calculated using the formula:
+$$A_{5G} = \frac{\mu_{5G}}{\mu_{5G} + \lambda_{5G}}$$where $\mu_{5G}$ is the repair rate and $\lambda_{5G}$ is the failure rate of the 5G network.
 
 x??
 
@@ -591,13 +585,10 @@ x??
 
 #### Cloud Storage Availability Model
 Background context explaining the availability model for cloud storage. The closed-form equation provided in the text is:
-\[ A_{\text{Storage}} = A_{API} \times A_{\text{storage pool}} \times \left(1 - \prod_{i=1}^{n}\left(1 - A_{VC_{server_i}}\right) \times \left(1 - A_{PS_{server_i}}\right)\right) \]
-
-:p What is the availability model for cloud storage?
+$$A_{\text{Storage}} = A_{API} \times A_{\text{storage pool}} \times \left(1 - \prod_{i=1}^{n}\left(1 - A_{VC_{server_i}}\right) \times \left(1 - A_{PS_{server_i}}\right)\right)$$:p What is the availability model for cloud storage?
 ??x
-The availability \(A_{\text{Storage}}\) of cloud storage can be calculated using the formula:
-\[ A_{\text{Storage}} = A_{API} \times A_{\text{storage pool}} \times \left(1 - \prod_{i=1}^{n}\left(1 - A_{VC_{server_i}}\right) \times \left(1 - A_{PS_{server_i}}\right)\right) \]
-where \(A_{API}\), \(A_{\text{storage pool}}\), \(A_{VC_{server_i}}\), and \(A_{PS_{server_i}}\) represent the availability of API, logical storage pool, virtual compute server, and physical storage server respectively.
+The availability $A_{\text{Storage}}$ of cloud storage can be calculated using the formula:
+$$A_{\text{Storage}} = A_{API} \times A_{\text{storage pool}} \times \left(1 - \prod_{i=1}^{n}\left(1 - A_{VC_{server_i}}\right) \times \left(1 - A_{PS_{server_i}}\right)\right)$$where $ A_{API}$,$ A_{\text{storage pool}}$,$ A_{VC_{server_i}}$, and $ A_{PS_{server_i}}$ represent the availability of API, logical storage pool, virtual compute server, and physical storage server respectively.
 
 x??
 
@@ -623,13 +614,10 @@ x??
 
 #### Availability Analysis for VCC Network
 Background context explaining the availability model for various components of a vehicular cloud computing network. The equation provided is:
-\[ A_{\text{Storage}} = A_{API} \times A_{\text{storage pool}} \times \left(1 - \prod_{i=1}^{n}\left(1 - A_{VC_{server_i}}\right) \times \left(1 - A_{PS_{server_i}}\right)\right) \]
-
-:p How is the availability of cloud storage evaluated?
+$$A_{\text{Storage}} = A_{API} \times A_{\text{storage pool}} \times \left(1 - \prod_{i=1}^{n}\left(1 - A_{VC_{server_i}}\right) \times \left(1 - A_{PS_{server_i}}\right)\right)$$:p How is the availability of cloud storage evaluated?
 ??x
-The availability \(A_{\text{Storage}}\) of cloud storage is calculated by multiplying the availability factors for each component:
-\[ A_{\text{Storage}} = A_{API} \times A_{\text{storage pool}} \times \left(1 - \prod_{i=1}^{n}\left(1 - A_{VC_{server_i}}\right) \times \left(1 - A_{PS_{server_i}}\right)\right) \]
-where \(A_{API}\), \(A_{\text{storage pool}}\), \(A_{VC_{server_i}}\), and \(A_{PS_{server_i}}\) represent the availability of API, logical storage pool, virtual compute server, and physical storage server respectively.
+The availability $A_{\text{Storage}}$ of cloud storage is calculated by multiplying the availability factors for each component:
+$$A_{\text{Storage}} = A_{API} \times A_{\text{storage pool}} \times \left(1 - \prod_{i=1}^{n}\left(1 - A_{VC_{server_i}}\right) \times \left(1 - A_{PS_{server_i}}\right)\right)$$where $ A_{API}$,$ A_{\text{storage pool}}$,$ A_{VC_{server_i}}$, and $ A_{PS_{server_i}}$ represent the availability of API, logical storage pool, virtual compute server, and physical storage server respectively.
 
 x??
 
@@ -678,16 +666,16 @@ x??
 
 #### Steady-State Availability of Cluster Controller
 
-Background context: The steady-state availability of the CLC is derived from the sum of probabilities of being in available states (AW, AD) minus the probability of being in a down state (DD). This is given by \( ACLC = \pi_1 + \pi_2 + \pi_3 = 1 - \pi_4 \), where \(\pi_i\) represents the steady-state probability of state i.
+Background context: The steady-state availability of the CLC is derived from the sum of probabilities of being in available states (AW, AD) minus the probability of being in a down state (DD). This is given by $ACLC = \pi_1 + \pi_2 + \pi_3 = 1 - \pi_4 $, where $\pi_i$ represents the steady-state probability of state i.
 
 :p What formula is used to calculate the steady-state availability of the Cluster Controller (CLC)?
 ??x
-The steady-state availability of the CLC is calculated using the equation \( ACLC = \pi_1 + \pi_2 + \pi_3 = 1 - \pi_4 \), where:
+The steady-state availability of the CLC is calculated using the equation $ACLC = \pi_1 + \pi_2 + \pi_3 = 1 - \pi_4$, where:
 
-- \(\pi_1\) represents the probability of being in state AW (Available with Warm Standby).
-- \(\pi_2\) represents the probability of being in state AD (Available but Down).
-- \(\pi_3\) represents the probability of being in state DS (Deterministic Switching from Primary to Secondary).
-- \(\pi_4\) represents the probability of being in state DD (Down).
+- $\pi_1$ represents the probability of being in state AW (Available with Warm Standby).
+- $\pi_2$ represents the probability of being in state AD (Available but Down).
+- $\pi_3$ represents the probability of being in state DS (Deterministic Switching from Primary to Secondary).
+- $\pi_4$ represents the probability of being in state DD (Down).
 
 This equation sums up the probabilities of all available states and subtracts the probability of the down state.
 
@@ -740,14 +728,13 @@ Background context: The overall availability of the Vehicle Cloud Computing (VCC
 :p How is the overall availability of the VCC architecture calculated?
 ??x
 The overall availability of the VCC architecture is calculated using a closed-form equation that combines the availabilities of submodels such as OBU (On-Board Unit), V2I (Vehicle-to-Infrastructure), V2V (Vehicle-to-Vehicle), Storage, Comp (Computing), CLC, Walrus, and CC (Cluster Controller):
-
-\[ A_{sys} = AOBU \times \left(1 - (1 - AV_{2I}) \times (1 - AV_{2V})\right) \times \left(1 - (1 - A_{Storage}) \times (1 - A_{Comp})\right) \times ACLC \times AWalrus \times \left(1 - \left(1 - ACC \times ASC \times \left(1 - \prod_{i=1}^{n}\frac{1 - ANC_i}{C_0/C_1/n}\right)\right)^3\right) \]
+$$A_{sys} = AOBU \times \left(1 - (1 - AV_{2I}) \times (1 - AV_{2V})\right) \times \left(1 - (1 - A_{Storage}) \times (1 - A_{Comp})\right) \times ACLC \times AWalrus \times \left(1 - \left(1 - ACC \times ASC \times \left(1 - \prod_{i=1}^{n}\frac{1 - ANC_i}{C_0/C_1/n}\right)\right)^3\right)$$
 
 Where:
-- \( AOBU \), \( AV_{2I} \), and \( AV_{2V} \) are the availabilities of OBU, V2I, and V2V.
-- \( A_{Storage} \) and \( A_{Comp} \) are the availability of storage and computing components.
-- \( ACLC \) is the availability of the CLC.
-- \( AWalrus \), \( ACC \), \( ASC \), and \( ANC_i \) are parameters related to Walrus, CC, etc.
+- $AOBU $, $ AV_{2I}$, and $ AV_{2V}$ are the availabilities of OBU, V2I, and V2V.
+- $A_{Storage}$ and $A_{Comp}$ are the availability of storage and computing components.
+- $ACLC$ is the availability of the CLC.
+- $AWalrus $, $ ACC $,$ ASC $, and$ ANC_i$ are parameters related to Walrus, CC, etc.
 
 ```java
 // Pseudocode for VCC Availability Calculation
@@ -1005,16 +992,17 @@ x??
 Background context: The partial derivative technique is one of the methods used to perform sensitivity analysis. It evaluates how changes in individual input parameters affect a measure of interest, such as availability, by calculating the partial derivatives and normalizing them.
 
 Relevant formulas:
-\[ S_{\theta Z} = \frac{\partial Z}{\partial \theta} \]  (3:10)
-\[ SS_{\theta Z} = \left( \frac{\theta}{Z} \right) \cdot \frac{\partial Z}{\partial \theta} \]  (3:11)
+$$S_{\theta Z} = \frac{\partial Z}{\partial \theta}$$(3:10)$$
 
-Explanation: The sensitivity coefficient \(SS\) is calculated by normalizing the partial derivative of the measure with respect to each input parameter. This normalization helps in removing the effect of unit differences among parameters.
+SS_{\theta Z} = \left( \frac{\theta}{Z} \right) \cdot \frac{\partial Z}{\partial \theta}$$(3:11)
+
+Explanation: The sensitivity coefficient $SS$ is calculated by normalizing the partial derivative of the measure with respect to each input parameter. This normalization helps in removing the effect of unit differences among parameters.
 
 :p What does the formula for the sensitivity coefficient involve?
 ??x
-The formula involves calculating the partial derivative of the measure (Z) with respect to the input parameter (\(\theta\)), and then normalizing it by multiplying with a term \(\left( \frac{\theta}{Z} \right)\).
+The formula involves calculating the partial derivative of the measure (Z) with respect to the input parameter ($\theta $), and then normalizing it by multiplying with a term $\left( \frac{\theta}{Z} \right)$.
 
-Explanation: This normalization step ensures that different parameters, even if they have different units or scales, can be compared on a common scale. The result is a sensitivity coefficient \(SS\) which indicates the relative impact of each parameter on the measure.
+Explanation: This normalization step ensures that different parameters, even if they have different units or scales, can be compared on a common scale. The result is a sensitivity coefficient $SS$ which indicates the relative impact of each parameter on the measure.
 
 ```java
 // Pseudocode for calculating sensitivity coefficient using partial derivative technique
@@ -1174,8 +1162,9 @@ x??
 
 #### Sensitivity Coefficient Calculation for VCC Availability
 The text describes a method to calculate the sensitivity coefficient of various parameters on the availability of a vehicular cloud computing (VCC) network. The formula used is:
-\[ S_{\theta}Z(\theta) = \frac{\max Z_{\theta} - \min Z_{\theta}}{\max Z_{\theta}} \]
-Where \( Z(\theta) \) represents the value of the measure for an input parameter \( \theta \), and \( \max Z(\theta) \) and \( \min Z(\theta) \) are the maximum and minimum output values, respectively, obtained by varying \( \theta \) over its entire range.
+$$S_{\theta}Z(\theta) = \frac{\max Z_{\theta} - \min Z_{\theta}}{\max Z_{\theta}}$$
+
+Where $Z(\theta)$ represents the value of the measure for an input parameter $\theta$, and $\max Z(\theta)$ and $\min Z(\theta)$ are the maximum and minimum output values, respectively, obtained by varying $\theta$ over its entire range.
 
 :p What is the formula used to calculate the sensitivity coefficient?
 ??x
@@ -1200,9 +1189,9 @@ A sensitivity ranking table based on the percentage difference technique is prov
 :p List one parameter from the sensitivity ranking table and its value.
 ??x
 One example from the sensitivity ranking table is:
-Parameter: \( \lambda_{SC} \) (SC rate)
+Parameter: $\lambda_{SC}$ (SC rate)
 Value: 0.025717
-This indicates that \( \lambda_{SC} \) has a significant impact on the availability of the VCC network as per the percentage difference technique.
+This indicates that $\lambda_{SC}$ has a significant impact on the availability of the VCC network as per the percentage difference technique.
 x??
 
 ---
@@ -1808,48 +1797,38 @@ Background context: The text introduces a pure birth process, which is used to m
 
 :p What is a pure birth process?
 ??x
-A pure birth process models situations where the number of individuals (in this context, failures) only increases over time. There are no deaths or removals. The probability of having \( r \) individuals at any given time \( t \), denoted as \( P_r(t) \), is governed by a specific differential equation.
+A pure birth process models situations where the number of individuals (in this context, failures) only increases over time. There are no deaths or removals. The probability of having $r $ individuals at any given time$t $, denoted as$ P_r(t)$, is governed by a specific differential equation.
 
 :p What is the differential equation governing a pure birth process?
 ??x
 The differential equation for a pure birth process is:
-\[ P'_r(t) = -\lambda_r(t)P_r(t) + \lambda_{r-1}(t)P_{r-1}(t) \]
-where \( \lambda_r(t) \) represents the birth (failure) rate at time \( t \).
+$$P'_r(t) = -\lambda_r(t)P_r(t) + \lambda_{r-1}(t)P_{r-1}(t)$$where $\lambda_r(t)$ represents the birth (failure) rate at time $t$.
 
 :p What are the initial conditions for a pure birth process?
 ??x
 The initial condition for a pure birth process is:
-\[ P'_0(t) = -\lambda_0(t)P_0(t) \]
-
-:p How can the probability of no births be calculated in a given time interval?
+$$P'_0(t) = -\lambda_0(t)P_0(t)$$:p How can the probability of no births be calculated in a given time interval?
 ??x
-The probability of no births in a given time interval \( (t, s) \) given that the system is at state \( r \) by time \( s \) is:
-\[ P(\text{no births } 2T > t - s) = \exp\left(-\int_t^s \lambda_r(\tau)d\tau\right), \quad t \geq s \]
-
-:p What does the integral of \( \lambda_r(t) \) represent?
+The probability of no births in a given time interval $(t, s)$ given that the system is at state $ r $ by time $s$ is:
+$$P(\text{no births } 2T > t - s) = \exp\left(-\int_t^s \lambda_r(\tau)d\tau\right), \quad t \geq s$$:p What does the integral of $\lambda_r(t)$ represent?
 ??x
-The integral of \( \lambda_r(t) \):
-\[ \int_s^t \lambda_r(\tau)d\tau = \mu_t - \mu_s \]
-represents the mean number of births (or failures) between times \( s \) and \( t \).
+The integral of $\lambda_r(t)$:
+$$\int_s^t \lambda_r(\tau)d\tau = \mu_t - \mu_s$$represents the mean number of births (or failures) between times $ s $ and $ t$.
 
 :p What is the mean number of individuals at a given time?
 ??x
-The mean number of individuals in a given time \( t \), denoted as \( M(t) \):
-\[ M(t) = \sum_{r=0}^{\infty} rP_r(t) \]
-can be obtained by summing up the product of each state and its corresponding probability, multiplied by \( r \).
+The mean number of individuals in a given time $t $, denoted as $ M(t)$:
+$$M(t) = \sum_{r=0}^{\infty} rP_r(t)$$can be obtained by summing up the product of each state and its corresponding probability, multiplied by $ r$.
 
 :p How is the failure rate proposed for dynamic projects?
 ??x
 For dynamic projects like those under Agile methodologies, where new code is constantly added to fix failures or meet new requirements, the proposal suggests a failure rate that increases proportionally with the previous number of failures. The formula:
-\[ \lambda_r(t) = \frac{1}{a(1 + br)(1 + at)} \]
-accounts for both the introduction and removal of failures.
+$$\lambda_r(t) = \frac{1}{a(1 + br)(1 + at)}$$accounts for both the introduction and removal of failures.
 
 :p What does this proposed failure rate model resemble?
 ??x
-This proposed failure rate resembles the Musa-Okumoto software reliability growth model when \( b = 0 \). It also shares a similar structure with the Polya contagion process, which is given by:
-\[ \lambda_r(t) = \frac{\rho r + \gamma}{1 + \rho t} \]
-
-:p How does this new proposed failure rate differ from previous models?
+This proposed failure rate resembles the Musa-Okumoto software reliability growth model when $b = 0$. It also shares a similar structure with the Polya contagion process, which is given by:
+$$\lambda_r(t) = \frac{\rho r + \gamma}{1 + \rho t}$$:p How does this new proposed failure rate differ from previous models?
 ??x
 The new proposed failure rate differs in its mean number of failures, as it accounts for both the introduction and removal of failures dynamically. This contrasts with traditional models that might assume a constant or increasing failure rate without considering dynamic project characteristics.
 
@@ -1876,20 +1855,19 @@ x??
 
 #### Mean Number of Failures
 
-The mean number of failures \(M(t)\) can be obtained by solving a differential equation derived from (4.8). The solution to this differential equation results in the function given in (4.11).
+The mean number of failures $M(t)$ can be obtained by solving a differential equation derived from (4.8). The solution to this differential equation results in the function given in (4.11).
 
-:p What is the expression for the mean value function \(M(t)\)?
+:p What is the expression for the mean value function $M(t)$?
 ??x
-The mean value function \(M(t)\) is given by:
-
-\[ M(t) = \frac{1}{b}\left(1 + \frac{at}{b}\right)^{-1} / C_16/C17 \]
+The mean value function $M(t)$ is given by:
+$$M(t) = \frac{1}{b}\left(1 + \frac{at}{b}\right)^{-1} / C_16/C17$$
 
 Where:
-- \(a\) and \(b\) are parameters.
-- \(t\) represents time.
-- \(C_{16}/C17\) is a constant factor.
+- $a $ and$b$ are parameters.
+- $t$ represents time.
+- $C_{16}/C17$ is a constant factor.
 
-This expression allows for modeling increasing failure rates as well as reliability growth depending on the value of \(b\).
+This expression allows for modeling increasing failure rates as well as reliability growth depending on the value of $b$.
 
 x??
 
@@ -1899,15 +1877,14 @@ x??
 
 Background context explaining the concept. The nonhomogeneous Poisson process arises when the birth rate, or failure rate in this case, is a function of time rather than constant.
 
-:p What is the probability of having \(r\) failures in a time interval \((s,t)\)?
+:p What is the probability of having $r $ failures in a time interval$(s,t)$?
 ??x
-The probability of having \(r\) failures in a time interval \((s,t)\) can be expressed as:
-
-\[ P(N_t - N_s = r) = \frac{\mu(t)^r}{r!} e^{-\mu(t) + \mu(s)} \]
+The probability of having $r $ failures in a time interval$(s,t)$ can be expressed as:
+$$P(N_t - N_s = r) = \frac{\mu(t)^r}{r!} e^{-\mu(t) + \mu(s)}$$
 
 Where:
-- \(\mu(t)\) is the mean number of failures at time \(t\).
-- \(\mu(s)\) is the mean number of failures at time \(s\).
+- $\mu(t)$ is the mean number of failures at time $t$.
+- $\mu(s)$ is the mean number of failures at time $s$.
 
 This formula shows how the probability of a specific number of failures depends on the time intervals and the mean failure rate.
 
@@ -1919,17 +1896,17 @@ x??
 
 Background context explaining the concept. The MTBF is calculated using the density function of the time to the next failure, derived from the exponential distribution.
 
-:p What is the formula for the distribution function \(F_T(t)\)?
+:p What is the formula for the distribution function $F_T(t)$?
 ??x
-The distribution function \(F_T(t; r, s) = 1 - \exp\left(-\int_s^t \lambda_r(u) du\right)\).
+The distribution function $F_T(t; r, s) = 1 - \exp\left(-\int_s^t \lambda_r(u) du\right)$.
 
 Where:
-- \(\lambda_r(u)\) is the birth rate (failure intensity) at time \(u\).
-- \(s\) and \(t\) are the start and end times of the interval.
+- $\lambda_r(u)$ is the birth rate (failure intensity) at time $u$.
+- $s $ and$t$ are the start and end times of the interval.
 
-The density function, which gives the probability of failure in a small time interval around \(t\), can be derived as:
+The density function, which gives the probability of failure in a small time interval around $t$, can be derived as:
 
-\[ f_T(t; r, s) = \lambda_r(t) \exp\left(-\int_s^t \lambda_r(u) du\right) \]
+$$f_T(t; r, s) = \lambda_r(t) \exp\left(-\int_s^t \lambda_r(u) du\right)$$
 
 This formula helps in understanding how the MTBF is calculated from the birth rate function.
 
@@ -1941,38 +1918,36 @@ x??
 
 Background context: The text describes how to calculate the Mean Time Between Failures (MTBF) under certain conditions using a specific model. It also explains the asymptotic behavior of this MTBF as the number of failures increases.
 
-:p What is the formula for calculating the conditional MTBF \( \text{MTBF}_{r,s} \) given \( r \) failures were detected by time \( s \)?
+:p What is the formula for calculating the conditional MTBF $\text{MTBF}_{r,s}$ given $ r $ failures were detected by time $s$?
 
 ??x
 The formula provided in the text is:
-\[ \text{MTBF}_{r,s} = \frac{1}{a + a^s b^r}, \quad r = 1, 2, 3, ... \]
+$$\text{MTBF}_{r,s} = \frac{1}{a + a^s b^r}, \quad r = 1, 2, 3, ...$$
 
-Here, \( a \) and \( b \) are parameters that depend on the specific model. The formula takes into account two factors: a reliability growth factor depending on time and another factor inversely proportional to the number of failures.
+Here,$a $ and$b$ are parameters that depend on the specific model. The formula takes into account two factors: a reliability growth factor depending on time and another factor inversely proportional to the number of failures.
 
-As \( s \) (the time) increases, the term \( a^s \) will dominate for large values of \( s \), leading to an asymptotic behavior:
-\[ \text{MTBF}_{r,s} \approx \frac{1}{a a^s b^{-r}} = \frac{1}{a^{1+s} b^{-r}}. \]
+As $s $(the time) increases, the term $ a^s $ will dominate for large values of $ s$, leading to an asymptotic behavior:
+$$\text{MTBF}_{r,s} \approx \frac{1}{a a^s b^{-r}} = \frac{1}{a^{1+s} b^{-r}}.$$
 
-For large \( s \):
-\[ \text{MTBF}_{r,s} \propto \frac{1}{a^s}. \]
+For large $s$:
+$$\text{MTBF}_{r,s} \propto \frac{1}{a^s}.$$
 
-If \( b > 1 \), the MTBF decreases as more failures are detected, indicating a trend towards lower reliability over time.
+If $b > 1$, the MTBF decreases as more failures are detected, indicating a trend towards lower reliability over time.
 
 x??
 
 ---
 
-#### Asymptotic Behavior for Large Values of \( s \)
-
-:p What is the asymptotic behavior of the conditional MTBF as \( s \) (time) increases?
+#### Asymptotic Behavior for Large Values of $s $:p What is the asymptotic behavior of the conditional MTBF as$ s$ (time) increases?
 
 ??x
-The text states that the asymptotic behavior of the conditional MTBF for large values of \( s \) can be approximated by:
-\[ \text{MTBF}_{r,s} \approx \frac{1}{a a^s b^{-r}} = \frac{1}{a^{1+s} b^{-r}}. \]
+The text states that the asymptotic behavior of the conditional MTBF for large values of $s$ can be approximated by:
+$$\text{MTBF}_{r,s} \approx \frac{1}{a a^s b^{-r}} = \frac{1}{a^{1+s} b^{-r}}.$$
 
-For simplicity, if we consider the dominant term for large \( s \), it simplifies to:
-\[ \text{MTBF}_{r,s} \propto \frac{1}{a^s}. \]
+For simplicity, if we consider the dominant term for large $s$, it simplifies to:
+$$\text{MTBF}_{r,s} \propto \frac{1}{a^s}.$$
 
-This implies that as \( s \) increases, the MTBF decreases exponentially with respect to \( a \).
+This implies that as $s $ increases, the MTBF decreases exponentially with respect to$a$.
 
 x??
 
@@ -1984,15 +1959,15 @@ x??
 
 ??x
 The conditional MTBF formula:
-\[ \text{MTBF}_{r,s} = \frac{1}{a + a^s b^r}, \quad r = 1, 2, 3, ... \]
+$$\text{MTBF}_{r,s} = \frac{1}{a + a^s b^r}, \quad r = 1, 2, 3, ...$$
 
 incorporates two key factors:
 
-1. **Reliability Growth Factor Dependent on Time (\( a^s \))**: This term accounts for the improvement in reliability over time as more development/testing phases progress.
+1. **Reliability Growth Factor Dependent on Time ($a^s$)**: This term accounts for the improvement in reliability over time as more development/testing phases progress.
 
-2. **Inverse Proportionality to Number of Failures (\( b^r \))**: This factor reflects the decrease in MTBF due to an increasing number of detected failures, indicating lower reliability.
+2. **Inverse Proportionality to Number of Failures ($b^r$)**: This factor reflects the decrease in MTBF due to an increasing number of detected failures, indicating lower reliability.
 
-The combined effect is that the MTBF decreases with both \( s \) (time) and increases with \( r \) (number of failures).
+The combined effect is that the MTBF decreases with both $s $(time) and increases with $ r$ (number of failures).
 
 x??
 
@@ -2019,13 +1994,12 @@ x??
 :p How is the Mean Time Between Failures (MTBF) calculated for NHPP using the standard formulation?
 
 ??x
-For a non-homogeneous Poisson process (NHPP), the mean time between failures \( \text{MTBF} \) can be calculated from the density function of the time to failure. Specifically:
+For a non-homogeneous Poisson process (NHPP), the mean time between failures $\text{MTBF}$ can be calculated from the density function of the time to failure. Specifically:
 
-\[ E[T_k] = \int_0^{+\infty} z \lambda(z) \mu(z)^{k-1} e^{-\mu(z)} dz - \int_a^0 z (k-1) \mu(z)^{k-2} e^{-\mu(z)} dz, \]
-where \( T_k \) is the time until the \( k \)-th failure.
+$$E[T_k] = \int_0^{+\infty} z \lambda(z) \mu(z)^{k-1} e^{-\mu(z)} dz - \int_a^0 z (k-1) \mu(z)^{k-2} e^{-\mu(z)} dz,$$where $ T_k $ is the time until the $ k$-th failure.
 
-To obtain the MTBF for the \( k \)-th failure:
-\[ E[X_k] = E[T_k] - E[T_{k-1}], \quad k = 1, 2, 3, ... \]
+To obtain the MTBF for the $k$-th failure:
+$$E[X_k] = E[T_k] - E[T_{k-1}], \quad k = 1, 2, 3, ...$$
 
 This calculation involves integrating over the density function and subtracting cumulative effects to find the expected time between consecutive failures.
 
@@ -2046,8 +2020,7 @@ For the experiments involving three well-known models based on non-homogeneous P
 These methods were applied to estimate the model parameters for each NHPP model: Goel-Okumoto, Yamada Delayed S-shaped, and logistic models. However, due to the lack of a closed formula for the failure time pdf, maximum likelihood estimation could not be performed on the contagion model, nor could exact MTBFs be calculated.
 
 The conditional MTBF and Mean Time To Failure (MTTF) were computed using Equation 4.16:
-\[ \text{MTBF}_s = \frac{1}{a + a^s b^{M(s)}}, \]
-where \( M(s) \) is the mean number of failures at time \( s \).
+$$\text{MTBF}_s = \frac{1}{a + a^s b^{M(s)}},$$where $ M(s)$is the mean number of failures at time $ s$.
 
 x??
 
@@ -2123,7 +2096,7 @@ Background context: The models' failure rate curves were compared to understand 
 
 :p What does the MTBF curve for the logistic model show?
 ??x
-The logistic model predicts a decrease in Mean Time Between Failures (MTBF) as the number of tests \( n \) increases, leading to the lowest MTBF value among all models when \( n = 26 \). This indicates that the logistic model may not accurately predict reliability growth.
+The logistic model predicts a decrease in Mean Time Between Failures (MTBF) as the number of tests $n $ increases, leading to the lowest MTBF value among all models when$n = 26$. This indicates that the logistic model may not accurately predict reliability growth.
 x??
 
 ---
@@ -2139,11 +2112,11 @@ x??
 ---
 
 #### Saddle Point Method for Integral Calculation
-Background context: The text mentions that for values of \( k \) greater than 100, the integral in equation (4.18) must be calculated using the saddle point method. This method is used to approximate complex integrals by finding a critical point.
+Background context: The text mentions that for values of $k$ greater than 100, the integral in equation (4.18) must be calculated using the saddle point method. This method is used to approximate complex integrals by finding a critical point.
 
-:p What method should be used to calculate the integral when \( k > 100 \)?
+:p What method should be used to calculate the integral when $k > 100$?
 ??x
-The saddle point method should be used to calculate the integral for values of \( k \) greater than 100, as it provides an accurate approximation in such cases.
+The saddle point method should be used to calculate the integral for values of $k$ greater than 100, as it provides an accurate approximation in such cases.
 x??
 
 ---

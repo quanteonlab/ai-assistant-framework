@@ -130,8 +130,7 @@ Background context: RMS displacement is a measure of how much particles move ove
 :p What is the formula for calculating root-mean-square displacement?
 ??x
 The RMS displacement is calculated using:
-\[ \text{RMS} = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (r_i(t) - r_i(0))^2 } \]
-where \( N \) is the number of particles, and \( r_i(t) \) are their positions at time \( t \).
+$$\text{RMS} = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (r_i(t) - r_i(0))^2 }$$where $ N $ is the number of particles, and $ r_i(t)$are their positions at time $ t$.
 ```python
 def calculate_rms_displacement(positions):
     sum_of_squares = 0
@@ -150,7 +149,8 @@ Background context: Lighter molecules tend to diffuse more quickly than heavier 
 :p How do you generalize the velocity-Verlet algorithm for particles of different masses?
 ??x
 Generalize by incorporating mass into the acceleration calculation:
-\[ \text{acceleration} = \frac{\text{force}}{\text{mass}} \]
+$$\text{acceleration} = \frac{\text{force}}{\text{mass}}$$
+
 In pseudocode, this would look like:
 ```python
 def compute_acceleration(position, mass):
@@ -236,7 +236,7 @@ Background context: This involves calculating and plotting the probability distr
 :p How would you calculate and plot the probability distribution?
 
 ??x
-Calculate the binomial coefficient \( C(n) \) for each possible value of `n` (number of particles on RHS). Then, use these values to compute probabilities and plot them:
+Calculate the binomial coefficient $C(n)$ for each possible value of `n` (number of particles on RHS). Then, use these values to compute probabilities and plot them:
 
 ```python
 import numpy as np
@@ -290,7 +290,7 @@ x??
 
 #### Heat Capacity Calculation
 
-Background context: This involves computing and plotting the heat capacity at a constant volume, \( C_V = \frac{\partial E}{\partial T} \), as a function of temperature for 16 particles in a box.
+Background context: This involves computing and plotting the heat capacity at a constant volume,$C_V = \frac{\partial E}{\partial T}$, as a function of temperature for 16 particles in a box.
 
 :p How would you compute the heat capacity at a constant volume?
 
@@ -398,7 +398,7 @@ Setting the initial conditions is crucial as it initializes the state of the sys
 ??x
 Initial positions and velocities are setup as follows:
 - Positions: Initially, atoms are placed linearly along a line segment.
-- Velocities: Each atom is assigned a random velocity which is scaled by \(\sqrt{T}\) where \(T\) is the initial temperature.
+- Velocities: Each atom is assigned a random velocity which is scaled by $\sqrt{T}$ where $T$ is the initial temperature.
 
 This ensures that the distribution of velocities approximates a Maxwell-Boltzmann distribution at the given temperature.
 
@@ -429,11 +429,11 @@ The force calculation is a critical component of the simulation as it determines
 ??x
 Forces between atoms are calculated using a Lennard-Jones potential, which is commonly used to model interatomic interactions. The provided code has an incomplete implementation but follows these steps:
 1. Iterate over all pairs of atoms.
-2. Calculate the distance squared (\(r^2\)).
+2. Calculate the distance squared ($r^2$).
 3. Check if the distance is within the cutoff radius.
 4. Compute the force using the Lennard-Jones potential function.
 
-The energy due to interactions between atoms is also calculated and accumulated in \(PE\) (potential energy).
+The energy due to interactions between atoms is also calculated and accumulated in $PE$(potential energy).
 
 C/Java pseudocode:
 ```python
@@ -491,7 +491,7 @@ Energy is a critical quantity to monitor during the simulation as it provides in
 :p How are kinetic and potential energies calculated in the provided code?
 ??x
 Kinetic and potential energies are calculated as follows:
-- Kinetic energy: Sum of \(\frac{1}{2} m v^2\) for each particle.
+- Kinetic energy: Sum of $\frac{1}{2} m v^2$ for each particle.
 - Potential energy: Sum of interaction energies between pairs of particles within a cutoff radius.
 
 The kinetic energy is used to compute the temperature, while the potential energy is directly plotted over time.
@@ -544,12 +544,11 @@ if(r2 < r2cut):
 :p What is the logic for force calculation in this molecular dynamics simulation?
 ??x
 The force between two atoms `i` and `j` is calculated based on their distance. If the distance squared (`r2`) is less than a cutoff value (`r2cut`), the interaction energy `wij` is computed using the Lennard-Jones potential formula:
-\[ wij = 48 \cdot (invr^3 - 0.5) \cdot invr^3 \]
-where \( invr = \frac{1}{\sqrt{r2}} \).
+$$wij = 48 \cdot (invr^3 - 0.5) \cdot invr^3$$where $ invr = \frac{1}{\sqrt{r2}}$.
 
 The force components in the x and y directions are then calculated as:
-\[ fijx = wij \cdot invr \cdot dx \]
-\[ fijy = wij \cdot invr \cdot dy \]
+$$fijx = wij \cdot invr \cdot dx$$
+$$fijy = wij \cdot invr \cdot dy$$
 
 This ensures that the forces accurately reflect the attractive and repulsive interactions between atoms.
 x??
@@ -596,8 +595,8 @@ if y[i] >= L:
 :p How is the position updated in this molecular dynamics simulation?
 ??x
 The position of each atom is updated using a simple Euler integration method. At each time step, the new position is calculated as:
-\[ x'[i] = x[i] + h \cdot (vx[i] + 0.5 \cdot fx[i][t1]) \]
-\[ y'[i] = y[i] + h \cdot (vy[i] + 0.5 \cdot fy[i][t1]) \]
+$$x'[i] = x[i] + h \cdot (vx[i] + 0.5 \cdot fx[i][t1])$$
+$$y'[i] = y[i] + h \cdot (vy[i] + 0.5 \cdot fy[i][t1])$$
 
 Here, `h` is the time step size, and `fx[i][t1]`, `fy[i][t1]` are the forces at the previous half time step.
 
@@ -617,8 +616,8 @@ w = Forces(t2, w, PE, 2)
 :p How are forces updated in this molecular dynamics simulation?
 ??x
 Forces are updated by averaging the force contributions from two time steps. This is done to ensure numerical stability and accuracy:
-\[ vx[i] = vx[i] + 0.5 \cdot (fx[i][t1] + fx[i][t2]) \]
-\[ vy[i] = vy[i] + 0.5 \cdot (fy[i][t1] + fy[i][t2]) \]
+$$vx[i] = vx[i] + 0.5 \cdot (fx[i][t1] + fx[i][t2])$$
+$$vy[i] = vy[i] + 0.5 \cdot (fy[i][t1] + fy[i][t2])$$
 
 After updating the velocities, the potential energy is recalculated using the `Forces` function with a different parameter setting (`PEorW == 2`), which updates only the forces and returns the weight value.
 x??
@@ -639,16 +638,20 @@ Tavg = ePavg / Natom
 :p How are energy averages computed in this molecular dynamics simulation?
 ??x
 Energy averages are computed by incrementally updating the total kinetic and potential energies at each time step. The average values are calculated as follows:
-\[ \text{avKE} = \text{avKE} + KE \]
-\[ \text{avPE} = \text{avPE} + PE \]
+$$\text{avKE} = \text{avKE} + KE$$
+$$\text{avPE} = \text{avPE} + PE$$
 
 After completing a full cycle, the averages are computed by dividing the total energies by the number of time steps (`t`):
-\[ Pavg = \frac{\text{avP}}{t} \]
-\[ eKavg = \frac{\text{avKE}}{t} \]
-\[ ePavg = \frac{\text{avPE}}{t} \]
+$$
+
+Pavg = \frac{\text{avP}}{t}$$
+$$eKavg = \frac{\text{avKE}}{t}$$
+$$ePavg = \frac{\text{avPE}}{t}$$
 
 The temperature is then calculated as the average potential energy per atom:
-\[ Tavg = \frac{ePavg}{Natom} \]
+$$
+
+Tavg = \frac{ePavg}{Natom}$$
 
 This process ensures that the simulation reaches a statistically stable state.
 x??
@@ -695,7 +698,7 @@ theta = 2 * pi * random.random() # Select angle 0 <= theta <= 2*pi
 vx = pref * cos(theta) # x component velocity
 vy = pref * sin(theta) # y component velocity
 ```
-Here, `pref` is a predefined constant that sets the initial speed. The velocities are randomly oriented within the range of \(0\) to \(2\pi\).
+Here, `pref` is a predefined constant that sets the initial speed. The velocities are randomly oriented within the range of $0 $ to$2\pi$.
 
 :p How are these velocities added to the simulation?
 ??x
@@ -777,9 +780,7 @@ for t in range(0, 1000):
 This loop updates positions and velocities for each atom over time using the Velocity Verlet method, which is a numerical integration scheme to solve Newton's equations of motion.
 
 The `forces` function is called twice within one step of the loop to ensure consistency in force calculations, reflecting the update rule:
-\[ v(t + h) = v(t) + 0.5h(f(t) + f(t + h)) \]
-and
-\[ x(t + h) = x(t) + hv(t + h/2) + 0.5hf(t + h/2) \]
+$$v(t + h) = v(t) + 0.5h(f(t) + f(t + h))$$and$$x(t + h) = x(t) + hv(t + h/2) + 0.5hf(t + h/2)$$
 
 This approach ensures accurate trajectory updates while handling periodic boundary conditions.
 ??x

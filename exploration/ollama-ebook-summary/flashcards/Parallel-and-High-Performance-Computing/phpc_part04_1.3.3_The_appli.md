@@ -571,9 +571,7 @@ The classification would depend on the specific task. For example, cooking multi
 
 To compute speedup: 
 Consider a scenario where you cook two dishes at once instead of one. If each dish takes 20 minutes to prepare and cook separately (serially), but now both can be prepared and cooked in the same 20 minutes with the stove, the speedup is:
-\[ \text{Speedup} = \frac{\text{Time in serial}}{\text{Time in parallel}} = \frac{40 \, \text{minutes}}{20 \, \text{minutes}} = 2 \]
-
----
+$$\text{Speedup} = \frac{\text{Time in serial}}{\text{Time in parallel}} = \frac{40 \, \text{minutes}}{20 \, \text{minutes}} = 2$$---
 #### Parallel Processing Power Comparison
 
 Background context: Understanding the difference between theoretical and actual processing power is crucial for evaluating system capabilities.
@@ -615,14 +613,11 @@ Background context: Evaluating the performance and scalability of an application
 ??x
 The best parallel design would be to distribute the images across multiple cores. Each core can process a portion of the images concurrently.
 
-Example: If you have 16 cores, each core could process 62 or 63 images in parallel.
-\[ \text{Images per core} = \left\lfloor \frac{1000}{16} \right\rfloor = 62 \]
+Example: If you have 16 cores, each core could process 62 or 63 images in parallel.$$\text{Images per core} = \left\lfloor \frac{1000}{16} \right\rfloor = 62$$
 
 This would reduce the processing time significantly:
-\[ \text{Time for one core} = \frac{10 \, \text{minutes}}{62} \approx 0.1613 \, \text{minutes} \]
-\[ \text{Total time with parallel design} = 0.1613 \times 16 \approx 2.58 \, \text{minutes} \]
-
----
+$$\text{Time for one core} = \frac{10 \, \text{minutes}}{62} \approx 0.1613 \, \text{minutes}$$
+$$\text{Total time with parallel design} = 0.1613 \times 16 \approx 2.58 \, \text{minutes}$$---
 #### GPU vs CPU Performance
 
 Background context: Comparing the performance of CPUs and GPUs helps understand their respective strengths in different scenarios.
@@ -631,16 +626,18 @@ Background context: Comparing the performance of CPUs and GPUs helps understand 
 
 ??x
 To determine if running the application on a GPU is more energy-efficient, compare the power usage and performance:
-\[ \text{Energy efficiency} = \frac{\text{Performance}}{\text{Power consumption}} \]
+$$\text{Energy efficiency} = \frac{\text{Performance}}{\text{Power consumption}}$$
 
-Assume your CPU can process \( P_{CPU} \) images per minute at 130 W, and your GPU can process \( P_{GPU} \) images per minute at 300 W.
+Assume your CPU can process $P_{CPU}$ images per minute at 130 W, and your GPU can process $P_{GPU}$ images per minute at 300 W.
 
 For the application to run more efficiently on a GPU:
-\[ \frac{P_{GPU}}{300 \, \text{W}} > \frac{P_{CPU}}{130 \, \text{W}} \]
+$$\frac{P_{GPU}}{300 \, \text{W}} > \frac{P_{CPU}}{130 \, \text{W}}$$
 
-Given \( P_{CPU} = 62 \) images per minute (as calculated in the previous example):
-\[ \frac{P_{GPU}}{300} > \frac{62}{130} \approx 0.477 \]
-\[ P_{GPU} > 143.1 \, \text{images per minute} \]
+Given $P_{CPU} = 62$ images per minute (as calculated in the previous example):
+$$\frac{P_{GPU}}{300} > \frac{62}{130} \approx 0.477$$
+$$
+
+P_{GPU} > 143.1 \, \text{images per minute}$$
 
 So, the GPU application should process more than approximately 143 images per minute to be considered more energy-efficient.
 

@@ -45,7 +45,7 @@ resource "aws_lb" "example" {
 ```
 To avoid downtime, you should use the `terraform state mv` command or add a `moved` block to update the state file. For example:
 ```shell
-$ terraform state mv aws_lb.example aws_lb.bar
+$terraform state mv aws_lb.example aws_lb.bar
 ```
 Or in Terraform code:
 ```hcl
@@ -94,8 +94,7 @@ resource "aws_security_group" "cluster_instance" {
 }
 ```
 To avoid this, you should use `terraform state mv` or add a `moved` block to update the state file correctly. For example:
-```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+```shell$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 Or in Terraform code:
 ```hcl
@@ -132,7 +131,7 @@ Running the `plan` command in Terraform helps identify unintended resource delet
 ??x
 The answer with detailed explanations.
 ```shell
-$ terraform plan
+$terraform plan
 ```
 Running the above command will provide a preview of what changes Terraform intends to make. You should carefully scan the output for any deletions that are not intentional. For example:
 ```plaintext
@@ -142,8 +141,7 @@ To avoid potential downtime, you should review and adjust your code or use `terr
 
 ??x
 The answer with detailed explanations.
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 Reviewing the output of `terraform plan` helps identify unintended deletions. For example:
 ```plaintext
@@ -183,7 +181,7 @@ resource "aws_security_group" "example" {
 ```
 Using `create_before_destroy` ensures that the transition from an old resource to a new one is seamless, reducing potential downtime. For example:
 ```shell
-$ terraform apply
+$terraform apply
 ```
 This will first create the new resource and then destroy the old one, ensuring minimal disruption.
 
@@ -198,15 +196,14 @@ You can use the `terraform state mv` command to manually update the state file w
 
 ??x
 The answer with detailed explanations.
-```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+```shell$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 Running this command updates the state file to reflect the new identifier of the resource, ensuring that Terraform does not delete and recreate it during an apply operation.
 
 ??x
 The answer with detailed explanations.
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 Using `terraform state mv` allows you to rename resources in your Terraform code while updating the state file correctly. This avoids unintended deletions and recreations, ensuring that your infrastructure remains stable during refactoring.
 
@@ -257,8 +254,7 @@ When refactoring resources in Terraform, especially if it might cause unintended
 
 ??x
 The answer with detailed explanations.
-```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+```shell$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 Or in Terraform code:
 ```hcl
@@ -272,7 +268,7 @@ Adding a `moved` block or using the `terraform state mv` command updates the sta
 ??x
 The answer with detailed explanations.
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 Or in Terraform code:
 ```hcl
@@ -299,8 +295,7 @@ Key best practices for refactoring resources in Terraform include:
 
 ??x
 The answer with detailed explanations.
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 Run `terraform plan` before applying changes to catch any unintended deletions and review the output for necessary adjustments. For example:
 ```plaintext
@@ -323,7 +318,7 @@ By setting `create_before_destroy` to `true`, Terraform will first create a new 
 ??x
 The answer with detailed explanations.
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 Use `terraform state mv` or add a `moved` block in your code to update the state file correctly. For example:
 ```hcl
@@ -337,14 +332,15 @@ Using these methods ensures that the transition from old identifiers to new ones
 
 ??x
 The answer with detailed explanations.
-```shell
-$ terraform apply
+```shell$ terraform apply
 ```
 Run `terraform apply` after making necessary adjustments. This command will update your infrastructure according to the changes in your Terraform code, ensuring that all intended transitions are handled without causing unintended downtime.
 
 --- 
 
-These best practices help ensure smooth refactoring and minimize potential issues during the transition. By following these steps, you can refactor resources in Terraform while maintaining the stability of your infrastructure. \[end\] \[EOF\] [BEGIN_OF_TEXT]
+These best practices help ensure smooth refactoring and minimize potential issues during the transition. By following these steps, you can refactor resources in Terraform while maintaining the stability of your infrastructure. $$end$$ $$
+
+EOF$$[BEGIN_OF_TEXT]
 
 # Refactoring Resources in Terraform
 
@@ -354,8 +350,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 ### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -377,7 +372,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 ### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -413,8 +408,7 @@ This summary outlines the key best practices to follow when refactoring resource
 ### Example Shell Commands
 
 1. **Running `plan`**:
-   ```shell
-   $ terraform plan
+   ```shell$ terraform plan
    ```
 
 2. **Using `create_before_destroy`**:
@@ -428,7 +422,7 @@ This summary outlines the key best practices to follow when refactoring resource
 
 3. **Updating State Files with `terraform state mv`**:
    ```shell
-   $ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+   $terraform state mv aws_security_group.instance aws_security_group.cluster_instance
    ```
    Or in Terraform code:
    ```hcl
@@ -465,8 +459,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -488,7 +481,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -544,8 +537,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -567,7 +559,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -623,8 +615,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -646,7 +637,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -708,8 +699,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -731,7 +721,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -799,8 +789,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -822,7 +811,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -878,8 +867,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -901,7 +889,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -963,8 +951,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -986,7 +973,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -1044,8 +1031,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -1067,7 +1053,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -1125,8 +1111,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -1148,7 +1133,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -1206,8 +1191,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -1229,7 +1213,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -1287,8 +1271,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -1310,7 +1293,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -1368,8 +1351,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -1391,7 +1373,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -1449,8 +1431,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -1472,7 +1453,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -1530,8 +1511,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -1553,7 +1533,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -1609,8 +1589,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -1632,7 +1611,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -1688,8 +1667,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -1711,7 +1689,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -1767,8 +1745,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -1790,7 +1767,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -1846,8 +1823,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -1869,7 +1845,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -1925,8 +1901,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -1948,7 +1923,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -2004,8 +1979,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -2027,7 +2001,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -2083,8 +2057,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -2106,7 +2079,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -2162,8 +2135,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -2185,7 +2157,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -2241,8 +2213,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -2264,7 +2235,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -2320,8 +2291,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -2343,7 +2313,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -2399,8 +2369,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -2422,7 +2391,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -2478,8 +2447,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.
@@ -2501,7 +2469,7 @@ When refactoring and renaming resources, you can use the `terraform state mv` co
 
 #### Example:
 ```shell
-$ terraform state mv aws_security_group.instance aws_security_group.cluster_instance
+$terraform state mv aws_security_group.instance aws_security_group.cluster_instance
 ```
 
 Or in Terraform code:
@@ -2557,8 +2525,7 @@ When refactoring code in Terraform, it is crucial to follow best practices to av
 Before applying changes, running the `terraform plan` command helps catch issues where Terraform plans to delete resources that shouldn't be deleted.
 
 #### Example:
-```shell
-$ terraform plan
+```shell$ terraform plan
 ```
 
 This command will provide a preview of what changes are intended. Reviewing the output can help you identify unintended deletions and take corrective actions if necessary.

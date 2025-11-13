@@ -85,17 +85,17 @@ In this example, the `Quaternion` class represents a quaternion and includes met
 ??x
 
 #### Unit Quaternions as 3D Rotations
-Unit quaternions can be visualized as a three-dimensional vector plus a fourth scalar coordinate. The vector part \( \mathbf{q}_V \) is the unit axis of rotation scaled by the sine of half the angle of rotation, and the scalar part \( q_S \) is the cosine of the half-angle.
+Unit quaternions can be visualized as a three-dimensional vector plus a fourth scalar coordinate. The vector part $\mathbf{q}_V $ is the unit axis of rotation scaled by the sine of half the angle of rotation, and the scalar part$q_S$ is the cosine of the half-angle.
 
 This representation allows us to write a unit quaternion as:
-\[ \mathbf{q} = [ \mathbf{q}_V q_S] = [\sin(\frac{\theta}{2}) \cos(\frac{\theta}{2})] \]
-Where \( \mathbf{a} \) is a unit vector along the axis of rotation, and \( \theta \) is the angle of rotation. The direction of the rotation follows the right-hand rule.
+$$\mathbf{q} = [ \mathbf{q}_V q_S] = [\sin(\frac{\theta}{2}) \cos(\frac{\theta}{2})]$$
+
+Where $\mathbf{a}$ is a unit vector along the axis of rotation, and $\theta$ is the angle of rotation. The direction of the rotation follows the right-hand rule.
 
 :p How can you represent a 3D rotation using a unit quaternion?
 ??x
 A 3D rotation can be represented by a unit quaternion as:
-\[ \mathbf{q} = [q_x, q_y, q_z, q_w] \]
-where \( q_x = a_x \sin(\frac{\theta}{2}) \), \( q_y = a_y \sin(\frac{\theta}{2}) \), \( q_z = a_z \sin(\frac{\theta}{2}) \), and \( q_w = \cos(\frac{\theta}{2}) \).
+$$\mathbf{q} = [q_x, q_y, q_z, q_w]$$where $ q_x = a_x \sin(\frac{\theta}{2})$,$ q_y = a_y \sin(\frac{\theta}{2})$,$ q_z = a_z \sin(\frac{\theta}{2})$, and $ q_w = \cos(\frac{\theta}{2})$.
 This representation combines the axis of rotation (vector part) with the angle of rotation (scalar part).
 
 ```java
@@ -116,16 +116,13 @@ x??
 
 ---
 #### Quaternion Multiplication
-One of the most important operations on quaternions is multiplication. Given two unit quaternions \( \mathbf{p} \) and \( \mathbf{q} \), representing rotations \( P \) and \( Q \) respectively, their product \( \mathbf{pq} \) represents the composite rotation (rotation \( Q \) followed by rotation \( P \)).
+One of the most important operations on quaternions is multiplication. Given two unit quaternions $\mathbf{p}$ and $\mathbf{q}$, representing rotations $ P$and $ Q$ respectively, their product $\mathbf{pq}$ represents the composite rotation (rotation $ Q $ followed by rotation $P$).
 
 The Grassman product of two quaternions is defined as:
-\[ \mathbf{pq} = [(p_S\mathbf{q}_V + q_S\mathbf{p}_V + (\mathbf{p}_V \cdot \mathbf{q}_V) \mathbf{q}_S), (p_S q_S - (\mathbf{p}_V \cdot \mathbf{q}_V))] \]
-
-:p What is the formula for multiplying two quaternions?
+$$\mathbf{pq} = [(p_S\mathbf{q}_V + q_S\mathbf{p}_V + (\mathbf{p}_V \cdot \mathbf{q}_V) \mathbf{q}_S), (p_S q_S - (\mathbf{p}_V \cdot \mathbf{q}_V))]$$:p What is the formula for multiplying two quaternions?
 ??x
-The product of two quaternions \( \mathbf{p} \) and \( \mathbf{q} \), using the Grassman product, is given by:
-\[ \mathbf{pq} = [(p_S\mathbf{q}_V + q_S\mathbf{p}_V + (\mathbf{p}_V \cdot \mathbf{q}_V) \mathbf{q}_S), (p_S q_S - (\mathbf{p}_V \cdot \mathbf{q}_V))] \]
-where \( p_S \) and \( q_S \) are the scalar parts, and \( \mathbf{p}_V \) and \( \mathbf{q}_V \) are the vector parts of the quaternions.
+The product of two quaternions $\mathbf{p}$ and $\mathbf{q}$, using the Grassman product, is given by:
+$$\mathbf{pq} = [(p_S\mathbf{q}_V + q_S\mathbf{p}_V + (\mathbf{p}_V \cdot \mathbf{q}_V) \mathbf{q}_S), (p_S q_S - (\mathbf{p}_V \cdot \mathbf{q}_V))]$$where $ p_S $ and $ q_S $ are the scalar parts, and $\mathbf{p}_V $ and$\mathbf{q}_V$ are the vector parts of the quaternions.
 
 ```java
 public Quaternion multiply(Quaternion other) {
@@ -147,29 +144,27 @@ x??
 
 ---
 #### Conjugate and Inverse of a Quaternion
-The inverse of a quaternion \( \mathbf{q} \) is denoted as \( \mathbf{q}^{-1} \). It is defined as a quaternion that, when multiplied by the original quaternion, yields the scalar 1 (i.e., \( \mathbf{qq}^{-1} = 0\mathbf{i} + 0\mathbf{j} + 0\mathbf{k} + 1 \)).
+The inverse of a quaternion $\mathbf{q}$ is denoted as $\mathbf{q}^{-1}$. It is defined as a quaternion that, when multiplied by the original quaternion, yields the scalar 1 (i.e.,$\mathbf{qq}^{-1} = 0\mathbf{i} + 0\mathbf{j} + 0\mathbf{k} + 1$).
 
-The zero rotation is represented by the quaternion \( [0, 0, 0, 1] \) since its sine components are 0 and cosine component is 1 for the first three parts.
+The zero rotation is represented by the quaternion $[0, 0, 0, 1]$ since its sine components are 0 and cosine component is 1 for the first three parts.
 
-To calculate the inverse of a quaternion, we must first define its conjugate. The conjugate of a quaternion \( \mathbf{q} = [\mathbf{q}_V q_S] \) is defined as:
-\[ \mathbf{q}^{\dagger} = [-\mathbf{q}_V q_S] \]
+To calculate the inverse of a quaternion, we must first define its conjugate. The conjugate of a quaternion $\mathbf{q} = [\mathbf{q}_V q_S]$ is defined as:
+$$\mathbf{q}^{\dagger} = [-\mathbf{q}_V q_S]$$
+
 In other words, we negate the vector part but leave the scalar part unchanged.
 
-Given this definition of the quaternion conjugate, the inverse quaternion \( \mathbf{q}^{-1} \) is defined as:
-\[ \mathbf{q}^{-1} = \frac{\mathbf{q}^{\dagger}}{||\mathbf{q}||^2} \]
-Where \( ||\mathbf{q}|| \) is the length of the quaternion.
+Given this definition of the quaternion conjugate, the inverse quaternion $\mathbf{q}^{-1}$ is defined as:
+$$\mathbf{q}^{-1} = \frac{\mathbf{q}^{\dagger}}{||\mathbf{q}||^2}$$
+
+Where $||\mathbf{q}||$ is the length of the quaternion.
 
 :p How do you find the inverse and conjugate of a quaternion?
 ??x
 The inverse and conjugate of a unit quaternion can be found as follows:
 
-- The conjugate of a quaternion \( \mathbf{q} = [q_x, q_y, q_z, q_w] \) is defined by negating the vector part:
-\[ \mathbf{q}^{\dagger} = [-\mathbf{q}_V q_S] \]
-
-- The inverse of a unit quaternion \( \mathbf{q} \), when its length is 1 (as it typically is in 3D rotations), is identical to the conjugate:
-\[ \mathbf{q}^{-1} = \mathbf{q}^{\dagger} = [-\mathbf{q}_V q_S] \]
-
-```java
+- The conjugate of a quaternion $\mathbf{q} = [q_x, q_y, q_z, q_w]$ is defined by negating the vector part:
+$$\mathbf{q}^{\dagger} = [-\mathbf{q}_V q_S]$$- The inverse of a unit quaternion $\mathbf{q}$, when its length is 1 (as it typically is in 3D rotations), is identical to the conjugate:
+$$\mathbf{q}^{-1} = \mathbf{q}^{\dagger} = [-\mathbf{q}_V q_S]$$```java
 public Quaternion conjugate() {
     return new Quaternion(-x, -y, -z, w);
 }
@@ -206,7 +201,7 @@ Background context: The properties of the conjugate and inverse in quaternions a
 
 :p What is the formula for the conjugate of a product of two quaternions?
 ??x
-The conjugate of a product of two quaternions (pq) is equal to the reverse product of their individual conjugates: \((pq)^* = q^* p^*\).
+The conjugate of a product of two quaternions (pq) is equal to the reverse product of their individual conjugates:$(pq)^* = q^* p^*$.
 
 ```java
 // Pseudocode for calculating the conjugate of a product
@@ -221,10 +216,8 @@ Background context: To apply a quaternion rotation to a vector, we can leverage 
 
 :p How do you rotate a vector using a quaternion?
 ??x
-To rotate a vector \( v \) by a quaternion \( q \), you premultiply the vector (written as a quaternion with zero scalar term) by \( q \) and then post-multiply it by the inverse of \( q \). This results in the rotated vector \( v' \): 
-\[ v' = qvq^{-1} \]
-
-```java
+To rotate a vector $v $ by a quaternion$q $, you premultiply the vector (written as a quaternion with zero scalar term) by$ q $and then post-multiply it by the inverse of$ q $. This results in the rotated vector$ v'$: 
+$$v' = qvq^{-1}$$```java
 // Pseudocode for rotating a vector using quaternions
 Quaternion v = new Quaternion(vx, vy, vz, 0);
 Quaternion q = getOrientationQuat(); // Assuming q is normalized
@@ -239,12 +232,11 @@ Background context: Rotations can be concatenated using quaternion multiplicatio
 
 :p How do you concatenate three quaternions representing distinct rotations?
 ??x
-To concatenate three quaternions \( q1, q2 \), and \( q3 \) representing distinct rotations, you multiply them in reverse order: 
-\[ q_{net} = q3 \cdot q2 \cdot q1 \]
-Then apply the resulting quaternion to a vector by multiplying it on both sides:
-\[ v' = q_{net}vq^{-1}_{net} \]
+To concatenate three quaternions $q1, q2 $, and $ q3$ representing distinct rotations, you multiply them in reverse order: 
+$$q_{net} = q3 \cdot q2 \cdot q1$$
 
-```java
+Then apply the resulting quaternion to a vector by multiplying it on both sides:
+$$v' = q_{net}vq^{-1}_{net}$$```java
 // Pseudocode for concatenating and applying quaternions
 Quaternion q1 = getRotationQuat1();
 Quaternion q2 = getRotationQuat2();
@@ -261,30 +253,27 @@ x??
 ---
 
 #### Quaternion-Matrix Equivalence
-Background context explaining the concept. We discuss how to convert between a 3×3 matrix representation \( R \) of a rotation and its quaternion representation \( q \). This conversion is essential for efficiently handling rotations in game engines.
+Background context explaining the concept. We discuss how to convert between a 3×3 matrix representation $R $ of a rotation and its quaternion representation$q$. This conversion is essential for efficiently handling rotations in game engines.
 
 Given:
-\[ q = [q_V, q_S] = [x, y, z, w] \]
-where \( q_V \) is the vector part and \( q_S \) is the scalar part of the quaternion. The matrix representation \( R \) can be derived from \( q \).
+$$q = [q_V, q_S] = [x, y, z, w]$$where $ q_V $ is the vector part and $ q_S $ is the scalar part of the quaternion. The matrix representation $ R $ can be derived from $ q$.
 
-The conversion from quaternion to 3×3 rotation matrix \( R \) is given by:
-\[ R = \begin{pmatrix}
+The conversion from quaternion to 3×3 rotation matrix $R$ is given by:
+$$R = \begin{pmatrix}
 1-2y^2-2z^2 & 2xy+2zw & 2xz-2yw \\
 2xy-2zw & 1-2x^2-2z^2 & 2yz+2xw \\
 2xz+2yw & 2yz-2xw & 1-2x^2-2y^2
-\end{pmatrix} \]
-
-:p How do we convert a quaternion to a 3×3 rotation matrix?
+\end{pmatrix}$$:p How do we convert a quaternion to a 3×3 rotation matrix?
 ??x
-To convert a quaternion \( q = [x, y, z, w] \) to a 3×3 rotation matrix \( R \), we use the formula:
-\[ R_{ij} = \begin{cases}
+To convert a quaternion $q = [x, y, z, w]$ to a 3×3 rotation matrix $R$, we use the formula:
+$$R_{ij} = \begin{cases}
 1-2(y^2+z^2) & i=j=0 \\
 1-2(x^2+z^2) & i=j=1 \\
 1-2(x^2+y^2) & i=j=2 \\
 2(xy+zw) & i=0, j=1 \text{ or } i=1, j=0 \\
 2(xz-yw) & i=0, j=2 \text{ or } i=2, j=0 \\
 2(yz+xw) & i=1, j=2 \text{ or } i=2, j=1
-\end{cases} \]
+\end{cases}$$
 
 The code snippet provided in the text performs this conversion:
 ```cpp
@@ -292,14 +281,14 @@ void quaternionToMatrix(const float q[4], float R[3][3]) {
     // Implementation of converting quaternion to 3x3 rotation matrix
 }
 ```
-This function takes a quaternion \( [x, y, z, w] \) and constructs the corresponding 3×3 rotation matrix.
+This function takes a quaternion $[x, y, z, w]$ and constructs the corresponding 3×3 rotation matrix.
 
 x??
 
 ---
 
 #### Matrix-Quaternion Conversion
-Background context explaining the concept. This section discusses how to convert a 3×3 rotation matrix \( R \) into its equivalent quaternion representation \( q \). This is useful for preserving rotational information when dealing with matrices instead of quaternions.
+Background context explaining the concept. This section discusses how to convert a 3×3 rotation matrix $R $ into its equivalent quaternion representation$q$. This is useful for preserving rotational information when dealing with matrices instead of quaternions.
 
 The given code snippet performs this conversion:
 ```cpp
@@ -333,21 +322,17 @@ void matrixToQuaternion(const float R[3][3], float q[4]) {
 ```
 :p How do we convert a 3×3 rotation matrix to a quaternion?
 ??x
-To convert a 3×3 rotation matrix \( R \) into its equivalent quaternion representation \( q \), the provided code snippet follows these steps:
+To convert a 3×3 rotation matrix $R $ into its equivalent quaternion representation$q$, the provided code snippet follows these steps:
 
 1. **Compute the trace of the matrix**:
-   \[ \text{trace} = R_{00} + R_{11} + R_{22} \]
-
-2. **Case 1: Trace > 0**:
-   - Calculate \( s = \sqrt{\text{trace} + 1} \)
-   - Set the scalar part of the quaternion \( q_3 = s * 0.5f \)
-   - Compute the vector parts using the formulae involving the elements of the matrix.
+   $$\text{trace} = R_{00} + R_{11} + R_{22}$$2. **Case 1: Trace > 0**:
+   - Calculate $s = \sqrt{\text{trace} + 1}$- Set the scalar part of the quaternion $ q_3 = s * 0.5f$- Compute the vector parts using the formulae involving the elements of the matrix.
 
 3. **Case 2: Trace <= 0**:
    - Determine which diagonal element is largest (choosing i to be this index).
-   - Use specific formulae based on the chosen \( i \) to compute all quaternion components.
+   - Use specific formulae based on the chosen $i$ to compute all quaternion components.
 
-The code snippet implements these steps and returns a quaternion in the form \( [x, y, z, w] \).
+The code snippet implements these steps and returns a quaternion in the form $[x, y, z, w]$.
 
 x??
 
@@ -357,26 +342,24 @@ x??
 Background context explaining the concept. Rotational linear interpolation (LERP) is used for smoothly transitioning between two rotations represented by quaternions. This technique helps in animating smooth transitions without accumulating small errors that can occur with other methods.
 
 Given:
-- Quaternions \( q_A \) and \( q_B \)
-- A parameter \( b \in [0, 1] \)
+- Quaternions $q_A $ and$q_B $- A parameter$ b \in [0, 1]$The intermediate quaternion $ q_{LERP}$, which is $ b\%$of the way from $ q_A$to $ q_B$, can be found using:
+$$q_{LERP} = \text{LERP}(q_A, q_B, b) = (1 - b)q_A + bq_B$$
 
-The intermediate quaternion \( q_{LERP} \), which is \( b\% \) of the way from \( q_A \) to \( q_B \), can be found using:
-\[ q_{LERP} = \text{LERP}(q_A, q_B, b) = (1 - b)q_A + bq_B \]
 The magnitude of this quaternion needs to be normalized.
 
 :p How do we perform rotational linear interpolation between two quaternions?
 ??x
-To perform rotational linear interpolation (LERP) between two quaternions \( q_A \) and \( q_B \):
+To perform rotational linear interpolation (LERP) between two quaternions $q_A $ and$q_B$:
 
-\[ q_{\text{LERP}} = \text{LERP}(q_A, q_B, b) = (1 - b)q_A + bq_B \]
+$$q_{\text{LERP}} = \text{LERP}(q_A, q_B, b) = (1 - b)q_A + bq_B$$
 
 After computing the interpolated quaternion:
-\[ j(1 - b)q_A + bq_Bj = \text{normalize} \left[ \begin{matrix}
+$$j(1 - b)q_A + bq_Bj = \text{normalize} \left[ \begin{matrix}
 (1 - b)q_{Ax} + bq_{Bx} \\
 (1 - b)q_{Ay} + bq_{By} \\
 (1 - b)q_{Az} + bq_{Bz} \\
 (1 - b)q_{Aw} + bq_{Bw}
-\end{matrix} \right] \]
+\end{matrix} \right]$$
 
 The normalization ensures that the interpolated quaternion remains a unit quaternion, which is essential for correct rotations.
 
@@ -404,42 +387,27 @@ Explanation on how SLERP addresses the issues with LERP by interpolating along a
 Spherical linear interpolation (SLERP) is a method for interpolating between two quaternions that ensures smooth and consistent rotation animations. It uses sines and cosines to interpolate along the surface of a 4D hypersphere, as opposed to LERP which interpolates along chords.
 
 The SLERP formula accounts for the fact that quaternions are points on a sphere by using trigonometric functions:
-\[ \text{SLERP}(p,q,b) = w_p p + w_q q \]
-where
-\[ w_p = \frac{\sin((1-b)\theta)}{\sin(\theta)} \]
-\[ w_q = \frac{\sin(b\theta)}{\sin(\theta)} \]
+$$\text{SLERP}(p,q,b) = w_p p + w_q q$$where$$w_p = \frac{\sin((1-b)\theta)}{\sin(\theta)}$$
+$$w_q = \frac{\sin(b\theta)}{\sin(\theta)}$$
 
-Here, \(\theta\) is the angle between quaternions \(p\) and \(q\), which can be calculated using their dot product.
+Here,$\theta $ is the angle between quaternions$p $ and$q$, which can be calculated using their dot product.
 
-The cosine of the angle between two unit-length quaternions \(p\) and \(q\) is given by:
-\[ \cos(\theta) = p \cdot q = pxqx + pyqy + pzqz + pwqw \]
-and
-\[ \theta = \arccos(p \cdot q) \]
-
-:p What is the formula for SLERP?
+The cosine of the angle between two unit-length quaternions $p $ and$q$ is given by:
+$$\cos(\theta) = p \cdot q = pxqx + pyqy + pzqz + pwqw$$and$$\theta = \arccos(p \cdot q)$$:p What is the formula for SLERP?
 ??x
 The formula for SLERP is as follows:
-\[ \text{SLERP}(p,q,b) = w_p p + w_q q \]
-where
-\[ w_p = \frac{\sin((1-b)\theta)}{\sin(\theta)} \]
-and
-\[ w_q = \frac{\sin(b\theta)}{\sin(\theta)} \]
+$$\text{SLERP}(p,q,b) = w_p p + w_q q$$where$$w_p = \frac{\sin((1-b)\theta)}{\sin(\theta)}$$and$$w_q = \frac{\sin(b\theta)}{\sin(\theta)}$$
 
-Here, \(p\) and \(q\) are the quaternions to be interpolated between, and \(b\) is the parameter that controls the interpolation.
+Here,$p $ and$q $ are the quaternions to be interpolated between, and$ b$ is the parameter that controls the interpolation.
 
-The angle \(\theta\) between the two quaternions can be calculated using their dot product:
-\[ \cos(\theta) = p \cdot q = pxqx + pyqy + pzqz + pwqw \]
-and then
-\[ \theta = \arccos(p \cdot q) \]
-
-:p How is the angle \(\theta\) between two quaternions calculated?
+The angle $\theta$ between the two quaternions can be calculated using their dot product:
+$$\cos(\theta) = p \cdot q = pxqx + pyqy + pzqz + pwqw$$and then$$\theta = \arccos(p \cdot q)$$:p How is the angle $\theta$ between two quaternions calculated?
 ??x
-The angle \(\theta\) between two unit-length quaternions \(p\) and \(q\) can be calculated using their dot product:
-\[ \cos(\theta) = p \cdot q = pxqx + pyqy + pzqz + pwqw \]
+The angle $\theta $ between two unit-length quaternions$p $ and$q$ can be calculated using their dot product:
+$$\cos(\theta) = p \cdot q = pxqx + pyqy + pzqz + pwqw$$
 
-Once we have the cosine of the angle, we can find \(\theta\) itself using the inverse cosine function:
-\[ \theta = \arccos(p \cdot q) \]
-x??
+Once we have the cosine of the angle, we can find $\theta$ itself using the inverse cosine function:
+$$\theta = \arccos(p \cdot q)$$x??
 
 ---
 
@@ -687,7 +655,7 @@ Explanation on how Euler angles require three floats but have zero constraints, 
 
 :p How many degrees of freedom do Euler angles have?
 ??x
-Euler angles have 3 degrees of freedom (DOFs) because they use three floating-point parameters without any additional constraints. The formula to calculate the DOF is \(N\text{DOF} = N\text{parameters} - N\text{constraints}\), where in this case, there are no constraints.
+Euler angles have 3 degrees of freedom (DOFs) because they use three floating-point parameters without any additional constraints. The formula to calculate the DOF is $N\text{DOF} = N\text{parameters} - N\text{constraints}$, where in this case, there are no constraints.
 x??
 
 ---
@@ -697,7 +665,7 @@ Explanation on how axis-angle representation uses four floats but has one constr
 
 :p How many degrees of freedom do Euler angles have?
 ??x
-Axis+angle representation also has 3 DOFs because it uses 4 floating-point parameters with a single constraint that the axis vector must be unit length. The formula to calculate the DOF is \(N\text{DOF} = N\text{parameters} - N\text{constraints}\), which in this case, results in 3 DOFs.
+Axis+angle representation also has 3 DOFs because it uses 4 floating-point parameters with a single constraint that the axis vector must be unit length. The formula to calculate the DOF is $N\text{DOF} = N\text{parameters} - N\text{constraints}$, which in this case, results in 3 DOFs.
 x??
 
 ---
@@ -707,7 +675,7 @@ Explanation on how quaternions use four floats but have one constraint (unit len
 
 :p How many degrees of freedom do Euler angles have?
 ??x
-Quaternions also have 3 DOFs because they use 4 floating-point parameters with a single constraint that the quaternion must be unit length. The formula to calculate the DOF is \(N\text{DOF} = N\text{parameters} - N\text{constraints}\), which results in 3 DOFs.
+Quaternions also have 3 DOFs because they use 4 floating-point parameters with a single constraint that the quaternion must be unit length. The formula to calculate the DOF is $N\text{DOF} = N\text{parameters} - N\text{constraints}$, which results in 3 DOFs.
 x??
 
 ---
@@ -717,7 +685,7 @@ Explanation on how 3×3 matrices use nine floats but have six constraints (unit 
 
 :p How many degrees of freedom do Euler angles have?
 ??x
-3×3 matrix representation has 3 DOFs because it uses 9 floating-point parameters with 6 constraints, ensuring that all three rows and columns are unit vectors. The formula to calculate the DOF is \(N\text{DOF} = N\text{parameters} - N\text{constraints}\), which results in 3 DOFs.
+3×3 matrix representation has 3 DOFs because it uses 9 floating-point parameters with 6 constraints, ensuring that all three rows and columns are unit vectors. The formula to calculate the DOF is $N\text{DOF} = N\text{parameters} - N\text{constraints}$, which results in 3 DOFs.
 x??
 
 ---
@@ -727,7 +695,7 @@ Explanation on how lines can be represented parametrically with constraints.
 
 :p How does a line segment's parametric equation differ from that of an infinite line?
 ??x
-A line's parametric equation is given by \(P(t) = P_0 + tu\), where \(t\) can range over all real numbers. For an infinite line, this means \(t: -\infty \rightarrow \infty\). A line segment has the same form but with a constrained parameter \(t\) ranging from 0 to the length of the segment (L): 
+A line's parametric equation is given by $P(t) = P_0 + tu $, where $ t $can range over all real numbers. For an infinite line, this means$ t: -\infty \rightarrow \infty $. A line segment has the same form but with a constrained parameter$ t$ ranging from 0 to the length of the segment (L): 
 ```java
 P(t) = P0 + tu, where 0 <= t <= L,
 ```
@@ -735,7 +703,7 @@ or equivalently:
 ```java
 P(t) = P0 + t(L), where 0 <= t <= 1.
 ```
-The latter format normalizes \(t\) between 0 and 1, making it easier to work with.
+The latter format normalizes $t$ between 0 and 1, making it easier to work with.
 x??
 
 ---
@@ -745,7 +713,7 @@ Explanation on how rays extend infinitely in one direction.
 
 :p How is the parametric equation for a ray defined?
 ??x
-The parametric equation for a ray is similar to that of an infinite line but constrained such that \(t \geq 0\). This means the ray starts at point \(P_0\) and extends indefinitely along the direction vector \(u\):
+The parametric equation for a ray is similar to that of an infinite line but constrained such that $t \geq 0 $. This means the ray starts at point $ P_0 $and extends indefinitely along the direction vector$ u$:
 ```java
 P(t) = P0 + tu, where t >= 0.
 ```
@@ -759,11 +727,11 @@ Explanation on how line segments are bounded.
 
 :p How can a line segment be represented parametrically?
 ??x
-A line segment can be represented parametrically by \(P(t) = P0 + tu\), where \(t\) ranges from 0 to the length of the segment (L). Alternatively, it can also be written as:
+A line segment can be represented parametrically by $P(t) = P0 + tu $, where $ t$ ranges from 0 to the length of the segment (L). Alternatively, it can also be written as:
 ```java
 P(t) = P0 + t(L), where 0 <= t <= 1.
 ```
-The second format normalizes \(t\) between 0 and 1, making it convenient for calculations. This ensures that the parameter \(t\) always varies from 0 to 1 regardless of the length or orientation of the line segment.
+The second format normalizes $t $ between 0 and 1, making it convenient for calculations. This ensures that the parameter$t$ always varies from 0 to 1 regardless of the length or orientation of the line segment.
 x??
 
 ---
@@ -774,7 +742,7 @@ If applicable, add code examples with explanations.
 
 :p What is a parametric equation of a line segment?
 ??x
-The parametric equation of a line segment can be represented as [C + t(L - C)], where \(C\) is the starting point, \(L\) is the ending point, and \(t \in [0, 1]\) is a normalized parameter.
+The parametric equation of a line segment can be represented as [C + t(L - C)], where $C $ is the starting point,$L $ is the ending point, and$t \in [0, 1]$ is a normalized parameter.
 ```java
 public class LineSegment {
     Vector3 start;
@@ -795,7 +763,7 @@ If applicable, add code examples with explanations.
 
 :p How can we represent a sphere?
 ??x
-A sphere can be represented as a four-element vector \([C_x, C_y, C_z, r]\), where \(C = [C_x, C_y, C_z]\) is the center point and \(r\) is the radius. This allows for efficient packing into SIMD registers.
+A sphere can be represented as a four-element vector $[C_x, C_y, C_z, r]$, where $ C = [C_x, C_y, C_z]$is the center point and $ r$ is the radius. This allows for efficient packing into SIMD registers.
 ```java
 public class Sphere {
     Vector3 center;
@@ -816,7 +784,7 @@ If applicable, add code examples with explanations.
 
 :p How can we represent a plane using the point-normal form?
 ??x
-A plane can be represented in point-normal form as \([a, b, c, d]\), where \(n = [a, b, c]\) is the unit normal vector to the plane and \(d\) is the signed distance from the origin. This representation allows for efficient packing into a four-element vector.
+A plane can be represented in point-normal form as $[a, b, c, d]$, where $ n = [a, b, c]$is the unit normal vector to the plane and $ d$ is the signed distance from the origin. This representation allows for efficient packing into a four-element vector.
 ```java
 public class Plane {
     Vector3 normal;
@@ -840,11 +808,10 @@ x??
 Background context explaining how the distance between a point and a plane can be calculated. Include any relevant formulas or data here.
 If applicable, add code examples with explanations.
 
-:p How do we calculate the perpendicular distance from a point \(P\) to a plane?
+:p How do we calculate the perpendicular distance from a point $P$ to a plane?
 ??x
-The perpendicular distance from a point \(P = [x, y, z]\) to a plane defined by \([a, b, c, d]\) can be calculated using the formula:
-\[ h = (P - P_0) \cdot n = ax + by + cz + d \]
-where \(n = [a, b, c]\) is the normal vector and \(d\) is the distance from the plane to the origin.
+The perpendicular distance from a point $P = [x, y, z]$ to a plane defined by $[a, b, c, d]$ can be calculated using the formula:
+$$h = (P - P_0) \cdot n = ax + by + cz + d$$where $ n = [a, b, c]$is the normal vector and $ d$ is the distance from the plane to the origin.
 
 ```java
 public class Plane {
@@ -870,7 +837,7 @@ If applicable, add code examples with explanations.
 
 :p How can we pack a plane into a four-element vector?
 ??x
-A plane can be packed into a four-element vector \([a, b, c, d]\), where \(n = [a, b, c]\) is the normal vector and \(d\) is the signed distance from the origin. This compact representation allows for efficient memory usage in SIMD operations.
+A plane can be packed into a four-element vector $[a, b, c, d]$, where $ n = [a, b, c]$is the normal vector and $ d$ is the signed distance from the origin. This compact representation allows for efficient memory usage in SIMD operations.
 ```java
 public class Plane {
     Vector3 normal;
@@ -886,9 +853,9 @@ x??
 ---
 
 #### Homogeneous Coordinates and Plane Transformation
-When points \( P \) are written in homogeneous coordinates with \( w = 1 \), the equation \( (L \cdot P) = 0 \) is another way of writing \( (n \cdot P) = d \). These equations are satisfied for all points \( P \) that lie on the plane \( L \).
-Planes defined in four-element vector form can be easily transformed from one coordinate space to another. Given a matrix \( M_{A.B} \) that transforms points and (non-normal) vectors from space A to space B, we already know that to transform a normal vector such as the plane's n-vector, we need to use the inverse transpose of that matrix, \( (M^{-1}_{A.B})^T \).
-Applying the inverse transpose of a matrix to a four-element plane vector \( L \) will correctly transform that plane from space A to space B.
+When points $P $ are written in homogeneous coordinates with$w = 1 $, the equation$(L \cdot P) = 0 $ is another way of writing$(n \cdot P) = d $. These equations are satisfied for all points$ P $that lie on the plane$ L$.
+Planes defined in four-element vector form can be easily transformed from one coordinate space to another. Given a matrix $M_{A.B}$ that transforms points and (non-normal) vectors from space A to space B, we already know that to transform a normal vector such as the plane's n-vector, we need to use the inverse transpose of that matrix,$(M^{-1}_{A.B})^T$.
+Applying the inverse transpose of a matrix to a four-element plane vector $L$ will correctly transform that plane from space A to space B.
 :p How does transforming planes using homogeneous coordinates work?
 ??x
 To transform a plane from one coordinate system to another, you use the inverse transpose of the transformation matrix. This ensures that the normal vector and distance of the plane are correctly adjusted.
@@ -909,18 +876,14 @@ x??
 ---
 
 #### Axis-Aligned Bounding Boxes (AABB)
-An axis-aligned bounding box (AABB) is a 3D cuboid whose six rectangular faces are aligned with a particular coordinate frame’s mutually orthogonal axes. Such an AABB can be represented by a six-element vector containing the minimum and maximum coordinates along each of the three principal axes, \([xmin, ymin, zmin, xmax, ymax, zmax]\), or two points \(P_{min}\) and \(P_{max}\).
+An axis-aligned bounding box (AABB) is a 3D cuboid whose six rectangular faces are aligned with a particular coordinate frame’s mutually orthogonal axes. Such an AABB can be represented by a six-element vector containing the minimum and maximum coordinates along each of the three principal axes, $[xmin, ymin, zmin, xmax, ymax, zmax]$, or two points $ P_{min}$and $ P_{max}$.
 
-This simple representation allows for a particularly convenient and inexpensive method of testing whether a point \( P \) is inside or outside any given AABB.
-To test if a point \( P \) is inside an AABB:
+This simple representation allows for a particularly convenient and inexpensive method of testing whether a point $P$ is inside or outside any given AABB.
+To test if a point $P$ is inside an AABB:
 - Check if all the following conditions are true: 
-  - \(Px \geq xmin\) and \(Px \leq xmax\)
-  - \(Py \geq ymin\) and \(Py \leq ymax\)
-  - \(Pz \geq zmin\) and \(Pz \leq zmax\)
-
-:p How do you test if a point is inside an AABB?
+  - $Px \geq xmin $ and$Px \leq xmax $-$ Py \geq ymin $and$ Py \leq ymax $-$ Pz \geq zmin $and$ Pz \leq zmax$:p How do you test if a point is inside an AABB?
 ??x
-To determine if a point \( P \) is within an axis-aligned bounding box (AABB), simply check that the coordinates of \( P \) are within the ranges defined by the minimum and maximum coordinates of the AABB.
+To determine if a point $P $ is within an axis-aligned bounding box (AABB), simply check that the coordinates of$P$ are within the ranges defined by the minimum and maximum coordinates of the AABB.
 
 For example, in C++:
 ```cpp
@@ -938,13 +901,13 @@ x??
 An oriented bounding box (OBB) is a cuboid that has been oriented so as to align in some logical way with the object it bounds. Typically, an OBB aligns with the local-space axes of the object.
 
 Because an OBB can be aligned differently from world space, testing whether a point lies within an OBB often involves transforming the point into the OBB's "aligned" coordinate system and then using an AABB intersection test as presented above.
-To transform a point \( P \) into the OBB's local coordinate system:
+To transform a point $P$ into the OBB's local coordinate system:
 1. Calculate the transformation matrix that aligns the local axes of the OBB with the world space.
 2. Apply this transformation to the point.
 
 :p How do you check if a point is inside an oriented bounding box (OBB)?
 ??x
-To check if a point \( P \) is within an oriented bounding box (OBB), first transform the point into the OBB's local coordinate system, and then use the AABB intersection test as described previously.
+To check if a point $P$ is within an oriented bounding box (OBB), first transform the point into the OBB's local coordinate system, and then use the AABB intersection test as described previously.
 
 For example, in C++:
 ```cpp
@@ -970,7 +933,7 @@ x??
 #### Frustum
 A frustum is a group of six planes that define a truncated pyramid shape. Frusta are commonplace in 3D rendering because they conveniently define the viewable region of the 3D world when rendered via a perspective projection from the point of view of a virtual camera.
 
-Four of the planes bound the edges of the screen space, while the other two planes represent the near and far clipping planes (i.e., they define the minimum and maximum \( z \) coordinates possible for any visible point).
+Four of the planes bound the edges of the screen space, while the other two planes represent the near and far clipping planes (i.e., they define the minimum and maximum $z$ coordinates possible for any visible point).
 A convenient representation of a frustum is an array of six planes, each represented in point-normal form.
 
 :p What are the key components of a frustum?
@@ -978,12 +941,12 @@ A convenient representation of a frustum is an array of six planes, each represe
 The key components of a frustum include:
 - Six defining planes that together create a truncated pyramid shape.
 - Four planes that bound the edges of the screen space.
-- Two additional planes representing the near and far clipping planes, which define the \( z \) range for visible points.
+- Two additional planes representing the near and far clipping planes, which define the $z$ range for visible points.
 
 These planes are typically represented in point-normal form. For example, each plane can be defined by:
-\[ (n_x, n_y, n_z) \cdot (x, y, z) + d = 0 \]
+$$(n_x, n_y, n_z) \cdot (x, y, z) + d = 0$$
 
-Where \( (n_x, n_y, n_z) \) is the normal vector of the plane and \( d \) is the distance from the origin.
+Where $(n_x, n_y, n_z)$ is the normal vector of the plane and $d$ is the distance from the origin.
 
 In C++:
 ```cpp

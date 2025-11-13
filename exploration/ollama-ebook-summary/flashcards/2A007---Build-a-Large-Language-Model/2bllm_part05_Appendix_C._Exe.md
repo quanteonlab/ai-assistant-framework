@@ -368,8 +368,8 @@ Background context explaining gradient clipping. Gradient clipping is a techniqu
 
 Gradient clipping involves setting a threshold above which gradients are scaled down to ensure that their norm does not exceed a specified maximum value. This process helps in preventing the exploding gradient problem, where large gradient values can lead to unstable model updates during training.
 
-The L2 norm (Euclidean norm) of a vector \( \mathbf{v} = [v_1, v_2, ..., v_n] \) is calculated as follows:
-\[ ||\mathbf{v}||_2 = \sqrt{\sum_{i=1}^{n} v_i^2} \]
+The L2 norm (Euclidean norm) of a vector $\mathbf{v} = [v_1, v_2, ..., v_n]$ is calculated as follows:
+$$||\mathbf{v}||_2 = \sqrt{\sum_{i=1}^{n} v_i^2}$$
 
 In the context of matrices and gradients, the L2 norm can be applied similarly.
 

@@ -288,7 +288,7 @@ x??
 
 ---
 #### Pipeline Latency and Throughput
-Pipeline latency is defined as the time required to process a single instruction, which is the sum of latencies at each stage: \( T_{pipeline} = \sum_{i=0}^{N-1} T_i \).
+Pipeline latency is defined as the time required to process a single instruction, which is the sum of latencies at each stage: $T_{pipeline} = \sum_{i=0}^{N-1} T_i$.
 Throughput measures how many instructions can be processed per unit time. The throughput is determined by the slowest stage in the pipeline.
 :p What does latency and throughput measure in a CPU pipeline?
 ??x

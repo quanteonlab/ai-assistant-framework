@@ -6,17 +6,15 @@
 
 #### Value Function and Policy Evaluation
 
-Background context: The value function \( v_\pi(s) \) for a policy \( \pi \) is defined as the expected return starting from state \( s \) under that policy. The update rule for the value function during iterative policy evaluation is given by:
+Background context: The value function $v_\pi(s)$ for a policy $\pi$ is defined as the expected return starting from state $s$ under that policy. The update rule for the value function during iterative policy evaluation is given by:
 
-\[ v_{k+1}(s) = E[R_{t+1} + \gamma v_k(S_{t+1}) | S_t = s, A_t = \pi(s)] \]
+$$v_{k+1}(s) = E[R_{t+1} + \gamma v_k(S_{t+1}) | S_t = s, A_t = \pi(s)]$$
 
-Where \( R_{t+1} \) is the reward at time step \( t+1 \), and \( \gamma \) is the discount factor. For an undiscounted task (\( \gamma = 1 \)), this simplifies to:
+Where $R_{t+1}$ is the reward at time step $ t+1 $, and $\gamma $ is the discount factor. For an undiscounted task ($\gamma = 1$), this simplifies to:
 
-\[ v_{k+1}(s) = E[R_{t+1} + v_k(S_{t+1}) | S_t = s, A_t = \pi(s)] \]
-
-:p What is the value function \( v_\pi(s) \)?
+$$v_{k+1}(s) = E[R_{t+1} + v_k(S_{t+1}) | S_t = s, A_t = \pi(s)]$$:p What is the value function $ v_\pi(s)$?
 ??x
-The value function \( v_\pi(s) \) represents the expected cumulative return starting from state \( s \) and following policy \( \pi \) thereafter. It quantifies how good it is to start in a particular state and follow a specific policy.
+The value function $v_\pi(s)$ represents the expected cumulative return starting from state $ s $ and following policy $\pi$ thereafter. It quantifies how good it is to start in a particular state and follow a specific policy.
 
 In iterative policy evaluation, we update our estimate of the value function iteratively using the Bellman expectation equation until convergence.
 x??
@@ -25,67 +23,65 @@ x??
 
 #### Action-Value Function and Its Approximation
 
-Background context: The action-value function \( q_\pi(s,a) \) for a given state-action pair is defined as the expected return starting from state \( s \), taking action \( a \), and then following policy \( \pi \). It can be expressed using the Bellman equation:
+Background context: The action-value function $q_\pi(s,a)$ for a given state-action pair is defined as the expected return starting from state $ s $, taking action $ a$, and then following policy $\pi$. It can be expressed using the Bellman equation:
 
-\[ q_\pi(s, a) = E[R_{t+1} + v_\pi(S_{t+1}) | S_t = s, A_t = a] \]
+$$q_\pi(s, a) = E[R_{t+1} + v_\pi(S_{t+1}) | S_t = s, A_t = a]$$
 
-For an undiscounted task (\( \gamma = 1 \)):
+For an undiscounted task ($\gamma = 1$):
 
-\[ q_\pi(s, a) = E[R_{t+1} + v_\pi(S_{t+1}) | S_t = s, A_t = a] \]
-
-:p What is the action-value function \( q_\pi(s,a) \)?
+$$q_\pi(s, a) = E[R_{t+1} + v_\pi(S_{t+1}) | S_t = s, A_t = a]$$:p What is the action-value function $ q_\pi(s,a)$?
 ??x
-The action-value function \( q_\pi(s,a) \) for a given state-action pair represents the expected return starting from state \( s \), taking action \( a \), and then following policy \( \pi \). It quantifies how good it is to take a specific action in a particular state under the current policy.
+The action-value function $q_\pi(s,a)$ for a given state-action pair represents the expected return starting from state $ s $, taking action $ a$, and then following policy $\pi$. It quantifies how good it is to take a specific action in a particular state under the current policy.
 x??
 
 ---
 
 #### Policy Improvement Theorem
 
-Background context: Given a policy \( \pi \) with value function \( v_\pi(s) \), we can determine if changing the policy at any state would improve the expected return. Specifically, for all states \( s \):
+Background context: Given a policy $\pi $ with value function$v_\pi(s)$, we can determine if changing the policy at any state would improve the expected return. Specifically, for all states $ s$:
 
-\[ q_\pi(s, \pi(s)) \geq v_\pi(s) \]
+$$q_\pi(s, \pi(s)) \geq v_\pi(s)$$
 
-If strict inequality holds, a new policy \( \pi' \) that is greedy with respect to \( v_\pi \) will strictly outperform \( \pi \).
+If strict inequality holds, a new policy $\pi'$ that is greedy with respect to $ v_\pi $ will strictly outperform $\pi$.
 
 The policy improvement theorem states:
 
-- If \( q_\pi(s, \pi'(s)) > v_\pi(s) \), then the new policy \( \pi' \) is better than the original policy \( \pi \).
+- If $q_\pi(s, \pi'(s)) > v_\pi(s)$, then the new policy $\pi'$ is better than the original policy $\pi$.
 - The greedy policy defined by:
-  \[ \pi'(s) = \arg\max_a q_\pi(s, a) \]
-  satisfies this condition and thus guarantees an improvement.
+  $$\pi'(s) = \arg\max_a q_\pi(s, a)$$satisfies this condition and thus guarantees an improvement.
 
 :p What does the policy improvement theorem state?
 ??x
-The policy improvement theorem states that if changing the action in a given state \( s \) to another action \( a \) (where \( q_\pi(s, a) > v_\pi(s) \)) improves the expected return, then using this new greedy policy will yield a better overall policy.
+The policy improvement theorem states that if changing the action in a given state $s $ to another action$a $(where$ q_\pi(s, a) > v_\pi(s)$) improves the expected return, then using this new greedy policy will yield a better overall policy.
 
 Formally:
-- For any deterministic policies \( \pi \) and \( \pi' \), if for all states \( s \):
-  \[ q_\pi(s, \pi'(s)) > v_\pi(s) \]
-  Then the new policy \( \pi' \) is strictly better than the original policy \( \pi \).
+- For any deterministic policies $\pi $ and$\pi'$, if for all states $ s$:
+  $$q_\pi(s, \pi'(s)) > v_\pi(s)$$
 
-- If there are ties in \( q_\pi(s, a) \), each maximizing action can be given a probability according to some apportioning scheme.
+Then the new policy $\pi'$ is strictly better than the original policy $\pi$.
+
+- If there are ties in $q_\pi(s, a)$, each maximizing action can be given a probability according to some apportioning scheme.
 x??
 
 ---
 
 #### Policy Improvement for Stochastic Policies
 
-Background context: For stochastic policies \( \pi \) that specify probabilities of taking actions \( a \) in state \( s \), the policy improvement theorem still applies. The greedy policy is defined as:
+Background context: For stochastic policies $\pi $ that specify probabilities of taking actions$a $ in state$s$, the policy improvement theorem still applies. The greedy policy is defined as:
 
-\[ \pi'(s) = \arg\max_a q_\pi(s, a) \]
+$$\pi'(s) = \arg\max_a q_\pi(s, a)$$
 
 Where ties are broken arbitrarily.
 
-The process ensures that the new policy \( \pi' \) will be at least as good as, and often better than, the original policy \( \pi \).
+The process ensures that the new policy $\pi'$ will be at least as good as, and often better than, the original policy $\pi$.
 
 :p What is the stochastic version of the greedy policy?
 ??x
 For stochastic policies, the greedy policy for improvement is defined as:
 
-\[ \pi'(s) = \arg\max_a q_\pi(s, a) \]
+$$\pi'(s) = \arg\max_a q_\pi(s, a)$$
 
-Where each action that achieves the maximum value in \( q_\pi(s, a) \) can be given a probability according to some apportioning scheme. This ensures that if there are multiple actions with the same maximum value, they share the probability of being selected.
+Where each action that achieves the maximum value in $q_\pi(s, a)$ can be given a probability according to some apportioning scheme. This ensures that if there are multiple actions with the same maximum value, they share the probability of being selected.
 
 This stochastic greedy policy guarantees an improvement over the original policy.
 x??
@@ -114,7 +110,7 @@ In each iteration, the value function for the current policy needs to be compute
 
 :p What is the purpose of the policy evaluation loop?
 ??x
-The purpose of the policy evaluation loop is to compute the state-value function \( V^\pi \) for a given policy \( \pi \). This involves iteratively updating the value of each state based on the expected future rewards under that policy until convergence.
+The purpose of the policy evaluation loop is to compute the state-value function $V^\pi $ for a given policy$\pi$. This involves iteratively updating the value of each state based on the expected future rewards under that policy until convergence.
 x??
 
 ---
@@ -145,7 +141,7 @@ The iteration process involves multiple steps of evaluation and improvement.
 :p What is the basic structure of the policy iteration algorithm?
 ??x
 The basic structure of the policy iteration algorithm consists of two main phases: 
-1. **Policy Evaluation**: Iteratively update state values \( V(s) \) for all states until convergence.
+1. **Policy Evaluation**: Iteratively update state values $V(s)$ for all states until convergence.
 2. **Policy Improvement**: Check if any actions can improve the value function and update the policy accordingly.
 
 If no further improvements are possible, the current policy is optimal.
@@ -223,12 +219,9 @@ Policy iteration for action values involves iteratively improving policies based
 1. Initialize q-values arbitrarily.
 2. Evaluate each state-action pair:
    - Update the q-value using the Bellman optimality equation: 
-     \[ q(s, a) = \sum_{s', r} p(s', r|s, a) [r + \gamma v(s')] \]
-3. Improve policy based on q-values:
-   - For each state \( s \), set the action to maximize the q-value: 
-     \[ \pi'(s) = \arg\max_a q(s, a) \]
-
-4. Repeat steps 2 and 3 until convergence.
+     $$q(s, a) = \sum_{s', r} p(s', r|s, a) [r + \gamma v(s')]$$3. Improve policy based on q-values:
+   - For each state $s$, set the action to maximize the q-value: 
+     $$\pi'(s) = \arg\max_a q(s, a)$$4. Repeat steps 2 and 3 until convergence.
 
 Here is a pseudocode implementation:
 
@@ -271,19 +264,19 @@ x??
 
 #### -Soft Policies
 
-An \(-soft\) policy ensures that the probability of selecting each action in each state is at least \(\frac{\epsilon}{|A(s)|}\).
+An $-soft $ policy ensures that the probability of selecting each action in each state is at least$\frac{\epsilon}{|A(s)|}$.
 
-:p How would you modify steps 3, 2, and 1 of the v⇤ policy iteration algorithm for an \(-soft\) policy?
+:p How would you modify steps 3, 2, and 1 of the v⇤ policy iteration algorithm for an $-soft$ policy?
 ??x
-For an \(-soft\) policy, we need to ensure that every action in each state has a minimum probability. This affects the policy evaluation (step 2) and improvement (step 3), but step 1 can remain unchanged.
+For an $-soft$ policy, we need to ensure that every action in each state has a minimum probability. This affects the policy evaluation (step 2) and improvement (step 3), but step 1 can remain unchanged.
 
 - **Step 1: Initialization**: Keep as is.
 - **Step 2: Policy Evaluation**:
-   - When updating q-values, ensure that actions with higher values are selected with a probability proportional to \(\frac{\epsilon}{|A(s)|}\).
+   - When updating q-values, ensure that actions with higher values are selected with a probability proportional to $\frac{\epsilon}{|A(s)|}$.
 
 - **Step 3: Policy Improvement**:
-   - For each state \(s\), compute the maximum q-value and select an action based on the soft policy.
-   - Adjust the probabilities of actions such that all actions in \(s\) have a probability at least \(\frac{\epsilon}{|A(s)|}\).
+   - For each state $s$, compute the maximum q-value and select an action based on the soft policy.
+   - Adjust the probabilities of actions such that all actions in $s $ have a probability at least$\frac{\epsilon}{|A(s)|}$.
 
 Example pseudocode for step 2 (policy evaluation) adjustment:
 
@@ -307,21 +300,19 @@ x??
 #### Gambler’s Problem
 
 The gambler's problem is an example where the optimal policy can be solved via value iteration. The state space and actions are defined as follows:
-- State: Capital \(s \in {1, 2, ..., 99}\)
-- Actions: Stakes \(a \in {0, 1, ..., \min(s, 100 - s)}\)
-- Reward: +1 when goal is reached; otherwise, 0
+- State: Capital $s \in {1, 2, ..., 99}$- Actions: Stakes $ a \in {0, 1, ..., \min(s, 100 - s)}$- Reward: +1 when goal is reached; otherwise, 0
 
 :p What is the optimal policy for the gambler's problem?
 ??x
-The optimal policy in the gambler’s problem involves a non-monotonic betting strategy. For low capital levels (e.g., less than \( \frac{99}{2} \)), the gambler bets all available money. Conversely, when the capital is close to 100, the gambler bets just enough to reach or exceed 100.
+The optimal policy in the gambler’s problem involves a non-monotonic betting strategy. For low capital levels (e.g., less than $\frac{99}{2}$), the gambler bets all available money. Conversely, when the capital is close to 100, the gambler bets just enough to reach or exceed 100.
 
 This policy ensures that the gambler maximizes his chances of reaching the goal without risking more than necessary at any point.
 
 Example:
-- If the gambler has $50, he should bet all $50 in one flip.
+- If the gambler has $50, he should bet all$50 in one flip.
 - However, if the gambler has $51, he should not risk losing a big chunk by betting too much. Instead, he bets just enough to have a higher probability of reaching 100.
 
-The exact threshold values and strategies can vary based on the discount factor \( \gamma \) and the probability \( p_h \).
+The exact threshold values and strategies can vary based on the discount factor $\gamma $ and the probability$p_h$.
 
 x??
 

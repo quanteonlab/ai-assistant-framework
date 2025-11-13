@@ -883,12 +883,11 @@ x??
 Each flashcard covers different aspects of the provided text, focusing on understanding rather than pure memorization.
 
 #### Floating-Point Representation Overview
-Background context: A 32-bit floating-point number uses a specific format to represent both very large and very small numbers. The representation includes a sign bit, an exponent, and a mantissa (also known as the significand). The value \(v\) is calculated using the formula:
-\[ v = s \cdot 2^{(e - 127)} \cdot (1 + m) \]
-where:
-- \(s\) is the sign bit (\(+1\) or \(-1\))
-- \(e\) is the biased exponent
-- \(m\) is the mantissa
+Background context: A 32-bit floating-point number uses a specific format to represent both very large and very small numbers. The representation includes a sign bit, an exponent, and a mantissa (also known as the significand). The value $v$ is calculated using the formula:
+$$v = s \cdot 2^{(e - 127)} \cdot (1 + m)$$where:
+- $s $ is the sign bit ($+1 $ or$-1$)
+- $e$ is the biased exponent
+- $m$ is the mantissa
 
 The exponent is biased by 127 to allow for both positive and negative exponents, making it easier to represent a wide range of values.
 
@@ -897,9 +896,9 @@ The exponent is biased by 127 to allow for both positive and negative exponents,
 The floating-point number format includes three components: the sign bit, the biased exponent (8 bits), and the mantissa (23 bits).
 
 Explanation:
-- The **sign bit** (\(s\)) is used to denote whether the number is positive or negative.
-- The **exponent** (\(e\)) is a 7-bit value with a bias of 127, allowing for both positive and negative exponents.
-- The **mantissa** (\(m\)), also known as the significand, includes an implicit leading '1' bit that is not stored. The remaining bits represent the fractional part.
+- The **sign bit** ($s$) is used to denote whether the number is positive or negative.
+- The **exponent** ($e$) is a 7-bit value with a bias of 127, allowing for both positive and negative exponents.
+- The **mantissa** ($m$), also known as the significand, includes an implicit leading '1' bit that is not stored. The remaining bits represent the fractional part.
 
 ??x
 The answer provides a clear breakdown of the components used in floating-point representation and their roles:
@@ -963,7 +962,7 @@ Background context: The exponent in a floating-point number is biased by 127 to 
 The exponent is calculated by subtracting 127 from the actual exponent value stored in the bit pattern.
 ??x
 Explanation:
-- The **exponent** (\(e\)) is represented as an 8-bit number with a bias of 127. To calculate the true exponent, you need to subtract this bias.
+- The **exponent** ($e$) is represented as an 8-bit number with a bias of 127. To calculate the true exponent, you need to subtract this bias.
 
 ```java
 // Pseudocode to calculate the true exponent value
@@ -993,7 +992,7 @@ Background context: The mantissa (also known as the significand) in a floating-p
 The **mantissa** or **significand** plays a crucial role in determining the fractional part of the number. It implicitly starts with a leading '1', which is not stored, allowing for higher precision in representing numbers.
 ??x
 Explanation:
-- The **mantissa** (\(m\)) includes an implicit leading '1' bit that is not actually stored. The remaining bits represent the fractional part.
+- The **mantissa** ($m$) includes an implicit leading '1' bit that is not actually stored. The remaining bits represent the fractional part.
 
 ```java
 // Pseudocode to interpret the mantissa value
@@ -1023,7 +1022,7 @@ Background context: The precision of a floating-point number increases as the ma
 The **trade-off** between magnitude and precision in floating-point numbers means that as the magnitude increases, the precision decreases, and vice versa. This is because there are a fixed number of bits (23 bits for the mantissa) that must be shared between representing the whole part and the fractional part of the number.
 ??x
 Explanation:
-- As the **magnitude** increases, more bits are allocated to represent the whole number, leaving fewer bits available for the fractional part (\(m\)), reducing precision.
+- As the **magnitude** increases, more bits are allocated to represent the whole number, leaving fewer bits available for the fractional part ($m$), reducing precision.
 - Conversely, as the magnitude decreases, fewer bits are used for the whole number, allowing more bits for the fractional part, increasing precision.
 
 ```java
@@ -1047,21 +1046,21 @@ x??
 ---
 
 #### FLT_MAX Representation and Its Characteristics
-Background context: The largest possible floating-point value, \(FLT_{MAX}\), is represented with a 23-bit mantissa, an exponent of 254 (which translates to 127 after bias correction), and a sign bit set to positive.
+Background context: The largest possible floating-point value, $FLT_{MAX}$, is represented with a 23-bit mantissa, an exponent of 254 (which translates to 127 after bias correction), and a sign bit set to positive.
 
 :p Explain the representation of FLT_MAX.
 ??x
-The **representation** of \(FLT_{MAX}\) in a 32-bit IEEE floating-point format is characterized by:
+The **representation** of $FLT_{MAX}$ in a 32-bit IEEE floating-point format is characterized by:
 - A **sign bit** set to 0 (positive).
-- An **exponent** value of 254, which translates to \(127 + 127\).
+- An **exponent** value of 254, which translates to $127 + 127$.
 - A **mantissa** with all bits set to 1.
 
-The largest absolute value that can be represented is \(0x00FFFFFF\) in hexadecimal, or 23 ones in the mantissa, plus the implicit leading one. The exponent of 254 shifts these 24 binary ones up by 127 bit positions.
+The largest absolute value that can be represented is $0x00FFFFFF$ in hexadecimal, or 23 ones in the mantissa, plus the implicit leading one. The exponent of 254 shifts these 24 binary ones up by 127 bit positions.
 ??x
 Explanation:
 - The **sign bit** is 0 (indicating a positive number).
-- The **exponent** \(e = 254\) translates to \(127 + 127\), which is the maximum value that can be represented.
-- The **mantissa** is all binary ones (\(0x00FFFFFF\)), representing the fractional part.
+- The **exponent**$e = 254 $ translates to$127 + 127$, which is the maximum value that can be represented.
+- The **mantissa** is all binary ones ($0x00FFFFFF$), representing the fractional part.
 
 ```java
 // Pseudocode demonstrating FLT_MAX representation
@@ -1089,11 +1088,11 @@ Background context: For floating-point values with magnitudes much less than one
 
 :p Explain the effects when magnitude is much smaller.
 ??x
-When the magnitude of a floating-point number is much smaller (less than 1), the **exponent** will be a large negative value. This shifts the significant digits towards the right, leaving fewer bits available for the fractional part (\(m\)). As a result, there is a loss of precision in representing the fractional component.
+When the magnitude of a floating-point number is much smaller (less than 1), the **exponent** will be a large negative value. This shifts the significant digits towards the right, leaving fewer bits available for the fractional part ($m$). As a result, there is a loss of precision in representing the fractional component.
 ??x
 Explanation:
-- The **exponent** \(e\) will be a large negative number, meaning it has been subtracted by a large value from 127.
-- This shift causes the implicit leading '1' to move further right, leaving fewer bits for the actual mantissa (\(m\)).
+- The **exponent** $e$ will be a large negative number, meaning it has been subtracted by a large value from 127.
+- This shift causes the implicit leading '1' to move further right, leaving fewer bits for the actual mantissa ($m$).
 - Consequently, the precision of the fractional part decreases.
 
 ```java
@@ -1152,11 +1151,11 @@ Subnormal values are represented by setting the biased exponent to 0. The expone
 
 #### Machine Epsilon
 
-Machine epsilon (`ε`) for a floating-point representation is the smallest value such that \(1 + ε \neq 1\). For an IEEE-754 single precision format, with its 23 bits of precision, `ε` is approximately \(2^{-23}\), or about `1.192e-07`.
+Machine epsilon (`ε`) for a floating-point representation is the smallest value such that $1 + ε \neq 1 $. For an IEEE-754 single precision format, with its 23 bits of precision, `ε` is approximately $2^{-23}$, or about `1.192e-07`.
 
 :p What does machine epsilon (`ε`) represent in floating-point numbers?
 ??x
-Machine epsilon represents the smallest positive value that can be added to 1 without resulting in a numerical change when using a specific floating-point format. For single precision IEEE-754, `ε` is approximately \(2^{-23}\).
+Machine epsilon represents the smallest positive value that can be added to 1 without resulting in a numerical change when using a specific floating-point format. For single precision IEEE-754, `ε` is approximately $2^{-23}$.
 ??x
 
 ---
@@ -1174,15 +1173,15 @@ Two floating-point numbers that differ by 1 ULP are identical everywhere except 
 These flashcards cover the key concepts from the provided text, focusing on understanding and context rather than pure memorization.
 
 #### Units in the Last Place (ULP)
-Background context explaining that ULP quantifies precision and error in floating-point numbers. The formula for 1 ULP is \(2^{\text{exponent}}\). For example, if an exponent is \(x\), then \(1 \text{ ULP} = 2^{(x - bias)}\).
+Background context explaining that ULP quantifies precision and error in floating-point numbers. The formula for 1 ULP is $2^{\text{exponent}}$. For example, if an exponent is $ x$, then $1 \text{ ULP} = 2^{(x - bias)}$.
 
 :p What is the significance of Units in the Last Place (ULP) in floating-point numbers?
 ??x
-Units in the Last Place (ULP) are significant because they quantify the precision and error inherent in a floating-point number. The size of 1 ULP depends on the exponent, specifically \(2^{\text{exponent}}\), making it useful for understanding how small changes affect values. For instance, if an exponent is \(x\), then \(1 \text{ ULP} = 2^{(x - bias)}\).
+Units in the Last Place (ULP) are significant because they quantify the precision and error inherent in a floating-point number. The size of 1 ULP depends on the exponent, specifically $2^{\text{exponent}}$, making it useful for understanding how small changes affect values. For instance, if an exponent is $ x$, then $1 \text{ ULP} = 2^{(x - bias)}$.
 
 For example:
 - If a floating-point value's unbiased exponent is zero (like 1.0f), the machine epsilon (the smallest difference between two representable numbers) is equal to 1 ULP.
-- Changing the exponent to 1 yields \(2^1 \cdot \text{machine epsilon}\) as 1 ULP.
+- Changing the exponent to 1 yields $2^1 \cdot \text{machine epsilon}$ as 1 ULP.
 
 This concept helps in understanding and managing floating-point errors, especially in calculations where precision matters. 
 x??
@@ -1192,12 +1191,12 @@ x??
 #### Impact of Floating-Point Precision on Game Time Tracking
 Background context explaining how the magnitude of a game's clock variable affects its precision over time. The example uses a floating-point variable to track absolute game time in seconds.
 
-:p How long can a 32-bit floating-point variable represent game time before adding \(1/30^{\text{th}}\) of a second no longer changes its value?
+:p How long can a 32-bit floating-point variable represent game time before adding $1/30^{\text{th}}$ of a second no longer changes its value?
 ??x
-The answer is that a 32-bit floating-point variable using the IEEE 754 standard has a precision limit such that after approximately 12.14 days (or about 220 seconds), adding \(1/30^{\text{th}}\) of a second to it no longer changes its value.
+The answer is that a 32-bit floating-point variable using the IEEE 754 standard has a precision limit such that after approximately 12.14 days (or about 220 seconds), adding $1/30^{\text{th}}$ of a second to it no longer changes its value.
 
-To understand this, consider the machine epsilon for single-precision floats is roughly \(2^{-23}\). After accumulating error over time, the total change might be less than this smallest representable difference. In practice:
-\[ 12.14 \text{ days} = \frac{2^{23}}{30} \approx 220 \text{ seconds}. \]
+To understand this, consider the machine epsilon for single-precision floats is roughly $2^{-23}$. After accumulating error over time, the total change might be less than this smallest representable difference. In practice:
+$$12.14 \text{ days} = \frac{2^{23}}{30} \approx 220 \text{ seconds}.$$
 
 For a game that is expected to run for much shorter durations, using a 32-bit floating-point clock in seconds can be sufficient.
 x??
@@ -1572,16 +1571,16 @@ x??
 
 #### Kilobytes versus Kibibytes
 
-The term "kilobyte" (kB) is commonly used in computing, but its actual size can be ambiguous. In metric (SI) systems, kilo means \(10^3\), or 1000. However, when referring to computer memory, a "kilobyte" often means 1024 bytes due to the binary nature of digital data.
+The term "kilobyte" (kB) is commonly used in computing, but its actual size can be ambiguous. In metric (SI) systems, kilo means $10^3$, or 1000. However, when referring to computer memory, a "kilobyte" often means 1024 bytes due to the binary nature of digital data.
 
-Background context: The International Electrotechnical Commission (IEC) introduced new prefixes in 1998 to resolve this ambiguity. They defined kibibyte (KiB) as \(2^{10}\), or 1024 bytes, and mebibyte (MiB) as \(2^{20}\), or 1,048,576 bytes.
+Background context: The International Electrotechnical Commission (IEC) introduced new prefixes in 1998 to resolve this ambiguity. They defined kibibyte (KiB) as $2^{10}$, or 1024 bytes, and mebibyte (MiB) as $2^{20}$, or 1,048,576 bytes.
 
 :p What are the differences between kilobytes and kibibytes?
 ??x
 The main difference lies in their definitions:
 
-- Kilobyte (kB): In SI units, it represents \(10^3\) or 1000 bytes.
-- Kibibyte (KiB): Defined by IEC as \(2^{10}\) or 1024 bytes.
+- Kilobyte (kB): In SI units, it represents $10^3$ or 1000 bytes.
+- Kibibyte (KiB): Defined by IEC as $2^{10}$ or 1024 bytes.
 
 This distinction is crucial for clarity when discussing quantities of memory in a computing context.
 

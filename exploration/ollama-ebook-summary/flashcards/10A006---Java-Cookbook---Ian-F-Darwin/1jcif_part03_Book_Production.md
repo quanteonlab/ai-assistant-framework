@@ -122,7 +122,7 @@ If your source file references other classes in the same directory for which .cl
 For Java 11 and newer versions with simple programs that don’t need additional class dependencies, you can combine these steps by passing the Java source file directly to the `java` command:
 
 ```sh
-$ java HelloWorld.java
+$java HelloWorld.java
 ```
 
 :p What is the importance of the CLASSPATH setting in the context of compiling and running Java?
@@ -137,8 +137,7 @@ The compiler follows a "no news is good news" philosophy; if no errors occur dur
 ??x
 For simpler programs that do not require additional co-compilation of other classes, you can use a more streamlined approach by directly passing the .java file to the `java` command. This eliminates the need for an intermediate compilation step and streamlines the process.
 
-```sh
-$ java HelloWorld.java
+```sh$ java HelloWorld.java
 ```
 
 :p What is the significance of using `javaw` instead of `java` on Windows?

@@ -658,12 +658,10 @@ end
 This script runs the web server on port 8000, and you can test it using a web browser or `curl` commands.
 
 ```sh
-$ ruby web-server.rb
+$ruby web-server.rb
 [2019-05-25 14:11:52] INFO  WEBrick 1.3.1 
 [2019-05-25 14:11:52] INFO  ruby 2.3.7 (2018-03-28) [universal.x86_64-darwin17]
-[2019-05-25 14:11:52] INFO  WEBrick::HTTPServer#start: pid=19767 port=8000
-
-$ curl localhost:8000/
+[2019-05-25 14:11:52] INFO  WEBrick::HTTPServer#start: pid=19767 port=8000$ curl localhost:8000/
 Hello, World
 ```
 
@@ -695,7 +693,7 @@ module "alb" {
 Then, you can apply this example configuration:
 
 ```sh
-$ terraform apply
+$terraform apply
 
 Apply complete. Resources: 5 added, 0 changed, 0 destroyed.
 
@@ -705,8 +703,7 @@ alb_dns_name = "hello-world-stage-477699288.us-east-2.elb.amazonaws.com"
 ```
 
 After applying the changes, you can test the ALB using tools like `curl` to ensure that it returns the expected responses:
-```sh
-$ curl -s -o /dev/null -w "%{http_code}" "hello-world-stage-477699288.us-east-2.elb.amazonaws.com"
+```sh$ curl -s -o /dev/null -w "%{http_code}" "hello-world-stage-477699288.us-east-2.elb.amazonaws.com"
 404
 ```
 

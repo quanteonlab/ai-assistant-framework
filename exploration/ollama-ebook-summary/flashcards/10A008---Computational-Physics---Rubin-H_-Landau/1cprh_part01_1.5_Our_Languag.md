@@ -259,7 +259,7 @@ int main() {
 The compiler processes the source code and generates machine code for execution. This involves multiple passes to ensure logic correctness and optimize the generated code.
 
 ```bash
-$ gcc -o hello hello.c
+$gcc -o hello hello.c
 ```
 This command compiles the `hello.c` file into an executable `hello`.
 x??
@@ -281,8 +281,7 @@ Background context: To run programs, you interact with shells which are command-
 ??x
 To start a shell on a Unix-based system, you open the terminal window or use the `bash` command:
 
-```sh
-$ bash
+```sh$ bash
 ```
 
 This opens an interactive shell where you can input commands.

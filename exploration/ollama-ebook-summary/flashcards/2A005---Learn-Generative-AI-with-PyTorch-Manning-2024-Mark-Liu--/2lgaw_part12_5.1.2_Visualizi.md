@@ -195,7 +195,7 @@ x??
 ---
 
 #### Critic in cGAN
-Background context: In cGANs, a critic network evaluates the input image by giving it a score between \(-\infty\) and \(\infty\). Higher scores indicate that the input is more likely to be from the training set (real images).
+Background context: In cGANs, a critic network evaluates the input image by giving it a score between $-\infty $ and$\infty$. Higher scores indicate that the input is more likely to be from the training set (real images).
 
 :p What role does the critic play in cGANs?
 ??x

@@ -522,14 +522,14 @@ x??
 ---
 
 #### Dynamic Range Compression (DRC)
-Background context explaining dynamic range compression. DRC is a process used to reduce the volume of the loudest portions of an audio signal while simultaneously increasing the volume of the quietest moments, making the overall sound more balanced and pleasant. The formula for calculating the gain reduction \( G \) applied by a compressor can be expressed as:
+Background context explaining dynamic range compression. DRC is a process used to reduce the volume of the loudest portions of an audio signal while simultaneously increasing the volume of the quietest moments, making the overall sound more balanced and pleasant. The formula for calculating the gain reduction $G$ applied by a compressor can be expressed as:
 
-\[ G = 10 \log_{10} \left( \frac{P_{threshold}}{P_{input}} \right) - (K - 1) \]
+$$G = 10 \log_{10} \left( \frac{P_{threshold}}{P_{input}} \right) - (K - 1)$$
 
 Where:
-- \( P_{threshold} \) is the threshold level, above which gain reduction begins.
-- \( P_{input} \) is the current input level.
-- \( K \) is the compression ratio.
+- $P_{threshold}$ is the threshold level, above which gain reduction begins.
+- $P_{input}$ is the current input level.
+- $K$ is the compression ratio.
 
 :p What does dynamic range compression do to an audio signal?
 ??x

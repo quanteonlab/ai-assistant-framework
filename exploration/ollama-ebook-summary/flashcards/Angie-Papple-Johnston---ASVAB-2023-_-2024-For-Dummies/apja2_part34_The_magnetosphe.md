@@ -199,7 +199,8 @@ Background context: The density of air (how closely packed the air molecules are
 :p How does temperature affect air density and pressure?
 ??x
 Air density is influenced by temperature; colder air is more dense and thus has higher pressure, whereas warmer air is less dense and has lower pressure. This relationship can be expressed as:
-\[ \text{Density} \propto \frac{1}{\text{Temperature}} \]
+$$\text{Density} \propto \frac{1}{\text{Temperature}}$$
+
 A barometer measures the atmospheric pressure which changes with variations in air density.
 x??
 
@@ -310,21 +311,17 @@ x??
 
 #### Temperature Conversion Formulas
 Scientists use three temperature scales: Fahrenheit, Celsius (Centigrade), and Kelvin. The formulas for converting between these scales are:
-- To convert from Celsius to Fahrenheit: \( F = \frac{9}{5}C + 32 \)
-- To convert from Fahrenheit to Celsius: \( C = \frac{5}{9}(F - 32) \)
-- To convert from Celsius to Kelvin: \( K = C + 273.15 \)
-- To convert from Kelvin to Celsius: \( C = K - 273.15 \)
-:p How do you convert between different temperature scales?
+- To convert from Celsius to Fahrenheit:$F = \frac{9}{5}C + 32 $- To convert from Fahrenheit to Celsius:$ C = \frac{5}{9}(F - 32)$- To convert from Celsius to Kelvin:$ K = C + 273.15 $- To convert from Kelvin to Celsius:$ C = K - 273.15$:p How do you convert between different temperature scales?
 ??x
 To convert between different temperature scales:
-- **Celsius to Fahrenheit**: Use the formula \( F = \frac{9}{5}C + 32 \).
-- **Fahrenheit to Celsius**: Use the formula \( C = \frac{5}{9}(F - 32) \).
-- **Celsius to Kelvin**: Add 273.15 to the Celsius temperature: \( K = C + 273.15 \).
-- **Kelvin to Celsius**: Subtract 273.15 from the Kelvin temperature: \( C = K - 273.15 \).
+- **Celsius to Fahrenheit**: Use the formula $F = \frac{9}{5}C + 32$.
+- **Fahrenheit to Celsius**: Use the formula $C = \frac{5}{9}(F - 32)$.
+- **Celsius to Kelvin**: Add 273.15 to the Celsius temperature: $K = C + 273.15$.
+- **Kelvin to Celsius**: Subtract 273.15 from the Kelvin temperature: $C = K - 273.15$.
 
 Here's a quick conversion system that works with Celsius and Fahrenheit:
 1. Add 40 to the temperature you want to convert.
-2. Multiply this sum by \( \frac{9}{5} \) if converting from Fahrenheit to Celsius or \( \frac{5}{9} \) if converting from Celsius to Fahrenheit.
+2. Multiply this sum by $\frac{9}{5}$ if converting from Fahrenheit to Celsius or $\frac{5}{9}$ if converting from Celsius to Fahrenheit.
 3. Subtract the 40 you added at the beginning to yield the result.
 
 This process simplifies conversions and can be remembered as "f for fraction" (5/9 for Fahrenheit to Celsius conversion) and "c for convert" (9/5 for Celsius to Fahrenheit).

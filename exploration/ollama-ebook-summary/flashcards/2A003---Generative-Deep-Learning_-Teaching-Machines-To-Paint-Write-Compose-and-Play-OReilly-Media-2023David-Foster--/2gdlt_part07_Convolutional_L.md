@@ -10,21 +10,20 @@ Convolutional layers are a fundamental component of convolutional neural network
 
 The process of applying a filter (or kernel) to an input is called a convolution. The basic idea is to slide the filter across the input, performing element-wise multiplication with the corresponding elements and summing the results. This operation emphasizes specific features of the image based on the values in the filter.
 
-Mathematically, if we have an input \(I\) (a 3x3 grayscale image) and a kernel \(K\), the convolution output is given by:
+Mathematically, if we have an input $I $(a 3x3 grayscale image) and a kernel $ K$, the convolution output is given by:
 
-\[ \text{Conv}(I, K) = \sum_{i=0}^{2}\sum_{j=0}^{2} I(i,j) \cdot K(2-i,2-j) \]
+$$\text{Conv}(I, K) = \sum_{i=0}^{2}\sum_{j=0}^{2} I(i,j) \cdot K(2-i,2-j)$$
 
 Where:
-- \(I(i,j)\) is the value at position (i,j) in the input image.
-- \(K(2-i,2-j)\) is the corresponding filter weight.
+- $I(i,j)$ is the value at position (i,j) in the input image.
+- $K(2-i,2-j)$ is the corresponding filter weight.
 
 The output of this convolution operation will be a new array that highlights certain features of the input based on the kernel used.
 
 :p What is the mathematical formula for a 3x3 convolution?
 ??x
-The mathematical formula for a 3x3 convolution involves sliding the kernel over the input image and performing an element-wise multiplication followed by summation. Specifically, if \(I(i,j)\) represents the value at position (i,j) in the input image and \(K(2-i,2-j)\) is the corresponding weight of the filter, the output of this convolution is calculated as:
-
-\[ \text{Conv}(I, K) = \sum_{i=0}^{2}\sum_{j=0}^{2} I(i,j) \cdot K(2-i,2-j) \]
+The mathematical formula for a 3x3 convolution involves sliding the kernel over the input image and performing an element-wise multiplication followed by summation. Specifically, if $I(i,j)$ represents the value at position (i,j) in the input image and $K(2-i,2-j)$ is the corresponding weight of the filter, the output of this convolution is calculated as:
+$$\text{Conv}(I, K) = \sum_{i=0}^{2}\sum_{j=0}^{2} I(i,j) \cdot K(2-i,2-j)$$
 
 This operation emphasizes specific features based on the kernel's values.
 x??
@@ -39,7 +38,7 @@ In convolutional layers, filters are used to detect different features of images
 ??x
 A filter detects a specific feature by sliding over the image and performing element-wise multiplication with the corresponding elements, followed by summation. The output is more positive when the portion of the image closely matches the filter and more negative when it's the inverse of the filter.
 
-For instance, if we have an input image \(I\) and a horizontal edge detection filter \(K\), the convolution process will produce a new array where positive values indicate parts of the image that strongly resonate with the filter (i.e., contain edges in the direction specified by the filter).
+For instance, if we have an input image $I $ and a horizontal edge detection filter$K$, the convolution process will produce a new array where positive values indicate parts of the image that strongly resonate with the filter (i.e., contain edges in the direction specified by the filter).
 
 Example:
 ```python
@@ -298,15 +297,15 @@ Batch normalization is a technique used to stabilize and accelerate the training
 
 :p How does batch normalization work during training?
 ??x
-During training, a batch normalization layer calculates the mean (\(\mu\)) and standard deviation (\(\sigma\)) of each input channel across the current mini-batch and normalizes the inputs by subtracting the mean and dividing by the standard deviation. It then scales and shifts these normalized values using learnable parameters \(\gamma\) (scale) and \(\beta\) (shift).
+During training, a batch normalization layer calculates the mean ($\mu $) and standard deviation ($\sigma $) of each input channel across the current mini-batch and normalizes the inputs by subtracting the mean and dividing by the standard deviation. It then scales and shifts these normalized values using learnable parameters $\gamma $(scale) and $\beta$(shift).
 
 Formula:
-\[ x_{\text{norm}} = \frac{x - \mu}{\sigma} \]
-\[ y = \gamma x_{\text{norm}} + \beta \]
+$$x_{\text{norm}} = \frac{x - \mu}{\sigma}$$
+$$y = \gamma x_{\text{norm}} + \beta$$
 
 :p How many parameters are learned during batch normalization?
 ??x
-During batch normalization, for each channel in the input, two learnable parameters are used: a scale parameter (\(\gamma\)) and a shift parameter (\(\beta\)). Additionally, moving averages of the mean and standard deviation are calculated but not trained.
+During batch normalization, for each channel in the input, two learnable parameters are used: a scale parameter ($\gamma $) and a shift parameter ($\beta$). Additionally, moving averages of the mean and standard deviation are calculated but not trained.
 
 :p What happens to the parameters at test time?
 ??x

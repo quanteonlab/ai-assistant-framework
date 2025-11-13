@@ -8,10 +8,10 @@
 
 Background context: This section introduces notations used for random variables, their values, and probability distributions. Understanding these notations is crucial to interpreting models involving probabilistic elements.
 
-:p What does \(X \sim p(x)\) mean?
+:p What does $X \sim p(x)$ mean?
 
 ??x
-This notation indicates that the random variable \(X\) is drawn from a distribution denoted by \(p(x)\). In other words, when we write \(X \sim p(x)\), it means that the probability distribution of \(X\) is given by \(p\).
+This notation indicates that the random variable $X $ is drawn from a distribution denoted by$p(x)$. In other words, when we write $ X \sim p(x)$, it means that the probability distribution of $ X$is given by $ p$.
 
 For example:
 ```java
@@ -28,12 +28,12 @@ x??
 
 Background context: This section introduces the notation for expectation, which is essential in understanding expected values and their significance in probabilistic models.
 
-:p What does \(E[X]\) represent?
+:p What does $E[X]$ represent?
 
 ??x
-The notation \(E[X]\) represents the expected value of a random variable \(X\). It is a measure of the long-run average or mean value that we expect to observe if we were to repeat the experiment many times. The formula for expectation can be written as:
+The notation $E[X]$ represents the expected value of a random variable $X$. It is a measure of the long-run average or mean value that we expect to observe if we were to repeat the experiment many times. The formula for expectation can be written as:
 
-\[ E[X] = \sum_{x} x \cdot Pr(X=x) \]
+$$E[X] = \sum_{x} x \cdot Pr(X=x)$$
 
 For example, in Java:
 ```java
@@ -54,10 +54,10 @@ x??
 
 Background context: This section introduces notations related to policies in reinforcement learning, which are rules that decide actions based on states.
 
-:p What does \(\pi(a|s)\) represent?
+:p What does $\pi(a|s)$ represent?
 
 ??x
-The notation \(\pi(a|s)\) represents the probability of taking action \(a\) given state \(s\). In other words, it is the policy's decision rule for selecting an action in a particular state. This can be seen as the probability distribution over actions given a state.
+The notation $\pi(a|s)$ represents the probability of taking action $a$ given state $s$. In other words, it is the policy's decision rule for selecting an action in a particular state. This can be seen as the probability distribution over actions given a state.
 
 For example:
 ```java
@@ -73,12 +73,12 @@ x??
 ---
 #### State-Action Value Function Notations
 
-Background context: This section introduces notations for value functions in reinforcement learning, specifically focusing on the state-action value function \(Q(s,a)\).
+Background context: This section introduces notations for value functions in reinforcement learning, specifically focusing on the state-action value function $Q(s,a)$.
 
-:p What does \(Q(s,a)\) represent?
+:p What does $Q(s,a)$ represent?
 
 ??x
-The notation \(Q(s,a)\) represents the expected cumulative reward starting from state \(s\), taking action \(a\), and following a policy \(\pi\) thereafter. It is a measure of how good it is to take a particular action in a given state.
+The notation $Q(s,a)$ represents the expected cumulative reward starting from state $s$, taking action $ a$, and following a policy $\pi$ thereafter. It is a measure of how good it is to take a particular action in a given state.
 
 For example, in Java:
 ```java
@@ -96,17 +96,17 @@ x??
 
 Background context: This section introduces notations related to temporal difference learning errors, which are crucial in assessing how well a learned model approximates the true values.
 
-:p What does \(\delta_t\) represent?
+:p What does $\delta_t$ represent?
 
 ??x
-The notation \(\delta_t\) represents the temporal difference error at time \(t\). It is defined as the difference between the target value and the current estimate of the state-value function. Formally, it can be written as:
+The notation $\delta_t $ represents the temporal difference error at time$t$. It is defined as the difference between the target value and the current estimate of the state-value function. Formally, it can be written as:
 
-\[ \delta_t = V(s_t) - (r_{t+1} + \gamma V(s_{t+1})) \]
+$$\delta_t = V(s_t) - (r_{t+1} + \gamma V(s_{t+1}))$$
 
 Where:
-- \(V(s_t)\) is the estimated value at time \(t\).
-- \(r_{t+1}\) is the immediate reward received at time \(t+1\).
-- \(\gamma\) is the discount factor.
+- $V(s_t)$ is the estimated value at time $t$.
+- $r_{t+1}$ is the immediate reward received at time $t+1$.
+- $\gamma$ is the discount factor.
 
 For example, in Java:
 ```java
@@ -556,20 +556,14 @@ These flashcards cover the key concepts of learning opponent behavior, dynamic p
 Background context explaining the concept. The text describes a method of updating state values during a game to improve future moves based on outcomes. This is done through a process called "temporal-difference" learning, where updates are made based on the difference between current and subsequent states.
 
 The update rule for temporal-difference learning can be expressed as follows:
-
-\[ V(S_t) \leftarrow V(S_t) + \alpha (V(S_{t+1}) - V(S_t)) \]
-
-where \( S_t \) is the state before a move, \( S_{t+1} \) is the state after the move, and \( \alpha \) is the step-size parameter that influences the rate of learning.
+$$V(S_t) \leftarrow V(S_t) + \alpha (V(S_{t+1}) - V(S_t))$$where $ S_t $is the state before a move,$ S_{t+1}$is the state after the move, and $\alpha$ is the step-size parameter that influences the rate of learning.
 
 :p What is the update rule for temporal-difference learning in the context of Tic-Tac-Toe?
 ??x
 The update rule for temporal-difference learning updates the value of a state based on the difference between its current value and the value of the next state, weighted by a step-size parameter. This can be written as:
+$$V(S_t) \leftarrow V(S_t) + \alpha (V(S_{t+1}) - V(S_t))$$where $ S_t $is the state before the move,$ S_{t+1}$is the state after the move, and $\alpha$ is the step-size parameter.
 
-\[ V(S_t) \leftarrow V(S_t) + \alpha (V(S_{t+1}) - V(S_t)) \]
-
-where \( S_t \) is the state before the move, \( S_{t+1} \) is the state after the move, and \( \alpha \) is the step-size parameter.
-
-This rule allows for incremental updates to state values as the game progresses. The step-size parameter \( \alpha \) controls how much influence the new value has on the current estimate.
+This rule allows for incremental updates to state values as the game progresses. The step-size parameter $\alpha$ controls how much influence the new value has on the current estimate.
 x??
 
 ---
@@ -595,7 +589,7 @@ If the step-size parameter is properly reduced over time, the method converges t
 
 :p What happens when the step-size parameter in temporal-difference learning is properly reduced over time?
 ??x
-When the step-size parameter \( \alpha \) is properly reduced over time in temporal-difference learning, the method converges to the true probabilities of winning from each state given optimal play by our player. This means that as the game progresses and more data is collected, the estimated values of states become increasingly accurate.
+When the step-size parameter $\alpha$ is properly reduced over time in temporal-difference learning, the method converges to the true probabilities of winning from each state given optimal play by our player. This means that as the game progresses and more data is collected, the estimated values of states become increasingly accurate.
 
 Moreover, the moves taken (except on exploratory moves) are actually the optimal moves against this fixed opponent. Over time, the policy learned through temporal-difference learning approaches an optimal strategy for winning the game.
 x??
@@ -691,7 +685,7 @@ Discussing the use of artificial neural networks to handle large state spaces an
 ??x
 Handling very large or even infinite state spaces is a significant challenge for reinforcement learning. One approach is to use artificial neural networks (ANNs) to enable the system to generalize from past experiences. ANNs allow the agent to approximate value functions, policies, or Q-functions for states that it has not directly experienced.
 
-An example application of this concept involves backgammon, where the state space is approximately \(10^{20}\). A program using an ANN can learn from a vast number of games and generalize to new states based on past experiences. This generalization helps in making informed decisions in unseen or rarely seen situations.
+An example application of this concept involves backgammon, where the state space is approximately $10^{20}$. A program using an ANN can learn from a vast number of games and generalize to new states based on past experiences. This generalization helps in making informed decisions in unseen or rarely seen situations.
 
 Example pseudo-code for using ANNs in reinforcement learning:
 ```python
@@ -766,8 +760,8 @@ Highlighting how value function methods differ from reinforcement learning in ev
 Value function methods evaluate individual states by estimating the expected future rewards associated with those states. In contrast, reinforcement learning (RL) focuses on learning a policy that maps states to actions based on maximizing cumulative rewards over time.
 
 Value function methods often involve:
-- Estimating \( V(s) \): The value of being in state \( s \).
-- Estimating \( Q(s,a) \): The expected reward for taking action \( a \) in state \( s \).
+- Estimating $V(s)$: The value of being in state $ s$.
+- Estimating $Q(s,a)$: The expected reward for taking action $ a$in state $ s$.
 
 In RL, the emphasis is more on learning policies directly. A policy specifies what actions to take based on current states.
 

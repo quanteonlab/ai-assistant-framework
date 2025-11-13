@@ -79,7 +79,7 @@ Background context: In rendering, a virtual scene is typically described using 3
 
 :p How is the virtual scene described in terms of mathematical forms?
 ??x
-The virtual scene is often described using 3D surfaces that are represented mathematically. These surfaces can range from simple shapes like planes and spheres to more complex constructs such as NURBS (Non-Uniform Rational B-Splines) or parametric surfaces. For instance, a 3D surface could be defined by a function \( z = f(x, y) \), where \( x \) and \( y \) are coordinates in the plane of the object's base, and \( z \) is the height at that point.
+The virtual scene is often described using 3D surfaces that are represented mathematically. These surfaces can range from simple shapes like planes and spheres to more complex constructs such as NURBS (Non-Uniform Rational B-Splines) or parametric surfaces. For instance, a 3D surface could be defined by a function $z = f(x, y)$, where $ x$and $ y$ are coordinates in the plane of the object's base, and $ z$ is the height at that point.
 
 ```java
 public class Surface {
@@ -322,7 +322,7 @@ Background context: Surfaces can be described analytically using parametric surf
 The answer: A parametric surface equation describes a surface mathematically in terms of parameters (like u and v). While theoretically precise, these equations are not practical for real-time rendering due to the complexity and computation required.
 
 Explanation:
-For example, a simple sphere can be described by the equation \( x = r \sin(\theta) \cos(\phi) \), \( y = r \sin(\theta) \sin(\phi) \), and \( z = r \cos(\theta) \). However, this complexity makes it inefficient for real-time rendering engines.
+For example, a simple sphere can be described by the equation $x = r \sin(\theta) \cos(\phi)$,$ y = r \sin(\theta) \sin(\phi)$, and $ z = r \cos(\theta)$. However, this complexity makes it inefficient for real-time rendering engines.
 ```java
 public class ParametricSurface {
     public Vector3 calculatePoint(float u, float v) {
@@ -638,7 +638,7 @@ x??
 Background context on how a vertex's world-space equivalent is calculated by multiplying its model-space coordinates with the model-to-world matrix. Also, explain that this transformation affects surface normals, which must be transformed using the inverse transpose of the model-to-world matrix.
 :p How does the rendering engine calculate the world-space equivalent of a vertex?
 ??x
-The rendering engine calculates the world-space equivalent of a vertex by multiplying its model-space coordinates with the model-to-world matrix: \( v_W = v_{MMM.W} \).
+The rendering engine calculates the world-space equivalent of a vertex by multiplying its model-space coordinates with the model-to-world matrix: $v_W = v_{MMM.W}$.
 x??
 
 ---
@@ -750,11 +750,11 @@ x??
 
 #### Introduction to Light and Color
 
-Light is electromagnetic radiation that acts like both a wave and a particle. The color of light depends on its intensity \( I \) and wavelength \( l \), or frequency \( f = \frac{1}{l} \). The visible spectrum ranges from about 380 nm (750 THz) to 740 nm (430 THz).
+Light is electromagnetic radiation that acts like both a wave and a particle. The color of light depends on its intensity $I $ and wavelength$l $, or frequency$ f = \frac{1}{l}$. The visible spectrum ranges from about 380 nm (750 THz) to 740 nm (430 THz).
 
 :p What are the fundamental aspects of light?
 ??x
-Light is electromagnetic radiation that behaves both as a wave and a particle. Its color is determined by its intensity \( I \) and wavelength \( l \), or frequency \( f = \frac{1}{l} \). The visible spectrum includes wavelengths from approximately 380 nm (750 THz) to 740 nm (430 THz).
+Light is electromagnetic radiation that behaves both as a wave and a particle. Its color is determined by its intensity $I $ and wavelength$l $, or frequency$ f = \frac{1}{l}$. The visible spectrum includes wavelengths from approximately 380 nm (750 THz) to 740 nm (430 THz).
 
 For example, white light has a spectral plot that covers the entire visible band, while pure green light would have a narrow spike at around 570 THz.
 x??
@@ -1024,13 +1024,12 @@ x??
 Background context: In skeletal animation, vertices of a mesh are attached to individual joints in an articulated skeleton. Each vertex can be influenced by one or more joints through weighted influences. This process is crucial for smooth animations.
 
 Relevant formulas:
-- Final vertex position = \(\sum_{i} w_{ij} * T_{j}(p_i)\)
-  - \(T_j(p_i)\) represents the transformation of the vertex under joint j
-  - \(w_{ij}\) is the weight factor indicating the influence of joint j on vertex i
+- Final vertex position = $\sum_{i} w_{ij} * T_{j}(p_i)$-$ T_j(p_i)$ represents the transformation of the vertex under joint j
+  -$w_{ij}$ is the weight factor indicating the influence of joint j on vertex i
 
 :p What are skinning weights and how do they work in skeletal animation?
 ??x
-Skinning weights, denoted as \(kij = [kijwij]\), represent the influence of joints on a mesh's vertices. Each vertex can be influenced by multiple joints through weighted averages. The final position of a vertex is calculated as the sum of each joint's transformed position multiplied by its respective weight.
+Skinning weights, denoted as $kij = [kijwij]$, represent the influence of joints on a mesh's vertices. Each vertex can be influenced by multiple joints through weighted averages. The final position of a vertex is calculated as the sum of each joint's transformed position multiplied by its respective weight.
 
 Example code in C++ for calculating skinned vertex positions:
 ```cpp
@@ -1124,20 +1123,14 @@ Gouraud shading is a specific application of attribute interpolation to vertex c
 :p What is Gouraud shading and how does it work?
 ??x
 Gouraud shading is an algorithm that linearly interpolates the vertex colors across the surface of a triangle. This technique calculates intermediate colors for each pixel based on the interpolated values at the vertices.
-For example, given three vertices with colors \(C_1\), \(C_2\), and \(C_3\) at positions \((x_1, y_1)\), \((x_2, y_2)\), and \((x_3, y_3)\) respectively, the color at a pixel position \((x, y)\) within the triangle can be calculated as:
-
-\[ C(x, y) = (1 - u - v)C_1 + uC_2 + vC_3 \]
-
-where \(u\) and \(v\) are barycentric coordinates that determine the weight of each vertex color based on the pixel's position within the triangle.
+For example, given three vertices with colors $C_1 $, $ C_2 $, and$ C_3 $at positions$(x_1, y_1)$,$(x_2, y_2)$, and $(x_3, y_3)$ respectively, the color at a pixel position $(x, y)$ within the triangle can be calculated as:
+$$C(x, y) = (1 - u - v)C_1 + uC_2 + vC_3$$where $ u $ and $ v$ are barycentric coordinates that determine the weight of each vertex color based on the pixel's position within the triangle.
 
 :p How is Gouraud shading applied to a triangle?
 ??x
 Gouraud shading applies linear interpolation of colors across the surface of a triangle. At each pixel, the color value is interpolated using the colors at the vertices and their corresponding barycentric coordinates.
-For instance, if you have three vertices with colors \(C_1\), \(C_2\), and \(C_3\) at positions \((x_1, y_1)\), \((x_2, y_2)\), and \((x_3, y_3)\) respectively, the color at a pixel position \((x, y)\) is calculated as:
-
-\[ C(x, y) = (1 - u - v)C_1 + uC_2 + vC_3 \]
-
-where \(u\) and \(v\) are computed based on the barycentric coordinates of the pixel within the triangle.
+For instance, if you have three vertices with colors $C_1 $, $ C_2 $, and$ C_3 $at positions$(x_1, y_1)$,$(x_2, y_2)$, and $(x_3, y_3)$ respectively, the color at a pixel position $(x, y)$ is calculated as:
+$$C(x, y) = (1 - u - v)C_1 + uC_2 + vC_3$$where $ u $ and $ v$ are computed based on the barycentric coordinates of the pixel within the triangle.
 
 :p How does Gouraud shading affect the appearance of faceted objects?
 ??x
@@ -1179,11 +1172,8 @@ In per-vertex lighting, the color or other attributes at each vertex are calcula
 :p How does per-vertex lighting work?
 ??x
 Per-vertex lighting involves calculating the color of a surface at each vertex and then interpolating these colors across the triangles of a mesh to determine the final color at each pixel. This method uses barycentric coordinates to perform linear interpolation between vertices.
-For instance, given three vertices with diffuse colors \(C_1\), \(C_2\), and \(C_3\) and their corresponding normal vectors \(n_1\), \(n_2\), and \(n_3\), the color at a pixel position \((x, y)\) within the triangle can be calculated as:
-
-\[ C(x, y) = (1 - u - v)C_1 + uC_2 + vC_3 \]
-
-where \(u\) and \(v\) are barycentric coordinates that determine the weight of each vertex color based on the pixel's position within the triangle.
+For instance, given three vertices with diffuse colors $C_1 $, $ C_2 $, and$ C_3 $and their corresponding normal vectors$ n_1 $,$ n_2 $, and$ n_3 $, the color at a pixel position$(x, y)$ within the triangle can be calculated as:
+$$C(x, y) = (1 - u - v)C_1 + uC_2 + vC_3$$where $ u $ and $ v$ are barycentric coordinates that determine the weight of each vertex color based on the pixel's position within the triangle.
 
 :p How does Gouraud shading contribute to per-vertex lighting?
 ??x
@@ -1341,7 +1331,7 @@ The modes include:
 
 :p What is the Wrap addressing mode?
 ??x
-The Wrap addressing mode repeats the texture over and over in every direction. This means that any texture coordinates of the form (ju, kv) are equivalent to the coordinate (u, v), where \( j \) and \( k \) are arbitrary integers. For example, if a texture is mapped with u = 0.5 and v = 0.5, and the Wrap mode is used, then the coordinates (1.5, 0.5) will map to (0.5, 0.5), which is the same as (0.5, 0.5).
+The Wrap addressing mode repeats the texture over and over in every direction. This means that any texture coordinates of the form (ju, kv) are equivalent to the coordinate (u, v), where $j $ and$k$ are arbitrary integers. For example, if a texture is mapped with u = 0.5 and v = 0.5, and the Wrap mode is used, then the coordinates (1.5, 0.5) will map to (0.5, 0.5), which is the same as (0.5, 0.5).
 x??
 
 ---
@@ -1352,8 +1342,8 @@ Mirror addressing mirrors the texture about the v-axis for odd integer multiples
 :p What does the Mirror addressing mode do?
 ??x
 The Mirror addressing mode acts like the Wrap mode but introduces mirroring effects. Specifically:
-- For an odd multiple of \( u \) (e.g., 1.5, 2.5), it mirrors the texture about the v-axis.
-- For an odd multiple of \( v \) (e.g., 0.75, 1.25), it mirrors the texture about the u-axis.
+- For an odd multiple of $u$(e.g., 1.5, 2.5), it mirrors the texture about the v-axis.
+- For an odd multiple of $v$(e.g., 0.75, 1.25), it mirrors the texture about the u-axis.
 
 This results in repeating and mirrored textures depending on the out-of-range coordinates.
 x??
@@ -1694,8 +1684,7 @@ The main inputs required by the Phong model include:
 - Information for each light source (color, intensity, direction)
 
 The formula to calculate the reflected light intensity I is given by:
-\[ I = (kA \cdot A) + \sum_{i} [kD(N \cdot L_i) + kS(R_i \cdot V)^a] C_i \]
-where \(L_i\) and \(R_i\) are the direction vectors from the reflection point to the light source and reflected by the surface, respectively.
+$$I = (kA \cdot A) + \sum_{i} [kD(N \cdot L_i) + kS(R_i \cdot V)^a] C_i$$where $ L_i $ and $ R_i$ are the direction vectors from the reflection point to the light source and reflected by the surface, respectively.
 x??
 
 ---
@@ -1771,25 +1760,23 @@ x??
 
 #### Hadamard Product and Reflection Vector Calculation
 
-Background context: The text introduces the concept of component-wise multiplication (Hadamard product) of two vectors, which is used in lighting calculations. Specifically, it explains how to calculate the reflection vector \( \mathbf{R} \) from the original light direction vector \( \mathbf{L} \) and surface normal \( \mathbf{N} \).
+Background context: The text introduces the concept of component-wise multiplication (Hadamard product) of two vectors, which is used in lighting calculations. Specifically, it explains how to calculate the reflection vector $\mathbf{R}$ from the original light direction vector $\mathbf{L}$ and surface normal $\mathbf{N}$.
 
-:p How can we calculate the reflection vector \( \mathbf{R} \) using vector math?
+:p How can we calculate the reflection vector $\mathbf{R}$ using vector math?
 
 ??x
-To calculate the reflection vector \( \mathbf{R} \), we use the formula derived from vector mathematics. The key steps are as follows:
-1. Break down the light direction vector \( \mathbf{L} \) into its normal and tangential components.
-2. Use these components to find the reflected vector \( \mathbf{R} \).
+To calculate the reflection vector $\mathbf{R}$, we use the formula derived from vector mathematics. The key steps are as follows:
+1. Break down the light direction vector $\mathbf{L}$ into its normal and tangential components.
+2. Use these components to find the reflected vector $\mathbf{R}$.
 
 The reflection vector can be calculated using the following equations:
 
-\[
-\mathbf{R} = 2 (\mathbf{N} \cdot \mathbf{L}) \mathbf{N} - \mathbf{L}
-\]
+$$\mathbf{R} = 2 (\mathbf{N} \cdot \mathbf{L}) \mathbf{N} - \mathbf{L}$$
 
 Where:
-- \( \mathbf{N} \) is the surface normal.
-- \( \mathbf{L} \) is the light direction vector.
-- \( \mathbf{N} \cdot \mathbf{L} \) represents the dot product, which gives a scalar value representing the projection of \( \mathbf{L} \) onto \( \mathbf{N} \).
+- $\mathbf{N}$ is the surface normal.
+- $\mathbf{L}$ is the light direction vector.
+- $\mathbf{N} \cdot \mathbf{L}$ represents the dot product, which gives a scalar value representing the projection of $\mathbf{L}$ onto $\mathbf{N}$.
 
 Here's an example in pseudocode to illustrate how this calculation can be implemented:
 
@@ -1811,21 +1798,19 @@ x??
 
 #### Blinn-Phong Lighting Model
 
-Background context: The text introduces the Blinn-Phong lighting model, which is a variation on Phong shading. It calculates the specular component differently by defining a halfway vector \( \mathbf{H} \) between the view vector and light direction vector.
+Background context: The text introduces the Blinn-Phong lighting model, which is a variation on Phong shading. It calculates the specular component differently by defining a halfway vector $\mathbf{H}$ between the view vector and light direction vector.
 
 :p How does the Blinn-Phong model calculate the specular reflection?
 
 ??x
-The Blinn-Phong lighting model calculates the specular reflection using the halfway vector \( \mathbf{H} \), which lies halfway between the view vector \( \mathbf{V} \) and the light direction vector \( \mathbf{L} \). The specular component is given by:
+The Blinn-Phong lighting model calculates the specular reflection using the halfway vector $\mathbf{H}$, which lies halfway between the view vector $\mathbf{V}$ and the light direction vector $\mathbf{L}$. The specular component is given by:
 
-\[
-(N \cdot H)^a
-\]
+$$(N \cdot H)^a$$
 
 Where:
-- \( N \) is the surface normal.
-- \( H \) is the halfway vector, defined as \( \mathbf{H} = \frac{\mathbf{L} + \mathbf{V}}{|\mathbf{L} + \mathbf{V}|} \).
-- \( a \) is the shininess exponent.
+- $N$ is the surface normal.
+- $H $ is the halfway vector, defined as$\mathbf{H} = \frac{\mathbf{L} + \mathbf{V}}{|\mathbf{L} + \mathbf{V}|}$.
+- $a$ is the shininess exponent.
 
 This model offers increased runtime efficiency compared to Phong shading, but it matches empirical results more closely for certain surfaces. Here's an example in pseudocode:
 
@@ -1850,37 +1835,29 @@ Background context: The text explains the Phong lighting model, which is compose
 
 ??x
 The Phong lighting model consists of three main components:
-1. **Diffuse Reflection**: This term accounts for the incoming illumination ray \( \mathbf{L} \) and is given by:
+1. **Diffuse Reflection**: This term accounts for the incoming illumination ray $\mathbf{L}$ and is given by:
 
-\[
-k_D (N \cdot L)
-\]
+$$k_D (N \cdot L)$$
 
 Where:
-- \( k_D \) is the diffuse reflection coefficient.
-- \( N \) is the surface normal.
-- \( L \) is the light direction vector.
+- $k_D$ is the diffuse reflection coefficient.
+- $N$ is the surface normal.
+- $L$ is the light direction vector.
 
 2. **Ambient Reflection**: This term accounts for ambient light and is given by:
-
-\[
-k_A A
-\]
+$$k_A A$$
 
 Where:
-- \( k_A \) is the ambient reflection coefficient.
-- \( A \) is the ambient light intensity.
+- $k_A$ is the ambient reflection coefficient.
+- $A$ is the ambient light intensity.
 
 3. **Specular Reflection**: This term accounts for specular highlights and is given by:
-
-\[
-k_S (R \cdot V)^a
-\]
+$$k_S (R \cdot V)^a$$
 
 Where:
-- \( k_S \) is the specular reflection coefficient.
-- \( R \) is the reflection vector.
-- \( a \) is the shininess exponent.
+- $k_S$ is the specular reflection coefficient.
+- $R$ is the reflection vector.
+- $a$ is the shininess exponent.
 
 These terms can be combined to form the total Phong lighting equation.
 
@@ -1890,12 +1867,12 @@ x??
 
 #### BRDF Plot and Diffuse Reflection
 
-Background context: The diffuse Phong reflection term only accounts for the incoming illumination ray \( \mathbf{L} \), not the viewing angle \( \mathbf{V} \). This means its value is the same for all viewing angles. A BRDF can be visualized as a hemispherical plot where the radial distance from the origin represents the intensity of light seen from that direction.
+Background context: The diffuse Phong reflection term only accounts for the incoming illumination ray $\mathbf{L}$, not the viewing angle $\mathbf{V}$. This means its value is the same for all viewing angles. A BRDF can be visualized as a hemispherical plot where the radial distance from the origin represents the intensity of light seen from that direction.
 
 :p How does the diffuse Phong reflection term behave with respect to different viewing angles?
 
 ??x
-The diffuse Phong reflection term \( k_D (N \cdot L) \) only accounts for the incoming illumination ray \( \mathbf{L} \). Therefore, its value remains constant regardless of the viewing angle \( \mathbf{V} \).
+The diffuse Phong reflection term $k_D (N \cdot L)$ only accounts for the incoming illumination ray $\mathbf{L}$. Therefore, its value remains constant regardless of the viewing angle $\mathbf{V}$.
 
 If we were to plot this term as a function of the viewing angle in three dimensions, it would look like a hemisphere centered on the point at which we are calculating the Phong reflection.
 
@@ -1911,11 +1888,11 @@ x??
 ---
 
 #### Diffuse Term of Phong Reflection Model
-Background context explaining that the diffuse term is dependent on the surface normal \(N\) and the illumination direction \(L\), but independent of the viewing angle \(V\). This term represents how light is scattered in all directions from a surface.
+Background context explaining that the diffuse term is dependent on the surface normal $N $ and the illumination direction$L $, but independent of the viewing angle$ V$. This term represents how light is scattered in all directions from a surface.
 
 :p What is the diffuse term of the Phong reflection model?
 ??x
-The diffuse term of the Phong reflection model is given by \(D \cdot N\) where \(D\) is the diffuse color and \(N\) is the normalized surface normal. This term describes how light is scattered in all directions from a surface, independent of the viewing angle.
+The diffuse term of the Phong reflection model is given by $D \cdot N $ where$D $ is the diffuse color and$N$ is the normalized surface normal. This term describes how light is scattered in all directions from a surface, independent of the viewing angle.
 
 For example, if we have a simple diffuse lighting calculation:
 ```java
@@ -1927,11 +1904,11 @@ x??
 ---
 
 #### Specular Term of Phong Reflection Model
-Background context explaining that the specular term \(k_D (R \cdot V)^a\) is dependent on both the illumination direction \(L\) and the viewing direction \(V\). It produces a specular "hot spot" when the viewing angle aligns closely with the reflection \(R\) of the illumination direction \(L\) about the surface normal. However, its contribution falls off very quickly as the viewing angle diverges from the reflected light direction.
+Background context explaining that the specular term $k_D (R \cdot V)^a $ is dependent on both the illumination direction$L $ and the viewing direction$V $. It produces a specular "hot spot" when the viewing angle aligns closely with the reflection $ R $of the illumination direction$ L$ about the surface normal. However, its contribution falls off very quickly as the viewing angle diverges from the reflected light direction.
 
 :p What is the role of the specular term in Phong reflection model?
 ??x
-The specular term in the Phong reflection model, given by \(k_D (R \cdot V)^a\), represents a shiny highlight on surfaces. It creates a "hot spot" when the viewing angle aligns closely with the reflected light direction (\(R\)), and its intensity drops off quickly as the viewing angle diverges from this direction.
+The specular term in the Phong reflection model, given by $k_D (R \cdot V)^a $, represents a shiny highlight on surfaces. It creates a "hot spot" when the viewing angle aligns closely with the reflected light direction ($ R$), and its intensity drops off quickly as the viewing angle diverges from this direction.
 
 For example:
 ```java
@@ -1967,11 +1944,11 @@ x??
 ---
 
 #### Ambient Lighting
-Background context explaining that ambient light corresponds to the \(A\) term in the Phong lighting model, which is independent of the viewing angle and has no specific direction. It is represented by a single color scaled by the surface’s ambient reflectivity.
+Background context explaining that ambient light corresponds to the $A$ term in the Phong lighting model, which is independent of the viewing angle and has no specific direction. It is represented by a single color scaled by the surface’s ambient reflectivity.
 
 :p What does ambient light represent in the Phong lighting model?
 ??x
-Ambient light represents the \(A\) term in the Phong lighting model, which is independent of the viewing angle and has no specific direction. Ambient light is typically modeled as a single color that is scaled by the surface’s ambient reflectivity factor \(k_A\). This means it contributes to the overall brightness of surfaces without any particular direction.
+Ambient light represents the $A $ term in the Phong lighting model, which is independent of the viewing angle and has no specific direction. Ambient light is typically modeled as a single color that is scaled by the surface’s ambient reflectivity factor$k_A$. This means it contributes to the overall brightness of surfaces without any particular direction.
 
 For example:
 ```java
@@ -2068,10 +2045,10 @@ if (Vector3f.distance(light.position, surfacePosition) <= maxRadius) {
 x??
 
 #### Spot Light Model
-Spot lights are defined by a position \( P \), source color \( C \), central direction vector \( L \), maximum radius \( r_{max} \), and inner (\( q_{min} \)) and outer cone angles (\( q_{max} \)). The light intensity within the cones falls off with distance and angle.
+Spot lights are defined by a position $P $, source color $ C $, central direction vector$ L $, maximum radius$ r_{max}$, and inner ($ q_{min}$) and outer cone angles ($ q_{max}$). The light intensity within the cones falls off with distance and angle.
 :p What is a spot light model in computer graphics?
 ??x
-A spot light model in computer graphics represents a localized, directional light source that affects a specific area. It is defined by its position \( P \), color \( C \), central direction vector \( L \), maximum radius \( r_{max} \), and inner (\( q_{min} \)) and outer cone angles (\( q_{max} \)). The intensity of the light falls off as you move away from the center, with full intensity within the inner cone. Beyond the outer cone, the light is considered zero.
+A spot light model in computer graphics represents a localized, directional light source that affects a specific area. It is defined by its position $P $, color $ C $, central direction vector$ L $, maximum radius$ r_{max}$, and inner ($ q_{min}$) and outer cone angles ($ q_{max}$). The intensity of the light falls off as you move away from the center, with full intensity within the inner cone. Beyond the outer cone, the light is considered zero.
 ??x
 ```java
 // Pseudocode for calculating spot light intensity
@@ -2205,37 +2182,34 @@ x??
 
 ---
 #### View-To-World Matrix
-The view-to-world matrix (MV.W) is used to transform objects from view space into world space. It can be written as follows, given the position vector \( \mathbf{t_V} \) and three unit basis vectors (\( i_V \), \( j_V \), \( k_V \)) of camera space expressed in world-space coordinates:
+The view-to-world matrix (MV.W) is used to transform objects from view space into world space. It can be written as follows, given the position vector $\mathbf{t_V}$ and three unit basis vectors ($i_V $,$ j_V $,$ k_V$) of camera space expressed in world-space coordinates:
 
-\[
-M_{V.W} = 
+$$M_{V.W} = 
 \begin{bmatrix}
 i_V & 0 \\
 j_V & 0 \\
 k_V & 0 \\
 t_V & 1
-\end{bmatrix}
-\]
+\end{bmatrix}$$
 
 This matrix is crucial for rendering objects correctly by first transforming them from model space to world space and then from world space to view space.
 
 :p What is the formula for a view-to-world matrix (MV.W)?
 ??x
 The view-to-world matrix (MV.W) can be written as:
+$$
 
-\[
 M_{V.W} = 
 \begin{bmatrix}
 i_V & 0 \\
 j_V & 0 \\
 k_V & 0 \\
 t_V & 1
-\end{bmatrix}
-\]
+\end{bmatrix}$$
 
 Where:
-- \( \mathbf{i_V}, \mathbf{j_V}, \mathbf{k_V} \) are the unit basis vectors of camera space expressed in world-space coordinates.
-- \( \mathbf{t_V} \) is the position vector of the virtual camera.
+- $\mathbf{i_V}, \mathbf{j_V}, \mathbf{k_V}$ are the unit basis vectors of camera space expressed in world-space coordinates.
+- $\mathbf{t_V}$ is the position vector of the virtual camera.
 
 This matrix transforms objects from view space to world space, essential for proper rendering.
 x??
@@ -2247,54 +2221,42 @@ The world-to-view matrix (MW.V) is the inverse of the view-to-world matrix. It i
 :p What is the world-to-view matrix (MW.V)?
 ??x
 The world-to-view matrix (MW.V) is the inverse of the view-to-world matrix (MV.W). Given:
-
-\[
-M_{V.W} = 
+$$M_{V.W} = 
 \begin{bmatrix}
 i_V & 0 \\
 j_V & 0 \\
 k_V & 0 \\
 t_V & 1
-\end{bmatrix}
-\]
+\end{bmatrix}$$
 
-The world-to-view matrix \( M_{W.V} \) is:
-
-\[
-M_{W.V} = (M_{V.W})^{-1}
-\]
+The world-to-view matrix $M_{W.V}$ is:
+$$M_{W.V} = (M_{V.W})^{-1}$$
 
 This matrix is used to transform objects from world space into view space, often concatenated with the model-to-world matrix in OpenGL to create a single model-view matrix.
 
 :p How is the world-to-view matrix (MW.V) calculated?
 ??x
-The world-to-view matrix \( M_{W.V} \) is calculated as the inverse of the view-to-world matrix \( M_{V.W} \). Given:
+The world-to-view matrix $M_{W.V}$ is calculated as the inverse of the view-to-world matrix $M_{V.W}$. Given:
 
-\[
-M_{V.W} = 
+$$M_{V.W} = 
 \begin{bmatrix}
 i_V & 0 \\
 j_V & 0 \\
 k_V & 0 \\
 t_V & 1
-\end{bmatrix}
-\]
+\end{bmatrix}$$
 
 The world-to-view matrix is:
+$$
 
-\[
-M_{W.V} = (M_{V.W})^{-1}
-\]
+M_{W.V} = (M_{V.W})^{-1}$$
 
 This transformation is crucial for rendering, as it allows objects to be correctly positioned and oriented in the view space before being rendered.
 
 :p How does concatenation of matrices work in OpenGL?
 ??x
-In OpenGL, the model-view matrix \( M_{modelview} \) is often used by concatenating the model-to-world matrix (M.W) with the world-to-view matrix (MW.V). The process can be represented as:
-
-\[
-M_{modelview} = M_{W} \times MW.V
-\]
+In OpenGL, the model-view matrix $M_{modelview}$ is often used by concatenating the model-to-world matrix (M.W) with the world-to-view matrix (MW.V). The process can be represented as:
+$$M_{modelview} = M_{W} \times MW.V$$
 
 This combined matrix simplifies vertex transformation during rendering, reducing the number of operations to a single matrix multiplication.
 
@@ -2505,7 +2467,7 @@ x??
 
 #### DirectX vs. OpenGL Perspective Projection
 
-Background context: DirectX and OpenGL differ in how they handle the z-axis in their clip-space view volume. While OpenGL uses a range of \([-1, 1]\), DirectX uses a range of \([0, 1]\). This difference needs to be accounted for when implementing perspective projection matrices.
+Background context: DirectX and OpenGL differ in how they handle the z-axis in their clip-space view volume. While OpenGL uses a range of $[-1, 1]$, DirectX uses a range of $[0, 1]$. This difference needs to be accounted for when implementing perspective projection matrices.
 
 Formula:
 The adjusted perspective projection matrix for DirectX is given by:
@@ -2519,7 +2481,7 @@ The adjusted perspective projection matrix for DirectX is given by:
 
 :p How does DirectX adjust its perspective projection matrix compared to OpenGL?
 ??x
-To account for the different z-axis ranges between DirectX and OpenGL, we need to modify the perspective projection matrix. Specifically, we scale the near (\(n\)) and far (\(f\)) clipping planes differently. For example, in DirectX, if \(n = 1\) and \(f = -1\), we adjust the perspective matrix to reflect this difference.
+To account for the different z-axis ranges between DirectX and OpenGL, we need to modify the perspective projection matrix. Specifically, we scale the near ($n $) and far ($ f $) clipping planes differently. For example, in DirectX, if$ n = 1 $and$ f = -1$, we adjust the perspective matrix to reflect this difference.
 
 ```plaintext
 2 * n/r    0        0        0
@@ -2528,7 +2490,7 @@ To account for the different z-axis ranges between DirectX and OpenGL, we need t
 -2 * n/f   0        0        -1
 ```
 
-In the matrix, \(n\) and \(f\) are adjusted to match DirectX's convention. This ensures that points in view space with negative z-values (indicating behind the camera) map correctly.
+In the matrix, $n $ and$f$ are adjusted to match DirectX's convention. This ensures that points in view space with negative z-values (indicating behind the camera) map correctly.
 
 x??
 
@@ -2539,7 +2501,7 @@ x??
 Background context: When perspective projection is applied, each vertex’s x- and y-coordinates are divided by its z-coordinate. This division creates an effect known as perspective foreshortening, which makes objects appear smaller when they are farther away from the viewer.
 
 Formula:
-For a view-space point \(p_V = [x_v, y_v, z_v]\), multiplying it by the perspective projection matrix results in:
+For a view-space point $p_V = [x_v, y_v, z_v]$, multiplying it by the perspective projection matrix results in:
 
 ```plaintext
 p_H = p_V * M_{MV}.H = [a, b, c / -z_v]
@@ -2576,7 +2538,7 @@ x??
 Background context: When rendering scenes with perspective projections, vertex attributes need to be interpolated in a way that accounts for perspective foreshortening. This is known as perspective-correct interpolation. It involves dividing the interpolated attribute values by the corresponding z-coordinates at each vertex.
 
 Formula:
-For any pair of vertex attributes \(A_1\) and \(A_2\), the interpolated attribute at a percentage \(t\) between them can be written as:
+For any pair of vertex attributes $A_1 $ and$A_2 $, the interpolated attribute at a percentage$ t$ between them can be written as:
 
 ```plaintext
 A_pz = (1 - t)(A_1 / p_1z) + t(A_2 / p_2z)

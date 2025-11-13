@@ -133,7 +133,7 @@ x??
 
 ---
 #### Power Calculation for Light Bulb
-Background context: The current drawn by a light bulb can be calculated using Ohm's Law, \( I = \frac{P}{V} \), where P is the power in watts and V is the voltage. For example, if you have a 60-watt bulb operating at 120 volts, it will draw 0.5 amperes.
+Background context: The current drawn by a light bulb can be calculated using Ohm's Law, $I = \frac{P}{V}$, where P is the power in watts and V is the voltage. For example, if you have a 60-watt bulb operating at 120 volts, it will draw 0.5 amperes.
 :p How much current does a 60-watt light bulb draw when operated at 120 volts?
 ??x
 A 60-watt light bulb draws 0.5 amperes when operated at 120 volts.
@@ -452,10 +452,10 @@ x??
 ---
 
 #### Mechanical Advantage of First-Class Lever
-The mechanical advantage (MA) of a lever can be calculated using the formula: \( MA = \frac{\text{effort arm length}}{\text{resistance arm length}} \).
+The mechanical advantage (MA) of a lever can be calculated using the formula: $MA = \frac{\text{effort arm length}}{\text{resistance arm length}}$.
 :p What is the mechanical advantage for a first-class lever with an effort arm measuring 8 feet and a resistance arm measuring 2 feet?
 ??B
-The mechanical advantage is \( \frac{8}{2} = 4 \).
+The mechanical advantage is $\frac{8}{2} = 4$.
 x??
 
 ---
@@ -479,10 +479,10 @@ x??
 ---
 
 #### Air Pressure Calculation
-Air pressure at sea level can be converted to force exerted on a surface using the formula: \( \text{Force} = \text{Pressure} \times \text{Area} \).
+Air pressure at sea level can be converted to force exerted on a surface using the formula: $\text{Force} = \text{Pressure} \times \text{Area}$.
 :p Calculate the force exerted on the top of your head given air pressure of 15 psi and an area of 24 square inches.
 ??A
-The force is calculated as \( 15 \, \text{psi} \times 24 \, \text{in}^2 = 360 \) pounds.
+The force is calculated as $15 \, \text{psi} \times 24 \, \text{in}^2 = 360$ pounds.
 x??
 
 ---
@@ -497,19 +497,19 @@ x??
 ---
 
 #### Gear Ratio Calculation
-The gear ratio can be calculated by dividing the number of teeth in the driving gear by the number of teeth on the driven gear. The formula for the gear ratio \( G \) between two gears is \( G = \frac{\text{number of teeth on driver}}{\text{number of teeth on follower}} \).
+The gear ratio can be calculated by dividing the number of teeth in the driving gear by the number of teeth on the driven gear. The formula for the gear ratio $G $ between two gears is$G = \frac{\text{number of teeth on driver}}{\text{number of teeth on follower}}$.
 :p If Gear 1 has 25 teeth and Gear 2 has 15 teeth, how many revolutions does Gear 2 make for every 10 revolutions Gear 1 makes?
 ??B
-The gear ratio is \( \frac{25}{15} = \frac{5}{3} \). For every 10 revolutions of Gear 1, Gear 2 will make \( 10 \times \frac{3}{5} = 6 \) revolutions.
+The gear ratio is $\frac{25}{15} = \frac{5}{3}$. For every 10 revolutions of Gear 1, Gear 2 will make $10 \times \frac{3}{5} = 6$ revolutions.
 x??
 
 ---
 
 #### Pressure in an Aquarium
-The pressure at the bottom of a liquid can be calculated using the formula: \( P = \rho g h \), where \( \rho \) is density, \( g \) is acceleration due to gravity, and \( h \) is height. For water, \( 1 \, \text{foot}^3 \) weighs approximately 62.5 pounds.
+The pressure at the bottom of a liquid can be calculated using the formula: $P = \rho g h $, where $\rho $ is density,$g $ is acceleration due to gravity, and$h $ is height. For water,$1 \, \text{foot}^3$ weighs approximately 62.5 pounds.
 :p Calculate the approximate pressure in psi on the bottom of an aquarium that is 18 feet long, 10 feet deep, and 12 feet wide?
 ??B
-The pressure is calculated as \( \frac{62.5 \times 10}{144} = 4.375 \approx 4 \) psi.
+The pressure is calculated as $\frac{62.5 \times 10}{144} = 4.375 \approx 4$ psi.
 x??
 
 ---
@@ -563,7 +563,7 @@ x??
 The mechanical advantage (MA) of a block-and-tackle system can be calculated by counting the number of rope segments supporting the load. Each segment provides an additional unit of MA.
 :p Calculate the mechanical advantage of the block-and-tackle arrangement shown below, which has 3 movable blocks and 1 fixed block.
 ??B
-The mechanical advantage is \( 3 \) because there are 3 movable blocks providing support.
+The mechanical advantage is $3$ because there are 3 movable blocks providing support.
 x??
 
 ---
@@ -623,7 +623,7 @@ x??
 ---
 
 #### Power Calculation
-Power can be calculated using the formula: \( \text{Power} = \frac{\text{Work}}{\text{Time}} \). This measures how much work is done in a given time period.
+Power can be calculated using the formula: $\text{Power} = \frac{\text{Work}}{\text{Time}}$. This measures how much work is done in a given time period.
 :p How can you determine the amount of power being used?
 ??D
 Divide the amount of work done by the amount of time it takes to do the work.

@@ -76,7 +76,7 @@ Background context: In 3D graphics, normal vectors are used to describe surface 
 ??x
 Normal vectors are often stored as normalized vectors (unit vectors) and then converted to a suitable format that fits within the RGB color space, which is strictly positive. This conversion involves scaling or biasing the vector components such that they fit into the 0-255 range of the texture's color channels.
 
-For example, if we have a normal vector \(\vec{n} = (x_n, y_n, z_n)\), and assuming it is normalized (\(|\vec{n}| = 1\)), we can convert these components to RGB as follows:
+For example, if we have a normal vector $\vec{n} = (x_n, y_n, z_n)$, and assuming it is normalized ($|\vec{n}| = 1$), we can convert these components to RGB as follows:
 
 ```java
 // Assuming the range of color values in the texture is [0, 255]
@@ -1162,7 +1162,7 @@ Background context explaining that CRT monitors have a nonlinear response to lum
 
 :p What is gamma correction in the context of CRT monitors?
 ??x
-Gamma correction involves adjusting the color values sent to a CRT monitor to counteract its non-linear response to luminance values. The formula \( V_{out} = V_{g_in}^{\gamma_{CRT}} \) where \( \gamma_{CRT} > 1 \), ensures that dark regions appear more perceptually correct.
+Gamma correction involves adjusting the color values sent to a CRT monitor to counteract its non-linear response to luminance values. The formula $V_{out} = V_{g_in}^{\gamma_{CRT}}$ where $\gamma_{CRT} > 1$, ensures that dark regions appear more perceptually correct.
 
 ```java
 // Example of gamma correction in Java
@@ -1182,7 +1182,7 @@ Background context explaining the curves used for gamma correction of images on 
 
 :p What are gamma encoding and decoding curves?
 ??x
-Gamma encoding and decoding curves are used to correct the nonlinear response of CRT monitors. Gamma encoding uses a curve where \( V_{out} = V_{g_in}^{\gamma_{CRT}} \) with \( \gamma_{CRT} > 1 \). Decoding reverses this process using an inverse transformation, typically \( V_{g_in} = V_{out}^{1/\gamma_{CRT}} \).
+Gamma encoding and decoding curves are used to correct the nonlinear response of CRT monitors. Gamma encoding uses a curve where $V_{out} = V_{g_in}^{\gamma_{CRT}}$ with $\gamma_{CRT} > 1$. Decoding reverses this process using an inverse transformation, typically $ V_{g_in} = V_{out}^{1/\gamma_{CRT}}$.
 
 ```java
 // Example of gamma encoding and decoding in Java

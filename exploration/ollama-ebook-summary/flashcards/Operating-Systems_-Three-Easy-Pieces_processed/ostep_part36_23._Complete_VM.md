@@ -625,11 +625,11 @@ x??
 ---
 
 #### 32-bit vs 64-bit Linux Memory Addressing
-Background context explaining how 32-bit and 64-bit systems handle memory addressing. Note that a 32-bit system can theoretically address up to \(2^{32} = 4 \text{ GB}\) of memory, whereas 64-bit systems are capable of far larger virtual address spaces.
+Background context explaining how 32-bit and 64-bit systems handle memory addressing. Note that a 32-bit system can theoretically address up to $2^{32} = 4 \text{ GB}$ of memory, whereas 64-bit systems are capable of far larger virtual address spaces.
 
 :p What is the difference in memory addressing capabilities between 32-bit and 64-bit Linux?
 ??x
-In a 32-bit system, the kernel can theoretically address up to \(2^{32} = 4 \text{ GB}\) of memory. However, due to various constraints like the need for system areas (e.g., kernel, etc.), the usable user space is typically limited to around 3 GB. In contrast, a 64-bit system can handle much larger virtual address spaces, although currently only 48 bits out of the full 64 are utilized.
+In a 32-bit system, the kernel can theoretically address up to $2^{32} = 4 \text{ GB}$ of memory. However, due to various constraints like the need for system areas (e.g., kernel, etc.), the usable user space is typically limited to around 3 GB. In contrast, a 64-bit system can handle much larger virtual address spaces, although currently only 48 bits out of the full 64 are utilized.
 
 ```java
 // Example code illustrating memory addressing limitations in 32-bit and 64-bit systems

@@ -403,16 +403,16 @@ Increasing execution time or memory allocation can significantly increase AWS La
 To illustrate:
 ```plaintext
 Scenario 1: 100 RPS with 10-second invocations (128 MB)
-Cost per invocation = $0.0000000021 * 10,000 ms = $0.000021
-Monthly cost = $0.000021 * 100 RPS * 100,000 seconds = $210
+Cost per invocation = $0.0000000021 * 10,000 ms =$0.000021
+Monthly cost = $0.000021 * 100 RPS * 100,000 seconds =$210
 
 Scenario 2: 1-minute invocations (60 seconds)
-Cost per invocation = $0.0000000021 * 60,000 ms = $0.000126
-Monthly cost = $0.000126 * 100 RPS * 100,000 seconds = $1,260
+Cost per invocation = $0.0000000021 * 60,000 ms =$0.000126
+Monthly cost = $0.000126 * 100 RPS * 100,000 seconds =$1,260
 
 Scenario 3: 1 GB memory (1,024 MB)
-Cost per invocation = $0.0000000167 * 60,000 ms = $0.001002
-Monthly cost = $0.001002 * 100 RPS * 100,000 seconds = $10,020
+Cost per invocation = $0.0000000167 * 60,000 ms =$0.001002
+Monthly cost = $0.001002 * 100 RPS * 100,000 seconds =$10,020
 ```
 x??
 

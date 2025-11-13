@@ -6,17 +6,14 @@
 
 ---
 #### Newton's Second Law of Motion
-Background context: Newton’s second law states that the acceleration (a) of an object as produced by a net force is directly proportional to the magnitude of the net force, in the same direction as the net force, and inversely proportional to the mass (m) of the object. The formula for this law is \(\mathbf{F} = m\mathbf{a}\), which can be rearranged to find the force: \(\mathbf{F} = ma\).
+Background context: Newton’s second law states that the acceleration (a) of an object as produced by a net force is directly proportional to the magnitude of the net force, in the same direction as the net force, and inversely proportional to the mass (m) of the object. The formula for this law is $\mathbf{F} = m\mathbf{a}$, which can be rearranged to find the force:$\mathbf{F} = ma$.
 
 :p What does Newton's second law tell us about the relationship between force, mass, and acceleration?
 ??x
-Newton's second law tells us that the greater an object’s mass, the more force is needed to achieve a certain acceleration. The formula \(\mathbf{F} = m\mathbf{a}\) demonstrates this: if you apply the same force to two objects with different masses, the one with less mass will accelerate faster.
+Newton's second law tells us that the greater an object’s mass, the more force is needed to achieve a certain acceleration. The formula $\mathbf{F} = m\mathbf{a}$ demonstrates this: if you apply the same force to two objects with different masses, the one with less mass will accelerate faster.
 
 For example, applying 10 newtons of force to a car and a train, where the car has a mass of 100 kg and the train has a mass of 5000 kg, results in:
-- Car: \(\mathbf{a} = \frac{\mathbf{F}}{m} = \frac{10}{100} = 0.1 \, \text{m/s}^2\)
-- Train: \(\mathbf{a} = \frac{\mathbf{F}}{m} = \frac{10}{5000} = 0.002 \, \text{m/s}^2\)
-
-The car accelerates much faster due to its lesser mass.
+- Car:$\mathbf{a} = \frac{\mathbf{F}}{m} = \frac{10}{100} = 0.1 \, \text{m/s}^2 $- Train:$\mathbf{a} = \frac{\mathbf{F}}{m} = \frac{10}{5000} = 0.002 \, \text{m/s}^2$ The car accelerates much faster due to its lesser mass.
 x??
 ---
 
@@ -34,7 +31,7 @@ x??
 
 ---
 #### Newton's Law of Universal Gravitation
-Background context: This law describes how all objects in the universe attract each other with a gravitational force that depends on their masses and the distance between them. The equation for this is \(\mathbf{F} = G\frac{m_1 m_2}{r^2}\), where \(G\) is the gravitational constant, \(m_1\) and \(m_2\) are the masses of the two objects, and \(r\) is the distance between them.
+Background context: This law describes how all objects in the universe attract each other with a gravitational force that depends on their masses and the distance between them. The equation for this is $\mathbf{F} = G\frac{m_1 m_2}{r^2}$, where $ G$is the gravitational constant,$ m_1 $and$ m_2 $are the masses of the two objects, and$ r$ is the distance between them.
 
 :p What does Newton’s law of universal gravitation state?
 ??x
@@ -46,17 +43,17 @@ x??
 
 ---
 #### Work
-Background context: In physics, work is defined as the product of a force acting upon an object that causes a displacement. The formula for calculating work is \(W = F \cdot d\). Units are newton-meters (Nm) or joules (J).
+Background context: In physics, work is defined as the product of a force acting upon an object that causes a displacement. The formula for calculating work is $W = F \cdot d$. Units are newton-meters (Nm) or joules (J).
 
 :p How do you calculate the work performed by a force?
 ??x
-To calculate work, use the equation \(W = F \cdot d\), where:
-- \(W\) represents the work done,
-- \(F\) is the force applied,
-- \(d\) is the displacement.
+To calculate work, use the equation $W = F \cdot d$, where:
+- $W$ represents the work done,
+- $F$ is the force applied,
+- $d$ is the displacement.
 
 For example, if Tech Sergeant Yost uses 60 newtons of force to move a box 2 meters, the work performed is:
-\[ W = F \cdot d = 60 \, \text{N} \times 2 \, \text{m} = 120 \, \text{J} \]
+$$W = F \cdot d = 60 \, \text{N} \times 2 \, \text{m} = 120 \, \text{J}$$
 
 Therefore, Tech Sergeant Yost performs 120 joules of work.
 x??
@@ -69,17 +66,16 @@ Background context: Force is defined as an interaction between objects that can 
 :p What is the definition of force, according to physics?
 ??x
 Force is any interaction between objects that causes a change in motion. This can be due to gravity, muscles pushing something, or collisions. The equation for calculating force depends on the specific situation:
-- For a stationary object: \(\mathbf{F} = m\mathbf{a}\), where \(m\) is mass and \(\mathbf{a}\) is acceleration.
+- For a stationary object:$\mathbf{F} = m\mathbf{a}$, where $ m$is mass and $\mathbf{a}$ is acceleration.
 - For dynamic situations: Use the net forces acting upon an object to determine its motion.
 
 For example, if you need 10 newtons of force to move a box with a mass of 2 kg (assuming it was initially at rest), the acceleration would be:
-\[ \mathbf{a} = \frac{\mathbf{F}}{m} = \frac{10 \, \text{N}}{2 \, \text{kg}} = 5 \, \text{m/s}^2 \]
-x??
+$$\mathbf{a} = \frac{\mathbf{F}}{m} = \frac{10 \, \text{N}}{2 \, \text{kg}} = 5 \, \text{m/s}^2$$x??
 ---
 
 ---
 #### Energy
-Background context: Energy is the capacity to do work. It can exist in various forms such as electrical, chemical, and thermal, but it’s always either kinetic or potential. The equation for calculating energy is \(E = W\), where \(W\) is work.
+Background context: Energy is the capacity to do work. It can exist in various forms such as electrical, chemical, and thermal, but it’s always either kinetic or potential. The equation for calculating energy is $E = W $, where $ W$ is work.
 
 :p What are the two main types of energy?
 ??x
@@ -93,20 +89,18 @@ x??
 
 ---
 #### Power
-Background context: Power is the rate at which work is done or the rate at which energy is converted. The equation for calculating power is \(P = \frac{W}{t}\), where \(P\) represents power, \(W\) represents work, and \(t\) represents time.
+Background context: Power is the rate at which work is done or the rate at which energy is converted. The equation for calculating power is $P = \frac{W}{t}$, where $ P$represents power,$ W $represents work, and$ t$ represents time.
 
 :p How do you calculate power?
 ??x
 To calculate power, use the formula:
-\[ P = \frac{W}{t} \]
-where:
-- \(P\) is power,
-- \(W\) is work done,
-- \(t\) is the time taken to perform the work.
+$$P = \frac{W}{t}$$where:
+- $P$ is power,
+- $W$ is work done,
+- $t$ is the time taken to perform the work.
 
 For example, if 120 joules of work are done in 5 seconds, then the power used is:
-\[ P = \frac{120 \, \text{J}}{5 \, \text{s}} = 24 \, \text{W} \]
-x??
+$$P = \frac{120 \, \text{J}}{5 \, \text{s}} = 24 \, \text{W}$$x??
 ---
 
 ---
@@ -114,7 +108,7 @@ x??
 Background context explaining the formula for work, which is force times distance. This helps in solving ASVAB problems that involve physical sciences.
 :p How do you calculate the work exerted when tackling an ASVAB problem?
 ??x
-The calculation of work involves using the formula \( \text{Work} = \text{Force} \times \text{Distance} \). Force is measured in newtons (N) and distance in meters (m), making the unit for work joules (J).
+The calculation of work involves using the formula $\text{Work} = \text{Force} \times \text{Distance}$. Force is measured in newtons (N) and distance in meters (m), making the unit for work joules (J).
 ```java
 // Example code to calculate work
 public class WorkCalculation {
@@ -178,7 +172,7 @@ The **electromagnetic spectrum** covers all wavelengths and frequencies of radia
   - Long wavelength, low frequency: Radio waves
   - Short wavelength, high frequency: Gamma rays
 
-For example, an FM radio station broadcasts at about 100 MHz (megahertz), a microwave oven generates radiation around 2.45 GHz (gigahertz), and X-ray machines produce between \(10^{18}\) to \(10^{20}\) Hz.
+For example, an FM radio station broadcasts at about 100 MHz (megahertz), a microwave oven generates radiation around 2.45 GHz (gigahertz), and X-ray machines produce between $10^{18}$ to $10^{20}$ Hz.
 ```java
 // Pseudocode for categorizing electromagnetic waves
 public class ElectromagneticSpectrum {
@@ -391,11 +385,11 @@ x??
 ---
 
 #### Force Formula
-Background context: The force (\(F\)) acting on an object can be determined using Newton's second law of motion. According to this law, force equals mass (\(m\)) times acceleration (\(a\)), expressed as \( \vec{F} = m\vec{a} \).
+Background context: The force ($F $) acting on an object can be determined using Newton's second law of motion. According to this law, force equals mass ($ m $) times acceleration ($ a $), expressed as$\vec{F} = m\vec{a}$.
 
 :p What formula is used to determine the force?
 ??x
-The formula used to determine the force is \( \vec{F} = m\vec{a} \). This means that the force acting on an object is directly proportional to its mass and the acceleration it experiences.
+The formula used to determine the force is $\vec{F} = m\vec{a}$. This means that the force acting on an object is directly proportional to its mass and the acceleration it experiences.
 x??
 
 ---
@@ -431,7 +425,7 @@ x??
 ---
 
 #### Atomic Number Indication
-Background context: An element's atomic number (\(Z\)) indicates the number of protons in its nucleus. This number uniquely determines an element and is crucial for distinguishing one element from another.
+Background context: An element's atomic number ($Z$) indicates the number of protons in its nucleus. This number uniquely determines an element and is crucial for distinguishing one element from another.
 
 :p What does the atomic number indicate?
 ??x
@@ -511,11 +505,11 @@ x??
 ---
 
 #### Hydrogen Atoms in Compound
-Background context: In the chemical compound \(H_{25}^{10}IPr\), it's important to identify the number of hydrogen atoms. Here, "H" typically indicates hydrogen and the subscript 25 suggests there are 25 hydrogen atoms.
+Background context: In the chemical compound $H_{25}^{10}IPr$, it's important to identify the number of hydrogen atoms. Here, "H" typically indicates hydrogen and the subscript 25 suggests there are 25 hydrogen atoms.
 
-:p How many atoms of hydrogen are in \(H_{25}^{10}IPr\)?
+:p How many atoms of hydrogen are in $H_{25}^{10}IPr$?
 ??x
-The chemical compound \(H_{25}^{10}IPr\) contains 25 atoms of hydrogen.
+The chemical compound $H_{25}^{10}IPr$ contains 25 atoms of hydrogen.
 x??
 
 ---

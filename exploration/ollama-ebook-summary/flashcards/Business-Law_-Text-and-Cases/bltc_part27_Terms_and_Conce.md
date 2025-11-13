@@ -92,8 +92,8 @@ Liquidated damages are a predetermined sum agreed upon in a contract as compensa
 Liquidated damages are a pre-agreed payment specified in a contract to be paid if one party breaches the agreement. For instance, when Cohen contracts with Windsor to sell his house for $100,000 and specifies that Windsor must pay 10% as a down payment, he can retain this sum if Windsor breaches the contract.
 
 In the given example:
-- Cohen retains $10,000 (10% of $100,000) as liquidated damages when Windsor breaches the contract.
-- Two weeks later, Cohen sells the house to Ballard for $105,000. Even though the breach happened, Cohen is not required to return the $10,000 because it was specified in the contract.
+- Cohen retains $10,000 (10% of$100,000) as liquidated damages when Windsor breaches the contract.
+- Two weeks later, Cohen sells the house to Ballard for $105,000. Even though the breach happened, Cohen is not required to return the$10,000 because it was specified in the contract.
 
 x??
 ---

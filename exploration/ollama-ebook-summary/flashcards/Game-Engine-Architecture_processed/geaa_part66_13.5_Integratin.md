@@ -677,8 +677,7 @@ Background context: In dynamic environments, AI-controlled characters may need t
 Leading shots involves predicting where the target will be when the projectile reaches its destination, accounting for the travel time of the projectile. The AI calculates this by tracking the target's movement and adjusting its aim point accordingly.
 
 For example, if an AI character shoots a bullet with a known velocity (v) and the target is moving at a speed (s), the AI would calculate the lead distance (d) using:
-\[ d = \frac{v \cdot t}{2} \]
-where \(t\) is the time it takes for the projectile to reach the target.
+$$d = \frac{v \cdot t}{2}$$where $ t$ is the time it takes for the projectile to reach the target.
 
 Here's a simplified pseudocode example:
 
@@ -810,11 +809,8 @@ This function sets up the visual and audio effects of an explosion and applies d
 Explosions can be simulated by applying impulses to objects within their radius. The direction of these impulses is typically radial, calculated by normalizing the vector from the center of the explosion to the center of the impacted object and then scaling this vector by the magnitude of the explosion.
 
 The formula for calculating the impulse direction is as follows:
-1. Calculate the vector from the explosion's center to the object's center: \(\vec{v} = \text{objectCenter} - \explosionCenter\)
-2. Normalize the vector: \(\vec{n} = \frac{\vec{v}}{\|\vec{v}\|}\), where \(\|\vec{v}\|\) is the magnitude of \(\vec{v}\).
-3. Scale by the explosion's force (and possibly decay with distance): \(\text{impulseDirection} = \vec{n} \times \explosionForce\)
-
-:p How are impulses applied in an explosion simulation?
+1. Calculate the vector from the explosion's center to the object's center:$\vec{v} = \text{objectCenter} - \explosionCenter $2. Normalize the vector:$\vec{n} = \frac{\vec{v}}{\|\vec{v}\|}$, where $\|\vec{v}\|$ is the magnitude of $\vec{v}$.
+3. Scale by the explosion's force (and possibly decay with distance): $\text{impulseDirection} = \vec{n} \times \explosionForce$:p How are impulses applied in an explosion simulation?
 ??x
 Impulses are applied radially from the explosion center to each affected object. The direction is calculated by normalizing the vector from the explosion's center to the impacted object and scaling it by the explosion force, possibly attenuated with distance.
 
@@ -1594,9 +1590,10 @@ Background context explaining how sound waves cause fluctuations in atmospheric 
 
 :p How is the instantaneous acoustic pressure calculated?
 ??x
-The instantaneous acoustic pressure \( p_{inst} \) is calculated by adding the ambient atmospheric pressure \( p_{atmos} \) to the perturbation caused by the sound wave at a specific instant in time, denoted as \( p_{sound} \). Mathematically, this can be expressed as:
-\[ p_{inst}(t) = p_{atmos} + p_{sound}(t) \]
-Here, \( p_{atmos} \) is considered constant for simplicity.
+The instantaneous acoustic pressure $p_{inst}$ is calculated by adding the ambient atmospheric pressure $p_{atmos}$ to the perturbation caused by the sound wave at a specific instant in time, denoted as $p_{sound}$. Mathematically, this can be expressed as:
+$$p_{inst}(t) = p_{atmos} + p_{sound}(t)$$
+
+Here,$p_{atmos}$ is considered constant for simplicity.
 x??
 
 ---
@@ -1606,11 +1603,10 @@ Background context explaining how a sound wave signal can be represented mathema
 
 :p How is a sound wave signal represented in signal processing theory?
 ??x
-In signal processing theory, a sound wave signal \( p(t) \) oscillates about the average atmospheric pressure. This time-varying function is called a signal. It can be plotted over time to visualize the amplitude variations of the sound wave.
+In signal processing theory, a sound wave signal $p(t)$ oscillates about the average atmospheric pressure. This time-varying function is called a signal. It can be plotted over time to visualize the amplitude variations of the sound wave.
 
 For example:
-\[ p(t) = A \sin(2\pi f t + \phi) + p_{atmos} \]
-where \( A \) is the amplitude, \( f \) is the frequency, and \( \phi \) is the phase shift. The function oscillates around \( p_{atmos} \).
+$$p(t) = A \sin(2\pi f t + \phi) + p_{atmos}$$where $ A $is the amplitude,$ f $ is the frequency, and $\phi $ is the phase shift. The function oscillates around$p_{atmos}$.
 
 A plot of this signal would show a wave form that fluctuates above and below the average atmospheric pressure.
 x??
@@ -1661,10 +1657,10 @@ x??
 
 ---
 #### Period of a Periodic Signal
-Background context explaining the concept. The period \(T\) of any repeating pattern describes the minimum amount of time that passes between successive instances of the pattern. For example, for a sinusoidal sound wave, the period measures the time between successive peaks or troughs.
-:p What is the definition of the period \(T\) of a periodic signal?
+Background context explaining the concept. The period $T$ of any repeating pattern describes the minimum amount of time that passes between successive instances of the pattern. For example, for a sinusoidal sound wave, the period measures the time between successive peaks or troughs.
+:p What is the definition of the period $T$ of a periodic signal?
 ??x
-The period \(T\) of any repeating pattern describes the minimum amount of time that passes between successive instances of the pattern. For example, for a sinusoidal sound wave, the period measures the time between successive peaks or troughs.
+The period $T$ of any repeating pattern describes the minimum amount of time that passes between successive instances of the pattern. For example, for a sinusoidal sound wave, the period measures the time between successive peaks or troughs.
 ```java
 // Pseudocode to calculate the period T from a set of sampled data points
 public void calculatePeriod(double[] samples) {
@@ -1690,11 +1686,12 @@ x??
 
 ---
 #### Frequency of a Wave
-Background context explaining the concept. The frequency \(f\) of a wave is just the inverse of its period (\(f=1/T\)). Frequency is measured in Hertz (Hz), which means “cycles per second.” A “cycle” is technically a dimensionless quantity, so the Hertz is the inverse of the second (Hz = 1/s).
-:p What is the relationship between frequency \(f\) and period \(T\)?
+Background context explaining the concept. The frequency $f $ of a wave is just the inverse of its period ($ f=1/T$). Frequency is measured in Hertz (Hz), which means “cycles per second.” A “cycle” is technically a dimensionless quantity, so the Hertz is the inverse of the second (Hz = 1/s).
+:p What is the relationship between frequency $f $ and period$T$?
 ??x
-The relationship between frequency \(f\) and period \(T\) is given by:
-\[ f = \frac{1}{T} \]
+The relationship between frequency $f $ and period$T$ is given by:
+$$f = \frac{1}{T}$$
+
 This means that if you know the period of a wave, you can find its frequency by taking the reciprocal of the period. Frequency measures how many cycles occur per second.
 
 ```java
@@ -1708,11 +1705,12 @@ x??
 
 ---
 #### Angular Frequency and Its Usefulness
-Background context explaining the concept. The angular frequency \(\omega\) is just the rate of oscillation measured in radians per second instead of cycles per second. Since one complete circular rotation is \(2\pi\) radians, \(\omega = 2\pi f = 2\pi / T\). Angular frequency is very useful when analyzing sinusoidal waves because a circular motion in two dimensions gives rise to a sinusoidal motion when projected onto a single-dimensional axis.
-:p What is the formula for angular frequency \(\omega\)?
+Background context explaining the concept. The angular frequency $\omega $ is just the rate of oscillation measured in radians per second instead of cycles per second. Since one complete circular rotation is$2\pi $ radians,$\omega = 2\pi f = 2\pi / T$. Angular frequency is very useful when analyzing sinusoidal waves because a circular motion in two dimensions gives rise to a sinusoidal motion when projected onto a single-dimensional axis.
+:p What is the formula for angular frequency $\omega$?
 ??x
-The formula for angular frequency \(\omega\) is given by:
-\[ \omega = 2\pi f = \frac{2\pi}{T} \]
+The formula for angular frequency $\omega$ is given by:
+$$\omega = 2\pi f = \frac{2\pi}{T}$$
+
 This shows that angular frequency measures the rate of oscillation in radians per second, which provides a more direct way to analyze sinusoidal waves compared to regular frequency.
 
 ```java
@@ -1726,10 +1724,10 @@ x??
 
 ---
 #### Phase of a Periodic Signal
-Background context explaining the concept. The amount by which a periodic signal such as a sine wave is shifted left or right along the time axis is known as its phase. Phase is a relative term. For example, \(\sin(t)\) is really just a version of \(\cos(t)\) that has been phase-shifted by \(\frac{\pi}{2}\) along the time axis (i.e., \(\sin(t) = \cos(t - \frac{\pi}{2})\)). Likewise, \(\cos(t)\) is just \(\sin(t)\) phase-shifted by \(-\frac{\pi}{2}\) (i.e., \(\cos(t) = \sin(t + \frac{\pi}{2})\)).
+Background context explaining the concept. The amount by which a periodic signal such as a sine wave is shifted left or right along the time axis is known as its phase. Phase is a relative term. For example,$\sin(t)$ is really just a version of $\cos(t)$ that has been phase-shifted by $\frac{\pi}{2}$ along the time axis (i.e.,$\sin(t) = \cos(t - \frac{\pi}{2})$). Likewise,$\cos(t)$ is just $\sin(t)$ phase-shifted by $-\frac{\pi}{2}$(i.e.,$\cos(t) = \sin(t + \frac{\pi}{2})$).
 :p What does the phase of a signal represent?
 ??x
-The phase of a signal represents the amount by which the signal is shifted along the time axis. It indicates how far into its cycle the signal has progressed, relative to a reference point. For example, \(\sin(t)\) and \(\cos(t)\) are sinusoidal functions that differ only in their phase shift; \(\sin(t)\) leads \(\cos(t)\) by \(\frac{\pi}{2}\) radians.
+The phase of a signal represents the amount by which the signal is shifted along the time axis. It indicates how far into its cycle the signal has progressed, relative to a reference point. For example, $\sin(t)$ and $\cos(t)$ are sinusoidal functions that differ only in their phase shift;$\sin(t)$ leads $\cos(t)$ by $\frac{\pi}{2}$ radians.
 
 ```java
 // Pseudocode to demonstrate phase shift between sin and cos
@@ -1746,10 +1744,10 @@ x??
 
 ---
 #### Speed of Sound in a Medium
-Background context explaining the concept. The speed \(v\) at which a sound wave propagates through its medium depends upon the material and physical properties of the medium, including phase (solid, gas or liquid), temperature, pressure, and density. In 20°C dry air, the speed of sound is approximately 343.2 m/s, which is equivalent to about 767.7 mph or 1235.6 km/h.
+Background context explaining the concept. The speed $v$ at which a sound wave propagates through its medium depends upon the material and physical properties of the medium, including phase (solid, gas or liquid), temperature, pressure, and density. In 20°C dry air, the speed of sound is approximately 343.2 m/s, which is equivalent to about 767.7 mph or 1235.6 km/h.
 :p What factors affect the speed of sound in a medium?
 ??x
-The speed \(v\) at which a sound wave propagates through its medium depends on several physical properties:
+The speed $v$ at which a sound wave propagates through its medium depends on several physical properties:
 - The type of material (solid, gas, or liquid)
 - Temperature
 - Pressure
@@ -1775,11 +1773,12 @@ x??
 
 ---
 #### Wavelength of a Sinusoidal Wave
-Background context explaining the concept. The wavelength \(\lambda\) of a sinusoidal wave measures the spatial distance between successive peaks or troughs. It depends in part on the frequency of the wave, but because it is a spatial measurement, it also depends on the speed of the wave. Specifically, \(\lambda = v/f\), where \(v\) is the speed of the wave (measured in m/s) and \(f\) is the frequency (measured in Hz or 1/s).
-:p What is the relationship between wavelength \(\lambda\), speed \(v\), and frequency \(f\)?
+Background context explaining the concept. The wavelength $\lambda $ of a sinusoidal wave measures the spatial distance between successive peaks or troughs. It depends in part on the frequency of the wave, but because it is a spatial measurement, it also depends on the speed of the wave. Specifically,$\lambda = v/f $, where $ v $is the speed of the wave (measured in m/s) and$ f$ is the frequency (measured in Hz or 1/s).
+:p What is the relationship between wavelength $\lambda $, speed $ v $, and frequency$ f$?
 ??x
-The relationship between wavelength \(\lambda\), speed \(v\), and frequency \(f\) for a sinusoidal wave is given by:
-\[ \lambda = \frac{v}{f} \]
+The relationship between wavelength $\lambda $, speed $ v $, and frequency$ f$for a sinusoidal wave is given by:
+$$\lambda = \frac{v}{f}$$
+
 This formula shows that the wavelength depends on both the speed of the wave and its frequency. The higher the speed or lower the frequency, the longer the wavelength.
 
 ```java
@@ -1799,12 +1798,10 @@ Background context explaining the concept. In order to judge the “loudness” 
 The human ear perceives loudness based on the RMS value of the sound pressure signal over a short, sliding time window. The effective sound pressure is calculated as the root mean square (RMS) of the instantaneous sound pressure measured over a specific interval of time.
 
 For discrete measurements:
-\[ p_{rms} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} p_i^2} \]
+$$p_{rms} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} p_i^2}$$
 
 For continuous measurement:
-\[ p_{rms} = \sqrt{\frac{1}{T_2 - T_1} \int_{T_1}^{T_2} (p(t))^2 dt} \]
-
-```java
+$$p_{rms} = \sqrt{\frac{1}{T_2 - T_1} \int_{T_1}^{T_2} (p(t))^2 dt}$$```java
 // Pseudocode to calculate RMS sound pressure from a series of discrete measurements
 public void calculateRmsSoundPressure(double[] samples) {
     double sumOfSquares = 0;
@@ -1822,15 +1819,17 @@ x??
 Background context explaining that perceived loudness is proportional to acoustic intensity, which itself is proportional to the square of RMS sound pressure. Humans can perceive a wide range of sound intensities, so decibels (dB) are used as a logarithmic unit to manage this dynamic range.
 
 Formula:
-\[ L_p = 10 \log_{10}\left(\frac{p^2_{\text{rms}}}{p^2_{\text{ref}}}\right) \, \text{dB} = 20 \log_{10}\left(\frac{p_{\text{rms}}}{p_{\text{ref}}}\right) \, \text{dB} \]
+$$
+
+L_p = 10 \log_{10}\left(\frac{p^2_{\text{rms}}}{p^2_{\text{ref}}}\right) \, \text{dB} = 20 \log_{10}\left(\frac{p_{\text{rms}}}{p_{\text{ref}}}\right) \, \text{dB}$$
 
 Explanation:
-The decibel scale allows for a wide range of measurements to be represented with fewer values. Commonly used reference sound pressure in air is \( p_{\text{ref}} = 20 \, \text{mPa} \).
+The decibel scale allows for a wide range of measurements to be represented with fewer values. Commonly used reference sound pressure in air is $p_{\text{ref}} = 20 \, \text{mPa}$.
 
 :p What is the formula to calculate sound pressure level (SPL)?
 ??x
 The formula for sound pressure level (SPL) is given by:
-\[ L_p = 10 \log_{10}\left(\frac{p^2_{\text{rms}}}{p^2_{\text{ref}}}\right) \, \text{dB} = 20 \log_{10}\left(\frac{p_{\text{rms}}}{p_{\text{ref}}}\right) \, \text{dB} \]
+$$L_p = 10 \log_{10}\left(\frac{p^2_{\text{rms}}}{p^2_{\text{ref}}}\right) \, \text{dB} = 20 \log_{10}\left(\frac{p_{\text{rms}}}{p_{\text{ref}}}\right) \, \text{dB}$$
 
 This formula converts the ratio of acoustic intensity to a logarithmic scale, making it easier to handle large ranges in sound levels.
 x??
@@ -1842,20 +1841,12 @@ x??
 Background context explaining that logarithms are used in the calculation of decibels and sound pressure level. Here are some key identities for working with logarithms.
 
 Formulas:
-1. \(\log_b(x \cdot y) = \log_b x + \log_b y\)
-2. \(\log_b\left(\frac{x}{y}\right) = \log_b x - \log_b y\)
-3. \(\log_b(x^d) = d \log_b x\)
-
-Explanation:
+1.$\log_b(x \cdot y) = \log_b x + \log_b y $2.$\log_b\left(\frac{x}{y}\right) = \log_b x - \log_b y $3.$\log_b(x^d) = d \log_b x$ Explanation:
 These identities help in simplifying logarithmic expressions.
 
 :p List the three main logarithmic identities.
 ??x
-1. \(\log_b(x \cdot y) = \log_b x + \log_b y\)
-2. \(\log_b\left(\frac{x}{y}\right) = \log_b x - \log_b y\)
-3. \(\log_b(x^d) = d \log_b x\)
-
-These identities are useful for simplifying and solving logarithmic expressions.
+1.$\log_b(x \cdot y) = \log_b x + \log_b y $2.$\log_b\left(\frac{x}{y}\right) = \log_b x - \log_b y $3.$\log_b(x^d) = d \log_b x$ These identities are useful for simplifying and solving logarithmic expressions.
 x??
 
 ---
@@ -1958,12 +1949,11 @@ x??
 Background context explaining how sound intensity and pressure fall off with distance in open space. The 1/r² law for intensity and 1/r law for pressure are discussed.
 :p How does the intensity of a spherical radiating sound wave decrease with distance?
 ??x
-The intensity \( I(r) \) of a spherical radiating sound wave decreases with the square of the radial distance from the source, following an inverse square law: 
-\[ I(r) = \frac{I_0}{r^2} \]
-where \( r \) is the distance from the source and \( I_0 \) is the intensity at the source.
+The intensity $I(r)$ of a spherical radiating sound wave decreases with the square of the radial distance from the source, following an inverse square law:
+$$I(r) = \frac{I_0}{r^2}$$where $ r $ is the distance from the source and $ I_0$ is the intensity at the source.
 
-Similarly, the sound pressure \( p(r) \) falls off with the distance as:
-\[ p(r) \propto \frac{1}{r} \]
+Similarly, the sound pressure $p(r)$ falls off with the distance as:
+$$p(r) \propto \frac{1}{r}$$
 
 This behavior arises due to the geometric expansion of the wavefront.
 x??
@@ -1973,7 +1963,7 @@ x??
 Background context discussing how energy is dissipated in sound waves, causing a 1/r fall-off in sound pressure. This occurs because the waveform expands geometrically as it propagates.
 :p What causes the 1/r fall-off in sound pressure with distance?
 ??x
-The 1/r fall-off in sound pressure arises from the geometric expansion of the wavefront as the sound propagates through space. As the wave spreads out, the energy is distributed over a larger area, leading to a decrease in intensity and pressure proportional to \( \frac{1}{r^2} \) for intensity and \( \frac{1}{r} \) for pressure.
+The 1/r fall-off in sound pressure arises from the geometric expansion of the wavefront as the sound propagates through space. As the wave spreads out, the energy is distributed over a larger area, leading to a decrease in intensity and pressure proportional to $\frac{1}{r^2}$ for intensity and $\frac{1}{r}$ for pressure.
 x??
 
 ---
@@ -1993,7 +1983,7 @@ Background context: Sound intensity decreases with distance from the source. Thi
 
 :p How does the intensity of a sound wave change as it travels through space?
 ??x
-The intensity of a sound wave decreases as it travels, due to the absorption of energy by the atmosphere. This decrease is typically described by an inverse square law: \( I \propto \frac{1}{r^2} \), where \( r \) is the distance from the source.
+The intensity of a sound wave decreases as it travels, due to the absorption of energy by the atmosphere. This decrease is typically described by an inverse square law:$I \propto \frac{1}{r^2}$, where $ r$ is the distance from the source.
 x??
 
 ---
@@ -2074,11 +2064,11 @@ x??
 #### Phase Shift and Interference
 Background context: In audio processing, the difference in path lengths between direct sound waves and their reflected counterparts can cause phase shifts. These phase shifts can result in either constructive or destructive interference. The amount of phase shift is dependent on the path length difference.
 
-Constructive interference occurs when two wavefronts meet at a point with a phase difference of 0 or an integer multiple of \(2\pi\). Destructive interference happens when the phase difference is \(\pi\) (or any odd multiple of \(\pi\)).
+Constructive interference occurs when two wavefronts meet at a point with a phase difference of 0 or an integer multiple of $2\pi $. Destructive interference happens when the phase difference is $\pi $(or any odd multiple of $\pi$).
 
 :p What causes constructive and destructive interference in audio?
 ??x
-Constructive and destructive interference are caused by phase shifts due to different path lengths between direct sound waves and their reflections. When the phase difference is an integer multiple of \(2\pi\), the waves reinforce each other (constructive interference). If the phase difference is \(\pi\) or an odd multiple, they cancel each other out (destructive interference).
+Constructive and destructive interference are caused by phase shifts due to different path lengths between direct sound waves and their reflections. When the phase difference is an integer multiple of $2\pi $, the waves reinforce each other (constructive interference). If the phase difference is $\pi$ or an odd multiple, they cancel each other out (destructive interference).
 x??
 
 ---
@@ -2111,7 +2101,7 @@ Background context: The delayed arrival of reflected sound waves leads to phase 
 
 :p How do phase shifts affect the frequency response in audio?
 ??x
-Phase shifts caused by differences in path lengths between direct and reflected sound waves lead to either constructive or destructive interference. This interference can attenuate specific frequencies in the audio spectrum, altering the overall frequency response. For example, a long delay might cause a \(\pi\) phase shift, leading to cancellation of that particular frequency.
+Phase shifts caused by differences in path lengths between direct and reflected sound waves lead to either constructive or destructive interference. This interference can attenuate specific frequencies in the audio spectrum, altering the overall frequency response. For example, a long delay might cause a $\pi$ phase shift, leading to cancellation of that particular frequency.
 x??
 
 ---
@@ -2225,12 +2215,11 @@ Background context explaining the concept. The Doppler effect is observed when a
 
 Sound travels at approximately 343 meters per second (m/s) through air under standard conditions. When the train (the source of the sound) approaches an observer, the sound waves are compressed (squashed together), resulting in a higher pitch. As the train moves away, the sound waves are stretched out (spread out), leading to a lower pitch.
 
-The relationship between the original frequency \( f \), the observed frequency \( f' \), the speed of sound \( c \) in air, and the relative velocity \( v_l \) or \( v_s \) (the velocities of the listener and source respectively) can be expressed as follows:
-\[ f' = \frac{c + v_l}{c + v_s} f \]
+The relationship between the original frequency $f $, the observed frequency $ f'$, the speed of sound $ c$in air, and the relative velocity $ v_l$ or $ v_s$ (the velocities of the listener and source respectively) can be expressed as follows:
+$$f' = \frac{c + v_l}{c + v_s} f$$
 
-For small relative velocities compared to the speed of sound (\( v_l, v_s << c \)), the expression simplifies to:
-\[ f' \approx (1 + \frac{v_l - v_s}{c}) f \]
-:p What is the Doppler effect?
+For small relative velocities compared to the speed of sound ($v_l, v_s << c$), the expression simplifies to:
+$$f' \approx (1 + \frac{v_l - v_s}{c}) f$$:p What is the Doppler effect?
 ??x
 The Doppler effect describes how the perceived frequency of a wave changes when the source and observer are moving relative to each other. For sound, this means that as a train approaches you, its pitch seems higher, and as it moves away, the pitch seems lower.
 x??
@@ -2238,46 +2227,39 @@ x??
 ---
 #### Formula for the Doppler Effect in One Dimension
 Explanation of the formula used to calculate the observed frequency due to motion:
-\[ f' = \frac{c + v_l}{c + v_s} f \]
+$$f' = \frac{c + v_l}{c + v_s} f$$
 
 Where:
-- \( f' \) is the observed (Doppler-shifted) frequency.
-- \( f \) is the original source frequency.
-- \( c \) is the speed of sound in air.
-- \( v_l \) is the velocity of the listener relative to the medium (air).
-- \( v_s \) is the velocity of the source relative to the medium.
+- $f'$ is the observed (Doppler-shifted) frequency.
+- $f$ is the original source frequency.
+- $c$ is the speed of sound in air.
+- $v_l$ is the velocity of the listener relative to the medium (air).
+- $v_s$ is the velocity of the source relative to the medium.
 
 For small velocities:
-\[ f' \approx 1 + \frac{v_l - v_s}{c} f \]
-:p What formula represents the Doppler effect in one dimension?
+$$f' \approx 1 + \frac{v_l - v_s}{c} f$$:p What formula represents the Doppler effect in one dimension?
 ??x
 The formula for the Doppler effect in one dimension is given by:
-\[ f' = \frac{c + v_l}{c + v_s} f \]
-where \( f' \) is the observed frequency, \( f \) is the original frequency, \( c \) is the speed of sound, and \( v_l \) and \( v_s \) are the velocities of the listener and source respectively. For small relative velocities:
-\[ f' \approx 1 + \frac{v_l - v_s}{c} f \]
+$$f' = \frac{c + v_l}{c + v_s} f$$where $ f'$ is the observed frequency,$ f $is the original frequency,$ c $ is the speed of sound, and $ v_l $ and $ v_s$ are the velocities of the listener and source respectively. For small relative velocities:
+$$f' \approx 1 + \frac{v_l - v_s}{c} f$$
 x??
 
 ---
 #### Example Calculation of Doppler Effect
-Let's consider an example where a train (source of sound) is moving towards you at 34 meters per second (\( v_s = 34 \, \text{m/s} \)) in air with a speed of sound \( c = 343 \, \text{m/s} \), and the original frequency emitted by the train's horn is \( f = 500 \, \text{Hz} \).
+Let's consider an example where a train (source of sound) is moving towards you at 34 meters per second ($v_s = 34 \, \text{m/s}$) in air with a speed of sound $ c = 343 \, \text{m/s}$, and the original frequency emitted by the train's horn is $ f = 500 \, \text{Hz}$.
 
 Using the formula:
-\[ f' = \frac{343 + v_l}{343 + 34} \times 500 \]
+$$f' = \frac{343 + v_l}{343 + 34} \times 500$$
 
-If you are stationary (\( v_l = 0 \)):
-\[ f' = \frac{343}{377} \times 500 \approx 462.18 \, \text{Hz} \]
-:p If a train moves towards an observer at 34 m/s, what is the observed frequency of its horn if the emitted frequency is 500 Hz?
+If you are stationary ($v_l = 0$):
+$$f' = \frac{343}{377} \times 500 \approx 462.18 \, \text{Hz}$$:p If a train moves towards an observer at 34 m/s, what is the observed frequency of its horn if the emitted frequency is 500 Hz?
 ??x
 Given:
-- Speed of sound \( c = 343 \, \text{m/s} \)
-- Velocity of the source (train) \( v_s = 34 \, \text{m/s} \)
-- Original frequency \( f = 500 \, \text{Hz} \)
+- Speed of sound $c = 343 \, \text{m/s}$- Velocity of the source (train)$ v_s = 34 \, \text{m/s}$- Original frequency $ f = 500 \, \text{Hz}$ Using the formula:
+$$f' = \frac{343 + 0}{343 + 34} \times 500$$
+$$f' = \frac{343}{377} \times 500 \approx 462.18 \, \text{Hz}$$
 
-Using the formula:
-\[ f' = \frac{343 + 0}{343 + 34} \times 500 \]
-\[ f' = \frac{343}{377} \times 500 \approx 462.18 \, \text{Hz} \]
-
-The observed frequency is approximately \( 462.18 \) Hz.
+The observed frequency is approximately $462.18$ Hz.
 x??
 
 ---

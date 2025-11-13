@@ -499,11 +499,11 @@ x??
 ---
 
 #### Solving Matrix Equations using NumPy
-Background context: In NumPy, you can solve matrix equations such as \(Ax = b\) using linear algebra functions provided by NumPy's `linalg` module. The `solve` function is used to find the solution vector \(x\).
+Background context: In NumPy, you can solve matrix equations such as $Ax = b $ using linear algebra functions provided by NumPy's `linalg` module. The `solve` function is used to find the solution vector$x$.
 
 :p How do you solve a matrix equation using NumPy?
 ??x
-To solve a matrix equation like \(Ax = b\) in NumPy, you can use the `solve` function from the `numpy.linalg` package.
+To solve a matrix equation like $Ax = b$ in NumPy, you can use the `solve` function from the `numpy.linalg` package.
 
 Here's an example:
 
@@ -520,14 +520,14 @@ x = np.linalg.solve(A, b)
 print('Solution:', x)
 ```
 
-The `solve` function automatically handles matrix operations and returns the solution vector \(x\).
+The `solve` function automatically handles matrix operations and returns the solution vector $x$.
 
 x??
 
 ---
 
 #### Matrix Inverse Calculation in NumPy
-Background context: Another way to solve a matrix equation like \(Ax = b\) is by calculating the inverse of matrix \(A\) (denoted as \(A^{-1}\)) and then using it to find the solution. This can be done using `numpy.linalg.inv`.
+Background context: Another way to solve a matrix equation like $Ax = b $ is by calculating the inverse of matrix$A $(denoted as$ A^{-1}$) and then using it to find the solution. This can be done using `numpy.linalg.inv`.
 
 :p How do you calculate the inverse of a matrix in NumPy?
 ??x
@@ -545,9 +545,9 @@ A = np.array([[1, 2, 3], [22, 32, 42], [55, 66, 100]])
 print(np.dot(np.linalg.inv(A), A))
 ```
 
-This will output an identity matrix, confirming that the `inv` function correctly computes \(A^{-1}\).
+This will output an identity matrix, confirming that the `inv` function correctly computes $A^{-1}$.
 
-To solve for \(x\) using the inverse, you can do:
+To solve for $x$ using the inverse, you can do:
 
 ```python
 # Solve the equation Ax = b for x using the inverse of A
@@ -563,9 +563,9 @@ x??
 
 #### Numerical Inverse of a Matrix
 
-Background context: Finding the numerical inverse of a matrix is crucial for solving systems of linear equations. The provided matrix \( A \) can be inverted to find its numerical inverse, and then checking this inverse by verifying if \( AA^{-1} = I \). This also helps in understanding the precision of the calculation.
+Background context: Finding the numerical inverse of a matrix is crucial for solving systems of linear equations. The provided matrix $A $ can be inverted to find its numerical inverse, and then checking this inverse by verifying if$AA^{-1} = I$. This also helps in understanding the precision of the calculation.
 
-:p Find the numerical inverse of the matrix \( A = \begin{bmatrix} 4 & -2 & 1 \\ 3 & 6 & -4 \\ 2 & 1 & 8 \end{bmatrix} \).
+:p Find the numerical inverse of the matrix $A = \begin{bmatrix} 4 & -2 & 1 \\ 3 & 6 & -4 \\ 2 & 1 & 8 \end{bmatrix}$.
 
 ??x
 To find the numerical inverse, you can use a NumPy function such as `numpy.linalg.inv`. Here's how you might do it:
@@ -584,9 +584,9 @@ A_inv = np.linalg.inv(A)
 print('Numerical Inverse:', A_inv)
 ```
 
-This code will give you the numerical inverse of matrix \( A \).
+This code will give you the numerical inverse of matrix $A$.
 
-To verify that this is indeed the correct inverse, check if multiplying \( A \) by its inverse gives the identity matrix:
+To verify that this is indeed the correct inverse, check if multiplying $A$ by its inverse gives the identity matrix:
 
 ```python
 # Check if AA^-1 = I
@@ -603,13 +603,11 @@ x??
 
 #### Solving Linear Equations
 
-Background context: Given a matrix \( A \) and vectors \( b_1, b_2, b_3 \), we need to solve for the vector \( x \) such that \( Ax = b_i \). This involves using NumPy's `numpy.linalg.solve` function.
+Background context: Given a matrix $A $ and vectors$b_1, b_2, b_3 $, we need to solve for the vector$ x $such that$ Ax = b_i$. This involves using NumPy's `numpy.linalg.solve` function.
 
-:p Consider the same matrix \( A \) as in the previous problem. Solve for the vectors \( x_1, x_2, x_3 \) corresponding to different right-hand side (RHS) vectors:
+:p Consider the same matrix $A $ as in the previous problem. Solve for the vectors$x_1, x_2, x_3$ corresponding to different right-hand side (RHS) vectors:
 
-- \( b_1 = \begin{bmatrix} 12 \\ -25 \\ 32 \end{bmatrix} \)
-- \( b_2 = \begin{bmatrix} 4 \\ -10 \\ 22 \end{bmatrix} \)
-- \( b_3 = \begin{bmatrix} 20 \\ -30 \\ 40 \end{bmatrix} \)
+- $b_1 = \begin{bmatrix} 12 \\ -25 \\ 32 \end{bmatrix}$-$ b_2 = \begin{bmatrix} 4 \\ -10 \\ 22 \end{bmatrix}$-$ b_3 = \begin{bmatrix} 20 \\ -30 \\ 40 \end{bmatrix}$
 
 ??x
 To solve the linear equations, you can use NumPy's `numpy.linalg.solve` function. Here is how:
@@ -639,13 +637,11 @@ x3 = np.linalg.solve(A, b3)
 print('Solution for x3:', x3)
 ```
 
-This code will output the solutions \( x_1, x_2, x_3 \) corresponding to each \( b_i \).
+This code will output the solutions $x_1, x_2, x_3 $ corresponding to each$b_i$.
 
 The expected solutions are:
 
-- \( x_1 = \begin{bmatrix} 1 \\ -2 \\ 4 \end{bmatrix} \)
-- \( x_2 = \begin{bmatrix} 0.312 \\ -0.038 \\ 2.677 \end{bmatrix} \)
-- \( x_3 = \begin{bmatrix} 2.319 \\ -2.965 \\ 4.79 \end{bmatrix} \)
+- $x_1 = \begin{bmatrix} 1 \\ -2 \\ 4 \end{bmatrix}$-$ x_2 = \begin{bmatrix} 0.312 \\ -0.038 \\ 2.677 \end{bmatrix}$-$ x_3 = \begin{bmatrix} 2.319 \\ -2.965 \\ 4.79 \end{bmatrix}$
 
 x??
 
@@ -653,13 +649,11 @@ x??
 
 #### Eigenvalues and Eigenvectors
 
-Background context: The eigenvalue problem is a fundamental concept in linear algebra, where we find the eigenvalues and eigenvectors of a matrix \( I \) such that \( I\omega = \lambda\omega \). This helps in understanding the principal axes of a cube.
+Background context: The eigenvalue problem is a fundamental concept in linear algebra, where we find the eigenvalues and eigenvectors of a matrix $I $ such that$I\omega = \lambda\omega$. This helps in understanding the principal axes of a cube.
 
 :p Solve for the eigenvalues and eigenvectors of the matrix:
 
-\[ I = \begin{bmatrix} 0.6667 & -0.25 \\ -0.25 & 0.6667 \end{bmatrix} \]
-
-??x
+$$I = \begin{bmatrix} 0.6667 & -0.25 \\ -0.25 & 0.6667 \end{bmatrix}$$??x
 To solve the eigenvalue problem, you can use NumPy's `numpy.linalg.eig` function.
 
 ```python
@@ -676,9 +670,9 @@ print('Eigenvalues:', E_vals)
 print('Eigenvector Matrix:', E_vectors)
 ```
 
-This code will output the eigenvalues and eigenvectors of matrix \( I \).
+This code will output the eigenvalues and eigenvectors of matrix $I$.
 
-To verify that the equation \( I\omega = \lambda\omega \) holds, you can check:
+To verify that the equation $I\omega = \lambda\omega$ holds, you can check:
 
 ```python
 # Extract first eigenvector
@@ -703,9 +697,9 @@ Background context: When a matrix has double roots as its eigenvalues, it can le
 
 :p Find the eigenvalues and eigenvectors of the matrix:
 
-\[ A = \begin{bmatrix} -2 & 2 & -3 \\ 2 & 1 & -6 \\ -1 & -2 & 0 \end{bmatrix} \]
+$$A = \begin{bmatrix} -2 & 2 & -3 \\ 2 & 1 & -6 \\ -1 & -2 & 0 \end{bmatrix}$$
 
-Verify that you obtain the eigenvalues \( \lambda_1 = 5, \lambda_2 = \lambda_3 = -3 \). Verify also for the eigenvector corresponding to \( \lambda_1 = 5 \) and verify if the eigenvectors for \( \lambda = -3 \) are degenerate.
+Verify that you obtain the eigenvalues $\lambda_1 = 5, \lambda_2 = \lambda_3 = -3 $. Verify also for the eigenvector corresponding to $\lambda_1 = 5 $ and verify if the eigenvectors for$\lambda = -3$ are degenerate.
 
 ??x
 To find the eigenvalues and eigenvectors, you can use NumPy's `numpy.linalg.eig` function:
@@ -725,9 +719,9 @@ print('Eigenvalues:', E_vals)
 print('Eigenvector Matrix:', E_vectors)
 ```
 
-This code will output the eigenvalues and eigenvectors of matrix \( A \).
+This code will output the eigenvalues and eigenvectors of matrix $A$.
 
-To verify that the eigenvalue \( 5 \) has an associated eigenvector, you can check:
+To verify that the eigenvalue $5$ has an associated eigenvector, you can check:
 
 ```python
 # Extract eigenvector for lambda = 5
@@ -737,7 +731,7 @@ vec_lambda_1 = E_vectors[:, lambda_1_idx]
 print('Eigenvector corresponding to lambda=5:', vec_lambda_1)
 ```
 
-For the eigenvalue \( -3 \), you can similarly check:
+For the eigenvalue $-3$, you can similarly check:
 
 ```python
 # Extract eigenvectors for lambda = -3
@@ -747,7 +741,7 @@ for idx in lambda_2_idx:
     print('Eigenvector corresponding to lambda=-3:', E_vectors[:, idx])
 ```
 
-The eigenvalues obtained should be \( 5 \) and two copies of \( -3 \). The eigenvectors for the double root \( -3 \) will show that they are linearly dependent, confirming degeneracy.
+The eigenvalues obtained should be $5 $ and two copies of$-3 $. The eigenvectors for the double root $-3$ will show that they are linearly dependent, confirming degeneracy.
 
 x??
 
@@ -757,15 +751,9 @@ x??
 
 Background context: A system of linear equations can often be solved using known matrices like the Hilbert matrix. This type of problem is common in numerical analysis and provides an opportunity to practice solving systems with well-known structures.
 
-:p Solve for \( x \) values in a system where:
+:p Solve for $x$ values in a system where:
 
-\[ [A_{ij}] = a = \begin{bmatrix} 1 & 1/2 & 1/3 & \cdots & 1/100 \\ 1/2 & 1/3 & 1/4 & \cdots & 1/101 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1/100 & 1/101 & 1/102 & \cdots & 1 \end{bmatrix} \]
-
-and
-
-\[ [b_i] = b = \begin{bmatrix} 1 \\ 1/2 \\ 1/3 \\ \vdots \\ 1/100 \end{bmatrix} \]
-
-??x
+$$[A_{ij}] = a = \begin{bmatrix} 1 & 1/2 & 1/3 & \cdots & 1/100 \\ 1/2 & 1/3 & 1/4 & \cdots & 1/101 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1/100 & 1/101 & 1/102 & \cdots & 1 \end{bmatrix}$$and$$[b_i] = b = \begin{bmatrix} 1 \\ 1/2 \\ 1/3 \\ \vdots \\ 1/100 \end{bmatrix}$$??x
 To solve the system of linear equations with a Hilbert matrix and its first column vector, you can use NumPy's `numpy.linalg.solve` function:
 
 ```python
@@ -782,9 +770,9 @@ x = np.linalg.solve(A, b)
 print('Solution vector:', x)
 ```
 
-This code constructs the Hilbert matrix \( A \) and the vector \( b \), then solves for the vector \( x \).
+This code constructs the Hilbert matrix $A $ and the vector$b $, then solves for the vector$ x$.
 
-The result will be a solution vector that approximates the values of \( x \) satisfying \( Ax = b \). Due to the nature of the Hilbert matrix, the solution can be quite sensitive to numerical precision issues.
+The result will be a solution vector that approximates the values of $x $ satisfying$Ax = b$. Due to the nature of the Hilbert matrix, the solution can be quite sensitive to numerical precision issues.
 
 x??
 

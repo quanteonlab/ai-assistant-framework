@@ -5,79 +5,75 @@
 ---
 
 #### Fixed Points of the Logistic Map
-In the logistic map (Equation 15.7), fixed points represent populations that do not change from one generation to another if the system is at those values. The equation for a fixed point, denoted by \(x^*\), is given as:
-\[ x_{i+1} = \mu x_i(1 - x_i) = x^* \]
+In the logistic map (Equation 15.7), fixed points represent populations that do not change from one generation to another if the system is at those values. The equation for a fixed point, denoted by $x^*$, is given as:
+$$x_{i+1} = \mu x_i(1 - x_i) = x^*$$
 
 Substituting this relation into Equation 15.7 yields a quadratic equation that can be easily solved:
-\[ \mu x^*(1 - x^*) = x^* \]
-Solving for \(x^*\), we get two solutions: 
-\[ x^* = 0 \quad \text{or} \quad x^* = \frac{\mu - 1}{\mu} \]
+$$\mu x^*(1 - x^*) = x^*$$
 
-The non-zero fixed point, \(x^* = \frac{\mu - 1}{\mu}\), represents a stable population where the birth rate equals the death rate. The zero fixed point is unstable since any small perturbation will cause exponential growth.
+Solving for $x^*$, we get two solutions: 
+$$x^* = 0 \quad \text{or} \quad x^* = \frac{\mu - 1}{\mu}$$
 
-The stability of these fixed points can be determined by evaluating the magnitude of the derivative of the mapping function \(f(x_i)\) at the fixed-point:
-\[ \left| \frac{df}{dx} \right|_{x^*} < 1 \quad (\text{stable}) \]
+The non-zero fixed point,$x^* = \frac{\mu - 1}{\mu}$, represents a stable population where the birth rate equals the death rate. The zero fixed point is unstable since any small perturbation will cause exponential growth.
+
+The stability of these fixed points can be determined by evaluating the magnitude of the derivative of the mapping function $f(x_i)$ at the fixed-point:
+$$\left| \frac{df}{dx} \right|_{x^*} < 1 \quad (\text{stable})$$
 
 For the one-cycle of the logistic map, the derivative is given by:
-\[ \left. \frac{d(\mu x (1 - x))}{dx} \right|_{x^*} = \mu - 2\mu x^* = 
+$$\left. \frac{d(\mu x (1 - x))}{dx} \right|_{x^*} = \mu - 2\mu x^* = 
 \begin{cases}
     \mu & \text{stable at } x^* = 0 \quad \text{if } \mu < 1 \\
     2 - \mu & \text{stable at } x^* = \frac{\mu - 1}{\mu} \quad \text{if } \mu < 3
-\end{cases}
-\]
-
-:p What is the condition for a fixed point to be stable in the logistic map?
+\end{cases}$$:p What is the condition for a fixed point to be stable in the logistic map?
 ??x
 For a fixed point to be stable, its magnitude must be less than 1. This can be mathematically expressed as:
-\[ \left| \frac{\mu - 2\mu x^*}{dx} \right|_{x^*} < 1 \]
+$$\left| \frac{\mu - 2\mu x^*}{dx} \right|_{x^*} < 1$$
 
-In simpler terms, if the derivative of the logistic function at a fixed point is between -1 and 1 (excluding these values), then that fixed point is stable. For \(x^* = 0\) it's only stable when \(\mu < 1\); for \(x^* = \frac{\mu - 1}{\mu}\) it's stable when \(\mu < 3\).
+In simpler terms, if the derivative of the logistic function at a fixed point is between -1 and 1 (excluding these values), then that fixed point is stable. For $x^* = 0 $ it's only stable when$\mu < 1 $; for $ x^* = \frac{\mu - 1}{\mu}$it's stable when $\mu < 3$.
 x??
 
 ---
 
 #### Period Doubling in the Logistic Map
-Period doubling refers to a phenomenon where, as the growth rate parameter \(\mu\) increases beyond certain thresholds, the system moves from a single fixed point (stable population) through bifurcations into multiple cycles of stable points. This transition occurs at specific values of \(\mu\), known as bifurcation points.
+Period doubling refers to a phenomenon where, as the growth rate parameter $\mu $ increases beyond certain thresholds, the system moves from a single fixed point (stable population) through bifurcations into multiple cycles of stable points. This transition occurs at specific values of$\mu$, known as bifurcation points.
 
-When \(\mu > 3\), the logistic map undergoes period doubling and transitions to a two-cycle attractor, where populations oscillate between two different levels. The x-values for these two-cycle attractors can be found by solving:
-\[ x_i = x_{i+2} = \mu x_{i+1}(1 - x_{i+1}) \]
+When $\mu > 3$, the logistic map undergoes period doubling and transitions to a two-cycle attractor, where populations oscillate between two different levels. The x-values for these two-cycle attractors can be found by solving:
+$$x_i = x_{i+2} = \mu x_{i+1}(1 - x_{i+1})$$
 
 Solving this equation gives us the following solutions:
-\[ x^* = 1 + \frac{\mu}{2} \pm \sqrt{ \left( \frac{\mu}{2} \right)^2 - 1 } \]
-
-:p What are the x-values for two-cycle attractors in the logistic map?
+$$x^* = 1 + \frac{\mu}{2} \pm \sqrt{ \left( \frac{\mu}{2} \right)^2 - 1 }$$:p What are the x-values for two-cycle attractors in the logistic map?
 ??x
 The x-values for the two-cycle attractors can be calculated using the following equation:
-\[ x^* = 1 + \frac{\mu}{2} \pm \sqrt{ \left( \frac{\mu}{2} \right)^2 - 1 } \]
+$$x^* = 1 + \frac{\mu}{2} \pm \sqrt{ \left( \frac{\mu}{2} \right)^2 - 1 }$$
 
-For \(\mu > 3\), the term under the square root produces a real number, indicating that these are physical solutions. As \(\mu\) increases beyond 3, the system transitions through multiple bifurcations into more complex periodic behaviors.
+For $\mu > 3 $, the term under the square root produces a real number, indicating that these are physical solutions. As $\mu$ increases beyond 3, the system transitions through multiple bifurcations into more complex periodic behaviors.
 x??
 
 ---
 
 #### Bifurcations and Period Doubling
-Period doubling in the logistic map occurs as the parameter \(\mu\) exceeds certain critical values, leading to a doubling of the period of the stable population cycles. Specifically, when \(\mu > 3\), the system transitions from a one-cycle (a single fixed point) to a two-cycle, meaning that the populations oscillate between two different levels.
+Period doubling in the logistic map occurs as the parameter $\mu $ exceeds certain critical values, leading to a doubling of the period of the stable population cycles. Specifically, when$\mu > 3$, the system transitions from a one-cycle (a single fixed point) to a two-cycle, meaning that the populations oscillate between two different levels.
 
-This phenomenon is characterized by bifurcations, where each doubling of the cycle length occurs at specific values of \(\mu\). As \(\mu\) increases, the number of stable cycles doubles, leading to increasingly complex behaviors such as chaos.
+This phenomenon is characterized by bifurcations, where each doubling of the cycle length occurs at specific values of $\mu $. As $\mu$ increases, the number of stable cycles doubles, leading to increasingly complex behaviors such as chaos.
 
-:p What happens when \(\mu > 3\) in the logistic map?
+:p What happens when $\mu > 3$ in the logistic map?
 ??x
-When \(\mu > 3\) in the logistic map, the system undergoes period doubling bifurcations. This means that instead of settling into a single fixed point (one-cycle), it transitions to a two-cycle, where populations oscillate between two different levels. The exact x-values for these two attractors can be found by solving:
-\[ x^* = 1 + \frac{\mu}{2} \pm \sqrt{ \left( \frac{\mu}{2} \right)^2 - 1 } \]
+When $\mu > 3$ in the logistic map, the system undergoes period doubling bifurcations. This means that instead of settling into a single fixed point (one-cycle), it transitions to a two-cycle, where populations oscillate between two different levels. The exact x-values for these two attractors can be found by solving:
+$$x^* = 1 + \frac{\mu}{2} \pm \sqrt{ \left( \frac{\mu}{2} \right)^2 - 1 }$$
 
-As \(\mu\) continues to increase, the system will undergo further bifurcations leading to more complex periodic behaviors and eventually chaos.
+As $\mu$ continues to increase, the system will undergo further bifurcations leading to more complex periodic behaviors and eventually chaos.
 x??
 
 ---
 
 #### Transients and Steady States
-Background context explaining transients and steady states. For the logistic map, as the growth rate \(\mu\) increases beyond a certain point, the system transitions from a stable state to cycles of increasing complexity.
+Background context explaining transients and steady states. For the logistic map, as the growth rate $\mu$ increases beyond a certain point, the system transitions from a stable state to cycles of increasing complexity.
 
-Transients are irregular behaviors that occur before a regular behavior is reached. The transient period can vary depending on the initial seed \(x_0\). Steady states refer to the long-term stable populations that solutions eventually reach, independent of the initial seed for large \(\mu\) values.
+Transients are irregular behaviors that occur before a regular behavior is reached. The transient period can vary depending on the initial seed $x_0 $. Steady states refer to the long-term stable populations that solutions eventually reach, independent of the initial seed for large $\mu$ values.
 
 :p Identify and describe transients and steady states in the logistic map.
 ??x
-Transients are irregular behaviors observed initially before a regular behavior is established. They differ based on different seeds \(x_0\). Steady states are stable long-term population levels that solutions approach, independent of initial conditions for high \(\mu\) values.
+Transients are irregular behaviors observed initially before a regular behavior is established. They differ based on different seeds $x_0 $. Steady states are stable long-term population levels that solutions approach, independent of initial conditions for high $\mu$ values.
 
 ```java
 // Pseudocode to simulate transients and steady states in the logistic map
@@ -109,11 +105,11 @@ x??
 ---
 
 #### Extinction in Logistic Map
-Background context explaining how the logistic map behaves when \(\mu\) is too low, leading to population extinction. The logistic map shows that if the growth rate is less than or equal to 1 (\(\mu \leq 1\)), the population eventually dies off.
+Background context explaining how the logistic map behaves when $\mu $ is too low, leading to population extinction. The logistic map shows that if the growth rate is less than or equal to 1 ($\mu \leq 1$), the population eventually dies off.
 
 :p Describe what happens to populations in the logistic map when the growth rate is too low.
 ??x
-When the growth rate \(\mu\) is too low (less than or equal to 1), the population will die off. This occurs because the product of \(\mu x_0 (1 - x_0)\) becomes smaller, and eventually, the population diminishes until it reaches zero.
+When the growth rate $\mu $ is too low (less than or equal to 1), the population will die off. This occurs because the product of$\mu x_0 (1 - x_0)$ becomes smaller, and eventually, the population diminishes until it reaches zero.
 
 ```java
 // Pseudocode for logistic map with extinction
@@ -138,11 +134,11 @@ x??
 ---
 
 #### Multiple Cycles in Logistic Map
-Background context explaining how the logistic map bifurcates as \(\mu\) increases through 3, leading to multiple attractors and cycles. Specifically, observe the system's behavior around \(\mu = 3.5\), where a four-cycle is observed.
+Background context explaining how the logistic map bifurcates as $\mu $ increases through 3, leading to multiple attractors and cycles. Specifically, observe the system's behavior around$\mu = 3.5$, where a four-cycle is observed.
 
-:p Observe populations for a growth parameter \(\mu\) increasing continuously through 3.
+:p Observe populations for a growth parameter $\mu$ increasing continuously through 3.
 ??x
-As the growth parameter \(\mu\) increases through 3, the logistic map undergoes bifurcations leading to multiple cycles and attractors. For example, at \(\mu = 3.5\), four attractors are observed.
+As the growth parameter $\mu $ increases through 3, the logistic map undergoes bifurcations leading to multiple cycles and attractors. For example, at$\mu = 3.5$, four attractors are observed.
 
 ```java
 // Pseudocode for observing cycles in logistic map
@@ -169,9 +165,9 @@ x??
 #### Intermittency in Logistic Map
 Background context explaining the concept of intermittency, where the system appears stable for a finite number of generations and then exhibits chaotic behavior.
 
-:p Observe simulations for \(3.8264 < \mu < 3.8304\).
+:p Observe simulations for $3.8264 < \mu < 3.8304$.
 ??x
-In the range \(3.8264 < \mu < 3.8304\), the logistic map shows intermittent behavior. The system seems stable for a finite number of generations and then suddenly exhibits chaotic, jumping behavior before becoming stable again.
+In the range $3.8264 < \mu < 3.8304$, the logistic map shows intermittent behavior. The system seems stable for a finite number of generations and then suddenly exhibits chaotic, jumping behavior before becoming stable again.
 
 ```java
 // Pseudocode to observe intermittency in logistic map
@@ -196,11 +192,11 @@ x??
 ---
 
 #### Bifurcation Diagrams
-Background context explaining the creation and purpose of bifurcation diagrams. These diagrams show the attractors as a function of the growth parameter \(\mu\), providing insights into the system's dynamics.
+Background context explaining the creation and purpose of bifurcation diagrams. These diagrams show the attractors as a function of the growth parameter $\mu$, providing insights into the system's dynamics.
 
 :p Create a bifurcation diagram for the logistic map.
 ??x
-A bifurcation diagram visualizes how attractors (stable populations) change with the growth parameter \(\mu\). The diagram helps identify patterns such as bifurcations and cycles. To create it, iterate the logistic map over all values of \(\mu\) in small steps, wait for transients to die out, and plot the stable points.
+A bifurcation diagram visualizes how attractors (stable populations) change with the growth parameter $\mu $. The diagram helps identify patterns such as bifurcations and cycles. To create it, iterate the logistic map over all values of $\mu$ in small steps, wait for transients to die out, and plot the stable points.
 
 ```java
 // Pseudocode for creating a bifurcation diagram
@@ -233,7 +229,7 @@ Background context explaining the concept of chaos, where deterministic systems 
 
 :p Explore long-term behaviors of the logistic map starting with two essentially identical seeds.
 ??x
-Chaos refers to deterministic systems that display no discernible regularity. The logistic map can be chaotic when \(\mu\) is in certain ranges, leading to highly sensitive dependence on initial conditions. By starting with two very similar seeds (e.g., 0.75 and \(0.75 + \epsilon\)), you can observe how their long-term behaviors diverge.
+Chaos refers to deterministic systems that display no discernible regularity. The logistic map can be chaotic when $\mu $ is in certain ranges, leading to highly sensitive dependence on initial conditions. By starting with two very similar seeds (e.g., 0.75 and$0.75 + \epsilon$), you can observe how their long-term behaviors diverge.
 
 ```java
 // Pseudocode for exploring chaos with logistic map
@@ -264,11 +260,11 @@ x??
 ---
 
 #### Gaussian Map Bifurcation Diagram
-Background context explaining the creation and purpose of bifurcation diagrams for different maps, specifically the Gaussian map. The diagram helps visualize how attractors change with the parameter \(\mu\).
+Background context explaining the creation and purpose of bifurcation diagrams for different maps, specifically the Gaussian map. The diagram helps visualize how attractors change with the parameter $\mu$.
 
 :p Create a bifurcation plot for the Gaussian map.
 ??x
-A bifurcation diagram for the Gaussian map shows how attractors (stable points) vary as a function of the growth parameter \(\mu\). To create it, iterate the Gaussian map over all values of \(\mu\) in small steps, wait for transients to die out, and plot the stable points.
+A bifurcation diagram for the Gaussian map shows how attractors (stable points) vary as a function of the growth parameter $\mu $. To create it, iterate the Gaussian map over all values of $\mu$ in small steps, wait for transients to die out, and plot the stable points.
 
 ```java
 // Pseudocode for creating a bifurcation diagram for the Gaussian map
@@ -4511,10 +4507,10 @@ Background context: In this section, we discuss how to implement a bifurcation d
 
 Steps include:
 1. Breaking up the range 1 ≤ 𝜇 ≤ 4 into 1000 steps.
-2. Looping through a range of initial \( x_0 \) values to capture all structures.
+2. Looping through a range of initial $x_0$ values to capture all structures.
 3. Waiting for transient states to die out by iterating for at least 200 generations before recording data.
-4. Recording \( x^* \) (the stable state or attractor) up to three or four decimal places.
-5. Plotting the \( (𝜇, x^*) \) values on a graph using small symbols.
+4. Recording $x^*$(the stable state or attractor) up to three or four decimal places.
+5. Plotting the $(𝜇, x^*)$ values on a graph using small symbols.
 
 Relevant code snippet:
 ```python
@@ -4532,7 +4528,7 @@ for mu in np.linspace(1, 4, 1000):
 
 :p What is the purpose of breaking up the range 1 ≤ 𝜇 ≤ 4 into 1000 steps?
 ??x
-Breaking up the range 1 ≤ 𝜇 ≤ 4 into 1000 steps ensures that we capture all possible values of \( \mu \) with sufficient resolution, allowing us to observe the bifurcation diagram's details. This step helps in generating a detailed and accurate representation of how the system behaves across different parameter values.
+Breaking up the range 1 ≤ 𝜇 ≤ 4 into 1000 steps ensures that we capture all possible values of $\mu$ with sufficient resolution, allowing us to observe the bifurcation diagram's details. This step helps in generating a detailed and accurate representation of how the system behaves across different parameter values.
 
 ```python
 for mu in np.linspace(1, 4, 1000):
@@ -4573,16 +4569,12 @@ x??
 ---
 
 #### Feigenbaum Constants and Bifurcation Series
-Background context: The sequence of \( \mu_k \) values where bifurcations occur follows a regular pattern. Specifically, these \( \mu \) values converge geometrically when expressed in terms of the distance between bifurcations.
+Background context: The sequence of $\mu_k $ values where bifurcations occur follows a regular pattern. Specifically, these$\mu$ values converge geometrically when expressed in terms of the distance between bifurcations.
 
 Relevant formula:
-\[
-\mu_k \to \mu_\infty - c \delta^k, \quad \delta = \lim_{k \to \infty} \frac{\mu_k - \mu_{k-1}}{\mu_{k+1} - \mu_k}
-\]
-
-:p What are the Feigenbaum constants and how do they relate to bifurcation diagrams?
+$$\mu_k \to \mu_\infty - c \delta^k, \quad \delta = \lim_{k \to \infty} \frac{\mu_k - \mu_{k-1}}{\mu_{k+1} - \mu_k}$$:p What are the Feigenbaum constants and how do they relate to bifurcation diagrams?
 ??x
-The Feigenbaum constants, particularly \( δ \), describe the ratio of successive differences between values of \( μ \) at which bifurcations occur. They show that as you zoom into regions of the bifurcation diagram where period doubling happens repeatedly, the spacing between these bifurcation points tends to converge to a specific value.
+The Feigenbaum constants, particularly $δ$, describe the ratio of successive differences between values of $μ$ at which bifurcations occur. They show that as you zoom into regions of the bifurcation diagram where period doubling happens repeatedly, the spacing between these bifurcation points tends to converge to a specific value.
 
 ```python
 mu_values = [3, 3.449, 3.544, 3.5644, 3.5688, 3.569692, 3.56989]
@@ -4594,7 +4586,7 @@ x??
 ---
 
 #### Visualization of Bifurcation Diagrams
-Background context: The visualization involves plotting individual points on a screen, with the density determined by the number of points plotted in each region. This process requires breaking up the range of \( \mu \) values into bins and recording stable states after transient behavior has died out.
+Background context: The visualization involves plotting individual points on a screen, with the density determined by the number of points plotted in each region. This process requires breaking up the range of $\mu$ values into bins and recording stable states after transient behavior has died out.
 
 :p What is the significance of using small symbols for points when plotting bifurcation diagrams?
 ??x

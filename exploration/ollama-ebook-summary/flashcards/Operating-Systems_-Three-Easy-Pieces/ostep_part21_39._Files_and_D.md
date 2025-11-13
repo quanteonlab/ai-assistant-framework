@@ -1398,10 +1398,9 @@ To make and mount a file system, follow these steps:
 
 ```bash
 # Example mkfs command
-$ sudo mkfs.ext4 /dev/sdb1
+$sudo mkfs.ext4 /dev/sdb1
 
-# Example mount command
-$ sudo mount /dev/sdb1 /mnt/newfs
+# Example mount command$ sudo mount /dev/sdb1 /mnt/newfs
 ```
 x??
 

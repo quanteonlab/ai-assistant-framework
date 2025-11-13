@@ -520,7 +520,7 @@ Background context: This example demonstrates running a Bash shell inside a cont
 ??x
 The `docker run -it ubuntu:20.04 bash` command is used to start a container from the official Ubuntu 20.04 Docker image and open an interactive Bash shell within it.
 ```bash
-$ docker run -it ubuntu:20.04 bash
+$docker run -it ubuntu:20.04 bash
 ```
 This command uses the `-it` flags, which enable interactive mode, allowing you to input commands and receive output in real-time.
 x??
@@ -594,8 +594,7 @@ Background context: The text explains how to manage stopped Docker containers by
 :p How can you list all Docker containers, including both running and stopped ones?
 ??x
 To list all Docker containers, including those that are stopped, use the command:
-```bash
-$ docker ps -a
+```bash$ docker ps -a
 ```
 This will display a list of all containers with their respective statuses.
 x??

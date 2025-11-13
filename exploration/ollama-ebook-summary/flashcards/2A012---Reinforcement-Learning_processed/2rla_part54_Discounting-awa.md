@@ -20,13 +20,13 @@ x??
 ---
 
 #### Discounting-aware Importance Sampling
-Background context: This section addresses reducing variance in off-policy estimators by considering the internal structure of returns as sums of discounted rewards. It focuses on scenarios where episodes are long and \(\gamma\) (discount factor) is significantly less than 1.
+Background context: This section addresses reducing variance in off-policy estimators by considering the internal structure of returns as sums of discounted rewards. It focuses on scenarios where episodes are long and $\gamma$(discount factor) is significantly less than 1.
 
-:p How does ordinary importance sampling handle the return from time 0 when \(\gamma = 0\), and why is it suboptimal?
+:p How does ordinary importance sampling handle the return from time 0 when $\gamma = 0$, and why is it suboptimal?
 ??x
-In ordinary importance sampling, the return from time 0, \(G_0\), would be scaled by a product of factors representing the probability ratio at each step. However, this is suboptimal because after the first reward is received (since \(\gamma = 0\)), the return is determined and the subsequent factors are irrelevant.
+In ordinary importance sampling, the return from time 0, $G_0 $, would be scaled by a product of factors representing the probability ratio at each step. However, this is suboptimal because after the first reward is received (since $\gamma = 0$), the return is determined and the subsequent factors are irrelevant.
 
-The entire product \(\pi(A_0|S_0)b(A_0|S_0)\pi(A_1|S_1)b(A_1|S_1)...\pi(A_{99}|S_{99})b(A_{99}|S_{99})\) adds a large variance but does not change the expected update. It is only necessary to scale by the first factor \(\pi(A_0|S_0)b(A_0|S_0)\).
+The entire product $\pi(A_0|S_0)b(A_0|S_0)\pi(A_1|S_1)b(A_1|S_1)...\pi(A_{99}|S_{99})b(A_{99}|S_{99})$ adds a large variance but does not change the expected update. It is only necessary to scale by the first factor $\pi(A_0|S_0)b(A_0|S_0)$.
 x??
 
 ---
@@ -36,11 +36,8 @@ Background context: This section proposes a method for discounting that treats r
 
 :p What is the formula for defining flat partial returns?
 ??x
-The formula for flat partial returns, denoted as \(\bar{G}_{t:h}\), is given by:
-\[
-\bar{G}_{t:h} = R_{t+1} + R_{t+2} + ... + R_h, \quad 0 \leq t < h \leq T
-\]
-where "flat" indicates the absence of discounting and "partial" means these returns do not extend all the way to termination but stop at \(h\) (called the horizon), with \(T\) being the time of episode termination.
+The formula for flat partial returns, denoted as $\bar{G}_{t:h}$, is given by:
+$$\bar{G}_{t:h} = R_{t+1} + R_{t+2} + ... + R_h, \quad 0 \leq t < h \leq T$$where "flat" indicates the absence of discounting and "partial" means these returns do not extend all the way to termination but stop at $ h $(called the horizon), with$ T$ being the time of episode termination.
 
 This concept is used in formulating estimators that consider the structure of discounted rewards, reducing variance by scaling only relevant factors.
 x??
@@ -50,9 +47,9 @@ x??
 #### Discounting as Determination of Termination
 Background context: This section describes discounting not just as a factor for future rewards but also as a probability of partial or full termination. It suggests treating returns as partly terminating at each step, leading to the calculation of flat partial returns.
 
-:p How does the concept of discounting as determination of termination affect the return \(G_0\)?
+:p How does the concept of discounting as determination of termination affect the return $G_0$?
 ??x
-When \(\gamma = 0\), the return \(G_0\) is only influenced by the first reward \(R_1\). The return can be seen partly terminating in one step to degree \(1 - \gamma\), producing a return of just \(R_1\); after two steps, it terminates with degree \((1 - \gamma)^\gamma\), producing a return of \(R_1 + R_2\).
+When $\gamma = 0 $, the return $ G_0 $is only influenced by the first reward$ R_1 $. The return can be seen partly terminating in one step to degree$1 - \gamma $, producing a return of just $ R_1 $; after two steps, it terminates with degree$(1 - \gamma)^\gamma $, producing a return of $ R_1 + R_2$.
 
 This perspective leads to the idea that discounting determines both future rewards and termination probabilities, allowing for more precise importance sampling estimators.
 x??
@@ -62,54 +59,57 @@ x??
 #### Per-decision Importance Sampling
 Importance sampling is a technique used in reinforcement learning to estimate the value function or policy by using data collected from different policies. The standard importance sampling estimator relies on estimating the expected values of returns, but it can be improved by considering the structure of the return.
 
-In traditional importance sampling, each term \( G_t \) in the sum (5.11) is a product of rewards and importance-sampling ratios:
-\[ G_t = \sum_{k=t+1}^{T} \gamma^{k-t-1} R_k \]
-where
-\[ P_t:T-1G_t = \prod_{k=t}^{T-1}\frac{\pi(A_k|S_k)}{b(A_k|S_k)} G_t. \]
+In traditional importance sampling, each term $G_t$ in the sum (5.11) is a product of rewards and importance-sampling ratios:
+$$G_t = \sum_{k=t+1}^{T} \gamma^{k-t-1} R_k$$where$$
 
-:p What is the concept of per-decision importance sampling?
+P_t:T-1G_t = \prod_{k=t}^{T-1}\frac{\pi(A_k|S_k)}{b(A_k|S_k)} G_t.$$:p What is the concept of per-decision importance sampling?
 ??x
-Per-decision importance sampling aims to reduce variance in off-policy estimators by focusing on individual rewards and their associated importance-sampling ratios rather than summing them up directly. This approach breaks down each term \( G_t \) into its constituent parts, allowing for a more nuanced treatment of the importance weights.
+Per-decision importance sampling aims to reduce variance in off-policy estimators by focusing on individual rewards and their associated importance-sampling ratios rather than summing them up directly. This approach breaks down each term $G_t$ into its constituent parts, allowing for a more nuanced treatment of the importance weights.
 
 The key insight is that many of these importance-weight factors are unrelated to the reward and have an expected value of one. For example:
-\[ E\left[\frac{\pi(A_k|S_k)}{b(A_k|S_k)} \right] = 1. \]
+$$E\left[\frac{\pi(A_k|S_k)}{b(A_k|S_k)} \right] = 1.$$
 
 Thus, the expectation of the terms can be simplified as follows:
-\[ E[P_t:T-1R_{t+1}] = E[P_t:tR_{t+1}]. \]
+$$
+
+E[P_t:T-1R_{t+1}] = E[P_t:tR_{t+1}].$$
 
 This leads to a new form of importance sampling where only the reward and the first importance weight are considered for each term. This is summarized by the equation:
-\[ \tilde{G}_t = P_t:t R_{t+1} + \sum_{k=2}^{T-t} (k-1)P_t:t+k-1 R_{t+k}. \]
+$$\tilde{G}_t = P_t:t R_{t+1} + \sum_{k=2}^{T-t} (k-1)P_t:t+k-1 R_{t+k}.$$
 
 Using this, we can derive a new importance-sampling estimator for the value function:
-\[ V(s) = \frac{1}{|T(s)|} \sum_{t \in T(s)} \tilde{G}_t. \]
+$$
 
-??x
-The derivation of \( E[P_t:T-1R_{t+1}] = E[P_t:tR_{t+1}] \) from the importance-sampling ratio.
+V(s) = \frac{1}{|T(s)|} \sum_{t \in T(s)} \tilde{G}_t.$$??x
+The derivation of $E[P_t:T-1R_{t+1}] = E[P_t:tR_{t+1}]$ from the importance-sampling ratio.
 ??x
 To derive this, we start with equation (5.12):
-\[ P_t:T-1R_{t+1} = \prod_{k=t}^{T-1}\frac{\pi(A_k|S_k)}{b(A_k|S_k)} R_{t+1}. \]
+$$P_t:T-1R_{t+1} = \prod_{k=t}^{T-1}\frac{\pi(A_k|S_k)}{b(A_k|S_k)} R_{t+1}.$$
 
 We can rewrite the expectation as:
-\[ E[P_t:T-1R_{t+1}] = E\left[\prod_{k=t}^{T-1}\frac{\pi(A_k|S_k)}{b(A_k|S_k)} R_{t+1}\right]. \]
+$$
 
-Given that \( E\left[\frac{\pi(A_k|S_k)}{b(A_k|S_k)}\right] = 1 \) for each term in the product, we can factor out these terms from the expectation:
-\[ E[P_t:T-1R_{t+1}] = E[R_{t+1}]\prod_{k=t}^{T-1}E\left[\frac{\pi(A_k|S_k)}{b(A_k|S_k)}\right]. \]
+E[P_t:T-1R_{t+1}] = E\left[\prod_{k=t}^{T-1}\frac{\pi(A_k|S_k)}{b(A_k|S_k)} R_{t+1}\right].$$
 
-Since \( E\left[\frac{\pi(A_k|S_k)}{b(A_k|S_k)}\right] = 1 \), the product simplifies to:
-\[ E[P_t:T-1R_{t+1}] = E[R_{t+1}]\prod_{k=t}^{T-1}1 = E[R_{t+1}], \]
-which is equivalent to:
-\[ E[P_t:tR_{t+1}] = E[R_{t+1}]. \]
+Given that $E\left[\frac{\pi(A_k|S_k)}{b(A_k|S_k)}\right] = 1$ for each term in the product, we can factor out these terms from the expectation:
+$$E[P_t:T-1R_{t+1}] = E[R_{t+1}]\prod_{k=t}^{T-1}E\left[\frac{\pi(A_k|S_k)}{b(A_k|S_k)}\right].$$
 
-??x
+Since $E\left[\frac{\pi(A_k|S_k)}{b(A_k|S_k)}\right] = 1$, the product simplifies to:
+$$E[P_t:T-1R_{t+1}] = E[R_{t+1}]\prod_{k=t}^{T-1}1 = E[R_{t+1}],$$which is equivalent to:
+$$
+
+E[P_t:tR_{t+1}] = E[R_{t+1}].$$??x
 How can you modify the off-policy Monte Carlo control algorithm to use per-decision importance sampling?
 ??x
 To modify the off-policy Monte Carlo control algorithm to use per-decision importance sampling, we need to adjust the update rule for the value function. The original update rule using ordinary importance sampling is:
-\[ V(s) = \frac{1}{|T(s)|} \sum_{t \in T(s)} G_t, \]
-where
-\[ G_t = R_{t+1} + \gamma R_{t+2} + \cdots + \gamma^{T-t-1} R_T. \]
+$$
 
-Using per-decision importance sampling, we replace \( G_t \) with the truncated weighted average estimator:
-\[ \tilde{G}_t = P_t:t R_{t+1} + \sum_{k=2}^{T-t} (k-1)P_t:t+k-1 R_{t+k}. \]
+V(s) = \frac{1}{|T(s)|} \sum_{t \in T(s)} G_t,$$where$$
+
+G_t = R_{t+1} + \gamma R_{t+2} + \cdots + \gamma^{T-t-1} R_T.$$
+
+Using per-decision importance sampling, we replace $G_t$ with the truncated weighted average estimator:
+$$\tilde{G}_t = P_t:t R_{t+1} + \sum_{k=2}^{T-t} (k-1)P_t:t+k-1 R_{t+k}.$$
 
 The modified algorithm is as follows:
 
@@ -132,7 +132,7 @@ public class PerDecisionImportanceSampling {
 }
 ```
 
-This code snippet demonstrates how to calculate the value function using per-decision importance sampling. The key is the calculation of \( \tilde{G}_t \) for each time step and then averaging these values.
+This code snippet demonstrates how to calculate the value function using per-decision importance sampling. The key is the calculation of $\tilde{G}_t$ for each time step and then averaging these values.
 
 ??x
 
@@ -354,20 +354,14 @@ x??
 ---
 
 #### TD Prediction
-Background context: TD prediction is a method used to solve the policy evaluation problem, which involves estimating the value function \(v_\pi\) for a given policy \(\pi\). Monte Carlo methods and TD methods both use experience from following the policy to update their estimates. Monte Carlo methods wait until the end of an episode to see the final return, while TD methods make updates immediately after each step based on observed rewards and state values.
+Background context: TD prediction is a method used to solve the policy evaluation problem, which involves estimating the value function $v_\pi $ for a given policy$\pi$. Monte Carlo methods and TD methods both use experience from following the policy to update their estimates. Monte Carlo methods wait until the end of an episode to see the final return, while TD methods make updates immediately after each step based on observed rewards and state values.
 
 Relevant formulas:
 - Simple every-visit Monte Carlo method: 
-  \[
-  V(S_t) = V(S_t) + \alpha \left( G_t - V(S_t) \right)
-  \]
-  where \(G_t\) is the actual return following time step \(t\), and \(\alpha\) is a constant step-size parameter.
+  $$V(S_t) = V(S_t) + \alpha \left( G_t - V(S_t) \right)$$where $ G_t $ is the actual return following time step $ t $, and$\alpha$ is a constant step-size parameter.
 
 - TD method update:
-  \[
-  V(S_t) = V(S_t) + \alpha \left( R_{t+1} + \gamma V(S_{t+1}) - V(S_t) \right)
-  \]
-  where \(R_{t+1}\) is the reward received at time step \(t+1\), and \(\gamma\) is the discount factor.
+$$V(S_t) = V(S_t) + \alpha \left( R_{t+1} + \gamma V(S_{t+1}) - V(S_t) \right)$$where $ R_{t+1}$is the reward received at time step $ t+1$, and $\gamma$ is the discount factor.
 
 :p What is the difference between Monte Carlo and TD methods in terms of when they update their estimates?
 ??x
@@ -381,22 +375,17 @@ Background context: The simplest form of TD learning is called TD(0), also known
 
 Relevant formulas:
 - Update rule for TD(0):
-  \[
-  V(S_t) = V(S_t) + \alpha \left( R_{t+1} + \gamma V(S_{t+1}) - V(S_t) \right)
-  \]
-
-:p How does the TD(0) method update its value estimate?
+$$V(S_t) = V(S_t) + \alpha \left( R_{t+1} + \gamma V(S_{t+1}) - V(S_t) \right)$$:p How does the TD(0) method update its value estimate?
 ??x
 The TD(0) method updates its value estimate immediately after each step using the observed reward and the estimated value of the next state, according to the rule:
-\[
-V(S_t) = V(S_t) + \alpha \left( R_{t+1} + \gamma V(S_{t+1}) - V(S_t) \right)
-\]
-x??
+$$
+
+V(S_t) = V(S_t) + \alpha \left( R_{t+1} + \gamma V(S_{t+1}) - V(S_t) \right)$$x??
 
 ---
 
 #### Bootstrapping in TD Methods
-Background context: Bootstrapping is a feature of some learning methods, where they make use of their current estimate to improve it. In the case of TD(0), this means that the update at time \(t\) relies on the value estimate at time \(t+1\).
+Background context: Bootstrapping is a feature of some learning methods, where they make use of their current estimate to improve it. In the case of TD(0), this means that the update at time $t $ relies on the value estimate at time$t+1$.
 
 :p Why are TD methods considered bootstrapping methods?
 ??x
@@ -406,11 +395,11 @@ x??
 ---
 
 #### Policy Evaluation Problem
-Background context: The policy evaluation or prediction problem involves estimating the value function \(v_\pi\) for a given policy \(\pi\). Monte Carlo methods and TD methods both use experience from following the policy to solve this problem, but they do so in different ways. Monte Carlo methods wait until the end of an episode, while TD methods make updates immediately after each step.
+Background context: The policy evaluation or prediction problem involves estimating the value function $v_\pi $ for a given policy$\pi$. Monte Carlo methods and TD methods both use experience from following the policy to solve this problem, but they do so in different ways. Monte Carlo methods wait until the end of an episode, while TD methods make updates immediately after each step.
 
 :p What is the goal of the policy evaluation problem?
 ??x
-The goal of the policy evaluation problem is to estimate the value function \(v_\pi\) for a given policy \(\pi\), which represents the expected return starting from each state under that policy.
+The goal of the policy evaluation problem is to estimate the value function $v_\pi $ for a given policy$\pi$, which represents the expected return starting from each state under that policy.
 x??
 
 ---
@@ -430,25 +419,25 @@ x??
 ---
 
 #### Monte Carlo Methods Target
-Background context explaining that Monte Carlo methods use an estimate of (6.3) as a target, where \(v_\pi(s) = \mathbb{E}_\pi[G_t|S_t=s]\).
+Background context explaining that Monte Carlo methods use an estimate of (6.3) as a target, where $v_\pi(s) = \mathbb{E}_\pi[G_t|S_t=s]$.
 :p What does the target for Monte Carlo methods represent?
 ??x
-The target for Monte Carlo methods represents the expected return starting from state \(s\) and following policy \(\pi\). It is estimated using a sample return since the true expected value is not known.
+The target for Monte Carlo methods represents the expected return starting from state $s $ and following policy$\pi$. It is estimated using a sample return since the true expected value is not known.
 x??
 
 ---
 
 #### Dynamic Programming Methods Target
-Background context explaining that dynamic programming (DP) methods use an estimate of (6.4) as a target, where \(v_\pi(s) = \mathbb{E}_\pi[R_{t+1} + \gamma v_\pi(S_{t+1})|S_t=s]\).
+Background context explaining that dynamic programming (DP) methods use an estimate of (6.4) as a target, where $v_\pi(s) = \mathbb{E}_\pi[R_{t+1} + \gamma v_\pi(S_{t+1})|S_t=s]$.
 :p What does the target for DP methods represent?
 ??x
-The target for DP methods represents the expected value of a state under policy \(\pi\) considering both immediate rewards and future states. It is based on a model of the environment, but \(v_\pi(S_{t+1})\) is estimated using current values.
+The target for DP methods represents the expected value of a state under policy $\pi $ considering both immediate rewards and future states. It is based on a model of the environment, but$v_\pi(S_{t+1})$ is estimated using current values.
 x??
 
 ---
 
 #### Temporal-Difference (TD) Methods Target
-Background context explaining that TD methods use an estimate for both expected values in (6.4) and the successor state value \(V\).
+Background context explaining that TD methods use an estimate for both expected values in (6.4) and the successor state value $V$.
 :p What does the target for TD methods represent?
 ??x
 The target for TD methods represents a combination of sampled returns from states and their immediate successors, using bootstrapping to update estimates based on current knowledge rather than full distributions.
@@ -478,7 +467,7 @@ x??
 Background context explaining the concept of TD error and its role in reinforcement learning.
 :p What is the TD error?
 ??x
-The TD error measures the difference between the estimated value of a state \(V(S_t)\) and a better estimate based on the next reward and state: \(\delta_t = R_{t+1} + \gamma V(S_{t+1}) - V(S_t)\).
+The TD error measures the difference between the estimated value of a state $V(S_t)$ and a better estimate based on the next reward and state:$\delta_t = R_{t+1} + \gamma V(S_{t+1}) - V(S_t)$.
 x??
 
 ---
@@ -487,16 +476,16 @@ x??
 Background context explaining how Monte Carlo errors can be expressed as sums of TD errors.
 :p How can the Monte Carlo error be related to TD errors?
 ??x
-The Monte Carlo error \(G_t - V(S_t)\) can be expressed as a sum of TD errors, showing that it is equivalent to accumulating TD errors over time steps: \[ G_t - V(S_t) = \delta_t + \gamma\delta_{t+1} + \cdots + \gamma^{T-t-1}\delta_T. \]
-x??
+The Monte Carlo error $G_t - V(S_t)$ can be expressed as a sum of TD errors, showing that it is equivalent to accumulating TD errors over time steps:
+$$G_t - V(S_t) = \delta_t + \gamma\delta_{t+1} + \cdots + \gamma^{T-t-1}\delta_T.$$x??
 
 ---
 
-#### Differences if \(V\) Changes During Episode
+#### Differences if $V$ Changes During Episode
 Background context explaining the impact on the identity if values change during an episode.
-:p What happens to the equation (6.6) if values \(V\) are updated during the episode?
+:p What happens to the equation (6.6) if values $V$ are updated during the episode?
 ??x
-If values \(V\) are updated during the episode, the exact identity in equation (6.6) no longer holds, but it may still be approximately true if step sizes are small.
+If values $V$ are updated during the episode, the exact identity in equation (6.6) no longer holds, but it may still be approximately true if step sizes are small.
 x??
 
 ---
@@ -508,7 +497,7 @@ Background context: The text discusses the comparison between Temporal-Differenc
 ??x
 To determine the additional amount, we need to calculate the difference between the actual return (MC error) and the current predicted value at each state. This is done by finding the error in the prediction for each state and then adjusting it according to the TD update rule.
 
-For example, when exiting the highway, you initially estimated 15 minutes but ended up taking 23 minutes. The error here is \( G_t - V_t = 23 - 15 = 8 \) minutes. With a step-size parameter \(\alpha = \frac{1}{2}\), the predicted time to go would be revised by \(\alpha \times (G_t - V_t) = \frac{1}{2} \times 8 = 4\) minutes.
+For example, when exiting the highway, you initially estimated 15 minutes but ended up taking 23 minutes. The error here is $G_t - V_t = 23 - 15 = 8 $ minutes. With a step-size parameter$\alpha = \frac{1}{2}$, the predicted time to go would be revised by $\alpha \times (G_t - V_t) = \frac{1}{2} \times 8 = 4$ minutes.
 
 ```java
 // Pseudocode for adjusting TD error based on Monte Carlo error
@@ -540,16 +529,17 @@ x??
 ---
 
 #### TD Error Calculation
-Background context: The example shows how TD errors are calculated using a simple method where \(\alpha = 1\). These errors represent the difference between the predicted value and the actual return.
+Background context: The example shows how TD errors are calculated using a simple method where $\alpha = 1$. These errors represent the difference between the predicted value and the actual return.
 
 :p What is the formula for calculating the TD error?
 ??x
 The formula for calculating the TD error (or Monte Carlo error) is:
-\[ G_t - V_t \]
-Where \( G_t \) is the actual return from state \( t \), and \( V_t \) is the current predicted value for that state.
+$$G_t - V_t$$
 
-For example, when exiting the highway at 20 minutes, you initially estimated 15 more minutes to reach home (\( V_{t} = 15 \)), but in reality, it took 23 minutes. Therefore, the TD error (Monte Carlo error) is:
-\[ G_t - V_t = 23 - 15 = 8 \]
+Where $G_t $ is the actual return from state$t $, and$ V_t$ is the current predicted value for that state.
+
+For example, when exiting the highway at 20 minutes, you initially estimated 15 more minutes to reach home ($V_{t} = 15$), but in reality, it took 23 minutes. Therefore, the TD error (Monte Carlo error) is:
+$$G_t - V_t = 23 - 15 = 8$$
 
 This error indicates that your prediction was off by 8 minutes.
 x??
@@ -557,19 +547,19 @@ x??
 ---
 
 #### Adjusting Predicted Values with TD Update Rule
-Background context: The example uses a step-size parameter (\(\alpha\)) to adjust the predicted values based on the TD errors. This is done using the update rule \( V_t \leftarrow V_t + \alpha (G_t - V_t) \).
+Background context: The example uses a step-size parameter ($\alpha $) to adjust the predicted values based on the TD errors. This is done using the update rule $ V_t \leftarrow V_t + \alpha (G_t - V_t)$.
 
 :p How does the TD update rule work?
 ??x
-The TD update rule works by revising the current prediction (\(V_t\)) for a state based on the difference between the actual return (\(G_t\)) and the predicted value (\(V_t\)). The revised prediction is calculated as:
-\[ V_t \leftarrow V_t + \alpha (G_t - V_t) \]
-Where:
-- \( V_t \): Current predicted value for state \( t \)
-- \( G_t \): Actual return from state \( t \)
-- \( \alpha \): Step-size parameter
+The TD update rule works by revising the current prediction ($V_t $) for a state based on the difference between the actual return ($ G_t $) and the predicted value ($ V_t$). The revised prediction is calculated as:
+$$V_t \leftarrow V_t + \alpha (G_t - V_t)$$
 
-For example, if the step-size parameter \(\alpha = \frac{1}{2}\), and the TD error is 8 minutes, then:
-\[ V_t \leftarrow 15 + \frac{1}{2} \times (23 - 15) = 15 + \frac{1}{2} \times 8 = 15 + 4 = 19 \]
+Where:
+- $V_t $: Current predicted value for state $ t $-$ G_t $: Actual return from state$ t $-$\alpha$: Step-size parameter
+
+For example, if the step-size parameter $\alpha = \frac{1}{2}$, and the TD error is 8 minutes, then:
+$$V_t \leftarrow 15 + \frac{1}{2} \times (23 - 15) = 15 + \frac{1}{2} \times 8 = 15 + 4 = 19$$
+
 This means the predicted value is revised to 19 minutes, reflecting the updated estimate.
 
 ```java
@@ -602,11 +592,11 @@ Background context: The example discusses how you initially estimated it will ta
 ??x
 According to the TD approach, you would learn immediately by shifting your initial 30-minute estimate toward the updated 50-minute estimate. Each subsequent estimate is adjusted based on the temporal differences between predictions.
 
-For example, if we denote the prediction as \( V(s) \), and the new observation as \( r + \gamma V(s') \), where \( r \) is the reward (negative travel time), and \( s' \) is the next state, then the update would be:
+For example, if we denote the prediction as $V(s)$, and the new observation as $ r + \gamma V(s')$, where $ r$is the reward (negative travel time), and $ s'$ is the next state, then the update would be:
 
-\[ V(s) = V(s) + \alpha [r + \gamma V(s') - V(s)] \]
+$$V(s) = V(s) + \alpha [r + \gamma V(s') - V(s)]$$
 
-Here, \( \alpha \) is the learning rate. In this case, if we set \( \alpha = 1 \), the update becomes simpler.
+Here,$\alpha $ is the learning rate. In this case, if we set$\alpha = 1$, the update becomes simpler.
 
 ```java
 // Pseudocode for a TD(0) update

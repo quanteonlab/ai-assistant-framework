@@ -284,27 +284,27 @@ x??
 Background context: This section introduces the notations used for developing a model to optimize resource allocation for software vulnerability correction. These notations help in formulating an optimization problem where the objective is to maximize the number of vulnerabilities corrected while minimizing resource usage.
 
 Notation explanation:
-- \( M \): Number of severity level groups pertaining to software vulnerabilities.
-- \( i \): Variable representing the severity level group, with \( i = 1, 2,..., M \).
-- \( N_{Ri} \): Expected number of vulnerabilities in the \( i^{th} \) severity group.
-- \( r_{Ri} \): Vulnerability removal rate for the \( i^{th} \) severity group.
-- \( y_i(t) \): Resource utilization at time \( t \) for the \( i^{th} \) severity group, with \( Y_i(t) = \int_0^t y_i(w) dw \).
-- \( Y^*_i \): Optimal value of \( Y_i \), for \( i = 1,2,...,M \).
-- \( Z \): Total resources available.
-- \( \Omega_{Ri}(t) \): Mean number of vulnerabilities removed in the \( (0,t) \) interval for the \( i^{th} \) severity group, a function of the Non Homogeneous Poisson Process (NHPP).
-- \( \Omega_{Ri}(Y_i(t)) \): Cumulative number of vulnerabilities removed using resources \( Y_i(t) \) in time \( (0,t) \).
-- \( T \): Total time available for the vulnerability removal process.
+- $M$: Number of severity level groups pertaining to software vulnerabilities.
+- $i $: Variable representing the severity level group, with $ i = 1, 2,..., M$.
+- $N_{Ri}$: Expected number of vulnerabilities in the $ i^{th}$ severity group.
+- $r_{Ri}$: Vulnerability removal rate for the $ i^{th}$ severity group.
+- $y_i(t)$: Resource utilization at time $ t$for the $ i^{th}$severity group, with $ Y_i(t) = \int_0^t y_i(w) dw$.
+- $Y^*_i $: Optimal value of $ Y_i $, for$ i = 1,2,...,M$.
+- $Z$: Total resources available.
+- $\Omega_{Ri}(t)$: Mean number of vulnerabilities removed in the $(0,t)$ interval for the $i^{th}$ severity group, a function of the Non Homogeneous Poisson Process (NHPP).
+- $\Omega_{Ri}(Y_i(t))$: Cumulative number of vulnerabilities removed using resources $ Y_i(t)$in time $(0,t)$.
+- $T$: Total time available for the vulnerability removal process.
 
 :p What are the key notations introduced in this section?
 ??x
 The key notations introduced include:
-- \( M \): Number of severity level groups.
-- \( N_{Ri} \): Expected number of vulnerabilities per group.
-- \( r_{Ri} \): Removal rate for each group.
-- \( y_i(t) \): Resource utilization at time t for a specific group, and its optimal value \( Y^*_i \).
-- \( Z \): Total available resources.
-- \( \Omega_{Ri}(t) \): Mean number of vulnerabilities removed by the ith severity group in (0,t).
-- \( T \): Total time available to remove vulnerabilities.
+- $M$: Number of severity level groups.
+- $N_{Ri}$: Expected number of vulnerabilities per group.
+- $r_{Ri}$: Removal rate for each group.
+- $y_i(t)$: Resource utilization at time t for a specific group, and its optimal value $ Y^*_i$.
+- $Z$: Total available resources.
+- $\Omega_{Ri}(t)$: Mean number of vulnerabilities removed by the ith severity group in (0,t).
+- $T$: Total time available to remove vulnerabilities.
 
 These notations are used to formulate an optimization problem for resource allocation.
 x??
@@ -335,11 +335,11 @@ Background context: The optimization problem discussed here involves balancing t
 ??x
 The optimization problem is formulated as maximizing the number of vulnerabilities corrected (vulnerability correction) while trying to minimize resource utilization (resource usage). The objective function can be represented as:
 
-\[ \text{Maximize } \sum_{i=1}^{M} \Omega_{Ri}(Y_i(t)) - \text{Minimize } Y^*_i \]
+$$\text{Maximize } \sum_{i=1}^{M} \Omega_{Ri}(Y_i(t)) - \text{Minimize } Y^*_i$$
 
 Where:
-- \( \Omega_{Ri}(Y_i(t)) \) is the cumulative number of vulnerabilities removed using resources \( Y_i(t) \) in time \( (0,t) \).
-- \( Y^*_i \) represents the optimal value of resource utilization for each severity group.
+- $\Omega_{Ri}(Y_i(t))$ is the cumulative number of vulnerabilities removed using resources $Y_i(t)$ in time $(0,t)$.
+- $Y^*_i$ represents the optimal value of resource utilization for each severity group.
 
 This problem is typically solved through optimization techniques to find the best allocation strategy.
 x??
@@ -370,13 +370,13 @@ Background context: The text presents a mathematical model defining the relation
 
 :p How does the differential equation relate effort consumption with vulnerability detection?
 ??x
-The differential equation \( \frac{d\Omega_{it}}{dt} = C30 x_{it} / r_i N_i - \Omega_{it} \) (1:1), where:
-- \( \Omega_{it} \) is the number of vulnerabilities detected by time t.
-- \( x_{it} \) represents resources or effort spent in vulnerability detection.
-- \( r_i \) is the detection rate for severity level i.
+The differential equation $\frac{d\Omega_{it}}{dt} = C30 x_{it} / r_i N_i - \Omega_{it}$ (1:1), where:
+- $\Omega_{it}$ is the number of vulnerabilities detected by time t.
+- $x_{it}$ represents resources or effort spent in vulnerability detection.
+- $r_i$ is the detection rate for severity level i.
 
 The solution to this equation gives us: 
-\[ \Omega_{it} = N_i (1 - e^{-r_i X_{it}}) / C16/C17, \] where \(N_i\) is the total number of vulnerabilities detected at severity level i.
+$$\Omega_{it} = N_i (1 - e^{-r_i X_{it}}) / C16/C17,$$where $ N_i$ is the total number of vulnerabilities detected at severity level i.
 x??
 
 ---
@@ -386,13 +386,15 @@ Background context: The text introduces a similar model for vulnerability remova
 
 :p How does the differential equation for vulnerability removal efforts consume resources?
 ??x
-The differential equation \( \frac{d\Omega_{Rit}}{dt} = C30 y_{it} / r_Ri N_i - \Omega_{Rit} \) (1:3), where:
-- \( \Omega_{Rit} \) is the number of vulnerabilities removed by time t.
-- \( y_{it} \) represents resources or effort spent in vulnerability removal.
-- \( r_Ri \) is the rate at which vulnerabilities are removed for severity level i.
+The differential equation $\frac{d\Omega_{Rit}}{dt} = C30 y_{it} / r_Ri N_i - \Omega_{Rit}$(1:3), where:
+- $\Omega_{Rit}$ is the number of vulnerabilities removed by time t.
+- $y_{it}$ represents resources or effort spent in vulnerability removal.
+- $r_Ri$ is the rate at which vulnerabilities are removed for severity level i.
 
 The solution to this equation gives us:
-\[ \Omega_{Rit} = N_i (1 - e^{-r_Ri Y_{it}}) / C16/C17. \] Here, \(N_i\) is the total number of vulnerabilities detected at severity level i.
+$$\Omega_{Rit} = N_i (1 - e^{-r_Ri Y_{it}}) / C16/C17.$$
+
+Here,$N_i$ is the total number of vulnerabilities detected at severity level i.
 x??
 
 ---
@@ -402,14 +404,13 @@ Background context: The effort function's behavior in vulnerability removal is d
 
 :p How does the differential equation model the consumption of available resources?
 ??x
-The differential equation \( \frac{dY_{it}}{dt} = g_i \lambda_i - Y_{it} \) (1:5), where:
-- \( Y_{it} \) is the effort spent in vulnerability removal.
-- \( g_i \) is the rate at which available resources are consumed for severity level i.
-- \( \lambda_i \) represents the total resources available to remove vulnerabilities of a given severity.
+The differential equation $\frac{dY_{it}}{dt} = g_i \lambda_i - Y_{it}$(1:5), where:
+- $Y_{it}$ is the effort spent in vulnerability removal.
+- $g_i$ is the rate at which available resources are consumed for severity level i.
+- $\lambda_i$ represents the total resources available to remove vulnerabilities of a given severity.
 
 The solution to this equation gives us:
-\[ Y_{it} = \lambda_i (1 - e^{-g_i t}) / C0/C1. \]
-x??
+$$Y_{it} = \lambda_i (1 - e^{-g_i t}) / C0/C1.$$x??
 
 ---
 
@@ -419,11 +420,10 @@ Background context: The text formulates an optimization problem to maximize the 
 :p What is the objective function in the optimization problem?
 ??x
 The objective function aims to maximize:
-\[ \sum_{i=1}^{M} \Omega_{Ri}(Y_i) = \sum_{i=1}^{M} N_i (1 - e^{-r_Ri Y_i}) / C16/C17, \] subject to constraints:
-- \( \sum_{i=1}^{M} Y_i \leq Z \)
-- \( Y_i \geq 0 \) for all \( i = 1, ..., M \).
+$$\sum_{i=1}^{M} \Omega_{Ri}(Y_i) = \sum_{i=1}^{M} N_i (1 - e^{-r_Ri Y_i}) / C16/C17,$$subject to constraints:
+- $\sum_{i=1}^{M} Y_i \leq Z $-$ Y_i \geq 0 $ for all $ i = 1, ..., M$.
 
-Here, \( Z \) is the total available resources.
+Here, $Z$ is the total available resources.
 x??
 
 ---
@@ -434,8 +434,7 @@ Background context: The text describes a method to dynamically allocate resource
 :p What are the main components of the resource allocation model described?
 ??x
 The main components include:
-- A differential equation for detecting vulnerabilities: \( \frac{d\Omega_{it}}{dt} = C30 x_{it} / r_i N_i - \Omega_{it} \)
-- An effort function for vulnerability removal: \( \frac{dY_{it}}{dt} = g_i \lambda_i - Y_{it} \)
+- A differential equation for detecting vulnerabilities: $\frac{d\Omega_{it}}{dt} = C30 x_{it} / r_i N_i - \Omega_{it}$- An effort function for vulnerability removal:$\frac{dY_{it}}{dt} = g_i \lambda_i - Y_{it}$
 - An optimization problem to maximize the number of vulnerabilities removed given limited resources.
 x??
 
@@ -853,7 +852,7 @@ Background context: The infinite server queueing modeling approach is an extensi
 
 :p How does the infinite server queueing modeling approach extend Yamada’s delayed S-shaped model?
 ??x
-The infinite server queueing modeling approach extends by providing a flexible description of uncertainties in both software failure occurrence and fault-removal times. It assumes that the total number of detected failures follows a nonhomogeneous Poisson process with mean \(H(t)\), and fault removal times are independently and identically distributed according to the cumulative probability distribution function \(G(t)\).
+The infinite server queueing modeling approach extends by providing a flexible description of uncertainties in both software failure occurrence and fault-removal times. It assumes that the total number of detected failures follows a nonhomogeneous Poisson process with mean $H(t)$, and fault removal times are independently and identically distributed according to the cumulative probability distribution function $ G(t)$.
 x??
 
 ---
@@ -897,17 +896,18 @@ x??
 
 #### Mathematical Formulation of Infinite Server Queueing
 
-Background context: This model assumes that software failures follow a nonhomogeneous Poisson process with mean \(H(t)\), and fault removal times are independently and identically distributed according to the cumulative distribution function \(G(t)\).
+Background context: This model assumes that software failures follow a nonhomogeneous Poisson process with mean $H(t)$, and fault removal times are independently and identically distributed according to the cumulative distribution function $ G(t)$.
 
 :p How would you represent the mathematical formulation for the infinite server queueing approach?
 ??x
 The infinite server queueing approach can be represented by:
-- Failure occurrences follow a nonhomogeneous Poisson process with rate \(\lambda(t) = H'(t)\).
-- Fault removal times are independently and identically distributed according to \(G(t)\).
+- Failure occurrences follow a nonhomogeneous Poisson process with rate $\lambda(t) = H'(t)$.
+- Fault removal times are independently and identically distributed according to $G(t)$.
 
 Mathematically, the mean value function for the failure occurrence is:
-\[ E[N(t)] = \int_0^t H(s) ds \]
-And the distribution of fault removal time \(T\) follows \(G(t)\).
+$$E[N(t)] = \int_0^t H(s) ds$$
+
+And the distribution of fault removal time $T $ follows$G(t)$.
 x??
 
 ---
@@ -933,70 +933,63 @@ function simulateSoftwareReliability(H, G, t_max):
     
     return T, N
 ```
-This pseudocode simulates the number of detected failures and fault removal times based on the nonhomogeneous Poisson process \(H(t)\) and the cumulative distribution function \(G(t)\).
+This pseudocode simulates the number of detected failures and fault removal times based on the nonhomogeneous Poisson process $H(t)$ and the cumulative distribution function $G(t)$.
 x??
 
-#### Stochastic Process \(A(t)\)
-Background context: The stochastic process \(A(t)\) represents the cumulative number of software failures observed during the interval \((0, t]\). This is a fundamental concept for understanding the failure behavior over time.
+#### Stochastic Process $A(t)$ Background context: The stochastic process $A(t)$ represents the cumulative number of software failures observed during the interval $(0, t]$. This is a fundamental concept for understanding the failure behavior over time.
 
-:p What does the stochastic process \(A(t)\) represent?
+:p What does the stochastic process $A(t)$ represent?
 ??x
-The stochastic process \(A(t)\), where \(t \geq 0\), represents the cumulative number of software failures observed during the interval \((0, t]\). This process helps in tracking the evolution of software failures over time.
+The stochastic process $A(t)$, where $ t \geq 0$, represents the cumulative number of software failures observed during the interval $(0, t]$. This process helps in tracking the evolution of software failures over time.
 
 ---
-#### Stochastic Process \(B(t)\)
-Background context: The stochastic process \(B(t)\) denotes the number of faults removed over the interval \((0, t]\). It is formulated based on the probability that a software fault causing an observed failure will be removed by time \(t\).
+#### Stochastic Process $B(t)$ Background context: The stochastic process $B(t)$ denotes the number of faults removed over the interval $(0, t]$. It is formulated based on the probability that a software fault causing an observed failure will be removed by time $ t$.
 
-:p What does the stochastic process \(B(t)\) represent?
+:p What does the stochastic process $B(t)$ represent?
 ??x
-The stochastic process \(B(t)\), where \(t \geq 0\), represents the number of faults removed over the interval \((0, t]\). It is formulated to capture the debugging activities and their effectiveness over time.
+The stochastic process $B(t)$, where $ t \geq 0$, represents the number of faults removed over the interval $(0, t]$. It is formulated to capture the debugging activities and their effectiveness over time.
 
 ---
-#### Conditional Probability Formula for \(B(t)\)
-Background context: The conditional probability that \(b\) software faults are perfectly/completely debugged during the interval \((0, t]\) given that \(i\) software failures have been observed over this interval is a key aspect of modeling debugging processes.
+#### Conditional Probability Formula for $B(t)$ Background context: The conditional probability that $b$ software faults are perfectly/completely debugged during the interval $(0, t]$ given that $i$ software failures have been observed over this interval is a key aspect of modeling debugging processes.
 
-:p What is the formula for the conditional probability that \(b\) software faults are removed given \(i\) failures?
+:p What is the formula for the conditional probability that $b $ software faults are removed given$i$ failures?
 ??x
-The conditional probability that \(b\) software faults are perfectly/completely debugged during \((0, t]\) given that \(i\) software failures have been observed over this interval is given by:
-\[ \Pr(B(t)=b | A(t)=i) = \sum_{k=b}^{i} \binom{i}{k} c_t^k (1-c_t)^{i-k} \]
-where \(c_t\) represents the probability that a software fault causing an observed failure is removed by time \(t\).
+The conditional probability that $b $ software faults are perfectly/completely debugged during$(0, t]$ given that $i$ software failures have been observed over this interval is given by:
+$$\Pr(B(t)=b | A(t)=i) = \sum_{k=b}^{i} \binom{i}{k} c_t^k (1-c_t)^{i-k}$$where $ c_t $ represents the probability that a software fault causing an observed failure is removed by time $ t$.
 
 ---
-#### Function \(c(t)\)
-Background context: The function \(c(t)\) models the probability that a software fault causing an observed failure will be removed by time \(t\). It involves the Stieltjes convolution of the software fault removal time distribution and the conditional distribution of the time of a software failure given \(A(t)=i\).
+#### Function $c(t)$ Background context: The function $c(t)$ models the probability that a software fault causing an observed failure will be removed by time $t$. It involves the Stieltjes convolution of the software fault removal time distribution and the conditional distribution of the time of a software failure given $ A(t)=i$.
 
-:p What is the formula for \(c(t)\)?
+:p What is the formula for $c(t)$?
 ??x
-The function \(c(t)\) is formulated as:
-\[ c(t) = \int_0^t G_{t-y}(H(y)) \, dH(y) \]
-where \(G_{t-y}\) represents the conditional distribution of the time of a software failure given that there are \(i\) failures observed over \((0, t]\), and \(H(y)\) is the cumulative fault removal function.
+The function $c(t)$ is formulated as:
+$$c(t) = \int_0^t G_{t-y}(H(y)) \, dH(y)$$where $ G_{t-y}$represents the conditional distribution of the time of a software failure given that there are $ i$failures observed over $(0, t]$, and $ H(y)$ is the cumulative fault removal function.
 
 ---
 #### Nonhomogeneous Poisson Process
-Background context: The process \(B(t)\) can be treated as a nonhomogeneous Poisson process. This allows for the expectation of \(B(t)\) to be formulated using appropriate functions of \(G_t\) and \(H_t\).
+Background context: The process $B(t)$ can be treated as a nonhomogeneous Poisson process. This allows for the expectation of $B(t)$ to be formulated using appropriate functions of $G_t$ and $H_t$.
 
-:p How is the process \(B(t)\) related to a nonhomogeneous Poisson process?
+:p How is the process $B(t)$ related to a nonhomogeneous Poisson process?
 ??x
-The process \(B(t)\), where \(t \geq 0\), can be treated as a nonhomogeneous Poisson process. This implies that its expectation can be formulated using appropriate functions of \(G_t\) and \(H_t\). Specifically, the expectation is given by:
-\[ E[B(t)] = \int_0^t G_{t-y} H(y) \, dy \]
-
----
+The process $B(t)$, where $ t \geq 0$, can be treated as a nonhomogeneous Poisson process. This implies that its expectation can be formulated using appropriate functions of $ G_t$and $ H_t$. Specifically, the expectation is given by:
+$$E[B(t)] = \int_0^t G_{t-y} H(y) \, dy$$---
 #### Example with Exponential Distributions
-Background context: An example of how to model the debugging process using specific functions for \(G_t\) and \(H_t\). Here, both distributions are assumed to follow exponential models.
+Background context: An example of how to model the debugging process using specific functions for $G_t $ and$H_t$. Here, both distributions are assumed to follow exponential models.
 
 :p What happens when we assume that fault removal times follow an exponential distribution?
 ??x
-When assuming that fault removal times follow an exponential distribution with parameter \(\theta > 0\), i.e., \(G_t = 1 - e^{-\theta t}\), and the software failure observations follow a nonhomogeneous Poisson process with mean \(H_t = \omega (1 - e^{-\theta t})\), where \(\omega\) is a constant, we can derive:
-\[ \int_0^t G_{t-y} H(y) \, dy = \frac{\omega}{1 + \theta t} e^{-\theta t} \]
+When assuming that fault removal times follow an exponential distribution with parameter $\theta > 0 $, i.e., $ G_t = 1 - e^{-\theta t}$, and the software failure observations follow a nonhomogeneous Poisson process with mean $ H_t = \omega (1 - e^{-\theta t})$, where $\omega $ is a constant, we can derive:
+$$\int_0^t G_{t-y} H(y) \, dy = \frac{\omega}{1 + \theta t} e^{-\theta t}$$
+
 This result matches the mathematical structure of Yamada's delayed S-shaped model.
 
 ---
 #### Example Code for Exponential Distributions
 Background context: An example to illustrate the calculations involved in this scenario using code.
 
-:p Provide a pseudocode example for calculating \(E[B(t)]\) under exponential assumptions.
+:p Provide a pseudocode example for calculating $E[B(t)]$ under exponential assumptions.
 ??x
-Here is a pseudocode example to calculate the expectation of the stochastic process \(B(t)\) assuming both fault removal and failure observation follow exponential distributions:
+Here is a pseudocode example to calculate the expectation of the stochastic process $B(t)$ assuming both fault removal and failure observation follow exponential distributions:
 
 ```pseudocode
 function expect_B(t, theta, omega):
@@ -1006,7 +999,7 @@ function expect_B(t, theta, omega):
     return result
 ```
 
-This function calculates the expected number of software faults removed by time \(t\) based on the given parameters \(\theta\) and \(\omega\).
+This function calculates the expected number of software faults removed by time $t $ based on the given parameters$\theta $ and$\omega$.
 
 ---
 #### Conclusion
@@ -1014,7 +1007,7 @@ Background context: The provided text outlines a detailed model for understandin
 
 :p What is the overall purpose of this modeling approach?
 ??x
-The overall purpose of this modeling approach is to provide a comprehensive framework for understanding and predicting the debugging process in software reliability. By formulating \(B(t)\) based on specific probability distributions, such as exponential functions, we can better assess the quality and reliability of software systems over time.
+The overall purpose of this modeling approach is to provide a comprehensive framework for understanding and predicting the debugging process in software reliability. By formulating $B(t)$ based on specific probability distributions, such as exponential functions, we can better assess the quality and reliability of software systems over time.
 
 ---
 
@@ -1046,22 +1039,20 @@ x??
 ---
 
 #### Basic Assumptions of Phase-Type Modeling Approach
-Background context explaining the basic assumptions underlying the phase-type modeling approach, including how they define the stochastic process \(B_{\text{PH}}(t)\).
+Background context explaining the basic assumptions underlying the phase-type modeling approach, including how they define the stochastic process $B_{\text{PH}}(t)$.
 
 :p What are the key assumptions that define the phase-type model in software fault debugging?
 ??x
 The key assumptions that define the phase-type model in software fault debugging include:
-1. The software contains \(\Omega_0\) software faults before testing, where \(\Omega_0\) is a random variable taking nonnegative integer values.
-2. The software failure observation and fault-removing processes are considered as successive debugging processes, with each process's completion time following an independent and identical cumulative probability distribution function \(E_{\text{PH}}(t)\).
+1. The software contains $\Omega_0 $ software faults before testing, where$\Omega_0$ is a random variable taking nonnegative integer values.
+2. The software failure observation and fault-removing processes are considered as successive debugging processes, with each process's completion time following an independent and identical cumulative probability distribution function $E_{\text{PH}}(t)$.
 3. No new faults are introduced during the debugging process, and any faults causing observed software failures are perfectly debugged.
 
-The number of faults removed over \((0, t]\) is denoted by the process \(B_{\text{PH}}(t)\), which follows the probability:
-\[ Pr(B_{\text{PH}}(t) = b) = \sum_{i=b}^{\infty} E_{\text{PH}}(t)^b (1 - E_{\text{PH}}(t))^{i-b} P(\Omega_0 = i), \]
-where \(P(\Omega_0 = i)\) is the probability mass function of \(\Omega_0\).
+The number of faults removed over $(0, t]$ is denoted by the process $B_{\text{PH}}(t)$, which follows the probability:
+$$Pr(B_{\text{PH}}(t) = b) = \sum_{i=b}^{\infty} E_{\text{PH}}(t)^b (1 - E_{\text{PH}}(t))^{i-b} P(\Omega_0 = i),$$where $ P(\Omega_0 = i)$is the probability mass function of $\Omega_0$.
 
-If \(\Omega_0\) follows a Poisson distribution with mean \(\alpha (> 0)\), then:
-\[ Pr(B_{\text{PH}}(t) = b) = \frac{1}{b!} (\alpha E_{\text{PH}}(t))^b e^{-\alpha E_{\text{PH}}(t)}, \]
-for \(b=0, 1, 2, ...\).
+If $\Omega_0 $ follows a Poisson distribution with mean$\alpha (> 0)$, then:
+$$Pr(B_{\text{PH}}(t) = b) = \frac{1}{b!} (\alpha E_{\text{PH}}(t))^b e^{-\alpha E_{\text{PH}}(t)},$$for $ b=0, 1, 2, ...$.
 
 ```java
 // Pseudocode to illustrate the probability calculation for phase-type model
@@ -1089,23 +1080,20 @@ x??
 
 ---
 
-#### Stochastic Process \(B_{\text{PH}}(t)\)
-Background context explaining the stochastic process \(B_{\text{PH}}(t)\), which represents the number of faults removed over \((0, t]\).
+#### Stochastic Process $B_{\text{PH}}(t)$ Background context explaining the stochastic process $B_{\text{PH}}(t)$, which represents the number of faults removed over $(0, t]$.
 
-:p What is the stochastic process \(B_{\text{PH}}(t)\) and how does it relate to fault removal in software debugging?
+:p What is the stochastic process $B_{\text{PH}}(t)$ and how does it relate to fault removal in software debugging?
 ??x
-The stochastic process \(B_{\text{PH}}(t)\) represents the number of faults removed from a software system over the interval \((0, t]\). It is derived based on several assumptions:
-- The initial state contains \(\Omega_0\) faults.
-- The removal and observation processes follow an independent and identical cumulative probability distribution function \(E_{\text{PH}}(t)\).
+The stochastic process $B_{\text{PH}}(t)$ represents the number of faults removed from a software system over the interval $(0, t]$. It is derived based on several assumptions:
+- The initial state contains $\Omega_0$ faults.
+- The removal and observation processes follow an independent and identical cumulative probability distribution function $E_{\text{PH}}(t)$.
 - No new faults are introduced during the debugging process.
 
-The probability that exactly \(b\) faults have been removed by time \(t\) is given by:
-\[ Pr(B_{\text{PH}}(t) = b) = \sum_{i=b}^{\infty} E_{\text{PH}}(t)^b (1 - E_{\text{PH}}(t))^{i-b} P(\Omega_0 = i), \]
-where \(P(\Omega_0 = i)\) is the probability mass function of the initial number of faults.
+The probability that exactly $b $ faults have been removed by time$t$ is given by:
+$$Pr(B_{\text{PH}}(t) = b) = \sum_{i=b}^{\infty} E_{\text{PH}}(t)^b (1 - E_{\text{PH}}(t))^{i-b} P(\Omega_0 = i),$$where $ P(\Omega_0 = i)$ is the probability mass function of the initial number of faults.
 
-If \(\Omega_0\) follows a Poisson distribution with mean \(\alpha (> 0)\), then:
-\[ Pr(B_{\text{PH}}(t) = b) = \frac{1}{b!} (\alpha E_{\text{PH}}(t))^b e^{-\alpha E_{\text{PH}}(t)}, \]
-for \(b=0, 1, 2, ...\).
+If $\Omega_0 $ follows a Poisson distribution with mean$\alpha (> 0)$, then:
+$$Pr(B_{\text{PH}}(t) = b) = \frac{1}{b!} (\alpha E_{\text{PH}}(t))^b e^{-\alpha E_{\text{PH}}(t)},$$for $ b=0, 1, 2, ...$.
 
 ```java
 // Pseudocode to illustrate the probability calculation for B_PH(t)
@@ -1138,11 +1126,11 @@ Background context explaining the concept of time-dependent expectation and its 
 
 :p How does the phase-type model account for the time-dependent nature of fault removal rates?
 ??x
-The phase-type model accounts for the time-dependent nature of fault removal rates by allowing the expected completion time \(E_{\text{PH}}(t)\) to vary with time. This means that as time progresses, the probability and distribution of faults being removed can change.
+The phase-type model accounts for the time-dependent nature of fault removal rates by allowing the expected completion time $E_{\text{PH}}(t)$ to vary with time. This means that as time progresses, the probability and distribution of faults being removed can change.
 
 In the context of software reliability growth models, this is crucial because the debugging process may not follow a constant rate of fault removal; rather, it could depend on factors like the number of faults remaining, the complexity of those faults, or the efficiency of the debugging tools and techniques used over time.
 
-The expected number of faults removed by time \(t\), denoted as \(\alpha E_{\text{PH}}(t)\), incorporates this variability. Here, \(\alpha\) represents the initial rate at which faults are being identified and removed, while \(E_{\text{PH}}(t)\) captures how quickly these removals occur over time.
+The expected number of faults removed by time $t $, denoted as $\alpha E_{\text{PH}}(t)$, incorporates this variability. Here,$\alpha $ represents the initial rate at which faults are being identified and removed, while$E_{\text{PH}}(t)$ captures how quickly these removals occur over time.
 
 ```java
 // Pseudocode to illustrate the calculation of expected fault removal with time dependency
@@ -1200,10 +1188,10 @@ Background context explaining the configuration of a continuous-time absorbing M
 :p What is the basic configuration of a continuous-time absorbing Markov chain used in phase-type modeling?
 ??x
 The basic configuration of a continuous-time absorbing Markov chain (CTMC) used in phase-type modeling consists of:
-- A set of transient states \(V_T = \{1, 2, ..., n\}\), which represent the intermediate stages or states during the debugging process.
-- An absorbing state \(V_A = \{n+1\}\), which represents the completion of the debugging process.
+- A set of transient states $V_T = \{1, 2, ..., n\}$, which represent the intermediate stages or states during the debugging process.
+- An absorbing state $V_A = \{n+1\}$, which represents the completion of the debugging process.
 
-The CTMC transitions from the initial state through the transient states until it reaches the absorbing state. The transition rates between these states are described by an infinitesimal generator matrix \(I\).
+The CTMC transitions from the initial state through the transient states until it reaches the absorbing state. The transition rates between these states are described by an infinitesimal generator matrix $I$.
 
 In software fault debugging, the CTMC can be used to model how faults are identified and removed over time. Each state in the transient set represents a phase or stage of the debugging process, while the absorbing state signifies that all faults have been successfully removed.
 
@@ -1251,16 +1239,15 @@ x??
 Background context: The text introduces a method to model software fault debugging processes using continuous-time absorbing Markov chains. This approach helps in assessing and predicting the reliability of software systems by understanding the dynamics of faults being detected and removed.
 
 Relevant formulas:
-- \( E_{PH}(t) = 1 - \pi_0 e^{St} / C_{138} \)
-- \( I = -\frac{d}{d} \left( \begin{array}{ccc} 0 & 0 \\ 0 & -dd \end{array} \right) \)
+- $E_{PH}(t) = 1 - \pi_0 e^{St} / C_{138}$-$ I = -\frac{d}{d} \left( \begin{array}{ccc} 0 & 0 \\ 0 & -dd \end{array} \right)$
 
 :p What is the infinitesimal generator matrix for the absorbing Markov chain in this context?
 ??x
-The infinitesimal generator matrix \( I \) is given by:
+The infinitesimal generator matrix $I$ is given by:
 
-\[ I = -\frac{d}{d} \left( \begin{array}{ccc} 0 & 0 \\ 0 & -dd \end{array} \right) \]
+$$I = -\frac{d}{d} \left( \begin{array}{ccc} 0 & 0 \\ 0 & -dd \end{array} \right)$$
 
-This matrix represents the rates of transition between states. The first row and column indicate that there are no transitions from state \( V_T \) to any other state, while the second row indicates self-transitions within \( V_A \).
+This matrix represents the rates of transition between states. The first row and column indicate that there are no transitions from state $V_T $ to any other state, while the second row indicates self-transitions within$V_A$.
 
 :x??
 
@@ -1271,16 +1258,15 @@ This matrix represents the rates of transition between states. The first row and
 Background context: The phase-type distribution is used to model the time it takes for a software system to transition from initial states to an absorbing state. This helps in understanding the variability and randomness in fault debugging processes.
 
 Relevant formulas:
-- \( E_{PH}(t) = 1 - \pi_0 e^{St} / C_{138} \)
-- \( \pi_0 = [1, 0] \)
+- $E_{PH}(t) = 1 - \pi_0 e^{St} / C_{138}$-$\pi_0 = [1, 0]$
 
 :p What is the expression for the cumulative probability distribution of the time to absorption in an initial state?
 ??x
 The cumulative probability distribution for the time to absorption from the initial states is given by:
 
-\[ E_{PH}(t) = 1 - \pi_0 e^{St} / C_{138} \]
+$$E_{PH}(t) = 1 - \pi_0 e^{St} / C_{138}$$
 
-Where \( \pi_0 \) represents the initial state vector, and \( S \) is the submatrix representing the instantaneous transition rates within the set of transient states. The matrix exponential \( e^{St} \) captures the dynamics over time.
+Where $\pi_0 $ represents the initial state vector, and$S $ is the submatrix representing the instantaneous transition rates within the set of transient states. The matrix exponential$e^{St}$ captures the dynamics over time.
 
 :x??
 
@@ -1291,16 +1277,13 @@ Where \( \pi_0 \) represents the initial state vector, and \( S \) is the submat
 Background context: The delayed S-shaped model is one of several models that can be analyzed using the continuous-time absorbing Markov chain approach. This model considers a delay before debugging efforts show significant improvement in reducing faults.
 
 Relevant formulas:
-- \( I = -\frac{d}{d} \left( \begin{array}{ccc} 0 & 0 \\ 0 & -dd \end{array} \right) \)
-- \( V_T = [1, 2] \), \( V_A = [3] \), \( S = -\frac{d}{d} \)
-
-:p What are the values of \( V_T \), \( V_A \), and \( S \) in the context of the delayed S-shaped model?
+- $I = -\frac{d}{d} \left( \begin{array}{ccc} 0 & 0 \\ 0 & -dd \end{array} \right)$-$ V_T = [1, 2]$,$ V_A = [3]$,$ S = -\frac{d}{d}$:p What are the values of $ V_T$,$ V_A $, and$ S$ in the context of the delayed S-shaped model?
 ??x
 In the context of the delayed S-shaped model, the following values are defined:
 
-- \( V_T = [1, 2] \): The set of transient states.
-- \( V_A = [3] \): The absorbing state.
-- \( S = -\frac{d}{d} \): The submatrix representing instantaneous transition rates within the set of transient states.
+- $V_T = [1, 2]$: The set of transient states.
+- $V_A = [3]$: The absorbing state.
+- $S = -\frac{d}{d}$: The submatrix representing instantaneous transition rates within the set of transient states.
 
 :x??
 
@@ -1311,20 +1294,18 @@ In the context of the delayed S-shaped model, the following values are defined:
 Background context: Using the parameters from the delayed S-shaped model, the phase-type probability distribution is derived to reflect the software fault debugging process. This distribution helps in understanding the time until absorption into an absorbing state.
 
 Relevant formulas:
-- \( E_{PH}(t) = 1 - \pi_0 e^{St} / C_{138} \)
-- \( \pi_0 = [1, 0] \)
+- $E_{PH}(t) = 1 - \pi_0 e^{St} / C_{138}$-$\pi_0 = [1, 0]$
 
 :p What is the derived phase-type probability distribution for the delayed S-shaped model?
 ??x
 The phase-type probability distribution for the delayed S-shaped model is:
 
-\[ E_{PH}(t) = 1 - \left( \begin{array}{c} 1 \\ 0 \end{array} \right) e^{-\frac{d}{d} \left[ \begin{array}{cc} 0 & 0 \\ 0 & -dd \end{array} \right] t} / C_{138} = 1 - (1 + dt) e^{-dt} / C_{138} \]
+$$E_{PH}(t) = 1 - \left( \begin{array}{c} 1 \\ 0 \end{array} \right) e^{-\frac{d}{d} \left[ \begin{array}{cc} 0 & 0 \\ 0 & -dd \end{array} \right] t} / C_{138} = 1 - (1 + dt) e^{-dt} / C_{138}$$
 
 Simplifying further, we get:
+$$
 
-\[ E_{PH}(t) = 1 - (1 + dt) e^{-dt} \]
-
-:x??
+E_{PH}(t) = 1 - (1 + dt) e^{-dt}$$:x??
 
 ---
 
@@ -1333,13 +1314,10 @@ Simplifying further, we get:
 Background context: The text discusses the use of continuous-time absorbing Markov chains for modeling software reliability growth. This approach helps in understanding and predicting how software faults are detected and removed over time.
 
 Relevant formulas:
-- \( E_{PH}(t) = 1 - \pi_0 e^{St} / C_{138} \)
-
-:p What is the mathematical structure of the mean value function reflecting software fault debugging processes?
+- $E_{PH}(t) = 1 - \pi_0 e^{St} / C_{138}$:p What is the mathematical structure of the mean value function reflecting software fault debugging processes?
 ??x
 The mean value function reflecting the software faults debugging processes can be obtained as:
-
-\[ \alpha E_{PH}(t) = \alpha (1 - (1 + dt) e^{-dt}) \]
+$$\alpha E_{PH}(t) = \alpha (1 - (1 + dt) e^{-dt})$$
 
 This is essentially the same mathematical structure as the delayed S-shaped model, indicating a similar growth pattern in fault detection and removal over time.
 
@@ -1352,7 +1330,7 @@ This is essentially the same mathematical structure as the delayed S-shaped mode
 Background context: The reliability of software systems can be assessed by modeling the debugging processes using techniques like infinite server queueing and phase-type distributions. These models help predict how faults are removed as testing progresses.
 
 Relevant formulas:
-- \( E_{PH}(t) = 1 - \pi_0 e^{St} / C_{138} \)
+- $E_{PH}(t) = 1 - \pi_0 e^{St} / C_{138}$
 
 :p How do these modeling approaches contribute to software reliability assessment?
 ??x

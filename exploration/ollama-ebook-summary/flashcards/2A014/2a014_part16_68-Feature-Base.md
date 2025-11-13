@@ -38,8 +38,7 @@ Background context: The text discusses how features can be used alongside collab
 :p How can we initialize a latent-factor model using features?
 ??x
 We can initialize a latent-factor model using features by learning a regression model that maps user and item features to the factor matrix. This involves learning a model such as:
-\[ s_{i,x} \sim w_{ix}^{\gamma} + \alpha_i + \beta_x + u_i v_x \]
-where \( w_{ix}^{\gamma} \) is a bilinear feature regression, \(\alpha_i\) and \(\beta_x\) are bias terms to estimate popularity or rank inflation, and \(u_i v_x\) are familiar MF terms.
+$$s_{i,x} \sim w_{ix}^{\gamma} + \alpha_i + \beta_x + u_i v_x$$where $ w_{ix}^{\gamma}$ is a bilinear feature regression,$\alpha_i $ and$\beta_x $ are bias terms to estimate popularity or rank inflation, and$u_i v_x$ are familiar MF terms.
 
 This approach allows us to leverage both user features and item interactions in our model.
 x??
@@ -52,9 +51,8 @@ Background context: The text discusses the need for a smooth transition between 
 
 :p How can we ensure a smooth transition from feature-based models to latent-factor models?
 ??x
-To ensure a smooth transition, we can initialize the latent factors using features learned from user and item interactions (content-based features). Specifically, we learn a regression model \( G_i \sim u_i \) for initialization of our learned factor matrix. This means:
-\[ s_{i,x} \sim w_{ix}^{\gamma} + \alpha_i + \beta_x + u_i v_x \]
-where \( w_{ix}^{\gamma} \) is a standard bilinear feature regression, and the factors \( u_i \) and \( v_x \) are initialized using features.
+To ensure a smooth transition, we can initialize the latent factors using features learned from user and item interactions (content-based features). Specifically, we learn a regression model $G_i \sim u_i$ for initialization of our learned factor matrix. This means:
+$$s_{i,x} \sim w_{ix}^{\gamma} + \alpha_i + \beta_x + u_i v_x$$where $ w_{ix}^{\gamma}$is a standard bilinear feature regression, and the factors $ u_i$and $ v_x$ are initialized using features.
 
 This approach allows us to use both explicit ratings (MF) and implicit feature-based information in our model.
 x??
@@ -129,7 +127,7 @@ Background context: Given user feature vectors, similarity measures can be formu
 
 :p How do we model new-user recommendations using segments?
 ??x
-We model new-user recommendations by first defining a similarity measure that clusters users into segments based on their features. Then, for each segment \(C\), we estimate the average rating or preference \(r_{C,x}\) and the probability \(P(j \in C)\) that user \(j\) belongs to segment \(C\). This allows us to use weighted averages of ratings from different segments to make recommendations.
+We model new-user recommendations by first defining a similarity measure that clusters users into segments based on their features. Then, for each segment $C $, we estimate the average rating or preference $ r_{C,x}$and the probability $ P(j \in C)$that user $ j$belongs to segment $ C$. This allows us to use weighted averages of ratings from different segments to make recommendations.
 x??
 
 ---

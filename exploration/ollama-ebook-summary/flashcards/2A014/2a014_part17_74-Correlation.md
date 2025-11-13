@@ -100,14 +100,13 @@ Background context: PMI is used to normalize co-occurrence counts and measure ho
 
 :p What formula is used to compute the Pointwise Mutual Information (PMI)?
 ??x
-The PMI between two items, \( x_i \) and \( x_j \), can be computed as follows:
-\[
-\text{PMI}(x_i, x_j) = \log \left( \frac{\frac{C_\mathcal{I}_{x_i,x_j}}{\# \text{total interactions}}}{\frac{\# x_i \cdot \# x_j}{(\# \text{total interactions})^2}} \right)
-\]
+The PMI between two items, $x_i $ and$x_j$, can be computed as follows:
+$$\text{PMI}(x_i, x_j) = \log \left( \frac{\frac{C_\mathcal{I}_{x_i,x_j}}{\# \text{total interactions}}}{\frac{\# x_i \cdot \# x_j}{(\# \text{total interactions})^2}} \right)$$
+
 Where:
-- \( C_\mathcal{I}_{x_i, x_j} \) is the co-occurrence count between \( x_i \) and \( x_j \).
-- \( \# \text{total interactions} \) is the total number of interactions.
-- \( \# x_i \) and \( \# x_j \) are the counts of \( x_i \) and \( x_j \) respectively.
+- $C_\mathcal{I}_{x_i, x_j}$ is the co-occurrence count between $ x_i $ and $x_j$.
+- $\# \text{total interactions}$ is the total number of interactions.
+- $\# x_i $ and$\# x_j $ are the counts of$x_i $ and$x_j$ respectively.
 
 This formula normalizes the co-occurrence count to account for the frequency of individual items.
 x??
@@ -119,13 +118,12 @@ Background context: Jaccard similarity is a measure used in recommendation syste
 
 :p What is the formula for Jaccard Similarity?
 ??x
-The Jaccard Similarity between two sets \( A \) and \( B \) (e.g., sets of items that two users have interacted with) can be defined as:
-\[
-\text{Jaccard}(A, B) = \frac{|A \cap B|}{|A \cup B|}
-\]
+The Jaccard Similarity between two sets $A $ and$B$ (e.g., sets of items that two users have interacted with) can be defined as:
+$$\text{Jaccard}(A, B) = \frac{|A \cap B|}{|A \cup B|}$$
+
 Where:
-- \( |A \cap B| \) is the number of elements common to both sets.
-- \( |A \cup B| \) is the total number of unique elements in both sets.
+- $|A \cap B|$ is the number of elements common to both sets.
+- $|A \cup B|$ is the total number of unique elements in both sets.
 
 This formula gives a measure of similarity between two sets by considering the intersection and union of the sets.
 x??
@@ -137,12 +135,11 @@ Background context: Cosine similarity is another measure used for recommendation
 
 :p How do you compute Cosine Similarity?
 ??x
-The Cosine Similarity between two sets \( A \) and \( B \) (e.g., incidence sets for users or items) is computed as:
-\[
-\text{Cosim}(A, B) = \frac{\sum_{i=1}^{n} a_i b_i}{\sqrt{\sum_{i=1}^{n} a_i^2} \cdot \sqrt{\sum_{i=1}^{n} b_i^2}}
-\]
+The Cosine Similarity between two sets $A $ and$B$(e.g., incidence sets for users or items) is computed as:
+$$\text{Cosim}(A, B) = \frac{\sum_{i=1}^{n} a_i b_i}{\sqrt{\sum_{i=1}^{n} a_i^2} \cdot \sqrt{\sum_{i=1}^{n} b_i^2}}$$
+
 Where:
-- \( a_i \) and \( b_i \) are the interaction counts for each item in sets A and B respectively.
+- $a_i $ and$b_i$ are the interaction counts for each item in sets A and B respectively.
 
 This formula normalizes the dot product of two vectors to give a similarity score between -1 and 1.
 x??
@@ -154,13 +151,11 @@ Background context: In recommendation systems, we can use various similarity mea
 
 :p How do you compute the Jaccard Similarity between a user and an item?
 ??x
-To compute the Jaccard Similarity between a user \( y_u \) and an unseen item \( x_i \), you can follow these steps:
-1. Let \( A = \{ x_j | (y_u, x_j) \text{ has been interacted with} \} \).
-2. Let \( B = \{ x_j | x_j \text{ is in the set of co-occurring items with } x_i \} \).
+To compute the Jaccard Similarity between a user $y_u $ and an unseen item$x_i$, you can follow these steps:
+1. Let $A = \{ x_j | (y_u, x_j) \text{ has been interacted with} \}$.
+2. Let $B = \{ x_j | x_j \text{ is in the set of co-occurring items with } x_i \}$.
 3. Calculate:
-\[
-\text{Jaccard}(A, B) = \frac{|A \cap B|}{|A \cup B|}
-\]
+$$\text{Jaccard}(A, B) = \frac{|A \cap B|}{|A \cup B|}$$
 
 This gives a measure of similarity between the user's interactions and the item's co-occurrences.
 x??
@@ -172,12 +167,10 @@ Background context: Similarly to user-user or user-item recommendations, we can 
 
 :p How do you compute the Jaccard Similarity between two items?
 ??x
-To compute the Jaccard Similarity between two items \( x_i \) and \( x_j \), you need to:
-1. Find the set of users who have interacted with both items: \( A = \{ y_u | (y_u, x_i) \text{ and } (y_u, x_j) \text{ has been interacted with} \} \).
+To compute the Jaccard Similarity between two items $x_i $ and$x_j$, you need to:
+1. Find the set of users who have interacted with both items: $A = \{ y_u | (y_u, x_i) \text{ and } (y_u, x_j) \text{ has been interacted with} \}$.
 2. Calculate:
-\[
-\text{Jaccard}(A) = \frac{|A|}{\# \text{total users}}
-\]
+$$\text{Jaccard}(A) = \frac{|A|}{\# \text{total users}}$$
 
 This gives a measure of the commonality in user interactions between two items.
 x??
@@ -189,12 +182,10 @@ Background context: We can also use Jaccard Similarity for recommending items ba
 
 :p How do you compute the Jaccard Similarity between two users?
 ??x
-To compute the Jaccard Similarity between two users \( y_u \) and \( y_v \), you need to:
-1. Find the set of interactions for both users: \( A = \{ x_j | (y_u, x_j) \text{ has been interacted with} \} \) and \( B = \{ x_j | (y_v, x_j) \text{ has been interacted with} \} \).
+To compute the Jaccard Similarity between two users $y_u $ and$y_v$, you need to:
+1. Find the set of interactions for both users: $A = \{ x_j | (y_u, x_j) \text{ has been interacted with} \}$ and $B = \{ x_j | (y_v, x_j) \text{ has been interacted with} \}$.
 2. Calculate:
-\[
-\text{Jaccard}(A, B) = \frac{|A \cap B|}{|A \cup B|}
-\]
+$$\text{Jaccard}(A, B) = \frac{|A \cap B|}{|A \cup B|}$$
 
 This gives a measure of the commonality in user interactions between two users.
 x??
@@ -220,7 +211,7 @@ Matrix factorization involves breaking down a large matrix into smaller matrices
 The Singular Value Decomposition (SVD) is one common method used for this purpose.
 :p What does SVD do, and how is it applied to matrix factorization?
 ??x
-Singular Value Decomposition (SVD) decomposes a matrix into three matrices: \( U \), \( \Sigma \), and \( V^T \). This decomposition can be used to reduce the dimensionality of the original matrix by setting some singular values to zero, effectively approximating the matrix with lower rank.
+Singular Value Decomposition (SVD) decomposes a matrix into three matrices:$U $, $\Sigma $, and $ V^T$. This decomposition can be used to reduce the dimensionality of the original matrix by setting some singular values to zero, effectively approximating the matrix with lower rank.
 
 Here is an example using SVD for matrix factorization:
 ```python

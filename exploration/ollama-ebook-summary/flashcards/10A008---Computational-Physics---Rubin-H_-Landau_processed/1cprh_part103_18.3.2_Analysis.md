@@ -20,7 +20,8 @@ Background context: The velocity-Verlet algorithm improves upon the basic Verlet
 :p How does the velocity-Verlet algorithm update particle positions?
 ??x
 The velocity-Verlet algorithm updates particle positions using a forward-difference approximation:
-\[ r_i(t+h) \approx r_i(t) + h v_i(t) + \frac{h^2}{2} F_i(t) + O(h^3). \]
+$$r_i(t+h) \approx r_i(t) + h v_i(t) + \frac{h^2}{2} F_i(t) + O(h^3).$$
+
 This formula incorporates the current and future forces to predict the position at the next time step. 
 ??x
 
@@ -31,7 +32,7 @@ Background context: Implementing a molecular dynamics simulation using Python, s
 
 :p How does the MDpBC.py program handle periodic boundary conditions (PBC)?
 ??x
-The MDpBC.py program handles PBCs by first updating all particle positions to time \(t+h\), applying forces, then using these updated positions to calculate velocities. It saves the forces at an earlier time for use in calculating velocities.
+The MDpBC.py program handles PBCs by first updating all particle positions to time $t+h$, applying forces, then using these updated positions to calculate velocities. It saves the forces at an earlier time for use in calculating velocities.
 ```python
 # Pseudocode snippet from MDpBC.py
 def update_positions_and_forces(t, dt):
@@ -52,7 +53,7 @@ Background context: In molecular dynamics simulations, a cutoff radius is often 
 
 :p What is the primary reason for using a cutoff radius in molecular dynamics simulations?
 ??x
-The primary reason for using a cutoff radius in molecular dynamics simulations is computational efficiency. The Lennard-Jones potential falls off rapidly with distance, so interactions at large distances contribute minimally to the motion of particles. By ignoring interactions beyond a certain radius \(r_{cut}\), the simulation becomes more manageable while still retaining significant accuracy.
+The primary reason for using a cutoff radius in molecular dynamics simulations is computational efficiency. The Lennard-Jones potential falls off rapidly with distance, so interactions at large distances contribute minimally to the motion of particles. By ignoring interactions beyond a certain radius $r_{cut}$, the simulation becomes more manageable while still retaining significant accuracy.
 ??x
 
 ---
@@ -68,11 +69,11 @@ Particles in a Lennard-Jones system at low temperatures typically form a face-ce
 ---
 
 #### Time-Step Selection in Verlet Algorithm
-Background context: The choice of time step (\(\Delta t\)) in molecular dynamics simulations impacts the accuracy and stability of the simulation.
+Background context: The choice of time step ($\Delta t$) in molecular dynamics simulations impacts the accuracy and stability of the simulation.
 
-:p What is a typical value for the time step \(\Delta t\) used in molecular dynamics simulations?
+:p What is a typical value for the time step $\Delta t$ used in molecular dynamics simulations?
 ??x
-A typical value for the time step \(\Delta t\) used in molecular dynamics simulations, such as MD2D.py, is \(10^{-14}\) seconds. In natural units, this equals 0.004. For stability and accuracy, a larger time step can be chosen, but it must be carefully balanced to ensure the simulation remains stable.
+A typical value for the time step $\Delta t $ used in molecular dynamics simulations, such as MD2D.py, is$10^{-14}$ seconds. In natural units, this equals 0.004. For stability and accuracy, a larger time step can be chosen, but it must be carefully balanced to ensure the simulation remains stable.
 ??x
 
 ---
@@ -82,7 +83,7 @@ Background context: As particles reach equilibrium, their kinetic and potential 
 
 :p How are the time-averaged energies for an equilibrated system calculated?
 ??x
-The time-averaged energies for an equilibrated system can be calculated by averaging the kinetic (\(KE\)) and potential (\(VE\)) energy over a sufficiently long period. The total energy \(E = KE + VE\) should ideally remain constant if the simulation is well-equilibrated.
+The time-averaged energies for an equilibrated system can be calculated by averaging the kinetic ($KE $) and potential ($ VE $) energy over a sufficiently long period. The total energy$ E = KE + VE$ should ideally remain constant if the simulation is well-equilibrated.
 ```python
 # Pseudocode snippet to calculate time-averaged energies
 def calculate_energies(total_time, dt):
@@ -213,7 +214,7 @@ Background context: You need to create histograms that represent the distributio
 :p How do you update a histogram representing the distribution of particle counts on the RHS?
 
 ??x
-To update a histogram, maintain an array or list where each index represents the number of times \( N_{rhs} \) particles are found on the RHS. Increment the corresponding index at each time step based on the count from `countParticlesOnRHS()`.
+To update a histogram, maintain an array or list where each index represents the number of times $N_{rhs}$ particles are found on the RHS. Increment the corresponding index at each time step based on the count from `countParticlesOnRHS()`.
 
 ```java
 void updateHistogram(int n) {
@@ -227,16 +228,13 @@ x??
 
 #### Probability Calculation and Distribution
 
-Background context: The probability of finding \( N_{rhs} \) particles on the RHS can be calculated using combinatorial methods. This helps in understanding the statistical distribution of particles.
+Background context: The probability of finding $N_{rhs}$ particles on the RHS can be calculated using combinatorial methods. This helps in understanding the statistical distribution of particles.
 
 :p How do you calculate the probability of finding a specific number of particles on the RHS?
 
 ??x
 The probability is given by the binomial coefficient formula:
-\[
-P(n) = \frac{C(N, n)}{2^N}
-\]
-where \( C(N, n) \) is the number of ways to choose \( n \) particles out of \( N \), and \( 2^N \) is the total possible configurations.
+$$P(n) = \frac{C(N, n)}{2^N}$$where $ C(N, n)$is the number of ways to choose $ n$particles out of $ N $, and $2^N$ is the total possible configurations.
 
 Here’s how you can implement it in Java:
 
@@ -316,7 +314,7 @@ x??
 
 #### Heat Capacity at Constant Volume
 
-Background context: Compute the heat capacity at constant volume, \( C_V \), as a function of temperature by averaging temperatures over multiple initial conditions.
+Background context: Compute the heat capacity at constant volume, $C_V$, as a function of temperature by averaging temperatures over multiple initial conditions.
 
 :p How do you compute and plot the heat capacity for 16 particles in a box?
 
@@ -585,8 +583,7 @@ The force calculation in the provided code is based on a pairwise interaction po
 :p How are forces calculated between particles in this simulation?
 ??x
 Forces between particles are calculated using a Lennard-Jones-like potential. If two particles are closer than the cutoff radius (`r2cut`), their interaction is computed based on the potential function, and the force is distributed between them. The formula used is:
-\[ wij = 48 \times (\frac{1}{r^6} - \frac{0.5}{r^9}) \times \frac{1}{r^3} \]
-where \( r \) is the distance between particles.
+$$wij = 48 \times (\frac{1}{r^6} - \frac{0.5}{r^9}) \times \frac{1}{r^3}$$where $ r$ is the distance between particles.
 
 The force components are then added to each particle’s total force:
 ```python
@@ -619,7 +616,7 @@ The energy calculation in the provided code includes both potential (`PE`) and k
 :p How is total energy calculated in this molecular dynamics simulation?
 ??x
 Total energy in the simulation is calculated by summing up the potential energy (`PE`) and kinetic energy (`KE`). The potential energy is computed using inter-particle interactions, while the kinetic energy is derived from particle velocities. The total energy `E` is given by:
-\[ E = KE + PE \]
+$$E = KE + PE$$
 
 Kinetic Energy calculation:
 ```python
@@ -697,7 +694,7 @@ This section describes how atoms are positioned within a simulation area. The po
 
 :p How does the code ensure that atoms are not placed outside the boundary?
 ??x
-The code uses the `random.random()` function in Python to generate random positions for the atoms within the specified range `-L + Ratom` to `L - Ratom`. If an atom's position is calculated and found to be outside these bounds, it adjusts the position by adding or subtracting multiples of \(2L\).
+The code uses the `random.random()` function in Python to generate random positions for the atoms within the specified range `-L + Ratom` to `L - Ratom`. If an atom's position is calculated and found to be outside these bounds, it adjusts the position by adding or subtracting multiples of $2L$.
 
 ```python
 x = (L - Ratom) * random.random() - L + Ratom  # Random x position within the boundaries
@@ -717,7 +714,7 @@ This section explains how initial velocities are assigned to atoms. Velocities a
 
 :p How does the code determine the initial velocity components for each atom?
 ??x
-The code assigns the x-component of velocity (\(vx\)) and y-component of velocity (\(vy\)) using trigonometric functions. The velocities are derived from a preferred velocity `pref` and a random angle `theta` between 0 and \(2\pi\).
+The code assigns the x-component of velocity ($vx $) and y-component of velocity ($ vy $) using trigonometric functions. The velocities are derived from a preferred velocity `pref` and a random angle `theta` between 0 and$2\pi$.
 
 ```python
 theta = 2 * pi * random.random()  # Randomly select an angle within the range [0, 2π]
@@ -736,7 +733,7 @@ This section outlines the method for calculating forces between atoms using a mo
 
 :p How does the code compute the net force on each atom?
 ??x
-The code computes the net force on each atom by iterating over all pairs of atoms, calculating the relative position vector `dr`, and applying the modified Lennard-Jones potential to determine the force. If the distance between two atoms is too small (less than \(R_{atom}\)), a correction factor is applied.
+The code computes the net force on each atom by iterating over all pairs of atoms, calculating the relative position vector `dr`, and applying the modified Lennard-Jones potential to determine the force. If the distance between two atoms is too small (less than $R_{atom}$), a correction factor is applied.
 
 ```python
 def forces(fr):
@@ -767,7 +764,7 @@ This section details the logic for updating positions of atoms while enforcing p
 
 :p How does the code handle periodic boundary conditions?
 ??x
-The code ensures that atom positions are updated within the boundaries by adjusting them when they move outside the defined range \([-L, L]\).
+The code ensures that atom positions are updated within the boundaries by adjusting them when they move outside the defined range $[-L, L]$.
 
 ```python
 for i in range(0, Natom):

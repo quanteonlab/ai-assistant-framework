@@ -71,12 +71,12 @@ x??
 Background context: In signal theory, signals can be categorized as either continuous or discrete. A continuous-time signal is one where the independent variable (usually time) can take on any real value. Conversely, a discrete-time signal is defined at specific, often equally spaced, points in time.
 :p What are the differences between Continuous and Discrete Signals?
 ??x
-Continuous signals have their values defined for all possible times, represented by a continuous function of time \( t \). They are commonly used to model analog signals like sound pressure levels over time.
+Continuous signals have their values defined for all possible times, represented by a continuous function of time $t$. They are commonly used to model analog signals like sound pressure levels over time.
 
 Discrete signals, on the other hand, only take specific values at certain discrete points in time. They are often obtained through sampling continuous signals and are frequently used in digital systems.
 For example:
-- A continuous signal \( v(t) \) might represent the voltage from a microphone over time.
-- A discrete signal \( v[n] \), where \( n \) is an integer, could be the sampled version of this voltage.
+- A continuous signal $v(t)$ might represent the voltage from a microphone over time.
+- A discrete signal $v[n]$, where $ n$ is an integer, could be the sampled version of this voltage.
 
 Code Example (C++):
 ```cpp
@@ -98,7 +98,7 @@ x??
 #### Discrete-Time Signals
 Background context explaining discrete-time signals. A discrete-time signal is characterized by an integer-valued independent variable (n ∈ ℤ). While its value can be a real number, the term "discrete-time signal" indicates that the signal's values are defined only at integer points in time.
 
-We often visualize continuous-time signals as ordinary function plots with time on the horizontal axis and the signal value \( p(t) \) on the vertical axis. In contrast, discrete-time signals can be plotted similarly but are only defined for specific integer values of n (see Figure 14.7).
+We often visualize continuous-time signals as ordinary function plots with time on the horizontal axis and the signal value $p(t)$ on the vertical axis. In contrast, discrete-time signals can be plotted similarly but are only defined for specific integer values of n (see Figure 14.7).
 
 Discrete-time signals can be thought of as a sampled version of continuous-time signals through digitization or analog-to-digital conversion.
 
@@ -112,15 +112,15 @@ x??
 #### Manipulating Signals: Time Shifts and Scaling
 Background context explaining how signals can be manipulated through time shifts and scaling.
 
-Time shifting to the right by a distance \( s \) involves replacing \( t \) with \( t - s \). Conversely, time shifting to the left (or in the negative direction) is achieved by replacing \( t \) with \( t + s \).
+Time shifting to the right by a distance $s $ involves replacing$t $ with$ t - s $. Conversely, time shifting to the left (or in the negative direction) is achieved by replacing $ t$with $ t + s$.
 
-For example, reflecting a signal about \( t = 0 \) means simply replacing \( t \) with \( -t \).
+For example, reflecting a signal about $t = 0 $ means simply replacing$t $ with$-t$.
 
 Scaling the domain of the signal involves changing the independent variable. For instance, to expand or compress the domain, you can multiply the independent variable by a scaling factor.
 
 :p How do we time-shift a signal in discrete-time?
 ??x
-To time-shift a discrete-time signal to the right by a distance \( s \), replace \( n \) with \( n - s \). For shifting to the left, replace \( n \) with \( n + s \).
+To time-shift a discrete-time signal to the right by a distance $s $, replace $ n $ with $ n - s $. For shifting to the left, replace$ n $ with $ n + s$.
 x??
 
 ---
@@ -128,7 +128,7 @@ x??
 #### Linear Time-Invariant (LTI) Systems
 Background context explaining LTI systems. In signal processing theory, an LTI system transforms an input signal into a new output signal. The mathematical concept of a system can describe many real-world processes in audio processing.
 
-For example, an amplifier is a simple LTI system that increases the amplitude of its input signal by a factor \( A \), known as the gain of the amp. Given an input signal \( x(t) \), this system would produce an output signal \( y(t) = Ax(t) \).
+For example, an amplifier is a simple LTI system that increases the amplitude of its input signal by a factor $A $, known as the gain of the amp. Given an input signal $ x(t)$, this system would produce an output signal $ y(t) = Ax(t)$.
 
 A time-invariant system's behavior does not change over time, meaning a time shift in the input causes an equal time shift in the output.
 
@@ -197,18 +197,16 @@ x??
 ---
 #### Unit Impulse Signal in Discrete Time
 Background context: The unit impulse is a fundamental signal used to describe LTI systems. It is defined as having a value of 1 at n=0 and 0 everywhere else. Its mathematical representation is:
-\[ d[n] = \begin{cases} 
+$$d[n] = \begin{cases} 
 1 & \text{if } n = 0 \\
 0 & \text{otherwise}
-\end{cases} \]
-
-:p What is the unit impulse signal, and how is it represented mathematically?
+\end{cases}$$:p What is the unit impulse signal, and how is it represented mathematically?
 ??x
-The unit impulse signal, denoted as \( d[n] \), is a discrete-time signal that has a value of 1 at n=0 and 0 everywhere else. Mathematically, this can be represented as:
-\[ d[n] = \begin{cases} 
+The unit impulse signal, denoted as $d[n]$, is a discrete-time signal that has a value of 1 at n=0 and 0 everywhere else. Mathematically, this can be represented as:
+$$d[n] = \begin{cases} 
 1 & \text{if } n = 0 \\
 0 & \text{otherwise}
-\end{cases} \]
+\end{cases}$$
 
 This signal is crucial because it helps in understanding the behavior of LTI systems; by knowing how a system responds to the unit impulse, one can infer its response to any other input.
 
@@ -264,7 +262,7 @@ x??
 ---
 
 #### Serial Connection
-Serial connection describes a system where the output of one component (B) is the input to another component (A), mathematically represented as \( y(t) = B(A(x(t))) \).
+Serial connection describes a system where the output of one component (B) is the input to another component (A), mathematically represented as $y(t) = B(A(x(t)))$.
 :p What does serial connection mean in system interconnection?
 ??x
 In serial connection, the output of one system or function acts directly as the input for the next. This forms a sequence where each subsequent block processes the output from its predecessor.
@@ -283,7 +281,7 @@ x??
 ---
 
 #### Parallel Connection
-Parallel connection involves combining the outputs of two components (or systems) using simple linear combinations, represented as \( y(t) = aA(x(t)) + bB(x(t)) \).
+Parallel connection involves combining the outputs of two components (or systems) using simple linear combinations, represented as $y(t) = aA(x(t)) + bB(x(t))$.
 :p What is parallel connection in system interconnection?
 ??x
 In parallel connection, multiple systems or functions are connected such that their outputs are summed up with appropriate weights. This allows for combining the effects of different components directly.
@@ -303,7 +301,7 @@ x??
 ---
 
 #### Feedback Loop
-Feedback loop involves returning the system's own output to its input, typically represented as \( y(t) = x(t) - a \cdot y(t) \). Here, \( a \) is a feedback factor.
+Feedback loop involves returning the system's own output to its input, typically represented as $y(t) = x(t) - a \cdot y(t)$. Here,$ a$ is a feedback factor.
 :p What does a feedback loop in systems mean?
 ??x
 A feedback loop is a mechanism where part of the output from a system is fed back to its input. This can be used for control purposes or to modify the behavior of the system dynamically.
@@ -321,27 +319,27 @@ x??
 ---
 
 #### Unit Impulse in Continuous Time
-The unit impulse \( \delta(t) \) is defined as zero everywhere except at \( t=0 \), where it is infinite, but its area under the curve equals 1. It can be formally defined as the limit of a box function with width approaching zero and height approaching infinity.
+The unit impulse $\delta(t)$ is defined as zero everywhere except at $t=0$, where it is infinite, but its area under the curve equals 1. It can be formally defined as the limit of a box function with width approaching zero and height approaching infinity.
 :p What is the definition of the unit impulse in continuous time?
 ??x
-The unit impulse \( \delta(t) \) is a mathematical construct that is zero everywhere except at \( t=0 \), where it has an infinite value, but its integral over all time equals 1. It can be thought of as a function that represents an instantaneous "hit" with a total area under the curve equal to one.
+The unit impulse $\delta(t)$ is a mathematical construct that is zero everywhere except at $t=0$, where it has an infinite value, but its integral over all time equals 1. It can be thought of as a function that represents an instantaneous "hit" with a total area under the curve equal to one.
 Formally:
-\[ \delta(t) = \lim_{T \to 0} \frac{1}{T} b(t), \text{ where } b(t) = 
+$$\delta(t) = \lim_{T \to 0} \frac{1}{T} b(t), \text{ where } b(t) = 
 \begin{cases} 
 \frac{1}{T}, & \text{if } 0 \leq t < T \\
 0, & \text{otherwise}
-\end{cases} \]
-x??
+\end{cases}$$x??
 
 ---
 
 #### Impulse Train to Represent Signals
-Impulse train is used to represent an arbitrary signal as a sum of scaled and time-shifted unit impulses. This can be written in continuous time as \( x(t) = \int_{-\infty}^{\infty} x(\tau) \delta(t - \tau) d\tau \).
+Impulse train is used to represent an arbitrary signal as a sum of scaled and time-shifted unit impulses. This can be written in continuous time as $x(t) = \int_{-\infty}^{\infty} x(\tau) \delta(t - \tau) d\tau$.
 :p How can we use impulse trains to represent an arbitrary signal?
 ??x
-Impulse trains are used to express any arbitrary signal \( x(t) \) as a sum of scaled and time-shifted unit impulses. Mathematically, this is represented by convolving the signal with a delta function:
-\[ x(t) = \int_{-\infty}^{\infty} x(\tau) \delta(t - \tau) d\tau \]
-This means that the value of \( x(t) \) at any point can be found by summing up contributions from each impulse, weighted by the signal's value at the time shift.
+Impulse trains are used to express any arbitrary signal $x(t)$ as a sum of scaled and time-shifted unit impulses. Mathematically, this is represented by convolving the signal with a delta function:
+$$x(t) = \int_{-\infty}^{\infty} x(\tau) \delta(t - \tau) d\tau$$
+
+This means that the value of $x(t)$ at any point can be found by summing up contributions from each impulse, weighted by the signal's value at the time shift.
 ```java
 public class ImpulseTrain {
     public double reconstructSignal(double[] signalSamples) {
@@ -363,14 +361,12 @@ x??
 ---
 
 #### Convolution in Continuous Time
-Convolution is a mathematical operation that expresses how the shape of one function is modified by another. For an arbitrary signal \( x(t) \), it can be represented as:
-\[ x(t) = \int_{-\infty}^{\infty} x(\tau) h(t - \tau) d\tau \]
-where \( h(t) \) represents the impulse response of a system.
+Convolution is a mathematical operation that expresses how the shape of one function is modified by another. For an arbitrary signal $x(t)$, it can be represented as:
+$$x(t) = \int_{-\infty}^{\infty} x(\tau) h(t - \tau) d\tau$$where $ h(t)$ represents the impulse response of a system.
 :p What is convolution in continuous time?
 ??x
-Convolution is an operation that combines two signals to produce a third signal. It expresses how the shape of one function (the input signal) is modified by another function (the system's impulse response). Mathematically, for a signal \( x(t) \), it can be represented as:
-\[ x(t) = \int_{-\infty}^{\infty} x(\tau) h(t - \tau) d\tau \]
-where \( h(t) \) is the impulse response of the system.
+Convolution is an operation that combines two signals to produce a third signal. It expresses how the shape of one function (the input signal) is modified by another function (the system's impulse response). Mathematically, for a signal $x(t)$, it can be represented as:
+$$x(t) = \int_{-\infty}^{\infty} x(\tau) h(t - \tau) d\tau$$where $ h(t)$ is the impulse response of the system.
 ```java
 public class Convolution {
     public double convolveSignals(double[] signalA, double[] signalB) {
@@ -391,17 +387,17 @@ public class Convolution {
 x??
 
 #### Impulse Response in Discrete Time
-Background context: The impulse response is a fundamental concept for linear time-invariant (LTI) systems. It describes how a system responds to an input signal that is a unit impulse function, denoted as \(d[n]\). For discrete-time LTI systems, the response of the system to an arbitrary input \(x[n]\) can be determined by convolving \(x[n]\) with the impulse response \(h[n]\).
+Background context: The impulse response is a fundamental concept for linear time-invariant (LTI) systems. It describes how a system responds to an input signal that is a unit impulse function, denoted as $d[n]$. For discrete-time LTI systems, the response of the system to an arbitrary input $ x[n]$can be determined by convolving $ x[n]$with the impulse response $ h[n]$.
 
-Relevant formulas: The output \(y[n]\) for a given input \(x[n] = d[n]\) is:
-\[ x[0]d[n] \rightarrow y[n] = x[0]h[n] \]
+Relevant formulas: The output $y[n]$ for a given input $x[n] = d[n]$ is:
+$$x[0]d[n] \rightarrow y[n] = x[0]h[n]$$
+
 For an arbitrary input signal, the system's response can be written as:
-\[ y[n] = \sum_{k=-\infty}^{\infty} x[k]h[n-k] \]
-
-:p What is the impulse response and how does it relate to the output of a discrete-time LTI system?
+$$y[n] = \sum_{k=-\infty}^{\infty} x[k]h[n-k]$$:p What is the impulse response and how does it relate to the output of a discrete-time LTI system?
 ??x
-The impulse response, \(h[n]\), is the system's reaction to a unit impulse function \(d[n]\). For an input signal \(x[n] = d[n]\), the system's output is \(y[n] = x[0]h[n] = h[n]\) because \(x[0] = 1\). The response of the LTI system for any arbitrary input can be found by convolving the input with the impulse response:
-\[ y[n] = \sum_{k=-\infty}^{\infty} x[k]h[n-k] \]
+The impulse response,$h[n]$, is the system's reaction to a unit impulse function $ d[n]$. For an input signal $ x[n] = d[n]$, the system's output is $ y[n] = x[0]h[n] = h[n]$because $ x[0] = 1$. The response of the LTI system for any arbitrary input can be found by convolving the input with the impulse response:
+$$y[n] = \sum_{k=-\infty}^{\infty} x[k]h[n-k]$$
+
 This concept is summarized in Equation (14.6) from the provided text.
 
 ```java
@@ -427,12 +423,11 @@ x??
 Background context: The convolution sum is a mathematical operation that describes how the output of an LTI system can be calculated from its input and impulse response. It involves convolving the input signal with the impulse response, essentially summing up the weighted responses to each component of the input.
 
 Relevant formulas: For a discrete-time LTI system:
-\[ y[n] = \sum_{k=-\infty}^{\infty} x[k]h[n-k] \]
-
-:p What is the convolution sum and how does it work?
+$$y[n] = \sum_{k=-\infty}^{\infty} x[k]h[n-k]$$:p What is the convolution sum and how does it work?
 ??x
-The convolution sum, represented by Equation (14.6), describes the output \(y[n]\) of an LTI system given its input \(x[n]\) and impulse response \(h[n]\). It involves summing up the responses to each time-shifted component of the input signal:
-\[ y[n] = \sum_{k=-\infty}^{\infty} x[k]h[n-k] \]
+The convolution sum, represented by Equation (14.6), describes the output $y[n]$ of an LTI system given its input $x[n]$ and impulse response $h[n]$. It involves summing up the responses to each time-shifted component of the input signal:
+$$y[n] = \sum_{k=-\infty}^{\infty} x[k]h[n-k]$$
+
 This means that for every point in time, we consider the entire history of the input and its corresponding impulse response.
 
 ```java
@@ -455,15 +450,14 @@ x??
 
 ---
 #### Convolution in Continuous Time
-Background context: In continuous time, the convolution operation is similar to that in discrete time but uses integrals instead of summations. The impulse response \(h(t)\) describes how a system responds to an input signal \(x(t)\).
+Background context: In continuous time, the convolution operation is similar to that in discrete time but uses integrals instead of summations. The impulse response $h(t)$ describes how a system responds to an input signal $x(t)$.
 
 Relevant formulas: For a continuous-time LTI system:
-\[ y(t) = \int_{-\infty}^{\infty} x(\tau)h(t-\tau)d\tau \]
-
-:p How does convolution work in continuous time?
+$$y(t) = \int_{-\infty}^{\infty} x(\tau)h(t-\tau)d\tau$$:p How does convolution work in continuous time?
 ??x
-In continuous time, the output \(y(t)\) of an LTI system is given by convolving the input signal \(x(t)\) with the impulse response \(h(t)\):
-\[ y(t) = \int_{-\infty}^{\infty} x(\tau)h(t-\tau)d\tau \]
+In continuous time, the output $y(t)$ of an LTI system is given by convolving the input signal $x(t)$ with the impulse response $h(t)$:
+$$y(t) = \int_{-\infty}^{\infty} x(\tau)h(t-\tau)d\tau$$
+
 This integral represents the weighted sum of all past and present values of the input, each multiplied by the corresponding value of the impulse response.
 
 ```java
@@ -495,12 +489,12 @@ Background context: The convolution operation can be visualized as integrating t
 
 :p How is convolution visualized in continuous time?
 ??x
-In continuous time, convolution can be visualized by first flipping and shifting one function (the impulse response \(h(t)\)) relative to a point on the other function (the input signal \(x(t)\)). Then, the area under the curve of their product at that point is calculated. This process is repeated for all points along the timeline.
+In continuous time, convolution can be visualized by first flipping and shifting one function (the impulse response $h(t)$) relative to a point on the other function (the input signal $ x(t)$). Then, the area under the curve of their product at that point is calculated. This process is repeated for all points along the timeline.
 
 This can be illustrated as follows:
-1. Plot \(x(t)\).
-2. Flip and shift \(h(t-\tau)\) over the timeline.
-3. Calculate the integral (area under the curve) of the product \(x(\tau)h(t-\tau)\).
+1. Plot $x(t)$.
+2. Flip and shift $h(t-\tau)$ over the timeline.
+3. Calculate the integral (area under the curve) of the product $x(\tau)h(t-\tau)$.
 
 ```java
 // Pseudo-code for visualizing convolution in continuous time
@@ -543,21 +537,18 @@ x??
 
 Convolution is a mathematical operation that is used to express how the shape of one function is modified by another. In signal processing, it's often used to find the output of a linear time-invariant system given its input and impulse response.
 
-The convolution of two functions \(x(t)\) and \(h(t)\) is defined as:
-
-\[ y(t) = (x * h)(t) = \int_{-\infty}^{+\infty} x(\tau) h(t - \tau) d\tau \]
+The convolution of two functions $x(t)$ and $h(t)$ is defined as:
+$$y(t) = (x * h)(t) = \int_{-\infty}^{+\infty} x(\tau) h(t - \tau) d\tau$$
 
 This can be rewritten as:
-\[ y(t) = (x * h)(t) = \int_{-\infty}^{+\infty} x(t + \tau) h(-\tau) d\tau \]
-
-:p What is the convolution operation, and how does it apply to signal processing?
+$$y(t) = (x * h)(t) = \int_{-\infty}^{+\infty} x(t + \tau) h(-\tau) d\tau$$:p What is the convolution operation, and how does it apply to signal processing?
 ??x
 The convolution operation allows us to determine the output of a linear time-invariant system given its input and impulse response. It is mathematically defined as an integral that combines the two functions in such a way that one function is reversed and shifted, then multiplied with the other function.
 
 In the context of signal processing:
-- \( x(t) \) represents the input signal.
-- \( h(t) \) represents the impulse response or kernel of the system.
-- The result, \( y(t) \), is the output signal, which can be obtained by convolving the input and the impulse response.
+- $x(t)$ represents the input signal.
+- $h(t)$ represents the impulse response or kernel of the system.
+- The result,$y(t)$, is the output signal, which can be obtained by convolving the input and the impulse response.
 
 Here’s a simple example in pseudocode to illustrate the convolution process:
 ```java
@@ -586,22 +577,20 @@ x??
 
 The commutative property of convolution states that the order in which two functions are convolved does not affect their result. Mathematically, this is expressed as:
 
-\[ x(t) * h(t) = h(t) * x(t) \]
-
-:p What property of convolution shows how the order of the signals being convolved does not change the output?
+$$x(t) * h(t) = h(t) * x(t)$$:p What property of convolution shows how the order of the signals being convolved does not change the output?
 ??x
 The commutative property of convolution demonstrates that when two functions are convolved, their order does not matter. The result is the same regardless of which function you apply first.
 
 In mathematical terms:
-\[ x(t) * h(t) = h(t) * x(t) \]
+$$x(t) * h(t) = h(t) * x(t)$$
 
-This means if we have a signal \(x(t)\) and an impulse response \(h(t)\), convolving \(x\) with \(h\) will yield the same result as convolving \(h\) with \(x\).
+This means if we have a signal $x(t)$ and an impulse response $h(t)$, convolving $ x$with $ h$will yield the same result as convolving $ h$with $ x$.
 
 :p
 ??x
-The commutative property of convolution ensures that the order in which you convolve two functions does not affect the output. This means that for any two signals \( x(t) \) and \( h(t) \), their convolution is symmetric:
+The commutative property of convolution ensures that the order in which you convolve two functions does not affect the output. This means that for any two signals $x(t)$ and $h(t)$, their convolution is symmetric:
 
-\[ x(t) * h(t) = h(t) * x(t) \]
+$$x(t) * h(t) = h(t) * x(t)$$
 
 This symmetry simplifies many signal processing operations, as you can perform convolutions in any order without affecting the result.
 
@@ -613,16 +602,12 @@ This symmetry simplifies many signal processing operations, as you can perform c
 #### Associative Property of Convolution
 
 The associative property of convolution states that when three functions are being convolved, the way in which they are grouped does not affect their outcome. Mathematically, this is written as:
-
-\[ x(t) * (h1(t) * h2(t)) = (x(t) * h1(t)) * h2(t) \]
-
-:p What property of convolution ensures that the grouping of functions being convolved does not change the output?
+$$x(t) * (h1(t) * h2(t)) = (x(t) * h1(t)) * h2(t)$$:p What property of convolution ensures that the grouping of functions being convolved does not change the output?
 ??x
 The associative property of convolution guarantees that when three or more functions are convolved, their order can be grouped in any way without affecting the final result. Mathematically, it is expressed as:
+$$x(t) * (h1(t) * h2(t)) = (x(t) * h1(t)) * h2(t)$$
 
-\[ x(t) * (h1(t) * h2(t)) = (x(t) * h1(t)) * h2(t) \]
-
-This means that if you have three signals \( x(t) \), \( h1(t) \), and \( h2(t) \), the result of their convolution will be the same regardless of how they are grouped. For example, convolving \( x(t) \) with the result of \( (h1 * h2)(t) \) yields the same output as first convolving \( x(t) \) and \( h1(t) \), then convolving that result with \( h2(t) \).
+This means that if you have three signals $x(t)$,$ h1(t)$, and $ h2(t)$, the result of their convolution will be the same regardless of how they are grouped. For example, convolving $ x(t)$with the result of $(h1 * h2)(t)$ yields the same output as first convolving $x(t)$ and $h1(t)$, then convolving that result with $ h2(t)$.
 
 :p
 ??x
@@ -633,15 +618,12 @@ This means that if you have three signals \( x(t) \), \( h1(t) \), and \( h2(t) 
 
 The distributive property of convolution states that when a function is convolved with the sum of two other functions, it can be broken down into the sum of its individual convolutions. Mathematically, this is expressed as:
 
-\[ x(t) * (h1(t) + h2(t)) = (x(t) * h1(t)) + (x(t) * h2(t)) \]
-
-:p What property of convolution allows breaking down a function's convolution with the sum of two other functions into separate convolutions?
+$$x(t) * (h1(t) + h2(t)) = (x(t) * h1(t)) + (x(t) * h2(t))$$:p What property of convolution allows breaking down a function's convolution with the sum of two other functions into separate convolutions?
 ??x
-The distributive property of convolution states that when you have a function \( x(t) \) being convolved with the sum of two other functions, it can be broken down into the sum of its individual convolutions. Mathematically, this is expressed as:
+The distributive property of convolution states that when you have a function $x(t)$ being convolved with the sum of two other functions, it can be broken down into the sum of its individual convolutions. Mathematically, this is expressed as:
+$$x(t) * (h1(t) + h2(t)) = (x(t) * h1(t)) + (x(t) * h2(t))$$
 
-\[ x(t) * (h1(t) + h2(t)) = (x(t) * h1(t)) + (x(t) * h2(t)) \]
-
-This means that if you have a signal \( x(t) \) and two impulse responses \( h1(t) \) and \( h2(t) \), convolving \( x(t) \) with the sum of these functions is equivalent to separately convolving \( x(t) \) with each function and then adding the results together.
+This means that if you have a signal $x(t)$ and two impulse responses $h1(t)$ and $h2(t)$, convolving $ x(t)$with the sum of these functions is equivalent to separately convolving $ x(t)$ with each function and then adding the results together.
 
 :p
 ??x
@@ -652,49 +634,39 @@ This means that if you have a signal \( x(t) \) and two impulse responses \( h1(
 
 A sinusoidal signal can be represented in a general form as:
 
-\[ x(t) = A \cos(w0t + \phi) \]
+$$x(t) = A \cos(w0t + \phi)$$where:
+- $A$ is the amplitude.
+- $w_0$ is the angular frequency (in radians per second).
+- $\phi$ is the phase offset.
 
-where:
-- \( A \) is the amplitude.
-- \( w_0 \) is the angular frequency (in radians per second).
-- \( \phi \) is the phase offset.
+A basic sinusoidal signal when $A=1, w_0=1,$ and $\phi=0$ reduces to:
+$$x(t) = \cos(t)$$
 
-A basic sinusoidal signal when \( A=1, w_0=1, \) and \( \phi=0 \) reduces to:
+When $\phi = \frac{\pi}{2}$, it becomes:
 
-\[ x(t) = \cos(t) \]
-
-When \( \phi = \frac{\pi}{2} \), it becomes:
-
-\[ x(t) = \sin(t) \]
-
-:p What is a sinusoidal signal, and how can it be represented mathematically?
+$$x(t) = \sin(t)$$:p What is a sinusoidal signal, and how can it be represented mathematically?
 ??x
 A sinusoidal signal is a periodic function that oscillates between two values over time. Mathematically, it can be represented as:
+$$x(t) = A \cos(w0t + \phi)$$where:
+- $A$ is the amplitude (the maximum value of the wave).
+- $w_0$ is the angular frequency in radians per second.
+- $\phi$ is the phase offset, which shifts the cosine wave horizontally along the time axis.
 
-\[ x(t) = A \cos(w0t + \phi) \]
+When $A = 1 $, $ w_0 = 1 $, and$\phi = 0$:
 
-where:
-- \( A \) is the amplitude (the maximum value of the wave).
-- \( w_0 \) is the angular frequency in radians per second.
-- \( \phi \) is the phase offset, which shifts the cosine wave horizontally along the time axis.
+$$x(t) = \cos(t)$$
 
-When \( A = 1 \), \( w_0 = 1 \), and \( \phi = 0 \):
+And when $\phi = \frac{\pi}{2}$:
 
-\[ x(t) = \cos(t) \]
-
-And when \( \phi = \frac{\pi}{2} \):
-
-\[ x(t) = \sin(t) \]
-
-:p
+$$x(t) = \sin(t)$$:p
 ??x
 
 #### Complex Number Representation
-Background context explaining how complex numbers are represented visually and mathematically. The magnitude \(|c|\) is given by \(\sqrt{a^2 + b^2}\), where \(c = a + jb\). The argument (or phase) of the complex number, \(\arg(c)\), is defined as \(\tan^{-1}(b/a)\).
+Background context explaining how complex numbers are represented visually and mathematically. The magnitude $|c|$ is given by $\sqrt{a^2 + b^2}$, where $ c = a + jb$. The argument (or phase) of the complex number,$\arg(c)$, is defined as $\tan^{-1}(b/a)$.
 
 :p How do you represent a complex number in 2D space and calculate its magnitude and argument?
 ??x
-A complex number can be represented as a vector [a, b] in a two-dimensional plane. The magnitude of the complex number \(c = a + jb\) is calculated using \(\sqrt{a^2 + b^2}\), while the argument (phase) is determined by \(\tan^{-1}(b/a)\).
+A complex number can be represented as a vector [a, b] in a two-dimensional plane. The magnitude of the complex number $c = a + jb $ is calculated using$\sqrt{a^2 + b^2}$, while the argument (phase) is determined by $\tan^{-1}(b/a)$.
 
 ```java
 public class ComplexNumber {
@@ -724,12 +696,12 @@ The explanation of how complex numbers are multiplied algebraically and the prop
 
 :p What happens when two complex numbers are multiplied?
 ??x
-When two complex numbers \(c_1 = a_1 + j b_1\) and \(c_2 = a_2 + j b_2\) are multiplied, the resulting product has its magnitude equal to the product of their magnitudes and its argument (phase) equal to the sum of their arguments. The formula for multiplication is:
-\[ c_1 \cdot c_2 = (a_1a_2 - b_1b_2) + j(a_1b_2 + a_2b_1). \]
+When two complex numbers $c_1 = a_1 + j b_1 $ and$c_2 = a_2 + j b_2$ are multiplied, the resulting product has its magnitude equal to the product of their magnitudes and its argument (phase) equal to the sum of their arguments. The formula for multiplication is:
+$$c_1 \cdot c_2 = (a_1a_2 - b_1b_2) + j(a_1b_2 + a_2b_1).$$
 
 The magnitude and argument properties are:
-\[ |c_1 \cdot c_2| = |c_1| \cdot |c_2|, \]
-\[ \arg(c_1 \cdot c_2) = \arg(c_1) + \arg(c_2). \]
+$$|c_1 \cdot c_2| = |c_1| \cdot |c_2|,$$
+$$\arg(c_1 \cdot c_2) = \arg(c_1) + \arg(c_2).$$
 
 This implies that multiplication causes a rotation in the complex plane.
 
@@ -753,9 +725,9 @@ Explanation of how unit-length quaternions can be used to represent rotations in
 
 :p How do unit-length quaternions work for rotations?
 ??x
-Unit-length quaternions operate similarly to complex numbers but in a four-dimensional space. A quaternion \(q = w + xi + yj + zk\) has one real part (w) and three imaginary parts (x, y, z). When the magnitude of a quaternion is 1 (\(w^2 + x^2 + y^2 + z^2 = 1\)), it represents a rotation in 3D space. Multiplying by such a unit-length quaternion acts like rotating a vector by an angle \(\theta\) around an axis.
+Unit-length quaternions operate similarly to complex numbers but in a four-dimensional space. A quaternion $q = w + xi + yj + zk $ has one real part (w) and three imaginary parts (x, y, z). When the magnitude of a quaternion is 1 ($w^2 + x^2 + y^2 + z^2 = 1 $), it represents a rotation in 3D space. Multiplying by such a unit-length quaternion acts like rotating a vector by an angle$\theta$ around an axis.
 
-For example, multiplying \(j = \sqrt{-1}\) (an imaginary number) with itself multiple times rotates the vector by 90 degrees each time in the complex plane.
+For example, multiplying $j = \sqrt{-1}$(an imaginary number) with itself multiple times rotates the vector by 90 degrees each time in the complex plane.
 
 ```java
 public class Quaternion {
@@ -786,7 +758,7 @@ Illustration of the effect of multiplying complex numbers with a magnitude of 1,
 
 :p What happens when you multiply two complex numbers both having a magnitude of 1?
 ??x
-When two complex numbers \(c_1\) and \(c_2\), each with a magnitude of 1, are multiplied together, the product results in a pure rotation. The magnitude of the product is the same as the magnitudes of the inputs (1), and the argument of the product is the sum of the arguments of the input numbers.
+When two complex numbers $c_1 $ and$c_2$, each with a magnitude of 1, are multiplied together, the product results in a pure rotation. The magnitude of the product is the same as the magnitudes of the inputs (1), and the argument of the product is the sum of the arguments of the input numbers.
 
 ```java
 public class ComplexNumber {
@@ -808,7 +780,7 @@ Explanation of how complex multiplication can result in a spiral motion when the
 
 :p What happens if one of the complex numbers involved in multiplication does not have a unit length?
 ??x
-If the magnitude of one or both complex numbers \(c_1\) and \(c_2\) is not 1, then their product undergoes a scaling transformation along with a rotation. The magnitude of the product will be scaled by the magnitude of \(c_1\), while the argument (phase) still sums up as in pure rotations.
+If the magnitude of one or both complex numbers $c_1 $ and$c_2 $ is not 1, then their product undergoes a scaling transformation along with a rotation. The magnitude of the product will be scaled by the magnitude of$c_1$, while the argument (phase) still sums up as in pure rotations.
 
 ```java
 public class ComplexNumber {
@@ -826,32 +798,34 @@ x??
 ---
 
 #### Complex Numbers and Rotation in the Complex Plane
-Background context explaining the concept of complex numbers, their multiplication by \( j \), and how this operation results in a 90-degree rotation. The text mentions that multiplying any complex number by \( j \) rotates it by 90 degrees, as illustrated in Figure 14.18.
-:p What happens when you multiply a complex number by \( j \)?
+Background context explaining the concept of complex numbers, their multiplication by $j $, and how this operation results in a 90-degree rotation. The text mentions that multiplying any complex number by $ j$ rotates it by 90 degrees, as illustrated in Figure 14.18.
+:p What happens when you multiply a complex number by $j$?
 ??x
-Multiplying a complex number by \( j \) results in a 90-degree rotation of that number in the complex plane. This is because \( j = e^{i\pi/2} \), and multiplication by \( j \) can be seen as multiplying by \( e^{i\pi/2} \), which corresponds to a 90-degree rotation.
+Multiplying a complex number by $j $ results in a 90-degree rotation of that number in the complex plane. This is because$j = e^{i\pi/2}$, and multiplication by $ j$can be seen as multiplying by $ e^{i\pi/2}$, which corresponds to a 90-degree rotation.
 x??
 
 ---
 
 #### Complex Exponential and Euler’s Formula
-Explanation of how raising a complex number with magnitude 1 to a power traces out circular paths in the complex plane, leading to sinusoidal behavior when projected onto axes. The text mentions that \( e^{j\omega_0 t} = \cos(\omega_0 t) + j\sin(\omega_0 t) \), where \( \omega_0 \) is a constant angular frequency.
+Explanation of how raising a complex number with magnitude 1 to a power traces out circular paths in the complex plane, leading to sinusoidal behavior when projected onto axes. The text mentions that $e^{j\omega_0 t} = \cos(\omega_0 t) + j\sin(\omega_0 t)$, where $\omega_0$ is a constant angular frequency.
 :p What is Euler’s formula, and how does it work?
 ??x
-Euler's formula states that for any complex number \( c \) with magnitude 1, the function \( f(n) = c^n \) traces out a circular path in the complex plane when \( n \) takes on increasing positive real values. Specifically, for a general complex exponential, we can write:
-\[ e^{j\omega_0 t} = \cos(\omega_0 t) + j\sin(\omega_0 t) \]
-This formula represents a complex number in its exponential form and shows how it results in a sinusoidal curve when plotted. The real part of \( e^{j\omega_0 t} \) is \( \cos(\omega_0 t) \), and the imaginary part is \( \sin(\omega_0 t) \).
+Euler's formula states that for any complex number $c $ with magnitude 1, the function$f(n) = c^n $ traces out a circular path in the complex plane when$n$ takes on increasing positive real values. Specifically, for a general complex exponential, we can write:
+$$e^{j\omega_0 t} = \cos(\omega_0 t) + j\sin(\omega_0 t)$$
+
+This formula represents a complex number in its exponential form and shows how it results in a sinusoidal curve when plotted. The real part of $e^{j\omega_0 t}$ is $\cos(\omega_0 t)$, and the imaginary part is $\sin(\omega_0 t)$.
 x??
 
 ---
 
 #### Fourier Series Representation
-Explanation of how periodic signals can be represented as a sum of harmonically related sinusoids, using the formula for the Fourier series. The text describes the Fourier series representation \( x(t) = \sum_{k=-\infty}^{\infty} a_k e^{j(kw_0)t} \), where \( w_0 \) is the fundamental frequency and \( a_k \) are the coefficients representing the amount of each harmonic in the signal.
+Explanation of how periodic signals can be represented as a sum of harmonically related sinusoids, using the formula for the Fourier series. The text describes the Fourier series representation $x(t) = \sum_{k=-\infty}^{\infty} a_k e^{j(kw_0)t}$, where $ w_0$is the fundamental frequency and $ a_k$ are the coefficients representing the amount of each harmonic in the signal.
 :p How can we represent a periodic signal as a sum of sinusoids?
 ??x
 A periodic signal can be represented as a sum of harmonically related sinusoids using the Fourier series. The general form of the Fourier series representation is:
-\[ x(t) = \sum_{k=-\infty}^{\infty} a_k e^{j(kw_0)t} \]
-Here, \( w_0 \) is the fundamental frequency of the signal, and \( a_k \) are the coefficients that represent the contribution of each harmonic component. This series allows us to decompose any periodic signal into its constituent sinusoidal components.
+$$x(t) = \sum_{k=-\infty}^{\infty} a_k e^{j(kw_0)t}$$
+
+Here,$w_0 $ is the fundamental frequency of the signal, and$a_k$ are the coefficients that represent the contribution of each harmonic component. This series allows us to decompose any periodic signal into its constituent sinusoidal components.
 x??
 
 ---
@@ -860,34 +834,30 @@ x??
 Explanation of how non-periodic signals can be represented as linear combinations of sinusoids, using the Fourier transform. The text mentions that reasonably well-behaved signals, even those that are not periodic, can be expressed as a sum of sinusoidal components at any frequency.
 :p What is the Fourier Transform and how does it work for non-periodic signals?
 ??x
-The Fourier transform allows us to represent non-periodic signals as linear combinations of sinusoids. It generalizes the concept of the Fourier series by extending it to non-periodic functions. For an arbitrary signal \( x(t) \), the Fourier transform decomposes it into its frequency components, allowing us to analyze the contribution of each frequency in the signal.
+The Fourier transform allows us to represent non-periodic signals as linear combinations of sinusoids. It generalizes the concept of the Fourier series by extending it to non-periodic functions. For an arbitrary signal $x(t)$, the Fourier transform decomposes it into its frequency components, allowing us to analyze the contribution of each frequency in the signal.
 x??
 
 ---
 
 #### Discrete Harmonic Coefficients to Continuous Frequency Representation
 
-Background context: In the previous discussion, we considered a discrete set of harmonic coefficients that represented how much each frequency component was present in a signal. This concept is now extended to a continuum where the time domain representation \( x(t) \) transitions into a frequency domain representation \( X(w) \). The function \( X(w) \) describes "how much" of each frequency is present in the original signal.
+Background context: In the previous discussion, we considered a discrete set of harmonic coefficients that represented how much each frequency component was present in a signal. This concept is now extended to a continuum where the time domain representation $x(t)$ transitions into a frequency domain representation $X(w)$. The function $ X(w)$ describes "how much" of each frequency is present in the original signal.
 
 Mathematically, we can find the frequency domain representation from the time domain using the Fourier transform:
 
-\[
-X(w) = \int_{-\infty}^{\infty} x(t)e^{-jwt} dt; \quad (14.15)
-\]
+$$X(w) = \int_{-\infty}^{\infty} x(t)e^{-jwt} dt; \quad (14.15)$$
 
-Conversely, to recover \( x(t) \):
+Conversely, to recover $x(t)$:
 
-\[
-x(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} X(w)e^{jw t} dw. \quad (14.16)
-\]
+$$x(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} X(w)e^{jw t} dw. \quad (14.16)$$
 
 All signals that meet the Dirichlet conditions have Fourier transforms and are "reasonably well-behaved."
 
-:p What does \( X(w) = \int_{-\infty}^{\infty} x(t)e^{-jwt} dt \) represent in terms of signal processing?
+:p What does $X(w) = \int_{-\infty}^{\infty} x(t)e^{-jwt} dt$ represent in terms of signal processing?
 ??x
-This equation represents the conversion of a time-domain signal \( x(t) \) into its frequency domain representation \( X(w) \). The integral computes the contribution of each frequency component present in \( x(t) \), effectively decomposing the signal into its constituent frequencies.
+This equation represents the conversion of a time-domain signal $x(t)$ into its frequency domain representation $X(w)$. The integral computes the contribution of each frequency component present in $ x(t)$, effectively decomposing the signal into its constituent frequencies.
 
-The term \( e^{-jwt} \) is an oscillating complex exponential function that modulates the signal at a frequency corresponding to \( w \). Integrating over all time (from \(-\infty\) to \(\infty\)) sums up these contributions, resulting in the amplitude and phase of each frequency component.
+The term $e^{-jwt}$ is an oscillating complex exponential function that modulates the signal at a frequency corresponding to $ w $. Integrating over all time (from $-\infty $ to $\infty$) sums up these contributions, resulting in the amplitude and phase of each frequency component.
 
 ```java
 public class FourierTransformExample {
@@ -916,16 +886,16 @@ x??
 ---
 #### Time and Frequency Domain Representations
 
-Background context: The time domain representation \( x(t) \) and frequency domain representation \( X(w) \) of a signal are two different ways to describe the same underlying signal. While \( x(t) \) directly describes how the amplitude changes with time, \( X(w) \) describes the composition of frequencies that make up \( x(t) \).
+Background context: The time domain representation $x(t)$ and frequency domain representation $X(w)$ of a signal are two different ways to describe the same underlying signal. While $x(t)$ directly describes how the amplitude changes with time,$ X(w)$ describes the composition of frequencies that make up $x(t)$.
 
-:p What is the difference between \( x(t) \) and \( X(w) \)?
+:p What is the difference between $x(t)$ and $X(w)$?
 ??x
 The primary difference lies in their domains:
 
-- **Time Domain (\( x(t) \))**: Describes how the amplitude of a signal changes over time.
-- **Frequency Domain (\( X(w) \))**: Represents the distribution of frequency components within the signal.
+- **Time Domain ($x(t)$)**: Describes how the amplitude of a signal changes over time.
+- **Frequency Domain ($X(w)$)**: Represents the distribution of frequency components within the signal.
 
-For example, \( x(t) = e^{-at} \) is represented in the time domain as an exponentially decaying signal. Its corresponding frequency domain representation \( |X(w)| = a/(a^2 + w^2) \) shows how this signal's energy is distributed across different frequencies, with more energy concentrated at lower frequencies.
+For example, $x(t) = e^{-at}$ is represented in the time domain as an exponentially decaying signal. Its corresponding frequency domain representation $|X(w)| = a/(a^2 + w^2)$ shows how this signal's energy is distributed across different frequencies, with more energy concentrated at lower frequencies.
 
 ```java
 public class FrequencyRepresentationExample {
@@ -960,11 +930,10 @@ Background context: A Bode plot is a visualization technique used to show the ma
 
 :p What are Bode plots used for?
 ??x
-Bode plots are used to visualize the complex-valued frequency response \( X(w) \) by plotting its magnitude and phase. This helps in understanding how a system behaves at different frequencies without dealing with complex numbers directly.
+Bode plots are used to visualize the complex-valued frequency response $X(w)$ by plotting its magnitude and phase. This helps in understanding how a system behaves at different frequencies without dealing with complex numbers directly.
 
 For example, given:
-- Magnitude: \( |X(w)| = 20 \log_{10} \left( \frac{a}{\sqrt{(a^2 + w^2)}} \right) \)
-- Phase: \( \angle X(w) = -\tan^{-1}\left(\frac{w}{a}\right) \)
+- Magnitude: $|X(w)| = 20 \log_{10} \left( \frac{a}{\sqrt{(a^2 + w^2)}} \right)$- Phase:$\angle X(w) = -\tan^{-1}\left(\frac{w}{a}\right)$
 
 These can be plotted on a Bode diagram to analyze the system's frequency response.
 
@@ -990,13 +959,13 @@ x??
 ---
 #### Fast Fourier Transform (FFT)
 
-Background context: The Fast Fourier Transform (FFT) is an efficient algorithm for computing the Discrete Fourier Transform (DFT). It reduces the number of required computations from \( O(N^2) \) to \( O(N \log N) \), making it feasible to compute the DFT of large data sets in real-time applications.
+Background context: The Fast Fourier Transform (FFT) is an efficient algorithm for computing the Discrete Fourier Transform (DFT). It reduces the number of required computations from $O(N^2)$ to $O(N \log N)$, making it feasible to compute the DFT of large data sets in real-time applications.
 
 :p What does FFT stand for and why is it important?
 ??x
 FFT stands for Fast Fourier Transform, an algorithm that significantly speeds up the computation of the Discrete Fourier Transform (DFT).
 
-It's important because without such optimizations, calculating the DFT directly would be computationally expensive, especially for large data sets. The FFT reduces the complexity from \( O(N^2) \) to \( O(N \log N) \), making real-time processing and analysis possible.
+It's important because without such optimizations, calculating the DFT directly would be computationally expensive, especially for large data sets. The FFT reduces the complexity from $O(N^2)$ to $O(N \log N)$, making real-time processing and analysis possible.
 
 For example, a naive implementation of DFT on 1024 points requires 1 million operations (since there are 1024 samples and each sample is processed by 1024 complex multiplications). With FFT, the same operation can be done with only 13,107 operations.
 
@@ -1017,11 +986,9 @@ Background context: The Fourier transform has a unique property where convolutio
 
 :p How does convolution in the time domain relate to multiplication in the frequency domain?
 ??x
-Convolution in the time domain of two signals \( x(t) \) and \( h(t) \) results in a new signal \( y(t) = x(t) * h(t) \). The Fourier transform property states that if we take the Fourier transforms of both \( x(t) \) and \( h(t) \), denoted as \( X(w) \) and \( H(w) \) respectively, then their convolution in the time domain corresponds to multiplication in the frequency domain:
+Convolution in the time domain of two signals $x(t)$ and $h(t)$ results in a new signal $y(t) = x(t) * h(t)$. The Fourier transform property states that if we take the Fourier transforms of both $ x(t)$and $ h(t)$, denoted as $ X(w)$and $ H(w)$ respectively, then their convolution in the time domain corresponds to multiplication in the frequency domain:
 
-\[
-Y(w) = X(w)H(w)
-\]
+$$Y(w) = X(w)H(w)$$
 
 Conversely, if we multiply two signals' Fourier transforms and take the inverse Fourier transform, it results in the convolution of the original signals.
 
@@ -1089,8 +1056,8 @@ If applicable, add code examples with explanations.
 :p What is the frequency response of an ideal filter?
 ??x
 The frequency response H(w) of an ideal filter looks like a rectangular box, where:
-- \( H(w) = 1 \) for frequencies within the passband.
-- \( H(w) = 0 \) for frequencies in the stopband.
+- $H(w) = 1$ for frequencies within the passband.
+- $H(w) = 0$ for frequencies in the stopband.
 
 This means that the filter preserves exactly the frequencies in the passband and sets to zero all the frequencies in the stopband.
 x??
@@ -1102,7 +1069,7 @@ Background context explaining the concept. Real-world filters often have a gradu
 If applicable, add code examples with explanations.
 :p What is the characteristic of real-world filters when compared to ideal filters?
 ??x
-Real-world filters typically have a gradual fall-off between the passband and stopband. Unlike an ideal filter which has a sharp transition (where \( H(w) = 1 \) in the passband and \( H(w) = 0 \) in the stopband), real-world filters smoothly attenuate frequencies as they approach the cutoff frequency.
+Real-world filters typically have a gradual fall-off between the passband and stopband. Unlike an ideal filter which has a sharp transition (where $H(w) = 1 $ in the passband and$H(w) = 0$ in the stopband), real-world filters smoothly attenuate frequencies as they approach the cutoff frequency.
 x??
 
 ---
@@ -1203,11 +1170,11 @@ x??
 ---
 
 #### RC Low-Pass Filter Frequency Response
-Background context: The frequency response \(H(w)\) for an RC (resistor-capacitor) low-pass filter is illustrated with a gradual fall-off. Both horizontal and vertical axes are on a logarithmic scale, meaning that equal distances represent proportional changes in the values.
+Background context: The frequency response $H(w)$ for an RC (resistor-capacitor) low-pass filter is illustrated with a gradual fall-off. Both horizontal and vertical axes are on a logarithmic scale, meaning that equal distances represent proportional changes in the values.
 
 :p What does the frequency response of an RC low-pass filter look like?
 ??x
-The frequency response shows a gradual decrease (fall-off) for frequencies higher than the cutoff frequency, which is inversely related to \(RC\). This means as the frequency increases from 0, the magnitude of the transfer function decreases logarithmically.
+The frequency response shows a gradual decrease (fall-off) for frequencies higher than the cutoff frequency, which is inversely related to $RC$. This means as the frequency increases from 0, the magnitude of the transfer function decreases logarithmically.
 
 ```python
 import matplotlib.pyplot as plt
@@ -1396,12 +1363,12 @@ x??
 
 ---
 #### Amplifier Circuits Explanation
-Amplification systems are discussed, particularly focusing on the concept of gain \( A \), defined as the ratio of output power \( P_{\text{out}} \) to input power \( P_{\text{in}} \). Gain is typically measured in decibels (dB):  
-\[ A = 10 \log_{10}\left(\frac{P_{\text{out}}}{P_{\text{in}}}\right) \, \text{dB} \]
-:p What is the formula for calculating gain \( A \)?
+Amplification systems are discussed, particularly focusing on the concept of gain $A $, defined as the ratio of output power $ P_{\text{out}}$to input power $ P_{\text{in}}$. Gain is typically measured in decibels (dB):  
+$$A = 10 \log_{10}\left(\frac{P_{\text{out}}}{P_{\text{in}}}\right) \, \text{dB}$$:p What is the formula for calculating gain $ A$?
 ??x
-The formula for calculating gain \( A \) in decibels (dB) is:
-\[ A = 10 \log_{10}\left(\frac{P_{\text{out}}}{P_{\text{in}}}\right) \, \text{dB} \]
+The formula for calculating gain $A$ in decibels (dB) is:
+$$A = 10 \log_{10}\left(\frac{P_{\text{out}}}{P_{\text{in}}}\right) \, \text{dB}$$
+
 This equation quantifies the ratio of output power to input power on a logarithmic scale.
 x??
 
@@ -1455,9 +1422,8 @@ Background context: To record audio for use in a digital system, an analog audio
 ??x
 Analog-to-digital conversion involves converting continuous-time analog signals into discrete-time digital signals by taking voltage measurements at regular time intervals. The process of measuring and quantizing these voltages allows the signal to be represented digitally, typically in integer form with a fixed number of bits.
 
-In math terms, given the continuous-time audio signal \( p(t) \), we construct the sampled version \( p[n] \) such that for each sample, 
-\[ p[n] = p(nT_s) \]
-where \( n \) is a non-negative integer used to index the samples, and \( T_s \) is the sampling period.
+In math terms, given the continuous-time audio signal $p(t)$, we construct the sampled version $ p[n]$ such that for each sample, 
+$$p[n] = p(nT_s)$$where $ n $ is a non-negative integer used to index the samples, and $ T_s$ is the sampling period.
 
 The following pseudocode illustrates this process:
 ```pseudocode
@@ -1481,10 +1447,9 @@ Background context: Pulse-code modulation is the standard method for encoding a 
 ??x
 Pulse-code modulation is a process where the continuous-time analog audio signal is sampled at regular intervals to produce discrete-time samples, which are then quantized into digital form. The PCM process can be represented by the following steps:
 
-1. Sample the analog voltage measurement: 
-\[ p[n] = p(nT_s) \]
-2. Quantize each sample value (e.g., 8-bit, 16-bit, etc.):
-\[ \text{digitalSample} = \text{quantize}(p[n]) \]
+1. Sample the analog voltage measurement:
+$$p[n] = p(nT_s)$$2. Quantize each sample value (e.g., 8-bit, 16-bit, etc.):
+$$\text{digitalSample} = \text{quantize}(p[n])$$
 
 The sequence of measured voltage values is then stored into an array in memory or written out to a long-term storage medium.
 
@@ -1517,8 +1482,8 @@ Background context: The sampling rate is the frequency at which voltage measurem
 ??x
 The sampling rate refers to the number of times per second that voltage measurements are taken from an analog signal. According to the Nyquist-Shannon sampling theorem, for accurate reconstruction of the original analog signal, it must be sampled at a rate that is at least twice the highest frequency component present in the signal.
 
-Mathematically, if \( f_{max} \) is the maximum frequency of the analog signal, then the minimum required sampling rate \( f_s \) is:
-\[ f_s \geq 2f_{max} \]
+Mathematically, if $f_{max}$ is the maximum frequency of the analog signal, then the minimum required sampling rate $f_s$ is:
+$$f_s \geq 2f_{max}$$
 
 For example, for an audio signal with a maximum frequency of 20 kHz (human hearing range), the minimum sampling rate would be 40 kHz.
 
@@ -1526,7 +1491,7 @@ x??
 ---
 
 #### Shannon-Nyquist Sampling Theorem
-The Shannon-Nyquist sampling theorem states that if a band-limited continuous-time signal is sampled to produce its discrete-time counterpart, the original continuous-time signal can be recovered exactly from the discrete signal provided that the sampling rate is high enough. Specifically, the minimum sampling frequency (Nyquist frequency) required is \( ws > 2w_{max} \), where \( w_s = 2\pi T_s \). Here, \( T_s \) is the sampling period.
+The Shannon-Nyquist sampling theorem states that if a band-limited continuous-time signal is sampled to produce its discrete-time counterpart, the original continuous-time signal can be recovered exactly from the discrete signal provided that the sampling rate is high enough. Specifically, the minimum sampling frequency (Nyquist frequency) required is $ws > 2w_{max}$, where $ w_s = 2\pi T_s$. Here,$ T_s$ is the sampling period.
 :p What does the Shannon-Nyquist theorem guarantee about the recovery of a signal from its samples?
 ??x
 The theorem guarantees that if a continuous-time signal is sampled at or above twice its highest frequency component (Nyquist rate), it can be perfectly reconstructed from its discrete-time samples.
@@ -1544,7 +1509,7 @@ x??
 ---
 
 #### Aliasing in Sampling
-Aliasing occurs when the sampling frequency is too low, causing spectrum copies of the signal to overlap. This overlap prevents the original signal from being recovered exactly via filtering. The Nyquist frequency \( ws > 2w_{max} \) ensures that the spectral copies do not overlap.
+Aliasing occurs when the sampling frequency is too low, causing spectrum copies of the signal to overlap. This overlap prevents the original signal from being recovered exactly via filtering. The Nyquist frequency $ws > 2w_{max}$ ensures that the spectral copies do not overlap.
 :p What is aliasing and under what condition does it occur?
 ??x
 Aliasing occurs when the sampling frequency is too low, causing multiple spectrum copies of a signal to overlap on the frequency axis. This prevents the original signal from being accurately recovered via filtering.

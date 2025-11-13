@@ -163,7 +163,7 @@ x??
 
 Background context: Local timelines are used to manage events or sequences that have their own timing, such as animations or audio clips. These can be mapped onto global timelines (like real time or game time) with different playback rates.
 
-Relevant formulas: Time scale factor \( R \)
+Relevant formulas: Time scale factor $R$
 
 :p What is a local timeline in the context of game development?
 ??x
@@ -189,11 +189,11 @@ x??
 
 Background context: Local timelines can be mapped onto global timelines, allowing for complex timing behaviors. This is useful for playing back animations or audio at different speeds.
 
-Relevant formulas: Time scale factor \( R \)
+Relevant formulas: Time scale factor $R$
 
 :p How does mapping a local timeline to a global timeline work?
 ??x
-Mapping a local timeline to a global timeline involves scaling and warping the local time based on the playback rate (time scale factor) \( R \). The start of the local timeline is mapped onto a desired start time in the global timeline.
+Mapping a local timeline to a global timeline involves scaling and warping the local time based on the playback rate (time scale factor) $R$. The start of the local timeline is mapped onto a desired start time in the global timeline.
 
 ```java
 // Example code snippet for mapping an animation's local timeline to a game timeline
@@ -220,7 +220,7 @@ For instance:
 - North America and Japan use 30 or 60 FPS.
 - Europe uses 50 FPS, as it matches the refresh rate of PAL/SECAM color television signals.
 
-The time that elapses between frames is known as the frametime, time delta, or \(\Delta t\). In a game running at exactly 30 FPS, the frame time would be \(1 / 30\) seconds or approximately 33.3 milliseconds (ms).
+The time that elapses between frames is known as the frametime, time delta, or $\Delta t $. In a game running at exactly 30 FPS, the frame time would be $1 / 30$ seconds or approximately 33.3 milliseconds (ms).
 
 :p What is the frame rate and how is it measured in games?
 ??x
@@ -230,7 +230,7 @@ For example:
 - A 30 FPS game means that there are 30 frames rendered and presented every second.
 - A 60 FPS game has twice as many frames per second compared to a 30 FPS game.
 
-This can be expressed mathematically using the formula: \( \text{FPS} = \frac{1}{\Delta t} \), where \(\Delta t\) is the time delta (frametime).
+This can be expressed mathematically using the formula:$\text{FPS} = \frac{1}{\Delta t}$, where $\Delta t$ is the time delta (frametime).
 
 ```java
 public class Game {
@@ -253,13 +253,12 @@ x??
 To move an object at a constant speed in a game, one can use the frame rate to determine how much position change should occur each frame. This involves multiplying the desired velocity by the frame time.
 
 For example:
-- If you want a spaceship to travel 40 meters per second (m/s) and the game is running at 30 FPS, then every frame, the position change \(\Delta x\) would be \(v \times \Delta t = 40 \, \text{m/s} \times \frac{1}{30} \, \text{s}\).
+- If you want a spaceship to travel 40 meters per second (m/s) and the game is running at 30 FPS, then every frame, the position change $\Delta x $ would be$v \times \Delta t = 40 \, \text{m/s} \times \frac{1}{30} \, \text{s}$.
 
 :p How can you calculate the position change for a moving object using frame rate?
 ??x
-To calculate the position change (\(\Delta x\)) for an object moving at a constant velocity \(v\) in a game running at 30 FPS, you would use the formula:
-\[ \Delta x = v \times \Delta t \]
-where \(\Delta t\) is the frame time. For a speed of 40 m/s and a frame rate of 30 FPS:
+To calculate the position change ($\Delta x $) for an object moving at a constant velocity $ v$in a game running at 30 FPS, you would use the formula:
+$$\Delta x = v \times \Delta t$$where $\Delta t$ is the frame time. For a speed of 40 m/s and a frame rate of 30 FPS:
 
 ```java
 public class Ship {
@@ -283,11 +282,11 @@ x??
 ---
 
 #### Time Deltas and Frame Rates in Different Regions
-Time deltas are crucial for maintaining consistent behavior across different frame rates. For instance, a game running at 30 FPS in North America will have a frametime of \(1/30\) seconds or approximately 33.3 ms, while one running at 60 FPS in Europe would have a frametime of \(1/60\) seconds or about 16.6 ms.
+Time deltas are crucial for maintaining consistent behavior across different frame rates. For instance, a game running at 30 FPS in North America will have a frametime of $1/30 $ seconds or approximately 33.3 ms, while one running at 60 FPS in Europe would have a frametime of$1/60$ seconds or about 16.6 ms.
 
 :p How does the frame rate affect time deltas and how can this be used for different regions?
 ??x
-The frame rate directly influences the size of the time delta \(\Delta t\). Higher frame rates result in smaller \(\Delta t\), which is important for achieving smooth animations and movements. For example, a 30 FPS game has a frametime of \(1/30\) seconds (approximately 33.3 ms) while a 60 FPS game has a frametime of \(1/60\) seconds (about 16.6 ms).
+The frame rate directly influences the size of the time delta $\Delta t $. Higher frame rates result in smaller $\Delta t $, which is important for achieving smooth animations and movements. For example, a 30 FPS game has a frametime of $1/30 $ seconds (approximately 33.3 ms) while a 60 FPS game has a frametime of$1/60$ seconds (about 16.6 ms).
 
 This can be used to ensure that animations and movements appear consistent across different regions with varying frame rates:
 
@@ -316,11 +315,11 @@ x??
 ---
 
 #### Reversing Animation
-Reversing an animation can be achieved by mapping the clip to the global timeline with a time scale of \(R = -1\). This effectively flips the timeline, making the animation play backward.
+Reversing an animation can be achieved by mapping the clip to the global timeline with a time scale of $R = -1$. This effectively flips the timeline, making the animation play backward.
 
 :p How do you reverse an animation in terms of time scaling?
 ??x
-To reverse an animation, you map it to the global timeline with a time scale of \(R = -1\). This means that every frame's time is negated, causing the animation to play backwards. For example:
+To reverse an animation, you map it to the global timeline with a time scale of $R = -1$. This means that every frame's time is negated, causing the animation to play backwards. For example:
 
 ```java
 public class Animation {
@@ -353,14 +352,14 @@ x??
 ---
 
 #### Frame Rate and Animation Speed Control
-Controlling the speed of an animation can be achieved by scaling the local timeline prior to mapping it onto the global timeline. For example, using \(R = 0.5\) scales time by half, effectively doubling the duration of the animation.
+Controlling the speed of an animation can be achieved by scaling the local timeline prior to mapping it onto the global timeline. For example, using $R = 0.5$ scales time by half, effectively doubling the duration of the animation.
 
 :p How do you control the speed of an animation using time scaling?
 ??x
-Controlling the speed of an animation can be done by applying a time scale factor \(R\). If you want to slow down or speed up an animation, you adjust \(R\) accordingly. For instance:
+Controlling the speed of an animation can be done by applying a time scale factor $R $. If you want to slow down or speed up an animation, you adjust $ R$ accordingly. For instance:
 
-- To halve the duration of an animation (double the speed), use \(R = 0.5\).
-- To double the duration of an animation (half the speed), use \(R = 2\).
+- To halve the duration of an animation (double the speed), use $R = 0.5$.
+- To double the duration of an animation (half the speed), use $R = 2$.
 
 This can be implemented in a game as follows:
 
@@ -386,17 +385,15 @@ x??
 ---
 
 #### Explicit Euler Method for Numerical Integration
-Background context explaining that this is a simple form of numerical integration used when object speeds are roughly constant. It uses the elapsed frame time \(\Delta t\) to update positions or velocities.
+Background context explaining that this is a simple form of numerical integration used when object speeds are roughly constant. It uses the elapsed frame time $\Delta t$ to update positions or velocities.
 
-:p What is the explicit Euler method and how does it use \(\Delta t\)?
+:p What is the explicit Euler method and how does it use $\Delta t$?
 ??x
-The explicit Euler method is a straightforward way to perform numerical integration, particularly useful for updating positions or velocities when object speeds are roughly constant. It approximates the change in position (\(\Delta x\)) as:
+The explicit Euler method is a straightforward way to perform numerical integration, particularly useful for updating positions or velocities when object speeds are roughly constant. It approximates the change in position ($\Delta x$) as:
 
-\[
-\Delta x = v \cdot \Delta t
-\]
+$$\Delta x = v \cdot \Delta t$$
 
-Where \(v\) is the velocity and \(\Delta t\) is the elapsed frame time.
+Where $v $ is the velocity and$\Delta t$ is the elapsed frame time.
 
 :p How does the explicit Euler method work in practice?
 ??x
@@ -411,7 +408,7 @@ function updatePosition(currentTime) {
 }
 ```
 
-The `elapsedFrameTime` is the difference between the current frame time and the previous frame time, which gives us \(\Delta t\). The position update uses this \(\Delta t\) to ensure that the movement is consistent with the speed.
+The `elapsedFrameTime` is the difference between the current frame time and the previous frame time, which gives us $\Delta t $. The position update uses this $\Delta t$ to ensure that the movement is consistent with the speed.
 
 x??
 
@@ -437,13 +434,13 @@ x??
 ---
 
 #### Updating Based on Elapsed Time
-Background context explaining the need to measure \(\Delta t\) to make games more CPU-independent by using a high-resolution timer to determine the time difference between frames.
+Background context explaining the need to measure $\Delta t$ to make games more CPU-independent by using a high-resolution timer to determine the time difference between frames.
 
 :p How do modern game engines update based on elapsed time?
 ??x
-Modern game engines measure \(\Delta t\) (elapsed frame time) using a high-resolution timer. They record the current time at the beginning and end of each frame, calculate the difference, and then use this value to ensure that object updates are consistent regardless of the frame rate.
+Modern game engines measure $\Delta t$(elapsed frame time) using a high-resolution timer. They record the current time at the beginning and end of each frame, calculate the difference, and then use this value to ensure that object updates are consistent regardless of the frame rate.
 
-:p Provide an example implementation for measuring \(\Delta t\).
+:p Provide an example implementation for measuring $\Delta t$.
 ??x
 Here is an example in C++ using a high-resolution timer:
 
@@ -459,11 +456,11 @@ float getDeltaTime() {
 }
 ```
 
-This function measures the time difference between the current frame and the previous one, returning \(\Delta t\) in seconds.
+This function measures the time difference between the current frame and the previous one, returning $\Delta t$ in seconds.
 
 :p How do engine subsystems use this delta time?
 ??x
-Engine subsystems can use this \(\Delta t\) by passing it as an argument or storing it in a global variable. For instance:
+Engine subsystems can use this $\Delta t$ by passing it as an argument or storing it in a global variable. For instance:
 
 ```java
 public void update(float deltaTime) {
@@ -914,7 +911,7 @@ x??
 #### Limitations of Floating-Point Clocks
 Background context: In a 32-bit IEEE float, the 23 bits of the mantissa are dynamically distributed between the whole and fractional parts by the exponent. Small magnitudes require fewer bits for the exponent, leaving more precision for the fraction. However, as the magnitude grows, the exponent takes up more bits, reducing the available bits for the fraction. This can lead to loss of precision in the fractional part.
 
-For example, a 32-bit float has an approximate range from \( \approx 10^{-38} \) to \( \approx 10^{38} \). As the magnitude increases, the effective precision decreases.
+For example, a 32-bit float has an approximate range from $\approx 10^{-38}$ to $\approx 10^{38}$. As the magnitude increases, the effective precision decreases.
 
 :p What are the limitations of using floating-point variables for long durations in game clocks?
 ??x

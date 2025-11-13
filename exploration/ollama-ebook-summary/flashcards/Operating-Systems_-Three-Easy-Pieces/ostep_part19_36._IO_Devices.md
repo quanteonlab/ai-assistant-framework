@@ -940,11 +940,11 @@ x??
 ---
 
 #### Disk Interface Overview
-Modern hard-disk drives use a straightforward interface where sectors (512-byte blocks) can be read or written. Sectors are numbered from 0 to \( n-1 \), with \( n \) being the total number of sectors on the disk. This allows viewing the disk as an array, where addresses range from 0 to \( n-1 \). Multi-sector operations are possible, often aligned to 4KB blocks.
+Modern hard-disk drives use a straightforward interface where sectors (512-byte blocks) can be read or written. Sectors are numbered from 0 to $n-1 $, with $ n $ being the total number of sectors on the disk. This allows viewing the disk as an array, where addresses range from 0 to $ n-1$. Multi-sector operations are possible, often aligned to 4KB blocks.
 
 :p What is a sector in the context of hard-disk drives?
 ??x
-A sector refers to a 512-byte block that can be read or written on a modern hard-disk drive. Each disk has multiple sectors, numbered sequentially starting from 0 up to \( n-1 \), where \( n \) is the total number of sectors.
+A sector refers to a 512-byte block that can be read or written on a modern hard-disk drive. Each disk has multiple sectors, numbered sequentially starting from 0 up to $n-1 $, where $ n$ is the total number of sectors.
 
 ---
 #### Atomic Write Guarantee
@@ -956,11 +956,11 @@ If a large write operation is interrupted by a power failure, only a portion of 
 
 ---
 #### Disk Address Space
-The address space of a hard-disk drive ranges from 0 to \( n-1 \), with \( n \) being the total number of sectors on the disk. Each sector can be individually read or written, allowing direct access to any portion of the disk.
+The address space of a hard-disk drive ranges from 0 to $n-1 $, with $ n$ being the total number of sectors on the disk. Each sector can be individually read or written, allowing direct access to any portion of the disk.
 
 :p What is the address range for a single sector in a hard-disk drive?
 ??x
-The address space for a single sector ranges from 0 to \( n-1 \), where \( n \) represents the total number of sectors on the disk. Each sector can be accessed individually, allowing direct read or write operations.
+The address space for a single sector ranges from 0 to $n-1 $, where $ n$ represents the total number of sectors on the disk. Each sector can be accessed individually, allowing direct read or write operations.
 
 ---
 #### Disk Geometry and Components
@@ -1003,7 +1003,7 @@ Background context: The rate of rotation is often measured in rotations per minu
 
 :p What is the relationship between RPM and rotational delay?
 ??x
-Rotational delay can be calculated using the formula: \( \text{rotational delay (ms)} = \frac{60}{\text{RPM}} \). For example, at 10,000 RPM, a single rotation takes approximately 6 ms.
+Rotational delay can be calculated using the formula: $\text{rotational delay (ms)} = \frac{60}{\text{RPM}}$. For example, at 10,000 RPM, a single rotation takes approximately 6 ms.
 x??
 
 ---
@@ -1234,10 +1234,7 @@ To calculate the time for one rotation of a 10K RPM disk, follow these steps:
 
 1. Start with the desired units on the left: `Time(ms) / Rotation`.
 2. Use given data and conversion factors to cancel out units:
-   \[
-   \text{Time(ms)} = \frac{6\, \text{ms}}{\text{Rotation}}
-   \]
-3. Use 10K RPM (or 10,000 rotations per minute) as the given value.
+   $$\text{Time(ms)} = \frac{6\, \text{ms}}{\text{Rotation}}$$3. Use 10K RPM (or 10,000 rotations per minute) as the given value.
 
 Here is a step-by-step example:
 
@@ -1255,25 +1252,24 @@ x??
 ---
 #### I/O Time Calculation
 
-Background context: Disk performance can be analyzed using the sum of three major components: seek time (Tseek), rotational latency (Trotation), and transfer time (Ttransfer). The total I/O time \( T_{\text{I/O}} \) is given by:
-
-\[ T_{\text{I/O}} = T_{\text{seek}} + T_{\text{rotation}} + T_{\text{transfer}} \]
+Background context: Disk performance can be analyzed using the sum of three major components: seek time (Tseek), rotational latency (Trotation), and transfer time (Ttransfer). The total I/O time $T_{\text{I/O}}$ is given by:
+$$T_{\text{I/O}} = T_{\text{seek}} + T_{\text{rotation}} + T_{\text{transfer}}$$
 
 Where:
-- \( T_{\text{seek}} \): Time to move the read/write head to the correct track.
-- \( T_{\text{rotation}} \): Time for the disk platter to rotate until the desired sector is under the head.
-- \( T_{\text{transfer}} \): Time to transfer data between the drive and the buffer.
+- $T_{\text{seek}}$: Time to move the read/write head to the correct track.
+- $T_{\text{rotation}}$: Time for the disk platter to rotate until the desired sector is under the head.
+- $T_{\text{transfer}}$: Time to transfer data between the drive and the buffer.
 
 :p What formula represents the total I/O time?
 ??x
-The total I/O time \( T_{\text{I/O}} \) is calculated using the following formula:
+The total I/O time $T_{\text{I/O}}$ is calculated using the following formula:
 
-\[ T_{\text{I/O}} = T_{\text{seek}} + T_{\text{rotation}} + T_{\text{transfer}} \]
+$$T_{\text{I/O}} = T_{\text{seek}} + T_{\text{rotation}} + T_{\text{transfer}}$$
 
 Where:
-- \( T_{\text{seek}} \): Time to move the read/write head.
-- \( T_{\text{rotation}} \): Time for a single rotation of the disk.
-- \( T_{\text{transfer}} \): Time to transfer data between the drive and buffer.
+- $T_{\text{seek}}$: Time to move the read/write head.
+- $T_{\text{rotation}}$: Time for a single rotation of the disk.
+- $T_{\text{transfer}}$: Time to transfer data between the drive and buffer.
 
 This formula helps in understanding the overall performance of a hard disk by breaking down the total time required for an I/O operation into its constituent parts.
 x??
@@ -1283,18 +1279,18 @@ x??
 
 Background context: The rate of I/O (RI/O) is a useful metric for comparing different drives. It can be calculated as the size of the transfer divided by the time it took to complete the transfer:
 
-\[ R_{\text{I/O}} = \frac{\text{SizeTransfer}}{\text{T}_{\text{transfer}}} \]
+$$R_{\text{I/O}} = \frac{\text{SizeTransfer}}{\text{T}_{\text{transfer}}}$$
 
 Where:
-- \( R_{\text{I/O}} \): Rate of I/O.
+- $R_{\text{I/O}}$: Rate of I/O.
 - SizeTransfer: The size of the data block being transferred.
-- \( T_{\text{transfer}} \): Time taken to transfer the data.
+- $T_{\text{transfer}}$: Time taken to transfer the data.
 
 :p How is the rate of I/O (RI/O) calculated?
 ??x
 The rate of I/O (RI/O) is calculated by dividing the size of the transfer by the time it took:
 
-\[ R_{\text{I/O}} = \frac{\text{SizeTransfer}}{\text{T}_{\text{transfer}}} \]
+$$R_{\text{I/O}} = \frac{\text{SizeTransfer}}{\text{T}_{\text{transfer}}}$$
 
 For example, if you need to calculate the RI/O for a 512 KB block transferred over 6 ms (as derived from the RPM calculation):
 
@@ -1347,24 +1343,21 @@ x??
 Background context: The random workload involves issuing small (e.g., 4KB) reads to random locations on the disk. This type of workload is common in database management systems and requires a detailed understanding of how disk drives operate under such conditions.
 
 Relevant formulas:
-- \(T_{\text{seek}} = 4 \, \text{ms}\)
-- \(T_{\text{rotation}} = 2 \, \text{ms}\)
-- \(T_{\text{transfer}} = 30 \mu s\) (37.3)
+- $T_{\text{seek}} = 4 \, \text{ms}$-$ T_{\text{rotation}} = 2 \, \text{ms}$-$ T_{\text{transfer}} = 30 \mu s$(37.3)
 
 Explanation: The random workload on the Cheetah 15K.5 involves calculating the total I/O time considering seek time, rotational latency, and transfer time.
 
 :p How is the total I/O time calculated for a single read in the random workload on the Cheetah 15K.5?
 ??x
-The total I/O time \(T_{\text{I/O}}\) can be calculated by summing up the seek time, rotational latency, and transfer time.
+The total I/O time $T_{\text{I/O}}$ can be calculated by summing up the seek time, rotational latency, and transfer time.
 
 ```plaintext
 T_{\text{I/O}} = T_{\text{seek}} + T_{\text{rotation}} + T_{\text{transfer}}
 ```
 
 For the Cheetah 15K.5:
-- \(T_{\text{seek}} = 4 \, \text{ms}\)
-- \(T_{\text{rotation}} = 2 \, \text{ms}\) (on average, half a rotation or 2 ms)
-- \(T_{\text{transfer}} = 30 \mu s\) (very small)
+- $T_{\text{seek}} = 4 \, \text{ms}$-$ T_{\text{rotation}} = 2 \, \text{ms}$(on average, half a rotation or 2 ms)
+- $T_{\text{transfer}} = 30 \mu s$(very small)
 
 Thus:
 ```plaintext
@@ -1379,9 +1372,8 @@ x??
 Background context: The random workload is also tested on the Barracuda disk, which is designed for capacity and has different performance characteristics compared to the Cheetah. This helps in understanding how the same type of workload behaves differently across different types of disks.
 
 Relevant formulas:
-- \(T_{\text{seek}} = 4 \, \text{ms}\)
-- \(T_{\text{rotation}} = 2 \, \text{ms}\) (on average, half a rotation or 2 ms)
-- \(T_{\text{transfer}} = 30 \mu s\) (37.3)
+- $T_{\text{seek}} = 4 \, \text{ms}$-$ T_{\text{rotation}} = 2 \, \text{ms}$(on average, half a rotation or 2 ms)
+- $T_{\text{transfer}} = 30 \mu s$(37.3)
 
 Explanation: Similar to the Cheetah 15K.5, the total I/O time is calculated for the Barracuda disk.
 
@@ -1394,16 +1386,15 @@ T_{\text{I/O}} = T_{\text{seek}} + T_{\text{rotation}} + T_{\text{transfer}}
 ```
 
 For the Barracuda:
-- \(T_{\text{seek}} = 4 \, \text{ms}\)
-- \(T_{\text{rotation}} = 2 \, \text{ms}\) (on average, half a rotation or 2 ms)
-- \(T_{\text{transfer}} = 30 \mu s\) (very small)
+- $T_{\text{seek}} = 4 \, \text{ms}$-$ T_{\text{rotation}} = 2 \, \text{ms}$(on average, half a rotation or 2 ms)
+- $T_{\text{transfer}} = 30 \mu s$(very small)
 
 Thus:
 ```plaintext
 T_{\text{I/O}} = 4 \, \text{ms} + 2 \, \text{ms} + 30 \mu s \approx 13.2 \, \text{ms}
 ```
 
-This results in a much higher I/O time compared to the Cheetah 15K.5, which is approximately \(6 \, \text{ms}\). The difference can be attributed to the lower performance specifications of the Barracuda.
+This results in a much higher I/O time compared to the Cheetah 15K.5, which is approximately $6 \, \text{ms}$. The difference can be attributed to the lower performance specifications of the Barracuda.
 x??
 
 ---
@@ -1413,31 +1404,31 @@ x??
 Background context: The sequential workload involves reading a large number of sectors consecutively from the disk without jumping around. This type of access pattern is common in many applications and often provides better performance compared to random access.
 
 Relevant formulas:
-- Not directly given, but assume \(T_{\text{seek}}\) is negligible for sequential access.
-- \(T_{\text{rotation}} = 2 \mu s\) (assuming higher RPM leads to lower rotational latency)
-- \(T_{\text{transfer}}\) depends on the transfer rate and sector size.
+- Not directly given, but assume $T_{\text{seek}}$ is negligible for sequential access.
+- $T_{\text{rotation}} = 2 \mu s$(assuming higher RPM leads to lower rotational latency)
+- $T_{\text{transfer}}$ depends on the transfer rate and sector size.
 
 Explanation: The total I/O time in a sequential workload mainly depends on rotational latency and transfer time, with seek time being negligible.
 
 :p How is the total I/O time calculated for a single read in the sequential workload on the Cheetah 15K.5?
 ??x
-The total I/O time \(T_{\text{I/O}}\) for a single read in a sequential workload can be approximated by considering rotational latency and transfer time, as seek time is negligible:
+The total I/O time $T_{\text{I/O}}$ for a single read in a sequential workload can be approximated by considering rotational latency and transfer time, as seek time is negligible:
 
 ```plaintext
 T_{\text{I/O}} \approx T_{\text{rotation}} + T_{\text{transfer}}
 ```
 
 For the Cheetah 15K.5:
-- \(T_{\text{seek}}\) is negligible for sequential access.
-- \(T_{\text{rotation}} = 2 \mu s\) (assumed due to higher RPM)
-- \(T_{\text{transfer}}\) depends on transfer rate and sector size, but generally much smaller than rotation time.
+- $T_{\text{seek}}$ is negligible for sequential access.
+- $T_{\text{rotation}} = 2 \mu s$(assumed due to higher RPM)
+- $T_{\text{transfer}}$ depends on transfer rate and sector size, but generally much smaller than rotation time.
 
 Thus:
 ```plaintext
 T_{\text{I/O}} \approx 2 \mu s + T_{\text{transfer}}
 ```
 
-The exact value of \(T_{\text{transfer}}\) would depend on the actual transfer rate.
+The exact value of $T_{\text{transfer}}$ would depend on the actual transfer rate.
 x??
 
 ---
@@ -1447,9 +1438,9 @@ x??
 Background context: The sequential workload is also tested on the Barracuda, which has different performance characteristics compared to the Cheetah 15K.5.
 
 Relevant formulas:
-- Not directly given, but assume \(T_{\text{seek}}\) is negligible for sequential access.
-- \(T_{\text{rotation}} = 2 \mu s\) (assumed due to higher RPM)
-- \(T_{\text{transfer}}\) depends on transfer rate and sector size.
+- Not directly given, but assume $T_{\text{seek}}$ is negligible for sequential access.
+- $T_{\text{rotation}} = 2 \mu s$(assumed due to higher RPM)
+- $T_{\text{transfer}}$ depends on transfer rate and sector size.
 
 Explanation: The total I/O time in a sequential workload mainly depends on rotational latency and transfer time, with seek time being negligible.
 
@@ -1462,8 +1453,8 @@ T_{\text{I/O}} \approx T_{\text{rotation}} + T_{\text{transfer}}
 ```
 
 For both disks:
-- \(T_{\text{seek}}\) is negligible.
-- \(T_{\text{rotation}} = 2 \mu s\) (assumed due to higher RPM)
+- $T_{\text{seek}}$ is negligible.
+- $T_{\text{rotation}} = 2 \mu s$(assumed due to higher RPM)
 
 The transfer time would depend on the actual transfer rate, but for simplicity:
 
@@ -1472,12 +1463,8 @@ T_{\text{I/O}} \approx 2 \mu s + T_{\text{transfer}}
 ```
 
 For Cheetah 15K.5:
-- \(T_{\text{rotation}} = 2 \mu s\)
-
-For Barracuda (assuming similar transfer rate):
-- \(T_{\text{rotation}} = 2 \mu s\)
-
-Thus, the total I/O time for sequential access is very similar on both disks due to their high RPM. However, the transfer rate might differ, which could slightly affect the overall time.
+- $T_{\text{rotation}} = 2 \mu s$ For Barracuda (assuming similar transfer rate):
+- $T_{\text{rotation}} = 2 \mu s$ Thus, the total I/O time for sequential access is very similar on both disks due to their high RPM. However, the transfer rate might differ, which could slightly affect the overall time.
 
 x??
 
@@ -1500,14 +1487,17 @@ Background context explaining how average seek time is derived from total seek d
 
 :p How do you derive the formula for the average seek distance on a disk?
 ??x
-The average seek distance can be computed by first adding up all possible seek distances and then dividing by the number of different possible seeks. For a disk with \(N\) tracks, the sum of all seek distances is given by:
-\[ \sum_{x=0}^{N}\sum_{y=0}^{N}|x-y| \]
+The average seek distance can be computed by first adding up all possible seek distances and then dividing by the number of different possible seeks. For a disk with $N$ tracks, the sum of all seek distances is given by:
+$$\sum_{x=0}^{N}\sum_{y=0}^{N}|x-y|$$
+
 This can be simplified to an integral form:
-\[ \int_0^N\int_0^N|x-y|\ dy\ dx \]
+$$\int_0^N\int_0^N|x-y|\ dy\ dx$$
+
 By breaking out the absolute value and solving the integrals, we get:
-\[ (1/3)N^2 \]
-And since the total number of seek distances is \(N^2\), the average seek distance is:
-\[ (1/3)N \]
+$$(1/3)N^2$$
+
+And since the total number of seek distances is $N^2$, the average seek distance is:
+$$(1/3)N$$
 x??
 
 ---

@@ -101,12 +101,11 @@ mvn clean package
 Example commands:
 
 ```shell
-$ mvn clean package
+$mvn clean package
 # Result shows successful build.
 ```
 
-```shell
-$ java -cp target/classes unsafe/LoadAverage 3.54 1.94 1.62
+```shell$ java -cp target/classes unsafe/LoadAverage 3.54 1.94 1.62
 # Output should match system uptime command output, e.g., "3.54 1.94 1.62".
 ```
 

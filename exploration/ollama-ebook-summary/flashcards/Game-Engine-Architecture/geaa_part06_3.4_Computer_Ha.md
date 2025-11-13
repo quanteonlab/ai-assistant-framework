@@ -579,12 +579,12 @@ Background context explaining how the width of the address bus determines the ma
 ??x
 The width of the address bus directly affects the amount of memory that can be accessed by the CPU. The relationship is exponential, as each additional bit doubles the addressing capacity:
 
-- A 16-bit address bus allows for a maximum of \(2^{16} = 64\) KiB (65,536 bytes) of memory.
-- A 32-bit address bus provides up to \(2^{32} = 4\) GiB (4,294,967,296 bytes) of memory.
-- A 64-bit address bus can access up to \(2^{64}\) exbibytes (18,446,744,073,709,551,616 bytes).
+- A 16-bit address bus allows for a maximum of $2^{16} = 64$ KiB (65,536 bytes) of memory.
+- A 32-bit address bus provides up to $2^{32} = 4$ GiB (4,294,967,296 bytes) of memory.
+- A 64-bit address bus can access up to $2^{64}$ exbibytes (18,446,744,073,709,551,616 bytes).
 
-These values are calculated based on the formula: 
-\[ \text{Memory Size} = 2^{\text{Address Bus Width}} \]
+These values are calculated based on the formula:
+$$\text{Memory Size} = 2^{\text{Address Bus Width}}$$
 x??
 
 ---

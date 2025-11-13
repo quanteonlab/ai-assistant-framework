@@ -15,11 +15,11 @@ Example: If you know the average service time and arrival rate, you can use oper
 x??
 
 #### Little's Law
-Background context: Little’s Law is one of the most important operational laws discussed. It relates the mean number of jobs in any system (L) to the mean response time experienced by arrivals (W), expressed as \( L = \lambda W \).
+Background context: Little’s Law is one of the most important operational laws discussed. It relates the mean number of jobs in any system (L) to the mean response time experienced by arrivals (W), expressed as $L = \lambda W$.
 
 :p What does Little's Law relate?
 ??x
-Little's Law relates the mean number of jobs in a system (L) to the mean response time experienced by arrivals (W). The relationship is given by \( L = \lambda W \), where \(\lambda\) represents the arrival rate.
+Little's Law relates the mean number of jobs in a system (L) to the mean response time experienced by arrivals (W). The relationship is given by $L = \lambda W $, where $\lambda$ represents the arrival rate.
 x??
 
 #### Application of Operational Laws
@@ -29,7 +29,7 @@ Background context: Operational laws are particularly useful for "what-if" quest
 ??x
 Operational laws provide a framework to analyze the impact of changes on system performance without detailed modeling. By understanding how different parameters affect response time and throughput, you can determine which modifications are likely to yield better results.
 
-Example: If increasing CPU speed by a factor of 2 decreases the service time (\(1/\mu\)), while increasing I/O device speed by a factor of 3 only slightly reduces interarrival times or increases service rates, Little's Law helps evaluate whether the overall response time and throughput improve significantly.
+Example: If increasing CPU speed by a factor of 2 decreases the service time ($1/\mu$), while increasing I/O device speed by a factor of 3 only slightly reduces interarrival times or increases service rates, Little's Law helps evaluate whether the overall response time and throughput improve significantly.
 x??
 
 #### Asymptotic Bounds
@@ -47,7 +47,7 @@ Background context: Chapter 7 focuses on using operational laws to prove asympto
 ??x
 By combining multiple operational laws, one can derive formulas that describe system behavior under various conditions. For example, Little's Law combined with other operational principles can help prove how changes in parameters like service times or arrival rates affect the overall performance metrics of a closed system.
 
-Example: Using operational laws, you might derive an expression for mean response time \( W \) as a function of multiprogramming level \( n \), and then take limits to understand its behavior at very high or low values of \( n \).
+Example: Using operational laws, you might derive an expression for mean response time $W $ as a function of multiprogramming level$n $, and then take limits to understand its behavior at very high or low values of$ n$.
 x??
 
 --- 
@@ -55,10 +55,10 @@ x??
 These flashcards cover key concepts from the provided text related to operational laws, Little's Law, and their applications in system analysis.
 
 #### Little's Law for Open Systems
-Background context explaining the concept. Little's Law states that the average number of jobs \(E[N]\) in a system is equal to the product of the average arrival rate into the system \(\lambda\) and the mean time jobs spend in the system \(E[T]\). Mathematically, this can be expressed as:
-\[ E[N] = \lambda E[T] \]
+Background context explaining the concept. Little's Law states that the average number of jobs $E[N]$ in a system is equal to the product of the average arrival rate into the system $\lambda$ and the mean time jobs spend in the system $E[T]$. Mathematically, this can be expressed as:
+$$E[N] = \lambda E[T]$$
 
-This law applies to both open and closed systems and holds true regardless of assumptions about the arrival process, service time distributions, network topology, or service order. The setup for Little's Law involves considering a system with jobs arriving at an average rate \(\lambda\) and spending some amount of time \(T\) in the system.
+This law applies to both open and closed systems and holds true regardless of assumptions about the arrival process, service time distributions, network topology, or service order. The setup for Little's Law involves considering a system with jobs arriving at an average rate $\lambda $ and spending some amount of time$T$ in the system.
 
 :p What does Little's Law state?
 ??x
@@ -70,8 +70,7 @@ x??
 Background context explaining the concept. An ergodic open system refers to systems where, over an extended period, all possible states are visited and the long-term behavior of the system is predictable based on the steady-state probabilities.
 
 The theorem for Little's Law in such a system can be expressed as:
-\[ E[N] = \lambda E[T] \]
-where \(E[N]\) is the expected number of jobs in the system, \(\lambda\) is the average arrival rate into the system, and \(E[T]\) is the mean time jobs spend in the system.
+$$E[N] = \lambda E[T]$$where $ E[N]$ is the expected number of jobs in the system,$\lambda $ is the average arrival rate into the system, and$E[T]$ is the mean time jobs spend in the system.
 
 :p What does ergodicity imply about open systems?
 ??x
@@ -80,52 +79,51 @@ x??
 
 ---
 #### Application of Little's Law
-Background context explaining the concept. The application of Little's Law involves leveraging known quantities (such as \(E[N]\) or \(\lambda\)) to find unknowns (\(E[T]\)) in queueing systems.
+Background context explaining the concept. The application of Little's Law involves leveraging known quantities (such as $E[N]$ or $\lambda$) to find unknowns ($ E[T]$) in queueing systems.
 
 :p How can we use Little's Law to find unknown values in a system?
 ??x
-We can use Little's Law by rearranging the formula. For example, if you know \(E[N]\) and \(\lambda\), you can find \(E[T]\) as follows:
-\[ E[T] = \frac{E[N]}{\lambda} \]
-Similarly, if you know \(E[T]\) and \(\lambda\), you can find \(E[N]\):
-\[ E[N] = \lambda E[T] \]
+We can use Little's Law by rearranging the formula. For example, if you know $E[N]$ and $\lambda$, you can find $ E[T]$ as follows:
+$$E[T] = \frac{E[N]}{\lambda}$$
+
+Similarly, if you know $E[T]$ and $\lambda$, you can find $ E[N]$:
+$$E[N] = \lambda E[T]$$
 
 This law is particularly useful in network analysis and system design.
 x??
 
 ---
 #### Open System Setup
-Background context explaining the concept. The setup for Little's Law involves a system with arrivals at an average rate \(\lambda\), departures, and jobs spending time \(T\) in the system.
+Background context explaining the concept. The setup for Little's Law involves a system with arrivals at an average rate $\lambda $, departures, and jobs spending time $ T$ in the system.
 
 The diagram provided (Figure 6.1) shows:
-- Arrivals (rate \(\lambda\))
+- Arrivals (rate $\lambda$)
 - Departures
-- Time in system, \(T\)
-
-:p What elements are involved in the setup for Little's Law?
+- Time in system, $T$:p What elements are involved in the setup for Little's Law?
 ??x
-The elements involved in the setup for Little's Law include arrivals at an average rate \(\lambda\), departures from the system, and the time jobs spend in the system, denoted as \(T\).
+The elements involved in the setup for Little's Law include arrivals at an average rate $\lambda $, departures from the system, and the time jobs spend in the system, denoted as $ T$.
 x??
 
 ---
 #### Open Systems Example
-Background context explaining the concept. To illustrate the use of Little's Law, consider a simple example where you have a queueing system with an arrival rate \(\lambda = 10\) jobs per minute and the average time spent in the system is \(E[T] = 2\) minutes.
+Background context explaining the concept. To illustrate the use of Little's Law, consider a simple example where you have a queueing system with an arrival rate $\lambda = 10 $ jobs per minute and the average time spent in the system is$E[T] = 2$ minutes.
 
-:p Calculate \(E[N]\) using Little's Law.
+:p Calculate $E[N]$ using Little's Law.
 ??x
-Given \(\lambda = 10\) jobs/minute and \(E[T] = 2\) minutes, we can calculate \(E[N]\) as follows:
-\[ E[N] = \lambda E[T] = 10 \times 2 = 20 \text{ jobs} \]
+Given $\lambda = 10 $ jobs/minute and$E[T] = 2 $ minutes, we can calculate$E[N]$ as follows:
+$$E[N] = \lambda E[T] = 10 \times 2 = 20 \text{ jobs}$$
 
 Thus, the expected number of jobs in the system is 20.
 x??
 
 ---
 #### Open Systems and Markov Chains
-Background context explaining the concept. When studying Markov chains, many techniques are used to compute \(E[N]\). Applying Little's Law will then immediately yield \(E[T]\).
+Background context explaining the concept. When studying Markov chains, many techniques are used to compute $E[N]$. Applying Little's Law will then immediately yield $ E[T]$.
 
 :p How does applying Little's Law help when studying Markov chains?
 ??x
-Applying Little's Law helps by providing a straightforward way to find \(E[T]\) once \(E[N]\) and \(\lambda\) are known. If you have computed \(E[N]\) using techniques from Markov chains, you can directly use the formula:
-\[ E[T] = \frac{E[N]}{\lambda} \]
+Applying Little's Law helps by providing a straightforward way to find $E[T]$ once $E[N]$ and $\lambda$ are known. If you have computed $E[N]$ using techniques from Markov chains, you can directly use the formula:
+$$E[T] = \frac{E[N]}{\lambda}$$
 This simplifies the process of finding the mean time jobs spend in the system.
 x??
 

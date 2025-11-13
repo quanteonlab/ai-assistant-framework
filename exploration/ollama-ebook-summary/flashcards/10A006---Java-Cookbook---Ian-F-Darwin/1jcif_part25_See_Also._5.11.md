@@ -393,14 +393,10 @@ Background context: The first version of the `TempConverter` program prints a ta
 The original `TempConverter` handles temperature conversion by using simple arithmetic formulas:
 
 - To convert from Fahrenheit (F) to Celsius (C), the formula used is:
-  \[
-  C = \left( F - 32 \right) \times \frac{5}{9}
-  \]
+  $$C = \left( F - 32 \right) \times \frac{5}{9}$$- To convert from Celsius (C) to Fahrenheit (F), the formula used is:
+$$
 
-- To convert from Celsius (C) to Fahrenheit (F), the formula used is:
-  \[
-  F = C \times \frac{9}{5} + 32
-  \]
+F = C \times \frac{9}{5} + 32$$
 
 However, it outputs these values with many decimal places that are not practical for everyday use.
 

@@ -5,20 +5,20 @@
 ---
 
 #### Total Resistance Calculation in Series-Parallel Circuits
-In a series-parallel circuit, you need to first calculate the resistance of the parallel combination and then combine it with the series resistances. The formula for the total resistance \(R_{total}\) in a parallel circuit is:
-\[ \frac{1}{R_{total}} = \frac{1}{R_1} + \frac{1}{R_2} \]
-
-:p How do you calculate the total resistance of a series-parallel circuit?
+In a series-parallel circuit, you need to first calculate the resistance of the parallel combination and then combine it with the series resistances. The formula for the total resistance $R_{total}$ in a parallel circuit is:
+$$\frac{1}{R_{total}} = \frac{1}{R_1} + \frac{1}{R_2}$$:p How do you calculate the total resistance of a series-parallel circuit?
 ??x
-To find the total resistance \(R_{total}\) in a series-parallel circuit, first determine the equivalent resistance (\(R_{eq}\)) of the parallel combination using:
-\[ \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} \]
-Then, add this to any series resistances. For example:
-- Given \(R_1 = 10\) and \(R_2 = 50\):
-\[ \frac{1}{R_{eq}} = \frac{1}{10} + \frac{1}{50} = \frac{5 + 1}{50} = \frac{6}{50} = \frac{3}{25} \]
-\[ R_{eq} = \frac{25}{3} \approx 8.33 \, \Omega \]
+To find the total resistance $R_{total}$ in a series-parallel circuit, first determine the equivalent resistance ($ R_{eq}$) of the parallel combination using:
+$$\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2}$$
 
-- If this parallel combination is in series with another resistance \(R_3 = 80\):
-\[ R_{total} = 80 + 8.33 = 88.33 \, \Omega \]
+Then, add this to any series resistances. For example:
+- Given $R_1 = 10 $ and$R_2 = 50$:
+$$\frac{1}{R_{eq}} = \frac{1}{10} + \frac{1}{50} = \frac{5 + 1}{50} = \frac{6}{50} = \frac{3}{25}$$
+$$
+
+R_{eq} = \frac{25}{3} \approx 8.33 \, \Omega$$- If this parallel combination is in series with another resistance $ R_3 = 80$:
+$$R_{total} = 80 + 8.33 = 88.33 \, \Omega$$
+
 However, the exact example given uses different values to match the answer choices.
 
 x??
@@ -27,36 +27,31 @@ x??
 
 #### Power Calculation Using Voltage and Current
 Power (P) in watts can be calculated using the formula:
-\[ P = V \times I \]
-where \(V\) is the voltage (in volts) and \(I\) is the current (in amperes).
+$$
+
+P = V \times I$$where $ V $ is the voltage (in volts) and $ I$ is the current (in amperes).
 
 :p How do you calculate power when given voltage and current?
 ??x
 To calculate power, use the formula:
-\[ P = V \times I \]
+$$P = V \times I$$
 
-For example, if the voltage \(V = 120\) volts and the current \(I = 5\) amperes:
-\[ P = 120 \times 5 = 600 \, \text{watts} \]
-
-x??
+For example, if the voltage $V = 120 $ volts and the current$I = 5$ amperes:
+$$P = 120 \times 5 = 600 \, \text{watts}$$x??
 
 ---
 
 #### Kilowatt-Hour Calculation
 Kilowatt-hours (kWh) represent the energy of 1,000 watts working for one hour. To calculate kWh:
-\[ \text{kWh} = \text{kW} \times \text{hours} \]
-where kW is kilowatts and hours is the time in hours.
+$$\text{kWh} = \text{kW} \times \text{hours}$$where kW is kilowatts and hours is the time in hours.
 
 :p How do you convert watt-hours to kilowatt-hours?
 ??x
 To convert watt-hours (Wh) to kilowatt-hours (kWh), divide by 1,000:
-\[ \text{kWh} = \frac{\text{Wh}}{1000} \]
+$$\text{kWh} = \frac{\text{Wh}}{1000}$$
 
 For example, if you use a 40-watt light bulb for 5 hours:
-- Total watt-hours: \(40 \times 5 = 200 \, \text{Wh}\)
-- Convert to kWh: \( \frac{200}{1000} = 0.2 \, \text{kWh} \)
-
-x??
+- Total watt-hours:$40 \times 5 = 200 \, \text{Wh}$- Convert to kWh:$\frac{200}{1000} = 0.2 \, \text{kWh}$ x??
 
 ---
 
@@ -81,13 +76,10 @@ Electricity passing through conductors causes them to heat up due to resistance.
 :p What is the heat effect of electricity?
 ??x
 The heat effect occurs because current must overcome the resistance of the wire, generating heat:
-\[ P = I^2 R \]
-where \(P\) is power (watts), \(I\) is current (amperes), and \(R\) is resistance (\(\Omega\)).
+$$P = I^2 R$$where $ P $is power (watts),$ I $is current (amperes), and$ R $is resistance ($\Omega$).
 
 For example, if 10 amperes of current flow through a 5-ohm resistor:
-\[ P = 10^2 \times 5 = 500 \, \text{watts} \]
-
-x??
+$$P = 10^2 \times 5 = 500 \, \text{watts}$$x??
 
 ---
 
@@ -102,8 +94,7 @@ The magnetic effect involves creating a magnetic field with a current-carrying w
 - Amount of current: Higher currents increase the field.
 
 Electromagnetic induction is when a changing magnetic field induces an electromotive force (EMF) in a conductor, as seen in generators:
-\[ \text{EMF} = -N \frac{\Delta \Phi}{\Delta t} \]
-where \(N\) is the number of turns and \(\Phi\) is the magnetic flux.
+$$\text{EMF} = -N \frac{\Delta \Phi}{\Delta t}$$where $ N $ is the number of turns and $\Phi$ is the magnetic flux.
 
 x??
 
@@ -226,9 +217,8 @@ x??
 Background context: The process of converting alternating current (AC) to direct current (DC) is called rectification. This is essential for powering many electronic devices that require DC, such as computers and smartphones. Diodes are a crucial part of these circuits, allowing electricity to flow in only one direction.
 
 Relevant formulas and explanations:
-- A diode's behavior can be modeled by the Shockley diode equation: \( I_D = I_S \left( e^{\frac{V_D}{nV_T}} - 1 \right) \)
-  where \( V_D \) is the voltage across the diode, \( n \) is the ideality factor, and \( I_S \) is the reverse saturation current.
-- Inductors (\( L \)) store energy in a magnetic field and capacitors (\( C \)) store energy in an electric field.
+- A diode's behavior can be modeled by the Shockley diode equation:$I_D = I_S \left( e^{\frac{V_D}{nV_T}} - 1 \right)$ where $ V_D $ is the voltage across the diode,$n $ is the ideality factor, and$I_S$ is the reverse saturation current.
+- Inductors ($L $) store energy in a magnetic field and capacitors ($ C$) store energy in an electric field.
 
 :p What is rectification?
 ??x
@@ -253,8 +243,7 @@ x??
 Background context: A transistor is a semiconductor device used for amplification, controlling the flow of electric current. It's essential in devices such as transistor radios.
 
 Relevant formulas and explanations:
-- The relationship between collector-emitter voltage (\( V_{CE} \)) and base current (\( I_B \)) can be described by the following equation: \( I_C = \beta I_B + I_{CBO} \)
-  where \( \beta \) is the current gain factor, and \( I_{CBO} \) is the collector-base open circuit current.
+- The relationship between collector-emitter voltage ($V_{CE}$) and base current ($ I_B $) can be described by the following equation:$ I_C = \beta I_B + I_{CBO}$where $\beta$ is the current gain factor, and $I_{CBO}$ is the collector-base open circuit current.
 
 :p What does a transistor control?
 ??x
@@ -395,16 +384,15 @@ Resistors restrict electric current flow, rated in ohms with a color-coded syste
 The resistor value for red-brown-orange would be calculated as follows:
 - First digit: Red = 2
 - Second digit: Brown = 1
-- Multiplier: Orange = \(10^3\)
-Thus, the value is \(2 \times 10^3\) ohms or 2 kΩ.
+- Multiplier: Orange = $10^3 $ Thus, the value is$2 \times 10^3$ ohms or 2 kΩ.
 
 :p What does a red-brown-orange resistor indicate in terms of its resistance?
 ??x
 The resistor indicates a resistance value of 2 kΩ. This calculation follows the steps:
 - The first band (Red) represents 2.
 - The second band (Brown) represents 1.
-- The third band (Orange) multiplies these by \(10^3\).
-Thus, \(2 \times 10^3 = 2000\) ohms or 2 kΩ.
+- The third band (Orange) multiplies these by $10^3$.
+Thus, $2 \times 10^3 = 2000$ ohms or 2 kΩ.
 
 ```java
 public class Resistor {

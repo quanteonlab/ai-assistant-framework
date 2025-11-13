@@ -226,12 +226,8 @@ The operation of applying this transposed convolutional layer to the image can b
 The transposed convolution operation involves sliding the kernel over the input in a way that each element of the input is multiplied by the corresponding element in the kernel and then summing up these products.
 
 For example, for the top-left block of the output matrix:
-- The value at position (1, 1) of the output is calculated as: \(2 \times 1 + 3 \times 0 = 2\)
-- The value at position (2, 1) of the output is calculated as: \(4 \times 1 + 5 \times 0 = 4\)
-
-Similarly for the bottom-left block:
-- The value at position (1, 2) of the output is calculated as: \(2 \times 2 + 3 \times 3 = 13\)
-- The value at position (2, 2) of the output is calculated as: \(4 \times 2 + 5 \times 3 = 23\)
+- The value at position (1, 1) of the output is calculated as: $2 \times 1 + 3 \times 0 = 2 $- The value at position (2, 1) of the output is calculated as:$4 \times 1 + 5 \times 0 = 4$ Similarly for the bottom-left block:
+- The value at position (1, 2) of the output is calculated as:$2 \times 2 + 3 \times 3 = 13 $- The value at position (2, 2) of the output is calculated as:$4 \times 2 + 5 \times 3 = 23$
 
 Putting these values together with zeros in between gives us:
 ```python
@@ -246,7 +242,7 @@ x??
 #### Batch Normalization in 2D Convolution
 Batch normalization is a technique used to normalize the inputs of each layer, which helps stabilize and speed up training by reducing internal covariate shift.
 
-In batch normalization for 2D data, we first calculate the mean (\(\mu\)) and variance (\(\sigma^2\)) for each feature channel in the input tensor. Then, these values are used to normalize the inputs.
+In batch normalization for 2D data, we first calculate the mean ($\mu $) and variance ($\sigma^2$) for each feature channel in the input tensor. Then, these values are used to normalize the inputs.
 
 :p How does batch normalization work on a three-channel input of size 64 × 64 with a 2D convolutional layer that outputs another three-channel image?
 ??x
@@ -259,9 +255,9 @@ std = out[:,0,:,:].std().item()
 ```
 
 The normalization process is then applied using the formula:
-\[ x' = \frac{x - \mu}{\sigma} \]
+$$x' = \frac{x - \mu}{\sigma}$$
 
-Where \(x\) is the original input, \(\mu\) is the mean, and \(\sigma\) is the standard deviation.
+Where $x $ is the original input,$\mu $ is the mean, and$\sigma$ is the standard deviation.
 
 After applying batch normalization to each channel, we should see that the mean of each channel is close to 0 and the standard deviation is approximately 1. This ensures that the distribution of the inputs remains stable during training.
 

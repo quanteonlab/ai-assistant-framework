@@ -376,20 +376,15 @@ Background context: The goal is to evaluate the cost-effectiveness of different 
 :p Calculate the flop/dollar ratio for the listed GPUs.
 ??x
 To calculate the flop/dollar ratio, use the formula:
-\[ \text{Flop per Dollar} = \frac{\text{Achievable Performance (Gflops/sec)}}{\text{Price (\$)}} \]
-
-For example, with V100:
-\[ \text{Flop per Dollar for V100} = \frac{108.23}{630} \approx 0.172 Gflops/\$ \]
-
-Repeat this calculation for each GPU listed in Table 9.7.
+$$ \text{Flop per Dollar} = \frac{\text{Achievable Performance (Gflops/sec)}}{\text{Price (\$)}} $$For example, with V100:
+$$ \text{Flop per Dollar for V100} = \frac{108.23}{630} \approx 0.172 Gflops/\$ $$Repeat this calculation for each GPU listed in Table 9.7.
 
 For V100:
 ```plaintext
 Achievable Performance: 108.23 Gflops/sec
-Price: $630
+Price:$630
 
-Flop per Dollar = 108.23 / 630 \approx 0.172 Gflops/\$
-```
+Flop per Dollar = 108.23 / 630 \approx 0.172 Gflops/\$```
 
 The GPU with the highest flop/dollar ratio is generally the best value.
 
@@ -491,24 +486,24 @@ Given:
 - Total number of images = 1,000,000
 
 On a CPU:
-\[ \text{Time on CPU} = \frac{\text{Total images}}{\text{Number of cores}} \times (\text{Transfer time + Processing time}) \]
-\[ \text{Time on CPU} = \frac{1,000,000}{16} \times (5 + 5 + 100) \text{ ms} \]
-\[ \text{Time on CPU} = 62,500 \text{ seconds} \]
+$$\text{Time on CPU} = \frac{\text{Total images}}{\text{Number of cores}} \times (\text{Transfer time + Processing time})$$
+$$\text{Time on CPU} = \frac{1,000,000}{16} \times (5 + 5 + 100) \text{ ms}$$
+$$\text{Time on CPU} = 62,500 \text{ seconds}$$
 
 On a GPU:
-\[ \text{Time on GPU} = (\text{Transfer time + Processing time}) \times \frac{\text{Total images}}{\text{Number of GPUs}} \]
-\[ \text{Time on GPU} = (5 + 5 + 5) \times 1,000,000 / 1,000 \text{ ms} \]
-\[ \text{Time on GPU} = 15,000 \text{ seconds} \]
+$$\text{Time on GPU} = (\text{Transfer time + Processing time}) \times \frac{\text{Total images}}{\text{Number of GPUs}}$$
+$$\text{Time on GPU} = (5 + 5 + 5) \times 1,000,000 / 1,000 \text{ ms}$$
+$$\text{Time on GPU} = 15,000 \text{ seconds}$$
 
 The GPU system would not be faster; it would take about 2.5 times as long.
 
 If the transfer time is reduced to Gen4 PCI bus:
-\[ \text{Time on CPU (Gen4)} = \frac{1,000,000}{16} \times (2.5 + 5 + 2.5) \]
-\[ \text{Time on CPU (Gen4)} = 9375 \text{ seconds} \]
+$$\text{Time on CPU (Gen4)} = \frac{1,000,000}{16} \times (2.5 + 5 + 2.5)$$
+$$\text{Time on CPU (Gen4)} = 9375 \text{ seconds}$$
 
 If the transfer time is reduced to Gen5 PCI bus:
-\[ \text{Time on CPU (Gen5)} = \frac{1,000,000}{16} \times (1.25 + 5 + 1.25) \]
-\[ \text{Time on CPU (Gen5)} = 7812.5 \text{ seconds} \]
+$$\text{Time on CPU (Gen5)} = \frac{1,000,000}{16} \times (1.25 + 5 + 1.25)$$
+$$\text{Time on CPU (Gen5)} = 7812.5 \text{ seconds}$$
 
 A Gen4 PCI bus reduces the time significantly.
 x??
@@ -524,17 +519,23 @@ To determine the suitable size of a 3D application, consider:
 - Memory usage per cell: 4 double-precision variables.
 - Usage limit: Half the GPU memory for temporary arrays.
 
-Assume a total GPU memory of \( M \) bytes. The available memory for data and temporary arrays is \( \frac{M}{2} \).
+Assume a total GPU memory of $M $ bytes. The available memory for data and temporary arrays is$\frac{M}{2}$.
 
-Let \( N \) be the number of cells:
-\[ N = \frac{\text{Available Memory}}{\text{Memory per cell}} \]
-\[ N = \frac{\frac{M}{2}}{4 \times 8} \]
-\[ N = \frac{M}{64} \]
+Let $N$ be the number of cells:
+$$N = \frac{\text{Available Memory}}{\text{Memory per cell}}$$
+$$
+
+N = \frac{\frac{M}{2}}{4 \times 8}$$
+$$
+
+N = \frac{M}{64}$$
 
 For example, if your GPU has 12 GB of memory:
-\[ N = \frac{12 \text{ GB}}{64} \approx 0.1875 \text{ billion cells} \]
+$$
 
-So the size of a suitable 3D application would be approximately \( 0.1875 \) billion cells.
+N = \frac{12 \text{ GB}}{64} \approx 0.1875 \text{ billion cells}$$
+
+So the size of a suitable 3D application would be approximately $0.1875$ billion cells.
 x??
 
 ---
@@ -545,7 +546,7 @@ Background context: The example discusses how changing from double precision to 
 
 :p How does single precision affect the 3D mesh resolution compared to double precision?
 ??x
-Using single precision (float) instead of double precision significantly increases the resolution of the 3D mesh. For an NVIDIA GeForce GTX 1060 with a memory size of 6 GiB, the maximum size of a 3D mesh changes from \(465 \times 465 \times 465\) to \(586 \times 586 \times 586\). This results in a 25 percent improvement in resolution.
+Using single precision (float) instead of double precision significantly increases the resolution of the 3D mesh. For an NVIDIA GeForce GTX 1060 with a memory size of 6 GiB, the maximum size of a 3D mesh changes from $465 \times 465 \times 465 $ to$586 \times 586 \times 586$. This results in a 25 percent improvement in resolution.
 
 Code Example:
 ```c

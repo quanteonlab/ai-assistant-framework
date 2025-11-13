@@ -26,11 +26,8 @@ Background context: The fine structure splitting arises from the coupling betwee
 
 :p What is the formula for the magnetic moment μ associated with a particle?
 ??x
-The magnetic moment \(\mu\) of a particle with charge \(q\) and spin \(S\) is given by:
-\[
-\mu = g \frac{q}{2m} S,
-\]
-where \(g\) is the particle's g-factor, and \(m\) is its mass.
+The magnetic moment $\mu $ of a particle with charge$q $ and spin$S$ is given by:
+$$\mu = g \frac{q}{2m} S,$$where $ g $ is the particle's g-factor, and $ m$ is its mass.
 
 x??
 
@@ -43,17 +40,10 @@ Background context: The hyperfine splitting occurs due to the interaction betwee
 :p What are the formulas for the g-factors and Bohr magnetons for an electron?
 ??x
 For an electron:
-\[
-g \approx -2,
-\]
-and its magnetic moment is given by:
-\[
-\mu_e = (-2) \frac{-e}{2m_e} S_e = \mu_B S_e,
-\]
-where the electron's Bohr magneton (\(\mu_B\)) is defined as:
-\[
-\mu_B = \frac{e \hbar}{2 m_e} = 5.05082 \times 10^{-27} \text{ J/T}.
-\]
+$$g \approx -2,$$and its magnetic moment is given by:
+$$\mu_e = (-2) \frac{-e}{2m_e} S_e = \mu_B S_e,$$
+where the electron's Bohr magneton ($\mu_B$) is defined as:
+$$\mu_B = \frac{e \hbar}{2 m_e} = 5.05082 \times 10^{-27} \text{ J/T}.$$
 
 x??
 
@@ -61,43 +51,35 @@ x??
 
 #### Pauli Matrices and Spin Interaction
 
-Background context: The interaction between the electron’s spin (\(\sigma_e\)) and the proton’s spin (\(\sigma_p\)) can be represented using Pauli matrices. These matrices help in describing the possible states of these particles.
+Background context: The interaction between the electron’s spin ($\sigma_e $) and the proton’s spin ($\sigma_p$) can be represented using Pauli matrices. These matrices help in describing the possible states of these particles.
 
-:p What are the Pauli matrices for \(x\), \(y\), and \(z\) directions?
+:p What are the Pauli matrices for $x $, $ y $, and$ z$ directions?
 ??x
 The Pauli matrices for the x, y, and z directions are:
-\[
-\sigma_x = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}, \quad \sigma_y = \begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix}, \quad \sigma_z = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}.
-\]
-
-x??
+$$\sigma_x = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}, \quad \sigma_y = \begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix}, \quad \sigma_z = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}.$$x??
 
 ---
 
 #### Interaction Matrix for Spin States
 
-Background context: The interaction between the electron and proton spins can be described by a matrix \(V\) derived from their Pauli matrices. This helps in understanding how these states evolve under the influence of each other.
+Background context: The interaction between the electron and proton spins can be described by a matrix $V$ derived from their Pauli matrices. This helps in understanding how these states evolve under the influence of each other.
 
-:p What is the interaction matrix for the \(\left| \alpha_e \alpha_p \right>\) state?
+:p What is the interaction matrix for the $\left| \alpha_e \alpha_p \right>$ state?
 ??x
-The interaction matrix for the \(\left| \alpha_e \alpha_p \right>\) state, where both particles start in a spin-up state, is:
-\[
-V \left| \alpha_e \alpha_p \right> = W (\sigma_e \cdot \sigma_p) \left| \alpha_e \alpha_p \right> = W ( \sigma_{e_x} \sigma_{p_x} + \sigma_{e_y} \sigma_{p_y} + \sigma_{e_z} \sigma_{p_z}) \left| \alpha_e \alpha_p \right>
-\]
+The interaction matrix for the $\left| \alpha_e \alpha_p \right>$ state, where both particles start in a spin-up state, is:
+$$V \left| \alpha_e \alpha_p \right> = W (\sigma_e \cdot \sigma_p) \left| \alpha_e \alpha_p \right> = W ( \sigma_{e_x} \sigma_{p_x} + \sigma_{e_y} \sigma_{p_y} + \sigma_{e_z} \sigma_{p_z}) \left| \alpha_e \alpha_p \right>$$
+
 This can be simplified to:
-\[
-V \left| \alpha_e \alpha_p \right> = W (1 + i + 1) \left| \beta_e \beta_p \right> = | \beta_e \beta_p \rangle + i | \beta_e \beta_p \rangle + | \alpha_e \alpha_p \rangle.
-\]
-The interaction matrix in the context of \(\langle \alpha_e \alpha_p | V | \alpha_e \alpha_p \rangle\) is:
-\[
-\langle \alpha_e \alpha_p | V | \alpha_e \alpha_p \rangle = \begin{bmatrix}
+$$
+
+V \left| \alpha_e \alpha_p \right> = W (1 + i + 1) \left| \beta_e \beta_p \right> = | \beta_e \beta_p \rangle + i | \beta_e \beta_p \rangle + | \alpha_e \alpha_p \rangle.$$
+
+The interaction matrix in the context of $\langle \alpha_e \alpha_p | V | \alpha_e \alpha_p \rangle$ is:
+$$\langle \alpha_e \alpha_p | V | \alpha_e \alpha_p \rangle = \begin{bmatrix}
 W & 0 & 0 \\
 0 & -W/2 & W \\
 0 & W & -W
-\end{bmatrix}.
-\]
-
-x??
+\end{bmatrix}.$$x??
 
 ---
 
@@ -107,22 +89,21 @@ Background context: The eigenvalues of the interaction matrix provide insights i
 
 :p What are the eigenvalues of the V interaction matrix?
 ??x
-The eigenvalues of the \(V\) interaction matrix for the \(\left| \alpha_e \alpha_p \right>\) state are:
-\[
--3W \text{ (multiplicity 3, triplet state)}, \quad W \text{ (multiplicity 1, singlet state)}.
-\]
-The triplet state corresponds to \(S=1\) with \(m_S = +1, 0, -1\), and the singlet state corresponds to \(S=0\) with \(m_S = 0\).
+The eigenvalues of the $V $ interaction matrix for the$\left| \alpha_e \alpha_p \right>$ state are:
+$$-3W \text{ (multiplicity 3, triplet state)}, \quad W \text{ (multiplicity 1, singlet state)}.$$
+
+The triplet state corresponds to $S=1 $ with$m_S = +1, 0, -1 $, and the singlet state corresponds to$ S=0 $with$ m_S = 0$.
 
 x??
 
 ---
 
 #### Hyperfine Splitting Comparison
-Background context explaining hyperfine splitting and its significance. The formula \(\nu = \frac{\hbar\Delta E}{4W}\) is provided to calculate the hyperfine splitting for the 1S state, where \(W\) is a constant specific to the system in question. The result should be compared with the experimental value measured by Bailey and Townsend: \(\nu = 1420.405751800 ± 0.000000028Hz\).
+Background context explaining hyperfine splitting and its significance. The formula $\nu = \frac{\hbar\Delta E}{4W}$ is provided to calculate the hyperfine splitting for the 1S state, where $W$ is a constant specific to the system in question. The result should be compared with the experimental value measured by Bailey and Townsend:$\nu = 1420.405751800 ± 0.000000028Hz$.
 
 :p What is the formula for calculating hyperfine splitting, and how does it compare to the experimental value?
 ??x
-The formula for calculating hyperfine splitting \(\nu = \frac{\hbar\Delta E}{4W}\) can be compared with the experimental value of \(1420.405751800 ± 0.000000028Hz\) measured by Bailey and Townsend, which should agree theoretically.
+The formula for calculating hyperfine splitting $\nu = \frac{\hbar\Delta E}{4W}$ can be compared with the experimental value of $1420.405751800 ± 0.000000028Hz$ measured by Bailey and Townsend, which should agree theoretically.
 x??
 
 ---
@@ -611,7 +592,7 @@ Background context: This section provides an example of solving nonlinear equati
 
 :p What is the role of the `F(x, f)` function in the provided code?
 ??x
-The `F(x, f)` function calculates the values of the functions \(f_i\) based on the current state vector `x`:
+The `F(x, f)` function calculates the values of the functions $f_i$ based on the current state vector `x`:
 
 ```python
 def F(x, f):
@@ -622,7 +603,7 @@ def F(x, f):
         f[i] = fi - b[i]
 ```
 
-This function computes the residuals \(f_i\) by evaluating the nonlinear equations with the current values of `x`. The results are stored in the array `f`.
+This function computes the residuals $f_i$ by evaluating the nonlinear equations with the current values of `x`. The results are stored in the array `f`.
 
 x?? 
 
@@ -905,7 +886,7 @@ Background context: This section demonstrates an iterative method to solve nonli
 
 :p Can you explain how the `dFi_dXj` function approximates the Jacobian matrix?
 ??x
-The `dFi_dXj` function in the provided code approximates the Jacobian matrix by computing the partial derivatives of each equation \( f_i \) with respect to each variable \( x_j \). Here's a detailed explanation:
+The `dFi_dXj` function in the provided code approximates the Jacobian matrix by computing the partial derivatives of each equation $f_i $ with respect to each variable$x_j$. Here's a detailed explanation:
 
 ### Function Definition
 
@@ -926,17 +907,16 @@ def dFi_dXj(x, deriv, n):
   - `n`: The number of variables and equations.
 
 - **Process**:
-  - For each equation \( f_i \), initialize a variable `dfi_dx` to zero. This variable will store the sum of the terms for the current equation's partial derivative with respect to all variables.
-  - Iterate over each variable \( x_j \):
-    - Multiply the coefficient \( a[i][j] \) (which represents the contribution of \( x_j \) to \( f_i \)) by the value of \( x[j] \).
+  - For each equation $f_i$, initialize a variable `dfi_dx` to zero. This variable will store the sum of the terms for the current equation's partial derivative with respect to all variables.
+  - Iterate over each variable $x_j$:
+    - Multiply the coefficient $a[i][j]$(which represents the contribution of $ x_j$to $ f_i$) by the value of $ x[j]$.
     - Add this product to `dfi_dx`.
   - After completing the inner loop, store `dfi_dx` in the appropriate position in the Jacobian matrix `deriv`.
 
 ### Example
 
 Suppose we have two equations and three variables:
-- Equations: \( f_1(x_1, x_2, x_3) \), \( f_2(x_1, x_2, x_3) \)
-- Variables: \( x_1 \), \( x_2 \), \( x_3 \)
+- Equations: $f_1(x_1, x_2, x_3)$,$ f_2(x_1, x_2, x_3)$- Variables:$ x_1 $,$ x_2 $,$ x_3$
 
 The Jacobian matrix `deriv` will be a 2x3 matrix:
 ```
@@ -944,12 +924,12 @@ The Jacobian matrix `deriv` will be a 2x3 matrix:
   [ df2/dx1, df2/dx2, df2/dx3 ] ]
 ```
 
-For the first equation \( f_1 \):
-- Compute `df1_dx1` by summing up terms: \( a[0][0] * x[0] + a[0][1] * x[1] + a[0][2] * x[2] \)
+For the first equation $f_1$:
+- Compute `df1_dx1` by summing up terms: $a[0][0] * x[0] + a[0][1] * x[1] + a[0][2] * x[2]$
 - Store this value in the first row, first column of `deriv`.
 
-For the second equation \( f_2 \):
-- Compute `df2_dx1` by summing up terms: \( a[1][0] * x[0] + a[1][1] * x[1] + a[1][2] * x[2] \)
+For the second equation $f_2$:
+- Compute `df2_dx1` by summing up terms: $a[1][0] * x[0] + a[1][1] * x[1] + a[1][2] * x[2]$
 - Store this value in the second row, first column of `deriv`.
 
 This process is repeated for all variables and equations to fill out the entire Jacobian matrix.

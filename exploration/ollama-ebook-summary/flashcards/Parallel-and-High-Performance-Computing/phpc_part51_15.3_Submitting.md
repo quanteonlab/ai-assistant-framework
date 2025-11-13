@@ -758,7 +758,7 @@ echo "Restart COUNT is $COUNT"
 
 if [ . -e DONE ]; then
     if [ -e RESTART ]; then
-        echo "=== Restarting $EXEC_NAME ===" >> $OUTPUT_FILE
+        echo "=== Restarting $EXEC_NAME ===" >>$ OUTPUT_FILE
         cycle=`cat RESTART`
         rm -f RESTART
     else
@@ -766,11 +766,11 @@ if [ . -e DONE ]; then
         cycle=""
     fi
 
-    mpirun -n ${NUM_CPUS} ${EXEC_NAME} ${cycle} &>> $OUTPUT_FILE
+    mpirun -n ${NUM_CPUS}${EXEC_NAME}${cycle} &>>$ OUTPUT_FILE
     STATUS=$?
     echo "Finished mpirun" >> $OUTPUT_FILE
 
-    if [ ${COUNT} -ge ${MAX_RESTARTS} ]; then
+    if [ ${COUNT} -ge${MAX_RESTARTS} ]; then
         echo "=== Reached maximum number of restarts ===" >> $OUTPUT_FILE
         date > DONE
     fi
@@ -827,7 +827,7 @@ The script differentiates by checking the presence of specific files:
 ```sh
 if [ . -e DONE ]; then
     if [ -e RESTART ]; then
-        echo "=== Restarting ${EXEC_NAME} ===" >> ${OUTPUT_FILE}
+        echo "=== Restarting ${EXEC_NAME} ===" >>${OUTPUT_FILE}
         cycle=`cat RESTART`
         rm -f RESTART
     else
@@ -862,7 +862,7 @@ Background context: The script handles multiple restart attempts by incrementing
 The script uses an internal counter (`COUNT`) to keep track of the number of restarts. It increments this counter each time and checks if the count has reached or exceeded the maximum allowed restarts (`MAX_RESTARTS`). If so, it creates a `DONE` file to signal that no more restarts are needed.
 
 ```sh
-if [ ${COUNT} -ge ${MAX_RESTARTS} ]; then
+if [ ${COUNT} -ge${MAX_RESTARTS} ]; then
     echo "=== Reached maximum number of restarts ===" >> ${OUTPUT_FILE}
     date > DONE
 fi

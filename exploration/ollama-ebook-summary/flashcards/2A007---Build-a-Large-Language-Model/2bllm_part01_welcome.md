@@ -898,13 +898,12 @@ x??
 Explanation of implementing the attention mechanism in LLMs, which is crucial for their functionality. The attention mechanism helps each position in the sequence attend to all positions in the input.
 
 The formula for scaled dot-product attention is:
-\[ \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V \]
-:p How is the attention mechanism implemented in LLMs?
+$$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$:p How is the attention mechanism implemented in LLMs?
 ??x
 The attention mechanism in LLMs implements scaled dot-product attention using the following formula:
-\[ \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V \]
+$$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
 
-Here, \( Q \), \( K \), and \( V \) are matrices representing query, key, and value vectors. The dot product between the query and key is scaled by dividing by the square root of the key dimension size (\( d_k \)), which helps stabilize the scaling of the softmax function.
+Here,$Q $, $ K $, and$ V $are matrices representing query, key, and value vectors. The dot product between the query and key is scaled by dividing by the square root of the key dimension size ($ d_k$), which helps stabilize the scaling of the softmax function.
 
 This mechanism allows each position in the sequence to attend to all positions, capturing dependencies effectively.
 x??

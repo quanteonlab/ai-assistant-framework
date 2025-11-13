@@ -38,19 +38,30 @@ prompts:
       2. Provide background context, relevant formulas, and explanations after the header
       3. The objective is familiarity, not pure memorization - explain context and background
       4. Add C/Java code or pseudocode when relevant, explaining the logic in detail
-      5. Use :p to denote the question/prompt
-      6. Wrap the answer between ??x and x??
-      7. Separate each flashcard with ---
-      8. Each flashcard should have only ONE question
-      9. If multiple cards cover the same topic, specify descriptions to differentiate them
+      5. For mathematical expressions:
+         - Use $$ for block math (equations on their own line)
+         - Use $ for inline math (equations within text) - NO SPACES between $ and content
+         - CORRECT: $f(t)$ or $E = mc^2$
+         - WRONG: $ f(t) $ or $ E = mc^2 $
+         - Example: The equation $$E = mc^2$$ is famous. Einstein's $E = mc^2$ relates energy and mass.
+      6. Use :p to denote the question/prompt
+      7. Wrap the answer between ??x and x??
+      8. Separate each flashcard with ---
+      9. Each flashcard should have only ONE question
+      10. If multiple cards cover the same topic, specify descriptions to differentiate them
 
       Example format:
       #### Concept Title
       Background context explaining the concept. Include any relevant formulas or data here.
+      For example, the quadratic formula is $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
       If applicable, add code examples with explanations.
       :p What is the question about this concept?
       ??x
       The answer with detailed explanations.
+      You can use inline math like $x^2 + y^2 = r^2$ (no spaces!) or block math:
+      $$
+      \int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
+      $$
       Include code examples if relevant:
       ```java
       public class Example {
@@ -87,6 +98,85 @@ prompts:
       4-5: Moderately useful, somewhat niche or context-specific
       2-3: Low technical value, trivial or overly specific
       1: Not useful for technical professionals, or completely irrelevant to focus area
+
+      Respond with ONLY a single number from 1-10, nothing else.
+
+      Flashcard to rate:
+      {flashcard}
+  chinese_flashcards:
+    prompt: |
+      Create Chinese language flashcards from the provided text. Generate TWO types of flashcards:
+
+      IMPORTANT: For mathematical expressions, use $$ for block math and $ for inline math.
+      Inline math must have NO SPACES: $f(t)$ is CORRECT, $ f(t) $ is WRONG.
+      Example: $$E = mc^2$$ or inline $E = mc^2$
+
+      TYPE 1: ADVANCED TERMINOLOGY FLASHCARDS
+      These focus on advanced/specialized Chinese vocabulary. Format:
+      #### [Topic/Context]
+      [Brief background explaining the term usage and context]
+      :p [Chinese characters]:::[Pinyin], [English translation]
+      ??x
+      [Detailed explanation of usage, context, example sentences in both Chinese and English]
+      x??
+
+      Example:
+      #### Transportation Terminology
+      This term is commonly used in formal contexts when discussing vehicle operation.
+      :p 行驶的时间:::Xíngshǐ de shíjiān, Travel time / Duration of travel
+      ??x
+      Used to refer to the time taken for a vehicle to travel. Example:
+      - 从北京到上海的行驶的时间大约需要五小时。(Cóng Běijīng dào Shànghǎi de xíngshǐ de shíjiān dàyuē xūyào wǔ xiǎoshí.)
+      - The travel time from Beijing to Shanghai takes approximately five hours.
+      x??
+
+      ---
+
+      TYPE 2: COMPREHENSION FLASHCARDS
+      These test understanding of concepts with bilingual content. Format:
+      #### [Concept Title in English and Chinese]
+      [Background context in both English and Chinese explaining the concept]
+      :p [Question in English with Chinese translation]
+      ??x
+      [Answer in both English and Chinese with detailed explanations]
+      x??
+
+      Example:
+      #### 中国历史朝代 / Chinese Historical Dynasties
+      中国有许多朝代，每个朝代都有其独特的文化和贡献。
+      China has many dynasties, each with unique culture and contributions.
+      :p What were the major achievements of the Tang Dynasty? / 唐朝的主要成就是什么？
+      ??x
+      The Tang Dynasty (618-907 CE) was known for:
+      唐朝（618-907年）以以下成就闻名：
+      - Poetry and literature flourishing / 诗歌和文学繁荣
+      - Economic prosperity / 经济繁荣
+      - Cultural exchange via Silk Road / 通过丝绸之路进行文化交流
+      x??
+
+      ---
+
+      Create multiple flashcards of BOTH types covering the key Chinese vocabulary and concepts in the text.
+      Focus on advanced vocabulary that would challenge an advanced Chinese learner.
+  chinese_difficulty_rating:
+    prompt: |
+      Rate the difficulty of this Chinese vocabulary/terminology flashcard for an ADVANCED Chinese learner (HSK 5-6 level).
+
+      Consider:
+      - Character complexity and rarity
+      - Vocabulary sophistication (is this advanced/specialized terminology?)
+      - Usage frequency in modern Chinese
+      - Cultural or contextual complexity
+      - Whether this is essential for advanced fluency
+      - Practical applicability in professional/academic contexts
+
+      Rating scale:
+      10: Extremely advanced/specialized vocabulary critical for native-level fluency
+      8-9: Very advanced terminology, important for professional/academic Chinese
+      6-7: Upper-intermediate to advanced vocabulary, useful for educated discourse
+      4-5: Mid-level vocabulary, some complexity but fairly common
+      2-3: Basic advanced vocabulary, relatively straightforward
+      1: Too simple for advanced learners (HSK 4 level or below)
 
       Respond with ONLY a single number from 1-10, nothing else.
 

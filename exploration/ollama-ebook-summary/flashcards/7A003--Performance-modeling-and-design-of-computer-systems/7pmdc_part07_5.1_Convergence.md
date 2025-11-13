@@ -6,37 +6,36 @@
 
 #### Definition of Convergence for Sequences of Numbers
 
-Background context: In high school, we learned about the convergence of a sequence of numbers. A sequence \(\{a_n : n=1,2,...\}\) converges to \(b\) as \(n \to \infty\), denoted as \(a_n \to b\) or equivalently, \(\lim_{n \to \infty} a_n = b\). This means that for any given degree of convergence \(\epsilon > 0\), there exists an index point \(n_0(\epsilon)\) such that beyond this point, all elements of the sequence are within \(\epsilon\) of \(b\).
+Background context: In high school, we learned about the convergence of a sequence of numbers. A sequence $\{a_n : n=1,2,...\}$ converges to $b$ as $n \to \infty$, denoted as $ a_n \to b$or equivalently,$\lim_{n \to \infty} a_n = b $. This means that for any given degree of convergence $\epsilon > 0 $, there exists an index point $ n_0(\epsilon)$such that beyond this point, all elements of the sequence are within $\epsilon$ of $b$.
 
 :p What does the definition of convergence for a sequence of numbers mean?
 ??x
-The definition states that a sequence converges to \(b\) if, for any given \(\epsilon > 0\), one can find an index point \(n_0(\epsilon)\) such that all elements in the sequence beyond this point are within \(\epsilon\) distance from \(b\). Mathematically:
-\[ \forall \epsilon > 0, \exists n_0(\epsilon) : |a_n - b| < \epsilon \text{ for all } n > n_0(\epsilon) \]
-x??
+The definition states that a sequence converges to $b $ if, for any given$\epsilon > 0 $, one can find an index point $ n_0(\epsilon)$such that all elements in the sequence beyond this point are within $\epsilon$ distance from $b$. Mathematically:
+$$\forall \epsilon > 0, \exists n_0(\epsilon) : |a_n - b| < \epsilon \text{ for all } n > n_0(\epsilon)$$x??
 
 ---
 
 #### Definition of Convergence for Random Variables
 
-Background context: When dealing with random variables, we need a similar definition to that of sequences. A sequence of random variables \(\{Y_n : n=1,2,...\}\) converges almost surely (a.s.) or with probability 1 (w.p.1) to \(\mu\) if the probability of sample paths where the limit does not equal \(\mu\) is zero.
+Background context: When dealing with random variables, we need a similar definition to that of sequences. A sequence of random variables $\{Y_n : n=1,2,...\}$ converges almost surely (a.s.) or with probability 1 (w.p.1) to $\mu$ if the probability of sample paths where the limit does not equal $\mu$ is zero.
 
-:p What does \(P\{\omega: \lim_{n \to \infty}|Y_n(\omega)-\mu| > k\}\) represent?
+:p What does $P\{\omega: \lim_{n \to \infty}|Y_n(\omega)-\mu| > k\}$ represent?
 ??x
-This represents the probability of sample paths that behave badly, meaning for each such path \(\omega\), the limit of the sequence \(\{Y_n(\omega): n=1,2,...\}\) is not \(\mu\) or does not exist. Formally:
-\[ P\{\omega: \lim_{n \to \infty}|Y_n(\omega)-\mu| > k\} = 0 \]
-x??
+This represents the probability of sample paths that behave badly, meaning for each such path $\omega $, the limit of the sequence $\{Y_n(\omega): n=1,2,...\}$ is not $\mu$ or does not exist. Formally:
+$$P\{\omega: \lim_{n \to \infty}|Y_n(\omega)-\mu| > k\} = 0$$x??
 
 ---
 
 #### Almost Sure Convergence
 
-Background context: Almost sure convergence occurs when, on almost all sample paths, the sequence of random variables will start behaving well and continue to behave well after some point. Specifically, for any \(k > 0\), the probability that the limit does not converge to \(\mu\) is zero.
+Background context: Almost sure convergence occurs when, on almost all sample paths, the sequence of random variables will start behaving well and continue to behave well after some point. Specifically, for any $k > 0 $, the probability that the limit does not converge to $\mu$ is zero.
 
 :p Describe what almost sure convergence means.
 ??x
-Almost sure convergence means that on a set of sample paths with total probability 1, the sequence of random variables converges to \(\mu\). Formally:
-\[ \forall k > 0, P\{\omega: \lim_{n \to \infty}|Y_n(\omega) - \mu| > k\} = 0 \]
-This implies that almost all sample paths \(\omega\) have the property that the sequence \(\{Y_n(\omega): n=1,2,...\}\) converges to \(\mu\).
+Almost sure convergence means that on a set of sample paths with total probability 1, the sequence of random variables converges to $\mu$. Formally:
+$$\forall k > 0, P\{\omega: \lim_{n \to \infty}|Y_n(\omega) - \mu| > k\} = 0$$
+
+This implies that almost all sample paths $\omega $ have the property that the sequence$\{Y_n(\omega): n=1,2,...\}$ converges to $\mu$.
 
 An illustration might be:
 ```plaintext
@@ -55,14 +54,15 @@ x??
 
 #### Convergence in Probability
 
-Background context: Convergence in probability is another way to describe how a sequence of random variables \(\{Y_n : n=1,2,...\}\) converges to \(\mu\). It states that for any \(k > 0\), the probability that the difference between \(Y_n\) and \(\mu\) exceeds \(k\) approaches zero as \(n\) goes to infinity.
+Background context: Convergence in probability is another way to describe how a sequence of random variables $\{Y_n : n=1,2,...\}$ converges to $\mu$. It states that for any $ k > 0$, the probability that the difference between $ Y_n$and $\mu$ exceeds $ k $ approaches zero as $n$ goes to infinity.
 
-:p What does \(P\{\omega: |Y_n(\omega)-\mu| > k\}\) represent in the context of convergence in probability?
+:p What does $P\{\omega: |Y_n(\omega)-\mu| > k\}$ represent in the context of convergence in probability?
 ??x
-This represents the probability that a given sample path behaves badly for the random variable \(Y_n\), meaning \(Y_n(\omega)\) deviates from \(\mu\) by more than \(k\).
+This represents the probability that a given sample path behaves badly for the random variable $Y_n $, meaning $ Y_n(\omega)$deviates from $\mu$ by more than $k$.
 
 Formally:
-\[ P\{\omega: |Y_n(\omega)-\mu| > k\} \]
+$$P\{\omega: |Y_n(\omega)-\mu| > k\}$$
+
 This is a number between 0 and 1.
 
 x??
@@ -71,7 +71,7 @@ x??
 
 #### Comparison Between Almost Sure Convergence and Convergence in Probability
 
-Background context: Both almost sure convergence and convergence in probability describe how sequences of random variables converge, but they are not the same. Almost sure convergence implies that for all \(k > 0\), with a probability of 1, the sequence converges to \(\mu\) beyond some point.
+Background context: Both almost sure convergence and convergence in probability describe how sequences of random variables converge, but they are not the same. Almost sure convergence implies that for all $k > 0 $, with a probability of 1, the sequence converges to $\mu$ beyond some point.
 
 :p How many badly behaving sample paths can there be according to almost sure convergence?
 ??x
@@ -85,11 +85,11 @@ x??
 
 #### Example of Convergence in Probability
 
-Background context: If \(Y_n\) represents the average of the first \(n\) coin flips for a fair coin (where each flip is either 0 or 1 with equal probability), we expect the sequence to converge to \(\frac{1}{2}\).
+Background context: If $Y_n $ represents the average of the first$n $ coin flips for a fair coin (where each flip is either 0 or 1 with equal probability), we expect the sequence to converge to$\frac{1}{2}$.
 
-:p What do we expect the sequence \(\{Y_n(\omega): n=1,2,...\}\) to converge to if \(Y_n\) represents the average of the first \(n\) coin flips?
+:p What do we expect the sequence $\{Y_n(\omega): n=1,2,...\}$ to converge to if $Y_n$ represents the average of the first $n$ coin flips?
 ??x
-We expect the sequence to converge to \(\frac{1}{2}\), as each flip is equally likely to be 0 or 1.
+We expect the sequence to converge to $\frac{1}{2}$, as each flip is equally likely to be 0 or 1.
 
 x??
 
@@ -101,7 +101,7 @@ Background context: While convergence in probability is useful, it does not guar
 
 :p Why can't we say that the convergence in probability holds for all sample paths?
 ??x
-There are always some sample paths (e.g., 1111...) that do not average to \(\frac{1}{2}\) no matter how far out we look. However, these paths have a total measure of zero.
+There are always some sample paths (e.g., 1111...) that do not average to $\frac{1}{2}$ no matter how far out we look. However, these paths have a total measure of zero.
 
 x??
 
@@ -122,12 +122,13 @@ x??
 Each flashcard provides detailed explanations while focusing on one key concept at a time. The questions are designed to reinforce understanding rather than pure memorization.
 
 #### Limit of a Sequence of Constants
-Background context: In probability theory, understanding how a sequence converges to a limit is crucial. For a constant sequence \(a_n = c\), the concept of convergence helps us understand if these constants approach some value as \(n\) becomes large.
+Background context: In probability theory, understanding how a sequence converges to a limit is crucial. For a constant sequence $a_n = c $, the concept of convergence helps us understand if these constants approach some value as $ n$ becomes large.
 
 :p How can we define the convergence in probability using the limit of a sequence of constants?
 ??x
-For any \(\epsilon > 0\), there exists an \(N\) such that for all \(n > N\), the probability that the absolute difference between \(Y_n\) and \(\mu\) exceeds \(\epsilon\) is less than some small value. Formally, this can be stated as: 
-\[ \forall k>0, \forall \epsilon_1>0, \exists n_0(\epsilon_1) \text{ s.t. } \forall n>n_0(\epsilon_1), P\{\omega : |Y_n(\omega) - \mu| > k\} < \epsilon_1. \]
+For any $\epsilon > 0 $, there exists an $ N $such that for all$ n > N $, the probability that the absolute difference between$ Y_n $and$\mu $ exceeds$\epsilon$ is less than some small value. Formally, this can be stated as:
+$$\forall k>0, \forall \epsilon_1>0, \exists n_0(\epsilon_1) \text{ s.t. } \forall n>n_0(\epsilon_1), P\{\omega : |Y_n(\omega) - \mu| > k\} < \epsilon_1.$$
+
 This definition replaces the traditional limit of a sequence with one that works in terms of probability.
 x??
 
@@ -138,9 +139,9 @@ Background context: These two types of convergence are fundamental concepts in p
 
 :p Which is stronger: almost sure convergence or convergence in probability?
 ??x
-Almost sure convergence implies convergence in probability. Intuitively, if a sequence \(Y_n\) converges almost surely to \(\mu\), it means that for "almost every" sample path (with probability 1), the sequence will eventually get arbitrarily close to \(\mu\) and stay there.
+Almost sure convergence implies convergence in probability. Intuitively, if a sequence $Y_n $ converges almost surely to$\mu $, it means that for "almost every" sample path (with probability 1), the sequence will eventually get arbitrarily close to $\mu$ and stay there.
 
-The formal intuition is that given almost sure convergence, each sample path will behave correctly from some point onward. As \(n\) increases, fewer and fewer paths deviate significantly, making it likely that the mass of such bad paths decreases. However, this requires a rigorous proof.
+The formal intuition is that given almost sure convergence, each sample path will behave correctly from some point onward. As $n$ increases, fewer and fewer paths deviate significantly, making it likely that the mass of such bad paths decreases. However, this requires a rigorous proof.
 x??
 
 ---
@@ -148,16 +149,16 @@ x??
 #### Convergence in Probability but Not Almost Surely
 Background context: Understanding when a sequence can converge in probability without converging almost surely is important for grasping the nuances between these two types of convergence.
 
-:p How might a sequence \(\{Y_n\}\) converge in probability but not almost surely?
+:p How might a sequence $\{Y_n\}$ converge in probability but not almost surely?
 ??x
-Even if \(\{Y_n\}\) converges in probability, it could still be that no single sample path behaves well after some point. For example, each path may spike occasionally; these spikes get further apart as \(n\) increases. Thus, for no sample path \(\omega\), does the sequence converge. However, for any fixed \(n\), the fraction of paths where \(Y_n\) is far from \(\mu\) becomes smaller as \(n\) grows.
+Even if $\{Y_n\}$ converges in probability, it could still be that no single sample path behaves well after some point. For example, each path may spike occasionally; these spikes get further apart as $n$ increases. Thus, for no sample path $\omega$, does the sequence converge. However, for any fixed $ n$, the fraction of paths where $ Y_n$is far from $\mu$ becomes smaller as $n$ grows.
 
 This can be visualized as follows: 
 - For each path, there might be occasional deviations (spikes).
 - These spikes get further apart.
-- As \(n\) increases, fewer and fewer paths exhibit such behavior. 
+- As $n$ increases, fewer and fewer paths exhibit such behavior. 
 
-In summary, while the overall probability of deviation decreases with larger \(n\), no single path converges to \(\mu\). This is illustrated in Figure 5.2 where sample paths have occasional "bad" behaviors that do not align with convergence.
+In summary, while the overall probability of deviation decreases with larger $n $, no single path converges to $\mu$. This is illustrated in Figure 5.2 where sample paths have occasional "bad" behaviors that do not align with convergence.
 x??
 
 ---
@@ -167,12 +168,13 @@ Background context: The weak law of large numbers (WLLN) provides a probabilisti
 
 :p What does the Weak Law of Large Numbers state?
 ??x
-The WLLN states that if \(X_1, X_2, \ldots\) are independent and identically distributed (i.i.d.) random variables with mean \(E[X]\), then the sample mean \(Y_n = \frac{S_n}{n}\) converges in probability to \(E[X]\). Formally:
-\[ Y_n \xrightarrow{P} E[X], \text{ as } n \to \infty. \]
-This is shorthand for: 
-\[ \forall k > 0, \lim_{n \to \infty} P\{|Y_n - E[X]| > k\} = 0. \]
+The WLLN states that if $X_1, X_2, \ldots $ are independent and identically distributed (i.i.d.) random variables with mean$E[X]$, then the sample mean $ Y_n = \frac{S_n}{n}$converges in probability to $ E[X]$. Formally:
+$$Y_n \xrightarrow{P} E[X], \text{ as } n \to \infty.$$
 
-In simpler terms, the probability that the difference between \(Y_n\) and the mean \(E[X]\) exceeds any positive constant \(k\) goes to zero as \(n\) increases.
+This is shorthand for:
+$$\forall k > 0, \lim_{n \to \infty} P\{|Y_n - E[X]| > k\} = 0.$$
+
+In simpler terms, the probability that the difference between $Y_n $ and the mean$E[X]$ exceeds any positive constant $k$ goes to zero as $n$ increases.
 x??
 
 ---
@@ -182,12 +184,13 @@ Background context: The strong law of large numbers (SLLN) provides a determinis
 
 :p What does the Strong Law of Large Numbers state?
 ??x
-The SLLN states that if \(X_1, X_2, \ldots\) are independent and identically distributed (i.i.d.) random variables with mean \(E[X]\), then the sample mean \(Y_n = \frac{S_n}{n}\) converges almost surely to \(E[X]\). Formally:
-\[ Y_n \xrightarrow{\text{a.s.}} E[X], \text{ as } n \to \infty. \]
-This is shorthand for: 
-\[ \forall k > 0, P\left\{ \lim_{n \to \infty} |Y_n - E[X]| \geq k \right\} = 0. \]
+The SLLN states that if $X_1, X_2, \ldots $ are independent and identically distributed (i.i.d.) random variables with mean$E[X]$, then the sample mean $ Y_n = \frac{S_n}{n}$converges almost surely to $ E[X]$. Formally:
+$$Y_n \xrightarrow{\text{a.s.}} E[X], \text{ as } n \to \infty.$$
 
-In simpler terms, almost every sample path of the sequence will eventually get arbitrarily close to \(E[X]\) and stay there as \(n\) increases.
+This is shorthand for:
+$$\forall k > 0, P\left\{ \lim_{n \to \infty} |Y_n - E[X]| \geq k \right\} = 0.$$
+
+In simpler terms, almost every sample path of the sequence will eventually get arbitrarily close to $E[X]$ and stay there as $n$ increases.
 x??
 
 ---
@@ -197,7 +200,7 @@ Background context: When dealing with i.i.d. Bernoulli random variables (which t
 
 :p What does the Strong Law say about a sequence of i.i.d. Bernoulli random variables?
 ??x
-For a sequence of i.i.d. Bernoulli random variables \(X_i\) with mean \(\frac{1}{2}\), the strong law says that for "almost every" sample path, if we average the outcomes far enough along the path, we will get convergence to \(\frac{1}{2}\) from that point onward.
+For a sequence of i.i.d. Bernoulli random variables $X_i $ with mean$\frac{1}{2}$, the strong law says that for "almost every" sample path, if we average the outcomes far enough along the path, we will get convergence to $\frac{1}{2}$ from that point onward.
 
 Even though there might be uncountably many paths that do not behave this way, the mass of such bad paths is zero when compared to all well-behaved sample paths.
 x??
@@ -208,23 +211,21 @@ x??
 #### Tim and Enzo's Simulation Approaches
 Tim, who viewed the world as a timeline, used one long sequence of coin flips to simulate the queue over an extended period. He recorded the number of jobs in the system every second for millions of samples and then took the average of these samples.
 
-Enzo approached this from a more 2-dimensional perspective. He ran 1,000 shorter simulations each lasting 1,000 seconds. At time \( t = 1,000 \), he sampled the number of jobs in the system for each simulation and then averaged these values over all his experiments.
+Enzo approached this from a more 2-dimensional perspective. He ran 1,000 shorter simulations each lasting 1,000 seconds. At time $t = 1,000$, he sampled the number of jobs in the system for each simulation and then averaged these values over all his experiments.
 
 :p Who is "right"? Tim or Enzo?
 ??x
 Both Tim and Enzo are correct but from different perspectives. Tim's approach calculates the time average by observing a single long sample path, while Enzo's method calculates the ensemble average by averaging over multiple short sample paths. Both methods provide valid ways to estimate the expected number of jobs in the system.
 
 Tim's time average is given by:
-\[
-N_{\text{Time Avg}} = \lim_{t \to \infty} \frac{\int_0^t N(v) dv}{t}
-\]
-Enzo's ensemble average is given by:
-\[
-N_{\text{Ensemble Avg}} = \lim_{t \to \infty} E[N(t)] = \sum_{i=0}^\infty i p_i
-\]
-where \( p_i = \lim_{t \to \infty} P\{N(t) = i\} \).
+$$N_{\text{Time Avg}} = \lim_{t \to \infty} \frac{\int_0^t N(v) dv}{t}$$
 
-In practice, both methods converge to the same value as \( t \) approaches infinity.
+Enzo's ensemble average is given by:
+$$
+
+N_{\text{Ensemble Avg}} = \lim_{t \to \infty} E[N(t)] = \sum_{i=0}^\infty i p_i$$where $ p_i = \lim_{t \to \infty} P\{N(t) = i\}$.
+
+In practice, both methods converge to the same value as $t$ approaches infinity.
 x??
 
 ---
@@ -232,20 +233,14 @@ x??
 The time average of a process is defined as the limit of the integral of the number of jobs in the system divided by time over an infinite period. It captures the long-term behavior of a single sample path.
 
 Formally, it is given by:
-\[
-N_{\text{Time Avg}}(ω) = \lim_{t \to ∞} \frac{\int_0^t N(v, ω) dv}{t}
-\]
-where \( N(v, ω) \) represents the number of jobs in the system at time \( v \) under sample path \( ω \).
+$$N_{\text{Time Avg}}(ω) = \lim_{t \to ∞} \frac{\int_0^t N(v, ω) dv}{t}$$where $ N(v, ω)$represents the number of jobs in the system at time $ v$under sample path $ω$.
 
 :p What is the definition of the time average?
 ??x
 The time average of a process is defined as the limit of the integral of the number of jobs in the system over an infinite period divided by time. This approach focuses on observing one long sequence to determine the average behavior.
 
 Mathematically, it is given by:
-\[
-N_{\text{Time Avg}}(ω) = \lim_{t \to ∞} \frac{\int_0^t N(v, ω) dv}{t}
-\]
-where \( N(v, ω) \) represents the number of jobs in the system at time \( v \) under sample path \( ω \).
+$$N_{\text{Time Avg}}(ω) = \lim_{t \to ∞} \frac{\int_0^t N(v, ω) dv}{t}$$where $ N(v, ω)$represents the number of jobs in the system at time $ v$under sample path $ω$.
 x??
 
 ---
@@ -253,20 +248,14 @@ x??
 The ensemble average is defined as the limit of the expected value of the number of jobs in the system over an infinite period. It involves averaging multiple short simulations to capture the long-term behavior.
 
 Formally, it is given by:
-\[
-N_{\text{Ensemble Avg}} = \lim_{t \to ∞} E[N(t)] = \sum_{i=0}^\infty i p_i
-\]
-where \( p_i = \lim_{t \to ∞} P\{N(t) = i\} \), which represents the mass of sample paths with value \( i \) at time \( t \).
+$$N_{\text{Ensemble Avg}} = \lim_{t \to ∞} E[N(t)] = \sum_{i=0}^\infty i p_i$$where $ p_i = \lim_{t \to ∞} P\{N(t) = i\}$, which represents the mass of sample paths with value $ i$at time $ t$.
 
 :p What is the definition of the ensemble average?
 ??x
 The ensemble average is defined as the limit of the expected number of jobs in the system over an infinite period. It involves averaging multiple short simulations to determine the long-term behavior.
 
 Mathematically, it is given by:
-\[
-N_{\text{Ensemble Avg}} = \lim_{t \to ∞} E[N(t)] = \sum_{i=0}^\infty i p_i
-\]
-where \( p_i = \lim_{t \to ∞} P\{N(t) = i\} \), which represents the mass of sample paths with value \( i \) at time \( t \).
+$$N_{\text{Ensemble Avg}} = \lim_{t \to ∞} E[N(t)] = \sum_{i=0}^\infty i p_i$$where $ p_i = \lim_{t \to ∞} P\{N(t) = i\}$, which represents the mass of sample paths with value $ i$at time $ t$.
 x??
 
 ---
@@ -369,11 +358,10 @@ Background context explaining the difference between time average and ensemble a
 Tim measures the time average, which involves averaging over time along a single sample path. Enzo measures the ensemble average, which involves averaging over many different sample paths at a specific point in time.
 
 Ensemble average:
-\[ \text{N}_{\text{Ensemble}} = \frac{1}{N} \sum_{i=1}^{N} Y(\omega_i) \]
+$$\text{N}_{\text{Ensemble}} = \frac{1}{N} \sum_{i=1}^{N} Y(\omega_i)$$
 
 Time average along a single path:
-\[ \text{N}_{\text{Time Avg}} = \lim_{T \to \infty} \frac{1}{T} \int_0^T Y(t) dt \]
-x??
+$$\text{N}_{\text{Time Avg}} = \lim_{T \to \infty} \frac{1}{T} \int_0^T Y(t) dt$$x??
 
 ---
 
@@ -397,7 +385,7 @@ Background context explaining what it means for a process to probabilistically r
 
 :p What does it mean for the system to "probabilistically restart itself"?
 ??x
-In an ergodic system, particularly positive recurrent ones, if the number of jobs in the queue returns to zero (empty state), this event acts as a reset. The process can be considered as starting anew from the empty state. For instance, in a queueing model where a job is added and removed with probabilities \( p \) and \( q \) respectively, once the system empties, the next arrival of a new job will start the cycle again.
+In an ergodic system, particularly positive recurrent ones, if the number of jobs in the queue returns to zero (empty state), this event acts as a reset. The process can be considered as starting anew from the empty state. For instance, in a queueing model where a job is added and removed with probabilities $p $ and$q$ respectively, once the system empties, the next arrival of a new job will start the cycle again.
 
 x??
 
@@ -408,7 +396,7 @@ Background context explaining under what conditions the time average equals the 
 
 :p Under what conditions does the time average equal the ensemble average according to Theorem 5.9?
 ??x
-According to Theorem 5.9, for an ergodic system, the time average along a single path converges to the ensemble average with probability one as \( T \) approaches infinity. This equivalence holds because in an irreducible and positive recurrent system, states are revisited infinitely often with finite mean times between visits.
+According to Theorem 5.9, for an ergodic system, the time average along a single path converges to the ensemble average with probability one as $T$ approaches infinity. This equivalence holds because in an irreducible and positive recurrent system, states are revisited infinitely often with finite mean times between visits.
 
 x??
 
@@ -484,8 +472,8 @@ The average time in the system can be defined from either a single long run (tim
 :p How is the average time in the system calculated?
 ??x
 The average time in the system can be calculated as follows:
-- For a single long run: \( T_{\text{Time Avg}} = \lim_{t \to \infty} \frac{\sum_{i=1}^{A(t)} T_i}{A(t)} \), where \( A(t) \) is the number of arrivals by time \( t \) and \( T_i \) is the time in system for the \( i \)-th arrival.
-- For multiple short runs: \( T_{\text{Ensemble}} = \lim_{i \to \infty} E[T_i] \), where \( E[T_i] \) is the average time in system of the \( i \)-th job, averaged over all sample paths.
+- For a single long run:$T_{\text{Time Avg}} = \lim_{t \to \infty} \frac{\sum_{i=1}^{A(t)} T_i}{A(t)}$, where $ A(t)$is the number of arrivals by time $ t$and $ T_i $ is the time in system for the $i$-th arrival.
+- For multiple short runs: $T_{\text{Ensemble}} = \lim_{i \to \infty} E[T_i]$, where $ E[T_i]$is the average time in system of the $ i$-th job, averaged over all sample paths.
 x??
 
 ---
@@ -493,43 +481,39 @@ x??
 #### Markov's Inequality
 Markov’s Inequality provides a way to bound the probability that a non-negative random variable exceeds some positive threshold. This inequality is particularly useful in proving other probabilistic limits.
 
-If \( X \) is a non-negative random variable, then:
-\[ P\{X > t\} \leq \frac{E[X]}{t}, \quad \forall t > 0. \]
+If $X$ is a non-negative random variable, then:
+$$P\{X > t\} \leq \frac{E[X]}{t}, \quad \forall t > 0.$$
 
-This means that the probability of observing a value greater than \( t \) for a non-negative random variable \( X \) is at most the expected value of \( X \) divided by \( t \).
+This means that the probability of observing a value greater than $t $ for a non-negative random variable$X $ is at most the expected value of$ X $ divided by $t$.
 
 :p State Markov's Inequality.
 ??x
-Markov’s Inequality states that if \( X \) is a non-negative random variable, then:
-\[ P\{X > t\} \leq \frac{E[X]}{t}, \quad \forall t > 0. \]
-x??
+Markov’s Inequality states that if $X$ is a non-negative random variable, then:
+$$P\{X > t\} \leq \frac{E[X]}{t}, \quad \forall t > 0.$$x??
 
 #### Chebyshev's Inequality
 Chebyshev’s Inequality extends the concept of Markov’s Inequality to random variables with finite mean and variance, providing a bound on the probability that a random variable deviates from its mean by more than a certain amount.
 
-Let \( Y \) be a random variable with finite mean \( E[Y] \) and finite variance \( \sigma^2_Y \). Then:
-\[ P\{|Y - E[Y]| \geq t\} \leq \frac{\sigma^2_Y}{t^2}. \]
+Let $Y $ be a random variable with finite mean$E[Y]$ and finite variance $\sigma^2_Y$. Then:
+$$P\{|Y - E[Y]| \geq t\} \leq \frac{\sigma^2_Y}{t^2}.$$
 
-This inequality gives an upper bound on the probability that a random variable deviates from its mean by more than \( t \).
+This inequality gives an upper bound on the probability that a random variable deviates from its mean by more than $t$.
 
 :p State Chebyshev's Inequality.
 ??x
-Chebyshev’s Inequality states that for any random variable \( Y \) with finite mean \( E[Y] \) and finite variance \( \sigma^2_Y \):
-\[ P\{|Y - E[Y]| \geq t\} \leq \frac{\sigma^2_Y}{t^2}. \]
-x??
+Chebyshev’s Inequality states that for any random variable $Y $ with finite mean$E[Y]$ and finite variance $\sigma^2_Y$:
+$$P\{|Y - E[Y]| \geq t\} \leq \frac{\sigma^2_Y}{t^2}.$$x??
 
 #### Weak Law of Large Numbers
 The Weak Law of Large Numbers (WLLN) is a fundamental theorem in probability theory and statistics, which describes the convergence of the sample mean to the expected value as the number of trials increases.
 
-For independent and identically distributed (i.i.d.) random variables \( X_1, X_2, X_3, \ldots \) with finite mean \( E[X] \) and finite variance \( \sigma^2 \), the WLLN states:
-\[ \lim_{n \to \infty} P\left( \left| \frac{S_n}{n} - E[X] \right| > \epsilon \right) = 0, \]
-where \( S_n = \sum_{i=1}^n X_i \).
+For independent and identically distributed (i.i.d.) random variables $X_1, X_2, X_3, \ldots $ with finite mean$E[X]$ and finite variance $\sigma^2$, the WLLN states:
+$$\lim_{n \to \infty} P\left( \left| \frac{S_n}{n} - E[X] \right| > \epsilon \right) = 0,$$where $ S_n = \sum_{i=1}^n X_i$.
 
 :p State the Weak Law of Large Numbers.
 ??x
-The Weak Law of Large Numbers (WLLN) states that for i.i.d. random variables \( X_1, X_2, X_3, \ldots \) with finite mean \( E[X] \) and finite variance \( \sigma^2 \):
-\[ \lim_{n \to \infty} P\left( \left| \frac{S_n}{n} - E[X] \right| > \epsilon \right) = 0, \]
-where \( S_n = \sum_{i=1}^n X_i \).
+The Weak Law of Large Numbers (WLLN) states that for i.i.d. random variables $X_1, X_2, X_3, \ldots $ with finite mean$E[X]$ and finite variance $\sigma^2$:
+$$\lim_{n \to \infty} P\left( \left| \frac{S_n}{n} - E[X] \right| > \epsilon \right) = 0,$$where $ S_n = \sum_{i=1}^n X_i$.
 x??
 
 ---

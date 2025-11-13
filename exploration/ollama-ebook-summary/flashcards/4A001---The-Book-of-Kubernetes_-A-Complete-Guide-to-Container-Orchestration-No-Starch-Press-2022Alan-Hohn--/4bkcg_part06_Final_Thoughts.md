@@ -264,7 +264,7 @@ x??
 The `crictl inspectp <pod_id>` command combined with `jq` can be used to extract specific information from the container metadata.
 
 ```bash
-root@host01:/opt# NETNS_PATH=$(crictl inspectp $B1P_ID | jq -r '.info.runtimeSpec.linux.namespaces[]|select(.type=="network").path')
+root@host01:/opt# NETNS_PATH=$(crictl inspectp$ B1P_ID | jq -r '.info.runtimeSpec.linux.namespaces[]|select(.type=="network").path')
 root@host01:/opt# echo $NETNS_PATH /var/run/netns/7c185da0-04e2-4321-b2eb-da18ceb5fcf6
 ```
 :p How can you extract the network namespace path for a container using `crictl` and `jq`?
@@ -272,7 +272,7 @@ root@host01:/opt# echo $NETNS_PATH /var/run/netns/7c185da0-04e2-4321-b2eb-da18ce
 You can use `crictl inspectp <pod_id>` to get detailed information about a pod, then pipe that output to `jq` to filter and extract the specific network namespace path.
 
 ```bash
-NETNS_PATH=$(crictl inspectp $B1P_ID | jq -r '.info.runtimeSpec.linux.namespaces[]|select(.type=="network").path')
+NETNS_PATH=$(crictl inspectp$ B1P_ID | jq -r '.info.runtimeSpec.linux.namespaces[]|select(.type=="network").path')
 echo $NETNS_PATH
 ```
 x??
@@ -293,7 +293,7 @@ Network namespace isolation in CRI-O works by creating a separate namespace for 
 
 For example:
 ```bash
-NETNS=$(basename $(crictl inspectp $B1P_ID | jq -r '.info.runtimeSpec.linux.namespaces[]|select(.type=="network").path'))
+NETNS=$(basename $(crictl inspectp $ B1P_ID | jq -r '.info.runtimeSpec.linux.namespaces[]|select(.type=="network").path'))
 ```
 This command extracts the path to the network namespace of a specific container, allowing you to manage its network configuration independently.
 x??
@@ -335,7 +335,7 @@ You use the combination of `ip netns pids <namespace_id>` to get the PIDs of pro
 
 Example command:
 ```bash
-ps --pid $(ip netns pids $NETNS)
+ps --pid $(ip netns pids$ NETNS)
 ```
 
 This command retrieves all the processes associated with a specific network namespace by first getting their PIDs and then listing them with `ps`.
@@ -345,7 +345,7 @@ The answer is to use `ip netns pids <namespace_id>` to get the process IDs (PIDs
 
 ```bash
 # Example command
-ps --pid $(ip netns pids $NETNS)
+ps --pid $(ip netns pids$ NETNS)
 ```
 
 x??
@@ -399,7 +399,7 @@ The answer is that CRI-O manages network namespaces by leveraging Kubernetes' CR
 ```bash
 # Example steps
 crictl inspect <container_id> | jq '.info.network_settings.network_ns'
-ps --pid $(ip netns pids $NETNS)
+ps --pid $(ip netns pids$ NETNS)
 ```
 
 x??

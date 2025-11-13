@@ -237,14 +237,14 @@ x??
 
 #### 1/r Fall-off Curve for Sound Attenuation
 
-Background context: In three-dimensional audio, sound attenuation is a critical aspect of creating an immersive environment. The 1/r (one-over-radius) curve models how the intensity of a sound decreases with distance from its source. This relationship follows the inverse square law (\(I \propto \frac{1}{r^2}\)), where \(I\) is the intensity and \(r\) is the distance.
+Background context: In three-dimensional audio, sound attenuation is a critical aspect of creating an immersive environment. The 1/r (one-over-radius) curve models how the intensity of a sound decreases with distance from its source. This relationship follows the inverse square law ($I \propto \frac{1}{r^2}$), where $ I$is the intensity and $ r$ is the distance.
 
 However, using just 1/r can lead to speech becoming unintelligible at moderate distances because it falls off too quickly.
 
 :p What are the limitations of the 1/r curve for sound attenuation in game audio?
 
 ??x
-The 1/r curve has an asymptotic nature; it never actually reaches zero, no matter how large \(r\) becomes. This means that even very far sounds will still be audible to some degree, which can make distant dialogue hard to understand. Additionally, it can cause speech to become inaudible too quickly for characters that are only a modest distance away.
+The 1/r curve has an asymptotic nature; it never actually reaches zero, no matter how large $r$ becomes. This means that even very far sounds will still be audible to some degree, which can make distant dialogue hard to understand. Additionally, it can cause speech to become inaudible too quickly for characters that are only a modest distance away.
 
 ```java
 public class AudioAttenuation {
@@ -378,8 +378,7 @@ To determine this:
 1. Measure the azimuthal angle (qs) of the sound source.
 2. Identify the angles of the two nearest adjacent speakers (q1 and q2).
 3. Calculate the pan blend percentage (b) as follows:
-
-\[ b = \frac{qs - q1}{q2 - q1} \]
+$$b = \frac{qs - q1}{q2 - q1}$$
 
 This value represents how much to blend between the gains of the two adjacent speakers.
 x??
@@ -390,41 +389,47 @@ x??
 Constant gain panning involves using a simple linear interpolation between the gains of two adjacent speakers. However, this method does not accurately represent human perception of loudness due to the non-linear relationship between sound pressure level (SPL) and perceived loudness.
 
 The formula for constant gain panning is:
+$$
 
-\[ A1 = (1 - b)A \]
-\[ A2 = bA \]
+A1 = (1 - b)A$$
+$$
+
+A2 = bA$$
 
 Where:
-- \(A\) is the original gain.
-- \(b\) is the pan blend percentage calculated based on the azimuthal angle.
-- \(A1\) and \(A2\) are the gains for the two adjacent speakers.
+- $A$ is the original gain.
+- $b$ is the pan blend percentage calculated based on the azimuthal angle.
+- $A1 $ and$A2$ are the gains for the two adjacent speakers.
 
 However, this method does not maintain constant loudness as the sound moves around the acoustic field. Human perception of loudness is proportional to the square of the sound pressure level (SPL).
 
 :p How does constant gain panning work?
 ??x
 Constant gain panning works by linearly interpolating between the gains of two adjacent speakers based on their azimuthal angle relative to the listener. The formula for this is:
+$$A1 = (1 - b)A$$
+$$
 
-\[ A1 = (1 - b)A \]
-\[ A2 = bA \]
+A2 = bA$$
 
 Where:
-- \(A\) is the original gain.
-- \(b\) is the pan blend percentage calculated as:
-
-\[ b = \frac{qs - q1}{q2 - q1} \]
+- $A$ is the original gain.
+- $b$ is the pan blend percentage calculated as:
+$$b = \frac{qs - q1}{q2 - q1}$$
 
 However, this method does not accurately represent human perception of loudness. The perceived loudness varies with the square of the sound pressure level (SPL), meaning constant gain panning can result in a lower perceived volume when a sound is panned to the center.
 
 Example:
-If \(b = 0.5\) and \(A = 1\):
+If $b = 0.5 $ and$A = 1$:
 
-\[ A1 = (1 - 0.5) \times 1 = 0.5 \]
-\[ A2 = 0.5 \times 1 = 0.5 \]
+$$A1 = (1 - 0.5) \times 1 = 0.5$$
+$$
+
+A2 = 0.5 \times 1 = 0.5$$
 
 The total power is:
+$$
 
-\[ A1^2 + A2^2 = 0.5^2 + 0.5^2 = 0.25 + 0.25 = 0.5 \]
+A1^2 + A2^2 = 0.5^2 + 0.5^2 = 0.25 + 0.25 = 0.5$$
 
 This results in a perceived volume that is half of what it would be if the sound were panned to only one side.
 x??
@@ -436,33 +441,34 @@ The constant power pan law ensures that the perception of loudness remains const
 
 :p How does the constant power pan law work?
 ??x
-To implement the constant power pan law, instead of linearly interpolating the gains, we use the sine and cosine of the blend percentage \( b \) to calculate the gains:
-\[ A1 = \sin\left(\frac{\pi}{2}b\right)A; \]
-\[ A2 = \cos\left(\frac{\pi}{2}b\right)A. \]
+To implement the constant power pan law, instead of linearly interpolating the gains, we use the sine and cosine of the blend percentage $b$ to calculate the gains:
+$$A1 = \sin\left(\frac{\pi}{2}b\right)A;$$
+$$
 
-For example, if a sound is panned halfway between two speakers (\( b = 0.5 \)):
-\[ A1 = \sin\left(\frac{\pi}{4}\right)A; \]
-\[ A2 = \cos\left(\frac{\pi}{4}\right)A. \]
+A2 = \cos\left(\frac{\pi}{2}b\right)A.$$
 
-The total power \( A^2 \) remains constant:
-\[ A2_1 + A2_2 = (\sin(\frac{\pi}{2}b)A)^2 + (\cos(\frac{\pi}{2}b)A)^2 = A^2. \]
-This works for any value of \( b \), ensuring the power is constant regardless of the sound's position.
+For example, if a sound is panned halfway between two speakers ($b = 0.5$):
+$$A1 = \sin\left(\frac{\pi}{4}\right)A;$$
+$$
+
+A2 = \cos\left(\frac{\pi}{4}\right)A.$$
+
+The total power $A^2$ remains constant:
+$$A2_1 + A2_2 = (\sin(\frac{\pi}{2}b)A)^2 + (\cos(\frac{\pi}{2}b)A)^2 = A^2.$$
+
+This works for any value of $b$, ensuring the power is constant regardless of the sound's position.
 
 ---
 #### 3 dB Rule
 The "3 dB rule" is often applied in audio to account for the pan law, stating that if a sound is mixed equally between two speakers, its gain should be reduced by 3 dB relative to the gain used when played from only one speaker. This is because:
-\[ \log_{10}(1 - p^2) \approx -0.15, \]
-and
-\[ 20 \times (-0.15) = -3 \text{ dB}. \]
+$$\log_{10}(1 - p^2) \approx -0.15,$$and$$20 \times (-0.15) = -3 \text{ dB}.$$
 
-Voltage (amplitude) gain is defined as \( 20 \log_{10}\left(\frac{A_{out}}{A_{in}}\right) \).
+Voltage (amplitude) gain is defined as $20 \log_{10}\left(\frac{A_{out}}{A_{in}}\right)$.
 
 :p What does the "3 dB rule" state?
 ??x
 The "3 dB rule" states that to mix a sound equally between two speakers, the gain in each speaker should be reduced by 3 dB relative to the gain used when playing it from only one speaker. This is due to the logarithmic relationship:
-\[ \log_{10}(1 - p^2) \approx -0.15, \]
-and
-\[ 20 \times (-0.15) = -3 \text{ dB}. \]
+$$\log_{10}(1 - p^2) \approx -0.15,$$and$$20 \times (-0.15) = -3 \text{ dB}.$$
 
 This rule ensures that the power remains constant across both speakers.
 
@@ -526,10 +532,10 @@ x??
 ---
 
 #### Focus Angle and Extended Sound Sources
-For sound sources near the listener, modeling them as extended arcs allows for a gradual transition of sound across multiple speakers. The focus angle \(a\) defines the projection of an extended sound source on the speaker circle, creating a "pie wedge" shape within the circle. This approach helps in creating more realistic and spatially accurate audio experiences.
+For sound sources near the listener, modeling them as extended arcs allows for a gradual transition of sound across multiple speakers. The focus angle $a$ defines the projection of an extended sound source on the speaker circle, creating a "pie wedge" shape within the circle. This approach helps in creating more realistic and spatially accurate audio experiences.
 :p How does the concept of the focus angle apply to extended sound sources?
 ??x
-The focus angle \(a\) is used to model extended sound sources near the listener by defining their projection on the speaker circle as a "pie wedge" shape. This allows for a gradual transition of sound across multiple speakers, creating more realistic and spatially accurate audio experiences.
+The focus angle $a$ is used to model extended sound sources near the listener by defining their projection on the speaker circle as a "pie wedge" shape. This allows for a gradual transition of sound across multiple speakers, creating more realistic and spatially accurate audio experiences.
 x??
 
 ---
@@ -586,8 +592,7 @@ Explanation of how convolution is used in audio processing, specifically for roo
 :p How does convolution work in the context of modeling room acoustics?
 ??x
 Convolution is a mathematical operation that combines an input signal (in this case, the dry sound) with an impulse response to produce the output signal. The formula for this process is:
-\[ p_{\text{wet}}(t) = p_{\text{dry}}(t) * h(t) \]
-where \(p_{\text{wet}}(t)\) represents the wet, or reverberated sound, and \(h(t)\) is the impulse response of the room.
+$$p_{\text{wet}}(t) = p_{\text{dry}}(t) * h(t)$$where $ p_{\text{wet}}(t)$represents the wet, or reverberated sound, and $ h(t)$ is the impulse response of the room.
 
 To apply this in practice:
 ```java

@@ -151,7 +151,7 @@ Background context: Courts generally don't inquire into whether the consideratio
 
 :p Can you give an example of when a court might find that despite lopsided exchange, there is still sufficient consideration?
 ??x
-Yes, if a person agrees to sell their $10,000 car for $10, even though no reasonable person would consider the price adequate. The fact that each party bargained for something is enough.
+Yes, if a person agrees to sell their $10,000 car for$10, even though no reasonable person would consider the price adequate. The fact that each party bargained for something is enough.
 x??
 
 ---

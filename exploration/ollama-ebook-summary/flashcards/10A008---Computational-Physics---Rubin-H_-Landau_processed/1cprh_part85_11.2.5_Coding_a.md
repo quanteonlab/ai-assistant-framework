@@ -11,31 +11,23 @@ Background context: The text explains how to calculate the change in loss when a
 ??x
 The change in loss with respect to a weight can be determined using the chain rule and the derivative of the activation function. The formula provided is:
 
-\[
-\frac{\partial \mathcal{L}}{\partial w_1} = -0.952 \times 0.249 \times (-0.0904) = 0.0214
-\]
+$$\frac{\partial \mathcal{L}}{\partial w_1} = -0.952 \times 0.249 \times (-0.0904) = 0.0214$$
 
-Here, \( \frac{\partial h_1}{\partial w_1} = -0.0904 \), and the learning rate is assumed to be 0.952.
+Here,$\frac{\partial h_1}{\partial w_1} = -0.0904$, and the learning rate is assumed to be 0.952.
 
-This calculation tells us that decreasing \( w_1 \) would lead to a decrease in loss, indicating an improvement in prediction accuracy.
+This calculation tells us that decreasing $w_1$ would lead to a decrease in loss, indicating an improvement in prediction accuracy.
 ??x
 The answer with detailed explanations:
 To understand this calculation, we need to apply the chain rule from calculus:
 
-\[
-\frac{\partial \mathcal{L}}{\partial w_1} = \frac{\partial h_1}{\partial w_1} \times \frac{\partial \mathcal{L}}{\partial h_1}
-\]
-
-- \( \frac{\partial h_1}{\partial w_1} \) is the derivative of the hidden node output with respect to weight \( w_1 \). It was calculated as -0.0904.
-- \( \frac{\partial \mathcal{L}}{\partial h_1} \) is the derivative of the loss function with respect to the hidden node's output, which was given as 0.249.
+$$\frac{\partial \mathcal{L}}{\partial w_1} = \frac{\partial h_1}{\partial w_1} \times \frac{\partial \mathcal{L}}{\partial h_1}$$-$\frac{\partial h_1}{\partial w_1}$ is the derivative of the hidden node output with respect to weight $w_1$. It was calculated as -0.0904.
+- $\frac{\partial \mathcal{L}}{\partial h_1}$ is the derivative of the loss function with respect to the hidden node's output, which was given as 0.249.
 
 Multiplying these values gives us the change in loss per unit change in weight:
 
-\[
-\frac{\partial \mathcal{L}}{\partial w_1} = -0.952 \times 0.249 \times (-0.0904) = 0.0214
-\]
+$$\frac{\partial \mathcal{L}}{\partial w_1} = -0.952 \times 0.249 \times (-0.0904) = 0.0214$$
 
-This positive value indicates that a decrease in \( w_1 \) would reduce the loss, making the prediction better.
+This positive value indicates that a decrease in $w_1$ would reduce the loss, making the prediction better.
 
 In code or pseudocode, this could be represented as:
 ```java
@@ -57,26 +49,20 @@ Background context: The text explains the concept of a learning rate and how it 
 
 :p What is the role of the learning rate in weight adjustment?
 ??x
-The learning rate (\(\eta\)) determines the size of the steps taken towards minimizing the loss function during training. The formula for adjusting a weight is:
+The learning rate ($\eta$) determines the size of the steps taken towards minimizing the loss function during training. The formula for adjusting a weight is:
 
-\[
-w_{(new)} = w_{(old)} - \eta \frac{\partial \mathcal{L}}{\partial w}
-\]
+$$w_{(new)} = w_{(old)} - \eta \frac{\partial \mathcal{L}}{\partial w}$$
 
-Here, \( \eta \) (the learning rate) controls how much to change the weights based on the gradient of the loss function with respect to the weight.
+Here,$\eta$ (the learning rate) controls how much to change the weights based on the gradient of the loss function with respect to the weight.
 ??x
 The answer with detailed explanations:
-The learning rate (\(\eta\)) is a crucial parameter in machine learning algorithms that determines the size of steps taken during each iteration towards minimizing the loss. A well-chosen learning rate can help the model converge faster and more accurately.
+The learning rate ($\eta$) is a crucial parameter in machine learning algorithms that determines the size of steps taken during each iteration towards minimizing the loss. A well-chosen learning rate can help the model converge faster and more accurately.
 
 For example, if we use the given formula:
 
-\[
-w_{(new)} = w_{(old)} - \eta \frac{\partial \mathcal{L}}{\partial w}
-\]
-
-- \( w_{(old)} \) is the current weight value.
-- \( \frac{\partial \mathcal{L}}{\partial w} \) is the gradient of the loss function with respect to the weight, indicating the direction and magnitude in which the weight should be adjusted.
-- The learning rate (\(\eta\)) scales this adjustment.
+$$w_{(new)} = w_{(old)} - \eta \frac{\partial \mathcal{L}}{\partial w}$$-$ w_{(old)}$ is the current weight value.
+- $\frac{\partial \mathcal{L}}{\partial w}$ is the gradient of the loss function with respect to the weight, indicating the direction and magnitude in which the weight should be adjusted.
+- The learning rate ($\eta$) scales this adjustment.
 
 A small learning rate may lead to slow convergence or may not converge at all if the step size is too small. On the other hand, a large learning rate can cause overshooting of the minimum point, leading to unstable training and potentially divergence.
 
@@ -348,11 +334,11 @@ jupyter notebook
 x??
 
 #### Atomic Number and Mass Calculation Using TensorFlow
-Background context: This example demonstrates how to compute the mass number \(A\) given the atomic number \(Z\) and neutron number \(N\) using TensorFlow. It also introduces basic tensor concepts such as shape, rank, and data types.
+Background context: This example demonstrates how to compute the mass number $A $ given the atomic number$Z $ and neutron number$N$ using TensorFlow. It also introduces basic tensor concepts such as shape, rank, and data types.
 
-:p How can you use TensorFlow to calculate the mass number \(A\) for an element?
+:p How can you use TensorFlow to calculate the mass number $A$ for an element?
 ??x
-To calculate the mass number \(A\) in TensorFlow:
+To calculate the mass number $A$ in TensorFlow:
 
 ```python
 import tensorflow as tf
@@ -366,7 +352,7 @@ A = tf.add(Z, N)
 
 print("A:", A)
 ```
-The output shows \(A\) as a TensorFlow tensor with the value `3` and shape `()` (a scalar).
+The output shows $A$ as a TensorFlow tensor with the value `3` and shape `()` (a scalar).
 
 ```python
 print(tf.__version__)
@@ -393,9 +379,9 @@ x??
 #### Binding Energy Calculation for Hydrogen Isotopes Using TensorFlow
 Background context: This example illustrates how to calculate the mass excess and binding energy of hydrogen isotopes using TensorFlow. The calculation involves atomic masses, neutron and proton numbers.
 
-:p How can you use TensorFlow to calculate the binding energy \(B\) for hydrogen isotopes?
+:p How can you use TensorFlow to calculate the binding energy $B$ for hydrogen isotopes?
 ??x
-To calculate the binding energy \(B\) for hydrogen isotopes in TensorFlow:
+To calculate the binding energy $B$ for hydrogen isotopes in TensorFlow:
 
 ```python
 import tensorflow as tf
@@ -422,11 +408,8 @@ The output will be a list of binding energies for each isotope.
 
 Explanation:
 - `tf.constant` and `np.array` define the constants and atomic masses.
-- The loop iterates over each isotope, calculating \(B\) using the formula provided in the text: 
-  \[
-  B = \left[ Zm(1H) + Nmn - M_{nuc} \right] c^2
-  \]
-  where \(M_{nuc}\) is the atomic mass of the nucleus.
+- The loop iterates over each isotope, calculating $B$ using the formula provided in the text:
+$$B = \left[ Zm(1H) + Nmn - M_{nuc} \right] c^2$$where $ M_{nuc}$ is the atomic mass of the nucleus.
 
 ```python
 # Example calculation for binding energy
@@ -439,7 +422,7 @@ print("BN:", B_values)
 x??
 
 #### Plotting Binding Energy of Hydrogen Isotopes Using TensorFlow and Matplotlib
-Background context: This example demonstrates plotting the binding energy per nucleon for hydrogen isotopes using TensorFlow and Matplotlib. It involves calculating \(B\) values, then visualizing them.
+Background context: This example demonstrates plotting the binding energy per nucleon for hydrogen isotopes using TensorFlow and Matplotlib. It involves calculating $B$ values, then visualizing them.
 
 :p How can you plot the binding energy per nucleon for hydrogen isotopes in TensorFlow?
 ??x
@@ -475,7 +458,7 @@ The plot will show the binding energies for each isotope.
 
 Explanation:
 - `A` and `am` are tensors/arrays of atomic numbers and masses.
-- The loop calculates \(B\) values, then these values are plotted using Matplotlib. 
+- The loop calculates $B$ values, then these values are plotted using Matplotlib. 
 
 ```python
 # Example plotting code

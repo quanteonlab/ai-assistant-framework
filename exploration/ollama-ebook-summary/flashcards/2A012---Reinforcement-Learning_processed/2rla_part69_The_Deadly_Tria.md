@@ -135,7 +135,7 @@ Background context: The text discusses how state-value functions can be represen
 
 :p What does the vector representation of a state-value function entail?
 ??x
-The vector representation of a state-value function corresponds to a list of values for each state in the state space \( S \). For example, if there are three states \( S = \{s1, s2, s3\} \) and two parameters \( w = (w1, w2) \), we can represent any value function as a vector like [v(s1), v(s2), v(s3)].
+The vector representation of a state-value function corresponds to a list of values for each state in the state space $S $. For example, if there are three states $ S = \{s1, s2, s3\}$and two parameters $ w = (w1, w2)$, we can represent any value function as a vector like [v(s1), v(s2), v(s3)].
 
 The vector has as many components as there are states in the state space. This direct representation is often impractical due to the large number of states.
 x??
@@ -149,7 +149,7 @@ Background context: The discussion shifts to understanding the subspace spanned 
 ??x
 The full state-value function space has as many dimensions as there are states, which can be very large. However, a linear function approximator, designed with fewer parameters than states, only represents a smaller subset of these value functions. In a simple case, if we consider three states and two parameters, the subspace forms a plane in three-dimensional space.
 
-This means that while there might be many complex value functions that cannot be represented exactly by the approximator, some representable value functions are closer to the true value function \( v^{\pi} \) than others.
+This means that while there might be many complex value functions that cannot be represented exactly by the approximator, some representable value functions are closer to the true value function $v^{\pi}$ than others.
 x??
 
 ---
@@ -159,40 +159,37 @@ Background context: The text introduces a way to measure the distance between tw
 
 :p How is the distance between two value functions defined in this context?
 ??x
-The distance between two value functions \( v1 \) and \( v2 \) is measured using a weighted norm. Specifically, if we have a vector \( v = v1 - v2 \), the size of this difference vector is calculated as:
+The distance between two value functions $v1 $ and$v2 $ is measured using a weighted norm. Specifically, if we have a vector$v = v1 - v2$, the size of this difference vector is calculated as:
 
-\[ \|v\|_{2,\mu} = \sqrt{\sum_{s \in S} \mu(s) [v(s)]^2} \]
+$$\|v\|_{2,\mu} = \sqrt{\sum_{s \in S} \mu(s) [v(s)]^2}$$where $\mu$ is a distribution over states that specifies how much we care about different states being accurately valued.
 
-where \( \mu \) is a distribution over states that specifies how much we care about different states being accurately valued.
-
-This measure adjusts the Euclidean norm by weighting each state according to its importance, as defined by \( \mu \).
+This measure adjusts the Euclidean norm by weighting each state according to its importance, as defined by $\mu$.
 x??
 
 ---
 
 #### Optimal Representable Value Function
-Background context: The goal is to find the representable value function that best approximates the true value function. This involves understanding how the choice of distribution \( \mu \) affects this approximation.
+Background context: The goal is to find the representable value function that best approximates the true value function. This involves understanding how the choice of distribution $\mu$ affects this approximation.
 
 :p What is the representable value function closest to the true value function?
 ??x
-To determine which representable value function \( v_w \) (with parameters \( w \)) is closest to the true value function \( v^{\pi} \), we use the distance measure defined earlier:
+To determine which representable value function $v_w $(with parameters $ w $) is closest to the true value function$ v^{\pi}$, we use the distance measure defined earlier:
 
-\[ VE(w) = \|v_w - v^{\pi}\|_{2,\mu} = \sqrt{\sum_{s \in S} \mu(s) [v_w(s) - v^{\pi}(s)]^2} \]
+$$VE(w) = \|v_w - v^{\pi}\|_{2,\mu} = \sqrt{\sum_{s \in S} \mu(s) [v_w(s) - v^{\pi}(s)]^2}$$
 
-Given this, the representable value function \( v_w \) that minimizes \( VE(w) \) is considered the best approximation of \( v^{\pi} \).
+Given this, the representable value function $v_w $ that minimizes$VE(w)$ is considered the best approximation of $v^{\pi}$.
 
-This process involves finding the parameters \( w \) that minimize the weighted squared difference between the approximated and true value functions.
+This process involves finding the parameters $w$ that minimize the weighted squared difference between the approximated and true value functions.
 x??
 
 ---
 
 #### Policy Evaluation in MDPs
-Background context: The goal of policy evaluation is to compute or estimate the value function \( v^\pi(s) \) for a given policy \( \pi \), which represents the expected discounted reward starting from state \( s \). This process is crucial for solving Markov Decision Processes (MDPs).
+Background context: The goal of policy evaluation is to compute or estimate the value function $v^\pi(s)$ for a given policy $\pi$, which represents the expected discounted reward starting from state $ s$. This process is crucial for solving Markov Decision Processes (MDPs).
 :p What is the primary objective of policy evaluation in MDPs?
 ??x
-The primary objective of policy evaluation in MDPs is to compute or estimate the value function \( v^\pi(s) \), which gives the expected discounted reward starting from state \( s \) and following policy \( \pi \). This involves calculating:
-\[ v^\pi(s) = E_\pi[R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \cdots | S_t = s] \]
-where \( \gamma \in [0, 1) \) is the discount rate.
+The primary objective of policy evaluation in MDPs is to compute or estimate the value function $v^\pi(s)$, which gives the expected discounted reward starting from state $ s$and following policy $\pi$. This involves calculating:
+$$v^\pi(s) = E_\pi[R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \cdots | S_t = s]$$where $\gamma \in [0, 1)$ is the discount rate.
 
 For example:
 ```java
@@ -220,47 +217,44 @@ x??
 ---
 
 #### Bellman Operator and Value Function Approximation
-Background context: The Bellman operator \( B^\pi \) maps a value function \( v \) to another value function that represents the optimal policy's expected rewards. Approximating the value function using parameterized forms is essential for handling large state spaces.
+Background context: The Bellman operator $B^\pi $ maps a value function$v$ to another value function that represents the optimal policy's expected rewards. Approximating the value function using parameterized forms is essential for handling large state spaces.
 :p What does the Bellman equation represent in MDPs?
 ??x
-The Bellman equation in MDPs represents the relationship between the true value function \( v^\pi(s) \) and its update through the Bellman operator \( B^\pi \):
-\[ v^\pi = B^\pi v^\pi \]
-where:
-\[ (B^\pi v)(s) = \sum_{a \in A} \pi(a|s) [r(s, a) + \gamma \sum_{s' \in S} p(s'|s, a)v^\pi(s')] \]
+The Bellman equation in MDPs represents the relationship between the true value function $v^\pi(s)$ and its update through the Bellman operator $B^\pi$:
+$$v^\pi = B^\pi v^\pi$$where:
+$$(B^\pi v)(s) = \sum_{a \in A} \pi(a|s) [r(s, a) + \gamma \sum_{s' \in S} p(s'|s, a)v^\pi(s')]$$
 
-For the continuous case, sums are replaced by integrals. The Bellman equation can be viewed as an alternate definition of \( v^\pi \).
+For the continuous case, sums are replaced by integrals. The Bellman equation can be viewed as an alternate definition of $v^\pi$.
 x??
 
 ---
 
 #### Linear Value Function Approximation
 Background context: Linear approximations to value functions involve representing them as linear combinations of features weighted by parameters:
-\[ v(s) = \theta^T \phi(s) \]
-where \( \phi(s) \) are feature vectors characterizing each state and \( \theta \in \mathbb{R}^n \) is the parameter vector.
+$$v(s) = \theta^T \phi(s)$$where $\phi(s)$ are feature vectors characterizing each state and $\theta \in \mathbb{R}^n$ is the parameter vector.
 :p What form does a linear value function approximation take?
 ??x
 A linear value function approximation takes the form:
-\[ v(s) = \theta^T \phi(s) \]
-where:
-- \( \theta \in \mathbb{R}^n \) is the weight/parameter vector.
-- \( \phi(s) \) are feature vectors characterizing each state.
+$$v(s) = \theta^T \phi(s)$$where:
+- $\theta \in \mathbb{R}^n$ is the weight/parameter vector.
+- $\phi(s)$ are feature vectors characterizing each state.
 
-For example, if using a neural network to approximate value functions, \( \theta \) would be the concatenation of all connection weights. The linear approximation simplifies computations and allows for efficient updates.
+For example, if using a neural network to approximate value functions,$\theta$ would be the concatenation of all connection weights. The linear approximation simplifies computations and allows for efficient updates.
 x??
 
 ---
 
 #### Bellman Error Vector
-Background context: The Bellman error vector measures the discrepancy between the true value function \( v^\pi \) and its estimate:
-\[ e = v - B^\pi v \]
+Background context: The Bellman error vector measures the discrepancy between the true value function $v^\pi$ and its estimate:
+$$e = v - B^\pi v$$
+
 Reducing this error is a key goal in approximation methods to improve the accuracy of value functions.
 :p What is the Bellman error vector?
 ??x
-The Bellman error vector measures the discrepancy between the true value function \( v^\pi(s) \) and its estimate:
-\[ e = v - B^\pi v \]
-where:
-- \( v \) is an estimated value function.
-- \( B^\pi \) is the Bellman operator for policy \( \pi \).
+The Bellman error vector measures the discrepancy between the true value function $v^\pi(s)$ and its estimate:
+$$e = v - B^\pi v$$where:
+- $v$ is an estimated value function.
+- $B^\pi $ is the Bellman operator for policy$\pi$.
 
 The goal in approximation methods is to minimize this error vector, thereby improving the accuracy of the value function estimate.
 x??
@@ -269,20 +263,18 @@ x??
 
 #### Minimizing Mean-Squared Bellman Error
 
-Background context explaining the concept. The goal is to minimize the mean-squared Bellman error, which measures how well a value function \( v \) approximates the true value function given by the Bellman operator. The formula for this is:
+Background context explaining the concept. The goal is to minimize the mean-squared Bellman error, which measures how well a value function $v$ approximates the true value function given by the Bellman operator. The formula for this is:
 
-\[ BE(\theta) = \sum_{s \in S} d(s) \left( B_\pi v_\theta(s) - v_\theta(s) \right)^2 \]
+$$BE(\theta) = \sum_{s \in S} d(s) \left( B_\pi v_\theta(s) - v_\theta(s) \right)^2$$where:
+- $d(s)$ is the importance sampling weight,
+- $B_\pi $ is the Bellman operator for policy$\pi$,
+- $v_\theta $ is the approximated value function parameterized by$\theta$.
 
-where:
-- \( d(s) \) is the importance sampling weight,
-- \( B_\pi \) is the Bellman operator for policy \( \pi \),
-- \( v_\theta \) is the approximated value function parameterized by \( \theta \).
-
-This error cannot be reduced to zero if \( v_\pi \) (the true value function of the policy \( \pi \)) is not representable by the chosen function approximator.
+This error cannot be reduced to zero if $v_\pi $(the true value function of the policy $\pi$) is not representable by the chosen function approximator.
 
 :p How can we minimize the mean-squared Bellman error?
 ??x
-To minimize the mean-squared Bellman error, you would typically use gradient-based methods or optimization techniques to find the parameters \( \theta \) that make the approximated value function \( v_\theta(s) \) as close as possible to \( B_\pi v_\theta(s) \). This involves iteratively adjusting the parameters such that the squared difference between the Bellman backup and the current estimate of the value function is minimized.
+To minimize the mean-squared Bellman error, you would typically use gradient-based methods or optimization techniques to find the parameters $\theta $ that make the approximated value function$v_\theta(s)$ as close as possible to $B_\pi v_\theta(s)$. This involves iteratively adjusting the parameters such that the squared difference between the Bellman backup and the current estimate of the value function is minimized.
 
 For instance, using a linear function approximator, you might use gradient descent on the error term:
 
@@ -306,16 +298,11 @@ x??
 
 Background context explaining the concept. The goal here is not to solve the original Bellman equation exactly, but to project it onto a smaller space of representable functions and then minimize this projected error. This can be done by minimizing the mean-squared projected Bellman error:
 
-\[ PBE(\theta) = \sum_{s \in S} d(s) \left( \pi^*(B_\pi v_\theta(s)) - v_\theta(s) \right)^2 \]
-
-where:
-- \( \pi^* \) is the projection onto a smaller space of representable functions.
+$$PBE(\theta) = \sum_{s \in S} d(s) \left( \pi^*(B_\pi v_\theta(s)) - v_\theta(s) \right)^2$$where:
+- $\pi^*$ is the projection onto a smaller space of representable functions.
 
 This projected equation can often be solved exactly, unlike the original Bellman equation. The solution to this equation lies at what is called the projection fixpoint:
-
-\[ \sum_{s \in S} d(s) \left( B_\pi v_\theta(s) - v_\theta(s) \right) = 0 \]
-
-:p How does minimizing the projected Bellman error help in solving the original Bellman equation approximately?
+$$\sum_{s \in S} d(s) \left( B_\pi v_\theta(s) - v_\theta(s) \right) = 0$$:p How does minimizing the projected Bellman error help in solving the original Bellman equation approximately?
 ??x
 Minimizing the projected Bellman error helps by providing a feasible solution within the representable function space. By projecting the Bellman operator onto this smaller, more manageable space and then finding the value function that minimizes the error in this projection, we can get an approximate solution to the original Bellman equation.
 
@@ -343,23 +330,21 @@ x??
 
 #### Bellman Equation for Approximation
 
-Background context explaining the concept. The goal is to approximately solve the Bellman equation by minimizing the difference between the true value function \( v_\pi \) and the approximated value function \( v_\theta \). This involves finding parameters \( \theta \) such that:
+Background context explaining the concept. The goal is to approximately solve the Bellman equation by minimizing the difference between the true value function $v_\pi $ and the approximated value function$v_\theta $. This involves finding parameters$\theta$ such that:
 
-\[ v_\theta = B_\pi v_\theta \]
+$$v_\theta = B_\pi v_\theta$$where:
+- $B_\pi $ is the Bellman operator for policy$\pi$,
+- $v_\theta $ is the approximated value function parameterized by$\theta$.
 
-where:
-- \( B_\pi \) is the Bellman operator for policy \( \pi \),
-- \( v_\theta \) is the approximated value function parameterized by \( \theta \).
+The Bellman equation can be viewed as an alternate way of defining the true value function. For any other value function $v \neq v_\pi$, we can minimize the Bellman error:
 
-The Bellman equation can be viewed as an alternate way of defining the true value function. For any other value function \( v \neq v_\pi \), we can minimize the Bellman error:
+$$BE(\theta) = ||v - B_\pi v||^2$$
 
-\[ BE(\theta) = ||v - B_\pi v||^2 \]
-
-However, if \( v_\pi \) is not representable, this cannot be driven to zero.
+However, if $v_\pi$ is not representable, this cannot be driven to zero.
 
 :p What are the challenges in exactly solving the Bellman equation for value function approximation?
 ??x
-The main challenge in exactly solving the Bellman equation for value function approximation lies in the fact that the true optimal value function \( v_\pi \) might not be representable within the chosen function approximator. This means that even if we could find an exact solution to the Bellman equation, it may not be a practical or accurate representation of the true value function.
+The main challenge in exactly solving the Bellman equation for value function approximation lies in the fact that the true optimal value function $v_\pi$ might not be representable within the chosen function approximator. This means that even if we could find an exact solution to the Bellman equation, it may not be a practical or accurate representation of the true value function.
 
 For example, with linear function approximation, the true optimal value function might lie outside the span of the basis functions used in the approximation:
 
@@ -388,14 +373,10 @@ x??
 #### Approximate Solution of Projected Bellman Equation
 
 Background context explaining the concept. The goal is to solve the projected Bellman equation:
-
-\[ v_\theta = \pi^* (B_\pi v_\theta) \]
-
-where \( \pi^* \) projects onto a smaller space of representable functions. For many function approximators, such as linear ones, this equation can be solved exactly due to its simpler structure.
+$$v_\theta = \pi^* (B_\pi v_\theta)$$where $\pi^*$ projects onto a smaller space of representable functions. For many function approximators, such as linear ones, this equation can be solved exactly due to its simpler structure.
 
 The objective is often to minimize the projected Bellman error:
-
-\[ PBE(\theta) = ||v_\theta - \pi^*(B_\pi v_\theta)||^2 \]
+$$PBE(\theta) = ||v_\theta - \pi^*(B_\pi v_\theta)||^2$$
 
 This minimization leads to a projection fixpoint where the error term becomes zero or as small as possible within the representable space.
 
@@ -504,19 +485,13 @@ Background context: The Bellman error measures how far an approximate value func
 
 :p What is the Bellman error?
 ??x
-The Bellman error measures the difference between the right-hand side and left-hand side of the Bellman equation for a given state, indicating how well an approximate value function \( v_w \) fits the true value function \( v_\pi \).
+The Bellman error measures the difference between the right-hand side and left-hand side of the Bellman equation for a given state, indicating how well an approximate value function $v_w $ fits the true value function$v_\pi$.
 
 Formulation:
-\[
-\bar{\Delta}_w(s) = 0 @X a_\pi(a|s) X s', r'p(s',r'|s,a)[r + \gamma v_w(s')] - v_w(s)@1
-\]
+$$\bar{\Delta}_w(s) = 0 @X a_\pi(a|s) X s', r'p(s',r'|s,a)[r + \gamma v_w(s')] - v_w(s)@1$$
 
 This can also be expressed as the expected TD error:
-\[
-\bar{\Delta}_w(s) = E_\pi \left[ R_{t+1} + \gamma v_w(S_{t+1}) - v_w(S_t) | S_t = s, A_t \sim \pi \right]
-\]
-
-:p How is the Bellman error used in practice?
+$$\bar{\Delta}_w(s) = E_\pi \left[ R_{t+1} + \gamma v_w(S_{t+1}) - v_w(S_t) | S_t = s, A_t \sim \pi \right]$$:p How is the Bellman error used in practice?
 ??x
 In practice, the Bellman error is used to guide updates to approximate value functions. By minimizing the Bellman error, we can find a value function that better approximates the true value function.
 
@@ -546,27 +521,21 @@ Background context: The Bellman error vector aggregates the Bellman errors acros
 The Bellman error vector is a collection of Bellman errors for each state, providing a vector representation of how much an approximate value function deviates from the true value function across all states. This vector helps in assessing the global error of the value function approximation.
 
 Formulation:
-\[
-\bar{\Delta} = \begin{bmatrix}
+$$\bar{\Delta} = \begin{bmatrix}
 \bar{\Delta}_w(s_1) \\
 \bar{\Delta}_w(s_2) \\
 \vdots \\
 \bar{\Delta}_w(s_n)
-\end{bmatrix}
-\]
-
-:p How is the mean squared Bellman error calculated?
+\end{bmatrix}$$:p How is the mean squared Bellman error calculated?
 ??x
 The mean squared Bellman error (MSBE) is a scalar measure that quantifies the overall deviation of an approximate value function from the true value function. It averages the squared Bellman errors over all states.
 
 Formulation:
-\[
-BE(w) = \|\bar{\Delta}_w\|_2^2
-\]
+$$
 
-:p How can one minimize the mean squared Bellman error?
+BE(w) = \|\bar{\Delta}_w\|_2^2$$:p How can one minimize the mean squared Bellman error?
 ??x
-To minimize the mean squared Bellman error, you need to find the set of weights \( w \) that minimizes the overall deviation from the true value function. This is typically done through optimization techniques such as least squares regression.
+To minimize the mean squared Bellman error, you need to find the set of weights $w$ that minimizes the overall deviation from the true value function. This is typically done through optimization techniques such as least squares regression.
 
 ```java
 // Pseudocode for minimizing MSBE using linear algebra
@@ -597,10 +566,10 @@ x??
 ---
 
 #### Bellman Operator and Error
-Bellman operator \(B_\pi v(s) = \sum_a \pi(a|s)\sum_{s',r}p(s', r | s, a)[r + v(s')] \), maps a value function to an updated version using the policy \(\pi\).
+Bellman operator $B_\pi v(s) = \sum_a \pi(a|s)\sum_{s',r}p(s', r | s, a)[r + v(s')]$, maps a value function to an updated version using the policy $\pi$.
 :p What does the Bellman operator do?
 ??x
-The Bellman operator updates the value of state \(s\) based on the expected future rewards and values under policy \(\pi\). It essentially computes the value function by summing over all possible actions, next states, and rewards.
+The Bellman operator updates the value of state $s $ based on the expected future rewards and values under policy$\pi$. It essentially computes the value function by summing over all possible actions, next states, and rewards.
 ```python
 def bellman_operator(v, s, a, p, r):
     total = 0.0
@@ -615,10 +584,10 @@ x??
 ---
 
 #### Bellman Error Vector
-The Bellman error vector is defined as \(\bar{w} = B_\pi v - v\).
+The Bellman error vector is defined as $\bar{w} = B_\pi v - v$.
 :p What is the Bellman error vector?
 ??x
-The Bellman error vector measures the difference between the updated value function by the Bellman operator and the current value function. It quantifies how much the current value function deviates from its ideal value under policy \(\pi\).
+The Bellman error vector measures the difference between the updated value function by the Bellman operator and the current value function. It quantifies how much the current value function deviates from its ideal value under policy $\pi$.
 ```python
 def bellman_error(v, s, a, p, r):
     return bellman_operator(v, s, a, p, r) - v[s]
@@ -628,7 +597,7 @@ x??
 ---
 
 #### Projected Bellman Error Vector
-The projected Bellman error vector is the projection of \(\bar{w}\) back into the representable subspace.
+The projected Bellman error vector is the projection of $\bar{w}$ back into the representable subspace.
 :p What is the projected Bellman error vector?
 ??x
 The projected Bellman error vector represents the closest approximant to the true error in the value function within the representable subspace. It ensures that any intermediate steps remain within the constraints of the chosen function approximation space.
@@ -642,7 +611,7 @@ x??
 ---
 
 #### Mean Square Projected Bellman Error (PBE)
-Mean square projected Bellman error is defined as \( \text{PBE}(w) = ||\bar{w}||^2_\mu \).
+Mean square projected Bellman error is defined as $\text{PBE}(w) = ||\bar{w}||^2_\mu$.
 :p What does the mean square projected Bellman error measure?
 ??x
 The mean square projected Bellman error measures the magnitude of the projection of the Bellman error vector into the representable subspace. It provides a scalar value that indicates the accuracy of the approximate value function.
@@ -711,22 +680,23 @@ Background context: The text proposes using the mean squared TD error as an obje
 :p What is the proposed objective function for TD learning?
 ??x
 The proposed objective function is the Mean Squared TD Error (TDE):
-\[ TDE(w) = \sum_{s \in S} \mu(s) E[\delta_t^2 | S_t=s, A_t \sim \pi] \]
-Where \( \delta_t = R_{t+1} + \gamma v(S_{t+1}, w_t) - v(S_t, w_t) \).
+$$TDE(w) = \sum_{s \in S} \mu(s) E[\delta_t^2 | S_t=s, A_t \sim \pi]$$
+
+Where $\delta_t = R_{t+1} + \gamma v(S_{t+1}, w_t) - v(S_t, w_t)$.
 ??x
 
 ---
 
 #### Gradient Descent Update Rule for TD Learning
-Background context: The text derives an update rule based on the gradient descent method to minimize the TDE. This involves using sampled experiences from behavior policy \( b \).
+Background context: The text derives an update rule based on the gradient descent method to minimize the TDE. This involves using sampled experiences from behavior policy $b$.
 
 :p What is the per-step update rule derived in the text?
 ??x
-The update rule for the per-step change in weights \( w \) is given by:
-\[ w_{t+1} = w_t - \alpha (\delta_t^2) \]
-Where \( \delta_t = R_{t+1} + \gamma v(S_{t+1}, w_t) - v(S_t, w_t) \). This can be simplified to the update rule:
-\[ w_{t+1} = w_t + \alpha \left( \delta_t^2 - 2 \nabla v(S_t, w_t)^T \nabla v(S_{t+1}, w_t) \right) \]
-??x
+The update rule for the per-step change in weights $w$ is given by:
+$$w_{t+1} = w_t - \alpha (\delta_t^2)$$
+
+Where $\delta_t = R_{t+1} + \gamma v(S_{t+1}, w_t) - v(S_t, w_t)$. This can be simplified to the update rule:
+$$w_{t+1} = w_t + \alpha \left( \delta_t^2 - 2 \nabla v(S_t, w_t)^T \nabla v(S_{t+1}, w_t) \right)$$??x
 
 ---
 
@@ -745,7 +715,7 @@ Background context: The text provides an example to illustrate why minimizing th
 
 :p Describe the A-split problem and its implications for TD learning?
 ??x
-In the A-split problem, episodes start in state \( A \) and can split stochastically: half the time they go to state \( B \) (with a reward of 1), and the other half they go to state \( C \) (with a reward of 0). State \( A \)'s value should ideally be \( \frac{1}{2} \), but TD learning might not converge to this value due to issues with the TDE minimization.
+In the A-split problem, episodes start in state $A $ and can split stochastically: half the time they go to state$B $(with a reward of 1), and the other half they go to state$ C $(with a reward of 0). State$ A $'s value should ideally be$\frac{1}{2}$, but TD learning might not converge to this value due to issues with the TDE minimization.
 ??x
 
 ---
@@ -806,9 +776,9 @@ Background context: The text explains that minimizing the Temporal Difference Er
 The objective of using the Bellman error instead of TDE is to achieve more accurate predictions by focusing directly on the expected TD error. The Bellman error for a state is the expected TD error in that state, and minimizing it should lead to better value function approximations.
 
 The update rule provided:
-\[ w_{t+1} = w_t - \frac{1}{2}\alpha r(E^{\pi}_{\tau}[G_t^2]) = w_t - \frac{1}{2}\alpha r(E_b[\delta_t^2]) \]
+$$w_{t+1} = w_t - \frac{1}{2}\alpha r(E^{\pi}_{\tau}[G_t^2]) = w_t - \frac{1}{2}\alpha r(E_b[\delta_t^2])$$
 
-Where \( E^{\pi}_{\tau}[G_t^2] \) is the squared error of the target value, and \( E_b[\delta_t^2] \) is the expected squared TD error. This update rule aims to reduce the Bellman error by adjusting the weights based on the current prediction errors.
+Where $E^{\pi}_{\tau}[G_t^2]$ is the squared error of the target value, and $E_b[\delta_t^2]$ is the expected squared TD error. This update rule aims to reduce the Bellman error by adjusting the weights based on the current prediction errors.
 
 x??
 
@@ -822,10 +792,9 @@ Background context: The text introduces a new algorithm called the residual-grad
 
 ??x
 The residual-gradient algorithm differs from the naive version by including expectations conditional on the current state St, which helps in more accurately capturing the expected TD error. The update rule for this algorithm is:
+$$w_{t+1} = w_t - \alpha \left( r(E_b[\delta_t^2]) - E_b[E_b[\delta_t^2] \cdot r(E_b[\delta_t^2])] \right)$$
 
-\[ w_{t+1} = w_t - \alpha \left( r(E_b[\delta_t^2]) - E_b[E_b[\delta_t^2] \cdot r(E_b[\delta_t^2])] \right) \]
-
-Where \( \alpha \) is the learning rate. This update involves calculating the expected TD error and its product with the reward, which helps in reducing the Bellman error more effectively.
+Where $\alpha$ is the learning rate. This update involves calculating the expected TD error and its product with the reward, which helps in reducing the Bellman error more effectively.
 
 While this approach improves upon the naive version by considering these conditional expectations, it still approximates the true values due to the nature of value function approximation methods.
 
@@ -841,8 +810,8 @@ Background context: The text discusses the differences between deterministic and
 In a **deterministic** environment, the transition from one state to another is fixed; given a state and an action, there is only one possible next state. In contrast, in a **non-deterministic** or stochastic environment, multiple outcomes are possible for the same state-action pair.
 
 For example:
-- Deterministic: If an agent moves right from state \(A\), it always transitions to state \(B\).
-- Non-Deterministic: Moving right from state \(A\) could transition to states \(B\) or \(C\) with certain probabilities.
+- Deterministic: If an agent moves right from state $A $, it always transitions to state $ B$.
+- Non-Deterministic: Moving right from state $A $ could transition to states$B $ or$C$ with certain probabilities.
 x??
 
 ---
@@ -869,9 +838,8 @@ Background context: The text mentions that under certain conditions, the residua
 ??x
 The residual-gradient algorithm ensures convergence by using standard stochastic gradient descent (SGD) principles. Under usual conditions on the step-size parameter, it is guaranteed to converge to a minimum of the Bellman error (BE). This applies to both linear and nonlinear function approximators.
 
-Mathematically, if \( w \) represents the weight parameters being optimized, the update rule for SGD in this context can be represented as:
-\[ w_{t+1} = w_t - \alpha \cdot \nabla_w BE(w_t) \]
-where \(\alpha\) is the step-size parameter.
+Mathematically, if $w$ represents the weight parameters being optimized, the update rule for SGD in this context can be represented as:
+$$w_{t+1} = w_t - \alpha \cdot \nabla_w BE(w_t)$$where $\alpha$ is the step-size parameter.
 
 This update rule is applied iteratively until convergence.
 x??
@@ -885,15 +853,15 @@ Background context: The text provides an example where the residual-gradient alg
 ??x
 The **A-presplit example** illustrates how the residual-gradient algorithm can fail even in deterministic environments when viewed through function approximators. Specifically:
 
-- The system has three states: \(A1\), \(A2\), and a combined state \(A\) (with features for \(B\) and \(C\)).
-- Episodes start from either \(A1\) or \(A2\) with equal probability.
-- Function approximator treats \(A1\) and \(A2\) as the same state, leading to incorrect value predictions.
+- The system has three states:$A1 $, $ A2 $, and a combined state$ A $(with features for$ B $and$ C$).
+- Episodes start from either $A1 $ or$A2$ with equal probability.
+- Function approximator treats $A1 $ and$A2$ as the same state, leading to incorrect value predictions.
 
 Example setup:
-- If starting in \(A1\), transitions to \(B\) (reward 0) then terminates (reward 1).
-- If starting in \(A2\), transitions to \(C\) (reward 0) then terminates (reward 0).
+- If starting in $A1 $, transitions to $ B$(reward 0) then terminates (reward 1).
+- If starting in $A2 $, transitions to $ C$(reward 0) then terminates (reward 0).
 
-The true values of \(B\) and \(C\) are 1 and 0, respectively. The best shared value for \(A1\) and \(A2\) is \(\frac{1}{2}\). However, the algorithm converges to incorrect values: \(\frac{3}{4}\) for \(B\) and \(\frac{1}{4}\) for \(C\).
+The true values of $B $ and$C $ are 1 and 0, respectively. The best shared value for$A1 $ and$A2 $ is$\frac{1}{2}$. However, the algorithm converges to incorrect values:$\frac{3}{4}$ for $B$ and $\frac{1}{4}$ for $C$.
 
 This example highlights a failure mode where the naive residual-gradient method does not converge to the optimal solution.
 x??

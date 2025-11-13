@@ -14,10 +14,10 @@ x??
 ---
 
 #### Policy Approach in RTDP
-The policy used by the agent to generate trajectories approaches an optimal policy as the value function approaches the optimal value function \(v^*\). This is because RTDP is always greedy with respect to the current value function, unlike conventional value iteration which terminates based on a small change criterion.
+The policy used by the agent to generate trajectories approaches an optimal policy as the value function approaches the optimal value function $v^*$. This is because RTDP is always greedy with respect to the current value function, unlike conventional value iteration which terminates based on a small change criterion.
 :p How does the policy approach in RTDP compare to that of traditional methods?
 ??x
-In RTDP, the policy used by the agent becomes increasingly optimal as the value function converges to \(v^*\) because it is always greedy with respect to the current value function. In contrast, conventional methods like value iteration stop when the value function changes very little in a sweep, but this might not necessarily coincide with an optimal or near-optimal policy.
+In RTDP, the policy used by the agent becomes increasingly optimal as the value function converges to $v^*$ because it is always greedy with respect to the current value function. In contrast, conventional methods like value iteration stop when the value function changes very little in a sweep, but this might not necessarily coincide with an optimal or near-optimal policy.
 x??
 
 ---
@@ -107,10 +107,10 @@ x??
 ---
 
 #### Approximate Value Function Backing Up
-Background context explaining the concept. The approximate value function is applied to leaf nodes, and then values are backed up toward the root state. This process mirrors expected updates with maxes (those for \(v^*\) and \(q^*\)), stopping at current state action nodes.
+Background context explaining the concept. The approximate value function is applied to leaf nodes, and then values are backed up toward the root state. This process mirrors expected updates with maxes (those for $v^*$ and $q^*$), stopping at current state action nodes.
 :p What is backing up in the context of approximate value functions?
 ??x
-Backpropagation of estimated values from leaf nodes to the root node, akin to the expected updates for \(v^*\) and \(q^*\), but it stops at the action nodes relevant to the current state. This process helps in refining the action selection by improving the estimate of the value function.
+Backpropagation of estimated values from leaf nodes to the root node, akin to the expected updates for $v^*$ and $q^*$, but it stops at the action nodes relevant to the current state. This process helps in refining the action selection by improving the estimate of the value function.
 x??
 
 ---
@@ -118,7 +118,7 @@ x??
 Explanation on how heuristic search differs from conventional methods, emphasizing the greedy-like nature of certain algorithms and their application beyond a single step.
 :p How does heuristic search differ from conventional methods?
 ??x
-Heuristic search is like applying a greedy policy but over multiple steps rather than just one. Unlike conventional methods where value functions are typically designed by people and not changed during the search, heuristic search allows for value function improvements using backed-up values or other methods. This can lead to better action selections as seen in algorithms like \(\epsilon\)-greedy and UCB.
+Heuristic search is like applying a greedy policy but over multiple steps rather than just one. Unlike conventional methods where value functions are typically designed by people and not changed during the search, heuristic search allows for value function improvements using backed-up values or other methods. This can lead to better action selections as seen in algorithms like $\epsilon$-greedy and UCB.
 x??
 
 ---
@@ -164,17 +164,17 @@ Background context: Rollout algorithms are decision-time planning techniques tha
 
 :p What is the primary goal of rollout algorithms?
 ??x
-The primary goal of rollout algorithms is not to find an optimal policy or fully approximate the action-value function \( q^{\pi} \). Instead, their objective is to improve a given current policy by estimating action values and selecting actions that maximize those estimates. The process involves simulating trajectories from the current state using different actions under a fixed policy, averaging the returns of these simulations, and then executing the action with the highest estimated value.
+The primary goal of rollout algorithms is not to find an optimal policy or fully approximate the action-value function $q^{\pi}$. Instead, their objective is to improve a given current policy by estimating action values and selecting actions that maximize those estimates. The process involves simulating trajectories from the current state using different actions under a fixed policy, averaging the returns of these simulations, and then executing the action with the highest estimated value.
 x??
 
 ---
 
 #### Policy Improvement in Rollout Algorithms
-Background context: The policy improvement theorem states that if two policies differ only in one state \( s \), and if for some action \( a_0 \) in state \( s \), the action-value estimate is higher than under the original policy, then the new policy is at least as good as the old one. Rollout algorithms leverage this by using Monte Carlo estimates to guide their decision-making process.
+Background context: The policy improvement theorem states that if two policies differ only in one state $s $, and if for some action $ a_0 $ in state $ s$, the action-value estimate is higher than under the original policy, then the new policy is at least as good as the old one. Rollout algorithms leverage this by using Monte Carlo estimates to guide their decision-making process.
 
 :p How does the policy improvement theorem apply to rollout algorithms?
 ??x
-The policy improvement theorem applies to rollout algorithms in that if a new action \( a_0 \) in state \( s \) has a higher estimated value than under the current policy \( \pi \), then the new policy (which selects \( a_0 \)) is at least as good as or better than the original policy. By averaging returns from simulations, rollout algorithms can estimate these action values accurately and make informed decisions to improve upon the existing policy.
+The policy improvement theorem applies to rollout algorithms in that if a new action $a_0 $ in state$s $ has a higher estimated value than under the current policy$\pi $, then the new policy (which selects$ a_0$) is at least as good as or better than the original policy. By averaging returns from simulations, rollout algorithms can estimate these action values accurately and make informed decisions to improve upon the existing policy.
 
 This process mirrors one step of policy iteration in dynamic programming but uses Monte Carlo methods for efficiency.
 x??
@@ -421,7 +421,7 @@ Monte Carlo Tree Search primarily addresses the challenge of exploring large or 
 #### Selection Step in MCTS
 The selection step involves traversing the tree using a tree policy based on action values attached to the edges of the tree, starting from the root node until reaching a leaf node.
 
-Background context: The goal is to find promising actions that can lead to high value trajectories. This step often uses an \(\epsilon\)-greedy or UCB (Upper Confidence Bound) selection rule to balance exploration and exploitation.
+Background context: The goal is to find promising actions that can lead to high value trajectories. This step often uses an $\epsilon$-greedy or UCB (Upper Confidence Bound) selection rule to balance exploration and exploitation.
 :p What does the Selection step in MCTS involve?
 ??x
 The Selection step involves traversing the tree using a tree policy based on action values attached to the edges of the tree, starting from the root node until reaching a leaf node.
@@ -459,12 +459,12 @@ The Backup step involves backpropagating values from the leaf node through the p
 ---
 
 #### Tree Policy in MCTS
-The tree policy balances exploration and exploitation by selecting actions that are either random or use an informed selection rule like \(\epsilon\)-greedy or UCB to choose among available actions.
+The tree policy balances exploration and exploitation by selecting actions that are either random or use an informed selection rule like $\epsilon$-greedy or UCB to choose among available actions.
 
 Background context: The tree policy is crucial for guiding the search towards promising areas while still allowing some randomness for exploration.
 :p What is the role of the Tree Policy in MCTS?
 ??x
-The role of the Tree Policy in MCTS is to balance exploration and exploitation by selecting actions that are either random or use an informed selection rule like \(\epsilon\)-greedy or UCB, guiding the search towards promising areas.
+The role of the Tree Policy in MCTS is to balance exploration and exploitation by selecting actions that are either random or use an informed selection rule like $\epsilon$-greedy or UCB, guiding the search towards promising areas.
 
 ---
 

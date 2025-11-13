@@ -7,30 +7,34 @@
 #### Solving One-Step Equations Involving Addition and Subtraction
 Background context: When solving equations involving addition or subtraction, the goal is to isolate the variable on one side of the equation. This often involves performing inverse operations such as subtracting a number from both sides if it was added.
 
-:p How do you solve \( x + 47,432 = 50,000 \)?
+:p How do you solve $x + 47,432 = 50,000$?
 ??x
 To solve this equation, perform the inverse operation of addition by subtracting 47,432 from both sides:
-\[ x + 47,432 - 47,432 = 50,000 - 47,432 \]
-This simplifies to:
-\[ x = 2,568 \]
+$$x + 47,432 - 47,432 = 50,000 - 47,432$$
 
-To verify the solution, substitute \( x = 2,568 \) back into the original equation:
-\[ 2,568 + 47,432 = 50,000 \]
+This simplifies to:
+$$x = 2,568$$
+
+To verify the solution, substitute $x = 2,568$ back into the original equation:
+$$2,568 + 47,432 = 50,000$$
+
 The answer is correct as both sides are equal.
 
 --- 
 #### Solving One-Step Equations Involving Multiplication and Division
 Background context: When solving equations involving multiplication or division, the goal is to isolate the variable. The inverse operation of multiplication is division, which can be represented using a fraction bar in algebraic expressions.
 
-:p How do you solve \( 6x = -36 \)?
+:p How do you solve $6x = -36$?
 ??x
 To solve this equation, perform the inverse operation of multiplication by dividing both sides by 6:
-\[ \frac{6x}{6} = \frac{-36}{6} \]
-This simplifies to:
-\[ x = -6 \]
+$$\frac{6x}{6} = \frac{-36}{6}$$
 
-To verify the solution, substitute \( x = -6 \) back into the original equation:
-\[ 6(-6) = -36 \]
+This simplifies to:
+$$x = -6$$
+
+To verify the solution, substitute $x = -6$ back into the original equation:
+$$6(-6) = -36$$
+
 The answer is correct as both sides are equal.
 
 ---
@@ -38,20 +42,23 @@ The answer is correct as both sides are equal.
 #### Solving Multi-Step Equations
 Background context: Multi-step equations require performing multiple inverse operations to isolate the variable. The goal is to get the variable on one side of the equation by moving terms from one side to another and using appropriate inverse operations like subtraction or addition, followed by division or multiplication.
 
-:p How do you solve \( 3x + x = 9 \)?
+:p How do you solve $3x + x = 9$?
 ??x
 First, combine like terms:
-\[ 3x + x = 4x \]
+$$3x + x = 4x$$
+
 The equation now is:
-\[ 4x = 9 \]
+$$4x = 9$$
 
 Next, perform the inverse operation of multiplication by dividing both sides by 4:
-\[ \frac{4x}{4} = \frac{9}{4} \]
-This simplifies to:
-\[ x = \frac{9}{4} \]
+$$\frac{4x}{4} = \frac{9}{4}$$
 
-To verify the solution, substitute \( x = \frac{9}{4} \) back into the original equation:
-\[ 3\left(\frac{9}{4}\right) + \frac{9}{4} = \frac{27}{4} + \frac{9}{4} = \frac{36}{4} = 9 \]
+This simplifies to:
+$$x = \frac{9}{4}$$
+
+To verify the solution, substitute $x = \frac{9}{4}$ back into the original equation:
+$$3\left(\frac{9}{4}\right) + \frac{9}{4} = \frac{27}{4} + \frac{9}{4} = \frac{36}{4} = 9$$
+
 The answer is correct as both sides are equal.
 
 ---
@@ -59,20 +66,19 @@ The answer is correct as both sides are equal.
 #### Simplifying Algebraic Expressions
 Background context: Before evaluating or solving algebraic expressions, it's essential to simplify them. Simplification involves removing parentheses using the distributive property, combining like terms, and combining constants.
 
-:p How do you simplify \( 3x^2 + 4 - (2x^2 + x) \)?
+:p How do you simplify $3x^2 + 4 - (2x^2 + x)$?
 ??x
 First, remove the parentheses by distributing the negative sign:
-\[ 3x^2 + 4 - 2x^2 - x \]
+$$3x^2 + 4 - 2x^2 - x$$
 
-Combine like terms. The \( x^2 \) terms are \( 3x^2 \) and \( -2x^2 \), which combine to give \( x^2 \):
-\[ (3x^2 - 2x^2) + 4 - x = x^2 + 4 - x \]
+Combine like terms. The $x^2 $ terms are$3x^2 $ and$-2x^2 $, which combine to give $ x^2$:
+$$(3x^2 - 2x^2) + 4 - x = x^2 + 4 - x$$
 
 The simplified expression is:
-\[ x^2 - x + 4 \]
+$$x^2 - x + 4$$
 
-To verify, check if substituting values into the original and simplified expressions gives the same result. For example, let \( x = 1 \):
-Original: \( 3(1)^2 + 4 - (2(1)^2 + 1) = 3 + 4 - (2 + 1) = 7 - 3 = 4 \)
-Simplified: \( 1^2 - 1 + 4 = 1 - 1 + 4 = 4 \)
+To verify, check if substituting values into the original and simplified expressions gives the same result. For example, let $x = 1$:
+Original: $3(1)^2 + 4 - (2(1)^2 + 1) = 3 + 4 - (2 + 1) = 7 - 3 = 4 $ Simplified:$1^2 - 1 + 4 = 1 - 1 + 4 = 4$
 
 The answers are the same, confirming the simplification is correct.
 
@@ -115,69 +121,61 @@ Background context: An example problem demonstrates how to use the FOIL method t
 :p Apply the FOIL method to (x + 2)(x - 5) and simplify the expression?
 ??x
 Using the FOIL method:
-- First: \( x \cdot x = x^2 \)
-- Outer: \( x \cdot (-5) = -5x \)
-- Inner: \( 2 \cdot x = 2x \)
-- Last: \( 2 \cdot (-5) = -10 \)
-
-Combine these results and simplify:
-\( x^2 - 5x + 2x - 10 = x^2 - 3x - 10 \)
+- First: $x \cdot x = x^2 $- Outer:$ x \cdot (-5) = -5x $- Inner:$2 \cdot x = 2x $- Last:$2 \cdot (-5) = -10 $ Combine these results and simplify:$x^2 - 5x + 2x - 10 = x^2 - 3x - 10$
 ??x
-The expression simplifies to \( x^2 - 3x - 10 \).
+The expression simplifies to $x^2 - 3x - 10$.
 x??
 
 ---
 #### Example Problem with Substitution Method
 Background context: An example problem shows how the substitution method can be used in a simple two-variable system of equations where one equation is easily solved for one variable.
 :p Solve the following system using the substitution method:
-\[ x + y = 3 \]
-\[ xy = 7 \]
-??x
-First, solve \( x + y = 3 \) for \( y \):
-\[ y = 3 - x \]
+$$x + y = 3$$
+$$xy = 7$$??x
+First, solve $x + y = 3 $ for$y$:
+$$y = 3 - x$$
 
 Substitute this expression into the second equation:
-\[ x(3 - x) = 7 \]
-\[ 3x - x^2 = 7 \]
-\[ x^2 - 3x + 7 = 0 \]
+$$x(3 - x) = 7$$
+$$3x - x^2 = 7$$
+$$x^2 - 3x + 7 = 0$$
 
-Solve for \( x \):
-\[ x = 1 \] (by substituting and solving the quadratic equation)
+Solve for $x$:
+$$x = 1$$(by substituting and solving the quadratic equation)
 
-Substitute \( x = 1 \) back into \( y = 3 - x \):
-\[ y = 3 - 1 = 2 \]
+Substitute $x = 1 $ back into$y = 3 - x$:
+$$y = 3 - 1 = 2$$
 
-Thus, \( x = 1 \) and \( y = 2 \).
+Thus,$x = 1 $ and$y = 2$.
 x??
 
 ---
 #### Example Problem with Combining Equations
 Background context: An example problem demonstrates how combining equations can be used to solve a more complex two-variable system of linear equations. This involves multiplying one equation by a constant to align coefficients for elimination.
 :p Solve the following system using the combining method:
-\[ 2x + 3y = 12 \]
-\[ 4x - y = 9 \]
-??x
-First, multiply the second equation by 3 to make the coefficients of \( y \) opposites:
-\[ 2x + 3y = 12 \]
-\[ 12x - 3y = 27 \]
+$$2x + 3y = 12$$
+$$4x - y = 9$$??x
+First, multiply the second equation by 3 to make the coefficients of $y$ opposites:
+$$2x + 3y = 12$$
+$$12x - 3y = 27$$
 
-Add the two equations together to eliminate \( y \):
-\[ (2x + 3y) + (12x - 3y) = 12 + 27 \]
-\[ 14x = 39 \]
-\[ x = \frac{39}{14} \]
+Add the two equations together to eliminate $y$:
+$$(2x + 3y) + (12x - 3y) = 12 + 27$$
+$$14x = 39$$
+$$x = \frac{39}{14}$$
 
-Substitute \( x = \frac{39}{14} \) back into the first equation:
-\[ 2\left(\frac{39}{14}\right) + 3y = 12 \]
-\[ \frac{78}{14} + 3y = 12 \]
-\[ \frac{39}{7} + 3y = 12 \]
+Substitute $x = \frac{39}{14}$ back into the first equation:
+$$2\left(\frac{39}{14}\right) + 3y = 12$$
+$$\frac{78}{14} + 3y = 12$$
+$$\frac{39}{7} + 3y = 12$$
 
-Solve for \( y \):
-\[ 3y = 12 - \frac{39}{7} \]
-\[ 3y = \frac{84 - 39}{7} \]
-\[ 3y = \frac{45}{7} \]
-\[ y = \frac{15}{7} \]
+Solve for $y$:
+$$3y = 12 - \frac{39}{7}$$
+$$3y = \frac{84 - 39}{7}$$
+$$3y = \frac{45}{7}$$
+$$y = \frac{15}{7}$$
 
-Thus, \( x = \frac{39}{14} \) and \( y = \frac{15}{7} \).
+Thus,$x = \frac{39}{14}$ and $y = \frac{15}{7}$.
 x??
 
 ---
@@ -239,7 +237,7 @@ x??
 
 ---
 #### Example of Factoring with GCF
-Let's consider the product \(4x^2y\) and \(2xy\).
+Let's consider the product $4x^2y $ and$2xy$.
 
 :p How do you factor the given terms using their greatest common factor?
 ??x First, identify the GCF as 2x. Then, divide each term by the GCF: 

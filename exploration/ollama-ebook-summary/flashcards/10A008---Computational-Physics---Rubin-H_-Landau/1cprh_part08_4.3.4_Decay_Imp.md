@@ -6,30 +6,25 @@
 
 #### Limiting Behavior of Exponential Decay
 
-In scenarios where a large number of particles \( N \to \infty \) and the observation time interval \( \Delta t \to 0 \), the difference equation (4.21) approximates to a differential equation, leading us to derive the well-known exponential decay law.
+In scenarios where a large number of particles $N \to \infty $ and the observation time interval$\Delta t \to 0$, the difference equation (4.21) approximates to a differential equation, leading us to derive the well-known exponential decay law.
 
 :p What is the differential equation that describes exponential decay in this context?
 ??x
-The differential equation that describes exponential decay when \( N \to \infty \) and \( \Delta t \to 0 \) is:
+The differential equation that describes exponential decay when $N \to \infty $ and$\Delta t \to 0$ is:
 
-\[
-\frac{dN(t)}{dt} = -\lambda N(t)
-\]
+$$\frac{dN(t)}{dt} = -\lambda N(t)$$
 
 This can be integrated to give the time dependencies of the total number of particles and their activity:
+$$
 
-\[
-N(t) = N(0)e^{-\lambda t} = N(0)e^{-t/\tau}, \quad \text{and} \quad \frac{dN}{dt}(t) = -\lambda N(0)e^{-\lambda t}
-\]
-
-where \( \lambda \) is the decay rate and \( \tau = \frac{1}{\lambda} \) is the mean lifetime.
+N(t) = N(0)e^{-\lambda t} = N(0)e^{-t/\tau}, \quad \text{and} \quad \frac{dN}{dt}(t) = -\lambda N(0)e^{-\lambda t}$$where $\lambda $ is the decay rate and$\tau = \frac{1}{\lambda}$ is the mean lifetime.
 x??
 
 ---
 
 #### Discrete Decay Simulation
 
-Simulating radioactive decay with discrete steps involves incrementing time in intervals of \( \Delta t \). For each interval, we count how many nuclei have decayed. The simulation ends when there are no more nuclei left to decay.
+Simulating radioactive decay with discrete steps involves incrementing time in intervals of $\Delta t$. For each interval, we count how many nuclei have decayed. The simulation ends when there are no more nuclei left to decay.
 
 :p What is the pseudocode for a simple radioactive decay simulator?
 ??x
@@ -51,8 +46,8 @@ Output t, Delta, N
 ```
 
 In this code:
-- \( N \) is the initial number of particles.
-- \( \lambda \) is the decay rate.
+- $N$ is the initial number of particles.
+- $\lambda$ is the decay rate.
 - `r_i` are random numbers between 0 and 1.
 - The loop increments time by one step each iteration until no more nuclei are left to decay.
 x??
@@ -61,11 +56,11 @@ x??
 
 #### Context of Exponential Decay Limitation
 
-In natural conditions, where \( N(t) \) can be a small number, the process is statistical rather than continuous. Although the fundamental law of nature remains valid, exponential decay (4.24) becomes less accurate as \( N \) decreases.
+In natural conditions, where $N(t)$ can be a small number, the process is statistical rather than continuous. Although the fundamental law of nature remains valid, exponential decay (4.24) becomes less accurate as $N$ decreases.
 
 :p Why does exponential decay become inaccurate for smaller numbers of particles?
 ??x
-Exponential decay becomes inaccurate when the number of particles \( N(t) \) is small because it approximates a continuous process. In reality, with few particles, each event (decay) is stochastic and random. The discrete nature of particle interactions means that the exponential model's assumptions about a smooth transition are no longer valid.
+Exponential decay becomes inaccurate when the number of particles $N(t)$ is small because it approximates a continuous process. In reality, with few particles, each event (decay) is stochastic and random. The discrete nature of particle interactions means that the exponential model's assumptions about a smooth transition are no longer valid.
 
 For very low numbers of particles, fluctuations become significant, leading to statistical variations that deviate from the expected behavior described by the continuous exponential decay equation.
 x??
@@ -74,19 +69,19 @@ x??
 
 #### Time Scale Setting in Simulations
 
-When setting up simulations with specific decay rates \( \lambda = 1/\tau \), one must consider the time scale. For instance, if the actual decay rate is \( \lambda = 0.3 \times 10^6 \text{s}^{-1} \) and we choose to measure times in units of \( 10^{-6} \text{s} \), random numbers \( r_i \) between 0 and 1 will yield values around the middle of the range, effectively approximating \( \lambda \approx 0.3 \).
+When setting up simulations with specific decay rates $\lambda = 1/\tau $, one must consider the time scale. For instance, if the actual decay rate is $\lambda = 0.3 \times 10^6 \text{s}^{-1}$ and we choose to measure times in units of $10^{-6} \text{s}$, random numbers $ r_i$between 0 and 1 will yield values around the middle of the range, effectively approximating $\lambda \approx 0.3$.
 
 :p How do you set up the time scale for a simulation with a given decay rate?
 ??x
-To set up the time scale for a simulation with a given decay rate \( \lambda = 1/\tau \), you need to:
+To set up the time scale for a simulation with a given decay rate $\lambda = 1/\tau$, you need to:
 
 1. Determine the actual decay rate in units relevant to your measurement.
 2. Choose the time unit such that it aligns well with the desired decay rate.
 
-For example, if the actual decay rate is \( \lambda = 0.3 \times 10^6 \text{s}^{-1} \) and you decide to measure times in units of \( 10^{-6} \text{s} \):
+For example, if the actual decay rate is $\lambda = 0.3 \times 10^6 \text{s}^{-1}$ and you decide to measure times in units of $10^{-6} \text{s}$:
 
-- The random numbers \( r_i \) will be between 0 and 1.
-- This setup will yield effective values for \( \lambda \) that are around the middle of its range, effectively approximating \( \lambda \approx 0.3 \).
+- The random numbers $r_i$ will be between 0 and 1.
+- This setup will yield effective values for $\lambda $ that are around the middle of its range, effectively approximating$\lambda \approx 0.3$.
 
 The choice of time unit ensures that the simulation aligns with real-world expectations by scaling the decay rate appropriately.
 x??
@@ -121,25 +116,23 @@ x??
 
 Background context explaining the concept. A simple test of uniformity involves evaluating the `k`-th moment of a distribution using the formula:
 
-\[ \langle x^k \rangle = \frac{1}{N} \sum_{i=1}^{N} x_i^k \]
+$$\langle x^k \rangle = \frac{1}{N} \sum_{i=1}^{N} x_i^k$$
 
 If the numbers are distributed uniformly, then the `k`-th moment is approximately given by:
+$$\langle x^k \rangle \approx \int_0^1 dx \, x^k P(x) \approx \frac{1}{k+1} + O\left(\frac{1}{\sqrt{N}}\right)$$
 
-\[ \langle x^k \rangle \approx \int_0^1 dx \, x^k P(x) \approx \frac{1}{k+1} + O\left(\frac{1}{\sqrt{N}}\right) \]
-
-If the deviation from this formula varies as \( 1/\sqrt{N} \), then you know that the distribution is random because this result derives from assuming randomness.
+If the deviation from this formula varies as $1/\sqrt{N}$, then you know that the distribution is random because this result derives from assuming randomness.
 
 :p How do you test uniformity using the k-th moment?
 ??x
 Evaluate the `k`-th moment of a distribution with:
 
-\[ \langle x^k \rangle = \frac{1}{N} \sum_{i=1}^{N} x_i^k \]
+$$\langle x^k \rangle = \frac{1}{N} \sum_{i=1}^{N} x_i^k$$
 
 If the numbers are uniformly distributed, then:
+$$\langle x^k \rangle \approx \frac{1}{k+1} + O\left(\frac{1}{\sqrt{N}}\right)$$
 
-\[ \langle x^k \rangle \approx \frac{1}{k+1} + O\left(\frac{1}{\sqrt{N}}\right) \]
-
-If the deviation from this formula varies as \( 1/\sqrt{N} \), it indicates randomness in the distribution.
+If the deviation from this formula varies as $1/\sqrt{N}$, it indicates randomness in the distribution.
 x??
 
 ---
@@ -148,15 +141,16 @@ x??
 
 Background context explaining the concept. Another simple test determines the near-neighbor correlation in your random sequence by taking sums of products for small `k`:
 
-\[ C(k) = \frac{1}{N} \sum_{i=1}^{N} x_i x_{i+k}, \quad (k=1,2,\ldots) \]
+$$C(k) = \frac{1}{N} \sum_{i=1}^{N} x_i x_{i+k}, \quad (k=1,2,\ldots)$$
 
 If points are not correlated, the correlation function should be close to zero.
 
 :p How do you determine near-neighbor correlations in a random sequence?
 ??x
 Calculate the near-neighbor correlation by taking sums of products for small `k`:
+$$
 
-\[ C(k) = \frac{1}{N} \sum_{i=1}^{N} x_i x_{i+k}, \quad (k=1,2,\ldots) \]
+C(k) = \frac{1}{N} \sum_{i=1}^{N} x_i x_{i+k}, \quad (k=1,2,\ldots)$$
 
 If points are not correlated, the correlation function should be close to zero. This test helps identify any regularity in the sequence.
 x??
@@ -268,15 +262,15 @@ These flashcards cover key concepts from the provided text, focusing on testing 
 
 #### Random Number Generator Testing
 
-Background context: This section discusses a method to test whether random numbers generated by your generator are uniform and independent. The formula \( \sqrt{N} \left| \frac{1}{N}\sum_{i=1}^{N} x_i x_{i+k} - 1/4 \right| \) is used to approximate the integral, where \( k \) is a constant and \( N \) is the number of random numbers. This test helps determine if your generator produces uniformly distributed and independent random numbers.
+Background context: This section discusses a method to test whether random numbers generated by your generator are uniform and independent. The formula $\sqrt{N} \left| \frac{1}{N}\sum_{i=1}^{N} x_i x_{i+k} - 1/4 \right|$ is used to approximate the integral, where $ k $ is a constant and $N$ is the number of random numbers. This test helps determine if your generator produces uniformly distributed and independent random numbers.
 
 :p What is the formula used to test whether generated random numbers are uniform and independent?
 ??x
-The formula uses the sum of products of pairs of random numbers separated by a fixed distance \( k \):
+The formula uses the sum of products of pairs of random numbers separated by a fixed distance $k$:
 
-\[ \sqrt{N} \left| \frac{1}{N}\sum_{i=1}^{N} x_i x_{i+k} - 1/4 \right| \]
+$$\sqrt{N} \left| \frac{1}{N}\sum_{i=1}^{N} x_i x_{i+k} - 1/4 \right|$$
 
-This formula should be approximately equal to 1 if the random numbers are uniform and independent. The test is performed for different values of \( k \) and \( N \).
+This formula should be approximately equal to 1 if the random numbers are uniform and independent. The test is performed for different values of $k $ and$N$.
 x??
 
 ---
@@ -357,9 +351,9 @@ Background context: The provided scripts `Walk.py` and `DecaySound.py` are examp
 `Walk.py` helps test the quality of a random number generator by simulating a two-dimensional random walk. The script uses uniformly distributed random numbers to move the walker either left, right, up, or down at each step. By analyzing the distribution and independence of these steps, we can infer whether the random number generator produces high-quality pseudo-random numbers.
 
 The key test involves computing:
-\[ \sqrt{N} \left| \frac{1}{N}\sum_{i=1}^{N} x_i x_{i+k} - 1/4 \right| \]
+$$\sqrt{N} \left| \frac{1}{N}\sum_{i=1}^{N} x_i x_{i+k} - 1/4 \right|$$
 
-This formula should be approximately equal to 1 if the random numbers are uniform and independent. The test is performed for different values of \( k \) and \( N \).
+This formula should be approximately equal to 1 if the random numbers are uniform and independent. The test is performed for different values of $k $ and$N$.
 
 x??
 

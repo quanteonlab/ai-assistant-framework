@@ -5,14 +5,15 @@
 ---
 
 #### Wave Packet Widths and Fourier Transform
-Background context: This section discusses wave packets and their relationship to time-frequency localization, specifically focusing on the widths \(\Delta t\) and \(\Delta \omega\). The Heisenberg uncertainty principle is introduced as a fundamental relation between these two quantities.
+Background context: This section discusses wave packets and their relationship to time-frequency localization, specifically focusing on the widths $\Delta t $ and$\Delta \omega$. The Heisenberg uncertainty principle is introduced as a fundamental relation between these two quantities.
 
-:p What is the width of a wave packet in terms of time (\(\Delta t\))?
+:p What is the width of a wave packet in terms of time ($\Delta t$)?
 
 ??x
-The width of a wave packet in time, \(\Delta t\), can be estimated using the number of cycles \(N\) and the angular frequency \(\omega_0\). For the specific example given:
-\[ \Delta t = N T = \frac{N}{2\pi/\omega_0} = N / (2\pi) \cdot \omega_0. \]
-Given that \(T = 2\pi/\omega_0\), this is derived from the periodicity of the wave packet.
+The width of a wave packet in time, $\Delta t $, can be estimated using the number of cycles $ N $and the angular frequency$\omega_0$. For the specific example given:
+$$\Delta t = N T = \frac{N}{2\pi/\omega_0} = N / (2\pi) \cdot \omega_0.$$
+
+Given that $T = 2\pi/\omega_0$, this is derived from the periodicity of the wave packet.
 
 The code to calculate this might look like:
 ```java
@@ -31,14 +32,15 @@ x??
 
 #### Fourier Transform of a Simple Wave Packet
 
-Background context: The Fourier transform of the wave packet \(y(t)\) is derived and shown to have non-zero values only around \(\omega_0\). The width in frequency, \(\Delta \omega\), can be estimated from the zeros of the transform.
+Background context: The Fourier transform of the wave packet $y(t)$ is derived and shown to have non-zero values only around $\omega_0$. The width in frequency,$\Delta \omega$, can be estimated from the zeros of the transform.
 
 :p What does the Fourier transform of a simple sine wave look like?
 
 ??x
-The Fourier transform of a simple sine wave \(y(t) = \sin(\omega_0 t)\) for \(|t| < N \pi/\omega_0\) is:
-\[ Y(\omega) = -i \frac{\sqrt{2\pi}}{(\omega^2 - \omega_0^2)} \left[ (\omega_0 + \omega) \sin\left( \frac{N \pi (\omega_0 - \omega)}{\omega_0} \right) - (\omega_0 - \omega) \sin\left( \frac{N \pi (\omega_0 + \omega)}{\omega_0} \right) \right]. \]
-This function has significant values only around \(\omega = \omega_0\) and drops off sharply away from this frequency.
+The Fourier transform of a simple sine wave $y(t) = \sin(\omega_0 t)$ for $|t| < N \pi/\omega_0$ is:
+$$Y(\omega) = -i \frac{\sqrt{2\pi}}{(\omega^2 - \omega_0^2)} \left[ (\omega_0 + \omega) \sin\left( \frac{N \pi (\omega_0 - \omega)}{\omega_0} \right) - (\omega_0 - \omega) \sin\left( \frac{N \pi (\omega_0 + \omega)}{\omega_0} \right) \right].$$
+
+This function has significant values only around $\omega = \omega_0$ and drops off sharply away from this frequency.
 
 The code to evaluate the transform might be:
 ```java
@@ -62,14 +64,14 @@ x??
 
 #### Heisenberg Uncertainty Principle
 
-Background context: The Heisenberg uncertainty principle is introduced, stating that the product of the uncertainties in time \(\Delta t\) and frequency \(\Delta \omega\) must be greater than or equal to \(2\pi\). This relation applies generally and indicates that a signal cannot be arbitrarily localized in both time and frequency simultaneously.
+Background context: The Heisenberg uncertainty principle is introduced, stating that the product of the uncertainties in time $\Delta t $ and frequency$\Delta \omega $ must be greater than or equal to$2\pi$. This relation applies generally and indicates that a signal cannot be arbitrarily localized in both time and frequency simultaneously.
 
 :p What does the Heisenberg uncertainty principle state?
 
 ??x
-The Heisenberg uncertainty principle states that for any wave packet, the product of its time width \(\Delta t\) and frequency width \(\Delta \omega\) must satisfy:
-\[ \Delta t \cdot \Delta \omega \geq 2\pi. \]
-This means that if a signal is very narrow in time (\(\Delta t\) small), it will have a broad spectrum in frequency (\(\Delta \omega\) large) and vice versa.
+The Heisenberg uncertainty principle states that for any wave packet, the product of its time width $\Delta t $ and frequency width$\Delta \omega$ must satisfy:
+$$\Delta t \cdot \Delta \omega \geq 2\pi.$$
+This means that if a signal is very narrow in time ($\Delta t $ small), it will have a broad spectrum in frequency ($\Delta \omega$ large) and vice versa.
 
 The code to check this might be:
 ```java
@@ -93,7 +95,7 @@ Background context: This section presents a series of exercises to analyze wave 
 :p What is the first step in analyzing a wave packet?
 
 ??x
-The first step in analyzing a wave packet is to estimate its width \(\Delta t\) using methods such as full-width at half-maxima (FWHM) of \(|y(t)|\). This helps understand how long the signal persists over time.
+The first step in analyzing a wave packet is to estimate its width $\Delta t $ using methods such as full-width at half-maxima (FWHM) of$|y(t)|$. This helps understand how long the signal persists over time.
 
 ```java
 public class WavePacketAnalysis {
@@ -173,12 +175,12 @@ x??
 ---
 
 #### Short-Time Fourier Transform (STFT)
-Background context explaining the concept. The short-time Fourier transform involves translating a window function \( w(t-\tau) \) over a signal to analyze it locally in time, as described by equation 10.13.
+Background context explaining the concept. The short-time Fourier transform involves translating a window function $w(t-\tau)$ over a signal to analyze it locally in time, as described by equation 10.13.
 
 Equation:
-\[ Y(\text{ST})(\omega, \tau)=\int_{-\infty}^{+\infty} dt \sqrt{\frac{2}{\pi}} w(t - \tau) y(t) e^{i \omega t}. \]
+$$Y(\text{ST})(\omega, \tau)=\int_{-\infty}^{+\infty} dt \sqrt{\frac{2}{\pi}} w(t - \tau) y(t) e^{i \omega t}.$$
 
-This formula indicates that for different values of the translation time \( \tau \), which correspond to different locations of the window over the signal, a surface or 3D plot is needed to visualize the amplitude as a function of both \( \omega \) and \( \tau \).
+This formula indicates that for different values of the translation time $\tau $, which correspond to different locations of the window over the signal, a surface or 3D plot is needed to visualize the amplitude as a function of both $\omega $ and$\tau$.
 
 :p What does the short-time Fourier transform allow us to do with respect to analyzing signals?
 ??x
@@ -200,9 +202,9 @@ x??
 Background context explaining the wavelet transform. The wavelet transform is defined by equation 10.14, similar to a short-time Fourier transform but using localized time basis functions (wavelets) instead of exponential functions.
 
 Equation:
-\[ Y(s,\tau)=\int_{-\infty}^{+\infty} dt \psi^*_{s,\tau}(t) y(t). \]
+$$Y(s,\tau)=\int_{-\infty}^{+\infty} dt \psi^*_{s,\tau}(t) y(t).$$
 
-The key difference is that the wavelet transform uses wave packets or wavelets localized in time, each containing its own limited range of frequencies. The variables \( s \) and \( \tau \) represent scale (equivalent to frequency) and translation (time portion), respectively.
+The key difference is that the wavelet transform uses wave packets or wavelets localized in time, each containing its own limited range of frequencies. The variables $s $ and$\tau$ represent scale (equivalent to frequency) and translation (time portion), respectively.
 
 :p What does the wavelet transform provide in terms of analyzing signals?
 ??x
@@ -221,17 +223,17 @@ x??
 ---
 
 #### Generating Wavelet Basis Functions
-Background context explaining the process of generating wavelet basis functions. Typically, a mother function \( \psi(t) \) is used to generate daughter wavelets through scaling and translation.
+Background context explaining the process of generating wavelet basis functions. Typically, a mother function $\psi(t)$ is used to generate daughter wavelets through scaling and translation.
 
 Example:
-\[ \psi(t) = \sin(8t) e^{-\frac{t^2}{2}}. \]
+$$\psi(t) = \sin(8t) e^{-\frac{t^2}{2}}.$$
 
 Using this mother wavelet, we can derive the daughter wavelets as follows:
 
 Equation for generating daughters:
-\[ \psi_{s,\tau}(t) = \frac{1}{\sqrt{s}} \psi\left(\frac{t - \tau}{s}\right). \]
+$$\psi_{s,\tau}(t) = \frac{1}{\sqrt{s}} \psi\left(\frac{t - \tau}{s}\right).$$
 
-Example of four generated wavelets in Figure 10.4, showing how different values of \( s \) and \( \tau \) affect the shape.
+Example of four generated wavelets in Figure 10.4, showing how different values of $s $ and$\tau$ affect the shape.
 
 :p How are wavelet basis functions generated from a mother function?
 ??x
@@ -256,8 +258,8 @@ x??
 Background context explaining the wavelet transform equations. The forward and inverse wavelet transforms are given by equations 10.18 and 10.19, respectively.
 
 Equations:
-\[ Y(s,\tau)=\frac{1}{\sqrt{s}} \int_{-\infty}^{+\infty} dt \psi^*_{s,\tau}(t) y(t). \]
-\[ y(t)=\frac{1}{C} \int_{-\infty}^{+\infty} d\tau \int_{0}^{+\infty} ds \frac{\psi^*_{s,\tau}(t)}{s^{3/2}} Y(s, \tau). \]
+$$Y(s,\tau)=\frac{1}{\sqrt{s}} \int_{-\infty}^{+\infty} dt \psi^*_{s,\tau}(t) y(t).$$
+$$y(t)=\frac{1}{C} \int_{-\infty}^{+\infty} d\tau \int_{0}^{+\infty} ds \frac{\psi^*_{s,\tau}(t)}{s^{3/2}} Y(s, \tau).$$
 
 Explanation of the equations and their interpretation.
 
@@ -286,10 +288,10 @@ x??
 Background context explaining the general requirements for a mother wavelet. The properties include being real, oscillating around zero mean, localized in time, and having specific moment conditions.
 
 Equations:
-1) \(\psi(t)\) is real.
-2) \(\int_{-\infty}^{+\infty} \psi(t) dt = 0\).
-3) \(\psi(t)\) is square-integrable: \(\lim_{|t| \to \infty} |\psi(t)| \to 0\) and \(\int_{-\infty}^{+\infty} |\psi(t)|^2 dt < \infty\).
-4) The transform of low powers of \( t \) vanish, i.e., the first p moments: \(\int_{-\infty}^{+\infty} t^n \psi(t) dt = 0\) for \( n=0,1,...,p-1 \).
+1)$\psi(t)$ is real.
+2)$\int_{-\infty}^{+\infty} \psi(t) dt = 0$.
+3) $\psi(t)$ is square-integrable:$\lim_{|t| \to \infty} |\psi(t)| \to 0 $ and$\int_{-\infty}^{+\infty} |\psi(t)|^2 dt < \infty$.
+4) The transform of low powers of $t $ vanish, i.e., the first p moments:$\int_{-\infty}^{+\infty} t^n \psi(t) dt = 0 $ for$n=0,1,...,p-1$.
 
 :p What are the requirements for a mother wavelet in the wavelet transform?
 ??x
@@ -340,7 +342,7 @@ x??
 
 ---
 #### Morlet Wavelet Calculation
-Background context: The Morlet wavelet is a complex wavelet given by the formula \( \psi(t) = \frac{1}{\sqrt{\pi f_b}} e^{i 2 \pi f_c t} e^{-t^2 / f_b} \).
+Background context: The Morlet wavelet is a complex wavelet given by the formula $\psi(t) = \frac{1}{\sqrt{\pi f_b}} e^{i 2 \pi f_c t} e^{-t^2 / f_b}$.
 
 :p Write a method to calculate the Morlet mother wavelet.
 ??x
@@ -381,7 +383,7 @@ x??
 #### Applying CWT to Input Signals
 Background context: The continuous wavelet transform can be applied to various signals, including pure sine waves, sums of sine waves, and non-stationary signals.
 
-:p Apply the CWT to a pure sine wave \( y(t) = \sin(2\pi t) \).
+:p Apply the CWT to a pure sine wave $y(t) = \sin(2\pi t)$.
 ??x
 ```python
 def cwt_pure_sine_wave(t):
@@ -420,7 +422,7 @@ x??
 #### Continuous Wavelet Spectrum Analysis
 Background context: The continuous wavelet spectrum shows how the energy of a signal is distributed across different scales and times.
 
-:p What does the CWT spectrum reveal about the input signal \( y(t) = \sin(2\pi t) \)?
+:p What does the CWT spectrum reveal about the input signal $y(t) = \sin(2\pi t)$?
 ??x
 The CWT spectrum reveals that there is predominantly one frequency at short times, indicating localized energy around the fundamental frequency.
 x??
@@ -431,7 +433,7 @@ Background context: The discrete wavelet transform makes optimal choices for sca
 
 :p What does the DWT aim to optimize compared to CWT?
 ??x
-The DWT optimizes the choice of scale and time translation parameters \( s \) and \( \tau \), making it more suitable for practical applications.
+The DWT optimizes the choice of scale and time translation parameters $s $ and$\tau$, making it more suitable for practical applications.
 x??
 
 ---

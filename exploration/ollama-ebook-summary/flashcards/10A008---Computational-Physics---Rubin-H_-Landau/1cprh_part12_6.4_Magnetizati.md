@@ -8,8 +8,8 @@
 
 Background context: The Newton-Raphson algorithm is a method for finding successively better approximations to the roots (or zeroes) of a real-valued function. However, it can fail if the initial guess is not close enough to the root or if the derivative vanishes at the starting point.
 
-The algorithm updates the current approximation \(x_n\) using the formula:
-\[ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)} \]
+The algorithm updates the current approximation $x_n$ using the formula:
+$$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
 
 If the function has a local extremum (where the derivative is zero), this can lead to division by zero or an infinite loop.
 
@@ -18,14 +18,14 @@ Backtracking is a technique used when the correction step leads to a larger magn
 :p What are the potential problems with the Newton-Raphson algorithm as described in the text?
 ??x
 The potential problems include:
-- Starting at a local extremum where \(f'(x) = 0\), leading to division by zero.
+- Starting at a local extremum where $f'(x) = 0$, leading to division by zero.
 - Entering an infinite loop when the step size leads to a larger magnitude of the function.
 
 Backtracking can be used to handle these issues by reducing the step size if it results in a worse approximation. This helps ensure convergence towards the root rather than diverging or oscillating indefinitely.
 
 ??x
 The answer with detailed explanations:
-- If \(f'(x) = 0\), the next update step becomes undefined (division by zero).
+- If $f'(x) = 0$, the next update step becomes undefined (division by zero).
 - An infinite loop occurs when the correction step increases the function value, suggesting that the initial guess was too far from the root.
 Backtracking helps by reducing the step size in such cases to find a more suitable path towards the root.
 
@@ -54,22 +54,25 @@ x??
 
 #### Magnetization Search Problem
 
-Background context: The problem involves determining the magnetization \(M(T)\) as a function of temperature for simple magnetic materials. This is done using statistical mechanics principles, specifically the Boltzmann distribution law.
+Background context: The problem involves determining the magnetization $M(T)$ as a function of temperature for simple magnetic materials. This is done using statistical mechanics principles, specifically the Boltzmann distribution law.
 
 The relevant formulas are:
-\[ N_L = \frac{N e^{\mu B / (k_B T)}}{e^{\mu B / (k_B T)} + e^{-\mu B / (k_B T)}} \]
-\[ N_U = \frac{N e^{-\mu B / (k_B T)}}{e^{\mu B / (k_B T)} + e^{-\mu B / (k_B T)}} \]
+$$N_L = \frac{N e^{\mu B / (k_B T)}}{e^{\mu B / (k_B T)} + e^{-\mu B / (k_B T)}}$$
+$$
 
-Where \(N_L\) and \(N_U\) are the number of particles in the lower and upper energy states respectively. The magnetization is given by:
-\[ M(T) = N \mu \tanh(\lambda \mu M(T) / k_B T) \]
-Here, \(\lambda\) is a constant related to the molecular magnetic field.
+N_U = \frac{N e^{-\mu B / (k_B T)}}{e^{\mu B / (k_B T)} + e^{-\mu B / (k_B T)}}$$
 
-The goal is to find \(M(T)\) numerically since there's no analytic solution.
+Where $N_L $ and$N_U$ are the number of particles in the lower and upper energy states respectively. The magnetization is given by:
+$$M(T) = N \mu \tanh(\lambda \mu M(T) / k_B T)$$
+
+Here,$\lambda$ is a constant related to the molecular magnetic field.
+
+The goal is to find $M(T)$ numerically since there's no analytic solution.
 
 :p What is the magnetization equation for simple magnetic materials?
-??x
-\[ M(T) = N \mu \tanh\left(\frac{\lambda \mu M(T)}{k_B T}\right) \]
-This equation relates the magnetization \(M\) to the temperature \(T\), where \(\mu\) is the magnetic moment, \(\lambda\) is related to the molecular magnetic field, and \(N\) is the number of particles.
+??x$$M(T) = N \mu \tanh\left(\frac{\lambda \mu M(T)}{k_B T}\right)$$
+
+This equation relates the magnetization $M $ to the temperature$T $, where$\mu $ is the magnetic moment,$\lambda $ is related to the molecular magnetic field, and$N$ is the number of particles.
 
 x??
 
@@ -79,7 +82,7 @@ x??
 
 Background context: The backtracking method can be used when the Newton-Raphson algorithm fails due to large correction steps leading to an increase in function magnitude. By reducing the step size incrementally, a more stable path towards the root is ensured.
 
-:p How does backtracking work in the context of solving for \(M(T)\) using the Newton-Raphson method?
+:p How does backtracking work in the context of solving for $M(T)$ using the Newton-Raphson method?
 ??x
 Backtracking works by adjusting the step size if the correction step leads to an increase in the function value. Specifically:
 - If the new estimate increases the function value, reduce the step size and try again.
@@ -114,17 +117,17 @@ x??
 
 #### Solving for Magnetization Using Bisection and Newton-Raphson Algorithms
 
-Background context: The magnetization \(M(T)\) can be solved numerically using the bisection method or the Newton-Raphson algorithm. Each method has its advantages:
+Background context: The magnetization $M(T)$ can be solved numerically using the bisection method or the Newton-Raphson algorithm. Each method has its advantages:
 - **Bisection Method**: Guaranteed to converge but slower.
 - **Newton-Raphson Algorithm**: Faster but requires a good initial guess and may fail if not close enough.
 
-:p How would you find the root of \(f(m, t) = m - \tanh(m/t)\) for a given \(t\) using the bisection algorithm?
+:p How would you find the root of $f(m, t) = m - \tanh(m/t)$ for a given $t$ using the bisection algorithm?
 ??x
-To find the root of \(f(m, t) = m - \tanh(m/t)\) using the bisection method:
-1. Choose an interval [a, b] such that \(f(a)\) and \(f(b)\) have opposite signs.
-2. Calculate the midpoint \(c\) and evaluate \(f(c)\).
-3. If \(f(c) = 0\), then \(c\) is the root.
-4. Otherwise, if \(f(a) \cdot f(c) < 0\), set \(b = c\); else, set \(a = c\).
+To find the root of $f(m, t) = m - \tanh(m/t)$ using the bisection method:
+1. Choose an interval [a, b] such that $f(a)$ and $f(b)$ have opposite signs.
+2. Calculate the midpoint $c $ and evaluate$f(c)$.
+3. If $f(c) = 0 $, then $ c$ is the root.
+4. Otherwise, if $f(a) \cdot f(c) < 0 $, set $ b = c $; else, set$ a = c$.
 5. Repeat until convergence.
 
 Here's a pseudocode example:
@@ -149,12 +152,12 @@ x??
 
 Background context: Both algorithms can be used to find roots of a function. The bisection method is guaranteed to converge but is slower, while the Newton-Raphson algorithm converges faster if given a good initial guess.
 
-:p What are some key differences between using the bisection and Newton-Raphson methods for solving \(f(m, t) = m - \tanh(m/t)\)?
+:p What are some key differences between using the bisection and Newton-Raphson methods for solving $f(m, t) = m - \tanh(m/t)$?
 ??x
 - **Bisection Method**:
   - Guaranteed to converge.
   - Slower but more robust since it always reduces the interval where the root lies.
-  - Requires an initial interval [a, b] such that \(f(a) \cdot f(b) < 0\).
+  - Requires an initial interval [a, b] such that $f(a) \cdot f(b) < 0$.
 
 - **Newton-Raphson Algorithm**:
   - Faster convergence if a good initial guess is provided.
@@ -192,7 +195,7 @@ x??
 
 ---
 #### Reduced Magnetization vs Reduced Temperature Plot
-Background context: The text mentions constructing a plot of reduced magnetization \(m(t)\) as a function of reduced temperature \(t\). This is used to analyze magnetic behavior at different temperatures.
+Background context: The text mentions constructing a plot of reduced magnetization $m(t)$ as a function of reduced temperature $t$. This is used to analyze magnetic behavior at different temperatures.
 
 :p How would you construct a plot of reduced magnetization versus reduced temperature?
 ??x
@@ -251,7 +254,7 @@ x??
 
 ---
 #### Least-Squares Fitting
-Background context: The text discusses fitting a theoretical function \(f(E) = f_r (E - E_r)^2 + \Gamma^2 / 4\) to experimental data, where parameters like \(f_r\), \(E_r\), and \(\Gamma\) need to be adjusted.
+Background context: The text discusses fitting a theoretical function $f(E) = f_r (E - E_r)^2 + \Gamma^2 / 4 $ to experimental data, where parameters like$f_r $,$ E_r $, and$\Gamma$ need to be adjusted.
 
 :p How do you perform least-squares fitting on the given theoretical function?
 ??x
@@ -285,10 +288,8 @@ Background context: The text provides the formula for Lagrange interpolation and
 
 :p What is the Lagrange interpolation formula?
 ??x
-The Lagrange interpolation formula for an \(n\)-th degree polynomial through \(n\) points \((x_i, g(x_i))\) is given by:
-\[ g(x) ≃ g_1\lambda_1(x) + g_2\lambda_2(x) + ... + g_n\lambda_n(x), \]
-where
-\[ \lambda_i(x) = \prod_{j \neq i} \frac{x - x_j}{x_i - x_j}. \]
+The Lagrange interpolation formula for an $n $-th degree polynomial through $ n $points$(x_i, g(x_i))$ is given by:
+$$g(x) ≃ g_1\lambda_1(x) + g_2\lambda_2(x) + ... + g_n\lambda_n(x),$$where$$\lambda_i(x) = \prod_{j \neq i} \frac{x - x_j}{x_i - x_j}.$$
 
 For example, for three points:
 ```python
@@ -315,16 +316,14 @@ x??
 ---
 
 #### Lagrange Interpolation Concept
-Background context: The task involves performing an n-point Lagrange interpolation on experimental neutron scattering data. The goal is to fit nine data points with an 8th-degree polynomial and then use this fit to plot the cross section at intervals of 5 MeV. This process helps in deducing resonance energy \( E_r \) and full width at half-maximum \( \Gamma \).
+Background context: The task involves performing an n-point Lagrange interpolation on experimental neutron scattering data. The goal is to fit nine data points with an 8th-degree polynomial and then use this fit to plot the cross section at intervals of 5 MeV. This process helps in deducing resonance energy $E_r $ and full width at half-maximum$\Gamma$.
 
 :p What is Lagrange interpolation, and why is it used for fitting data?
 ??x
-Lagrange interpolation is a method used to construct a polynomial that passes through a given set of points. It's particularly useful when you have discrete data points and want to estimate the function value between these points. The formula for the n-point Lagrange interpolating polynomial \( P_n(x) \) is given by:
-\[ P_n(x) = \sum_{j=0}^{n} y_j \ell_j(x), \]
-where
-\[ \ell_j(x) = \prod_{\substack{0 \leq m \leq n \\ m \neq j}} \frac{x - x_m}{x_j - x_m}. \]
+Lagrange interpolation is a method used to construct a polynomial that passes through a given set of points. It's particularly useful when you have discrete data points and want to estimate the function value between these points. The formula for the n-point Lagrange interpolating polynomial $P_n(x)$ is given by:
+$$P_n(x) = \sum_{j=0}^{n} y_j \ell_j(x),$$where$$\ell_j(x) = \prod_{\substack{0 \leq m \leq n \\ m \neq j}} \frac{x - x_m}{x_j - x_m}.$$
 
-This method ensures that the polynomial passes through all the given data points \( (x_i, y_i) \). The 8th-degree polynomial is used because it has 9 coefficients and fits nine data points exactly.
+This method ensures that the polynomial passes through all the given data points $(x_i, y_i)$. The 8th-degree polynomial is used because it has 9 coefficients and fits nine data points exactly.
 
 ```java
 public class LagrangeInterpolation {
@@ -347,7 +346,7 @@ public class LagrangeInterpolation {
 }
 ```
 
-The code calculates the Lagrange polynomial for a given set of \( x \)-values and interpolates at point \( x \). 
+The code calculates the Lagrange polynomial for a given set of $x $-values and interpolates at point $ x$. 
 x??
 
 ---
@@ -358,7 +357,7 @@ Background context: The objective is to fit an 8th-degree polynomial through nin
 :p How do you perform Lagrange interpolation for fitting all nine data points with an 8th-degree polynomial?
 ??x
 To fit all nine data points with an 8th-degree polynomial using Lagrange interpolation, follow these steps:
-1. Define the \( x \) and \( y \) values from Table 6.1.
+1. Define the $x $ and$y$ values from Table 6.1.
 2. Use the Lagrange interpolation formula to construct a polynomial that passes through each of the nine points.
 3. Evaluate this polynomial at intervals of 5 MeV to plot the cross section.
 
@@ -390,7 +389,7 @@ x??
 ---
 
 #### Determining Resonance Parameters
-Background context: After fitting the cross section with an 8th-degree polynomial, determine the resonance energy \( E_r \) and full width at half-maximum \( \Gamma \). Compare these values with theoretical predictions.
+Background context: After fitting the cross section with an 8th-degree polynomial, determine the resonance energy $E_r $ and full width at half-maximum$\Gamma$. Compare these values with theoretical predictions.
 
 :p How do you use Lagrange interpolation to deduce the resonance parameters?
 ??x
@@ -398,10 +397,10 @@ To deduce the resonance parameters using Lagrange interpolation:
 
 1. Fit the 8th-degree polynomial through all nine data points.
 2. Evaluate this polynomial at intervals of 5 MeV.
-3. Find the position of the peak, which corresponds to \( E_r \).
+3. Find the position of the peak, which corresponds to $E_r$.
 4. Determine the full width at half-maximum (FWHM) by finding where the polynomial value is half its maximum.
 
-The resonance energy \( E_r \) can be found by locating the maximum value in the interpolated data:
+The resonance energy $E_r$ can be found by locating the maximum value in the interpolated data:
 ```java
 public class PeakFinding {
     public double findPeak(double[] xValues, double[] yValues) {
@@ -417,7 +416,7 @@ public class PeakFinding {
 }
 ```
 
-The full width at half-maximum \( \Gamma \) can be calculated as the distance between two points where the polynomial value is half its maximum:
+The full width at half-maximum $\Gamma$ can be calculated as the distance between two points where the polynomial value is half its maximum:
 ```java
 public class FWHMFinding {
     public double findFWHM(double[] xValues, double peakValue, double[] yValues) {
@@ -436,7 +435,7 @@ public class FWHMFinding {
 }
 ```
 
-These methods help in identifying \( E_r \) and \( \Gamma \).
+These methods help in identifying $E_r $ and$\Gamma$.
 x??
 
 ---
@@ -446,8 +445,8 @@ Background context: For a more localized interpolation, use three-point Lagrange
 
 :p How do you perform three-point Lagrange interpolation?
 ??x
-Three-point Lagrange interpolation involves fitting cubic polynomials between each pair of points with an additional point in between. For a set of points \( (x_0, y_0) \), \( (x_1, y_1) \), and \( (x_2, y_2) \), the polynomial is given by:
-\[ P(x) = \frac{(x - x_1)(x - x_2)}{(x_0 - x_1)(x_0 - x_2)}y_0 + \frac{(x - x_0)(x - x_2)}{(x_1 - x_0)(x_1 - x_2)}y_1 + \frac{(x - x_0)(x - x_1)}{(x_2 - x_0)(x_2 - x_1)}y_2. \]
+Three-point Lagrange interpolation involves fitting cubic polynomials between each pair of points with an additional point in between. For a set of points $(x_0, y_0)$,$(x_1, y_1)$, and $(x_2, y_2)$, the polynomial is given by:
+$$P(x) = \frac{(x - x_1)(x - x_2)}{(x_0 - x_1)(x_0 - x_2)}y_0 + \frac{(x - x_0)(x - x_2)}{(x_1 - x_0)(x_1 - x_2)}y_1 + \frac{(x - x_0)(x - x_1)}{(x_2 - x_0)(x_2 - x_1)}y_2.$$
 
 Here is an example in Java:
 ```java
@@ -471,7 +470,7 @@ public class ThreePointInterpolation {
 }
 ```
 
-This function evaluates the three-point Lagrange polynomial at a given \( x \).
+This function evaluates the three-point Lagrange polynomial at a given $x$.
 x??
 
 ---
@@ -508,10 +507,10 @@ Background context: Cubic spline interpolation fits piecewise cubic polynomials 
 ??x
 Cubic spline interpolation involves constructing a piecewise function where each segment is a cubic polynomial that passes through the given data points. The key advantage of this method is ensuring continuity in both the first and second derivatives across the intervals, leading to a smooth overall curve.
 
-The general form for the cubic polynomial between \( x_i \) and \( x_{i+1} \) is:
-\[ g(x) ≃ g_i(x) = g_i + g'_i (x - x_i) + \frac{1}{2}g''_i (x - x_i)^2 + \frac{1}{6}g'''_i (x - x_i)^3. \]
+The general form for the cubic polynomial between $x_i $ and$x_{i+1}$ is:
+$$g(x) ≃ g_i(x) = g_i + g'_i (x - x_i) + \frac{1}{2}g''_i (x - x_i)^2 + \frac{1}{6}g'''_i (x - x_i)^3.$$
 
-The coefficients \( g_i, g'_i, g''_i, g'''_i \) are determined to ensure the spline fits through the points and is continuous in its derivatives.
+The coefficients $g_i, g'_i, g''_i, g'''_i$ are determined to ensure the spline fits through the points and is continuous in its derivatives.
 
 ```java
 public class CubicSpline {

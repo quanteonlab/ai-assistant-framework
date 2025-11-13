@@ -113,8 +113,8 @@ void main(int argc, char** argv) {
     unsigned int address = 0x4200; // Address to store data
 
     // Assembly pseudo-code:
-    // LDA #$1A   ; Load the accumulator with $1A
-    // STA $4200  ; Store the accumulator in memory at $4200
+    // LDA #$1A   ; Load the accumulator with$1A
+    // STA $4200  ; Store the accumulator in memory at$4200
 }
 ```
 x??

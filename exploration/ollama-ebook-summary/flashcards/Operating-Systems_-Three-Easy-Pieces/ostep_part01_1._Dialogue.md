@@ -808,7 +808,7 @@ Background context: Understanding how to measure and analyze CPU utilization is 
 
 :p What should you expect the CPU utilization to be for processes run with `-l 5:100,5:100`?
 ??x
-For processes run with `-l 5:100,5:100`, the CPU utilization should theoretically be around \( \frac{5 + 5}{(5+100) * 2} = 0.1\% \). However, in practice, due to context switching and other overheads, it might be slightly higher.
+For processes run with `-l 5:100,5:100`, the CPU utilization should theoretically be around $\frac{5 + 5}{(5+100) * 2} = 0.1\%$. However, in practice, due to context switching and other overheads, it might be slightly higher.
 
 ```python
 # Pseudocode for calculating expected CPU utilization

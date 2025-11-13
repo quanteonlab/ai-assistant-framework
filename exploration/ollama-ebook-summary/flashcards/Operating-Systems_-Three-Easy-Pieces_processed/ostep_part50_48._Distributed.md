@@ -2862,7 +2862,7 @@ Timing information and per-request/reply unique ID allow you to compute latencie
 ??x
 To calculate the average latency, use:
 ```sh
-cat <trace_file>.txt | awk '{print $1 " " $2}' > timestamps.txt
+cat <trace_file>.txt | awk '{print $1 " "$2}' > timestamps.txt
 sort -n -t' ' -k1,1 -k2,2 timestamps.txt | awk '{latency=$2-$1; sum+=$0} END {print sum/NR}'
 ```
 This command extracts relevant time stamps from the trace file, sorts them, and calculates latencies between consecutive requests. `awk` then computes the average latency.
@@ -2877,7 +2877,7 @@ Sometimes requests are retried due to lost or dropped replies. You can check for
 ??x
 To find evidence of request retries, you can use:
 ```sh
-cat <trace_file>.txt | awk '{print $1 " " $2}' > timestamps.txt
+cat <trace_file>.txt | awk '{print $1 " "$2}' > timestamps.txt
 sort -n -t' ' -k1,1 -k2,2 timestamps.txt | awk '{if ($2 - prev >= 5) print $0; prev=$2}'
 ```
 This command extracts and sorts the time stamps, checks for large gaps between consecutive requests (indicating potential retries), and prints lines with significant delays.

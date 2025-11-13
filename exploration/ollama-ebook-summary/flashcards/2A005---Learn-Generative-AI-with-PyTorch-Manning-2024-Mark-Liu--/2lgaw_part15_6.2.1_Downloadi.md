@@ -584,7 +584,7 @@ x??
 ---
 
 #### Tanh Activation Function at Output Layer
-Background context explaining that the tanh activation function is used to ensure output pixels are in the range of -1 to 1, which aligns with the training image data. The formula for tanh is \( \tanh(x) = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}} \).
+Background context explaining that the tanh activation function is used to ensure output pixels are in the range of -1 to 1, which aligns with the training image data. The formula for tanh is $\tanh(x) = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}$.
 :p What activation function is used at the output layer, and why?
 ??x
 The tanh activation function is applied to ensure that the generated images have pixel values between -1 and 1. This range matches the training image data distribution.
@@ -646,7 +646,7 @@ Explanation of what residual connections are and why they help in very deep netw
 ??x
 A residual connection is used to bypass one or more layers in a neural network. It helps mitigate the vanishing gradient problem by allowing gradients to flow directly through the skip connection, thus preserving useful signals.
 
-The input \( x \) is added back to the output of transformations \( f(x) \).
+The input $x $ is added back to the output of transformations$f(x)$.
 
 ```plaintext
 Input: x

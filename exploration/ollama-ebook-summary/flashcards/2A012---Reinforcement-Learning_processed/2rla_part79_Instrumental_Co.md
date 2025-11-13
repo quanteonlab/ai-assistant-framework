@@ -179,15 +179,15 @@ This law is foundational to reinforcement learning, where algorithms explore dif
 ---
 
 #### Exploration in Reinforcement Learning Algorithms
-Background context explaining the importance of exploration in reinforcement learning algorithms, and how it differs from random action selection. Highlight key methods like \(\epsilon\)-greedy and upper-confidence-bound action selection.
+Background context explaining the importance of exploration in reinforcement learning algorithms, and how it differs from random action selection. Highlight key methods like $\epsilon$-greedy and upper-confidence-bound action selection.
 
 :p What is exploration in reinforcement learning?
 ??x
 Exploration in reinforcement learning refers to the process by which an agent searches for actions that could lead to better outcomes or higher rewards. Unlike simply selecting actions at random, exploration strategies aim to balance between exploitation (choosing known good actions) and exploration (trying out new or unknown actions).
 
-Reinforcement learning algorithms like \(\epsilon\)-greedy and Upper Confidence Bound (UCB) action selection are common methods for managing this trade-off.
+Reinforcement learning algorithms like $\epsilon$-greedy and Upper Confidence Bound (UCB) action selection are common methods for managing this trade-off.
 
-- **\(\epsilon\)-greedy**: With probability \(1-\epsilon\), the agent chooses the currently best-known action. With probability \(\epsilon\), it explores a random action.
+- **$\epsilon $-greedy**: With probability $1-\epsilon $, the agent chooses the currently best-known action. With probability $\epsilon$, it explores a random action.
   
 - **Upper Confidence Bound (UCB)**: This method uses an exploration bonus to balance between exploring actions with high uncertainty and exploiting known good actions.
 
@@ -241,7 +241,7 @@ Thorndike described the behavior of cats in his experiments with puzzle boxes as
   
 - **Selection from Admissible Actions**: Successful actions were selected from the set of instinctual responses rather than considering every possible action or activity.
 
-In reinforcement learning algorithms, this is similar to specifying a set of admissible actions \(A(s)\) for each state \(s\). This can radically simplify the learning process by limiting the search space and focusing on relevant actions.
+In reinforcement learning algorithms, this is similar to specifying a set of admissible actions $A(s)$ for each state $s$. This can radically simplify the learning process by limiting the search space and focusing on relevant actions.
 
 ??x
 ---
@@ -254,7 +254,7 @@ Background context explaining how Thorndike observed that cats might have been e
 Thorndike observed that in addition to simply selecting from instinctual impulses, cats might have been exploring based on a context-specific ordering of actions. This means that the selection process could be guided by more than just inherent instincts; it could involve reasoning or other methods based on the current situation.
 
 In reinforcement learning, this can be modeled as:
-- Specifying admissible action sets \(A(s)\) for each state.
+- Specifying admissible action sets $A(s)$ for each state.
 - Considering context-specific strategies to order and select actions within these sets.
 
 This approach allows for a more nuanced exploration strategy that leverages contextual information beyond basic instincts. By incorporating context-specific ordering, the algorithm can make more informed decisions about which actions are worth trying in a given situation.
@@ -449,9 +449,8 @@ Background context: TD learning is used in reinforcement learning algorithms whe
 :p How does TD learning work?
 ??x
 Temporal difference (TD) learning updates value estimates based on the difference between current predictions and updated predictions after experiencing a new state or action. This allows for immediate evaluation without waiting for delayed primary reward signals.
-For example, if \( V(s_t) \) is the estimated value of state \( s_t \), then an update using TD(0) can be expressed as:
-\[ V(s_{t+1}) \leftarrow V(s_{t+1}) + \alpha [r + \gamma V(s_{t+1}) - V(s_t)] \]
-where \( r \) is the immediate reward, \( \gamma \) is the discount factor, and \( \alpha \) is the learning rate.
+For example, if $V(s_t)$ is the estimated value of state $s_t$, then an update using TD(0) can be expressed as:
+$$V(s_{t+1}) \leftarrow V(s_{t+1}) + \alpha [r + \gamma V(s_{t+1}) - V(s_t)]$$where $ r $is the immediate reward,$\gamma $ is the discount factor, and$\alpha$ is the learning rate.
 x??
 
 ---
@@ -560,7 +559,7 @@ Example: If the action values for states are as follows:
 - S1: L(3), R(4)
 - S2: L(0), R(4)
 
-The model-free strategy would select action R from both states \(S_1\) and \(S_2\) to achieve a higher return.
+The model-free strategy would select action R from both states $S_1 $ and$S_2$ to achieve a higher return.
 ```java
 public class ModelFreeStrategy {
     // Assume a method to get the best action based on action values
@@ -627,7 +626,7 @@ Background context explaining the differences between model-free and model-based
 Model-free strategies depend on stored action values to make decisions at each state without explicitly modeling the environment. In contrast, model-based strategies learn an environment model that includes knowledge of state transitions and rewards. This allows them to simulate paths before taking actions.
 ??
 Example: For a given maze problem:
-- Model-Free: Selects L from \(S_1\) and R from \(S_2\), resulting in reward 4.
+- Model-Free: Selects L from $S_1 $ and R from$S_2$, resulting in reward 4.
 - Model-Based: Uses the environment model to simulate multiple paths, potentially finding an optimal sequence of actions leading to the highest reward.
 
 ```java

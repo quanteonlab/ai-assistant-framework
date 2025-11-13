@@ -187,12 +187,11 @@ Explanation of how TensorFlow can be used for linear regression by minimizing a 
 In the context of Hubble's data, TensorFlow handles the fitting process through a series of steps involving defining variables, computing predictions, calculating losses, and minimizing these losses via gradient descent. Specifically:
 
 1. **Data Preparation**: The dataset is loaded into `tf.Variable` objects.
-2. **Model Definition**: A simple linear model \( y = mx + b \) is defined where \( m \) and \( b \) are parameters to be optimized.
+2. **Model Definition**: A simple linear model $y = mx + b $ is defined where$m $ and$b$ are parameters to be optimized.
 3. **Prediction Calculation**: Predicted values for the dependent variable are computed based on the input data and current parameter values.
 4. **Loss Function**: The mean squared error between predictions and actual values is calculated as a loss function: 
-   \[ \text{loss} = \frac{1}{n} \sum_{i=1}^{n}(y_i - y_{\text{pred}, i})^2 \]
-5. **Gradient Calculation**: Gradients of the loss with respect to parameters are computed.
-6. **Parameter Update**: Parameters \( m \) and \( b \) are updated using the gradients.
+   $$\text{loss} = \frac{1}{n} \sum_{i=1}^{n}(y_i - y_{\text{pred}, i})^2$$5. **Gradient Calculation**: Gradients of the loss with respect to parameters are computed.
+6. **Parameter Update**: Parameters $m $ and$b$ are updated using the gradients.
 
 Example code:
 ```python
@@ -342,9 +341,9 @@ ppn.fit(X_train_std, y_train)
 A Perceptron helps by using supervised learning techniques. It iteratively adjusts its weights based on the training data, aiming to find boundaries that separate different classes (clusters) effectively.
 
 The Perceptron algorithm updates its weights according to the formula:
-\[ w \rightarrow w - \eta \frac{\partial E(w^T x + b)}{\partial w} \]
+$$w \rightarrow w - \eta \frac{\partial E(w^T x + b)}{\partial w}$$
 
-Where \( \eta \) is the learning rate parameter. To ensure stability and precision, the learning rate decreases gradually through the training data.
+Where $\eta$ is the learning rate parameter. To ensure stability and precision, the learning rate decreases gradually through the training data.
 
 ```python
 # Import Perceptron from sklearn.linear_model.
@@ -396,9 +395,9 @@ sgd_clf.fit(X_train_std, y_train)
 Stochastic Gradient Descent (SGD) is a more advanced optimization technique compared to Perceptrons. While perceptrons are simpler and useful for smaller datasets, SGD can handle larger datasets by updating weights incrementally based on individual data points.
 
 SGD introduces randomness in the search process, making it more robust against local minima. It updates the weights according to the formula:
-\[ w \rightarrow w - \eta \frac{\partial E(w^T x + b)}{\partial w} \]
+$$w \rightarrow w - \eta \frac{\partial E(w^T x + b)}{\partial w}$$
 
-Where \( \eta \) is the learning rate parameter that decreases gradually through training.
+Where $\eta$ is the learning rate parameter that decreases gradually through training.
 
 ```python
 # Import SGDClassifier from sklearn.linear_model.

@@ -133,7 +133,7 @@ x??
 
 ---
 #### Example of Unfair Agreement
-Background context: An example to illustrate fairness and efficiency principles involves an extremely lopsided transaction. Here, one party sells a $10,000 car for only $100.
+Background context: An example to illustrate fairness and efficiency principles involves an extremely lopsided transaction. Here, one party sells a $10,000 car for only$100.
 
 :p In the given scenario, what does the efficiency principle suggest?
 ??x
@@ -144,7 +144,7 @@ x??
 #### Example of Unfair Agreement
 :p What does the fairness principle indicate about the same scenario?
 ??x
-The fairness principle would question whether such a transaction is fair, given that selling a $10,000 car for only $100 seems unusual. Factors like coercion or mental incapacity might be considered to determine if the agreement was just.
+The fairness principle would question whether such a transaction is fair, given that selling a $10,000 car for only$100 seems unusual. Factors like coercion or mental incapacity might be considered to determine if the agreement was just.
 x??
 
 ---

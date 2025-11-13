@@ -5,10 +5,10 @@
 ---
 
 #### n-step Return of Sarsa
-Background context: The n-step return for Sarsa is defined as \( G_{t:t+n} = Q_t(S_t, A_t) + \sum_{k=t+1}^{\min(t+n, T)} [R_k + \gamma Q_k(S_k, A_k) - Q_{k-1}(S_{k-1}, A_{k-1})] \). This formula accounts for the return over \( n \) steps using a combination of immediate rewards and estimated future values.
+Background context: The n-step return for Sarsa is defined as $G_{t:t+n} = Q_t(S_t, A_t) + \sum_{k=t+1}^{\min(t+n, T)} [R_k + \gamma Q_k(S_k, A_k) - Q_{k-1}(S_{k-1}, A_{k-1})]$. This formula accounts for the return over $ n$ steps using a combination of immediate rewards and estimated future values.
 :p How is the n-step return defined in Sarsa?
 ??x
-The n-step return \( G_{t:t+n} \) is computed by summing the current action-value estimate at time \( t \), followed by discounted immediate rewards and the difference between estimated future value and previous action-value estimates over \( n \) steps. 
+The n-step return $G_{t:t+n}$ is computed by summing the current action-value estimate at time $ t $, followed by discounted immediate rewards and the difference between estimated future value and previous action-value estimates over $ n$ steps. 
 ```python
 def n_step_return(S_t, A_t, Q, R, gamma):
     G = Q(S_t, A_t)
@@ -22,10 +22,10 @@ x??
 ---
 
 #### Expected Sarsa n-step Return
-Background context: In the case of Expected Sarsa, the n-step return is defined as \( G_{t:t+n} = R_{t+1} + \cdots + R_{t+n} + \bar{V}_{t+n-1}(S_{t+n}) \), where \( \bar{V}_{t+n-1}(s) = \sum_a \pi(a|s) Q_{t+n-1}(s, a) \). This formula accounts for the sum of immediate rewards and the expected approximate value under the target policy.
+Background context: In the case of Expected Sarsa, the n-step return is defined as $G_{t:t+n} = R_{t+1} + \cdots + R_{t+n} + \bar{V}_{t+n-1}(S_{t+n})$, where $\bar{V}_{t+n-1}(s) = \sum_a \pi(a|s) Q_{t+n-1}(s, a)$. This formula accounts for the sum of immediate rewards and the expected approximate value under the target policy.
 :p How is the n-step return defined in Expected Sarsa?
 ??x
-The n-step return \( G_{t:t+n} \) in Expected Sarsa includes the cumulative immediate rewards from time \( t+1 \) to \( t+n \), plus the expected approximate value of the state at time \( t+n \). 
+The n-step return $G_{t:t+n}$ in Expected Sarsa includes the cumulative immediate rewards from time $ t+1 $ to $ t+n $, plus the expected approximate value of the state at time $ t+n$. 
 ```python
 def expected_n_step_return(S_t, A_t, Q, R, gamma, target_policy):
     G = 0
@@ -40,10 +40,10 @@ x??
 ---
 
 #### n-step O↵-policy Learning
-Background context: In o↵-policy learning, the goal is to learn the value function of one policy \( \pi \), while following another behavior policy \( b \). The importance sampling ratio \( \rho_{t:t+n-1} = \prod_{k=t}^{t+n-1} \frac{\pi(A_k|S_k)}{b(A_k|S_k)} \) is used to adjust the weight of returns based on the relative probability of taking actions under different policies.
+Background context: In o↵-policy learning, the goal is to learn the value function of one policy $\pi $, while following another behavior policy $ b $. The importance sampling ratio$\rho_{t:t+n-1} = \prod_{k=t}^{t+n-1} \frac{\pi(A_k|S_k)}{b(A_k|S_k)}$ is used to adjust the weight of returns based on the relative probability of taking actions under different policies.
 :p What update rule does n-step o↵-policy Sarsa follow?
 ??x
-The update rule for n-step o↵-policy Sarsa includes weighting the return by the importance sampling ratio \( \rho_{t:t+n-1} \):
+The update rule for n-step o↵-policy Sarsa includes weighting the return by the importance sampling ratio $\rho_{t:t+n-1}$:
 ```python
 def off_policy_n_step_sarsa(S_t, A_t, Q, R, gamma, behavior_policy, target_policy):
     G = 0
@@ -58,10 +58,10 @@ x??
 ---
 
 #### Importance Sampling Ratio
-Background context: The importance sampling ratio \( \rho_{t:t+n-1} = \prod_{k=t}^{t+n-1} \frac{\pi(A_k|S_k)}{b(A_k|S_k)} \) is used to adjust the weight of returns when the behavior policy \( b \) and target policy \( \pi \) differ. In the on-policy case, where \( \pi = b \), this ratio is always 1.
+Background context: The importance sampling ratio $\rho_{t:t+n-1} = \prod_{k=t}^{t+n-1} \frac{\pi(A_k|S_k)}{b(A_k|S_k)}$ is used to adjust the weight of returns when the behavior policy $ b $ and target policy $\pi$ differ. In the on-policy case, where $\pi = b$, this ratio is always 1.
 :p What is the importance sampling ratio in o↵-policy learning?
 ??x
-The importance sampling ratio \( \rho_{t:t+n-1} \) measures the relative probability of taking actions under the target policy \( \pi \) compared to the behavior policy \( b \):
+The importance sampling ratio $\rho_{t:t+n-1}$ measures the relative probability of taking actions under the target policy $\pi$ compared to the behavior policy $b$:
 ```python
 def importance_sampling_ratio(S_t, A_t, S_k, A_k, behavior_policy, target_policy):
     return (target_policy(S_k)[A_k] / behavior_policy(S_k)[A_k])
@@ -71,7 +71,7 @@ x??
 ---
 
 #### n-step TD with O↵-policy Learning
-Background context: The update for n-step TD with o↵-policy learning involves weighting the importance sampling ratio \( \rho_{t:t+n-1} \) to adjust the return based on the relative probability of taking actions under different policies. This is particularly useful when following a more exploratory policy.
+Background context: The update for n-step TD with o↵-policy learning involves weighting the importance sampling ratio $\rho_{t:t+n-1}$ to adjust the return based on the relative probability of taking actions under different policies. This is particularly useful when following a more exploratory policy.
 :p How does the update rule for n-step TD with o↵-policy learning work?
 ??x
 The update rule for n-step TD with o↵-policy learning involves weighting the importance sampling ratio to adjust the return:
@@ -90,18 +90,17 @@ x??
 Background context explaining the concept. In Chapter 7, we discuss how to adapt n-step bootstrapping to off-policy learning, particularly focusing on the oﬄine version of Expected Sarsa. The key idea is that importance sampling is used with one less factor compared to the standard n-step algorithm.
 :p What does the update for oﬄine n-step Expected Sarsa use?
 ??x
-The update uses an importance sampling ratio of \(\theta_{t+1:t+n-1}\) instead of \(\theta_{t+1:t+n}\), and it employs the expected version of the n-step return.
+The update uses an importance sampling ratio of $\theta_{t+1:t+n-1}$ instead of $\theta_{t+1:t+n}$, and it employs the expected version of the n-step return.
 x??
 
 ---
 
 #### Per-decision Importance Sampling with Control Variates for Oﬄine Policies
 Context: Section 7.4 introduces a more sophisticated approach to oﬄine policy learning using per-decision importance sampling, control variates, and recursive returns. It presents an advanced method that addresses variance issues in the standard n-step TD methods.
-:p How does the n-step return at horizon \(h\) change when following a behavior policy \(\beta\) that is not the same as the target policy \(\pi\)?
+:p How does the n-step return at horizon $h $ change when following a behavior policy$\beta $ that is not the same as the target policy$\pi$?
 ??x
-The return changes to include a control variate, which helps stabilize updates by ensuring the expected value of the update remains unaffected. The updated formula for the n-step return at horizon \(h\) is:
-\[ G_{t:h} = \theta_t (R_{t+1} + \gamma^k G_{t+1:h}) + (1 - \theta_t) V_{h-1}(S_{t+1}) \]
-where \(\theta_t = \frac{\pi(A_t|S_t)}{\beta(A_t|S_t)}\).
+The return changes to include a control variate, which helps stabilize updates by ensuring the expected value of the update remains unaffected. The updated formula for the n-step return at horizon $h$ is:
+$$G_{t:h} = \theta_t (R_{t+1} + \gamma^k G_{t+1:h}) + (1 - \theta_t) V_{h-1}(S_{t+1})$$where $\theta_t = \frac{\pi(A_t|S_t)}{\beta(A_t|S_t)}$.
 x??
 
 ---
@@ -134,11 +133,10 @@ x??
 
 #### Action Values with Control Variate for Oﬄine Policies
 Context: The section extends the concept to action values, introducing a control variate that ensures the expected update remains stable.
-:p Write the formula for the n-step return at horizon \(h\) when using oﬄine policy and control variates.
+:p Write the formula for the n-step return at horizon $h$ when using oﬄine policy and control variates.
 ??x
-The n-step return at horizon \(h\) with control variate is:
-\[ G_{t:h} = R_{t+1} + \gamma \theta_{t+1} (G_{t+1:h} - Q_{h-1}(S_{t+1}, A_{t+1})) + V_{h-1}(S_{t+1}) \]
-where \(\theta_t = \frac{\pi(A_t|S_t)}{\beta(A_t|S_t)}\).
+The n-step return at horizon $h$ with control variate is:
+$$G_{t:h} = R_{t+1} + \gamma \theta_{t+1} (G_{t+1:h} - Q_{h-1}(S_{t+1}, A_{t+1})) + V_{h-1}(S_{t+1})$$where $\theta_t = \frac{\pi(A_t|S_t)}{\beta(A_t|S_t)}$.
 x??
 
 ---
@@ -148,8 +146,9 @@ Context: This exercise aims to prove that the control variate does not change th
 :p Prove that the control variate in equation (7.13) does not change the expected value of the return.
 ??x
 The control variate is a term added to ensure the expected update remains stable:
-\[ G_{t:h} = \theta_t (R_{t+1} + \gamma G_{t+1:h}) + (1 - \theta_t) V_h(S_h) \]
-Since \(\theta_t\) has an expected value of 1 and is uncorrelated with the estimate, the control variate does not change the expected return.
+$$G_{t:h} = \theta_t (R_{t+1} + \gamma G_{t+1:h}) + (1 - \theta_t) V_h(S_h)$$
+
+Since $\theta_t$ has an expected value of 1 and is uncorrelated with the estimate, the control variate does not change the expected return.
 x??
 
 ---
@@ -184,8 +183,7 @@ Context: This exercise aims to show that the general (oﬄine policy) version of
 :p Show that the general (oﬄine policy) version of the n-step return can still be written exactly and compactly as the sum of state-based TD errors if the approximate state value function does not change.
 ??x
 The general oﬄine policy n-step return with control variate can be expressed as:
-\[ G_{t:h} = R_{t+1} + \gamma \theta_{t+1} (G_{t+1:h} - Q_h(S_t, A_t)) + V_h(S_t) \]
-where \(V_h(S_t)\) is the approximate state value function. This can be seen as a sum of state-based TD errors if the value function remains constant.
+$$G_{t:h} = R_{t+1} + \gamma \theta_{t+1} (G_{t+1:h} - Q_h(S_t, A_t)) + V_h(S_t)$$where $ V_h(S_t)$ is the approximate state value function. This can be seen as a sum of state-based TD errors if the value function remains constant.
 x??
 
 ---
@@ -195,10 +193,10 @@ Context: The section extends this to action values, using the control variate in
 :p Repeat the above exercise for the action version of the oﬄine policy n-step return and the Expected Sarsa TD error.
 ??x
 The action version of the oﬄine policy n-step return with control variate can be expressed as:
-\[ G_{t:h} = R_{t+1} + \gamma \theta_{t+1} (G_{t+1:h} - Q_h(S_t, A_t)) + V_h(S_{t+1}) \]
-This formula reduces to the Expected Sarsa TD error when \(h < T\):
-\[ TD = R_{t+1} + \gamma Q(S_{t+1}, A_{t+1}) - Q(S_t, A_t) \]
-x??
+$$G_{t:h} = R_{t+1} + \gamma \theta_{t+1} (G_{t+1:h} - Q_h(S_t, A_t)) + V_h(S_{t+1})$$
+
+This formula reduces to the Expected Sarsa TD error when $h < T$:
+$$TD = R_{t+1} + \gamma Q(S_{t+1}, A_{t+1}) - Q(S_t, A_t)$$x??
 
 ---
 
@@ -206,7 +204,7 @@ x??
 Context: The final exercise aims to demonstrate the efficiency of oﬄine policy prediction using (7.13) and (7.2).
 :p Devise a small oﬄine policy prediction problem and show that the algorithm using (7.13) and (7.2) is more data-efficient than the simpler algorithm using (7.1) and (7.9).
 ??x
-Create a simple grid-world environment where an agent learns to navigate from start to goal, following a behavior policy \(\beta\) but aiming for target policy \(\pi\). Implement both algorithms and compare their performance by observing how quickly they converge with less data.
+Create a simple grid-world environment where an agent learns to navigate from start to goal, following a behavior policy $\beta $ but aiming for target policy$\pi$. Implement both algorithms and compare their performance by observing how quickly they converge with less data.
 ```python
 # Example pseudocode
 def test_off_policy_prediction():
@@ -254,19 +252,17 @@ x??
 Background context: The n-step tree-backup algorithm is designed for off-policy learning without using importance sampling, extending Q-learning and Expected Sarsa to multi-step updates. It uses a recursive definition to calculate the target value for each state-action pair.
 
 Relevant formula: 
-\[ G_{t:t+n} = R_{t+1} + \sum_{a_6=At+1} \pi(a|S_{t+1}) Q_{n-1}(S_{t+1}, a) + \pi(At+1|S_{t+1}) G_{t+1:t+n} \]
-
-:p What is the target value \(G_{t:t+n}\) in the n-step tree-backup algorithm?
+$$G_{t:t+n} = R_{t+1} + \sum_{a_6=At+1} \pi(a|S_{t+1}) Q_{n-1}(S_{t+1}, a) + \pi(At+1|S_{t+1}) G_{t+1:t+n}$$:p What is the target value $ G_{t:t+n}$ in the n-step tree-backup algorithm?
 ??x
-The target value \(G_{t:t+n}\) in the n-step tree-backup algorithm is calculated as:
-\[ G_{t:t+n} = R_{t+1} + \sum_{a_6=At+1} \pi(a|S_{t+1}) Q_{n-1}(S_{t+1}, a) + \pi(At+1|S_{t+1}) G_{t+1:t+n} \]
+The target value $G_{t:t+n}$ in the n-step tree-backup algorithm is calculated as:
+$$G_{t:t+n} = R_{t+1} + \sum_{a_6=At+1} \pi(a|S_{t+1}) Q_{n-1}(S_{t+1}, a) + \pi(At+1|S_{t+1}) G_{t+1:t+n}$$
 
-This formula considers the immediate reward \(R_{t+1}\), the values of all non-selected actions at state \(S_{t+1}\), and the target value from subsequent states.
+This formula considers the immediate reward $R_{t+1}$, the values of all non-selected actions at state $ S_{t+1}$, and the target value from subsequent states.
 
-For example, if \(n=3\):
-\[ G_{t:t+3} = R_{t+1} + \sum_{a_6=At+1} \pi(a|S_{t+1}) Q_{2}(S_{t+1}, a) + \pi(At+1|S_{t+1}) (R_{t+2} + \sum_{a_6=At+2} \pi(a|S_{t+2}) Q_{1}(S_{t+2}, a)) \]
+For example, if $n=3$:
+$$G_{t:t+3} = R_{t+1} + \sum_{a_6=At+1} \pi(a|S_{t+1}) Q_{2}(S_{t+1}, a) + \pi(At+1|S_{t+1}) (R_{t+2} + \sum_{a_6=At+2} \pi(a|S_{t+2}) Q_{1}(S_{t+2}, a))$$
 
-This target value is used to update the action-value function \(Q_n(S_t, A_t)\).
+This target value is used to update the action-value function $Q_n(S_t, A_t)$.
 
 ```java
 for (int t = 0; t < T-1; ++t) {
@@ -290,21 +286,23 @@ Background context: The n-step tree-backup algorithm has a detailed recursive de
 
 Relevant formulas:
 1. One-step return:
-\[ G_{t:t+1} = R_{t+1} + \sum_{a_6=At+1} \pi(a|S_{t+1}) Q(S_{t+1}, a) \]
-2. Two-step tree-backup return:
-\[ G_{t:t+2} = R_{t+1} + \sum_{a_6=At+1} \pi(a|S_{t+1}) Q_{1}(S_{t+1}, a) + \pi(At+1|S_{t+1}) (R_{t+2} + \sum_{a_6=At+2} \pi(a|S_{t+2}) Q(S_{t+2}, a)) \]
-3. General n-step tree-backup return:
-\[ G_{t:t+n} = R_{t+1} + \sum_{a_6=At+1} \pi(a|S_{t+1}) Q_{n-1}(S_{t+1}, a) + \pi(At+1|S_{t+1}) G_{t+1:t+n} \]
+$$G_{t:t+1} = R_{t+1} + \sum_{a_6=At+1} \pi(a|S_{t+1}) Q(S_{t+1}, a)$$2. Two-step tree-backup return:
+$$
 
-:p Explain the general recursive definition of the n-step tree-backup return.
+G_{t:t+2} = R_{t+1} + \sum_{a_6=At+1} \pi(a|S_{t+1}) Q_{1}(S_{t+1}, a) + \pi(At+1|S_{t+1}) (R_{t+2} + \sum_{a_6=At+2} \pi(a|S_{t+2}) Q(S_{t+2}, a))$$3. General n-step tree-backup return:
+$$
+
+G_{t:t+n} = R_{t+1} + \sum_{a_6=At+1} \pi(a|S_{t+1}) Q_{n-1}(S_{t+1}, a) + \pi(At+1|S_{t+1}) G_{t+1:t+n}$$:p Explain the general recursive definition of the n-step tree-backup return.
 ??x
 The general recursive definition of the n-step tree-backup return is:
-\[ G_{t:t+n} = R_{t+1} + \sum_{a_6=At+1} \pi(a|S_{t+1}) Q_{n-1}(S_{t+1}, a) + \pi(At+1|S_{t+1}) G_{t+1:t+n} \]
+$$
 
-This equation considers the immediate reward \(R_{t+1}\), the values of all non-selected actions at state \(S_{t+1}\), and the target value from subsequent states. The term \(\pi(At+1|S_{t+1}) G_{t+1:t+n}\) accounts for the contribution from the action actually taken.
+G_{t:t+n} = R_{t+1} + \sum_{a_6=At+1} \pi(a|S_{t+1}) Q_{n-1}(S_{t+1}, a) + \pi(At+1|S_{t+1}) G_{t+1:t+n}$$
 
-For example, if \(n=3\):
-\[ G_{t:t+3} = R_{t+1} + \sum_{a_6=At+1} \pi(a|S_{t+1}) Q_2(S_{t+1}, a) + \pi(At+1|S_{t+1}) (R_{t+2} + \sum_{a_6=At+2} \pi(a|S_{t+2}) Q(S_{t+2}, a)) \]
+This equation considers the immediate reward $R_{t+1}$, the values of all non-selected actions at state $ S_{t+1}$, and the target value from subsequent states. The term $\pi(At+1|S_{t+1}) G_{t+1:t+n}$ accounts for the contribution from the action actually taken.
+
+For example, if $n=3$:
+$$G_{t:t+3} = R_{t+1} + \sum_{a_6=At+1} \pi(a|S_{t+1}) Q_2(S_{t+1}, a) + \pi(At+1|S_{t+1}) (R_{t+2} + \sum_{a_6=At+2} \pi(a|S_{t+2}) Q(S_{t+2}, a))$$
 
 This recursive formula ensures that the update rule considers not just the immediate reward and value of actions, but also their values at future steps, forming a tree-like structure.
 
@@ -324,18 +322,16 @@ x??
 Background context: In the tree-backup update, weights are assigned to action nodes based on their probabilities of being selected under the target policy π. These weights determine how much each node contributes to the overall target value.
 
 Relevant formulas:
-\[ \text{Weight for } a = \pi(a|S_{t+1}) \cdot \prod_{i=t+2}^{t+n-1} \pi(A_i|S_i) \]
-
-:p How are the weights assigned in the tree-backup update?
+$$\text{Weight for } a = \pi(a|S_{t+1}) \cdot \prod_{i=t+2}^{t+n-1} \pi(A_i|S_i)$$:p How are the weights assigned in the tree-backup update?
 ??x
-In the tree-backup update, the weights for each action node \(a\) at level \(k\) (where \(k = t + 1, t + 2, \ldots, t + n - 1\)) are assigned based on their probabilities under the target policy π. The weight of an action node is calculated as:
-\[ \text{Weight for } a = \pi(a|S_{t+1}) \cdot \prod_{i=t+2}^{t+n-1} \pi(A_i|S_i) \]
+In the tree-backup update, the weights for each action node $a $ at level$k $(where $ k = t + 1, t + 2, \ldots, t + n - 1$) are assigned based on their probabilities under the target policy π. The weight of an action node is calculated as:
+$$\text{Weight for } a = \pi(a|S_{t+1}) \cdot \prod_{i=t+2}^{t+n-1} \pi(A_i|S_i)$$
 
-This means that each leaf node contributes to the target value with a weight proportional to its probability of being selected under π. For example, at level \(t + 1\), all non-selected actions contribute with weights:
-\[ \text{Weight for } a_0 = \pi(a_0|S_{t+1}) \]
+This means that each leaf node contributes to the target value with a weight proportional to its probability of being selected under π. For example, at level $t + 1$, all non-selected actions contribute with weights:
+$$\text{Weight for } a_0 = \pi(a_0|S_{t+1})$$
 
-For the action actually taken at each step, it does not directly contribute but affects the weight of the next-level nodes. Specifically, if \(a_{t+1}\) is the actual action:
-\[ \text{Weight for } a_{t+2} = \pi(a_{t+1}|S_{t+1}) \cdot \pi(a_{t+2}|S_{t+2}) \]
+For the action actually taken at each step, it does not directly contribute but affects the weight of the next-level nodes. Specifically, if $a_{t+1}$ is the actual action:
+$$\text{Weight for } a_{t+2} = \pi(a_{t+1}|S_{t+1}) \cdot \pi(a_{t+2}|S_{t+2})$$
 
 This process forms a tree structure where each node's value is updated based on its probability and the values of all child nodes.
 
@@ -351,12 +347,10 @@ x??
 ---
 
 #### C/Java Pseudocode for n-Step Tree Backup
-Background context: The pseudocode for the n-step tree-backup algorithm is provided, detailing how to update action values based on the target value \(G_{t:t+n}\).
+Background context: The pseudocode for the n-step tree-backup algorithm is provided, detailing how to update action values based on the target value $G_{t:t+n}$.
 
 Relevant formulas:
-\[ Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha [ G_{t:t+n} - Q(S_t, A_t)] \]
-
-:p Provide a detailed pseudocode for the n-step tree-backup algorithm.
+$$Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha [ G_{t:t+n} - Q(S_t, A_t)]$$:p Provide a detailed pseudocode for the n-step tree-backup algorithm.
 ??x
 Here is the pseudocode for the n-step tree-backup algorithm:
 
@@ -377,9 +371,9 @@ for (int t = 0; t < T - 1; ++t) {
 ```
 
 Explanation:
-- The algorithm iterates through each time step \(t\) up to \(T-1\).
-- For each step, it calculates the n-step target value \(G_{t:t+n}\) by considering the immediate reward and recursively adding the values of non-selected actions.
-- The update rule then adjusts the action-value function \(Q(S_t, A_t)\) based on the difference between the target value \(G_{t:t+n}\) and its current value.
+- The algorithm iterates through each time step $t $ up to$T-1$.
+- For each step, it calculates the n-step target value $G_{t:t+n}$ by considering the immediate reward and recursively adding the values of non-selected actions.
+- The update rule then adjusts the action-value function $Q(S_t, A_t)$ based on the difference between the target value $G_{t:t+n}$ and its current value.
 
 This pseudocode ensures that the algorithm updates the Q-values in a manner consistent with the n-step tree-backup method, taking into account both immediate rewards and future values.
 x??

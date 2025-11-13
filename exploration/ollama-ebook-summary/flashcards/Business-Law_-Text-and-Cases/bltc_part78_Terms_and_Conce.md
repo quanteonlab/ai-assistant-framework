@@ -277,7 +277,7 @@ Abatement refers to a legal process where beneficiaries receive reduced benefits
 Example: Julie’s will leaves $15,000 to each of her children, Tamara and Lynn. On her death, only $10,000 is available. By abatement, each child will receive $5,000.
 :p What is the process called when a will's beneficiaries receive reduced benefits due to insufficient funds?
 ??x
-Abatement is the process where the legatees (beneficiaries) receive reduced benefits because there are not enough funds to fulfill the full bequests stated in the will. In this case, each of Julie’s children would receive $5,000 instead of $15,000.
+Abatement is the process where the legatees (beneficiaries) receive reduced benefits because there are not enough funds to fulfill the full bequests stated in the will. In this case, each of Julie’s children would receive $5,000 instead of$15,000.
 x??
 
 ---

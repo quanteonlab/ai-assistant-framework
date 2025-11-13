@@ -91,8 +91,9 @@ x??
 Background context: In many recommendation systems, especially those dealing with large datasets like MovieLens, data often follows a Zipfian distribution. This means that items (e.g., movies) are ranked such that their frequency decreases exponentially. Additionally, popular items receive much higher engagement rates than less popular ones, a phenomenon known as the Matthew effect or popularity bias.
 
 Mathematically, this can be expressed using Zipf’s law:
-\[ f_k,M = \frac{1}{k} \sum_{n=1}^M \frac{1}{n} \]
-Where \( k \) is the rank of an item and \( M \) is the total number of items.
+$$f_k,M = \frac{1}{k} \sum_{n=1}^M \frac{1}{n}$$
+
+Where $k $ is the rank of an item and$M$ is the total number of items.
 
 The Matthew effect can be observed in how popular items attract more attention, widening the gap between them and less popular ones. For example, in MovieLens data, very popular movies have significantly higher click counts compared to average movies.
 
@@ -115,9 +116,7 @@ x??
 Background context: When building user-based collaborative filtering models (UBCF), the distributional properties of data and the Matthew effect can significantly impact recommendation outcomes. These effects can lead to biased recommendations favoring highly popular users or items.
 
 Formula for joint probability of an item appearing in two user's ratings:
-\[ P_i = \frac{f_{i,M}}{\sum_{j=1}^{M} f_{j,M}} = \frac{1/i}{\sum_{j=1}^{M} 1/j} \]
-
-:p How does the Matthew effect impact UBCF models?
+$$P_i = \frac{f_{i,M}}{\sum_{j=1}^{M} f_{j,M}} = \frac{1/i}{\sum_{j=1}^{M} 1/j}$$:p How does the Matthew effect impact UBCF models?
 ??x
 The Matthew effect impacts UBCF by causing popular items to be disproportionately recommended because they have higher joint probability scores. This is due to the formula for similarity, where the probability of shared items between two users decreases rapidly as the popularity rank increases.
 x??
@@ -127,9 +126,9 @@ x??
 Background context: In user-based collaborative filtering (UBCF), the similarity between users is often calculated based on the number of jointly rated items. The Matthew effect influences this calculation, leading to lower similarity scores for less popular items.
 
 Formula for joint probability of shared items:
-\[ P_{i2} = \frac{1/i^2}{\sum_{j=1}^{M} 1/j^2} \]
+$$
 
-:p How does the Matthew effect affect the similarity score in UBCF?
+P_{i2} = \frac{1/i^2}{\sum_{j=1}^{M} 1/j^2}$$:p How does the Matthew effect affect the similarity score in UBCF?
 ??x
 The Matthew effect affects the similarity score by reducing it for less popular items. Since the joint probability of shared items decreases with the square of their popularity rank, less popular items are rated lower in terms of similarity, leading to biased recommendations.
 x??
@@ -148,9 +147,7 @@ x??
 Background context: The combinatorial formulas indicate that the Zipfian distribution significantly impacts the output scores in collaborative filtering models, particularly UBCF.
 
 Formula for similarity score calculation:
-\[ \sum_{i=1}^{M} P_i^2 / \| \mathcal{I}_A \cup \mathcal{I}_B \| \]
-
-:p What are combinatorial formulas used for in UBCF?
+$$\sum_{i=1}^{M} P_i^2 / \| \mathcal{I}_A \cup \mathcal{I}_B \|$$:p What are combinatorial formulas used for in UBCF?
 ??x
 Combinatorial formulas are used to quantify the impact of the Zipfian distribution on collaborative filtering models. They help in understanding how the popularity rank affects similarity scores, leading to more accurate but potentially biased recommendations.
 x??
@@ -185,7 +182,7 @@ Background context: The user similarity counts help understand how users with si
 
 :p How does the formula for user similarity count work?
 ??x
-The formula for calculating the expected number of other users who click the ith most popular item, given by \( P_i = \frac{f_{i,M}}{\sum_{j=1}^{M} f_{j,M}} = \frac{1/i}{\sum_{j=1}^{M} 1/j} \), helps determine the popularity of an item and its influence on other users. The total number of users who will share a rating with X can be calculated as \( \sum_{i=1}^{M} (M-1) * P_i \).
+The formula for calculating the expected number of other users who click the ith most popular item, given by $P_i = \frac{f_{i,M}}{\sum_{j=1}^{M} f_{j,M}} = \frac{1/i}{\sum_{j=1}^{M} 1/j}$, helps determine the popularity of an item and its influence on other users. The total number of users who will share a rating with X can be calculated as $\sum_{i=1}^{M} (M-1) * P_i$.
 
 This formula accounts for the decreasing probability that less popular items are rated by many users, thus influencing user similarity counts.
 x??

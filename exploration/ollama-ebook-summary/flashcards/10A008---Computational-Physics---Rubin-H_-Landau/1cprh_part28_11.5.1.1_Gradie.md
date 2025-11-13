@@ -109,8 +109,7 @@ print(coefs)
 Here, `intcp` is the intercept term, which represents the predicted value when all polynomial terms are zero. The `coefs` array contains the coefficients for each term in the polynomial.
 
 For example, if the output shows `[0.1, 0.2, -0.3]`, it means that the model equation might look like:
-\[ y = 0.1 + 0.2x + (-0.3)x^2 \]
-where `x` is one of the polynomial terms.
+$$y = 0.1 + 0.2x + (-0.3)x^2$$where `x` is one of the polynomial terms.
 x??
 
 #### Data Transformation and Model Fitting
@@ -334,9 +333,8 @@ x??
 #### Clustering with Perceptrons
 Background context: In Section 11.1.1, perceptrons were introduced as artificial neural networks where a neuron fires or not depending on some threshold value. Although they are not state-of-the-art AI techniques, they can be useful for smaller datasets arranged in a 2D table of rows and columns.
 
-The problem involves clustering elementary particles into four groups using Perceptrons based on their properties. The program `Perceptron.py` uses the sklearn package to create a perceptron classifier that assumes an approximate linear behavior of the Loss function: \( \mathcal{L} \approx w^T x + b \). It updates weights via:
-\[ w' = w - \eta \frac{\partial \mathcal{L}(w^T x_i + b, y_i)}{\partial w}, \]
-where \(\eta\) is the learning rate parameter. The learning rate is gradually decreased through the training data.
+The problem involves clustering elementary particles into four groups using Perceptrons based on their properties. The program `Perceptron.py` uses the sklearn package to create a perceptron classifier that assumes an approximate linear behavior of the Loss function:$\mathcal{L} \approx w^T x + b$. It updates weights via:
+$$w' = w - \eta \frac{\partial \mathcal{L}(w^T x_i + b, y_i)}{\partial w},$$where $\eta$ is the learning rate parameter. The learning rate is gradually decreased through the training data.
 
 :p How does Perceptron.py use pandas to read and process the particle data?
 ??x

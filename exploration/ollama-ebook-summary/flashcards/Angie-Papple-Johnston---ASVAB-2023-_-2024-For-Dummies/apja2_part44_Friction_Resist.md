@@ -8,13 +8,11 @@
 #### Gravity: What Goes Up Must Come Down
 Background context explaining gravity. Isaac Newton's law of universal gravitation states that every object in the universe attracts every other object with a force proportional to the product of their masses and inversely proportional to the square of the distance between them.
 
-\[ F = G \frac{m_1 m_2}{r^2} \]
-
-where \(F\) is the gravitational force, \(G\) is the gravitational constant, \(m_1\) and \(m_2\) are the two masses, and \(r\) is the distance between their centers. The force of gravity acting on an object is equal to its weight.
+$$F = G \frac{m_1 m_2}{r^2}$$where $ F $is the gravitational force,$ G $is the gravitational constant,$ m_1 $and$ m_2 $are the two masses, and$ r$ is the distance between their centers. The force of gravity acting on an object is equal to its weight.
 
 :p What is Newton's law of universal gravitation?
 ??x
-Newton's law states that every object in the universe attracts every other object with a force proportional to the product of their masses and inversely proportional to the square of the distance between them. This is represented by the formula \( F = G \frac{m_1 m_2}{r^2} \).
+Newton's law states that every object in the universe attracts every other object with a force proportional to the product of their masses and inversely proportional to the square of the distance between them. This is represented by the formula $F = G \frac{m_1 m_2}{r^2}$.
 x??
 
 ---
@@ -43,9 +41,7 @@ Background context explaining centrifugal force as the apparent outward force ex
 ??x
 Centrifugal force is a concept that describes the apparent outward force experienced by objects in circular motion, even though it is a fictitious force arising from the inertia of the object. The amount of centrifugal force depends on the mass of the object, its speed, and its distance from the center.
 
-\[ F_{\text{centrifugal}} = m \omega^2 r \]
-
-where \(m\) is the mass of the object, \(\omega\) is the angular velocity, and \(r\) is the radius. This force is perpendicular to the centripetal force directed towards the center of rotation.
+$$F_{\text{centrifugal}} = m \omega^2 r$$where $ m $is the mass of the object,$\omega $ is the angular velocity, and$r$ is the radius. This force is perpendicular to the centripetal force directed towards the center of rotation.
 x??
 
 ---
@@ -63,12 +59,7 @@ In physics terms:
 - **Kinetic Friction** is the force that resists the motion of an object sliding across a surface.
 
 The amount of friction depends on the materials in contact and the normal force pressing them together. The formula for kinetic friction (assuming a constant coefficient of friction) is:
-
-\[
-f_k = \mu_k N
-\]
-
-where \( f_k \) is the force of kinetic friction, \( \mu_k \) is the coefficient of kinetic friction, and \( N \) is the normal force.
+$$f_k = \mu_k N$$where $ f_k $is the force of kinetic friction,$\mu_k $ is the coefficient of kinetic friction, and$N$ is the normal force.
 
 C/Java code for calculating simple friction:
 ```java
@@ -89,12 +80,7 @@ Background context explaining that rolling friction is always less than sliding 
 Wheels reduce the amount of force required to move an object because rolling friction is significantly lower than sliding friction. When you push a box across a smooth floor, the rolling friction of the wheels is much less than if you were trying to drag the same box on its flat bottom.
 
 The formula for the coefficient of rolling friction (CRR) can be expressed as:
-
-\[
-\text{CRR} = \frac{F_{roll}}{N}
-\]
-
-where \( F_{roll} \) is the force required to roll the object and \( N \) is the normal force.
+$$\text{CRR} = \frac{F_{roll}}{N}$$where $ F_{roll}$is the force required to roll the object and $ N$ is the normal force.
 
 Using a wheeled dolly, the forces involved are reduced because of the lower rolling friction compared to sliding. The exact reduction depends on the specific materials in contact.
 
@@ -117,15 +103,10 @@ Background context explaining that elastic recoil is the force a solid object ex
 Elastic recoil (or spring force) describes the restoring force that tries to return an object to its original shape after being deformed. This principle can be seen in materials that resist changes in their form due to applied forces.
 
 Mathematically, the relationship between the force exerted by a spring and the distance it is displaced from its equilibrium position is described by Hooke's Law:
-
-\[
-F = -kx
-\]
-
-where \( F \) is the restoring force, \( k \) is the spring constant (a measure of how stiff or elastic the material is), and \( x \) is the displacement.
+$$F = -kx$$where $ F $is the restoring force,$ k $ is the spring constant (a measure of how stiff or elastic the material is), and $ x$ is the displacement.
 
 Example: A cat on a board.
-- When the cat steps off a bent board, the board will try to return to its original shape due to elastic recoil. The force required for this deformation and restoration depends on the spring constant of the board and how much it was displaced (\( x \)).
+- When the cat steps off a bent board, the board will try to return to its original shape due to elastic recoil. The force required for this deformation and restoration depends on the spring constant of the board and how much it was displaced ($x$).
 
 C/Java code example:
 ```java
@@ -281,7 +262,7 @@ Background context: Work is the result of a force (usually in pounds) moving ove
 ??x
 Work is defined as the result of a force overcoming resistance over a distance. It can be mathematically represented by the formula:
 
-\[ \text{Work} = \text{Force} \times \text{Distance} \]
+$$\text{Work} = \text{Force} \times \text{Distance}$$
 
 In the US, this is often measured in foot-pounds (1 foot-pound occurs when 1 pound moves 1 foot). The unit of work here is the foot-pound.
 

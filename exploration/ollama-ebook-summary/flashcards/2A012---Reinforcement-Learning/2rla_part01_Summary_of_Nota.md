@@ -10,7 +10,7 @@ Background context: The notation used to represent random variables, their value
 
 :p What does `X ~ p` mean?
 ??x
-This means that the random variable \( X \) is selected from the distribution \( p(x) \). For example, if you are dealing with a Bernoulli trial where the outcome could be heads or tails, you might define your random variable as:
+This means that the random variable $X $ is selected from the distribution$p(x)$. For example, if you are dealing with a Bernoulli trial where the outcome could be heads or tails, you might define your random variable as:
 ```java
 RandomVariable X = new RandomVariable("Bernoulli", 0.5);
 ```
@@ -20,13 +20,12 @@ x??
 
 #### Expectation of a Random Variable
 
-Background context: The expectation (or expected value) of a random variable \( X \), denoted by \( E[X] \), is the long-run average or mean value that we expect to obtain from repeated observations.
+Background context: The expectation (or expected value) of a random variable $X $, denoted by $ E[X]$, is the long-run average or mean value that we expect to obtain from repeated observations.
 
 :p What does `E[X]` represent?
 ??x
-The expectation of a random variable \( X \), which represents the weighted sum (with weights being probabilities) of all possible values of \( X \). It can be formally defined as:
-\[ E[X] = \sum_x x \cdot p(x) \]
-where \( p(x) \) is the probability mass function for the discrete random variable \( X \).
+The expectation of a random variable $X $, which represents the weighted sum (with weights being probabilities) of all possible values of $ X$. It can be formally defined as:
+$$E[X] = \sum_x x \cdot p(x)$$where $ p(x)$is the probability mass function for the discrete random variable $ X$.
 
 For example, if you have a random variable representing the outcome of rolling a fair six-sided die, then its expectation would be:
 ```java
@@ -38,12 +37,13 @@ x??
 
 #### Natural Logarithm and Exponential Function
 
-Background context: The natural logarithm \( \ln(x) \) is the inverse of the exponential function \( e^x \). They are fundamental in mathematical computations involving growth rates, decay, and more.
+Background context: The natural logarithm $\ln(x)$ is the inverse of the exponential function $e^x$. They are fundamental in mathematical computations involving growth rates, decay, and more.
 
 :p What does `ln x` represent?
 ??x
-The natural logarithm of \( x \), which returns the power to which \( e \) (approximately 2.71828) must be raised to get \( x \). For example:
-\[ \ln(1) = 0, \quad \ln(e^3) = 3 \]
+The natural logarithm of $x $, which returns the power to which $ e $ (approximately 2.71828) must be raised to get $ x$. For example:
+$$\ln(1) = 0, \quad \ln(e^3) = 3$$
+
 In code, you might use it like this:
 ```java
 double logValue = Math.log(x); // where x is a positive number
@@ -58,8 +58,9 @@ Background context: The notation for intervals is used to represent ranges of re
 
 :p What does `a <= b` mean?
 ??x
-It means that the value \( a \) is less than or equal to the value \( b \). This can be represented as an interval:
-\[ [a, b] = \{ x | a \leq x \leq b \} \]
+It means that the value $a $ is less than or equal to the value$b$. This can be represented as an interval:
+$$[a, b] = \{ x | a \leq x \leq b \}$$
+
 For example, in a Java context, you might check if a number falls within an interval like this:
 ```java
 boolean isInInterval = x >= a && x <= b;
@@ -75,7 +76,8 @@ Background context: In the multi-arm bandit problem, the goal is to maximize exp
 :p What does `k` represent?
 ??x
 The number of actions (arms) available in a multi-arm bandit problem. For example:
-\[ k = 3 \]
+$$k = 3$$
+
 This could mean there are three slot machines, and you need to decide which one to pull each time.
 
 For instance, the code might look like this:
@@ -93,8 +95,9 @@ Background context: An MDP is a framework for modeling decision-making problems 
 :p What does `S` represent?
 ??x
 The set of all non-terminal states in an MDP. For example:
-\[ S = \{s_1, s_2, ..., s_n\} \]
-where each \( s_i \) is a state that the system can be in at any given time.
+$$
+
+S = \{s_1, s_2, ..., s_n\}$$where each $ s_i$ is a state that the system can be in at any given time.
 
 For instance, in Java code, you might define this set like so:
 ```java
@@ -106,13 +109,12 @@ x??
 
 #### Policy and Action-Value Functions
 
-Background context: Policies determine the action to be taken given a state. The value function \( q(s, a) \) gives the expected return starting from state \( s \), taking action \( a \).
+Background context: Policies determine the action to be taken given a state. The value function $q(s, a)$ gives the expected return starting from state $ s $, taking action $ a$.
 
 :p What does `q(s,a)` represent?
 ??x
-The action-value function or Q-function, which represents the expected return (reward plus future rewards) when an agent takes action \( a \) in state \( s \). For example:
-\[ q(s, a) = E[G_t | S_t=s, A_t=a] \]
-where \( G_t \) is the return starting from time step \( t \).
+The action-value function or Q-function, which represents the expected return (reward plus future rewards) when an agent takes action $a $ in state$s$. For example:
+$$q(s, a) = E[G_t | S_t=s, A_t=a]$$where $ G_t $ is the return starting from time step $ t$.
 
 In code, you might approximate this as:
 ```java
@@ -128,9 +130,8 @@ Background context: The TD error measures the difference between the predicted v
 
 :p What does `t` represent?
 ??x
-The temporal-difference (TD) error at time \( t \), which is defined as:
-\[ t = R_{t+1} + \gamma v(S_{t+1}) - v(S_t) \]
-where \( R_{t+1} \) is the reward received after transitioning to state \( S_{t+1} \), and \( \gamma \) is the discount factor.
+The temporal-difference (TD) error at time $t$, which is defined as:
+$$t = R_{t+1} + \gamma v(S_{t+1}) - v(S_t)$$where $ R_{t+1}$is the reward received after transitioning to state $ S_{t+1}$, and $\gamma$ is the discount factor.
 
 For example, in Java:
 ```java
@@ -146,9 +147,8 @@ Background context: The on-policy distribution over states represents the probab
 
 :p What does `µ(s)` represent?
 ??x
-The on-policy distribution over states, which is a vector \( \mu \) where each component \( \mu(s) \) gives the probability of being in state \( s \) under the current policy. For example:
-\[ \mu = [\mu(s_1), \mu(s_2), ..., \mu(s_n)] \]
-where \( n \) is the number of states.
+The on-policy distribution over states, which is a vector $\mu $ where each component$\mu(s)$ gives the probability of being in state $s$ under the current policy. For example:
+$$\mu = [\mu(s_1), \mu(s_2), ..., \mu(s_n)]$$where $ n$ is the number of states.
 
 In code, you might define this as:
 ```java
@@ -161,13 +161,12 @@ x??
 
 #### Bellman Operator
 
-Background context: The Bellman operator is used to express the relationship between the value function at time \( t \) and the value function at future times. It's a key component in reinforcement learning algorithms.
+Background context: The Bellman operator is used to express the relationship between the value function at time $t$ and the value function at future times. It's a key component in reinforcement learning algorithms.
 
 :p What does `B⇡` represent?
 ??x
-The Bellman operator for value functions, which represents the expected value of taking an action in state \( s \), given the policy \( \pi \). For example:
-\[ B_\pi v(s) = E_{s', r \sim p(s', r|s, a)} [r + \gamma v(s')] \]
-where \( p(s', r|s, a) \) is the probability of transitioning to state \( s' \) with reward \( r \) from state \( s \) under action \( a \).
+The Bellman operator for value functions, which represents the expected value of taking an action in state $s $, given the policy $\pi$. For example:
+$$B_\pi v(s) = E_{s', r \sim p(s', r|s, a)} [r + \gamma v(s')]$$where $ p(s', r|s, a)$is the probability of transitioning to state $ s'$with reward $ r$from state $ s $ under action $a$.
 
 In Java:
 ```java
@@ -592,14 +591,12 @@ Background context: This concept explains how to update state values during a ga
 
 :p What is the formula for updating the state value in temporal-difference learning?
 ??x
-The formula for updating the state value \( V(S_t) \) during temporal-difference learning is:
+The formula for updating the state value $V(S_t)$ during temporal-difference learning is:
 
-\[ V(S_t) = V(S_t) + \alpha \left( V(S_{t+1}) - V(S_t) \right) \]
-
-where:
-- \( S_t \) denotes the state before a greedy move.
-- \( S_{t+1} \) denotes the state after the move.
-- \( \alpha \) is the step-size parameter, which influences the rate of learning.
+$$V(S_t) = V(S_t) + \alpha \left( V(S_{t+1}) - V(S_t) \right)$$where:
+- $S_t$ denotes the state before a greedy move.
+- $S_{t+1}$ denotes the state after the move.
+- $\alpha$ is the step-size parameter, which influences the rate of learning.
 
 This update rule moves the earlier state’s value closer to the later state's value by a fraction determined by the step-size parameter. It essentially reflects the difference in values between two consecutive states, updating the earlier state based on this difference.
 x??
@@ -615,7 +612,7 @@ Background context: The text mentions that exploratory moves are taken even thou
 During exploratory moves, the reinforcement learning player makes a move that is not necessarily ranked as highly as another sibling move (e.g., moving from 'd' to 'f' instead of 'e'). These moves do not result in any direct learning but still allow for updates to be made through temporal-difference learning. The value of the earlier state is updated based on the value of the later state, even though the exploratory move was taken.
 
 For example:
-- If moving from state \( S_t \) (e.g., 'd') to state \( S_{t+1} \) (e.g., 'f'), the player updates \( V(S_t) \) based on \( V(S_{t+1}) \), even though the move was exploratory.
+- If moving from state $S_t $(e.g., 'd') to state $ S_{t+1}$(e.g., 'f'), the player updates $ V(S_t)$based on $ V(S_{t+1})$, even though the move was exploratory.
 x??
 
 ---
@@ -626,7 +623,7 @@ Background context: The text discusses how, with an appropriate step-size parame
 
 :p What happens when the step-size parameter is reduced properly over time?
 ??x
-When the step-size parameter \( \alpha \) is reduced appropriately over time, the method converges to the true probabilities of winning from each state given optimal play by our player. Specifically, for any fixed opponent, this method will converge to the optimal policy for playing tic-tac-toe.
+When the step-size parameter $\alpha$ is reduced appropriately over time, the method converges to the true probabilities of winning from each state given optimal play by our player. Specifically, for any fixed opponent, this method will converge to the optimal policy for playing tic-tac-toe.
 
 The key idea is that as the step-size decreases over time, the updates become smaller and more precise, eventually leading to a stable set of estimated values that reflect the true win probabilities. Consequently, the moves taken by the player are the optimal moves against this fixed opponent.
 x??
@@ -674,7 +671,7 @@ x??
 Reinforcement learning is not limited to two-person games or episodic tasks like tic-tac-toe. It can be applied to "games against nature," continuous-time problems, and problems with large or infinite state sets. The example of backgammon shows how reinforcement learning can handle vast state spaces.
 :p Can you explain the broader applicability of reinforcement learning beyond simple games?
 ??x
-Reinforcement learning is versatile and can be applied in various scenarios: "games against nature," continuous-time tasks, and problems with large or infinite state sets. For example, backgammon involves a vast number of states (approximately \(10^{20}\)), making it impossible to experience all states directly.
+Reinforcement learning is versatile and can be applied in various scenarios: "games against nature," continuous-time tasks, and problems with large or infinite state sets. For example, backgammon involves a vast number of states (approximately $10^{20}$), making it impossible to experience all states directly.
 x??
 
 ---
@@ -703,8 +700,7 @@ Reinforcement learning (RL) is a type of machine learning where an agent learns 
 In the context of tic-tac-toe, the agent initially has no knowledge of the game rules but learns by playing against various opponents. The learning process involves receiving rewards based on the outcomes (winning, losing, or drawing).
 
 Relevant equations for updating Q-values in reinforcement learning are:
-\[Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha [r_{t+1} + \gamma \max_a Q(s_{t+1}, a) - Q(s_t, a_t)]\]
-where \(s_t\) is the state at time step \(t\), \(a_t\) is the action taken in that state, \(\alpha\) is the learning rate, \(r_{t+1}\) is the immediate reward received after taking the action, \(\gamma\) is the discount factor, and \(\max_a Q(s_{t+1}, a)\) is the maximum expected future reward.
+$$Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha [r_{t+1} + \gamma \max_a Q(s_{t+1}, a) - Q(s_t, a_t)]$$where $ s_t $ is the state at time step $ t $,$ a_t $is the action taken in that state,$\alpha $ is the learning rate,$ r_{t+1}$ is the immediate reward received after taking the action,$\gamma $ is the discount factor, and$\max_a Q(s_{t+1}, a)$ is the maximum expected future reward.
 
 :p What does reinforcement learning involve in terms of an agent's interaction with its environment?
 ??x
@@ -851,7 +847,7 @@ Exploration is crucial for reinforcement learning as it allows the agent to disc
 ??x
 Incorporating exploration during learning ensures that the agent does not get stuck in suboptimal policies by occasionally trying out new actions. This helps in discovering better strategies that might be hidden behind initially less rewarding options. By updating Q-values after all moves, including exploratory ones, the agent can learn more effectively and adapt to changing environments.
 
-For example, using an exploration strategy like epsilon-greedy where \(\epsilon\) is gradually reduced over time.
+For example, using an exploration strategy like epsilon-greedy where $\epsilon$ is gradually reduced over time.
 ```java
 public class ExplorationAgent {
     public void learnWithExploration() {

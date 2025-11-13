@@ -5,7 +5,7 @@
 ---
 
 #### Grover's Algorithm Overview
-Grover’s algorithm is a quantum search algorithm that can find a specific item \( i \) in an unsorted database of size \( N \) with a quadratic speedup over classical algorithms. The core idea involves repeatedly applying two operations: an oracle and a diffuser.
+Grover’s algorithm is a quantum search algorithm that can find a specific item $i $ in an unsorted database of size$N$ with a quadratic speedup over classical algorithms. The core idea involves repeatedly applying two operations: an oracle and a diffuser.
 
 :p What is the main purpose of Grover's Algorithm?
 ??x
@@ -14,11 +14,11 @@ x??
 
 ---
 #### Oracle Operation
-The oracle operation is designed to identify the target state \( |i⟩ \) by flipping its phase. For example, if \( i = 15 \), the oracle will flip the sign of \( |15⟩ \).
+The oracle operation is designed to identify the target state $|i⟩$ by flipping its phase. For example, if $ i = 15 $, the oracle will flip the sign of $|15⟩$.
 
 :p How does an oracle operate in Grover's Algorithm?
 ??x
-In Grover's Algorithm, the oracle operation flips the phase of the target state \( |i⟩ \). This is typically achieved using a controlled-Z (CZ) gate followed by Hadamard gates. For instance, to create an oracle for \( i = 15 \), which is represented as \( |1111⟩ \):
+In Grover's Algorithm, the oracle operation flips the phase of the target state $|i⟩$. This is typically achieved using a controlled-Z (CZ) gate followed by Hadamard gates. For instance, to create an oracle for $ i = 15$, which is represented as $|1111⟩$:
 ```java
 // Oracle circuit for Grover's Algorithm
 public class Oracle {
@@ -50,11 +50,11 @@ x??
 
 ---
 #### Diffuser Operation
-The diffuser operation amplifies the amplitude of the target state \( |i⟩ \). It works by reflecting each state around an average amplitude.
+The diffuser operation amplifies the amplitude of the target state $|i⟩$. It works by reflecting each state around an average amplitude.
 
 :p What is the purpose of the diffuser in Grover's Algorithm?
 ??x
-The diffuser in Grover’s Algorithm serves to amplify the amplitude of the target state \( |i⟩ \) relative to other states. This operation helps increase the probability of measuring the correct state after multiple iterations.
+The diffuser in Grover’s Algorithm serves to amplify the amplitude of the target state $|i⟩$ relative to other states. This operation helps increase the probability of measuring the correct state after multiple iterations.
 
 Geometrically, it reflects each amplitude around the average value.
 ```java
@@ -84,11 +84,11 @@ x??
 
 ---
 #### Grover Operator
-The Grover operator combines the oracle and diffuser operations. Repeated applications of this operator amplify the amplitude of \( |i⟩ \).
+The Grover operator combines the oracle and diffuser operations. Repeated applications of this operator amplify the amplitude of $|i⟩$.
 
 :p How is the Grover operator defined in Grover's Algorithm?
 ??x
-The Grover operator, denoted as \( U_\psi O \), where \( O \) is the oracle and \( U_\psi \) is the diffuser, is defined as follows:
+The Grover operator, denoted as $U_\psi O $, where $ O $ is the oracle and $ U_\psi$ is the diffuser, is defined as follows:
 ```java
 // Grover Operator circuit for Grover's Algorithm
 public class GroverOperator {
@@ -181,13 +181,13 @@ x??
 
 ---
 #### Period Finding in Shor's Algorithm
-Period finding is essential for determining the period \( T \) of a function \( f(x) = r^x \mod N \).
+Period finding is essential for determining the period $T $ of a function$f(x) = r^x \mod N$.
 
 :p What is the goal of period finding?
 ??x
-The goal of period finding is to determine the smallest positive integer \( T \) such that \( f(x + T) = f(x) \), i.e., \( r^T \equiv 1 \mod N \). This is crucial for factoring large numbers using Shor's Algorithm.
+The goal of period finding is to determine the smallest positive integer $T $ such that$f(x + T) = f(x)$, i.e.,$ r^T \equiv 1 \mod N$. This is crucial for factoring large numbers using Shor's Algorithm.
 
-By determining the period, we can factorize \( N \).
+By determining the period, we can factorize $N$.
 x??
 
 ---
@@ -201,7 +201,7 @@ Period finding in Shor's Algorithm can be implemented by creating a quantum circ
 2. Applies a modular exponentiation operation.
 3. Uses controlled-Z gates and Hadamard gates to find the periodicity.
 
-The final step involves using continued fractions to determine \( T \).
+The final step involves using continued fractions to determine $T$.
 ```java
 // Period Finding circuit for Shor's Algorithm
 public class PeriodFinding {
@@ -241,9 +241,9 @@ Shor's algorithm combines the concepts of phase estimation and period finding to
 Shor's Algorithm combines phase estimation and period finding by:
 1. Preparing a superposition state.
 2. Applying modular exponentiation operations.
-3. Using controlled-Z gates to find the periodicity of the function \( f(x) = r^x \mod N \).
+3. Using controlled-Z gates to find the periodicity of the function $f(x) = r^x \mod N$.
 4. Estimating the phase using QFT.
-5. Using continued fractions to determine the period \( T \).
+5. Using continued fractions to determine the period $T$.
 
 This combination allows us to factorize large numbers efficiently, offering a significant speedup over classical algorithms.
 x??
@@ -255,10 +255,10 @@ The output from running Shor's Algorithm provides insights into the factors of t
 :p What kind of information does the output of Shor’s Algorithm provide?
 ??x
 The output of Shor's Algorithm typically includes:
-- The random integer \( a \) chosen for modular exponentiation.
+- The random integer $a$ chosen for modular exponentiation.
 - The register reading, which reflects the state after applying controlled operations.
 - The corresponding phase value estimated from QFT.
-- The calculated period \( T \).
+- The calculated period $T$.
 - The identified factors of the number.
 
 For example, if running Shor’s Algorithm on 15:
@@ -290,7 +290,7 @@ The key components of Grover's Algorithm and Shor’s Algorithm include:
 2. Diffuser operation: Amplifies the amplitude of the target state.
 3. Grover operator: Combines oracle and diffuser for iterative amplification.
 4. Phase estimation: Determines the phase shift introduced by the oracle using QFT.
-5. Period finding: Determines the periodicity of a function \( f(x) = r^x \mod N \).
+5. Period finding: Determines the periodicity of a function $f(x) = r^x \mod N$.
 
 These components work together to achieve significant speedups in searching databases (Grover’s Algorithm) and factoring large numbers (Shor's Algorithm).
 x??
@@ -487,7 +487,7 @@ x??
 These flashcards cover key concepts from the provided text in a structured format suitable for learning. Each card provides context, relevant code, and detailed explanations to aid understanding without overburdening memory.
 
 #### Shor's Algorithm Overview
-Shor’s algorithm is a quantum algorithm designed to factorize large integers, which has significant implications for cryptography. The goal is to find non-trivial factors of an integer \( N \). This algorithm runs significantly faster on a quantum computer compared to classical algorithms.
+Shor’s algorithm is a quantum algorithm designed to factorize large integers, which has significant implications for cryptography. The goal is to find non-trivial factors of an integer $N$. This algorithm runs significantly faster on a quantum computer compared to classical algorithms.
 
 Background context: 
 The RSA cryptosystem relies heavily on the difficulty of factoring large numbers. Shor’s algorithm can break this system by efficiently finding the prime factors of large integers, thus posing a significant threat to current cryptographic protocols.
@@ -500,14 +500,14 @@ x??
 ---
 
 #### Amod15 Function
-This function defines the quantum circuit for modular exponentiation \( a^{2^k} \mod 15 \). The circuits are parameterized based on the value of \( a \) and used in Shor’s algorithm.
+This function defines the quantum circuit for modular exponentiation $a^{2^k} \mod 15 $. The circuits are parameterized based on the value of $ a$ and used in Shor’s algorithm.
 
 Background context:
 Modular arithmetic is fundamental to many areas of cryptography, including RSA. In this case, we are specifically dealing with modular exponentiation under modulo 15.
 
 :p What does the `amod15` function do?
 ??x
-The `amod15` function constructs a quantum circuit that performs the operation \( a^{2^k} \mod 15 \) for given values of \( a \). The circuits are used as subroutines in Shor’s algorithm to find the period of the function.
+The `amod15` function constructs a quantum circuit that performs the operation $a^{2^k} \mod 15 $ for given values of$a$. The circuits are used as subroutines in Shor’s algorithm to find the period of the function.
 
 ```python
 def amod15(a_in: int, p_in: int) -> QuantumCircuit:
@@ -549,7 +549,7 @@ x??
 Quantum Phase Estimation (QPE) is a subroutine used in Shor’s algorithm to estimate the period of a function.
 
 Background context:
-The Quantum Fourier Transform (QFT) and its inverse are crucial components of QPE. The goal is to estimate the phase of an eigenvalue from which we can derive the order \( r \).
+The Quantum Fourier Transform (QFT) and its inverse are crucial components of QPE. The goal is to estimate the phase of an eigenvalue from which we can derive the order $r$.
 
 :p What does the `qpe` function do?
 ??x
@@ -595,14 +595,14 @@ x??
 ---
 
 #### Main Execution Loop
-The main loop in the provided code repeatedly attempts to find a factor of \( N \) using Shor’s algorithm.
+The main loop in the provided code repeatedly attempts to find a factor of $N$ using Shor’s algorithm.
 
 Background context:
-After constructing the circuits and running QPE, we use the estimated phase to derive the order \( r \). We then use this \( r \) to find potential factors of \( N \).
+After constructing the circuits and running QPE, we use the estimated phase to derive the order $r $. We then use this $ r $ to find potential factors of $ N$.
 
 :p What does the main execution loop do?
 ??x
-The main execution loop repeatedly attempts to find a factor of \( N = 15 \) using Shor’s algorithm. It generates random values for \( a \), runs the necessary quantum circuits, and uses QPE to estimate the phase, which helps in finding the order \( r \). Using this order, it computes potential factors.
+The main execution loop repeatedly attempts to find a factor of $N = 15 $ using Shor’s algorithm. It generates random values for$a $, runs the necessary quantum circuits, and uses QPE to estimate the phase, which helps in finding the order$ r$. Using this order, it computes potential factors.
 
 ```python
 if __name__ == "__main__":
@@ -640,91 +640,61 @@ x??
 ---
 
 #### Quantum Eigenvalues for Arbitrary Potentials
-In quantum mechanics, a particle's wave function \(\psi(x)\) is determined by solving the time-independent Schrödinger equation. For a particle of energy \(E\) moving in one dimension and experiencing a potential \(V(x)\), the equation takes the form:
-\[
--\frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} + V(x) \psi(x) = E \psi(x).
-\]
-For bound states (\(E < 0\)), we relate the wave vector \(\kappa\) to the energy by:
-\[
-\kappa^2 = -\frac{2m}{\hbar^2} E.
-\]
+In quantum mechanics, a particle's wave function $\psi(x)$ is determined by solving the time-independent Schrödinger equation. For a particle of energy $E$ moving in one dimension and experiencing a potential $V(x)$, the equation takes the form:
+$$-\frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} + V(x) \psi(x) = E \psi(x).$$
+For bound states ($E < 0 $), we relate the wave vector $\kappa$ to the energy by:
+$$\kappa^2 = -\frac{2m}{\hbar^2} E.$$
 The problem requires solving this differential equation with boundary conditions that ensure normalizability of the wave function, leading to an eigenvalue problem.
 
 :p What does the problem state about the particle in terms of its energy and potential?
 ??x
-The problem states that the particle is bound by a potential which confines it to an atomic distance. For a bound state (\(E < 0\)), the wave function \(\psi(x)\) must decay exponentially as \(x \to \pm \infty\). This means:
-\[
-\psi(x) \to 
+The problem states that the particle is bound by a potential which confines it to an atomic distance. For a bound state ($E < 0 $), the wave function $\psi(x)$ must decay exponentially as $x \to \pm \infty$. This means:
+$$\psi(x) \to 
 \begin{cases} 
 e^{-\kappa x}, & \text{for } x \to +\infty, \\
 e^{\kappa x}, & \text{for } x \to -\infty.
-\end{cases}
-\]
-x??
+\end{cases}$$x??
 
 ---
 #### Numerical Solution of the Schrödinger Equation
-To solve the Schrödinger equation numerically, we use an ODE solver. For a particle in a finite square well potential \(V(x)\), the wave function \(\psi(x)\) is determined by:
-\[
--\frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} + V(x) \psi(x) = E \psi(x),
-\]
-where the potential \(V(x)\) is defined as:
-\[
-V(x) = 
+To solve the Schrödinger equation numerically, we use an ODE solver. For a particle in a finite square well potential $V(x)$, the wave function $\psi(x)$ is determined by:
+$$-\frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} + V(x) \psi(x) = E \psi(x),$$where the potential $ V(x)$ is defined as:
+$$V(x) = 
 \begin{cases} 
 -V_0, & |x| \leq a, \\
 0, & |x| > a.
-\end{cases}
-\]
-
-:p How does the Schrödinger equation change for the finite square well potential?
+\end{cases}$$:p How does the Schrödinger equation change for the finite square well potential?
 ??x
 The Schrödinger equation changes to:
-\[
--\frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} + V(x) \psi(x) = E \psi(x),
-\]
-where \(V(x)\) is the finite square well potential defined as:
-\[
-V(x) = 
+$$-\frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} + V(x) \psi(x) = E \psi(x),$$where $ V(x)$ is the finite square well potential defined as:
+$$V(x) = 
 \begin{cases} 
 -V_0, & |x| \leq a, \\
 0, & |x| > a.
-\end{cases}
-\]
-For \(|x| \leq a\), it becomes:
-\[
--\frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} - V_0 \psi(x) = E \psi(x),
-\]
-and for \(|x| > a\):
-\[
--\frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} = E \psi(x).
-\]
+\end{cases}$$
 
-x??
+For $|x| \leq a$, it becomes:
+$$-\frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} - V_0 \psi(x) = E \psi(x),$$and for $|x| > a$:
+$$-\frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} = E \psi(x).$$x??
 
 ---
 #### Numerical Integration Method
-The numerical method involves integrating the wave function step-by-step. We start by assuming a wave function that satisfies the boundary condition at \(x \to -\infty\) and integrate towards the origin. Similarly, we assume another wave function satisfying the boundary condition at \(x \to +\infty\) and integrate backwards to the matching radius.
+The numerical method involves integrating the wave function step-by-step. We start by assuming a wave function that satisfies the boundary condition at $x \to -\infty $ and integrate towards the origin. Similarly, we assume another wave function satisfying the boundary condition at$x \to +\infty$ and integrate backwards to the matching radius.
 
 :p How is the wave function integrated for bound states?
 ??x
 The wave function is integrated step-by-step using an ODE solver. We start by assuming a wave function that satisfies:
-\[
-\psi(x) = e^{\kappa x} \quad \text{for } x \to -\infty.
-\]
-We then integrate this towards the origin, matching it with another solution at \(x_m\) where:
-\[
-\psi(x) = 
+$$\psi(x) = e^{\kappa x} \quad \text{for } x \to -\infty.$$
+
+We then integrate this towards the origin, matching it with another solution at $x_m$ where:
+$$\psi(x) = 
 \begin{cases} 
 e^{-\kappa (x-x_m)}, & \text{for } x > x_m, \\
 \psi_{R}(x), & \text{for } x < x_m.
-\end{cases}
-\]
+\end{cases}$$
+
 Similarly, for the right side:
-\[
-\psi(x) = e^{-\kappa x} \quad \text{for } x \to +\infty,
-\]
-and integrate backwards to \(x_m\) matching it with a solution on the left.
+$$\psi(x) = e^{-\kappa x} \quad \text{for } x \to +\infty,$$and integrate backwards to $ x_m$ matching it with a solution on the left.
 
 x??
 
@@ -734,10 +704,10 @@ The search algorithm involves integrating the wave function from both sides and 
 
 :p What is the role of the search algorithm in solving the eigenvalue problem?
 ??x
-The search algorithm integrates the wave function from both sides towards a matching radius \(x_m\). By varying the energy, we find values where the wave functions match at \(x_m\), indicating an eigenvalue. This process involves:
-1) Starting with a large negative \(x\) and integrating to the left.
-2) Starting with a large positive \(x\) and integrating to the right.
-3) Matching these solutions at some point \(x_m\) between \(-a\) and \(+a\).
+The search algorithm integrates the wave function from both sides towards a matching radius $x_m $. By varying the energy, we find values where the wave functions match at $ x_m$, indicating an eigenvalue. This process involves:
+1) Starting with a large negative $x$ and integrating to the left.
+2) Starting with a large positive $x$ and integrating to the right.
+3) Matching these solutions at some point $x_m $ between$-a $ and$+a$.
 
 This iterative approach helps in finding energy levels where the wave function is normalizable, thus solving the eigenvalue problem.
 

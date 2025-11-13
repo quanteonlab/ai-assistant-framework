@@ -213,10 +213,8 @@ To multiply and reduce fractions:
 
 For example:
 - To multiply 3/4 and 2/5: 
-  - Numerator: \(3 \times 2 = 6\)
-  - Denominator: \(4 \times 5 = 20\)
-  - The fraction is now 6/20, which can be reduced by dividing both the numerator and denominator by their GCD (which is 2):
-    - Reduced form: \(6/20\) becomes \(3/10\).
+  - Numerator: $3 \times 2 = 6 $- Denominator:$4 \times 5 = 20$- The fraction is now 6/20, which can be reduced by dividing both the numerator and denominator by their GCD (which is 2):
+    - Reduced form:$6/20 $ becomes$3/10$.
 
 ??x
 To verify this:
@@ -258,7 +256,7 @@ To divide fractions:
 
 For example:
 - To divide 5/6 by 3/4, first find the reciprocal of 3/4 which is 4/3.
-- Now multiply: \( \frac{5}{6} \times \frac{4}{3} = \frac{5 \times 4}{6 \times 3} = \frac{20}{18} \).
+- Now multiply: $\frac{5}{6} \times \frac{4}{3} = \frac{5 \times 4}{6 \times 3} = \frac{20}{18}$.
 - Simplify the fraction if possible (in this case, 20/18 can be simplified to 10/9).
 
 ??x

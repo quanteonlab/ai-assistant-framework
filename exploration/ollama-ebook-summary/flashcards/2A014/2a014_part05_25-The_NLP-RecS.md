@@ -32,7 +32,7 @@ Similarity measures are often used instead of dissimilarity in machine learning 
 
 :p What is the relationship between distance and similarity?
 ??x
-Distance and similarity are related but complementary concepts. A dissimilarity function \( d \) can be transformed into a similarity measure using \( S_{i,j} = 1 - d(i, j) \). The choice of similarity or dissimilarity depends on the specific task; for instance, in clustering, distances are often used to find nearest neighbors.
+Distance and similarity are related but complementary concepts. A dissimilarity function $d $ can be transformed into a similarity measure using$S_{i,j} = 1 - d(i, j)$. The choice of similarity or dissimilarity depends on the specific task; for instance, in clustering, distances are often used to find nearest neighbors.
 x??
 
 ---
@@ -110,11 +110,11 @@ x?
 
 #### ϵ-greedy Algorithm
 
-The ε-greedy algorithm is a simple exploration-exploitation strategy where the agent decides between exploring or exploiting based on a probability value \( \epsilon \).
+The ε-greedy algorithm is a simple exploration-exploitation strategy where the agent decides between exploring or exploiting based on a probability value $\epsilon$.
 
 :p How does the ε-greedy algorithm work in recommendation systems?
 ??x
-The ε-greedy algorithm works by setting a threshold \( \epsilon \). With probability \( 1 - \epsilon \), the agent exploits by choosing the most rewarding option (typically the most popular item); otherwise, it explores by selecting a random alternative.
+The ε-greedy algorithm works by setting a threshold $\epsilon $. With probability $1 - \epsilon$, the agent exploits by choosing the most rewarding option (typically the most popular item); otherwise, it explores by selecting a random alternative.
 ```python
 def get_recommendation_ep_greedy(ε):
     # Generate a random number between 0 and 1

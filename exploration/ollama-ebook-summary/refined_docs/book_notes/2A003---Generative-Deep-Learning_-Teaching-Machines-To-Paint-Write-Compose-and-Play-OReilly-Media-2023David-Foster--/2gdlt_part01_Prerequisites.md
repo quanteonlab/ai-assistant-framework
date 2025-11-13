@@ -75,10 +75,10 @@ Background context: VAEs are discussed as a method in generative modeling where 
 ??x
 A variational autoencoder (VAE) is a type of generative model that uses a probabilistic approach to learn a compressed latent space representation of input data. It consists of an encoder network that maps the input data to a distribution in the latent space, and a decoder network that reconstructs the original data from this distribution.
 
-Mathematically, the encoder outputs two parameters (mean \(\mu\) and log variance \(\log\sigma^2\)) of a Gaussian distribution:
-\[ q(z|x) = \mathcal{N}(\mu(x), \Sigma(x)) \]
+Mathematically, the encoder outputs two parameters (mean $\mu $ and log variance$\log\sigma^2$) of a Gaussian distribution:
+$$q(z|x) = \mathcal{N}(\mu(x), \Sigma(x))$$
 
-The decoder takes samples \(z\) from this distribution to generate new data points.
+The decoder takes samples $z$ from this distribution to generate new data points.
 x??
 
 ---
@@ -92,9 +92,9 @@ Background context: GANs are introduced as a framework where two neural networks
 A generative adversarial network (GAN) consists of two neural networks: the generator and the discriminator. The generator creates new data instances, while the discriminator evaluates whether generated samples are real or fake. Through an iterative training process, both networks improve their performance until the generated data is indistinguishable from real data.
 
 The objective function in a GAN can be formulated as:
-\[ \min_{G} \max_{D} V(D, G) = \mathbb{E}_{x \sim p_{data}(x)}[\log D(x)] + \mathbb{E}_{z \sim p_z(z)}[\log (1 - D(G(z)))] \]
+$$\min_{G} \max_{D} V(D, G) = \mathbb{E}_{x \sim p_{data}(x)}[\log D(x)] + \mathbb{E}_{z \sim p_z(z)}[\log (1 - D(G(z)))]$$
 
-Where \(D\) is the discriminator and \(G\) is the generator.
+Where $D $ is the discriminator and$G$ is the generator.
 x??
 
 ---
@@ -108,15 +108,15 @@ Background context: The concept of autoregressive models, particularly recurrent
 Autoregressive models predict each element in a sequence based on the previous elements. In the context of this book, they include models like Long Short-Term Memory networks (LSTMs) used for text generation and PixelCNNs used for image generation.
 
 For example, an LSTM can be defined as:
-\[ \begin{aligned}
+$$\begin{aligned}
 i_t &= \sigma(W_{xi} x_t + W_{hi} h_{t-1} + b_i) \\
 f_t &= \sigma(W_{xf} x_t + W_{hf} h_{t-1} + b_f) \\
 c_t &= f_t \odot c_{t-1} + i_t \odot \tanh(W_{xc} x_t + W_{hc} h_{t-1} + b_c) \\
 o_t &= \sigma(W_{xo} x_t + W_{ho} h_{t-1} + b_o) \\
 h_t &= o_t \odot \tanh(c_t)
-\end{aligned} \]
+\end{aligned}$$
 
-Where \(i_t, f_t, c_t, o_t\) are the input, forget, cell state, and output gates respectively.
+Where $i_t, f_t, c_t, o_t$ are the input, forget, cell state, and output gates respectively.
 x??
 
 ---
@@ -130,9 +130,9 @@ Background context: This section introduces normalizing flows as a technique to 
 Normalizing flow models transform a simple base distribution (e.g., a standard normal distribution) into a more complex target distribution through a series of invertible transformations. These models allow for efficient sampling and density evaluation, making them useful in generative modeling tasks.
 
 A simple example using the RealNVP model involves a sequence of bijective transformations that are composed to form a flow:
-\[ z = \text{affine}(\theta, x) \]
+$$z = \text{affine}(\theta, x)$$
 
-Where \(x\) is the input data and \(z\) is the transformed latent space.
+Where $x $ is the input data and$z$ is the transformed latent space.
 x??
 
 ---
@@ -144,12 +144,12 @@ Background context: The book covers energy-based models which are trained by min
 :p What are energy-based models?
 ??x
 Energy-based models (EBMs) are probabilistic models where the probability distribution over data points is defined as:
-\[ p(x) = \frac{1}{Z} e^{-E(x)} \]
+$$p(x) = \frac{1}{Z} e^{-E(x)}$$
 
-Where \(E(x)\) is an energy function that measures how likely a configuration of variables \(x\) is. The normalizing constant \(Z\) ensures that the probabilities sum to 1.
+Where $E(x)$ is an energy function that measures how likely a configuration of variables $ x $ is. The normalizing constant $Z$ ensures that the probabilities sum to 1.
 
 Training involves minimizing the negative log-likelihood:
-\[ -\log p(x_i) = E(x_i) + \log Z \]
+$$-\log p(x_i) = E(x_i) + \log Z$$
 
 For practical training, contrastive divergence and Langevin dynamics can be used.
 x??

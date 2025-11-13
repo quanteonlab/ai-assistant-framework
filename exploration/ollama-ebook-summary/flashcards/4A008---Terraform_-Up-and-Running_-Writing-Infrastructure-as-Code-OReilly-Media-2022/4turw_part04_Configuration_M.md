@@ -234,7 +234,7 @@ resource "aws_instance" "example" {
 ```
 To scale up, you simply update the `count` attribute without rewriting the entire script. You can also use Terraform's `plan` command to preview changes:
 ```sh
-$ terraform plan
+$terraform plan
 # Preview of changes before applying the configuration.
 ```
 Terraform will recognize existing resources and only apply necessary updates.
@@ -248,8 +248,7 @@ Explanation of the `plan` command used in Terraform.
 :p What is the `plan` command in Terraform?
 ??x
 The `plan` command in Terraform allows you to preview changes before applying them. It shows what resources will be created, modified, or destroyed. For example:
-```sh
-$ terraform plan
+```sh$ terraform plan
 # aws_instance.example[11] will be created + resource "aws_instance" "example" {
     + ami            = "ami-0fb653ca2d3203ac1"
     + instance_type  = "t2.micro"

@@ -96,7 +96,7 @@ Background context: The text discusses the significant time and financial invest
 
 :p How much does it cost to create 13,000 (prompt, response) pairs for InstructGPT?
 ??x
-Creating 13,000 (prompt, response) pairs for InstructGPT would cost approximately $130,000 if each pair costs $10. This estimate does not include the additional costs of designing the data, recruiting labelers, and ensuring data quality.
+Creating 13,000 (prompt, response) pairs for InstructGPT would cost approximately $130,000 if each pair costs$10. This estimate does not include the additional costs of designing the data, recruiting labelers, and ensuring data quality.
 
 ```java
 // Example calculation method
@@ -360,7 +360,7 @@ Background context: The loss function used to train the reward model represents 
 
 :p How is the loss value computed for each training sample (x, yw, yl) in InstructGPT?
 ??x
-The loss value for each training sample \((x, yw, yl)\) is computed as \( \log(\sigma(r_{\theta}(x,yw) - r_{\theta}(x,yl))) \). Here, \(r_{\theta}\) represents the reward model parameterized by \(\theta\), and \(\sigma\) is the sigmoid function.
+The loss value for each training sample $(x, yw, yl)$ is computed as $ \log(\sigma(r_{\theta}(x,yw) - r_{\theta}(x,yl))) $. Here,$ r_{\theta}$represents the reward model parameterized by $\theta$, and $\sigma$ is the sigmoid function.
 
 For example:
 ```python
@@ -384,18 +384,18 @@ x??
 ---
 
 #### Training Data Format for InstructGPT
-Background context: The training data format includes a prompt, a winning response (\(yw\)), and a losing response (\(yl\)). The reward model provides scalar scores \(sw\) and \(sl\) for these responses.
+Background context: The training data format includes a prompt, a winning response ($yw $), and a losing response ($ yl $). The reward model provides scalar scores$ sw $and$ sl$ for these responses.
 
 :p What is the training data format used by InstructGPT?
 ??x
 The training data format used by InstructGPT includes:
-- \(x\): prompt
-- \(yw\): winning response
-- \(yl\): losing response
+- $x$: prompt
+- $yw$: winning response
+- $yl$: losing response
 
 For each sample, the reward model provides scalar scores as follows:
-- \(sw = r(x, yw)\) for the winning response
-- \(sl = r(x, yl)\) for the losing response
+- $sw = r(x, yw)$ for the winning response
+- $sl = r(x, yl)$ for the losing response
 x??
 
 ---

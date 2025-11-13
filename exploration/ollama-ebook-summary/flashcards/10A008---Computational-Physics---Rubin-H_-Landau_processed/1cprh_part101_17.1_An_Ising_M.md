@@ -8,8 +8,7 @@
 Background context: The Ising model is a mathematical model used to describe ferromagnetic behavior. It consists of spins (up or down) on a lattice, interacting with each other and an external magnetic field. This model helps understand thermal transitions in materials like ferromagnets.
 
 The energy of the system can be described by the Hamiltonian:
-\[ E = - J \sum_{i} s_i s_{i+1} - g \mu_B B \sum_{i} s_i \]
-where \( s_i = \pm 1/2 \) are the spin states, \( J \) is the exchange energy (positive for ferromagnetic interaction), and \( g \mu_B B \) is the Zeeman term representing the interaction with an external magnetic field.
+$$E = - J \sum_{i} s_i s_{i+1} - g \mu_B B \sum_{i} s_i$$where $ s_i = \pm 1/2 $are the spin states,$ J $ is the exchange energy (positive for ferromagnetic interaction), and $ g \mu_B B$ is the Zeeman term representing the interaction with an external magnetic field.
 
 :p What does the Ising model help explain in materials science?
 ??x
@@ -18,12 +17,10 @@ x??
 
 ---
 #### Phase Transition in Ferromagnets
-Background context: As the temperature increases, the magnetization decreases due to thermal fluctuations. At a critical temperature \( T_c \), called the Curie temperature, there is a phase transition where all magnetic domains align randomly.
+Background context: As the temperature increases, the magnetization decreases due to thermal fluctuations. At a critical temperature $T_c$, called the Curie temperature, there is a phase transition where all magnetic domains align randomly.
 
 The energy equation:
-\[ E_{\alpha_k} = -J(N-1)\sum_i s_i s_{i+1} - B \mu_b N \sum_i s_i \]
-
-:p What happens to magnetization as the temperature increases in ferromagnets?
+$$E_{\alpha_k} = -J(N-1)\sum_i s_i s_{i+1} - B \mu_b N \sum_i s_i$$:p What happens to magnetization as the temperature increases in ferromagnets?
 ??x
 As the temperature increases, thermal fluctuations cause spins to randomize more, leading to a decrease in overall magnetization. Eventually, at high enough temperatures, all magnetization disappears.
 x??
@@ -34,25 +31,25 @@ Background context: In the absence of an external magnetic field (B=0), even tho
 
 :p What is a Bloch wall transition?
 ??x
-A Bloch wall transition refers to a spontaneous change in spin orientation within a ferromagnetic material when the external magnetic field \( B \) is zero, leading to regions with different spin orientations changing size.
+A Bloch wall transition refers to a spontaneous change in spin orientation within a ferromagnetic material when the external magnetic field $B$ is zero, leading to regions with different spin orientations changing size.
 x??
 
 ---
 #### Spin Alignment and Exchange Energy
-Background context: The alignment of spins depends on the sign of the exchange energy \( J \). If \( J > 0 \), neighboring spins tend to align. At low temperatures, this can result in a ferromagnetic ground state. Conversely, if \( J < 0 \), neighboring spins will have opposite alignments leading to an antiferromagnetic ground state.
+Background context: The alignment of spins depends on the sign of the exchange energy $J $. If $ J > 0 $, neighboring spins tend to align. At low temperatures, this can result in a ferromagnetic ground state. Conversely, if$ J < 0$, neighboring spins will have opposite alignments leading to an antiferromagnetic ground state.
 
-:p How does the exchange energy \( J \) affect spin alignment?
+:p How does the exchange energy $J$ affect spin alignment?
 ??x
-The sign of the exchange energy \( J \) determines whether neighboring spins tend to align (ferromagnetic) or oppose each other (antiferromagnetic). At low temperatures, these interactions dominate and result in different ground states.
+The sign of the exchange energy $J$ determines whether neighboring spins tend to align (ferromagnetic) or oppose each other (antiferromagnetic). At low temperatures, these interactions dominate and result in different ground states.
 x??
 
 ---
 #### Statistical Approach for Large Systems
-Background context: For large systems with \( N \approx 10^{23} \), it's impractical to examine all possible spin configurations. Instead, statistical methods are used to approximate the behavior of the system.
+Background context: For large systems with $N \approx 10^{23}$, it's impractical to examine all possible spin configurations. Instead, statistical methods are used to approximate the behavior of the system.
 
 :p Why is a statistical approach necessary for large systems?
 ??x
-A statistical approach is necessary because examining all \( 2^N \) spin configurations becomes computationally infeasible as the number of particles increases significantly. Statistical methods provide a practical way to analyze such complex systems.
+A statistical approach is necessary because examining all $2^N$ spin configurations becomes computationally infeasible as the number of particles increases significantly. Statistical methods provide a practical way to analyze such complex systems.
 x??
 
 ---
@@ -60,11 +57,9 @@ x??
 Background context: The energy calculation involves summing up the interaction potential between neighboring spins and considering an external magnetic field.
 
 The equation for calculating the total energy is:
-\[ E_{\alpha_k} = -J(N-1)\sum_i s_i s_{i+1} - B \mu_b N \sum_i s_i \]
-
-:p How is the total energy of a spin configuration calculated in the Ising model?
+$$E_{\alpha_k} = -J(N-1)\sum_i s_i s_{i+1} - B \mu_b N \sum_i s_i$$:p How is the total energy of a spin configuration calculated in the Ising model?
 ??x
-The total energy \( E_{\alpha_k} \) is calculated by summing up the interaction potential between neighboring spins and considering the Zeeman term due to an external magnetic field. This involves iterating over each pair of nearest-neighbor spins and adding their contributions.
+The total energy $E_{\alpha_k}$ is calculated by summing up the interaction potential between neighboring spins and considering the Zeeman term due to an external magnetic field. This involves iterating over each pair of nearest-neighbor spins and adding their contributions.
 x??
 
 ---
@@ -103,44 +98,44 @@ x??
 
 ---
 #### Boltzmann Distribution
-The energy \( E_{\alpha j} \) of state \( \alpha j \) in a canonical ensemble is not constant but distributed according to the Boltzmann distribution: 
-\[ P(\alpha j) = \frac{e^{-E_{\alpha j}/k_BT}}{Z(T)}, \quad Z(T) = \sum_{\alpha j} e^{-E_{\alpha j}/k_BT}. \]
-Here, \( k_B \) is Boltzmann's constant, \( T \) is the temperature, and \( Z(T) \) is the partition function.
+The energy $E_{\alpha j}$ of state $\alpha j$ in a canonical ensemble is not constant but distributed according to the Boltzmann distribution:
+$$P(\alpha j) = \frac{e^{-E_{\alpha j}/k_BT}}{Z(T)}, \quad Z(T) = \sum_{\alpha j} e^{-E_{\alpha j}/k_BT}.$$
+
+Here,$k_B $ is Boltzmann's constant,$T $ is the temperature, and$Z(T)$ is the partition function.
 :p What is the Boltzmann distribution formula?
 ??x
-The Boltzmann distribution formula for a state \( \alpha j \) in a canonical ensemble is given by:
-\[ P(\alpha j) = \frac{e^{-E_{\alpha j}/k_BT}}{Z(T)}, \quad Z(T) = \sum_{\alpha j} e^{-E_{\alpha j}/k_BT}. \]
-This formula provides the probability of finding a system in state \( \alpha j \), where \( k_B \) is Boltzmann's constant, \( T \) is temperature, and \( Z(T) \) is the partition function.
+The Boltzmann distribution formula for a state $\alpha j$ in a canonical ensemble is given by:
+$$P(\alpha j) = \frac{e^{-E_{\alpha j}/k_BT}}{Z(T)}, \quad Z(T) = \sum_{\alpha j} e^{-E_{\alpha j}/k_BT}.$$
+
+This formula provides the probability of finding a system in state $\alpha j $, where $ k_B $ is Boltzmann's constant, $ T $ is temperature, and $ Z(T)$ is the partition function.
 x??
 
 ---
 #### Analytic Solution for 1D Ising Model
-For very large numbers of particles, the internal energy \( U = \langle E \rangle \) of a 1D Ising model can be derived as:
-\[ U J = -N \tanh\left(\frac{J}{k_BT}\right), \]
-with specific heat and magnetization expressions given by equations (17.8) and (17.9).
+For very large numbers of particles, the internal energy $U = \langle E \rangle$ of a 1D Ising model can be derived as:
+$$U J = -N \tanh\left(\frac{J}{k_BT}\right),$$with specific heat and magnetization expressions given by equations (17.8) and (17.9).
 :p What is the internal energy expression for a 1D Ising model?
 ??x
-The internal energy \( U = \langle E \rangle \) of a 1D Ising model can be expressed as:
-\[ U J = -N \tanh\left(\frac{J}{k_BT}\right). \]
+The internal energy $U = \langle E \rangle$ of a 1D Ising model can be expressed as:
+$$U J = -N \tanh\left(\frac{J}{k_BT}\right).$$
+
 This formula is derived for large numbers of particles and describes how the internal energy depends on temperature.
 x??
 
 ---
 #### Analytic Solution for 2D Ising Model
 The 2D Ising model also has an analytic solution, but it involves elliptic integrals. The spontaneous magnetization per particle can be described by:
-\[ \mathcal{M}(T) = \begin{cases} 
+$$\mathcal{M}(T) = \begin{cases} 
 0 & \text{if } T > T_c, \\
 \left(1 + z^2\right)^{\frac{1}{4}} \left(1 - 6z^2 + z^4\right)^{\frac{1}{8}} \sqrt{1 - z^2} & \text{if } T < T_c,
-\end{cases} \]
-where \( z = e^{-2J/k_BT} \) and \( kT_c \approx 2.269185 J \).
+\end{cases}$$where $ z = e^{-2J/k_BT}$and $ kT_c \approx 2.269185 J$.
 :p What is the expression for spontaneous magnetization in a 2D Ising model?
 ??x
 The expression for spontaneous magnetization per particle in a 2D Ising model is:
-\[ \mathcal{M}(T) = \begin{cases} 
+$$\mathcal{M}(T) = \begin{cases} 
 0 & \text{if } T > T_c, \\
 \left(1 + z^2\right)^{\frac{1}{4}} \left(1 - 6z^2 + z^4\right)^{\frac{1}{8}} \sqrt{1 - z^2} & \text{if } T < T_c,
-\end{cases} \]
-where \( z = e^{-2J/k_BT} \) and \( kT_c \approx 2.269185 J \). This describes the magnetization at different temperatures relative to the Curie temperature.
+\end{cases}$$where $ z = e^{-2J/k_BT}$and $ kT_c \approx 2.269185 J$. This describes the magnetization at different temperatures relative to the Curie temperature.
 x??
 
 ---
@@ -289,7 +284,7 @@ Background context explaining the role of temperature in simulations and how it 
 
 :p How does the Metropolis algorithm handle changes in temperature during simulation?
 ??x
-The Metropolis algorithm allows for changes in temperature by modifying the value of \( k_B T \), which scales the energy differences. This enables the study of temperature dependence on thermodynamic quantities by repeating the process at different temperatures.
+The Metropolis algorithm allows for changes in temperature by modifying the value of $k_B T$, which scales the energy differences. This enables the study of temperature dependence on thermodynamic quantities by repeating the process at different temperatures.
 
 ```java
 // Example of adjusting temperature and re-running the simulation
@@ -358,14 +353,15 @@ x??
 ---
 
 #### Internal Energy and Magnetization
-Background context: The internal energy \(U(T)\) of a system at thermal equilibrium can be calculated as the average value of the energy. For an Ising model, this involves summing up the interactions between neighboring spins.
+Background context: The internal energy $U(T)$ of a system at thermal equilibrium can be calculated as the average value of the energy. For an Ising model, this involves summing up the interactions between neighboring spins.
 
-:p How do you calculate the internal energy \(U\) for an Ising model?
+:p How do you calculate the internal energy $U$ for an Ising model?
 ??x
-The internal energy \(U\) is calculated by averaging the energy over many trials:
-\[ U(T) = \langle E \rangle \]
-Where the average is taken over a system in equilibrium. The specific heat \(C\) can be computed from the fluctuations in energy, given by:
-\[ C = \frac{1}{N^2} \left( \langle E^2 \rangle - \langle E \rangle^2 \right) \frac{1}{k_B T^2} \]
+The internal energy $U$ is calculated by averaging the energy over many trials:
+$$U(T) = \langle E \rangle$$
+
+Where the average is taken over a system in equilibrium. The specific heat $C$ can be computed from the fluctuations in energy, given by:
+$$C = \frac{1}{N^2} \left( \langle E^2 \rangle - \langle E \rangle^2 \right) \frac{1}{k_B T^2}$$
 
 Example code to calculate internal energy and specific heat:
 ```java
@@ -395,11 +391,11 @@ x??
 ---
 
 #### Equilibration and Fluctuations
-Background context: At low temperatures, the system has larger fluctuations due to the alignment of most spins. High \(k_BT\) values can lead to spontaneous flipping of a large number of spins, indicating instability.
+Background context: At low temperatures, the system has larger fluctuations due to the alignment of most spins. High $k_BT$ values can lead to spontaneous flipping of a large number of spins, indicating instability.
 
 :p What is the relationship between temperature and spin fluctuations in the Ising model?
 ??x
-At high temperatures or for small numbers of atoms, there are large fluctuations as the system is in a more disordered state. At lower temperatures, the system has smaller fluctuations due to most spins aligning. Higher \(k_BT\) values increase the likelihood of spontaneous flipping of many spins.
+At high temperatures or for small numbers of atoms, there are large fluctuations as the system is in a more disordered state. At lower temperatures, the system has smaller fluctuations due to most spins aligning. Higher $k_BT$ values increase the likelihood of spontaneous flipping of many spins.
 
 Example code snippet:
 ```java
@@ -427,7 +423,7 @@ Background context: Running the simulation multiple times with different seeds a
 
 :p How can you ensure accurate thermodynamic quantities by reducing statistical fluctuations?
 ??x
-To ensure accurate thermodynamic quantities, run the simulation multiple times with different random seeds. Taking the average of these runs reduces statistical fluctuations, providing a more reliable result. This approach is particularly useful when dealing with small \(k_BT\) values where equilibration might be slow.
+To ensure accurate thermodynamic quantities, run the simulation multiple times with different random seeds. Taking the average of these runs reduces statistical fluctuations, providing a more reliable result. This approach is particularly useful when dealing with small $k_BT$ values where equilibration might be slow.
 
 Example code to perform multiple simulations:
 ```java
@@ -452,11 +448,11 @@ x??
 ---
 
 #### Small vs. Large N Simulations
-Background context: The simulations for small \(N\) may be realistic, but they do not necessarily agree with statistical mechanics, which assumes \(N \approx \infty\). For practical purposes, an \(N \approx 2000\) is considered close to infinity.
+Background context: The simulations for small $N $ may be realistic, but they do not necessarily agree with statistical mechanics, which assumes$N \approx \infty $. For practical purposes, an $ N \approx 2000$ is considered close to infinity.
 
-:p Do large \(N\) simulations better agree with analytic results compared to small \(N\)?
+:p Do large $N $ simulations better agree with analytic results compared to small$N$?
 ??x
-For larger \(N\), the agreement with analytic results for thermodynamic limits is generally better because statistical fluctuations are reduced as \(N\) increases. This means that the behavior of the system becomes more predictable and aligns closer with theoretical predictions.
+For larger $N $, the agreement with analytic results for thermodynamic limits is generally better because statistical fluctuations are reduced as $ N$ increases. This means that the behavior of the system becomes more predictable and aligns closer with theoretical predictions.
 
 ```java
 // Pseudocode for checking agreement between simulations and theory
@@ -495,12 +491,11 @@ x??
 
 ---
 
-#### Plot of Internal Energy vs. \(k_B T\)
-Background context: The internal energy \(U\) as a function of \(k_B T\) should be compared with the analytic result for deeper understanding and validation.
+#### Plot of Internal Energy vs.$k_B T $ Background context: The internal energy$U $ as a function of$k_B T$ should be compared with the analytic result for deeper understanding and validation.
 
 :p What plot can we make to compare internal energy and its theoretical prediction?
 ??x
-Plot the internal energy \(U\) as a function of \(k_B T\) and compare it with the analytic result given by equation (17.6).
+Plot the internal energy $U $ as a function of$k_B T$ and compare it with the analytic result given by equation (17.6).
 
 ```java
 // Pseudocode for plotting internal energy vs. kBT
@@ -517,12 +512,11 @@ x??
 
 ---
 
-#### Magnetization vs. \(k_B T\)
-Background context: The magnetization \(\mathcal{M}\) as a function of \(k_B T\) should be compared with the analytic result to see how it behaves at different temperatures.
+#### Magnetization vs.$k_B T $ Background context: The magnetization$\mathcal{M}$ as a function of $k_B T$ should be compared with the analytic result to see how it behaves at different temperatures.
 
 :p What plot can we make to compare magnetization and its theoretical prediction?
 ??x
-Plot the magnetization \(\mathcal{M}\) as a function of \(k_B T\) and compare it with the analytic result provided by equation (17.6).
+Plot the magnetization $\mathcal{M}$ as a function of $k_B T$ and compare it with the analytic result provided by equation (17.6).
 
 ```java
 // Pseudocode for plotting magnetization vs. kBT
@@ -540,11 +534,11 @@ x??
 ---
 
 #### Energy Fluctuations and Specific Heat
-Background context: The energy fluctuations \(U^2\) and specific heat \(C\) should be computed and compared with the theoretical results.
+Background context: The energy fluctuations $U^2 $ and specific heat$C$ should be computed and compared with the theoretical results.
 
 :p How can we compute and compare energy fluctuations and specific heat?
 ??x
-Compute the energy fluctuations \(U^2\) using equation (17.16) and the specific heat \(C\) using equation (17.17). Then, compare these values with their analytic counterparts given by equation (17.8).
+Compute the energy fluctuations $U^2 $ using equation (17.16) and the specific heat$C$ using equation (17.17). Then, compare these values with their analytic counterparts given by equation (17.8).
 
 ```java
 // Pseudocode for computing energy fluctuations and specific heat
@@ -603,7 +597,7 @@ Background context: Extend the ferromagnetic spin-spin interaction to nearest ne
 
 :p What steps are involved in extending the 1D model to a 2D Ising model?
 ??x
-Extend the ferromagnetic spin-spin interaction from the 1D model to include nearest neighbors in a two-dimensional square lattice. For simplicity, start with small \(N\) and use periodic boundary conditions.
+Extend the ferromagnetic spin-spin interaction from the 1D model to include nearest neighbors in a two-dimensional square lattice. For simplicity, start with small $N$ and use periodic boundary conditions.
 
 ```java
 // Pseudocode for creating a 2D Ising model
@@ -670,7 +664,7 @@ Background context: The Wang-Landau sampling (WLS) algorithm is an alternative t
 
 :p What is the Wang–Landau Sampling algorithm?
 ??x
-The Wang-Landau Sampling (WLS) algorithm uses a Boltzmann distribution but focuses on energy dependence, starting with an initial probability that a system at temperature \(T\) will contain a certain energy distribution. It computes the density of states \(g(E)\), which is then used to calculate thermodynamic quantities without needing repeated simulations for each temperature.
+The Wang-Landau Sampling (WLS) algorithm uses a Boltzmann distribution but focuses on energy dependence, starting with an initial probability that a system at temperature $T $ will contain a certain energy distribution. It computes the density of states$g(E)$, which is then used to calculate thermodynamic quantities without needing repeated simulations for each temperature.
 
 ```java
 // Pseudocode for Wang-Landau Sampling
@@ -703,22 +697,20 @@ x??
 
 #### Wang–Landau Sampling Implementation
 
-Wang-Landau (WLS) sampling is a technique used to estimate the density of states \(g(E)\) for a given system. This method is particularly useful when direct calculation of \(g(E)\) is computationally expensive or infeasible.
+Wang-Landau (WLS) sampling is a technique used to estimate the density of states $g(E)$ for a given system. This method is particularly useful when direct calculation of $g(E)$ is computationally expensive or infeasible.
 
-In WLS, we perform a random walk through energy configurations and record how many times each state is visited. The goal is to make the histogram of visited states, \(H(E)\), flat by adjusting the acceptance probability inversely proportional to an estimate of \(g(E)\).
+In WLS, we perform a random walk through energy configurations and record how many times each state is visited. The goal is to make the histogram of visited states,$H(E)$, flat by adjusting the acceptance probability inversely proportional to an estimate of $ g(E)$.
 
-The acceptance probability for transitioning from one energy state \(E_i\) to another is given by:
-\[
-\Pi(E_{i+1} \rightarrow E_i) = \frac{1}{g(E_{i+1})}
-\]
+The acceptance probability for transitioning from one energy state $E_i$ to another is given by:
+$$\Pi(E_{i+1} \rightarrow E_i) = \frac{1}{g(E_{i+1})}$$
 
-The algorithm iteratively adjusts the factor \(f\) that multiplies the current estimate of \(g(E)\) until it converges to a nearly flat histogram, indicating an equal visitation rate across all energy states.
+The algorithm iteratively adjusts the factor $f $ that multiplies the current estimate of$g(E)$ until it converges to a nearly flat histogram, indicating an equal visitation rate across all energy states.
 
 :p How does Wang-Landau Sampling work?
 ??x
-Wang-Landau sampling works by using a random walk through the energy space. The goal is to make the histogram \(H(E)\) of visited energy states flat, meaning that each state is visited approximately equally often. To achieve this, the algorithm adjusts the acceptance probability for transitions between energy states based on an estimate of the density of states \(g(E)\).
+Wang-Landau sampling works by using a random walk through the energy space. The goal is to make the histogram $H(E)$ of visited energy states flat, meaning that each state is visited approximately equally often. To achieve this, the algorithm adjusts the acceptance probability for transitions between energy states based on an estimate of the density of states $g(E)$.
 
-The initial value of \(g(E_i)\) is set arbitrarily and then multiplied by a factor \(f > 1\). This increases the likelihood of reaching less probable configurations. As the histogram \(H(E_i)\) becomes flatter, \(f\) is gradually decreased until it approaches 1, indicating that all energy states have been visited with approximately equal frequency.
+The initial value of $g(E_i)$ is set arbitrarily and then multiplied by a factor $f > 1$. This increases the likelihood of reaching less probable configurations. As the histogram $ H(E_i)$ becomes flatter,$ f$ is gradually decreased until it approaches 1, indicating that all energy states have been visited with approximately equal frequency.
 
 The algorithm can be summarized in pseudocode as follows:
 
@@ -750,40 +742,30 @@ x??
 
 #### 2D Ising Model Energy Calculation
 
-In the context of the 2D Ising model on an \(8 \times 8\) lattice, Wang-Landau sampling is used to compute the energy differences when flipping spins.
+In the context of the 2D Ising model on an $8 \times 8$ lattice, Wang-Landau sampling is used to compute the energy differences when flipping spins.
 
 For a linear sequence of eight spins with periodic boundary conditions:
-\[
--E_k = \sigma_0 \sigma_1 + \sigma_1 \sigma_2 + \sigma_2 \sigma_3 + \sigma_3 \sigma_4 + \sigma_4 \sigma_5 + \sigma_5 \sigma_6 + \sigma_6 \sigma_7 + \sigma_7 \sigma_0
-\]
+$$-E_k = \sigma_0 \sigma_1 + \sigma_1 \sigma_2 + \sigma_2 \sigma_3 + \sigma_3 \sigma_4 + \sigma_4 \sigma_5 + \sigma_5 \sigma_6 + \sigma_6 \sigma_7 + \sigma_7 \sigma_0$$
 
 Flipping spin 5 changes the energy by:
-\[
--E_{k+1} = \sigma_0 \sigma_1 + \sigma_1 \sigma_2 + \sigma_2 \sigma_3 + \sigma_3 \sigma_4 - \sigma_4 \sigma_5 - \sigma_5 \sigma_6 + \sigma_6 \sigma_7 + \sigma_7 \sigma_0
-\]
+$$-E_{k+1} = \sigma_0 \sigma_1 + \sigma_1 \sigma_2 + \sigma_2 \sigma_3 + \sigma_3 \sigma_4 - \sigma_4 \sigma_5 - \sigma_5 \sigma_6 + \sigma_6 \sigma_7 + \sigma_7 \sigma_0$$
 
 The energy difference is then:
-\[
-\Delta E = E_{k+1} - E_k = 2(\sigma_4 + \sigma_6) \sigma_5
-\]
+$$\Delta E = E_{k+1} - E_k = 2(\sigma_4 + \sigma_6) \sigma_5$$
 
-For the 2D problem with spins on a lattice, flipping spin \((i,j)\) changes the energy by:
-\[
-\Delta E = 2 \sigma_{i,j} (\sigma_{i+1,j} + \sigma_{i-1,j} + \sigma_{i,j+1} + \sigma_{i,j-1})
-\]
+For the 2D problem with spins on a lattice, flipping spin $(i,j)$ changes the energy by:
+$$\Delta E = 2 \sigma_{i,j} (\sigma_{i+1,j} + \sigma_{i-1,j} + \sigma_{i,j+1} + \sigma_{i,j-1})$$
 
-The produced histogram \(H(E_i)\) and entropy \(S(T)\) are given in Figure 17.5.
+The produced histogram $H(E_i)$ and entropy $S(T)$ are given in Figure 17.5.
 
 :p What is the energy change when flipping a spin on an 8x8 lattice?
 ??x
-When flipping a spin at position \((i, j)\) on an 8x8 lattice, the change in energy \(\Delta E\) for the Ising model can be calculated as:
-\[
-\Delta E = 2 \sigma_{i,j} (\sigma_{i+1,j} + \sigma_{i-1,j} + \sigma_{i,j+1} + \sigma_{i,j-1})
-\]
+When flipping a spin at position $(i, j)$ on an 8x8 lattice, the change in energy $\Delta E$ for the Ising model can be calculated as:
+$$\Delta E = 2 \sigma_{i,j} (\sigma_{i+1,j} + \sigma_{i-1,j} + \sigma_{i,j+1} + \sigma_{i,j-1})$$
 
-This formula represents the difference in energy due to the spin flip, considering its nearest neighbors. The factor 2 comes from the interaction strength \(J = 1\) between spins.
+This formula represents the difference in energy due to the spin flip, considering its nearest neighbors. The factor 2 comes from the interaction strength $J = 1$ between spins.
 
-The exact value of \(\Delta E\) depends on the current state of the neighboring spins and the flipped spin itself.
+The exact value of $\Delta E$ depends on the current state of the neighboring spins and the flipped spin itself.
 x??
 
 ---
@@ -792,30 +774,22 @@ x??
 
 Path integral quantum mechanics is a formulation that connects classical mechanics with quantum mechanics. It was proposed by Richard Feynman as an alternative to Schrödinger's theory, aiming for a more direct connection between classical and quantum dynamics.
 
-Feynman suggested that the path integral approach could be derived from Hamilton's principle of least action. The key idea is that the wave function \(\psi(x_b, t_b)\) describing the propagation of a free particle from point \(a = (x_a, t_a)\) to point \(b = (x_b, t_b)\) can be expressed as:
-\[
-\psi(x_b, t_b) = \int d x_a G(x_b, t_b; x_a, t_a) \psi(x_a, t_a)
-\]
+Feynman suggested that the path integral approach could be derived from Hamilton's principle of least action. The key idea is that the wave function $\psi(x_b, t_b)$ describing the propagation of a free particle from point $a = (x_a, t_a)$ to point $b = (x_b, t_b)$ can be expressed as:
+$$\psi(x_b, t_b) = \int d x_a G(x_b, t_b; x_a, t_a) \psi(x_a, t_a)$$
 
-Here, \(G(x_b, t_b; x_a, t_a)\) is the Green's function or propagator:
-\[
-G(x_b, t_b; x_a, t_a) = \sqrt{\frac{m}{2\pi i (t_b - t_a)}} \exp\left[ \frac{i m (x_b - x_a)^2}{2 (t_b - t_a)} \right]
-\]
-
-:p What is the relationship between the classical trajectory and the quantum mechanical wave function in path integral quantum mechanics?
+Here,$G(x_b, t_b; x_a, t_a)$ is the Green's function or propagator:
+$$G(x_b, t_b; x_a, t_a) = \sqrt{\frac{m}{2\pi i (t_b - t_a)}} \exp\left[ \frac{i m (x_b - x_a)^2}{2 (t_b - t_a)} \right]$$:p What is the relationship between the classical trajectory and the quantum mechanical wave function in path integral quantum mechanics?
 ??x
-In path integral quantum mechanics, the quantum mechanical wave function \(\psi(x_b, t_b)\) describing the propagation of a free particle from point \(a = (x_a, t_a)\) to point \(b = (x_b, t_b)\) is related to its classical trajectory through the Green's function or propagator \(G\):
+In path integral quantum mechanics, the quantum mechanical wave function $\psi(x_b, t_b)$ describing the propagation of a free particle from point $a = (x_a, t_a)$ to point $b = (x_b, t_b)$ is related to its classical trajectory through the Green's function or propagator $G$:
 
-\[
-\psi(x_b, t_b) = \int d x_a G(x_b, t_b; x_a, t_a) \psi(x_a, t_a)
-\]
+$$\psi(x_b, t_b) = \int d x_a G(x_b, t_b; x_a, t_a) \psi(x_a, t_a)$$
 
-The Green's function \(G\) connects the initial state \(\psi(x_a, t_a)\) to the final state \(\psi(x_b, t_b)\). It accounts for all possible paths the particle could take between the two points in spacetime.
+The Green's function $G $ connects the initial state$\psi(x_a, t_a)$ to the final state $\psi(x_b, t_b)$. It accounts for all possible paths the particle could take between the two points in spacetime.
 
 Mathematically:
-- The path integral formulation sums over all possible paths from \(a\) to \(b\).
+- The path integral formulation sums over all possible paths from $a $ to$b$.
 - Each path contributes a term involving the action of that path.
-- The propagator \(G\) encapsulates this summation, effectively integrating over these paths weighted by their action.
+- The propagator $G$ encapsulates this summation, effectively integrating over these paths weighted by their action.
 
 This approach allows for a more intuitive connection between classical and quantum mechanics, as it considers all possible trajectories rather than just the classical one.
 x??
@@ -863,17 +837,16 @@ Background context explaining the concept. The most general motion of a physical
 
 :p How does the action principle relate to Newton’s differential equations?
 ??x
-The action principle relates to Newton's differential equations by stating that the path followed by a particle in classical mechanics must minimize (or maximize) the action \( S \). This means that for a free particle, the classical trajectory is the one where the action is minimized. If we assume no potential energy (\( V = 0 \)), the action simplifies to:
+The action principle relates to Newton's differential equations by stating that the path followed by a particle in classical mechanics must minimize (or maximize) the action $S $. This means that for a free particle, the classical trajectory is the one where the action is minimized. If we assume no potential energy ($ V = 0$), the action simplifies to:
 
-\[ S[b,a] = \frac{m}{2} \int_{t_a}^{t_b} (\dot{x})^2 dt = \frac{m}{2} \frac{(x_b - x_a)^2}{t_b - t_a} \]
+$$S[b,a] = \frac{m}{2} \int_{t_a}^{t_b} (\dot{x})^2 dt = \frac{m}{2} \frac{(x_b - x_a)^2}{t_b - t_a}$$
 
-This is equivalent to Newton's second law if the action \( S \) is expressed as a line integral of the Lagrangian along the classical trajectory:
+This is equivalent to Newton's second law if the action $S$ is expressed as a line integral of the Lagrangian along the classical trajectory:
+$$S[x(t)] = \int_{t_a}^{t_b} L[x(t), \dot{x}(t)] dt$$where$$
 
-\[ S[x(t)] = \int_{t_a}^{t_b} L[x(t), \dot{x}(t)] dt \]
-where
-\[ L = T - V \]
+L = T - V$$
 
-Here, \( T \) is the kinetic energy and \( V \) is the potential energy.
+Here,$T $ is the kinetic energy and$V$ is the potential energy.
 
 ```java
 // Pseudocode for action calculation in classical mechanics
@@ -893,19 +866,18 @@ x??
 ---
 
 #### Propagator and Classical Action Connection
-Background context explaining the concept. The classical action for a free particle, \( S[b,a] \), is related to the free-particle propagator by:
+Background context explaining the concept. The classical action for a free particle,$S[b,a]$, is related to the free-particle propagator by:
 
-\[ G(b,a) = \sqrt{\frac{m}{2\pi i (t_b - t_a)}} e^{iS[b,a]/\hbar} \]
+$$G(b,a) = \sqrt{\frac{m}{2\pi i (t_b - t_a)}} e^{iS[b,a]/\hbar}$$
 
 This equation represents the connection between quantum mechanics and Hamilton’s principle.
 
 :p How does Feynman use the classical action in his path integral formulation?
 ??x
-Feynman uses the classical action to formulate a path integral approach where the propagator \( G(b, a) \) is expressed as a weighted sum of exponentials, each corresponding to an action for a path connecting points A and B. This is given by:
+Feynman uses the classical action to formulate a path integral approach where the propagator $G(b, a)$ is expressed as a weighted sum of exponentials, each corresponding to an action for a path connecting points A and B. This is given by:
+$$G(b,a) = \sum_{\text{paths}} e^{iS[b,a]/\hbar}$$
 
-\[ G(b,a) = \sum_{\text{paths}} e^{iS[b,a]/\hbar} \]
-
-Where \( S \) is the classical action for a path.
+Where $S$ is the classical action for a path.
 
 ```java
 // Pseudocode illustrating the path integral formulation
@@ -936,11 +908,11 @@ x??
 ---
 
 #### Quantum Mechanics and Statistical Nature
-Background context explaining the concept. In quantum mechanics, Feynman’s approach views the wave function as summing over all possible paths that a particle could take from point A to B. Each path has an associated probability amplitude, which is given by \( e^{iS/\hbar} \), where \( S \) is the classical action for that path.
+Background context explaining the concept. In quantum mechanics, Feynman’s approach views the wave function as summing over all possible paths that a particle could take from point A to B. Each path has an associated probability amplitude, which is given by $e^{iS/\hbar}$, where $ S$ is the classical action for that path.
 
 :p How does Feynman incorporate the statistical nature of quantum mechanics into his formulation?
 ??x
-Feynman incorporates the statistical nature of quantum mechanics by assigning a probability amplitude to each possible path that a particle could take from point A to B. The overall probability amplitude for finding the particle at point B is the sum over all paths, weighted by \( e^{iS/\hbar} \), where \( S \) is the classical action for that path.
+Feynman incorporates the statistical nature of quantum mechanics by assigning a probability amplitude to each possible path that a particle could take from point A to B. The overall probability amplitude for finding the particle at point B is the sum over all paths, weighted by $e^{iS/\hbar}$, where $ S$ is the classical action for that path.
 
 ```java
 // Pseudocode illustrating the quantum path integral approach
@@ -973,42 +945,35 @@ x??
 
 #### Path Integral and Feynman's Postulate
 
-Feynman’s path-integral postulate suggests summing over all possible paths to calculate physical quantities. The Green’s function \( G(x, t; x_0, 0) \) represents the probability amplitude of a particle going from position \( x_0 \) at time \( t = 0 \) to position \( x \) at later times.
+Feynman’s path-integral postulate suggests summing over all possible paths to calculate physical quantities. The Green’s function $G(x, t; x_0, 0)$ represents the probability amplitude of a particle going from position $ x_0 $ at time $ t = 0 $ to position $x$ at later times.
 
 :p What is Feynman's path-integral postulate about?
 ??x
-Feynman’s path-integral postulate means that we sum over all paths connecting two points A and B to obtain the Green’s function \( G(b, a) \). This involves weighting each path by the exponential of its action. The sum not only includes individual links in one path but also sums over different paths to produce variations required by Hamilton’s principle.
+Feynman’s path-integral postulate means that we sum over all paths connecting two points A and B to obtain the Green’s function $G(b, a)$. This involves weighting each path by the exponential of its action. The sum not only includes individual links in one path but also sums over different paths to produce variations required by Hamilton’s principle.
 x??
 
 ---
 
 #### Bound-State Wave Function
 
-The bound-state wave function can be derived using an eigenfunction expansion approach, where \( \psi(x,t) = \sum_{n=0}^{\infty} c_n e^{-iE_nt} \psi_n(x) \). This involves expanding the wave function in terms of a complete orthonormal set of eigenfunctions.
+The bound-state wave function can be derived using an eigenfunction expansion approach, where $\psi(x,t) = \sum_{n=0}^{\infty} c_n e^{-iE_nt} \psi_n(x)$. This involves expanding the wave function in terms of a complete orthonormal set of eigenfunctions.
 
 :p How is the bound-state wave function derived using an eigenfunction expansion?
 ??x
-The bound-state wave function can be derived by first expressing the solution \( \psi(x,t) \) as a sum over eigenfunctions. Each eigenfunction \( \psi_n(x) \) corresponds to an energy level \( E_n \). The coefficients \( c_n \) are determined from the initial conditions using orthogonality relations.
+The bound-state wave function can be derived by first expressing the solution $\psi(x,t)$ as a sum over eigenfunctions. Each eigenfunction $\psi_n(x)$ corresponds to an energy level $ E_n $. The coefficients $ c_n$ are determined from the initial conditions using orthogonality relations.
 
 The formal expression is:
-\[
-\psi(x,t) = \sum_{n=0}^{\infty} c_n e^{-iE_nt} \psi_n(x)
-\]
-where
-\[
-c_n = \int dx \, \psi_n^*(x) \psi(x,t=0).
-\]
+$$\psi(x,t) = \sum_{n=0}^{\infty} c_n e^{-iE_nt} \psi_n(x)$$where$$c_n = \int dx \, \psi_n^*(x) \psi(x,t=0).$$
 
-By substituting the value of \( c_n \), we get:
-\[
-\psi(x,t) = \sum_{n=0}^{\infty} \left( \int dx \, \psi_n^*(x_0) \psi_n(x) e^{-iE_nt} \right) \psi(x_0, t=0).
-\]
+By substituting the value of $c_n$, we get:
+$$\psi(x,t) = \sum_{n=0}^{\infty} \left( \int dx \, \psi_n^*(x_0) \psi_n(x) e^{-iE_nt} \right) \psi(x_0, t=0).$$
 
 This leads to the eigenfunction expansion of the Green’s function:
-\[
-G(x,t; x_0, 0) = \sum_{n=0}^{\infty} |\psi_n(x)|^2 e^{-E_n t}.
-\]
-Taking \( t \rightarrow -i\tau \), we obtain the ground state wave function in the limit of long imaginary times.
+$$
+
+G(x,t; x_0, 0) = \sum_{n=0}^{\infty} |\psi_n(x)|^2 e^{-E_n t}.$$
+
+Taking $t \rightarrow -i\tau$, we obtain the ground state wave function in the limit of long imaginary times.
 
 ```java
 public class WaveFunction {
@@ -1029,26 +994,20 @@ x??
 
 #### Lattice Path Integration
 
-Lattice path integration involves discretizing space and time into a grid. By dividing the time interval between two points A and B into N equal steps of size \( \epsilon \), each step is labeled with an index \( j \). The action for each link can be approximated using Euler’s method.
+Lattice path integration involves discretizing space and time into a grid. By dividing the time interval between two points A and B into N equal steps of size $\epsilon $, each step is labeled with an index $ j$. The action for each link can be approximated using Euler’s method.
 
 :p What is lattice path integration?
 ??x
-Lattice path integration involves discretizing space-time into a grid. By dividing the time interval between two points A and B into N equal steps of size \( \epsilon \), each step is labeled with an index \( j \). The action for each link can be approximated using Euler’s method.
+Lattice path integration involves discretizing space-time into a grid. By dividing the time interval between two points A and B into N equal steps of size $\epsilon $, each step is labeled with an index $ j$. The action for each link can be approximated using Euler’s method.
 
-The lattice position at time \( t_j \) is given by:
-\[
-t_j = t_a + j \epsilon, \quad (j=0,N).
-\]
+The lattice position at time $t_j$ is given by:
+$$t_j = t_a + j \epsilon, \quad (j=0,N).$$
 
 The position on the lattice is determined as follows:
-\[
-dx_j/dt \approx x_j - x_{j-1} / \epsilon.
-\]
-The action \( S[j+1,j] \) for each link can be approximated by:
-\[
-S[j+1,j] = L(x_j, dx_j/dt) \epsilon,
-\]
-where the Lagrangian \( L \) is assumed to be constant over each link.
+$$dx_j/dt \approx x_j - x_{j-1} / \epsilon.$$
+
+The action $S[j+1,j]$ for each link can be approximated by:
+$$S[j+1,j] = L(x_j, dx_j/dt) \epsilon,$$where the Lagrangian $ L$ is assumed to be constant over each link.
 
 ```java
 public class LatticePath {
@@ -1071,30 +1030,22 @@ x??
 
 #### Reversal of Kinetic Energy Sign
 
-The propagator \( G(x,t; x_0, 0) \) is the sum over all paths connecting A to B. The action for each path is given by an integral over that path. For ground state wave functions, this expression is evaluated with negative imaginary time.
+The propagator $G(x,t; x_0, 0)$ is the sum over all paths connecting A to B. The action for each path is given by an integral over that path. For ground state wave functions, this expression is evaluated with negative imaginary time.
 
 :p How does the sign of kinetic energy affect the propagator?
 ??x
-The sign of kinetic energy in the Lagrangian \( L \) can be reversed to express the path integral using the Hamiltonian \( H \). The key step is recognizing that the Lagrangian for real positive time \( t \) and imaginary time \( \tau = -it \) are related as follows:
+The sign of kinetic energy in the Lagrangian $L $ can be reversed to express the path integral using the Hamiltonian$H $. The key step is recognizing that the Lagrangian for real positive time$ t $and imaginary time$\tau = -it$ are related as follows:
 
-\[
-L(x, dx/dt) = \frac{1}{2} m (dx/dt)^2 - V(x)
-\]
-becomes
-\[
-L(x, d x / d \tau) = - \left( \frac{1}{2} m (d x / d \tau)^2 + V(x) \right).
-\]
+$$L(x, dx/dt) = \frac{1}{2} m (dx/dt)^2 - V(x)$$becomes$$
 
-This implies that the Lagrangian evaluated at \( t = \tau \) is related to the negative Hamiltonian:
-\[
-H(x, dx/dt) = \frac{1}{2} m (dx/dt)^2 + V(x),
-\]
-so
-\[
-L(x, d x / d \tau) = - H(x, d x / d \tau).
-\]
+L(x, d x / d \tau) = - \left( \frac{1}{2} m (d x / d \tau)^2 + V(x) \right).$$
 
-This allows us to write the time path integral of \( L \) as a Hamiltonian path integral over imaginary time \( \tau \).
+This implies that the Lagrangian evaluated at $t = \tau$ is related to the negative Hamiltonian:
+$$H(x, dx/dt) = \frac{1}{2} m (dx/dt)^2 + V(x),$$so$$
+
+L(x, d x / d \tau) = - H(x, d x / d \tau).$$
+
+This allows us to write the time path integral of $L $ as a Hamiltonian path integral over imaginary time$\tau$.
 
 ```java
 public class PathIntegral {

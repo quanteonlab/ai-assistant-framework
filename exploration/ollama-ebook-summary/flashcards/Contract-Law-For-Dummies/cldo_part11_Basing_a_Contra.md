@@ -152,7 +152,7 @@ x??
 
 Background context: When a victim of fraud can prove that the other party intentionally misled her, she has two potential remedies—contract fraud and tort fraud. The choice between these remedies depends on the client's desired outcome and the language used in the contract.
 
-If the contract says "Business B warrants that it has assets worth $300,000," then Business A can get damages if the warranty is not true. If the contract says, "Business B represents that it has assets worth $300,000," then Business A can avoid the contract if the representation is not true.
+If the contract says "Business B warrants that it has assets worth $300,000," then Business A can get damages if the warranty is not true. If the contract says, "Business B represents that it has assets worth$300,000," then Business A can avoid the contract if the representation is not true.
 
 Many drafters use the phrase "warrants and represents" to preserve a choice of remedies.
 
@@ -366,7 +366,7 @@ A court evaluates several factors to determine unconscionability in a unilateral
 1. **Known vs Unknown Mistakes**: If the mistaken party was aware of the error but proceeded anyway, it might be harder to argue for relief.
 2. **Market Context**: The relative bids or offers made by other parties can indicate whether the mistaken bid was reasonable or clearly out of line.
 
-For example, if a subcontractor bids $10,000 and the contractor accepts without realizing the error, but another bidder submitted a $90,000 bid, the court may find it unconscionable to hold the subcontractor to the lower price.
+For example, if a subcontractor bids $10,000 and the contractor accepts without realizing the error, but another bidder submitted a$90,000 bid, the court may find it unconscionable to hold the subcontractor to the lower price.
 x??
 
 ---

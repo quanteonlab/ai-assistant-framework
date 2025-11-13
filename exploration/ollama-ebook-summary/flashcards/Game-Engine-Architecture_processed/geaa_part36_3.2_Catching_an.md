@@ -770,7 +770,7 @@ enum { \
     ASSERT_GLUE(g_assert_fail_, __LINE__) = 1 / (int)(..(expr)) \
 }
 ```
-The macro constructs an enumeration with the name `g_assert_fail_` followed by a line number and sets its value to \( \frac{1}{\text{(result of expr)}} \). If `expr` is true, this evaluates to 1.0, which is fine. If `expr` is false, it attempts to evaluate \( \frac{1}{0} \), causing the compiler to fail.
+The macro constructs an enumeration with the name `g_assert_fail_` followed by a line number and sets its value to $\frac{1}{\text{(result of expr)}}$. If `expr` is true, this evaluates to 1.0, which is fine. If `expr` is false, it attempts to evaluate $\frac{1}{0}$, causing the compiler to fail.
 
 ```cpp
 // Example usage
@@ -922,18 +922,18 @@ x??
 ---
 
 #### Two's Complement Notation
-Background context: Most microprocessors use two's complement notation for representing integers, which simplifies arithmetic operations and ensures only one representation of zero. The notation represents positive numbers from 0 to \(2^{n-1}-1\) and negative numbers from \(-2^{n-1}\) to \(-(2^n - 1)\), where \(n\) is the number of bits.
+Background context: Most microprocessors use two's complement notation for representing integers, which simplifies arithmetic operations and ensures only one representation of zero. The notation represents positive numbers from 0 to $2^{n-1}-1 $ and negative numbers from$-2^{n-1}$ to $-(2^n - 1)$, where $ n$ is the number of bits.
 
 For example, in a 32-bit system:
-- Positive integers range from 0x00000000 (0) to 0x7FFFFFFF (\(2^{31}-1\)).
-- Negative integers range from 0x80000000 (\(-2^{31}\)) to 0xFFFFFFFF (\(-1\)), where the most significant bit (MSB) is set for negative numbers.
+- Positive integers range from 0x00000000 (0) to 0x7FFFFFFF ($2^{31}-1$).
+- Negative integers range from 0x80000000 ($-2^{31}$) to 0xFFFFFFFF ($-1$), where the most significant bit (MSB) is set for negative numbers.
 
 :p What are the characteristics of two's complement notation?
 ??x
 Two's complement notation ensures that:
 - There is only one representation of zero.
-- Positive integers range from \(0\) to \((2^n - 1)\).
-- Negative integers range from \(-(2^{n-1})\) to \(-(2^n - 1)\), where the MSB being set indicates a negative number.
+- Positive integers range from $0 $ to$(2^n - 1)$.
+- Negative integers range from $-(2^{n-1})$ to $-(2^n - 1)$, where the MSB being set indicates a negative number.
 
 For example, in a 32-bit system:
 - Positive integers: 0x00000000 (0) to 0x7FFFFFFF (2,147,483,647).
@@ -958,20 +958,17 @@ x??
 Background context: Fixed-point notation is used to represent fractional numbers by dividing the integer into a magnitude part and a fraction part. The position of the binary point (decimal point) is fixed, meaning that a certain number of bits are dedicated to the whole number part and the rest for the fractional part.
 
 For instance, in a 32-bit system with 16 bits for magnitude and 15 bits for the fraction:
-- Magnitude: Represents values from \(-32768\) to \(32767\).
-- Fraction: Represents values from \(0.00390625\) to \(1 - 0.00390625 = 0.99609375\).
+- Magnitude: Represents values from $-32768 $ to$32767$.
+- Fraction: Represents values from $0.00390625 $ to$1 - 0.00390625 = 0.99609375$.
 
 :p What is fixed-point notation used for?
 ??x
 Fixed-point notation is used to represent fractional numbers by specifying a fixed number of bits for the integer part and the fractional part, without explicitly having a binary point.
 
 For example, in a 32-bit system with 16 bits for magnitude and 15 bits for the fraction:
-- The binary representation of \(-173.25\) can be calculated as follows:
+- The binary representation of $-173.25$ can be calculated as follows:
   - Sign: `0b1` (negative)
-  - Magnitude: \(173 = 0b10101101\)
-  - Fraction: \(0.25 = 0b010000000000000\)
-
-Combining these, the final value is `0x8056A000`.
+  - Magnitude:$173 = 0b10101101 $- Fraction:$0.25 = 0b010000000000000$ Combining these, the final value is `0x8056A000`.
 
 ```java
 public class FixedPointExample {
@@ -996,7 +993,7 @@ In IEEE-754 32-bit format:
 - Exponent (8 bits): Specifies the power of two to which the mantissa should be multiplied.
 - Mantissa (23 bits): Contains the significant digits, normalized such that the leading digit is always 1.
 
-For instance, a value like \(-173.25\) in IEEE-754 format would have:
+For instance, a value like $-173.25$ in IEEE-754 format would have:
 - Sign: `0` (positive)
 - Exponent: Adjusted to position the binary point appropriately.
 - Mantissa: The significant digits after normalizing.
@@ -1009,12 +1006,12 @@ Floating-point notation is used to represent a wide range of values, from very s
 - Mantissa: Contains the significant digits after normalizing.
 
 For example, in IEEE-754 32-bit format:
-- A value like \(-173.25\) would be represented as follows:
+- A value like $-173.25$ would be represented as follows:
   - Sign bit: `0` (positive)
   - Exponent: Adjusted to position the binary point.
   - Mantissa: The significant digits after normalization.
 
-The final representation in IEEE-754 format for \(-173.25\) could be something like:
+The final representation in IEEE-754 format for $-173.25$ could be something like:
 ```java
 public class FloatingPointExample {
     public static void main(String[] args) {
@@ -1036,7 +1033,7 @@ Background context: The IEEE-754 standard defines the format and behavior of flo
 
 For a 32-bit IEEE-754 representation:
 - Sign bit: 1 bit.
-- Exponent: 8 bits, biased by \(127\).
+- Exponent: 8 bits, biased by $127$.
 - Mantissa: 23 bits.
 
 The format is illustrated in Figure 3.5, where the exponent and mantissa are packed together with a sign bit.
@@ -1050,7 +1047,7 @@ The IEEE-754 standard defines:
 
 For a 32-bit IEEE-754 representation:
 - Sign bit: 1 bit (0 = positive, 1 = negative).
-- Exponent: 8 bits, with an implicit leading `1` bit, so 7 explicit bits represent the actual exponent value, biased by \(127\).
+- Exponent: 8 bits, with an implicit leading `1` bit, so 7 explicit bits represent the actual exponent value, biased by $127$.
 - Mantissa: 23 bits representing the fractional part of the number.
 
 ```java
@@ -1068,16 +1065,16 @@ x??
 
 #### Sign Bit, Exponent, and Mantissa Representation
 
-Background context explaining the concept. 32-bit floating-point numbers are represented using a sign bit, an 8-bit exponent, and a 23-bit mantissa. The value \(v\) is calculated as \(v = s \cdot 2^{(e - 127)} \cdot (1 + m)\), where:
-- \(s\) is the sign bit (\(+1\) or \(-1\))
-- \(e\) is the biased exponent
-- \(m\) is the mantissa
+Background context explaining the concept. 32-bit floating-point numbers are represented using a sign bit, an 8-bit exponent, and a 23-bit mantissa. The value $v $ is calculated as$v = s \cdot 2^{(e - 127)} \cdot (1 + m)$, where:
+- $s $ is the sign bit ($+1 $ or$-1$)
+- $e$ is the biased exponent
+- $m$ is the mantissa
 
-The exponent \(e\) uses a bias of 127 to allow negative exponents, and the mantissa has an implicit leading '1', which means only 23 bits are explicitly stored.
+The exponent $e$ uses a bias of 127 to allow negative exponents, and the mantissa has an implicit leading '1', which means only 23 bits are explicitly stored.
 
 :p What does each part (sign bit, exponent, and mantissa) represent in a 32-bit floating-point number?
 ??x
-The sign bit \(s\) represents whether the number is positive or negative (\(+1\) for positive and \(-1\) for negative). The biased exponent \(e - 127\) determines the magnitude of the number. The mantissa \(m\), along with its implicit leading '1', forms the fractional part of the number.
+The sign bit $s $ represents whether the number is positive or negative ($+1 $ for positive and$-1 $ for negative). The biased exponent$e - 127 $ determines the magnitude of the number. The mantissa$m$, along with its implicit leading '1', forms the fractional part of the number.
 
 For example:
 ```java
@@ -1130,18 +1127,15 @@ x??
 
 Background context explaining the concept. The largest possible floating-point value, represented as `FLT_MAX`, uses all bits of the mantissa and exponent to achieve maximum magnitude.
 
-The largest absolute value with a 23-bit mantissa is \(0x00FFFFFF\) or \(24\) consecutive binary ones (including the implicit leading '1'). With an exponent of \(254\), which translates to \(127\) after subtracting the bias, `FLT_MAX` can be calculated as follows:
-
-\[ \text{FLT\_MAX} = 0x00FFFFFF \times 2^{(254 - 127)} \]
-
-:p What is the largest possible floating-point value (`FLT_MAX`) and how is it represented?
+The largest absolute value with a 23-bit mantissa is $0x00FFFFFF $ or$24 $ consecutive binary ones (including the implicit leading '1'). With an exponent of$254 $, which translates to $127$ after subtracting the bias, `FLT_MAX` can be calculated as follows:
+$$\text{FLT\_MAX} = 0x00FFFFFF \times 2^{(254 - 127)}$$:p What is the largest possible floating-point value (`FLT_MAX`) and how is it represented?
 ??x
-The largest possible floating-point value, `FLT_MAX`, uses all bits of the mantissa to represent the maximum possible magnitude. Given a 23-bit mantissa, its binary representation with all ones would be \(0x00FFFFFF\). The exponent used for this value is \(254\) (since \(2^{127}\) is the largest valid exponent in IEEE-754 format).
+The largest possible floating-point value, `FLT_MAX`, uses all bits of the mantissa to represent the maximum possible magnitude. Given a 23-bit mantissa, its binary representation with all ones would be $0x00FFFFFF $. The exponent used for this value is $254 $(since $2^{127}$ is the largest valid exponent in IEEE-754 format).
 
 Thus, `FLT_MAX` can be represented as:
-\[ \text{FLT\_MAX} = 0x00FFFFFF \times 2^{(254 - 127)} = 0xFFFFFF00000000000000000000000000 \]
+$$\text{FLT\_MAX} = 0x00FFFFFF \times 2^{(254 - 127)} = 0xFFFFFF00000000000000000000000000$$
 
-This means the binary representation is \(24\) consecutive ones shifted by \(127\) positions.
+This means the binary representation is $24 $ consecutive ones shifted by$127$ positions.
 
 ```java
 // Example Java code to explain
@@ -1238,21 +1232,19 @@ x??
 #### Units in the Last Place (ULP)
 Background context: Understanding units in the last place (ULP) is crucial for grasping how floating-point precision works and its impact on calculations. ULP represents the difference between two consecutive representable floating-point numbers.
 
-Explanation: In a floating-point number, the precision depends significantly on the exponent value. For instance, when the unbiased exponent of a floating-point number is \( x \), 1 ULP equals \( 2^x \times \text{machine epsilon} \).
+Explanation: In a floating-point number, the precision depends significantly on the exponent value. For instance, when the unbiased exponent of a floating-point number is $x $, 1 ULP equals $2^x \times \text{machine epsilon}$.
 
 For example:
-- If the exponent is 0 (as in 1.0f), 1 ULP = machine epsilon (\(2^{-23}\)).
-- If the exponent is 1 (as in 2.0f), 1 ULP = \(2 \times\) machine epsilon.
-- If the exponent is 2 (as in 4.0f), 1 ULP = \(4 \times\) machine epsilon.
+- If the exponent is 0 (as in 1.0f), 1 ULP = machine epsilon ($2^{-23}$).
+- If the exponent is 1 (as in 2.0f), 1 ULP = $2 \times$ machine epsilon.
+- If the exponent is 2 (as in 4.0f), 1 ULP =$4 \times$ machine epsilon.
 
-Mathematically, if a floating-point value’s unbiased exponent is \( x \), then:
-\[ 1\text{ ULP} = 2^x \times \text{machine epsilon} \]
-
-:p What is the relationship between the unbiased exponent and the size of 1 ULP?
+Mathematically, if a floating-point value’s unbiased exponent is $x$, then:
+$$1\text{ ULP} = 2^x \times \text{machine epsilon}$$:p What is the relationship between the unbiased exponent and the size of 1 ULP?
 ??x
 The relationship is that as the unbiased exponent increases, the value of 1 ULP also increases exponentially. For example:
-- If \( x = 0 \), then \( 1\text{ ULP} = 2^0 \times \text{machine epsilon} = \text{machine epsilon} \).
-- If \( x = 1 \), then \( 1\text{ ULP} = 2^1 \times \text{machine epsilon} = 2 \times \text{machine epsilon} \).
+- If $x = 0 $, then $1\text{ ULP} = 2^0 \times \text{machine epsilon} = \text{machine epsilon}$.
+- If $x = 1 $, then $1\text{ ULP} = 2^1 \times \text{machine epsilon} = 2 \times \text{machine epsilon}$.
 
 This concept is useful for understanding the precision of floating-point numbers and quantifying errors in calculations.
 x??
@@ -1262,16 +1254,16 @@ x??
 #### Impact of Floating-Point Precision on Game Software
 Background context: The limitations of floating-point precision can significantly impact game software, especially over extended periods. Understanding these limitations helps in predicting potential issues and avoiding them when necessary.
 
-Explanation: For example, if a floating-point variable tracks absolute game time in seconds, the maximum duration for which adding 1/30th of a second (approximately \( \frac{1}{30} = 0.03333\ldots \) seconds) will not change the value is determined by the floating-point precision.
+Explanation: For example, if a floating-point variable tracks absolute game time in seconds, the maximum duration for which adding 1/30th of a second (approximately $\frac{1}{30} = 0.03333\ldots$ seconds) will not change the value is determined by the floating-point precision.
 
 Given that:
-\[ 2^{20} = 1,048,576 \approx 12.14 \text{ days} \]
+$$2^{20} = 1,048,576 \approx 12.14 \text{ days}$$
 
 Thus, a 32-bit floating-point clock can accurately track time for around 12.14 days or 220 seconds.
 
-:p How long can we run a game before adding \( \frac{1}{30} \) of a second no longer changes the value of the clock variable?
+:p How long can we run a game before adding $\frac{1}{30}$ of a second no longer changes the value of the clock variable?
 ??x
-A 32-bit floating-point clock can accurately track time for around 12.14 days or 220 seconds before adding \( \frac{1}{30} \) of a second (approximately 0.03333 seconds) no longer changes the value of the clock variable.
+A 32-bit floating-point clock can accurately track time for around 12.14 days or 220 seconds before adding $\frac{1}{30}$ of a second (approximately 0.03333 seconds) no longer changes the value of the clock variable.
 x??
 
 ---
@@ -1286,7 +1278,7 @@ Explanation: These bit tricks allow for very fast comparisons and manipulations,
 :p What are some useful IEEE floating-point "bit tricks"?
 ??x
 Some useful IEEE floating-point "bit tricks" include:
-1. **Checking for Zero**: A floating-point number \( x \) is zero if and only if its sign bit is 0 (assuming the number is not subnormal).
+1. **Checking for Zero**: A floating-point number $x$ is zero if and only if its sign bit is 0 (assuming the number is not subnormal).
 2. **Converting Integer to Float**: Copying integer bits directly into a float variable can be done very quickly without needing an explicit conversion function.
 
 Example:

@@ -5,7 +5,7 @@
 ---
 
 #### VAX-11 Virtual Address Space
-Background context: The VAX-11 architecture, introduced by DEC in the late 1970s, featured a 32-bit virtual address space per process. This was divided into 512-byte pages, making each page size \(2^{9}\) bytes (512 bytes).
+Background context: The VAX-11 architecture, introduced by DEC in the late 1970s, featured a 32-bit virtual address space per process. This was divided into 512-byte pages, making each page size $2^{9}$ bytes (512 bytes).
 
 :p What is the virtual address format used in VAX-11?
 ??x
@@ -33,7 +33,7 @@ x??
 ---
 
 #### VAX-11 Page Size and Address Structure
-Background context: The VAX-11 virtual address space is divided into pages of size 512 bytes (or \(2^9\) bytes). Each virtual address consists of a 23-bit Virtual Page Number (VPN) and a 9-bit offset.
+Background context: The VAX-11 virtual address space is divided into pages of size 512 bytes (or $2^9$ bytes). Each virtual address consists of a 23-bit Virtual Page Number (VPN) and a 9-bit offset.
 
 :p What is the page size in VAX-11, and how does it affect the virtual address structure?
 ??x
@@ -644,13 +644,13 @@ x??
 ---
 
 #### 32-bit vs. 64-bit Address Spaces
-Background context explaining how address spaces have evolved from 32-bit to 64-bit systems, and why this transition was necessary as technology progressed. The limitation of a 32-bit address space is that it can only refer to \(2^{32}\) memory addresses (approximately 4 GB), which became insufficient with modern systems having more than 4 GB of RAM.
+Background context explaining how address spaces have evolved from 32-bit to 64-bit systems, and why this transition was necessary as technology progressed. The limitation of a 32-bit address space is that it can only refer to $2^{32}$ memory addresses (approximately 4 GB), which became insufficient with modern systems having more than 4 GB of RAM.
 
 :p How does the move from 32-bit to 64-bit address spaces impact system design and memory management?
 ??x
-The transition to 64-bit address spaces allows for addressing a much larger amount of physical memory, overcoming the \(2^{32}\) limit. This is crucial as modern systems require more than 4 GB of RAM.
+The transition to 64-bit address spaces allows for addressing a much larger amount of physical memory, overcoming the $2^{32}$ limit. This is crucial as modern systems require more than 4 GB of RAM.
 
-In 32-bit systems, each process has an address space limited to 4 GB. However, with the advent of 64-bit systems, this limitation no longer holds true. A typical 64-bit system can handle \(2^{64}\) addresses, which is a vast increase in memory capacity.
+In 32-bit systems, each process has an address space limited to 4 GB. However, with the advent of 64-bit systems, this limitation no longer holds true. A typical 64-bit system can handle $2^{64}$ addresses, which is a vast increase in memory capacity.
 
 ```java
 public class AddressSpaceExample {

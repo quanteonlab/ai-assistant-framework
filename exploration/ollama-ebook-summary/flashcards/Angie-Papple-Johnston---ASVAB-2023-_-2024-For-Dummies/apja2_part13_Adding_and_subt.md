@@ -12,11 +12,11 @@ Background context: An improper fraction is a fraction with a numerator larger t
 To convert 7/3 to a mixed number, divide the numerator by the denominator. Here, 7 divided by 3 gives a quotient of 2 with a remainder of 1. The remainder becomes the new numerator over the original denominator: 
 - Quotient = 2
 - Remainder = 1
-Therefore, \( \frac{7}{3} = 2\frac{1}{3} \).
+Therefore, $\frac{7}{3} = 2\frac{1}{3}$.
 
 ??x
 The answer includes detailed steps:
-To convert an improper fraction like \( \frac{7}{3} \) to a mixed number:
+To convert an improper fraction like $\frac{7}{3}$ to a mixed number:
 
 1. Divide the numerator (7) by the denominator (3).
 2. The quotient is 2 and the remainder is 1.
@@ -24,7 +24,7 @@ To convert an improper fraction like \( \frac{7}{3} \) to a mixed number:
    - Quotient = 2
    - Remainder = 1
 
-Thus, \( \frac{7}{3} \) becomes \( 2\frac{1}{3} \).
+Thus, $\frac{7}{3}$ becomes $2\frac{1}{3}$.
 
 ---
 #### Converting Mixed Numbers to Improper Fractions
@@ -32,29 +32,25 @@ Background context: To perform operations like multiplication or division on mix
 
 :p How do you convert 72/3 (or 7 2/3) back to an improper fraction?
 ??x
-To convert \( 7\frac{2}{3} \) into an improper fraction, follow these steps:
+To convert $7\frac{2}{3}$ into an improper fraction, follow these steps:
 
 1. Multiply the whole number (7) by the denominator (3): 
-   - \( 7 \times 3 = 21 \)
+   - $7 \times 3 = 21$
 2. Place this new numerator over the existing denominator: 
-   - \( \frac{21}{3} \)
+   - $\frac{21}{3}$
 3. Add this fraction to the original fractional part:
-   - \( \frac{21}{3} + \frac{2}{3} = \frac{21+2}{3} = \frac{23}{3} \)
-
-Thus, \( 7\frac{2}{3} \) as an improper fraction is \( \frac{23}{3} \).
+   - $\frac{21}{3} + \frac{2}{3} = \frac{21+2}{3} = \frac{23}{3}$ Thus,$7\frac{2}{3}$ as an improper fraction is $\frac{23}{3}$.
 
 ??x
 The answer includes detailed steps:
-To convert the mixed number \( 7\frac{2}{3} \) to an improper fraction:
+To convert the mixed number $7\frac{2}{3}$ to an improper fraction:
 
 1. Multiply the whole number (7) by the denominator (3): 
-   - \( 7 \times 3 = 21 \)
+   - $7 \times 3 = 21$
 2. Place this new numerator over the existing denominator: 
-   - \( \frac{21}{3} \)
+   - $\frac{21}{3}$
 3. Add this fraction to the original fractional part:
-   - \( \frac{21}{3} + \frac{2}{3} = \frac{21+2}{3} = \frac{23}{3} \)
-
-Thus, \( 7\frac{2}{3} \) as an improper fraction is \( \frac{23}{3} \).
+   - $\frac{21}{3} + \frac{2}{3} = \frac{21+2}{3} = \frac{23}{3}$ Thus,$7\frac{2}{3}$ as an improper fraction is $\frac{23}{3}$.
 
 ---
 #### Converting Fractions to Decimals
@@ -62,19 +58,15 @@ Background context: A fraction can be expressed in decimal form by dividing the 
 
 :p How do you convert 3/5 into a decimal?
 ??x
-To convert \( \frac{3}{5} \) to a decimal, divide the numerator (3) by the denominator (5):
-- \( 3 ÷ 5 = 0.6 \)
-
-Thus, \( \frac{3}{5} = 0.6 \).
+To convert $\frac{3}{5}$ to a decimal, divide the numerator (3) by the denominator (5):
+- $3 ÷ 5 = 0.6 $ Thus,$\frac{3}{5} = 0.6$.
 
 ??x
 The answer includes detailed steps:
-To convert the fraction \( \frac{3}{5} \) to a decimal:
+To convert the fraction $\frac{3}{5}$ to a decimal:
 
 1. Divide the numerator (3) by the denominator (5):
-   - \( 3 ÷ 5 = 0.6 \)
-
-Thus, \( \frac{3}{5} = 0.6 \).
+   - $3 ÷ 5 = 0.6 $ Thus,$\frac{3}{5} = 0.6$.
 
 ---
 #### Converting Decimals to Percents
@@ -82,25 +74,21 @@ Background context: To convert a decimal into a percent, move the decimal point 
 
 :p How do you convert 0.6 into a percent?
 ??x
-To convert \( 0.6 \) to a percent, follow these steps:
+To convert $0.6$ to a percent, follow these steps:
 
 1. Move the decimal point two places to the right:
-   - Moving from \( 0.6 \) to \( 60 \)
+   - Moving from $0.6 $ to$60$
 2. Add a percentage sign (%):
-   - Thus, \( 0.6 = 60\% \)
-
-Thus, \( 0.6 \) as a percent is \( 60\% \).
+   - Thus, $0.6 = 60\%$ Thus,$0.6 $ as a percent is$60\%$.
 
 ??x
 The answer includes detailed steps:
-To convert the decimal \( 0.6 \) to a percent:
+To convert the decimal $0.6$ to a percent:
 
 1. Move the decimal point two places to the right: 
-   - Moving from \( 0.6 \) to \( 60 \)
+   - Moving from $0.6 $ to$60$
 2. Add a percentage sign (%):
-   - Thus, \( 0.6 = 60\% \)
-
-Thus, \( 0.6 \) as a percent is \( 60\% \).
+   - Thus, $0.6 = 60\%$ Thus,$0.6 $ as a percent is$60\%$.
 
 ---
 #### Adding and Subtracting Decimals
@@ -156,7 +144,7 @@ For example:
 1254 ÷ 4
 ```
 
-Move the decimal point two places to the right: \( 125 \div 4 = 31.25 \).
+Move the decimal point two places to the right: $125 \div 4 = 31.25$.
 
 Since we moved the decimal point two places, place it back in the quotient:
 
@@ -174,11 +162,11 @@ Background context: When dividing one decimal by another, both numbers are conve
 ??x
 Convert both the divisor and dividend to whole numbers by moving their decimal points rightward the same number of places. For example, if dividing 0.15 by 0.25:
 
-Move the decimal point in the divisor (0.25) two places: \( 25 \).
+Move the decimal point in the divisor (0.25) two places: $25$.
 
-Then, move the decimal point in the dividend (0.15) two places as well: \( 15 \).
+Then, move the decimal point in the dividend (0.15) two places as well: $15$.
 
-Now divide these whole numbers: \( 15 ÷ 25 = 0.60 \).
+Now divide these whole numbers: $15 ÷ 25 = 0.60$.
 
 x??
 
@@ -224,8 +212,8 @@ Background context: When dividing percents, first convert them to decimals or fr
 ??x
 To calculate an increase of 25%:
 1. Convert 25% to its decimal form: 25% = 0.25.
-2. Multiply the original number by this decimal: If the original number is \( N \), then the increased value is \( N * (1 + 0.25) = N * 1.25 \).
-Therefore, a 25% increase on any number \( N \) results in multiplying it by 1.25.
+2. Multiply the original number by this decimal: If the original number is $N $, then the increased value is $ N * (1 + 0.25) = N * 1.25$.
+Therefore, a 25% increase on any number $N$ results in multiplying it by 1.25.
 x??
 
 ---
@@ -235,7 +223,7 @@ Background context: A ratio shows the relationship between two quantities. You c
 ??x
 To simplify the ratio 30:60:
 1. Find the greatest common divisor (GCD) of both numbers. The GCD of 30 and 60 is 30.
-2. Divide both numbers by their GCD: \( \frac{30}{30} : \frac{60}{30} = 1 : 2 \).
+2. Divide both numbers by their GCD: $\frac{30}{30} : \frac{60}{30} = 1 : 2$.
 Therefore, the simplified form of the ratio 30:60 is 1:2.
 x??
 
@@ -246,7 +234,7 @@ Background context: Scale drawings are used to represent real-world objects or s
 ??x
 To solve this:
 1. Understand the given scale: 1 inch represents 50 miles.
-2. Determine the number of inches for 250 miles: \( \frac{250 \text{ miles}}{50 \text{ miles/inch}} = 5 \text{ inches} \).
+2. Determine the number of inches for 250 miles: $\frac{250 \text{ miles}}{50 \text{ miles/inch}} = 5 \text{ inches}$.
 Therefore, on a map with a scale of 1 inch to 50 miles, 250 miles would be represented by 5 inches.
 x??
 
@@ -256,8 +244,8 @@ Background context: Rates such as speed or gas mileage can be calculated using r
 :p How do you calculate your car's gas mileage from a 240-mile trip using 15 gallons?
 ??x
 To calculate gas mileage:
-1. Use the formula for miles per gallon: \( \frac{\text{miles driven}}{\text{gallons used}} \).
-2. Plug in the values: \( \frac{240 \text{ miles}}{15 \text{ gallons}} = 16 \text{ miles/gallon} \).
+1. Use the formula for miles per gallon: $\frac{\text{miles driven}}{\text{gallons used}}$.
+2. Plug in the values: $\frac{240 \text{ miles}}{15 \text{ gallons}} = 16 \text{ miles/gallon}$.
 Therefore, your car's gas mileage for a trip of 240 miles using 15 gallons is 16 miles per gallon.
 x??
 

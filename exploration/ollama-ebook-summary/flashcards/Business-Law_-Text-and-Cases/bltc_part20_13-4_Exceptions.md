@@ -97,7 +97,7 @@ x??
 #### Consideration
 Background context: Consideration is a legal term that refers to the value exchanged between parties in an agreement. It can be money, goods, services, or something of value.
 
-Example: Sharyn agrees to work for Totem Productions at $500/week and later receives an offer from Umber Shows for $600/week.
+Example: Sharyn agrees to work for Totem Productions at $500/week and later receives an offer from Umber Shows for$600/week.
 :p Does a new contract exist after Sharyn renegotiates her terms with Totem?
 ??x
 Yes, a new contract exists between Sharyn and Totem. The original agreement had no consideration as Totem tore it up when Sharyn offered to accept less (from $575 to the original $500), but when they agreed on $575, this provided mutual consideration because both parties benefited from the new terms.

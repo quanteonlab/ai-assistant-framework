@@ -169,7 +169,7 @@ Background context: The architecture discussed involves dividing a large dataset
 
 :p How does the master thread divide work among worker threads?
 ??x
-The master thread divides the total number of data items \( N \) into \( m \) roughly equal-sized batches, each batch containing approximately \( \frac{N}{m} \) elements. The value of \( m \) is often determined based on the available cores in the system but can be adjusted to leave some cores free for other tasks.
+The master thread divides the total number of data items $N $ into$m $ roughly equal-sized batches, each batch containing approximately$\frac{N}{m}$ elements. The value of $m$ is often determined based on the available cores in the system but can be adjusted to leave some cores free for other tasks.
 ```java
 // Pseudocode example
 int N = totalDataItems; // Total number of data items to process

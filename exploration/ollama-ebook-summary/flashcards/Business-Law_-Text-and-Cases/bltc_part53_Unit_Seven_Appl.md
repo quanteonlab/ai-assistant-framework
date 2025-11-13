@@ -397,7 +397,7 @@ Background context: The case illustrates the risk of unlimited personal liabilit
 :p What happened with Michael Sark’s house transfer?
 
 ??x
-Michael Sark sold his house (valued at $203,500) to his son for one dollar but continued to live in it. Quality Car & Truck Leasing filed a claim against the Sarks for $150,480 and also sought to invalidate the transfer as fraudulent.
+Michael Sark sold his house (valued at $203,500) to his son for one dollar but continued to live in it. Quality Car & Truck Leasing filed a claim against the Sarks for$150,480 and also sought to invalidate the transfer as fraudulent.
 x??
 
 ---

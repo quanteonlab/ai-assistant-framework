@@ -8,24 +8,21 @@
 Emphatic TD(λ) is a variant of Temporal Difference (TD) learning that aims to handle high variance and potentially slow convergence by incorporating an emphasis mechanism. This method modifies the standard eligibility trace update rule to include a form of followon trace, which helps in better handling temporal dependencies.
 
 The update rules for Emphatic TD(λ) are as follows:
-- \( w_{t+1} = w_t + \alpha_t z_t \)
-- \( z_t = \gamma t z_{t-1} + M_t \langle x_t | w \rangle - z_t (w^T \langle x_t | w \rangle) \)
-- \( M_t = \delta_t I_t + (1 - \delta_t) F_t \)
-- \( F_t = \gamma t F_{t-1} + I_t \)
+- $w_{t+1} = w_t + \alpha_t z_t $-$ z_t = \gamma t z_{t-1} + M_t \langle x_t | w \rangle - z_t (w^T \langle x_t | w \rangle)$-$ M_t = \delta_t I_t + (1 - \delta_t) F_t $-$ F_t = \gamma t F_{t-1} + I_t$
 
 Where:
-- \( w_t \) is the weight vector at time step \( t \).
-- \( z_t \) represents the eligibility trace.
-- \( \alpha_t \) is the learning rate.
-- \( \delta_t \) is the discount factor for emphasis.
+- $w_t $ is the weight vector at time step$t$.
+- $z_t$ represents the eligibility trace.
+- $\alpha_t$ is the learning rate.
+- $\delta_t$ is the discount factor for emphasis.
 
-The term \( M_t \) and \( F_t \) are designed to handle the followon traces, which emphasize recent events more heavily. The initial value of \( z_1 = 0 \).
+The term $M_t $ and$F_t $ are designed to handle the followon traces, which emphasize recent events more heavily. The initial value of$z_1 = 0$.
 
 :p What is Emphatic TD(λ) used for?
 ??x
 Emphatic TD(λ) is used to address high variance and slow convergence issues in standard TD learning by incorporating an emphasis mechanism that helps in better handling temporal dependencies.
 
-The formula for the update of \( w_t \) involves using the eligibility trace \( z_t \), which is updated based on both the current state-action value and a followon trace term. This approach allows for more focused updates, potentially leading to faster learning.
+The formula for the update of $w_t $ involves using the eligibility trace$z_t$, which is updated based on both the current state-action value and a followon trace term. This approach allows for more focused updates, potentially leading to faster learning.
 x??
 
 ---
@@ -51,7 +48,7 @@ function emphatic_tdlambda(alpha, gamma, delta, s, a, r, s_prime):
 
 :p What is the pseudocode for Emphatic TD(λ)?
 ??x
-The pseudocode for implementing true online Emphatic-TD(λ) involves initializing weights and eligibility traces, then updating them in an incremental manner. The key steps include calculating the eligibility trace \( z \), updating the followon traces \( M_t \) and \( F_t \), computing the weight update \( \delta_w \), and finally applying this update to the weight vector.
+The pseudocode for implementing true online Emphatic-TD(λ) involves initializing weights and eligibility traces, then updating them in an incremental manner. The key steps include calculating the eligibility trace $z $, updating the followon traces $ M_t $ and $ F_t $, computing the weight update$\delta_w$, and finally applying this update to the weight vector.
 
 Here is the detailed pseudocode:
 ```pseudocode
@@ -74,17 +71,17 @@ x??
 
 ---
 #### On-policy vs Off-policy for Emphatic-TD(λ)
-In the on-policy case, where \( \delta_t = 1 \) for all \( t \), Emphatic TD(λ) behaves similarly to conventional TD(λ). However, it still differs significantly from standard TD learning in terms of its guarantees and performance.
+In the on-policy case, where $\delta_t = 1 $ for all$t$, Emphatic TD(λ) behaves similarly to conventional TD(λ). However, it still differs significantly from standard TD learning in terms of its guarantees and performance.
 
-While standard TD methods are guaranteed to converge only if the eligibility trace \( \lambda \) is a constant (i.e., \( \alpha = 1 - \gamma \)), Emphatic-TD(λ) is guaranteed to converge for any state-dependent \( \lambda \). This makes it more robust and versatile in various learning scenarios.
+While standard TD methods are guaranteed to converge only if the eligibility trace $\lambda $ is a constant (i.e.,$\alpha = 1 - \gamma $), Emphatic-TD(λ) is guaranteed to converge for any state-dependent $\lambda$. This makes it more robust and versatile in various learning scenarios.
 
 :p How does on-policy Emphatic TD(λ) compare to standard TD methods?
 ??x
-In the on-policy case, where \( \delta_t = 1 \) for all time steps, Emphatic-TD(λ) behaves similarly to conventional TD(λ), but it still provides a significant advantage in convergence guarantees. Unlike standard TD learning, which is guaranteed to converge only if the eligibility trace \( \lambda \) is constant (i.e., when \( \alpha = 1 - \gamma \)), Emphatic-TD(λ) is guaranteed to converge for any state-dependent \( \lambda \). This makes it more robust and versatile in various learning scenarios, offering a broader set of applications.
+In the on-policy case, where $\delta_t = 1 $ for all time steps, Emphatic-TD(λ) behaves similarly to conventional TD(λ), but it still provides a significant advantage in convergence guarantees. Unlike standard TD learning, which is guaranteed to converge only if the eligibility trace$\lambda $ is constant (i.e., when$\alpha = 1 - \gamma $), Emphatic-TD(λ) is guaranteed to converge for any state-dependent $\lambda$. This makes it more robust and versatile in various learning scenarios, offering a broader set of applications.
 
 :p How does the convergence guarantee differ between standard TD methods and on-policy Emphatic-TD(λ)?
 ??x
-The key difference lies in their convergence guarantees. Standard TD methods are guaranteed to converge only if the eligibility trace \( \lambda \) is constant (i.e., when the learning rate \( \alpha = 1 - \gamma \)). In contrast, Emphatic-TD(λ) offers a broader guarantee and converges for any state-dependent \( \lambda \). This makes it more robust and versatile in various learning scenarios.
+The key difference lies in their convergence guarantees. Standard TD methods are guaranteed to converge only if the eligibility trace $\lambda $ is constant (i.e., when the learning rate$\alpha = 1 - \gamma $). In contrast, Emphatic-TD(λ) offers a broader guarantee and converges for any state-dependent $\lambda$. This makes it more robust and versatile in various learning scenarios.
 
 :p How does Emphatic-TD(λ) handle the computational expense of eligibility traces?
 ??x
@@ -104,15 +101,15 @@ When using function approximation with artificial neural networks (ANNs), the us
 
 :p How does Emphatic-TD(λ) improve upon standard TD methods?
 ??x
-Emphatic-TD(λ) improves upon standard TD methods by addressing high variance and slow convergence issues through an emphasis mechanism. Unlike standard TD learning, which is only guaranteed to converge if the eligibility trace \( \lambda \) is a constant (i.e., when the learning rate \( \alpha = 1 - \gamma \)), Emphatic-TD(λ) guarantees convergence for any state-dependent \( \lambda \). This makes it more robust and versatile in various learning scenarios, offering better performance in practice.
+Emphatic-TD(λ) improves upon standard TD methods by addressing high variance and slow convergence issues through an emphasis mechanism. Unlike standard TD learning, which is only guaranteed to converge if the eligibility trace $\lambda $ is a constant (i.e., when the learning rate$\alpha = 1 - \gamma $), Emphatic-TD(λ) guarantees convergence for any state-dependent $\lambda$. This makes it more robust and versatile in various learning scenarios, offering better performance in practice.
 
 :p How does Emphatic-TD(λ) handle recent events?
 ??x
-Emphatic-TD(λ) handles recent events by incorporating a form of followon trace through the terms \( M_t \) and \( F_t \). These terms emphasize recent events more heavily, ensuring that updates are focused on states that have recently been visited. This helps in better handling temporal dependencies and improving learning efficiency.
+Emphatic-TD(λ) handles recent events by incorporating a form of followon trace through the terms $M_t $ and$F_t$. These terms emphasize recent events more heavily, ensuring that updates are focused on states that have recently been visited. This helps in better handling temporal dependencies and improving learning efficiency.
 
 :p How does Emphatic-TD(λ) update its weight vector?
 ??x
-Emphatic-TD(λ) updates its weight vector by calculating the eligibility trace \( z_t \), which is influenced by both the current state-action value and a followon trace term. The weight update \( \delta_w \) is then computed based on this eligibility trace and applied to the current weights.
+Emphatic-TD(λ) updates its weight vector by calculating the eligibility trace $z_t $, which is influenced by both the current state-action value and a followon trace term. The weight update $\delta_w$ is then computed based on this eligibility trace and applied to the current weights.
 
 :p How does Emphatic-TD(λ) ensure computational efficiency?
 ??x
@@ -124,7 +121,7 @@ Emphatic-TD(λ) differs from n-step methods in that it provides a more general a
 
 :p How does Emphatic-TD(λ) handle variable bootstrapping and discounting?
 ??x
-Emphatic-TD(λ) handles variable bootstrapping and discounting by allowing the use of state-dependent \( \lambda \) values, which can vary over time. This flexibility in handling different levels of discounting and bootstrapping makes it more adaptable to various learning scenarios.
+Emphatic-TD(λ) handles variable bootstrapping and discounting by allowing the use of state-dependent $\lambda$ values, which can vary over time. This flexibility in handling different levels of discounting and bootstrapping makes it more adaptable to various learning scenarios.
 
 :p How does Emphatic-TD(λ) contribute to on- and off-policy learning?
 ??x
@@ -132,7 +129,7 @@ Emphatic-TD(λ) contributes to both on- and off-policy learning by providing a u
 
 :p How does Emphatic-TD(λ) ensure convergence guarantees?
 ??x
-Emphatic-TD(λ) ensures convergence guarantees by leveraging eligibility traces to focus updates on relevant states. This approach is more robust than standard TD methods, which are only guaranteed to converge if the eligibility trace \( \lambda \) is constant. Emphatic-TD(λ) offers a broader guarantee and converges for any state-dependent \( \lambda \).
+Emphatic-TD(λ) ensures convergence guarantees by leveraging eligibility traces to focus updates on relevant states. This approach is more robust than standard TD methods, which are only guaranteed to converge if the eligibility trace $\lambda $ is constant. Emphatic-TD(λ) offers a broader guarantee and converges for any state-dependent$\lambda$.
 
 :p How does Emphatic-TD(λ) handle high variance?
 ??x
@@ -140,9 +137,8 @@ Emphatic-TD(λ) handles high variance by incorporating an emphasis mechanism thr
 
 :p How does Emphatic-TD(λ) update its followon trace?
 ??x
-Emphatic-TD(λ) updates its followon trace through the terms \( M_t \) and \( F_t \). Specifically:
-- \( Mt = \delta I(t) + (1 - \delta) F(t-1) \)
-- \( Ft = \gamma t F(t-1) + I(t) \)
+Emphatic-TD(λ) updates its followon trace through the terms $M_t $ and$F_t$. Specifically:
+- $Mt = \delta I(t) + (1 - \delta) F(t-1)$-$ Ft = \gamma t F(t-1) + I(t)$
 
 These update rules ensure that recent events are emphasized more heavily, helping to handle high variance and improve learning efficiency.
 
@@ -150,7 +146,7 @@ These update rules ensure that recent events are emphasized more heavily, helpin
 ??x
 Emphatic-TD(λ) differs from conventional TD methods in several ways:
 - It uses an emphasis mechanism through eligibility traces.
-- It is guaranteed to converge for any state-dependent \( \lambda \), unlike standard TD learning which converges only if \( \alpha = 1 - \gamma \).
+- It is guaranteed to converge for any state-dependent $\lambda $, unlike standard TD learning which converges only if $\alpha = 1 - \gamma$.
 - It offers a more general and versatile approach by allowing variable bootstrapping and discounting.
 
 :p How does Emphatic-TD(λ) handle tabular methods?
@@ -163,19 +159,18 @@ Emphatic-TD(λ) handles function approximation by using eligibility traces to fo
 
 :p How does Emphatic-TD(λ) handle variable bootstrapping?
 ??x
-Emphatic-TD(λ) handles variable bootstrapping by allowing \( \lambda \) values that can vary over time, providing flexibility in handling different levels of discounting and bootstrapping. This adaptability makes it more suitable for various learning scenarios.
+Emphatic-TD(λ) handles variable bootstrapping by allowing $\lambda$ values that can vary over time, providing flexibility in handling different levels of discounting and bootstrapping. This adaptability makes it more suitable for various learning scenarios.
 
 :p How does Emphatic-TD(λ) handle followon traces?
 ??x
-Emphatic-TD(λ) handles followon traces through the terms \( M_t \) and \( F_t \). Specifically:
-- \( Mt = \delta I(t) + (1 - \delta) F(t-1) \)
-- \( Ft = \gamma t F(t-1) + I(t) \)
+Emphatic-TD(λ) handles followon traces through the terms $M_t $ and$F_t$. Specifically:
+- $Mt = \delta I(t) + (1 - \delta) F(t-1)$-$ Ft = \gamma t F(t-1) + I(t)$
 
 These update rules ensure that recent events are emphasized more heavily, helping to handle high variance and improve learning efficiency.
 
 :p How does Emphatic-TD(λ) contribute to Monte Carlo methods?
 ??x
-Emphatic-TD(λ) contributes to Monte Carlo methods by allowing the use of state-dependent \( \lambda \) values, which can vary over time. This flexibility in handling different levels of discounting and bootstrapping makes it more adaptable to various learning scenarios, bridging the gap between Monte Carlo and TD methods.
+Emphatic-TD(λ) contributes to Monte Carlo methods by allowing the use of state-dependent $\lambda$ values, which can vary over time. This flexibility in handling different levels of discounting and bootstrapping makes it more adaptable to various learning scenarios, bridging the gap between Monte Carlo and TD methods.
 
 :p How does Emphatic-TD(λ) contribute to TD methods?
 ??x
@@ -183,7 +178,7 @@ Emphatic-TD(λ) contributes to TD methods by providing a unified framework that 
 
 :p How does Emphatic-TD(λ) ensure robustness?
 ??x
-Emphatic-TD(λ) ensures robustness by leveraging eligibility traces to focus updates on relevant states. This approach is more robust than standard TD methods, which are only guaranteed to converge if the eligibility trace \( \lambda \) is constant. Emphatic-TD(λ) offers a broader guarantee and converges for any state-dependent \( \lambda \).
+Emphatic-TD(λ) ensures robustness by leveraging eligibility traces to focus updates on relevant states. This approach is more robust than standard TD methods, which are only guaranteed to converge if the eligibility trace $\lambda $ is constant. Emphatic-TD(λ) offers a broader guarantee and converges for any state-dependent$\lambda$.
 
 :p How does Emphatic-TD(λ) handle convergence?
 ??x
@@ -191,7 +186,7 @@ Emphatic-TD(λ) handles convergence by using an emphasis mechanism through eligi
 
 :p How does Emphatic-TD(λ) ensure flexibility?
 ??x
-Emphatic-TD(λ) ensures flexibility by allowing state-dependent \( \lambda \) values, which can vary over time. This adaptability makes it suitable for various learning scenarios where different levels of discounting and bootstrapping are required.
+Emphatic-TD(λ) ensures flexibility by allowing state-dependent $\lambda$ values, which can vary over time. This adaptability makes it suitable for various learning scenarios where different levels of discounting and bootstrapping are required.
 
 :p How does Emphatic-TD(λ) handle memory efficiency?
 ??x
@@ -203,19 +198,19 @@ Emphatic-TD(λ) handles computational overhead by focusing updates on relevant s
 
 :p How does Emphatic-TD(λ) handle convergence guarantees?
 ??x
-Emphatic-TD(λ) handles convergence guarantees by ensuring that it converges for any state-dependent \( \lambda \), unlike standard TD methods which are only guaranteed to converge if the eligibility trace \( \lambda \) is constant. This broadens its applicability and makes it more robust in various learning scenarios.
+Emphatic-TD(λ) handles convergence guarantees by ensuring that it converges for any state-dependent $\lambda $, unlike standard TD methods which are only guaranteed to converge if the eligibility trace $\lambda$ is constant. This broadens its applicability and makes it more robust in various learning scenarios.
 
 :p How does Emphatic-TD(λ) handle recent events?
 ??x
-Emphatic-TD(λ) handles recent events by incorporating a form of followon trace through the terms \( M_t \) and \( F_t \). These terms emphasize recent events more heavily, helping to focus updates on relevant states and improving learning efficiency.
+Emphatic-TD(λ) handles recent events by incorporating a form of followon trace through the terms $M_t $ and$F_t$. These terms emphasize recent events more heavily, helping to focus updates on relevant states and improving learning efficiency.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values by allowing \( \lambda \) to vary over time. This flexibility in handling different levels of discounting and bootstrapping makes it more adaptable to various learning scenarios, bridging the gap between Monte Carlo and TD methods.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values by allowing$\lambda$ to vary over time. This flexibility in handling different levels of discounting and bootstrapping makes it more adaptable to various learning scenarios, bridging the gap between Monte Carlo and TD methods.
 
 :p How does Emphatic-TD(λ) handle variable discounting?
 ??x
-Emphatic-TD(λ) handles variable discounting by allowing state-dependent \( \lambda \) values, which can vary over time. This adaptability makes it suitable for scenarios where different levels of discounting are required at different states.
+Emphatic-TD(λ) handles variable discounting by allowing state-dependent $\lambda$ values, which can vary over time. This adaptability makes it suitable for scenarios where different levels of discounting are required at different states.
 
 :p How does Emphatic-TD(λ) handle convergence in practice?
 ??x
@@ -231,1379 +226,1379 @@ Emphatic-TD(λ) handles recent events in practice by emphasizing them more heavi
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values by allowing \( \lambda \) to vary over time. This flexibility in handling different levels of discounting and bootstrapping makes it more adaptable to various learning scenarios, ensuring that the approach is robust and versatile.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values by allowing$\lambda$ to vary over time. This flexibility in handling different levels of discounting and bootstrapping makes it more adaptable to various learning scenarios, ensuring that the approach is robust and versatile.
 
 :p How does Emphatic-TD(λ) handle recent events through its followon trace?
 ??x
-Emphatic-TD(λ) handles recent events through its followon trace by emphasizing them more heavily. The terms \( M_t \) and \( F_t \) ensure that recent events are given higher importance, helping to focus updates on relevant states and improving learning efficiency.
+Emphatic-TD(λ) handles recent events through its followon trace by emphasizing them more heavily. The terms $M_t $ and$F_t$ ensure that recent events are given higher importance, helping to focus updates on relevant states and improving learning efficiency.
 
 :p How does Emphatic-TD(λ) handle convergence guarantees in practice?
 ??x
-Emphatic-TD(λ) handles convergence guarantees in practice by ensuring that it converges for any state-dependent \( \lambda \), unlike standard TD methods which are only guaranteed to converge if the eligibility trace \( \lambda \) is constant. This broadens its applicability and makes it more robust in various learning scenarios.
+Emphatic-TD(λ) handles convergence guarantees in practice by ensuring that it converges for any state-dependent $\lambda $, unlike standard TD methods which are only guaranteed to converge if the eligibility trace $\lambda$ is constant. This broadens its applicability and makes it more robust in various learning scenarios.
 
 :p How does Emphatic-TD(λ) handle recent events through its followon trace mechanism?
 ??x
-Emphatic-TD(λ) handles recent events through its followon trace mechanism by emphasizing them more heavily. The terms \( M_t \) and \( F_t \) ensure that recent events are given higher importance, helping to focus updates on relevant states and improving learning efficiency.
+Emphatic-TD(λ) handles recent events through its followon trace mechanism by emphasizing them more heavily. The terms $M_t $ and$F_t$ ensure that recent events are given higher importance, helping to focus updates on relevant states and improving learning efficiency.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values in practice?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values in practice by allowing \( \lambda \) to vary over time, making it suitable for scenarios where different levels of discounting and bootstrapping are required. This flexibility ensures that the approach is robust and versatile.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values in practice by allowing$\lambda$ to vary over time, making it suitable for scenarios where different levels of discounting and bootstrapping are required. This flexibility ensures that the approach is robust and versatile.
 
 :p How does Emphatic-TD(λ) handle recent events through its emphasis mechanism?
 ??x
-Emphatic-TD(λ) handles recent events through its emphasis mechanism by ensuring that updates are focused on states that have recently been visited. The terms \( M_t \) and \( F_t \) help in emphasizing recent events more heavily, improving the handling of high variance and enhancing learning efficiency.
+Emphatic-TD(λ) handles recent events through its emphasis mechanism by ensuring that updates are focused on states that have recently been visited. The terms $M_t $ and$F_t$ help in emphasizing recent events more heavily, improving the handling of high variance and enhancing learning efficiency.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, making it suitable for scenarios where different levels of discounting and bootstrapping are required.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, making it suitable for scenarios where different levels of discounting and bootstrapping are required.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values in practice?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values in practice by allowing \( \lambda \) to vary over time, making it suitable for scenarios where different levels of discounting and bootstrapping are required. This flexibility ensures that the approach is robust and versatile.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values in practice by allowing$\lambda$ to vary over time, making it suitable for scenarios where different levels of discounting and bootstrapping are required. This flexibility ensures that the approach is robust and versatile.
 
 :p How does Emphatic-TD(λ) handle recent events through its followon trace mechanism?
 ??x
-Emphatic-TD(λ) handles recent events through its followon trace mechanism by emphasizing them more heavily. The terms \( M_t \) and \( F_t \) ensure that recent events are given higher importance, helping to focus updates on relevant states and improving learning efficiency.
+Emphatic-TD(λ) handles recent events through its followon trace mechanism by emphasizing them more heavily. The terms $M_t $ and$F_t$ ensure that recent events are given higher importance, helping to focus updates on relevant states and improving learning efficiency.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values in a practical setting?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values in a practical setting by allowing \( \lambda \) to vary over time, making it suitable for scenarios where different levels of discounting and bootstrapping are required. This flexibility ensures that the approach is robust and versatile.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values in a practical setting by allowing$\lambda$ to vary over time, making it suitable for scenarios where different levels of discounting and bootstrapping are required. This flexibility ensures that the approach is robust and versatile.
 
 :p How does Emphatic-TD(λ) handle recent events through its emphasis mechanism?
 ??x
-Emphatic-TD(λ) handles recent events through its emphasis mechanism by ensuring that updates are focused on states that have recently been visited. The terms \( M_t \) and \( F_t \) help in emphasizing recent events more heavily, improving the handling of high variance and enhancing learning efficiency.
+Emphatic-TD(λ) handles recent events through its emphasis mechanism by ensuring that updates are focused on states that have recently been visited. The terms $M_t $ and$F_t$ help in emphasizing recent events more heavily, improving the handling of high variance and enhancing learning efficiency.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, making it suitable for scenarios where different levels of discounting and bootstrapping are required.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, making it suitable for scenarios where different levels of discounting and bootstrapping are required.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values in practice?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values in practice by allowing \( \lambda \) to vary over time, making it suitable for scenarios where different levels of discounting and bootstrapping are required. This flexibility ensures that the approach is robust and versatile.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values in practice by allowing$\lambda$ to vary over time, making it suitable for scenarios where different levels of discounting and bootstrapping are required. This flexibility ensures that the approach is robust and versatile.
 
 :p How does Emphatic-TD(λ) handle recent events through its followon trace mechanism?
 ??x
-Emphatic-TD(λ) handles recent events through its followon trace mechanism by emphasizing them more heavily. The terms \( M_t \) and \( F_t \) ensure that recent events are given higher importance, helping to focus updates on relevant states and improving learning efficiency.
+Emphatic-TD(λ) handles recent events through its followon trace mechanism by emphasizing them more heavily. The terms $M_t $ and$F_t$ ensure that recent events are given higher importance, helping to focus updates on relevant states and improving learning efficiency.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values in a practical setting?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values in a practical setting by allowing \( \lambda \) to vary over time, making it suitable for scenarios where different levels of discounting and bootstrapping are required. This flexibility ensures that the approach is robust and versatile.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values in a practical setting by allowing$\lambda$ to vary over time, making it suitable for scenarios where different levels of discounting and bootstrapping are required. This flexibility ensures that the approach is robust and versatile.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, making it suitable for scenarios where different levels of discounting and bootstrapping are required. The flexibility in handling these values allows for a more robust and adaptable learning process.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, making it suitable for scenarios where different levels of discounting and bootstrapping are required. The flexibility in handling these values allows for a more robust and adaptable learning process.
 
 :p How does Emphatic-TD(λ) handle convergence guarantees?
 ??x
-Emphatic-TD(λ) handles convergence guarantees by ensuring that the algorithm converges for any state-dependent \( \lambda \). Unlike traditional TD methods which are only guaranteed to converge under specific conditions, Emphatic-TD(λ) can adapt to varying levels of discounting and bootstrapping across different states. This flexibility allows it to provide a broader range of convergence guarantees in practical applications.
+Emphatic-TD(λ) handles convergence guarantees by ensuring that the algorithm converges for any state-dependent $\lambda$. Unlike traditional TD methods which are only guaranteed to converge under specific conditions, Emphatic-TD(λ) can adapt to varying levels of discounting and bootstrapping across different states. This flexibility allows it to provide a broader range of convergence guarantees in practical applications.
 
 :p How does Emphatic-TD(λ) handle recent events?
 ??x
-Emphatic-TD(λ) handles recent events by emphasizing them more heavily through its followon trace mechanism. The terms \( M_t \) and \( F_t \) ensure that recent experiences are given higher importance, helping to focus updates on relevant states and improving the handling of high variance in the learning process.
+Emphatic-TD(λ) handles recent events by emphasizing them more heavily through its followon trace mechanism. The terms $M_t $ and$F_t$ ensure that recent experiences are given higher importance, helping to focus updates on relevant states and improving the handling of high variance in the learning process.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values by allowing \( \lambda \) to vary over time, making it suitable for scenarios where different levels of discounting and bootstrapping are required. This flexibility ensures that the approach is robust and versatile, adapting to the characteristics of the environment or task being learned.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values by allowing$\lambda$ to vary over time, making it suitable for scenarios where different levels of discounting and bootstrapping are required. This flexibility ensures that the approach is robust and versatile, adapting to the characteristics of the environment or task being learned.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values in a practical setting?
 ??x
-In a practical setting, Emphatic-TD(λ) handles state-dependent \( \lambda \) values by dynamically adjusting the discount factor \( \lambda \) based on the history of interactions. This allows it to adapt to different states and situations where the importance of past events varies. The algorithm can handle scenarios with changing environments or varying levels of reward correlation, making it more robust and applicable in real-world settings.
+In a practical setting, Emphatic-TD(λ) handles state-dependent $\lambda $ values by dynamically adjusting the discount factor$\lambda$ based on the history of interactions. This allows it to adapt to different states and situations where the importance of past events varies. The algorithm can handle scenarios with changing environments or varying levels of reward correlation, making it more robust and applicable in real-world settings.
 
 :p How does Emphatic-TD(λ) handle recent events through its followon trace?
 ??x
-Emphatic-TD(λ) handles recent events through its followon trace mechanism by emphasizing them more heavily. The terms \( M_t \) and \( F_t \) ensure that the most recent experiences are given higher importance, helping to focus updates on relevant states and improving the handling of high variance in the learning process.
+Emphatic-TD(λ) handles recent events through its followon trace mechanism by emphasizing them more heavily. The terms $M_t $ and$F_t$ ensure that the most recent experiences are given higher importance, helping to focus updates on relevant states and improving the handling of high variance in the learning process.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle convergence through its followon trace?
 ??x
-Emphatic-TD(λ) handles convergence through its followon trace by ensuring that recent events are given higher importance, which helps in stabilizing and improving the learning process. The terms \( M_t \) and \( F_t \) in the followon trace mechanism contribute to a more robust and reliable convergence compared to traditional TD methods.
+Emphatic-TD(λ) handles convergence through its followon trace by ensuring that recent events are given higher importance, which helps in stabilizing and improving the learning process. The terms $M_t $ and$F_t$ in the followon trace mechanism contribute to a more robust and reliable convergence compared to traditional TD methods.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values in practice?
 ??x
-In practice, Emphatic-TD(λ) handles state-dependent \( \lambda \) values by dynamically adjusting the discount factor \( \lambda \) based on the history of interactions. This allows it to adapt to different states and situations where the importance of past events varies. The algorithm can handle scenarios with changing environments or varying levels of reward correlation, making it more robust and applicable in real-world settings.
+In practice, Emphatic-TD(λ) handles state-dependent $\lambda $ values by dynamically adjusting the discount factor$\lambda$ based on the history of interactions. This allows it to adapt to different states and situations where the importance of past events varies. The algorithm can handle scenarios with changing environments or varying levels of reward correlation, making it more robust and applicable in real-world settings.
 
 :p How does Emphatic-TD(λ) handle convergence guarantees through its followon trace?
 ??x
-Emphatic-TD(λ) handles convergence guarantees by ensuring that the learning process is stable and reliable. The followon trace mechanism helps in emphasizing recent events, which contributes to a more robust and consistent convergence compared to traditional TD methods. By adapting to state-dependent \( \lambda \) values, Emphatic-TD(λ) provides broader convergence guarantees across different scenarios.
+Emphatic-TD(λ) handles convergence guarantees by ensuring that the learning process is stable and reliable. The followon trace mechanism helps in emphasizing recent events, which contributes to a more robust and consistent convergence compared to traditional TD methods. By adapting to state-dependent $\lambda$ values, Emphatic-TD(λ) provides broader convergence guarantees across different scenarios.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
-
-:p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace mechanism?
-??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace mechanism?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
+:p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace mechanism?
+??x
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
-Emphatic-TD(λ) handles state-dependent \( \lambda \) values through its followon trace mechanism by using the terms \( M_t \) and \( F_t \). These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
+Emphatic-TD(λ) handles state-dependent $\lambda $ values through its followon trace mechanism by using the terms$M_t $ and$F_t$. These update rules ensure that recent events are given higher importance, allowing the algorithm to adapt to varying levels of discounting and bootstrapping across different states. This flexibility helps in handling scenarios where the importance of past experiences changes dynamically.
 
 :p How does Emphatic-TD(λ) handle state-dependent λ values through its followon trace?
 ??x
@@ -1884,12 +1879,12 @@ function ACTOR_CRITIC(lambda) {
 Background context explaining the concept. In reinforcement learning, Watkins's Q(λ) algorithm is a variant of Q-learning that uses eligibility traces to balance between exploitation and exploration. The algorithm maintains an eligibility trace vector for each state-action pair, which allows it to accumulate credit over time.
 
 Relevant formulas:
-- \(Q(s_t, a_t)\) = target value function
-- \(\lambda\) = decay rate of the eligibility trace
+- $Q(s_t, a_t)$= target value function
+- $\lambda$= decay rate of the eligibility trace
 
 :p What is Watkins's Q(λ) algorithm used for?
 ??x
-Watkins’s Q(λ) algorithm is used in reinforcement learning to balance between exploitation and exploration by using eligibility traces. It modifies the standard Q-learning update rule by introducing a parameter \(\lambda\) that controls how much credit should be given to past state-action pairs.
+Watkins’s Q(λ) algorithm is used in reinforcement learning to balance between exploitation and exploration by using eligibility traces. It modifies the standard Q-learning update rule by introducing a parameter $\lambda$ that controls how much credit should be given to past state-action pairs.
 
 Code example:
 ```java
@@ -1947,8 +1942,8 @@ x??
 Background context explaining the concept. The Expected Sarsa(λ) algorithm is a variant of SARSA that uses eligibility traces to balance between exploitation and exploration.
 
 Relevant formulas:
-- \(Q(s_t, a_t)\) = target value function
-- \(\lambda\) = decay rate of the eligibility trace
+- $Q(s_t, a_t)$= target value function
+- $\lambda$= decay rate of the eligibility trace
 
 :p What is the main difference between Expected Sarsa(λ) and standard SARSA?
 ??x
@@ -1979,7 +1974,7 @@ x??
 Background context explaining the concept. GTD(λ) (Gradient Temporal Difference) is a method that combines gradient methods with temporal difference learning to improve convergence properties.
 
 Relevant formulas:
-- \(\lambda\) = decay rate of the eligibility trace
+- $\lambda$= decay rate of the eligibility trace
 
 :p What is the main advantage of using GTD(λ)?
 ??x
@@ -2030,18 +2025,15 @@ x??
 The soft-max distribution is used to map action preferences into probabilities. This ensures that actions are selected probabilistically, allowing for exploration.
 :p What is the formula for the probability of selecting an action using a soft-max distribution?
 ??x
-The probability of selecting action \(a\) in state \(s\) given parameter \(\theta\) is calculated using the soft-max function:
-\[
-\Pi(a|s,\theta) = \frac{e^{h(s,a,\theta)}}{\sum_{b} e^{h(s,b,\theta)}}
-\]
-where \(h(s, a, \theta)\) are the action preferences.
+The probability of selecting action $a $ in state$s $ given parameter$\theta$ is calculated using the soft-max function:
+$$\Pi(a|s,\theta) = \frac{e^{h(s,a,\theta)}}{\sum_{b} e^{h(s,b,\theta)}}$$where $ h(s, a, \theta)$ are the action preferences.
 x??
 
 ---
 
 #### Advantages of Soft-Max Parameterization
 Soft-max parameterization allows policies to be stochastic and can approach deterministic policies as needed. It also enables the selection of actions with arbitrary probabilities, which is crucial for complex problems involving function approximation.
-:p What advantage does soft-max policy parameterization offer over \(\epsilon\)-greedy action value methods?
+:p What advantage does soft-max policy parameterization offer over $\epsilon$-greedy action value methods?
 ??x
 The key advantages are:
 1. Policies can be stochastic and approximate deterministic policies more flexibly.
@@ -2052,9 +2044,9 @@ x??
 
 #### Example: Short Corridor with Switched Actions
 In this example, a small corridor gridworld has states that appear identical under function approximation. The problem is challenging because actions have different consequences depending on state.
-:p How does the \(\epsilon\)-greedy method fail to solve the short corridor problem effectively?
+:p How does the $\epsilon$-greedy method fail to solve the short corridor problem effectively?
 ??x
-The \(\epsilon\)-greedy method fails by being overly deterministic, only allowing two policies: always choosing right or left with a high probability. This rigidity prevents it from finding the optimal stochastic policy, leading to poor performance.
+The $\epsilon$-greedy method fails by being overly deterministic, only allowing two policies: always choosing right or left with a high probability. This rigidity prevents it from finding the optimal stochastic policy, leading to poor performance.
 ```java
 // Example pseudocode for epsilon-greedy selection
 public int selectAction(EpsilonGreedyPolicy policy) {
@@ -2070,7 +2062,7 @@ x??
 ---
 
 #### Determinism in Soft-Max Parameterization
-Soft-max parameterization can drive action preferences to specific values, effectively creating a deterministic policy. This is not possible with \(\epsilon\)-greedy methods due to their probabilistic nature.
+Soft-max parameterization can drive action preferences to specific values, effectively creating a deterministic policy. This is not possible with $\epsilon$-greedy methods due to their probabilistic nature.
 :p How does the soft-max distribution help achieve determinism?
 ??x
 The soft-max distribution helps by driving the action preferences of optimal actions infinitely higher than those of suboptimal actions (if permitted by the parameterization). This can approximate a deterministic policy as the temperature parameter decreases over time, though choosing this schedule can be challenging.
@@ -2099,7 +2091,7 @@ x??
 ---
 
 #### Policy Parameterization and Prior Knowledge
-Background context: The choice of policy parameterization can inject prior knowledge about the desired form of the policy into a reinforcement learning system, which is often crucial for using a policy-based method over action-value methods like \(\epsilon\)-greedy.
+Background context: The choice of policy parameterization can inject prior knowledge about the desired form of the policy into a reinforcement learning system, which is often crucial for using a policy-based method over action-value methods like $\epsilon$-greedy.
 
 :p What is the importance of policy parameterization in reinforcement learning?
 ??x
@@ -2109,7 +2101,7 @@ x??
 ---
 
 #### Policy Gradient Theorem (Episodic Case)
-Background context: The policy gradient theorem provides a way to estimate the performance gradient with respect to the policy parameters in an episodic setting, which is essential for policy-based reinforcement learning algorithms. It ensures smoother convergence compared to value-based methods like \(\epsilon\)-greedy.
+Background context: The policy gradient theorem provides a way to estimate the performance gradient with respect to the policy parameters in an episodic setting, which is essential for policy-based reinforcement learning algorithms. It ensures smoother convergence compared to value-based methods like $\epsilon$-greedy.
 
 :p What is the objective of the policy gradient theorem?
 ??x
@@ -2123,8 +2115,9 @@ Background context: To derive the exact expression for the gradient of the state
 
 :p How is the gradient of the state-value function related to action-value functions?
 ??x
-The gradient of the state-value function \(v_\pi(\mathbf{s})\) can be expressed in terms of the action-value function \(q_\pi(s, a)\) as follows:
-\[ \nabla v_\pi(s) = \sum_a \pi(a|s) \left( r + q_\pi(s, a) \right). \]
+The gradient of the state-value function $v_\pi(\mathbf{s})$ can be expressed in terms of the action-value function $q_\pi(s, a)$ as follows:
+$$\nabla v_\pi(s) = \sum_a \pi(a|s) \left( r + q_\pi(s, a) \right).$$
+
 This equation shows that the gradient depends on both immediate rewards and future expected returns under the current policy.
 x??
 
@@ -2133,11 +2126,10 @@ x??
 #### Episode Performance Measure
 Background context: In episodic reinforcement learning, the performance measure is defined as the value of the start state of the episode. This helps in quantifying how well the agent performs from its initial state.
 
-:p How do we define the performance measure \(J(\theta)\) for an episodic task?
+:p How do we define the performance measure $J(\theta)$ for an episodic task?
 ??x
-The performance measure \(J(\theta)\) for an episodic task is defined as:
-\[ J(\theta) = v_\pi(s_0), \]
-where \(v_\pi(s_0)\) is the true value function of the policy \(\pi\) starting from state \(s_0\). This means that we measure how good the agent performs in terms of its expected return from the start state.
+The performance measure $J(\theta)$ for an episodic task is defined as:
+$$J(\theta) = v_\pi(s_0),$$where $ v_\pi(s_0)$is the true value function of the policy $\pi$ starting from state $s_0$. This means that we measure how good the agent performs in terms of its expected return from the start state.
 x??
 
 ---
@@ -2156,23 +2148,22 @@ x??
 ---
 
 #### Policy Dependence on Parameters
-Background context: The policy \(\pi\) depends continuously on the parameters \(\theta\), which is crucial for applying gradient ascent methods. This continuity ensures smoother updates during learning.
+Background context: The policy $\pi $ depends continuously on the parameters$\theta$, which is crucial for applying gradient ascent methods. This continuity ensures smoother updates during learning.
 
 :p How does the continuity of the policy with respect to its parameters help in reinforcement learning?
 ??x
-The continuity of the policy \(\pi\) with respect to its parameters \(\theta\) allows us to apply gradient ascent methods effectively. Since small changes in \(\theta\) lead to smooth transitions in the policy, we can more reliably approximate and maximize the expected return using gradient-based optimization techniques.
+The continuity of the policy $\pi $ with respect to its parameters$\theta $ allows us to apply gradient ascent methods effectively. Since small changes in$\theta$ lead to smooth transitions in the policy, we can more reliably approximate and maximize the expected return using gradient-based optimization techniques.
 x??
 
 ---
 
 #### Episodic Case Performance Measure Calculation
-Background context: In the episodic case, performance is measured from a specific start state \(s_0\), which simplifies the notation but still requires careful consideration of the environment dynamics.
+Background context: In the episodic case, performance is measured from a specific start state $s_0$, which simplifies the notation but still requires careful consideration of the environment dynamics.
 
-:p How do we calculate the performance measure for an episode starting in state \(s_0\)?
+:p How do we calculate the performance measure for an episode starting in state $s_0$?
 ??x
-To calculate the performance measure for an episode starting in state \(s_0\):
-\[ J(\theta) = v_\pi(s_0), \]
-where \(v_\pi(s_0)\) is the value function of the policy \(\pi\) when starting from state \(s_0\). This means we evaluate how well the agent performs starting from this specific initial state.
+To calculate the performance measure for an episode starting in state $s_0$:
+$$J(\theta) = v_\pi(s_0),$$where $ v_\pi(s_0)$is the value function of the policy $\pi$ when starting from state $s_0$. This means we evaluate how well the agent performs starting from this specific initial state.
 x??
 
 ---
@@ -2183,7 +2174,7 @@ Background context: The unrolling process helps in expressing the gradient of th
 :p How do you express the gradient of the state-value function using unrolling?
 ??x
 The gradient of the state-value function can be expressed through repeated unrolling:
-\[ \nabla v_\pi(s) = \sum_a \pi(a|s) \left( r + \sum_{s'} p(s'|s, a) (r' + v_\pi(s')) \right). \]
+$$\nabla v_\pi(s) = \sum_a \pi(a|s) \left( r + \sum_{s'} p(s'|s, a) (r' + v_\pi(s')) \right).$$
 This expression shows the recursive nature of the value function and how it depends on future states and actions.
 x??
 

@@ -15,7 +15,7 @@ The two main conditions for a writing to satisfy the statute of frauds are:
 1. The writing must sufficiently describe the contract, which means it should identify the parties involved, the subject matter, and essential terms.
 2. The writing must be signed by the party against whom enforcement is sought.
 
-For example, if Tom sells his house to Mary for $300,000, a note left by Tom at his lawyer's office saying "Just sold my house to Mary for $300,000" would satisfy both conditions.
+For example, if Tom sells his house to Mary for $300,000, a note left by Tom at his lawyer's office saying "Just sold my house to Mary for$300,000" would satisfy both conditions.
 ??x
 ---
 #### Sufficiency of Description
@@ -37,11 +37,11 @@ If you sign a writing and the other party does not, then:
 - The other party can enforce the contract against you.
 - You cannot enforce it against the other party.
 
-For example, Tom agrees to sell his house to Mary for $300,000. If only Tom signs a note saying "Just sold my house to Mary for $300,000," he could not sue Mary for breach of contract if she fails to fulfill her obligations.
+For example, Tom agrees to sell his house to Mary for $300,000. If only Tom signs a note saying "Just sold my house to Mary for$300,000," he could not sue Mary for breach of contract if she fails to fulfill her obligations.
 ??x
 ---
 #### Example Scenario with Note
-Tom orally agrees to sell his house to Mary for $300,000. He leaves a note at his lawyer’s office saying "Just sold my house to Mary for $300,000." Later, Tom gets a better offer and refuses to sell the house to Mary.
+Tom orally agrees to sell his house to Mary for $300,000. He leaves a note at his lawyer’s office saying "Just sold my house to Mary for$300,000." Later, Tom gets a better offer and refuses to sell the house to Mary.
 
 :p Can Mary enforce the contract based on the note left by Tom?
 ??x
@@ -281,7 +281,7 @@ Background context: The Uniform Commercial Code (UCC) governs sales of goods in 
 
 :p What is the common mistake regarding the UCC's application?
 ??x
-A common mistake is assuming that the UCC does not apply to contracts for the sale of goods worth less than $500. In fact, the UCC applies to all sales of goods, regardless of value. For transactions valued under $500, the specific statute of frauds provisions in the UCC do not apply.
+A common mistake is assuming that the UCC does not apply to contracts for the sale of goods worth less than $500. In fact, the UCC applies to all sales of goods, regardless of value. For transactions valued under$500, the specific statute of frauds provisions in the UCC do not apply.
 
 For instance, if a contract is for the sale of goods worth less than $500, the usual requirement that such contracts be in writing (statute of frauds) does not apply.
 x??

@@ -38,10 +38,7 @@ Occupancy is a measure of how busy the compute units are during calculations and
 :p What is occupancy in GPU programming?
 ??x
 Occupancy measures how efficiently the GPU's compute units are utilized. It is calculated as the number of active threads or subgroups divided by the maximum possible number of threads per compute unit.
-\[
-\text{Occupancy} = \frac{\text{Number of Active Threads}}{\text{Maximum Number of Threads Per Compute Unit}}
-\]
-x??
+$$\text{Occupancy} = \frac{\text{Number of Active Threads}}{\text{Maximum Number of Threads Per Compute Unit}}$$x??
 
 ---
 #### Register Usage Calculation
@@ -293,7 +290,7 @@ x??
 ---
 
 #### Unstructured Mesh Data Distribution
-In 3D unstructured mesh applications using tetrahedral or polygonal cells, data is often stored in a 1D list. The data includes spatial information such as \(x\), \(y\), and \(z\) coordinates. Given the unstructured nature of this data, one-dimensional distribution is typically the most practical approach.
+In 3D unstructured mesh applications using tetrahedral or polygonal cells, data is often stored in a 1D list. The data includes spatial information such as $x $, $ y $, and$ z$ coordinates. Given the unstructured nature of this data, one-dimensional distribution is typically the most practical approach.
 
 To manage the data on the GPU, a tile size of 128 is chosen to ensure efficient work group management. This results in from 8,000 to 80,000 work groups, which helps hide memory latency and provides adequate computational load for the GPU.
 
@@ -305,7 +302,7 @@ x??
 ---
 
 #### Memory Requirements for Unstructured Mesh
-Given the nature of unstructured meshes, additional data such as face, neighbor, and mapping arrays are required to maintain connectivity between cells. Each cell in a mesh might have multiple \(x\), \(y\), and \(z\) coordinates.
+Given the nature of unstructured meshes, additional data such as face, neighbor, and mapping arrays are required to maintain connectivity between cells. Each cell in a mesh might have multiple $x $, $ y $, and$ z$ coordinates.
 
 The memory requirements include:
 - 128 × 8 byte double-precision values for each work group

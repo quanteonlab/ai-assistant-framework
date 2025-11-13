@@ -26,10 +26,14 @@ x??
 Background context: The concept introduces an idea for reducing variance in importance sampling estimators through a technique called flat partial returns. These are returns that do not discount future rewards but instead stop at a certain horizon h, and can be summed to form the conventional full return.
 :p How is the conventional full return expressed as a sum of flat partial returns?
 ??x
-The conventional full return \( G_t \) can be viewed as a sum of flat partial returns as follows:
-\[ G_t = R_{t+1} + 0.9R_{t+2} + 0.9^2R_{t+3} + \cdots + 0.9^{T-t-1}R_T \]
+The conventional full return $G_t$ can be viewed as a sum of flat partial returns as follows:
+$$G_t = R_{t+1} + 0.9R_{t+2} + 0.9^2R_{t+3} + \cdots + 0.9^{T-t-1}R_T$$
+
 This can be rewritten using the formula for flat partial returns:
-\[ G_t = (1 - \gamma) R_{t+1} + (1 - \gamma)\gamma (R_{t+1} + R_{t+2}) + (1 - \gamma)\gamma^2 (R_{t+1} + R_{t+2} + R_{t+3}) + \cdots + (1 - \gamma)\gamma^{T-t-1}(R_{t+1} + R_{t+2} + \cdots + R_T) \]
+$$
+
+G_t = (1 - \gamma) R_{t+1} + (1 - \gamma)\gamma (R_{t+1} + R_{t+2}) + (1 - \gamma)\gamma^2 (R_{t+1} + R_{t+2} + R_{t+3}) + \cdots + (1 - \gamma)\gamma^{T-t-1}(R_{t+1} + R_{t+2} + \cdots + R_T)$$
+
 This expression shows that the full return can be decomposed into a sum of flat partial returns.
 x??
 
@@ -40,8 +44,9 @@ Background context: These estimators adjust importance sampling ratios based on 
 :p What is the formula for the ordinary importance-sampling estimator?
 ??x
 The formula for the ordinary importance-sampling estimator is:
-\[ V(s) = \frac{1}{|T(s)|} \sum_{t \in T(s)} \left[ (1 - \gamma)^{P_T(t)-1} \sum_{h=t+1}^{H} \theta_{t:h-1} \bar{G}_{t:h} + \gamma^{P_T(t)-t-1} \bar{G}_{t:H}(t) \right] \]
-where \( \bar{G}_{t:h} = R_{t+1} + R_{t+2} + \cdots + R_h \).
+$$
+
+V(s) = \frac{1}{|T(s)|} \sum_{t \in T(s)} \left[ (1 - \gamma)^{P_T(t)-1} \sum_{h=t+1}^{H} \theta_{t:h-1} \bar{G}_{t:h} + \gamma^{P_T(t)-t-1} \bar{G}_{t:H}(t) \right]$$where $\bar{G}_{t:h} = R_{t+1} + R_{t+2} + \cdots + R_h$.
 x??
 
 ---
@@ -51,14 +56,13 @@ Background context: These estimators further refine the importance sampling by c
 :p What is the formula for the weighted importance-sampling estimator?
 ??x
 The formula for the weighted importance-sampling estimator is:
-\[ V(s) = \frac{1}{\sum_{t \in T(s)} (1 - \gamma)^{P_T(t)-1} \sum_{h=t+1}^{H} \theta_{t:h-1} + \gamma^{P_T(t)-t-1}} \sum_{t \in T(s)} (1 - \gamma)^{P_T(t)-1} \sum_{h=t+1}^{H} \theta_{t:h-1} \bar{G}_{t:h} + \gamma^{P_T(t)-t-1} \bar{G}_{t:H}(t) \]
-where \( \bar{G}_{t:h} = R_{t+1} + R_{t+2} + \cdots + R_h \).
+$$V(s) = \frac{1}{\sum_{t \in T(s)} (1 - \gamma)^{P_T(t)-1} \sum_{h=t+1}^{H} \theta_{t:h-1} + \gamma^{P_T(t)-t-1}} \sum_{t \in T(s)} (1 - \gamma)^{P_T(t)-1} \sum_{h=t+1}^{H} \theta_{t:h-1} \bar{G}_{t:h} + \gamma^{P_T(t)-t-1} \bar{G}_{t:H}(t)$$where $\bar{G}_{t:h} = R_{t+1} + R_{t+2} + \cdots + R_h$.
 x??
 
 ---
 
 #### Per-decision Importance Sampling
-Importance sampling is a method used to estimate the value function \(V(s)\) or policy \(\pi\) using samples from a different policy. The traditional importance sampling estimators (5.5) and (5.6) are based on summing rewards weighted by the ratio of policies at decision points. However, in per-decision importance sampling, each term of the sum is treated individually to reduce variance.
+Importance sampling is a method used to estimate the value function $V(s)$ or policy $\pi$ using samples from a different policy. The traditional importance sampling estimators (5.5) and (5.6) are based on summing rewards weighted by the ratio of policies at decision points. However, in per-decision importance sampling, each term of the sum is treated individually to reduce variance.
 
 The key idea is that each sub-term in the numerator can be broken down into a product of reward and importance-sampling ratios. The expected value of these factors (other than the last one) is 1 due to stationarity assumptions.
 :p What is per-decision importance sampling?
@@ -66,13 +70,8 @@ The key idea is that each sub-term in the numerator can be broken down into a pr
 Per-decision importance sampling involves breaking down each term in the sum of rewards into individual sub-terms, allowing for a more precise estimation by considering the importance-sampling ratio at each decision point. This method can potentially reduce variance compared to traditional importance sampling estimators.
 
 The process involves rewriting the numerator terms as:
-\[
-\rho_{t:T-1} G_t = \rho_{t:T-1} (R_{t+1} + R_{t+2} + \cdots + T_{t-1} R_T)
-\]
-where
-\[
-\rho_{t:T-1} R_{t+1} = \pi(A_t | S_t) \frac{b(A_t | S_t)}{\pi(A_t | S_t)} \pi(A_{t+1} | S_{t+1}) \frac{b(A_{t+1} | S_{t+1})}{\pi(A_{t+1} | S_{t+1})} \cdots \pi(A_{T-1} | S_{T-1}) \frac{b(A_{T-1} | S_{T-1})}{\pi(A_{T-1} | S_{T-1})} R_{t+1}.
-\]
+$$\rho_{t:T-1} G_t = \rho_{t:T-1} (R_{t+1} + R_{t+2} + \cdots + T_{t-1} R_T)$$where$$\rho_{t:T-1} R_{t+1} = \pi(A_t | S_t) \frac{b(A_t | S_t)}{\pi(A_t | S_t)} \pi(A_{t+1} | S_{t+1}) \frac{b(A_{t+1} | S_{t+1})}{\pi(A_{t+1} | S_{t+1})} \cdots \pi(A_{T-1} | S_{T-1}) \frac{b(A_{T-1} | S_{T-1})}{\pi(A_{T-1} | S_{T-1})} R_{t+1}.$$
+
 The expected value of the factors other than the reward term is 1, thus simplifying the estimation.
 
 :p How does per-decision importance sampling simplify the estimation?
@@ -80,36 +79,32 @@ The expected value of the factors other than the reward term is 1, thus simplify
 Per-decision importance sampling simplifies the estimation by focusing on individual sub-terms in the sum of rewards. Each sub-term can be rewritten as a product of an importance-sampling ratio and a reward. The expected value of the ratios other than the last one is 1, meaning they do not contribute to the variance. This allows us to focus on the actual reward terms directly, leading to more accurate estimations.
 
 For example:
-\[
-E[\rho_{t:T-1} R_{t+1}] = E[\pi(A_t | S_t) \frac{b(A_t | S_t)}{\pi(A_t | S_t)} \pi(A_{t+1} | S_{t+1}) \frac{b(A_{t+1} | S_{t+1})}{\pi(A_{t+1} | S_{t+1})} \cdots R_{t+1}] = E[R_{t+1}]
-\]
-since the expected value of each ratio term is 1.
+$$
 
-:p What is the formula for \( \tilde{G}_t \) in per-decision importance sampling?
+E[\rho_{t:T-1} R_{t+1}] = E[\pi(A_t | S_t) \frac{b(A_t | S_t)}{\pi(A_t | S_t)} \pi(A_{t+1} | S_{t+1}) \frac{b(A_{t+1} | S_{t+1})}{\pi(A_{t+1} | S_{t+1})} \cdots R_{t+1}] = E[R_{t+1}]$$since the expected value of each ratio term is 1.
+
+:p What is the formula for $\tilde{G}_t$ in per-decision importance sampling?
 ??x
-The formula for \(\tilde{G}_t\) in per-decision importance sampling is:
-\[
-\tilde{G}_t = \rho_{t:t} R_{t+1} + \rho_{t:t+1} R_{t+2} + 2\rho_{t:t+2} R_{t+3} + \cdots + (T-1)\rho_{t:T-1} R_T
-\]
-where \(\rho_{t:t+k-1}\) is the product of importance-sampling ratios from time \(t\) to \(t+k-1\).
+The formula for $\tilde{G}_t$ in per-decision importance sampling is:
+$$\tilde{G}_t = \rho_{t:t} R_{t+1} + \rho_{t:t+1} R_{t+2} + 2\rho_{t:t+2} R_{t+3} + \cdots + (T-1)\rho_{t:T-1} R_T$$where $\rho_{t:t+k-1}$ is the product of importance-sampling ratios from time $t$ to $t+k-1$.
 
 :p How can per-decision importance sampling be applied in an algorithm?
 ??x
-Per-decision importance sampling can be applied in an algorithm by adjusting the estimator for the value function or policy. For example, in oﬀ-policy Monte Carlo control (Algorithm 5.3), the update rule would use \(\tilde{G}_t\) instead of \(G_t\):
+Per-decision importance sampling can be applied in an algorithm by adjusting the estimator for the value function or policy. For example, in oﬀ-policy Monte Carlo control (Algorithm 5.3), the update rule would use $\tilde{G}_t $ instead of$G_t$:
 
 ```python
 for s in T(s):
     V[s] = V[s] + (1 / len(T(s))) * (sum([w * G for w, G in zip(wt, T(s))]))
 ```
 
-Replace \(G_t\) with \(\tilde{G}_t\) to get:
+Replace $G_t $ with$\tilde{G}_t$ to get:
 
 ```python
 for s in T(s):
     V[s] = V[s] + (1 / len(T(s))) * sum([w * tilde_G for w, G in zip(wt, T(s))])
 ```
 
-where \(wt\) is the weight associated with each \(\tilde{G}_t\).
+where $wt $ is the weight associated with each$\tilde{G}_t$.
 
 :p How does per-decision importance sampling reduce variance?
 ??x
@@ -119,24 +114,20 @@ Per-decision importance sampling reduces variance by breaking down the sum of re
 ??x
 There is no established consistent per-decision version of weighted importance sampling. The concept of per-decision importance sampling focuses on simplifying the estimation by focusing on individual reward terms rather than developing a new weighted approach. Therefore, the consistency and convergence properties of such an estimator are not guaranteed.
 
-:p How can one derive \( E[\rho_{t:T-1} R_{t+1}] = E[R_{t+1}] \) from (5.12)?
+:p How can one derive $E[\rho_{t:T-1} R_{t+1}] = E[R_{t+1}]$ from (5.12)?
 ??x
-To derive \( E[\rho_{t:T-1} R_{t+1}] = E[R_{t+1}] \), we start with the expression:
-\[
-\rho_{t:T-1} R_{t+1} = \pi(A_t | S_t) \frac{b(A_t | S_t)}{\pi(A_t | S_t)} \pi(A_{t+1} | S_{t+1}) \frac{b(A_{t+1} | S_{t+1})}{\pi(A_{t+1} | S_{t+1})} \cdots \pi(A_{T-1} | S_{T-1}) \frac{b(A_{T-1} | S_{T-1})}{\pi(A_{T-1} | S_{T-1})} R_{t+1}
-\]
+To derive $E[\rho_{t:T-1} R_{t+1}] = E[R_{t+1}]$, we start with the expression:
+$$\rho_{t:T-1} R_{t+1} = \pi(A_t | S_t) \frac{b(A_t | S_t)}{\pi(A_t | S_t)} \pi(A_{t+1} | S_{t+1}) \frac{b(A_{t+1} | S_{t+1})}{\pi(A_{t+1} | S_{t+1})} \cdots \pi(A_{T-1} | S_{T-1}) \frac{b(A_{T-1} | S_{T-1})}{\pi(A_{T-1} | S_{T-1})} R_{t+1}$$
 
 Taking the expectation of both sides:
-\[
-E[\rho_{t:T-1} R_{t+1}] = E\left[ \pi(A_t | S_t) \frac{b(A_t | S_t)}{\pi(A_t | S_t)} \pi(A_{t+1} | S_{t+1}) \frac{b(A_{t+1} | S_{t+1})}{\pi(A_{t+1} | S_{t+1})} \cdots \pi(A_{T-1} | S_{T-1}) \frac{b(A_{T-1} | S_{T-1})}{\pi(A_{T-1} | S_{T-1})} R_{t+1} \right]
-\]
+$$
+
+E[\rho_{t:T-1} R_{t+1}] = E\left[ \pi(A_t | S_t) \frac{b(A_t | S_t)}{\pi(A_t | S_t)} \pi(A_{t+1} | S_{t+1}) \frac{b(A_{t+1} | S_{t+1})}{\pi(A_{t+1} | S_{t+1})} \cdots \pi(A_{T-1} | S_{T-1}) \frac{b(A_{T-1} | S_{T-1})}{\pi(A_{T-1} | S_{T-1})} R_{t+1} \right]$$
 
 Since the expected value of each ratio term is 1:
-\[
-E[\rho_{t:T-1} R_{t+1}] = E[R_{t+1}]
-\]
+$$
 
-:p How does per-decision importance sampling affect variance?
+E[\rho_{t:T-1} R_{t+1}] = E[R_{t+1}]$$:p How does per-decision importance sampling affect variance?
 ??x
 Per-decision importance sampling can potentially reduce variance because it focuses on individual decision points, allowing the algorithm to more accurately capture the influence of specific actions and states. By isolating each reward term in the sum, the method minimizes the noise from other events that occurred after the reward. This targeted approach leads to a more stable estimation process.
 
@@ -156,30 +147,27 @@ Monte Carlo methods learn value functions and optimal policies from experience i
 
 :p What is oﬀ-policy Monte Carlo control?
 ??x
-Off-policy Monte Carlo control involves learning a policy \(\pi'\) that is different from the behavior policy \(b\). The goal is to estimate the value function or optimal policy using samples collected under the behavior policy. It allows for more exploration and potentially better performance by learning a target policy that may not be directly observable.
+Off-policy Monte Carlo control involves learning a policy $\pi'$ that is different from the behavior policy $b$. The goal is to estimate the value function or optimal policy using samples collected under the behavior policy. It allows for more exploration and potentially better performance by learning a target policy that may not be directly observable.
 
 :p How does oﬀ-policy Monte Carlo control work?
 ??x
-Off-policy Monte Carlo control works by updating the value function based on samples from a different policy, typically using importance sampling to weight the updates correctly. The algorithm collects episodes under the behavior policy \(b\) and uses them to estimate the target policy \(\pi'\).
+Off-policy Monte Carlo control works by updating the value function based on samples from a different policy, typically using importance sampling to weight the updates correctly. The algorithm collects episodes under the behavior policy $b $ and uses them to estimate the target policy$\pi'$.
 
 The update rule for off-policy Monte Carlo control is:
 ```python
 for s in T(s):
     V[s] = V[s] + (1 / N[s]) * (G - V[s])
 ```
-where \(N[s]\) is the number of times state \(s\) has been visited, and \(G\) is the return from that state.
+where $N[s]$ is the number of times state $s$ has been visited, and $G$ is the return from that state.
 
 :p How does oﬀ-policy Monte Carlo control use importance sampling?
 ??x
-Off-policy Monte Carlo control uses importance sampling to correct for the difference between the behavior policy \(b\) and the target policy \(\pi'\). The update rule involves weighting returns by the ratio of the target policy to the behavior policy:
-\[
-V(s) = V(s) + \alpha (G - V(s)) \frac{\pi'(A|S)}{b(A|S)}
-\]
-where \(G\) is the return from state \(s\), and \(\frac{\pi'(A|S)}{b(A|S)}\) is the importance-sampling ratio.
+Off-policy Monte Carlo control uses importance sampling to correct for the difference between the behavior policy $b $ and the target policy$\pi'$. The update rule involves weighting returns by the ratio of the target policy to the behavior policy:
+$$V(s) = V(s) + \alpha (G - V(s)) \frac{\pi'(A|S)}{b(A|S)}$$where $ G $ is the return from state $ s $, and$\frac{\pi'(A|S)}{b(A|S)}$ is the importance-sampling ratio.
 
 :p How does oﬀ-policy Monte Carlo control handle simulation?
 ??x
-Off-policy Monte Carlo control can use simulations to generate episodes under the behavior policy. These episodes are then used to estimate the value function or optimal policy for the target policy \(\pi'\). The use of simulations allows for flexibility and practical application in scenarios where constructing a detailed model is challenging.
+Off-policy Monte Carlo control can use simulations to generate episodes under the behavior policy. These episodes are then used to estimate the value function or optimal policy for the target policy $\pi'$. The use of simulations allows for flexibility and practical application in scenarios where constructing a detailed model is challenging.
 
 :p What does the oﬀ-policy Monte Carlo control algorithm look like?
 ??x
@@ -220,31 +208,31 @@ Off-policy Monte Carlo control handles episodic data by collecting entire sequen
 
 :p How does oﬀ-policy Monte Carlo control handle non-stationary environments?
 ??x
-Off-policy Monte Carlo control can handle non-stationary environments by continuously updating the value function and policy as new episodes are collected. The use of sampled data from multiple episodes allows for adaptive learning, where the target policy \(\pi'\) is updated based on the latest information available.
+Off-policy Monte Carlo control can handle non-stationary environments by continuously updating the value function and policy as new episodes are collected. The use of sampled data from multiple episodes allows for adaptive learning, where the target policy $\pi'$ is updated based on the latest information available.
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control encourages exploration through the behavior policy \(b\). The behavior policy can be designed to explore more than the target policy \(\pi'\), allowing for better learning of the optimal policy. This ensures that the agent explores the environment sufficiently to gather a diverse set of experiences, which is crucial for accurate value function estimation.
+Off-policy Monte Carlo control encourages exploration through the behavior policy $b $. The behavior policy can be designed to explore more than the target policy $\pi'$, allowing for better learning of the optimal policy. This ensures that the agent explores the environment sufficiently to gather a diverse set of experiences, which is crucial for accurate value function estimation.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust the updates based on the difference between the behavior policy and the target policy. This allows for learning a target policy \(\pi'\) even when the episodes are generated under a different policy \(b\).
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust the updates based on the difference between the behavior policy and the target policy. This allows for learning a target policy $\pi'$ even when the episodes are generated under a different policy $b$.
 
 :p How does oﬀ-policy Monte Carlo control handle reinforcement?
 ??x
-Off-policy Monte Carlo control handles reinforcement by using sampled returns from the environment to update the value function or policy. The updates are weighted by importance sampling ratios, ensuring that the learning process is aligned with the target policy \(\pi'\) even when episodes are collected under a different behavior policy \(b\). This approach allows for effective learning and optimization of policies in reinforcement learning tasks.
+Off-policy Monte Carlo control handles reinforcement by using sampled returns from the environment to update the value function or policy. The updates are weighted by importance sampling ratios, ensuring that the learning process is aligned with the target policy $\pi'$ even when episodes are collected under a different behavior policy $b$. This approach allows for effective learning and optimization of policies in reinforcement learning tasks.
 
 :p How does oﬀ-policy Monte Carlo control handle value estimation?
 ??x
-Off-policy Monte Carlo control handles value estimation by using sampled returns from the environment to update the value function. The updates are weighted by importance sampling ratios, which account for the difference between the behavior policy \(b\) and the target policy \(\pi'\). This ensures that the estimated values accurately reflect the desired policy.
+Off-policy Monte Carlo control handles value estimation by using sampled returns from the environment to update the value function. The updates are weighted by importance sampling ratios, which account for the difference between the behavior policy $b $ and the target policy$\pi'$. This ensures that the estimated values accurately reflect the desired policy.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to correct for the discrepancy between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm updates the value function or policy based on samples from the behavior policy, but it adjusts these updates to align with the desired target policy. This allows for learning an optimal policy even when episodes are generated under a different policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to correct for the discrepancy between the behavior policy $b $ and the target policy$\pi'$. The algorithm updates the value function or policy based on samples from the behavior policy, but it adjusts these updates to align with the desired target policy. This allows for learning an optimal policy even when episodes are generated under a different policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
-Off-policy Monte Carlo control handles episodic data by using complete trajectories (episodes) from the environment to update the value function or policy. Each episode consists of sequences of state-action-reward pairs, and these episodes are used to estimate the value function for a target policy \(\pi'\). The use of entire episodes ensures that the learning process is based on comprehensive experiences rather than individual transitions.
+Off-policy Monte Carlo control handles episodic data by using complete trajectories (episodes) from the environment to update the value function or policy. Each episode consists of sequences of state-action-reward pairs, and these episodes are used to estimate the value function for a target policy $\pi'$. The use of entire episodes ensures that the learning process is based on comprehensive experiences rather than individual transitions.
 
 :p How does oﬀ-policy Monte Carlo control handle non-stationary environments?
 ??x
@@ -252,15 +240,15 @@ Off-policy Monte Carlo control can handle non-stationary environments by continu
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\). The behavior policy is designed to explore more than the target policy \(\pi'\), allowing for a broader range of experiences. This ensures that the agent can discover various state-action pairs, which are necessary for accurate value function estimation and effective learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $. The behavior policy is designed to explore more than the target policy $\pi'$, allowing for a broader range of experiences. This ensures that the agent can discover various state-action pairs, which are necessary for accurate value function estimation and effective learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control handles different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but uses these episodes to learn a target policy. This approach allows for learning an optimal policy even when the episodes are generated under a different policy.
+Off-policy Monte Carlo control handles different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but uses these episodes to learn a target policy. This approach allows for learning an optimal policy even when the episodes are generated under a different policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
-Off-policy Monte Carlo control handles episodic data by collecting entire sequences of state-action-reward pairs (episodes) from the environment and using these episodes to update the value function or policy. Each episode provides a comprehensive trajectory, which is used to estimate the value for the target policy \(\pi'\).
+Off-policy Monte Carlo control handles episodic data by collecting entire sequences of state-action-reward pairs (episodes) from the environment and using these episodes to update the value function or policy. Each episode provides a comprehensive trajectory, which is used to estimate the value for the target policy $\pi'$.
 
 :p How does oﬀ-policy Monte Carlo control handle non-stationary environments?
 ??x
@@ -268,11 +256,11 @@ Off-policy Monte Carlo control can handle non-stationary environments by continu
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\). The behavior policy is often designed to be more exploratory than the target policy \(\pi'\), allowing the agent to gather diverse experiences. This ensures that the agent can effectively explore the state-action space, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $. The behavior policy is often designed to be more exploratory than the target policy $\pi'$, allowing the agent to gather diverse experiences. This ensures that the agent can effectively explore the state-action space, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control handles different policies by using importance sampling to correct for the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control handles different policies by using importance sampling to correct for the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -284,7 +272,7 @@ Off-policy Monte Carlo control can handle non-stationary environments by continu
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is designed to be more exploratory than the target policy \(\pi'\). The use of a different behavior policy encourages the agent to explore a wider range of state-action pairs, leading to better value function estimation and optimal policy learning.  (This answer was repeated from previous questions) 
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is designed to be more exploratory than the target policy $\pi'$. The use of a different behavior policy encourages the agent to explore a wider range of state-action pairs, leading to better value function estimation and optimal policy learning.  (This answer was repeated from previous questions) 
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -296,11 +284,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is typically more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, which are crucial for accurate value function estimation and effective learning. The use of importance sampling helps align the updates with the target policy.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is typically more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, which are crucial for accurate value function estimation and effective learning. The use of importance sampling helps align the updates with the target policy.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust the updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but uses these episodes to learn a target policy, ensuring that the learning process is aligned with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust the updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but uses these episodes to learn a target policy, ensuring that the learning process is aligned with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -312,11 +300,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy. (This answer was repeated from previous questions) 
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy. (This answer was repeated from previous questions) 
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -328,11 +316,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -344,11 +332,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -360,11 +348,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -376,11 +364,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -392,11 +380,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -408,11 +396,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -424,11 +412,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -440,11 +428,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -456,11 +444,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -472,11 +460,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -488,11 +476,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -504,11 +492,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -520,11 +508,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -536,11 +524,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -552,11 +540,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -568,11 +556,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -584,11 +572,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -600,11 +588,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -616,11 +604,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -632,11 +620,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -648,11 +636,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -664,11 +652,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -680,11 +668,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -696,11 +684,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -712,11 +700,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -728,11 +716,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -744,11 +732,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -760,11 +748,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -776,11 +764,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -792,11 +780,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -808,11 +796,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -824,11 +812,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -840,11 +828,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -856,11 +844,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -872,11 +860,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -888,11 +876,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -904,11 +892,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -920,11 +908,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -936,11 +924,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -952,11 +940,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -968,11 +956,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -984,11 +972,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1000,11 +988,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1016,11 +1004,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1032,11 +1020,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1048,11 +1036,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1064,11 +1052,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1080,11 +1068,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1096,11 +1084,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1112,11 +1100,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1128,11 +1116,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1144,11 +1132,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1160,11 +1148,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1176,11 +1164,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1192,11 +1180,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1208,11 +1196,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1224,11 +1212,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1240,11 +1228,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1256,11 +1244,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1272,11 +1260,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1288,11 +1276,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1304,11 +1292,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1320,11 +1308,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1336,11 +1324,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1352,11 +1340,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1368,11 +1356,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1384,11 +1372,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1400,11 +1388,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1416,11 +1404,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1432,11 +1420,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1448,11 +1436,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1464,11 +1452,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1480,11 +1468,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1496,11 +1484,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1512,11 +1500,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1528,11 +1516,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1544,11 +1532,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1560,11 +1548,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1576,11 +1564,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1592,11 +1580,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1608,11 +1596,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1624,11 +1612,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1640,11 +1628,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1656,11 +1644,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1672,11 +1660,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1688,11 +1676,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1704,11 +1692,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1720,11 +1708,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1736,11 +1724,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1752,11 +1740,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1768,11 +1756,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1784,11 +1772,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1800,11 +1788,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1816,11 +1804,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1832,11 +1820,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1848,11 +1836,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1864,11 +1852,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1880,11 +1868,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1896,11 +1884,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1912,11 +1900,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1928,11 +1916,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1944,11 +1932,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1960,11 +1948,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1976,11 +1964,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -1992,11 +1980,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -2008,11 +1996,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -2024,11 +2012,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -2040,11 +2028,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -2056,11 +2044,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -2072,11 +2060,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -2088,11 +2076,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -2104,11 +2092,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -2120,11 +2108,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -2136,11 +2124,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -2152,11 +2140,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -2168,11 +2156,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -2184,11 +2172,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -2200,11 +2188,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -2216,11 +2204,11 @@ Off-policy Monte Carlo control can adapt to changes in non-stationary environmen
 
 :p How does oﬀ-policy Monte Carlo control handle exploration?
 ??x
-Off-policy Monte Carlo control handles exploration through the behavior policy \(b\), which is often designed to be more exploratory than the target policy \(\pi'\). This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
+Off-policy Monte Carlo control handles exploration through the behavior policy $b $, which is often designed to be more exploratory than the target policy $\pi'$. This allows the agent to gather a diverse set of experiences, leading to better value function estimation and optimal policy learning.
 
 :p How does oﬀ-policy Monte Carlo control handle different policies?
 ??x
-Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy \(b\) and the target policy \(\pi'\). The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
+Off-policy Monte Carlo control can handle different policies by using importance sampling to adjust updates based on the difference between the behavior policy $b $ and the target policy$\pi'$. The algorithm collects episodes under the behavior policy but updates the value function or policy according to the target policy, ensuring that the learning process aligns with the desired optimal policy.
 
 :p How does oﬀ-policy Monte Carlo control handle episodic data?
 ??x
@@ -2368,11 +2356,11 @@ x??
 ---
 
 #### TD Prediction Overview
-Background context explaining the prediction problem and its relation to Monte Carlo and TD methods. The text mentions that both methods update their estimate \( V \) of the value function \( v_\pi \) based on experience following a policy \( \pi \). The key difference lies in when they use the return as an update target.
+Background context explaining the prediction problem and its relation to Monte Carlo and TD methods. The text mentions that both methods update their estimate $V $ of the value function$v_\pi $ based on experience following a policy$\pi$. The key difference lies in when they use the return as an update target.
 
 :p What is the main distinction between how Monte Carlo and TD methods handle updates?
 ??x
-Monte Carlo methods wait until the end of the episode (when the entire return \( G_t \) is known) to make updates, while TD methods can update estimates immediately after each step using partial information.
+Monte Carlo methods wait until the end of the episode (when the entire return $G_t$ is known) to make updates, while TD methods can update estimates immediately after each step using partial information.
 x??
 
 ---
@@ -2382,10 +2370,9 @@ The text provides a simple formula for a Monte Carlo method suitable for nonstat
 
 :p What is the equation for constant-α Monte Carlo (MC) method?
 ??x
-\[ V(S_t) \leftarrow V(S_t) + \alpha \left( G_t - V(S_t) \right) \]
-where \( G_t \) is the actual return following time step \( t \), and \( \alpha \) is a constant step-size parameter.
+$$V(S_t) \leftarrow V(S_t) + \alpha \left( G_t - V(S_t) \right)$$where $ G_t $ is the actual return following time step $ t $, and$\alpha$ is a constant step-size parameter.
 
-The equation updates the value estimate for state \( S_t \) by adding a learning rate-scaled difference between the actual return and the current estimate.
+The equation updates the value estimate for state $S_t$ by adding a learning rate-scaled difference between the actual return and the current estimate.
 x??
 
 ---
@@ -2395,8 +2382,7 @@ The text introduces the simplest form of temporal-difference learning, TD(0), al
 
 :p What is the update rule for the TD(0) method?
 ??x
-\[ V(S_t) \leftarrow V(S_t) + \alpha \left( R_{t+1} + \gamma V(S_{t+1}) - V(S_t) \right) \]
-where \( R_{t+1} \) is the reward at time step \( t+1 \), and \( \gamma \) is the discount factor, typically set to 1 in this context.
+$$V(S_t) \leftarrow V(S_t) + \alpha \left( R_{t+1} + \gamma V(S_{t+1}) - V(S_t) \right)$$where $ R_{t+1}$is the reward at time step $ t+1$, and $\gamma$ is the discount factor, typically set to 1 in this context.
 
 The update rule combines a new observation (reward + next state estimate) with the current estimate.
 x??
@@ -2434,11 +2420,11 @@ x??
 ---
 
 #### Monte Carlo and DP Methods Overview
-Background context: The provided text explains how different reinforcement learning methods target different values. Monte Carlo methods use an estimate of \( v_\pi(s) \) as a target, while DP (Dynamic Programming) methods use an estimate of \( E_\pi[G_t | S_t = s] \), which involves bootstrapping with the value function.
+Background context: The provided text explains how different reinforcement learning methods target different values. Monte Carlo methods use an estimate of $v_\pi(s)$ as a target, while DP (Dynamic Programming) methods use an estimate of $E_\pi[G_t | S_t = s]$, which involves bootstrapping with the value function.
 
 :p What is the main difference between Monte Carlo and DP methods in terms of their targets?
 ??x
-Monte Carlo methods target \( v_\pi(s) = E_\pi[G_t | S_t = s] \), using a sample return as an estimate. In contrast, DP methods target \( E_\pi[R_{t+1} + \gamma V(S_{t+1}) | S_t = s] \), which involves bootstrapping with the value function.
+Monte Carlo methods target $v_\pi(s) = E_\pi[G_t | S_t = s]$, using a sample return as an estimate. In contrast, DP methods target $ E_\pi[R_{t+1} + \gamma V(S_{t+1}) | S_t = s]$, which involves bootstrapping with the value function.
 
 x??
 
@@ -2449,7 +2435,7 @@ Background context: The text explains that Temporal Difference (TD) methods comb
 
 :p What are the two main components in the TD target?
 ??x
-The TD target consists of two parts: sampling the expected values \( E_\pi[R_{t+1} + \gamma V(S_{t+1}) | S_t = s] \) and using the current estimate \( V(S_{t+1}) \) instead of the true \( v_\pi(S_{t+1}) \).
+The TD target consists of two parts: sampling the expected values $E_\pi[R_{t+1} + \gamma V(S_{t+1}) | S_t = s]$ and using the current estimate $V(S_{t+1})$ instead of the true $v_\pi(S_{t+1})$.
 
 x??
 
@@ -2461,8 +2447,9 @@ Background context: The TD error measures the difference between the estimated v
 :p What is the formula for the TD error?
 ??x
 The TD error is defined as:
-\[ \delta_t = R_{t+1} + \gamma V(S_{t+1}) - V(S_t) \]
-This measures the difference between the estimated value of \( S_t \) and a better estimate based on the next state and reward.
+$$\delta_t = R_{t+1} + \gamma V(S_{t+1}) - V(S_t)$$
+
+This measures the difference between the estimated value of $S_t$ and a better estimate based on the next state and reward.
 
 x??
 
@@ -2473,8 +2460,9 @@ Background context: The text explains that in Monte Carlo methods, the expected 
 
 :p How can the Monte Carlo error be expressed as a sum of TD errors?
 ??x
-The Monte Carlo error \( G_t - V(S_t) \) can be written as a sum of TD errors:
-\[ G_t - V(S_t) = \delta_t + \sum_{k=t+1}^{T-1} \gamma^k (V(S_{t+k}) - V(S_{t+k-1})) \]
+The Monte Carlo error $G_t - V(S_t)$ can be written as a sum of TD errors:
+$$G_t - V(S_t) = \delta_t + \sum_{k=t+1}^{T-1} \gamma^k (V(S_{t+k}) - V(S_{t+k-1}))$$
+
 This identity holds approximately if the step size is small.
 
 x??
@@ -2498,8 +2486,9 @@ Background context: The text explains that in tabular TD(0), updates are made ba
 :p What is the update formula for tabular TD(0)?
 ??x
 The update formula for tabular TD(0) is:
-\[ V(S_t) \leftarrow V(S_t) + \alpha [R_{t+1} + \gamma V(S_{t+1}) - V(S_t)] \]
-where \( \alpha \) is the learning rate.
+$$
+
+V(S_t) \leftarrow V(S_t) + \alpha [R_{t+1} + \gamma V(S_{t+1}) - V(S_t)]$$where $\alpha$ is the learning rate.
 
 x??
 
@@ -2521,7 +2510,7 @@ Background context: The text explains that the TD error is the estimation error 
 
 :p What does the TD error represent in reinforcement learning?
 ??x
-The TD error represents the estimation error at each time step. It measures the difference between the estimated value of a state \( S_t \) and a better estimate based on the next state \( S_{t+1} \) and the reward \( R_{t+1} \).
+The TD error represents the estimation error at each time step. It measures the difference between the estimated value of a state $S_t $ and a better estimate based on the next state$S_{t+1}$ and the reward $R_{t+1}$.
 
 x??
 
@@ -2531,19 +2520,16 @@ x??
 Background context explaining the concept. The example involves predicting travel time home from work, where each state is a point in the journey, and the predicted value (time to go) is updated using temporal difference (TD) error. The goal is to understand how much needs to be added to the sum of TD errors to equal the Monte Carlo error.
 :p What does Vt denote in the context of this example?
 ??x
-In the context of this example, \(V_t\) denotes the array of state values used at time \(t\) in the temporal difference (TD) error and in the TD update. These values represent the predicted time to go from each state.
+In the context of this example, $V_t $ denotes the array of state values used at time$t$ in the temporal difference (TD) error and in the TD update. These values represent the predicted time to go from each state.
 x??
 
 ---
 #### TD Error Calculation
-Background context explaining the concept. The text discusses how the TD error is calculated as the difference between the predicted value (\(V_t\)) and the actual return (\(G_t - V_t\)). In this example, the TD error at different points of the journey needs to be computed.
+Background context explaining the concept. The text discusses how the TD error is calculated as the difference between the predicted value ($V_t $) and the actual return ($ G_t - V_t$). In this example, the TD error at different points of the journey needs to be computed.
 :p How is the TD error defined in this context?
 ??x
 The TD error is defined as the difference between the estimated value (predicted time to go) and the actual return (actual time to go). Mathematically, it can be represented as:
-\[
-\text{TD Error} = G_t - V_t
-\]
-where \(G_t\) is the actual return at time \(t\) and \(V_t\) is the predicted value.
+$$\text{TD Error} = G_t - V_t$$where $ G_t $ is the actual return at time $ t $ and $ V_t$ is the predicted value.
 x??
 
 ---
@@ -2552,24 +2538,18 @@ Background context explaining the concept. The example shows how the Monte Carlo
 :p What is the Monte Carlo error in this example?
 ??x
 The Monte Carlo error in this example is the difference between the actual total travel time to reach home (43 minutes) and the initial predicted total travel time (30 minutes):
-\[
-\text{Monte Carlo Error} = 43 - 30 = 13 \text{ minutes}
-\]
+$$\text{Monte Carlo Error} = 43 - 30 = 13 \text{ minutes}$$
 x??
 
 ---
 #### TD Update
-Background context explaining the concept. The example demonstrates how the predicted values are updated using a step-size parameter (\(\alpha\)) and the TD error. The update rule is given by:
-\[
-V_{t+1} = V_t + \alpha (G_t - V_t)
-\]
-:p What is the TD update formula in this context?
+Background context explaining the concept. The example demonstrates how the predicted values are updated using a step-size parameter ($\alpha$) and the TD error. The update rule is given by:
+$$V_{t+1} = V_t + \alpha (G_t - V_t)$$:p What is the TD update formula in this context?
 ??x
 The TD update formula in this context is:
-\[
-V_{t+1} = V_t + \alpha (G_t - V_t)
-\]
-where \(V_t\) is the current predicted value, \(G_t\) is the actual return at time \(t\), and \(\alpha\) is the step-size parameter. This formula adjusts the predicted value based on the difference between the estimated and actual returns.
+$$
+
+V_{t+1} = V_t + \alpha (G_t - V_t)$$where $ V_t $is the current predicted value,$ G_t $is the actual return at time$ t $, and$\alpha$ is the step-size parameter. This formula adjusts the predicted value based on the difference between the estimated and actual returns.
 x??
 
 ---
@@ -2578,10 +2558,7 @@ Background context explaining the concept. The example highlights that to achiev
 :p How can we make the TD error sum equal to the Monte Carlo error?
 ??x
 To make the TD error sum equal to the Monte Carlo error, an additional amount must be added to the sum of TD errors. Specifically, in this example, if you want to match the Monte Carlo error of 13 minutes, the additional amount required is:
-\[
-\text{Additional Amount} = \text{Monte Carlo Error} - \sum_{t=0}^{T-1} (G_t - V_t)
-\]
-where \(T\) is the final time step. This ensures that the total adjustment to the predicted values matches the overall learning update achieved by Monte Carlo methods.
+$$\text{Additional Amount} = \text{Monte Carlo Error} - \sum_{t=0}^{T-1} (G_t - V_t)$$where $ T$ is the final time step. This ensures that the total adjustment to the predicted values matches the overall learning update achieved by Monte Carlo methods.
 x??
 
 ---

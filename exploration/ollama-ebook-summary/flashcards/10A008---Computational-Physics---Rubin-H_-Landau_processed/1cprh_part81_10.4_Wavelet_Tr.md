@@ -5,44 +5,50 @@
 ---
 
 #### Wave Packet and Uncertainty Principle
-Wave packets are collections of waves with varying frequencies that form a pulse. The Fourier transform of such wave packets results in pulses in the frequency domain. The relationship between time width \( \Delta t \) and frequency width \( \Delta \omega \) is fundamental.
+Wave packets are collections of waves with varying frequencies that form a pulse. The Fourier transform of such wave packets results in pulses in the frequency domain. The relationship between time width $\Delta t $ and frequency width$\Delta \omega$ is fundamental.
 :p What is the relationship between the time width and frequency width of a wave packet?
 ??x
-The time width \( \Delta t \) and frequency width \( \Delta \omega \) are related by the uncertainty principle:
-\[ \Delta t \Delta \omega \geq 2\pi. \]
-This means that as the signal becomes more localized in time (smaller \( \Delta t \)), it becomes less localized in frequency (larger \( \Delta \omega \)).
+The time width $\Delta t $ and frequency width$\Delta \omega$ are related by the uncertainty principle:
+$$\Delta t \Delta \omega \geq 2\pi.$$
+
+This means that as the signal becomes more localized in time (smaller $\Delta t $), it becomes less localized in frequency (larger $\Delta \omega$).
 x??
 
 ---
 
 #### Simple Wave Packet Example
-A simple example of a wave packet is given by a sine wave oscillating for \( N \) periods:
-\[ y(t) = \begin{cases} 
+A simple example of a wave packet is given by a sine wave oscillating for $N$ periods:
+$$y(t) = \begin{cases} 
 \sin(\omega_0 t), & |t| < \frac{N\pi}{\omega_0}, \\
 0, & |t| > \frac{N\pi}{\omega_0},
-\end{cases} \]
-where \( \omega_0 = \frac{2\pi}{T} \).
+\end{cases}$$where $\omega_0 = \frac{2\pi}{T}$.
 The time width of this wave packet is:
-\[ \Delta t = NT = \frac{N^2}{2\omega_0}. \]
-:p What is the Fourier transform of the simple wave packet example given?
+$$\Delta t = NT = \frac{N^2}{2\omega_0}.$$:p What is the Fourier transform of the simple wave packet example given?
 ??x
 The Fourier transform of the wave packet can be calculated as follows:
-\[ Y(\omega) = -i\sqrt{\frac{2\pi}{1}} \int_{-N\pi/\omega_0}^{0} \sin(\omega_0 t) e^{-i\omega t} dt + i\sqrt{\frac{2\pi}{1}} \int_{0}^{N\pi/\omega_0} \sin(\omega_0 t) e^{-i\omega t} dt. \]
+$$
+
+Y(\omega) = -i\sqrt{\frac{2\pi}{1}} \int_{-N\pi/\omega_0}^{0} \sin(\omega_0 t) e^{-i\omega t} dt + i\sqrt{\frac{2\pi}{1}} \int_{0}^{N\pi/\omega_0} \sin(\omega_0 t) e^{-i\omega t} dt.$$
+
 This results in:
-\[ Y(\omega) = \frac{(\omega_0+\omega)\sin[(\omega_0-\omega)N\pi/\omega_0] - (\omega_0-\omega)\sin[(\omega_0+\omega)N\pi/\omega_0]}{\sqrt{2\pi}(\omega^2_0-\omega^2)}. \]
-The transform peaks at \( \omega = \omega_0 \), with the frequency width \( \Delta \omega \approx \frac{\omega_0}{N} \).
+$$
+
+Y(\omega) = \frac{(\omega_0+\omega)\sin[(\omega_0-\omega)N\pi/\omega_0] - (\omega_0-\omega)\sin[(\omega_0+\omega)N\pi/\omega_0]}{\sqrt{2\pi}(\omega^2_0-\omega^2)}.$$
+
+The transform peaks at $\omega = \omega_0 $, with the frequency width $\Delta \omega \approx \frac{\omega_0}{N}$.
 x??
 
 ---
 
 #### Wave Packet Exercise
 Consider three wave packets:
-\[ y_1(t) = e^{-t^2/2}, \quad y_2(t) = \sin(8t)e^{-t^2/2}, \quad y_3(t) = (1-t^2)e^{-t^2/2}. \]
-For each, estimate the time width \( \Delta t \) and frequency width \( \Delta \omega \).
+$$y_1(t) = e^{-t^2/2}, \quad y_2(t) = \sin(8t)e^{-t^2/2}, \quad y_3(t) = (1-t^2)e^{-t^2/2}.$$
+
+For each, estimate the time width $\Delta t $ and frequency width$\Delta \omega$.
 :p What is the general procedure for estimating the time width of a wave packet?
 ??x
-To estimate the time width \( \Delta t \), one can use the full width at half-maxima (FWHM) of \( |y(t)| \). This involves finding the points where the absolute value of the signal drops to half its maximum value.
-For frequency width \( \Delta \omega \), similarly, find the FWHM of \( |Y(\omega)| \).
+To estimate the time width $\Delta t $, one can use the full width at half-maxima (FWHM) of $|y(t)|$. This involves finding the points where the absolute value of the signal drops to half its maximum value.
+For frequency width $\Delta \omega $, similarly, find the FWHM of $|Y(\omega)|$.
 x??
 
 ---
@@ -76,12 +82,13 @@ x??
 
 #### Short-Time Fourier Transform
 Background context explaining the short-time Fourier transform, including the mathematical formulation and its purpose. The formula for the short-time Fourier transform is given as:
-\[ Y(\text{ST})(\omega, \tau) = \int_{-\infty}^{+\infty} dt e^{i\omega t} \sqrt{\frac{2}{\pi}} w(t - \tau) y(t). \]
+$$Y(\text{ST})(\omega, \tau) = \int_{-\infty}^{+\infty} dt e^{i\omega t} \sqrt{\frac{2}{\pi}} w(t - \tau) y(t).$$
+
 Here, the values of the translation time τ correspond to different locations of the window function over the signal.
 
 :p What is the purpose of the short-time Fourier transform?
 ??x
-The short-time Fourier transform aims to analyze signals in both time and frequency domains simultaneously. By translating a window function \( w(t - \tau) \) across the signal, it captures local spectral information at different times. This approach allows for a more detailed analysis compared to traditional Fourier transforms, which only provide global frequency information.
+The short-time Fourier transform aims to analyze signals in both time and frequency domains simultaneously. By translating a window function $w(t - \tau)$ across the signal, it captures local spectral information at different times. This approach allows for a more detailed analysis compared to traditional Fourier transforms, which only provide global frequency information.
 x??
 
 ---
@@ -91,24 +98,23 @@ Background context explaining wavelet transforms, their similarity to short-time
 
 :p What is the key difference between wavelet transforms and short-time Fourier transforms?
 ??x
-The key difference lies in the basis functions used. While short-time Fourier transforms use \( e^{i\omega t} \) as their basis functions, wavelet transforms use wavelets or wave packets \( \psi_{s,\tau}(t) \) that are localized both in time and frequency.
+The key difference lies in the basis functions used. While short-time Fourier transforms use $e^{i\omega t}$ as their basis functions, wavelet transforms use wavelets or wave packets $\psi_{s,\tau}(t)$ that are localized both in time and frequency.
 x??
 
 ---
 
 #### Generating Wavelet Basis Functions
 Explanation of how to generate a family of wavelet basis functions using a mother wavelet. The provided example uses the function:
-\[ \Psi(t) = \sin(8t)e^{-\frac{t^2}{2}}. \]
-From this, daughter wavelets are generated as:
-\[ \psi_{s,\tau}(t) = \frac{1}{\sqrt{s}} \Psi\left(\frac{t - \tau}{s}\right) = \frac{1}{\sqrt{s}} \sin\left(8\frac{(t-\tau)}{s}\right)e^{-\frac{(t-\tau)^2}{2s^2}}. \]
+$$\Psi(t) = \sin(8t)e^{-\frac{t^2}{2}}.$$
 
-:p How do we generate daughter wavelets from a mother wavelet?
+From this, daughter wavelets are generated as:
+$$\psi_{s,\tau}(t) = \frac{1}{\sqrt{s}} \Psi\left(\frac{t - \tau}{s}\right) = \frac{1}{\sqrt{s}} \sin\left(8\frac{(t-\tau)}{s}\right)e^{-\frac{(t-\tau)^2}{2s^2}}.$$:p How do we generate daughter wavelets from a mother wavelet?
 ??x
-We generate daughter wavelets by scaling and translating the mother wavelet \( \Psi(t) \). For example, given the mother wavelet:
-\[ \Psi(t) = \sin(8t)e^{-\frac{t^2}{2}}, \]
-daughter wavelets are created using the transformation:
-\[ \psi_{s,\tau}(t) = \frac{1}{\sqrt{s}} \Psi\left(\frac{t - \tau}{s}\right). \]
-This involves scaling \( \tau \) by a factor of \( s \) and translating it by \( \tau \).
+We generate daughter wavelets by scaling and translating the mother wavelet $\Psi(t)$. For example, given the mother wavelet:
+$$\Psi(t) = \sin(8t)e^{-\frac{t^2}{2}},$$daughter wavelets are created using the transformation:
+$$\psi_{s,\tau}(t) = \frac{1}{\sqrt{s}} \Psi\left(\frac{t - \tau}{s}\right).$$
+
+This involves scaling $\tau $ by a factor of$s $ and translating it by$\tau$.
 x??
 
 ---
@@ -119,10 +125,12 @@ Explanation of the wavelet transform equations, including the forward and invers
 :p What are the forward and inverse wavelet transform equations?
 ??x
 The forward wavelet transform is given by:
-\[ Y(s, \tau) = \frac{1}{\sqrt{s}} \int_{-\infty}^{+\infty} dt \Psi^* \left(\frac{t - \tau}{s}\right) y(t). \]
+$$Y(s, \tau) = \frac{1}{\sqrt{s}} \int_{-\infty}^{+\infty} dt \Psi^* \left(\frac{t - \tau}{s}\right) y(t).$$
+
 And the inverse wavelet transform is:
-\[ y(t) = \frac{1}{C} \int_{-\infty}^{+\infty} d\tau \int_0^\infty ds \psi^*_{s, \tau}(t) \frac{s^{3/2}}{Y(s, \tau)}. \]
-Here \( C \) is a normalization constant that depends on the wavelet used.
+$$y(t) = \frac{1}{C} \int_{-\infty}^{+\infty} d\tau \int_0^\infty ds \psi^*_{s, \tau}(t) \frac{s^{3/2}}{Y(s, \tau)}.$$
+
+Here $C$ is a normalization constant that depends on the wavelet used.
 x??
 
 ---
@@ -132,10 +140,10 @@ Explanation of the requirements for a mother wavelet and their significance.
 
 :p What are the general requirements for a mother wavelet?
 ??x
-The general requirements for a mother wavelet \( \Psi(t) \) are:
-1. Real-valued: \( \Psi(t) \) must be real.
-2. Zero-mean oscillation: The average value of \( \Psi(t) \) over all time should be zero, i.e., \( \int_{-\infty}^{+\infty} \Psi(t) dt = 0 \).
-3. Localized in time: It must decay rapidly as \( |t| \to \infty \), i.e., \( \Psi(|t| \to \infty) \to 0 \), and be square-integrable, meaning the integral of its squared magnitude over all time is finite.
+The general requirements for a mother wavelet $\Psi(t)$ are:
+1. Real-valued:$\Psi(t)$ must be real.
+2. Zero-mean oscillation: The average value of $\Psi(t)$ over all time should be zero, i.e.,$\int_{-\infty}^{+\infty} \Psi(t) dt = 0$.
+3. Localized in time: It must decay rapidly as $|t| \to \infty $, i.e., $\Psi(|t| \to \infty) \to 0$, and be square-integrable, meaning the integral of its squared magnitude over all time is finite.
 4. Vanishing low powers of t moments: The first few moments should vanish, ensuring the transform is more sensitive to details than general shapes.
 x??
 
@@ -146,7 +154,7 @@ Explanation of how wavelet transforms are used in analyzing signals like chirps.
 
 :p How do wavelets help analyze a chirp signal?
 ??x
-Wavelets help by analyzing the signal at multiple scales. For a chirp signal \( y(t) = \sin(60t^2) \), wavelets can capture both time and frequency details:
+Wavelets help by analyzing the signal at multiple scales. For a chirp signal $y(t) = \sin(60t^2)$, wavelets can capture both time and frequency details:
 1. At low scales (small s values, higher frequencies), wavelets provide high-resolution analysis.
 2. At high scales (large s values, lower frequencies), wavelets offer low-resolution analysis.
 
@@ -184,10 +192,7 @@ Background context on implementing different types of mother wavelets such as Mo
 :p How do you calculate a Morlet wavelet?
 ??x
 To calculate a Morlet wavelet, use the following formula:
-\[
-\psi(t) = \frac{1}{\sqrt{\pi f_b}} e^{j 2 \pi f_c t} e^{-t^2 / (f_b)}
-\]
-where \(f_c\) is the center frequency and \(f_b\) is the bandwidth.
+$$\psi(t) = \frac{1}{\sqrt{\pi f_b}} e^{j 2 \pi f_c t} e^{-t^2 / (f_b)}$$where $ f_c $ is the center frequency and $ f_b$ is the bandwidth.
 
 ```python
 import numpy as np
@@ -205,7 +210,7 @@ Background context on applying wavelet transforms to various signals, including 
 
 :p How would you apply a wavelet transform to a pure sine wave?
 ??x
-To apply a wavelet transform to a pure sine wave \(y(t) = \sin(2\pi t)\), use the Morlet wavelet or another mother wavelet. The process involves shifting and scaling the wavelet across the signal's time domain and calculating the overlap at each point.
+To apply a wavelet transform to a pure sine wave $y(t) = \sin(2\pi t)$, use the Morlet wavelet or another mother wavelet. The process involves shifting and scaling the wavelet across the signal's time domain and calculating the overlap at each point.
 
 ```python
 def continuous_wavelet_transform(signal, wavelet):
@@ -227,10 +232,7 @@ Background context on the inverse transform and its importance in reconstructing
 :p How do you invert a wavelet transform?
 ??x
 To invert a wavelet transform, use the CWT formula:
-\[
-y(t) = \int_{-\infty}^{\infty} X(\tau, s) \overline{\psi(s - t / s)} d\tau
-\]
-where \(X(\tau, s)\) is the wavelet coefficients and \(\psi\) is the mother wavelet.
+$$y(t) = \int_{-\infty}^{\infty} X(\tau, s) \overline{\psi(s - t / s)} d\tau$$where $ X(\tau, s)$is the wavelet coefficients and $\psi$ is the mother wavelet.
 
 ```python
 def inverse_wavelet_transform(wavelet_coeffs, wavelet):

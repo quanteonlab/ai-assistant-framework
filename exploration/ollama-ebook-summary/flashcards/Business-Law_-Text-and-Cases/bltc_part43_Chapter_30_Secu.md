@@ -70,7 +70,7 @@ x??
 ---
 #### Business Scenarios and Case Problems: Liens on Nabil’s Home
 
-Background context: Nabil owes $10,000 to Kandhari Electrical for repairs. His home's value is only $60,000 after applying the homestead exemption.
+Background context: Nabil owes $10,000 to Kandhari Electrical for repairs. His home's value is only$60,000 after applying the homestead exemption.
 
 :p What remedies does Kandhari have against Nabil?
 ??x

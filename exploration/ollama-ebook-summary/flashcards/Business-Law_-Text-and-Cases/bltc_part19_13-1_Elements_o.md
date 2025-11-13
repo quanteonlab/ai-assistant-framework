@@ -122,8 +122,7 @@ Example:
 ```plaintext
 If Chris works for 30 days (one month) and then gets a 30-day notice,
 he is entitled to the remaining 30 days' worth of his $500/day salary.
-Total: 30 days * $500 = $15,000. However, since the contract only promised
-$10,000 for one month (30 days), Chris can claim that amount as enforceable.
+Total: 30 days * $500 =$15,000. However, since the contract only promised$10,000 for one month (30 days), Chris can claim that amount as enforceable.
 ```
 x??
 
@@ -155,7 +154,7 @@ In an **accord and satisfaction**, a debtor offers to pay a lesser amount, and a
 Example:
 ```plaintext
 Barbara Kwan agrees to pay $120 per month for two years at 5% interest.
-She owes the bank a total of $34,800. Later, she offers to settle with $32,000,
+She owes the bank a total of $34,800. Later, she offers to settle with$32,000,
 and the bank accepts this offer.
 
 Accord: Barbara will pay $32,000.

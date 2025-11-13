@@ -748,7 +748,7 @@ Background context: The `__abs__` method calculates the magnitude of a vector. T
 
 :p How does the `__abs__` method work in the `Vector2d` class?
 ??x
-The `__abs__` method computes the Euclidean norm (magnitude) of the vector using the formula: \(\sqrt{x^2 + y^2}\).
+The `__abs__` method computes the Euclidean norm (magnitude) of the vector using the formula: $\sqrt{x^2 + y^2}$.
 ```python
 class Vector2d:
     def __abs__(self):

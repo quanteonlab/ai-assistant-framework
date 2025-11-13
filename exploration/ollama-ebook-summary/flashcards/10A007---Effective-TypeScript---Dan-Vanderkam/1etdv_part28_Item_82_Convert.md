@@ -181,7 +181,7 @@ class Greeting {
         this.name = name;
     }
     greet() {
-        return `${this.greeting} ${this.name}`;  // Error: Property 'greeting' does not exist
+        return `${this.greeting}${this.name}`;  // Error: Property 'greeting' does not exist
     }
 }
 ```
@@ -197,7 +197,7 @@ class Greeting {
         this.name = name;
     }
     greet() {
-        return `${this.greeting} ${this.name}`;
+        return `${this.greeting}${this.name}`;
     }
 }
 ```

@@ -351,22 +351,20 @@ The author of the above passage would agree that (A) without the passage of the 
 #### Exponential Equations and Algebraic Manipulation
 Background context: This problem involves understanding how to manipulate algebraic expressions, specifically focusing on exponent rules and basic equations.
 
-:p What is the value of \( y \) if given that \( x^8 \) and the equation \( y = x^{242} \)?
+:p What is the value of $y $ if given that$x^8 $ and the equation$y = x^{242}$?
 ??x
-To find \( y \), we need to understand the relationship between \( x^8 \) and \( x^{242} \). Given \( x^8 \), we can express 242 as a multiple of 8. We notice that \( 242 = 8 \times 30 + 2 \), meaning:
+To find $y $, we need to understand the relationship between $ x^8 $ and $ x^{242}$. Given $ x^8$, we can express 242 as a multiple of 8. We notice that $242 = 8 \times 30 + 2$, meaning:
 
-\[ x^{242} = (x^8)^{30} \cdot x^2 \]
+$$x^{242} = (x^8)^{30} \cdot x^2$$
 
-However, since the question only provides \( x^8 \) and asks for a simple value of \( y \), we assume that the equation simplifies to finding a straightforward power relationship. Given the choices, it implies a direct substitution or recognition.
+However, since the question only provides $x^8 $ and asks for a simple value of$y$, we assume that the equation simplifies to finding a straightforward power relationship. Given the choices, it implies a direct substitution or recognition.
 
-The correct answer is (B) 16 because if \( x = 2 \), then:
+The correct answer is (B) 16 because if $x = 2$, then:
 
-\[ x^8 = 256 \]
-\[ x^{242} = (x^8)^{30} \cdot x^2 = 256^{30} \cdot 4 \]
+$$x^8 = 256$$
+$$x^{242} = (x^8)^{30} \cdot x^2 = 256^{30} \cdot 4$$
 
-But for simpler direct substitution and given choices, \( y = 16 \).
-
-\( y = 16 \)
+But for simpler direct substitution and given choices,$y = 16 $.$ y = 16$
 x??
 
 ---
@@ -377,20 +375,18 @@ Background context: This problem tests the understanding of cubic operations. Th
 ??x
 The cube of 5 is calculated as:
 
-\[ 5^3 = 5 \times 5 \times 5 = 125 \]
+$$5^3 = 5 \times 5 \times 5 = 125$$
 
-\( 125 \)
+$125$
 x??
 
 ---
 #### Fraction and Decimal Operations
 Background context: This problem tests basic arithmetic operations involving fractions and decimals.
 
-:p What is \( 25.33 \) rounded to the nearest tenth?
+:p What is $25.33$ rounded to the nearest tenth?
 ??x
-To round \( 25.33 \) to the nearest tenth, we look at the digit in the hundredths place, which is 3. Since it is less than 5, we do not change the tenths place.
-
-\( 25.3 \)
+To round $25.33 $ to the nearest tenth, we look at the digit in the hundredths place, which is 3. Since it is less than 5, we do not change the tenths place.$25.3$
 x??
 
 ---
@@ -399,73 +395,67 @@ Background context: This problem involves finding roots and understanding how th
 
 :p What is the fourth root of 16?
 ??x
-The fourth root of a number \( n \) can be expressed as:
+The fourth root of a number $n$ can be expressed as:
 
-\[ \sqrt[4]{n} = n^{1/4} \]
+$$\sqrt[4]{n} = n^{1/4}$$
 
 For 16:
+$$\sqrt[4]{16} = 16^{1/4} = (2^4)^{1/4} = 2$$
 
-\[ \sqrt[4]{16} = 16^{1/4} = (2^4)^{1/4} = 2 \]
-
-\( 2 \)
+$2$
 x??
 
 ---
 #### Linear Equations
-Background context: This problem involves finding the equation of a line passing through two given points. The general form is \( y = mx + b \), where \( m \) is the slope and \( b \) is the y-intercept.
+Background context: This problem involves finding the equation of a line passing through two given points. The general form is $y = mx + b $, where $ m $ is the slope and $ b$ is the y-intercept.
 
 :p What is the equation of a line that passes through the points (0, –1) and (2, 3)?
 ??x
-First, calculate the slope \( m \):
+First, calculate the slope $m$:
 
-\[ m = \frac{y_2 - y_1}{x_2 - x_1} = \frac{3 - (-1)}{2 - 0} = \frac{4}{2} = 2 \]
+$$m = \frac{y_2 - y_1}{x_2 - x_1} = \frac{3 - (-1)}{2 - 0} = \frac{4}{2} = 2$$
 
-Using the point (0, –1), we can find \( b \):
+Using the point (0, –1), we can find $b$:
 
-\[ y = mx + b \]
-\[ -1 = 2(0) + b \Rightarrow b = -1 \]
+$$y = mx + b$$
+$$-1 = 2(0) + b \Rightarrow b = -1$$
 
 Thus, the equation is:
+$$y = 2x - 1$$
 
-\[ y = 2x - 1 \]
-
-\( y = 2x - 1 \)
+$y = 2x - 1$
 x??
 
 ---
 #### Unit Conversion
 Background context: This problem involves converting units from feet and yards to a single unit.
 
-:p What is \( 12 + 14/5 \) in yards?
+:p What is $12 + 14/5$ in yards?
 ??x
 First, convert the mixed number to an improper fraction or decimal:
 
-\[ 12 + \frac{14}{5} = 12 + 2.8 = 14.8 \]
+$$12 + \frac{14}{5} = 12 + 2.8 = 14.8$$
 
-Since there are 3 feet in a yard, we need to convert \( 14.8 \) feet into yards:
+Since there are 3 feet in a yard, we need to convert $14.8$ feet into yards:
+$$14.8 \text{ feet} = \frac{14.8}{3} \approx 4.9333 \text{ yards}$$
 
-\[ 14.8 \text{ feet} = \frac{14.8}{3} \approx 4.9333 \text{ yards} \]
-
-The closest option is 5 yards.
-
-\( 5 \)
-x??
+The closest option is 5 yards.$5$ x??
 
 ---
 #### Exponent Rules
 Background context: This problem tests understanding of exponent rules and simplification.
 
-:p Simplify \( x^3 \cdot x^4 \).
+:p Simplify $x^3 \cdot x^4$.
 ??x
 Using the property of exponents that states:
 
-\[ a^m \cdot a^n = a^{m+n} \]
+$$a^m \cdot a^n = a^{m+n}$$
 
-For \( x^3 \cdot x^4 \):
+For $x^3 \cdot x^4$:
 
-\[ x^3 \cdot x^4 = x^{3+4} = x^7 \]
+$$x^3 \cdot x^4 = x^{3+4} = x^7$$
 
-\( x^7 \)
+$x^7$
 x??
 
 ---
@@ -473,22 +463,17 @@ x??
 Background context: This problem involves simplifying fractions to find the largest one.
 
 :p Which of the following fractions is the largest?
-1. \( \frac{2}{5} \)
-2. \( \frac{3}{8} \)
-3. \( \frac{7}{10} \)
-4. \( \frac{13}{16} \)
+1. $\frac{2}{5}$2.$\frac{3}{8}$3.$\frac{7}{10}$4.$\frac{13}{16}$
 
 ??x
 To compare these fractions, convert them to a common denominator or decimals:
 
-\[ \frac{2}{5} = 0.4 \]
-\[ \frac{3}{8} = 0.375 \]
-\[ \frac{7}{10} = 0.7 \]
-\[ \frac{13}{16} = 0.8125 \]
+$$\frac{2}{5} = 0.4$$
+$$\frac{3}{8} = 0.375$$
+$$\frac{7}{10} = 0.7$$
+$$\frac{13}{16} = 0.8125$$
 
-The largest fraction is \( \frac{13}{16} \).
-
-\( \frac{13}{16} \)
+The largest fraction is $\frac{13}{16}$.$\frac{13}{16}$
 x??
 
 ---
@@ -499,13 +484,12 @@ Background context: This problem involves converting a percentage into a fractio
 ??x
 To convert 24% to a fraction, first write it as a fraction with 100:
 
-\[ 24\% = \frac{24}{100} \]
+$$24\% = \frac{24}{100}$$
 
 Then simplify the fraction by dividing both the numerator and denominator by their greatest common divisor (GCD), which is 4:
+$$\frac{24}{100} = \frac{24 \div 4}{100 \div 4} = \frac{6}{25}$$
 
-\[ \frac{24}{100} = \frac{24 \div 4}{100 \div 4} = \frac{6}{25} \]
-
-\( \frac{6}{25} \)
+$\frac{6}{25}$
 x??
 
 ---

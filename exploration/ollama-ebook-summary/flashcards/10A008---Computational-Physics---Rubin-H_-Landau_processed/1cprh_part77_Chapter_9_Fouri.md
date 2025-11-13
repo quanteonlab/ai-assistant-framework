@@ -5,13 +5,12 @@
 ---
 
 #### Fourier Series Basics
-Fourier series are used to expand periodic functions into a sum of sines and cosines. The function \( y(t) \) can be expressed as:
-\[ y(t) = \frac{a_0}{2} + \sum_{n=1}^{\infty} \left( a_n \cos(n\omega t) + b_n \sin(n\omega t) \right) \]
-where \( \omega = \frac{2\pi}{T} \), and \( T \) is the period of the function.
+Fourier series are used to expand periodic functions into a sum of sines and cosines. The function $y(t)$ can be expressed as:
+$$y(t) = \frac{a_0}{2} + \sum_{n=1}^{\infty} \left( a_n \cos(n\omega t) + b_n \sin(n\omega t) \right)$$where $\omega = \frac{2\pi}{T}$, and $ T$ is the period of the function.
 
 :p What is the Fourier series representation for a periodic function?
 ??x
-The Fourier series represents any periodic function as a sum of sines and cosines with frequencies that are integer multiples of the fundamental frequency. The coefficients \(a_n\) and \(b_n\) determine the contribution of each harmonic component.
+The Fourier series represents any periodic function as a sum of sines and cosines with frequencies that are integer multiples of the fundamental frequency. The coefficients $a_n $ and$b_n$ determine the contribution of each harmonic component.
 ```java
 public class FourierSeries {
     public void computeCoefficients(double[] y, double T) {
@@ -38,13 +37,12 @@ x??
 ---
 
 #### Fourier Series Coefficient Calculation
-The coefficients \(a_n\) and \(b_n\) are calculated by integrating the product of the function and the cosine or sine functions over one period. The formula is:
-\[ a_n = \frac{2}{T} \int_0^T y(t) \cos(n\omega t) dt, \quad b_n = \frac{2}{T} \int_0^T y(t) \sin(n\omega t) dt \]
-where \( \omega = \frac{2\pi}{T} \).
+The coefficients $a_n $ and$b_n$ are calculated by integrating the product of the function and the cosine or sine functions over one period. The formula is:
+$$a_n = \frac{2}{T} \int_0^T y(t) \cos(n\omega t) dt, \quad b_n = \frac{2}{T} \int_0^T y(t) \sin(n\omega t) dt$$where $\omega = \frac{2\pi}{T}$.
 
-:p How are the coefficients \(a_n\) and \(b_n\) calculated for a Fourier series?
+:p How are the coefficients $a_n $ and$b_n$ calculated for a Fourier series?
 ??x
-The coefficients \(a_n\) and \(b_n\) are computed by multiplying both sides of the Fourier series equation by \(\cos(n\omega t)\) or \(\sin(n\omega t)\), integrating over one period, and then solving for \(a_n\) and \(b_n\).
+The coefficients $a_n $ and$b_n $ are computed by multiplying both sides of the Fourier series equation by$\cos(n\omega t)$ or $\sin(n\omega t)$, integrating over one period, and then solving for $ a_n$and $ b_n$.
 
 ```java
 public class FourierCoefficients {
@@ -98,7 +96,7 @@ x??
 ---
 
 #### Quantum Fourier Transform
-The Quantum Fourier Transform (QFT) is a quantum computing version of the Discrete Fourier Transform. It transforms a state vector \( | \psi \rangle \) from the computational basis to the frequency domain.
+The Quantum Fourier Transform (QFT) is a quantum computing version of the Discrete Fourier Transform. It transforms a state vector $| \psi \rangle$ from the computational basis to the frequency domain.
 
 :p What is the Quantum Fourier Transform?
 ??x
@@ -136,7 +134,7 @@ x??
 ---
 
 #### Nonlinear Oscillations and Fourier Series
-In nonlinear oscillators, such as those described by \( V(x) = \frac{1}{2} k x^2 (1 - 2/3 \alpha x) \), the motion is periodic but not necessarily harmonic. The solution can be expanded in a Fourier series to analyze its spectral content.
+In nonlinear oscillators, such as those described by $V(x) = \frac{1}{2} k x^2 (1 - 2/3 \alpha x)$, the motion is periodic but not necessarily harmonic. The solution can be expanded in a Fourier series to analyze its spectral content.
 
 :p How are nonlinear oscillations analyzed using Fourier series?
 ??x
@@ -172,7 +170,7 @@ x??
 ---
 
 #### Fourier Series Basics
-Background context explaining the concept of Fourier series, including its relevance to periodic functions and their decomposition into sinusoidal components. The Fourier spectrum shows how frequencies are distributed within a function, with coefficients \(b_n\) decreasing as frequency increases.
+Background context explaining the concept of Fourier series, including its relevance to periodic functions and their decomposition into sinusoidal components. The Fourier spectrum shows how frequencies are distributed within a function, with coefficients $b_n$ decreasing as frequency increases.
 
 :p What is the Fourier series used for in analyzing periodic functions?
 ??x
@@ -181,11 +179,11 @@ x??
 
 ---
 #### Symmetry in Fourier Series
-Background on how symmetry can simplify the calculation of Fourier coefficients. For an odd function, all \(a_n\) coefficients are zero, and only half the integration range is needed to determine \(b_n\). For an even function, all \(b_n\) coefficients are zero, and similarly, only half the range is used for \(a_n\).
+Background on how symmetry can simplify the calculation of Fourier coefficients. For an odd function, all $a_n $ coefficients are zero, and only half the integration range is needed to determine$b_n $. For an even function, all $ b_n $coefficients are zero, and similarly, only half the range is used for$ a_n$.
 
 :p How can symmetry in a periodic signal simplify Fourier series calculations?
 ??x
-Symmetry allows us to focus on specific types of coefficients. If a function is odd (i.e., \(y(-t) = -y(t)\)), all \(a_n\) coefficients are zero, and we only need to compute the \(b_n\) coefficients over half the period. Similarly, if the function is even (\(y(-t) = y(t)\)), all \(b_n\) coefficients are zero, and we only integrate over half the period for \(a_n\).
+Symmetry allows us to focus on specific types of coefficients. If a function is odd (i.e., $y(-t) = -y(t)$), all $ a_n$coefficients are zero, and we only need to compute the $ b_n$coefficients over half the period. Similarly, if the function is even ($ y(-t) = y(t)$), all $ b_n$coefficients are zero, and we only integrate over half the period for $ a_n$.
 
 For example, if a signal is odd:
 ```java
@@ -199,17 +197,14 @@ Description of the sawtooth function and its mathematical representation. It is 
 
 :p How is a sawtooth function mathematically represented?
 ??x
-A sawtooth function \(y(t)\) is defined as:
-\[
-y(t) = \begin{cases} 
+A sawtooth function $y(t)$ is defined as:
+$$y(t) = \begin{cases} 
 t/T & \text{for } 0 \leq t \leq T/2 \\
 t - T/T & \text{for } T/2 \leq t \leq T
-\end{cases}
-\]
+\end{cases}$$
+
 This function can be simplified by shifting it to:
-\[
-y(t) = \frac{t}{T/2} \text{ for } -T/2 \leq t \leq T/2.
-\]
+$$y(t) = \frac{t}{T/2} \text{ for } -T/2 \leq t \leq T/2.$$
 
 The general shape of the sawtooth function is periodic and nonharmonic, but its symmetry allows for simpler Fourier series representation. However, many components are needed to accurately represent sharp corners.
 
@@ -217,16 +212,14 @@ x??
 
 ---
 #### Odd Function Properties
-Explanation of how an odd function simplifies Fourier series calculations by setting all \(a_n\) coefficients to zero and reducing the integration range.
+Explanation of how an odd function simplifies Fourier series calculations by setting all $a_n$ coefficients to zero and reducing the integration range.
 
 :p What happens when a function is odd in terms of its Fourier series?
 ??x
-For an odd function, defined as \(y(-t) = -y(t)\), the Fourier series contains only sine terms (\(b_n\)) because cosine terms (even functions) are orthogonal to the odd function over any symmetric interval. This means all \(a_n\) coefficients are zero.
+For an odd function, defined as $y(-t) = -y(t)$, the Fourier series contains only sine terms ($ b_n $) because cosine terms (even functions) are orthogonal to the odd function over any symmetric interval. This means all$ a_n$ coefficients are zero.
 
 The integration range can be halved, simplifying the calculation:
-\[
-b_n = \frac{4}{T} \int_{0}^{T/2} y(t) \sin(n\omega t) \, dt.
-\]
+$$b_n = \frac{4}{T} \int_{0}^{T/2} y(t) \sin(n\omega t) \, dt.$$
 
 This property is useful for reducing computational complexity in signal processing and analysis.
 
@@ -234,16 +227,14 @@ x??
 
 ---
 #### Even Function Properties
-Explanation of how an even function simplifies Fourier series calculations by setting all \(b_n\) coefficients to zero and reducing the integration range.
+Explanation of how an even function simplifies Fourier series calculations by setting all $b_n$ coefficients to zero and reducing the integration range.
 
 :p What happens when a function is even in terms of its Fourier series?
 ??x
-For an even function, defined as \(y(-t) = y(t)\), the Fourier series contains only cosine terms (\(a_n\)) because sine terms (odd functions) are orthogonal to the even function over any symmetric interval. This means all \(b_n\) coefficients are zero.
+For an even function, defined as $y(-t) = y(t)$, the Fourier series contains only cosine terms ($ a_n $) because sine terms (odd functions) are orthogonal to the even function over any symmetric interval. This means all$ b_n$ coefficients are zero.
 
 The integration range can be halved, simplifying the calculation:
-\[
-a_n = \frac{4}{T} \int_{0}^{T/2} y(t) \cos(n\omega t) \, dt.
-\]
+$$a_n = \frac{4}{T} \int_{0}^{T/2} y(t) \cos(n\omega t) \, dt.$$
 
 This property is useful for reducing computational complexity in signal processing and analysis.
 
@@ -256,9 +247,8 @@ Explanation of the sawtooth function's simplification through symmetry and its F
 :p How does the sawtooth function simplify when considering symmetry?
 ??x
 The sawtooth function can be simplified by leveraging its odd symmetry. By shifting the function, we get:
-\[
-y(t) = \frac{t}{T/2} \text{ for } -T/2 \leq t \leq T/2.
-\]
+$$y(t) = \frac{t}{T/2} \text{ for } -T/2 \leq t \leq T/2.$$
+
 This simplification is useful because it reduces the complexity of the Fourier series calculation. Although many components are needed to accurately represent sharp corners, the symmetry allows us to focus on either half of the period.
 
 x??
@@ -279,16 +269,15 @@ x??
 
 Background context explaining the concept. The sawtooth function is a periodic, nonharmonic, and continuous function with discontinuous derivatives. Its Fourier series can be used to approximate it.
 
-Formula: 
-\[ y(t) = 2 \frac{1}{\pi} \left( -\frac{\sin(\omega t)}{1} + \frac{\sin(3 \omega t)}{3} - \frac{\sin(5 \omega t)}{5} + \cdots \right) \]
-
-:p What is the Fourier series representation of a sawtooth function?
+Formula:
+$$y(t) = 2 \frac{1}{\pi} \left( -\frac{\sin(\omega t)}{1} + \frac{\sin(3 \omega t)}{3} - \frac{\sin(5 \omega t)}{5} + \cdots \right)$$:p What is the Fourier series representation of a sawtooth function?
 ??x
 The Fourier series for a sawtooth function can be represented as an infinite sum of sine terms:
-\[ y(t) = 2 \frac{1}{\pi} \sum_{n=1,3,5,\ldots}^{\infty} \left( -\frac{\sin((2n-1)\omega t)}{2n-1} \right). \]
+$$y(t) = 2 \frac{1}{\pi} \sum_{n=1,3,5,\ldots}^{\infty} \left( -\frac{\sin((2n-1)\omega t)}{2n-1} \right).$$
+
 This series includes only odd harmonics.
 
-The code to sum the Fourier series up to a given order \(N\) is as follows:
+The code to sum the Fourier series up to a given order $N$ is as follows:
 ```python
 import numpy as np
 
@@ -350,21 +339,19 @@ x??
 
 Background context explaining the concept. The half-wave function is a periodic, nonharmonic, and continuous function with discontinuous derivatives that lacks sharp corners compared to a sawtooth function.
 
-Formula: 
-\[ y(t) = \begin{cases} 
+Formula:
+$$y(t) = \begin{cases} 
 \sin(\omega t), & 0 < t < T/2 \\
 0, & T/2 < t < T 
-\end{cases} \]
+\end{cases}$$
 
 The Fourier series for the half-wave function is:
-\[ y(t) = \frac{1}{2} \sin(\omega t) + \sum_{n=1}^{\infty} \left( -\frac{2}{\pi (2n-1)^2} \cos((2n-1)\omega t) \right). \]
-
-:p What is the Fourier series representation of a half-wave function?
+$$y(t) = \frac{1}{2} \sin(\omega t) + \sum_{n=1}^{\infty} \left( -\frac{2}{\pi (2n-1)^2} \cos((2n-1)\omega t) \right).$$:p What is the Fourier series representation of a half-wave function?
 ??x
 The Fourier series for the half-wave function includes both sine and cosine terms:
-\[ y(t) = \frac{1}{2} \sin(\omega t) - \frac{2}{\pi (3)} \cos(2\omega t) - \frac{2}{\pi (5)} \cos(4\omega t) + \cdots. \]
+$$y(t) = \frac{1}{2} \sin(\omega t) - \frac{2}{\pi (3)} \cos(2\omega t) - \frac{2}{\pi (5)} \cos(4\omega t) + \cdots.$$
 
-The code to sum the series up to a given order \(N\) is:
+The code to sum the series up to a given order $N$ is:
 ```python
 def half_wave_fourier_series(t, omega, N):
     y = 0.0
@@ -390,15 +377,17 @@ x??
 
 Background context explaining the concept. The Fourier transform is used to analyze non-periodic functions by representing them as a sum of sinusoidal functions.
 
-Formula: 
-\[ y(t) = \int_{-\infty}^{\infty} d\omega Y(\omega) e^{i\omega t} / \sqrt{2\pi}. \]
-\[ Y(\omega) = \int_{-\infty}^{\infty} dt e^{-i\omega t} y(t) / \sqrt{2\pi}. \]
+Formula:
+$$y(t) = \int_{-\infty}^{\infty} d\omega Y(\omega) e^{i\omega t} / \sqrt{2\pi}.$$
+$$
 
-:p What are the formulas for Fourier transform and its inverse?
+Y(\omega) = \int_{-\infty}^{\infty} dt e^{-i\omega t} y(t) / \sqrt{2\pi}.$$:p What are the formulas for Fourier transform and its inverse?
 ??x
 The formulas for the Fourier transform and its inverse are:
-\[ y(t) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} d\omega Y(\omega) e^{i\omega t}, \]
-\[ Y(\omega) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} dt y(t) e^{-i\omega t}. \]
+$$y(t) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} d\omega Y(\omega) e^{i\omega t},$$
+$$
+
+Y(\omega) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} dt y(t) e^{-i\omega t}.$$
 
 The code to compute the Fourier transform and inverse is as follows:
 ```python
@@ -418,42 +407,41 @@ x??
 
 Background context explaining the concept. The Dirac delta function is a generalized function that can be used to represent impulses and has applications in physics.
 
-Formula: 
-\[ \int_{-\infty}^{\infty} d\omega e^{i(\omega - \omega_0)t} = 2\pi \delta(\omega - \omega_0). \]
-
-:p What is the Dirac delta function?
+Formula:
+$$\int_{-\infty}^{\infty} d\omega e^{i(\omega - \omega_0)t} = 2\pi \delta(\omega - \omega_0).$$:p What is the Dirac delta function?
 ??x
-The Dirac delta function \( \delta(\omega - \omega_0) \) is a generalized function defined such that:
-\[ \int_{-\infty}^{\infty} d\omega e^{i(\omega - \omega_0)t} = 2\pi \delta(\omega - \omega_0). \]
+The Dirac delta function $\delta(\omega - \omega_0)$ is a generalized function defined such that:
+$$\int_{-\infty}^{\infty} d\omega e^{i(\omega - \omega_0)t} = 2\pi \delta(\omega - \omega_0).$$
 
-The Dirac delta function is not well-behaved in the sense of conventional functions, but it is extremely useful in theoretical physics. It can be thought of as a function that has an infinite value at \( \omega_0 \) and zero elsewhere, with the area under its curve being 1.
+The Dirac delta function is not well-behaved in the sense of conventional functions, but it is extremely useful in theoretical physics. It can be thought of as a function that has an infinite value at $\omega_0$ and zero elsewhere, with the area under its curve being 1.
 
 :p How does the Dirac delta function relate to the Fourier transform?
 ??x
 The Dirac delta function appears in the context of the Fourier transform when converting between the time domain and frequency domain. Specifically, it helps establish the identity:
-\[ Y(\omega) = \int_{-\infty}^{\infty} d\omega' \delta(\omega - \omega') Y(\omega'). \]
+$$Y(\omega) = \int_{-\infty}^{\infty} d\omega' \delta(\omega - \omega') Y(\omega').$$
 
 This relationship is crucial for ensuring consistency in the Fourier transform pair.
 
 :p How can we use the Dirac delta function to prove the equivalence of Fourier series and transforms?
 ??x
 To prove the equivalence, we start by substituting the inverse Fourier transform into the forward Fourier transform:
-\[ Y(\omega) = \int_{-\infty}^{\infty} dt e^{-i\omega t} y(t), \]
-\[ y(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega' Y(\omega') e^{i\omega' t}. \]
+$$
 
-Substituting \( Y(\omega) \) into the inverse Fourier transform:
-\[ y(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega' \left( \int_{-\infty}^{\infty} dt e^{-i\omega t} y(t) \right) e^{i\omega' t}. \]
+Y(\omega) = \int_{-\infty}^{\infty} dt e^{-i\omega t} y(t),$$
+$$y(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega' Y(\omega') e^{i\omega' t}.$$
+
+Substituting $Y(\omega)$ into the inverse Fourier transform:
+$$y(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega' \left( \int_{-\infty}^{\infty} dt e^{-i\omega t} y(t) \right) e^{i\omega' t}.$$
 
 By changing the order of integration and using the identity:
-\[ \int_{-\infty}^{\infty} d\omega e^{i(\omega - \omega')t} = 2\pi \delta(\omega - \omega'), \]
-we get:
-\[ y(t) = \int_{-\infty}^{\infty} dt' y(t') \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega e^{i\omega (t-t')} = y(t). \]
+$$\int_{-\infty}^{\infty} d\omega e^{i(\omega - \omega')t} = 2\pi \delta(\omega - \omega'),$$we get:
+$$y(t) = \int_{-\infty}^{\infty} dt' y(t') \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega e^{i\omega (t-t')} = y(t).$$
 
 This shows that the Fourier transform and its inverse are consistent with each other.
 
 :p How can we create a semilog plot of the squared modulus of the Fourier transform?
 ??x
-To create a semilog plot of the squared modulus of the Fourier transform \( |Y(\omega)|^2 \), follow these steps:
+To create a semilog plot of the squared modulus of the Fourier transform $|Y(\omega)|^2$, follow these steps:
 ```python
 import matplotlib.pyplot as plt
 

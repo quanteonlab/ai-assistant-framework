@@ -533,10 +533,10 @@ x??
 ---
 
 #### Training Cost of BloombergGPT
-The training process for BloombergGPT consumed 1.3 million A100 GPU hours and had an estimated cost between $1.3 million and $2.6 million, excluding data costs.
+The training process for BloombergGPT consumed 1.3 million A100 GPU hours and had an estimated cost between $1.3 million and$2.6 million, excluding data costs.
 :p What was the cost of training BloombergGPT?
 ??x
-The training of BloombergGPT required 1.3 million A100 GPU hours and cost between $1.3 million and $2.6 million (excluding data). This high investment reflects the significant resources needed for specialized model development.
+The training of BloombergGPT required 1.3 million A100 GPU hours and cost between $1.3 million and$2.6 million (excluding data). This high investment reflects the significant resources needed for specialized model development.
 x??
 
 ---

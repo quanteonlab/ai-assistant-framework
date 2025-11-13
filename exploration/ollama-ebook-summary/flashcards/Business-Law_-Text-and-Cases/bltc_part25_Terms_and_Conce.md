@@ -126,7 +126,7 @@ Background context: Discharging contractual duties is often achieved through per
 
 :p What are the steps for discharging a contract via performance in the provided example?
 ??x
-In the given example, a buyer and seller entered into an agreement via e-mail to sell a Lexus RX for $48,000. The contract is discharged by performance when the buyer pays $48,000 to the seller, and the seller transfers possession of the Lexus to the buyer.
+In the given example, a buyer and seller entered into an agreement via e-mail to sell a Lexus RX for $48,000. The contract is discharged by performance when the buyer pays$48,000 to the seller, and the seller transfers possession of the Lexus to the buyer.
 x??
 
 ---

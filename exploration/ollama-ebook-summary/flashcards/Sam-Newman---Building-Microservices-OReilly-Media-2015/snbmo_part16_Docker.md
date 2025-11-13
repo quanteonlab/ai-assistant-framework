@@ -111,15 +111,14 @@ The deployment command is parameterized to include artifact name, version, and e
 
 Example command format:
 ```
-$ deploy artifact=<microservice_name> environment=<environment_name> version=<version>
+$deploy artifact=<microservice_name> environment=<environment_name> version=<version>
 ```
 
 :p How would you deploy the catalog service locally using the provided deployment command?
 ??x
 The command to deploy the catalog service locally would be:
 
-```sh
-$ deploy artifact=catalog environment=local version=local
+```sh$ deploy artifact=catalog environment=local version=local
 ```
 This command specifies that the `catalog` microservice should be deployed in the local environment with the same version as on the local machine.
 ??x
@@ -129,15 +128,14 @@ The CI build service can pick up changes and trigger deployments automatically. 
 
 Example command for CI stage:
 ```
-$ deploy artifact=catalog environment=ci version=b456
+$deploy artifact=catalog environment=ci version=b456
 ```
 
 :p How would you deploy the catalog service into an integrated test environment using the latest build artifact?
 ??x
 To deploy the catalog service into an integrated test environment with the latest build artifact, you would use the following command:
 
-```sh
-$ deploy artifact=catalog environment=integrated_qa version=latest
+```sh$ deploy artifact=catalog environment=integrated_qa version=latest
 ```
 This command deploys the `catalog` microservice in the integrated QA environment using the most recent build from the CI/CD pipeline.
 ??x

@@ -35,7 +35,7 @@ Inverse proportions occur when one value increases and another decreases. For ex
 
 :p How can you solve for the unknown quantity in inverse proportion problems?
 ??x
-In inverse proportions, if one variable increases while the other decreases at a fixed product, the relationship can be expressed as \(xy = k\), where \(k\) is a constant. For example, if more workers (W) are hired to complete a job in less time (T), their relationship would follow:
+In inverse proportions, if one variable increases while the other decreases at a fixed product, the relationship can be expressed as $xy = k $, where $ k$ is a constant. For example, if more workers (W) are hired to complete a job in less time (T), their relationship would follow:
 ```
 W1 * T1 = W2 * T2
 ```
@@ -56,7 +56,7 @@ Rates are fixed quantities used for comparison or calculation. Common rates incl
 
 :p What is a rate formula useful for solving problems involving distance and time?
 ??x
-The distance-rate-time formula \(d = rt\) can be used to solve for any of the three variables when you know the other two:
+The distance-rate-time formula $d = rt$ can be used to solve for any of the three variables when you know the other two:
 - Distance (d) = Rate (r) * Time (t)
 - Example: If John drives at a rate of 60 miles per hour and travels for 3 hours, how far does he travel?
 ``` 
@@ -69,7 +69,7 @@ x??
 ---
 
 #### Simple Interest Calculation
-Simple interest is calculated using the formula \(I = Prt\), where:
+Simple interest is calculated using the formula $I = Prt$, where:
 - I is the interest,
 - P is the principal (initial amount),
 - r is the interest rate as a decimal,
@@ -83,7 +83,7 @@ I = Prt
 If P = $1000, r = 5% (or 0.05), t = 2 years,
 I = 1000 * 0.05 * 2 = $100
 ```
-So, the interest earned on a principal of $1000 at an annual rate of 5% over 2 years would be $100.
+So, the interest earned on a principal of $1000 at an annual rate of 5% over 2 years would be$100.
 x??
 
 #### Rate as Division
@@ -92,9 +92,8 @@ Background context: In a rate, you can generally think of "per" as a division si
 :p What is the formula for calculating the average speed?
 ??x
 To calculate the average speed, you divide the total distance by the total time.
-\[
-\text{Speed} = \frac{\text{Distance}}{\text{Time}}
-\]
+$$\text{Speed} = \frac{\text{Distance}}{\text{Time}}$$
+
 For example:
 ```python
 distance = 141  # miles
@@ -112,10 +111,9 @@ Background context: Scientific notation is a compact format for writing very lar
 ??x
 Scientific notation separates a number into two parts: 
 1. A coefficient that is a number between 1 and 10.
-2. A power of ten (such as \(10^7\), \(10^{-8}\)).
+2. A power of ten (such as $10^7 $, $10^{-8}$).
 For example, the number 125 can be written in scientific notation as:
-\[ 1.25 \times 10^2 \]
-x??
+$$1.25 \times 10^2$$x??
 
 ---
 
@@ -125,8 +123,7 @@ Background context: The square root of a number is a factor that when multiplied
 :p How can you find the square root of a perfect square without a calculator?
 ??x
 To find the square root of a perfect square without a calculator, memorize the square roots of the first 12 perfect squares:
-\[
-\begin{align*}
+$$\begin{align*}
 1^2 &= 1 & \sqrt{1} &= 1 \\
 2^2 &= 4 & \sqrt{4} &= 2 \\
 3^2 &= 9 & \sqrt{9} &= 3 \\
@@ -139,9 +136,9 @@ To find the square root of a perfect square without a calculator, memorize the s
 10^2 &= 100 & \sqrt{100} &= 10 \\
 11^2 &= 121 & \sqrt{121} &= 11 \\
 12^2 &= 144 & \sqrt{144} &= 12 \\
-\end{align*}
-\]
-For example, to find the square root of 36, you know it's 6 because \(6^2 = 36\).
+\end{align*}$$
+
+For example, to find the square root of 36, you know it's 6 because $6^2 = 36$.
 x??
 
 ---
@@ -156,14 +153,11 @@ For numbers like 54, which aren't perfect squares:
 2. Make an educated guess based on their roots.
 3. Refine your guess by testing values between these perfect squares.
 
-Example: Find \(\sqrt{54}\):
-- The closest perfect squares are \(49\) (which is \(7^2\)) and \(64\) (which is \(8^2\)).
+Example: Find $\sqrt{54}$:
+- The closest perfect squares are $49 $(which is $7^2 $) and $64 $(which is $8^2$).
 - Since 54 is closer to 49, the root will be closer to 7.
 - Test:
-  - \(7.3 \times 7.3 = 53.29\)
-  - \(7.4 \times 7.4 = 54.76\)
-
-Thus, the square root of 54 is approximately 7.3 (since 53.29 is closer to 54 than 54.76).
+  - $7.3 \times 7.3 = 53.29 $-$7.4 \times 7.4 = 54.76$ Thus, the square root of 54 is approximately 7.3 (since 53.29 is closer to 54 than 54.76).
 x??
 
 ---
@@ -173,8 +167,8 @@ x??
 When faced with questions involving squaring a number and then taking the square root of its result, recognize that the original number often reappears. This is due to the inverse nature of these operations.
 
 For example:
-- \(81^2\) results in 6561.
-- \(\sqrt{6561}\) yields 81 again.
+- $81^2$ results in 6561.
+- $\sqrt{6561}$ yields 81 again.
 
 :p Notice the pattern when you square a number and then take the square root of its result. What is the outcome?
 ??x
@@ -187,9 +181,9 @@ x??
 
 Always read questions thoroughly to understand what they're asking. Sometimes, questions might appear more complex than they actually are. For instance, a question about solving for an unknown variable can often be simplified by recognizing it involves basic arithmetic.
 
-:p Suppose you see the following: Solve for \(s\): \(s^2 = 51 - 2\). How would you approach this problem?
+:p Suppose you see the following: Solve for $s $: $ s^2 = 51 - 2$. How would you approach this problem?
 ??x
-Simplify the right side of the equation first to get \(s^2 = 49\). Then, taking the square root of both sides yields \(s = 7\) or \(s = -7\). However, since we're usually looking for a positive solution in such contexts, the answer is 7.
+Simplify the right side of the equation first to get $s^2 = 49 $. Then, taking the square root of both sides yields $ s = 7 $or$ s = -7$. However, since we're usually looking for a positive solution in such contexts, the answer is 7.
 x??
 
 ---
@@ -198,9 +192,9 @@ x??
 
 When faced with complex problems requiring multiple steps, tackle what you can first. For example, if you don't remember how to multiply decimals, simplify the problem by focusing on the multiplication of simpler numbers.
 
-:p Consider this question: What's the value of \(0.03 \times 0.03\)?
+:p Consider this question: What's the value of $0.03 \times 0.03$?
 ??x
-First, recognize that multiplying 0.03 and 0.03 is essentially finding \(3 \times 3 = 9\). Then, consider the decimal places: there are six total places after the decimal in both numbers, so place the decimal point in your answer to make it have six places. This gives you 0.000027.
+First, recognize that multiplying 0.03 and 0.03 is essentially finding $3 \times 3 = 9$. Then, consider the decimal places: there are six total places after the decimal in both numbers, so place the decimal point in your answer to make it have six places. This gives you 0.000027.
 x??
 
 ---
@@ -209,13 +203,12 @@ x??
 
 If you’re unsure about how to solve a problem, try plugging the given choices back into the equation. This can help you identify the correct answer even if you don’t know the exact solution method.
 
-:p Solve for \(x\): \(x^5 = 32\).
+:p Solve for $x $: $ x^5 = 32$.
 ??x
 Plugging in each option:
-- (A) \(5^5 \neq 32\)
-- (B) \(32^5\) is much larger than 32
-- (C) \(32^5\) is also not equal to 32
-- (D) \(37^5\) doesn’t fit, but checking simpler values like \(2^5 = 32\).
+- (A) $5^5 \neq 32 $- (B)$32^5$ is much larger than 32
+- (C)$32^5$ is also not equal to 32
+- (D)$37^5 $ doesn’t fit, but checking simpler values like$2^5 = 32$.
 
 So the correct answer is Choice (D).
 x??

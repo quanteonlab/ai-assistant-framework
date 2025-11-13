@@ -156,7 +156,7 @@ Background context: The text presents a specific problem where the top-left and 
 
 :p What is the minimum number of dominoes required to cover all but two squares on an 8x8 chessboard?
 ??x
-The minimum number of dominoes required is 31. Since each domino covers 2 squares, and we are removing 2 squares, we need \( \frac{62}{2} = 31 \) dominoes to cover the remaining 62 squares.
+The minimum number of dominoes required is 31. Since each domino covers 2 squares, and we are removing 2 squares, we need $\frac{62}{2} = 31$ dominoes to cover the remaining 62 squares.
 x??
 
 ---
@@ -273,7 +273,7 @@ Background context: The text encourages thinking about questions that can be ask
 
 :p Can you formulate a question asking whether an m×n chessboard has a perfect cover with 2×1 dominoes?
 ??x
-For every \(m\) and \(n\), does there exist a perfect cover of the \(m \times n\) chessboard by 2×1 dominoes? If not, for which \(m\) and \(n\) is there a perfect cover?
+For every $m $ and$n $, does there exist a perfect cover of the$ m \times n $chessboard by 2×1 dominoes? If not, for which$ m $and$ n$ is there a perfect cover?
 
 ```java
 public class GeneralizationQuestion {
@@ -426,13 +426,13 @@ x??
 ---
 
 #### The Pigeonhole Principle
-Background context: The pigeonhole principle is a simple but powerful counting argument used to prove that certain conditions must be met. It states that if you have more pigeons than pigeonholes and each pigeon must reside in one of the holes, then at least one hole will contain multiple pigeons. Mathematically, if \( n \) pigeonholes can hold at most \( k \) pigeons each, and there are at least \( kn+1 \) pigeons, then at least one pigeonhole contains at least \( k+1 \) pigeons.
+Background context: The pigeonhole principle is a simple but powerful counting argument used to prove that certain conditions must be met. It states that if you have more pigeons than pigeonholes and each pigeon must reside in one of the holes, then at least one hole will contain multiple pigeons. Mathematically, if $n $ pigeonholes can hold at most$k $ pigeons each, and there are at least$ kn+1 $ pigeons, then at least one pigeonhole contains at least $k+1$ pigeons.
 
 This principle works for any objects (not just pigeons) placed into containers. In the context of this proof, people in Sacramento, CA, are considered "pigeons," and their number of hairs on their head are the "pigeonholes."
 
 :p What is the pigeonhole principle?
 ??x
-The pigeonhole principle states that if \( n \) items are put into \( m \) containers, with \( n > m \), then at least one container must contain more than one item. In this case, people (pigeons) in Sacramento are distributed based on their number of hairs (pigeonholes).
+The pigeonhole principle states that if $n $ items are put into$m $ containers, with$n > m$, then at least one container must contain more than one item. In this case, people (pigeons) in Sacramento are distributed based on their number of hairs (pigeonholes).
 x??
 
 ---
@@ -441,12 +441,12 @@ Background context: The proof involves counting the number of non-balding people
 
 :p How many non-balding people are estimated to be in Sacramento?
 ??x
-Based on the given data, we can estimate that there are at least \( 480,000 - 100,000 = 380,000 \) non-balding people.
+Based on the given data, we can estimate that there are at least $480,000 - 100,000 = 380,000$ non-balding people.
 x??
 
 ---
 #### Pigeonholes and Hairs on Heads
-Background context: To apply the pigeonhole principle to this problem, we define each possible number of hairs as a "pigeonhole." Specifically, from 50,000 to 199,999 hairs are considered, making a total of \( 199,999 - 50,000 + 1 = 150,000 \) pigeonholes.
+Background context: To apply the pigeonhole principle to this problem, we define each possible number of hairs as a "pigeonhole." Specifically, from 50,000 to 199,999 hairs are considered, making a total of $199,999 - 50,000 + 1 = 150,000$ pigeonholes.
 
 :p How many "pigeonholes" (boxes) are created for the number of hairs?
 ??x
@@ -459,7 +459,7 @@ Background context: With at least 380,000 non-balding people and 150,000 pigeonh
 
 :p Using the pigeonhole principle, how do you prove that at least three non-balding people have exactly the same number of hairs?
 ??x
-By applying the pigeonhole principle: If 380,000 or more non-balding people are placed into 150,000 pigeonholes (representing different numbers of hairs), and since \( 380,000 > 150,000 \times 2 + 1 \), at least one pigeonhole must contain at least three people with the same number of hairs.
+By applying the pigeonhole principle: If 380,000 or more non-balding people are placed into 150,000 pigeonholes (representing different numbers of hairs), and since $380,000 > 150,000 \times 2 + 1$, at least one pigeonhole must contain at least three people with the same number of hairs.
 x??
 
 ---
@@ -468,27 +468,27 @@ Background context: To further illustrate this, let's break down how the princip
 
 :p How does the pigeonhole principle ensure that there are at least three non-balding people with the same number of hairs?
 ??x
-The pigeonhole principle ensures this by noting that since 380,000 is greater than \( 150,000 \times 2 + 1 \), at least one box (pigeonhole) must contain at least three people with the same number of hairs. This is because if each box had at most two people, we would need fewer than 380,000 people to fill all boxes, but we have more.
+The pigeonhole principle ensures this by noting that since 380,000 is greater than $150,000 \times 2 + 1$, at least one box (pigeonhole) must contain at least three people with the same number of hairs. This is because if each box had at most two people, we would need fewer than 380,000 people to fill all boxes, but we have more.
 x??
 
 ---
 
 #### The Pigeonhole Principle - Simple Form
-The pigeonhole principle is a fundamental concept in discrete mathematics that deals with the distribution of items into containers. If you have more items than containers, at least one container must contain more than one item. In formal terms, if \( n+1 \) objects are placed into \( n \) boxes, then at least one box has at least two objects in it.
+The pigeonhole principle is a fundamental concept in discrete mathematics that deals with the distribution of items into containers. If you have more items than containers, at least one container must contain more than one item. In formal terms, if $n+1 $ objects are placed into$n$ boxes, then at least one box has at least two objects in it.
 
 :p What does the simple form of the pigeonhole principle state?
 ??x
-The simple form states that if you have \( n+1 \) objects and only \( n \) boxes, at least one box must contain at least two objects.
+The simple form states that if you have $n+1 $ objects and only$n$ boxes, at least one box must contain at least two objects.
 x??
 
 ---
 
 #### The Pigeonhole Principle - General Form
-The general form of the pigeonhole principle extends the basic idea to more complex scenarios. It says that if you have \( kn+1 \) objects distributed into \( n \) boxes, then at least one box will contain at least \( k+1 \) objects.
+The general form of the pigeonhole principle extends the basic idea to more complex scenarios. It says that if you have $kn+1 $ objects distributed into$n $ boxes, then at least one box will contain at least$k+1$ objects.
 
 :p What does the general form of the pigeonhole principle state?
 ??x
-The general form states that if you have \( kn+1 \) objects and distribute them into \( n \) boxes, then at least one box will contain at least \( k+1 \) objects.
+The general form states that if you have $kn+1 $ objects and distribute them into$n $ boxes, then at least one box will contain at least$k+1$ objects.
 x??
 
 ---
@@ -539,7 +539,7 @@ Background context: The pigeonhole principle states that if you have more items 
 
 :p How many socks must be pulled out to guarantee a matching pair?
 ??x
-By the pigeonhole principle, if you pull out \( n + 1 \) socks, you will have at least one pair because there are only \( n \) different colors (pairs). If you pull out just \( n \) socks, it is possible that each sock could be from a different color.
+By the pigeonhole principle, if you pull out $n + 1 $ socks, you will have at least one pair because there are only$n $ different colors (pairs). If you pull out just$n$ socks, it is possible that each sock could be from a different color.
 
 ```java
 // Pseudocode to illustrate the logic
@@ -554,11 +554,11 @@ x??
 ---
 
 #### Pigeonhole Principle - US Residents Example
-Background context: The pigeonhole principle can be used to determine that in a set of \( k \) items distributed among \( n \) containers, if the number of items exceeds the product of \( (n-1)k + 1 \), at least one container must contain more than \( k \) items. Here, we are determining how many people share the same birthday.
+Background context: The pigeonhole principle can be used to determine that in a set of $k $ items distributed among$n $ containers, if the number of items exceeds the product of$(n-1)k + 1 $, at least one container must contain more than$ k$ items. Here, we are determining how many people share the same birthday.
 
 :p How many U.S. residents are guaranteed to have the same birthday?
 ??x
-Using the pigeonhole principle, if you distribute 330 million people across 366 days of the year, at least one day will have more than \( \left\lceil \frac{330,000,000}{366} \right\rceil = 901,640 \) people born on it.
+Using the pigeonhole principle, if you distribute 330 million people across 366 days of the year, at least one day will have more than $\left\lceil \frac{330,000,000}{366} \right\rceil = 901,640$ people born on it.
 
 ```java
 // Pseudocode to calculate the minimum number of people with the same birthday
@@ -573,11 +573,11 @@ x??
 ---
 
 #### Pigeonhole Principle - General Form
-Background context: The general form of the pigeonhole principle states that if \( k \cdot n + 1 \) items are distributed among \( n \) containers, at least one container must contain more than \( k \) items. This is a formal way to express the principle where \( k \) is the number of items per container before needing an additional item.
+Background context: The general form of the pigeonhole principle states that if $k \cdot n + 1 $ items are distributed among$n $ containers, at least one container must contain more than$ k $ items. This is a formal way to express the principle where $k$ is the number of items per container before needing an additional item.
 
 :p How does the general form of the pigeonhole principle work?
 ??x
-The general form of the pigeonhole principle states that if you have \( k \cdot n + 1 \) items and \( n \) containers, at least one container must contain more than \( k \) items. This is because distributing \( k \cdot n \) items would fill each container with exactly \( k \) items, but the additional item (the \( (k \cdot n + 1)^{th} \)) forces one of the containers to have at least \( k + 1 \) items.
+The general form of the pigeonhole principle states that if you have $k \cdot n + 1 $ items and$n $ containers, at least one container must contain more than$ k $ items. This is because distributing $ k \cdot n $ items would fill each container with exactly $ k $ items, but the additional item (the $(k \cdot n + 1)^{th}$) forces one of the containers to have at least $ k + 1$ items.
 
 ```java
 // Pseudocode to illustrate the general form
@@ -592,7 +592,7 @@ x??
 ---
 
 #### Pigeonhole Principle Introduction
-Background context: The pigeonhole principle is a fundamental concept in combinatorics and discrete mathematics. It states that if \( n \) items are put into \( m \) containers, with \( n > m \), then at least one container must contain more than one item.
+Background context: The pigeonhole principle is a fundamental concept in combinatorics and discrete mathematics. It states that if $n $ items are put into$m $ containers, with$n > m$, then at least one container must contain more than one item.
 
 In the given text, the author discusses how to identify suitable "boxes" (containers) and "objects" for applying the pigeonhole principle. This example uses birthdays as objects and days of the year as boxes.
 :p How can we apply the pigeonhole principle to ensure that 901,640 people have the same birthday in the U.S.?
@@ -604,18 +604,17 @@ Given:
 - Required number of people to ensure same birthday = 901,640
 
 We calculate the minimum number of people required using:
-\[ \text{Minimum People} = (365 \times k) + 1 \]
-where \( k \) is an integer.
+$$\text{Minimum People} = (365 \times k) + 1$$where $ k$ is an integer.
 
 For:
-\[ 365k + 1 > 901,640 \]
+$$365k + 1 > 901,640$$
 
-Solving for \( k \):
-\[ k = \left\lceil \frac{901,640 - 1}{365} \right\rceil \]
-\[ k = \left\lceil 2478.15 \right\rceil = 2479 \]
+Solving for $k$:
+$$k = \left\lceil \frac{901,640 - 1}{365} \right\rceil$$
+$$k = \left\lceil 2478.15 \right\rceil = 2479$$
 
 Thus:
-\[ (365 \times 2479) + 1 = 901,641 \]
+$$(365 \times 2479) + 1 = 901,641$$
 
 Therefore, to guarantee that 901,640 people all have the same birthday, we need at least 901,641 people.
 x??
@@ -626,7 +625,7 @@ x??
 Background context: In applying the pigeonhole principle, it is crucial to correctly identify what should be considered as "pigeons" (objects) and "pigeonholes" (containers). The example given involves identifying pairs of numbers from a set that sum up to 9.
 :p How do we identify the objects and boxes in Proposition 1.9?
 ??x
-In Proposition 1.9, the task is to prove that given any five numbers chosen from the set \(\{1, 2, 3, 4, 5, 6, 7, 8\}\), two of them will add up to 9.
+In Proposition 1.9, the task is to prove that given any five numbers chosen from the set $\{1, 2, 3, 4, 5, 6, 7, 8\}$, two of them will add up to 9.
 
 Here:
 - Objects: The five chosen numbers.
@@ -649,7 +648,7 @@ Scratch work helps in:
 - Gaining intuition about the problem.
 - Finding counterexamples if a hypothesis fails.
 
-For Proposition 1.9, testing with different sets of five numbers from \(\{1, 2, 3, 4, 5, 6, 7, 8\}\) confirms that at least two numbers will always sum to 9.
+For Proposition 1.9, testing with different sets of five numbers from $\{1, 2, 3, 4, 5, 6, 7, 8\}$ confirms that at least two numbers will always sum to 9.
 x??
 
 ---
@@ -661,7 +660,7 @@ Example from the text:
 - Finding pairs of numbers that add up to a specific value (e.g., 9).
 :p How does the pigeonhole principle help identify pairs of numbers that sum to 9?
 ??x
-The pigeonhole principle helps by dividing the set into groups where each group contains pairs that sum to 9. For \(\{1, 2, 3, 4, 5, 6, 7, 8\}\), these pairs are (1, 8), (2, 7), (3, 6), and (4, 5).
+The pigeonhole principle helps by dividing the set into groups where each group contains pairs that sum to 9. For $\{1, 2, 3, 4, 5, 6, 7, 8\}$, these pairs are (1, 8), (2, 7), (3, 6), and (4, 5).
 
 Since there are four such pairs (pigeonholes) and five numbers (objects) to place in them, by the pigeonhole principle, at least one pair must contain two of the chosen numbers.
 x??
@@ -720,11 +719,10 @@ Background context on calculating the maximum distance between two points in a 1
 
 :p What is the maximum possible distance between two points in a 1×1 square?
 ??x
-The maximum distance between two points in a 1×1 square can be calculated using the Pythagorean theorem. For opposite corners, the distance \(d\) is given by:
-\[
-d = \sqrt{(1-0)^2 + (1-0)^2} = \sqrt{1^2 + 1^2} = \sqrt{2}
-\]
-Therefore, the maximum possible distance between two points in a 1×1 square is \(\sqrt{2}\).
+The maximum distance between two points in a 1×1 square can be calculated using the Pythagorean theorem. For opposite corners, the distance $d$ is given by:
+$$d = \sqrt{(1-0)^2 + (1-0)^2} = \sqrt{1^2 + 1^2} = \sqrt{2}$$
+
+Therefore, the maximum possible distance between two points in a 1×1 square is $\sqrt{2}$.
 x??
 
 ---
@@ -734,7 +732,7 @@ Background context on constructing a proof for the pigeonhole principle applicat
 
 :p How does the proof construct the scenario and apply the pigeonhole principle?
 ??x
-The 3×3 square is divided into 9 smaller 1×1 squares (boxes). By placing 10 points in these 9 boxes, at least one box must contain at least two points by the pigeonhole principle. These two points are within a 1×1 square and thus their maximum distance apart is \(\sqrt{2}\).
+The 3×3 square is divided into 9 smaller 1×1 squares (boxes). By placing 10 points in these 9 boxes, at least one box must contain at least two points by the pigeonhole principle. These two points are within a 1×1 square and thus their maximum distance apart is $\sqrt{2}$.
 
 ```java
 // Pseudocode to illustrate the placement of points into boxes
@@ -746,7 +744,7 @@ public void placePoints() {
 }
 ```
 
-By the pigeonhole principle, at least two points will share a box. The maximum distance between any two points within a single 1×1 square is \(\sqrt{2}\).
+By the pigeonhole principle, at least two points will share a box. The maximum distance between any two points within a single 1×1 square is $\sqrt{2}$.
 x??
 
 #### Paul Erdős and His Contributions to Mathematics
@@ -759,7 +757,7 @@ x??
 ---
 
 #### Divisibility and Pigeonhole Principle
-Background context: The text presents a mathematical proposition stating that among any 101 integers chosen from the set {1, 2, ..., 200}, at least one number will divide another. This is related to the pigeonhole principle, which states that if \( n \) items are put into \( m \) containers, with \( n > m \), then at least one container must contain more than one item.
+Background context: The text presents a mathematical proposition stating that among any 101 integers chosen from the set {1, 2, ..., 200}, at least one number will divide another. This is related to the pigeonhole principle, which states that if $n $ items are put into$m $ containers, with$n > m$, then at least one container must contain more than one item.
 :p What is the proposition about divisibility?
 ??x
 The proposition states that given any 101 integers chosen from the set {1, 2, ..., 200}, at least one of these numbers will divide another. This can be proven using the pigeonhole principle by setting up a specific rule for placing the numbers into boxes such that if two numbers land in the same box, one divides the other.
@@ -825,7 +823,7 @@ x??
 In this problem, we are tasked with selecting 100 boxes to place numbers from 1 to 200 such that any two chosen numbers in the same box have a divisibility relationship. The initial attempt involved pairing prime numbers larger than 100 with other numbers, but this approach became overly complex.
 :p How can we solve this problem by considering even and odd numbers?
 ??x
-We can divide the numbers from 1 to 200 into two categories: even and odd. For each odd number \( m \), we create a box that contains all numbers of the form \( 2^k \cdot m \) where \( k \) is a non-negative integer. This ensures that any two numbers in the same box have a smaller number that divides the larger one.
+We can divide the numbers from 1 to 200 into two categories: even and odd. For each odd number $m $, we create a box that contains all numbers of the form $2^k \cdot m $ where$k$ is a non-negative integer. This ensures that any two numbers in the same box have a smaller number that divides the larger one.
 ??x
 ```java
 // Pseudocode to illustrate the concept
@@ -855,10 +853,10 @@ Primes larger than 100 should have their own separate boxes because none of them
 ---
 
 #### Divisibility Pairs for Even Numbers
-For even numbers in the range {1, 2, ..., 200}, we can pair them with their multiples by powers of 2. For example, if \( m \) is an odd number less than or equal to 100, then \( 2^k \cdot m \) for various non-negative integers \( k \) will be placed in the same box.
+For even numbers in the range {1, 2, ..., 200}, we can pair them with their multiples by powers of 2. For example, if $m $ is an odd number less than or equal to 100, then$2^k \cdot m $ for various non-negative integers$k$ will be placed in the same box.
 :p How do we place even numbers into boxes?
 ??x
-Even numbers can be paired with their multiples by powers of 2. For instance, if you have a number like 10 (which is \( 2^1 \cdot 5 \)), it would go in the same box as 20 (which is \( 2^2 \cdot 5 \)) and 40 (which is \( 2^3 \cdot 5 \)). This ensures that any two numbers in the same box will have a smaller number dividing the larger one.
+Even numbers can be paired with their multiples by powers of 2. For instance, if you have a number like 10 (which is $2^1 \cdot 5 $), it would go in the same box as 20 (which is $2^2 \cdot 5 $) and 40 (which is $2^3 \cdot 5$). This ensures that any two numbers in the same box will have a smaller number dividing the larger one.
 ??x
 ```java
 // Pseudocode to illustrate the concept for even numbers
@@ -882,7 +880,7 @@ x??
 Numbers greater than 100 that are not prime and do not have a divisibility relationship with any number between 1 and 100 can be paired in such a way that each pair (or larger group) shares a common factor.
 :p How do we handle numbers like 12?
 ??x
-A number like 12, which is \( 3 \times 4 \), can go in the box with 6 and 3 because they are all multiples of 3. This ensures that any two numbers in the same box share a common factor.
+A number like 12, which is $3 \times 4$, can go in the box with 6 and 3 because they are all multiples of 3. This ensures that any two numbers in the same box share a common factor.
 ??x
 
 ---

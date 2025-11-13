@@ -15,7 +15,7 @@ The script `mpirun_distrib.sh` uses `mpirun -np 1 hwloc-bind core:<core_numbers>
 APP="$2"
 CORES="$1"
 
-mpirun -np 1 hwloc-bind core:$CORES $APP
+mpirun -np 1 hwloc-bind core:$CORES$ APP
 ```
 x??
 
@@ -577,7 +577,7 @@ x??
 ---
 #### Vector Addition Optimization with Pythagorean Formula
 
-Background context: The vector addition (vecadd_opt3.c) example in Section 14.3 was modified to include more floating-point operations using the Pythagorean formula \( c[i] = \sqrt{a[i]*a[i] + b[i]*b[i]} \). This change affects how tasks are placed and bound to cores.
+Background context: The vector addition (vecadd_opt3.c) example in Section 14.3 was modified to include more floating-point operations using the Pythagorean formula $c[i] = \sqrt{a[i]*a[i] + b[i]*b[i]}$. This change affects how tasks are placed and bound to cores.
 
 :p How did changing the vector addition kernel to use the Pythagorean formula affect your results?
 

@@ -635,7 +635,7 @@ Background context: This section covers segmentation, a memory management techni
 
 :p What is the highest legal virtual address in segment 0 with the given parameters?
 ??x
-The highest legal virtual address in segment 0 can be calculated by adding the base address (b) to the length of the segment minus one. For example, if -b0 is set to 512 and -l0 is 20, then the highest legal address would be \(512 + 20 - 1 = 531\).
+The highest legal virtual address in segment 0 can be calculated by adding the base address (b) to the length of the segment minus one. For example, if -b0 is set to 512 and -l0 is 20, then the highest legal address would be $512 + 20 - 1 = 531$.
 
 x??
 
@@ -646,7 +646,7 @@ Background context: The virtual address space consists of multiple segments each
 
 :p What are the lowest and highest illegal addresses in this entire address space?
 ??x
-The lowest illegal address would be 0, as it's below the virtual address space. The highest illegal address would be \(2^{address\space size} - 1\) (considering a typical 32-bit system where the maximum address is \(2^{32} - 1 = 4294967295\)).
+The lowest illegal address would be 0, as it's below the virtual address space. The highest illegal address would be $2^{address\space size} - 1 $(considering a typical 32-bit system where the maximum address is $2^{32} - 1 = 4294967295$).
 
 x??
 

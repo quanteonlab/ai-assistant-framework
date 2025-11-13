@@ -6,12 +6,10 @@
 
 #### Temperature Conversion Concept
 
-Temperature conversion from Fahrenheit to Centigrade involves a linear transformation. The formula for converting \( F \) (Fahrenheit) to \( C \) (Centigrade) is:
-\[ C = \frac{5}{9} (F - 32) \]
-
-:p What is the formula for converting Fahrenheit to Centigrade?
+Temperature conversion from Fahrenheit to Centigrade involves a linear transformation. The formula for converting $F $(Fahrenheit) to $ C$ (Centigrade) is:
+$$C = \frac{5}{9} (F - 32)$$:p What is the formula for converting Fahrenheit to Centigrade?
 ??x
-The formula for converting Fahrenheit to Centigrade is \( C = \frac{5}{9} (F - 32) \).
+The formula for converting Fahrenheit to Centigrade is $C = \frac{5}{9} (F - 32)$.
 x??
 
 ---

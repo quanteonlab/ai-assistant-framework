@@ -495,11 +495,10 @@ x??
 Note: Flashcards 10 and 420 were already provided in the original text, so they are not included here as separate flashcards.
 
 #### Exponent Rules - Multiplication of Like Bases
-When multiplying like bases, add the exponents. For example, \( x^a \cdot x^b = x^{a+b} \).
-:p Simplify \( x^2 \cdot x^4 \).
+When multiplying like bases, add the exponents. For example, $x^a \cdot x^b = x^{a+b}$.
+:p Simplify $x^2 \cdot x^4$.
 ??x
-\( x^6 \)
-The answer is \( x^6 \). This follows from the rule that when you multiply like bases, you add their exponents.
+$x^6 $ The answer is$x^6$. This follows from the rule that when you multiply like bases, you add their exponents.
 ```python
 # Example in Python for clarity
 base = 'x'
@@ -514,36 +513,32 @@ x??
 ---
 
 #### Area of a Rectangle
-The area \( A \) of a rectangle is given by the formula \( A = l \times w \), where \( l \) is the length and \( w \) is the width.
+The area $A $ of a rectangle is given by the formula$A = l \times w $, where$ l $is the length and$ w$ is the width.
 :p Find the area of a rectangle with a perimeter of 36 feet and a width of 4 feet.
 ??x
 16 square feet
-To find the area, we need to first determine the length. Given that the perimeter \( P = 2(l + w) \), and \( P = 36 \) feet and \( w = 4 \) feet:
-\[
-36 = 2(l + 4)
-\]
-Solving for \( l \):
-\[
-18 = l + 4 \implies l = 14
-\]
-Now, using the area formula \( A = l \times w \):
-\[
-A = 14 \times 4 = 56 \text{ square feet}
-\]
+To find the area, we need to first determine the length. Given that the perimeter $P = 2(l + w)$, and $ P = 36$feet and $ w = 4$ feet:
+$$36 = 2(l + 4)$$
+
+Solving for $l$:
+$$18 = l + 4 \implies l = 14$$
+
+Now, using the area formula $A = l \times w$:
+$$A = 14 \times 4 = 56 \text{ square feet}$$
+
 However, since the correct answer is given as 16 square feet, it suggests a different interpretation or an error in the provided options. Assuming the width and length are swapped or misinterpreted, we get:
-\[
-A = 4 \times (36/2 - 4) = 4 \times 16 = 64 / 2 = 16
-\]
-x??
+$$
+
+A = 4 \times (36/2 - 4) = 4 \times 16 = 64 / 2 = 16$$x??
 
 ---
 
 #### Cube Root Calculation
-The cube root of a number \( n \) is the value that, when cubed, gives the original number. For example, \( \sqrt[3]{n} = x \) if \( x^3 = n \).
+The cube root of a number $n $ is the value that, when cubed, gives the original number. For example,$\sqrt[3]{n} = x $ if$x^3 = n$.
 :p What is the cube root of 64?
 ??x
 4
-The cube root of 64 is 4 because \( 4^3 = 64 \).
+The cube root of 64 is 4 because $4^3 = 64$.
 ```python
 import math
 
@@ -555,11 +550,10 @@ x??
 ---
 
 #### Scientific Notation Conversion
-To convert a number to scientific notation, express it as a product of a number between 1 and 10 and a power of 10. For example, \( 314,000 = 3.14 \times 10^5 \).
+To convert a number to scientific notation, express it as a product of a number between 1 and 10 and a power of 10. For example, $314,000 = 3.14 \times 10^5$.
 :p Convert 314,000 to scientific notation.
 ??x
-\( 3.14 \times 10^5 \)
-The number 314,000 can be expressed in scientific notation as \( 3.14 \times 10^5 \) because moving the decimal point 5 places to the left gives us a number between 1 and 10.
+$3.14 \times 10^5 $ The number 314,000 can be expressed in scientific notation as$3.14 \times 10^5$ because moving the decimal point 5 places to the left gives us a number between 1 and 10.
 ```python
 # Convert 314000 to scientific notation using Python
 number = 314000
@@ -571,11 +565,11 @@ x??
 ---
 
 #### Reciprocal Calculation
-The reciprocal of a number \( \frac{a}{b} \) is given by \( \frac{b}{a} \). For example, the reciprocal of \( \frac{1}{6} \) is 6.
-:p What is the reciprocal of \( \frac{1}{6} \)?
+The reciprocal of a number $\frac{a}{b}$ is given by $\frac{b}{a}$. For example, the reciprocal of $\frac{1}{6}$ is 6.
+:p What is the reciprocal of $\frac{1}{6}$?
 ??x
 6
-The reciprocal of \( \frac{1}{6} \) is 6 because multiplying them together gives 1: \( \frac{1}{6} \times 6 = 1 \).
+The reciprocal of $\frac{1}{6}$ is 6 because multiplying them together gives 1:$\frac{1}{6} \times 6 = 1$.
 ```python
 # Calculate the reciprocal in Python
 reciprocal = 1 / (1/6)
@@ -587,14 +581,11 @@ x??
 
 #### Linear Equation Solving - Simple Equations
 To solve a simple linear equation, isolate the variable on one side of the equation.
-:p Solve for \( x \): \( 0.05 = 0.1x \).
+:p Solve for $x $: $0.05 = 0.1x$.
 ??x
 0.5
-The solution involves isolating \( x \). Divide both sides by 0.1:
-\[
-x = \frac{0.05}{0.1} = 0.5
-\]
-```python
+The solution involves isolating $x$. Divide both sides by 0.1:
+$$x = \frac{0.05}{0.1} = 0.5$$```python
 # Solve for x in Python
 x_value = 0.05 / 0.1
 print(x_value) # Output: 0.5
@@ -604,23 +595,18 @@ x??
 ---
 
 #### Factoring Quadratic Expressions - Difference of Squares
-The difference of squares formula is \( a^2 - b^2 = (a - b)(a + b) \).
-:p Factor \( x^6 - 9x^4 \).
+The difference of squares formula is $a^2 - b^2 = (a - b)(a + b)$.
+:p Factor $x^6 - 9x^4$.
 ??x
-\( x^2(x^2 - 3)(x^2 + 3) \)
+$x^2(x^2 - 3)(x^2 + 3)$
 First, factor out the greatest common factor:
-\[
-x^6 - 9x^4 = x^4(x^2 - 9)
-\]
-Then apply the difference of squares formula to \( x^2 - 9 \):
-\[
-x^2 - 9 = (x - 3)(x + 3)
-\]
+$$x^6 - 9x^4 = x^4(x^2 - 9)$$
+
+Then apply the difference of squares formula to $x^2 - 9$:
+$$x^2 - 9 = (x - 3)(x + 3)$$
+
 Thus, the complete factorization is:
-\[
-x^6 - 9x^4 = x^4(x - 3)(x + 3) = x^2(x^2 - 3)(x^2 + 3)
-\]
-```python
+$$x^6 - 9x^4 = x^4(x - 3)(x + 3) = x^2(x^2 - 3)(x^2 + 3)$$```python
 # Simplify expression in Python using sympy for clarity
 from sympy import symbols, factor
 
@@ -634,15 +620,12 @@ x??
 ---
 
 #### Exponent Rules - Negative and Positive Bases
-When raising a negative number to an even power, the result is positive. For example, \( (-2)^2 = 4 \).
-:p Simplify \( (-2)^{10} \).
+When raising a negative number to an even power, the result is positive. For example,$(-2)^2 = 4$.
+:p Simplify $(-2)^{10}$.
 ??x
 1024
 The answer is 1024 because any negative number raised to an even power results in a positive value:
-\[
-(-2)^{10} = (2^{10}) = 1024
-\]
-```python
+$$(-2)^{10} = (2^{10}) = 1024$$```python
 # Simplify expression in Python using sympy for clarity
 from sympy import symbols
 
@@ -654,15 +637,12 @@ x??
 ---
 
 #### Area of a Circle
-The area \( A \) of a circle is given by the formula \( A = \pi r^2 \), where \( r \) is the radius.
+The area $A $ of a circle is given by the formula$A = \pi r^2 $, where$ r$ is the radius.
 :p Find the approximate area of a circle with a radius of 5 inches.
 ??x
 78.5 square inches
 Using the area formula for a circle:
-\[
-A = \pi r^2 = \pi (5)^2 = 25\pi \approx 78.5 \text{ square inches}
-\]
-```python
+$$A = \pi r^2 = \pi (5)^2 = 25\pi \approx 78.5 \text{ square inches}$$```python
 import math
 
 radius = 5
@@ -675,22 +655,17 @@ x??
 
 #### Inequality Solving - Basic Inequalities
 To solve inequalities, follow similar steps to solving equations but be careful with the sign when multiplying or dividing by negative numbers.
-:p Solve the inequality \( 2x + 3 < 15 \).
+:p Solve the inequality $2x + 3 < 15$.
 ??x
-\( x < 6 \)
+$x < 6$
 To solve:
-\[
-2x + 3 < 15
-\]
+$$2x + 3 < 15$$
+
 Subtract 3 from both sides:
-\[
-2x < 12
-\]
+$$2x < 12$$
+
 Divide by 2:
-\[
-x < 6
-\]
-```python
+$$x < 6$$```python
 from sympy import symbols, solve
 
 x = symbols('x')
@@ -703,15 +678,12 @@ x??
 ---
 
 #### Volume of a Cylinder - Approximate Formula
-The volume \( V \) of a cylinder is given by the formula \( V = \pi r^2 h \), where \( r \) is the radius and \( h \) is the height.
+The volume $V $ of a cylinder is given by the formula$V = \pi r^2 h $, where$ r $is the radius and$ h$ is the height.
 :p Find the approximate volume of a tube with a radius of 3 inches and a height of 5 inches.
 ??x
 47.1 cubic inches
 Using the volume formula for a cylinder:
-\[
-V = \pi (3)^2 (5) = 45\pi \approx 141 \text{ cubic inches}
-\]
-```python
+$$V = \pi (3)^2 (5) = 45\pi \approx 141 \text{ cubic inches}$$```python
 import math
 
 radius = 3
@@ -764,19 +736,15 @@ x??
 ---
 
 #### Solving Quadratic Equations - Factoring
-To solve \( x^2 + bx + c = 0 \), find two numbers that multiply to \( c \) and add up to \( b \).
-:p Solve for \( x \): \( x^2 - 30 = 0 \).
+To solve $x^2 + bx + c = 0 $, find two numbers that multiply to $ c $ and add up to $ b$.
+:p Solve for $x $: $ x^2 - 30 = 0$.
 ??x
-\( \sqrt{30} \) and \( -\sqrt{30} \)
+$\sqrt{30}$ and $-\sqrt{30}$
 The equation can be factored as:
-\[
-x^2 - 30 = (x - \sqrt{30})(x + \sqrt{30}) = 0
-\]
+$$x^2 - 30 = (x - \sqrt{30})(x + \sqrt{30}) = 0$$
+
 Setting each factor to zero gives the solutions:
-\[
-x = \sqrt{30}, x = -\sqrt{30}
-\]
-```python
+$$x = \sqrt{30}, x = -\sqrt{30}$$```python
 from sympy import sqrt
 
 # Solve for x in Python using sympy for clarity
@@ -788,20 +756,17 @@ x??
 ---
 
 #### Sum of Arithmetic Series and Square Roots
-To find the sum of an arithmetic series, use the formula \( S_n = \frac{n}{2} (a_1 + a_n) \). For square roots, simplify as needed.
-:p Simplify \( 5\sqrt{36} - 2\sqrt{9} + \sqrt{49} \).
+To find the sum of an arithmetic series, use the formula $S_n = \frac{n}{2} (a_1 + a_n)$. For square roots, simplify as needed.
+:p Simplify $5\sqrt{36} - 2\sqrt{9} + \sqrt{49}$.
 ??x
 17
 First, calculate the values of each term:
-\[
-5\sqrt{36} = 5 \times 6 = 30 \\
+$$5\sqrt{36} = 5 \times 6 = 30 \\
 -2\sqrt{9} = -2 \times 3 = -6 \\
-\sqrt{49} = 7
-\]
+\sqrt{49} = 7$$
+
 Combine these results:
-\[
-30 - 6 + 7 = 17
-\]
+$$30 - 6 + 7 = 17$$
 ```python
 import math
 

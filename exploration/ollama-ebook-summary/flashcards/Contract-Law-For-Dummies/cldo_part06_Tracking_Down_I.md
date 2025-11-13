@@ -45,7 +45,7 @@ Background context explaining why certain promises might seem like valid contrac
 
 :p Why is the example given an illusory promise?
 ??x
-The example provided ("For $10,000, I’ll either sell you my car or I won’t") is illusory because it doesn't create a binding contract. The seller isn't committed to selling the car; they can choose not to sell it even if the buyer agrees to buy it for $10,000.
+The example provided ("For $10,000, I’ll either sell you my car or I won’t") is illusory because it doesn't create a binding contract. The seller isn't committed to selling the car; they can choose not to sell it even if the buyer agrees to buy it for$10,000.
 
 Therefore, both parties aren't bound by this agreement, making it an example of an illusory promise.
 x??
@@ -57,7 +57,7 @@ Background context explaining that a contract requires mutual commitment. If one
 
 :p How does the lack of commitment affect the enforceability of a contract?
 ??x
-A contract is binding only if both parties are committed to performing their obligations. In the example given, "I’ll sell my car to you for either $10,000 or $10," there is mutual consideration because either alternative would be binding once accepted.
+A contract is binding only if both parties are committed to performing their obligations. In the example given, "I’ll sell my car to you for either $10,000 or$10," there is mutual consideration because either alternative would be binding once accepted.
 
 However, "For $10,000, I’ll either sell you my car or I won’t" lacks commitment from the seller, making it an illusory promise and invalidating the contract.
 x??
@@ -155,8 +155,7 @@ Background context: The text explains that a settlement, or release, involves a 
 A release (settlement) involves the plaintiff relinquishing their claim in return for something, usually monetary compensation from the defendant. The structure can be illustrated as:
 ```plaintext
 Plaintiff    Defendant
-Relinquish claim  $$$
-```
+Relinquish claim  $$$```
 x??
 
 ---
@@ -230,7 +229,7 @@ x??
 #### Recital of Consideration in Contracts
 Background context: This section explains what recitals of consideration are and their role in contract formation. It highlights that such recitals can be rebuttable and may not always indicate real consideration.
 
-:p What does the recital of $1 in a contract mean?
+:p What does the recital of$1 in a contract mean?
 ??x
 The recital of $1 is presumed to be enforceable but is rebuttable; the party opposing the contract must prove that it was nominal and not genuine consideration.
 x??

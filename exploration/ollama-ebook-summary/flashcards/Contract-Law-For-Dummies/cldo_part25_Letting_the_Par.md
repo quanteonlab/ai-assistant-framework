@@ -9,7 +9,7 @@
 In cases where a party breaches a contract and stops performing, restitution is awarded to compensate the non-breaching party. The amount of restitution depends on Turner’s expectancy of receiving the full value of the contract minus any expenses incurred by the breaching party.
 :p How does the court determine the amount of restitution in a breach of contract?
 ??x
-The court calculates restitution based on Turner's expectancy, ensuring that the non-breaching party receives no more than what would have been reasonably expected. For example, if Turner had to pay $30 to complete the job and agreed to receive $120, Britton should not receive more than $90 as restitution. If Turner completed 9.5/12 of the work worth $120 at a cost of $20 per unit, then the pro-rata portion would be (9.5 ÷ 12) × $120 = $95.
+The court calculates restitution based on Turner's expectancy, ensuring that the non-breaching party receives no more than what would have been reasonably expected. For example, if Turner had to pay $30 to complete the job and agreed to receive $120, Britton should not receive more than $90 as restitution. If Turner completed 9.5/12 of the work worth $120 at a cost of $20 per unit, then the pro-rata portion would be (9.5 ÷ 12) ×$120 =$95.
 x??
 
 ---
@@ -123,7 +123,7 @@ The choice of approach depends on the specific circumstances and jurisdiction.
 ??x
 
 #### Liquidated Damages Provision
-Background context: In 1979, C&H Sugar contracted with Sun Ship to build a sugar ship for $25 million. The agreement included a liquidated damages provision of $17,000 per day if delivered late. This provision was intended to ensure that both parties agreed on the amount of damages in advance and avoid uncertainty.
+Background context: In 1979, C&H Sugar contracted with Sun Ship to build a sugar ship for $25 million. The agreement included a liquidated damages provision of$17,000 per day if delivered late. This provision was intended to ensure that both parties agreed on the amount of damages in advance and avoid uncertainty.
 
 The first test for enforcement is whether the party suffering the loss can prove actual damages. The second test is whether the parties were sophisticated enough to reasonably predict the probable extent of their losses.
 :p What is a liquidated damages provision, and what tests must be met for it to be enforced?
@@ -134,7 +134,7 @@ x??
 ---
 
 #### Damages Proportionality
-Background context: Sun Ship delivered the ship nine months late, causing C&H Sugar to demand $4.4 million in liquidated damages. However, due to the availability of other ships, C&H Sugar only suffered $368,000 in actual losses.
+Background context: Sun Ship delivered the ship nine months late, causing C&H Sugar to demand $4.4 million in liquidated damages. However, due to the availability of other ships, C&H Sugar only suffered$368,000 in actual losses.
 :p Why did the court refuse to apply the hindsight rule despite the large difference between the liquidated damages and the actual damages?
 ??x
 The court refused to apply the hindsight rule because the parties had agreed on a formula for determining the liquidated damages, which satisfied both tests of reasonableness and sophistication. The court determined that it was not their role to second-guess the agreement.

@@ -1832,13 +1832,13 @@ Background context explaining address translation mechanisms. This involves how 
 
 :p What is the mechanism for translating virtual addresses into physical addresses in a system with base and bounds registers?
 ??x
-The mechanism uses two key registers: the Base register, which holds the starting address of the virtual memory space, and the Bounds register, which defines the end of the valid memory space. For any given virtual address \( V \), its translation to a physical address \( P \) is computed as:
+The mechanism uses two key registers: the Base register, which holds the starting address of the virtual memory space, and the Bounds register, which defines the end of the valid memory space. For any given virtual address $V $, its translation to a physical address $ P$ is computed as:
 
-\[ P = (V - B) + B_p \]
+$$P = (V - B) + B_p$$
 
 Where:
-- \( B \) is the value in the Base register.
-- \( B_p \) is the starting address of the physical memory.
+- $B$ is the value in the Base register.
+- $B_p$ is the starting address of the physical memory.
 
 The Bounds register ensures that only valid addresses are considered, and any attempt to access a virtual address outside this range would be flagged as out-of-bounds. 
 ```python
@@ -1883,7 +1883,7 @@ Background context on how to configure the program's parameters to ensure all vi
 To ensure all virtual addresses are within bounds, the Bounds register must be configured such that it covers the entire range of virtual addresses produced by the program.
 
 For example:
-- If the Base Register is set at 0x1000 and -n 10 generates addresses up to 0x109F (since address space starts from 0), setting the Bounds register to a value such that \( \text{Base} + \text{Bounds} - 1 \geq \text{Maximum Virtual Address} \) will suffice.
+- If the Base Register is set at 0x1000 and -n 10 generates addresses up to 0x109F (since address space starts from 0), setting the Bounds register to a value such that $\text{Base} + \text{Bounds} - 1 \geq \text{Maximum Virtual Address}$ will suffice.
 
 A suitable value for the Bounds register here would be:
 ```plaintext
@@ -1899,10 +1899,11 @@ Background context on how the address space must fit within physical memory.
 ??x
 Given a Bounds register of 100 (which means addresses from 0 to 99), we need to determine the maximum Base value so that all virtual addresses fit within the physical memory.
 
-Since the total usable range is \( \text{Base} + \text{Bounds} - 1 \):
+Since the total usable range is $\text{Base} + \text{Bounds} - 1$:
 
 For the address space to fully fit:
-\[ \text{Physical Memory Size} = \text{Base} + \text{Bounds} - 1 \]
+$$\text{Physical Memory Size} = \text{Base} + \text{Bounds} - 1$$
+
 Assuming a typical physical memory size of at least 1024 (0x400 in hexadecimal), set Base as follows:
 
 ```plaintext
@@ -1925,7 +1926,7 @@ To determine the fraction of valid addresses:
 3. Calculate the ratio of addresses in bounds to total generated addresses.
 
 The fraction can be computed as:
-\[ \text{Fraction} = \frac{\text{Number of Valid Addresses}}{\text{Total Number of Generated Addresses}} \]
+$$\text{Fraction} = \frac{\text{Number of Valid Addresses}}{\text{Total Number of Generated Addresses}}$$
 
 For example, with a 4096-byte address space and a Bounds of 128 (0x80 in hex), the fraction would be calculated based on how many addresses from 0 to 3999 are within [Base, Base + 127].
 

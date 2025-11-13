@@ -30,7 +30,7 @@ For example, if a seller breaches by delivering goods worth $800,000 but the buy
 ??x
 If a seller breaches by delivering goods to the buyer, the buyer can seek the contract price as damages. This means the seller must pay the agreed-upon price for the delivered goods.
 
-For instance, if the seller breached by delivering 100,000 bushels of wheat at $7.50 per bushel (totaling $750,000), but the market price later rose to $8.00 per bushel ($800,000), the buyer can still only recover the original contract price of $750,000.
+For instance, if the seller breached by delivering 100,000 bushels of wheat at $7.50 per bushel (totaling $750,000), but the market price later rose to $8.00 per bushel ($800,000), the buyer can still only recover the original contract price of$750,000.
 
 :p Can a seller recover damages if they deliver goods and the buyer breaches?
 ??x
@@ -71,9 +71,9 @@ For instance, if a seller produces a custom neon sign that the buyer refuses to 
 Background context: When a buyer breaches a contract to purchase goods, and the seller finds another buyer willing to purchase them at a lower price, the seller can sell the goods to the new buyer. The difference between this resale remedy and the cover remedy is that resale remedies do not include consequential damages.
 
 Resale formula as found in UCC § 2-706(1): 
-\[ \text{Damages} = (\text{Contract Price}) - (\text{Resale Price}) + (\text{Incidental Damages}) - (\text{Expenses Saved by Breach}) \]
+$$\text{Damages} = (\text{Contract Price}) - (\text{Resale Price}) + (\text{Incidental Damages}) - (\text{Expenses Saved by Breach})$$
 
-Example: Suppose a buyer in Boston contracted to buy from a seller in Seattle 100,000 bushels of winter wheat at $7.50 per bushel. The buyer agreed to pay the shipping cost of $50,000. The buyer breaches. The seller finds a buyer in Minneapolis who will pay $7.00 per bushel but the seller has to pay shipping costs of $30,000 to get it there.
+Example: Suppose a buyer in Boston contracted to buy from a seller in Seattle 100,000 bushels of winter wheat at $7.50 per bushel. The buyer agreed to pay the shipping cost of $50,000. The buyer breaches. The seller finds a buyer in Minneapolis who will pay $7.00 per bushel but the seller has to pay shipping costs of$30,000 to get it there.
 
 :p What is the resale formula as found in UCC § 2-706(1)?
 ??x
@@ -127,7 +127,7 @@ x??
 
 ---
 #### Contract Breach and Damages Calculation for Labor and Materials
-Background context: The contract price was $100,000 with expected expenses of $90,000 to yield a $10,000 profit. If the county breaches the contract at any point, the contractor should recover enough damages to cover its costs plus a $10,000 profit. The contractor's decision on whether to continue work is critical because it impacts both the contractor and the county.
+Background context: The contract price was $100,000 with expected expenses of $90,000 to yield a $10,000 profit. If the county breaches the contract at any point, the contractor should recover enough damages to cover its costs plus a$10,000 profit. The contractor's decision on whether to continue work is critical because it impacts both the contractor and the county.
 
 :p What principle does the contractor follow when deciding to stop or continue work after a breach?
 ??x
@@ -155,7 +155,7 @@ Background context: If a seller breaches a contract for the sale of goods, they 
 :p What does UCC § 2-708 allow a seller to do in case of breach?
 ??x
 UCC § 2-708 permits the seller, upon breaching a contract for the sale of goods, to determine the market price and recover the difference between the contract price and the market price at the time of tender. The formula is:
-\[ \text{Damages} = \text{Contract Price} - \text{Market Price} \]
+$$\text{Damages} = \text{Contract Price} - \text{Market Price}$$
 
 :p How does UCC § 2-708 handle the timing of market prices?
 ??x
@@ -178,17 +178,16 @@ x??
 ---
 
 #### Market Damages Calculation
-Background context: The example involves a contract where a buyer in Boston contracts to buy 100,000 bushels of winter wheat from a seller in Seattle at $7.50 per bushel. The market price on October 1 (tender date) was $7.00 per bushel. The formula for calculating the difference between contract and market prices is: 
-\[ \text{Market Damages} = (\text{Contract Price} - \text{Market Price}) \times \text{Quantity} \]
-
-:p What is the calculation of market damages in this scenario?
+Background context: The example involves a contract where a buyer in Boston contracts to buy 100,000 bushels of winter wheat from a seller in Seattle at $7.50 per bushel. The market price on October 1 (tender date) was$7.00 per bushel. The formula for calculating the difference between contract and market prices is: 
+$$\text{Market Damages} = (\text{Contract Price} - \text{Market Price}) \times \text{Quantity}$$:p What is the calculation of market damages in this scenario?
 ??x
 The market damages can be calculated as follows:
-\[ \text{Market Damages} = (7.50 - 7.00) \times 100,000 \]
-This results in:
-\[ \text{Market Damages} = 0.50 \times 100,000 = 50,000 \]
+$$\text{Market Damages} = (7.50 - 7.00) \times 100,000$$
 
-So the buyer owes the seller $50,000 in market damages.
+This results in:
+$$\text{Market Damages} = 0.50 \times 100,000 = 50,000$$
+
+So the buyer owes the seller$50,000 in market damages.
 x??
 
 ---
@@ -199,16 +198,14 @@ Background context: The resale rule under UCC §2-706 states that if a seller su
 :p How can a new-car dealer recover more than just the resale price minus the contract price?
 ??x
 A new-car dealer might use the lost profits rule under UCC §2-708(2) to argue that even if it resells the goods, it is entitled to recover the profit it would have made. For example:
-- If a car dealer contracts to sell you a $25,000 car and breaches immediately after finding another buyer for $25,000, the resale price equals the contract price.
+- If a car dealer contracts to sell you a $25,000 car and breaches immediately after finding another buyer for$25,000, the resale price equals the contract price.
 - The dealer can claim lost profits because it could potentially sell two cars instead of one if the first sale had not been breached.
 
 To calculate this, accountants would determine how much profit was lost due to the breach. For instance:
-\[ \text{Lost Profits} = (\text{Potential Sales Price} - \text{Cost}) - (\text{Actual Resale Price} - \text{Cost}) \]
+$$\text{Lost Profits} = (\text{Potential Sales Price} - \text{Cost}) - (\text{Actual Resale Price} - \text{Cost})$$
 
-If the dealer could have sold another car for $25,000 and had a total cost of $18,750 (initial sale) + $6,250 (second sale) = $25,000:
-\[ \text{Lost Profits} = 25,000 - 18,750 - (25,000 - 18,750) = 6,250 \]
-
-x??
+If the dealer could have sold another car for $25,000 and had a total cost of $18,750 (initial sale) + $6,250 (second sale) =$25,000:
+$$\text{Lost Profits} = 25,000 - 18,750 - (25,000 - 18,750) = 6,250$$x??
 
 ---
 
@@ -218,13 +215,13 @@ Background context: In this case, Mr. Neri breached a contract to buy a boat fro
 :p How did the court determine the measure of damages in this case?
 ??x
 The court determined that Retail Marine should recover the lost profit from selling the boat only once rather than twice. The calculation is as follows:
-- Potential Sales Profit: If Neri had not breached, the shop would have made $12,587 - $674 = $11,913.
-- Actual Resale Price: Retail Marine resold the boat for $12,587 and incurred costs of $674.
+- Potential Sales Profit: If Neri had not breached, the shop would have made $12,587 -$674 =$11,913.
+- Actual Resale Price: Retail Marine resold the boat for $12,587 and incurred costs of$674.
 
 The lost profit is:
-\[ \text{Lost Profit} = 11,913 - (12,587 - 674) = 11,913 - 11,913 = 2,579 \]
+$$\text{Lost Profit} = 11,913 - (12,587 - 674) = 11,913 - 11,913 = 2,579$$
 
-Additionally, the court awarded $674 as incidental damages but denied attorney's fees.
+Additionally, the court awarded$674 as incidental damages but denied attorney's fees.
 
 x??
 

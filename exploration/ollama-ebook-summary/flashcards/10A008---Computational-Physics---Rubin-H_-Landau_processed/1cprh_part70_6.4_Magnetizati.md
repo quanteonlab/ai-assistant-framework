@@ -5,14 +5,14 @@
 ---
 
 #### Newton-Raphson Algorithm Basics
-Background context explaining the Newton-Raphson algorithm. The algorithm is used to find roots of a function \( f(x) = 0 \). It requires an initial guess and iteratively improves it using the formula:
-\[ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)} \]
+Background context explaining the Newton-Raphson algorithm. The algorithm is used to find roots of a function $f(x) = 0$. It requires an initial guess and iteratively improves it using the formula:
+$$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
 
 If the derivative vanishes at the root, the algorithm fails as division by zero occurs. This can lead to issues like infinite loops or guessing out of bounds.
 
 :p What is a common issue with the Newton-Raphson algorithm when the initial guess is not accurate?
 ??x
-When the initial guess is inaccurate and the function has a local extremum (where the derivative vanishes), the algorithm might fail due to division by zero, leading to an infinite loop or incorrect guesses. This happens because \( x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)} \) cannot be computed if \( f'(x_n) = 0 \).
+When the initial guess is inaccurate and the function has a local extremum (where the derivative vanishes), the algorithm might fail due to division by zero, leading to an infinite loop or incorrect guesses. This happens because $x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$ cannot be computed if $f'(x_n) = 0$.
 x??
 
 ---
@@ -23,8 +23,8 @@ Background context on the failure modes of the Newton-Raphson algorithm. If a st
 :p How does backtracking work to address issues with the Newton-Raphson method?
 ??x
 Backtracking involves reducing the step size when a guess increases the function's value. For example:
-- If \( x_0 + \Delta x \) increases \( f(x) \), try a smaller step like \( x_0 + \frac{\Delta x}{2} \).
-- Continue halving until \( f(x) \) decreases, ensuring convergence.
+- If $x_0 + \Delta x $ increases$f(x)$, try a smaller step like $ x_0 + \frac{\Delta x}{2}$.
+- Continue halving until $f(x)$ decreases, ensuring convergence.
 
 Here is a pseudocode snippet to illustrate the backtracking logic:
 ```pseudocode
@@ -44,7 +44,7 @@ Background context on comparing different root-finding methods, specifically bis
 
 :p How can you compare solutions from the Newton-Raphson algorithm with those from the bisection method?
 ??x
-To compare, apply both methods to find roots of an equation like \( f(x) = 0 \). Use the bisection method first for its robustness, then switch to Newton-Raphson once close to the root. Compare results in terms of accuracy and computational efficiency.
+To compare, apply both methods to find roots of an equation like $f(x) = 0$. Use the bisection method first for its robustness, then switch to Newton-Raphson once close to the root. Compare results in terms of accuracy and computational efficiency.
 
 Example code comparing two methods:
 ```python
@@ -80,19 +80,18 @@ x??
 ---
 
 #### Magnetization Problem Setup
-Background context on the magnetization problem. The system involves spins in an external magnetic field \( B \), with Boltzmann distribution determining spin states.
+Background context on the magnetization problem. The system involves spins in an external magnetic field $B$, with Boltzmann distribution determining spin states.
 
 :p What is the formula for the number of particles in the lower and upper energy states?
 ??x
 The formulas are:
-- Lower state: \( N_L = \frac{N e^{\mu B / (k_B T)}}{e^{\mu B / (k_B T)} + e^{-\mu B / (k_B T)}} \)
-- Upper state: \( N_U = \frac{N e^{-\mu B / (k_B T)}}{e^{\mu B / (k_B T)} + e^{-\mu B / (k_B T)}} \)
+- Lower state: $N_L = \frac{N e^{\mu B / (k_B T)}}{e^{\mu B / (k_B T)} + e^{-\mu B / (k_B T)}}$- Upper state:$ N_U = \frac{N e^{-\mu B / (k_B T)}}{e^{\mu B / (k_B T)} + e^{-\mu B / (k_B T)}}$
 
 Where:
-- \( N \) is the total number of particles,
-- \( \mu \) is the magnetic moment per particle,
-- \( k_B \) is Boltzmann's constant,
-- \( T \) is temperature.
+- $N$ is the total number of particles,
+- $\mu$ is the magnetic moment per particle,
+- $k_B$ is Boltzmann's constant,
+- $T$ is temperature.
 
 These formulas are derived from the Boltzmann distribution.
 x??
@@ -104,17 +103,15 @@ Background context on simplifying the magnetization problem using reduced variab
 
 :p How do you express the magnetization in terms of reduced variables?
 ??x
-The magnetization \( M(T) \) is expressed as:
-\[ m(t) = \tanh\left( \frac{m}{t} \right) \]
-where:
-- \( t = T / T_c \),
-- \( T_c = N \mu^2 \lambda / k_B \).
+The magnetization $M(T)$ is expressed as:
+$$m(t) = \tanh\left( \frac{m}{t} \right)$$where:
+- $t = T / T_c$,
+- $T_c = N \mu^2 \lambda / k_B$.
 
-The reduced magnetization \( m \) and temperature \( t \) help in numerical solutions.
+The reduced magnetization $m $ and temperature$t$ help in numerical solutions.
 
 To find the magnetization, use:
-\[ M(T) = \frac{N \mu}{1 + e^{(\mu B - 2 J S)(T_c/T - 1)}} \]
-where \( B \) is the external magnetic field.
+$$M(T) = \frac{N \mu}{1 + e^{(\mu B - 2 J S)(T_c/T - 1)}}$$where $ B$ is the external magnetic field.
 x??
 
 ---
@@ -124,7 +121,7 @@ Background context on enhancing the Newton-Raphson method with backtracking.
 
 :p How does implementing backtracking improve the Newton-Raphson algorithm?
 ??x
-Backtracking improves by halving steps when they increase function value, ensuring convergence. If \( f(x_0 + \Delta x) > f(x_0) \), reduce step size like \( x_0 + \frac{\Delta x}{2} \). Continue halving until a decrease is found.
+Backtracking improves by halving steps when they increase function value, ensuring convergence. If $f(x_0 + \Delta x) > f(x_0)$, reduce step size like $ x_0 + \frac{\Delta x}{2}$. Continue halving until a decrease is found.
 
 Example pseudocode:
 ```pseudocode
@@ -145,9 +142,9 @@ x??
 #### Magnetization Problem: Finding Roots
 Background context on solving the magnetization problem using root-finding methods.
 
-:p How do you find the reduced magnetization \( m \) for a given temperature?
+:p How do you find the reduced magnetization $m$ for a given temperature?
 ??x
-Find the zero of \( f(m, t) = m - \tanh\left( \frac{m}{t} \right) \). Use numerical methods like bisection or Newton-Raphson.
+Find the zero of $f(m, t) = m - \tanh\left( \frac{m}{t} \right)$. Use numerical methods like bisection or Newton-Raphson.
 
 Example code using the bisection method:
 ```python
@@ -194,15 +191,11 @@ x??
 ---
 
 #### Lagrange Interpolation Formula
-Background context: The Lagrange interpolation formula provides a way to fit an \( (n-1) \)-degree polynomial through \( n \) given points. It is defined as:
+Background context: The Lagrange interpolation formula provides a way to fit an $(n-1)$-degree polynomial through $ n$ given points. It is defined as:
 
-\[ g(x) ≃ g_1\lambda_1(x) + g_2\lambda_2(x) + ... + g_n\lambda_n(x) \]
-where
-\[ \lambda_i(x) = \frac{(x - x_1)(x - x_2)...(x - x_{i-1})(x - x_{i+1})...(x - x_n)}{x_i - x_1}(x - x_1)x_i - x_2 ... (x - x_n)(x_i - x_n) \]
-
-:p What is the Lagrange interpolation formula used for?
+$$g(x) ≃ g_1\lambda_1(x) + g_2\lambda_2(x) + ... + g_n\lambda_n(x)$$where$$\lambda_i(x) = \frac{(x - x_1)(x - x_2)...(x - x_{i-1})(x - x_{i+1})...(x - x_n)}{x_i - x_1}(x - x_1)x_i - x_2 ... (x - x_n)(x_i - x_n)$$:p What is the Lagrange interpolation formula used for?
 ??x
-The Lagrange interpolation formula is used to fit a polynomial of degree \( n-1 \) that passes through \( n \) given data points, allowing us to estimate values between these points.
+The Lagrange interpolation formula is used to fit a polynomial of degree $n-1 $ that passes through$n$ given data points, allowing us to estimate values between these points.
 x??
 
 ---
@@ -212,7 +205,7 @@ Background context: An example illustrates how the Lagrange formula can be appli
 
 :p How is the polynomial determined using Lagrange interpolation?
 ??x
-Using Lagrange interpolation, we determine the coefficients of the polynomial by evaluating it at specific points. For instance, given four points \( (0, -12), (1, -12), (2, -24), (4, -60) \), a third-degree polynomial is found that fits these values.
+Using Lagrange interpolation, we determine the coefficients of the polynomial by evaluating it at specific points. For instance, given four points $(0, -12), (1, -12), (2, -24), (4, -60)$, a third-degree polynomial is found that fits these values.
 
 ```java
 // Example code to calculate the Lagrange polynomial for 4 points
@@ -259,7 +252,7 @@ Background context: In neutron scattering, cross sections are measured at discre
 
 :p How is the least-squares method applied to fit a theoretical model?
 ??x
-The least-squares method is applied by adjusting the parameters of a theoretical function (e.g., \( f(E) = fr (E - Er)^2 + \Gamma^2 / 4 \)) to minimize the sum of the squares of the differences between observed and predicted cross sections. This provides the best-fit values for unknown parameters like \( fr, Er, \) and \( \Gamma \).
+The least-squares method is applied by adjusting the parameters of a theoretical function (e.g., $f(E) = fr (E - Er)^2 + \Gamma^2 / 4 $) to minimize the sum of the squares of the differences between observed and predicted cross sections. This provides the best-fit values for unknown parameters like $ fr, Er,$and $\Gamma$.
 x??
 
 ---
@@ -285,19 +278,12 @@ x??
 ---
 
 #### Lagrange Interpolation Overview
-Lagrange interpolation is a method used to construct a polynomial that passes through all given data points. The general form of the Lagrange polynomial for \(n\) points \((x_i, y_i)\) is:
+Lagrange interpolation is a method used to construct a polynomial that passes through all given data points. The general form of the Lagrange polynomial for $n $ points$(x_i, y_i)$ is:
+$$P(x) = \sum_{i=0}^{n-1} L_i(x) y_i$$where$$
 
-\[
-P(x) = \sum_{i=0}^{n-1} L_i(x) y_i
-\]
+L_i(x) = \prod_{\substack{0 \leq j \leq n-1 \\ j \neq i}} \frac{x - x_j}{x_i - x_j}$$
 
-where
-
-\[
-L_i(x) = \prod_{\substack{0 \leq j \leq n-1 \\ j \neq i}} \frac{x - x_j}{x_i - x_j}
-\]
-
-This polynomial is guaranteed to pass through each of the \(n\) given points. For example, in a 9-point Lagrange interpolation (8th degree polynomial), it would fit all nine data points.
+This polynomial is guaranteed to pass through each of the $n$ given points. For example, in a 9-point Lagrange interpolation (8th degree polynomial), it would fit all nine data points.
 
 :p What is Lagrange interpolation used for?
 ??x
@@ -307,23 +293,16 @@ x??
 ---
 
 #### Eight-Point Polynomial Fitting Using Lagrange Interpolation
-The problem at hand involves fitting an 8th-degree polynomial to nine noisy experimental neutron scattering data points using Lagrange interpolation. This means \(n = 9\) and you need to create a 9-point Lagrange interpolation.
+The problem at hand involves fitting an 8th-degree polynomial to nine noisy experimental neutron scattering data points using Lagrange interpolation. This means $n = 9$ and you need to create a 9-point Lagrange interpolation.
 
 :p How do you fit the entire experimental spectrum with one polynomial using Lagrange interpolation?
 ??x
 To fit the entire experimental spectrum with an 8th-degree polynomial using Lagrange interpolation, you would use all nine data points. The general form of the Lagrange polynomial is:
+$$P(x) = \sum_{i=0}^{8} L_i(x) y_i$$where$$
 
-\[
-P(x) = \sum_{i=0}^{8} L_i(x) y_i
-\]
+L_i(x) = \prod_{\substack{0 \leq j \leq 8 \\ j \neq i}} \frac{x - x_j}{x_i - x_j}$$
 
-where
-
-\[
-L_i(x) = \prod_{\substack{0 \leq j \leq 8 \\ j \neq i}} \frac{x - x_j}{x_i - x_j}
-\]
-
-Here, \(y_i\) are the experimental data values at points \(x_i\). For each new point \(x\) where you want to interpolate, you would compute:
+Here,$y_i $ are the experimental data values at points$x_i $. For each new point$ x$ where you want to interpolate, you would compute:
 
 ```java
 public class LagrangeInterpolation {
@@ -349,21 +328,21 @@ public class LagrangeInterpolation {
 }
 ```
 
-This code calculates the Lagrange polynomial value at point \(x\).
+This code calculates the Lagrange polynomial value at point $x$.
 
 x??
 
 ---
 
 #### Resonance Energy and Full Width at Half Maximum
-After fitting the data with an 8th-degree polynomial, you can analyze it to find resonance energy \(E_r\) (the peak position) and full width at half maximum \(\Gamma\). These values are crucial for understanding the behavior of the resonant cross section.
+After fitting the data with an 8th-degree polynomial, you can analyze it to find resonance energy $E_r $(the peak position) and full width at half maximum $\Gamma$. These values are crucial for understanding the behavior of the resonant cross section.
 
 :p How do you determine the resonance energy and full width at half maximum using the fitted polynomial?
 ??x
-To determine the resonance energy \(E_r\) and full width at half maximum \(\Gamma\):
+To determine the resonance energy $E_r $ and full width at half maximum$\Gamma$:
 
-1. **Resonance Energy (\(E_r\))**: Find the peak position of the polynomial, which is where the derivative changes from positive to negative.
-2. **Full Width at Half Maximum (FWHM, \(\Gamma\))**: Calculate the \(x\) values where the polynomial value equals half its maximum.
+1. **Resonance Energy ($E_r$)**: Find the peak position of the polynomial, which is where the derivative changes from positive to negative.
+2. **Full Width at Half Maximum (FWHM, $\Gamma $)**: Calculate the $ x$ values where the polynomial value equals half its maximum.
 
 Here's a simplified approach:
 
@@ -423,7 +402,7 @@ For a more realistic use, three-point Lagrange interpolation can be used to fit 
 To perform three-point Lagrange interpolation for each interval of 5 MeV:
 
 1. **Divide the spectrum into intervals**: Each interval will span 5 MeV.
-2. **Calculate the polynomial**: For each \(x\) value in an interval, use the three points around it to calculate a 2nd-degree polynomial.
+2. **Calculate the polynomial**: For each $x$ value in an interval, use the three points around it to calculate a 2nd-degree polynomial.
 
 Example code:
 
@@ -446,7 +425,7 @@ public class ThreePointLagrange {
 }
 ```
 
-This code calculates the value of a 2nd-degree Lagrange polynomial at \(x\).
+This code calculates the value of a 2nd-degree Lagrange polynomial at $x$.
 
 x??
 
@@ -459,8 +438,8 @@ Extrapolating with high-order polynomials can lead to serious systematic errors,
 ??x
 To extrapolate using Lagrange interpolation, follow these steps:
 
-1. **Fit the data with a high-degree polynomial**: Use all available points to fit an \(n\)-degree polynomial.
-2. **Predict values outside the range**: Use the fitted polynomial to predict values at \(x\) outside the given range.
+1. **Fit the data with a high-degree polynomial**: Use all available points to fit an $n$-degree polynomial.
+2. **Predict values outside the range**: Use the fitted polynomial to predict values at $x$ outside the given range.
 
 Example code for extrapolation:
 
@@ -495,13 +474,13 @@ x??
 ---
 
 #### Cubic Spline Fitting Implementation
-In cubic spline interpolation, each interval \([x_i, x_{i+1}]\) is fitted with a 3rd-degree polynomial that ensures continuity of the function and its first and second derivatives at the knots.
+In cubic spline interpolation, each interval $[x_i, x_{i+1}]$ is fitted with a 3rd-degree polynomial that ensures continuity of the function and its first and second derivatives at the knots.
 
 :p How do you implement cubic spline fitting?
 ??x
 To implement cubic spline fitting:
 
-1. **Set up the system of equations**: Ensure \(n-1\) intervals, resulting in \((n-1)\) third-degree polynomials.
+1. **Set up the system of equations**: Ensure $n-1 $ intervals, resulting in$(n-1)$ third-degree polynomials.
 2. **Solve for coefficients**: Use linear algebra to solve for the coefficients that ensure continuity.
 
 Example code:

@@ -382,7 +382,7 @@ To start a container using CRI-O, you need to define Pod and Container YAML file
    ```sh
    root@host01:/opt# cd /opt
    root@host01:/opt# PUL_ID=$(crictl runp po-nolim.yaml)
-   root@host01:/opt# CUL_ID=$(crictl create $PUL_ID co-nolim.yaml po-nolim.yaml)
+   root@host01:/opt# CUL_ID=$(crictl create$ PUL_ID co-nolim.yaml po-nolim.yaml)
    root@host01:/opt# crictl start $CUL_ID
    ```
 

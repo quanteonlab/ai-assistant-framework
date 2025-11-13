@@ -245,10 +245,10 @@ x??
 ---
 
 #### Mirror-Image Rule
-Background context: The text mentions that acceptance must match the offer exactly, known as the mirror-image rule. This means if Joe offers to buy the bicycle for $200, Mary's response must also include agreeing to sell it for $200; any deviation would not form a contract.
+Background context: The text mentions that acceptance must match the offer exactly, known as the mirror-image rule. This means if Joe offers to buy the bicycle for $200, Mary's response must also include agreeing to sell it for$200; any deviation would not form a contract.
 :p What does the mirror-image rule imply in terms of contract formation?
 ??x
-The mirror-image rule implies that acceptance must exactly match the offer. For example, if Joe offers to buy the bicycle for $200 and Mary accepts by saying "It’s a deal" (which implicitly includes $200), this is valid under the mirror-image rule.
+The mirror-image rule implies that acceptance must exactly match the offer. For example, if Joe offers to buy the bicycle for $200 and Mary accepts by saying "It’s a deal" (which implicitly includes$200), this is valid under the mirror-image rule.
 x??
 
 ---

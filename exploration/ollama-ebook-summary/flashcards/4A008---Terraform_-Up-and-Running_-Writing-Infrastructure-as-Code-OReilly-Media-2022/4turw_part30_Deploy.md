@@ -12,8 +12,7 @@ Background context: After checking out a new feature branch, you can run applica
 To start running the Ruby web server example, you need to navigate to the correct directory and then execute the `web-server.rb` file using the Ruby interpreter. Here's an example command:
 
 ```bash
-$ cd code/ruby/10-terraform/team
-$ ruby web-server.rb
+$cd code/ruby/10-terraform/team$ ruby web-server.rb
 ```
 
 This command starts a simple HTTP server that listens on port 8000. You can access it via `http://localhost:8000`.
@@ -21,14 +20,13 @@ This command starts a simple HTTP server that listens on port 8000. You can acce
 You can use tools like `curl` to test the output of the server:
 
 ```bash
-$ curl http://localhost:8000
+$curl http://localhost:8000
 Hello, World
 ```
 
 Additionally, you can run automated tests by executing another Ruby script:
 
-```bash
-$ ruby web-server-test.rb
+```bash$ ruby web-server-test.rb
 ```
 
 The output shows that all tests passed successfully.
@@ -57,7 +55,7 @@ To make changes and verify them in the Ruby web server example, follow these ste
 
 3. **Test the Change:** Use `curl` to test the new output of the server:
     ```bash
-    $ curl http://localhost:8000
+    $curl http://localhost:8000
     Hello, World v2
     ```
 
@@ -68,13 +66,12 @@ To make changes and verify them in the Ruby web server example, follow these ste
 To run a simple HTTP server using Ruby, follow these steps:
 
 1. Navigate to the directory containing the `web-server.rb` file:
-    ```bash
-    $ cd code/ruby/10-terraform/team
+    ```bash$ cd code/ruby/10-terraform/team
     ```
 
 2. Start the server by running the script with the Ruby interpreter:
     ```bash
-    $ ruby web-server.rb
+    $ruby web-server.rb
     ```
 
 The output should indicate that the server is up and running on port 8000.
@@ -82,8 +79,7 @@ The output should indicate that the server is up and running on port 8000.
 :p How do you test a locally run HTTP server using `curl`?
 ??x
 To test a locally run HTTP server using `curl`, use the following command:
-```bash
-$ curl http://localhost:8000
+```bash$ curl http://localhost:8000
 ```
 
 This command sends an HTTP GET request to the local server running on port 8000 and displays the response, which should be "Hello, World" by default.
@@ -92,7 +88,7 @@ This command sends an HTTP GET request to the local server running on port 8000 
 ??x
 To run automated tests for a Ruby application, use the `ruby` command followed by the path to the test file. For example:
 ```bash
-$ ruby web-server-test.rb
+$ruby web-server-test.rb
 ```
 
 The output will indicate whether all tests passed or if any failed.
@@ -107,8 +103,7 @@ Background context: After making and testing changes locally, you should commit 
 :p How do you commit local code changes?
 ??x
 To commit local code changes, use the `git commit` command followed by an appropriate message that describes the changes. For example:
-```bash
-$ git commit -m "Updated Hello, World text"
+```bash$ git commit -m "Updated Hello, World text"
 ```
 
 This command commits all staged changes to your current branch with a clear commit message.
@@ -585,7 +580,7 @@ Background context explaining that manual testing in Terraform requires using sa
 ??x
 You manually test Terraform code by running `terraform apply` in a sandbox environment, such as an AWS account dedicated for developers or each developer. For instance:
 ```bash
-$ terraform apply
+$terraform apply
 Apply complete. Resources: 5 added, 0 changed, 0 destroyed.
 Outputs:
 alb_dns_name = "hello-world-stage-477699288.us-east-2.elb.amazonaws.com"
@@ -604,8 +599,7 @@ The steps for deploying infrastructure code using Terraform include:
 2. **Apply Changes**: Run `terraform apply` to deploy those changes.
 3. **Manual Testing**: Use tools like `curl` or other tests to verify the deployed infrastructure works as expected.
    For example:
-   ```bash
-   $ curl hello-world-stage-477699288.us-east-2.elb.amazonaws.com 
+   ```bash$ curl hello-world-stage-477699288.us-east-2.elb.amazonaws.com 
    Hello, World v2
    ```
 4. **Automated Testing**: Run automated tests with `go test` to ensure the changes don’t break anything.

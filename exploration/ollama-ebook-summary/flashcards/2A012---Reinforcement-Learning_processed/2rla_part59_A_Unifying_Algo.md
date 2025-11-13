@@ -50,8 +50,7 @@ The n-step Q(α) algorithm updates action values based on α, where α=1 fully s
 :p What is the equation used in the n-step Q(α) update?
 ??x
 The update for n-step Q(α) is given by:
-\[ G_{t:h} = R_{t+1} + \alpha \left[ \alpha_t \frac{\pi(A_{t+1}|S_{t+1})}{b(A_{t+1}|S_{t+1})}(G_{t+1:h} - Q_{h-1}(S_{t+1}, A_{t+1})) + (1 - \alpha_t) \bar{V}_{h-1}(S_{t+1}) \right] \]
-x??
+$$G_{t:h} = R_{t+1} + \alpha \left[ \alpha_t \frac{\pi(A_{t+1}|S_{t+1})}{b(A_{t+1}|S_{t+1})}(G_{t+1:h} - Q_{h-1}(S_{t+1}, A_{t+1})) + (1 - \alpha_t) \bar{V}_{h-1}(S_{t+1}) \right]$$x??
 
 ---
 
@@ -60,7 +59,7 @@ The algorithm uses a behavior policy b and updates the action-value function Q w
 
 :p How does the n-step Q(α) update handle different values of α?
 ??x
-For each time step t, if \(\alpha_t = 1\), it fully samples actions and updates using importance sampling. If \(\alpha_t = 0\), it uses the expectation over all possible actions without sampling.
+For each time step t, if $\alpha_t = 1 $, it fully samples actions and updates using importance sampling. If $\alpha_t = 0$, it uses the expectation over all possible actions without sampling.
 x??
 
 ---
@@ -70,13 +69,13 @@ The complete algorithm for o↵-policy n-step Q(α) includes initialization, han
 
 :p What are the key steps in the n-step Q(α) algorithm?
 ??x
-1. Initialize action-value function \(Q(s, a)\).
-2. Set up behavior policy \(b(a|s)\).
+1. Initialize action-value function $Q(s, a)$.
+2. Set up behavior policy $b(a|s)$.
 3. For each episode, initialize and store states.
 4. Choose actions based on the current policy or behavior policy.
-5. Store relevant values like \(\alpha\) and importance sampling ratios.
+5. Store relevant values like $\alpha$ and importance sampling ratios.
 6. Update Q-values using the n-step return formula with varying α.
-7. Ensure the policy is greedy with respect to \(Q\).
+7. Ensure the policy is greedy with respect to $Q$.
 x??
 
 ---
@@ -86,18 +85,19 @@ Background context: This section introduces a range of temporal-difference learn
 
 :p What are the key characteristics of n-step temporal-difference methods?
 ??x
-The n-step methods look ahead to the next \(n\) rewards, states, and actions before updating. They combine elements of one-step TD learning with Monte Carlo methods by incorporating multiple steps into their update rules. The state-value function is updated based on the sum of the next \(n-1\) rewards plus the value of the state at time step \(n\).
+The n-step methods look ahead to the next $n $ rewards, states, and actions before updating. They combine elements of one-step TD learning with Monte Carlo methods by incorporating multiple steps into their update rules. The state-value function is updated based on the sum of the next$n-1 $ rewards plus the value of the state at time step$n$.
 
 For example, for a 4-step method, the state-value update can be represented as:
-\[ V(s_t) \leftarrow V(s_t) + \alpha \left( G_t - V(s_t) \right) \]
-where
-\[ G_t = R_{t+1} + \gamma R_{t+2} + \ldots + \gamma^{n-1}R_{t+n} + \gamma^n V(S_{t+n}) \]
+$$V(s_t) \leftarrow V(s_t) + \alpha \left( G_t - V(s_t) \right)$$where$$
+
+G_t = R_{t+1} + \gamma R_{t+2} + \ldots + \gamma^{n-1}R_{t+n} + \gamma^n V(S_{t+n})$$
 
 Similarly, the action-value function update for n-step Q(π) is:
-\[ Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \left( G_t - Q(s_t, a_t) \right) \]
-where \( G_t \) is defined similarly.
+$$
 
-The methods involve delays of \(n\) time steps before updating because only then do all required future events become known. They also require more computation per time step than one-step methods and more memory to store the states, actions, rewards over the last \(n\) time steps.
+Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \left( G_t - Q(s_t, a_t) \right)$$where $ G_t$ is defined similarly.
+
+The methods involve delays of $n $ time steps before updating because only then do all required future events become known. They also require more computation per time step than one-step methods and more memory to store the states, actions, rewards over the last$n$ time steps.
 x??
 
 ---
@@ -107,11 +107,10 @@ Background context: This method involves using importance sampling in the state-
 
 :p What is the formula for updating the state value function using n-step TD with importance sampling?
 ??x
-The state value function \(V(s_t)\) is updated based on the weighted difference between the actual return and the current estimate. The update rule can be represented as:
-\[ V(s_t) \leftarrow V(s_t) + \alpha \frac{w_t}{\hat{\pi}(a_t | s_t)} \left( G_t - V(s_t) \right) \]
-where \( w_t = \prod_{i=t+1}^{t+n} \frac{\pi(a_i | s_i)}{\hat{\pi}(a_i | s_i)} \), and \(\hat{\pi}\) is the behavior policy, while \(\pi\) is the target policy.
+The state value function $V(s_t)$ is updated based on the weighted difference between the actual return and the current estimate. The update rule can be represented as:
+$$V(s_t) \leftarrow V(s_t) + \alpha \frac{w_t}{\hat{\pi}(a_t | s_t)} \left( G_t - V(s_t) \right)$$where $ w_t = \prod_{i=t+1}^{t+n} \frac{\pi(a_i | s_i)}{\hat{\pi}(a_i | s_i)}$, and $\hat{\pi}$ is the behavior policy, while $\pi$ is the target policy.
 
-This update rule incorporates a weight \(w_t\) to account for the difference between the actual path followed by the agent (\(\hat{\pi}\)) and the desired path (\(\pi\)).
+This update rule incorporates a weight $w_t $ to account for the difference between the actual path followed by the agent ($\hat{\pi}$) and the desired path ($\pi$).
 x??
 
 ---
@@ -121,14 +120,12 @@ Background context: This method generalizes Expected Sarsa and Q-learning, focus
 
 :p How does n-step Q(π) differ from one-step methods like Sarsa and Q-learning?
 ??x
-n-step Q(π) extends the idea of Q-learning to consider multiple steps ahead. In contrast to one-step methods such as Sarsa or Q-learning, which update based on a single step reward, n-step Q(π) updates using rewards over \(n\) steps.
+n-step Q(π) extends the idea of Q-learning to consider multiple steps ahead. In contrast to one-step methods such as Sarsa or Q-learning, which update based on a single step reward, n-step Q(π) updates using rewards over $n$ steps.
 
 The action-value function is updated according to:
-\[ Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \frac{w_t}{\hat{\pi}(a_t | s_t)} \left( G_t - Q(s_t, a_t) \right) \]
+$$Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \frac{w_t}{\hat{\pi}(a_t | s_t)} \left( G_t - Q(s_t, a_t) \right)$$where $ w_t = \prod_{i=t+1}^{t+n} \frac{\pi(a_i | s_i)}{\hat{\pi}(a_i | s_i)}$. This weight helps in correcting the bias introduced by using an off-policy behavior policy.
 
-where \( w_t = \prod_{i=t+1}^{t+n} \frac{\pi(a_i | s_i)}{\hat{\pi}(a_i | s_i)} \). This weight helps in correcting the bias introduced by using an off-policy behavior policy.
-
-The update rule ensures that the Q-values are adjusted based on the weighted sum of rewards over \(n\) steps, promoting a more stable and accurate learning process.
+The update rule ensures that the Q-values are adjusted based on the weighted sum of rewards over $n$ steps, promoting a more stable and accurate learning process.
 x??
 
 ---
@@ -141,9 +138,9 @@ Background context: The tree-backup algorithm is a method for updating action va
 The primary advantage of the tree-backup update is that it does not require importance sampling, which can be computationally expensive and introduce high variance. The algorithm updates action values based on a backward pass through the sequence of states, accounting for both positive and negative rewards.
 
 For instance, the update rule in n-step Q(π) using tree backup can be described as:
-\[ Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \frac{w_t}{\hat{\pi}(a_t | s_t)} \sum_{k=t+1}^{t+n} G_k - Q(s_t, a_t) \]
+$$Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \frac{w_t}{\hat{\pi}(a_t | s_t)} \sum_{k=t+1}^{t+n} G_k - Q(s_t, a_t)$$
 
-Where \( w_t = \prod_{i=t+1}^{t+n} \frac{\pi(a_i | s_i)}{\hat{\pi}(a_i | s_i)} \), and the sum of weighted returns is computed backward from the current state.
+Where $w_t = \prod_{i=t+1}^{t+n} \frac{\pi(a_i | s_i)}{\hat{\pi}(a_i | s_i)}$, and the sum of weighted returns is computed backward from the current state.
 
 This method ensures that the updates are consistent with the policy being followed, leading to more accurate learning in scenarios where the target and behavior policies differ significantly.
 x??
@@ -151,11 +148,11 @@ x??
 ---
 
 #### Memory and Computation Trade-offs
-Background context: n-step methods involve storing states, actions, rewards over \(n\) time steps, which increases memory requirements. Additionally, they require more computation per time step compared to one-step methods.
+Background context: n-step methods involve storing states, actions, rewards over $n$ time steps, which increases memory requirements. Additionally, they require more computation per time step compared to one-step methods.
 
 :p What are the trade-offs involved in using n-step temporal-difference learning?
 ??x
-Using n-step TD methods comes with increased memory and computational costs. The primary trade-off is between the accuracy of the method (which improves with \(n\)) and the overhead required for storing past experiences and performing more complex calculations.
+Using n-step TD methods comes with increased memory and computational costs. The primary trade-off is between the accuracy of the method (which improves with $n$) and the overhead required for storing past experiences and performing more complex calculations.
 
 For example, to implement an n-step Q-learning update:
 ```java
@@ -203,7 +200,7 @@ x??
 Background context: All planning methods rely on computing value functions to improve policies. These value functions are computed by updates or backup operations applied to simulated experience. The goal is to predict future rewards based on current states and actions, which helps in improving the policy over time.
 :p What role do value functions play in state-space planning?
 ??x
-Value functions play a crucial role in state-space planning as they help in predicting the long-term consequences of actions taken from given states. These values are computed through backup operations that use simulated experience to update the approximate value function, thereby improving the policy. For example, in dynamic programming, value backups can be performed using formulas like \( V(s) \leftarrow V(s) + \alpha [r + \gamma V(s')] - V(s) \).
+Value functions play a crucial role in state-space planning as they help in predicting the long-term consequences of actions taken from given states. These values are computed through backup operations that use simulated experience to update the approximate value function, thereby improving the policy. For example, in dynamic programming, value backups can be performed using formulas like $V(s) \leftarrow V(s) + \alpha [r + \gamma V(s')] - V(s)$.
 x??
 
 ---

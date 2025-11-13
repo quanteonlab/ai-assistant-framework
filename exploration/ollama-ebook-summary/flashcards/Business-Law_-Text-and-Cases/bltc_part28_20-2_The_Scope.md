@@ -481,11 +481,11 @@ x??
 ---
 
 #### Statute of Frauds
-Background context explaining the concept. The UCC contains provisions similar to the common law Statute of Frauds for sales and lease contracts. Specifically, sales contracts for goods priced at $500 or more and lease contracts requiring total payments of $1,000 or more must be in writing to be enforceable.
+Background context explaining the concept. The UCC contains provisions similar to the common law Statute of Frauds for sales and lease contracts. Specifically, sales contracts for goods priced at $500 or more and lease contracts requiring total payments of$1,000 or more must be in writing to be enforceable.
 
 :p What does the UCC say about the written requirement for sales and lease contracts?
 ??x
-The UCC states that sales contracts for goods priced at $500 or more and lease contracts requiring total payments of $1,000 or more must be in writing to be enforceable (UCC 2-201(1), 2A-201(1)). This requirement ensures that such significant transactions are documented in a written form to prevent disputes.
+The UCC states that sales contracts for goods priced at $500 or more and lease contracts requiring total payments of$1,000 or more must be in writing to be enforceable (UCC 2-201(1), 2A-201(1)). This requirement ensures that such significant transactions are documented in a written form to prevent disputes.
 x??
 
 ---
@@ -655,7 +655,7 @@ x??
 ---
 
 #### Questionable Contract Terms
-Background context: The case discusses whether a freezer unit sold for $900, when its retail value is only $300, constitutes an unconscionable contract. A key factor here is the disparity between the actual cost and the selling price, which may be used to argue that one party took advantage of the other's limited financial resources.
+Background context: The case discusses whether a freezer unit sold for $900, when its retail value is only$300, constitutes an unconscionable contract. A key factor here is the disparity between the actual cost and the selling price, which may be used to argue that one party took advantage of the other's limited financial resources.
 :p What does the court consider in deciding whether a contract is unconscionable?
 ??x
 The court considers several factors:

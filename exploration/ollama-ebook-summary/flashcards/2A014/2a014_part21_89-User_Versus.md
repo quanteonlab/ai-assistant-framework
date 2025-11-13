@@ -275,10 +275,10 @@ Background context: Precision focuses on the quality of recommendations by ensur
 :p What distinguishes precision from recall in a recommender system?
 ??x
 Precision in a recommender system is defined as the fraction of recommended items that are actually relevant out of all the recommended items:
-\[ \text{Precision} = \frac{\text{Number of true positives}}{\text{Number of true positives + Number of false positives}} \]
+$$\text{Precision} = \frac{\text{Number of true positives}}{\text{Number of true positives + Number of false positives}}$$
 
 Recall, on the other hand, measures the fraction of relevant items that are correctly identified by the recommendations out of all relevant items:
-\[ \text{Recall} = \frac{\text{Number of true positives}}{\text{Number of true positives + Number of false negatives}} \]
+$$\text{Recall} = \frac{\text{Number of true positives}}{\text{Number of true positives + Number of false negatives}}$$
 
 Precision and recall are complementary metrics; improving one may come at the cost of the other. A high precision means fewer irrelevant items, but it might miss some relevant ones (low recall), while a high recall ensures more relevant items are captured, potentially at the expense of including irrelevant ones.
 x??

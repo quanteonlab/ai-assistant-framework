@@ -6,11 +6,11 @@
 
 ---
 #### Bisection Method for Finding Zeros of a Function
-Background context: The bisection method is a root-finding algorithm that repeatedly bisects an interval and then selects a subinterval in which a root must lie for further processing. It is based on the intermediate value theorem, which states that if \( f(x) \) is continuous on \([a, b]\), and \( f(a) \cdot f(b) < 0 \), then there exists at least one root in \((a, b)\).
+Background context: The bisection method is a root-finding algorithm that repeatedly bisects an interval and then selects a subinterval in which a root must lie for further processing. It is based on the intermediate value theorem, which states that if $f(x)$ is continuous on $[a, b]$, and $ f(a) \cdot f(b) < 0$, then there exists at least one root in $(a, b)$.
 
 :p How does the Bisection method work to find a zero of a function?
 ??x
-The Bisection method works by repeatedly dividing an interval [a, b] into two halves. If \( f(a) \cdot f(b) < 0 \), it means that there is at least one root in this interval. The midpoint \( x = (a + b)/2 \) is then calculated and used to check the sign of \( f(x) \). Depending on the signs, either \( a \) or \( b \) is updated to narrow down the search interval until the function value at the current midpoint is within the specified precision.
+The Bisection method works by repeatedly dividing an interval [a, b] into two halves. If $f(a) \cdot f(b) < 0 $, it means that there is at least one root in this interval. The midpoint $ x = (a + b)/2 $ is then calculated and used to check the sign of $ f(x)$. Depending on the signs, either $ a$or $ b$ is updated to narrow down the search interval until the function value at the current midpoint is within the specified precision.
 
 The code for implementing this in Python is provided below:
 ```python
@@ -43,7 +43,7 @@ Background context: The Newton-Raphson method is an iterative algorithm to find 
 
 :p How does the Newton-Raphson method work?
 ??x
-The Newton-Raphson method works by using an iterative formula \( x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)} \) to find the root, where \( f'(x) \) is the derivative of the function. The initial guess \( x_0 \) is used and the process continues until the difference between successive approximations or the function value at the current approximation is within a specified tolerance.
+The Newton-Raphson method works by using an iterative formula $x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$ to find the root, where $f'(x)$ is the derivative of the function. The initial guess $x_0$ is used and the process continues until the difference between successive approximations or the function value at the current approximation is within a specified tolerance.
 
 Here is an example implementation in Python:
 ```python
@@ -126,7 +126,7 @@ Background context: The least square fit method is used to find the best-fitting
 
 :p How does the `FitParabola` script calculate the coefficients of the parabola that best fits given data points?
 ??x
-The `FitParabola` script calculates the coefficients \(a_0\), \(a_1\), and \(a_2\) for a quadratic function \(y = a_0 + a_1 x + a_2 x^2\) using the least squares method. It first constructs matrix A and vector bvec based on the data points, then uses either inversion or elimination to solve for the coefficients.
+The `FitParabola` script calculates the coefficients $a_0 $, $ a_1 $, and$ a_2 $for a quadratic function$ y = a_0 + a_1 x + a_2 x^2$ using the least squares method. It first constructs matrix A and vector bvec based on the data points, then uses either inversion or elimination to solve for the coefficients.
 
 Here is an example of how it works:
 ```python
@@ -181,32 +181,14 @@ In this problem, we deal with two masses connected by strings hanging from a hor
 
 The relevant equations are:
 1. Geometric Constraints:
-   - Horizontal length of the structure: \( L_1 \cos(\theta_1) + L_2 \cos(\theta_2) + L_3 \cos(\theta_3) = L \)
-   - Vertical position constraints: \( L_1 \sin(\theta_1) + L_2 \sin(\theta_2) - L_3 \sin(\theta_3) = 0 \)
-   - Trigonometric identities for each angle: \( \sin^2(\theta_i) + \cos^2(\theta_i) = 1 \)
-
-2. Static Equilibrium Conditions:
-   - Horizontal force balance: \( T_1 \sin(\theta_1) - T_2 \sin(\theta_2) - W_1 = 0 \)
-   - Vertical force balance for mass 1: \( T_1 \cos(\theta_1) - T_2 \cos(\theta_2) = 0 \)
-   - Horizontal and vertical force balances for the second mass:
-     - \( T_2 \sin(\theta_2) + T_3 \sin(\theta_3) - W_2 = 0 \)
-     - \( T_2 \cos(\theta_2) - T_3 \cos(\theta_3) = 0 \)
-
-:p What are the equations used to find the angles and tensions in this problem?
+   - Horizontal length of the structure:$L_1 \cos(\theta_1) + L_2 \cos(\theta_2) + L_3 \cos(\theta_3) = L $- Vertical position constraints:$ L_1 \sin(\theta_1) + L_2 \sin(\theta_2) - L_3 \sin(\theta_3) = 0 $- Trigonometric identities for each angle:$\sin^2(\theta_i) + \cos^2(\theta_i) = 1$2. Static Equilibrium Conditions:
+   - Horizontal force balance:$T_1 \sin(\theta_1) - T_2 \sin(\theta_2) - W_1 = 0 $- Vertical force balance for mass 1:$ T_1 \cos(\theta_1) - T_2 \cos(\theta_2) = 0$- Horizontal and vertical force balances for the second mass:
+     -$T_2 \sin(\theta_2) + T_3 \sin(\theta_3) - W_2 = 0 $-$ T_2 \cos(\theta_2) - T_3 \cos(\theta_3) = 0$:p What are the equations used to find the angles and tensions in this problem?
 ??x
 The equations include geometric constraints, trigonometric identities, and force balance conditions:
-- Geometric: \( L_1 \cos(\theta_1) + L_2 \cos(\theta_2) + L_3 \cos(\theta_3) = L \)
-- Vertical position: \( L_1 \sin(\theta_1) + L_2 \sin(\theta_2) - L_3 \sin(\theta_3) = 0 \)
-- Trigonometric identities: \( \sin^2(\theta_i) + \cos^2(\theta_i) = 1 \)
-
-Force balances:
-- Horizontal force balance for mass 1: \( T_1 \sin(\theta_1) - T_2 \sin(\theta_2) - W_1 = 0 \)
-- Vertical force balance for mass 1: \( T_1 \cos(\theta_1) - T_2 \cos(\theta_2) = 0 \)
-- Horizontal and vertical force balances for the second mass:
-  - \( T_2 \sin(\theta_2) + T_3 \sin(\theta_3) - W_2 = 0 \)
-  - \( T_2 \cos(\theta_2) - T_3 \cos(\theta_3) = 0 \)
-
-These equations are nonlinear and coupled, making them unsolvable with linear algebra.
+- Geometric:$L_1 \cos(\theta_1) + L_2 \cos(\theta_2) + L_3 \cos(\theta_3) = L $- Vertical position:$ L_1 \sin(\theta_1) + L_2 \sin(\theta_2) - L_3 \sin(\theta_3) = 0 $- Trigonometric identities:$\sin^2(\theta_i) + \cos^2(\theta_i) = 1$ Force balances:
+- Horizontal force balance for mass 1:$T_1 \sin(\theta_1) - T_2 \sin(\theta_2) - W_1 = 0 $- Vertical force balance for mass 1:$ T_1 \cos(\theta_1) - T_2 \cos(\theta_2) = 0$- Horizontal and vertical force balances for the second mass:
+  -$T_2 \sin(\theta_2) + T_3 \sin(\theta_3) - W_2 = 0 $-$ T_2 \cos(\theta_2) - T_3 \cos(\theta_3) = 0$ These equations are nonlinear and coupled, making them unsolvable with linear algebra.
 x??
 
 ---
@@ -214,28 +196,20 @@ x??
 #### Matrix Formulation of the Problem
 
 We combine the nine equations into a vector form to solve for the unknowns using matrix methods. The variables are:
-
-\[ y = [ x_1, x_2, ..., x_9 ]^T = [\sin(\theta_1), \sin(\theta_2), \sin(\theta_3), \cos(\theta_1), \cos(\theta_2), \cos(\theta_3), T_1, T_2, T_3]^T \]
+$$y = [ x_1, x_2, ..., x_9 ]^T = [\sin(\theta_1), \sin(\theta_2), \sin(\theta_3), \cos(\theta_1), \cos(\theta_2), \cos(\theta_3), T_1, T_2, T_3]^T$$
 
 The equations are then written in a general form:
+$$f(y) = [f_1(y), f_2(y), ..., f_9(y)]^T = 0$$
 
-\[ f(y) = [f_1(y), f_2(y), ..., f_9(y)]^T = 0 \]
-
-Where each \( f_i \) is derived from the original constraints and equilibrium conditions.
+Where each $f_i$ is derived from the original constraints and equilibrium conditions.
 
 :p How do we represent the nine nonlinear equations in matrix form?
 ??x
-We represent the nine nonlinear equations in a vector form using matrices. Each equation \( f_i \) is transformed into:
+We represent the nine nonlinear equations in a vector form using matrices. Each equation $f_i$ is transformed into:
+$$f(y) = [f_1(y), f_2(y), ..., f_9(y)]^T = 0$$
 
-\[ f(y) = [f_1(y), f_2(y), ..., f_9(y)]^T = 0 \]
-
-The expressions for each \( f_i \) are:
-- Geometric: \( 3x_4 + 4x_5 + 4x_6 - 8 \)
-- Position: \( 3x_1 + 4x_2 - 4x_3 \)
-- Trigonometric identities: \( x_7 x_{1} - x_8 x_{2} - 10, x_7 x_{4} - x_8 x_{5}, x_8 x_{2} + x_9 x_{3} - 20, x_8 x_{5} - x_9 x_{6} \)
-- Force balances: \( x_2^2 + x_4^2 - 1, x_2^2 + x_5^2 - 1, x_3^2 + x_6^2 - 1 \)
-
-These equations are combined into a single matrix equation for solving:
+The expressions for each $f_i$ are:
+- Geometric:$3x_4 + 4x_5 + 4x_6 - 8 $- Position:$3x_1 + 4x_2 - 4x_3 $- Trigonometric identities:$ x_7 x_{1} - x_8 x_{2} - 10, x_7 x_{4} - x_8 x_{5}, x_8 x_{2} + x_9 x_{3} - 20, x_8 x_{5} - x_9 x_{6}$- Force balances:$ x_2^2 + x_4^2 - 1, x_2^2 + x_5^2 - 1, x_3^2 + x_6^2 - 1$ These equations are combined into a single matrix equation for solving:
 ```python
 import numpy as np
 
@@ -268,11 +242,10 @@ x??
 To solve the nonlinear equations, we use an extension of the Newton-Raphson algorithm to multiple variables. This involves expanding the function and keeping only linear terms, then solving a set of linear equations.
 
 The key steps are:
-1. Start with an initial guess \( y \).
-2. Assume there are corrections \( \Delta x_i \) such that \( f(y + \Delta y) = 0 \).
+1. Start with an initial guess $y$.
+2. Assume there are corrections $\Delta x_i $ such that$f(y + \Delta y) = 0$.
 3. Use Taylor series expansion to approximate the function: 
-   \[ fi(x1+Δx1,..,x9+Δx9) ≃ fi(x1,..,x9) + ∑_j=1^9 (𝜕fi/𝜕xj Δxj) = 0 \]
-4. Solve for \( \Delta x_i \).
+   $$fi(x1+Δx1,..,x9+Δx9) ≃ fi(x1,..,x9) + ∑_j=1^9 (𝜕fi/𝜕xj Δxj) = 0$$4. Solve for $\Delta x_i$.
 
 The resulting linear equations are represented as a matrix equation.
 
@@ -280,13 +253,13 @@ The resulting linear equations are represented as a matrix equation.
 ??x
 To apply the Newton-Raphson method, follow these steps:
 
-1. Start with an initial guess \( y \) (e.g., \( [0.5, 0.6, 0.7, 1.0, 1.1, 1.2, 5, 4, 3] \)).
+1. Start with an initial guess $y $(e.g.,$[0.5, 0.6, 0.7, 1.0, 1.1, 1.2, 5, 4, 3]$).
 2. Approximate the nonlinear equations using a first-order Taylor series expansion:
-   \[ f_i(x_1 + \Delta x_1, ..., x_9 + \Delta x_9) ≃ f_i(x_1, ..., x_9) + ∑_{j=1}^9 \left( \frac{∂f_i}{∂x_j} \Delta x_j \right) = 0 \]
-3. Solve the resulting linear system for \( \Delta x_i \):
-   \[ f(y) + A \cdot Δy = 0 \]
-   where:
-   \[ A_{ij} = \frac{∂f_i}{∂x_j} \]
+   $$f_i(x_1 + \Delta x_1, ..., x_9 + \Delta x_9) ≃ f_i(x_1, ..., x_9) + ∑_{j=1}^9 \left( \frac{∂f_i}{∂x_j} \Delta x_j \right) = 0$$3. Solve the resulting linear system for $\Delta x_i$:
+   $$f(y) + A \cdot Δy = 0$$where:
+$$
+
+A_{ij} = \frac{∂f_i}{∂x_j}$$
 
 Example in Python using NumPy:
 
@@ -321,21 +294,19 @@ x??
 
 #### Solution Updating Process Using Newton-Raphson Method
 
-The Newton-Raphson method involves updating the initial guess iteratively to converge to a solution. The process includes calculating the Jacobian matrix and solving for corrections \( \Delta x_i \).
+The Newton-Raphson method involves updating the initial guess iteratively to converge to a solution. The process includes calculating the Jacobian matrix and solving for corrections $\Delta x_i$.
 
 :p How is the solution updated in each iteration of the Newton-Raphson method?
 ??x
 In each iteration of the Newton-Raphson method, we update the solution using the following steps:
 
-1. Start with an initial guess \( y \).
-2. Compute the Jacobian matrix \( A \), which consists of partial derivatives of the function \( f(y) \):
-   \[ A_{ij} = \frac{∂f_i}{∂x_j} \]
-3. Solve for the corrections \( Δy \) using the linear system:
-   \[ f(y) + A \cdot Δy = 0 \]
-4. Update the solution by adding the corrections to the current guess:
-   \[ y_{\text{new}} = y + Δy \]
+1. Start with an initial guess $y$.
+2. Compute the Jacobian matrix $A $, which consists of partial derivatives of the function $ f(y)$:
+   $$A_{ij} = \frac{∂f_i}{∂x_j}$$3. Solve for the corrections $Δy$ using the linear system:
+$$f(y) + A \cdot Δy = 0$$4. Update the solution by adding the corrections to the current guess:
+$$y_{\text{new}} = y + Δy$$
 
-The Jacobian matrix and the function \( f(y) \) are defined as:
+The Jacobian matrix and the function $f(y)$ are defined as:
 
 ```python
 import numpy as np
@@ -386,9 +357,9 @@ To ensure convergence in the Newton-Raphson method, follow these steps:
 
 1. **Initial Guess**: Start with a reasonable initial guess for the solution.
 2. **Jacobian Matrix Calculation**: Compute the Jacobian matrix at each iteration to approximate the function's behavior locally.
-3. **Linear System Solution**: Solve the linear system \( A \cdot Δy = -f(y) \) where \( A \) is the Jacobian and \( f(y) \) are the nonlinear equations evaluated at the current guess.
-4. **Solution Update**: Update the solution by adding the corrections to the current guess: \( y_{\text{new}} = y + Δy \).
-5. **Convergence Check**: Monitor the norm of the correction vector \( Δy \). If it falls below a specified tolerance, the method has converged.
+3. **Linear System Solution**: Solve the linear system $A \cdot Δy = -f(y)$ where $ A $ is the Jacobian and $f(y)$ are the nonlinear equations evaluated at the current guess.
+4. **Solution Update**: Update the solution by adding the corrections to the current guess:$y_{\text{new}} = y + Δy$.
+5. **Convergence Check**: Monitor the norm of the correction vector $Δy$. If it falls below a specified tolerance, the method has converged.
 
 Example in Python:
 
@@ -488,10 +459,10 @@ The problem involves solving nine nonlinear equations for multiple variables (an
 
 :p How many variables are involved in this problem?
 ??x
-There are nine variables involved in this problem: three angles (\( \theta_1, \theta_2, \theta_3 \)) and six tensions (\( T_1, T_2, T_3 \)).
+There are nine variables involved in this problem: three angles ($\theta_1, \theta_2, \theta_3 $) and six tensions ($ T_1, T_2, T_3$).
 
 The initial guess for these variables might look like:
-\[ y = [\sin(\theta_1), \sin(\theta_2), \sin(\theta_3), \cos(\theta_1), \cos(\theta_2), \cos(\theta_3), T_1, T_2, T_3]^T \]
+$$y = [\sin(\theta_1), \sin(\theta_2), \sin(\theta_3), \cos(\theta_1), \cos(\theta_2), \cos(\theta_3), T_1, T_2, T_3]^T$$
 
 The goal is to find values for these variables that satisfy the nine nonlinear equations derived from geometric constraints and static equilibrium conditions.
 x?? 
@@ -505,8 +476,7 @@ We use an iterative approach in Python to solve the system of nonlinear equation
 :p How do we set up the initial guess for the variables?
 ??x
 To set up the initial guess for the variables, you need to provide a reasonable starting point. For example, if solving for angles and tensions, an initial guess might be:
-
-\[ y = [\sin(\theta_1), \sin(\theta_2), \sin(\theta_3), \cos(\theta_1), \cos(\theta_2), \cos(\theta_3), T_1, T_2, T_3]^T \]
+$$y = [\sin(\theta_1), \sin(\theta_2), \sin(\theta_3), \cos(\theta_1), \cos(\theta_2), \cos(\theta_3), T_1, T_2, T_3]^T$$
 
 Here is a sample initial guess:
 
@@ -514,7 +484,7 @@ Here is a sample initial guess:
 y_initial_guess = np.array([0.5, 0.6, 0.7, 1.0, 1.1, 1.2, 5, 4, 3])
 ```
 
-This vector contains values for \( \sin(\theta_1), \sin(\theta_2), \sin(\theta_3) \), \( \cos(\theta_1), \cos(\theta_2), \cos(\theta_3) \), and the tensions \( T_1, T_2, T_3 \).
+This vector contains values for $\sin(\theta_1), \sin(\theta_2), \sin(\theta_3)$,$\cos(\theta_1), \cos(\theta_2), \cos(\theta_3)$, and the tensions $ T_1, T_2, T_3$.
 
 You can adjust these values based on your specific problem or previous knowledge about the system.
 x?? 
@@ -527,9 +497,9 @@ The Jacobian matrix is crucial for the Newton-Raphson method as it provides a lo
 
 :p How do we define the Jacobian matrix in this context?
 ??x
-In the context of solving nonlinear equations using the Newton-Raphson method, the Jacobian matrix \( A \) is defined by the partial derivatives of the function \( f(y) \). Each row of the Jacobian corresponds to one equation, and each column corresponds to a variable.
+In the context of solving nonlinear equations using the Newton-Raphson method, the Jacobian matrix $A $ is defined by the partial derivatives of the function$f(y)$. Each row of the Jacobian corresponds to one equation, and each column corresponds to a variable.
 
-For example, if we have three angles (\( \theta_1, \theta_2, \theta_3 \)) and six tensions (\( T_1, T_2, T_3 \)), the Jacobian matrix \( A \) would be a 9x9 matrix. Each row corresponds to one of the nine equations, and each column contains the partial derivatives with respect to each variable.
+For example, if we have three angles ($\theta_1, \theta_2, \theta_3 $) and six tensions ($ T_1, T_2, T_3 $), the Jacobian matrix$ A$ would be a 9x9 matrix. Each row corresponds to one of the nine equations, and each column contains the partial derivatives with respect to each variable.
 
 Here's how you might define the Jacobian in Python:
 
@@ -553,14 +523,14 @@ print("Jacobian Matrix:")
 print(A)
 ```
 
-This function computes the Jacobian matrix based on the current values of \( y \). Each row corresponds to one equation and each column corresponds to a variable.
+This function computes the Jacobian matrix based on the current values of $y$. Each row corresponds to one equation and each column corresponds to a variable.
 x?? 
 
 --- 
 
 #### Jacobian Calculation for Nonlinear Equations
 
-The Jacobian matrix is essential for the Newton-Raphson method as it provides a linear approximation of the nonlinear equations. In this context, we need to calculate the partial derivatives of the function \( f(y) \).
+The Jacobian matrix is essential for the Newton-Raphson method as it provides a linear approximation of the nonlinear equations. In this context, we need to calculate the partial derivatives of the function $f(y)$.
 
 :p What are the steps to calculate the Jacobian matrix in Python?
 ??x
@@ -602,7 +572,7 @@ print("Jacobian Matrix:")
 print(A)
 ```
 
-This code defines the nonlinear equations and their Jacobian matrix in terms of \( \theta_1, \theta_2, \theta_3 \). The `jacobian` function computes the partial derivatives for each equation with respect to each variable.
+This code defines the nonlinear equations and their Jacobian matrix in terms of $\theta_1, \theta_2, \theta_3$. The `jacobian` function computes the partial derivatives for each equation with respect to each variable.
 
 You can extend this example by adding more equations as needed.
 x?? 
@@ -611,11 +581,11 @@ x??
 
 #### Iterative Convergence and Jacobian
 
-The Newton-Raphson method relies on iterative updates using the Jacobian matrix. Proper convergence is ensured by checking the norm of the correction vector \( \Delta y \).
+The Newton-Raphson method relies on iterative updates using the Jacobian matrix. Proper convergence is ensured by checking the norm of the correction vector $\Delta y$.
 
 :p How do we check for convergence in the Newton-Raphson iteration?
 ??x
-To check for convergence in the Newton-Raphson iteration, you need to monitor the norm of the correction vector \( \Delta y \). If this norm falls below a specified tolerance, the method has converged.
+To check for convergence in the Newton-Raphson iteration, you need to monitor the norm of the correction vector $\Delta y$. If this norm falls below a specified tolerance, the method has converged.
 
 Here's how you can implement this in Python:
 
@@ -651,7 +621,7 @@ In this example:
 
 1. **Jacobian Calculation**: `jacobian` function computes the Jacobian matrix.
 2. **Correction Vector**: `delta_y = -np.linalg.solve(A, f(y_initial_guess))` solves for the corrections.
-3. **Convergence Check**: `if np.linalg.norm(delta_y) < tolerance:` checks if the norm of \( \Delta y \) is below the specified tolerance.
+3. **Convergence Check**: `if np.linalg.norm(delta_y) < tolerance:` checks if the norm of $\Delta y$ is below the specified tolerance.
 
 If the condition is met, the loop breaks and the solution is considered converged.
 x?? 
@@ -666,11 +636,11 @@ The Newton-Raphson method provides an iterative approach to solving nonlinear eq
 ??x
 The key steps in implementing the Newton-Raphson method for solving a system of nonlinear equations are:
 
-1. **Define the Nonlinear Equations**: Write down the equations as a function \( f(y) \).
+1. **Define the Nonlinear Equations**: Write down the equations as a function $f(y)$.
 2. **Compute the Jacobian Matrix**: Define the Jacobian matrix, which contains the partial derivatives of each equation with respect to each variable.
 3. **Initial Guess**: Provide an initial guess for the variables.
-4. **Iterative Update**: Use the Newton-Raphson update rule: \( y_{\text{new}} = y + \Delta y \), where \( \Delta y \) is the solution of the linear system \( A \cdot \Delta y = -f(y) \).
-5. **Convergence Check**: Monitor the norm of the correction vector \( \Delta y \). If it falls below a specified tolerance, stop iterating and consider the current guess as the converged solution.
+4. **Iterative Update**: Use the Newton-Raphson update rule: $y_{\text{new}} = y + \Delta y $, where $\Delta y $ is the solution of the linear system$A \cdot \Delta y = -f(y)$.
+5. **Convergence Check**: Monitor the norm of the correction vector $\Delta y$. If it falls below a specified tolerance, stop iterating and consider the current guess as the converged solution.
 
 Here’s a summary of the steps:
 
@@ -715,11 +685,11 @@ x??
 
 #### Implementation Details for Nonlinear Equations
 
-The implementation involves defining the function \( f(y) \), computing the Jacobian matrix, and iteratively updating the guess until convergence.
+The implementation involves defining the function $f(y)$, computing the Jacobian matrix, and iteratively updating the guess until convergence.
 
 :p Can you provide an example of how to define the function `f(y)` in this context?
 ??x
-Sure! Let's define a function `f(y)` that represents the nonlinear equations for our problem. In this case, we have three angles (\( \theta_1, \theta_2, \theta_3 \)) and six tensions (\( T_1, T_2, T_3 \)). Here’s an example of how to define `f(y)`:
+Sure! Let's define a function `f(y)` that represents the nonlinear equations for our problem. In this case, we have three angles ($\theta_1, \theta_2, \theta_3 $) and six tensions ($ T_1, T_2, T_3$). Here’s an example of how to define `f(y)`:
 
 ```python
 import numpy as np
@@ -739,7 +709,7 @@ def f(y):
     ])
 ```
 
-This function takes a vector `y` as input, which contains the values of \( \theta_1, \theta_2, \theta_3 \), and \( T_1, T_2, T_3 \). It returns an array representing the evaluated nonlinear equations.
+This function takes a vector `y` as input, which contains the values of $\theta_1, \theta_2, \theta_3 $, and $ T_1, T_2, T_3$. It returns an array representing the evaluated nonlinear equations.
 
 Here’s a more complete example:
 
@@ -792,23 +762,21 @@ x??
 
 #### Iterative Solution Example
 
-The iterative solution using the Newton-Raphson method involves defining the function \( f(y) \), computing the Jacobian, and updating the guess until convergence.
+The iterative solution using the Newton-Raphson method involves defining the function $f(y)$, computing the Jacobian, and updating the guess until convergence.
 
 :p Can you provide a detailed example of how to define `jacobian(y)` for a specific set of nonlinear equations?
 ??x
-Certainly! Let's consider a more detailed example with a specific set of nonlinear equations. We will have three angles (\( \theta_1, \theta_2, \theta_3 \)) and six tensions (\( T_1, T_2, T_3 \)). Here are the steps to define `jacobian(y)`:
+Certainly! Let's consider a more detailed example with a specific set of nonlinear equations. We will have three angles ($\theta_1, \theta_2, \theta_3 $) and six tensions ($ T_1, T_2, T_3$). Here are the steps to define `jacobian(y)`:
 
-1. **Define the Nonlinear Equations**: Write down the equations as a function \( f(y) \).
+1. **Define the Nonlinear Equations**: Write down the equations as a function $f(y)$.
 2. **Compute the Jacobian Matrix**: Define the Jacobian matrix using partial derivatives.
 
 Let's assume we have the following nonlinear equations:
 
-\[
-\begin{aligned}
+$$\begin{aligned}
 &f_1(\theta_1, \theta_2, \theta_3, T_1, T_2, T_3) = 3 \sin(\theta_1) + 4 \sin(\theta_2) - 4 \sin(\theta_3) \\
 &f_2(\theta_1, \theta_2, \theta_3, T_1, T_2, T_3) = \cos(\theta_1) (5 - 2 \sin(\theta_2)) - \cos(\theta_2) (7 - 3 \sin(\theta_1))
-\end{aligned}
-\]
+\end{aligned}$$
 
 And we will add more equations if necessary. For now, let's keep it simple with just these two equations.
 
@@ -919,15 +887,10 @@ Certainly! Below is a complete Python script that implements the Newton-Raphson 
 
 ### Problem Definition:
 We will consider the following nonlinear equations:
-
-\[
-\begin{aligned}
+$$\begin{aligned}
 &f_1(\theta_1, \theta_2, T_1, T_2) = 3 \sin(\theta_1) + 4 \sin(\theta_2) - 4 \sin(T_1) \\
 &f_2(\theta_1, \theta_2, T_1, T_2) = \cos(\theta_1) (5 - 2 \sin(\theta_2)) - \cos(\theta_2) (7 - 3 \sin(\theta_1))
-\end{aligned}
-\]
-
-### Python Script:
+\end{aligned}$$### Python Script:
 
 ```python
 import numpy as np
@@ -1069,16 +1032,11 @@ Let's add more complexity to our example by including an additional nonlinear eq
 
 ### Problem Definition:
 We will consider the following nonlinear equations:
-
-\[
-\begin{aligned}
+$$\begin{aligned}
 &f_1(\theta_1, \theta_2, T_1, T_2) = 3 \sin(\theta_1) + 4 \sin(\theta_2) - 4 \sin(T_1) \\
 &f_2(\theta_1, \theta_2, T_1, T_2) = \cos(\theta_1) (5 - 2 \sin(\theta_2)) - \cos(\theta_2) (7 - 3 \sin(\theta_1)) \\
 &f_3(\theta_1, \theta_2, T_1, T_2) = \tan(\theta_1) + \tan(\theta_2) - \tan(T_1)
-\end{aligned}
-\]
-
-### Python Script:
+\end{aligned}$$### Python Script:
 
 ```python
 import numpy as np
@@ -4842,12 +4800,12 @@ The final output from running the provided script is:
 
 #### Matrix Notation and Linear Equation Solving
 
-Background context explaining the concept. The matrix equation \(F' \Delta x = -f\) is used to solve for unknown changes in variables, where \(F'\) represents the Jacobian matrix of derivatives, \(\Delta x\) represents small changes in the independent variables, and \(f\) represents function evaluations at known values.
+Background context explaining the concept. The matrix equation $F' \Delta x = -f $ is used to solve for unknown changes in variables, where$F'$ represents the Jacobian matrix of derivatives,$\Delta x $ represents small changes in the independent variables, and$f$ represents function evaluations at known values.
 
 If applicable, add code examples with explanations.
 :p How does the matrix equation relate to solving a system of linear equations?
 ??x
-The matrix equation relates to solving a system of linear equations by expressing it as \(F' \Delta x = -f\). Here, \(F'\) is the Jacobian matrix containing partial derivatives, and \(\Delta x\) represents small changes in the independent variables. The goal is to find these changes such that the function values approximate zero.
+The matrix equation relates to solving a system of linear equations by expressing it as $F' \Delta x = -f $. Here, $ F'$is the Jacobian matrix containing partial derivatives, and $\Delta x$ represents small changes in the independent variables. The goal is to find these changes such that the function values approximate zero.
 
 To solve this equation using linear algebra techniques:
 ```java
@@ -4870,10 +4828,7 @@ If applicable, add code examples with explanations.
 :p Why might one choose a forward difference over an analytical derivative?
 ??x
 One might choose a forward difference over an analytical derivative because while both methods are valid, the forward difference is straightforward to implement. It involves evaluating the function at nearby points:
-
-\[
-\frac{\partial f_i}{\partial x_j} \approx \frac{f_i(x_j + \Delta x_j) - f_i(x_j)}{\Delta x_j}
-\]
+$$\frac{\partial f_i}{\partial x_j} \approx \frac{f_i(x_j + \Delta x_j) - f_i(x_j)}{\Delta x_j}$$
 
 This approach avoids complex symbolic differentiation and manual error-prone calculations, making it particularly useful in numerical methods.
 
@@ -4893,16 +4848,13 @@ x??
 
 #### Solution of Linear Equations
 
-Background context explaining the concept. The solution to a system of linear equations \(A \cdot x = b\) is often obtained using matrix inversion, although more efficient methods like Gaussian elimination or LU decomposition are commonly used.
+Background context explaining the concept. The solution to a system of linear equations $A \cdot x = b$ is often obtained using matrix inversion, although more efficient methods like Gaussian elimination or LU decomposition are commonly used.
 
 If applicable, add code examples with explanations.
 :p How can one solve a system of linear equations Ax=b?
 ??x
-One can solve the system of linear equations \(Ax = b\) by various methods. A straightforward but often slower approach is to use matrix inversion:
-
-\[
-x = A^{-1} \cdot b
-\]
+One can solve the system of linear equations $Ax = b$ by various methods. A straightforward but often slower approach is to use matrix inversion:
+$$x = A^{-1} \cdot b$$
 
 However, more efficient and numerically stable methods like Gaussian elimination or LU decomposition are preferred for practical implementation.
 
@@ -4920,28 +4872,18 @@ x??
 
 #### Eigenvalue Problem
 
-Background context explaining the concept. The eigenvalue problem involves finding values \(\lambda\) and vectors \(x\) that satisfy the equation \(A \cdot x = \lambda \cdot x\). This is a special case of solving linear equations.
+Background context explaining the concept. The eigenvalue problem involves finding values $\lambda $ and vectors$x $ that satisfy the equation$A \cdot x = \lambda \cdot x$. This is a special case of solving linear equations.
 
 If applicable, add code examples with explanations.
 :p What is an eigenvalue problem?
 ??x
-An eigenvalue problem involves finding scalar values \(\lambda\) (eigenvalues) and corresponding non-zero vectors \(x\) (eigenvectors) that satisfy the equation:
-
-\[
-A \cdot x = \lambda \cdot x
-\]
+An eigenvalue problem involves finding scalar values $\lambda $(eigenvalues) and corresponding non-zero vectors $ x$(eigenvectors) that satisfy the equation:
+$$A \cdot x = \lambda \cdot x$$
 
 This can be rewritten using the identity matrix as:
+$$(A - \lambda I) \cdot x = 0$$
 
-\[
-(A - \lambda I) \cdot x = 0
-\]
-
-The eigenvalues are found by ensuring the determinant of \(A - \lambda I\) is zero, i.e.,
-
-\[
-\text{det}(A - \lambda I) = 0
-\]
+The eigenvalues are found by ensuring the determinant of $A - \lambda I $ is zero, i.e.,$$\text{det}(A - \lambda I) = 0$$
 
 Example pseudocode:
 ```java
@@ -5008,16 +4950,10 @@ If applicable, add code examples with explanations.
 Minimizing stride refers to reducing the number of bytes skipped between accessing consecutive elements in memory, which can significantly impact the performance of matrix operations. By aligning data access patterns to match the natural storage order, fewer cache misses occur and overall computation time decreases.
 
 Example:
-For summing diagonal elements of a matrix \(A[i][i]\):
+For summing diagonal elements of a matrix $A[i][i]$:
 
 - In row-major order (C/C++): Access each element directly.
-  \[
-  \text{Trace} = A[0][0] + A[1][1] + \ldots
-  \]
-- In column-major order (Fortran): Skip columns to access the diagonal.
-  \[
-  \text{Trace} = A[0][0] + A[1][1] + \ldots
-  \]
+  $$\text{Trace} = A[0][0] + A[1][1] + \ldots$$- In column-major order (Fortran): Skip columns to access the diagonal.$$\text{Trace} = A[0][0] + A[1][1] + \ldots$$
 
 In both cases, minimizing stride can help by ensuring that elements are accessed in a cache-friendly manner.
 

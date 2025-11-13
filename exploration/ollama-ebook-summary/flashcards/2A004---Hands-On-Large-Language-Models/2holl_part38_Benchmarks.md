@@ -8,8 +8,7 @@
 Perplexity is a measure used to evaluate how well a language model predicts the next token in a sequence. It provides insights into the confidence with which the model can predict the correct next word given the context.
 
 The formula for perplexity is defined as:
-\[ \text{Perplexity} = 2^{-\frac{\sum_{i=1}^n \log_2 P(w_i|w_{1:i-1})}{n}} \]
-where \(P(w_i|w_{1:i-1})\) is the probability of the next word given all previous words, and \(n\) is the number of tokens.
+$$\text{Perplexity} = 2^{-\frac{\sum_{i=1}^n \log_2 P(w_i|w_{1:i-1})}{n}}$$where $ P(w_i|w_{1:i-1})$is the probability of the next word given all previous words, and $ n$ is the number of tokens.
 
 The model performs better when it gives higher probabilities to the correct next token. A lower perplexity score indicates a better model.
 
@@ -65,8 +64,7 @@ BLEU uses a brevity penalty that adjusts for the length of the generated text re
 BLEU (Bilingual Evaluation Understudy) measures the similarity between a candidate translation and one or more reference translations by comparing n-grams. It evaluates both the quality and the fluency of translated sentences using precision metrics.
 
 The formula for BLEU is:
-\[ \text{BLEU} = \text{BP} \times \text{exp}\left( \sum_{n=1}^{N} \log p_n / N \right) \]
-where \(p_n\) is the n-gram precision, and BP is the brevity penalty.
+$$\text{BLEU} = \text{BP} \times \text{exp}\left( \sum_{n=1}^{N} \log p_n / N \right)$$where $ p_n$ is the n-gram precision, and BP is the brevity penalty.
 
 The brevity penalty (BP) ensures that shorter translations are not favored unfairly. If the candidate translation is shorter than the shortest reference, the score is penalized. Otherwise, it’s adjusted based on the length ratio of the candidate to the reference.
 

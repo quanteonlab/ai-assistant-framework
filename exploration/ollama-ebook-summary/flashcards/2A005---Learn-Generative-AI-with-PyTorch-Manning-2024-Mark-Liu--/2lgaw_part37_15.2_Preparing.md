@@ -55,11 +55,11 @@ x??
 ---
 
 #### Gathering Dataset for Training
-Background context: The first step involves gathering a dataset of flower images for training a diffusion model. We'll use the Oxford 102 Flower dataset as our training set and resize all images to a fixed resolution of \(64 \times 64\) pixels, normalizing pixel values to the range \([-1, 1]\).
+Background context: The first step involves gathering a dataset of flower images for training a diffusion model. We'll use the Oxford 102 Flower dataset as our training set and resize all images to a fixed resolution of $64 \times 64 $ pixels, normalizing pixel values to the range$[-1, 1]$.
 
 :p What is the first step in preparing the data for training?
 ??x
-The first step involves gathering flower images from the Oxford 102 Flower dataset and resizing them to a fixed resolution of \(64 \times 64\) pixels. The pixel values are normalized to the range \([-1, 1]\).
+The first step involves gathering flower images from the Oxford 102 Flower dataset and resizing them to a fixed resolution of $64 \times 64 $ pixels. The pixel values are normalized to the range$[-1, 1]$.
 x??
 
 ---
@@ -85,11 +85,11 @@ x??
 ---
 
 #### Training Process Overview
-Background context: During training, we iterate over the dataset in batches. We add noise to the flower images and present them to the U-Net model along with time steps \(t\). The model predicts noise based on current parameters and minimizes L1 loss (mean absolute error) during each epoch.
+Background context: During training, we iterate over the dataset in batches. We add noise to the flower images and present them to the U-Net model along with time steps $t$. The model predicts noise based on current parameters and minimizes L1 loss (mean absolute error) during each epoch.
 
 :p What is the general process of training the denoising U-Net model?
 ??x
-During each epoch, noisy images are iteratively fed to the U-Net model along with their corresponding time steps \(t\). The model predicts noise and minimizes L1 loss (mean absolute error) in the process. This iterative adjustment helps the model learn better over multiple epochs.
+During each epoch, noisy images are iteratively fed to the U-Net model along with their corresponding time steps $t$. The model predicts noise and minimizes L1 loss (mean absolute error) in the process. This iterative adjustment helps the model learn better over multiple epochs.
 x??
 
 ---
@@ -143,15 +143,15 @@ noise_scheduler = DDIMScheduler(num_train_timesteps=1000)
 x??
 
 #### Forward Diffusion Process
-Background context: The forward diffusion process involves transitioning from clean images to noisy images. As the variable \( t \) increases from 0 to 1,000, the weight on the clean image decreases and the weight on the noise increases.
+Background context: The forward diffusion process involves transitioning from clean images to noisy images. As the variable $t$ increases from 0 to 1,000, the weight on the clean image decreases and the weight on the noise increases.
 
 :p What is the purpose of the forward diffusion process in generating images?
 ??x
-The purpose of the forward diffusion process is to gradually add noise to clean images by transitioning from \( x_0 \) (the initial clean image) to \( x_T \) (random noise). This process allows for the generation of transitional noisy images, which are a weighted sum of the clean image and the added noise.
+The purpose of the forward diffusion process is to gradually add noise to clean images by transitioning from $x_0 $(the initial clean image) to $ x_T$ (random noise). This process allows for the generation of transitional noisy images, which are a weighted sum of the clean image and the added noise.
 
 :p How does the weight on the clean image change during the forward diffusion process?
 ??x
-During the forward diffusion process, as the time step \( t \) increases from 0 to 1,000, the weight on the clean image decreases. Conversely, the weight on the noise gradually increases, reflecting the transition from a clean image to random noise.
+During the forward diffusion process, as the time step $t$ increases from 0 to 1,000, the weight on the clean image decreases. Conversely, the weight on the noise gradually increases, reflecting the transition from a clean image to random noise.
 
 ```python
 # Example of adding noise at different time steps
@@ -161,11 +161,11 @@ noisy_images_200 = noise_scheduler.add_noise(clean_images, noise, timesteps)
 x??
 
 #### Generating Noisy Images
-Background context: The `add_noise()` method in the `DDIMScheduler` class combines a clean image with noise based on a specified time step \( t \). This weighted sum produces noisy images that are progressively more distorted.
+Background context: The `add_noise()` method in the `DDIMScheduler` class combines a clean image with noise based on a specified time step $t$. This weighted sum produces noisy images that are progressively more distorted.
 
 :p How is a noisy image generated using the `DDIMScheduler.add_noise()` method?
 ??x
-A noisy image is generated by combining a clean image with noise using the `add_noise()` method. The weight of each component (clean image and noise) depends on the specified time step \( t \). As \( t \) increases, the weight on the noise increases while the weight on the clean image decreases.
+A noisy image is generated by combining a clean image with noise using the `add_noise()` method. The weight of each component (clean image and noise) depends on the specified time step $t $. As $ t$ increases, the weight on the noise increases while the weight on the clean image decreases.
 
 :p What are the steps to generate noisy images at specific time steps?
 ??x
@@ -187,7 +187,7 @@ Background context: The `DDIMScheduler` class is used to generate transitional n
 
 :p How are transitional noisy images visualized using the `DDIMScheduler`?
 ??x
-Transitional noisy images are visualized by generating a sequence of noisy images at different time steps and then concatenating them with the original clean images. The `DDIMScheduler.add_noise()` method is used to produce these noisy images, which are progressively more distorted as \( t \) increases.
+Transitional noisy images are visualized by generating a sequence of noisy images at different time steps and then concatenating them with the original clean images. The `DDIMScheduler.add_noise()` method is used to produce these noisy images, which are progressively more distorted as $t$ increases.
 
 :p What code snippet is used to generate and display transitional noisy images?
 ??x
@@ -239,14 +239,15 @@ The four columns in the figure represent:
 ??x
 The forward diffusion process involves adding increasing amounts of Gaussian noise to clean images over multiple time steps. This process helps in training models to denoise images effectively by simulating real-world scenarios where data can degrade or be corrupted over time.
 
-For example, consider an image \(I\) at time step 0:
-\[ I_0 = I \]
-At each subsequent time step \(t\), noise is added according to a Gaussian distribution:
-\[ I_t = I_{t-1} + \epsilon \cdot N(0, \sigma^2) \]
+For example, consider an image $I$ at time step 0:
+$$I_0 = I$$
+
+At each subsequent time step $t$, noise is added according to a Gaussian distribution:
+$$I_t = I_{t-1} + \epsilon \cdot N(0, \sigma^2)$$
 
 Where:
-- \(\epsilon\) is the scale parameter for adding noise.
-- \(N(0, \sigma^2)\) represents a normally distributed random variable with mean 0 and variance \(\sigma^2\).
+- $\epsilon$ is the scale parameter for adding noise.
+- $N(0, \sigma^2)$ represents a normally distributed random variable with mean 0 and variance $\sigma^2$.
 
 This process can be visualized as follows:
 
@@ -416,9 +417,9 @@ The steps are as follows:
 5. Concatenate the attention vectors from the four heads.
 
 Formula: 
-\[ \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V \]
+$$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
 
-Where \( d_k \) represents the dimension of the key vector K.
+Where $d_k$ represents the dimension of the key vector K.
 ??x
 
 ---
@@ -548,15 +549,15 @@ The contracting path captures local features, the bottleneck path extracts deep 
 ---
 
 #### Noisy Image Representation
-Background context: In the process of denoising images, a noisy image at any time step \( t \), denoted as \( x_t \), can be represented as a weighted sum of a clean image, \( x_0 \), and standard normally distributed random noise, \( \epsilon \). This representation is given by:
-\[ x_t = (1 - \frac{t}{T})x_0 + \sqrt{\frac{2t}{T}}\epsilon \]
-where the weight assigned to the clean image decreases as time step \( t \) progresses from 0 to \( T \), and the weight assigned to the random noise increases.
+Background context: In the process of denoising images, a noisy image at any time step $t $, denoted as $ x_t $, can be represented as a weighted sum of a clean image,$ x_0 $, and standard normally distributed random noise,$\epsilon$. This representation is given by:
+$$x_t = (1 - \frac{t}{T})x_0 + \sqrt{\frac{2t}{T}}\epsilon$$where the weight assigned to the clean image decreases as time step $ t $ progresses from 0 to $ T$, and the weight assigned to the random noise increases.
 
 :p How is a noisy image represented in terms of the clean image and noise?
 ??x
-The representation of a noisy image at any time step \( t \) combines the clean image with random noise, weighted by their respective factors. Specifically:
-\[ x_t = (1 - \frac{t}{T})x_0 + \sqrt{\frac{2t}{T}}\epsilon \]
-This equation ensures that as \( t \) increases from 0 to \( T \), the clean image's weight decreases, and the noise’s weight increases.
+The representation of a noisy image at any time step $t$ combines the clean image with random noise, weighted by their respective factors. Specifically:
+$$x_t = (1 - \frac{t}{T})x_0 + \sqrt{\frac{2t}{T}}\epsilon$$
+
+This equation ensures that as $t $ increases from 0 to$T$, the clean image's weight decreases, and the noise’s weight increases.
 ??x
 ---
 #### Time Embedding for Denoising U-Net
@@ -564,10 +565,11 @@ Background context: To incorporate the time step information into the denoising 
 
 :p What method is used to embed time steps for the U-Net?
 ??x
-The time steps are embedded using a positional encoding technique that involves sine and cosine functions. Specifically, for each time step \( t \) in the range [0, T], an embedding vector of 128 values is created as follows:
-\[ PE_{(pos, 2i)} = \sin(\frac{pos}{10000^{2i/d}}) \]
-\[ PE_{(pos, 2i+1)} = \cos(\frac{pos}{10000^{2i/d}}) \]
-where \( pos \) is the position index of the time step and \( d \) is the dimensionality (128 in this case).
+The time steps are embedded using a positional encoding technique that involves sine and cosine functions. Specifically, for each time step $t$ in the range [0, T], an embedding vector of 128 values is created as follows:
+$$PE_{(pos, 2i)} = \sin(\frac{pos}{10000^{2i/d}})$$
+$$
+
+PE_{(pos, 2i+1)} = \cos(\frac{pos}{10000^{2i/d}})$$where $ pos $ is the position index of the time step and $ d$ is the dimensionality (128 in this case).
 
 This embedding vector is then expanded to match the dimensions of image features at various layers. For instance, if the first down block processes features with shape (128, 64, 64), the time embeddings are broadcasted to the same shape before being added to the features.
 ??x

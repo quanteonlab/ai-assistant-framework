@@ -253,37 +253,37 @@ x??
 ---
 
 #### Context Vector Calculation in Self-Attention
-In the example depicted (Figure 3.7), for each input element \( x(i) \) in a sequence, we aim to compute a context vector \( z(i) \). The importance or contribution of each input element is determined by attention weights \( \alpha_{ij} \), which are calculated with respect to the specific input element and all other inputs.
+In the example depicted (Figure 3.7), for each input element $x(i)$ in a sequence, we aim to compute a context vector $z(i)$. The importance or contribution of each input element is determined by attention weights $\alpha_{ij}$, which are calculated with respect to the specific input element and all other inputs.
 :p How do we determine the importance or contribution of each input element in self-attention?
 ??x
-The importance or contribution of each input element is determined by the attention weights \( \alpha_{ij} \). These weights are computed based on the specific input element and all other elements in the sequence, allowing for a weighted combination of information from all parts of the input.
+The importance or contribution of each input element is determined by the attention weights $\alpha_{ij}$. These weights are computed based on the specific input element and all other elements in the sequence, allowing for a weighted combination of information from all parts of the input.
 x??
 
 ---
 
 #### Example Input Sequence in Self-Attention
-Consider an example input text "Your journey starts with one step." In this case, each element \( x(i) \) corresponds to a d-dimensional embedding vector representing a specific token. For instance, the token "journey" would be represented by an embedding vector.
+Consider an example input text "Your journey starts with one step." In this case, each element $x(i)$ corresponds to a d-dimensional embedding vector representing a specific token. For instance, the token "journey" would be represented by an embedding vector.
 :p What does an example input sequence in self-attention typically look like?
 ??x
-An example input sequence in self-attention typically looks like a sentence where each element \( x(i) \) is a d-dimensional embedding vector representing a specific token. For instance, the input "Your journey starts with one step." would have each word ("Your", "journey", "starts", "with", "one", "step") represented by an embedding vector.
+An example input sequence in self-attention typically looks like a sentence where each element $x(i)$ is a d-dimensional embedding vector representing a specific token. For instance, the input "Your journey starts with one step." would have each word ("Your", "journey", "starts", "with", "one", "step") represented by an embedding vector.
 x??
 
 ---
 
 #### Computing Attention Weights
-In self-attention, attention weights \( \alpha_{ij} \) are calculated to determine the importance of each input element when computing a context vector for another element. This involves comparing and combining information from all elements in the sequence.
+In self-attention, attention weights $\alpha_{ij}$ are calculated to determine the importance of each input element when computing a context vector for another element. This involves comparing and combining information from all elements in the sequence.
 :p How are attention weights computed in self-attention?
 ??x
-Attention weights \( \alpha_{ij} \) are computed by comparing and combining information from all elements in the sequence to determine their importance when computing a context vector. The exact computation is typically done using dot products or other similarity measures between embeddings of different input elements.
+Attention weights $\alpha_{ij}$ are computed by comparing and combining information from all elements in the sequence to determine their importance when computing a context vector. The exact computation is typically done using dot products or other similarity measures between embeddings of different input elements.
 x??
 
 ---
 
 #### Context Vector for Specific Element
-For instance, consider the embedding vector \( x(2) \) corresponding to "journey" and the context vector \( z(2) \). The context vector \( z(2) \) is an embedding that contains information about \( x(2) \) and all other input elements \( x(1) \) to \( x(T) \).
+For instance, consider the embedding vector $x(2)$ corresponding to "journey" and the context vector $z(2)$. The context vector $ z(2)$is an embedding that contains information about $ x(2)$and all other input elements $ x(1)$to $ x(T)$.
 :p What does a context vector in self-attention represent?
 ??x
-A context vector in self-attention represents an enriched embedding vector that combines information from the specific element and all other elements in the sequence. For example, for "journey," the context vector \( z(2) \) includes information about "journey" as well as all surrounding words.
+A context vector in self-attention represents an enriched embedding vector that combines information from the specific element and all other elements in the sequence. For example, for "journey," the context vector $z(2)$ includes information about "journey" as well as all surrounding words.
 x??
 
 ---
@@ -395,9 +395,9 @@ x??
 #### Computing Context Vector for a Query
 Background context explaining the concept. After obtaining normalized attention weights, the next step is to compute the context vector by multiplying each input vector with its corresponding weight and then summing these weighted vectors.
 
-:p How do you calculate the context vector \( z(2) \)?
+:p How do you calculate the context vector $z(2)$?
 ??x
-To calculate the context vector \( z(2) \), we multiply each input token vector \( x(i) \) by its corresponding attention weight and sum the results. This is a weighted combination of all input vectors based on their importance as determined by the attention weights.
+To calculate the context vector $z(2)$, we multiply each input token vector $ x(i)$ by its corresponding attention weight and sum the results. This is a weighted combination of all input vectors based on their importance as determined by the attention weights.
 
 ```python
 query = inputs[1]  # 2nd input token is the query
@@ -530,27 +530,27 @@ This step ensures that our self-attention implementation matches known values, c
 x??
 
 #### Introduction to Trainable Weights in Self-Attention
-Background context: In this section, we are enhancing our understanding of self-attention mechanisms used in language models like GPT. The goal is to implement a more sophisticated version that includes trainable weight matrices \(W_q\), \(W_k\), and \(W_v\). These weights allow the model to learn from data and improve its performance on specific tasks.
+Background context: In this section, we are enhancing our understanding of self-attention mechanisms used in language models like GPT. The goal is to implement a more sophisticated version that includes trainable weight matrices $W_q $, $ W_k $, and$ W_v$. These weights allow the model to learn from data and improve its performance on specific tasks.
 
 :p What are the main differences between the self-attention mechanism with trainable weights and the basic attention mechanism?
 ??x
 The key differences include:
-1. **Trainable Weight Matrices**: Introducing weight matrices \(W_q\), \(W_k\), and \(W_v\) that can be updated during model training.
+1. **Trainable Weight Matrices**: Introducing weight matrices $W_q $, $ W_k $, and$ W_v$ that can be updated during model training.
 2. **More Sophisticated Computation**: These weight matrices are used to project the input tokens into query, key, and value vectors.
 
 These changes enable the model to learn more complex relationships between words in a sentence, making it better suited for various language tasks.
 
-:p What is the purpose of the trainable weight matrices \(W_q\), \(W_k\), and \(W_v\)?
+:p What is the purpose of the trainable weight matrices $W_q $, $ W_k $, and$ W_v$?
 ??x
 The purpose of these matrices is to allow the attention mechanism to learn context-specific weights. By adjusting during training, they help the model produce more effective context vectors that capture meaningful relationships between words.
 
 :p What does Figure 3.14 illustrate in terms of self-attention with trainable weight matrices?
 ??x
-Figure 3.14 illustrates the first step of computing query (q), key (k), and value (v) vectors for input elements \(x\). Specifically, it shows how these vectors are obtained through matrix multiplications involving the input tokens and the weight matrices.
+Figure 3.14 illustrates the first step of computing query (q), key (k), and value (v) vectors for input elements $x$. Specifically, it shows how these vectors are obtained through matrix multiplications involving the input tokens and the weight matrices.
 
 :p How do we compute the query vector in this context?
 ??x
-The query vector is computed by multiplying the second input element \(x(2)\) with the weight matrix \(W_q\).
+The query vector is computed by multiplying the second input element $x(2)$ with the weight matrix $W_q$.
 
 Example code:
 ```python
@@ -561,7 +561,7 @@ In this example, `@` denotes matrix multiplication.
 
 :p What is the role of the key and value vectors in the self-attention mechanism?
 ??x
-The key and value vectors are computed similarly to the query vector but using different weight matrices \(W_k\) and \(W_v\). The keys help identify which parts of the input are relevant, while the values carry the actual information that is used to compute the context.
+The key and value vectors are computed similarly to the query vector but using different weight matrices $W_k $ and$W_v$. The keys help identify which parts of the input are relevant, while the values carry the actual information that is used to compute the context.
 
 :p How does the self-attention mechanism with trainable weights build on previous concepts?
 ??x
@@ -578,7 +578,7 @@ The next steps involve using these vectors to compute the attention weights, whi
 This format can be repeated for other concepts in the provided text.
 
 #### Input Dimensions and Weights Initialization
-Background context: The input dimensions and weight initialization are crucial for understanding how to set up a basic attention mechanism in neural networks, particularly in models like GPT. Here, we initialize three weight matrices \( W_{query} \), \( W_{key} \), and \( W_{value} \) with different input and output dimensions.
+Background context: The input dimensions and weight initialization are crucial for understanding how to set up a basic attention mechanism in neural networks, particularly in models like GPT. Here, we initialize three weight matrices $W_{query}$,$ W_{key}$, and $ W_{value}$ with different input and output dimensions.
 
 C/Java code or pseudocode:
 ```python
@@ -594,12 +594,12 @@ W_key   = torch.nn.Parameter(torch.rand(d_in, d_out), requires_grad=False)
 W_value = torch.nn.Parameter(torch.rand(d_in, d_out), requires_grad=False)
 ```
 
-:p What is the purpose of initializing weight matrices \( W_{query} \), \( W_{key} \), and \( W_{value} \)?
+:p What is the purpose of initializing weight matrices $W_{query}$,$ W_{key}$, and $ W_{value}$?
 ??x
 The purpose of initializing these weight matrices is to project the input vectors into a lower-dimensional space. Specifically:
-- \( W_{query} \) transforms the input vector into query vectors.
-- \( W_{key} \) transforms the input vector into key vectors.
-- \( W_{value} \) transforms the input vector into value vectors.
+- $W_{query}$ transforms the input vector into query vectors.
+- $W_{key}$ transforms the input vector into key vectors.
+- $W_{value}$ transforms the input vector into value vectors.
 
 These transformations are essential for computing attention scores and weights in the attention mechanism. :x?
 
@@ -621,10 +621,8 @@ print(query_2)
 
 :p How are the query, key, and value vectors computed?
 ??x
-The query, key, and value vectors are computed by multiplying the input vector \( x \) with their respective weight matrices:
-- Query: \( q = x @ W_{query} \)
-- Key: \( k = x @ W_{key} \)
-- Value: \( v = x @ W_{value} \)
+The query, key, and value vectors are computed by multiplying the input vector $x$ with their respective weight matrices:
+- Query: $q = x @ W_{query}$- Key:$ k = x @ W_{key}$- Value:$ v = x @ W_{value}$
 
 This step projects the input vectors into a lower-dimensional space, which is necessary for computing attention scores and weights. :x?
 
@@ -642,12 +640,12 @@ print(attn_scores_2)
 
 :p How are the attention scores computed?
 ??x
-The attention scores are computed by taking the dot product of the query vector \( q \) with all key vectors \( k \):
-\[ \text{attn\_scores} = q @ K^T \]
+The attention scores are computed by taking the dot product of the query vector $q $ with all key vectors$k$:
+$$\text{attn\_scores} = q @ K^T$$
 
 Where:
-- \( K \) is a matrix whose columns are the key vectors.
-- \( T \) denotes the transpose operation.
+- $K$ is a matrix whose columns are the key vectors.
+- $T$ denotes the transpose operation.
 
 This computation gives us a vector of attention scores indicating how much each input should contribute to the final context vector. :x?
 
@@ -667,11 +665,11 @@ print(attn_weights_2)
 :p How are the attention weights computed?
 ??x
 The attention weights are computed by normalizing the attention scores using the softmax function:
-\[ \alpha = \text{softmax}\left(\frac{\text{attn\_scores}}{\sqrt{d_k}}\right) \]
+$$\alpha = \text{softmax}\left(\frac{\text{attn\_scores}}{\sqrt{d_k}}\right)$$
 
 Where:
-- \( d_k \) is the embedding dimension of the keys.
-- The division by \( \sqrt{d_k} \) scales down the attention scores to avoid numerical issues during backpropagation.
+- $d_k$ is the embedding dimension of the keys.
+- The division by $\sqrt{d_k}$ scales down the attention scores to avoid numerical issues during backpropagation.
 
 This step ensures that the attention weights sum up to 1, making them suitable for weighting the corresponding values. :x?
 
@@ -690,7 +688,7 @@ print(attn_scores_2)
 :p What is the rationale behind scaled-dot product attention?
 ??x
 The rationale behind scaled-dot product attention is to improve training performance by avoiding small gradients. Specifically:
-- Scaling the dot products by \( \frac{1}{\sqrt{d_k}} \) helps in normalizing these scores.
+- Scaling the dot products by $\frac{1}{\sqrt{d_k}}$ helps in normalizing these scores.
 - This scaling prevents large dot products from resulting in very small gradients during backpropagation, which can slow down learning or cause training to stagnate.
 
 This step ensures that the attention mechanism remains numerically stable and effective. :x?
@@ -776,8 +774,7 @@ Explanation on why scaling by the square root is important in self-attention mec
 Scaling the attention scores by the square root of the embedding dimension ensures that the dot product between queries and keys remains stable as the dimensions increase. This helps prevent vanishing or exploding gradients, which can occur during backpropagation.
 
 Mathematically:
-\[ \text{Scaled Attention Score} = \frac{\text{queries} @ \text{keys}^T}{\sqrt{d_k}} \]
-where \( d_k \) is the embedding dimension of keys (or equivalently queries).
+$$\text{Scaled Attention Score} = \frac{\text{queries} @ \text{keys}^T}{\sqrt{d_k}}$$where $ d_k$ is the embedding dimension of keys (or equivalently queries).
 
 This scaling helps maintain a well-behaved attention score, making training more stable and efficient.
 x??
@@ -1135,7 +1132,7 @@ x??
 Dropout is a regularization technique commonly used during training to prevent overfitting by randomly ignoring (dropping out) hidden units. In the context of causal attention within transformer models like GPT, dropout can be applied after computing the attention weights to reduce overfitting.
 :p How does applying dropout after calculating attention scores in causal attention mechanism work?
 ??x
-Applying dropout after calculating the attention scores helps prevent the model from relying too heavily on specific weights. During training, half of the elements in the attention weight matrix are randomly set to zero (with a 50% dropout rate). To compensate for this reduction in active elements, the remaining non-zero values are scaled up by a factor of \( \frac{1}{\text{dropout\_rate}} \).
+Applying dropout after calculating the attention scores helps prevent the model from relying too heavily on specific weights. During training, half of the elements in the attention weight matrix are randomly set to zero (with a 50% dropout rate). To compensate for this reduction in active elements, the remaining non-zero values are scaled up by a factor of $\frac{1}{\text{dropout\_rate}}$.
 
 For example, if the dropout rate is 50%, then each element that remains will be multiplied by 2 to maintain the overall balance.
 
@@ -1158,7 +1155,7 @@ print(result)
 ```
 
 In this code:
-- A tensor of size \(6 \times 6\) filled with ones is created.
+- A tensor of size $6 \times 6$ filled with ones is created.
 - Dropout with a rate of 0.5 (meaning half of the elements are set to zero) is applied.
 
 The output will be approximately half of the values zeroed out, and the remaining values scaled up by 2.
@@ -1179,7 +1176,7 @@ In the context of causal attention within transformer models, dropout can also b
 
 :p How does applying dropout to an attention weight matrix work?
 ??x
-Applying dropout to the attention weight matrix involves setting a certain percentage of elements randomly to zero. For instance, with a 50% dropout rate, half of the elements in the matrix are set to zero. To compensate for this reduction in active elements, the remaining non-zero values are scaled up by a factor of \( \frac{1}{\text{dropout\_rate}} \), which is 2 in this case.
+Applying dropout to the attention weight matrix involves setting a certain percentage of elements randomly to zero. For instance, with a 50% dropout rate, half of the elements in the matrix are set to zero. To compensate for this reduction in active elements, the remaining non-zero values are scaled up by a factor of $\frac{1}{\text{dropout\_rate}}$, which is 2 in this case.
 
 Here's an example using PyTorch:
 

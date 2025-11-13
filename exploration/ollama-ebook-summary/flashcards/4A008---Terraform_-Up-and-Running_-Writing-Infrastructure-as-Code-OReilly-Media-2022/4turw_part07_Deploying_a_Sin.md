@@ -234,7 +234,7 @@ Terraform parses dependencies, builds a dependency graph from them, and uses tha
 Terraform manages the creation order by parsing dependencies and building a dependency graph. This graph helps in determining which resources need to be created first based on their interdependencies. For instance, an EC2 Instance might reference a Security Group ID, so Terraform will create the security group before the EC2 Instance.
 
 ```
-$ terraform graph
+$terraform graph
 digraph {
 compound = "true"
 newrank = "true"
@@ -285,8 +285,7 @@ Terraform's `graph` command can generate a DOT file, which can be visualized usi
 Terraform uses the `terraform graph` command to generate a DOT file that represents the dependency relationships between resources. This DOT file can then be rendered into a human-readable graph diagram, helping you understand the sequence in which Terraform will create or modify resources.
 
 For example:
-```
-$ terraform graph
+```$ terraform graph
 digraph {
 compound = "true"
 newrank = "true"
@@ -360,7 +359,7 @@ Running servers in a public subnet exposes them directly to the public internet,
 Background context explaining the concept. The text provides instructions on how to test if the new EC2 instance is functioning correctly by making an HTTP request using `curl`.
 :p How can you verify that your EC2 instance is working?
 ??x
-You can verify that your EC2 instance is working by sending an HTTP request to its public IP address and port 8080, as shown in the example: `$ curl http://<EC2_INSTANCE_PUBLIC_IP>:8080`. If it returns "Hello, World", the web server is running successfully.
+You can verify that your EC2 instance is working by sending an HTTP request to its public IP address and port 8080, as shown in the example: `$curl http://<EC2_INSTANCE_PUBLIC_IP>:8080`. If it returns "Hello, World", the web server is running successfully.
 ??x
 
 ---
@@ -614,7 +613,7 @@ To use a server port variable in a User Data script:
 user_data  = <<-EOF
               #!/bin/bash
               echo "Hello, World" > index.html
-              nohup busybox httpd -f -p ${var.server_port} &
+              nohup busybox httpd -f -p${var.server_port} &
               EOF
 ```
 x??

@@ -295,37 +295,36 @@ In an environment with trusted processes, one process can boost its ticket value
 
 #### Lottery Scheduling Unfairness
 
-In lottery scheduling, fairness can be quantified using a metric called unfairness \( U \). This metric is defined as the time at which the first job completes divided by the time that the second job completes. A scheduler that achieves perfect fairness would have an average unfairness of 1.
+In lottery scheduling, fairness can be quantified using a metric called unfairness $U$. This metric is defined as the time at which the first job completes divided by the time that the second job completes. A scheduler that achieves perfect fairness would have an average unfairness of 1.
 
-:p What does the unfairness metric \( U \) measure in lottery scheduling?
+:p What does the unfairness metric $U$ measure in lottery scheduling?
 ??x
-The unfairness metric \( U \) measures how balanced or fair the completion times are between jobs under a lottery scheduling system. A value close to 1 indicates that both jobs complete at approximately the same time, suggesting fairness.
+The unfairness metric $U$ measures how balanced or fair the completion times are between jobs under a lottery scheduling system. A value close to 1 indicates that both jobs complete at approximately the same time, suggesting fairness.
 x??
 
 ---
 
 #### Example of Lottery Scheduling
 
-Consider two jobs with identical parameters: each has 100 tickets and the same run time \( R \). The goal is for both jobs to finish around the same time. We define a metric called unfairness \( U \), which compares the completion times of the first and second job.
+Consider two jobs with identical parameters: each has 100 tickets and the same run time $R $. The goal is for both jobs to finish around the same time. We define a metric called unfairness $ U$, which compares the completion times of the first and second job.
 
-:p How do you calculate the unfairness \( U \) in this scenario?
+:p How do you calculate the unfairness $U$ in this scenario?
 ??x
-The unfairness \( U \) is calculated as:
-\[
-U = \frac{\text{Time Job 1 completes}}{\text{Time Job 2 completes}}
-\]
-For example, if \( R = 10 \), and Job 1 finishes at time 10 while Job 2 finishes at time 20, then \( U = \frac{10}{20} = 0.5 \). A scheduler is considered fair when the average \( U \) approaches 1.
+The unfairness $U$ is calculated as:
+$$U = \frac{\text{Time Job 1 completes}}{\text{Time Job 2 completes}}$$
+
+For example, if $R = 10 $, and Job 1 finishes at time 10 while Job 2 finishes at time 20, then $ U = \frac{10}{20} = 0.5 $. A scheduler is considered fair when the average$ U$ approaches 1.
 x??
 
 ---
 
 #### Lottery Scheduling Simulation Results
 
-A simulation was performed to study the unfairness of lottery scheduling as a function of job length \( R \), varying from 1 to 1000 over thirty trials. The results show that for shorter job lengths, the average unfairness can be quite severe. Only when jobs run for a significant number of time slices does the scheduler approach ideal fairness.
+A simulation was performed to study the unfairness of lottery scheduling as a function of job length $R$, varying from 1 to 1000 over thirty trials. The results show that for shorter job lengths, the average unfairness can be quite severe. Only when jobs run for a significant number of time slices does the scheduler approach ideal fairness.
 
 :p What did the simulation reveal about lottery scheduling's performance?
 ??x
-The simulation revealed that for short job lengths \( R \), the average unfairness is high, indicating poor fairness in the scheduler. As the job length increases and more time slices are involved, the unfairness metric approaches 1, suggesting improved fairness.
+The simulation revealed that for short job lengths $R$, the average unfairness is high, indicating poor fairness in the scheduler. As the job length increases and more time slices are involved, the unfairness metric approaches 1, suggesting improved fairness.
 x??
 
 ---
@@ -563,11 +562,9 @@ x??
 Background context: In the Completely Fair Scheduler (CFS), process priority is managed using a mechanism called "nice levels." The nice level can range from -20 to +19, with 0 as the default. Positive values imply lower priority, while negative values imply higher priority. These priorities are translated into weights that affect how much CPU time each process receives.
 
 Relevant formula: 
-\[ \text{timeslice}_k = \frac{\text{weight}_k}{\sum_{i=0}^{n-1}\text{weight}_i} \cdot \text{schedlatency} \]
-
-:p What is the timeslice calculation in CFS based on?
+$$\text{timeslice}_k = \frac{\text{weight}_k}{\sum_{i=0}^{n-1}\text{weight}_i} \cdot \text{schedlatency}$$:p What is the timeslice calculation in CFS based on?
 ??x
-The timeslice for a process \( k \) is calculated as its weight divided by the sum of weights of all processes, multiplied by the scheduling latency. This accounts for the priority differences among processes.
+The timeslice for a process $k$ is calculated as its weight divided by the sum of weights of all processes, multiplied by the scheduling latency. This accounts for the priority differences among processes.
 
 ```c
 #include <stdio.h>
@@ -602,14 +599,12 @@ x??
 
 #### Virtual Run Time Calculation in CFS
 
-Background context: The virtual runtime (\(vruntime_i\)) is a measure used by the Completely Fair Scheduler (CFS) to track the accumulated time each process has been scheduled. This helps in maintaining fairness among processes, especially when different nice levels are assigned.
+Background context: The virtual runtime ($vruntime_i$) is a measure used by the Completely Fair Scheduler (CFS) to track the accumulated time each process has been scheduled. This helps in maintaining fairness among processes, especially when different nice levels are assigned.
 
 Relevant formula:
-\[ \text{vruntime}_i = \text{vruntime}_i + \frac{\text{weight}_0}{\text{weight}_i} \cdot \text{runtime}_i \]
-
-:p How does CFS calculate the virtual runtime for a process?
+$$\text{vruntime}_i = \text{vruntime}_i + \frac{\text{weight}_0}{\text{weight}_i} \cdot \text{runtime}_i$$:p How does CFS calculate the virtual runtime for a process?
 ??x
-The virtual runtime for a process \( i \) is updated by adding to its current value, a fraction of the actual runtime that has been accrued. The fraction is inversely proportional to the weight of the process.
+The virtual runtime for a process $i$ is updated by adding to its current value, a fraction of the actual runtime that has been accrued. The fraction is inversely proportional to the weight of the process.
 
 ```java
 public class Process {
@@ -624,7 +619,7 @@ public class Process {
 }
 ```
 
-In the example, if process A has a weight of 3121 and runs for some duration, its \(vruntime\) will be updated more slowly compared to process B, which has a default weight of 1024.
+In the example, if process A has a weight of 3121 and runs for some duration, its $vruntime$ will be updated more slowly compared to process B, which has a default weight of 1024.
 
 x??
 
@@ -645,7 +640,7 @@ Red-black trees maintain balance through a set of rules:
 4. If a node is red, both its children are black.
 5. For each node, all simple paths from the node to descendant leaves contain the same number of black nodes.
 
-This balance ensures that operations such as insertion and lookup remain efficient with a time complexity of \(O(\log n)\).
+This balance ensures that operations such as insertion and lookup remain efficient with a time complexity of $O(\log n)$.
 
 ```java
 public class RBNode {

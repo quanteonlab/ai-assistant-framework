@@ -396,7 +396,7 @@ Background context: After confirming that all components are healthy, you can te
 ??x
 Use `curl` to access the ALB’s DNS name. The command should look like this:
 ```sh
-$ curl http://terraform-asg-example-123.us-east-2.elb.amazonaws.com
+$curl http://terraform-asg-example-123.us-east-2.elb.amazonaws.com
 ```
 You should see a response like "Hello, World". This indicates that traffic is being routed correctly to one of your EC2 Instances.
 x??
@@ -437,8 +437,7 @@ Background context: When experimenting with Terraform, it is important to remove
 ??x
 The `terraform destroy` command instructs Terraform to delete all managed infrastructure resources defined in your Terraform configuration files. Before executing the destruction, Terraform will generate a plan showing what resources will be destroyed and prompt you for confirmation to proceed.
 ```sh
-# Example of running terraform destroy
-$ terraform destroy
+# Example of running terraform destroy$ terraform destroy
 
 Terraform will perform the following actions:
   # aws_autoscaling_group.example will be destroyed
@@ -459,7 +458,7 @@ The purpose of running the `terraform plan` command is to generate a detailed re
 
 ```sh
 # Example of running terraform plan
-$ terraform plan
+$terraform plan
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
   + create
@@ -524,8 +523,7 @@ Background context: In a larger organization, different teams might be responsib
 Workspace isolation in Terraform allows you to maintain separate state files for different development environments or teams. This prevents conflicts when multiple teams are working on the same infrastructure configuration and helps in maintaining a clean, organized project structure.
 
 ```sh
-# Example of creating a new workspace
-$ terraform workspace new dev
+# Example of creating a new workspace$ terraform workspace new dev
 
 Successfully switched to "dev" workspace.
 ```
@@ -542,7 +540,7 @@ Terraform manages state files across multiple projects by default storing them i
 
 ```sh
 # Example of setting a custom state backend
-$ terraform init -backend-config="bucket=example-bucket" -backend-config="key=dev/terraform.tfstate"
+$terraform init -backend-config="bucket=example-bucket" -backend-config="key=dev/terraform.tfstate"
 ```
 x??
 
@@ -819,8 +817,7 @@ Example output:
 Successfully configured the backend "s3".
 ```
 
-```bash
-$ terraform init
+```bash$ terraform init
 Initializing the backend...
 Acquiring state lock. This may take a few moments...
 Do you want to copy existing state to the new backend?

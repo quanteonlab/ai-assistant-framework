@@ -728,7 +728,7 @@ The key tasks are:
 Code examples:
 ```bash
 // Example command to run vmstat
-$ vmstat 1 5
+$vmstat 1 5
 
 # The output will show memory, CPU, swap, IO statistics over time
 ```
@@ -870,9 +870,9 @@ x??
 Background context explaining the role of cache management in virtual memory systems. The primary goal is to minimize cache misses and maximize hits, thereby reducing average memory access time (AMAT).
 
 The formula for AMAT is given as:
-\[ \text{AMAT} = T_M + (P_{\text{miss}} \cdot T_D) \]
+$$\text{AMAT} = T_M + (P_{\text{miss}} \cdot T_D)$$
 
-Where \(T_M\) represents the cost of accessing memory, \(T_D\) the cost of accessing disk, and \(P_{\text{miss}}\) the probability of not finding data in the cache.
+Where $T_M $ represents the cost of accessing memory,$T_D $ the cost of accessing disk, and$ P_{\text{miss}}$ the probability of not finding data in the cache.
 
 :p What is the goal of cache management in virtual memory systems?
 ??x
@@ -899,15 +899,14 @@ x??
 Background context explaining how to calculate the hit rate based on the number of cache hits and misses.
 
 Given the hit rate is the percentage of references found in memory, it can be calculated as follows:
-\[ \text{Hit Rate} = \frac{\text{Number of Hits}}{\text{Total Number of References}} \times 100\% \]
+$$\text{Hit Rate} = \frac{\text{Number of Hits}}{\text{Total Number of References}} \times 100\%$$
 
 In the example provided, there are 9 hits out of 10 references, resulting in a hit rate of 90%.
 
 :p How is the hit rate calculated?
 ??x
 The hit rate is calculated by dividing the number of cache hits by the total number of memory references and multiplying by 100%. For the example provided, this results in:
-\[ \text{Hit Rate} = \frac{9}{10} \times 100\% = 90\% \]
-x??
+$$\text{Hit Rate} = \frac{9}{10} \times 100\% = 90\%$$x??
 
 ---
 
@@ -915,15 +914,16 @@ x??
 Background context explaining how cache misses increase memory access time.
 
 Cache misses result in additional costs because the data must be fetched from disk. The cost of a cache miss is represented by:
-\[ \text{Cost of Cache Miss} = T_M + (P_{\text{miss}} \cdot T_D) \]
+$$\text{Cost of Cache Miss} = T_M + (P_{\text{miss}} \cdot T_D)$$
 
-Where \(T_M\) is the time to access memory, and \(T_D\) is the time to access disk.
+Where $T_M $ is the time to access memory, and$T_D$ is the time to access disk.
 
 :p What additional cost does a cache miss incur?
 ??x
 A cache miss incurs an additional cost of fetching data from disk, represented by:
-\[ T_M + (P_{\text{miss}} \cdot T_D) \]
-Where \(T_M\) is the memory access time and \(T_D\) is the disk access time.
+$$T_M + (P_{\text{miss}} \cdot T_D)$$
+
+Where $T_M $ is the memory access time and$T_D$ is the disk access time.
 x??
 
 ---
@@ -945,13 +945,12 @@ Background context: The miss rate (PMiss) is given as 0.1, which means that 10% 
 :p What is the relationship between the hit rate and miss rate?
 ??x
 The hit rate (PHit) plus the miss rate (PMiss) must equal 1.0. Given that PMiss is 0.1, we have:
-\[ \text{PHit} + 0.1 = 1.0 \]
-Thus,
-\[ \text{PHit} = 1.0 - 0.1 = 0.9 \]
+$$\text{PHit} + 0.1 = 1.0$$
+
+Thus,$$\text{PHit} = 1.0 - 0.1 = 0.9$$
 
 This means the hit rate is 90%. The relationship can be expressed by the equation:
-\[ \text{PHit} + \text{PMiss} = 1.0 \]
-x??
+$$\text{PHit} + \text{PMiss} = 1.0$$x??
 
 ---
 
@@ -960,14 +959,15 @@ Background context: The access method (AMAT) is calculated based on the cost of 
 :p How is AMAT calculated?
 ??x
 The Access Methodology (AMAT) combines the time to access memory (TM) and the time to access disk (TD), weighted by their respective probabilities. The formula for AMAT can be expressed as:
-\[ \text{AMAT} = TM + PMiss \times TD \]
+$$\text{AMAT} = TM + PMiss \times TD$$
 
-Given that \( TM = 100 \, \text{nanoseconds} \) and \( PMiss = 0.1 \), with \( TD = 10 \, \text{milliseconds} \):
-\[ \text{AMAT} = 100 \, \text{ns} + 0.1 \times 10 \, \text{ms} \]
-Since \( 10 \, \text{ms} = 10,000,000 \, \text{ns} \):
-\[ \text{AMAT} = 100 \, \text{ns} + 0.1 \times 10,000,000 \, \text{ns} \]
-\[ \text{AMAT} = 100 \, \text{ns} + 1,000,000 \, \text{ns} \]
-\[ \text{AMAT} = 1,000,100 \, \text{ns} \approx 1.0001 \, \text{ms} \]
+Given that $TM = 100 \, \text{nanoseconds}$ and $ PMiss = 0.1 $, with $ TD = 10 \, \text{milliseconds}$:
+$$\text{AMAT} = 100 \, \text{ns} + 0.1 \times 10 \, \text{ms}$$
+
+Since $10 \, \text{ms} = 10,000,000 \, \text{ns}$:
+$$\text{AMAT} = 100 \, \text{ns} + 0.1 \times 10,000,000 \, \text{ns}$$
+$$\text{AMAT} = 100 \, \text{ns} + 1,000,000 \, \text{ns}$$
+$$\text{AMAT} = 1,000,100 \, \text{ns} \approx 1.0001 \, \text{ms}$$
 
 This is approximately 1 millisecond.
 x??
@@ -1103,16 +1103,16 @@ Background context explaining how to calculate the hit rate of a cache, consider
 :p How is the hit rate calculated for a cache?
 ??x
 The hit rate for a cache can be calculated using the following formula:
-\[ \text{Hit Rate} = \frac{\text{Number of Hits}}{\text{Total Number of References (Hits + Misses)}} \]
+$$\text{Hit Rate} = \frac{\text{Number of Hits}}{\text{Total Number of References (Hits + Misses)}}$$
 
 In the provided example, with 6 hits and 5 misses, the overall hit rate is:
-\[ \text{Overall Hit Rate} = \frac{6}{6+5} = 0.545 \text{ or } 54.5\% \]
+$$\text{Overall Hit Rate} = \frac{6}{6+5} = 0.545 \text{ or } 54.5\%$$
 
 Additionally, if we want to calculate the hit rate excluding compulsory misses (first access to a page), we can subtract these from the total number of references:
-\[ \text{Adjusted Hit Rate} = \frac{\text{Number of Hits After Compulsory Misses}}{\text{Total Number of References After Compulsory Misses}} \]
+$$\text{Adjusted Hit Rate} = \frac{\text{Number of Hits After Compulsory Misses}}{\text{Total Number of References After Compulsory Misses}}$$
 
 In this case, with 3 compulsory misses (initial accesses to pages), the adjusted hit rate is:
-\[ \text{Adjusted Hit Rate} = \frac{6}{9-3+5} = \frac{6}{11} = 0.857 \text{ or } 85.7\% \]
+$$\text{Adjusted Hit Rate} = \frac{6}{9-3+5} = \frac{6}{11} = 0.857 \text{ or } 85.7\%$$
 ??x
 The answer with detailed explanations.
 ```java

@@ -8,13 +8,10 @@
 Background context: In digital signal processing, delay-line filters are used to create specific frequency responses through time delays. Each tap on a delay line provides a delayed version of the input signal, which is then scaled and summed up to form the total response function.
 
 Formula:
-\[ h(t) = \sum_{n=0}^{N} c_n \delta(t - n\tau) \]
-where \(c_n\) are scaling factors, and \(\delta(t)\) represents an impulse at time \(t\).
+$$h(t) = \sum_{n=0}^{N} c_n \delta(t - n\tau)$$where $ c_n $ are scaling factors, and $\delta(t)$ represents an impulse at time $t$.
 
 Frequency domain transfer function:
-\[ H(\omega) = \sum_{n=0}^{N} c_n e^{-in\omega\tau} \]
-
-:p What is the delay-line filter used for in digital signal processing?
+$$H(\omega) = \sum_{n=0}^{N} c_n e^{-in\omega\tau}$$:p What is the delay-line filter used for in digital signal processing?
 ??x
 The delay-line filter is used to create a specific frequency response by using time delays and scaling factors. Each tap on the delay line represents an impulse that is delayed by a certain amount of time, which can be combined to produce a desired output.
 x??
@@ -25,11 +22,10 @@ x??
 Background context: Windowed sinc filters are used to separate different bands of frequencies in a signal. They are popular because they can effectively remove high-frequency noise while preserving low-frequency signals.
 
 Formula for the sinc function:
-\[ \int_{-\infty}^{\infty} d\omega e^{-i\omega t} \text{rect}(\omega) = \frac{\sin(\pi t / 2)}{\pi t / 2} \]
+$$\int_{-\infty}^{\infty} d\omega e^{-i\omega t} \text{rect}(\omega) = \frac{\sin(\pi t / 2)}{\pi t / 2}$$
 
 Filter response in time domain:
-\[ h[i] = \frac{\sin(2\pi \omega_c (i - M/2))}{\pi (i - M/2)}, \quad 0 \leq t \leq M \]
-where \(M\) is the number of points, and \(\omega_c\) is the cutoff frequency.
+$$h[i] = \frac{\sin(2\pi \omega_c (i - M/2))}{\pi (i - M/2)}, \quad 0 \leq t \leq M$$where $ M $ is the number of points, and $\omega_c$ is the cutoff frequency.
 
 :p What is the sinc filter used for in digital signal processing?
 ??x
@@ -39,19 +35,18 @@ x??
 ---
 
 #### Rectangular Function and Its Fourier Transform
-Background context: The rectangular function \(\text{rect}(\omega)\) is constant within a finite frequency interval, representing an ideal low-pass filter that passes all frequencies below a cutoff frequency \(\omega_c\) and blocks higher frequencies.
+Background context: The rectangular function $\text{rect}(\omega)$ is constant within a finite frequency interval, representing an ideal low-pass filter that passes all frequencies below a cutoff frequency $\omega_c$ and blocks higher frequencies.
 
 Formula for the rect function:
-\[ \text{rect}\left( \frac{\omega}{2\omega_c} \right) = \begin{cases} 1 & \text{if } |\omega| \leq 1/2 \\ 0 & \text{otherwise} \end{cases} \]
+$$\text{rect}\left( \frac{\omega}{2\omega_c} \right) = \begin{cases} 1 & \text{if } |\omega| \leq 1/2 \\ 0 & \text{otherwise} \end{cases}$$
 
 Fourier transform of the sinc function:
-\[ \int_{-\infty}^{\infty} d\omega e^{-i\omega t} \text{rect}(\omega) = \frac{\sin(\pi t / 2)}{\pi t / 2} \]
+$$\int_{-\infty}^{\infty} d\omega e^{-i\omega t} \text{rect}(\omega) = \frac{\sin(\pi t / 2)}{\pi t / 2}$$
 
 :p What is the Fourier transform of a rectangular pulse?
 ??x
-The Fourier transform of a rectangular pulse in the frequency domain results in a sinc function in the time domain. Specifically, the Fourier transform of rect(\(\omega\)) is given by:
-\[ \int_{-\infty}^{\infty} d\omega e^{-i\omega t} \text{rect}(\omega) = \frac{\sin(\pi t / 2)}{\pi t / 2} \]
-x??
+The Fourier transform of a rectangular pulse in the frequency domain results in a sinc function in the time domain. Specifically, the Fourier transform of rect($\omega$) is given by:
+$$\int_{-\infty}^{\infty} d\omega e^{-i\omega t} \text{rect}(\omega) = \frac{\sin(\pi t / 2)}{\pi t / 2}$$x??
 
 ---
 
@@ -59,12 +54,10 @@ x??
 Background context: In practice, using a sinc function as a filter results in Gibbs overshoot, where the response has rounded corners and oscillations beyond the cutoff frequency. To mitigate this, window functions such as Hamming windows are applied to smooth out the truncation.
 
 Hamming window formula:
-\[ w[i] = 0.54 - 0.46 \cos\left( \frac{2\pi i}{M} \right) \]
+$$w[i] = 0.54 - 0.46 \cos\left( \frac{2\pi i}{M} \right)$$
 
 Combined filter kernel with Hamming window:
-\[ h[i] = \frac{\sin[2\pi \omega_c (i - M/2)]}{\pi (i - M/2)} \left[ 0.54 - 0.46 \cos\left( \frac{2\pi i}{M} \right) \right] \]
-
-:p What is Gibbs overshoot in the context of digital filters?
+$$h[i] = \frac{\sin[2\pi \omega_c (i - M/2)]}{\pi (i - M/2)} \left[ 0.54 - 0.46 \cos\left( \frac{2\pi i}{M} \right) \right]$$:p What is Gibbs overshoot in the context of digital filters?
 ??x
 Gibbs overshoot refers to the phenomenon where a sinc function filter, when used directly as a filter kernel, results in oscillations and ripples around the cutoff frequency. This is due to the abrupt truncation of the sinc function.
 x??
@@ -72,13 +65,10 @@ x??
 ---
 
 #### Sinc Filter for Noise Reduction
-Background context: The sinc filter is a type of low-pass filter used to reduce noise while preserving the signal. It works by allowing signals below a certain cutoff frequency \( \omega_c \) to pass through, and attenuating higher frequencies.
+Background context: The sinc filter is a type of low-pass filter used to reduce noise while preserving the signal. It works by allowing signals below a certain cutoff frequency $\omega_c$ to pass through, and attenuating higher frequencies.
 
 The sinc function has the form:
-\[
-h[n] = \frac{\sin(\pi n / M)}{\pi n / M}
-\]
-where \( M \) is half of the filter's time length. The cutoff frequency \( \omega_c \) should be a fraction of the sampling rate, and the timelength \( M \) determines the bandwidth over which the filter changes from 1 to 0.
+$$h[n] = \frac{\sin(\pi n / M)}{\pi n / M}$$where $ M $ is half of the filter's time length. The cutoff frequency $\omega_c $ should be a fraction of the sampling rate, and the timelength$M$ determines the bandwidth over which the filter changes from 1 to 0.
 
 :p How does the sinc filter reduce noise in signals?
 ??x
@@ -88,17 +78,14 @@ x??
 ---
 
 #### Fast Fourier Transform (FFT)
-Background context: The FFT algorithm is an efficient method for computing the Discrete Fourier Transform (DFT). It reduces the number of operations from \( N^2 \) to approximately \( N \log_2 N \), significantly speeding up computations.
+Background context: The FFT algorithm is an efficient method for computing the Discrete Fourier Transform (DFT). It reduces the number of operations from $N^2 $ to approximately$N \log_2 N$, significantly speeding up computations.
 
 The DFT in compact form:
-\[
-Y_n = \frac{1}{\sqrt{2\pi N}} \sum_{k=1}^{N} Z_n k y_k, \quad Z=e^{-2\pi i/N}, \quad n=0,1,\dots,N-1
-\]
-where \( Z \) is complex, and both \( n \) and \( k \) range from 0 to \( N-1 \).
+$$Y_n = \frac{1}{\sqrt{2\pi N}} \sum_{k=1}^{N} Z_n k y_k, \quad Z=e^{-2\pi i/N}, \quad n=0,1,\dots,N-1$$where $ Z $ is complex, and both $ n $ and $ k $ range from 0 to $ N-1$.
 
 :p What is the time complexity of a direct DFT computation?
 ??x
-The time complexity of a direct DFT computation is \( O(N^2) \).
+The time complexity of a direct DFT computation is $O(N^2)$.
 x??
 
 ---
@@ -114,19 +101,15 @@ x??
 ---
 
 #### Simplified DFT Computations with Symmetry
-Background context: For a specific case, such as \( N = 8 \), we can simplify the computations using the symmetry in the powers of \( Z \).
+Background context: For a specific case, such as $N = 8 $, we can simplify the computations using the symmetry in the powers of $ Z$.
 
-Example for \( N = 8 \):
-\[
-Y_0 = Z_0 y_0 + Z_1 y_1 + Z_2 y_2 + Z_3 y_3 + Z_4 y_4 + Z_5 y_5 + Z_6 y_6 + Z_7 y_7
-\]
-\[
-Y_1 = Z_0 y_0 + Z_1 y_1 + Z_2 y_2 + Z_3 y_3 - Z_4 y_4 - Z_5 y_5 - Z_6 y_6 - Z_7 y_7
-\]
+Example for $N = 8$:
+$$Y_0 = Z_0 y_0 + Z_1 y_1 + Z_2 y_2 + Z_3 y_3 + Z_4 y_4 + Z_5 y_5 + Z_6 y_6 + Z_7 y_7$$
+$$
 
-:p How do we simplify the DFT computations using symmetry?
+Y_1 = Z_0 y_0 + Z_1 y_1 + Z_2 y_2 + Z_3 y_3 - Z_4 y_4 - Z_5 y_5 - Z_6 y_6 - Z_7 y_7$$:p How do we simplify the DFT computations using symmetry?
 ??x
-By exploiting the periodicity and symmetry of \( Z \), we can reduce the number of multiplications. For instance, for \( N = 8 \), only four unique powers of \( Z \) are used: \( Z_0, Z_1, Z_2, Z_3 \). This allows us to rewrite the DFT as a series of sums and differences.
+By exploiting the periodicity and symmetry of $Z $, we can reduce the number of multiplications. For instance, for $ N = 8 $, only four unique powers of$ Z $ are used: $ Z_0, Z_1, Z_2, Z_3$. This allows us to rewrite the DFT as a series of sums and differences.
 x??
 
 ---
@@ -136,13 +119,10 @@ Background context: The butterfly operation regroups terms into sums and differe
 
 :p What is the butterfly operation in the FFT?
 ??x
-The butterfly operation restructures the computations by combining pairs of \( y \) values into new values using symmetry. It reduces the number of required multiplications to approximately \( N \log_2 N \).
+The butterfly operation restructures the computations by combining pairs of $y $ values into new values using symmetry. It reduces the number of required multiplications to approximately$N \log_2 N$.
 
-For example, for \( N = 8 \):
-\[
-Y_0 = Z_0 (y_0 + y_4) + Z_0 (y_1 + y_5) + Z_0 (y_2 + y_6) + Z_0 (y_3 + y_7)
-\]
-x??
+For example, for $N = 8$:
+$$Y_0 = Z_0 (y_0 + y_4) + Z_0 (y_1 + y_5) + Z_0 (y_2 + y_6) + Z_0 (y_3 + y_7)$$x??
 
 ---
 
@@ -151,7 +131,7 @@ Background context: The butterfly operation is a fundamental step in the Fast Fo
 
 :p Describe the basic structure of the butterfly operation in an FFT.
 ??x
-The butterfly operation involves taking two input elements, typically denoted as \(y_p\) and \(y_q\), and transforming them into two new output values: \((y_p + Z y_q)\) and \((y_p - Z y_q)\). The complex number \(Z\) is a twiddle factor which rotates the phase of the second input by an angle corresponding to its position in the FFT.
+The butterfly operation involves taking two input elements, typically denoted as $y_p $ and$y_q $, and transforming them into two new output values: $(y_p + Z y_q)$ and $(y_p - Z y_q)$. The complex number $ Z$ is a twiddle factor which rotates the phase of the second input by an angle corresponding to its position in the FFT.
 
 This operation can be visualized as:
 
@@ -162,15 +142,12 @@ Z yp + Zyq yp – Zyq
 
 :p Explain the butterfly operation for two consecutive inputs.
 ??x
-For two consecutive inputs \(y_p\) and \(y_q\), the butterfly operation computes:
-1. \( y_p + Z y_q \)
-2. \( y_p - Z y_q \)
-
-Where \(Z = e^{-j2\pi k/N}\) is a complex number that represents a phase shift.
+For two consecutive inputs $y_p $ and$y_q$, the butterfly operation computes:
+1. $y_p + Z y_q $2.$ y_p - Z y_q $Where$ Z = e^{-j2\pi k/N}$ is a complex number that represents a phase shift.
 
 :p Provide an example of how a single butterfly operation works.
 ??x
-Consider two input elements \(y_0\) and \(y_1\). After applying the butterfly operation with \(Z = e^{-j2\pi \cdot 1/8} = Z_4\):
+Consider two input elements $y_0 $ and$y_1 $. After applying the butterfly operation with $ Z = e^{-j2\pi \cdot 1/8} = Z_4$:
 
 ```plaintext
 y0 y1
@@ -178,10 +155,7 @@ Z0 y0 + Z0 y1 y0 – Z0 y1
 ```
 
 The outputs are:
-- \(Y_0 = (y_0 + y_1)\)
-- \(Y_1 = (y_0 - Z_0 y_1)\)
-
-:p What is the significance of bit reversal in FFT?
+- $Y_0 = (y_0 + y_1)$-$ Y_1 = (y_0 - Z_0 y_1)$:p What is the significance of bit reversal in FFT?
 ??x
 Bit-reversal refers to rearranging the input data based on their binary representation. For example, if we have 8 inputs labeled from 0 to 7, after bit-reversing, the order changes to 0, 4, 2, 6, 1, 5, 3, 7.
 
@@ -204,10 +178,9 @@ The FFT reduces the number of required multiplications by exploiting the symmetr
 
 :p Illustrate how the total number of multiplications is reduced from 64 to 24 for 8 points.
 ??x
-In a straightforward DFT, we would need \(N^2 = 8^2 = 64\) complex multiplications. However, an FFT algorithm reduces this by reusing intermediate results:
+In a straightforward DFT, we would need $N^2 = 8^2 = 64$ complex multiplications. However, an FFT algorithm reduces this by reusing intermediate results:
 
-- For the first butterfly: 8 multiplications by \(Z_0\)
-- Second butterfly: 8 multiplications
+- For the first butterfly: 8 multiplications by $Z_0$- Second butterfly: 8 multiplications
 - And so on...
 
 Total: 24 multiplications.
@@ -221,8 +194,7 @@ y7 y3 y5 y1 y6 y2 y4 y0
 ```
 
 After processing:
-- \(Y_0 = (y_0 + y_4) + (y_2 + y_6)\)
-- \(Y_1 = (y_0 – y_4) + Z_2(y_2 – y_6) + Z_1(y_1 – y_5) + Z_3(y_3 – y_7)\)
+- $Y_0 = (y_0 + y_4) + (y_2 + y_6)$-$ Y_1 = (y_0 – y_4) + Z_2(y_2 – y_6) + Z_1(y_1 – y_5) + Z_3(y_3 – y_7)$
 
 :p How does the output order differ between a standard FFT and the modified FFT?
 ??x

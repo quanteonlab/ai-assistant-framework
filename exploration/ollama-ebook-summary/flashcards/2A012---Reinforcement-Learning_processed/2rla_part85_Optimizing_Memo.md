@@ -273,11 +273,11 @@ x??
 
 ---
 #### Exploration Strategy
-The exploration strategy used was \(\epsilon\)-greedy, where \(\epsilon = 0.05\). This means that with a probability of \(0.95\), the agent会选择动作值最高的动作；否则，随机选择一个动作。
+The exploration strategy used was $\epsilon $-greedy, where $\epsilon = 0.05 $. This means that with a probability of $0.95$, the agent会选择动作值最高的动作；否则，随机选择一个动作。
 
 :p What is the exploration strategy in this setup?
 ??x
-The exploration strategy used was \(\epsilon\)-greedy, where \(\epsilon = 0.05\). This means that with a probability of \(0.95\), the agent will choose the action with the highest expected value (exploitation); otherwise, it randomly selects an action (exploration).
+The exploration strategy used was $\epsilon $-greedy, where $\epsilon = 0.05 $. This means that with a probability of $0.95$, the agent will choose the action with the highest expected value (exploitation); otherwise, it randomly selects an action (exploration).
 
 ```java
 public class ExplorationStrategy {
@@ -544,10 +544,10 @@ x??
 ---
 
 #### Experience Replay Mechanism
-Experience replay involves storing transitions as tuples \((s_t, a_t, r_t, s_{t+1})\) (state at time \(t\), action taken, reward received, state after action) in a memory buffer. These samples are then used to train the network multiple times over mini-batches.
+Experience replay involves storing transitions as tuples $(s_t, a_t, r_t, s_{t+1})$(state at time $ t$, action taken, reward received, state after action) in a memory buffer. These samples are then used to train the network multiple times over mini-batches.
 :p How does experience replay work in DQN?
 ??x
-Experience replay works by storing transitions as tuples \((s_t, a_t, r_t, s_{t+1})\) (state at time \(t\), action taken, reward received, state after action) in a memory buffer. During training, the network is updated using mini-batches sampled from this buffer multiple times to improve learning stability and reduce correlation between samples.
+Experience replay works by storing transitions as tuples $(s_t, a_t, r_t, s_{t+1})$(state at time $ t$, action taken, reward received, state after action) in a memory buffer. During training, the network is updated using mini-batches sampled from this buffer multiple times to improve learning stability and reduce correlation between samples.
 ```java
 public class Experience {
     State s_t;
@@ -760,8 +760,9 @@ Background context: The semi-gradient form of Q-learning used by DQN updates the
 :p What is the update formula used in DQN?
 ??x
 The update formula used in DQN is:
-\[ w_{t+1} = w_t + \alpha [R_{t+1} + \gamma \max_a Q(S_{t+1}, a, w_t) - Q(S_t, A_t, w_t)] \]
-Where \( w_t \) are the weights of the network, \( R_{t+1} \) is the reward, and \( \alpha \) and \( \gamma \) are learning rate and discount factor respectively.
+$$w_{t+1} = w_t + \alpha [R_{t+1} + \gamma \max_a Q(S_{t+1}, a, w_t) - Q(S_t, A_t, w_t)]$$
+
+Where $w_t $ are the weights of the network,$ R_{t+1}$ is the reward, and $\alpha$ and $\gamma$ are learning rate and discount factor respectively.
 x??
 
 ---
@@ -799,7 +800,7 @@ Off-policy learning, such as Q-learning, does not require actions to be taken al
 
 :p What is off-policy learning and how does it differ from on-policy learning?
 ??x
-Off-policy learning involves learning the value function or policy based on actions chosen by a different behavior policy. In contrast, on-policy methods use the actions chosen by the current policy being learned. Q-learning, for instance, can learn the optimal action-value function \(Q^*\) using experiences from an arbitrary policy.
+Off-policy learning involves learning the value function or policy based on actions chosen by a different behavior policy. In contrast, on-policy methods use the actions chosen by the current policy being learned. Q-learning, for instance, can learn the optimal action-value function $Q^*$ using experiences from an arbitrary policy.
 
 Experience replay is a technique where past experiences are stored and periodically used to update the model. This separation of experience collection and training helps reduce correlations between updates and stabilizes learning.
 x??
@@ -808,11 +809,11 @@ x??
 
 #### Target Updates in Q-learning
 
-In standard Q-learning, the target for updating \(Q\) values depends on the current action-value function estimate. For parameterized function approximation methods, the target is often a function of the same parameters being updated.
+In standard Q-learning, the target for updating $Q$ values depends on the current action-value function estimate. For parameterized function approximation methods, the target is often a function of the same parameters being updated.
 
 :p What problem can arise from having the target value depend on the parameters being updated?
 ??x
-When using parameterized function approximations in Q-learning, the target for an update depends on the current action-value function estimate. This dependence can lead to oscillations or divergence because the updates are not independent of each other. The formula \(\max_a q(S_{t+1}, a, w_t)\) shows that the target value is calculated based on the parameters \(w_t\) which are being updated.
+When using parameterized function approximations in Q-learning, the target for an update depends on the current action-value function estimate. This dependence can lead to oscillations or divergence because the updates are not independent of each other. The formula $\max_a q(S_{t+1}, a, w_t)$ shows that the target value is calculated based on the parameters $w_t$ which are being updated.
 
 ```java
 // Pseudocode for Q-learning update with dependent targets
@@ -835,9 +836,9 @@ Mnih et al. introduced a technique to stabilize Q-learning by decoupling the tar
 To address the issue of correlated updates and oscillations, Mnih et al. used a technique called "target networks" or "fixing the targets." They periodically copy the weights from the online network to a separate fixed target network. The outputs of this fixed target network are then used as the targets for Q-learning updates.
 
 The update rule becomes:
-\[ w_{t+1} = w_t + \alpha (r_{t+1} + \gamma \max_a q(S_{t+1}, a, w^{\text{fixed}}) - q(S_t, A_t, w_t)) \cdot \nabla q(S_t, A_t, w_t) \]
+$$w_{t+1} = w_t + \alpha (r_{t+1} + \gamma \max_a q(S_{t+1}, a, w^{\text{fixed}}) - q(S_t, A_t, w_t)) \cdot \nabla q(S_t, A_t, w_t)$$
 
-Here, \(w^{\text{fixed}}\) refers to the weights of the target network.
+Here,$w^{\text{fixed}}$ refers to the weights of the target network.
 
 ```java
 // Pseudocode for Q-learning update with target networks
@@ -857,7 +858,7 @@ Experience replay reduces variance by breaking the correlation between successiv
 
 :p How does experience replay help reduce the variance in Q-learning?
 ??x
-Experience replay works by storing a buffer of past experiences \(\{(S_t, A_t, R_t, S_{t+1})\}\). When updating the Q-values, instead of using only the most recent transition, the algorithm selects transitions randomly from this replay buffer. This random selection helps break the correlation between updates and reduces the variance.
+Experience replay works by storing a buffer of past experiences $\{(S_t, A_t, R_t, S_{t+1})\}$. When updating the Q-values, instead of using only the most recent transition, the algorithm selects transitions randomly from this replay buffer. This random selection helps break the correlation between updates and reduces the variance.
 
 The process involves storing a set of experiences in memory and periodically sampling from it to update the model:
 ```java
@@ -890,10 +891,10 @@ These concepts collectively enhance the stability and efficiency of Q-learning a
 x??
 
 #### Q-learning Modification for Go
-Mnih et al. found that a final modification of standard Q-learning improved stability by clipping the error term \(R_{t+1} + \max_a q(S_{t+1}, a, w_t) - q(S_t, A_t, w_t)\) so that it remained in the interval \([-1, 1]\).
+Mnih et al. found that a final modification of standard Q-learning improved stability by clipping the error term $R_{t+1} + \max_a q(S_{t+1}, a, w_t) - q(S_t, A_t, w_t)$ so that it remained in the interval $[-1, 1]$.
 :p What was the modification to standard Q-learning for Go?
 ??x
-The error term \(R_{t+1} + \max_a q(S_{t+1}, a, w_t) - q(S_t, A_t, w_t)\) was clipped to remain within the interval \([-1, 1]\).
+The error term $R_{t+1} + \max_a q(S_{t+1}, a, w_t) - q(S_t, A_t, w_t)$ was clipped to remain within the interval $[-1, 1]$.
 x??
 
 ---

@@ -311,11 +311,10 @@ To install Terraform on macOS using Homebrew, follow these steps:
 
 1. Tap the HashiCorp repository by running:
    ```bash
-   $ brew tap hashicorp/tap
+   $brew tap hashicorp/tap
    ```
 2. Install Terraform from this repository by running:
-   ```bash
-   $ brew install hashicorp/tap/terraform
+   ```bash$ brew install hashicorp/tap/terraform
    ```
 
 This command will download and install the latest version of Terraform.
@@ -332,7 +331,7 @@ To install Terraform on Windows using Chocolatey, follow these steps:
 
 1. Run the following command in your terminal:
    ```bash
-   $ choco install terraform
+   $choco install terraform
    ```
 
 This command will download and install the latest version of Terraform from the Chocolatey repository.
@@ -346,8 +345,7 @@ Background context: This section explains how to verify that Terraform has been 
 :p How do you check if Terraform is working correctly after installation?
 ??x
 To check if Terraform is working correctly, run the following command in your terminal:
-```bash
-$ terraform
+```bash$ terraform
 ```
 
 This will display the usage instructions for Terraform, indicating that it has been installed successfully and can be used to create or manage infrastructure.
@@ -362,8 +360,7 @@ Background context: This section explains how to securely store and set up AWS c
 ??x
 To set the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY environment variables on a Unix/Linux/macOS terminal, use the following commands:
 ```bash
-$ export AWS_ACCESS_KEY_ID=(your access key id)
-$ export AWS_SECRET_ACCESS_KEY=(your secret access key)
+$export AWS_ACCESS_KEY_ID=(your access key id)$ export AWS_SECRET_ACCESS_KEY=(your secret access key)
 ```
 
 These commands export the required credentials as environment variables. Note that these environment variables are only available in the current shell session and need to be set again after a reboot or opening a new terminal window.
@@ -378,8 +375,7 @@ Background context: This section explains how to securely store and set up AWS c
 ??x
 To set the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY environment variables in a Windows command terminal, use the following commands:
 ```cmd
-$ set AWS_ACCESS_KEY_ID=(your access key id)
-$ set AWS_SECRET_ACCESS_KEY=(your secret access key)
+$set AWS_ACCESS_KEY_ID=(your access key id)$ set AWS_SECRET_ACCESS_KEY=(your secret access key)
 ```
 
 These commands export the required credentials as environment variables. Note that these environment variables are only available in the current shell session and need to be set again after a reboot or opening a new terminal window.
@@ -520,7 +516,7 @@ Terraform is an open-source infrastructure as code (IaC) tool that allows you to
 The `terraform init` command is used to initialize a new Terraform project in a given working directory. It ensures that the correct version of each provider (e.g., AWS) is installed and available for use. The process involves downloading providers from their respective repositories, such as GitHub, and storing them locally in a `.terraform` folder within your project.
 
 ```sh
-$ terraform init
+$terraform init
 ```
 x??
 
@@ -533,8 +529,7 @@ After initializing the backend and providers, you can run `terraform plan` to se
 ??x
 The `terraform plan` command generates a detailed report showing what Terraform intends to do if you run `terraform apply`. It checks your configuration and provider plugins, then outputs a list of resources that will be created, modified, or destroyed. This allows you to review the proposed changes before applying them.
 
-```sh
-$ terraform plan
+```sh$ terraform plan
 ```
 Output:
 ```
@@ -559,7 +554,7 @@ Once you are satisfied with the plan, you can execute `terraform apply` to make 
 The `terraform apply` command applies a previously generated execution plan to your infrastructure. It creates resources according to the configuration defined in your Terraform files and provider plugins. After running `terraform apply`, you will see detailed outputs indicating what actions are being taken.
 
 ```sh
-$ terraform apply
+$terraform apply
 ```
 Output:
 ```
@@ -618,9 +613,7 @@ x??
 ??x
 `terraform init` is designed to be idempotent, meaning that running it repeatedly does not change the state of your Terraform project beyond its initial setup. This property ensures that you can safely run `terraform init` multiple times without worrying about unexpected behavior.
 
-```sh
-$ terraform init  # Initial setup
-$ terraform init  # No-op as everything is already initialized
+```sh $terraform init  # Initial setup$ terraform init  # No-op as everything is already initialized
 ```
 
 This idempotence makes it safe to include `terraform init` in your deployment scripts or CI/CD pipelines, ensuring that the environment always starts from a clean state when necessary.
@@ -684,10 +677,7 @@ Version control using Git is essential for managing changes to your Terraform co
 :p How do you set up a local Git repository for your Terraform configuration?
 ??x
 To set up a local Git repository for your Terraform configuration, initialize a new Git repository, add your Terraform configuration files, and commit the changes. You also need to create and commit a `.gitignore` file to exclude unnecessary files from version control.
-```sh
-$ git init
-$ git add main.tf .terraform.lock.hcl
-$ git commit -m "Initial commit"
+```sh $git init $ git add main.tf .terraform.lock.hcl$ git commit -m "Initial commit"
 ```
 Create a `.gitignore` file with:
 ```plaintext
@@ -697,8 +687,7 @@ Create a `.gitignore` file with:
 ```
 Then commit the `.gitignore` file.
 ```sh
-$ git add .gitignore
-$ git commit -m "Add a .gitignore file"
+$git add .gitignore$ git commit -m "Add a .gitignore file"
 ```
 x??
 

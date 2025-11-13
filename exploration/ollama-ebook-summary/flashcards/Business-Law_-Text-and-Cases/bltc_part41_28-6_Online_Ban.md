@@ -79,10 +79,10 @@ x??
 ---
 
 #### Consumer Protection in EFT Systems
-Consumers can recover both actual damages (including attorneys' fees and costs) and punitive damages of at least $100 but not more than $1,000 from banks that violate the EFTA. If a bank fails to investigate an error in good faith, it may be liable for treble damages.
+Consumers can recover both actual damages (including attorneys' fees and costs) and punitive damages of at least $100 but not more than$1,000 from banks that violate the EFTA. If a bank fails to investigate an error in good faith, it may be liable for treble damages.
 :p What remedies are available to consumers if a bank violates the EFTA?
 ??x
-Consumers can recover both actual damages (including attorneys' fees and costs) and punitive damages of at least $100 but not more than $1,000 from banks that violate the EFTA. If the bank fails to investigate an error in good faith, it may be liable for treble damages.
+Consumers can recover both actual damages (including attorneys' fees and costs) and punitive damages of at least $100 but not more than$1,000 from banks that violate the EFTA. If the bank fails to investigate an error in good faith, it may be liable for treble damages.
 x??
 
 ---
@@ -97,7 +97,7 @@ x??
 ---
 
 #### Example of a Commercial Fund Transfer
-Jellux, Inc., instructs its bank to credit $5 million to Perot Corporation’s account in another bank. The process involves debiting Jellux's account and electronically transferring $5 million to Perot's account.
+Jellux, Inc., instructs its bank to credit $5 million to Perot Corporation’s account in another bank. The process involves debiting Jellux's account and electronically transferring$5 million to Perot's account.
 :p What is an example of a commercial fund transfer?
 ??x
 An example of a commercial fund transfer is when Jellux, Inc., instructs its bank, North Bank, to credit $5 million to Perot Corporation’s account in South Bank. North Bank debits Jellux’s account and wires $5 million to South Bank with instructions to credit $5 million to Perot’s account.
@@ -729,10 +729,10 @@ x??
 ---
 
 #### Carrollton Exempted Village School District Project
-Background context: The Carrollton Exempted Village School District (in Ohio) contracted with Clean Vehicle Solutions America, LLC (CVSA) to convert ten school buses from diesel to compressed natural gas. A $400,000 deposit was paid initially, and installments of $26,000 were agreed upon after the delivery of each converted bus.
+Background context: The Carrollton Exempted Village School District (in Ohio) contracted with Clean Vehicle Solutions America, LLC (CVSA) to convert ten school buses from diesel to compressed natural gas. A $400,000 deposit was paid initially, and installments of$26,000 were agreed upon after the delivery of each converted bus.
 :p What is the initial payment and subsequent payments made by the Carrollton Exempted Village School District to CVSA?
 ??x
-The district initially paid a $400,000 deposit. After each of the ten buses was delivered, they agreed to pay installments of $26,000.
+The district initially paid a $400,000 deposit. After each of the ten buses was delivered, they agreed to pay installments of$26,000.
 x??
 
 ---

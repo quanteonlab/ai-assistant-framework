@@ -427,7 +427,7 @@ LoRA is one of the most popular adapter-based methods developed by Hu et al. (20
 ??x
 LoRA, or Low-Rank Adaptation, is a parameter-efficient method for fine-tuning large language models. Instead of adding fully connected layers, it uses low-rank factorization techniques to add only a few parameters to the model's existing structure. This makes the fine-tuning process more efficient and less resource-intensive.
 
-Example: LoRA modifies a dense layer by introducing two small matrices \( A \) and \( B \), where the product of these matrices represents a low-rank update to the original dense weights.
+Example: LoRA modifies a dense layer by introducing two small matrices $A $ and$B$, where the product of these matrices represents a low-rank update to the original dense weights.
 ```python
 # Pseudocode for LoRA modification in a dense layer
 class LoRAModifiedLayer(nn.Module):
@@ -497,7 +497,7 @@ LongLoRA is a variant of LoRA that incorporates attention-modification technique
 ??x
 LongLoRA is an extension of LoRA that aims to enhance the model's ability to process longer contexts by modifying the attention mechanism. It achieves this by adding low-rank factors to the attention layers, which helps in preserving or expanding the context length without a substantial increase in computational resources.
 
-Example: In LongLoRA, you might add a small matrix \( C \) that modifies the attention weights to capture long-range dependencies.
+Example: In LongLoRA, you might add a small matrix $C$ that modifies the attention weights to capture long-range dependencies.
 ```python
 # Pseudocode for LongLoRA modification in an attention layer
 class LoRALinear(nn.Module):
@@ -666,12 +666,11 @@ x??
 Background context explaining the concept. LoRA is a technique built on low-rank factorization, which aims to reduce the number of trainable parameters during fine-tuning while maintaining or even improving model performance.
 :p What is LoRA and how does it achieve parameter efficiency?
 ??x
-LoRA is a method that decomposes a large weight matrix \( W \) into the product of two smaller matrices \( A \) and \( B \), such that \( W = AB \). During fine-tuning, only \( A \) and \( B \) are updated, while the original matrix \( W \) remains unchanged. This approach significantly reduces the number of parameters to be trained, making it more efficient.
+LoRA is a method that decomposes a large weight matrix $W $ into the product of two smaller matrices$A $ and$ B $, such that $ W = AB$. During fine-tuning, only $ A$and $ B$ are updated, while the original matrix $ W$ remains unchanged. This approach significantly reduces the number of parameters to be trained, making it more efficient.
 For example, a 9x9 weight matrix can be factorized into two matrices with dimensions 9x1 and 1x9:
-\[
-W = AB
-\]
-Where \( A \) is 9x1 and \( B \) is 1x9. The original matrix has 81 parameters, but the combined smaller matrices have only 18 parameters.
+$$W = AB$$
+
+Where $A $ is 9x1 and$B$ is 1x9. The original matrix has 81 parameters, but the combined smaller matrices have only 18 parameters.
 ```java
 public class LoRAExample {
     public static void main(String[] args) {
@@ -751,7 +750,7 @@ Background context explaining the concept. While LoRA is used during fine-tuning
 ??x
 Low-rank pre-training is significant because it can drastically reduce the number of parameters required for pre-training, thereby lowering the computational cost and time. By factorizing a model into smaller matrices from the start, the pre-training process becomes more efficient.
 
-For example, instead of training a full-rank 1024x1024 weight matrix during pre-training, we can use low-rank factorization to represent it with two smaller matrices \( A \) and \( B \), each having fewer parameters. This approach can significantly reduce the overall computational requirements while maintaining or improving model performance.
+For example, instead of training a full-rank 1024x1024 weight matrix during pre-training, we can use low-rank factorization to represent it with two smaller matrices $A $ and$B$, each having fewer parameters. This approach can significantly reduce the overall computational requirements while maintaining or improving model performance.
 ```java
 public class LowRankPreTrainingExample {
     public static void main(String[] args) {
@@ -886,7 +885,7 @@ x??
 
 ---
 #### α Hyperparameter in LoRA
-Background context: The value of α determines how much the product WAB should contribute to the new matrix during merging: \(W' = W + \alpha rWAB\). The optimal ratio varies and depends on the specific use case.
+Background context: The value of α determines how much the product WAB should contribute to the new matrix during merging: $W' = W + \alpha rWAB$. The optimal ratio varies and depends on the specific use case.
 
 :p What is the role of the hyperparameter α in LoRA?
 ??x
@@ -899,7 +898,7 @@ Background context: Servicing a LoRA-finetuned model can be done by either mergi
 
 :p How can you serve a LoRA-finetuned model?
 ??x
-You can serve a LoRA-finetuned model by merging the LoRA weights A and B into the original model to create the new matrix \(W'\) prior to serving, or by keeping them separate for greater flexibility during inference. Merging adds no extra computation during inference, thus no additional latency.
+You can serve a LoRA-finetuned model by merging the LoRA weights A and B into the original model to create the new matrix $W'$ prior to serving, or by keeping them separate for greater flexibility during inference. Merging adds no extra computation during inference, thus no additional latency.
 x??
 
 ---

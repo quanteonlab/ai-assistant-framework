@@ -10,10 +10,9 @@ When dealing with division of mixed numbers and fractions, it's important to fir
 :p How do you divide 10½ by ¾?
 ??x
 To divide 10½ by ¾, first convert the mixed number to an improper fraction:
-- \(10 \frac{1}{2} = \frac{(10 \times 2 + 1)}{2} = \frac{21}{2}\)
-Now, multiply by the reciprocal of ¾:
-- Reciprocal of ¾ is \(\frac{4}{3}\).
-So, \(\frac{21}{2} \div \frac{3}{4} = \frac{21}{2} \times \frac{4}{3} = \frac{21 \times 4}{2 \times 3} = \frac{84}{6} = 14\).
+- $10 \frac{1}{2} = \frac{(10 \times 2 + 1)}{2} = \frac{21}{2}$ Now, multiply by the reciprocal of ¾:
+- Reciprocal of ¾ is $\frac{4}{3}$.
+So, $\frac{21}{2} \div \frac{3}{4} = \frac{21}{2} \times \frac{4}{3} = \frac{21 \times 4}{2 \times 3} = \frac{84}{6} = 14$.
 The answer is 14.
 x??
 
@@ -24,13 +23,13 @@ To calculate the number of paving stones needed, first convert all measurements 
 
 :p How many paving stones are needed for a patio that measures 12 feet by 14 feet if each stone is 8 inches square?
 ??x
-Convert 12 feet to inches: \(12 \times 12 = 144\) inches.
+Convert 12 feet to inches: $12 \times 12 = 144$ inches.
 Each stone is 8 inches square, so:
-- For the 12-foot side: \(\frac{144}{8} = 18\) stones.
+- For the 12-foot side:$\frac{144}{8} = 18$ stones.
 For the 14-foot side (converted similarly):
-- \(14 \times 12 = 168\) inches.
-Dividing by stone size: \(\frac{168}{8} = 21\) stones.
-Total stones needed: \(18 \times 21 = 378\).
+- $14 \times 12 = 168$ inches.
+Dividing by stone size:$\frac{168}{8} = 21$ stones.
+Total stones needed:$18 \times 21 = 378$.
 The answer is 378.
 x??
 
@@ -43,9 +42,9 @@ Net pay can be calculated by subtracting the deduction from the gross pay. The f
 :p How much will a programmer earn after deducting 28% of his salary?
 ??x
 Given a salary of $25,000 and a deduction of 28%, calculate the net pay as follows:
-- First, find the deduction amount: \(25,000 \times 0.28 = 7,000\).
+- First, find the deduction amount: $25,000 \times 0.28 = 7,000$.
 Then subtract this from the gross pay:
-- Net Pay = $25,000 - $7,000 = $18,000.
+- Net Pay = $25,000 -$7,000 =$18,000.
 The answer is $18,000.
 x??
 
@@ -57,7 +56,7 @@ When two angles sum up to 180 degrees, they are supplementary. The supplement of
 :p What is the supplement of an angle that measures 55 degrees?
 ??x
 To find the supplement of a 55-degree angle:
-- Subtract 55 from 180: \(180 - 55 = 125\).
+- Subtract 55 from 180: $180 - 55 = 125$.
 The answer is 125.
 x??
 
@@ -68,9 +67,9 @@ To determine how many boards are in a stack, convert the height to inches and di
 
 :p How many pieces of lumber are in a stack that measures 6 feet high if each piece is 4 inches thick?
 ??x
-Convert the height from feet to inches: \(6 \times 12 = 72\) inches.
+Convert the height from feet to inches: $6 \times 12 = 72$ inches.
 Divide by the thickness of each board:
-- Number of boards = \(\frac{72}{4} = 18\).
+- Number of boards =$\frac{72}{4} = 18$.
 The answer is 18 pieces of lumber.
 x??
 
@@ -349,8 +348,8 @@ To calculate the number of boards in a stack:
 - Convert the height from feet to inches.
 - Divide by the thickness of each board.
 For example, if the stack is 6 feet high and each piece is 4 inches thick:
-- \(6 \times 12 = 72\) inches (height).
-- \(\frac{72}{4} = 18\) pieces of lumber.
+- $6 \times 12 = 72$ inches (height).
+- $\frac{72}{4} = 18$ pieces of lumber.
 The answer is 18 pieces of lumber.
 x??
 
@@ -573,22 +572,25 @@ To find the area, you multiply the length times the width. In this problem, you 
 :p How do you calculate the area of a rectangle?
 ??x
 You calculate the area of a rectangle by multiplying its length and width. The formula is:
-\[ \text{Area} = \text{length} \times \text{width} \]
+$$\text{Area} = \text{length} \times \text{width}$$
+
 Given that you have the width but need to find the length, you can solve for the length if the area is provided.
 x??
 
 ---
 
 #### Perimeter and Area of a Rectangle
-Background context: The perimeter \(P\) of a rectangle is given by \(P = 2(l + w)\), where \(l\) is the length and \(w\) is the width. The area \(A\) of a rectangle is given by \(A = l \times w\).
+Background context: The perimeter $P $ of a rectangle is given by$P = 2(l + w)$, where $ l$is the length and $ w$is the width. The area $ A$of a rectangle is given by $ A = l \times w$.
 :p Calculate the length of a rectangle with a perimeter of 36 inches and a width of 8 inches.
 ??x
-To find the length, we use the formula for the perimeter: \(P = 2(l + w)\). Plugging in the known values:
-\[ 36 = 2(l + 8) \]
+To find the length, we use the formula for the perimeter: $P = 2(l + w)$. Plugging in the known values:
+$$36 = 2(l + 8)$$
+
 First, divide both sides by 2 to simplify:
-\[ 18 = l + 8 \]
-Next, subtract 8 from both sides to solve for \(l\):
-\[ l = 10 \]
+$$18 = l + 8$$
+
+Next, subtract 8 from both sides to solve for $l$:
+$$l = 10$$
 
 The length of the rectangle is 10 inches.
 x??
@@ -596,40 +598,40 @@ x??
 ---
 
 #### Cube Root and Scientific Notation
-Background context: The cube root of a number \(a\) is a value that when multiplied by itself three times equals the original number. For example, the cube root of 64 is 4 because \(4 \times 4 \times 4 = 64\). In scientific notation, a number is written as \(a \times 10^b\), where \(1 \leq |a| < 10\) and \(b\) is an integer.
+Background context: The cube root of a number $a $ is a value that when multiplied by itself three times equals the original number. For example, the cube root of 64 is 4 because$4 \times 4 \times 4 = 64 $. In scientific notation, a number is written as $ a \times 10^b $, where$1 \leq |a| < 10 $ and$b$ is an integer.
 :p Determine the cube root of 64 and convert the number 314,000 to scientific notation.
 ??x
 The cube root of 64 is 4 because:
-\[ 4^3 = 64 \]
+$$4^3 = 64$$
 
-To convert 314,000 to scientific notation, move the decimal point so that there is only one non-zero digit in front of it. In this case, moving the decimal five places left gives \(3.14\), and since we moved it five places, we multiply by \(10^5\). Thus, 314,000 in scientific notation is:
-\[ 3.14 \times 10^5 \]
+To convert 314,000 to scientific notation, move the decimal point so that there is only one non-zero digit in front of it. In this case, moving the decimal five places left gives $3.14 $, and since we moved it five places, we multiply by $10^5$. Thus, 314,000 in scientific notation is:
+$$3.14 \times 10^5$$
 
-The answer is 4 for the cube root and \(3.14 \times 10^5\) for scientific notation.
+The answer is 4 for the cube root and $3.14 \times 10^5$ for scientific notation.
 x??
 
 ---
 
 #### Reciprocal
-Background context: The reciprocal of a number \(a\) (where \(a \neq 0\)) is defined as \(\frac{1}{a}\). For example, the reciprocal of 6 is \(\frac{1}{6}\), and when multiplied together, they equal 1:
-\[ 6 \times \frac{1}{6} = 1 \]
-:p Find the reciprocal of 6.
+Background context: The reciprocal of a number $a $(where $ a \neq 0 $) is defined as$\frac{1}{a}$. For example, the reciprocal of 6 is $\frac{1}{6}$, and when multiplied together, they equal 1:
+$$6 \times \frac{1}{6} = 1$$:p Find the reciprocal of 6.
 ??x
-The reciprocal of 6 is \(\frac{1}{6}\) because:
-\[ 6 \times \frac{1}{6} = 1 \]
+The reciprocal of 6 is $\frac{1}{6}$ because:
+$$6 \times \frac{1}{6} = 1$$
 
-The answer is \(\frac{1}{6}\).
+The answer is $\frac{1}{6}$.
 x??
 
 ---
 
 #### Solving Equations
-Background context: To solve equations, isolate the variable by performing inverse operations. For linear equations like \(ax + b = c\), subtract or add constants and divide or multiply by coefficients to get the variable alone.
-:p Solve the equation \(\frac{0.05}{x} = 1\) for \(x\).
+Background context: To solve equations, isolate the variable by performing inverse operations. For linear equations like $ax + b = c$, subtract or add constants and divide or multiply by coefficients to get the variable alone.
+:p Solve the equation $\frac{0.05}{x} = 1 $ for$x$.
 ??x
-To solve \(\frac{0.05}{x} = 1\), multiply both sides of the equation by \(x\):
-\[ 0.05 = x \]
-Thus, \(x = 0.05\).
+To solve $\frac{0.05}{x} = 1 $, multiply both sides of the equation by $ x$:
+$$0.05 = x$$
+
+Thus,$x = 0.05$.
 
 The answer is 0.05.
 x??
@@ -637,43 +639,48 @@ x??
 ---
 
 #### Quadratic Equations
-Background context: A quadratic equation is in the form \(ax^2 + bx + c = 0\). Solving these involves factoring or using the quadratic formula. For this example, we can factor out a common term and solve for \(x\).
-:p Solve the equation \(x^2 - x - 6 = 0\) for \(x\).
+Background context: A quadratic equation is in the form $ax^2 + bx + c = 0 $. Solving these involves factoring or using the quadratic formula. For this example, we can factor out a common term and solve for $ x$.
+:p Solve the equation $x^2 - x - 6 = 0 $ for$x$.
 ??x
-To solve \(x^2 - x - 6 = 0\), first look for factors of \(-6\) that add up to \(-1\). The numbers are \(-3\) and \(2\):
-\[ (x - 3)(x + 2) = 0 \]
-Set each factor equal to zero:
-\[ x - 3 = 0 \quad \text{or} \quad x + 2 = 0 \]
-Solve for \(x\):
-\[ x = 3 \quad \text{or} \quad x = -2 \]
+To solve $x^2 - x - 6 = 0 $, first look for factors of $-6 $ that add up to$-1 $. The numbers are $-3 $ and$2$:
+$$(x - 3)(x + 2) = 0$$
 
-The answers are \(x = 3\) or \(x = -2\).
+Set each factor equal to zero:
+$$x - 3 = 0 \quad \text{or} \quad x + 2 = 0$$
+
+Solve for $x$:
+$$x = 3 \quad \text{or} \quad x = -2$$
+
+The answers are $x = 3 $ or$x = -2$.
 x??
 
 ---
 
 #### Area of a Circle
-Background context: The area \(A\) of a circle is given by the formula \(A = \pi r^2\), where \(r\) is the radius. The value of \(\pi\) is approximately 3.14.
+Background context: The area $A $ of a circle is given by the formula$A = \pi r^2 $, where$ r $is the radius. The value of$\pi$ is approximately 3.14.
 :p Calculate the area of a circle with a diameter of 5 inches.
 ??x
 The radius of the circle is half the diameter, so:
-\[ r = \frac{5}{2} = 2.5 \]
-Using the formula for the area of a circle:
-\[ A = \pi r^2 = 3.14 \times (2.5)^2 = 3.14 \times 6.25 = 19.625 \]
+$$r = \frac{5}{2} = 2.5$$
 
-The area is approximately \(19.625\) square inches.
+Using the formula for the area of a circle:
+$$
+
+A = \pi r^2 = 3.14 \times (2.5)^2 = 3.14 \times 6.25 = 19.625$$
+
+The area is approximately $19.625$ square inches.
 x??
 
 ---
 
 #### Volume of a Cylinder
-Background context: The volume \(V\) of a cylinder is given by the formula \(V = \pi r^2 h\), where \(r\) is the radius and \(h\) is the height. Here, we use \(\pi \approx 3.14\).
+Background context: The volume $V $ of a cylinder is given by the formula$V = \pi r^2 h $, where $ r $is the radius and$ h $is the height. Here, we use$\pi \approx 3.14$.
 :p Calculate the volume of a cylinder with a radius of 5 inches and a height of 9 inches.
 ??x
 Using the formula for the volume of a cylinder:
-\[ V = \pi r^2 h = 3.14 \times (5)^2 \times 9 = 3.14 \times 25 \times 9 = 688.5 \]
+$$V = \pi r^2 h = 3.14 \times (5)^2 \times 9 = 3.14 \times 25 \times 9 = 688.5$$
 
-The volume is approximately \(688.5\) cubic inches.
+The volume is approximately $688.5$ cubic inches.
 x??
 
 ---
@@ -712,37 +719,38 @@ x??
 ---
 
 #### Surface Area of a Cube
-Background context: The surface area \(A\) of a cube with side length \(s\) is given by the formula \(A = 6s^2\), since a cube has six equal square faces.
+Background context: The surface area $A $ of a cube with side length$s $ is given by the formula$A = 6s^2$, since a cube has six equal square faces.
 :p Calculate the surface area of a cube with each edge measuring 3 inches.
 ??x
 The surface area of a cube is calculated using the formula:
-\[ A = 6s^2 \]
-Given that the side length \(s = 3\) inches, we have:
-\[ A = 6 \times (3)^2 = 6 \times 9 = 54 \]
+$$A = 6s^2$$
 
-The surface area is \(54\) square inches.
+Given that the side length $s = 3$ inches, we have:
+$$A = 6 \times (3)^2 = 6 \times 9 = 54$$
+
+The surface area is $54$ square inches.
 x??
 
 ---
 
 #### Exponentiation
-Background context: When multiplying a number by itself multiple times, exponents are used. For example, \(a^3 = a \times a \times a\). Exponential properties allow simplification of expressions involving powers.
-:p Simplify the expression \(x^{2+2}\).
+Background context: When multiplying a number by itself multiple times, exponents are used. For example,$a^3 = a \times a \times a$. Exponential properties allow simplification of expressions involving powers.
+:p Simplify the expression $x^{2+2}$.
 ??x
 Using the property that when you multiply two exponents with the same base, you add their exponents:
-\[ x^{2+2} = x^4 \]
+$$x^{2+2} = x^4$$
 
-The answer is \(x^4\).
+The answer is $x^4$.
 x??
 
 ---
 
 #### Factorial Notation
-Background context: The factorial of a non-negative integer \(n\) (denoted by \(n!\)) is the product of all positive integers less than or equal to \(n\). For example, \(4! = 4 \times 3 \times 2 \times 1 = 24\).
-:p Evaluate \(4!\).
+Background context: The factorial of a non-negative integer $n $(denoted by $ n!$) is the product of all positive integers less than or equal to $ n$. For example,$4! = 4 \times 3 \times 2 \times 1 = 24$.
+:p Evaluate $4!$.
 ??x
 The factorial of 4 is:
-\[ 4! = 4 \times 3 \times 2 \times 1 = 24 \]
+$$4! = 4 \times 3 \times 2 \times 1 = 24$$
 
 The answer is 24.
 x??
@@ -750,13 +758,13 @@ x??
 ---
 
 #### Cube Root and Algebraic Operations
-Background context: The cube root of a number \(a\) (written as \(\sqrt[3]{a}\)) is a value that when multiplied by itself three times equals the original number. In this problem, we also use algebraic operations to solve equations involving exponents.
-:p Simplify the expression \(x^{3+3}\).
+Background context: The cube root of a number $a $(written as $\sqrt[3]{a}$) is a value that when multiplied by itself three times equals the original number. In this problem, we also use algebraic operations to solve equations involving exponents.
+:p Simplify the expression $x^{3+3}$.
 ??x
 Using the property of exponents, when you multiply two exponents with the same base, you add their exponents:
-\[ x^{3+3} = x^6 \]
+$$x^{3+3} = x^6$$
 
-The answer is \(x^6\).
+The answer is $x^6$.
 x??
 
 ---
@@ -847,7 +855,7 @@ Background context: Power (P) in an electrical system can be calculated using th
 
 :p How do you calculate power when given the current and voltage?
 ??x
-To calculate power, use the formula \( P = I \times V \). In this case, if \( I = 1200 \) amperes and \( V = 120 \) volts, then the power is \( 1200 \times 120 = 144,000 \) watts or 144 kilowatts.
+To calculate power, use the formula $P = I \times V $. In this case, if $ I = 1200 $ amperes and $ V = 120 $ volts, then the power is $1200 \times 120 = 144,000$ watts or 144 kilowatts.
 x??
 
 ---

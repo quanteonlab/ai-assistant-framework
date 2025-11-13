@@ -166,8 +166,8 @@ Background context explaining common types of errors in financial data with exam
 :p What are some common types of data errors found in financial data?
 ??x
 Common types of data errors include:
-- Random measurement errors (e.g., $9.345 instead of $9.335)
-- Wrong decimal places (e.g., a price of $111.34 instead of $11.134)
+- Random measurement errors (e.g., $9.345 instead of$9.335)
+- Wrong decimal places (e.g., a price of $111.34 instead of$11.134)
 - Decimal precision issues (e.g., an exchange rate of 1.345 instead of 1.3458)
 - Negative prices (e.g., one Apple stock is worth $-200)
 - Dummy and test quotes

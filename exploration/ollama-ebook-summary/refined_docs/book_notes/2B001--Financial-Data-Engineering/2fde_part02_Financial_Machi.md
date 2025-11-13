@@ -103,11 +103,9 @@ Common performance metrics for supervised learning include:
 ??x
 The formula for RMSE is:
 
-\[
-\text{RMSE} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}
-\]
+$$\text{RMSE} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}$$
 
-Where \( y_i \) are the actual values and \( \hat{y}_i \) are the predicted values.
+Where $y_i $ are the actual values and$\hat{y}_i$ are the predicted values.
 
 x??
 
@@ -146,10 +144,9 @@ x??
 #### Linear Regression
 Background context: Linear regression is a fundamental supervised learning technique used for predicting continuous outcomes. It models the relationship between a dependent variable (Y) and one or more independent variables (X) using a linear equation.
 
-Relevant formula: \( Y = \beta_0 + \beta_1 X + \epsilon \)
-- \( \beta_0 \): intercept
-- \( \beta_1 \): slope coefficient
-- \( \epsilon \): error term
+Relevant formula:$Y = \beta_0 + \beta_1 X + \epsilon $-$\beta_0$: intercept
+- $\beta_1$: slope coefficient
+- $\epsilon$: error term
 
 :p What is the basic principle of linear regression?
 ??x
@@ -161,9 +158,8 @@ x??
 #### Autoregressive Models (AR)
 Background context: Autoregressive models are used in time series analysis for predicting future points based on previous observations.
 
-Relevant formula: \( X_t = c + \phi_1 X_{t-1} + \epsilon_t \)
-- \( X_t \): value at time t
-- \( \phi_1 \): autoregressive coefficient
+Relevant formula: $X_t = c + \phi_1 X_{t-1} + \epsilon_t $-$ X_t$: value at time t
+- $\phi_1$: autoregressive coefficient
 
 :p What is the structure of an Autoregressive (AR) model?
 ??x
@@ -205,8 +201,7 @@ x??
 #### Logistic Regression for Classification
 Background context: Logistic regression is used when the dependent variable is binary.
 
-Relevant formula: \( P(Y=1) = \frac{e^{\beta_0 + \beta_1 X}}{1 + e^{\beta_0 + \beta_1 X}} \)
-- \( P(Y=1) \): probability of class 1
+Relevant formula: $P(Y=1) = \frac{e^{\beta_0 + \beta_1 X}}{1 + e^{\beta_0 + \beta_1 X}}$-$ P(Y=1)$: probability of class 1
 
 :p What does logistic regression predict?
 ??x

@@ -675,7 +675,7 @@ Background context explaining the Mandelbrot set and its algorithm. The membersh
 
 :p What does the `isMandelbrot` function determine?
 ??x
-The `isMandelbrot` function determines whether a given complex number belongs to the Mandelbrot set. It iterates the function \(z_{n+1} = z_n^2 + c\) starting from \(z_0 = 0\) and checks if the magnitude of the resulting sequence remains bounded (i.e., does not tend towards infinity).
+The `isMandelbrot` function determines whether a given complex number belongs to the Mandelbrot set. It iterates the function $z_{n+1} = z_n^2 + c $ starting from$z_0 = 0$ and checks if the magnitude of the resulting sequence remains bounded (i.e., does not tend towards infinity).
 
 ```csharp
 Func<Complex, int, bool> isMandelbrot = (complex, iterations) => {
@@ -766,12 +766,11 @@ x??
 Background context: The Mandelbrot set is a mathematical set of points whose boundary forms a fractal. To visualize it, each pixel on an image represents a complex number, and the color of that pixel depends on whether or not the corresponding complex number belongs to the Mandelbrot set. Typically, this process involves iterating a function many times for each pixel.
 
 The formula used in determining membership in the Mandelbrot set is:
-\[ z_{n+1} = z_n^2 + c \]
-where \( z_0 = 0 \) and \( c \) is a complex number corresponding to the point on the image. The iteration stops if the magnitude of \( z_n \) exceeds 2, indicating that the point does not belong to the set.
+$$z_{n+1} = z_n^2 + c$$where $ z_0 = 0 $ and $ c $ is a complex number corresponding to the point on the image. The iteration stops if the magnitude of $ z_n$ exceeds 2, indicating that the point does not belong to the set.
 
 :p What does the `isMandelbrot` function determine in this context?
 ??x
-The `isMandelbrot` function determines whether a given complex number \( c \) belongs to the Mandelbrot set after a certain number of iterations. It uses the iterative formula \( z_{n+1} = z_n^2 + c \) with initial \( z_0 = 0 \). The function returns true if, after 100 iterations (or fewer), the magnitude of \( z_n \) does not exceed 2.
+The `isMandelbrot` function determines whether a given complex number $c $ belongs to the Mandelbrot set after a certain number of iterations. It uses the iterative formula$z_{n+1} = z_n^2 + c $ with initial$ z_0 = 0 $. The function returns true if, after 100 iterations (or fewer), the magnitude of $ z_n$ does not exceed 2.
 ```csharp
 Func<Complex, int, bool> isMandelbrot = (complex, iterations) => {
     var z = new Complex(0.0f, 0.0f);
@@ -814,11 +813,11 @@ x??
 
 #### Iterative Formula and Convergence
 
-Background context: The iterative formula \( z_{n+1} = z_n^2 + c \) is used in determining membership of a complex number in the Mandelbrot set. If the magnitude of \( z_n \) exceeds 2 at any point, the sequence diverges, indicating that the corresponding complex number does not belong to the Mandelbrot set.
+Background context: The iterative formula $z_{n+1} = z_n^2 + c $ is used in determining membership of a complex number in the Mandelbrot set. If the magnitude of$z_n$ exceeds 2 at any point, the sequence diverges, indicating that the corresponding complex number does not belong to the Mandelbrot set.
 
-:p What happens if the magnitude of \( z_n \) in the iteration process exceeds 2?
+:p What happens if the magnitude of $z_n$ in the iteration process exceeds 2?
 ??x
-If the magnitude of \( z_n \) exceeds 2 during the iterative process, it indicates that the sequence is diverging. In this case, we can conclude that the corresponding complex number does not belong to the Mandelbrot set because points outside the set will eventually escape to infinity under repeated iteration.
+If the magnitude of $z_n$ exceeds 2 during the iterative process, it indicates that the sequence is diverging. In this case, we can conclude that the corresponding complex number does not belong to the Mandelbrot set because points outside the set will eventually escape to infinity under repeated iteration.
 
 This is a key stopping condition in the `isMandelbrot` function:
 ```csharp
@@ -835,7 +834,7 @@ Background context: In rendering the Mandelbrot set, each pixel corresponds to a
 :p How are colors assigned to pixels based on membership in the Mandelbrot set?
 ??x
 Colors are assigned to pixels based on their membership in the Mandelbrot set as follows:
-- If a complex number \( c \) is determined to be part of the Mandelbrot set, it is colored dark blue.
+- If a complex number $c$ is determined to be part of the Mandelbrot set, it is colored dark blue.
 - Otherwise, it is colored white.
 
 This assignment is done using the `isMandelbrot` function and the color properties of the pixel buffer:
@@ -916,7 +915,7 @@ Background context: The optimal number of worker threads should be equal to the 
 :p How does determining the optimal number of worker threads help in performance optimization?
 ??x
 Determining the optimal number of worker threads helps by balancing between maximizing parallelism and reducing overhead. Too few threads underutilize cores, while too many can lead to excessive context-switching overhead, degrading performance. For example, with a quad-core machine having 50% average core utilization:
-- Optimal worker threads: \(4 \text{ cores} \times \frac{100\%}{50\%} = 8\) threads.
+- Optimal worker threads: $4 \text{ cores} \times \frac{100\%}{50\%} = 8$ threads.
 Too many threads beyond this point would increase context-switching costs, reducing overall efficiency.
 
 ```csharp
@@ -937,8 +936,7 @@ Background context: In the Mandelbrot example, memory allocation for `Complex` o
 Converting a reference type to a value type optimizes memory by eliminating heap allocations for short-lived objects, reducing the burden on the garbage collector. `Complex` class instances are reference types that consume additional memory due to pointers and overhead. By changing `class Complex` to `struct Complex`, each instance is allocated directly on the stack rather than the heap.
 
 For example, a 1 million-element array of `Complex` objects in a 32-bit machine would consume:
-- Heap-based: \(8 + (4 \times 10^6) + (8 + 24 \times 10^6) = 72 MB\)
-- Stack-based: \(8 + (24 \times 10^6) = 24 MB\)
+- Heap-based:$8 + (4 \times 10^6) + (8 + 24 \times 10^6) = 72 MB $- Stack-based:$8 + (24 \times 10^6) = 24 MB$
 
 This reduces GC frequency and pauses, improving overall performance.
 

@@ -147,34 +147,26 @@ We first determine how many years she has to save:
 - Current age: 37
 - Goal age: 40
 
-Therefore, the number of years \( y \) is calculated as follows:
+Therefore, the number of years $y$ is calculated as follows:
 
-\[
-y = goalAge - currentAge = 40 - 37 = 3
-\]
+$$y = goalAge - currentAge = 40 - 37 = 3$$
 
 Next, we set up the equation where the total savings needed equals the annual savings multiplied by the number of years:
-- Total Savings Goal: $15,000
+- Total Savings Goal:$15,000
 
 We represent this as an equation:
 
-\[
+$$
 y \times m = \$15,000
-\]
+$$Substituting $ y = 3$:
 
-Substituting \( y = 3 \):
-
-\[
+$$
 3m = \$15,000
-\]
+$$To find the annual savings $ m$, we divide both sides by 3:
 
-To find the annual savings \( m \), we divide both sides by 3:
-
-\[
+$$
 m = \frac{\$15,000}{3} = \$5,000
-\]
-
-Therefore, Joan needs to save $5,000 each year for three years.
+$$Therefore, Joan needs to save$5,000 each year for three years.
 x??
 
 ---
@@ -196,33 +188,24 @@ public class IsolateUnknownExample {
     }
 }
 ```
-:p How do you isolate an unknown variable in the equation \( ym = \$15,000 \) when \( y = 3 \)?
+:p How do you isolate an unknown variable in the equation $ym = \$15,000 $ when$y = 3$?
 ??x
-To solve for \( m \), we start with the equation:
+To solve for $m$, we start with the equation:
 
-\[
+$$
 y \times m = \$15,000
-\]
+$$Given that $ y = 3$:
 
-Given that \( y = 3 \):
-
-\[
+$$
 3 \times m = \$15,000
-\]
+$$We need to isolate $ m$. To do this, divide both sides of the equation by 3:
 
-We need to isolate \( m \). To do this, divide both sides of the equation by 3:
-
-\[
+$$
 m = \frac{\$15,000}{3}
-\]
-
-Performing the division gives us:
-
-\[
+$$Performing the division gives us:
+$$
 m = \$5,000
-\]
-
-So, Joan needs to save $5,000 each year.
+$$So, Joan needs to save$5,000 each year.
 x??
 
 ---
@@ -258,23 +241,15 @@ Drawing a diagram helps visualize the space and simplifies calculations. For ins
 
 A diagram can help break down the area into more manageable parts. In this case, we assume a simplified approach by calculating the area of two pairs of opposite sides:
 
-\[
-\text{Area to tile} = side1 \times side2 + side3 \times side4
-\]
+$$\text{Area to tile} = side1 \times side2 + side3 \times side4$$
 
 Plugging in the values:
-
-\[
-\text{Area to tile} = 15 \times 14 + 8 \times 6
-\]
+$$\text{Area to tile} = 15 \times 14 + 8 \times 6$$
 
 This visualization helps you understand that you need to calculate the area of each section separately and sum them up.
 
 Therefore, the total area to be tiled is:
-
-\[
-15 \times 14 + 8 \times 6 = 210 + 48 = 258 \text{ square feet}
-\]
+$$15 \times 14 + 8 \times 6 = 210 + 48 = 258 \text{ square feet}$$
 
 This diagrammatic approach makes it easier to conceptualize and compute the required tiling area.
 x??

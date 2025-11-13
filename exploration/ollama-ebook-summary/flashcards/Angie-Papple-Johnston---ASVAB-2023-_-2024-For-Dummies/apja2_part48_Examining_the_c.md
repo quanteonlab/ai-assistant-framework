@@ -25,7 +25,7 @@ x??
 
 ---
 #### Electrical Current and Flow Rate
-Background context: Electrical current is the flow of electrons in a conductor. It's measured in amps (A). A coulomb (C) represents one unit of charge and contains approximately \(6,241,500,000,000,000,000\) electrons.
+Background context: Electrical current is the flow of electrons in a conductor. It's measured in amps (A). A coulomb (C) represents one unit of charge and contains approximately $6,241,500,000,000,000,000$ electrons.
 
 :p What is electrical current?
 ??x
@@ -56,11 +56,9 @@ x??
 ---
 #### Relationship Between Voltage, Current, and Resistance (Ohm's Law)
 Background context: The relationship between voltage (V), current (I), and resistance (R) in a circuit is described by Ohm's law:
-\[ V = I \times R \]
-
-:p What is Ohm’s law?
+$$V = I \times R$$:p What is Ohm’s law?
 ??x
-Ohm’s law states that the current flowing through a conductor between two points is directly proportional to the voltage across the two points, and inversely proportional to the resistance between them. Mathematically: \( V = I \times R \).
+Ohm’s law states that the current flowing through a conductor between two points is directly proportional to the voltage across the two points, and inversely proportional to the resistance between them. Mathematically:$V = I \times R$.
 ??x
 How does increasing voltage affect the flow of electrons (current)?
 ??x
@@ -80,19 +78,19 @@ Circuit breakers are used to safely interrupt an electrical current when it exce
 
 ---
 #### Ohm’s Law: Relating Resistance, Current, and Voltage
-Background context: Georg Simon Ohm formulated the relationship between voltage (V), current (I), and resistance (R) in electrical circuits. The formula \( I = \frac{V}{R} \) represents this relationship.
+Background context: Georg Simon Ohm formulated the relationship between voltage (V), current (I), and resistance (R) in electrical circuits. The formula $I = \frac{V}{R}$ represents this relationship.
 :p What is Ohm's law?
 ??x
-Ohm's Law states that the current (I) flowing through a conductor between two points is directly proportional to the voltage (V) across the two points, and inversely proportional to the resistance (R) of the conductor. This can be expressed mathematically as \( I = \frac{V}{R} \).
+Ohm's Law states that the current (I) flowing through a conductor between two points is directly proportional to the voltage (V) across the two points, and inversely proportional to the resistance (R) of the conductor. This can be expressed mathematically as $I = \frac{V}{R}$.
 ???x
 ---
 
 ---
 #### Measuring Voltage: Using Voltmeters and Multimeters
-Background context: To measure voltage in a circuit, one compares the potential difference between two points using a voltmeter or multimeter. The formula for calculating voltage is \( V = I \times R \), where V is the voltage, I is the current, and R is the resistance.
+Background context: To measure voltage in a circuit, one compares the potential difference between two points using a voltmeter or multimeter. The formula for calculating voltage is $V = I \times R$, where V is the voltage, I is the current, and R is the resistance.
 :p How do you measure voltage?
 ??x
-You can measure voltage by comparing the potential difference between two points in a circuit using a voltmeter or multimeter. The formula to calculate voltage is \( V = I \times R \), where \( V \) is the voltage, \( I \) is the current, and \( R \) is the resistance.
+You can measure voltage by comparing the potential difference between two points in a circuit using a voltmeter or multimeter. The formula to calculate voltage is $V = I \times R $, where $ V $ is the voltage, $ I $ is the current, and $ R$ is the resistance.
 ???x
 ---
 
@@ -239,8 +237,9 @@ Background context: Calculating resistance involves understanding series, parall
 
 :p How do you calculate total resistance in a series circuit?
 ??x
-In a series circuit, the total resistance \( R_{total} \) is simply the sum of all individual resistances. For example:
-\[ R_{total} = R_1 + R_2 + R_3 \]
+In a series circuit, the total resistance $R_{total}$ is simply the sum of all individual resistances. For example:
+$$R_{total} = R_1 + R_2 + R_3$$
+
 This means if multiple loads are connected in series, their resistances add up.
 
 ```java
@@ -255,14 +254,15 @@ x??
 ---
 
 #### Parallel Circuits and Total Resistance
-Background context: In a parallel circuit, the total resistance \( R_{total} \) can be calculated using the formula involving the reciprocal of each individual resistance.
+Background context: In a parallel circuit, the total resistance $R_{total}$ can be calculated using the formula involving the reciprocal of each individual resistance.
 
 :p How do you calculate total resistance in a parallel circuit?
 ??x
 In a parallel circuit, the total resistance is given by:
-\[ \frac{1}{R_{total}} = \frac{1}{R_1} + \frac{1}{R_2} + \ldots + \frac{1}{R_n} \]
-For example, if you have two resistors \( R_1 \) and \( R_2 \):
-\[ R_{total} = \left( \frac{1}{R_1} + \frac{1}{R_2} \right)^{-1} \]
+$$\frac{1}{R_{total}} = \frac{1}{R_1} + \frac{1}{R_2} + \ldots + \frac{1}{R_n}$$
+
+For example, if you have two resistors $R_1 $ and$R_2$:
+$$R_{total} = \left( \frac{1}{R_1} + \frac{1}{R_2} \right)^{-1}$$
 
 ```java
 public class ParallelResistanceCalculation {

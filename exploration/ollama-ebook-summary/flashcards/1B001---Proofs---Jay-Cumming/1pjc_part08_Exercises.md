@@ -10,53 +10,53 @@ Background context: The base case of the proof for Mantel's theorem involves sho
 
 :p What is the base case in the proof of Mantel’s theorem?
 ??x
-The base case in the proof of Mantel’s theorem states that for \( n = 1 \), we have a graph with 2 vertices and 2 edges, which by definition cannot contain a triangle. Therefore, the statement "every graph on 2n vertices and \( n^2 + 1 \) edges contains a triangle" is vacuously true.
+The base case in the proof of Mantel’s theorem states that for $n = 1 $, we have a graph with 2 vertices and 2 edges, which by definition cannot contain a triangle. Therefore, the statement "every graph on 2n vertices and $ n^2 + 1$ edges contains a triangle" is vacuously true.
 x??
 
 ---
 
 #### Inductive Hypothesis
 
-Background context: The inductive hypothesis assumes that for some integer \( k \), every graph with \( 2k \) vertices and \( k^2 + 1 \) edges contains a triangle. This assumption will be used to prove the statement for \( k+1 \).
+Background context: The inductive hypothesis assumes that for some integer $k $, every graph with $2k $ vertices and$k^2 + 1 $ edges contains a triangle. This assumption will be used to prove the statement for$k+1$.
 
 :p What is the inductive hypothesis in the proof of Mantel’s theorem?
 ??x
-The inductive hypothesis in the proof of Mantel's theorem states that if we have a graph with \( 2k \) vertices and \( k^2 + 1 \) edges, then this graph must contain a triangle. We use this assumption to prove that for \( k+1 \), every graph on \( 2(k+1) \) vertices and \( (k+1)^2 + 1 \) edges also contains a triangle.
+The inductive hypothesis in the proof of Mantel's theorem states that if we have a graph with $2k $ vertices and$k^2 + 1 $ edges, then this graph must contain a triangle. We use this assumption to prove that for$ k+1 $, every graph on $2(k+1)$ vertices and $(k+1)^2 + 1$ edges also contains a triangle.
 x??
 
 ---
 
 #### Induction Step - Edge Count
 
-Background context: In the induction step, we consider a graph with \( 2(k+1) \) vertices and \( (k+1)^2 + 1 \) edges. We choose any two connected vertices \( u \) and \( v \), and analyze the remaining \( 2k \) vertices.
+Background context: In the induction step, we consider a graph with $2(k+1)$ vertices and $(k+1)^2 + 1$ edges. We choose any two connected vertices $ u $ and $ v $, and analyze the remaining $2k$ vertices.
 
 :p What is the scenario described in the induction step of Mantel’s theorem?
 ??x
-In the induction step, we consider a graph with \( 2(k+1) = 2k + 2 \) vertices and \( (k+1)^2 + 1 = k^2 + 2k + 2 \) edges. We select any two connected vertices \( u \) and \( v \), and the remaining \( 2k \) vertices form a subgraph \( H \). The number of edges between these \( 2k \) vertices in \( H \) is analyzed to prove the presence of a triangle.
+In the induction step, we consider a graph with $2(k+1) = 2k + 2 $ vertices and$(k+1)^2 + 1 = k^2 + 2k + 2 $ edges. We select any two connected vertices$u $ and$ v $, and the remaining $2k$ vertices form a subgraph $ H $. The number of edges between these $2k $ vertices in $H$ is analyzed to prove the presence of a triangle.
 x??
 
 ---
 
 #### Edge Count Analysis
 
-Background context: If the subgraph \( H \) has at least \( k^2 + 1 \) edges, then by the inductive hypothesis, it contains a triangle. Otherwise, if there are at most \( k^2 \) edges, we analyze the remaining edges.
+Background context: If the subgraph $H $ has at least$k^2 + 1 $ edges, then by the inductive hypothesis, it contains a triangle. Otherwise, if there are at most$k^2$ edges, we analyze the remaining edges.
 
-:p What happens when the subgraph \( H \) does not have enough edges?
+:p What happens when the subgraph $H$ does not have enough edges?
 ??x
-If the subgraph \( H \) has at most \( k^2 \) edges, then there must be at least \( (k+1)^2 + 1 - k^2 = 2k + 2 \) edges connecting to vertices \( u \) and \( v \). Since only one of these is the edge between \( u \) and \( v \), the remaining \( 2k + 1 \) edges must connect \( u \) or \( v \) to some other vertex in \( H \).
+If the subgraph $H $ has at most$k^2 $ edges, then there must be at least$(k+1)^2 + 1 - k^2 = 2k + 2 $ edges connecting to vertices$u $ and $ v $. Since only one of these is the edge between$ u $and$ v $, the remaining$2k + 1 $ edges must connect$ u $ or $ v $ to some other vertex in $H$.
 
-By the pigeonhole principle, at least one vertex \( w \) in \( H \) must be connected to both \( u \) and \( v \), forming a triangle with \( u \), \( v \), and \( w \).
+By the pigeonhole principle, at least one vertex $w $ in$H $ must be connected to both$ u $ and $ v $, forming a triangle with $ u$,$ v $, and$ w$.
 x??
 
 ---
 
 #### Conclusion of Induction
 
-Background context: Using the inductive hypothesis and edge analysis, we conclude that every graph on \( 2(k+1) \) vertices and \( (k+1)^2 + 1 \) edges contains a triangle.
+Background context: Using the inductive hypothesis and edge analysis, we conclude that every graph on $2(k+1)$ vertices and $(k+1)^2 + 1$ edges contains a triangle.
 
 :p What is the conclusion drawn from the induction step?
 ??x
-The conclusion drawn from the induction step is that if a graph with \( 2(k+1) \) vertices and \( (k+1)^2 + 1 \) edges contains at least two connected vertices, then by analyzing the remaining \( 2k \) vertices, we can show that there must be a triangle. This completes the induction step and proves Mantel's theorem.
+The conclusion drawn from the induction step is that if a graph with $2(k+1)$ vertices and $(k+1)^2 + 1$ edges contains at least two connected vertices, then by analyzing the remaining $2k$ vertices, we can show that there must be a triangle. This completes the induction step and proves Mantel's theorem.
 x??
 
 ---
@@ -74,29 +74,29 @@ x??
 
 #### Base Cases for Fibonacci Sequence
 
-Background context: For proofs involving sequences like the Fibonacci sequence \( F_n = F_{n-1} + F_{n-2} \), multiple base cases are often necessary.
+Background context: For proofs involving sequences like the Fibonacci sequence $F_n = F_{n-1} + F_{n-2}$, multiple base cases are often necessary.
 
 :p How many base cases are needed for a proof using induction on the Fibonacci sequence?
 ??x
-A proof by induction on the Fibonacci sequence \( F_n = F_{n-1} + F_{n-2} \) requires two base cases, namely \( F_1 \) and \( F_2 \), to establish the initial conditions.
+A proof by induction on the Fibonacci sequence $F_n = F_{n-1} + F_{n-2}$ requires two base cases, namely $ F_1 $ and $F_2$, to establish the initial conditions.
 x??
 
 ---
 
 #### Two Inductions for All Z
-Background context: Sometimes a theorem needs to be proven for all integers \( n \in \mathbb{Z} \). This requires proving both positive and negative integer cases. The standard induction process is extended by performing two separate inductions:
-- One for the non-negative integers (i.e., \( k \geq 0 \)).
-- Another for the negative integers (i.e., \( k < 0 \)).
+Background context: Sometimes a theorem needs to be proven for all integers $n \in \mathbb{Z}$. This requires proving both positive and negative integer cases. The standard induction process is extended by performing two separate inductions:
+- One for the non-negative integers (i.e., $k \geq 0$).
+- Another for the negative integers (i.e., $k < 0$).
 
 The combined result ensures that the theorem holds for all integers.
 
-:p How do you prove a theorem for every integer \( n \in \mathbb{Z} \) using induction?
+:p How do you prove a theorem for every integer $n \in \mathbb{Z}$ using induction?
 ??x
 To prove a theorem for every integer, perform two separate inductions:
-1. Prove the base case \( S_0 \).
-2. Assume that \( S_k \) holds for all non-negative integers up to some arbitrary \( k \geq 0 \), and show \( Sk+1 \).
-3. Similarly, prove the base case \( S_0 \) for negative integers.
-4. Assume that \( S_k \) holds for all negative integers down to some arbitrary \( k \leq 0 \), and show \( Sk-1 \).
+1. Prove the base case $S_0$.
+2. Assume that $S_k $ holds for all non-negative integers up to some arbitrary$k \geq 0 $, and show$ Sk+1$.
+3. Similarly, prove the base case $S_0$ for negative integers.
+4. Assume that $S_k $ holds for all negative integers down to some arbitrary$k \leq 0 $, and show$ Sk-1$.
 
 The combined results ensure the theorem is true for every integer.
 
@@ -135,19 +135,19 @@ x??
 ---
 
 #### Induction for Finitely Many Cases
-Background context: Induction can also be used to prove a statement for a finite set of values. For example, proving \( S_n \) holds for all \( n \in \{1, 2, 3, ..., 100\} \).
+Background context: Induction can also be used to prove a statement for a finite set of values. For example, proving $S_n $ holds for all$n \in \{1, 2, 3, ..., 100\}$.
 
 :p How do you use induction to prove a result in finitely many cases?
 ??x
-To use induction for a finite set of values (e.g., \( n \in \{1, 2, 3, ..., 100\} \)):
+To use induction for a finite set of values (e.g., $n \in \{1, 2, 3, ..., 100\}$):
 
-- Set the base case as \( S_1 \).
-- Assume \( S_k \) holds for all \( k \in \{1, 2, 3, ..., 99\} \).
-- Prove that \( Sk+1 \) follows from \( S_k \).
+- Set the base case as $S_1$.
+- Assume $S_k $ holds for all$k \in \{1, 2, 3, ..., 99\}$.
+- Prove that $Sk+1 $ follows from$S_k$.
 
 This ensures the result is true for every value in the finite set.
 
-Example: Proving a statement for \( n = 1, 2, 3, ..., 100 \).
+Example: Proving a statement for $n = 1, 2, 3, ..., 100$.
 ```java
 // Pseudocode example
 function induction_for_finite_cases(n) {
@@ -169,12 +169,12 @@ Background context: Backwards induction proves a result by showing that if it ho
 :p How does backwards induction work?
 ??x
 Backwards induction works by:
-1. Proving the statement for an infinite sequence (e.g., \( n = 1, 2, 4, 8, 16, ... \)).
-2. Showing that if it holds for \( S_k \), then it also holds for \( S_{k-1} \).
+1. Proving the statement for an infinite sequence (e.g., $n = 1, 2, 4, 8, 16, ...$).
+2. Showing that if it holds for $S_k $, then it also holds for $ S_{k-1}$.
 
 This process allows proving the statement for any value by tracing back from an infinite sequence.
 
-Example: Proving a result for \( n = 60 \).
+Example: Proving a result for $n = 60$.
 ```java
 // Pseudocode example
 function backwards_induction(n) {
@@ -194,15 +194,15 @@ Background context: Sometimes, a proof involves multiple variables and requires 
 
 :p How do you perform induction on two different variables?
 ??x
-To perform induction on two different variables \( m \) and \( n \):
+To perform induction on two different variables $m $ and$n$:
 
-1. Set the base case: Prove \( S_{m, 1} \).
-2. Assume \( S_{m, k} \) holds for all \( k \leq n-1 \), and prove \( Sk+1 \).
-3. Assume \( S_{k, n} \) holds for all \( k \leq m-1 \), and prove \( Sm+1,n \).
+1. Set the base case: Prove $S_{m, 1}$.
+2. Assume $S_{m, k}$ holds for all $ k \leq n-1 $, and prove $ Sk+1$.
+3. Assume $S_{k, n}$ holds for all $ k \leq m-1 $, and prove $ Sm+1,n$.
 
 This ensures the result is true for all pairs of variables.
 
-Example: Proving a statement for all \( m, n \in \mathbb{N} \).
+Example: Proving a statement for all $m, n \in \mathbb{N}$.
 ```java
 // Pseudocode example
 function multi_variable_induction(m, n) {
@@ -227,7 +227,7 @@ Background context: A statement can be true "vacuously" if it has no elements to
 
 :p What does it mean for a statement to be vacuously true?
 ??x
-A statement is vacuously true when there are no cases that could make the statement false. For example, the statement "For all \( n \in \emptyset \), \( P(n) \)" is always true because there are no elements in the empty set.
+A statement is vacuously true when there are no cases that could make the statement false. For example, the statement "For all $n \in \emptyset $, $ P(n)$" is always true because there are no elements in the empty set.
 
 In induction, a base case might be trivial if it has no values to check, but this doesn't affect the truth of the entire proof.
 
@@ -239,15 +239,17 @@ x??
 
 #### Induction Proof for Sum of Squares
 
-Background context: The given proof demonstrates an induction step to show that the sum of squares from 1 to n is bounded by \(\frac{2}{3}n^3 + \frac{1}{2}n^2 + \frac{1}{6}n\), which simplifies to \(2n^2 - \frac{n}{3}\) for large \(n\) and thus, the sum of squares is less than or equal to \(\frac{2}{3}n^3\).
+Background context: The given proof demonstrates an induction step to show that the sum of squares from 1 to n is bounded by $\frac{2}{3}n^3 + \frac{1}{2}n^2 + \frac{1}{6}n $, which simplifies to $2n^2 - \frac{n}{3}$ for large $n$ and thus, the sum of squares is less than or equal to $\frac{2}{3}n^3$.
 
 :p What does this induction proof demonstrate about the sum of squares?
 ??x
-The induction proof demonstrates that the sum of squares from 1 to n, denoted as \(\sum_{k=1}^{n} k^2\), is bounded by \(2n^2 - \frac{n}{3}\). This means for any natural number \(n\),
-\[ \sum_{k=1}^{n} k^2 \leq 2n^2 - \frac{n}{3}. \]
-The proof uses an inductive approach to show that if the statement holds for some \(k\), it also holds for \(k+1\). Specifically, starting with the base case \(n=1\) and then assuming it holds for \(k\),
-\[ k^2 + (k+1)^2 \leq 2(k+1)^2 - \frac{(k+1)}{3}. \]
-The induction step confirms that the sum of squares up to \(n=k+1\) is still bounded by a similar form.
+The induction proof demonstrates that the sum of squares from 1 to n, denoted as $\sum_{k=1}^{n} k^2 $, is bounded by $2n^2 - \frac{n}{3}$. This means for any natural number $ n$,
+$$\sum_{k=1}^{n} k^2 \leq 2n^2 - \frac{n}{3}.$$
+
+The proof uses an inductive approach to show that if the statement holds for some $k $, it also holds for$ k+1 $. Specifically, starting with the base case$ n=1 $and then assuming it holds for$ k$,
+$$k^2 + (k+1)^2 \leq 2(k+1)^2 - \frac{(k+1)}{3}.$$
+
+The induction step confirms that the sum of squares up to $n=k+1$ is still bounded by a similar form.
 
 x??
 
@@ -255,28 +257,23 @@ x??
 
 #### Sum of First n Odd Natural Numbers
 
-Background context: The problem requires proving that the sum of the first \(n\) odd natural numbers equals \(n^2\). This can be done using induction, and it provides an interesting pattern in number sequences.
+Background context: The problem requires proving that the sum of the first $n $ odd natural numbers equals$n^2$. This can be done using induction, and it provides an interesting pattern in number sequences.
 
-:p How do you prove the sum of the first \(n\) odd natural numbers is equal to \(n^2\)?
+:p How do you prove the sum of the first $n $ odd natural numbers is equal to$n^2$?
 ??x
-To prove that the sum of the first \(n\) odd natural numbers equals \(n^2\), we use mathematical induction. The formula for the sum of the first \(n\) odd natural numbers is:
-\[ 1 + 3 + 5 + \cdots + (2n-1) = n^2. \]
+To prove that the sum of the first $n $ odd natural numbers equals$n^2 $, we use mathematical induction. The formula for the sum of the first$ n$odd natural numbers is:
+$$1 + 3 + 5 + \cdots + (2n-1) = n^2.$$**Base Case:** For $ n=1$,
+$$1 = 1^2,$$which is true.
 
-**Base Case:** For \(n=1\),
-\[ 1 = 1^2, \]
-which is true.
+**Inductive Hypothesis:** Assume the statement is true for some $k$, i.e.,
+$$1 + 3 + 5 + \cdots + (2k-1) = k^2.$$**Inductive Step:** We need to show that$$1 + 3 + 5 + \cdots + (2k-1) + (2(k+1)-1) = (k+1)^2.$$
 
-**Inductive Hypothesis:** Assume the statement is true for some \(k\), i.e.,
-\[ 1 + 3 + 5 + \cdots + (2k-1) = k^2. \]
+Using the inductive hypothesis,$$1 + 3 + 5 + \cdots + (2k-1) + (2k+1) = k^2 + (2k+1).$$
 
-**Inductive Step:** We need to show that
-\[ 1 + 3 + 5 + \cdots + (2k-1) + (2(k+1)-1) = (k+1)^2. \]
-Using the inductive hypothesis,
-\[ 1 + 3 + 5 + \cdots + (2k-1) + (2k+1) = k^2 + (2k+1). \]
 Simplifying the right-hand side:
-\[ k^2 + 2k + 1 = (k+1)^2. \]
+$$k^2 + 2k + 1 = (k+1)^2.$$
 
-Thus, by induction, the statement holds for all \(n\).
+Thus, by induction, the statement holds for all $n$.
 
 x??
 
@@ -284,29 +281,24 @@ x??
 
 #### Proofs of Evenness
 
-Background context: The problem involves proving that \(n^2 - n\) is even for any natural number \(n\). There are multiple methods to prove this, including cases, applying a proposition, and using strong induction.
+Background context: The problem involves proving that $n^2 - n $ is even for any natural number$n$. There are multiple methods to prove this, including cases, applying a proposition, and using strong induction.
 
-:p Provide three different proofs that if \(n \in \mathbb{N}\), then \(n^2 - n\) is even.
+:p Provide three different proofs that if $n \in \mathbb{N}$, then $ n^2 - n$ is even.
 ??x
 **Proof by Cases:**
-- **Case 1:** If \(n\) is even, let \(n = 2k\). Then,
-\[ n^2 - n = (2k)^2 - 2k = 4k^2 - 2k = 2(2k^2 - k), \]
-which is clearly even.
-- **Case 2:** If \(n\) is odd, let \(n = 2k + 1\). Then,
-\[ n^2 - n = (2k+1)^2 - (2k+1) = 4k^2 + 4k + 1 - 2k - 1 = 4k^2 + 2k, \]
-which is also even.
+- **Case 1:** If $n $ is even, let$n = 2k$. Then,
+$$n^2 - n = (2k)^2 - 2k = 4k^2 - 2k = 2(2k^2 - k),$$which is clearly even.
+- **Case 2:** If $n $ is odd, let$n = 2k + 1$. Then,
+$$n^2 - n = (2k+1)^2 - (2k+1) = 4k^2 + 4k + 1 - 2k - 1 = 4k^2 + 2k,$$which is also even.
 
 **Proof by Applying Proposition 4.2 to the Sum:**
-Using the sum \(1 + 2 + 3 + \cdots + (n-1)\), and knowing that this sum is an integer,
-\[ n(n-1) = \sum_{i=1}^{n-1} i, \]
-and since any product of consecutive integers is even, \(n^2 - n\) must be even.
+Using the sum $1 + 2 + 3 + \cdots + (n-1)$, and knowing that this sum is an integer,
+$$n(n-1) = \sum_{i=1}^{n-1} i,$$and since any product of consecutive integers is even,$ n^2 - n$ must be even.
 
 **Proof by Strong Induction:**
-Assume the statement holds for all \(k < n\). If \(n\) is even, let \(n = 2m\), then
-\[ (2m)^2 - 2m = 4m(m-1), \]
-which is clearly even. If \(n\) is odd, let \(n = 2m+1\), then
-\[ (2m+1)^2 - (2m+1) = 4m^2 + 2m, \]
-which is also even.
+Assume the statement holds for all $k < n $. If $ n $is even, let$ n = 2m$, then
+$$(2m)^2 - 2m = 4m(m-1),$$which is clearly even. If $ n $ is odd, let $ n = 2m+1$, then
+$$(2m+1)^2 - (2m+1) = 4m^2 + 2m,$$which is also even.
 
 x??
 
@@ -316,28 +308,24 @@ x??
 
 Background context: The problem requires proving several statements about divisibility using induction. This involves showing that certain expressions are divisible by specific numbers.
 
-:p Use induction to prove \(3j(4^n - 1)\) for every natural number \(n\).
+:p Use induction to prove $3j(4^n - 1)$ for every natural number $n$.
 ??x
-To prove \(3 \mid (4^n - 1)\) for every natural number \(n\) using induction:
+To prove $3 \mid (4^n - 1)$ for every natural number $n$ using induction:
 
-**Base Case:** For \(n=1\),
-\[ 4^1 - 1 = 3, \]
-which is divisible by 3.
+**Base Case:** For $n=1$,
+$$4^1 - 1 = 3,$$which is divisible by 3.
 
-**Inductive Hypothesis:** Assume the statement holds for some \(k\), i.e.,
-\[ 3 \mid (4^k - 1). \]
+**Inductive Hypothesis:** Assume the statement holds for some $k$, i.e.,
+$$3 \mid (4^k - 1).$$**Inductive Step:** We need to show that$$3 \mid (4^{k+1} - 1).$$
 
-**Inductive Step:** We need to show that
-\[ 3 \mid (4^{k+1} - 1). \]
 Starting from the inductive hypothesis:
-\[ 4^{k+1} - 1 = 4 \cdot 4^k - 1 = 4(4^k) - 1. \]
-Using the fact that \(3 \mid (4^k - 1)\), we can write:
-\[ 4^k = 3m + 1, \]
-for some integer \(m\). Thus,
-\[ 4^{k+1} - 1 = 4(3m + 1) - 1 = 12m + 4 - 1 = 12m + 3 = 3(4m + 1), \]
-which is clearly divisible by 3.
+$$4^{k+1} - 1 = 4 \cdot 4^k - 1 = 4(4^k) - 1.$$
 
-Thus, by induction, the statement holds for all \(n\).
+Using the fact that $3 \mid (4^k - 1)$, we can write:
+$$4^k = 3m + 1,$$for some integer $ m$. Thus,
+$$4^{k+1} - 1 = 4(3m + 1) - 1 = 12m + 4 - 1 = 12m + 3 = 3(4m + 1),$$which is clearly divisible by 3.
+
+Thus, by induction, the statement holds for all $n$.
 
 x??
 
@@ -347,30 +335,27 @@ x??
 
 Background context: The problem involves proving various sum formulas using induction or strong induction. These include sums of squares, cubes, and products of consecutive numbers.
 
-:p Prove that \(\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}\) for every natural number \(n\).
+:p Prove that $\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}$ for every natural number $n$.
 ??x
 To prove the sum of squares formula using induction:
-\[ \sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}. \]
+$$\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}.$$**Base Case:** For $ n=1$,
+$$1^2 = \frac{1(1+1)(2\cdot1+1)}{6} = \frac{1 \cdot 2 \cdot 3}{6} = 1,$$which is true.
 
-**Base Case:** For \(n=1\),
-\[ 1^2 = \frac{1(1+1)(2\cdot1+1)}{6} = \frac{1 \cdot 2 \cdot 3}{6} = 1, \]
-which is true.
+**Inductive Hypothesis:** Assume the statement holds for some $k$, i.e.,
+$$\sum_{k=1}^{k} k^2 = \frac{k(k+1)(2k+1)}{6}.$$**Inductive Step:** We need to show that$$\sum_{k=1}^{k+1} (k+1)^2 = \frac{(k+1)(k+2)(2k+3)}{6}.$$
 
-**Inductive Hypothesis:** Assume the statement holds for some \(k\), i.e.,
-\[ \sum_{k=1}^{k} k^2 = \frac{k(k+1)(2k+1)}{6}. \]
-
-**Inductive Step:** We need to show that
-\[ \sum_{k=1}^{k+1} (k+1)^2 = \frac{(k+1)(k+2)(2k+3)}{6}. \]
 Starting from the inductive hypothesis:
-\[ \sum_{k=1}^{k+1} k^2 = \sum_{k=1}^{k} k^2 + (k+1)^2 = \frac{k(k+1)(2k+1)}{6} + (k+1)^2. \]
-Combine the terms:
-\[ \frac{k(k+1)(2k+1) + 6(k+1)^2}{6} = \frac{(k+1)[k(2k+1) + 6(k+1)]}{6}. \]
-Simplify inside the brackets:
-\[ k(2k+1) + 6(k+1) = 2k^2 + k + 6k + 6 = 2k^2 + 7k + 6. \]
-Thus,
-\[ \frac{(k+1)(2k^2 + 7k + 6)}{6} = \frac{(k+1)[(2k+3)(k+2)]}{6} = \frac{(k+1)(k+2)(2k+3)}{6}. \]
+$$\sum_{k=1}^{k+1} k^2 = \sum_{k=1}^{k} k^2 + (k+1)^2 = \frac{k(k+1)(2k+1)}{6} + (k+1)^2.$$
 
-Thus, by induction, the statement holds for all \(n\).
+Combine the terms:
+$$\frac{k(k+1)(2k+1) + 6(k+1)^2}{6} = \frac{(k+1)[k(2k+1) + 6(k+1)]}{6}.$$
+
+Simplify inside the brackets:
+$$k(2k+1) + 6(k+1) = 2k^2 + k + 6k + 6 = 2k^2 + 7k + 6.$$
+
+Thus,$$\frac{(k+1)(2k^2 + 7k + 6)}{6} = \frac{(k+1)[(2k+3)(k+2)]}{6} = \frac{(k+1)(k+2)(2k+3)}{6}.$$
+
+Thus, by induction, the statement holds for all $n$.
 
 x??
 
@@ -380,26 +365,25 @@ x??
 
 Background context: The problem involves proving various inequalities and equalities about numbers using mathematical reasoning.
 
-:p Prove that \(4^n > 2n\) for every natural number \(n\).
+:p Prove that $4^n > 2n $ for every natural number$n$.
 ??x
-To prove \(4^n > 2n\) for all natural numbers \(n\), we use induction:
+To prove $4^n > 2n $ for all natural numbers$n$, we use induction:
 
-**Base Case:** For \(n=1\),
-\[ 4^1 = 4 > 2 \cdot 1 = 2, \]
-which is true.
+**Base Case:** For $n=1$,
+$$4^1 = 4 > 2 \cdot 1 = 2,$$which is true.
 
-**Inductive Hypothesis:** Assume the statement holds for some \(k\), i.e.,
-\[ 4^k > 2k. \]
+**Inductive Hypothesis:** Assume the statement holds for some $k$, i.e.,
+$$4^k > 2k.$$**Inductive Step:** We need to show that$$4^{k+1} > 2(k+1).$$
 
-**Inductive Step:** We need to show that
-\[ 4^{k+1} > 2(k+1). \]
 Starting from the inductive hypothesis:
-\[ 4^{k+1} = 4 \cdot 4^k > 4 \cdot 2k = 8k. \]
-We need to show \(8k > 2(k+1)\):
-\[ 8k > 2k + 2 \implies 6k > 2 \implies k > \frac{1}{3}. \]
-Since \(k\) is a natural number, \(k \geq 1\), so the inequality holds.
+$$4^{k+1} = 4 \cdot 4^k > 4 \cdot 2k = 8k.$$
 
-Thus, by induction, the statement holds for all \(n\).
+We need to show $8k > 2(k+1)$:
+$$8k > 2k + 2 \implies 6k > 2 \implies k > \frac{1}{3}.$$
+
+Since $k $ is a natural number,$ k \geq 1$, so the inequality holds.
+
+Thus, by induction, the statement holds for all $n$.
 
 x??
 
@@ -409,26 +393,25 @@ x??
 
 Background context: The problem introduces the concept of Fermat numbers and explores their properties.
 
-:p Prove that \(F_n = 2^{2^n} + 1\) is always odd.
+:p Prove that $F_n = 2^{2^n} + 1$ is always odd.
 ??x
-To prove that \(F_n = 2^{2^n} + 1\) is always odd for any natural number \(n\):
+To prove that $F_n = 2^{2^n} + 1 $ is always odd for any natural number$n$:
 
-**Base Case:** For \(n=0\),
-\[ F_0 = 2^{2^0} + 1 = 2^1 + 1 = 3, \]
-which is odd.
+**Base Case:** For $n=0$,
+$$F_0 = 2^{2^0} + 1 = 2^1 + 1 = 3,$$which is odd.
 
-**Inductive Hypothesis:** Assume the statement holds for some \(k\), i.e.,
-\[ F_k = 2^{2^k} + 1 \text{ is odd}. \]
+**Inductive Hypothesis:** Assume the statement holds for some $k$, i.e.,
+$$F_k = 2^{2^k} + 1 \text{ is odd}.$$**Inductive Step:** We need to show that$$
 
-**Inductive Step:** We need to show that
-\[ F_{k+1} = 2^{2^{k+1}} + 1 \]
-is odd. Notice:
-\[ F_{k+1} = 2^{2^{k+1}} + 1 = 2^{2 \cdot 2^k} + 1 = (2^{2^k})^2 + 1. \]
-Since \(2^{2^k}\) is even, let \(2^{2^k} = 2m\) for some integer \(m\). Then,
-\[ F_{k+1} = (2m)^2 + 1 = 4m^2 + 1, \]
-which is clearly odd.
+F_{k+1} = 2^{2^{k+1}} + 1$$is odd. Notice:
+$$
 
-Thus, by induction, the statement holds for all \(n\).
+F_{k+1} = 2^{2^{k+1}} + 1 = 2^{2 \cdot 2^k} + 1 = (2^{2^k})^2 + 1.$$
+
+Since $2^{2^k}$ is even, let $2^{2^k} = 2m$ for some integer $m$. Then,
+$$F_{k+1} = (2m)^2 + 1 = 4m^2 + 1,$$which is clearly odd.
+
+Thus, by induction, the statement holds for all $n$.
 
 x??
 
@@ -449,40 +432,33 @@ x??
 ---
 
 #### Proving a Fake Proposition
-Background context: A "fake proof" is provided that claims \(2^n = 0\) for all \(n \in \{0, 1, 2, 3, \ldots\}\). This proof uses strong induction and attempts to show the conclusion by breaking down the problem into smaller parts.
+Background context: A "fake proof" is provided that claims $2^n = 0 $ for all$n \in \{0, 1, 2, 3, \ldots\}$. This proof uses strong induction and attempts to show the conclusion by breaking down the problem into smaller parts.
 
 :p Identify the error in the "fake proof" of Fake Proposition 4.11.
 ??x
-The error lies in assuming that any two numbers \(a\) and \(b\) chosen from \(\{0, 1, 2, \ldots, k\}\) will result in \(2a = 0\) and \(2b = 0\). This is incorrect because the inductive hypothesis only covers specific values of \(m\) up to \(k\), not all values within that range. Specifically, choosing \(a = k\) and \(b = 1\) would violate the assumption since neither are necessarily zero.
+The error lies in assuming that any two numbers $a $ and$b $ chosen from$\{0, 1, 2, \ldots, k\}$ will result in $2a = 0$ and $2b = 0$. This is incorrect because the inductive hypothesis only covers specific values of $ m$up to $ k$, not all values within that range. Specifically, choosing $ a = k$and $ b = 1$ would violate the assumption since neither are necessarily zero.
 
-In strong induction, one must show the statement holds for all \(m \leq k+1\) given it is true for all \(m \leq k\), but this proof fails to address that.
+In strong induction, one must show the statement holds for all $m \leq k+1 $ given it is true for all$m \leq k$, but this proof fails to address that.
 x??
 
 ---
 
 #### Proving Every n ≥ 11 can be written as 2a + 5b
-Background context: We need to prove by induction or strong induction that every natural number \(n \geq 11\) can be expressed in the form \(2a + 5b\), where \(a\) and \(b\) are non-negative integers.
+Background context: We need to prove by induction or strong induction that every natural number $n \geq 11 $ can be expressed in the form$2a + 5b $, where $ a $and$ b$ are non-negative integers.
 
-:p Prove that every \(n \geq 11\) can be written as \(2a + 5b\).
+:p Prove that every $n \geq 11 $ can be written as$2a + 5b$.
 ??x
-We use strong induction. The base cases for \(n = 11, 12, 13, 14, 15\) are:
+We use strong induction. The base cases for $n = 11, 12, 13, 14, 15$ are:
 
-- \(11 = 2(0) + 5(2)\)
-- \(12 = 2(6) + 5(0)\)
-- \(13 = 2(4) + 5(1)\)
-- \(14 = 2(9) + 5(1)\)
-- \(15 = 2(7) + 5(1)\)
-
-Assume the statement is true for all \(k, k+1, \ldots, n\). We need to show it holds for \(n+1\).
+- $11 = 2(0) + 5(2)$-$12 = 2(6) + 5(0)$-$13 = 2(4) + 5(1)$-$14 = 2(9) + 5(1)$-$15 = 2(7) + 5(1)$ Assume the statement is true for all $k, k+1, \ldots, n$. We need to show it holds for $ n+1$.
 
 Consider:
-\[ (n+1) - 5m \]
-where \(0 \leq m < 2\) and we can choose \(m = 0\) or \(1\):
+$$(n+1) - 5m$$where $0 \leq m < 2 $ and we can choose$m = 0 $ or$1$:
 
-- If \(0 \leq (n+1) - 5(1) < 6\), then \(n+1 - 5(1) = n - 4\). Since \(n > 11\), by the inductive hypothesis, \(n - 4\) can be written as \(2a + 5b\).
-- If \((n+1) - 5(0)\) is valid and satisfies the form.
+- If $0 \leq (n+1) - 5(1) < 6 $, then $ n+1 - 5(1) = n - 4 $. Since$ n > 11 $, by the inductive hypothesis,$ n - 4 $can be written as$2a + 5b$.
+- If $(n+1) - 5(0)$ is valid and satisfies the form.
 
-Thus, for any \(n \geq 11\), we can write it as \(2a + 5b\).
+Thus, for any $n \geq 11 $, we can write it as $2a + 5b$.
 
 ```java
 public class InductionProof {
@@ -501,97 +477,99 @@ x??
 
 #### Sum of Even Numbers from 2 to 2n
 
-Background context: We need to find the formula for the sum \(2 + 4 + 6 + \ldots + 2n\) and prove it using both Proposition 4.2 and induction.
+Background context: We need to find the formula for the sum $2 + 4 + 6 + \ldots + 2n$ and prove it using both Proposition 4.2 and induction.
 
-:p Find a formula for the sum \(2 + 4 + 6 + \ldots + 2n\).
+:p Find a formula for the sum $2 + 4 + 6 + \ldots + 2n$.
 ??x
-The sum of the first \(n\) even numbers can be expressed as:
-\[ S = 2(1) + 2(2) + 2(3) + \ldots + 2(n) = 2(1 + 2 + 3 + \ldots + n) \]
+The sum of the first $n$ even numbers can be expressed as:
+$$S = 2(1) + 2(2) + 2(3) + \ldots + 2(n) = 2(1 + 2 + 3 + \ldots + n)$$
 
-Using the formula for the sum of the first \(n\) natural numbers, we get:
-\[ S = 2 \left(\frac{n(n+1)}{2}\right) = n(n+1) \]
+Using the formula for the sum of the first $n$ natural numbers, we get:
+$$S = 2 \left(\frac{n(n+1)}{2}\right) = n(n+1)$$
 
 Thus, the formula is:
-\[ 2 + 4 + 6 + \ldots + 2n = n(n+1) \]
-x??
+$$2 + 4 + 6 + \ldots + 2n = n(n+1)$$x??
 
 ---
 
 #### Sum of Consecutive Integers from m to n
 
-Background context: We need to find a formula for the sum \(m + (m+1) + (m+2) + \ldots + n\) and prove it using both Proposition 4.2 and induction.
+Background context: We need to find a formula for the sum $m + (m+1) + (m+2) + \ldots + n$ and prove it using both Proposition 4.2 and induction.
 
-:p Find a formula for the sum \(m + (m+1) + (m+2) + \ldots + n\).
+:p Find a formula for the sum $m + (m+1) + (m+2) + \ldots + n$.
 ??x
-The sum of consecutive integers from \(m\) to \(n\) can be expressed as:
-\[ S = m + (m+1) + (m+2) + \ldots + n \]
+The sum of consecutive integers from $m $ to$n$ can be expressed as:
+$$S = m + (m+1) + (m+2) + \ldots + n$$
 
-This is equivalent to the sum of natural numbers from 1 to \(n\) minus the sum from 1 to \(m-1\):
-\[ S = \left(\frac{n(n+1)}{2}\right) - \left(\frac{(m-1)m}{2}\right) \]
+This is equivalent to the sum of natural numbers from 1 to $n $ minus the sum from 1 to$m-1$:
+$$S = \left(\frac{n(n+1)}{2}\right) - \left(\frac{(m-1)m}{2}\right)$$
 
 Simplifying, we get:
-\[ S = \frac{n^2 + n - m^2 + m}{2} \]
-x??
+$$
+
+S = \frac{n^2 + n - m^2 + m}{2}$$x??
 
 ---
 
 #### Divisibility and Prime Factorization
-Background context: This section discusses a fundamental theorem of arithmetic, which states that every integer greater than 1 can be uniquely factored into prime numbers. The proof involves showing that if \( n \geq 2 \) is an integer with factorizations \( n = p_1p_2\ldots p_k \) and \( n = q_1q_2\ldots q_\ell \), then the number of primes in each list must be equal, and the primes themselves are identical (up to order).
+Background context: This section discusses a fundamental theorem of arithmetic, which states that every integer greater than 1 can be uniquely factored into prime numbers. The proof involves showing that if $n \geq 2 $ is an integer with factorizations$n = p_1p_2\ldots p_k $ and$n = q_1q_2\ldots q_\ell$, then the number of primes in each list must be equal, and the primes themselves are identical (up to order).
 
-:p Prove that if \( n \geq 2 \) is an integer with two prime factorizations, then these factorizations are unique.
+:p Prove that if $n \geq 2$ is an integer with two prime factorizations, then these factorizations are unique.
 ??x
-To prove the uniqueness part of the fundamental theorem of arithmetic, we use a proof by contradiction. Assume there exists an integer \( n \geq 2 \) with two distinct prime factorizations:
-\[ n = p_1p_2\ldots p_k \]
-and
-\[ n = q_1q_2\ldots q_\ell \]
+To prove the uniqueness part of the fundamental theorem of arithmetic, we use a proof by contradiction. Assume there exists an integer $n \geq 2$ with two distinct prime factorizations:
+$$n = p_1p_2\ldots p_k$$and$$n = q_1q_2\ldots q_\ell$$
 
-Where each \( p_i \) and \( q_j \) are primes. Without loss of generality, assume that there is a smallest integer \( n \) with two different prime factorizations.
+Where each $p_i $ and$q_j $ are primes. Without loss of generality, assume that there is a smallest integer$n$ with two different prime factorizations.
 
-If \( k \neq \ell \), then without loss of generality, let's say \( k < \ell \). Then we can divide both sides by one of the primes from the first factorization. This would reduce \( n \) and still have two distinct factorizations, contradicting our assumption that \( n \) is the smallest such number.
+If $k \neq \ell $, then without loss of generality, let's say $ k < \ell $. Then we can divide both sides by one of the primes from the first factorization. This would reduce$ n $ and still have two distinct factorizations, contradicting our assumption that $ n$ is the smallest such number.
 
-Therefore, \( k = \ell \), meaning there are exactly \( k \) terms in each factorization. Now consider one of the primes from the first factorization, say \( p_1 \). Since it must divide \( q_1q_2\ldots q_k \), and since all \( q_i \)'s are prime, by Euclid's lemma, \( p_1 \) must equal some \( q_j \).
+Therefore, $k = \ell $, meaning there are exactly $ k $ terms in each factorization. Now consider one of the primes from the first factorization, say $ p_1 $. Since it must divide$ q_1q_2\ldots q_k $, and since all$ q_i $'s are prime, by Euclid's lemma,$ p_1 $ must equal some $ q_j$.
 
 This implies that the primes in both factorizations can be matched up term-by-term. Repeating this argument for each of the remaining terms shows that the order is also preserved.
 
 Thus, the two factorizations are identical:
-\[ n = p_1p_2\ldots p_k = q_1q_2\ldots q_k \]
-??x
+$$n = p_1p_2\ldots p_k = q_1q_2\ldots q_k$$??x
 ---
 
 #### Strong Induction in Sequences
 Background context: This section discusses using strong induction to prove properties of recursively defined sequences. It covers several examples, including sequences where the next term depends on previous terms.
 
-:p Use strong induction to prove that \( a_n = 2^n - 1 \) for all \( n \in \mathbb{N} \), given the sequence is defined by \( a_1 = 1 \), \( a_2 = 3 \), and \( a_n = 2a_{n-1} + a_{n-2} \) for \( n \geq 3 \).
+:p Use strong induction to prove that $a_n = 2^n - 1 $ for all$n \in \mathbb{N}$, given the sequence is defined by $ a_1 = 1$,$ a_2 = 3 $, and$ a_n = 2a_{n-1} + a_{n-2}$for $ n \geq 3$.
 ??x
-To prove that \( a_n = 2^n - 1 \) using strong induction, we follow these steps:
+To prove that $a_n = 2^n - 1$ using strong induction, we follow these steps:
 
 **Base Cases:**
-For \( n = 1 \):
-\[ a_1 = 1 = 2^1 - 1 \]
-For \( n = 2 \):
-\[ a_2 = 3 = 2^2 - 1 \]
+For $n = 1$:
+$$a_1 = 1 = 2^1 - 1$$
 
-Assume the statement is true for all \( k \leq n \), i.e., \( a_k = 2^k - 1 \) for all \( k \leq n \).
+For $n = 2$:
+$$a_2 = 3 = 2^2 - 1$$
+
+Assume the statement is true for all $k \leq n $, i.e., $ a_k = 2^k - 1 $ for all $ k \leq n$.
 
 **Induction Step:**
-We need to show that \( a_{n+1} = 2^{n+1} - 1 \).
+We need to show that $a_{n+1} = 2^{n+1} - 1$.
 By the definition of the sequence:
-\[ a_{n+1} = 2a_n + a_{n-1} \]
+$$a_{n+1} = 2a_n + a_{n-1}$$
+
 Using our induction hypothesis:
-\[ a_n = 2^n - 1 \quad \text{and} \quad a_{n-1} = 2^{n-1} - 1 \]
+$$a_n = 2^n - 1 \quad \text{and} \quad a_{n-1} = 2^{n-1} - 1$$
 
 Substitute these into the equation:
-\[ a_{n+1} = 2(2^n - 1) + (2^{n-1} - 1) \]
+$$a_{n+1} = 2(2^n - 1) + (2^{n-1} - 1)$$
+
 Simplify:
-\[ a_{n+1} = 2^{n+1} - 2 + 2^{n-1} - 1 \]
+$$a_{n+1} = 2^{n+1} - 2 + 2^{n-1} - 1$$
+
 Combine like terms:
-\[ a_{n+1} = 2^{n+1} - 2 + 2^{n-1} - 1 = 2^{n+1} - 2^{n} + 2^{n-1} - 3 \]
-Factor out \( 2^n \):
-\[ a_{n+1} = 2^{n+1} - (2^1 - 2^{-1}) = 2^{n+1} - 1 \]
+$$a_{n+1} = 2^{n+1} - 2 + 2^{n-1} - 1 = 2^{n+1} - 2^{n} + 2^{n-1} - 3$$
 
-Thus, the statement holds for \( n+1 \).
+Factor out $2^n$:
+$$a_{n+1} = 2^{n+1} - (2^1 - 2^{-1}) = 2^{n+1} - 1$$
 
-By strong induction, \( a_n = 2^n - 1 \) is true for all \( n \in \mathbb{N} \).
+Thus, the statement holds for $n+1$.
+
+By strong induction, $a_n = 2^n - 1 $ is true for all$n \in \mathbb{N}$.
 ??x
 ---
 ---
@@ -691,9 +669,9 @@ Background context: An open sentence is a statement or mathematical expression t
 
 :p What is an example of an open sentence?
 ??x
-An example of an open sentence is \(3jx^3.f \text{ is continuous}\). This expression depends on the variable x and the function f. If we specify that \(f(x) = x^2\) for all real numbers, then it becomes true because \(x^2\) is a continuous function.
+An example of an open sentence is $3jx^3.f \text{ is continuous}$. This expression depends on the variable x and the function f. If we specify that $ f(x) = x^2$for all real numbers, then it becomes true because $ x^2$ is a continuous function.
 
-However, if we choose \(f(t) = 1/t\), this makes the sentence false since \(1/t\) is not defined at t=0 and hence not continuous everywhere.
+However, if we choose $f(t) = 1/t $, this makes the sentence false since $1/t$ is not defined at t=0 and hence not continuous everywhere.
 ??x
 ---
 
@@ -704,7 +682,7 @@ Background context: The term 'or' in mathematics always denotes an inclusive or,
 ??x
 In mathematical logic, 'or' is always an inclusive or, which means that at least one or both of the statements can be true. For example, the statement "The light is on or off" uses exclusive or (XOR) because only one state (on or off) can be true.
 
-In contrast, in mathematics, a statement like \(p \lor q\) would mean that p and/or q are true. This means both could be true simultaneously.
+In contrast, in mathematics, a statement like $p \lor q$ would mean that p and/or q are true. This means both could be true simultaneously.
 ??x
 ---
 
@@ -713,11 +691,11 @@ Background context: An open sentence does not have a truth value until the unkno
 
 :p What makes an expression an open sentence?
 ??x
-An expression is considered an open sentence if it contains unknowns like variables or arbitrary functions and does not have a truth value on its own. For example, \(x + 7 = 12\) is an open sentence because its truth depends on the value of x.
+An expression is considered an open sentence if it contains unknowns like variables or arbitrary functions and does not have a truth value on its own. For example,$x + 7 = 12$ is an open sentence because its truth depends on the value of x.
 
-Another example is \(3jx^3.f \text{ is continuous}\), which becomes true if we specify \(f(x) = x^2\) and false if \(f(t) = 1/t\).
+Another example is $3jx^3.f \text{ is continuous}$, which becomes true if we specify $ f(x) = x^2$and false if $ f(t) = 1/t$.
 
-An expression like "for each \(x \in R, we have \(x - x = 0\)" is a statement because it holds for all real numbers and thus has a truth value.
+An expression like "for each $x \in R, we have \(x - x = 0$" is a statement because it holds for all real numbers and thus has a truth value.
 ??x
 ---
 
@@ -728,59 +706,59 @@ Background context: In logic, statements are expressions that can be definitivel
 ??x
 A statement in mathematical logic is an expression that has a definite truth value; it can be either true or false but not both. Examples include "the light is on" (true) or "2 + 2 = 5" (false).
 
-In contrast, open sentences like \(x + 7 = 12\) have no fixed truth value until the variable x is assigned a specific value.
+In contrast, open sentences like $x + 7 = 12$ have no fixed truth value until the variable x is assigned a specific value.
 ??x
 ---
 
 #### Logical Connectives and Truth Values
 Background context: In logic, statements can be combined using logical connectives such as conjunction (^), disjunction (v), and negation (~). These operations transform simple statements into more complex ones that also hold truth values. For example:
-- \( P \land Q \) is true if both \( P \) and \( Q \) are true.
-- \( P \lor Q \) is true if at least one of \( P \) or \( Q \) is true.
-- \( \neg P \) is the negation of \( P \), meaning it's true when \( P \) is false.
+- $P \land Q $ is true if both$P $ and$Q$ are true.
+- $P \lor Q $ is true if at least one of$P $ or$Q$ is true.
+- $\neg P $ is the negation of$P $, meaning it's true when$ P$ is false.
 
-:p What does \( P \land Q \) mean in logical terms?
+:p What does $P \land Q$ mean in logical terms?
 ??x
-\( P \land Q \) means "P and Q". It is a conjunction, which is true only if both statements \( P \) and \( Q \) are true.
+$P \land Q $ means "P and Q". It is a conjunction, which is true only if both statements$P $ and$Q$ are true.
 x??
 
 ---
 #### Disjunction of Statements
 Background context: The disjunction operation (or v) combines two statements such that the resulting statement is true if at least one of the original statements is true. For instance:
-- \( P \lor Q \) is false only when both \( P \) and \( Q \) are false.
+- $P \lor Q $ is false only when both$P $ and$Q$ are false.
 
-:p What does \( P \lor Q \) mean in logical terms?
+:p What does $P \lor Q$ mean in logical terms?
 ??x
-\( P \lor Q \) means "P or Q". It is a disjunction, which is true if at least one of the statements \( P \) or \( Q \) is true.
+$P \lor Q $ means "P or Q". It is a disjunction, which is true if at least one of the statements$P $ or$Q$ is true.
 x??
 
 ---
 #### Negation of Statements
-Background context: The negation operation (\(\neg\)) inverts the truth value of a statement. For example:
-- If \( P \) is true, then \( \neg P \) is false, and vice versa.
+Background context: The negation operation ($\neg$) inverts the truth value of a statement. For example:
+- If $P $ is true, then$\neg P$ is false, and vice versa.
 
-:p What does \( \neg P \) mean in logical terms?
+:p What does $\neg P$ mean in logical terms?
 ??x
-\( \neg P \) means "not P". It negates the truth value of \( P \). If \( P \) is true, \( \neg P \) is false; if \( P \) is false, \( \neg P \) is true.
+$\neg P $ means "not P". It negates the truth value of$P $. If$ P $is true,$\neg P $ is false; if$P $ is false,$\neg P$ is true.
 x??
 
 ---
 #### Implications in Logic
 Background context: An implication statement (P → Q) means "if P then Q". It is false only when P is true and Q is false. For example:
-- \( P \rightarrow Q \): If the number 3 is odd, then the number 4 is even.
+- $P \rightarrow Q$: If the number 3 is odd, then the number 4 is even.
 
-:p What does \( P \rightarrow Q \) mean in logical terms?
+:p What does $P \rightarrow Q$ mean in logical terms?
 ??x
-\( P \rightarrow Q \) means "if P then Q". It states that if statement \( P \) is true, then statement \( Q \) must also be true. The implication is false only when \( P \) is true and \( Q \) is false.
+$P \rightarrow Q $ means "if P then Q". It states that if statement$P $ is true, then statement$ Q $ must also be true. The implication is false only when $ P $ is true and $Q$ is false.
 x??
 
 ---
 #### Biconditional Statements
 Background context: A biconditional statement (P ↔ Q) means "P if and only if Q". It is true if both statements have the same truth value. For example:
-- \( P \leftrightarrow Q \): If a number is odd, then its square is odd.
+- $P \leftrightarrow Q$: If a number is odd, then its square is odd.
 
-:p What does \( P \leftrightarrow Q \) mean in logical terms?
+:p What does $P \leftrightarrow Q$ mean in logical terms?
 ??x
-\( P \leftrightarrow Q \) means "P if and only if Q". It states that both statements have the same truth value. The biconditional statement is true when both \( P \) and \( Q \) are either both true or both false.
+$P \leftrightarrow Q $ means "P if and only if Q". It states that both statements have the same truth value. The biconditional statement is true when both$P $ and$Q$ are either both true or both false.
 x??
 
 ---
@@ -815,31 +793,31 @@ x??
 ---
 #### Tautology and Examples
 Background context: A tautology is a statement that is always true regardless of the truth values of its components. For example:
-- \( \neg S \lor S \) (a statement or its negation is always true)
+- $\neg S \lor S$ (a statement or its negation is always true)
 
-:p What does \( \neg S \lor S \) mean in logical terms?
+:p What does $\neg S \lor S$ mean in logical terms?
 ??x
-\( \neg S \lor S \) means "not S or S". This is a tautology because it states that either the statement \( S \) is false, or it is true. Since one of these must be true, the entire expression is always true.
+$\neg S \lor S $ means "not S or S". This is a tautology because it states that either the statement$S$ is false, or it is true. Since one of these must be true, the entire expression is always true.
 x??
 
 ---
 #### Example with Tautology
-Background context: The example provided in the text demonstrates how \( S \lor \neg S \) (a statement or its negation) is a tautology.
+Background context: The example provided in the text demonstrates how $S \lor \neg S$ (a statement or its negation) is a tautology.
 
-:p What does \( S \lor \neg S \) mean and why is it considered a tautology?
+:p What does $S \lor \neg S$ mean and why is it considered a tautology?
 ??x
-\( S \lor \neg S \) means "S or not S". It asserts that the statement \( S \) is either true or false. This expression is always true because at least one of the two parts (\( S \) being true or \( \neg S \) being true) must be true. Therefore, it is a tautology.
+$S \lor \neg S $ means "S or not S". It asserts that the statement$S $ is either true or false. This expression is always true because at least one of the two parts ($S $ being true or$\neg S$ being true) must be true. Therefore, it is a tautology.
 x??
 
 ---
 #### Equivalence in Logic
 Background context: The equivalence between statements P and Q (P ↔ Q) means that both statements are either both true or both false. It can also be expressed as:
-- \( (P \rightarrow Q) \land (Q \rightarrow P) \)
+- $(P \rightarrow Q) \land (Q \rightarrow P)$
 
 :p How can you express "P if and only if Q" using implications?
 ??x
 "P if and only if Q" can be expressed using the conjunction of two implications: 
-- \( (P \rightarrow Q) \land (Q \rightarrow P) \)
+- $(P \rightarrow Q) \land (Q \rightarrow P)$
 This means that both "if P then Q" and "if Q then P" are true.
 x??
 
@@ -858,16 +836,16 @@ x??
 Background context: The converse of a conditional statement P → Q is Q → P. Just because P implies Q doesn't mean that Q implies P. Understanding the converse helps in recognizing when logical implications fail to hold both ways.
 :p What is the definition of the converse of a conditional statement?
 ??x
-The converse of a conditional statement \(P \rightarrow Q\) is \(Q \rightarrow P\).
+The converse of a conditional statement $P \rightarrow Q $ is$Q \rightarrow P$.
 x??
 
 ---
 
 #### Example with Conditional and Biconditional Statements
-Background context: Consider the example, "If \(n\) is even, then \(n \equiv 0 \pmod{2}\)" is true. The biconditional statement would be that \(n\) is even if and only if \(n \equiv 0 \pmod{2}\). This means both directions are equivalent.
+Background context: Consider the example, "If $n $ is even, then$n \equiv 0 \pmod{2}$" is true. The biconditional statement would be that $ n$is even if and only if $ n \equiv 0 \pmod{2}$. This means both directions are equivalent.
 :p Provide an example where a conditional statement holds, but its converse does not.
 ??x
-Consider the statement: "If \(x = 2\), then \(x\) is even." The converse of this statement would be: "If \(x\) is even, then \(x = 2\)." 
+Consider the statement: "If $x = 2 $, then $ x $is even." The converse of this statement would be: "If$ x $is even, then$ x = 2$." 
 The first statement is true because any integer equal to 2 is even. However, the converse is false because there are other even numbers besides 2.
 x??
 
@@ -883,19 +861,19 @@ x??
 ---
 
 #### If and Only If (IFF)
-Background context: The phrase "if and only if" (iff) denotes a biconditional statement. It means both directions must be true for the overall statement to hold. For example, \(P\) iff \(Q\) means that \(P \rightarrow Q\) and \(Q \rightarrow P\).
+Background context: The phrase "if and only if" (iff) denotes a biconditional statement. It means both directions must be true for the overall statement to hold. For example, $P $ iff$Q $ means that$ P \rightarrow Q $ and $Q \rightarrow P$.
 :p What does "if and only if" mean in logic?
 ??x
-"If and only if" (iff) means a biconditional relationship: both statements imply each other. Mathematically, \(P\) iff \(Q\) is written as \(P \leftrightarrow Q\), meaning both \(P \rightarrow Q\) and \(Q \rightarrow P\) are true.
+"If and only if" (iff) means a biconditional relationship: both statements imply each other. Mathematically, $P $ iff$Q $ is written as$ P \leftrightarrow Q $, meaning both $ P \rightarrow Q$and $ Q \rightarrow P$ are true.
 x??
 
 ---
 
 #### Implication vs. Only If
-Background context: Sometimes, the distinction between "if" and "only if" can be confusing. The statement "If \(P\), then \(Q\)" means that whenever \(P\) is true, \(Q\) must also be true. However, "Only if \(Q\)" means that \(P\) can only be true when \(Q\) is true.
+Background context: Sometimes, the distinction between "if" and "only if" can be confusing. The statement "If $P $, then $ Q $" means that whenever$ P $is true,$ Q $must also be true. However, "Only if$ Q $" means that$ P $can only be true when$ Q$ is true.
 :p Should "if P, then Q" and "Q only if P" mean the same thing?
 ??x
-No, "If \(P\), then \(Q\)" (P → Q) means whenever \(P\) is true, \(Q\) must also be true. On the other hand, "Only if \(Q\)" (P only if Q or P → Q in reverse) means that \(P\) can only be true when \(Q\) is true.
+No, "If $P $, then $ Q $" (P → Q) means whenever$ P $is true,$ Q $must also be true. On the other hand, "Only if$ Q $" (P only if Q or P → Q in reverse) means that$ P $can only be true when$ Q$ is true.
 x??
 
 ---
@@ -986,17 +964,17 @@ x??
 ---
 
 #### Truth Table for P ∧ Q
-Background context explaining how a truth table models logical relationships. The table shows all possible combinations of truth values for statements \(P\) and \(Q\), and deduces the resulting truth value for \(P \land Q\).
+Background context explaining how a truth table models logical relationships. The table shows all possible combinations of truth values for statements $P $ and$Q $, and deduces the resulting truth value for $ P \land Q$.
 
-:p What are the possible truth value combinations of \(P\) and \(Q\)? How does this affect the truth value of \(P \land Q\)?
+:p What are the possible truth value combinations of $P $ and$Q $? How does this affect the truth value of$ P \land Q$?
 ??x
-The table lists all combinations: True/True, True/False, False/True, and False/False. For \(P \land Q\) to be true, both \(P\) and \(Q\) must independently be true.
+The table lists all combinations: True/True, True/False, False/True, and False/False. For $P \land Q $ to be true, both$P $ and$Q$ must independently be true.
 
 For example:
-- If \(P\) is True and \(Q\) is True, then \(P \land Q\) is True.
-- If \(P\) is True and \(Q\) is False, then \(P \land Q\) is False.
-- If \(P\) is False and \(Q\) is True, then \(P \land Q\) is False.
-- If both \(P\) and \(Q\) are False, then \(P \land Q\) is False.
+- If $P $ is True and$Q $ is True, then$P \land Q$ is True.
+- If $P $ is True and$Q $ is False, then$P \land Q$ is False.
+- If $P $ is False and$Q $ is True, then$P \land Q$ is False.
+- If both $P $ and$Q $ are False, then$P \land Q$ is False.
 
 This can be verified through the truth table provided in the text:
 ```
@@ -1011,17 +989,17 @@ F  F   F
 ---
 
 #### Truth Table for P ∨ Q
-Background context explaining how a truth table models logical relationships. The table shows all possible combinations of truth values for statements \(P\) and \(Q\), and deduces the resulting truth value for \(P \lor Q\).
+Background context explaining how a truth table models logical relationships. The table shows all possible combinations of truth values for statements $P $ and$Q $, and deduces the resulting truth value for $ P \lor Q$.
 
-:p What are the possible truth value combinations of \(P\) and \(Q\)? How does this affect the truth value of \(P \lor Q\)?
+:p What are the possible truth value combinations of $P $ and$Q $? How does this affect the truth value of$ P \lor Q$?
 ??x
-The table lists all combinations: True/True, True/False, False/True, and False/False. For \(P \lor Q\) to be true, either \(P\) or \(Q\) (or both) must be true.
+The table lists all combinations: True/True, True/False, False/True, and False/False. For $P \lor Q $ to be true, either$P $ or$Q$(or both) must be true.
 
 For example:
-- If \(P\) is True and \(Q\) is True, then \(P \lor Q\) is True.
-- If \(P\) is True and \(Q\) is False, then \(P \lor Q\) is True.
-- If \(P\) is False and \(Q\) is True, then \(P \lor Q\) is True.
-- If both \(P\) and \(Q\) are False, then \(P \lor Q\) is False.
+- If $P $ is True and$Q $ is True, then$P \lor Q$ is True.
+- If $P $ is True and$Q $ is False, then$P \lor Q$ is True.
+- If $P $ is False and$Q $ is True, then$P \lor Q$ is True.
+- If both $P $ and$Q $ are False, then$P \lor Q$ is False.
 
 This can be verified through the truth table provided in the text:
 ```
@@ -1036,13 +1014,13 @@ F  F   F
 ---
 
 #### Truth Table for ¬P
-Background context explaining how a truth table models logical relationships. The table shows all possible combinations of truth values for statement \(P\), and deduces the resulting truth value for \(\neg P\).
+Background context explaining how a truth table models logical relationships. The table shows all possible combinations of truth values for statement $P $, and deduces the resulting truth value for $\neg P$.
 
-:p What is the relationship between the truth value of \(P\) and \(\neg P\)? How does this work with multiple negations?
+:p What is the relationship between the truth value of $P $ and$\neg P$? How does this work with multiple negations?
 ??x
-For \(\neg P\), if \(P\) is True, then \(\neg P\) is False. Conversely, if \(P\) is False, then \(\neg P\) is True.
+For $\neg P $, if $ P $is True, then$\neg P $ is False. Conversely, if$P $ is False, then$\neg P$ is True.
 
-By applying this reasoning twice, it implies that \(\neg \neg P\) and \(P\) always have the same truth value. This can be seen through the following truth table:
+By applying this reasoning twice, it implies that $\neg \neg P $ and$P$ always have the same truth value. This can be seen through the following truth table:
 
 ```
 P  ¬P
@@ -1050,17 +1028,17 @@ T   F
 F   T
 ```
 
-Since \(\neg \neg P\) is logically equivalent to \(P\), we can deduce that applying negation twice returns the original statement.
+Since $\neg \neg P $ is logically equivalent to$P$, we can deduce that applying negation twice returns the original statement.
 
 ??x
 ---
 
 #### De Morgan's Logic Laws - Example
-Background context explaining how a truth table can be used to verify logical equivalences. Specifically, this example verifies De Morgan’s Law for \(\neg (P \land Q)\) and \((\neg P \lor \neg Q)\).
+Background context explaining how a truth table can be used to verify logical equivalences. Specifically, this example verifies De Morgan’s Law for $\neg (P \land Q)$ and $(\neg P \lor \neg Q)$.
 
-:p How do the truth tables of \(\neg (P \land Q)\) and \((\neg P \lor \neg Q)\) compare?
+:p How do the truth tables of $\neg (P \land Q)$ and $(\neg P \lor \neg Q)$ compare?
 ??x
-The truth table for \(\neg (P \land Q)\):
+The truth table for $\neg (P \land Q)$:
 ```
 P  Q   P^Q    ¬(P^Q)
 T  T    T       F
@@ -1069,7 +1047,7 @@ F  T    F       T
 F  F    F       T
 ```
 
-The truth table for \((\neg P \lor \neg Q)\):
+The truth table for $(\neg P \lor \neg Q)$:
 ```
 P  Q   ¬P    ¬Q    (¬P ∨ ¬Q)
 T  T   F     F      F
@@ -1078,7 +1056,7 @@ F  T   T     F      T
 F  F   T     T      T
 ```
 
-The final columns for both truth tables are identical, which verifies De Morgan’s Law: \(\neg (P \land Q) \equiv (\neg P \lor \neg Q)\).
+The final columns for both truth tables are identical, which verifies De Morgan’s Law: $\neg (P \land Q) \equiv (\neg P \lor \neg Q)$.
 
 ??x
 ---
@@ -1237,9 +1215,9 @@ x??
 #### Vacuously True Statements
 Background context explaining the concept of vacuously true statements, particularly how implications are considered true when the antecedent is false. The example provided discusses logical implications and their truth values based on the presence or absence of elements in a set.
 
-:p Why is an implication \(P \rightarrow Q\) considered true if \(P\) is false?
+:p Why is an implication $P \rightarrow Q $ considered true if$P$ is false?
 ??x
-An implication \(P \rightarrow Q\) is considered true when the antecedent \(P\) is false because there are no counterexamples that would make it false. This concept aligns with vacuously true statements, where a statement about all elements of an empty set is inherently true since there are no elements to contradict it.
+An implication $P \rightarrow Q $ is considered true when the antecedent$P$ is false because there are no counterexamples that would make it false. This concept aligns with vacuously true statements, where a statement about all elements of an empty set is inherently true since there are no elements to contradict it.
 
 For instance:
 - "If unicorns exist, then they can fly" is vacuously true because the antecedent (unicorns existing) is false. Since there are no unicorns, the implication holds regardless of whether flying or not flying.
@@ -1250,23 +1228,23 @@ x??
 ---
 
 #### Logical Implications and Truth Tables
-Background context explaining how truth tables can illustrate the different cases for \(P \rightarrow Q\) depending on the truth values of \(P\) and \(Q\). The text provides a specific example involving grades to explain why "False \(\rightarrow\) False" and "False \(\rightarrow\) True" are considered true.
+Background context explaining how truth tables can illustrate the different cases for $P \rightarrow Q $ depending on the truth values of$P $ and$Q $. The text provides a specific example involving grades to explain why "False $\rightarrow $ False" and "False$\rightarrow$ True" are considered true.
 
 :p How do you interpret the statement "If you get an A on your final, then you will get an A in the class"?
 ??x
 The statement "If you get an A on your final, then you will get an A in the class" is a logical implication. Here’s how to interpret it based on different scenarios:
 
-1. **True \(\rightarrow\) True**: If you did get an A on the final and also got an A in the class, this supports the implication.
-2. **True \(\rightarrow\) False**: If you got an A on the final but not an A in the class, this would falsify the implication.
-3. **False \(\rightarrow\) True**: Even if you didn't get an A on the final (the antecedent is false), getting an A in the class still does not contradict the implication; it remains true because the implication only needs to hold when the antecedent is true.
-4. **False \(\rightarrow\) False**: Similarly, failing both the final and the class does not falsify the implication since the antecedent being false means the implication holds.
+1. **True $\rightarrow$ True**: If you did get an A on the final and also got an A in the class, this supports the implication.
+2. **True $\rightarrow$ False**: If you got an A on the final but not an A in the class, this would falsify the implication.
+3. **False $\rightarrow$ True**: Even if you didn't get an A on the final (the antecedent is false), getting an A in the class still does not contradict the implication; it remains true because the implication only needs to hold when the antecedent is true.
+4. **False $\rightarrow$ False**: Similarly, failing both the final and the class does not falsify the implication since the antecedent being false means the implication holds.
 
 In summary:
-- "If you get an A on your final, then you will get an A in the class" would be considered true if these scenarios were observed: (A on Final) \(\rightarrow\) (A in Class).
+- "If you get an A on your final, then you will get an A in the class" would be considered true if these scenarios were observed: (A on Final)$\rightarrow$(A in Class).
 
 In logical terms, this is represented as follows:
 
-| Grade on Final | Grade in Class | (A on Final) \(\rightarrow\) (A in Class) |
+| Grade on Final | Grade in Class | (A on Final)$\rightarrow$(A in Class) |
 |----------------|---------------|-----------------------------------------|
 | A              | A             | True                                    |
 | A              | B             | False                                   |
@@ -1286,8 +1264,8 @@ Background context explaining vacuous truth through specific examples, such as "
 The statement "If unicorns exist, then they can fly" is considered vacuously true because the premise (unicorns existing) is inherently false. Since there are no unicorns, any claim about their abilities cannot be contradicted; therefore, it does not make sense to call this statement a lie.
 
 To elaborate further:
-- If \(P\) (unicorns exist) is false, then \(P \rightarrow Q\) (unicorns can fly) is automatically true regardless of the truth value of \(Q\).
-- This is because there are no instances where \(P\) is true and \(Q\) is false, which would be required to make the implication false.
+- If $P $(unicorns exist) is false, then $ P \rightarrow Q $(unicorns can fly) is automatically true regardless of the truth value of$ Q$.
+- This is because there are no instances where $P $ is true and$Q$ is false, which would be required to make the implication false.
 
 For example:
 ```java
@@ -1307,16 +1285,15 @@ x??
 
 ---
 
-#### Truth Table for \(P \rightarrow Q\)
-Background context explaining how truth tables can help understand different cases of logical implications and their corresponding outcomes.
+#### Truth Table for $P \rightarrow Q$ Background context explaining how truth tables can help understand different cases of logical implications and their corresponding outcomes.
 
-:p How does a truth table illustrate the different scenarios for \(P \rightarrow Q\)?
+:p How does a truth table illustrate the different scenarios for $P \rightarrow Q$?
 ??x
-A truth table illustrates all possible combinations of truth values for statements \(P\) and \(Q\) to show the outcome of the implication \(P \rightarrow Q\).
+A truth table illustrates all possible combinations of truth values for statements $P $ and$Q $ to show the outcome of the implication$P \rightarrow Q$.
 
-The truth table for \(P \rightarrow Q\) is as follows:
+The truth table for $P \rightarrow Q$ is as follows:
 
-| P | Q | \(P \rightarrow Q\) |
+| P | Q |$P \rightarrow Q$|
 |---|---|--------------------|
 | T | T | True               |
 | T | F | False              |
@@ -1324,13 +1301,13 @@ The truth table for \(P \rightarrow Q\) is as follows:
 | F | F | True               |
 
 Here’s the logic behind each row:
-- **True \(\rightarrow\) True**: The implication holds when both \(P\) and \(Q\) are true.
-- **True \(\rightarrow\) False**: The implication fails when \(P\) is true but \(Q\) is false.
-- **False \(\rightarrow\) True**: This case is vacuously true because the antecedent (\(P\)) is false, meaning there is no situation where \(P\) could be true and \(Q\) false.
-- **False \(\rightarrow\) False**: Similarly, this case is also vacuously true for the same reason.
+- **True $\rightarrow $ True**: The implication holds when both$P $ and$Q$ are true.
+- **True $\rightarrow $ False**: The implication fails when$P $ is true but$Q$ is false.
+- **False $\rightarrow $ True**: This case is vacuously true because the antecedent ($P $) is false, meaning there is no situation where$ P $could be true and$ Q$ false.
+- **False $\rightarrow$ False**: Similarly, this case is also vacuously true for the same reason.
 
 This table helps in understanding that:
-- An implication is only considered false if it can fail (i.e., when \(P\) is true but \(Q\) is false).
+- An implication is only considered false if it can fail (i.e., when $P $ is true but$Q$ is false).
 - All other cases are considered true due to the nature of vacuous truth.
 
 ```java
@@ -1342,7 +1319,7 @@ public class ImplicationExample {
 ```
 
 In this code snippet:
-- The method `evaluateImplication` implements the logic of \(P \rightarrow Q\) using the formula \(\neg P \vee Q\), which is equivalent to the implication.
+- The method `evaluateImplication` implements the logic of $P \rightarrow Q $ using the formula$\neg P \vee Q$, which is equivalent to the implication.
 
 x??
 

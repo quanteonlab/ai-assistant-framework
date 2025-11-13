@@ -14,10 +14,10 @@ x??
 ---
 
 #### ε-Greedy Policy Explanation
-In on-policy methods, "ε-greedy" policies are used to ensure exploration and exploitation balance. The probability of selecting a non-greedy action is set to \(\epsilon / |A(s)|\) for all actions in state \(s\), while the greedy action has a higher probability of being chosen.
+In on-policy methods, "ε-greedy" policies are used to ensure exploration and exploitation balance. The probability of selecting a non-greedy action is set to $\epsilon / |A(s)|$ for all actions in state $s$, while the greedy action has a higher probability of being chosen.
 :p What is an ε-greedy policy?
 ??x
-An ε-greedy policy is a strategy where most of the time, actions are selected based on their estimated values (greedily). However, with a small probability \(\epsilon\) (where \(0 < \epsilon \leq 1\)), a random action is chosen. This helps in balancing exploration and exploitation.
+An ε-greedy policy is a strategy where most of the time, actions are selected based on their estimated values (greedily). However, with a small probability $\epsilon $(where $0 < \epsilon \leq 1$), a random action is chosen. This helps in balancing exploration and exploitation.
 x??
 
 ---
@@ -52,20 +52,22 @@ x??
 ---
 
 #### Policy Improvement Theorem Application
-The policy improvement theorem states that if \(\pi_0\) is an ε-greedy policy, then it improves over any arbitrary "ε-soft" policy. This ensures the action-value function \(Q_{\pi}(s,a)\) for a new policy will be at least as good as or better than the old one.
+The policy improvement theorem states that if $\pi_0 $ is an ε-greedy policy, then it improves over any arbitrary "ε-soft" policy. This ensures the action-value function$Q_{\pi}(s,a)$ for a new policy will be at least as good as or better than the old one.
 :p How does the policy improvement theorem apply to on-policy methods?
 ??x
-The policy improvement theorem applies by showing that any ε-greedy policy with respect to \(q_\pi\) is an improvement over any arbitrary "ε-soft" policy \(\pi\). Specifically, for a state \(s\):
-\[ q_\pi(s, \pi_0(s)) = \sum_{a} \pi_0(a|s) q_\pi(s, a) \]
+The policy improvement theorem applies by showing that any ε-greedy policy with respect to $q_\pi $ is an improvement over any arbitrary "ε-soft" policy$\pi $. Specifically, for a state $ s$:
+$$q_\pi(s, \pi_0(s)) = \sum_{a} \pi_0(a|s) q_\pi(s, a)$$
+
 This can be simplified to:
-\[ q_\pi(s, \pi_0(s)) \geq v_\pi(s) \]
+$$q_\pi(s, \pi_0(s)) \geq v_\pi(s)$$
+
 Thus, the new policy is guaranteed to have at least as good or better value than the old one.
 x??
 
 ---
 
 #### Unique Optimal Value Function
-In environments where policies are "ε-soft," the optimal value function \(v^*\) and action-value function \(q^*\) can be uniquely determined. This ensures that any ε-greedy policy is an improvement over other arbitrary "ε-soft" policies.
+In environments where policies are "ε-soft," the optimal value function $v^*$ and action-value function $q^*$ can be uniquely determined. This ensures that any ε-greedy policy is an improvement over other arbitrary "ε-soft" policies.
 :p Why is it important to consider the unique optimal value function in on-policy methods?
 ??x
 Considering the unique optimal value function in environments with "ε-soft" policies is crucial because it ensures that moving towards an ε-greedy policy leads to improvements. Any ε-greedy policy will be better than or equal to any other arbitrary "ε-soft" policy, making the method practical for reinforcement learning.
@@ -83,20 +85,19 @@ x??
 ---
 
 #### Target Policy and Behavior Policy
-In off-policy learning, there are two distinct policies: the target policy (\(\pi\)) and the behavior policy (\(b\)). The target policy is the policy we want to evaluate or optimize, while the behavior policy determines how actions are taken during data collection.
+In off-policy learning, there are two distinct policies: the target policy ($\pi $) and the behavior policy ($ b$). The target policy is the policy we want to evaluate or optimize, while the behavior policy determines how actions are taken during data collection.
 :p How do target and behavior policies differ in off-policy methods?
 ??x
-The target policy \(\pi\) represents the optimal or near-optimal policy that we aim to learn about. It is used for evaluating action values. The behavior policy \(b\), on the other hand, is more exploratory and generates data through actions that are not necessarily aligned with the optimal strategy.
+The target policy $\pi $ represents the optimal or near-optimal policy that we aim to learn about. It is used for evaluating action values. The behavior policy$b$, on the other hand, is more exploratory and generates data through actions that are not necessarily aligned with the optimal strategy.
 x??
 
 ---
 
 #### Coverage Assumption
-The coverage assumption in off-policy learning ensures that all actions taken under the target policy \(\pi\) are also performed by the behavior policy \(b\) at least occasionally. Mathematically, this is expressed as: 
-\[ b(a|s) > 0 \text{ whenever } \pi(a|s) > 0 \]
-:p What does the coverage assumption ensure in off-policy learning?
+The coverage assumption in off-policy learning ensures that all actions taken under the target policy $\pi $ are also performed by the behavior policy$b$ at least occasionally. Mathematically, this is expressed as:
+$$b(a|s) > 0 \text{ whenever } \pi(a|s) > 0$$:p What does the coverage assumption ensure in off-policy learning?
 ??x
-The coverage assumption ensures that the behavior policy \(b\) covers all actions selected by the target policy \(\pi\). This is crucial because it allows us to use data generated by the exploratory behavior policy \(b\) to estimate values for the target policy \(\pi\).
+The coverage assumption ensures that the behavior policy $b $ covers all actions selected by the target policy$\pi $. This is crucial because it allows us to use data generated by the exploratory behavior policy $ b $to estimate values for the target policy$\pi$.
 x??
 
 ---
@@ -105,21 +106,22 @@ x??
 Importance sampling is a technique used in off-policy learning to estimate action values under one policy using trajectories generated by another. The formula involves weighting the returns from the behavior policy with importance weights.
 :p How does importance sampling work in off-policy prediction?
 ??x
-Importance sampling adjusts the return of each step based on the likelihood ratio, which is the ratio of the probability densities of actions taken according to \(\pi\) and \(b\):
-\[ W_t = \prod_{t=0}^{T-1} \frac{b(a_t|s_t)}{\pi(a_t|s_t)} \]
-The return for state-action pair \((s, a)\) is then adjusted by the importance weight:
-\[ G_t = R_{t+1} + \gamma G_{t+1}, \quad V^\pi(s) = E_\pi [G_t] = \sum_a \pi(a|s) Q^\pi(s,a) \]
+Importance sampling adjusts the return of each step based on the likelihood ratio, which is the ratio of the probability densities of actions taken according to $\pi $ and$b$:
+$$W_t = \prod_{t=0}^{T-1} \frac{b(a_t|s_t)}{\pi(a_t|s_t)}$$
+
+The return for state-action pair $(s, a)$ is then adjusted by the importance weight:
+$$G_t = R_{t+1} + \gamma G_{t+1}, \quad V^\pi(s) = E_\pi [G_t] = \sum_a \pi(a|s) Q^\pi(s,a)$$
+
 The estimated value using importance sampling is:
-\[ \hat{V}^\pi(s) = \frac{\sum_t W_t R_t}{\sum_t W_t} \]
-x??
+$$\hat{V}^\pi(s) = \frac{\sum_t W_t R_t}{\sum_t W_t}$$x??
 
 ---
 
 #### Exploration Policies
-In reinforcement learning, an exploration policy like \(\epsilon\)-greedy or Softmax is used to balance between exploitation and exploration. For example, the \(\epsilon\)-greedy policy selects the greedy action with probability \(1 - \epsilon\) and a random action with probability \(\epsilon\).
+In reinforcement learning, an exploration policy like $\epsilon $-greedy or Softmax is used to balance between exploitation and exploration. For example, the $\epsilon $-greedy policy selects the greedy action with probability $1 - \epsilon $ and a random action with probability$\epsilon$.
 :p What are common exploration policies in reinforcement learning?
 ??x
-Common exploration policies include \(\epsilon\)-greedy and Softmax. The \(\epsilon\)-greedy policy chooses the best-known action (exploitation) with probability \(1 - \epsilon\) and selects a random action (exploration) with probability \(\epsilon\). This balance allows the agent to explore all actions while still making optimal choices.
+Common exploration policies include $\epsilon $-greedy and Softmax. The $\epsilon $-greedy policy chooses the best-known action (exploitation) with probability $1 - \epsilon $ and selects a random action (exploration) with probability$\epsilon$. This balance allows the agent to explore all actions while still making optimal choices.
 x??
 
 ---
@@ -137,15 +139,11 @@ x??
 Importance sampling is a technique used for estimating expected values under one distribution given samples from another. In the context of off-policy learning, importance sampling is applied by weighting returns based on the relative probability of their trajectories occurring under different policies.
 
 Relevant formula:
-\[
-\begin{align*}
+$$\begin{align*}
 \Pi_{t:T-1} &= \prod_{k=t}^{T-1} \frac{\pi(A_k | S_k)}{b(A_k | S_k)}
-\end{align*}
-\]
-
-:p What is the importance-sampling ratio and how is it calculated?
+\end{align*}$$:p What is the importance-sampling ratio and how is it calculated?
 ??x
-The importance-sampling ratio, denoted as \(\Pi_{t:T-1}\), is the relative probability of a trajectory occurring under one policy compared to another. It is calculated by taking the product of the ratios of the action probabilities given the states for each step in the trajectory.
+The importance-sampling ratio, denoted as $\Pi_{t:T-1}$, is the relative probability of a trajectory occurring under one policy compared to another. It is calculated by taking the product of the ratios of the action probabilities given the states for each step in the trajectory.
 
 Example:
 ```java
@@ -167,13 +165,9 @@ x??
 Off-policy prediction involves estimating the expected returns under a target policy using samples collected by following a different behavior policy. Importance sampling is used to transform these returns so that they have the correct expectation.
 
 Relevant formula:
-\[
-E[\Pi_{t:T-1} G_t | S_t = s] = v^\pi(s)
-\]
-
-:p How does importance sampling help in off-policy prediction?
+$$E[\Pi_{t:T-1} G_t | S_t = s] = v^\pi(s)$$:p How does importance sampling help in off-policy prediction?
 ??x
-Importance sampling helps by transforming the returns from a behavior policy to have the correct expected value under the target policy. The ratio \(\Pi_{t:T-1}\) adjusts each return \(G_t\) so that when averaged, it gives the true expected return for the state according to the target policy.
+Importance sampling helps by transforming the returns from a behavior policy to have the correct expected value under the target policy. The ratio $\Pi_{t:T-1}$ adjusts each return $G_t$ so that when averaged, it gives the true expected return for the state according to the target policy.
 
 Example:
 ```java
@@ -198,13 +192,9 @@ x??
 A Monte Carlo algorithm can be used to estimate the expected returns under a target policy by averaging returns from episodes following a behavior policy, weighted using importance sampling.
 
 Relevant formula:
-\[
-V(s) = \frac{\sum_{t \in T(s)} \Pi_{t:T(t)-1} G_t}{|T(s)|}
-\]
-
-:p How is the value of a state estimated using Monte Carlo methods and importance sampling?
+$$V(s) = \frac{\sum_{t \in T(s)} \Pi_{t:T(t)-1} G_t}{|T(s)|}$$:p How is the value of a state estimated using Monte Carlo methods and importance sampling?
 ??x
-The value \(V(s)\) of a state is estimated by averaging the returns scaled by their respective importance-sampling ratios. The algorithm considers all time steps where the state has been visited and scales each return with its corresponding ratio before taking the average.
+The value $V(s)$ of a state is estimated by averaging the returns scaled by their respective importance-sampling ratios. The algorithm considers all time steps where the state has been visited and scales each return with its corresponding ratio before taking the average.
 
 Example:
 ```java
@@ -229,11 +219,7 @@ x??
 Weighted importance sampling is an alternative to ordinary importance sampling that uses a weighted average of the returns.
 
 Relevant formula:
-\[
-V(s) = \frac{\sum_{t \in T(s)} \Pi_{t:T(t)-1} G_t}{\sum_{t \in T(s)} \Pi_{t:T(t)-1}}
-\]
-
-:p What is the difference between ordinary and weighted importance sampling?
+$$V(s) = \frac{\sum_{t \in T(s)} \Pi_{t:T(t)-1} G_t}{\sum_{t \in T(s)} \Pi_{t:T(t)-1}}$$:p What is the difference between ordinary and weighted importance sampling?
 ??x
 Ordinary importance sampling averages returns directly, while weighted importance sampling uses a weighted average. The weights are given by the importance-sampling ratios.
 
@@ -261,12 +247,12 @@ x??
 Trajectories are often terminated at specific time steps, and numbering time steps across episodes allows for consistent reference to particular steps.
 
 Relevant information:
-- \(T(t)\) denotes the first time of termination following time \(t\).
-- \(G_t\) is the return after time step \(t\) through \(T(t)\).
+- $T(t)$ denotes the first time of termination following time $t$.
+- $G_t $ is the return after time step$t $ through$T(t)$.
 
 :p How are trajectory terminations handled in off-policy learning methods?
 ??x
-Trajectory terminations are managed by defining \(T(t)\), which marks the end of a trajectory starting from time step \(t\). This helps in consistently referring to returns and states across different episodes.
+Trajectory terminations are managed by defining $T(t)$, which marks the end of a trajectory starting from time step $ t$. This helps in consistently referring to returns and states across different episodes.
 
 Example:
 ```java
@@ -287,14 +273,14 @@ x??
 
 #### Weighted-Average Estimate vs Ordinary Importance-Sampling Estimator
 
-Weighted-average estimate cancels the ratio \(\frac{\pi_t}{\tau(t)}\) for a single return, resulting in an estimate equal to the observed return. This estimate is unbiased but its expectation is \(v_{\pi}(s)\), making it statistically biased.
+Weighted-average estimate cancels the ratio $\frac{\pi_t}{\tau(t)}$ for a single return, resulting in an estimate equal to the observed return. This estimate is unbiased but its expectation is $v_{\pi}(s)$, making it statistically biased.
 
-Ordinary importance-sampling estimator (5.5) has no such cancellation and can be extreme, especially if the ratio \(\frac{\pi_t}{\tau(t)}\) is high. For instance, a ratio of ten means the observed return would be multiplied by ten.
+Ordinary importance-sampling estimator (5.5) has no such cancellation and can be extreme, especially if the ratio $\frac{\pi_t}{\tau(t)}$ is high. For instance, a ratio of ten means the observed return would be multiplied by ten.
 
 :p What is the key difference between weighted-average estimate and ordinary importance-sampling estimator in terms of their expectations?
 
 ??x
-The weighted-average estimate has an expectation that equals \(v_{\pi}(s)\), making it statistically biased. In contrast, the ordinary importance-sampling estimator always has an expectation equal to \(v_{\pi}(s)\) and is unbiased.
+The weighted-average estimate has an expectation that equals $v_{\pi}(s)$, making it statistically biased. In contrast, the ordinary importance-sampling estimator always has an expectation equal to $ v_{\pi}(s)$ and is unbiased.
 
 ---
 #### Variance Comparison in Importance Sampling
@@ -309,7 +295,7 @@ The weighted importance-sampling estimator converges to zero variance even if th
 ---
 #### First-Visit vs Every-Visit Methods
 
-First-visit methods are unbiased but can be extreme depending on the observed trajectory’s likelihood under \(\pi\). Every-visit methods are biased but often preferred for lower variance and ease of implementation with function approximations.
+First-visit methods are unbiased but can be extreme depending on the observed trajectory’s likelihood under $\pi$. Every-visit methods are biased but often preferred for lower variance and ease of implementation with function approximations.
 
 :p What are the key differences between first-visit and every-visit methods in terms of bias and variance?
 
@@ -319,17 +305,14 @@ First-visit methods are unbiased but can be extreme, whereas every-visit methods
 ---
 #### Example Calculation for Importance Sampling
 
-Consider an MDP with one nonterminal state and a single action that transitions back to the same state with probability \(p\) or terminates otherwise. The reward is +1 on all transitions, \(\gamma = 1\), and we observe a return of 10 over 10 steps.
+Consider an MDP with one nonterminal state and a single action that transitions back to the same state with probability $p $ or terminates otherwise. The reward is +1 on all transitions,$\gamma = 1$, and we observe a return of 10 over 10 steps.
 
 :p What are the first-visit and every-visit estimators for the nonterminal state value?
 
 ??x
-For both methods, since \(\gamma = 1\) and there is only one state, the value \(v_{\pi}(s)\) can be directly estimated. Given a return of 10 over 10 steps:
+For both methods, since $\gamma = 1 $ and there is only one state, the value$v_{\pi}(s)$ can be directly estimated. Given a return of 10 over 10 steps:
 
-- First-visit: \(v_{\pi}(s) = 10\)
-- Every-visit: \(v_{\pi}(s) = 10\)
-
-Both methods converge to the same value due to the simplification in this MDP setup.
+- First-visit:$v_{\pi}(s) = 10 $- Every-visit:$ v_{\pi}(s) = 10$ Both methods converge to the same value due to the simplification in this MDP setup.
 
 ---
 #### Blackjack State Value Estimation
@@ -390,7 +373,7 @@ x??
 
 #### Deterministic Transition Example
 
-Background context explaining the concept. In this simplified Markov Decision Process (MDP), there are two actions: 'right' and 'left'. The 'right' action always terminates the episode, while the 'left' action transitions back to state \( s \) with probability 0.9 or to termination with a reward of +1 and probability 0.1.
+Background context explaining the concept. In this simplified Markov Decision Process (MDP), there are two actions: 'right' and 'left'. The 'right' action always terminates the episode, while the 'left' action transitions back to state $s$ with probability 0.9 or to termination with a reward of +1 and probability 0.1.
 
 :p What is the target policy in this example?
 ??x
@@ -401,11 +384,11 @@ x??
 
 #### Value Calculation for Target Policy
 
-Background context explaining the concept. Given the target policy, all episodes consist of transitions back to state \( s \) (with probability 0.9) followed by termination with a reward of +1.
+Background context explaining the concept. Given the target policy, all episodes consist of transitions back to state $s$(with probability 0.9) followed by termination with a reward of +1.
 
-:p What is the value of state \( s \) under the target policy?
+:p What is the value of state $s$ under the target policy?
 ??x
-The value of state \( s \) under the target policy is 1, as all episodes end in termination with a reward of +1.
+The value of state $s$ under the target policy is 1, as all episodes end in termination with a reward of +1.
 x??
 
 ---
@@ -456,14 +439,11 @@ The key difference lies in how returns are calculated:
 
 :p How does ordinary importance sampling work in this context?
 ??x
-Ordinary importance sampling adjusts the update of value estimates by weighting each return with the likelihood ratio of following the behavior policy instead of the target policy. The formula for updating state values \( V(s) \) is:
-
-\[ V(s) = V(s) + \alpha [G_t - V(s)] \]
-
-where:
-- \( G_t \) is the discounted sum of rewards from time step \( t \).
-- \( \alpha \) is the learning rate.
-- The importance sampling ratio \( \frac{\pi(A|S)}{b(A|S)} \) adjusts the weight of each return.
+Ordinary importance sampling adjusts the update of value estimates by weighting each return with the likelihood ratio of following the behavior policy instead of the target policy. The formula for updating state values $V(s)$ is:
+$$V(s) = V(s) + \alpha [G_t - V(s)]$$where:
+- $G_t $ is the discounted sum of rewards from time step$t$.
+- $\alpha$ is the learning rate.
+- The importance sampling ratio $\frac{\pi(A|S)}{b(A|S)}$ adjusts the weight of each return.
 
 :p Why does ordinary importance sampling fail to converge in this example?
 ??x
@@ -482,30 +462,26 @@ This results in an unbiased estimate of 1 after the first episode that ends with
 
 :p How do we verify that the variance of the importance-sampling-scaled returns is infinite?
 ??x
-The variance \( \text{Var}[X] \) of any random variable \( X \) can be calculated using:
+The variance $\text{Var}[X]$ of any random variable $X$ can be calculated using:
 
-\[ \text{Var}[X] = E[X^2] - (E[X])^2 \]
+$$\text{Var}[X] = E[X^2] - (E[X])^2$$
 
 In this case, the importance-sampling-scaled returns are:
+$$b_4^{T-1} \sum_{t=0}^{T-1} \frac{\pi(A_t|S_t)}{b(A_t|S_t)} G_0$$
 
-\[ b_4^{T-1} \sum_{t=0}^{T-1} \frac{\pi(A_t|S_t)}{b(A_t|S_t)} G_0 \]
-
-The variance is infinite if \( E[X^2] = \infty \) while \( E[X] \) remains finite. For our example:
-
-\[ \text{Var}[X] = 1/2 \sum_{k=0}^\infty (0.9)^k \cdot 2^{2k+1} \]
+The variance is infinite if $E[X^2] = \infty $ while$E[X]$ remains finite. For our example:
+$$\text{Var}[X] = 1/2 \sum_{k=0}^\infty (0.9)^k \cdot 2^{2k+1}$$
 
 This infinite series diverges, showing that the variance is indeed infinite.
 
-:p What is the equation analogous to \( V(s) \) for action values \( Q(s, a) \)?
+:p What is the equation analogous to $V(s)$ for action values $Q(s, a)$?
 ??x
-The analogous equation to \( V(s) \) for action values \( Q(s, a) \) using returns generated by importance sampling would be:
+The analogous equation to $V(s)$ for action values $Q(s, a)$ using returns generated by importance sampling would be:
 
-\[ Q(s, a) = Q(s, a) + \alpha [G_t - Q(s, a)] \]
-
-where:
-- \( G_t \) is the discounted sum of rewards from time step \( t \).
-- \( \alpha \) is the learning rate.
-- The importance sampling ratio \( \frac{\pi(A|S)}{b(A|S)} \) adjusts the weight of each return.
+$$Q(s, a) = Q(s, a) + \alpha [G_t - Q(s, a)]$$where:
+- $G_t $ is the discounted sum of rewards from time step$t$.
+- $\alpha$ is the learning rate.
+- The importance sampling ratio $\frac{\pi(A|S)}{b(A|S)}$ adjusts the weight of each return.
 
 :p Explain why error in weighted importance-sampling methods can increase before decreasing?
 ??x
@@ -526,7 +502,7 @@ Background context: Monte Carlo methods can be implemented incrementally, on an 
 ??x
 The main difference lies in averaging returns instead of rewards as done in Chapter 2. In Monte Carlo methods, returns (sequences of rewards) are averaged rather than individual rewards. This involves scaling the returns by importance sampling ratios before averaging.
 
-For oﬀ-policy Monte Carlo methods, two types of importance sampling techniques can be used: ordinary and weighted. Ordinary importance sampling scales returns with the ratio \(\frac{\pi_t}{b_t}\), while in weighted importance sampling, a weighted average of the returns is formed using weights \(W\).
+For oﬀ-policy Monte Carlo methods, two types of importance sampling techniques can be used: ordinary and weighted. Ordinary importance sampling scales returns with the ratio $\frac{\pi_t}{b_t}$, while in weighted importance sampling, a weighted average of the returns is formed using weights $ W$.
 
 ```java
 // Pseudocode for updating Q-values in Monte Carlo method
@@ -539,14 +515,14 @@ x??
 ---
 
 #### Ordinary Importance Sampling in Monte Carlo Methods
-Background context: In oﬀ-policy Monte Carlo methods that use ordinary importance sampling, returns are scaled by the importance sampling ratio \(\frac{\pi_t}{b_t}\), then averaged.
+Background context: In oﬀ-policy Monte Carlo methods that use ordinary importance sampling, returns are scaled by the importance sampling ratio $\frac{\pi_t}{b_t}$, then averaged.
 
 :p How do you update the Q-value using ordinary importance sampling in a Monte Carlo method?
 ??x
-You scale the return \(G\) by the importance sampling ratio \(\frac{\pi_t}{b_t}\) and then average it. The formula for updating the Q-value is:
-\[ Q(s, a) = Q(s, a) + \alpha \left( G \cdot \frac{\pi_t}{b_t} - Q(s, a) \right) \]
+You scale the return $G $ by the importance sampling ratio$\frac{\pi_t}{b_t}$ and then average it. The formula for updating the Q-value is:
+$$Q(s, a) = Q(s, a) + \alpha \left( G \cdot \frac{\pi_t}{b_t} - Q(s, a) \right)$$
 
-This involves calculating the importance sampling ratio at each step \(t\) and using it to scale the return.
+This involves calculating the importance sampling ratio at each step $t$ and using it to scale the return.
 
 ```java
 // Pseudocode for updating Q-value with ordinary importance sampling
@@ -561,15 +537,15 @@ x??
 #### Weighted Importance Sampling in Monte Carlo Methods
 Background context: For oﬀ-policy methods using weighted importance sampling, a weighted average of the returns is required. A different incremental algorithm is needed to keep track of cumulative weights.
 
-:p How do you update the \(V_n\) estimate using the weighted importance sampling method?
+:p How do you update the $V_n$ estimate using the weighted importance sampling method?
 ??x
-The update rule for \(V_n\) in the weighted importance sampling method is:
-\[ V_{n+1} = V_n + \frac{W_n G_n (C_n - C_{n-1})}{\sum_{k=1}^{n} W_k} \]
+The update rule for $V_n$ in the weighted importance sampling method is:
+$$V_{n+1} = V_n + \frac{W_n G_n (C_n - C_{n-1})}{\sum_{k=1}^{n} W_k}$$
 
 Where:
-- \(G_n\) is the return at step \(n\),
-- \(W_n\) is the weight at step \(n\),
-- \(C_n\) is the cumulative sum of weights up to step \(n\).
+- $G_n $ is the return at step$n$,
+- $W_n $ is the weight at step$n$,
+- $C_n $ is the cumulative sum of weights up to step$n$.
 
 This ensures that the estimate remains up-to-date as new returns are obtained.
 
@@ -591,14 +567,14 @@ Background context: Oﬀ-policy methods separate the policy used for generating 
 :p What are the key components of an oﬀ-policy Monte Carlo control method?
 ??x
 The key components include:
-1. A **target policy** (\(\pi\)) which determines how to update the Q-values.
-2. A **behavior policy** (\(b\)), which can be soft and may change between or within episodes, used to generate actions.
-3. The algorithm updates \(Q(s, a)\) based on returns from the behavior policy while converging to an optimal target policy.
+1. A **target policy** ($\pi$) which determines how to update the Q-values.
+2. A **behavior policy** ($b$), which can be soft and may change between or within episodes, used to generate actions.
+3. The algorithm updates $Q(s, a)$ based on returns from the behavior policy while converging to an optimal target policy.
 
 The method involves updating the Q-values using weighted importance sampling:
-\[ Q(s, a) = Q(s, a) + \alpha W (G - Q(s, a)) \]
+$$Q(s, a) = Q(s, a) + \alpha W (G - Q(s, a))$$
 
-Where \(W\) is the weight and \(G\) is the return from the behavior policy.
+Where $W $ is the weight and$G$ is the return from the behavior policy.
 
 ```java
 // Pseudocode for oﬀ-policy Monte Carlo control update
@@ -621,7 +597,7 @@ The key elements include:
 3. **Actions**: Possible changes in velocity components (+1, 0, -1).
 4. **Start/End Conditions**: Episodes start with zero velocity from a random starting position and end when the car crosses the finish line.
 
-The rewards are \(-1\) for each step until the car finishes, and penalties are applied if the car hits the boundary.
+The rewards are $-1$ for each step until the car finishes, and penalties are applied if the car hits the boundary.
 
 ```java
 // Pseudocode for racetrack problem

@@ -5,10 +5,9 @@
 ---
 
 #### Q-learning: Off-policy TD Control
-Q-learning is an off-policy TD control algorithm that directly approximates \( q^{\star} \), the optimal action-value function, independent of the policy being followed. It updates the action-values based on the maximum possible future values according to the current value estimates.
+Q-learning is an off-policy TD control algorithm that directly approximates $q^{\star}$, the optimal action-value function, independent of the policy being followed. It updates the action-values based on the maximum possible future values according to the current value estimates.
 The update rule for Q-learning is given by:
-\[ Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha [R_{t+1} + \gamma \max_a Q(S_{t+1}, a) - Q(S_t, A_t)] \]
-where \( \alpha \) is the step size and \( \gamma \) is the discount factor.
+$$Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha [R_{t+1} + \gamma \max_a Q(S_{t+1}, a) - Q(S_t, A_t)]$$where $\alpha $ is the step size and$\gamma$ is the discount factor.
 :p What does Q-learning update in each iteration?
 ??x
 Q-learning updates the action-values for state-action pairs based on the TD error, which is the difference between the current estimate of the value and a better estimate from future actions. This involves checking all possible next-state actions to maximize the expected future reward.
@@ -99,8 +98,7 @@ Expected Sarsa is an algorithm that modifies Q-learning by using the expected va
 :p What distinguishes Expected Sarsa from Q-learning?
 ??x
 Expected Sarsa uses the expected value of future rewards by summing over all possible actions in the next state according to the current policy, whereas Q-learning takes the maximum action. The update rule is:
-\[ Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha [R_{t+1} + \mathbb{E}_{\pi}[Q(S_{t+1}, A_{t+1})|S_{t+1}] - Q(S_t, A_t)] \]
-x??
+$$Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha [R_{t+1} + \mathbb{E}_{\pi}[Q(S_{t+1}, A_{t+1})|S_{t+1}] - Q(S_t, A_t)]$$x??
 
 ---
 
@@ -135,7 +133,7 @@ x??
 On the cliff walking task, Expected Sarsa outperforms Q-learning and standard Sarsa for all learning rate values. This confirms Hypothesis 1 that Expected Sarsa generally performs better due to its lower variance. The optimal learning rate for Expected Sarsa is higher than that of Sarsa in a deterministic environment.
 :p How did Expected Sarsa perform on the cliff walking task?
 ??x
-Expected Sarsa showed superior performance compared to Q-learning and standard Sarsa across various learning rates, especially as learning progressed. The optimal learning rate for Expected Sarsa was found to be 1 when \( n = 100 \), while it was lower for Sarsa due to the deterministic nature of the problem.
+Expected Sarsa showed superior performance compared to Q-learning and standard Sarsa across various learning rates, especially as learning progressed. The optimal learning rate for Expected Sarsa was found to be 1 when $n = 100$, while it was lower for Sarsa due to the deterministic nature of the problem.
 x??
 
 ---
@@ -458,15 +456,19 @@ x??
 Double Q-learning is an algorithm designed to address issues related to action-value function approximation, particularly the maximization bias. The core idea involves maintaining two separate approximate value functions (Q1 and Q2) that are updated independently but symmetrically.
 
 The update rule for Double Q-learning can be described by the following formula:
-\[ Q1(S_t, A_t) \leftarrow Q1(S_t, A_t) + \alpha \left( R_{t+1} + \max_a Q2(S_{t+1}, a) - Q1(S_t, A_t) \right) \]
-If the coin comes up tails, then the same update is done with \(Q_1\) and \(Q_2\) switched.
+$$Q1(S_t, A_t) \leftarrow Q1(S_t, A_t) + \alpha \left( R_{t+1} + \max_a Q2(S_{t+1}, a) - Q1(S_t, A_t) \right)$$
+
+If the coin comes up tails, then the same update is done with $Q_1 $ and$Q_2$ switched.
 
 :p What is the update rule for Double Q-learning?
 ??x
 The update rule for Double Q-learning involves maintaining two separate action-value functions (Q1 and Q2). At each time step, one of these functions is updated based on the other. For example:
-\[ Q1(S_t, A_t) \leftarrow Q1(S_t, A_t) + \alpha \left( R_{t+1} + \max_a Q2(S_{t+1}, a) - Q1(S_t, A_t) \right) \]
+$$Q1(S_t, A_t) \leftarrow Q1(S_t, A_t) + \alpha \left( R_{t+1} + \max_a Q2(S_{t+1}, a) - Q1(S_t, A_t) \right)$$
+
 If the coin flip results in tails, then:
-\[ Q2(S_t, A_t) \leftarrow Q2(S_t, A_t) + \alpha \left( R_{t+1} + \max_a Q1(S_{t+1}, a) - Q2(S_t, A_t) \right) \]
+$$
+
+Q2(S_t, A_t) \leftarrow Q2(S_t, A_t) + \alpha \left( R_{t+1} + \max_a Q1(S_{t+1}, a) - Q2(S_t, A_t) \right)$$
 
 This ensures that the policy evaluation is done using one function while the target value comes from another, thus reducing overestimation bias.
 x??
@@ -477,19 +479,19 @@ x??
 Double Expected Sarsa extends the idea of Double Q-learning to an expected version. It uses two separate action-value functions (Q1 and Q2) but also introduces a policy for selecting actions based on these estimates.
 
 The update rule can be described as:
-\[ Q1(S_t, A_t) \leftarrow Q1(S_t, A_t) + \alpha \left( R_{t+1} + \sum_a p(a|S_{t+1}) \max_b Q2(S_{t+1}, b) - Q1(S_t, A_t) \right) \]
-where \(p(a|S_{t+1})\) is the probability of taking action \(a\) in state \(S_{t+1}\).
+$$
 
-:p What are the update equations for Double Expected Sarsa with an \(\epsilon\)-greedy target policy?
+Q1(S_t, A_t) \leftarrow Q1(S_t, A_t) + \alpha \left( R_{t+1} + \sum_a p(a|S_{t+1}) \max_b Q2(S_{t+1}, b) - Q1(S_t, A_t) \right)$$where $ p(a|S_{t+1})$is the probability of taking action $ a$in state $ S_{t+1}$.
+
+:p What are the update equations for Double Expected Sarsa with an $\epsilon$-greedy target policy?
 ??x
-The update equations for Double Expected Sarsa involve using two separate Q-functions (Q1 and Q2) to reduce overestimation bias. The policy is typically \(\epsilon\)-greedy, which means that with probability \(1 - \epsilon\) the action is chosen based on the expected value of both Q-functions, and with probability \(\epsilon\) a random action is selected.
+The update equations for Double Expected Sarsa involve using two separate Q-functions (Q1 and Q2) to reduce overestimation bias. The policy is typically $\epsilon $-greedy, which means that with probability $1 - \epsilon $ the action is chosen based on the expected value of both Q-functions, and with probability$\epsilon$ a random action is selected.
 
 The update rule can be described as:
-\[ Q1(S_t, A_t) \leftarrow Q1(S_t, A_t) + \alpha \left( R_{t+1} + \sum_a p(a|S_{t+1}) \max_b Q2(S_{t+1}, b) - Q1(S_t, A_t) \right) \]
+$$Q1(S_t, A_t) \leftarrow Q1(S_t, A_t) + \alpha \left( R_{t+1} + \sum_a p(a|S_{t+1}) \max_b Q2(S_{t+1}, b) - Q1(S_t, A_t) \right)$$
 
-Here \(p(a|S_{t+1})\) is the probability of taking action \(a\) in state \(S_{t+1}\), and typically \(\epsilon\)-greedy policy ensures that:
-\[ p(a|S_{t+1}) = 1 - \epsilon + \frac{\epsilon}{A(S_{t+1})} \]
-where \(A(S_{t+1})\) is the number of actions in state \(S_{t+1}\).
+Here $p(a|S_{t+1})$ is the probability of taking action $ a $ in state $S_{t+1}$, and typically $\epsilon$-greedy policy ensures that:
+$$p(a|S_{t+1}) = 1 - \epsilon + \frac{\epsilon}{A(S_{t+1})}$$where $ A(S_{t+1})$is the number of actions in state $ S_{t+1}$.
 
 This approach helps in reducing the bias caused by overestimation.
 x??

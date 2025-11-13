@@ -9,7 +9,7 @@ Background context explaining how to implement and solve the heat equation numer
 
 :p How do you set up the initial conditions for the aluminum bar in the `EqHeat.py` program?
 ??x
-To initialize the temperature distribution at \( t = 0 \), we set all points on the bar except the ends to 100°C. The ends are set to 0°C, satisfying the boundary conditions.
+To initialize the temperature distribution at $t = 0$, we set all points on the bar except the ends to 100°C. The ends are set to 0°C, satisfying the boundary conditions.
 
 ```python
 # Initialize T for t=0
@@ -22,15 +22,14 @@ x??
 
 ---
 #### Stability Condition for Heat Equation
-Background explaining the stability condition \(\eta < \frac{C}{2K\Delta t}\) derived to ensure numerical solutions remain stable.
+Background explaining the stability condition $\eta < \frac{C}{2K\Delta t}$ derived to ensure numerical solutions remain stable.
 
-:p What is the condition on \(\eta\) (the ratio of heat capacity, thermal conductivity, and time step) to maintain stability in solving the heat equation numerically?
+:p What is the condition on $\eta$(the ratio of heat capacity, thermal conductivity, and time step) to maintain stability in solving the heat equation numerically?
 ??x
 The stability condition for the numerical solution of the heat equation requires that:
-\[
-\eta = \frac{K \Delta t}{C \rho \Delta x^2} < \frac{1}{2}
-\]
-This means the time step \(\Delta t\) must be sufficiently small relative to the spatial resolution \(\Delta x\) squared, divided by twice the product of thermal conductivity \(K\), specific heat capacity \(C\), and density \(\rho\).
+$$\eta = \frac{K \Delta t}{C \rho \Delta x^2} < \frac{1}{2}$$
+
+This means the time step $\Delta t $ must be sufficiently small relative to the spatial resolution$\Delta x $ squared, divided by twice the product of thermal conductivity$K $, specific heat capacity $ C $, and density$\rho$.
 
 x??
 
@@ -41,10 +40,7 @@ Explanation of the leapfrog method used in solving partial differential equation
 :p How does the leapfrog method work to update temperature values over time?
 ??x
 The leapfrog method updates temperatures using a second-order accurate central difference in space and first-order in time. The key formula is:
-\[
-T_j^{n+1} = T_j^n + \eta [T_{j-1}^n + T_{j+1}^n - 2T_j^n]
-\]
-where \( \eta = \frac{K \Delta t}{C \rho \Delta x^2} \).
+$$T_j^{n+1} = T_j^n + \eta [T_{j-1}^n + T_{j+1}^n - 2T_j^n]$$where $\eta = \frac{K \Delta t}{C \rho \Delta x^2}$.
 
 This method alternates between two states of the temperature array, saving memory by using one state for the current time step and another for the next.
 
@@ -62,10 +58,7 @@ Explanation of incorporating Newton's cooling law into the heat equation.
 :p How do you modify the heat equation to include Newton's cooling law?
 ??x
 To incorporate Newton's cooling law, the heat equation is modified by adding a term proportional to the temperature difference between the object and its environment:
-\[
-\frac{\partial T}{\partial t} = \frac{K}{C \rho} \frac{\partial^2 T}{\partial x^2} - hT
-\]
-where \(h\) is the heat transfer coefficient.
+$$\frac{\partial T}{\partial t} = \frac{K}{C \rho} \frac{\partial^2 T}{\partial x^2} - hT$$where $ h$ is the heat transfer coefficient.
 
 In a discrete form, this can be implemented as:
 ```python
@@ -84,9 +77,7 @@ Explanation of the Crank-Nicolson method's implicit nature and how it handles fu
 The Crank-Nicolson method is an implicit scheme that averages the forward and backward Euler methods. It uses a central difference for both spatial derivatives and a trapezoidal rule for time integration, providing second-order accuracy in both space and time.
 
 The key update formula involves future times:
-\[
-T_{i,j+1} = \frac{2 - 2\eta}{2 + 2\eta} T_{i,j} + \frac{\eta (T_{i-1,j+1} + T_{i+1,j+1})}{2 + 2\eta}
-\]
+$$T_{i,j+1} = \frac{2 - 2\eta}{2 + 2\eta} T_{i,j} + \frac{\eta (T_{i-1,j+1} + T_{i+1,j+1})}{2 + 2\eta}$$
 
 This method requires solving a system of linear equations at each time step to find the new temperature distribution:
 ```python
@@ -108,12 +99,8 @@ Explanation of how time-stepping is performed using the Crank-Nicolson method.
 ??x
 In the Crank-Nicolson method, time-stepping involves solving a matrix equation to find the temperature distribution at the next time step. This requires setting up and solving a system of linear equations for each spatial location.
 
-The process starts with initial conditions \(T_{i,0}\), and for each new time step, we update the temperatures using:
-\[
-- T_{i-1,j+1} + (2 + 2\eta) T_{i,j+1} - T_{i+1,j+1} = T_{i-1,j} + (2\eta - 2) T_{i,j} + T_{i+1,j}
-\]
-
-```python
+The process starts with initial conditions $T_{i,0}$, and for each new time step, we update the temperatures using:
+$$- T_{i-1,j+1} + (2 + 2\eta) T_{i,j+1} - T_{i+1,j+1} = T_{i-1,j} + (2\eta - 2) T_{i,j} + T_{i+1,j}$$```python
 # Time-stepping with Crank-Nicolson
 for j in range(0, J):  # Number of time steps
     A = sp.eye(n) * (2 + 2*eta)
@@ -130,7 +117,7 @@ Explanation of setting up boundary conditions and initial temperature distributi
 
 :p How do you set the boundary and initial conditions for the heat equation in a numerical simulation?
 ??x
-Setting up the boundary and initial conditions involves defining the state of the system at \(t=0\) and ensuring that the boundaries meet physical constraints. For example, in an aluminum bar:
+Setting up the boundary and initial conditions involves defining the state of the system at $t=0$ and ensuring that the boundaries meet physical constraints. For example, in an aluminum bar:
 - Initial condition: Set all internal points to 100°C.
 - Boundary conditions: Set both ends to 0°C.
 
@@ -152,11 +139,11 @@ Explanation of the trade-offs between different numerical schemes (leapfrog vs C
 The key differences between the leapfrog method and the Crank-Nicolson method lie in their stability and accuracy:
 
 - **Leapfrog Method**:
-  - Explicit scheme, leading to stricter stability conditions (small \(\Delta t\)).
+  - Explicit scheme, leading to stricter stability conditions (small $\Delta t$).
   - Second-order accurate in space but only first-order in time.
   
 - **Crank-Nicolson Method**:
-  - Implicit scheme, allowing for larger \(\Delta t\) while maintaining second-order accuracy in both space and time.
+  - Implicit scheme, allowing for larger $\Delta t$ while maintaining second-order accuracy in both space and time.
   - Solves a system of linear equations at each step.
 
 ```python
@@ -182,10 +169,10 @@ Explanation of the computational complexity associated with different numerical 
 The computational complexity differs significantly between explicit and implicit methods:
 
 - **Leapfrog Method**:
-  - Simple to implement, but requires very small \(\Delta t\) for stability.
+  - Simple to implement, but requires very small $\Delta t$ for stability.
   
 - **Crank-Nicolson Method**:
-  - More complex due to solving linear equations at each time step, but allows larger \(\Delta t\).
+  - More complex due to solving linear equations at each time step, but allows larger $\Delta t$.
 
 For example, solving the matrix equation in Crank-Nicolson is more computationally intensive than updating temperatures directly with leapfrog.
 
@@ -210,19 +197,15 @@ Explanation of how to discretize the heat equation in both space and time.
 :p How do you discretize the heat equation for numerical solution?
 ??x
 Discretizing the heat equation involves approximating spatial derivatives using finite differences and temporal derivatives using forward or backward differences. For example, a second-order central difference approximation in space:
-\[
-\frac{\partial^2 T}{\partial x^2} \approx \frac{T_{i+1,j} - 2T_{i,j} + T_{i-1,j}}{(\Delta x)^2}
-\]
+$$\frac{\partial^2 T}{\partial x^2} \approx \frac{T_{i+1,j} - 2T_{i,j} + T_{i-1,j}}{(\Delta x)^2}$$
+
 And first-order forward difference for time:
-\[
-\frac{\partial T}{\partial t} \approx \frac{T_{i,j+1} - T_{i,j}}{\Delta t}
-\]
+$$\frac{\partial T}{\partial t} \approx \frac{T_{i,j+1} - T_{i,j}}{\Delta t}$$
 
 Combining these, the heat equation can be approximated as:
-\[
-T_{i,j+1} = T_{i,j} + \eta [T_{i-1,j} + T_{i+1,j} - 2T_{i,j}]
-\]
-where \( \eta = \frac{K \Delta t}{C \rho \Delta x^2} \).
+$$
+
+T_{i,j+1} = T_{i,j} + \eta [T_{i-1,j} + T_{i+1,j} - 2T_{i,j}]$$where $\eta = \frac{K \Delta t}{C \rho \Delta x^2}$.
 
 ```python
 # Discretization in space and time
@@ -240,7 +223,7 @@ Explanation of analyzing the error in numerical solutions compared to analytical
 Analyzing the error involves comparing numerical solutions with known or derived analytical solutions. Key steps include:
 
 1. **Error Calculation**: Compute the absolute difference between numerical and analytical solutions.
-2. **Convergence Test**: Check if reducing \(\Delta t\) and \(\Delta x\) reduces the error, indicating second-order convergence.
+2. **Convergence Test**: Check if reducing $\Delta t $ and$\Delta x$ reduces the error, indicating second-order convergence.
 
 For example:
 ```python
@@ -261,7 +244,7 @@ Explanation of how to set up and solve matrix equations for the Crank-Nicolson m
 ??x
 Setting up and solving a system of linear equations for the Crank-Nicolson method involves:
 
-1. **Matrix Construction**: Construct a tridiagonal matrix \(A\) representing the spatial derivatives.
+1. **Matrix Construction**: Construct a tridiagonal matrix $A$ representing the spatial derivatives.
 2. **Solving Equations**: Solve the resulting system at each time step.
 
 For example:
@@ -351,7 +334,7 @@ Summary of different numerical methods and their characteristics.
 Key points to remember when implementing numerical solutions for the heat equation include:
 
 1. **Choosing a Method**:
-   - **Leapfrog**: Simple, explicit scheme but requires small \(\Delta t\) for stability.
+   - **Leapfrog**: Simple, explicit scheme but requires small $\Delta t$ for stability.
    - **Crank-Nicolson**: Implicit scheme with better stability and accuracy.
 
 2. **Discretization**:
@@ -367,8 +350,8 @@ Key points to remember when implementing numerical solutions for the heat equati
    - For leapfrog, update temperatures directly in a straightforward manner.
 
 5. **Stability and Accuracy**:
-   - Use stability analysis to determine \(\Delta t\) and \(\Delta x\).
-   - Check convergence by reducing \(\Delta t\) and \(\Delta x\).
+   - Use stability analysis to determine $\Delta t $ and$\Delta x$.
+   - Check convergence by reducing $\Delta t $ and$\Delta x$.
 
 6. **Implementation**:
    - Initialize grid, parameters, and initial conditions.
@@ -389,8 +372,8 @@ Summary of different numerical methods and their characteristics.
 The key differences between explicit (leapfrog) and implicit (Crank-Nicolson) methods for the heat equation are:
 
 1. **Stability**:
-   - **Leapfrog**: Explicit, requires small \(\Delta t\) to maintain stability.
-   - **Crank-Nicolson**: Implicit, allows larger \(\Delta t\) while maintaining accuracy.
+   - **Leapfrog**: Explicit, requires small $\Delta t$ to maintain stability.
+   - **Crank-Nicolson**: Implicit, allows larger $\Delta t$ while maintaining accuracy.
 
 2. **Accuracy**:
    - **Leapfrog**: Second-order accurate in space but only first-order in time.
@@ -402,7 +385,7 @@ The key differences between explicit (leapfrog) and implicit (Crank-Nicolson) me
 
 4. **Computational Efficiency**:
    - **Leapfrog**: Faster but may require more frequent time steps for stability.
-   - **Crank-Nicolson**: Slower per time step due to matrix solution, but can use larger \(\Delta t\).
+   - **Crank-Nicolson**: Slower per time step due to matrix solution, but can use larger $\Delta t$.
 
 5. **Error Analysis**:
    - Both methods should be tested for convergence and accuracy by comparing with known solutions.
@@ -3377,7 +3360,7 @@ Background context: The leapfrog method is a technique used to solve the heat eq
 
 :p What is the leapfrog method in the context of solving the heat equation?
 ??x
-The leapfrog method updates temperature values by averaging the temperatures from previous and next time steps. This alternates between using \( T_{i}^{n+1} \) based on \( T_{i}^{n-1} \), which can lead to stability issues due to the accumulation of numerical errors over multiple steps.
+The leapfrog method updates temperature values by averaging the temperatures from previous and next time steps. This alternates between using $T_{i}^{n+1}$ based on $T_{i}^{n-1}$, which can lead to stability issues due to the accumulation of numerical errors over multiple steps.
 
 Code example (from `EqHeat.py`):
 ```python
@@ -3425,10 +3408,10 @@ Background context: The stability of the heat equation solution is crucial to en
 
 :p How does one check the stability of a numerical solution for the heat equation?
 ??x
-To check the stability, one can choose different values for the time step \( \Delta t \) and spatial step \( \Delta x \). The condition number for stability is often related to the Courant-Friedrichs-Lewy (CFL) condition, which requires that the numerical scheme satisfies certain criteria to avoid instability.
+To check the stability, one can choose different values for the time step $\Delta t $ and spatial step$\Delta x$. The condition number for stability is often related to the Courant-Friedrichs-Lewy (CFL) condition, which requires that the numerical scheme satisfies certain criteria to avoid instability.
 
 For leapfrogging:
-- Stability condition: \( \frac{\kappa \Delta t}{\Delta x^2} < 0.5 \)
+- Stability condition: $\frac{\kappa \Delta t}{\Delta x^2} < 0.5$
 
 For Crank-Nicolson:
 - More stable due to implicit nature but still requires careful selection of step sizes.
@@ -3441,7 +3424,7 @@ Background context: Visualizing the temperature distribution over time and space
 
 :p How can one construct a contour surface plot for temperature versus position and time?
 ??x
-To construct a contour surface plot, one first generates a grid of \( x \) and \( y \) values representing positions and times. Then, using these points, a function is defined that returns the corresponding temperatures at each point. Finally, this function is plotted in 3D to visualize the temperature distribution.
+To construct a contour surface plot, one first generates a grid of $x $ and$y$ values representing positions and times. Then, using these points, a function is defined that returns the corresponding temperatures at each point. Finally, this function is plotted in 3D to visualize the temperature distribution.
 
 Code example (from `HeatCNTridiag.py`):
 ```python
@@ -3479,15 +3462,14 @@ x??
 Background context: This concept deals with the mathematical modeling of wave propagation on a string, which is governed by a hyperbolic partial differential equation (PDE). The PDE describes how disturbances travel along the string and can form both traveling and standing waves.
 
 Relevant formulas:
-\[ \sum F_y = \rho \Delta x \frac{\partial^2 y}{\partial t^2} \]
-\[ T \sin(\theta(x + \Delta x)) - T \sin(\theta(x)) \approx T \frac{\partial y}{\partial x}_{|x+\Delta x} - T \frac{\partial y}{\partial x}_{|x} \approx T \frac{\partial^2 y}{\partial x^2} \]
-\[ \frac{\partial^2 y(x,t)}{\partial x^2} = \frac{1}{c^2} \frac{\partial^2 y(x,t)}{\partial t^2}, c = \sqrt{\frac{T}{\rho}} \]
+$$\sum F_y = \rho \Delta x \frac{\partial^2 y}{\partial t^2}$$
+$$
 
-:p What is the governing PDE for a vibrating string?
+T \sin(\theta(x + \Delta x)) - T \sin(\theta(x)) \approx T \frac{\partial y}{\partial x}_{|x+\Delta x} - T \frac{\partial y}{\partial x}_{|x} \approx T \frac{\partial^2 y}{\partial x^2}$$
+$$\frac{\partial^2 y(x,t)}{\partial x^2} = \frac{1}{c^2} \frac{\partial^2 y(x,t)}{\partial t^2}, c = \sqrt{\frac{T}{\rho}}$$:p What is the governing PDE for a vibrating string?
 ??x
 The wave equation for a vibrating string:
-\[ \frac{\partial^2 y(x,t)}{\partial x^2} = \frac{1}{c^2} \frac{\partial^2 y(x,t)}{\partial t^2}, c = \sqrt{\frac{T}{\rho}} \]
-where \( c \) is the wave velocity, which depends on tension \( T \) and string density \( \rho \).
+$$\frac{\partial^2 y(x,t)}{\partial x^2} = \frac{1}{c^2} \frac{\partial^2 y(x,t)}{\partial t^2}, c = \sqrt{\frac{T}{\rho}}$$where $ c $ is the wave velocity, which depends on tension $ T $ and string density $\rho$.
 x??
 
 ---
@@ -3496,24 +3478,21 @@ x??
 Background context: The initial condition describes how the string is plucked. In this case, it forms a triangular shape with specific parameters.
 
 Relevant formulas:
-\[ y(x,t=0) = 
+$$y(x,t=0) = 
 \begin{cases} 
 1.25 \frac{x}{L}, & x \leq 0.8L \\
 (5 - 5 \frac{x}{L}), & x > 0.8L
-\end{cases}
-\]
-\[ \frac{\partial y}{\partial t}(x,t=0) = 0 \]
-
-:p What is the initial displacement of the string?
+\end{cases}$$
+$$\frac{\partial y}{\partial t}(x,t=0) = 0$$:p What is the initial displacement of the string?
 ??x
 The initial displacement function for a plucked string:
-\[ y(x,0) = 
+$$y(x,0) = 
 \begin{cases} 
 1.25 \frac{x}{L}, & x \leq 0.8L \\
 (5 - 5 \frac{x}{L}), & x > 0.8L
-\end{cases}
-\]
-This describes a triangular shape with the peak at \( x = 0.8L \) and height 1.
+\end{cases}$$
+
+This describes a triangular shape with the peak at $x = 0.8L$ and height 1.
 x??
 
 ---
@@ -3522,12 +3501,11 @@ x??
 Background context: The boundary conditions specify that both ends of the string are tied down, meaning no displacement is allowed at these points.
 
 Relevant formulas:
-\[ y(0,t) \equiv 0, \quad y(L,t) \equiv 0 \]
-
-:p What are the boundary conditions for a fixed-end string?
+$$y(0,t) \equiv 0, \quad y(L,t) \equiv 0$$:p What are the boundary conditions for a fixed-end string?
 ??x
 The boundary conditions for a fixed-end string are:
-\[ y(0,t) = 0, \quad y(L,t) = 0 \]
+$$y(0,t) = 0, \quad y(L,t) = 0$$
+
 These conditions indicate that at both ends of the string, there is no vertical displacement.
 x??
 
@@ -3537,14 +3515,11 @@ x??
 Background context: The solution to the wave equation can be found using a normal-mode expansion. Each mode represents a specific frequency and spatial pattern.
 
 Relevant formulas:
-\[ y(x,t) = \sum_{n=0}^{\infty} B_n \sin(k_n x) \cos(\omega_n t) \]
-\[ k_n = \frac{n\pi}{L}, \quad \omega_n = n c_0 \frac{\pi}{L} \]
-
-:p What is the general form of the solution for a vibrating string?
+$$y(x,t) = \sum_{n=0}^{\infty} B_n \sin(k_n x) \cos(\omega_n t)$$
+$$k_n = \frac{n\pi}{L}, \quad \omega_n = n c_0 \frac{\pi}{L}$$:p What is the general form of the solution for a vibrating string?
 ??x
 The general form of the solution for a vibrating string using normal-mode expansion:
-\[ y(x,t) = \sum_{n=0}^{\infty} B_n \sin(k_n x) \cos(\omega_n t) \]
-where \( k_n = \frac{n\pi}{L} \), and \( \omega_n = n c_0 \frac{\pi}{L} \). Here, each term represents a normal mode of vibration.
+$$y(x,t) = \sum_{n=0}^{\infty} B_n \sin(k_n x) \cos(\omega_n t)$$where $ k_n = \frac{n\pi}{L}$, and $\omega_n = n c_0 \frac{\pi}{L}$. Here, each term represents a normal mode of vibration.
 x??
 
 ---
@@ -3553,27 +3528,24 @@ x??
 Background context: The time-stepping algorithm uses finite differences to approximate the solution at discrete points in space and time.
 
 Relevant formulas:
-\[ y_{i,j+1} = 2y_{i,j} - y_{i,j-1} + c^2 \left( \frac{\Delta x}{\Delta t} \right)^2 (y_{i+1,j} + y_{i-1,j} - 2y_{i,j}) \]
-
-:p What is the difference equation used in the time-stepping algorithm?
+$$y_{i,j+1} = 2y_{i,j} - y_{i,j-1} + c^2 \left( \frac{\Delta x}{\Delta t} \right)^2 (y_{i+1,j} + y_{i-1,j} - 2y_{i,j})$$:p What is the difference equation used in the time-stepping algorithm?
 ??x
 The difference equation used in the time-stepping algorithm:
-\[ y_{i,j+1} = 2y_{i,j} - y_{i,j-1} + c^2 \left( \frac{\Delta x}{\Delta t} \right)^2 (y_{i+1,j} + y_{i-1,j} - 2y_{i,j}) \]
+$$y_{i,j+1} = 2y_{i,j} - y_{i,j-1} + c^2 \left( \frac{\Delta x}{\Delta t} \right)^2 (y_{i+1,j} + y_{i-1,j} - 2y_{i,j})$$
+
 This equation predicts the future solution based on present and past values.
 x??
 
 ---
 #### Fourier Coefficient Calculation
 
-Background context: The Fourier coefficients \( B_n \) are determined by fitting the initial condition to the sum of normal modes.
+Background context: The Fourier coefficients $B_n$ are determined by fitting the initial condition to the sum of normal modes.
 
 Relevant formulas:
-\[ B_m = \frac{6.25 \sin(0.8m\pi)}{m^2 \pi^2} \]
-
-:p How are the Fourier coefficients calculated for the initial condition?
+$$B_m = \frac{6.25 \sin(0.8m\pi)}{m^2 \pi^2}$$:p How are the Fourier coefficients calculated for the initial condition?
 ??x
-The Fourier coefficients \( B_m \) are calculated by fitting the initial condition to the sum of normal modes:
-\[ B_m = \frac{6.25 \sin(0.8m\pi)}{m^2 \pi^2} \]
+The Fourier coefficients $B_m$ are calculated by fitting the initial condition to the sum of normal modes:
+$$B_m = \frac{6.25 \sin(0.8m\pi)}{m^2 \pi^2}$$
 These coefficients ensure that the initial displacement matches the triangular shape described.
 x??
 

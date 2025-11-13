@@ -6,7 +6,7 @@
 
 #### W-Buffering Technique
 W-buffering is a technique used in computer graphics for depth testing, where the view-space z-coordinate conveniently appears in the w-component of homogeneous clip-space coordinates. This means that pHw = pVz (Equation 11.1). The z- and w-buffers store coordinates expressed in clip space.
-However, from the perspective of view-space coordinates, the z-buffer stores \( \frac{1}{pV_z} \) (i.e., \( \frac{1}{z} \)) while the w-buffer stores \( pV_z \) (i.e., \( z \)). This difference in how depths are stored can be confusing.
+However, from the perspective of view-space coordinates, the z-buffer stores $\frac{1}{pV_z}$(i.e.,$\frac{1}{z}$) while the w-buffer stores $ pV_z$(i.e.,$ z$). This difference in how depths are stored can be confusing.
 
 W-buffering incurs additional computational cost because it cannot linearly interpolate depths directly. Depths must first be inverted, interpolated, and then re-inverted before being stored in the w-buffer.
 :p What is the relationship between pHw and pVz?
@@ -511,10 +511,10 @@ x??
 
 ---
 #### Alpha Blending Function
-Alpha blending is a technique used to render semitransparent geometry by combining the color of the incoming fragment (source) with the existing content of the frame buffer (destination). The formula for alpha blending is given as: \(C'_{D} = A_{S}C_{S} + (1 - A_{S})C_{D}\).
+Alpha blending is a technique used to render semitransparent geometry by combining the color of the incoming fragment (source) with the existing content of the frame buffer (destination). The formula for alpha blending is given as: $C'_{D} = A_{S}C_{S} + (1 - A_{S})C_{D}$.
 :p What is the basic structure of an alpha blending function?
 ??x
-The alpha blending function combines the source color (\(C_{S}\)) with the destination color (\(C_{D}\)) based on a blend weight \(A_{S}\), which is the source alpha. The formula ensures that semitransparent surfaces are blended correctly into the frame buffer.
+The alpha blending function combines the source color ($C_{S}$) with the destination color ($ C_{D}$) based on a blend weight $ A_{S}$, which is the source alpha. The formula ensures that semitransparent surfaces are blended correctly into the frame buffer.
 ```java
 // Pseudocode for alpha blending
 float blendColor = srcAlpha * srcColor + (1 - srcAlpha) * destColor;
@@ -539,7 +539,7 @@ x??
 
 ---
 #### General Blending Equation
-The general form of a blending equation can be defined as \(C'_{D} = w_{S}C_{S} + w_{D}C_{D}\). Here, the weights (\(w_{S}\) and \(w_{D}\)) can be selected by the programmer from predefined values such as zero, one, source color, destination color, source or destination alpha, and one minus the source or destination color or alpha.
+The general form of a blending equation can be defined as $C'_{D} = w_{S}C_{S} + w_{D}C_{D}$. Here, the weights ($ w_{S}$and $ w_{D}$) can be selected by the programmer from predefined values such as zero, one, source color, destination color, source or destination alpha, and one minus the source or destination color or alpha.
 :p What is the general form of a blending equation?
 ??x
 The general blending equation combines the colors of two elements using weighted factors. The weights can be chosen from various predefined values to control how much each input contributes to the final output. This allows for flexible blending operations beyond simple semitransparent rendering.

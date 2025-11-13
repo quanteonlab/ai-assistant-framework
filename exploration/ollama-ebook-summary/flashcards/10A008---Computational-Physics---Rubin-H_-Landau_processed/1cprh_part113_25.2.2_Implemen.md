@@ -25,19 +25,13 @@ x??
 
 Background context: The continuity equation describes the conservation of mass in fluid dynamics, stating that changes in density within a region arise from the flow of current in and out of that region. For 1D flow in the x-direction, it simplifies to:
 
-\[
-\frac{\partial \rho}{\partial t} + c \frac{\partial \rho}{\partial x} = 0
-\]
-
-where \(\rho\) is the mass density and \(v=c\) is a constant velocity.
+$$\frac{\partial \rho}{\partial t} + c \frac{\partial \rho}{\partial x} = 0$$where $\rho $ is the mass density and$v=c$ is a constant velocity.
 
 :p What is the continuity equation for 1D flow in the x-direction?
 ??x
-The continuity equation for 1D flow in the x-direction, where the fluid moves with a constant velocity \(c\), is:
+The continuity equation for 1D flow in the x-direction, where the fluid moves with a constant velocity $c$, is:
 
-\[
-\frac{\partial \rho}{\partial t} + c \frac{\partial \rho}{\partial x} = 0
-\]
+$$\frac{\partial \rho}{\partial t} + c \frac{\partial \rho}{\partial x} = 0$$
 
 This equation states that any changes in density within a region arise from the flow of mass current into or out of that region.
 
@@ -48,22 +42,14 @@ x??
 #### Advection Equation
 
 Background context: The advection equation describes horizontal transport due to a flow's velocity field. It is related to the wave equation and can be expressed as:
-
-\[
-\frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} = 0
-\]
-
-where \(u\) is a quantity being advected, and \(c\) is its constant speed.
+$$\frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} = 0$$where $ u $ is a quantity being advected, and $ c$ is its constant speed.
 
 :p What is the advection equation?
 ??x
 The advection equation describes the horizontal transport of a quantity due to a flow's velocity field. It is given by:
+$$\frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} = 0$$
 
-\[
-\frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} = 0
-\]
-
-This equation states that the rate of change of \(u\) with respect to time plus its spatial derivative times the speed of advection equals zero.
+This equation states that the rate of change of $u$ with respect to time plus its spatial derivative times the speed of advection equals zero.
 
 x??
 
@@ -72,20 +58,14 @@ x??
 #### Solitary Waves and Shock Waves
 
 Background context: Burgers' equation models solitary waves, where a traveling wave solution is given by:
-
-\[
-\frac{\partial u}{\partial t} + \epsilon u \frac{\partial u}{\partial x} = 0
-\]
+$$\frac{\partial u}{\partial t} + \epsilon u \frac{\partial u}{\partial x} = 0$$
 
 This equation describes how points on the wave move such that local speed depends on the local amplitude. Shock waves occur when high parts of the wave move faster than low parts, forming a sharp edge.
 
 :p What is Burgers' equation and what does it describe?
 ??x
 Burgers' equation is:
-
-\[
-\frac{\partial u}{\partial t} + \epsilon u \frac{\partial u}{\partial x} = 0
-\]
+$$\frac{\partial u}{\partial t} + \epsilon u \frac{\partial u}{\partial x} = 0$$
 
 This equation describes the movement of a traveling wave where points on the wave move such that the local speed depends on the local amplitude. It models how shock waves form when high parts of the wave move faster than low parts, leading to a sharp edge.
 
@@ -96,22 +76,12 @@ x??
 #### Lax–Wendroff Algorithm
 
 Background context: The Lax-Wendroff method is used for solving partial differential equations more accurately than simple leapfrog schemes by retaining second-order differences. For Burgers' equation:
-
-\[
-u(x,t+Δt) = u(x,t-Δt) - \beta \left( u^2(x+\Delta x, t) - u^2(x-\Delta x, t) \right)
-\]
-
-where \(\beta\) is a ratio of constants known as the Courant–Friedrichs–Lewy (CFL) number. This method improves stability and accuracy by reducing numerical instabilities.
+$$u(x,t+Δt) = u(x,t-Δt) - \beta \left( u^2(x+\Delta x, t) - u^2(x-\Delta x, t) \right)$$where $\beta$ is a ratio of constants known as the Courant–Friedrichs–Lewy (CFL) number. This method improves stability and accuracy by reducing numerical instabilities.
 
 :p What is the Lax-Wendroff algorithm for solving Burgers' equation?
 ??x
 The Lax-Wendroff algorithm for solving Burgers' equation retains second-order differences, leading to better stability and accuracy:
-
-\[
-u(x,t+Δt) = u(x,t-Δt) - \beta \left( u^2(x+\Delta x, t) - u^2(x-\Delta x, t) \right)
-\]
-
-where \(u^2\) is the square of \(u\), not its second derivative. The parameter \(\beta\) is a ratio known as the Courant–Friedrichs–Lewy (CFL) number and must satisfy \(\beta < 1\) for stability.
+$$u(x,t+Δt) = u(x,t-Δt) - \beta \left( u^2(x+\Delta x, t) - u^2(x-\Delta x, t) \right)$$where $ u^2 $ is the square of $ u $, not its second derivative. The parameter$\beta $ is a ratio known as the Courant–Friedrichs–Lewy (CFL) number and must satisfy$\beta < 1$ for stability.
 
 x??
 
@@ -123,7 +93,7 @@ Background context: The leapfrog method is an explicit scheme used to solve part
 
 :p How does the leapfrog method work in solving Burgers' equation?
 ??x
-The leapfrog method uses a two-level time stepping approach where data from the past and future time steps are alternated. For Burgers' equation \( u_t + uu_x = 0 \), it involves updating the solution at each grid point using information from previous and next time levels.
+The leapfrog method uses a two-level time stepping approach where data from the past and future time steps are alternated. For Burgers' equation $u_t + uu_x = 0$, it involves updating the solution at each grid point using information from previous and next time levels.
 
 ```java
 // Pseudocode for Leapfrog Method
@@ -158,15 +128,12 @@ x??
 
 #### Stability Condition for Lax-Wendroff Method
 
-Background context: The stability of the Lax-Wendroff method is crucial to ensure that the numerical solution does not diverge. The CFL (Courant–Friedrichs–Lewy) number \(\beta\) must be less than 1 for the method to remain stable.
+Background context: The stability of the Lax-Wendroff method is crucial to ensure that the numerical solution does not diverge. The CFL (Courant–Friedrichs–Lewy) number $\beta$ must be less than 1 for the method to remain stable.
 
 :p What is the condition for the stability of the Lax-Wendroff method?
 ??x
-The Lax-Wendroff method is stable if the Courant-Friedrichs-Lewy (CFL) number \(\beta\) satisfies:
-
-\[
-0 < \beta < 1
-\]
+The Lax-Wendroff method is stable if the Courant-Friedrichs-Lewy (CFL) number $\beta$ satisfies:
+$$0 < \beta < 1$$
 
 This ensures that the numerical solution remains bounded and does not lead to unphysical behavior.
 
@@ -188,7 +155,7 @@ Background context: Proper initial conditions are critical in numerical methods 
 
 :p How do you seed initial conditions for solving Burgers' equation?
 ??x
-Seeding initial conditions involves setting the initial state of the system at time \( t = 0 \). For example, if the initial condition is a shock or rarefaction wave:
+Seeding initial conditions involves setting the initial state of the system at time $t = 0$. For example, if the initial condition is a shock or rarefaction wave:
 
 ```java
 // Pseudocode for Initial Conditions
@@ -215,21 +182,16 @@ x??
 
 #### Truncation Error and Stability Analysis
 
-Background context: The truncation error and stability analysis help in understanding the accuracy of numerical methods. For finite difference schemes, these analyses provide insights into the balance between time step size \(\Delta t\) and space step size \(\Delta x\).
+Background context: The truncation error and stability analysis help in understanding the accuracy of numerical methods. For finite difference schemes, these analyses provide insights into the balance between time step size $\Delta t $ and space step size$\Delta x$.
 
 :p What is the relationship between truncation error and stability for the given algorithm?
 ??x
 The truncation error and stability condition for the Lax-Wendroff method are related as follows:
 
-\[
-\mathcal{O}((\Delta t)^3) + \mathcal{O}(\Delta t (\Delta x)^2)
-\]
+$$\mathcal{O}((\Delta t)^3) + \mathcal{O}(\Delta t (\Delta x)^2)$$
 
 And the stability condition is given by:
-
-\[
-\frac{\Delta t}{\Delta x}[\epsilon |u| + 4 \mu (\Delta x)^2] \leq 1
-\]
+$$\frac{\Delta t}{\Delta x}[\epsilon |u| + 4 \mu (\Delta x)^2] \leq 1$$
 
 This ensures that small time and space steps lead to a smaller approximation error while maintaining numerical stability.
 
@@ -261,7 +223,7 @@ for (int j = 1; j < num_times; ++j) {
 }
 ```
 
-Where \( \mu \) is a constant related to the third-order spatial derivative.
+Where $\mu$ is a constant related to the third-order spatial derivative.
 
 ```java
 // Pseudocode for Third Order Spatial Derivative Approximation
@@ -279,7 +241,7 @@ Background context: Proper initial conditions are crucial for the numerical solu
 
 :p How do you seed initial conditions for the KdV equation?
 ??x
-Seeding initial conditions involves setting up the initial state of the system at time \( t = 0 \). For example, if the initial condition is a single soliton:
+Seeding initial conditions involves setting up the initial state of the system at time $t = 0$. For example, if the initial condition is a single soliton:
 
 ```java
 // Pseudocode for Initial Conditions
@@ -288,7 +250,7 @@ for (int i = 1; i < num_points; ++i) {
 }
 ```
 
-Where \( c \) is the wave speed and \( x_0 \) is the initial position of the soliton.
+Where $c $ is the wave speed and$x_0$ is the initial position of the soliton.
 
 ```java
 // Pseudocode for Initial Conditions Check
@@ -306,21 +268,16 @@ x??
 
 #### Truncation Error and Stability for KdV Equation
 
-Background context: The truncation error and stability analysis help in understanding the accuracy of numerical methods. For finite difference schemes, these analyses provide insights into the balance between time step size \(\Delta t\) and space step size \(\Delta x\).
+Background context: The truncation error and stability analysis help in understanding the accuracy of numerical methods. For finite difference schemes, these analyses provide insights into the balance between time step size $\Delta t $ and space step size$\Delta x$.
 
 :p What are the truncation error and stability conditions for the KdV equation algorithm?
 ??x
 The truncation error and stability condition for the KdV equation algorithm are given by:
 
-\[
-\mathcal{O}[(\Delta t)^3] + \mathcal{O}(\Delta t (\Delta x)^2)
-\]
+$$\mathcal{O}[(\Delta t)^3] + \mathcal{O}(\Delta t (\Delta x)^2)$$
 
 And the stability condition is:
-
-\[
-\frac{\Delta t}{\Delta x}[|\epsilon u| + 4 \mu (\Delta x)^2] \leq 1
-\]
+$$\frac{\Delta t}{\Delta x}[|\epsilon u| + 4 \mu (\Delta x)^2] \leq 1$$
 
 This ensures that small time and space steps lead to a smaller approximation error while maintaining numerical stability.
 
@@ -340,16 +297,16 @@ These flashcards cover the key concepts and methods described in the provided te
 
 #### Initial Condition for Soliton Wave
 
-Background context: The initial condition given is a specific form of the soliton wave function \(u(x,t=0)\) which is defined as:
-\[ u(x, t=0) = \frac{1}{2} [ 1 - \tanh\left( \frac{x-25}{5} \right)] \]
+Background context: The initial condition given is a specific form of the soliton wave function $u(x,t=0)$ which is defined as:
+$$u(x, t=0) = \frac{1}{2} [ 1 - \tanh\left( \frac{x-25}{5} \right)]$$
 
-This condition describes a solitary wave that starts with a specific shape and moves over time. The parameters are given as \(\epsilon = 0.2\) and \(\mu = 0.1\). These values influence the behavior of the soliton.
+This condition describes a solitary wave that starts with a specific shape and moves over time. The parameters are given as $\epsilon = 0.2 $ and$\mu = 0.1$. These values influence the behavior of the soliton.
 
 :p Define an initial array for u in the Soliton.py program.
 ??x
-You need to define a 2D array `u` with dimensions `[131, 3]`. The first index corresponds to position \( x \), and the second to time \( t \). For your choice of parameters, the maximum value for \( x \) is \( 52 \) (since \( 130 \times 0.4 = 52 \)).
+You need to define a 2D array `u` with dimensions `[131, 3]`. The first index corresponds to position $x $, and the second to time $ t $. For your choice of parameters, the maximum value for$ x $ is $52 $(since $130 \times 0.4 = 52$).
 
-The array initialization should start at \( t=0 \):
+The array initialization should start at $t=0$:
 ```python
 # Initialize u with zeros
 u = np.zeros((131, 3))
@@ -367,12 +324,12 @@ x??
 
 Background context: The time-stepping procedure is described using equations (25.31) and (25.33). The goal is to advance the solution from one time step to the next, ensuring that no array indices are out of bounds.
 
-:p Describe how to update \( u \) at each time step.
+:p Describe how to update $u$ at each time step.
 ??x
-To update the values of \( u \), you need to follow a specific procedure:
+To update the values of $u$, you need to follow a specific procedure:
 
 1. **Update for Time Step 2:**
-   - For \( i = 3, 4, ..., 129 \):
+   - For $i = 3, 4, ..., 129$:
      Use equation (25.31) but avoid out-of-bound indices:
      ```python
      # Update u at time step t=2 using values from t=1
@@ -387,7 +344,7 @@ To update the values of \( u \), you need to follow a specific procedure:
      ```
 
 2. **Update for Time Step 3:**
-   - For \( i = 3, 4, ..., 129 \):
+   - For $i = 3, 4, ..., 129$:
      Use equation (25.30) to update the values:
      ```python
      # Update u at time step t=3 using values from t=2
@@ -419,7 +376,7 @@ Background context: The evolution of the soliton wave over time can be visualize
 
 :p Describe how to visualize the soliton wave evolution over time.
 ??x
-To visualize the soliton wave evolution, you can plot the values of \( u \) at different time steps:
+To visualize the soliton wave evolution, you can plot the values of $u$ at different time steps:
 
 ```python
 import matplotlib.pyplot as plt
@@ -441,7 +398,7 @@ plt.grid(True)
 plt.show()
 ```
 
-This code plots the soliton wave at \( t=0 \), \( t=2 \), and \( t=3 \) to visualize its evolution over time.
+This code plots the soliton wave at $t=0 $, $ t=2 $, and$ t=3$ to visualize its evolution over time.
 
 x??
 
@@ -484,7 +441,7 @@ To convert the discrete pendulum chain model into a PDE, follow these steps:
      1/c² d²𝜃/dt'² - ∂²𝜃/∂x'² = sin(𝜃)
      ```
 
-Where \( c \) is a characteristic speed, and the Sine-Gordon Equation (SGE) is obtained.
+Where $c$ is a characteristic speed, and the Sine-Gordon Equation (SGE) is obtained.
 
 ```python
 # Define the wave equation in terms of the new units:

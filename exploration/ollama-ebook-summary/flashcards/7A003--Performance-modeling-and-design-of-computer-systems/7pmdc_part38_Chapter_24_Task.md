@@ -334,7 +334,7 @@ x??
 BACKGROUND: The policies discussed are RANDOM and ROUND-ROBIN. In RANDOM, jobs are dispatched randomly among servers, while in ROUND-ROBIN, jobs are dispatched to each server in a cyclic manner.
 
 RELEVANT FORMULAS AND EXPLANATIONS:
-- Under RANDOM dispatching, the arrival process into each queue is a Poisson process with rate \(\lambda/k\).
+- Under RANDOM dispatching, the arrival process into each queue is a Poisson process with rate $\lambda/k$.
 - Under ROUND-ROBIN, the interarrival time of jobs into each queue follows an Erlang-k distribution (sum of k exponentials), which has lower variability compared to an exponential.
 
 :p Which policy outperforms the other in terms of mean response time and why?
@@ -492,7 +492,7 @@ x??
 Background context explaining that both JSQ and M/G/k are dynamic policies, but M/G/k holds off on assigning jobs as long as possible. Under JSQ, unutilized servers can occur when all queues have similar job sizes.
 :p How does M/G/k compare to JSQ in terms of handling high job size variability?
 ??x
-M/G/k outperforms JSQ by an order of magnitude with respect to mean response time under high job size variability. This is because M/G/k holds off on assigning jobs as long as possible, ensuring no server remains unutilized when there are at least \(k\) jobs.
+M/G/k outperforms JSQ by an order of magnitude with respect to mean response time under high job size variability. This is because M/G/k holds off on assigning jobs as long as possible, ensuring no server remains unutilized when there are at least $k$ jobs.
 ```java
 // Pseudocode for M/G/k policy
 public class MGKPolicy {
@@ -592,30 +592,30 @@ x??
 ---
 
 #### Lee and Longton's Approximation for M/G/k Waiting Time
-Background context: In 1970, Lee and Longton proposed a simple approximation to estimate the waiting time in an \(M/G/k\) queue by scaling up the mean delay of an \(M/M/k\) queue using the coefficient of variation \(C_2\). The formula is given as:
-\[ E[T_{M/G/k}] \approx \left(\frac{C_2 + 1}{2}\right) E[T_{M/M/k}] \]
-where \(E[T_{M/G/k}]\) and \(E[T_{M/M/k}]\) are the expected waiting times in an \(M/G/k\) and \(M/M/k\) queue, respectively.
+Background context: In 1970, Lee and Longton proposed a simple approximation to estimate the waiting time in an $M/G/k $ queue by scaling up the mean delay of an$M/M/k $ queue using the coefficient of variation$C_2$. The formula is given as:
+$$E[T_{M/G/k}] \approx \left(\frac{C_2 + 1}{2}\right) E[T_{M/M/k}]$$where $ E[T_{M/G/k}]$and $ E[T_{M/M/k}]$are the expected waiting times in an $ M/G/k$and $ M/M/k$ queue, respectively.
 
-:p What does Lee and Longton's approximation state for estimating the waiting time in an \(M/G/k\) queue?
+:p What does Lee and Longton's approximation state for estimating the waiting time in an $M/G/k$ queue?
 ??x
-Lee and Longton’s approximation states that the waiting time in an \(M/G/k\) queue can be approximated by scaling up the mean delay of an \(M/M/k\) queue using a factor related to the coefficient of variation \(C_2\):
-\[ E[T_{M/G/k}] \approx \left(\frac{C_2 + 1}{2}\right) E[T_{M/M/k}] \]
-This approximation simplifies the estimation process by leveraging the known results for \(M/M/k\) queues, but it may not be accurate for certain job size distributions.
+Lee and Longton’s approximation states that the waiting time in an $M/G/k $ queue can be approximated by scaling up the mean delay of an$M/M/k $ queue using a factor related to the coefficient of variation$C_2$:
+$$E[T_{M/G/k}] \approx \left(\frac{C_2 + 1}{2}\right) E[T_{M/M/k}]$$
+
+This approximation simplifies the estimation process by leveraging the known results for $M/M/k$ queues, but it may not be accurate for certain job size distributions.
 
 x??
 
 ---
 
 #### Inaccuracy of 2-Moment Approximations
-Background context: The accuracy of approximating mean delay using only two moments (mean and variance) can vary significantly depending on the job size distribution. Specifically, the inaccuracy can be proportional to \(C_2\), where \(C_2\) is related to the coefficient of variation squared.
+Background context: The accuracy of approximating mean delay using only two moments (mean and variance) can vary significantly depending on the job size distribution. Specifically, the inaccuracy can be proportional to $C_2 $, where $ C_2$ is related to the coefficient of variation squared.
 
-:p Why are 2-moment approximations potentially inaccurate for predicting \(E[T_{Q}]\)?
+:p Why are 2-moment approximations potentially inaccurate for predicting $E[T_{Q}]$?
 ??x
-Two-moment approximations (like Lee and Longton's) can be highly inaccurate because they fail to capture the nuances in job size distributions. The inaccuracy is proportional to \(C_2\), which indicates that the variability in job sizes has a significant impact on waiting times.
+Two-moment approximations (like Lee and Longton's) can be highly inaccurate because they fail to capture the nuances in job size distributions. The inaccuracy is proportional to $C_2$, which indicates that the variability in job sizes has a significant impact on waiting times.
 
-For example, consider an \(M/G/10\) queue with mean job size of 1 and different values of \(C_2\):
-- For \(C_2 = \frac{1}{9}\): The approximation gives an expected delay of about 6.7.
-- For \(C_2 = \frac{9}{9}\): The approximation can give an expected delay of over 33.
+For example, consider an $M/G/10 $ queue with mean job size of 1 and different values of$C_2$:
+- For $C_2 = \frac{1}{9}$: The approximation gives an expected delay of about 6.7.
+- For $C_2 = \frac{9}{9}$: The approximation can give an expected delay of over 33.
 
 These differences highlight that a single distribution with the same mean and variance but different job size characteristics can lead to vastly different waiting times, making two-moment approximations unreliable in some cases.
 
@@ -713,7 +713,7 @@ Explanation on how to analyze the SITA policy given known cutoffs, using probabi
 Given known size cutoffs, the analysis under a Poisson arrival process is straightforward. Jobs are split into different queues based on their sizes. Each queue can be modeled as an M/G_i/1 system where G_i represents the job size distribution of jobs arriving at queue i.
 
 For instance:
-- If \( t \) is the job size and we know the cutoffs, the probability that a job falls into each queue can be calculated.
+- If $t$ is the job size and we know the cutoffs, the probability that a job falls into each queue can be calculated.
 ```java
 public class SITAQueueAnalysis {
     private double[] probQueue;
@@ -757,7 +757,7 @@ public class PerformanceAnalyzer {
 x??
 
 #### SITA Policy and Job Size Distribution
-Background context: The original job size distribution, \( G \), has high variability. This variability is transferred to all queues under most policies. However, SITA specifically divides the job size distribution so that each queue sees only a portion of the domain of the original distribution, thereby decreasing the variability at each queue.
+Background context: The original job size distribution, $G$, has high variability. This variability is transferred to all queues under most policies. However, SITA specifically divides the job size distribution so that each queue sees only a portion of the domain of the original distribution, thereby decreasing the variability at each queue.
 :p What does SITA do differently in managing job size distributions compared to other policies?
 ??x
 SITA divides the job size distribution among different queues such that each queue handles a specific subset of the job sizes. This approach reduces the variability seen by each queue and ensures that short jobs are not affected by long jobs, leading to lower mean response times.
@@ -793,10 +793,10 @@ x??
 ---
 
 #### Example with Bounded Pareto Distribution
-Background context: A server farm with 2 servers uses a Bounded Pareto job size distribution with \(\alpha = 1.4\) and resource requirement \(R = 0.95\). SITA computes the optimal splitting cutoff analytically, while LWL's performance is estimated using an upper bound.
+Background context: A server farm with 2 servers uses a Bounded Pareto job size distribution with $\alpha = 1.4 $ and resource requirement$R = 0.95$. SITA computes the optimal splitting cutoff analytically, while LWL's performance is estimated using an upper bound.
 :p What does Figure 24.3 illustrate regarding SITA and LWL?
 ??x
-Figure 24.3 illustrates that as \(C_2\) increases (with \(E[S]\) fixed), SITA provides a significantly lower mean response time compared to the upper-bound estimate of LWL, demonstrating the superiority of SITA in high variability scenarios.
+Figure 24.3 illustrates that as $C_2 $ increases (with$E[S]$ fixed), SITA provides a significantly lower mean response time compared to the upper-bound estimate of LWL, demonstrating the superiority of SITA in high variability scenarios.
 x??
 
 ---
@@ -813,39 +813,39 @@ x??
 #### SITA vs. LWL for High Job Size Variability
 Background context: The text discusses a comparison between SITA and LWL (M/G/k) task assignment policies, highlighting that despite SITA generally outperforming LWL under high job size variability, there are specific scenarios where this is not the case. This comparison is particularly relevant in server farm systems with varying job sizes.
 
-The key point is that for a 2-server system with a Bounded Pareto job size distribution, as \( p \rightarrow \infty \) and \( C_2 \rightarrow \infty \), SITA's performance can degrade compared to LWL. This happens because SITA needs to place a size cutoff for task assignment, which affects the variance of the job sizes seen by different servers.
+The key point is that for a 2-server system with a Bounded Pareto job size distribution, as $p \rightarrow \infty $ and$C_2 \rightarrow \infty$, SITA's performance can degrade compared to LWL. This happens because SITA needs to place a size cutoff for task assignment, which affects the variance of the job sizes seen by different servers.
 
 :p Why might SITA be inferior to LWL under high job size variability?
 ??x
-SITA may appear inferior to LWL under high job size variability because it requires placing a fixed size cutoff. This cutoff leads to different variance characteristics for tasks assigned to each server, specifically finite variance for the first host and infinite variance for the second host as \( p \rightarrow \infty \).
+SITA may appear inferior to LWL under high job size variability because it requires placing a fixed size cutoff. This cutoff leads to different variance characteristics for tasks assigned to each server, specifically finite variance for the first host and infinite variance for the second host as $p \rightarrow \infty$.
 
-For example, consider a Bounded Pareto distribution with parameters \( (k, p, \alpha) \). If SITA sets the cutoff at any finite value \( x \), then:
-- The first server sees tasks ranging from \( k \) to \( x \) with finite variance.
-- The second server sees tasks ranging from \( x \) to infinity with infinite variance.
+For example, consider a Bounded Pareto distribution with parameters $(k, p, \alpha)$. If SITA sets the cutoff at any finite value $ x$, then:
+- The first server sees tasks ranging from $k $ to$x$ with finite variance.
+- The second server sees tasks ranging from $x$ to infinity with infinite variance.
 
 This difference in task distribution can lead to divergent response times for SITA compared to LWL as the number of servers increases and job sizes become highly variable. In contrast, LWL (M/G/k) is more robust under such conditions.
 ??x
 ---
 
 #### Crossover Point Between SITA and LWL
-Background context: The text mentions a crossover point where SITA's performance diverges from LWL's as the number of servers (\( C_2 \)) increases. This crossover occurs at lower \( C_2 \) values than expected due to an upper bound on LWL’s response time being loose.
+Background context: The text mentions a crossover point where SITA's performance diverges from LWL's as the number of servers ($C_2 $) increases. This crossover occurs at lower $ C_2$ values than expected due to an upper bound on LWL’s response time being loose.
 
 :p What does the crossover point signify in this comparison between SITA and LWL?
 ??x
-The crossover point signifies that for certain system configurations, such as a 2-server setup with specific job size distributions (e.g., Bounded Pareto), there is a threshold at which SITA's performance degrades relative to LWL. Specifically, below this \( C_2 \) value, SITA outperforms LWL; however, above it, SITA’s response time diverges while LWL converges.
+The crossover point signifies that for certain system configurations, such as a 2-server setup with specific job size distributions (e.g., Bounded Pareto), there is a threshold at which SITA's performance degrades relative to LWL. Specifically, below this $C_2$ value, SITA outperforms LWL; however, above it, SITA’s response time diverges while LWL converges.
 
-This phenomenon was not observed in previous literature because simulations and approximations typically focused on heavy-traffic regimes or lower \( C_2 \) values.
+This phenomenon was not observed in previous literature because simulations and approximations typically focused on heavy-traffic regimes or lower $C_2$ values.
 ??x
 ---
 
 #### Bounded Pareto Job Size Distribution Impact
-Background context: The text describes a scenario using a Bounded Pareto job size distribution with parameter \( \alpha = 1.6 \). This distribution is used to illustrate the impact on SITA and LWL performance.
+Background context: The text describes a scenario using a Bounded Pareto job size distribution with parameter $\alpha = 1.6$. This distribution is used to illustrate the impact on SITA and LWL performance.
 
-:p How does changing the Bounded Pareto parameter \( \alpha \) affect the comparison between SITA and LWL?
+:p How does changing the Bounded Pareto parameter $\alpha$ affect the comparison between SITA and LWL?
 ??x
-Changing the Bounded Pareto parameter \( \alpha \) can significantly alter the response time characteristics of both SITA and LWL. For a higher value of \( \alpha \), as seen in this example with \( \alpha = 1.6 \), it affects how tasks are distributed among servers.
+Changing the Bounded Pareto parameter $\alpha $ can significantly alter the response time characteristics of both SITA and LWL. For a higher value of$\alpha $, as seen in this example with $\alpha = 1.6$, it affects how tasks are distributed among servers.
 
-In the given setup, an analytical method is used for computing SITA's mean response time, while an upper bound from [157] is used for LWL. The crossover point observed here shows that even in a high variability regime (as \( C_2 \) increases), there can be situations where SITA performs worse than LWL.
+In the given setup, an analytical method is used for computing SITA's mean response time, while an upper bound from [157] is used for LWL. The crossover point observed here shows that even in a high variability regime (as $C_2$ increases), there can be situations where SITA performs worse than LWL.
 
 This example highlights the need to carefully consider different job size distributions and their impact on task assignment policies like SITA.
 ??x
@@ -911,10 +911,10 @@ This example demonstrates how to calculate the 3/2-moment of a Bounded Pareto di
 ??x
 
 #### Response Time for High Job Size Variability
-Background context: In cases where job size variability is high, task assignment policies such as RANDOM, ROUND-ROBIN (RR), and JSQ are often inadequate. The mean response time can be infinite under certain conditions, specifically if \(E[S^2]\) is not finite.
+Background context: In cases where job size variability is high, task assignment policies such as RANDOM, ROUND-ROBIN (RR), and JSQ are often inadequate. The mean response time can be infinite under certain conditions, specifically if $E[S^2]$ is not finite.
 :p How does the mean response time behave when job size variability is high?
 ??x
-The mean response time is finite only if \(E[S^2]\) (the second moment of the service time distribution) is finite. If it's infinite, then the system can exhibit unstable behavior or have an unbounded response time.
+The mean response time is finite only if $E[S^2]$(the second moment of the service time distribution) is finite. If it's infinite, then the system can exhibit unstable behavior or have an unbounded response time.
 x??
 
 ---
@@ -988,32 +988,23 @@ Both policies, RANDOM and SITA, yield the same mean response time under the cond
 For the RANDOM policy:
 - An arrival randomly selects a queue with load ρ.
 - By Little's Law, the expected response time for this queue is given by:
-
-\[
-E[T]_{RANDOM} = \frac{1}{(\lambda/k) \cdot (ρ / (1 - ρ))} = k \cdot \frac{λ \cdot ρ}{1 - ρ}
-\]
+$$E[T]_{RANDOM} = \frac{1}{(\lambda/k) \cdot (ρ / (1 - ρ))} = k \cdot \frac{λ \cdot ρ}{1 - ρ}$$
 
 For the SITA policy:
 - Jobs are split among servers based on size cutoffs.
-- The fraction of jobs that go to server i is \(p_i\), where \(p_i\) = ∫\_{si-1}^{si} f(t) dt, and λi = λ \cdot pi.
+- The fraction of jobs that go to server i is $p_i $, where $ p_i$= ∫\_{si-1}^{si} f(t) dt, and λi = λ \cdot pi.
 - Each queue's load is ρ, and the expected response time for a queue i is:
-
-\[
-E[T|job goes to host i]_{SITA} = \frac{1}{(λ_i) \cdot (ρ / (1 - ρ))} = \frac{1}{(λ \cdot p_i) \cdot (ρ / (1 - ρ))}
-\]
+$$E[T|job goes to host i]_{SITA} = \frac{1}{(λ_i) \cdot (ρ / (1 - ρ))} = \frac{1}{(λ \cdot p_i) \cdot (ρ / (1 - ρ))}$$
 
 Summing over all servers:
+$$
 
-\[
-E[T]_{SITA} = k \sum_{i=1}^k p_i \cdot E[T|job goes to host i] = k \sum_{i=1}^k \frac{p_i}{λ \cdot ρ / (1 - ρ)} = k \cdot \frac{k}{(ρ) \cdot (1 - ρ)}
-\]
+E[T]_{SITA} = k \sum_{i=1}^k p_i \cdot E[T|job goes to host i] = k \sum_{i=1}^k \frac{p_i}{λ \cdot ρ / (1 - ρ)} = k \cdot \frac{k}{(ρ) \cdot (1 - ρ)}$$
 
 Thus, the mean response times for both policies are equal:
+$$
 
-\[
-E[T]_{RANDOM} = E[T]_{SITA} = k \cdot \frac{λ \cdot ρ}{1 - ρ}
-\]
-x??
+E[T]_{RANDOM} = E[T]_{SITA} = k \cdot \frac{λ \cdot ρ}{1 - ρ}$$x??
 
 ---
 
@@ -1030,31 +1021,26 @@ In a PS (Processor Sharing) server farm, both RANDOM and SITA policies experienc
 For the RANDOM policy:
 - Each arrival randomly selects a queue with load ρ.
 - The mean response time for each queue can be calculated as:
+$$
 
-\[
-E[T]_{RANDOM} = \frac{k}{λ (1 - ρ)}
-\]
+E[T]_{RANDOM} = \frac{k}{λ (1 - ρ)}$$
 
 For the SITA policy:
 - Jobs are split among servers based on size cutoffs, but the overall system load at each server remains ρ due to PS.
 - The mean response time for a queue i is:
+$$
 
-\[
-E[T|job goes to host i]_{SITA} = \frac{1}{λ p_i (1 - ρ)}
-\]
+E[T|job goes to host i]_{SITA} = \frac{1}{λ p_i (1 - ρ)}$$
 
 Summing over all servers:
+$$
 
-\[
-E[T]_{SITA} = k \sum_{i=1}^k p_i \cdot E[T|job goes to host i]_{SITA} = k \cdot \frac{k}{(ρ) (1 - ρ)} = \frac{k}{λ (1 - ρ)}
-\]
+E[T]_{SITA} = k \sum_{i=1}^k p_i \cdot E[T|job goes to host i]_{SITA} = k \cdot \frac{k}{(ρ) (1 - ρ)} = \frac{k}{λ (1 - ρ)}$$
 
 Thus, the mean response times for both policies are equal:
+$$
 
-\[
-E[T]_{RANDOM} = E[T]_{SITA}
-\]
-x??
+E[T]_{RANDOM} = E[T]_{SITA}$$x??
 
 ---
 
@@ -1068,7 +1054,7 @@ The objective is to understand how load balancing affects the performance of tas
 ??x
 The optimal size cutoffs for PS server farms ensure that the load at each server remains balanced. This balance is critical because it directly impacts the mean response time and overall system efficiency.
 
-For both RANDOM and SITA policies, achieving this balance means that the load on each server is ρ (the system-wide load). By setting appropriate size cutoffs \(s_i\), we can ensure that jobs are distributed such that each queue experiences an average load of ρ.
+For both RANDOM and SITA policies, achieving this balance means that the load on each server is ρ (the system-wide load). By setting appropriate size cutoffs $s_i$, we can ensure that jobs are distributed such that each queue experiences an average load of ρ.
 
 The key advantage of PS scheduling in this context is its ability to handle variability in job sizes without significantly impacting performance. The optimal size cutoffs effectively distribute the load, ensuring that no single server bears a disproportionate amount of the workload.
 
@@ -1147,7 +1133,7 @@ x??
 ---
 
 #### Job Size Distributions and Server Farm Load
-Background context: The text discusses various job size distributions, each with a mean of 2 but different variances. These distributions range from deterministic to highly variable (Bimodal-2). Additionally, the server farm load is set at \(\rho = 0.9\).
+Background context: The text discusses various job size distributions, each with a mean of 2 but different variances. These distributions range from deterministic to highly variable (Bimodal-2). Additionally, the server farm load is set at $\rho = 0.9$.
 
 :p What are the key job size distributions mentioned and their characteristics?
 ??x
@@ -1155,11 +1141,11 @@ The key job size distributions mentioned in the text are:
 1. Deterministic: A point mass at 2.
 2. Erlang-2: Sum of two Exp(1) random variables.
 3. Exponential: Exp(0.5) random variable.
-4. Bimodal-1: \(\begin{cases} 1 & \text{with probability 0.9}\\ 11 & \text{with probability 0.1}\end{cases}\).
-5. Weibull-1 (shape parameter = 0.5, scale parameter = 1): \[ f(t) = \frac{\alpha \lambda}{(t^{\lambda})^{\alpha - 1}}e^{-(\frac{t}{\lambda})^{\alpha}}, \text{ for } t > 0, \] where \(\alpha > 0\) is the shape parameter and \(\lambda > 0\) is the scale parameter.
+4. Bimodal-1: $\begin{cases} 1 & \text{with probability 0.9}\\ 11 & \text{with probability 0.1}\end{cases}$.
+5. Weibull-1 (shape parameter = 0.5, scale parameter = 1): $$f(t) = \frac{\alpha \lambda}{(t^{\lambda})^{\alpha - 1}}e^{-(\frac{t}{\lambda})^{\alpha}}, \text{ for } t > 0,$$where $\alpha > 0 $ is the shape parameter and$\lambda > 0$ is the scale parameter.
 6. Weibull-2 (shape parameter = 1/3, scale parameter = 1/3): This has a heavy-tailed distribution due to the chosen parameters.
 
-These distributions have increasing variance, ranging from 0 for the deterministic distribution to 99 for Bimodal-2. The server farm load \(\rho = 0.9\) affects the performance of different task assignment policies.
+These distributions have increasing variance, ranging from 0 for the deterministic distribution to 99 for Bimodal-2. The server farm load $\rho = 0.9$ affects the performance of different task assignment policies.
 x??
 
 ---

@@ -12,26 +12,26 @@ In reinforcement learning, when states are initially expressed as numbers (e.g.,
 
 :p How can polynomials be utilized in representing interactions between state dimensions?
 ??x
-Polynomials can help capture interactions by allowing the representation of higher-order terms that involve multiple state dimensions. For instance, if we have two numerical state dimensions \(s_1\) and \(s_2\), a simple polynomial feature might include both individual features as well as their product: \((s_1, s_2, s_1^2, s_2^2, s_1s_2)\). This way, the model can learn to weigh these interactions appropriately.
+Polynomials can help capture interactions by allowing the representation of higher-order terms that involve multiple state dimensions. For instance, if we have two numerical state dimensions $s_1 $ and$s_2 $, a simple polynomial feature might include both individual features as well as their product:$(s_1, s_2, s_1^2, s_2^2, s_1s_2)$. This way, the model can learn to weigh these interactions appropriately.
 
-For example, in the pole-balancing task (Example 3.4), where angular velocity (\(v\)) and angle (\(\theta\)) interact significantly, a simple polynomial feature might include \((\theta, v, \theta^2, v^2, \theta v)\).
+For example, in the pole-balancing task (Example 3.4), where angular velocity ($v $) and angle ($\theta $) interact significantly, a simple polynomial feature might include $(\theta, v, \theta^2, v^2, \theta v)$.
 
 ??x
 ---
 #### Example of Polynomial Features in RL
-Background context explaining how polynomials can be applied to specific state dimensions. For states with two numerical dimensions \(s_1\) and \(s_2\), a simple example is provided.
+Background context explaining how polynomials can be applied to specific state dimensions. For states with two numerical dimensions $s_1 $ and$s_2$, a simple example is provided.
 
-Consider a reinforcement learning problem where the state space has two numerical dimensions, say \(s_1\) and \(s_2\). If we choose to represent the state simply by its two dimensions without considering any interactions between them, then:
-\[ x(s) = (s_1, s_2)^T \]
+Consider a reinforcement learning problem where the state space has two numerical dimensions, say $s_1 $ and$s_2$. If we choose to represent the state simply by its two dimensions without considering any interactions between them, then:
+$$x(s) = (s_1, s_2)^T$$
 
-However, this representation would not be able to capture important interactions. For example, in the pole-balancing task, a high angular velocity might indicate an imminent danger of falling when the angle is high (\(\theta\) and \(v\)), but it could also mean the pole is righting itself when the angle is low.
+However, this representation would not be able to capture important interactions. For example, in the pole-balancing task, a high angular velocity might indicate an imminent danger of falling when the angle is high ($\theta $ and$v$), but it could also mean the pole is righting itself when the angle is low.
 
 :p How can polynomial features improve the representation of state dimensions?
 ??x
-Polynomial features can be used to capture interactions between different state dimensions. For example, if we have two state dimensions \(s_1\) and \(s_2\), a simple polynomial feature could include terms like \((s_1, s_2, s_1^2, s_2^2, s_1 s_2)\). This way, the model can learn to weigh these interactions appropriately.
+Polynomial features can be used to capture interactions between different state dimensions. For example, if we have two state dimensions $s_1 $ and$s_2 $, a simple polynomial feature could include terms like$(s_1, s_2, s_1^2, s_2^2, s_1 s_2)$. This way, the model can learn to weigh these interactions appropriately.
 
 For instance, in the pole-balancing task:
-\[ x(s) = (s_1, s_2, s_1^2, s_2^2, s_1 s_2)^T \]
+$$x(s) = (s_1, s_2, s_1^2, s_2^2, s_1 s_2)^T$$
 
 This allows the model to distinguish between situations where high angular velocity is dangerous or beneficial based on the angle.
 
@@ -40,11 +40,11 @@ This allows the model to distinguish between situations where high angular veloc
 #### Limitations of Linear Value Functions
 Background context explaining how linear value functions may struggle with state representations that involve complex interactions. The limitations of using basic polynomial features are discussed, focusing on their inability to capture certain types of interactions.
 
-A limitation of the linear form is that it cannot take into account any interactions between features. For example, in tasks like pole-balancing (Example 3.4), where angular velocity (\(v\)) and angle (\(\theta\)) interact significantly, a simple polynomial feature might not suffice. High angular velocity can be either good or bad depending on the angle: if \(\theta\) is high, then \(v\) means an imminent danger of falling; but if \(\theta\) is low, \(v\) indicates that the pole is righting itself.
+A limitation of the linear form is that it cannot take into account any interactions between features. For example, in tasks like pole-balancing (Example 3.4), where angular velocity ($v $) and angle ($\theta $) interact significantly, a simple polynomial feature might not suffice. High angular velocity can be either good or bad depending on the angle: if $\theta $ is high, then$v $ means an imminent danger of falling; but if$\theta $ is low,$ v$ indicates that the pole is righting itself.
 
 :p How do basic polynomial features fail to capture complex interactions in state representations?
 ??x
-Basic polynomial features like \((s_1, s_2, s_1^2, s_2^2, s_1 s_2)\) can still be limited in capturing certain types of interactions. For example, in the pole-balancing task, a high angular velocity might indicate an imminent danger of falling when the angle is high (\(\theta\) and \(v\)), but it could also mean the pole is righting itself when the angle is low.
+Basic polynomial features like $(s_1, s_2, s_1^2, s_2^2, s_1 s_2)$ can still be limited in capturing certain types of interactions. For example, in the pole-balancing task, a high angular velocity might indicate an imminent danger of falling when the angle is high ($\theta $ and$v$), but it could also mean the pole is righting itself when the angle is low.
 
 Thus, simple polynomial features may not be sufficient to capture such complex interactions. More sophisticated feature construction methods are needed to handle these scenarios effectively.
 
@@ -58,15 +58,13 @@ Background context explaining the concept. The polynomial basis features enable 
 :p How does the polynomial basis feature representation work for a k-dimensional state space?
 
 ??x
-The polynomial basis feature represents each state \( s \) as a vector containing terms of varying orders up to degree \( n \). For a k-dimensional state space with state variables \( s_1, s_2, \ldots, s_k \), the feature vector can be written as:
+The polynomial basis feature represents each state $s $ as a vector containing terms of varying orders up to degree$n $. For a k-dimensional state space with state variables$ s_1, s_2, \ldots, s_k$, the feature vector can be written as:
 
-\[ x(s) = (\mathbf{1}, s_1^{c_{1,1}}s_2^{c_{2,1}}\cdots s_k^{c_{k,1}}, s_1^{c_{1,2}}s_2^{c_{2,2}}\cdots s_k^{c_{k,2}}, \ldots, s_1^{c_{1,n}}s_2^{c_{2,n}}\cdots s_k^{c_{k,n}}) \]
+$$x(s) = (\mathbf{1}, s_1^{c_{1,1}}s_2^{c_{2,1}}\cdots s_k^{c_{k,1}}, s_1^{c_{1,2}}s_2^{c_{2,2}}\cdots s_k^{c_{k,2}}, \ldots, s_1^{c_{1,n}}s_2^{c_{2,n}}\cdots s_k^{c_{k,n}})$$where each $ c_{i,j}$is an integer in the set {0, 1, ..., n}. This creates a total of $(n+1)^k$ features.
 
-where each \( c_{i,j} \) is an integer in the set {0, 1, ..., n}. This creates a total of \( (n+1)^k \) features.
+For example, for $k = 2 $ and$n = 2$, we get:
 
-For example, for \( k = 2 \) and \( n = 2 \), we get:
-
-\[ x(s) = (1, s_1, s_2, s_1^2, s_2^2, s_1s_2, s_1^2s_2, s_1s_2^2, s_1^2s_2^2) \]
+$$x(s) = (1, s_1, s_2, s_1^2, s_2^2, s_1s_2, s_1^2s_2, s_1s_2^2, s_1^2s_2^2)$$
 
 This allows for an approximation of functions as high-order polynomials in the state variables.
 
@@ -78,18 +76,15 @@ Background context explaining the concept. The Fourier basis features use sine a
 :p How does the Fourier series represent a function in one dimension?
 
 ??x
-The Fourier series represents a function of one dimension having period \( \tau \) as a linear combination of sine and cosine functions that are each periodic with periods that evenly divide \( \tau \). For an interval of length \( L \), you can set \( \tau = 2L \) and use only cosine features over the half interval [0, \( L/2 \)].
+The Fourier series represents a function of one dimension having period $\tau $ as a linear combination of sine and cosine functions that are each periodic with periods that evenly divide$\tau $. For an interval of length $ L $, you can set$\tau = 2L $ and use only cosine features over the half interval [0,$ L/2$].
 
-For example, for a function defined over an interval [0, \( L \)], the Fourier series representation is:
+For example, for a function defined over an interval [0, $L$], the Fourier series representation is:
 
-\[ f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} (a_n \cos(\frac{n\pi x}{L}) + b_n \sin(\frac{n\pi x}{L})) \]
+$$f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} (a_n \cos(\frac{n\pi x}{L}) + b_n \sin(\frac{n\pi x}{L}))$$where $ a_n $ and $ b_n$ are the Fourier coefficients given by:
+$$a_n = \frac{2}{L} \int_{0}^{L} f(x) \cos\left(\frac{n\pi x}{L}\right) dx$$
+$$b_n = \frac{2}{L} \int_{0}^{L} f(x) \sin\left(\frac{n\pi x}{L}\right) dx$$
 
-where \( a_n \) and \( b_n \) are the Fourier coefficients given by:
-
-\[ a_n = \frac{2}{L} \int_{0}^{L} f(x) \cos\left(\frac{n\pi x}{L}\right) dx \]
-\[ b_n = \frac{2}{L} \int_{0}^{L} f(x) \sin\left(\frac{n\pi x}{L}\right) dx \]
-
-If the function is aperiodic, you can still use these features by setting \( \tau \) to twice the length of the interval and approximating over [0, \( L/2 \)].
+If the function is aperiodic, you can still use these features by setting $\tau $ to twice the length of the interval and approximating over [0,$ L/2$].
 
 ---
 #### Higher-Order Polynomial Features
@@ -101,13 +96,11 @@ Background context explaining the concept. Higher-order polynomial basis feature
 ??x
 The order-n polynomial basis for a k-dimensional state space represents each feature as:
 
-\[ x_i(s) = \prod_{j=1}^k s_j^{c_{i,j}} \]
+$$x_i(s) = \prod_{j=1}^k s_j^{c_{i,j}}$$where $ c_{i,j}$are integers in the set {0, 1, ..., n}. This creates a total of $(n+1)^k$ features.
 
-where \( c_{i,j} \) are integers in the set {0, 1, ..., n}. This creates a total of \( (n+1)^k \) features.
+For example, for $k = 2 $ and$n = 2$:
 
-For example, for \( k = 2 \) and \( n = 2 \):
-
-\[ x(s) = (1, s_1, s_2, s_1^2, s_2^2, s_1s_2, s_1^2s_2, s_1s_2^2, s_1^2s_2^2) \]
+$$x(s) = (1, s_1, s_2, s_1^2, s_2^2, s_1s_2, s_1^2s_2, s_1s_2^2, s_1^2s_2^2)$$
 
 Higher-order polynomials allow for more accurate approximations of complex functions but can be computationally expensive due to the exponential growth in the number of features.
 
@@ -116,16 +109,14 @@ Higher-order polynomials allow for more accurate approximations of complex funct
 
 Background context explaining the example. The provided example demonstrates how polynomial basis features work with a k-dimensional state space, where each feature is a product of powers of state variables up to order n.
 
-:p What are the feature vectors for \( s = (s_1, s_2) \) in the given example?
+:p What are the feature vectors for $s = (s_1, s_2)$ in the given example?
 
 ??x
 For the given example:
+$$x(s) = (1, s_1, s_2, s_1s_2, s_1^2, s_2^2, s_1^2s_2, s_1s_2^2, s_1^2s_2^2)$$
 
-\[ x(s) = (1, s_1, s_2, s_1s_2, s_1^2, s_2^2, s_1^2s_2, s_1s_2^2, s_1^2s_2^2) \]
-
-The feature vectors for \( s = (1, 2) \) are:
-
-\[ x(1, 2) = (1, 1, 2, 1\cdot2, 1^2, 2^2, 1^2\cdot2, 1\cdot2^2, 1^2\cdot2^2) = (1, 1, 2, 2, 1, 4, 2, 4, 4) \]
+The feature vectors for $s = (1, 2)$ are:
+$$x(1, 2) = (1, 1, 2, 1\cdot2, 1^2, 2^2, 1^2\cdot2, 1\cdot2^2, 1^2\cdot2^2) = (1, 1, 2, 2, 1, 4, 2, 4, 4)$$
 
 This vector represents a higher-order polynomial approximation of the function.
 
@@ -147,9 +138,8 @@ In summary, polynomial bases are more flexible for capturing complex interaction
 Background context: The text explains that even functions, which are symmetric about the origin, can be represented with cosine basis functions. This allows any function over a half-period [0, ⌧/2] to be approximated using enough cosine features.
 :p What is an even function and how does it relate to Fourier cosine basis functions?
 ??x
-An even function f(s) satisfies the condition \(f(s) = f(-s)\). In the context of Fourier analysis over a half-period [0, ⌧/2], these functions can be well-approximated using only cosine features because cosines are also even. The one-dimensional order-n Fourier cosine basis consists of:
-\[ x_i(s) = \cos(i\pi s), \quad s \in [0, 1] \]
-for \(i = 0, ..., n\).
+An even function f(s) satisfies the condition $f(s) = f(-s)$. In the context of Fourier analysis over a half-period [0, ⌧/2], these functions can be well-approximated using only cosine features because cosines are also even. The one-dimensional order-n Fourier cosine basis consists of:
+$$x_i(s) = \cos(i\pi s), \quad s \in [0, 1]$$for $ i = 0, ..., n$.
 
 For example, if ⌧=2, the features would be defined over the interval [0,1], and we can write:
 ```java
@@ -164,18 +154,12 @@ x??
 ---
 
 #### One-dimensional Fourier Cosine Features
-Background context: The text provides a detailed explanation of one-dimensional Fourier cosine features, which are used to approximate functions over the interval [0, 1]. These features are defined as \( x_i(s) = \cos(i\pi s) \), where i ranges from 0 to n.
+Background context: The text provides a detailed explanation of one-dimensional Fourier cosine features, which are used to approximate functions over the interval [0, 1]. These features are defined as $x_i(s) = \cos(i\pi s)$, where i ranges from 0 to n.
 :p What is the formula for generating one-dimensional Fourier cosine features?
 ??x
 The formula for generating one-dimensional Fourier cosine features is:
-\[ x_i(s) = \cos(i\pi s) \]
-where \(i\) can take any integer value from 0 to n. For example, if we want to generate four features (n=3), the features would be:
-1. \( x_0(s) = \cos(0 \cdot \pi s) = 1 \)
-2. \( x_1(s) = \cos(\pi s) \)
-3. \( x_2(s) = \cos(2\pi s) \)
-4. \( x_3(s) = \cos(3\pi s) \)
-
-Here is a simple implementation in Java:
+$$x_i(s) = \cos(i\pi s)$$where $ i$ can take any integer value from 0 to n. For example, if we want to generate four features (n=3), the features would be:
+1.$x_0(s) = \cos(0 \cdot \pi s) = 1 $2.$ x_1(s) = \cos(\pi s)$3.$ x_2(s) = \cos(2\pi s)$4.$ x_3(s) = \cos(3\pi s)$ Here is a simple implementation in Java:
 ```java
 public class FourierCosineFeatures {
     public double getCosineFeature(int i, double s) {
@@ -188,16 +172,14 @@ x??
 ---
 
 #### Multi-dimensional Fourier Cosine Features
-Background context: In the multi-dimensional case, each state \(s\) is a vector of numbers. The text explains that the ith feature in the order-n Fourier cosine basis can be written as:
-\[ x_i(s) = \cos(\pi s^T c_i), \]
-where \(c_i\) is an integer vector with components in \{0, ..., n\}.
+Background context: In the multi-dimensional case, each state $s$ is a vector of numbers. The text explains that the ith feature in the order-n Fourier cosine basis can be written as:
+$$x_i(s) = \cos(\pi s^T c_i),$$where $ c_i$ is an integer vector with components in \{0, ..., n\}.
 :p What is the formula for generating multi-dimensional Fourier cosine features?
 ??x
 The formula for generating multi-dimensional Fourier cosine features is:
-\[ x_i(s) = \cos(\pi s^T c_i), \]
-where \(s = (s_1, s_2, ..., s_k)\) and \(c_i = (c_{i1}, c_{i2}, ..., c_{ik})\). Here, each component of \(c_i\) is an integer in the range {0, 1, ..., n}.
+$$x_i(s) = \cos(\pi s^T c_i),$$where $ s = (s_1, s_2, ..., s_k)$and $ c_i = (c_{i1}, c_{i2}, ..., c_{ik})$. Here, each component of $ c_i$ is an integer in the range {0, 1, ..., n}.
 
-For example, if we have a two-dimensional state space with \(k=2\), and we choose specific values for \(c_i = (c_{i1}, c_{i2})\), we can generate features as follows:
+For example, if we have a two-dimensional state space with $k=2 $, and we choose specific values for $ c_i = (c_{i1}, c_{i2})$, we can generate features as follows:
 ```java
 public class MultiDimensionalFourierCosineFeatures {
     public double getMultiDimCosineFeature(int[] ci, double[] s) {
@@ -221,10 +203,9 @@ x??
 Background context: The text suggests using different step-size parameters for each feature in the learning algorithm. This can help improve performance.
 :p How are the step-size parameters adjusted for Fourier cosine features?
 ??x
-The suggested adjustment for the step-size parameter \(\alpha_i\) for the \(i\)-th feature is:
-\[ \alpha_i = \frac{\alpha}{\sqrt{c_{i1}^2 + c_{i2}^2 + ... + c_{ik}^2}} \]
-where \(\alpha\) is the basic step-size parameter, and each component of \(c_i\) represents the frequency along a particular dimension. If all components of \(c_i\) are zero (meaning the feature is constant), then:
-\[ \alpha_i = \alpha \]
+The suggested adjustment for the step-size parameter $\alpha_i $ for the$i$-th feature is:
+$$\alpha_i = \frac{\alpha}{\sqrt{c_{i1}^2 + c_{i2}^2 + ... + c_{ik}^2}}$$where $\alpha $ is the basic step-size parameter, and each component of$c_i $ represents the frequency along a particular dimension. If all components of$c_i$ are zero (meaning the feature is constant), then:
+$$\alpha_i = \alpha$$
 
 This adjustment accounts for the varying importance of different features based on their frequency content.
 x??
@@ -387,21 +368,21 @@ x??
 ---
 
 #### Feature Vector Construction
-In tile coding with multiple tilings, the feature vector \( x(s) \) has one component per tile in each tiling. For a state that falls within four tiles across four different tilings, this would result in four active features.
+In tile coding with multiple tilings, the feature vector $x(s)$ has one component per tile in each tiling. For a state that falls within four tiles across four different tilings, this would result in four active features.
 
 :p How is the feature vector constructed in tile coding?
 ??x
-The feature vector \( x(s) \) includes components for each tile of each tiling. If we use 4 tilings and a state falls into one tile per tiling, there will be 64 total components (4 tiles * 4 tilings), with only the relevant ones active.
+The feature vector $x(s)$ includes components for each tile of each tiling. If we use 4 tilings and a state falls into one tile per tiling, there will be 64 total components (4 tiles * 4 tilings), with only the relevant ones active.
 x??
 
 ---
 
 #### Practical Advantage: Consistent Feature Count
-One practical advantage is that using multiple tilings ensures exactly one feature is active in each tiling at any given time. This allows setting the step-size parameter \( \alpha = \frac{1}{n} \), where \( n \) is the number of tilings.
+One practical advantage is that using multiple tilings ensures exactly one feature is active in each tiling at any given time. This allows setting the step-size parameter $\alpha = \frac{1}{n}$, where $ n$ is the number of tilings.
 
 :p How does tile coding help with setting the learning rate?
 ??x
-The consistent feature count across multiple tilings enables a straightforward and intuitive way to set the learning rate. For instance, if using 50 tilings, you can set \( \alpha = \frac{1}{50} \) to ensure one-trial learning is achieved.
+The consistent feature count across multiple tilings enables a straightforward and intuitive way to set the learning rate. For instance, if using 50 tilings, you can set $\alpha = \frac{1}{50}$ to ensure one-trial learning is achieved.
 x??
 
 ---
@@ -441,7 +422,7 @@ Background context explaining how new estimates are updated based on prior estim
 
 :p How does tile coding update its value estimates?
 ??x
-In tile coding, when trained with an example, the new estimate is set to the target value \(v\), overriding any previous estimate \(\hat{v}(s, w_t)\). However, in practice, one would typically wish for a more gradual change to allow generalization and account for stochastic variation. A common approach is to update the weights using a learning rate \(\alpha = \frac{1}{n^{10}}\), where \(n\) is the number of training iterations.
+In tile coding, when trained with an example, the new estimate is set to the target value $v $, overriding any previous estimate $\hat{v}(s, w_t)$. However, in practice, one would typically wish for a more gradual change to allow generalization and account for stochastic variation. A common approach is to update the weights using a learning rate $\alpha = \frac{1}{n^{10}}$, where $ n$ is the number of training iterations.
 x??
 
 ---
@@ -449,9 +430,9 @@ x??
 #### Learning Rate in Tile Coding
 Background context explaining the importance of the learning rate.
 
-:p Why do we typically choose a smaller learning rate like \(\alpha = \frac{1}{n^{10}}\)?
+:p Why do we typically choose a smaller learning rate like $\alpha = \frac{1}{n^{10}}$?
 ??x
-Choosing a small learning rate, such as \(\alpha = \frac{1}{n^{10}}\), allows the value function to change more slowly in response to new data. This gradual update helps in generalizing well and handling stochastic variations in target outputs. For example, if \(n = 1\), then \(\alpha = 1\); for larger values of \(n\), the learning rate decreases rapidly, ensuring that updates are proportionally smaller.
+Choosing a small learning rate, such as $\alpha = \frac{1}{n^{10}}$, allows the value function to change more slowly in response to new data. This gradual update helps in generalizing well and handling stochastic variations in target outputs. For example, if $ n = 1$, then $\alpha = 1 $; for larger values of $ n$, the learning rate decreases rapidly, ensuring that updates are proportionally smaller.
 x??
 
 ---
@@ -461,7 +442,7 @@ Background context explaining how states are represented using tiles.
 
 :p How does tile coding represent a state?
 ??x
-In tile coding, each state is represented by an active set of binary features. Each feature corresponds to whether a particular tile contains the state. The value function approximation \(\hat{v}(s, w)\) is computed as a weighted sum of these features, where the weights are learned parameters.
+In tile coding, each state is represented by an active set of binary features. Each feature corresponds to whether a particular tile contains the state. The value function approximation $\hat{v}(s, w)$ is computed as a weighted sum of these features, where the weights are learned parameters.
 x??
 
 ---
@@ -510,7 +491,7 @@ Background context explaining the relationship between tile width, number of til
 
 :p What is a fundamental unit in tile coding?
 ??x
-A fundamental unit in tile coding is \(w_n\), which represents the distance by which states activate different tiles. Within small squares with side length \(wn\), all states have the same feature representation. When a state moves by \(wn\) units, its feature representation changes by one component/tile.
+A fundamental unit in tile coding is $w_n $, which represents the distance by which states activate different tiles. Within small squares with side length $ wn $, all states have the same feature representation. When a state moves by$ wn$ units, its feature representation changes by one component/tile.
 x??
 
 ---
@@ -536,7 +517,7 @@ int nTilings = (int) Math.pow(2, 4 * 2); // Number of tilings set to 2^8 or 256
 ```
 :p What are the recommended displacement vectors and number of tilings based on Miller and Glanz (1996)?
 ??x
-The first odd integers should be used for the displacement vectors. For a continuous space with dimension k, n (the number of tilings) should be set to an integer power of 2 greater than or equal to \(4^k\).
+The first odd integers should be used for the displacement vectors. For a continuous space with dimension k, n (the number of tilings) should be set to an integer power of 2 greater than or equal to $4^k$.
 x??
 
 ---
@@ -546,7 +527,7 @@ If applicable, add code examples with explanations:
 ```java
 // Example for selecting parameters
 int k = 2; // Dimension of space
-int nTilings = (int) Math.pow(2, 4 * k); // Setting number of tilings to \(2^{8}\)
+int nTilings = (int) Math.pow(2, 4 * k); // Setting number of tilings to $2^{8}$
 ```
 :p What factors determine the resolution or fineness in tiling strategies?
 ??x

@@ -9,8 +9,7 @@
 Background context: The policy gradient theorem provides a way to compute the gradient of performance with respect to the policy parameter without involving the derivative of the state distribution. This is crucial for applying stochastic gradient ascent (13.1) in reinforcement learning.
 
 Relevant formulas:
-\[ \frac{\partial J(\theta)}{\partial \theta} = \sum_{s, a} \mu(s) q_\pi(s, a) r_\pi(a|s, \theta), \]
-where \(J(\theta)\) is the performance measure with respect to parameter vector \(\theta\).
+$$\frac{\partial J(\theta)}{\partial \theta} = \sum_{s, a} \mu(s) q_\pi(s, a) r_\pi(a|s, \theta),$$where $ J(\theta)$is the performance measure with respect to parameter vector $\theta$.
 
 :p What does the policy gradient theorem provide in terms of computing gradients?
 ??x
@@ -24,8 +23,7 @@ x??
 Background context: The REINFORCE algorithm is a Monte Carlo policy gradient method that updates the policy parameter based on sampled returns from episodes.
 
 Relevant formulas:
-\[ \frac{\partial J(\theta)}{X s\mu(s)X aq_\pi(s, a)r_\pi(a|s, \theta)} = E_\pi \left[ q_\pi(S_t, A_t) r_\pi(A_t | S_t, \theta) \right], \]
-where \(G_t\) is the return at time step \(t\).
+$$\frac{\partial J(\theta)}{X s\mu(s)X aq_\pi(s, a)r_\pi(a|s, \theta)} = E_\pi \left[ q_\pi(S_t, A_t) r_\pi(A_t | S_t, \theta) \right],$$where $ G_t $ is the return at time step $ t$.
 
 :p What is the basic idea behind the REINFORCE algorithm?
 ??x
@@ -39,12 +37,11 @@ x??
 Background context: The REINFORCE update equation is derived from the policy gradient theorem and involves sampling returns directly.
 
 Relevant formulas:
-\[ \theta_{t+1} = \theta_t + \alpha G_t r_\pi(A_t | S_t, \theta_t) / \pi(A_t | S_t, \theta_t). \]
-
-:p What does the REINFORCE update equation look like?
+$$\theta_{t+1} = \theta_t + \alpha G_t r_\pi(A_t | S_t, \theta_t) / \pi(A_t | S_t, \theta_t).$$:p What does the REINFORCE update equation look like?
 ??x
 The REINFORCE update equation is:
-\[ \theta_{t+1} = \theta_t + \alpha G_t r_\pi(A_t | S_t, \theta_t) / \pi(A_t | S_t, \theta_t). \]
+$$\theta_{t+1} = \theta_t + \alpha G_t r_\pi(A_t | S_t, \theta_t) / \pi(A_t | S_t, \theta_t).$$
+
 This equation adjusts the policy parameter in a direction that increases the probability of actions leading to high returns.
 x??
 
@@ -106,12 +103,11 @@ x??
 Background context: The algorithms can be extended to handle discounted returns, but the non-discounted case is considered here.
 
 Relevant formulas:
-\[ \theta_{t+1} = \theta_t + \alpha G_t r_\pi(A_t | S_t, \theta_t) / \pi(A_t | S_t, \theta_t). \]
-
-:p How does the REINFORCE algorithm handle discounted returns?
+$$\theta_{t+1} = \theta_t + \alpha G_t r_\pi(A_t | S_t, \theta_t) / \pi(A_t | S_t, \theta_t).$$:p How does the REINFORCE algorithm handle discounted returns?
 ??x
-The REINFORCE algorithm can be adjusted to handle discounted returns by including a discount factor \(\gamma\):
-\[ G_t = \sum_{k=t}^{T-1} \gamma^{k-t+1} R_k. \]
+The REINFORCE algorithm can be adjusted to handle discounted returns by including a discount factor $\gamma$:
+$$G_t = \sum_{k=t}^{T-1} \gamma^{k-t+1} R_k.$$
+
 However, for simplicity and focus on the main ideas, the non-discounted case is often considered.
 x??
 
@@ -133,8 +129,7 @@ x??
 
 #### REINFORCE Method Overview
 Background context: REINFORCE is a stochastic gradient method used for policy gradient methods. It updates the policy parameter to improve performance by moving in the direction of the performance gradient. The update rule for REINFORCE without a baseline is given as:
-\[ \theta_{t+1} = \theta_t + \alpha G_t r(\pi(a|s, \theta_t)) \]
-where \( G_t \) is the discounted return from time step \( t \).
+$$\theta_{t+1} = \theta_t + \alpha G_t r(\pi(a|s, \theta_t))$$where $ G_t $ is the discounted return from time step $ t$.
 
 :p What does the REINFORCE method do?
 ??x
@@ -144,14 +139,12 @@ x??
 ---
 
 #### Eligibility Vector for Softmax Policy
-Background context: For a policy parameterized using softmax with linear action preferences, the eligibility vector \( \mathcal{E}(s,a) \) can be calculated as:
-\[ r\ln \pi(a|s,\theta) = x(s,a) \sum_{b} \pi(b|s,\theta) x(s,b) \]
-
-:p Prove that the eligibility vector is given by the formula provided.
+Background context: For a policy parameterized using softmax with linear action preferences, the eligibility vector $\mathcal{E}(s,a)$ can be calculated as:
+$$r\ln \pi(a|s,\theta) = x(s,a) \sum_{b} \pi(b|s,\theta) x(s,b)$$:p Prove that the eligibility vector is given by the formula provided.
 ??x
 Given the policy parameterization using softmax with linear action preferences, we can derive the eligibility vector as follows:
-1. Start from the definition of the log probability: \( r\ln \pi(a|s,\theta) = x(s,a) - \sum_{b} \pi(b|s,\theta) x(s,b) \).
-2. Simplify to get the final form: \( r\ln \pi(a|s,\theta) = x(s,a) \sum_{b} \pi(b|s,\theta) x(s,b) \).
+1. Start from the definition of the log probability:$r\ln \pi(a|s,\theta) = x(s,a) - \sum_{b} \pi(b|s,\theta) x(s,b)$.
+2. Simplify to get the final form: $r\ln \pi(a|s,\theta) = x(s,a) \sum_{b} \pi(b|s,\theta) x(s,b)$.
 
 This derivation uses the properties of softmax and linearity.
 x??
@@ -159,17 +152,14 @@ x??
 ---
 
 #### Policy Gradient Theorem with Baseline
-Background context: The policy gradient theorem can be extended to include a comparison with an arbitrary baseline \( b(s) \). This is represented by:
-\[ \frac{\partial J(\theta)}{\partial \theta} = \sum_{s,\pi} \mu(s)\sum_a [q_\pi(s,a) - b(s)] r\pi(a|s, \theta) \]
-
-:p Explain the policy gradient theorem with a baseline.
+Background context: The policy gradient theorem can be extended to include a comparison with an arbitrary baseline $b(s)$. This is represented by:
+$$\frac{\partial J(\theta)}{\partial \theta} = \sum_{s,\pi} \mu(s)\sum_a [q_\pi(s,a) - b(s)] r\pi(a|s, \theta)$$:p Explain the policy gradient theorem with a baseline.
 ??x
-The policy gradient theorem with a baseline \( b(s) \) modifies the update rule to:
-\[ \nabla J(\theta) = \sum_{s} \mu(s) \sum_a [q_\pi(s,a) - b(s)] r\pi(a|s, \theta) \]
-where \( q_\pi(s,a) \) is the action value function. The baseline can be any function and helps in reducing variance.
+The policy gradient theorem with a baseline $b(s)$ modifies the update rule to:
+$$\nabla J(\theta) = \sum_{s} \mu(s) \sum_a [q_\pi(s,a) - b(s)] r\pi(a|s, \theta)$$where $ q_\pi(s,a)$ is the action value function. The baseline can be any function and helps in reducing variance.
 
 This update rule results in a new version of REINFORCE that includes a general baseline:
-\[ \theta_{t+1} = \theta_t + \alpha [G_t - b(S_t)] r\pi(A_t|S_t, \theta_t) \]
+$$\theta_{t+1} = \theta_t + \alpha [G_t - b(S_t)] r\pi(A_t|S_t, \theta_t)$$
 
 The baseline can help reduce the variance and speed up learning.
 x??
@@ -177,7 +167,7 @@ x??
 ---
 
 #### REINFORCE with Baseline Algorithm
-Background context: REINFORCE with a baseline uses a learned state-value function \( \hat{v}(s,\omega) \) to estimate the value of states. The algorithm updates both policy parameters and state-value weights.
+Background context: REINFORCE with a baseline uses a learned state-value function $\hat{v}(s,\omega)$ to estimate the value of states. The algorithm updates both policy parameters and state-value weights.
 
 :p Describe the pseudocode for REINFORCE with baseline.
 ??x
@@ -194,7 +184,7 @@ def REINFORCE_with_Baseline():
             Update policy parameters: θ = θ + α_θ * [G_t - v_hat(S_t, ω)] * ln(π(A_t|S_t, θ))
 ```
 
-This algorithm uses two step sizes \( \alpha_\theta \) and \( \alpha_\omega \). The state-value function is updated based on the difference between the discounted return and its estimate.
+This algorithm uses two step sizes $\alpha_\theta $ and$\alpha_\omega$. The state-value function is updated based on the difference between the discounted return and its estimate.
 x??
 
 ---
@@ -207,8 +197,7 @@ Background context: A baseline can significantly reduce the variance in updates,
 A baseline helps reduce the variance of the policy update by subtracting a component that does not change with actions. This can be particularly useful when all actions have similar values, making it harder to distinguish between them.
 
 For instance, if using a linear state-value function as a baseline:
-\[ \theta_{t+1} = \theta_t + \alpha [G_t - v(S_t, w)] r\pi(A_t|S_t, \theta_t) \]
-where \( v(S_t, w) \) is the estimated value of the state.
+$$\theta_{t+1} = \theta_t + \alpha [G_t - v(S_t, w)] r\pi(A_t|S_t, \theta_t)$$where $ v(S_t, w)$ is the estimated value of the state.
 
 Using such a baseline can significantly improve learning speed by reducing noise in the gradient estimates.
 x??

@@ -12,9 +12,9 @@ Background context explaining how small differences in initial conditions can le
 In nonlinear systems, particularly those exhibiting chaos, minute differences in initial conditions can lead to divergent behaviors as the systems evolve over time. For instance, two pendulums with nearly identical initial conditions might show similar behavior initially but eventually diverge significantly due to their inherent nonlinearity.
 
 For example, consider a simple pendulum system described by the equation:
-\[ \ddot{\theta} + \frac{b}{mL^2}\dot{\theta} + \frac{g}{L}\sin(\theta) = 0 \]
+$$\ddot{\theta} + \frac{b}{mL^2}\dot{\theta} + \frac{g}{L}\sin(\theta) = 0$$
 
-Where \( b \) is the damping coefficient, \( m \) is the mass of the pendulum bob, \( L \) is the length of the rod, and \( g \) is gravity. Even a tiny difference in the initial angular displacement or velocity can result in vastly different trajectories over time.
+Where $b $ is the damping coefficient,$m $ is the mass of the pendulum bob,$L $ is the length of the rod, and$g$ is gravity. Even a tiny difference in the initial angular displacement or velocity can result in vastly different trajectories over time.
 
 ```java
 // Pseudocode to simulate two pendulums with slightly different initial conditions
@@ -30,13 +30,13 @@ x??
 ---
 
 #### Chaotic Pendulum Behavior
-Background context explaining the chaotic behavior of a pendulum when driven by external forces and subjected to friction. The system's parameters (\(\omega_0\), \(\alpha\), \(f\), \(\omega\)) are highly sensitive, making it challenging to predict long-term behavior.
+Background context explaining the chaotic behavior of a pendulum when driven by external forces and subjected to friction. The system's parameters ($\omega_0 $, $\alpha $, $ f $,$\omega$) are highly sensitive, making it challenging to predict long-term behavior.
 
 :p What challenges do you face in simulating a chaotic pendulum?
 ??x
-Simulating a chaotic pendulum is challenging because the 4D parameter space (\(\omega_0\), \(\alpha\), \(f\), \(\omega\)) is so vast that only sections can be studied systematically. Small changes in any of these parameters can lead to drastically different behaviors, making it difficult to predict long-term outcomes.
+Simulating a chaotic pendulum is challenging because the 4D parameter space ($\omega_0 $, $\alpha $, $ f $,$\omega$) is so vast that only sections can be studied systematically. Small changes in any of these parameters can lead to drastically different behaviors, making it difficult to predict long-term outcomes.
 
-For instance, sweeping through the driving frequency (\(\omega\)) should reveal resonances and beating; varying frictional force (\(\alpha\)) should show underdamping, critical damping, and over-damping; and altering the driving torque \(f\) might exhibit resonances and mode locking. These behaviors are mixed together, adding to the complexity.
+For instance, sweeping through the driving frequency ($\omega $) should reveal resonances and beating; varying frictional force ($\alpha $) should show underdamping, critical damping, and over-damping; and altering the driving torque $ f$ might exhibit resonances and mode locking. These behaviors are mixed together, adding to the complexity.
 
 ```java
 // Pseudocode for simulating a chaotic pendulum
@@ -58,11 +58,11 @@ x??
 #### Driving Frequency and Resonance
 Background context explaining how driving frequency affects the behavior of a pendulum, including resonances and beating patterns.
 
-:p How does changing the driving frequency (\(\omega\)) affect a chaotic pendulum?
+:p How does changing the driving frequency ($\omega$) affect a chaotic pendulum?
 ??x
-Changing the driving frequency \(\omega\) can reveal resonance phenomena in a chaotic pendulum. When the driving frequency is close to the natural frequency \(\omega_0\), the system exhibits resonances, leading to large-amplitude oscillations. Additionally, beating patterns may emerge as the driven and natural frequencies are not exactly equal.
+Changing the driving frequency $\omega $ can reveal resonance phenomena in a chaotic pendulum. When the driving frequency is close to the natural frequency$\omega_0$, the system exhibits resonances, leading to large-amplitude oscillations. Additionally, beating patterns may emerge as the driven and natural frequencies are not exactly equal.
 
-To observe this behavior, you would typically vary \(\omega\) slightly around \(\omega_0\) and record the resulting phase space trajectories or time series data. For example:
+To observe this behavior, you would typically vary $\omega $ slightly around$\omega_0$ and record the resulting phase space trajectories or time series data. For example:
 
 ```java
 // Pseudocode to vary driving frequency
@@ -83,13 +83,13 @@ x??
 ---
 
 #### Driving Torque Effects
-Background context explaining how small changes in the driving torque (\(f\)) can lead to distinct behaviors, such as broad bands of chaos.
+Background context explaining how small changes in the driving torque ($f$) can lead to distinct behaviors, such as broad bands of chaos.
 
-:p How do small changes in the driving torque (\(f\)) affect a chaotic pendulum?
+:p How do small changes in the driving torque ($f$) affect a chaotic pendulum?
 ??x
-Small changes in the driving torque \(f\) can dramatically alter the behavior of a chaotic pendulum. For instance, a slight increase in \(f\) might introduce broadbands of chaos into the system's phase space plot. These broadbands indicate regions where the system exhibits highly unpredictable and irregular oscillations.
+Small changes in the driving torque $f $ can dramatically alter the behavior of a chaotic pendulum. For instance, a slight increase in$f$ might introduce broadbands of chaos into the system's phase space plot. These broadbands indicate regions where the system exhibits highly unpredictable and irregular oscillations.
 
-To observe these effects, you would start with specific parameter values and then make very small changes to \(f\), noting how the resulting behaviors differ.
+To observe these effects, you would start with specific parameter values and then make very small changes to $f$, noting how the resulting behaviors differ.
 
 ```java
 // Pseudocode to vary driving torque
@@ -110,13 +110,13 @@ x??
 ---
 
 #### Nonlinear Resonance
-Background context explaining how nonlinear resonance can be observed by scanning through different driving frequencies (\(\omega\)).
+Background context explaining how nonlinear resonance can be observed by scanning through different driving frequencies ($\omega$).
 
 :p How do you search for nonlinear resonance in a chaotic pendulum?
 ??x
-Nonlinear resonance in a chaotic pendulum can be observed by systematically sweeping through the driving frequency \(\omega\) and identifying regions where the system exhibits beating patterns. These patterns indicate that the driving frequency is close to the natural frequency of the pendulum, but not exactly equal.
+Nonlinear resonance in a chaotic pendulum can be observed by systematically sweeping through the driving frequency $\omega$ and identifying regions where the system exhibits beating patterns. These patterns indicate that the driving frequency is close to the natural frequency of the pendulum, but not exactly equal.
 
-To search for nonlinear resonance, you would vary \(\omega\) around \(\omega_0\), observing how the amplitude of oscillations changes and noting the presence of beating frequencies.
+To search for nonlinear resonance, you would vary $\omega $ around$\omega_0$, observing how the amplitude of oscillations changes and noting the presence of beating frequencies.
 
 ```java
 // Pseudocode to find nonlinear resonance
@@ -272,7 +272,7 @@ x??
 ---
 
 #### Phase Space Without Velocities
-When you only have displacement data over time and no information about the conjugate momenta or velocities, you can still create a phase space plot by plotting \( \theta(t+\tau) \) versus \( \theta(t) \). This is based on the forward difference approximation for velocity.
+When you only have displacement data over time and no information about the conjugate momenta or velocities, you can still create a phase space plot by plotting $\theta(t+\tau)$ versus $\theta(t)$. This is based on the forward difference approximation for velocity.
 
 :p How can you generate a phase space plot without velocity data?
 ??x
@@ -308,9 +308,7 @@ x??
 Background context: The provided text discusses a bifurcation diagram for a damped pendulum with a vibrating pivot. This system's behavior is chaotic, and its instantaneous angular velocity |d𝜃∕dt| is plotted against the driving force f. The text suggests that this diagram resembles those of other chaotic systems like the logistic map.
 
 Relevant formulas: 
-\[ \frac{d^2\theta}{dt^2} = -\alpha \frac{d\theta}{dt} - (\omega_0^2 + f\cos(\omega t)) \sin \theta \]
-
-:p What is a bifurcation diagram for the damped pendulum with a vibrating pivot, and how does it resemble other chaotic systems?
+$$\frac{d^2\theta}{dt^2} = -\alpha \frac{d\theta}{dt} - (\omega_0^2 + f\cos(\omega t)) \sin \theta$$:p What is a bifurcation diagram for the damped pendulum with a vibrating pivot, and how does it resemble other chaotic systems?
 ??x
 A bifurcation diagram plots the instantaneous angular velocity |d𝜃∕dt| against the driving force f. The heavy line in the diagram results from overlapping points rather than connecting them. This diagram is similar to that of the logistic map, indicating a complex, non-linear behavior.
 x??
@@ -323,11 +321,11 @@ Background context: The text outlines detailed steps to explore chaotic bifurcat
 
 :p What are the steps involved in constructing a bifurcation diagram for a chaotic pendulum using the given system?
 ??x
-1. Start by setting initial conditions: \(\theta(0) = 1\) and \(\dot{\theta}(0) = 1\).
-2. Set parameters: \(\alpha = 0.1\), \(\omega_0 = 1\), \(\omega = 2\), and vary \(f\) from 0 to 2.25.
+1. Start by setting initial conditions:$\theta(0) = 1 $ and$\dot{\theta}(0) = 1$.
+2. Set parameters: $\alpha = 0.1 $, $\omega_0 = 1 $, $\omega = 2 $, and vary $ f$ from 0 to 2.25.
 3. Wait for 150 periods of the driver to allow transient behavior to die off before sampling.
-4. Sample \(\dot{\theta}\) at instances when the driving force passes through zero (or when the pendulum passes through its equilibrium position).
-5. Plot the absolute values of \(\dot{\theta}\) against \(f\).
+4. Sample $\dot{\theta}$ at instances when the driving force passes through zero (or when the pendulum passes through its equilibrium position).
+5. Plot the absolute values of $\dot{\theta}$ against $f$.
 
 Here is a pseudocode for this experiment:
 ```pseudocode
@@ -351,11 +349,11 @@ x??
 
 #### Fourier Analysis of Pendulum
 
-Background context: The text explains that a realistic pendulum experiences a gravitational restoring torque \(\tau_g \propto \sin\theta \approx \theta - \frac{\theta^3}{3} + \frac{\theta^5}{5} + \cdots\).
+Background context: The text explains that a realistic pendulum experiences a gravitational restoring torque $\tau_g \propto \sin\theta \approx \theta - \frac{\theta^3}{3} + \frac{\theta^5}{5} + \cdots$.
 
 :p What does the Fourier analysis of a realistic pendulum reveal about its behavior?
 ??x
-The Fourier analysis reveals that a realistic pendulum's restoring torque includes higher-order terms beyond just \(\sin\theta\). This nonlinearity is significant in understanding the complex oscillatory modes and chaotic behavior observed.
+The Fourier analysis reveals that a realistic pendulum's restoring torque includes higher-order terms beyond just $\sin\theta$. This nonlinearity is significant in understanding the complex oscillatory modes and chaotic behavior observed.
 
 Here is an example of how to incorporate this into code for numerical simulation:
 ```java

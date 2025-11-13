@@ -44,7 +44,7 @@ x??
 Context: The objective of maximizing performance per watt by balancing mean response time and mean power consumption.
 :p What is the goal when optimizing for Performance-per-Watt?
 ??x
-The goal is to maximize the Performance-per-Watt, which is defined as \( \frac{1}{\text{E[Power]} \cdot \text{E[Response Time]}} \). This involves minimizing both mean response time and mean power.
+The goal is to maximize the Performance-per-Watt, which is defined as $\frac{1}{\text{E[Power]} \cdot \text{E[Response Time]}}$. This involves minimizing both mean response time and mean power.
 x??
 
 ---
@@ -98,13 +98,12 @@ x??
 
 #### Deriving the Laplace Transform of Busy Period
 
-**Background context:** To understand the behavior of busy periods, we often use their Laplace transform. The goal is to derive \(\tilde{B}(s)\), the Laplace transform of B.
+**Background context:** To understand the behavior of busy periods, we often use their Laplace transform. The goal is to derive $\tilde{B}(s)$, the Laplace transform of B.
 
-:p How can we write a general expression for \(B(x)\)?
+:p How can we write a general expression for $B(x)$?
 ??x
 The length of a busy period starting with x units of work can be written as:
-\[ B(x) = x + \sum_{i=1}^{A_x} B_i, \]
-where \(A_x\) is the number of Poisson arrivals during time \(x\), and each \(B_i\) is an independent copy of the busy period.
+$$B(x) = x + \sum_{i=1}^{A_x} B_i,$$where $ A_x $ is the number of Poisson arrivals during time $ x $, and each$ B_i$ is an independent copy of the busy period.
 ```java
 // Pseudocode for deriving B(x)
 BusyPeriod B = InitialWorkTime + SumOfArrivalsBusyPeriods;
@@ -115,17 +114,16 @@ x??
 
 #### Laplace Transform of Busy Period
 
-**Background context:** Using the previous expressions, we can derive the Laplace transform of \(B(x)\). The key is to use the known form of \(\hat{A}_x(z)\) and apply it in the context of Laplace transforms.
+**Background context:** Using the previous expressions, we can derive the Laplace transform of $B(x)$. The key is to use the known form of $\hat{A}_x(z)$ and apply it in the context of Laplace transforms.
 
-:p How can we use equation (27.1) to derive an expression for \(\tilde{B}(x)(s)\)?
+:p How can we use equation (27.1) to derive an expression for $\tilde{B}(x)(s)$?
 ??x
 Taking the Laplace transform of equation (27.1):
-\[ \tilde{B}(x)(s) = e^{-sx} \cdot \frac{\hat{A}_x(s)}{\sum_{i=1}^{\infty} \tilde{B}(x_i)}, \]
-using Theorem 25.12, we get:
-\[ \tilde{B}(x)(s) = e^{-sx} \cdot \left(\frac{e^{-\lambda x}}{1 - \tilde{B}(s)}\right). \]
+$$\tilde{B}(x)(s) = e^{-sx} \cdot \frac{\hat{A}_x(s)}{\sum_{i=1}^{\infty} \tilde{B}(x_i)},$$using Theorem 25.12, we get:
+$$\tilde{B}(x)(s) = e^{-sx} \cdot \left(\frac{e^{-\lambda x}}{1 - \tilde{B}(s)}\right).$$
+
 Simplifying this expression results in:
-\[ \tilde{B}(x)(s) = e^{-(s + \lambda)x} (1 - \tilde{B}(s)). \]
-x??
+$$\tilde{B}(x)(s) = e^{-(s + \lambda)x} (1 - \tilde{B}(s)).$$x??
 
 ---
 
@@ -133,43 +131,42 @@ x??
 
 **Background context:** Once we have the Laplace transform, we can derive the moments of the busy period. Specifically, we focus on the first and second moments.
 
-:p How do we find the mean busy period duration \(E[B]\)?
+:p How do we find the mean busy period duration $E[B]$?
 ??x
-To find the mean busy period duration \(E[B]\), we differentiate \(\tilde{B}(s)\) with respect to \(s\) and evaluate at \(s = 0\):
-\[ E[B] = -\frac{\partial \tilde{B}(s)}{\partial s} \Bigg|_{s=0}. \]
-Using the derived form of \(\tilde{B}(s)\), we get:
-\[ E[B] = E[S] \cdot \frac{1 + \lambda E[B]}{1 - \lambda E[S]}, \]
-which simplifies to:
-\[ E[B] = \frac{E[S]}{1 - \rho}. \]
-x??
+To find the mean busy period duration $E[B]$, we differentiate $\tilde{B}(s)$ with respect to $s$ and evaluate at $s = 0$:
+$$E[B] = -\frac{\partial \tilde{B}(s)}{\partial s} \Bigg|_{s=0}.$$
+
+Using the derived form of $\tilde{B}(s)$, we get:
+$$E[B] = E[S] \cdot \frac{1 + \lambda E[B]}{1 - \lambda E[S]},$$which simplifies to:
+$$
+
+E[B] = \frac{E[S]}{1 - \rho}.$$x??
 
 ---
 
 #### Variability in Busy Period and Response Time
 
-**Background context:** The variability of job sizes \(S\) affects both the mean busy period duration \(E[B]\) and the mean response time \(E[T]\). However, their roles differ due to the nature of the M/G/1 system.
+**Background context:** The variability of job sizes $S $ affects both the mean busy period duration$E[B]$ and the mean response time $E[T]$. However, their roles differ due to the nature of the M/G/1 system.
 
 :p How does the variability of S affect E[B] compared to its role in E[T]?
 ??x
-The variability of \(S\) affects both \(E[B]\) and \(E[T]\), but in different ways. For \(E[B]\), it is directly involved because a busy period is essentially a sum of job service times, making higher variability increase the expected duration.
+The variability of $S $ affects both$E[B]$ and $E[T]$, but in different ways. For $ E[B]$, it is directly involved because a busy period is essentially a sum of job service times, making higher variability increase the expected duration.
 
-For \(E[T]\), the impact is more complex due to the Inspection Paradox and the effect of \(E[Se]\). However, in an M/G/1 system without jobs already in service when the busy period starts (\(e = 0\)), there's no "excess" to contend with, making \(E[B]\) less dependent on job sizes once steady state is reached.
+For $E[T]$, the impact is more complex due to the Inspection Paradox and the effect of $ E[Se]$. However, in an M/G/1 system without jobs already in service when the busy period starts ($ e = 0 $), there's no "excess" to contend with, making$ E[B]$ less dependent on job sizes once steady state is reached.
 
 This difference highlights how variability impacts different performance metrics differently. 
 x??
 
 ---
 
-#### Laplace Transform of \(\tilde{B}(s)\)
-Background context: The Laplace transform \(\tilde{\tilde{B}}(x)(s)\) is given, and from it, we derive the Laplace transform \(\tilde{\tilde{B}}_W(s)\). This involves integrating over the work size distribution \(f_W(x)\).
+#### Laplace Transform of $\tilde{B}(s)$ Background context: The Laplace transform $\tilde{\tilde{B}}(x)(s)$ is given, and from it, we derive the Laplace transform $\tilde{\tilde{B}}_W(s)$. This involves integrating over the work size distribution $ f_W(x)$.
 
-:p What is the formula for \(\tilde{\tilde{B}}_W(s)\)?
+:p What is the formula for $\tilde{\tilde{B}}_W(s)$?
 ??x
-The formula for \(\tilde{\tilde{B}}_W(s)\) can be derived as follows:
-\[
-\tilde{\tilde{B}}_W(s) = \int_{0}^{\infty} e^{-x(s + \lambda - \lambda / \tilde{B}(s))} f_W(x) dx
-\]
-This integral effectively transforms the work distribution \(f_W(x)\) through the busy period transform \(\tilde{B}(s)\).
+The formula for $\tilde{\tilde{B}}_W(s)$ can be derived as follows:
+$$\tilde{\tilde{B}}_W(s) = \int_{0}^{\infty} e^{-x(s + \lambda - \lambda / \tilde{B}(s))} f_W(x) dx$$
+
+This integral effectively transforms the work distribution $f_W(x)$ through the busy period transform $\tilde{B}(s)$.
 
 ```java
 public class BusyPeriodTransform {
@@ -189,16 +186,14 @@ x??
 
 ---
 
-#### Mean Length of \(\tilde{B}_W\)
-Background context: The mean length of the busy period with work \(W\) is derived using the Laplace transform properties.
+#### Mean Length of $\tilde{B}_W $ Background context: The mean length of the busy period with work$W$ is derived using the Laplace transform properties.
 
-:p What is the formula for the mean length of \(\tilde{B}_W\)?
+:p What is the formula for the mean length of $\tilde{B}_W$?
 ??x
-The formula for the mean length of \(\tilde{B}_W\) is given by:
-\[
-E[\tilde{B}_W] = E[W] / (1 - \rho)
-\]
-This result follows from differentiating the Laplace transform at \(s=0\).
+The formula for the mean length of $\tilde{B}_W$ is given by:
+$$E[\tilde{B}_W] = E[W] / (1 - \rho)$$
+
+This result follows from differentiating the Laplace transform at $s=0$.
 
 ```java
 public class MeanBusyPeriodLength {
@@ -217,15 +212,13 @@ x??
 
 ---
 
-#### Mean Duration of Busy Period with Setup Cost \(I\)
-Background context: The busy period duration when there is an initial setup cost \(I\) affects not just the job starting it but also subsequent jobs.
+#### Mean Duration of Busy Period with Setup Cost $I $ Background context: The busy period duration when there is an initial setup cost$I$ affects not just the job starting it but also subsequent jobs.
 
-:p What is the mean duration of a busy period in an M/G/1 with setup cost \(I\)?
+:p What is the mean duration of a busy period in an M/G/1 with setup cost $I$?
 ??x
-The mean duration of a busy period in an M/G/1 with setup cost \(I\) can be derived as:
-\[
-E[B_{setup}] = E[I] / (1 - \rho) + E[S]
-\]
+The mean duration of a busy period in an M/G/1 with setup cost $I$ can be derived as:
+$$E[B_{setup}] = E[I] / (1 - \rho) + E[S]$$
+
 This formula combines the expected setup time and the standard busy period length.
 
 ```java
@@ -245,15 +238,13 @@ x??
 
 ---
 
-#### Fraction of Time Server is Busy with Setup Cost \(I\)
-Background context: The fraction of time \(\rho_{setup}\) that the server is busy, including setup time, is derived using renewal theory.
+#### Fraction of Time Server is Busy with Setup Cost $I $ Background context: The fraction of time$\rho_{setup}$ that the server is busy, including setup time, is derived using renewal theory.
 
-:p What is the formula for the fraction of time the server is busy in an M/G/1 with setup cost \(I\)?
+:p What is the formula for the fraction of time the server is busy in an M/G/1 with setup cost $I$?
 ??x
 The fraction of time the server is busy can be calculated as:
-\[
-\rho_{setup} = \frac{E[I] + E[S] / (1 - \rho)}{E[I] + E[S] / (1 - \rho) + 1/\lambda}
-\]
+$$\rho_{setup} = \frac{E[I] + E[S] / (1 - \rho)}{E[I] + E[S] / (1 - \rho) + 1/\lambda}$$
+
 This formula accounts for the total busy time, including setup and service phases.
 
 ```java
@@ -274,15 +265,12 @@ x??
 
 ---
 
-#### Laplace Transform of \(\tilde{T}_{setup}^Q\)
-Background context: The delay \(T_{setup}^Q\) experienced by an arrival in an M/G/1 with setup cost is derived through its Laplace transform.
+#### Laplace Transform of $\tilde{T}_{setup}^Q $ Background context: The delay$T_{setup}^Q$ experienced by an arrival in an M/G/1 with setup cost is derived through its Laplace transform.
 
-:p What is the formula for the Laplace transform of \(\tilde{T}_{setup}^Q(s)\)?
+:p What is the formula for the Laplace transform of $\tilde{T}_{setup}^Q(s)$?
 ??x
-The Laplace transform of \(\tilde{T}_{setup}^Q(s)\) can be derived as:
-\[
-\tilde{\tilde{T}}_{setup}^Q(s) = \frac{π_0 (1 - s/λ)}{\tilde{S}(s) / \tilde{I}(s) - λ / \tilde{S}(s)}
-\]
+The Laplace transform of $\tilde{T}_{setup}^Q(s)$ can be derived as:
+$$\tilde{\tilde{T}}_{setup}^Q(s) = \frac{π_0 (1 - s/λ)}{\tilde{S}(s) / \tilde{I}(s) - λ / \tilde{S}(s)}$$
 This expression accounts for the setup and service times.
 
 ```java

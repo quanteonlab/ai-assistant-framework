@@ -29,9 +29,9 @@ x??
 #### Imaginary Time and Partition Function
 Background context: The text explains how making time parameters imaginary transforms the Schrödinger equation into a heat diffusion equation. This transformation is crucial for relating quantum mechanics to thermodynamics through the partition function.
 
-:p How does the partition function \( Z \) relate to the Green’s function in this context?
+:p How does the partition function $Z$ relate to the Green’s function in this context?
 ??x
-The partition function \( Z \) and the Green's function are related through the path integral formulation. As \( \tau \rightarrow \infty \), the partition function \( Z \) is equivalent to the sum over all paths weighted by the Boltzmann factor, which is analogous to the Green’s function.
+The partition function $Z $ and the Green's function are related through the path integral formulation. As$\tau \rightarrow \infty $, the partition function $ Z$ is equivalent to the sum over all paths weighted by the Boltzmann factor, which is analogous to the Green’s function.
 
 ```java
 // Pseudocode for calculating the partition function
@@ -48,15 +48,13 @@ x??
 ---
 
 #### Ground-State Wave Function and Classical Mechanics
-Background context: The text discusses how the ground-state wave function can be found using path integrals, linking it to classical mechanics. By considering paths in imaginary time, the problem is transformed into a thermodynamic-like scenario where the action \( S \) plays the role of energy.
+Background context: The text discusses how the ground-state wave function can be found using path integrals, linking it to classical mechanics. By considering paths in imaginary time, the problem is transformed into a thermodynamic-like scenario where the action $S$ plays the role of energy.
 
 :p How does the temperature relate to the inverse time step in this context?
 ??x
-The temperature \( T \) is identified with the inverse of the time step \( \epsilon \), such that as \( \epsilon \rightarrow 0 \), time becomes continuous, and as \( \tau \rightarrow \infty \), we project onto the ground state. This relationship can be expressed as:
+The temperature $T $ is identified with the inverse of the time step$\epsilon $, such that as $\epsilon \rightarrow 0 $, time becomes continuous, and as $\tau \rightarrow \infty$, we project onto the ground state. This relationship can be expressed as:
 
-\[ k_B T = \frac{1}{\epsilon} \equiv \hbar \epsilon \]
-
-where \( \hbar \) is Planck's reduced constant.
+$$k_B T = \frac{1}{\epsilon} \equiv \hbar \epsilon$$where $\hbar$ is Planck's reduced constant.
 
 ```java
 // Pseudocode for temperature relation
@@ -75,7 +73,7 @@ Background context: The text explains how to use the Metropolis algorithm to sim
 
 :p How does the Metropolis algorithm work in this context?
 ??x
-The Metropolis algorithm works by proposing changes (or 'flips' in spin) and accepting them with a probability that depends on the change in action \( S \). In the quantum case, these 'flips' are replaced by 'links', where each step is based on the change in energy.
+The Metropolis algorithm works by proposing changes (or 'flips' in spin) and accepting them with a probability that depends on the change in action $S$. In the quantum case, these 'flips' are replaced by 'links', where each step is based on the change in energy.
 
 ```java
 // Pseudocode for Metropolis algorithm
@@ -90,13 +88,13 @@ x??
 ---
 
 #### Time-Saving Trick for Path Integrals
-Background context: The text introduces a trick to avoid repeated simulations by calculating the wave function \( \psi_0(x) \) over all space and time in one step. By inserting a delta function, the initial position is fixed, allowing direct computation of the desired wave function.
+Background context: The text introduces a trick to avoid repeated simulations by calculating the wave function $\psi_0(x)$ over all space and time in one step. By inserting a delta function, the initial position is fixed, allowing direct computation of the desired wave function.
 
 :p How can we use a delta function to simplify path integral calculations?
 ??x
-Using a delta function simplifies the calculation by fixing the initial position \( x_0 \) and integrating over all other positions:
+Using a delta function simplifies the calculation by fixing the initial position $x_0$ and integrating over all other positions:
 
-\[ ||\psi_0(x)||^2 = \int dx_1 \cdots dx_N e^{-\epsilon S(x, x_1, \ldots)} = \int dx_0 \cdots dx_N \delta(x - x_0) e^{-\epsilon S(x, x_1, \ldots)} \]
+$$||\psi_0(x)||^2 = \int dx_1 \cdots dx_N e^{-\epsilon S(x, x_1, \ldots)} = \int dx_0 \cdots dx_N \delta(x - x_0) e^{-\epsilon S(x, x_1, \ldots)}$$
 
 This approach transforms the problem into averaging a delta function over all paths, making it more efficient to compute.
 
@@ -125,23 +123,23 @@ x??
 ---
 
 #### Harmonic Oscillator Potential Implementation
-Background context explaining the implementation of the harmonic oscillator potential with specific parameters. The potential \( V(x) = \frac{1}{2}x^2 \) is used for a particle of mass \( m = 1 \), and lengths are measured in natural units where \( \sqrt{\frac{1}{m\omega}} \equiv \sqrt{\frac{\hbar}{m\omega}} = 1 \) and times in \( \frac{1}{\omega} = 1 \).
+Background context explaining the implementation of the harmonic oscillator potential with specific parameters. The potential $V(x) = \frac{1}{2}x^2 $ is used for a particle of mass$m = 1 $, and lengths are measured in natural units where$\sqrt{\frac{1}{m\omega}} \equiv \sqrt{\frac{\hbar}{m\omega}} = 1 $ and times in$\frac{1}{\omega} = 1$.
 
 :p What potential is used for the harmonic oscillator, and what are the natural units?
 ??x
-The potential used for the harmonic oscillator is \( V(x) = \frac{1}{2}x^2 \). The natural units are defined such that lengths are measured in \( \sqrt{\frac{1}{m\omega}} \equiv \sqrt{\frac{\hbar}{m\omega}} = 1 \) and times in \( \frac{1}{\omega} = 1 \).
+The potential used for the harmonic oscillator is $V(x) = \frac{1}{2}x^2 $. The natural units are defined such that lengths are measured in $\sqrt{\frac{1}{m\omega}} \equiv \sqrt{\frac{\hbar}{m\omega}} = 1 $ and times in$\frac{1}{\omega} = 1$.
 x??
 
 ---
 
 #### Path Construction
-Background context explaining the construction of a grid for both time and space points, with specific steps on how to build these grids. Time is extended monotonically from \( t=0 \) to \( \tau = N\epsilon \), and space points are separated by step size \( \delta \).
+Background context explaining the construction of a grid for both time and space points, with specific steps on how to build these grids. Time is extended monotonically from $t=0 $ to$\tau = N\epsilon $, and space points are separated by step size $\delta$.
 
 :p How does one construct a grid for the path in QMC.py?
 ??x
 To construct a grid for the path in QMC.py, follow these steps:
-1. Create a time grid with \( N \) timesteps each of length \( \epsilon \), extending from \( t=0 \) to \( \tau = N\epsilon \).
-2. Create a space grid with \( M \) points separated by step size \( \delta \). Typically, \( M \approx N \).
+1. Create a time grid with $N $ timesteps each of length$\epsilon $, extending from $ t=0 $ to $\tau = N\epsilon$.
+2. Create a space grid with $M $ points separated by step size$\delta $. Typically, $ M \approx N$.
 
 The time always increases monotonically along a path.
 x??
@@ -151,24 +149,24 @@ x??
 #### Path Evaluation
 Background context explaining the evaluation of paths and their summed energy using the given formula. The summed energy is calculated as a sum of kinetic and potential energies for each link in the path.
 
-:p How is the summed energy \( \mathcal{H} \) evaluated for a path?
+:p How is the summed energy $\mathcal{H}$ evaluated for a path?
 ??x
-The summed energy \( \mathcal{H} \) for a path is evaluated using the following formula:
-\[ \mathcal{H}(x_0, x_1, \ldots, x_N) \approx \sum_{j=1}^{N} \left[ \frac{m}{2} \left( \frac{x_j - x_{j-1}}{\epsilon} \right)^2 + V\left( \frac{x_j + x_{j-1}}{2} \right) \right] \]
+The summed energy $\mathcal{H}$ for a path is evaluated using the following formula:
+$$\mathcal{H}(x_0, x_1, \ldots, x_N) \approx \sum_{j=1}^{N} \left[ \frac{m}{2} \left( \frac{x_j - x_{j-1}}{\epsilon} \right)^2 + V\left( \frac{x_j + x_{j-1}}{2} \right) \right]$$
 
-Where \( m = 1 \), and the potential is given by \( V(x) = \frac{1}{2}x^2 \).
+Where $m = 1 $, and the potential is given by $ V(x) = \frac{1}{2}x^2$.
 x??
 
 ---
 
 #### Path Modification
-Background context explaining how paths are modified using the Metropolis algorithm, which involves changing a position at random time step \( t_j \) to another point \( x'_j \), and updating based on the Boltzmann factor.
+Background context explaining how paths are modified using the Metropolis algorithm, which involves changing a position at random time step $t_j $ to another point$x'_j$, and updating based on the Boltzmann factor.
 
 :p How is the path modified in the QMC.py program?
 ??x
 In the QMC.py program, paths are modified by:
-1. Randomly choosing a position \( x_j \) associated with time step \( t_j \).
-2. Changing this position to another point \( x'_j \), which changes two links in the path.
+1. Randomly choosing a position $x_j $ associated with time step$t_j$.
+2. Changing this position to another point $x'_j$, which changes two links in the path.
 3. Using the Metropolis algorithm to weigh the new position using the Boltzmann factor.
 
 This process helps in equilibrating the system and determining the wave function at various points.
@@ -177,13 +175,13 @@ x??
 ---
 
 #### Wave Function Update
-Background context explaining how the wave function is updated based on the frequency of acceptance of certain positions \( x_j \). The more frequently a position is accepted, the higher the value of the wave function at that point.
+Background context explaining how the wave function is updated based on the frequency of acceptance of certain positions $x_j$. The more frequently a position is accepted, the higher the value of the wave function at that point.
 
 :p How does the program determine new values for the wave function?
 ??x
 The program determines new values for the wave function by:
 1. Flipping links to new values and calculating new actions.
-2. More frequent acceptance of certain positions \( x_j \) increases the value of the wave function at those points.
+2. More frequent acceptance of certain positions $x_j$ increases the value of the wave function at those points.
 
 This is done by evaluating paths and their summed energy, then updating the wave function based on these evaluations.
 x??
@@ -191,12 +189,12 @@ x??
 ---
 
 #### Classical Trajectory vs. Quantum Fluctuations
-Background context explaining how classical trajectories and quantum fluctuations are observed in simulations. For small time differences \( t_b - t_a \), the system looks like an excited state, but for larger time differences, it approaches a ground state.
+Background context explaining how classical trajectories and quantum fluctuations are observed in simulations. For small time differences $t_b - t_a$, the system looks like an excited state, but for larger time differences, it approaches a ground state.
 
 :p How do classical trajectories and quantum fluctuations manifest in the simulation?
 ??x
 Classical trajectories and quantum fluctuations manifest as follows:
-- When the time difference \( t_b - t_a \) is small (e.g., 2T), the system does not have enough time to equilibrate, resembling an excited state.
+- When the time difference $t_b - t_a$ is small (e.g., 2T), the system does not have enough time to equilibrate, resembling an excited state.
 - For larger time differences (e.g., 20T), the system decays to its ground state, showing a Gaussian wave function.
 
 The trajectory through space-time fluctuates around the classical trajectory due to the Metropolis algorithm occasionally going uphill in its search. If searches go only downhill, the wave function will vanish.
@@ -210,10 +208,10 @@ Background context explaining the detailed steps for constructing time and space
 :p What are the explicit steps for constructing a grid of points?
 ??x
 The explicit steps for constructing a grid of points are:
-1. Construct a time grid with \( N \) timesteps each of length \( \epsilon \), extending from \( t=0 \) to \( \tau = N\epsilon \).
-2. Start with \( M \approx N \) space points separated by step size \( \delta \). Use a range of \( x \) values several times larger than the characteristic size of the potential.
-3. Any \( x \) or \( t \) value falling between lattice points should be assigned to the closest lattice point.
-4. Associate a position \( x_j \) with each time step \( \tau_j \), subject to boundary conditions that keep initial and final positions at \( x_N = x_0 = x \).
+1. Construct a time grid with $N $ timesteps each of length$\epsilon $, extending from $ t=0 $ to $\tau = N\epsilon$.
+2. Start with $M \approx N $ space points separated by step size$\delta $. Use a range of $ x$ values several times larger than the characteristic size of the potential.
+3. Any $x $ or$t$ value falling between lattice points should be assigned to the closest lattice point.
+4. Associate a position $x_j $ with each time step$\tau_j $, subject to boundary conditions that keep initial and final positions at $ x_N = x_0 = x$.
 5. Construct paths consisting of straight-line links connecting lattice points, corresponding to the classical trajectory.
 
 The values for the links may increase, decrease, or remain unchanged (in contrast to time, which always increases).
@@ -234,11 +232,11 @@ x??
 
 #### Running Sum Calculation
 
-After each single-link change or decision not to change, increase the running sum by 1 for the new \( x \) value. After a sufficiently long run, divide this sum by the number of steps to get the simulated value for \( |\psi(x_j)|^2 \) at each lattice point.
+After each single-link change or decision not to change, increase the running sum by 1 for the new $x $ value. After a sufficiently long run, divide this sum by the number of steps to get the simulated value for$|\psi(x_j)|^2$ at each lattice point.
 
 :p How is the running sum used in path integration simulations?
 ??x
-The running sum tracks how many times a particular state or path is visited. By increasing it after every step and dividing by the total number of steps, we approximate \( |\psi(x_j)|^2 \). This helps in estimating the probability density at each lattice point.
+The running sum tracks how many times a particular state or path is visited. By increasing it after every step and dividing by the total number of steps, we approximate $|\psi(x_j)|^2$. This helps in estimating the probability density at each lattice point.
 x??
 
 ---
@@ -256,7 +254,7 @@ x??
 
 #### Continuous Wavefunction Representation
 
-To get a smoother representation of the wavefunction, reduce the lattice spacing \( x \) or sample more points and use a smaller time step \( \epsilon \).
+To get a smoother representation of the wavefunction, reduce the lattice spacing $x $ or sample more points and use a smaller time step$\epsilon$.
 
 :p How does reducing lattice spacing improve the wave function simulation?
 ??x
@@ -267,11 +265,9 @@ x??
 
 #### Estimating Ground State Energy
 
-For the ground state, you can ignore the phase and assume \( \psi(x) = \sqrt{\psi^2(x)} \). Use this to estimate the energy via the formula:
+For the ground state, you can ignore the phase and assume $\psi(x) = \sqrt{\psi^2(x)}$. Use this to estimate the energy via the formula:
 
-\[ E = \frac{\langle\psi|H|\psi\rangle}{\langle\psi|\psi\rangle} = \omega^2 \langle\psi|\psi\rangle \int_{-\infty}^{+\infty}\psi^*(x)\left(-\frac{d^2}{dx^2} + x^2\right) \psi(x) dx, \]
-
-where the spatial derivative is evaluated numerically.
+$$E = \frac{\langle\psi|H|\psi\rangle}{\langle\psi|\psi\rangle} = \omega^2 \langle\psi|\psi\rangle \int_{-\infty}^{+\infty}\psi^*(x)\left(-\frac{d^2}{dx^2} + x^2\right) \psi(x) dx,$$where the spatial derivative is evaluated numerically.
 
 :p How do you estimate the ground state energy in a path integration simulation?
 ??x
@@ -280,13 +276,11 @@ x??
 
 ---
 
-#### Effect of Larger \(\hbar\)
+#### Effect of Larger $\hbar $ Explore the effect of making$\hbar$ larger by decreasing the exponent in the Boltzmann factor. Determine if this makes the calculation more robust or less so.
 
-Explore the effect of making \(\hbar\) larger by decreasing the exponent in the Boltzmann factor. Determine if this makes the calculation more robust or less so.
-
-:p How does changing \(\hbar\) affect path integration simulations?
+:p How does changing $\hbar$ affect path integration simulations?
 ??x
-Increasing \(\hbar\) allows for greater fluctuations around the classical trajectory, which can make the simulation more sensitive to these fluctuations. This might improve the ability to find the classical trajectory by exploring a broader range of paths but could also increase computational complexity and noise.
+Increasing $\hbar$ allows for greater fluctuations around the classical trajectory, which can make the simulation more sensitive to these fluctuations. This might improve the ability to find the classical trajectory by exploring a broader range of paths but could also increase computational complexity and noise.
 x??
 
 ---
@@ -297,7 +291,7 @@ The quantum bouncer problem involves a particle in a uniform gravitational field
 
 :p What is the quantum bouncer problem?
 ??x
-The quantum bouncer problem describes a particle in a one-dimensional potential well with a hard wall at \( x=0 \) due to gravity. The classical trajectory shows discrete energy levels, and the path integration method helps approximate these levels quantitatively.
+The quantum bouncer problem describes a particle in a one-dimensional potential well with a hard wall at $x=0$ due to gravity. The classical trajectory shows discrete energy levels, and the path integration method helps approximate these levels quantitatively.
 x??
 
 ---
@@ -305,18 +299,13 @@ x??
 #### Analytic Solution for Quantum Bouncer
 
 The time-independent Schrödinger equation for this problem is:
-
-\[ -\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2} + mg x \psi(x) = E \psi(x), \]
-
-with the boundary condition \( \psi(0)=0 \).
+$$-\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2} + mg x \psi(x) = E \psi(x),$$with the boundary condition $\psi(0)=0$.
 
 :p What are the key equations for solving the quantum bouncer problem analytically?
 ??x
 The key equations include the time-independent Schrödinger equation:
 
-\[ -\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2} + mg x \psi(x) = E \psi(x), \]
-
-with the boundary condition \( \psi(0)=0 \). This leads to a dimensionless form using Airy functions, providing an analytical solution for the wavefunction.
+$$-\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2} + mg x \psi(x) = E \psi(x),$$with the boundary condition $\psi(0)=0$. This leads to a dimensionless form using Airy functions, providing an analytical solution for the wavefunction.
 x??
 
 ---
@@ -325,13 +314,11 @@ x??
 
 The analytic solution involves Airy functions and can be converted to a dimensionless form:
 
-\[ d^2\psi / dz^2 - (z-z_E) \psi = 0, \]
-
-where \( z=x(2gm^2/\hbar^2)^{1/3} \) and \( z_E=E(2/\hbar^2 mg^2)^{1/3} \).
+$$d^2\psi / dz^2 - (z-z_E) \psi = 0,$$where $ z=x(2gm^2/\hbar^2)^{1/3}$and $ z_E=E(2/\hbar^2 mg^2)^{1/3}$.
 
 :p How are Airy functions used to solve the quantum bouncer problem?
 ??x
-Airy functions are used to solve the dimensionless form of the Schrödinger equation. The wavefunction is given by \( \psi(z) = N_n Ai(z - z_E) \), where \( N_n \) is a normalization constant and \( z_E \) corresponds to the energy levels.
+Airy functions are used to solve the dimensionless form of the Schrödinger equation. The wavefunction is given by $\psi(z) = N_n Ai(z - z_E)$, where $ N_n$is a normalization constant and $ z_E$ corresponds to the energy levels.
 x??
 
 ---
@@ -340,11 +327,9 @@ x??
 
 The gravitational potential for the bouncer problem is:
 
-\[ V(x) = mg |x|, x(t) = x_0 + v_0 t + \frac{1}{2} g t^2. \]
-
-:p What is the potential energy function used in the quantum bouncer experiment?
+$$V(x) = mg |x|, x(t) = x_0 + v_0 t + \frac{1}{2} g t^2.$$:p What is the potential energy function used in the quantum bouncer experiment?
 ??x
-The potential energy function for the quantum bouncer problem is \( V(x) = mg |x| \), which models a particle in a gravitational field hitting a hard floor at \( x=0 \).
+The potential energy function for the quantum bouncer problem is $V(x) = mg |x|$, which models a particle in a gravitational field hitting a hard floor at $ x=0$.
 x??
 
 ---
@@ -355,21 +340,19 @@ Background context: The quantum bouncer problem involves a particle that is cons
 
 Relevant formula:
 
-\[
-\psi(z,t)=\sum_{n=1}^{\infty}C_n N_n \text{Ai}(z-z_n)e^{-iE_nt/\hbar}
-\]
+$$\psi(z,t)=\sum_{n=1}^{\infty}C_n N_n \text{Ai}(z-z_n)e^{-iE_nt/\hbar}$$
 
 Where:
-- \( C_n \) are constants,
-- \( N_n \) is the normalization factor,
-- \( \text{Ai}(z-z_n) \) is the Airy function, and
-- \( E_n \) is the energy eigenvalue.
+- $C_n$ are constants,
+- $N_n$ is the normalization factor,
+- $\text{Ai}(z-z_n)$ is the Airy function, and
+- $E_n$ is the energy eigenvalue.
 
-The program uses a quantum Monte Carlo method to solve for the ground state probability using path integration. The time increment \( dt \) and total time \( t \) were selected by trial and error to satisfy the boundary condition \( |\psi(0)|^2 \approx 0 \). Trajectories with positive \( x \)-values over all their links are used to account for the infinite potential barrier.
+The program uses a quantum Monte Carlo method to solve for the ground state probability using path integration. The time increment $dt $ and total time$t $ were selected by trial and error to satisfy the boundary condition$|\psi(0)|^2 \approx 0 $. Trajectories with positive$ x$-values over all their links are used to account for the infinite potential barrier.
 
 :p How does the path integration method solve the quantum bouncer problem?
 ??x
-The path integration method involves summing over an ensemble of paths that a particle might take, weighted by a phase factor determined by the classical action. For the quantum bouncer, each path contributes to the wave function with a weight proportional to \( e^{-iS/\hbar} \), where \( S \) is the action for that particular path.
+The path integration method involves summing over an ensemble of paths that a particle might take, weighted by a phase factor determined by the classical action. For the quantum bouncer, each path contributes to the wave function with a weight proportional to $e^{-iS/\hbar}$, where $ S$ is the action for that particular path.
 
 The method uses trajectories that start and end at the ground state condition, ensuring they never penetrate the infinite potential barrier. The agreement between the analytical solution (Airy function) and the numerical solution from path integration can be seen in Figure 17.9, although there might be some discrepancy due to finite sampling effects.
 ```java
@@ -415,13 +398,13 @@ x??
 ---
 #### Quantum Bouncer Path Integration Boundary Condition
 
-Background context: In the path integration method for solving the quantum bouncer, ensuring that the wave function at the ground state boundary \( x = 0 \) satisfies the condition \( |\psi(0)|^2 \approx 0 \) is crucial. This ensures that trajectories are physically meaningful and do not penetrate the infinite potential barrier.
+Background context: In the path integration method for solving the quantum bouncer, ensuring that the wave function at the ground state boundary $x = 0 $ satisfies the condition$|\psi(0)|^2 \approx 0$ is crucial. This ensures that trajectories are physically meaningful and do not penetrate the infinite potential barrier.
 
 :p How does the selection of trajectories help in satisfying the boundary condition for the quantum bouncer?
 ??x
-Selecting trajectories with positive \( x \)-values over all their links helps ensure that the particle cannot penetrate the infinite potential barrier at \( x = 0 \). This is because any trajectory that ventures into negative \( x \) values would violate the physical constraint of the problem, leading to unphysical results.
+Selecting trajectories with positive $x $-values over all their links helps ensure that the particle cannot penetrate the infinite potential barrier at $ x = 0 $. This is because any trajectory that ventures into negative$ x$ values would violate the physical constraint of the problem, leading to unphysical results.
 
-The boundary condition \( |\psi(0)|^2 \approx 0 \) implies that the probability density should be zero or very small at the ground state position. By ensuring all trajectories remain in positive \( x \)-values, we effectively enforce this condition numerically.
+The boundary condition $|\psi(0)|^2 \approx 0 $ implies that the probability density should be zero or very small at the ground state position. By ensuring all trajectories remain in positive$x$-values, we effectively enforce this condition numerically.
 ```java
 // Pseudocode for Trajectory Selection
 public class Trajectory {
@@ -448,15 +431,15 @@ x??
 ---
 #### Quantum Bouncer Path Integration Time Increment
 
-Background context: The time increment \( \Delta t \) in the path integration method for solving the quantum bouncer plays a crucial role in ensuring that the numerical solution accurately represents the physical behavior of the system. Too large or too small values can lead to significant errors.
+Background context: The time increment $\Delta t$ in the path integration method for solving the quantum bouncer plays a crucial role in ensuring that the numerical solution accurately represents the physical behavior of the system. Too large or too small values can lead to significant errors.
 
 :p How does the selection of the time increment affect the accuracy of the path integration solution?
 ??x
-The selection of the time increment \( \Delta t \) is critical for the accuracy of the path integration solution. If \( \Delta t \) is too large, it may not capture the fine details of the particle's motion, leading to significant errors in the computed wave function. Conversely, if \( \Delta t \) is too small, the computational cost increases significantly, which can be impractical.
+The selection of the time increment $\Delta t $ is critical for the accuracy of the path integration solution. If$\Delta t $ is too large, it may not capture the fine details of the particle's motion, leading to significant errors in the computed wave function. Conversely, if$\Delta t$ is too small, the computational cost increases significantly, which can be impractical.
 
-The time increment must be chosen such that the path integral accurately represents the system's behavior while keeping the computational complexity manageable. The boundary condition \( |\psi(0)|^2 \approx 0 \) helps guide this choice by ensuring that trajectories do not penetrate the infinite potential barrier.
+The time increment must be chosen such that the path integral accurately represents the system's behavior while keeping the computational complexity manageable. The boundary condition $|\psi(0)|^2 \approx 0$ helps guide this choice by ensuring that trajectories do not penetrate the infinite potential barrier.
 
-For example, in Listing 17.4, a time increment of \( \Delta t = 0.05 \) was used with one million trajectories to achieve an acceptable balance between accuracy and computational efficiency.
+For example, in Listing 17.4, a time increment of $\Delta t = 0.05$ was used with one million trajectories to achieve an acceptable balance between accuracy and computational efficiency.
 ```java
 // Pseudocode for Time Increment Selection
 public class PathIntegrationSolver {
@@ -541,8 +524,8 @@ Thermodynamic simulations often involve calculating various thermodynamic quanti
 :p What is the role of the `energy` function in the provided code?
 ??x
 The `energy` function calculates the total energy of a given spin configuration. It consists of two parts: 
-1. A term representing the interaction between nearest neighbors, denoted as \(J\).
-2. A term representing an external magnetic field effect, denoted as \(-B \mu\).
+1. A term representing the interaction between nearest neighbors, denoted as $J$.
+2. A term representing an external magnetic field effect, denoted as $-B \mu$.
 
 C/Java code:
 ```python
@@ -661,7 +644,7 @@ The algorithm calculates various thermodynamic properties such as internal energ
 
 :p What does the `IntEnergy()` function do in the provided code?
 ??x
-The `IntEnergy()` function calculates the internal energy \(U(T)\) at a given temperature \(T\). It sums up contributions from all spin configurations, weighted by their probability, to estimate the average energy of the system.
+The `IntEnergy()` function calculates the internal energy $U(T)$ at a given temperature $T$. It sums up contributions from all spin configurations, weighted by their probability, to estimate the average energy of the system.
 
 C/Java code:
 ```python
@@ -903,8 +886,7 @@ def energy(arr):
 ```
 
 The energy is calculated as the sum of kinetic and potential energies for each segment:
-- Kinetic Energy: \( \frac{1}{2} \left( \frac{\Delta x^2}{\Delta t^2} \right) \)
-- Potential Energy: \( g \cdot \frac{x_{i+1} + x_i}{2} \)
+- Kinetic Energy: $\frac{1}{2} \left( \frac{\Delta x^2}{\Delta t^2} \right)$- Potential Energy:$ g \cdot \frac{x_{i+1} + x_i}{2}$
 
 This function returns the total energy of a given path.
 x??
@@ -943,7 +925,7 @@ if newE > oldE and exp(-newE + oldE) <= random.random():
 
 The script then decides whether to accept or reject the move based on Boltzmann's distribution:
 - If the new energy is lower, it always accepts.
-- If higher, it accepts with a probability \( e^{-\Delta E} \).
+- If higher, it accepts with a probability $e^{-\Delta E}$.
 
 If accepted, the trajectory and wave function are updated accordingly.
 
@@ -973,20 +955,14 @@ Background context: The ideal gas law can be derived by confining noninteracting
 The ideal gas law is derived by considering non-interacting particles confined in a box of volume V at temperature T. Each particle has kinetic energy and follows statistical mechanics principles.
 
 1. **Kinetic Energy**: The average kinetic energy per molecule is given by:
-   \[
-   E = \frac{3}{2} kT
-   \]
-2. **Number of Molecules**: Let N be the number of molecules.
-3. **Total Energy**: The total internal energy \( U \) of the gas is:
-   \[
-   U = \frac{3}{2} NkT
-   \]
+   $$E = \frac{3}{2} kT$$2. **Number of Molecules**: Let N be the number of molecules.
+3. **Total Energy**: The total internal energy $U$ of the gas is:
+$$U = \frac{3}{2} NkT$$
 
 The pressure P exerted by these molecules on the walls of the box can be derived from considering the collisions and the force exerted, leading to the ideal gas law:
+$$
 
-\[
-PV = NkT
-\]
+PV = NkT$$
 
 This derivation simplifies complex interactions to understand basic principles.
 x??
@@ -999,12 +975,10 @@ Background context: MD simulations extend the concept of non-interacting molecul
 ??x
 Molecular Dynamics (MD) simulations use Newton’s laws as their basis to study bulk properties of systems. These simulations involve a large number of particles where each particle's position and velocity change continuously with time due to intermolecular forces.
 
-The key equation for the acceleration of a molecule \(i\) is:
-\[
-\frac{d^2 \mathbf{r}_i}{dt^2} = -\nabla_i U(\{\mathbf{r}_j\})
-\]
+The key equation for the acceleration of a molecule $i$ is:
+$$\frac{d^2 \mathbf{r}_i}{dt^2} = -\nabla_i U(\{\mathbf{r}_j\})$$
 
-Where \(U(\{\mathbf{r}_j\})\) is the total potential energy due to interactions between all particles.
+Where $U(\{\mathbf{r}_j\})$ is the total potential energy due to interactions between all particles.
 x??
 
 ---
@@ -1025,20 +999,14 @@ Background context: The Lennard-Jones potential models intermolecular interactio
 :p What is the Lennard-Jones potential?
 ??x
 The Lennard-Jones (LJ) potential describes the interaction between two particles as a sum of a long-range attractive force and a short-range repulsive force:
+$$u(r) = 4 \epsilon \left[ \left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6 \right]$$
 
-\[
-u(r) = 4 \epsilon \left[ \left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6 \right]
-\]
-
-Where \( r \) is the distance between particles, and:
-- \(\epsilon\) determines the strength of interaction,
-- \(\sigma\) defines the length scale.
+Where $r$ is the distance between particles, and:
+- $\epsilon$ determines the strength of interaction,
+- $\sigma$ defines the length scale.
 
 The force derived from this potential is:
-
-\[
-f(r) = -\frac{du}{dr} = 48 \epsilon \left[ \left(\frac{\sigma}{r}\right)^{12} - \frac{1}{2} \left(\frac{\sigma}{r}\right)^6 \right] r
-\]
+$$f(r) = -\frac{du}{dr} = 48 \epsilon \left[ \left(\frac{\sigma}{r}\right)^{12} - \frac{1}{2} \left(\frac{\sigma}{r}\right)^6 \right] r$$
 
 This potential models the transition from repulsion to attraction and is useful in simulating argon, which has a solid-like behavior at low temperatures.
 x??
@@ -1049,15 +1017,11 @@ x??
 Background context: The force between molecules can be calculated using the gradient of the potential energy function. This calculation is crucial for implementing MD simulations.
 :p How do you calculate the force in an MD simulation using the Lennard-Jones potential?
 ??x
-To calculate the force \( f \) between two particles using the Lennard-Jones potential, we use the following formula:
-
-\[
-f(r) = -\frac{du}{dr} = 48 \epsilon \left[ \left(\frac{\sigma}{r}\right)^{12} - \frac{1}{2} \left(\frac{\sigma}{r}\right)^6 \right] r
-\]
+To calculate the force $f$ between two particles using the Lennard-Jones potential, we use the following formula:
+$$f(r) = -\frac{du}{dr} = 48 \epsilon \left[ \left(\frac{\sigma}{r}\right)^{12} - \frac{1}{2} \left(\frac{\sigma}{r}\right)^6 \right] r$$
 
 Where:
-- \( u(r) = 4 \epsilon \left[ \left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6 \right] \)
-- \( f(r) \) is the force at distance \( r \).
+- $u(r) = 4 \epsilon \left[ \left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6 \right]$-$ f(r)$is the force at distance $ r$.
 
 This formula captures both the repulsive and attractive forces based on the distance between particles.
 x??
@@ -1070,13 +1034,11 @@ Background context: After running a simulation long enough to stabilize, time av
 ??x
 Time averages in MD simulations are used after the system has stabilized to extract dynamic properties that can be related to thermodynamic parameters. By averaging over a sufficient number of trajectories, one can determine quantities like pressure, temperature, and energy fluctuations.
 
-For example, if we want to find the average kinetic energy \( \langle E_k \rangle \):
+For example, if we want to find the average kinetic energy $\langle E_k \rangle$:
 
-\[
-\langle E_k \rangle = \frac{1}{N} \sum_{i=1}^N \frac{m v_i^2}{2}
-\]
+$$\langle E_k \rangle = \frac{1}{N} \sum_{i=1}^N \frac{m v_i^2}{2}$$
 
-Where \( N \) is the number of particles, and \( m \), \( v_i \) are the mass and velocity of each particle respectively.
+Where $N $ is the number of particles, and$m $,$ v_i$ are the mass and velocity of each particle respectively.
 x??
 
 ---
@@ -1114,45 +1076,37 @@ x??
 ---
 #### Equipartition Theorem
 
-Background context: The equipartition theorem states that each degree of freedom in a system at thermal equilibrium has an average energy of \( \frac{k_B T}{2} \). This is used to relate the kinetic energy (KE) of particles to temperature.
+Background context: The equipartition theorem states that each degree of freedom in a system at thermal equilibrium has an average energy of $\frac{k_B T}{2}$. This is used to relate the kinetic energy (KE) of particles to temperature.
 
 :p How does the equipartition theorem apply to molecular dynamics simulations?
 ??x
-The equipartition theorem is applied by noting that in a system at thermal equilibrium, each degree of freedom per particle has an average energy of \( \frac{k_B T}{2} \). For molecules with three degrees of freedom (translational), the total average kinetic energy is given by:
+The equipartition theorem is applied by noting that in a system at thermal equilibrium, each degree of freedom per particle has an average energy of $\frac{k_B T}{2}$. For molecules with three degrees of freedom (translational), the total average kinetic energy is given by:
 
-\[ \langle KE \rangle = \frac{N_3 k_B T}{2} \]
+$$\langle KE \rangle = \frac{N_3 k_B T}{2}$$
 
-Where \( N \) is the number of particles and \( k_B = 1.38 \times 10^{-23} J/K \). The temperature can then be calculated using this relation.
+Where $N $ is the number of particles and$k_B = 1.38 \times 10^{-23} J/K$. The temperature can then be calculated using this relation.
 
 :p What formula relates kinetic energy to temperature in MD simulations?
 ??x
 The relationship between the average kinetic energy (KE) and temperature is given by:
 
-\[ \langle KE \rangle = \frac{N_3 k_B T}{2} \]
+$$\langle KE \rangle = \frac{N_3 k_B T}{2}$$
 
-Where \( N \) is the number of particles, and \( k_B \) is Boltzmann's constant. Solving for temperature \( T \):
+Where $N $ is the number of particles, and$k_B $ is Boltzmann's constant. Solving for temperature$T$:
 
-\[ T = \frac{2 \langle KE \rangle}{k_B N_3} \]
-
-:p What is the formula to calculate pressure in MD simulations?
+$$T = \frac{2 \langle KE \rangle}{k_B N_3}$$:p What is the formula to calculate pressure in MD simulations?
 ??x
-The pressure \( P \) in an MD simulation can be determined using the Virial theorem:
+The pressure $P$ in an MD simulation can be determined using the Virial theorem:
+$$PV = N k_B T + W$$
 
-\[ PV = N k_B T + W \]
-Where \( W = \frac{1}{N-1} \sum_{i<j} r_{ij} \cdot f_{ij} \)
-
-For a general case, the pressure is given by:
-
-\[ P = \frac{\rho (2 \langle KE \rangle + W)}{3} \]
-
-:p How does periodic boundary conditions (PBCs) work in MD simulations?
+Where $W = \frac{1}{N-1} \sum_{i<j} r_{ij} \cdot f_{ij}$ For a general case, the pressure is given by:
+$$P = \frac{\rho (2 \langle KE \rangle + W)}{3}$$:p How does periodic boundary conditions (PBCs) work in MD simulations?
 ??x
 Periodic boundary conditions (PBCs) are used to simulate an infinite system within a finite computational box. When a particle leaves the simulation volume, it re-enters from the opposite side:
-
-\[ x \Rightarrow \begin{cases} 
+$$x \Rightarrow \begin{cases} 
 x + L_x & \text{if } x \leq 0 \\
 x - L_x & \text{if } x > L_x
-\end{cases} \]
+\end{cases}$$
 
 This ensures that interactions are considered between all molecules and their images, maintaining the continuity of properties at the edges.
 
@@ -1196,7 +1150,7 @@ The initial random distribution serves to speed up the equilibration process by 
 
 :p How does an MD simulation predict bulk properties?
 ??x
-An MD simulation can predict bulk properties well with large numbers of particles (e.g., \(10^{23}\)). However, with fewer particles (e.g., \(10^6\) to \(10^9\)), the system must be handled carefully. Techniques such as PBCs are used to simulate a larger effective volume.
+An MD simulation can predict bulk properties well with large numbers of particles (e.g.,$10^{23}$). However, with fewer particles (e.g.,$10^6 $ to$10^9$), the system must be handled carefully. Techniques such as PBCs are used to simulate a larger effective volume.
 
 :p What is surface effect in MD simulations?
 ??x

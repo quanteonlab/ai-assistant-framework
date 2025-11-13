@@ -5,7 +5,7 @@
 ---
 
 #### Bit Reversal and FFT Input Reordering
-Background context: The Fourier transforms are produced in an order corresponding to the bit-reversed order of numbers. This suggests that processing data in a bit-reversed order (e.g., 0, 4, 2, 6 for 8 points) will result in correctly ordered output. The number 3 appears here because it is the power of 2 giving the number of data; specifically, \(2^3 = 8\). For an FFT algorithm to produce transforms in the proper order, input data must be reshuffled into bit-reversed order.
+Background context: The Fourier transforms are produced in an order corresponding to the bit-reversed order of numbers. This suggests that processing data in a bit-reversed order (e.g., 0, 4, 2, 6 for 8 points) will result in correctly ordered output. The number 3 appears here because it is the power of 2 giving the number of data; specifically, $2^3 = 8$. For an FFT algorithm to produce transforms in the proper order, input data must be reshuffled into bit-reversed order.
 
 :p How does bit reversal help in ordering the output for FFTs?
 ??x
@@ -34,11 +34,11 @@ x??
 ---
 
 #### Butterfly Operations in FFTs
-Background context: The butterfly operation is a key component of the Fast Fourier Transform (FFT) algorithm. It involves combining pairs of complex numbers to produce new values that are used in subsequent stages of the transform. For an N-point FFT, where \(N = 2^k\), the number of butterfly operations required is \( \log_2(N) \).
+Background context: The butterfly operation is a key component of the Fast Fourier Transform (FFT) algorithm. It involves combining pairs of complex numbers to produce new values that are used in subsequent stages of the transform. For an N-point FFT, where $N = 2^k $, the number of butterfly operations required is $\log_2(N)$.
 
 :p What is a butterfly operation and how many times does it need to be applied for an 8-point FFT?
 ??x
-A butterfly operation combines pairs of complex numbers using a specific formula, typically involving multiplications by roots of unity (twiddle factors). For an 8-point FFT (\(N = 2^3\)), the number of butterfly operations needed is \( \log_2(8) = 3 \).
+A butterfly operation combines pairs of complex numbers using a specific formula, typically involving multiplications by roots of unity (twiddle factors). For an 8-point FFT ($N = 2^3 $), the number of butterfly operations needed is $\log_2(8) = 3$.
 
 In each stage of the FFT, the input data are processed in pairs to produce new values that form the output. The process involves multiple stages where the number of operations per stage decreases logarithmically.
 
@@ -104,13 +104,13 @@ x??
 ---
 
 #### Python Implementation of FFT
-Background context: The provided text mentions a Python implementation of an FFT algorithm, which is easier to follow than the original Fortran IV version. This implementation processes \(N = 2^n\) data points using complex numbers and bit-reversal ordering.
+Background context: The provided text mentions a Python implementation of an FFT algorithm, which is easier to follow than the original Fortran IV version. This implementation processes $N = 2^n$ data points using complex numbers and bit-reversal ordering.
 
 :p How does the Python FFT implementation in Listing 9.3 work?
 ??x
-The Python FFT implementation processes \(N = 2^n\) data points by first assigning complex numbers to the data points, then reordering them via bit reversal, and finally performing butterfly operations. Here’s a high-level overview of how it works:
+The Python FFT implementation processes $N = 2^n$ data points by first assigning complex numbers to the data points, then reordering them via bit reversal, and finally performing butterfly operations. Here’s a high-level overview of how it works:
 
-1. **Complex Number Assignment**: Each of the \(N\) data points is assigned a complex number.
+1. **Complex Number Assignment**: Each of the $N$ data points is assigned a complex number.
 2. **Bit Reversal Ordering**: The input data are reordered according to their bit-reversed indices.
 3. **Butterfly Operations**: Butterfly operations are performed in stages until all outputs are computed.
 
@@ -163,12 +163,7 @@ x??
 #### Discrete Fourier Transform (DFT) Using Complex Numbers
 
 Background context: The DFT is a fundamental tool used to analyze signals by transforming them from the time domain to the frequency domain. When using complex numbers, each input signal can be represented as a combination of sine and cosine functions. The formula for DFT is given by:
-
-\[
-X[k] = \sum_{n=0}^{N-1} x[n]e^{-j2\pi kn/N}
-\]
-
-where \(x[n]\) is the time-domain signal, \(X[k]\) is the frequency-domain representation, and \(k\) ranges from 0 to \(N-1\).
+$$X[k] = \sum_{n=0}^{N-1} x[n]e^{-j2\pi kn/N}$$where $ x[n]$ is the time-domain signal,$ X[k]$is the frequency-domain representation, and $ k$ranges from 0 to $ N-1$.
 
 The provided code demonstrates how to compute the DFT using complex numbers. The `DFT` function iterates over each point in the input signal and calculates the corresponding frequency domain values by summing the product of the time-domain values with complex exponentials.
 
@@ -196,9 +191,7 @@ Background context: Similar to the previous DFT implementation using complex num
 
 The formula for computing the imaginary part of the DFT is:
 
-\[
-X[k]_{\text{imag}} = - \sum_{n=0}^{N-1} x[n]\sin(2\pi kn/N)
-\]
+$$X[k]_{\text{imag}} = - \sum_{n=0}^{N-1} x[n]\sin(2\pi kn/N)$$
 
 This method avoids complex arithmetic by separating real and imaginary parts, making it more efficient for certain hardware implementations.
 
@@ -221,7 +214,7 @@ x??
 
 #### Fast Fourier Transform (FFT)
 
-Background context: The FFT is an efficient algorithm to compute the DFT of a sequence. It reduces the complexity from \(O(N^2)\) to \(O(N \log N)\) by exploiting the symmetry and periodicity properties of complex exponentials.
+Background context: The FFT is an efficient algorithm to compute the DFT of a sequence. It reduces the complexity from $O(N^2)$ to $O(N \log N)$ by exploiting the symmetry and periodicity properties of complex exponentials.
 
 The provided `fft` function implements the Cooley-Tukey algorithm, which recursively splits the DFT into smaller DFTs. The function reorders input data in a bit-reversed manner and performs butterfly operations to combine results from lower frequency bins.
 
@@ -278,45 +271,39 @@ x??
 
 #### Signal Example for Wavelet Analysis
 The example signal given is:
-\[ y(t) = \begin{cases} 
+$$y(t) = \begin{cases} 
 \sin(2\pi t), & \text{for } 0 \leq t \leq 2, \\
 5\sin(2\pi t) + 10\sin(4\pi t), & \text{for } 2 \leq t \leq 8, \\
 2.5\sin(2\pi t) + 6\sin(4\pi t) + 10\sin(6\pi t), & \text{for } 8 \leq t \leq 12.
-\end{cases} \]
-:p What is the signal used to demonstrate wavelet analysis?
+\end{cases}$$:p What is the signal used to demonstrate wavelet analysis?
 ??x
 The signal used to demonstrate wavelet analysis is a piecewise function that changes its frequency content over time:
-\[ y(t) = \begin{cases} 
+$$y(t) = \begin{cases} 
 \sin(2\pi t), & \text{for } 0 \leq t \leq 2, \\
 5\sin(2\pi t) + 10\sin(4\pi t), & \text{for } 2 \leq t \leq 8, \\
 2.5\sin(2\pi t) + 6\sin(4\pi t) + 10\sin(6\pi t), & \text{for } 8 \leq t \leq 12.
-\end{cases} \]
-x??
+\end{cases}$$x??
 
 ---
 
 #### Wavelet Functions
 Wavelets are functions that are localized in both time and frequency. They can be mathematically defined as:
-\[ \psi(t) = e^{i\omega_0t - \frac{t^2}{2\sigma^2}} = (\cos(\omega_0 t) + i\sin(\omega_0 t))e^{-\frac{t^2}{2\sigma^2}}, \]
-where \( \psi(t) \) is the Morlet wavelet with \( \omega_0 \) being a frequency parameter and \( \sigma \) controlling its width.
+$$\psi(t) = e^{i\omega_0t - \frac{t^2}{2\sigma^2}} = (\cos(\omega_0 t) + i\sin(\omega_0 t))e^{-\frac{t^2}{2\sigma^2}},$$where $\psi(t)$ is the Morlet wavelet with $\omega_0$ being a frequency parameter and $\sigma$ controlling its width.
 :p What is an example of a wavelet function provided in the text?
 ??x
 An example of a wavelet function provided in the text is the Morlet wavelet, which has the following definition:
-\[ \psi(t) = e^{i\omega_0t - \frac{t^2}{2\sigma^2}} = (\cos(\omega_0 t) + i\sin(\omega_0 t))e^{-\frac{t^2}{2\sigma^2}}, \]
-where \( \omega_0 \) is the frequency parameter and \( \sigma \) controls its width.
+$$\psi(t) = e^{i\omega_0t - \frac{t^2}{2\sigma^2}} = (\cos(\omega_0 t) + i\sin(\omega_0 t))e^{-\frac{t^2}{2\sigma^2}},$$where $\omega_0 $ is the frequency parameter and$\sigma$ controls its width.
 x??
 
 ---
 
 #### Wavelet Generation
 Wavelets can be generated by scaling and translating a mother wavelet. For instance, a Morlet wavelet:
-\[ \psi(t) = e^{i\omega_0t - \frac{t^2}{2\sigma^2}}, \]
-can generate daughter wavelets through different values of \( a \) (scaling factor) and \( b \) (translation parameter).
+$$\psi(t) = e^{i\omega_0t - \frac{t^2}{2\sigma^2}},$$can generate daughter wavelets through different values of $ a $(scaling factor) and$ b$(translation parameter).
 :p How are mother wavelets transformed into daughter wavelets?
 ??x
 Mother wavelets can be transformed into daughter wavelets by scaling and translating them. For example, the Morlet wavelet:
-\[ \psi(t) = e^{i\omega_0t - \frac{t^2}{2\sigma^2}}, \]
-can generate different daughter wavelets using different values of \( a \) (scaling factor) and \( b \) (translation parameter).
+$$\psi(t) = e^{i\omega_0t - \frac{t^2}{2\sigma^2}},$$can generate different daughter wavelets using different values of $ a $(scaling factor) and$ b$ (translation parameter).
 x??
 
 ---

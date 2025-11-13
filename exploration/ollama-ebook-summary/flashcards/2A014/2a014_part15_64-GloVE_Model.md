@@ -14,9 +14,10 @@ x??
 ---
 
 #### GloVe Model Overview
-Background context: The Global Vectors (GloVe) model is designed to create word embeddings based on co-occurrence counts. It aims to generate vectors such that the dot product between them is proportional to the log of their observed co-occurrence count \( N \). This relationship is represented by the formula:
-\[ y_{predicted} = x_i^T x_j + b_i + b_j \]
-Where \( x \) represents the embedding, and \( b \) are bias terms.
+Background context: The Global Vectors (GloVe) model is designed to create word embeddings based on co-occurrence counts. It aims to generate vectors such that the dot product between them is proportional to the log of their observed co-occurrence count $N$. This relationship is represented by the formula:
+$$y_{predicted} = x_i^T x_j + b_i + b_j$$
+
+Where $x $ represents the embedding, and$b$ are bias terms.
 :p What is the primary goal of the GloVe model?
 ??x
 The primary goal of the GloVe model is to generate word embeddings where the vectors for two words are proportional to the log of their co-occurrence count. This helps in creating a more meaningful representation of words based on how they appear together in text.
@@ -26,11 +27,12 @@ x??
 
 #### Loss Function in GloVe
 Background context: The loss function used in training the GloVe model is designed to minimize the squared difference between the predicted value and the actual log-count-adjusted value. The formula for this loss is:
-\[ \text{loss} = w * (y_{predicted} - y_{target})^2 \]
-Where \( w \) is a weighting term, \( y_{predicted} \) is the predicted dot product, and \( y_{target} \) is adjusted based on the co-occurrence count.
+$$\text{loss} = w * (y_{predicted} - y_{target})^2$$
+
+Where $w $ is a weighting term,$ y_{predicted}$ is the predicted dot product, and $y_{target}$ is adjusted based on the co-occurrence count.
 :p What does the loss function in GloVe model minimize?
 ??x
-The loss function in the GloVe model minimizes the squared difference between the predicted log-count of a word pair and the actual log-count-adjusted value, weighted by \( w \). This helps ensure that both common and rare co-occurrences are appropriately represented.
+The loss function in the GloVe model minimizes the squared difference between the predicted log-count of a word pair and the actual log-count-adjusted value, weighted by $w$. This helps ensure that both common and rare co-occurrences are appropriately represented.
 x??
 
 ---
@@ -129,15 +131,13 @@ Background context: This section describes the implementation of the GloVe weigh
 ??x
 The formula for the GloVe loss computes the weighted mean squared error:
 
-\[
-\text{loss} = \frac{1}{N} \sum_{i=1}^{N} w_i (\log(1 + t_{ij}) - p_{ij})
-\]
+$$\text{loss} = \frac{1}{N} \sum_{i=1}^{N} w_i (\log(1 + t_{ij}) - p_{ij})$$
 
 Where:
-- \( N \) is the number of samples.
-- \( w_i \) is the weight for each sample.
-- \( t_{ij} \) is the target value.
-- \( p_{ij} \) is the predicted value.
+- $N$ is the number of samples.
+- $w_i$ is the weight for each sample.
+- $t_{ij}$ is the target value.
+- $p_{ij}$ is the predicted value.
 
 In JAX, this can be implemented as:
 
@@ -273,8 +273,9 @@ Background context: The text explains how cosine similarity is used to measure t
 
 :p How does cosine similarity work?
 ??x
-Cosine similarity measures the cosine of the angle between two non-zero vectors in an inner product space. For user \(i\) and item \(x\), it is defined as:
-\[ \text{similarity}_{i,x} = \frac{\mathbf{i} \cdot \mathbf{x}}{||\mathbf{i}|| ||\mathbf{x}||} \]
+Cosine similarity measures the cosine of the angle between two non-zero vectors in an inner product space. For user $i $ and item$x$, it is defined as:
+$$\text{similarity}_{i,x} = \frac{\mathbf{i} \cdot \mathbf{x}}{||\mathbf{i}|| ||\mathbf{x}||}$$
+
 This can be simplified to the inner product in a normalized space, where both vectors are unit vectors.
 x??
 
@@ -297,8 +298,8 @@ Background context: The text introduces bilinear regression as a method for maki
 
 :p How does bilinear regression work in this context?
 ??x
-Bilinear regression works by representing users and items as vectors, then computing their similarity through matrix multiplication. Specifically, it uses a weighted summation defined via a diagonal matrix \(A\):
-\[ r_{i,x} \sim \text{sim}_{A i, x} = \sum_{k=1}^n a_k * i_k * x_k \]
+Bilinear regression works by representing users and items as vectors, then computing their similarity through matrix multiplication. Specifically, it uses a weighted summation defined via a diagonal matrix $A$:
+$$r_{i,x} \sim \text{sim}_{A i, x} = \sum_{k=1}^n a_k * i_k * x_k$$
 This approach introduces more parameters and brings us closer to the familiar ground of linear regression.
 x??
 

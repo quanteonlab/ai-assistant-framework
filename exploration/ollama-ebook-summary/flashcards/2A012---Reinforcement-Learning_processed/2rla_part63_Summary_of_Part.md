@@ -806,10 +806,10 @@ Background context explaining the use of linear methods in function approximatio
 
 :p What is the formula for the approximate value function when using linear methods?
 ??x
-The approximate value function, ˆv(s,w), can be calculated as the inner product of the weight vector \( w \) and the feature vector \( x(s) \):
-\[ ˆv(s,w) = w > x(s) = \sum_{i=1}^{d} w_i x_i(s). \]
+The approximate value function, ˆv(s,w), can be calculated as the inner product of the weight vector $w $ and the feature vector$x(s)$:
+$$ˆv(s,w) = w > x(s) = \sum_{i=1}^{d} w_i x_i(s).$$
 
-In this context, \( x(s) \) is a real-valued vector representing features for state \( s \), and the approximate value function is linear in the weight vector \( w \).
+In this context,$x(s)$ is a real-valued vector representing features for state $ s $, and the approximate value function is linear in the weight vector $ w$.
 
 x??
 
@@ -832,8 +832,7 @@ Background context explaining how Stochastic Gradient Descent (SGD) updates work
 :p How does the SGD update rule look for linear function approximation?
 ??x
 The SGD update rule for linear function approximation is particularly simple:
-\[ w_{t+1} = w_t + \alpha h U_t^{*}(S_t, w_t) x(S_t), \]
-where \( \alpha \) is the learning rate, and \( U_t^{*}(S_t, w_t) \) is the estimated advantage or value function.
+$$w_{t+1} = w_t + \alpha h U_t^{*}(S_t, w_t) x(S_t),$$where $\alpha $ is the learning rate, and$U_t^{*}(S_t, w_t)$ is the estimated advantage or value function.
 
 For example:
 ```java
@@ -854,17 +853,17 @@ Background context explaining the convergence properties of linear function appr
 
 :p Why are linear function approximations considered favorable for learning systems?
 ??x
-Linear function approximations are favored because they have only one optimum (or a set of equally good optima in degenerate cases), making any method that converges to or near a local optimum also converge to the global optimum. This is true for algorithms like gradient Monte Carlo and semi-gradient TD(0) under linear function approximation, which can ensure convergence to the global minimum if the learning rate \( \alpha \) is reduced appropriately over time.
+Linear function approximations are favored because they have only one optimum (or a set of equally good optima in degenerate cases), making any method that converges to or near a local optimum also converge to the global optimum. This is true for algorithms like gradient Monte Carlo and semi-gradient TD(0) under linear function approximation, which can ensure convergence to the global minimum if the learning rate $\alpha$ is reduced appropriately over time.
 
 x??
 
 ---
 
 #### Update Rule for TD(0)
-Background context: The update rule for TD(0) is given as \( w_{t+1} = w_t + \alpha (R_{t+1} x_t - x_t^T w_t) \), where \( x_t = x(S_t) \). This rule adjusts the weight vector based on the difference between the predicted and actual returns.
+Background context: The update rule for TD(0) is given as $w_{t+1} = w_t + \alpha (R_{t+1} x_t - x_t^T w_t)$, where $ x_t = x(S_t)$. This rule adjusts the weight vector based on the difference between the predicted and actual returns.
 :p What is the update rule for TD(0)?
 ??x
-The update rule for TD(0) involves adjusting the weight vector \( w_t \) at each time step \( t \) by adding a term that depends on the difference between the actual return \( R_{t+1} x_t \) and the predicted value \( x_t^T w_t \). This is done with a learning rate \( \alpha \).
+The update rule for TD(0) involves adjusting the weight vector $w_t $ at each time step$t $ by adding a term that depends on the difference between the actual return$ R_{t+1} x_t $ and the predicted value $ x_t^T w_t $. This is done with a learning rate $\alpha$.
 ```java
 // Pseudocode for TD(0) update rule
 function tdUpdate(w, alpha, R_t1, x_t) {
@@ -877,52 +876,52 @@ x??
 ---
 
 #### Expected Weight Vector at Steady State
-Background context: The expected next weight vector at the steady state can be written as \( E[w_{t+1}|w_t] = w_t + \alpha (b - A w_t) \), where \( b = E[R_{t+1} x_t] \) and \( A = E[x_t x_t^T | x_{t+1}] \). At the steady state, the weight vector \( w \) converges to a fixed point \( w_TD \).
+Background context: The expected next weight vector at the steady state can be written as $E[w_{t+1}|w_t] = w_t + \alpha (b - A w_t)$, where $ b = E[R_{t+1} x_t]$and $ A = E[x_t x_t^T | x_{t+1}]$. At the steady state, the weight vector $ w$converges to a fixed point $ w_TD$.
 :p What is the expression for the expected next weight vector at the steady state?
 ??x
-At the steady state, the expected weight vector can be expressed as \( E[w_{t+1}|w_t] = w_t + \alpha (b - A w_t) \). This expression shows that the update rule at steady state involves a term that depends on the difference between \( b \) and the product of \( A \) and the current weight vector \( w_t \).
+At the steady state, the expected weight vector can be expressed as $E[w_{t+1}|w_t] = w_t + \alpha (b - A w_t)$. This expression shows that the update rule at steady state involves a term that depends on the difference between $ b$and the product of $ A$ and the current weight vector $ w_t$.
 x??
 
 ---
 
 #### TD Fixed Point
-Background context: The system converges to the weight vector \( w_{TD} \) where \( b - A w_{TD} = 0 \), which simplifies to \( w_{TD} = A^{-1} b \). This is called the TD fixed point.
+Background context: The system converges to the weight vector $w_{TD}$ where $ b - A w_{TD} = 0 $, which simplifies to $ w_{TD} = A^{-1} b$. This is called the TD fixed point.
 :p What is the definition of the TD fixed point?
 ??x
-The TD fixed point is defined as the weight vector \( w_{TD} \) where the system converges, satisfying the equation \( b - A w_{TD} = 0 \). Solving for \( w_{TD} \), we get \( w_{TD} = A^{-1} b \).
+The TD fixed point is defined as the weight vector $w_{TD}$ where the system converges, satisfying the equation $ b - A w_{TD} = 0 $. Solving for $ w_{TD}$, we get $ w_{TD} = A^{-1} b$.
 x??
 
 ---
 
 #### Convergence of Linear TD(0)
-Background context: The convergence of linear TD(0) can be analyzed by rewriting the update rule as \( E[w_{t+1}|w_t] = (I - \alpha A) w_t + \alpha b \). For convergence, the matrix \( I - \alpha A \) must have eigenvalues less than 1 in magnitude.
+Background context: The convergence of linear TD(0) can be analyzed by rewriting the update rule as $E[w_{t+1}|w_t] = (I - \alpha A) w_t + \alpha b $. For convergence, the matrix $ I - \alpha A$ must have eigenvalues less than 1 in magnitude.
 :p What condition ensures the convergence of linear TD(0)?
 ??x
-For the linear TD(0) algorithm to converge, the matrix \( I - \alpha A \) must have eigenvalues with magnitudes less than 1. This ensures that the update rule does not diverge and the weight vector converges.
+For the linear TD(0) algorithm to converge, the matrix $I - \alpha A$ must have eigenvalues with magnitudes less than 1. This ensures that the update rule does not diverge and the weight vector converges.
 x??
 
 ---
 
 #### Properties for Convergence of Linear TD(0)
-Background context: If \( A \) is a diagonal matrix, convergence depends on the values of \( \alpha \). For general \( A \), if it is positive definite (\( y^T A y > 0 \) for any non-zero vector \( y \)), then the inverse exists and the system converges. The matrix \( A \) in the continuing case can be written as \( A = X D (I - P) X^T \), where \( \mu(s) \) is the stationary distribution, \( p(s_0|s) \) is the transition probability, and \( P \) is a matrix of these probabilities.
-:p What property of matrix \( A \) ensures the convergence of linear TD(0)?
+Background context: If $A $ is a diagonal matrix, convergence depends on the values of$\alpha $. For general $ A $, if it is positive definite ($ y^T A y > 0 $ for any non-zero vector $ y $), then the inverse exists and the system converges. The matrix$ A $ in the continuing case can be written as $ A = X D (I - P) X^T $, where$\mu(s)$ is the stationary distribution,$ p(s_0|s)$ is the transition probability, and $P$ is a matrix of these probabilities.
+:p What property of matrix $A$ ensures the convergence of linear TD(0)?
 ??x
-The positive definiteness of matrix \( A \) ensures the convergence of linear TD(0). Specifically, if \( y^T A y > 0 \) for any non-zero vector \( y \), then the inverse \( A^{-1} \) exists and the system converges.
+The positive definiteness of matrix $A $ ensures the convergence of linear TD(0). Specifically, if$y^T A y > 0 $ for any non-zero vector$ y $, then the inverse $ A^{-1}$ exists and the system converges.
 x??
 
 ---
 
 #### Matrix A in Linear TD(0)
-Background context: The matrix \( A \) can be written as \( A = X D (I - P) X^T \). For positive definiteness, all columns of the inner matrix \( D(I - P) \) must sum to a nonnegative number. This was shown by Sutton based on two theorems.
-:p How is matrix \( A \) expressed in terms of other matrices?
+Background context: The matrix $A $ can be written as$A = X D (I - P) X^T $. For positive definiteness, all columns of the inner matrix$ D(I - P)$ must sum to a nonnegative number. This was shown by Sutton based on two theorems.
+:p How is matrix $A$ expressed in terms of other matrices?
 ??x
-Matrix \( A \) can be expressed as \( A = X D (I - P) X^T \), where:
-- \( \mu(s) \) is the stationary distribution,
-- \( p(s_0|s) \) is the transition probability from state \( s \) to \( s_0 \),
-- \( P \) is a matrix of these probabilities,
-- \( D \) is a diagonal matrix with \( \mu(s) \) on its diagonal, and
-- \( X \) is a matrix with rows as feature vectors \( x(s) \).
-The positive definiteness of \( A \) depends on the sum of columns of \( D(I - P) \) being nonnegative.
+Matrix $A $ can be expressed as$A = X D (I - P) X^T$, where:
+- $\mu(s)$ is the stationary distribution,
+- $p(s_0|s)$ is the transition probability from state $ s $ to $s_0$,
+- $P$ is a matrix of these probabilities,
+- $D $ is a diagonal matrix with$\mu(s)$ on its diagonal, and
+- $X $ is a matrix with rows as feature vectors$x(s)$.
+The positive definiteness of $A $ depends on the sum of columns of$D(I - P)$ being nonnegative.
 x??
 
 ---
@@ -932,25 +931,27 @@ Background context: The text discusses properties of a specific key matrix used 
 
 :p What does the text say about the properties of the key matrix D(I - P)?
 ??x
-The text states that for the key matrix \(D(I - \pi)\), where \(I\) is an identity matrix and \(\pi\) is a stochastic matrix with \(\rho < 1\), each row sum plus the corresponding column sum is positive. This ensures stability in on-policy TD(0). The row sums are all positive because \(\pi\) is a stochastic matrix, and since \(\rho < 1\), the column sums must be non-negative.
+The text states that for the key matrix $D(I - \pi)$, where $ I$is an identity matrix and $\pi$ is a stochastic matrix with $\rho < 1$, each row sum plus the corresponding column sum is positive. This ensures stability in on-policy TD(0). The row sums are all positive because $\pi $ is a stochastic matrix, and since $\rho < 1$, the column sums must be non-negative.
 
 To elaborate:
-- Row sums of \(D(I - \pi)\) are positive as \(\pi\) is a stochastic matrix.
-- Column sums can be shown to be non-negative by using vector operations with the stationary distribution \(\mu\).
+- Row sums of $D(I - \pi)$ are positive as $\pi$ is a stochastic matrix.
+- Column sums can be shown to be non-negative by using vector operations with the stationary distribution $\mu$.
 
 Specifically, the column sums of the key matrix are given by:
-\[1 > D(I - \pi) = \mu > (I - \pi)\]
+$$1 > D(I - \pi) = \mu > (I - \pi)$$
 
 This simplifies to:
-\[\mu > (I - \pi) = \mu > I - \mu > \pi\]
-Since \(\mu\) is the stationary distribution, we have:
-\[\mu > I - \mu > \pi = 0\]
+$$\mu > (I - \pi) = \mu > I - \mu > \pi$$
+
+Since $\mu$ is the stationary distribution, we have:
+$$\mu > I - \mu > \pi = 0$$
+
 Thus, the column sums are non-negative.
 
 The full expression for the column sums is then:
-\[1 > D(I - \pi) = \mu > (I - \pi)\]
+$$1 > D(I - \pi) = \mu > (I - \pi)$$
 
-This ensures that \(D\) and its corresponding matrix \(A\) are positive definite.
+This ensures that $D $ and its corresponding matrix$A$ are positive definite.
 x??
 
 ---
@@ -960,39 +961,42 @@ Background context: The text discusses how on-policy TD(0) learning is stable gi
 
 :p How does the text describe the stability of on-policy TD(0)?
 ??x
-The text describes that on-policy TD(0) is stable if the key matrix \(D(I - \pi)\) and its corresponding matrix \(A\) are positive definite. This is shown by ensuring that each row sum plus the corresponding column sum is positive.
+The text describes that on-policy TD(0) is stable if the key matrix $D(I - \pi)$ and its corresponding matrix $A$ are positive definite. This is shown by ensuring that each row sum plus the corresponding column sum is positive.
 
 Specifically, it notes:
-- The row sums of \(D(I - \pi)\) are all positive because \(\pi\) is a stochastic matrix.
-- To show non-negativity of the column sums, the expression \(1 > D(I - \pi) = \mu > (I - \pi)\) is used.
-- Since \(\mu\) is the stationary distribution and \(\rho < 1\), it follows that:
-\[1 > D(I - \pi) = \mu > (I - \pi) = \mu > I - \mu > \pi\]
-Given \(\mu > \pi = 0\), we have:
-\[1 > D(I - \pi) = \mu > (I - \pi)\]
+- The row sums of $D(I - \pi)$ are all positive because $\pi$ is a stochastic matrix.
+- To show non-negativity of the column sums, the expression $1 > D(I - \pi) = \mu > (I - \pi)$ is used.
+- Since $\mu $ is the stationary distribution and$\rho < 1$, it follows that:
+$$1 > D(I - \pi) = \mu > (I - \pi) = \mu > I - \mu > \pi$$
 
-This confirms that the column sums are non-negative, ensuring positive definiteness of \(D\) and \(A\).
+Given $\mu > \pi = 0$, we have:
+$$1 > D(I - \pi) = \mu > (I - \pi)$$
 
-Thus, on-policy TD(0) is stable under these conditions. However, additional conditions and a schedule for reducing \(\alpha\) over time are needed to prove convergence with probability one.
+This confirms that the column sums are non-negative, ensuring positive definiteness of $D $ and$A$.
+
+Thus, on-policy TD(0) is stable under these conditions. However, additional conditions and a schedule for reducing $\alpha$ over time are needed to prove convergence with probability one.
 x??
 
 ---
 
 #### Asymptotic Error in TD Method
-Background context: The text explains the asymptotic error bound of the TD method compared to the Monte Carlo method. It mentions that the error is within a factor of \(1 - \rho\) of the lowest possible error, where \(\rho < 1\).
+Background context: The text explains the asymptotic error bound of the TD method compared to the Monte Carlo method. It mentions that the error is within a factor of $1 - \rho $ of the lowest possible error, where$\rho < 1$.
 
 :p What does the text say about the asymptotic error in the TD method?
 ??x
-The text states that the asymptotic error in the TD method (TD(0)) is no more than \(1 - \rho\) times the smallest possible error. This is given by:
-\[VE(w_{TD}) \leq 1 - \rho\]
+The text states that the asymptotic error in the TD method (TD(0)) is no more than $1 - \rho$ times the smallest possible error. This is given by:
+$$VE(w_{TD}) \leq 1 - \rho$$
 
 This bound is derived from the fact that the TD method converges to a fixed point within a bounded expansion of the lowest possible error, as expressed in Equation (9.14):
-\[VE(w_{TD}) \leq 1 - \rho \times \min_w VE(w)\]
+$$
 
-Because \(\rho\) is often close to one, this factor can be quite large, indicating a potential loss in asymptotic performance.
+VE(w_{TD}) \leq 1 - \rho \times \min_w VE(w)$$
+
+Because $\rho$ is often close to one, this factor can be quite large, indicating a potential loss in asymptotic performance.
 
 To summarize:
-- The TD method's asymptotic error is bounded by \(1 - \rho\), where \(\rho < 1\).
-- This means the TD method can perform significantly worse than Monte Carlo methods as \(\rho\) approaches one.
+- The TD method's asymptotic error is bounded by $1 - \rho $, where $\rho < 1$.
+- This means the TD method can perform significantly worse than Monte Carlo methods as $\rho$ approaches one.
 x??
 
 ---
@@ -1040,10 +1044,10 @@ Background context: The n-step semi-gradient TD algorithm extends the tabular ve
 :p What is the key equation of the n-step semi-gradient TD algorithm?
 ??x
 The key equation of the n-step semi-gradient TD algorithm is:
-\[ w_{t+n} = w_{t+n-1} + \alpha [G_t:t+n - \hat{v}(S_t, w_{t+n-1})] \]
-where \( G_t:t+n \) is the generalized return over \( n \) steps, defined as:
-\[ G_t:t+n = R_{t+1} + \gamma R_{t+2} + \cdots + \gamma^{n-1} R_{t+n} + \gamma^n \hat{v}(S_{t+n}, w_{t+n-1}) \]
-This equation updates the weight vector \( w \) based on the difference between the generalized return and the estimated value function.
+$$w_{t+n} = w_{t+n-1} + \alpha [G_t:t+n - \hat{v}(S_t, w_{t+n-1})]$$where $ G_t:t+n $ is the generalized return over $ n$ steps, defined as:
+$$G_t:t+n = R_{t+1} + \gamma R_{t+2} + \cdots + \gamma^{n-1} R_{t+n} + \gamma^n \hat{v}(S_{t+n}, w_{t+n-1})$$
+
+This equation updates the weight vector $w$ based on the difference between the generalized return and the estimated value function.
 x??
 
 ---
@@ -1052,8 +1056,8 @@ x??
 Background context: Tabular methods, such as those presented in Part I of the book, can be seen as a special case of linear function approximation. In this context, each state is represented by a feature vector consisting of binary indicators for that state.
 :p What are the feature vectors used in tabular methods?
 ??x
-In tabular methods, the feature vectors are simple one-hot encodings where each element corresponds to a specific state. For instance, if there are 20 states, the feature vector for state \( s \) would be:
-\[ \mathbf{x}_s = [0, 0, \ldots, 1, \ldots, 0] \]
+In tabular methods, the feature vectors are simple one-hot encodings where each element corresponds to a specific state. For instance, if there are 20 states, the feature vector for state $s$ would be:
+$$\mathbf{x}_s = [0, 0, \ldots, 1, \ldots, 0]$$
 where the single '1' indicates the presence of the state.
 x??
 

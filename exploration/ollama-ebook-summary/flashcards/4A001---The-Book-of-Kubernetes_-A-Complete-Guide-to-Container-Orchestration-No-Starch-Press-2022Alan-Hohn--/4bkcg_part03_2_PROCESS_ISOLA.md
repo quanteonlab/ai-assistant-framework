@@ -464,8 +464,8 @@ Background context on how repositories are set up for CRI-O installation using `
 To configure repositories for CRI-O, you need to add files to `/etc/apt/sources.list.d/`. The following commands illustrate the process:
 
 ```sh
-root@host01:~# echo "deb $REPO/$OS/ /" > /etc/apt/sources.list.d/kubic.list
-root@host01:~# echo "deb $REPO:/cri-o:/$VERSION/$OS/ /" \
+root@host01:~# echo "deb $REPO/$ OS/ /" > /etc/apt/sources.list.d/kubic.list
+root@host01:~# echo "deb $REPO:/cri-o:/$ VERSION/$ OS/ /" \
     > /etc/apt/sources.list.d/kubic.cri-o.list
 ```
 These commands add the necessary repository URLs for CRI-O, which are specific to the version and distribution.
@@ -608,7 +608,7 @@ root@host01:~# crictl pull docker.io/library/busybox:latest
 root@host01:~# POD_ID=$(crictl runp pod.yaml)
 
 # Step 3: Create the container
-root@host01:~# CONTAINER_ID=$(crictl create $POD_ID container.yaml pod.yaml)
+root@host01:~# CONTAINER_ID=$(crictl create$ POD_ID container.yaml pod.yaml)
 
 # Step 4: Start the container
 root@host01:~# crictl start $CONTAINER_ID
@@ -643,7 +643,7 @@ CRI-O uses Linux namespaces for process isolation, even when network namespace i
 ??x
 To verify the use of Linux namespaces in a CRI-O container, inspect the running processes and check their PID:
 ```sh
-root@host01:~# PID=$(crictl inspect $CONTAINER_ID | jq '.info.pid')
+root@host01:~# PID=$(crictl inspect$ CONTAINER_ID | jq '.info.pid')
 root@host01:/opt# ps -ef | grep $PID | grep -v grep
 ```
 

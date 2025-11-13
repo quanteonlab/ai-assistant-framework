@@ -159,7 +159,7 @@ The `for` expression with lists allows you to create a list by iterating over an
 Example:
 ```terraform
 output "bios" {
-  value = [for name, role in var.hero_thousand_faces : "${name} is the ${role}"]
+  value = [for name, role in var.hero_thousand_faces : "${name} is the${role}"]
 }
 ```
 This will loop through each element in `var.hero_thousand_faces` (a map where keys are names and values are roles) and generate a string for each pair.
@@ -168,10 +168,10 @@ This will loop through each element in `var.hero_thousand_faces` (a map where ke
 The answer with detailed explanations.
 ```terraform
 output "bios" {
-  value = [for name, role in var.hero_thousand_faces : "${name} is the ${role}"]
+  value = [for name, role in var.hero_thousand_faces : "${name} is the${role}"]
 }
 ```
-In this example, `var.hero_thousand_faces` is a map where keys are names and values are roles. The `for` expression iterates over each key-value pair (name, role), and for each iteration, it generates a string in the format `${name} is the ${role}`.
+In this example, `var.hero_thousand_faces` is a map where keys are names and values are roles. The `for` expression iterates over each key-value pair (name, role), and for each iteration, it generates a string in the format `${name} is the${role}`.
 
 The resulting list will be:
 ```plaintext
@@ -280,7 +280,7 @@ The `for` string directive can also accept an index along with each item in a co
 Example:
 ```terraform
 output "for_directive_index" {
-  value = "%{ for i, name in var.names }(${i}) ${name}, %{ endfor }"
+  value = "%{ for i, name in var.names }(${i})${name}, %{ endfor }"
 }
 ```
 This will loop over each element (`name`) and its index (`i`), appending the index in parentheses followed by a space and the name.
@@ -289,10 +289,10 @@ This will loop over each element (`name`) and its index (`i`), appending the ind
 The answer with detailed explanations.
 ```terraform
 output "for_directive_index" {
-  value = "%{ for i, name in var.names }(${i}) ${name}, %{ endfor }"
+  value = "%{ for i, name in var.names }(${i})${name}, %{ endfor }"
 }
 ```
-In this example, the `for` string directive is used to loop over each element (`name`) and its index (`i`). For each iteration, it appends `(${i}) ${name}` followed by a comma.
+In this example, the `for` string directive is used to loop over each element (`name`) and its index (`i`). For each iteration, it appends `(${i})${name}` followed by a comma.
 
 The resulting output will be:
 ```plaintext

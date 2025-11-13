@@ -192,7 +192,7 @@ Background context: In the given architecture, a dataset is divided among worker
 
 :p How does the master thread divide the work in this parallel processing setup?
 ??x
-The master thread divides the entire dataset into roughly equal-sized batches (m batches) and assigns each batch to a worker thread. The number of batches \( m \) is typically determined by the available cores, although it can also be adjusted to leave some cores free for other tasks.
+The master thread divides the entire dataset into roughly equal-sized batches (m batches) and assigns each batch to a worker thread. The number of batches $m$ is typically determined by the available cores, although it can also be adjusted to leave some cores free for other tasks.
 ```java
 int N = totalNumberOfDataItems; // Total number of data items in the dataset
 int m = numberOfAvailableCores; // Number of available worker threads

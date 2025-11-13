@@ -8,17 +8,17 @@
 Background context: We are dealing with solving the heat equation for a bar of aluminum, where the goal is to find the temperature distribution over time. The stability condition ensures that our numerical solution remains accurate.
 
 The difference equation used is:
-\[ \xi_{j+1} e^{ikm\Delta x} = \xi_j e^{ikm\Delta x} + \eta [\xi_j e^{ik(m+1)\Delta x} + \xi_j e^{ik(m-1)\Delta x} - 2\xi_j e^{ikm\Delta x}] \]
+$$\xi_{j+1} e^{ikm\Delta x} = \xi_j e^{ikm\Delta x} + \eta [\xi_j e^{ik(m+1)\Delta x} + \xi_j e^{ik(m-1)\Delta x} - 2\xi_j e^{ikm\Delta x}]$$
 
 After canceling common factors, we derive:
-\[ \xi(k) = 1 + 2\eta [cos(k\Delta x) - 1] \]
+$$\xi(k) = 1 + 2\eta [cos(k\Delta x) - 1]$$
 
 For stability, the condition is:
-\[ \eta = \frac{K\Delta t}{C\rho \Delta x^2} < \frac{1}{2} \]
+$$\eta = \frac{K\Delta t}{C\rho \Delta x^2} < \frac{1}{2}$$
 
 :p What does the stability condition tell us about the time and space steps in solving the heat equation?
 ??x
-The stability condition tells us that reducing the time step (\(\Delta t\)) will always improve stability, as expected. However, making the spatial step (\(\Delta x\)) smaller without a corresponding quadratic increase in \(\Delta t\) will worsen the stability.
+The stability condition tells us that reducing the time step ($\Delta t $) will always improve stability, as expected. However, making the spatial step ($\Delta x $) smaller without a corresponding quadratic increase in $\Delta t$ will worsen the stability.
 
 Code example:
 ```java
@@ -37,10 +37,7 @@ x??
 Background context: We need to implement a numerical solver for the heat equation in an aluminum bar, ensuring that boundary and initial conditions are met. The implementation involves setting up a 2D array to store temperature data over time.
 
 We initialize temperatures as follows:
-- All points except the ends at \(100^\circ C\)
-- Ends set to \(0^\circ C\) at \(t = 0\)
-
-:p How do you set initial and boundary conditions for an aluminum bar of length 1 meter?
+- All points except the ends at $100^\circ C $- Ends set to $0^\circ C $ at$t = 0$:p How do you set initial and boundary conditions for an aluminum bar of length 1 meter?
 ??x
 To set the initial and boundary conditions, we initialize a 2D array `T[101,2]` where:
 - The first index represents spatial division (100 points in space).
@@ -62,11 +59,11 @@ x??
 ---
 
 #### Stability Test with Newton’s Cooling Law
-Background context: The stability condition can be tested by verifying that the temperature distribution does not diverge if \(\eta > \frac{1}{4}\). This ensures that the numerical solution remains stable under different conditions.
+Background context: The stability condition can be tested by verifying that the temperature distribution does not diverge if $\eta > \frac{1}{4}$. This ensures that the numerical solution remains stable under different conditions.
 
 :p How do you verify the stability condition for a heat equation solver?
 ??x
-To verify the stability condition, observe how the temperature distribution behaves when \(\eta > \frac{1}{4}\):
+To verify the stability condition, observe how the temperature distribution behaves when $\eta > \frac{1}{4}$:
 ```java
 // Pseudocode to test stability
 if (eta > 0.25) {
@@ -83,12 +80,10 @@ x??
 Background context: The Crank-Nicolson method is an implicit scheme that uses both current and future time step values. This ensures better stability compared to explicit methods.
 
 The heat difference equation in the Crank-Nicolson form:
-\[ T_{i,j+1} - T_{i,j} = \frac{\eta}{2} [T_{i-1,j+1} - 2T_{i,j+1} + T_{i+1,j+1} + T_{i-1,j} - 2T_{i,j} + T_{i+1,j}] \]
+$$T_{i,j+1} - T_{i,j} = \frac{\eta}{2} [T_{i-1,j+1} - 2T_{i,j+1} + T_{i+1,j+1} + T_{i-1,j} - 2T_{i,j} + T_{i+1,j}]$$
 
 Rearranging to form a linear system:
-\[ (2\eta + 2)T_{i,j+1} - T_{i-1,j+1} - T_{i+1,j+1} = T_{i-1,j} + (2\eta - 2)T_{i,j} + T_{i+1,j} \]
-
-:p How do you set up the matrix equation for solving temperatures in the Crank-Nicolson method?
+$$(2\eta + 2)T_{i,j+1} - T_{i-1,j+1} - T_{i+1,j+1} = T_{i-1,j} + (2\eta - 2)T_{i,j} + T_{i+1,j}$$:p How do you set up the matrix equation for solving temperatures in the Crank-Nicolson method?
 ??x
 To set up the matrix equation, we rearrange terms to form a system of linear equations:
 ```java
@@ -188,9 +183,11 @@ The Crank-Nicolson method is a finite difference technique used to solve partial
 The Crank-Nicolson method is a time-stepping method that uses an average of the forward (explicit) and backward (implicit) Euler methods to approximate solutions to differential equations. It achieves higher accuracy than both explicit and implicit methods by incorporating information from future and past time steps.
 
 Relevant formula:
-\[ T^{n+1}_i = \frac{1}{2} \left( T^n_i + T^{n+1}_i \right) - \frac{\Delta t \cdot k}{2 \cdot (h^2)} \left( T^n_{i-1} - 2T^n_i + T^n_{i+1} \right) \]
+$$
 
-In this formula, \( T_i \) represents the temperature at position \( i \), \( n \) is the time step index, and \( k = \frac{\Delta t \cdot C \cdot \rho}{h^2} \).
+T^{n+1}_i = \frac{1}{2} \left( T^n_i + T^{n+1}_i \right) - \frac{\Delta t \cdot k}{2 \cdot (h^2)} \left( T^n_{i-1} - 2T^n_i + T^n_{i+1} \right)$$
+
+In this formula,$T_i $ represents the temperature at position$i $,$ n $ is the time step index, and $ k = \frac{\Delta t \cdot C \cdot \rho}{h^2}$.
 
 :p How does the Crank-Nicolson method work?
 ??x
@@ -307,9 +304,9 @@ Stability of the solution is crucial when solving partial differential equations
 To check the stability, one must ensure that the Courant-Friedrichs-Lewy (CFL) condition is satisfied. For the heat equation using the Crank-Nicolson method, this means ensuring that the time step `Dt` and space step `Dx` are chosen such that they do not violate the stability criterion.
 
 Relevant formula:
-\[ \Delta t \leq \frac{h^2}{2k} \]
+$$\Delta t \leq \frac{h^2}{2k}$$
 
-Where \( k = \frac{\Delta t \cdot C \cdot \rho}{h^2} \).
+Where $k = \frac{\Delta t \cdot C \cdot \rho}{h^2}$.
 
 :p What is the significance of the time step `Dt` and space step `Dx` in stability?
 ??x
@@ -358,64 +355,45 @@ x??
 In this section, we explore how waves propagate on a string tied down at both ends. We start by deriving the wave equation for such a system and then solve it using initial and boundary conditions.
 
 The basic assumptions are:
-- The string has a constant density \(\rho\) per unit length.
+- The string has a constant density $\rho$ per unit length.
 - No frictional forces act on the string.
-- The tension \(T\) is high enough to neglect any sagging due to gravity.
-- Displacement from its equilibrium position, \(y(x,t)\), is only in the vertical direction.
+- The tension $T$ is high enough to neglect any sagging due to gravity.
+- Displacement from its equilibrium position,$y(x,t)$, is only in the vertical direction.
 
 The wave equation for small displacements can be derived by considering an infinitesimal section of the string and applying Newton's second law. This leads us to:
 
-\[
-\sum F_y = \rho \Delta x \frac{\partial^2 y}{\partial t^2}
-\]
+$$\sum F_y = \rho \Delta x \frac{\partial^2 y}{\partial t^2}$$
 
 Considering the difference in tension forces at either end of this differential element, we get:
+$$
 
-\[
-T \sin \theta(x + \Delta x) - T \sin \theta(x) \approx T \frac{\partial y}{\partial x} \bigg|_{x+\Delta x} - T \frac{\partial y}{\partial x} \bigg|_x
-\]
+T \sin \theta(x + \Delta x) - T \sin \theta(x) \approx T \frac{\partial y}{\partial x} \bigg|_{x+\Delta x} - T \frac{\partial y}{\partial x} \bigg|_x$$
 
 For small angles, we can approximate:
+$$
 
-\[
-T \left( \frac{\partial^2 y}{\partial x^2} \right)
-\]
+T \left( \frac{\partial^2 y}{\partial x^2} \right)$$
 
 Thus, the wave equation simplifies to:
-
-\[
-\frac{\partial^2 y(x,t)}{\partial x^2} = \frac{1}{c^2} \frac{\partial^2 y(x,t)}{\partial t^2}, \quad c = \sqrt{\frac{T}{\rho}}
-\]
-
-:p What is the wave equation for a vibrating string, and what does \(c\) represent?
+$$\frac{\partial^2 y(x,t)}{\partial x^2} = \frac{1}{c^2} \frac{\partial^2 y(x,t)}{\partial t^2}, \quad c = \sqrt{\frac{T}{\rho}}$$:p What is the wave equation for a vibrating string, and what does $ c$ represent?
 ??x
 The wave equation for a vibrating string is:
+$$\frac{\partial^2 y(x,t)}{\partial x^2} = \frac{1}{c^2} \frac{\partial^2 y(x,t)}{\partial t^2}, \quad c = \sqrt{\frac{T}{\rho}}$$
 
-\[
-\frac{\partial^2 y(x,t)}{\partial x^2} = \frac{1}{c^2} \frac{\partial^2 y(x,t)}{\partial t^2}, \quad c = \sqrt{\frac{T}{\rho}}
-\]
+Here,$c $ is the wave velocity along the string, which depends on the tension$T $ and density$\rho$. It represents how fast a disturbance travels along the string. The initial conditions for this problem are that the string is plucked gently at one point and released, forming a triangular shape:
 
-Here, \(c\) is the wave velocity along the string, which depends on the tension \(T\) and density \(\rho\). It represents how fast a disturbance travels along the string. The initial conditions for this problem are that the string is plucked gently at one point and released, forming a triangular shape:
-
-\[
-y(x,t=0) = 
+$$y(x,t=0) = 
 \begin{cases} 
 1.25 \frac{x}{L}, & x \leq 0.8L \\ 
 (5 - 5 \frac{x}{L}), & x > 0.8L
-\end{cases}
-\]
+\end{cases}$$
 
-And the velocity is zero at \(t=0\):
+And the velocity is zero at $t=0$:
 
-\[
-\frac{\partial y(x,t)}{\partial t} (x, t = 0) = 0.
-\]
+$$\frac{\partial y(x,t)}{\partial t} (x, t = 0) = 0.$$
 
 The boundary conditions are that both ends of the string are tied down:
-
-\[
-y(0,t) \equiv 0, \quad y(L,t) \equiv 0.
-\]
+$$y(0,t) \equiv 0, \quad y(L,t) \equiv 0.$$
 
 The solution to this PDE can be found using normal-mode expansion.
 
@@ -425,66 +403,37 @@ x??
 
 #### Solution via Normal-Mode Expansion
 To solve the wave equation for a vibrating string with fixed ends, we use separation of variables. We assume:
-
-\[
-y(x,t) = X(x)T(t).
-\]
+$$y(x,t) = X(x)T(t).$$
 
 Substituting into the wave equation and separating the variables leads to two ordinary differential equations (ODEs):
-
-\[
-\frac{d^2 T}{dt^2} + \omega^2 T = 0, \quad \frac{d^2 X}{dx^2} + k^2 X = 0,
-\]
-
-with \(k = \omega c\).
+$$\frac{d^2 T}{dt^2} + \omega^2 T = 0, \quad \frac{d^2 X}{dx^2} + k^2 X = 0,$$with $ k = \omega c$.
 
 The boundary conditions are:
 
-\[
-X(0,t) = X(L,t) = 0.
-\]
+$$X(0,t) = X(L,t) = 0.$$
 
 This results in the eigenfunctions and eigenvalues:
+$$
 
-\[
-X_n(x) = A_n \sin(k_n x), \quad k_n = \frac{n\pi}{L}, \quad n=1,2,\ldots
-\]
+X_n(x) = A_n \sin(k_n x), \quad k_n = \frac{n\pi}{L}, \quad n=1,2,\ldots$$
 
 The time part is given by:
+$$
 
-\[
-T_n(t) = C_n \cos(\omega_n t) + D_n \sin(\omega_n t),
-\]
+T_n(t) = C_n \cos(\omega_n t) + D_n \sin(\omega_n t),$$with$$\omega_n = c k_n = \frac{n \pi c}{L}, \quad n=1,2,\ldots$$
 
-with 
+The initial condition of zero velocity suggests $C_n = 0$. Thus, the normal mode solution is:
 
-\[
-\omega_n = c k_n = \frac{n \pi c}{L}, \quad n=1,2,\ldots
-\]
-
-The initial condition of zero velocity suggests \(C_n = 0\). Thus, the normal mode solution is:
-
-\[
-y_n(x,t) = A_n \sin(k_n x) \cos(\omega_n t).
-\]
+$$y_n(x,t) = A_n \sin(k_n x) \cos(\omega_n t).$$
 
 Using the initial displacement and applying orthogonality, we can determine the Fourier coefficients.
 
 :p What are the normal modes for a vibrating string with fixed ends?
 ??x
 The normal modes for a vibrating string with fixed ends are:
+$$y_n(x,t) = A_n \sin(k_n x) \cos(\omega_n t),$$where$$k_n = \frac{n\pi}{L}, \quad \omega_n = \frac{n\pi c}{L}.$$
 
-\[
-y_n(x,t) = A_n \sin(k_n x) \cos(\omega_n t),
-\]
-
-where 
-
-\[
-k_n = \frac{n\pi}{L}, \quad \omega_n = \frac{n\pi c}{L}.
-\]
-
-Here, \(n=1,2,\ldots\) represents the mode number. The coefficients \(A_n\) can be determined by considering the initial displacement condition.
+Here,$n=1,2,\ldots $ represents the mode number. The coefficients$ A_n$ can be determined by considering the initial displacement condition.
 
 x??
 
@@ -492,32 +441,15 @@ x??
 
 #### Time-Stepping Algorithm for Wave Equation
 We use a time-stepping algorithm to solve the wave equation numerically. For simplicity, we consider discrete values of space and time:
+$$x = i \Delta x, \quad t = j \Delta t.$$
 
-\[
-x = i \Delta x, \quad t = j \Delta t.
-\]
-
-The solution \(y(x,t)\) is approximated at lattice sites in the grid.
+The solution $y(x,t)$ is approximated at lattice sites in the grid.
 
 Using central differences for discretization, we get:
-
-\[
-\frac{\partial^2 y}{\partial t^2} \approx \frac{y_{i,j+1} + y_{i,j-1} - 2y_{i,j}}{(\Delta t)^2},
-\]
-
-and
-
-\[
-\frac{\partial^2 y}{\partial x^2} \approx \frac{y_{i+1,j} + y_{i-1,j} - 2y_{i,j}}{(\Delta x)^2}.
-\]
+$$\frac{\partial^2 y}{\partial t^2} \approx \frac{y_{i,j+1} + y_{i,j-1} - 2y_{i,j}}{(\Delta t)^2},$$and$$\frac{\partial^2 y}{\partial x^2} \approx \frac{y_{i+1,j} + y_{i-1,j} - 2y_{i,j}}{(\Delta x)^2}.$$
 
 Substituting into the wave equation, we get:
-
-\[
-y_{i,j+1} = 2y_{i,j} - y_{i,j-1} + \left( \frac{c^2}{c'^2} \right) [y_{i+1,j} + y_{i-1,j} - 2y_{i,j}],
-\]
-
-where \(c' = \Delta x / \Delta t\).
+$$y_{i,j+1} = 2y_{i,j} - y_{i,j-1} + \left( \frac{c^2}{c'^2} \right) [y_{i+1,j} + y_{i-1,j} - 2y_{i,j}],$$where $ c' = \Delta x / \Delta t$.
 
 The algorithm propagates the wave from past to future times.
 
@@ -525,11 +457,7 @@ The algorithm propagates the wave from past to future times.
 ??x
 The difference equation for the time-stepping method is:
 
-\[
-y_{i,j+1} = 2y_{i,j} - y_{i,j-1} + \left( \frac{c^2}{c'^2} \right) [y_{i+1,j} + y_{i-1,j} - 2y_{i,j}],
-\]
-
-where \(c' = \Delta x / \Delta t\).
+$$y_{i,j+1} = 2y_{i,j} - y_{i,j-1} + \left( \frac{c^2}{c'^2} \right) [y_{i+1,j} + y_{i-1,j} - 2y_{i,j}],$$where $ c' = \Delta x / \Delta t$.
 
 This equation allows us to predict the future solution from the present and past solutions.
 
@@ -537,7 +465,7 @@ x??
 
 --- 
 #### Stability of Time-Stepping Algorithm
-The stability of the time-stepping algorithm is crucial. The parameter \(c'\) determines the size relative to the wave speed \(c\) which affects the stability of the method.
+The stability of the time-stepping algorithm is crucial. The parameter $c'$ determines the size relative to the wave speed $c$ which affects the stability of the method.
 
 If we represent this in code, it might look like:
 
@@ -552,25 +480,15 @@ public class WaveEquationSolver {
 
 The logic here is to update the solution at each time step based on the past and nearby positions.
 
-:p How does the stability of the algorithm depend on \(c'\)?
+:p How does the stability of the algorithm depend on $c'$?
 ??x
-The stability of the time-stepping algorithm depends on the parameter \(c'\), which is defined as:
+The stability of the time-stepping algorithm depends on the parameter $c'$, which is defined as:
 
-\[
-c' = \frac{\Delta x}{\Delta t}
-\]
+$$c' = \frac{\Delta x}{\Delta t}$$
 
-For the algorithm to be stable, \(c'\) must be chosen such that it does not exceed a critical value. This critical value depends on the wave speed \(c\) and the numerical parameters \(\Delta x\) and \(\Delta t\). Specifically, for stability, we need:
+For the algorithm to be stable,$c'$ must be chosen such that it does not exceed a critical value. This critical value depends on the wave speed $ c $ and the numerical parameters $\Delta x$ and $\Delta t$. Specifically, for stability, we need:
 
-\[
-\frac{c^2}{c'^2} < 1
-\]
-
-or equivalently,
-
-\[
-\left( \frac{\Delta t}{\Delta x} \right)^2 > \frac{c^2}{1}
-\]
+$$\frac{c^2}{c'^2} < 1$$or equivalently,$$\left( \frac{\Delta t}{\Delta x} \right)^2 > \frac{c^2}{1}$$
 
 This ensures that the numerical method does not introduce instability into the solution.
 
@@ -578,46 +496,33 @@ x??
 
 --- 
 #### Initial Conditions and Boundary Conditions Application
-The initial conditions for the problem specify the shape of the string at \(t = 0\):
+The initial conditions for the problem specify the shape of the string at $t = 0$:
 
-\[
-y(x, t=0) = \begin{cases} 
+$$y(x, t=0) = \begin{cases} 
 1.25 \frac{x}{L}, & x \leq 0.8L \\ 
 (5 - 5 \frac{x}{L}), & x > 0.8L
-\end{cases}
-\]
+\end{cases}$$
 
-And the velocity is zero at \(t=0\):
+And the velocity is zero at $t=0$:
 
-\[
-\frac{\partial y(x, t)}{\partial t} (x, t = 0) = 0.
-\]
+$$\frac{\partial y(x, t)}{\partial t} (x, t = 0) = 0.$$
 
 The boundary conditions are that both ends of the string are tied down:
-
-\[
-y(0,t) \equiv 0, \quad y(L,t) \equiv 0.
-\]
+$$y(0,t) \equiv 0, \quad y(L,t) \equiv 0.$$
 
 These conditions must be applied when setting up and solving the wave equation.
 
 :p How do initial and boundary conditions affect the solution?
 ??x
 Initial and boundary conditions significantly influence the solution of the wave equation. The initial condition determines the shape of the string at the start, which in this case is a triangular shape:
-
-\[
-y(x, t=0) = 
+$$y(x, t=0) = 
 \begin{cases} 
 1.25 \frac{x}{L}, & x \leq 0.8L \\ 
 (5 - 5 \frac{x}{L}), & x > 0.8L
-\end{cases}
-\]
+\end{cases}$$
 
 The boundary conditions specify that the ends of the string are fixed, meaning they cannot move:
-
-\[
-y(0,t) = y(L,t) = 0.
-\]
+$$y(0,t) = y(L,t) = 0.$$
 
 These conditions ensure that the solution remains valid and physically meaningful throughout the simulation.
 
@@ -626,20 +531,14 @@ x??
 --- 
 #### Discretization in Time
 To discretize the wave equation in time, we use a central difference approximation for the second-order derivative:
-
-\[
-\frac{\partial^2 y}{\partial t^2} \approx \frac{y_{i,j+1} + y_{i,j-1} - 2y_{i,j}}{(\Delta t)^2}.
-\]
+$$\frac{\partial^2 y}{\partial t^2} \approx \frac{y_{i,j+1} + y_{i,j-1} - 2y_{i,j}}{(\Delta t)^2}.$$
 
 This leads to the difference equation for each time step.
 
 :p What is the central difference approximation used for in this context?
 ??x
-The central difference approximation is used to discretize the second-order time derivative \(\frac{\partial^2 y}{\partial t^2}\) in the wave equation. Specifically, it approximates:
-
-\[
-\frac{\partial^2 y}{\partial t^2} \approx \frac{y_{i,j+1} + y_{i,j-1} - 2y_{i,j}}{(\Delta t)^2}.
-\]
+The central difference approximation is used to discretize the second-order time derivative $\frac{\partial^2 y}{\partial t^2}$ in the wave equation. Specifically, it approximates:
+$$\frac{\partial^2 y}{\partial t^2} \approx \frac{y_{i,j+1} + y_{i,j-1} - 2y_{i,j}}{(\Delta t)^2}.$$
 
 This allows us to update the solution at each time step using values from previous steps. The approximation helps in converting the continuous wave equation into a discrete form that can be solved numerically.
 
@@ -648,48 +547,32 @@ x??
 --- 
 #### Stability Condition
 The stability condition for the numerical method is given by:
+$$\left( \frac{\Delta t}{\Delta x} \right)^2 < \frac{c^2}{1}.$$
 
-\[
-\left( \frac{\Delta t}{\Delta x} \right)^2 < \frac{c^2}{1}.
-\]
-
-This ensures that the time step \(\Delta t\) and space step \(\Delta x\) are chosen appropriately to avoid instability in the solution.
+This ensures that the time step $\Delta t $ and space step$\Delta x$ are chosen appropriately to avoid instability in the solution.
 
 :p What is the stability condition for the numerical method?
 ??x
 The stability condition for the numerical method used to solve the wave equation is:
+$$\left( \frac{\Delta t}{\Delta x} \right)^2 < \frac{c^2}{1}.$$
 
-\[
-\left( \frac{\Delta t}{\Delta x} \right)^2 < \frac{c^2}{1}.
-\]
-
-This ensures that the time step \(\Delta t\) and space step \(\Delta x\) are chosen such that the numerical solution remains stable. If this condition is not met, the solution can become unstable or even diverge.
+This ensures that the time step $\Delta t $ and space step$\Delta x$ are chosen such that the numerical solution remains stable. If this condition is not met, the solution can become unstable or even diverge.
 
 x??
 
 --- 
 #### Time-Stepping Algorithm Implementation
 The time-stepping algorithm propagates the wave from past to future times using:
-
-\[
-y_{i,j+1} = 2y_{i,j} - y_{i,j-1} + \left( \frac{c^2}{c'^2} \right) [y_{i+1,j} + y_{i-1,j} - 2y_{i,j}],
-\]
-
-where \(c' = \Delta x / \Delta t\).
+$$y_{i,j+1} = 2y_{i,j} - y_{i,j-1} + \left( \frac{c^2}{c'^2} \right) [y_{i+1,j} + y_{i-1,j} - 2y_{i,j}],$$where $ c' = \Delta x / \Delta t$.
 
 :p What is the logic behind the time-stepping algorithm?
 ??x
 The logic behind the time-stepping algorithm is to update the solution at each grid point in a way that reflects the wave equation. Specifically:
 
 1. We start with the initial condition and boundary conditions.
-2. For each time step \(j+1\), we use the values from the current time step \(j\) and the previous time step \(j-1\).
-3. The update rule for the solution at a grid point \((i, j+1)\) is:
-
-\[
-y_{i,j+1} = 2y_{i,j} - y_{i,j-1} + \left( \frac{c^2}{c'^2} \right) [y_{i+1,j} + y_{i-1,j} - 2y_{i,j}],
-\]
-
-where \(c' = \Delta x / \Delta t\).
+2. For each time step $j+1 $, we use the values from the current time step $ j $and the previous time step$ j-1$.
+3. The update rule for the solution at a grid point $(i, j+1)$ is:
+$$y_{i,j+1} = 2y_{i,j} - y_{i,j-1} + \left( \frac{c^2}{c'^2} \right) [y_{i+1,j} + y_{i-1,j} - 2y_{i,j}],$$where $ c' = \Delta x / \Delta t$.
 
 This formula combines the current and past values, as well as nearby spatial positions, to predict the future state of the wave.
 
@@ -711,31 +594,14 @@ x??
 #### Summary of Normal Modes
 The normal modes for a string with fixed ends are:
 
-\[
-y_n(x,t) = A_n \sin(k_n x) \cos(\omega_n t),
-\]
-
-where
-
-\[
-k_n = \frac{n\pi}{L}, \quad \omega_n = \frac{n\pi c}{L}.
-\]
+$$y_n(x,t) = A_n \sin(k_n x) \cos(\omega_n t),$$where$$k_n = \frac{n\pi}{L}, \quad \omega_n = \frac{n\pi c}{L}.$$
 
 These modes represent the fundamental and higher harmonics of the string's vibration.
 
 :p What are normal modes in the context of a vibrating string?
 ??x
-Normal modes in the context of a vibrating string with fixed ends represent the specific patterns or shapes in which the string vibrates. Each mode corresponds to a particular frequency and shape, where \(n\) is an integer representing the number of half-wavelengths fitting into the length of the string:
-
-\[
-y_n(x,t) = A_n \sin(k_n x) \cos(\omega_n t),
-\]
-
-where
-
-\[
-k_n = \frac{n\pi}{L}, \quad \omega_n = \frac{n\pi c}{L}.
-\]
+Normal modes in the context of a vibrating string with fixed ends represent the specific patterns or shapes in which the string vibrates. Each mode corresponds to a particular frequency and shape, where $n$ is an integer representing the number of half-wavelengths fitting into the length of the string:
+$$y_n(x,t) = A_n \sin(k_n x) \cos(\omega_n t),$$where$$k_n = \frac{n\pi}{L}, \quad \omega_n = \frac{n\pi c}{L}.$$
 
 These modes are eigenfunctions of the wave equation and describe how the string oscillates at specific frequencies.
 
@@ -757,7 +623,7 @@ The final solution obtained from the wave equation solver can be visualized by p
 
 :p How is the final solution typically visualized?
 ??x
-The final solution to the wave equation is typically visualized by plotting the displacement of the string at various points in space for different time steps or continuously over time. This can be done using 2D plots where one axis represents position \(x\) and the other axis represents time \(t\). For each time step, a snapshot of the string's shape is taken and displayed.
+The final solution to the wave equation is typically visualized by plotting the displacement of the string at various points in space for different time steps or continuously over time. This can be done using 2D plots where one axis represents position $x $ and the other axis represents time$t$. For each time step, a snapshot of the string's shape is taken and displayed.
 
 By animating these snapshots, we can see how the wave propagates and evolves over time. This visualization helps in understanding the dynamics of the system and verifying that the numerical method produces accurate results.
 
@@ -830,7 +696,7 @@ Key considerations when solving the wave equation numerically include:
 1. **Initial Conditions**: Properly setting up initial shapes and boundary constraints.
 2. **Discretization Techniques**: Using accurate finite difference approximations to convert the continuous equation into a discrete form.
 3. **Time-Stepping Methods**: Choosing appropriate algorithms to update the solution iteratively while ensuring stability.
-4. **Stability Criteria**: Ensuring that the time step \(\Delta t\) and space step \(\Delta x\) are chosen such that the numerical method remains stable.
+4. **Stability Criteria**: Ensuring that the time step $\Delta t $ and space step$\Delta x$ are chosen such that the numerical method remains stable.
 5. **Efficient Storage**: Saving solutions only at specific intervals to manage computational resources effectively.
 6. **Visualization**: Using plots or animations to understand and validate the behavior of the system.
 
@@ -904,7 +770,7 @@ Key aspects to consider when solving the wave equation numerically include:
 1. **Initial Conditions**: Properly defining the initial state and boundary constraints.
 2. **Discretization Techniques**: Using accurate finite difference approximations to convert continuous equations into discrete forms.
 3. **Time-Stepping Methods**: Choosing appropriate algorithms to update solutions iteratively while ensuring stability.
-4. **Stability Criteria**: Ensuring that time step \(\Delta t\) and space step \(\Delta x\) are chosen appropriately for numerical stability.
+4. **Stability Criteria**: Ensuring that time step $\Delta t $ and space step$\Delta x$ are chosen appropriately for numerical stability.
 5. **Efficient Storage**: Managing computational resources by saving only essential data at specific intervals.
 6. **Visualization**: Using plots or animations to understand the behavior of the system and validate the method.
 
@@ -1528,9 +1394,9 @@ The solution process for a vibrating string involves setting up initial conditio
 Sure! Let's walk through implementing a simple numerical solution for the wave equation in Python using the finite difference method. We'll use the `NumPy` library for array operations and `Matplotlib` for visualization.
 
 The wave equation we will solve is:
-\[ \frac{\partial^2 u}{\partial t^2} = c^2 \frac{\partial^2 u}{\partial x^2} \]
+$$\frac{\partial^2 u}{\partial t^2} = c^2 \frac{\partial^2 u}{\partial x^2}$$
 
-Where \( u(x, t) \) represents the displacement of the string at position \( x \) and time \( t \), and \( c \) is the wave speed.
+Where $u(x, t)$ represents the displacement of the string at position $ x $ and time $ t $, and $ c$ is the wave speed.
 
 Here’s a simple implementation:
 
@@ -1584,21 +1450,21 @@ plt.show()
    - `dt`: Time step size.
 
 2. **Grid Points**:
-   - We create a grid for \( x \) using `np.arange` and calculate the number of timesteps.
+   - We create a grid for $x$ using `np.arange` and calculate the number of timesteps.
 
 3. **Initial Conditions**:
-   - Set initial displacement to a sine wave: \( u(x, 0) = \sin(\pi x) \).
+   - Set initial displacement to a sine wave: $u(x, 0) = \sin(\pi x)$.
 
 4. **Time Stepping Loop**:
    - Use a loop to update the solution at each time step.
-   - Apply boundary conditions (fixed ends): \( u(0, t) = 0 \) and \( u(L, t) = 0 \).
+   - Apply boundary conditions (fixed ends): $u(0, t) = 0 $ and$u(L, t) = 0$.
    - Update the solution using finite differences.
 
 5. **Plotting**:
    - Plot the displacement of the string over time using `matplotlib`.
 
 ### Note:
-- The stability condition for this explicit method is given by the Courant-Friedrichs-Lewy (CFL) condition: \( c \Delta t / \Delta x < 1/2 \). In this example, we have set \( dt = 0.01 \) and \( dx = 0.01 \), which satisfies the CFL condition.
+- The stability condition for this explicit method is given by the Courant-Friedrichs-Lewy (CFL) condition: $c \Delta t / \Delta x < 1/2 $. In this example, we have set $ dt = 0.01 $ and $ dx = 0.01$, which satisfies the CFL condition.
 - For more complex scenarios or higher accuracy, you might want to use implicit methods or adaptive time-stepping.
 
 This code provides a basic implementation of solving the wave equation for a vibrating string using Python. You can further customize it based on your specific requirements! 
@@ -1611,41 +1477,36 @@ The solution process for a vibrating string involves setting up initial conditio
 
 :p Can you explain the Courant-Friedrichs-Lewy (CFL) condition in more detail and how it applies to solving the wave equation numerically?
 ??x
-Certainly! The Courant-Friedrichs-Lewy (CFL) condition is a fundamental criterion for ensuring numerical stability when solving hyperbolic partial differential equations, such as the wave equation, using explicit time-stepping methods. It provides a relationship between the time step size \( \Delta t \), spatial step size \( \Delta x \), and the wave speed \( c \).
+Certainly! The Courant-Friedrichs-Lewy (CFL) condition is a fundamental criterion for ensuring numerical stability when solving hyperbolic partial differential equations, such as the wave equation, using explicit time-stepping methods. It provides a relationship between the time step size $\Delta t $, spatial step size $\Delta x $, and the wave speed $ c$.
 
 ### Definition of the CFL Condition
 
 The CFL condition is given by:
-\[ \frac{c \Delta t}{\Delta x} < 1 \]
+$$\frac{c \Delta t}{\Delta x} < 1$$
 
 Where:
-- \( c \) is the wave speed.
-- \( \Delta t \) is the time step size.
-- \( \Delta x \) is the spatial step size.
+- $c$ is the wave speed.
+- $\Delta t$ is the time step size.
+- $\Delta x$ is the spatial step size.
 
 ### Derivation and Intuition
 
-The CFL condition arises from the finite propagation of information in numerical methods. In a physical system, the wavefront travels at a constant speed \( c \). For explicit time-stepping schemes (where future values are computed based on past values), it's essential that the information can "travel" across one spatial step within one time step.
+The CFL condition arises from the finite propagation of information in numerical methods. In a physical system, the wavefront travels at a constant speed $c$. For explicit time-stepping schemes (where future values are computed based on past values), it's essential that the information can "travel" across one spatial step within one time step.
 
 1. **Wave Speed and Time Step**:
-   - If the wave travels a distance \( c \Delta t \) in one time step, then for stability, this distance should not exceed the grid spacing \( \Delta x \). This ensures that the information from the previous time step has enough time to propagate across only one spatial cell.
+   - If the wave travels a distance $c \Delta t $ in one time step, then for stability, this distance should not exceed the grid spacing$\Delta x$. This ensures that the information from the previous time step has enough time to propagate across only one spatial cell.
 
 2. **Mathematical Derivation**:
    - Consider a simple explicit finite difference method for the wave equation:
-     \[ u(x, t + \Delta t) = 2u(x, t) - u(x, t - \Delta t) + c^2 \left( \frac{\Delta t}{\Delta x} \right)^2 (u(x + \Delta x, t) - 2u(x, t) + u(x - \Delta x, t)) \]
-   - For this method to be stable, the term involving \( \Delta t / \Delta x \) should not dominate the equation. This leads to the condition:
-     \[ \frac{c \Delta t}{\Delta x} < 1 \]
-
-### Application in Numerical Methods
+     $$u(x, t + \Delta t) = 2u(x, t) - u(x, t - \Delta t) + c^2 \left( \frac{\Delta t}{\Delta x} \right)^2 (u(x + \Delta x, t) - 2u(x, t) + u(x - \Delta x, t))$$- For this method to be stable, the term involving $\Delta t / \Delta x$ should not dominate the equation. This leads to the condition:
+$$\frac{c \Delta t}{\Delta x} < 1$$### Application in Numerical Methods
 
 In practice, the CFL condition ensures that numerical solutions do not exhibit unphysical oscillations or blow-ups. Here’s how it applies to solving the wave equation:
 
 1. **Explicit Finite Difference Method**:
-   - For explicit methods (e.g., forward Euler), the time step \( \Delta t \) must be small enough so that the information from one grid point can propagate to its neighboring points without causing instability.
-   - The CFL condition helps in setting an upper bound on \( \Delta t \):
-     \[ \Delta t < \frac{\Delta x}{c} \]
-
-2. **Implicit Methods**:
+   - For explicit methods (e.g., forward Euler), the time step $\Delta t$ must be small enough so that the information from one grid point can propagate to its neighboring points without causing instability.
+   - The CFL condition helps in setting an upper bound on $\Delta t$:
+     $$\Delta t < \frac{\Delta x}{c}$$2. **Implicit Methods**:
    - Implicit methods, such as the Crank-Nicolson method, do not have this strict restriction because they use a combination of past and future values, making them more stable.
    - However, implicit methods generally require solving systems of equations at each time step.
 
@@ -1654,7 +1515,7 @@ In practice, the CFL condition ensures that numerical solutions do not exhibit u
 
 ### Example in Python
 
-In the example provided earlier, the CFL condition is implicitly satisfied by setting \( \Delta t = 0.01 \) and \( \Delta x = 0.01 \):
+In the example provided earlier, the CFL condition is implicitly satisfied by setting $\Delta t = 0.01 $ and$\Delta x = 0.01$:
 
 ```python
 c = 1.0          # Wave speed

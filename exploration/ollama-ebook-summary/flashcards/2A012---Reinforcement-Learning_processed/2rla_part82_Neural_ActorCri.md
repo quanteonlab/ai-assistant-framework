@@ -108,16 +108,14 @@ The TD (Temporal Difference) error is a crucial component that combines predicte
 The TD error is calculated by comparing the current estimate of state values with an updated estimate based on observed rewards. It serves as the reinforcement signal for both the actor and critic networks, driving their learning processes.
 
 Formula: 
-\[
-\delta = R + \gamma V(s') - V(s)
-\]
+$$\delta = R + \gamma V(s') - V(s)$$
 
 Where:
-- \( \delta \) is the TD error
-- \( R \) is the immediate reward
-- \( \gamma \) is the discount factor (usually a value between 0 and 1)
-- \( V(s) \) is the current state-value estimate
-- \( V(s') \) is the new state-value estimate
+- $\delta$ is the TD error
+- $R$ is the immediate reward
+- $\gamma$ is the discount factor (usually a value between 0 and 1)
+- $V(s)$ is the current state-value estimate
+- $V(s')$ is the new state-value estimate
 
 :p How does the TD error influence learning in both actor and critic networks?
 ??x
@@ -138,7 +136,7 @@ The actor-critic algorithm can be implemented using artificial neural networks (
 
 :p What does an implementation of the actor-critic algorithm look like in terms of a neural network?
 ??x
-In the ANNs implementation, the critic consists of a single neuron-like unit \( V \) that outputs state values. The actor network has multiple units (e.g., \( A_i \)) each contributing to a multidimensional action vector.
+In the ANNs implementation, the critic consists of a single neuron-like unit $V $ that outputs state values. The actor network has multiple units (e.g.,$ A_i$) each contributing to a multidimensional action vector.
 
 :p How does the TD error contribute to learning in this ANN setup?
 ??x
@@ -233,11 +231,11 @@ x??
 ---
 
 #### Reward-Related Information Processing
-Background context explaining the concept. Dopamine neurons receive information from various brain areas, generating a vector of reward-related information. The theoretical scalar reward signal \( R_t \) represents the net contribution to dopamine neuron activity across many neurons.
+Background context explaining the concept. Dopamine neurons receive information from various brain areas, generating a vector of reward-related information. The theoretical scalar reward signal $R_t$ represents the net contribution to dopamine neuron activity across many neurons.
 
-:p What is the scalar reward signal \( R_t \)?
+:p What is the scalar reward signal $R_t$?
 ??x
-The scalar reward signal \( R_t \) is the combined effect of all reward-related information contributing to the activity of dopamine neurons, reflecting the overall state of reward in the brain. It results from a pattern of activity distributed across multiple neurons in different areas.
+The scalar reward signal $R_t$ is the combined effect of all reward-related information contributing to the activity of dopamine neurons, reflecting the overall state of reward in the brain. It results from a pattern of activity distributed across multiple neurons in different areas.
 x??
 
 ---
@@ -245,9 +243,9 @@ x??
 #### Actor-Critic Neural Implementation
 Background context explaining the concept. The actor-critic model illustrated in Figure 15.5b is used to understand how dopamine neuron activity influences corticostriatal synapses.
 
-:p How does the theoretical scalar reward signal \( R_t \) affect the synapses of the dorsal and ventral striatum?
+:p How does the theoretical scalar reward signal $R_t$ affect the synapses of the dorsal and ventral striatum?
 ??x
-The theoretical scalar reward signal \( R_t \) affects the synapses in different ways. The actor component works to maximize positive TD errors, while the critic aims to minimize the magnitude of these errors by adjusting the value function parameters.
+The theoretical scalar reward signal $R_t$ affects the synapses in different ways. The actor component works to maximize positive TD errors, while the critic aims to minimize the magnitude of these errors by adjusting the value function parameters.
 
 In more detail:
 - **Actor Component**: Updates action probabilities to reach higher-valued states.
@@ -380,13 +378,13 @@ x??
 #### Actor and Critic Learning Rules Overview
 Actor and critic learning rules are fundamental components of reinforcement learning (RL) algorithms, where the actor learns to choose actions based on state evaluations provided by the critic. The formulas describe how parameters for both the critic and actor are updated.
 
-The critic evaluates states using a linear function approximator \( \hat{v}(s, w) = w^T x(s) \), where \( x(s) \) is the feature vector representation of the state. The actor selects actions based on these evaluations.
+The critic evaluates states using a linear function approximator $\hat{v}(s, w) = w^T x(s)$, where $ x(s)$ is the feature vector representation of the state. The actor selects actions based on these evaluations.
 
-The update rules for the parameters \( w \) (critic) and \( \theta \) (actor) are given by:
-\[ w_t = w_{t-1} + \alpha_w t z_w^t \]
-\[ \theta_t = \theta_{t-1} + \alpha_\theta t r \ln \pi(a|s, \theta) \]
+The update rules for the parameters $w $(critic) and $\theta$ (actor) are given by:
+$$w_t = w_{t-1} + \alpha_w t z_w^t$$
+$$\theta_t = \theta_{t-1} + \alpha_\theta t r \ln \pi(a|s, \theta)$$
 
-Where \( \alpha_w > 0 \) and \( \alpha_\theta > 0 \) are step-size parameters, \( z_w^t \) is the eligibility trace vector for critic updates, and \( t \) is the reinforcement signal.
+Where $\alpha_w > 0 $ and$\alpha_\theta > 0 $ are step-size parameters,$z_w^t $ is the eligibility trace vector for critic updates, and$t$ is the reinforcement signal.
 
 :p What do the actor and critic learning rules aim to accomplish?
 ??x
@@ -396,15 +394,13 @@ x??
 ---
 #### Critic Learning Rule Details
 The critic evaluates states using a linear function approximator:
-\[ \hat{v}(s, w) = w^T x(s) \]
-
-where \( x(s) \) is the feature vector representing state \( s \), and \( w \) are the weight parameters.
+$$\hat{v}(s, w) = w^T x(s)$$where $ x(s)$is the feature vector representing state $ s$, and $ w$ are the weight parameters.
 
 The update rule for the critic is given by:
-\[ z_w^{t+1} = (1 - \delta_w) z_w^t + r \hat{v}(s_t, w_t) \]
-\[ w_{t+1} = w_t + \alpha_w t z_w^t \]
+$$z_w^{t+1} = (1 - \delta_w) z_w^t + r \hat{v}(s_t, w_t)$$
+$$w_{t+1} = w_t + \alpha_w t z_w^t$$
 
-Here, \( \delta_w \in [0, 1) \) is the discount rate parameter for the critic's eligibility trace vector.
+Here,$\delta_w \in [0, 1)$ is the discount rate parameter for the critic's eligibility trace vector.
 
 :p What is the update rule for the critic?
 ??x
@@ -419,9 +415,7 @@ x??
 ---
 #### Actor Learning Rule Details
 The actor selects actions based on the evaluated state values provided by the critic. The update rule for the actor is given by:
-\[ \theta_{t+1} = \theta_t + \alpha_\theta t r \ln \pi(a|s, \theta) \]
-
-where \( \alpha_\theta > 0 \) is a step-size parameter and \( r \ln \pi(a|s, \theta) \) represents the reinforcement signal weighted by the natural logarithm of the action probability.
+$$\theta_{t+1} = \theta_t + \alpha_\theta t r \ln \pi(a|s, \theta)$$where $\alpha_\theta > 0 $ is a step-size parameter and$r \ln \pi(a|s, \theta)$ represents the reinforcement signal weighted by the natural logarithm of the action probability.
 
 :p What is the update rule for the actor?
 ??x
@@ -434,10 +428,8 @@ x??
 
 ---
 #### Eligibility Trace Vector in Critic Learning Rule
-The eligibility trace vector \( z_w^t \) is crucial for determining the critic's weight updates. It tracks recent values of the reinforcement signal and is updated by:
-\[ z_w^{t+1} = (1 - \delta_w) z_w^t + r \hat{v}(s_t, w_t) \]
-
-where \( \delta_w \in [0, 1) \) is a discount rate that controls how recent the values are.
+The eligibility trace vector $z_w^t$ is crucial for determining the critic's weight updates. It tracks recent values of the reinforcement signal and is updated by:
+$$z_w^{t+1} = (1 - \delta_w) z_w^t + r \hat{v}(s_t, w_t)$$where $\delta_w \in [0, 1)$ is a discount rate that controls how recent the values are.
 
 :p What role does the eligibility trace vector play in critic learning?
 ??x
@@ -449,9 +441,9 @@ x??
 Non-contingent eligibility traces allow each synapse's weight to update based solely on presynaptic activity (feature vector components) without considering postsynaptic activity. This is similar to the Temporal Difference (TD) model of classical conditioning.
 
 The non-contingent nature means that:
-\[ r \hat{v}(s_t, w) = x(s_t) \]
+$$r \hat{v}(s_t, w) = x(s_t)$$
 
-Where each component \( x_i(s_t) \) of the feature vector represents presynaptic activity for a synapse, and its eligibility trace accumulates according to this activity level.
+Where each component $x_i(s_t)$ of the feature vector represents presynaptic activity for a synapse, and its eligibility trace accumulates according to this activity level.
 
 :p How do non-contingent eligibility traces function in the critic unit?
 ??x
@@ -462,9 +454,8 @@ x??
 
 #### Neuron Firing and Action Potential
 Neurons emit action potentials, which can be analogized to value 1. The weighted sum of input vectors determines the action probabilities via the exponential softmax distribution for two actions:
-\[
-\pi(1|s,\theta) = \frac{1}{1 + e^{-\theta^T x(s)}}
-\]
+$$\pi(1|s,\theta) = \frac{1}{1 + e^{-\theta^T x(s)}}$$
+
 This logistic function models how the probability of an action is influenced by the inputs.
 
 :p What does value 1 represent in this context?
@@ -474,38 +465,33 @@ x??
 
 #### Actor Unit Weights Update
 The weights of each actor unit are updated based on reinforcement signals. The update rule is given by:
-\[
-\theta \leftarrow \theta + \alpha \delta_t w_{t}
-\]
-where \( \delta_t \) corresponds to the dopamine signal.
+$$\theta \leftarrow \theta + \alpha \delta_t w_{t}$$where $\delta_t$ corresponds to the dopamine signal.
 
 :p How are the weights of an actor unit updated?
 ??x
-The weights of an actor unit are incremented based on the product of the learning rate \( \alpha \), the reinforcement signal \( \delta_t \), and the corresponding weight \( w_t \).
+The weights of an actor unit are incremented based on the product of the learning rate $\alpha $, the reinforcement signal $\delta_t $, and the corresponding weight $ w_t$.
 x??
 
 #### Eligibility Trace Vector for Actor Units
-The eligibility trace vector \( z_\theta^t \) is a running average of the return to the policy gradient:
-\[
-z_\theta^t = \gamma z_\theta^{t-1} + r_{ln\pi(A_t|S_t, \theta)}
-\]
+The eligibility trace vector $z_\theta^t$ is a running average of the return to the policy gradient:
+$$z_\theta^t = \gamma z_\theta^{t-1} + r_{ln\pi(A_t|S_t, \theta)}$$
+
 It accumulates over time and reflects the contribution of actions taken in states.
 
 :p What is an eligibility trace vector for actor units?
 ??x
-An eligibility trace vector \( z_\theta^t \) is a running average that tracks the contributions of actions taken in states to the policy gradient. It helps in allocating credit or blame to the policy parameters based on the actions' impact.
+An eligibility trace vector $z_\theta^t$ is a running average that tracks the contributions of actions taken in states to the policy gradient. It helps in allocating credit or blame to the policy parameters based on the actions' impact.
 x??
 
 #### Contingent Eligibility Trace
 The contingent eligibility trace for actor units accounts for both presynaptic activity and postsynaptic activity:
-\[
-r_{\pi}(A_t|S_t, \theta) = A_t - \pi(A_t|S_t, \theta)x(S_t)
-\]
+$$r_{\pi}(A_t|S_t, \theta) = A_t - \pi(A_t|S_t, \theta)x(S_t)$$
+
 It is positive when the action matches the policy's prediction.
 
 :p What is a contingent eligibility trace?
 ??x
-A contingent eligibility trace accounts for both presynaptic activity (input vectors \( x(S_t) \)) and postsynaptic activity (the action actually taken \( A_t \)). It is used to update synapse efficacies based on how well the actions align with the policy's predictions.
+A contingent eligibility trace accounts for both presynaptic activity (input vectors $x(S_t)$) and postsynaptic activity (the action actually taken $ A_t$). It is used to update synapse efficacies based on how well the actions align with the policy's predictions.
 x??
 
 #### Difference Between Critic and Actor Learning Rules

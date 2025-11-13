@@ -568,7 +568,7 @@ The `vmstat` tool helps in monitoring memory (both physical and virtual), CPU, a
 
 Example command:
 ```bash
-$ vmstat 1 5
+$vmstat 1 5
 ```
 This command runs `vmstat` every second for five iterations to observe changes over time.
 x??
@@ -695,11 +695,12 @@ To test this, you could run similar experiments with `mem` on both types of stor
 Background context: In virtual memory systems, managing main memory effectively is crucial. Main memory can be viewed as a cache for virtual pages, and the goal of picking a replacement policy is to minimize cache misses (the number of times we have to fetch a page from disk) or maximize cache hits.
 
 The formula for average memory access time (AMAT) is:
-\[ AMAT = T_M + (P_{\text{Miss}} \cdot T_D) \]
+$$AMAT = T_M + (P_{\text{Miss}} \cdot T_D)$$
+
 Where:
-- \(T_M\) represents the cost of accessing memory.
-- \(T_D\) is the cost of accessing disk.
-- \(P_{\text{Miss}}\) is the probability of not finding the data in the cache (a miss).
+- $T_M$ represents the cost of accessing memory.
+- $T_D$ is the cost of accessing disk.
+- $P_{\text{Miss}}$ is the probability of not finding the data in the cache (a miss).
 
 The hit rate can be calculated as the number of hits divided by the total number of references.
 
@@ -750,8 +751,7 @@ Background context: The example showed that out of 10 memory references, 9 were 
 :p How is the hit rate calculated from the given sequence?
 ??x
 The hit rate is calculated by dividing the number of hits by the total number of references and then converting it to a percentage. In this case, with 9 out of 10 references being hits:
-\[ \text{Hit Rate} = \left(\frac{\text{Number of Hits}}{\text{Total Number of References}}\right) \times 100 = \left(\frac{9}{10}\right) \times 100 = 90\% \]
-x??
+$$\text{Hit Rate} = \left(\frac{\text{Number of Hits}}{\text{Total Number of References}}\right) \times 100 = \left(\frac{9}{10}\right) \times 100 = 90\%$$x??
 
 ---
 
@@ -760,9 +760,8 @@ Background context explaining how to calculate memory access time (AMAT) by cons
 :p How do you calculate AMAT given a hit rate and costs of accessing memory and disk?
 ??x
 To calculate the average memory access time (AMAT), we use the formula:
-\[ \text{AMAT} = T_M \cdot P_{\text{Hit}} + T_D \cdot P_{\text{Miss}} \]
-where \(T_M\) is the cost of accessing memory, \(T_D\) is the cost of accessing disk, \(P_{\text{Hit}}\) is the hit rate, and \(P_{\text{Miss}}\) is the miss rate. For example, with a 10% miss rate (\(P_{\text{Miss}} = 0.1\)), and costs \(T_M = 100 \text{ nanoseconds}\) and \(T_D = 10 \text{ milliseconds}\), we have:
-\[ \text{AMAT} = 100 \, \text{ns} + 0.1 \cdot 10 \text{ ms} = 100 \, \text{ns} + 1 \text{ ms} = 1.0001 \text{ ms} \approx 1 \text{ millisecond}. \]
+$$\text{AMAT} = T_M \cdot P_{\text{Hit}} + T_D \cdot P_{\text{Miss}}$$where $ T_M $is the cost of accessing memory,$ T_D $is the cost of accessing disk,$ P_{\text{Hit}}$is the hit rate, and $ P_{\text{Miss}}$is the miss rate. For example, with a 10% miss rate ($ P_{\text{Miss}} = 0.1 $), and costs$ T_M = 100 \text{ nanoseconds}$and $ T_D = 10 \text{ milliseconds}$, we have:
+$$\text{AMAT} = 100 \, \text{ns} + 0.1 \cdot 10 \text{ ms} = 100 \, \text{ns} + 1 \text{ ms} = 1.0001 \text{ ms} \approx 1 \text{ millisecond}.$$
 x??
 
 ---
@@ -770,8 +769,9 @@ x??
 Background context explaining how a high hit rate significantly reduces the overall memory access time (AMAT), as demonstrated by comparing two different scenarios.
 :p How does increasing the hit rate affect the average memory access time (AMAT)?
 ??x
-Increasing the hit rate decreases the miss rate, which in turn reduces the contribution of disk access costs to the AMAT. For instance, with a 99.9% hit rate (\(P_{\text{Miss}} = 0.001\)), and using the same costs \(T_M\) and \(T_D\), we calculate:
-\[ \text{AMAT} = 100 \, \text{ns} + 0.001 \cdot 10 \text{ ms} = 100 \, \text{ns} + 0.01 \text{ ms} = 0.0101 \text{ ms} \approx 10.1 \text{ microseconds}. \]
+Increasing the hit rate decreases the miss rate, which in turn reduces the contribution of disk access costs to the AMAT. For instance, with a 99.9% hit rate ($P_{\text{Miss}} = 0.001 $), and using the same costs $ T_M $and$ T_D$, we calculate:
+$$\text{AMAT} = 100 \, \text{ns} + 0.001 \cdot 10 \text{ ms} = 100 \, \text{ns} + 0.01 \text{ ms} = 0.0101 \text{ ms} \approx 10.1 \text{ microseconds}.$$
+
 This shows that even a small miss rate can significantly impact the AMAT.
 x??
 
@@ -852,7 +852,7 @@ Background context explaining how hit rate is calculated and modified for compul
 
 :p How is the hit rate typically calculated?
 ??x
-The hit rate is generally calculated by dividing the number of hits by the total number of accesses (hits + misses). For example, in Figure 22.1, there are 6 hits out of 11 accesses (0, 1, 3, 3, 1, 2), resulting in a hit rate of \( \frac{6}{11} \approx 54.5\% \).
+The hit rate is generally calculated by dividing the number of hits by the total number of accesses (hits + misses). For example, in Figure 22.1, there are 6 hits out of 11 accesses (0, 1, 3, 3, 1, 2), resulting in a hit rate of $\frac{6}{11} \approx 54.5\%$.
 x??
 
 ---
@@ -862,7 +862,7 @@ Background context explaining the adjustment made when excluding compulsory miss
 
 :p How is the adjusted hit rate calculated, ignoring compulsory misses?
 ??x
-The adjusted hit rate excludes the first access to a page that is cold-start (compulsory) and only considers subsequent hits. For example, if we exclude the first miss (0), there are 5 accesses left (1, 3, 1, 2). With 4 out of these being hits, the adjusted hit rate would be \( \frac{4}{5} = 80\% \).
+The adjusted hit rate excludes the first access to a page that is cold-start (compulsory) and only considers subsequent hits. For example, if we exclude the first miss (0), there are 5 accesses left (1, 3, 1, 2). With 4 out of these being hits, the adjusted hit rate would be $\frac{4}{5} = 80\%$.
 x??
 
 ---
@@ -882,7 +882,7 @@ Background context explaining how the hit rate is used to evaluate the performan
 
 :p What was the calculated hit rate for the cache in Figure 22.1?
 ??x
-The initial hit rate calculation for the cache in Figure 22.1, including all misses, results in \( \frac{6}{11} \approx 54.5\% \). Excluding compulsory misses gives a higher adjusted hit rate of \( \frac{4}{5} = 80\% \).
+The initial hit rate calculation for the cache in Figure 22.1, including all misses, results in $\frac{6}{11} \approx 54.5\%$. Excluding compulsory misses gives a higher adjusted hit rate of $\frac{4}{5} = 80\%$.
 x??
 
 ---

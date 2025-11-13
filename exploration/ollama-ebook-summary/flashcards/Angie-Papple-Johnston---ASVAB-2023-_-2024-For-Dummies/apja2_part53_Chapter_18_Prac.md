@@ -307,12 +307,11 @@ Background context explaining that this question involves basic arithmetic opera
 :p If a car is towed 12 miles to the repair shop, and the tow charge is $3.50 per mile, how much does the tow cost?
 ??x
 The tow cost can be calculated by multiplying the number of miles by the rate per mile.
-\[ \text{Tow Cost} = 12 \times 3.50 \]
-\(12 \times 3.50 = 42\)
-So, the tow costs $42.00.
+$$\text{Tow Cost} = 12 \times 3.50$$
+$12 \times 3.50 = 42 $ So, the tow costs$42.00.
 
 ??x
-The answer is \(C\) or \$42.00.
+The answer is $C $ or \$42.00.
 x??
 
 ---
@@ -322,18 +321,19 @@ Background context explaining that this question involves solving a linear equat
 
 :p The sum of two numbers is 70. One number is 8 more than the other. What’s the smaller number?
 ??x
-Let's denote the smaller number by \(x\). Then the larger number would be \(x + 8\).
+Let's denote the smaller number by $x $. Then the larger number would be $ x + 8$.
 The equation based on the problem statement is:
-\[ x + (x + 8) = 70 \]
-Simplifying, we get:
-\[ 2x + 8 = 70 \]
-Subtract 8 from both sides:
-\[ 2x = 62 \]
-Divide by 2:
-\[ x = 31 \]
+$$x + (x + 8) = 70$$
 
-??x
-The smaller number is \(A\) or 31.
+Simplifying, we get:
+$$2x + 8 = 70$$
+
+Subtract 8 from both sides:
+$$2x = 62$$
+
+Divide by 2:
+$$x = 31$$??x
+The smaller number is $A$ or 31.
 x??
 
 ---
@@ -341,24 +341,25 @@ x??
 #### Units of Measurement and Conversion
 Background context explaining that this question involves converting between units, specifically square feet to square yards for carpeting.
 
-:p A carpet stain protector costs $0.65 per square yard to apply. How much will it cost to apply the protector to a 16-foot-x-18-foot carpet?
+:p A carpet stain protector costs$0.65 per square yard to apply. How much will it cost to apply the protector to a 16-foot-x-18-foot carpet?
 ??x
 First, we need to convert the area from square feet to square yards.
-\[ \text{Area in square yards} = \frac{\text{Area in square feet}}{9} \]
+$$\text{Area in square yards} = \frac{\text{Area in square feet}}{9}$$
+
 The area of the carpet is:
-\[ 16 \times 18 = 288 \text{ square feet} \]
+$$16 \times 18 = 288 \text{ square feet}$$
+
 Converting this to square yards:
-\[ \text{Square yards} = \frac{288}{9} = 32 \text{ square yards} \]
-Now, we can find the cost by multiplying the area in square yards by the cost per square yard.
-\[ \text{Cost} = 32 \times 0.65 \]
+$$\text{Square yards} = \frac{288}{9} = 32 \text{ square yards}$$
 
-??x
+Now, we can find the cost by multiplying the area in square yards by the cost per square yard.$$\text{Cost} = 32 \times 0.65$$??x
 The calculation is:
-\[ 32 \times 0.65 = 20.80 \]
-So, the answer is \(C\) or $20.80.
+$$32 \times 0.65 = 20.80$$
+
+So, the answer is $C $ or$20.80.
 
 ??x
-The cost to apply the protector is \(C\) or $20.80.
+The cost to apply the protector is $C $ or$20.80.
 x??
 
 ---
@@ -369,20 +370,18 @@ Background context explaining that this question involves calculating profit bas
 :p A printing plant has a monthly overhead of $6,000. It costs 18 cents to print each card, and the cards sell for 30 cents each. How many cards must the printing plant sell each month in order to make a profit?
 ??x
 To find out how many cards need to be sold to break even, we first calculate the cost per card:
-\[ \text{Cost per card} = \$0.18 \]
-The selling price per card is $0.30.
+$$ \text{Cost per card} = \$0.18 $$The selling price per card is$0.30.
 
 To break even, the total revenue should equal the total cost.
-Let \(x\) be the number of cards that need to be sold. The equation for breaking even is:
-\[ 0.30x - 6000 = 0.18x \]
-Solving for \(x\):
-\[ 0.30x - 0.18x = 6000 \]
-\[ 0.12x = 6000 \]
-\[ x = \frac{6000}{0.12} \]
-\[ x = 50,000 \]
+Let $x$ be the number of cards that need to be sold. The equation for breaking even is:
+$$0.30x - 6000 = 0.18x$$
 
-??x
-The answer is \(B\) or 50,000 cards.
+Solving for $x$:
+$$0.30x - 0.18x = 6000$$
+$$0.12x = 6000$$
+$$x = \frac{6000}{0.12}$$
+$$x = 50,000$$??x
+The answer is $B$ or 50,000 cards.
 x??
 
 ---
@@ -390,21 +389,21 @@ x??
 #### Percentage and Wage Adjustments
 Background context explaining that this question involves calculating a new wage after a percentage increase.
 
-:p Joe received an hourly wage of $8.15. His boss gave him a 7 percent raise. How much does Joe make per hour now?
+:p Joe received an hourly wage of$8.15. His boss gave him a 7 percent raise. How much does Joe make per hour now?
 ??x
 To find the new wage, we need to calculate 7% of the original wage and add it to the original wage.
-\[ \text{Raise} = 8.15 \times 0.07 \]
-\[ \text{New Wage} = 8.15 + (8.15 \times 0.07) \]
-
-??x
+$$\text{Raise} = 8.15 \times 0.07$$
+$$\text{New Wage} = 8.15 + (8.15 \times 0.07)$$??x
 The calculation is:
-\[ 8.15 \times 0.07 = 0.5705 \]
+$$8.15 \times 0.07 = 0.5705$$
+
 Adding this to the original wage:
-\[ 8.15 + 0.5705 = 8.7205 \]
-Rounding to two decimal places, we get $8.72.
+$$8.15 + 0.5705 = 8.7205$$
+
+Rounding to two decimal places, we get$8.72.
 
 ??x
-Joe's new hourly wage is \(C\) or $8.72.
+Joe's new hourly wage is $C $ or$8.72.
 x??
 
 ---
@@ -417,17 +416,18 @@ Background context explaining that this question involves using the formula for 
 To find out how far apart the two trains are after 3 hours, we need to calculate the distance each train travels in that time and then add those distances together.
 
 For the train headed for Wichita:
-\[ \text{Distance} = 55 \times 3 = 165 \text{ miles} \]
+$$\text{Distance} = 55 \times 3 = 165 \text{ miles}$$
 
 For the train headed for Des Moines:
-\[ \text{Distance} = 70 \times 3 = 210 \text{ miles} \]
+$$\text{Distance} = 70 \times 3 = 210 \text{ miles}$$
 
 Adding these distances gives us the total distance between them.
 
 ??x
 The total distance is:
-\[ 165 + 210 = 375 \text{ miles} \]
-So, the answer is \(D\) or 375 miles.
+$$165 + 210 = 375 \text{ miles}$$
+
+So, the answer is $D$ or 375 miles.
 x??
 
 ---
@@ -435,20 +435,17 @@ x??
 #### Time and Work Problems
 Background context explaining that this question involves calculating time spent traveling a certain distance at a given speed.
 
-:p A recruiter travels 1,100 miles during a 40-hour workweek. If they spend \(\frac{2}{5}\) of their time traveling, how many hours do they spend traveling?
+:p A recruiter travels 1,100 miles during a 40-hour workweek. If they spend $\frac{2}{5}$ of their time traveling, how many hours do they spend traveling?
 ??x
-To find out the number of hours spent traveling, we need to calculate \(\frac{2}{5}\) of the total working hours.
-
-\[ \text{Total working hours} = 40 \]
-\[ \text{Hours spent traveling} = \frac{2}{5} \times 40 \]
-
-??x
+To find out the number of hours spent traveling, we need to calculate $\frac{2}{5}$ of the total working hours.$$\text{Total working hours} = 40$$
+$$\text{Hours spent traveling} = \frac{2}{5} \times 40$$??x
 The calculation is:
-\[ \frac{2}{5} \times 40 = 16 \]
-So, the recruiter spends \(16\) hours traveling.
+$$\frac{2}{5} \times 40 = 16$$
+
+So, the recruiter spends $16$ hours traveling.
 
 ??x
-The answer is \(A\) or 16 hours.
+The answer is $A$ or 16 hours.
 x??
 
 ---
@@ -456,21 +453,20 @@ x??
 #### Unit Conversion and Cost Calculation
 Background context explaining that this question involves converting units and performing cost calculations for gasoline usage.
 
-:p Your car uses gasoline at the rate of 21 miles per gallon. If gasoline costs $2.82 per gallon, and you drive for 7 hours at a speed of 48 miles per hour, how much will you pay for gasoline for the trip?
+:p Your car uses gasoline at the rate of 21 miles per gallon. If gasoline costs$2.82 per gallon, and you drive for 7 hours at a speed of 48 miles per hour, how much will you pay for gasoline for the trip?
 ??x
 First, we need to determine the total distance driven:
-\[ \text{Distance} = \text{Speed} \times \text{Time} = 48 \times 7 = 336 \text{ miles} \]
+$$\text{Distance} = \text{Speed} \times \text{Time} = 48 \times 7 = 336 \text{ miles}$$
 
 Next, we calculate how many gallons of gasoline are used. Using the rate of 21 miles per gallon:
-\[ \text{Gallons used} = \frac{\text{Distance}}{\text{Rate}} = \frac{336}{21} = 16 \text{ gallons} \]
+$$\text{Gallons used} = \frac{\text{Distance}}{\text{Rate}} = \frac{336}{21} = 16 \text{ gallons}$$
 
 Finally, we calculate the cost of gasoline:
-\[ \text{Cost} = \text{Gallons used} \times \text{Price per gallon} = 16 \times 2.82 \]
-
-??x
+$$\text{Cost} = \text{Gallons used} \times \text{Price per gallon} = 16 \times 2.82$$??x
 The calculation is:
-\[ 16 \times 2.82 = 45.12 \]
-So, the answer is \(B\) or $45.12.
+$$16 \times 2.82 = 45.12$$
+
+So, the answer is $B $ or$45.12.
 x??
 
 --- 

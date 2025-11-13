@@ -431,7 +431,7 @@ def loss_fn(pred, target):
     return -torch.mean(pred * target)
 ```
 
-The goal of this setup is for the generator to produce music that maximizes the prediction value \( \text{pred} \).
+The goal of this setup is for the generator to produce music that maximizes the prediction value $\text{pred}$.
 
 x??
 

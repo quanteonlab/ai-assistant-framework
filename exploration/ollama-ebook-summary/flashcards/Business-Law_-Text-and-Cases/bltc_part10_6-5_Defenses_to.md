@@ -74,7 +74,7 @@ If the court concludes that the statute applies only to skiing and not to snow t
 ??x
 Elaine's lawsuit may still proceed successfully if the statute does not apply to snow tubing. However, she could face a defense of comparative negligence. If the jury finds that Elaine was partly at fault for the accident (e.g., crossing over the center line), her damages might be reduced in proportion to her degree of fault.
 
-For example, if the jury determines that Elaine is 20% at fault and the total damages are $10,000, she would only recover $8,000 ($10,000 - 20% of $10,000).
+For example, if the jury determines that Elaine is 20% at fault and the total damages are $10,000, she would only recover $8,000 ($10,000 - 20% of$10,000).
 
 The logic behind this system is to ensure that plaintiffs who contribute to their own injuries do not receive a full recovery. This approach aims to balance fairness and prevent individuals from unreasonably seeking compensation for their own actions.
 x??
@@ -89,18 +89,18 @@ Comparative negligence is a legal principle that reduces the amount of damages a
 ??x
 Elaine's damages could be reduced under the comparative negligence theory. This means that if the jury finds Elaine was partly responsible for the accident, its judgment on the total damages would take into account her share of fault.
 
-For instance, if the jury determines Elaine is 20% at fault and the total damages are $10,000, she would only receive $8,000 ($10,000 - 20% of $10,000).
+For instance, if the jury determines Elaine is 20% at fault and the total damages are $10,000, she would only receive $8,000 ($10,000 - 20% of$10,000).
 
 The formula to calculate reduced damages due to comparative negligence can be expressed as:
 
-\[ \text{Reduced Damages} = \left(1 - \frac{\text{Plaintiff's Fault Percentage}}{100}\right) \times \text{Total Damages} \]
+$$\text{Reduced Damages} = \left(1 - \frac{\text{Plaintiff's Fault Percentage}}{100}\right) \times \text{Total Damages}$$
 
 In this case:
 - Plaintiff’s Fault Percentage = 20%
-- Total Damages = $10,000
+- Total Damages =$10,000
 
 Thus,
-\[ \text{Reduced Damages} = \left(1 - \frac{20}{100}\right) \times \$10,000 = 0.8 \times \$10,000 = \$8,000 \]
+$$ \text{Reduced Damages} = \left(1 - \frac{20}{100}\right) \times \$10,000 = 0.8 \times \$10,000 = \$8,000 $$
 
 This ensures that the plaintiff receives compensation proportional to their fault.
 x??

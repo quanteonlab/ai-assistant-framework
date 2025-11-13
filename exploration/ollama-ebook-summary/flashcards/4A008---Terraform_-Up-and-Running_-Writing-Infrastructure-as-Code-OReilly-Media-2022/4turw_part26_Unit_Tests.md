@@ -591,7 +591,7 @@ When running tests that deploy real infrastructure using Terraform, setting an e
 To ensure the test completes without being prematurely terminated, you need to use the `-timeout` flag with a longer duration. For example:
 
 ```bash
-$ go test -v -timeout 30m TestAlbExample
+$go test -v -timeout 30m TestAlbExample
 ```
 
 This command runs the `TestAlbExample` test with a timeout of 30 minutes.
@@ -606,8 +606,7 @@ After testing, it is crucial to clean up any resources created by Terraform. Thi
 ??x
 Post-testing, you need to run the `terraform destroy` command with appropriate flags to ensure all resources are destroyed:
 
-```bash
-$ go test -v -timeout 30m TestAlbExample
+```bash$ go test -v -timeout 30m TestAlbExample
 # During test:
 TestAlbExample 2019-05-26T13:32:06+01:00 command.go:53: Running command terraform with args [destroy -auto-approve -input=false -lock=false] (...) 
 TestAlbExample 2019-05-26T13:39:16+01:00 command.go:121: Destroy complete. Resources: 5 destroyed.
@@ -1475,14 +1474,13 @@ Background context explaining how to run only a specific test using the `go test
 To run a single test, such as `TestHelloWorldAppExample`, you use the `-run` argument with the name of the test:
 
 ```sh
-$ go test -v -timeout 30m -run TestHelloWorldAppExample
+$go test -v -timeout 30m -run TestHelloWorldAppExample
 ```
 
 This command will only execute `TestHelloWorldAppExample`. By default, Go runs all tests in the current folder if no specific test is provided.
 
 For example:
-```sh
-$ go test -v -timeout 30m -run TestHelloWorldAppExample
+```sh$ go test -v -timeout 30m -run TestHelloWorldAppExample
 PASS
 ok    terraform-up-and-running     204.113s
 ```

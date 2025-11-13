@@ -56,13 +56,12 @@ Background context: After setting up workspaces, you can use Terraform commands 
 First, initialize the backend with the appropriate configuration:
 
 ```sh
-$ terraform init -backend-config="backend.tf"
+$terraform init -backend-config="backend.tf"
 ```
 
 Then, create a new workspace for your environment:
 
-```sh
-$ terraform workspace new staging
+```sh$ terraform workspace new staging
 ```
 
 Finally, apply the changes to deploy the resource in that specific workspace:
@@ -964,7 +963,7 @@ You can use the `format` function to format strings using values from the RDS in
 user_data  = <<EOF
 #./bin/bash
 echo "Hello, World" >> index.html
-echo "$(format(\"%s:%d\", ${data.terraform_remote_state.db.outputs.address}, ${data.terraform_remote_state.db.outputs.port}))" >> index.html
+echo "$(format(\"%s:%d\",${data.terraform_remote_state.db.outputs.address},${data.terraform_remote_state.db.outputs.port}))" >> index.html
 nohup busybox httpd -f -p ${var.server_port} & EOF
 ```
 

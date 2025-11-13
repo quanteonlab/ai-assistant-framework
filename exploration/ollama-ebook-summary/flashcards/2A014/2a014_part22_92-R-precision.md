@@ -8,30 +8,24 @@
 #### Precision at k
 Background context: Precision is a measure of the accuracy of the recommendations made by a recommendation system. It calculates how many of the recommended items are relevant to the user.
 
-The formula for precision at \(k\) is:
-\[
-Precision @k = \frac{\text{numrelevant}}{k}
-\]
-where `numrelevant` is the number of relevant items in the top \(k\) recommendations, and \(k\) is the total number of recommended items.
+The formula for precision at $k$ is:
+$$Precision @k = \frac{\text{numrelevant}}{k}$$where `numrelevant` is the number of relevant items in the top $ k $ recommendations, and $ k$ is the total number of recommended items.
 
 :p What does the Precision at k metric measure?
 ??x
-The precision at \(k\) measures the accuracy of the recommendation system by calculating the ratio of relevant items among the first \(k\) recommendations. It helps understand how many of the top suggested items are actually useful or desired by the user.
+The precision at $k $ measures the accuracy of the recommendation system by calculating the ratio of relevant items among the first$k$ recommendations. It helps understand how many of the top suggested items are actually useful or desired by the user.
 x??
 
 ---
 #### Recall at k
 Background context: Recall is another metric used to evaluate a recommendation system, focusing on the proportion of relevant items that were successfully recommended.
 
-The formula for recall at \(k\) can be expressed as:
-\[
-Recall @k = \frac{\text{numrelevant}}{\text{max}(r, k)}
-\]
-where `numrelevant` is the number of relevant items in the top \(k\) recommendations, and \(r\) is the total number of relevant items that exist. The `max(r, k)` ensures that recall considers the maximum possible size of relevant items.
+The formula for recall at $k$ can be expressed as:
+$$Recall @k = \frac{\text{numrelevant}}{\text{max}(r, k)}$$where `numrelevant` is the number of relevant items in the top $ k $ recommendations, and $ r$ is the total number of relevant items that exist. The `max(r, k)` ensures that recall considers the maximum possible size of relevant items.
 
 :p How is the Recall at k metric calculated?
 ??x
-The recall at \(k\) metric calculates how well the recommendation system covers all relevant items by considering the ratio of relevant recommendations to either the total number of relevant items or the top \(k\) recommended items, whichever is larger. This ensures that if \(r > k\), the denominator still reflects the actual count of relevant items.
+The recall at $k $ metric calculates how well the recommendation system covers all relevant items by considering the ratio of relevant recommendations to either the total number of relevant items or the top$k $ recommended items, whichever is larger. This ensures that if$r > k$, the denominator still reflects the actual count of relevant items.
 x??
 
 ---
@@ -54,17 +48,12 @@ x??
 Background context: In scenarios where users have a wide range of preferences, the concept of "avoid" can be useful to measure how well a recommendation system performs. Instead of focusing on what users like, it looks at what they do not want.
 
 The formula for avoid recall is:
-\[
-Avoid @k = \frac{\text{numrelevant}}{k - \text{numrelevant}}
-\]
-and the recall adjusted by this factor is:
-\[
-Recall @k = k - Avoid @k
-\]
+$$Avoid @k = \frac{\text{numrelevant}}{k - \text{numrelevant}}$$and the recall adjusted by this factor is:
+$$
 
-:p How does Scenario 4 use Recall and Avoid to evaluate recommendations?
+Recall @k = k - Avoid @k$$:p How does Scenario 4 use Recall and Avoid to evaluate recommendations?
 ??x
-Scenario 4 uses a different approach to recall, focusing on what users do not want rather than what they like. By calculating avoid recall, it measures the number of irrelevant items among the top \(k\) recommendations. The adjusted recall then reflects how well the system avoids recommending unwanted items. This provides an alternative way to evaluate recommendation systems in scenarios where users have a large set of dislikes.
+Scenario 4 uses a different approach to recall, focusing on what users do not want rather than what they like. By calculating avoid recall, it measures the number of irrelevant items among the top $k$ recommendations. The adjusted recall then reflects how well the system avoids recommending unwanted items. This provides an alternative way to evaluate recommendation systems in scenarios where users have a large set of dislikes.
 x??
 
 ---
@@ -73,8 +62,9 @@ x??
 Background context explaining the concept. The mAP metric evaluates recommendation systems by considering both the relevance and the ranking of recommended items. It computes the average precision for each query at various cutoffs, providing a comprehensive measure.
 
 Formula:
-\[ \text{mAP} = \frac{1}{Q} \sum_{q=1}^{Q} \frac{1}{m_q} \sum_{k=1}^{n_q} P_k \cdot rel_k \]
-Where \( Q \) is the total number of queries, \( m_q \) is the number of relevant documents for a specific query \( q \), and \( P_k \) stands for precision at the \( k \)-th cutoff. The indicator function \( rel_k = 1 \) if the item at rank \( k \) is relevant; otherwise, \( rel_k = 0 \).
+$$\text{mAP} = \frac{1}{Q} \sum_{q=1}^{Q} \frac{1}{m_q} \sum_{k=1}^{n_q} P_k \cdot rel_k$$
+
+Where $Q $ is the total number of queries,$m_q $ is the number of relevant documents for a specific query$q $, and$ P_k $stands for precision at the$ k $-th cutoff. The indicator function $ rel_k = 1$ if the item at rank $ k $ is relevant; otherwise, $ rel_k = 0$.
 
 :p What does mAP measure in a recommendation system?
 ??x
@@ -87,8 +77,9 @@ x??
 Background context explaining the concept. The MRR metric focuses on the position of the first relevant item in a recommendation list, giving it more weight when the relevant item is ranked higher.
 
 Formula:
-\[ \text{MRR} = \frac{1}{Q} \sum_{i=1}^{Q} \frac{1}{rank_i} \]
-Where \( Q \) represents the total number of queries, and \( rank_i \) is the position of the first relevant item in the list for query \( i \).
+$$\text{MRR} = \frac{1}{Q} \sum_{i=1}^{Q} \frac{1}{rank_i}$$
+
+Where $Q $ represents the total number of queries, and$rank_i $ is the position of the first relevant item in the list for query$i$.
 
 :p What does MRR measure in a recommendation system?
 ??x
@@ -101,15 +92,17 @@ x??
 Background context explaining the concept. The NDCG metric evaluates recommendation systems by considering the ranking and relevance of items, but it discounts the relevance as we move further down the list.
 
 Formula:
-\[ \text{NDCG} = \frac{\text{DCG}}{\text{IDCG}} \]
+$$\text{NDCG} = \frac{\text{DCG}}{\text{IDCG}}$$
+
 Where DCG (Discounted Cumulative Gain) is calculated as:
-\[ \text{DCG} = \sum_{i=1}^{k} \frac{rel_i}{\log_2(i+1)} \]
+$$\text{DCG} = \sum_{i=1}^{k} \frac{rel_i}{\log_2(i+1)}$$
 
 And IDCG (Ideal Discounted Cumulative Gain) is the optimal DCG value when all relevant items are at the top of the list.
 
 Formula for NDCG@k:
-\[ \text{NDCG}_{@k} = \frac{\sum_{i=1}^{k} \frac{rel_i}{\log_2(i+1)}}{\sum_{i=1}^{|ℛ|} \frac{rel_i}{\log_2(i+1)}} \]
-Where \( ℛ \) is the set of relevant documents.
+$$\text{NDCG}_{@k} = \frac{\sum_{i=1}^{k} \frac{rel_i}{\log_2(i+1)}}{\sum_{i=1}^{|ℛ|} \frac{rel_i}{\log_2(i+1)}}$$
+
+Where $ℛ$ is the set of relevant documents.
 
 :p What does NDCG measure in a recommendation system?
 ??x

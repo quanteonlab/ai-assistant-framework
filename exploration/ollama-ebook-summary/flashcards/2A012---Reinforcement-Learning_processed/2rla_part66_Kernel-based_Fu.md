@@ -16,11 +16,11 @@ x??
 ---
 
 #### Locally Weighted Regression (LWR)
-Background context: Locally weighted regression requires fast ways to perform local regression computations for each query. LWR uses a kernel function \( k(s, s_0) \) that assigns weights based on the distance or some other measure of similarity between states.
+Background context: Locally weighted regression requires fast ways to perform local regression computations for each query. LWR uses a kernel function $k(s, s_0)$ that assigns weights based on the distance or some other measure of similarity between states.
 
 :p What is the key idea behind locally weighted regression?
 ??x
-Locally weighted regression (LWR) involves computing a weighted average of the targets stored in memory using a kernel function to assign weights. The target for a query state \( s \) is approximated by summing the products of the weights and the corresponding targets from the training examples.
+Locally weighted regression (LWR) involves computing a weighted average of the targets stored in memory using a kernel function to assign weights. The target for a query state $s$ is approximated by summing the products of the weights and the corresponding targets from the training examples.
 x??
 
 ---
@@ -30,7 +30,7 @@ Background context: Kernel functions numerically express how relevant knowledge 
 
 :p What are kernel functions and their role in memory-based methods?
 ??x
-Kernel functions \( k(s, s_0) \) assign weights based on the distance or similarity between states. In LWR, these weights determine how much influence each example in memory has on a query state. The function can be a Gaussian radial basis function (RBF), among others.
+Kernel functions $k(s, s_0)$ assign weights based on the distance or similarity between states. In LWR, these weights determine how much influence each example in memory has on a query state. The function can be a Gaussian radial basis function (RBF), among others.
 x??
 
 ---
@@ -40,7 +40,7 @@ Background context: Kernel regression is a method that computes a weighted avera
 
 :p What distinguishes kernel regression with an RBF kernel from other methods?
 ??x
-Kernel regression with an RBF kernel differs from linear parametric methods in that it is memory-based (RBFs are centered on stored examples) and nonparametric (no parameters to learn). Instead, the response to a query \( s \) is given by summing the weighted targets of all stored examples.
+Kernel regression with an RBF kernel differs from linear parametric methods in that it is memory-based (RBFs are centered on stored examples) and nonparametric (no parameters to learn). Instead, the response to a query $s$ is given by summing the weighted targets of all stored examples.
 x??
 
 ---
@@ -50,9 +50,8 @@ Background context: Any linear parametric regression method can be recast as ker
 
 :p How can any linear parametric regression method be transformed into kernel regression?
 ??x
-Any linear parametric regression method with states represented by feature vectors \( x(s) = (x_1(s), x_2(s), ..., x_d(s))^T \) can be recast as kernel regression where the kernel function is the inner product of these feature vector representations. The formula for this is:
-\[ k(s, s_0) = x(s)^T x(s_0). \]
-x??
+Any linear parametric regression method with states represented by feature vectors $x(s) = (x_1(s), x_2(s), ..., x_d(s))^T$ can be recast as kernel regression where the kernel function is the inner product of these feature vector representations. The formula for this is:
+$$k(s, s_0) = x(s)^T x(s_0).$$x??
 
 ---
 
@@ -61,13 +60,13 @@ Background context: The "kernel trick" allows working in a high-dimensional feat
 
 :p What is the kernel trick and why is it beneficial?
 ??x
-The kernel trick involves expressing the kernel function \( k(s, s_0) \) as the inner product of feature vectors \( x(s) \) and \( x(s_0) \). This allows working in a high-dimensional feature space while only using stored training examples. It simplifies computation compared to directly using linear parametric methods.
+The kernel trick involves expressing the kernel function $k(s, s_0)$ as the inner product of feature vectors $x(s)$ and $x(s_0)$. This allows working in a high-dimensional feature space while only using stored training examples. It simplifies computation compared to directly using linear parametric methods.
 x??
 
 ---
 
 #### Interest and Emphasis Concept Introduction
-Interest and emphasis are introduced as mechanisms to prioritize certain states or state-action pairs during on-policy learning. The interest \(I_t\) is a non-negative scalar indicating the degree of importance for accurately valuing state \(s_t\). The emphasis \(M_t\) is another non-negative scalar that modifies the learning update at time \(t\).
+Interest and emphasis are introduced as mechanisms to prioritize certain states or state-action pairs during on-policy learning. The interest $I_t $ is a non-negative scalar indicating the degree of importance for accurately valuing state$s_t $. The emphasis$ M_t $is another non-negative scalar that modifies the learning update at time$ t$.
 :p What are interest and emphasis in the context of on-policy learning?
 ??x
 Interest and emphasis are introduced to target function approximation resources more effectively. By assigning higher interest to certain states, the algorithm can focus more computational resources on those states, potentially leading to better value estimates.
@@ -76,45 +75,43 @@ x??
 ---
 
 #### Interest Variable Definition
-The interest \(I_t\) is a non-negative scalar that indicates how much we care about accurately valuing state \(s_t\). It can be set in any causal way and may depend on the trajectory up to time \(t\) or learned parameters at time \(t\).
-:p What defines the interest variable \(I_t\)?
+The interest $I_t $ is a non-negative scalar that indicates how much we care about accurately valuing state$s_t $. It can be set in any causal way and may depend on the trajectory up to time$ t $or learned parameters at time$ t$.
+:p What defines the interest variable $I_t$?
 ??x
-The interest variable \(I_t\) is a non-negative scalar that quantifies how much attention should be given to state \(s_t\). It can be influenced by various factors, such as the trajectory history up to time \(t\) or learned parameters at time \(t\).
+The interest variable $I_t $ is a non-negative scalar that quantifies how much attention should be given to state$s_t $. It can be influenced by various factors, such as the trajectory history up to time$ t $or learned parameters at time$ t$.
 x??
 
 ---
 
 #### Emphasis Variable Definition
-The emphasis \(M_t\) is another non-negative scalar random variable that modifies the learning update at time \(t\). High values of \(M_t\) emphasize updates for state \(s_t\), while low values de-emphasize them.
-:p What does the emphasis variable \(M_t\) do in on-policy learning?
+The emphasis $M_t $ is another non-negative scalar random variable that modifies the learning update at time$t $. High values of$ M_t $emphasize updates for state$ s_t$, while low values de-emphasize them.
+:p What does the emphasis variable $M_t$ do in on-policy learning?
 ??x
-The emphasis variable \(M_t\) adjusts the weight of learning updates at time \(t\). Higher values of \(M_t\) increase the importance of updates for state \(s_t\), while lower values decrease their significance, allowing for targeted optimization.
+The emphasis variable $M_t $ adjusts the weight of learning updates at time$t $. Higher values of $ M_t $increase the importance of updates for state$ s_t$, while lower values decrease their significance, allowing for targeted optimization.
 x??
 
 ---
 
 #### General n-step Learning Rule
 The general n-step learning rule is given by:
-\[ w_{t+n} = w_{t+n-1} + \alpha M_t [G^{(t,t+n)} - v(\pi; S_t, w_{t+n-1})] r^{(t,t+n)} \]
-where \( G^{(t,t+n)} \) is the n-step return and \(r^{(t,t+n)}\) is the estimated return.
+$$w_{t+n} = w_{t+n-1} + \alpha M_t [G^{(t,t+n)} - v(\pi; S_t, w_{t+n-1})] r^{(t,t+n)}$$where $ G^{(t,t+n)}$is the n-step return and $ r^{(t,t+n)}$ is the estimated return.
 :p What is the general n-step learning rule for on-policy learning with interest and emphasis?
 ??x
-The general n-step learning rule incorporates interest and emphasis to modify the update at time \(t\):
-\[ w_{t+n} = w_{t+n-1} + \alpha M_t [G^{(t,t+n)} - v(\pi; S_t, w_{t+n-1})] r^{(t,t+n)} \]
-Here, \(M_t\) adjusts the weight of the update based on how much we care about state \(s_t\), and \(G^{(t,t+n)}\) is the n-step return.
+The general n-step learning rule incorporates interest and emphasis to modify the update at time $t$:
+$$w_{t+n} = w_{t+n-1} + \alpha M_t [G^{(t,t+n)} - v(\pi; S_t, w_{t+n-1})] r^{(t,t+n)}$$
+
+Here,$M_t $ adjusts the weight of the update based on how much we care about state$s_t $, and $ G^{(t,t+n)}$ is the n-step return.
 x??
 
 ---
 
 #### Recursion for Emphasis
 The emphasis variable is determined recursively by:
-\[ M_t = I_t + \gamma M_{t-n} \]
-for \( t \geq 0 \) with \(M_0 = 0\).
-:p How is the emphasis variable \(M_t\) calculated?
+$$M_t = I_t + \gamma M_{t-n}$$for $ t \geq 0 $ with $ M_0 = 0$.
+:p How is the emphasis variable $M_t$ calculated?
 ??x
-The emphasis variable \(M_t\) is calculated using a recursive formula:
-\[ M_t = I_t + \gamma M_{t-n} \]
-where \(I_t\) represents interest at time \(t\) and \(\gamma\) is the discount factor. This ensures that the emphasis is influenced by both current interest and past emphasis.
+The emphasis variable $M_t$ is calculated using a recursive formula:
+$$M_t = I_t + \gamma M_{t-n}$$where $ I_t $ represents interest at time $ t $ and $\gamma$ is the discount factor. This ensures that the emphasis is influenced by both current interest and past emphasis.
 x??
 
 ---
@@ -130,7 +127,7 @@ x??
 
 #### On-policy Prediction with Approximation
 
-Background context explaining that on-policy prediction involves estimating value functions under the current policy. The state space can be large, necessitating function approximation methods to generalize across states. We define \(VE(w)\) as a measure of error for approximations.
+Background context explaining that on-policy prediction involves estimating value functions under the current policy. The state space can be large, necessitating function approximation methods to generalize across states. We define $VE(w)$ as a measure of error for approximations.
 
 :p What is the main goal of using function approximation in reinforcement learning?
 ??x
@@ -141,15 +138,12 @@ x??
 
 #### Mean Squared Value Error (VE)
 
-Background context explaining that \(VE(w)\) measures the error in values under an on-policy distribution. This helps rank different value-function approximations.
+Background context explaining that $VE(w)$ measures the error in values under an on-policy distribution. This helps rank different value-function approximations.
 
-:p How is the mean squared value error defined for a weight vector \(w\)?
+:p How is the mean squared value error defined for a weight vector $w$?
 ??x
-The mean squared value error, \(VE(w)\), is defined as:
-\[
-VE(w) = \mathbb{E}_{s_t \sim \mu} \left[ (v_\pi^w(s_t) - V_\pi(s_t))^2 \right]
-\]
-where \(v_\pi^w(s)\) are the value estimates under the current weight vector, and \(V_\pi(s)\) are the true values.
+The mean squared value error, $VE(w)$, is defined as:
+$$VE(w) = \mathbb{E}_{s_t \sim \mu} \left[ (v_\pi^w(s_t) - V_\pi(s_t))^2 \right]$$where $ v_\pi^w(s)$are the value estimates under the current weight vector, and $ V_\pi(s)$ are the true values.
 
 x??
 
@@ -157,11 +151,11 @@ x??
 
 #### Stochastic Gradient Descent (SGD)
 
-Background context explaining that SGD is a popular method for finding good weight vectors. In reinforcement learning, it can be used to minimize \(VE(w)\).
+Background context explaining that SGD is a popular method for finding good weight vectors. In reinforcement learning, it can be used to minimize $VE(w)$.
 
 :p What is the primary method used to find a good weight vector in this context?
 ??x
-The primary method is stochastic gradient descent (SGD), which updates weights based on gradients of \(VE(w)\) with respect to the current state.
+The primary method is stochastic gradient descent (SGD), which updates weights based on gradients of $VE(w)$ with respect to the current state.
 
 x??
 
@@ -173,7 +167,7 @@ Background context explaining that n-step semi-gradient TD is a learning algorit
 
 :p What is the main feature of the n-step semi-gradient TD method?
 ??x
-The main feature is its flexibility in handling different values of \(n\), allowing it to balance between on-policy updates like gradient Monte Carlo (when \(n=1\)) and off-policy updates like TD(0) (when \(n \to \infty\)).
+The main feature is its flexibility in handling different values of $n $, allowing it to balance between on-policy updates like gradient Monte Carlo (when $ n=1 $) and off-policy updates like TD(0) (when$ n \to \infty$).
 
 x??
 
@@ -197,11 +191,8 @@ Background context explaining that linear function approximation involves approx
 
 :p How does linear function approximation work?
 ??x
-Linear function approximation represents the value estimate \(v_\pi^w(s)\) as:
-\[
-v_\pi^w(s) = \sum_{i=1}^{d} w_i f_i(s)
-\]
-where \(f_i(s)\) are features of state \(s\) and \(w_i\) are corresponding weights.
+Linear function approximation represents the value estimate $v_\pi^w(s)$ as:
+$$v_\pi^w(s) = \sum_{i=1}^{d} w_i f_i(s)$$where $ f_i(s)$are features of state $ s$and $ w_i$ are corresponding weights.
 
 x??
 
@@ -268,21 +259,21 @@ x??
 ---
 
 #### Linear Semi-Gradient n-step TD Convergence
-Background context: The text discusses the convergence properties of linear semi-gradient n-step temporal difference (TD) learning methods. It explains that while these methods are guaranteed to converge under standard conditions, the rate of convergence and the bound on the error approach zero as \(n\) increases.
+Background context: The text discusses the convergence properties of linear semi-gradient n-step temporal difference (TD) learning methods. It explains that while these methods are guaranteed to converge under standard conditions, the rate of convergence and the bound on the error approach zero as $n$ increases.
 
 :p What is the key guarantee regarding the convergence of linear semi-gradient n-step TD?
 ??x
-The key guarantee is that linear semi-gradient n-step TD is guaranteed to converge under standard conditions for all \(n\), converging to a value that is within a bound of the optimal error. This bound approaches zero as \(n\) increases, but practical implementations often prefer lower values of \(n\) due to slower learning rates.
+The key guarantee is that linear semi-gradient n-step TD is guaranteed to converge under standard conditions for all $n $, converging to a value that is within a bound of the optimal error. This bound approaches zero as $ n $increases, but practical implementations often prefer lower values of$ n$ due to slower learning rates.
 
 x??
 
 ---
 #### Higher n in Linear Semi-Gradient TD
-Background context: The text mentions that increasing \(n\) improves the bound on the error but also results in very slow learning. Therefore, a balance is usually preferred with some degree of bootstrapping (\(n < 1\)) being preferable over fully deterministic methods.
+Background context: The text mentions that increasing $n $ improves the bound on the error but also results in very slow learning. Therefore, a balance is usually preferred with some degree of bootstrapping ($ n < 1$) being preferable over fully deterministic methods.
 
-:p How does increasing \(n\) affect the convergence and learning rate of linear semi-gradient TD?
+:p How does increasing $n$ affect the convergence and learning rate of linear semi-gradient TD?
 ??x
-Increasing \(n\) tightens the bound on the error but can significantly slow down the learning process. This is because higher \(n\) values require more data to converge, making the learning dynamics slower compared to lower \(n\) or bootstrapping methods.
+Increasing $n $ tightens the bound on the error but can significantly slow down the learning process. This is because higher$n $ values require more data to converge, making the learning dynamics slower compared to lower$n$ or bootstrapping methods.
 
 x??
 
@@ -628,7 +619,7 @@ Background context: Peng (1995) used the pole-balancing task to experiment with 
 ??x
 The basic idea behind using nearest-neighbor methods (NNM) in reinforcement learning tasks such as pole-balancing is to approximate functions or policies by looking at the closest data points in the feature space. In these methods, predictions are made based on a weighted average of the values from nearby training examples.
 
-For example, when approximating a value function \(V(s)\), instead of fitting a global model, NNM looks for the nearest states to the state \(s\) and uses their values as a basis for prediction. The weights can be determined by various metrics such as distance or inverse distance.
+For example, when approximating a value function $V(s)$, instead of fitting a global model, NNM looks for the nearest states to the state $ s$ and uses their values as a basis for prediction. The weights can be determined by various metrics such as distance or inverse distance.
 
 ```java
 public class NearestNeighbor {
@@ -679,7 +670,7 @@ Background context: Moore, Schneider, and Deng (1997) introduced the use of k-d 
 ??x
 Using k-d trees improves efficiency in nearest-neighbor search by organizing the data points in a hierarchical structure that allows for faster searching. In a k-d tree, the data space is recursively split into two halves along one of the dimensions at each level. This structure enables efficient nearest-neighbor queries because we can quickly eliminate large portions of the dataset based on the current node and its descendants.
 
-For example, when querying for the nearest neighbor to a point \(p\), the algorithm traverses the tree, splitting the search space into smaller regions until it finds the closest point efficiently. The average running time is \(O(\log n)\) where \(n\) is the number of records, making it much faster than linear searches.
+For example, when querying for the nearest neighbor to a point $p $, the algorithm traverses the tree, splitting the search space into smaller regions until it finds the closest point efficiently. The average running time is $ O(\log n)$where $ n$ is the number of records, making it much faster than linear searches.
 
 ```java
 public class KDTree {

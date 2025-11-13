@@ -103,37 +103,31 @@ These individuals played crucial roles in laying down the theoretical and practi
 x??
 
 #### Weighted Summation in a Neural Network
-Background context: In a simple neural network, the input signals are combined through weighted summation before being passed to an activation function. This is represented by the equation \( \Sigma = w_1x_1 + w_2x_2 \), where \( x_1 \) and \( x_2 \) are inputs, and \( w_1 \) and \( w_2 \) are weights.
+Background context: In a simple neural network, the input signals are combined through weighted summation before being passed to an activation function. This is represented by the equation $\Sigma = w_1x_1 + w_2x_2 $, where $ x_1 $ and $ x_2 $ are inputs, and $ w_1 $ and $ w_2$ are weights.
 :p What is the formula for weighted summation in a simple neural network?
 ??x
 The formula for weighted summation is given by:
 
-\[
-\Sigma = w_1x_1 + w_2x_2
-\]
+$$\Sigma = w_1x_1 + w_2x_2$$
 
-This equation combines the input signals \( x_1 \) and \( x_2 \) using weights \( w_1 \) and \( w_2 \). 
+This equation combines the input signals $x_1 $ and$x_2 $ using weights$ w_1 $ and $w_2$. 
 x??
 
 ---
 
 #### Output of a Simple Perceptron
 Background context: The output of a simple perceptron is determined by an activation function applied to the weighted summation. If the activation function is linear, it can only produce binary outputs (0 or 1), which limits its complexity.
-:p How is the output \( y \) calculated in a simple perceptron?
+:p How is the output $y$ calculated in a simple perceptron?
 ??x
-The output \( y \) of a simple perceptron is calculated using:
+The output $y$ of a simple perceptron is calculated using:
 
-\[
-y = f(x_1 w_1 + x_2 w_2 + b)
-\]
+$$y = f(x_1 w_1 + x_2 w_2 + b)$$where:
+- $x_1 $ and$x_2$ are the input signals.
+- $w_1 $ and$w_2$ are the weights.
+- $b$ is a bias term.
+- $f$ is an activation function (e.g., step function, sigmoid).
 
-where:
-- \( x_1 \) and \( x_2 \) are the input signals.
-- \( w_1 \) and \( w_2 \) are the weights.
-- \( b \) is a bias term.
-- \( f \) is an activation function (e.g., step function, sigmoid).
-
-If \( f(x) = x \), then the output will be linearly dependent on the weighted sum. 
+If $f(x) = x$, then the output will be linearly dependent on the weighted sum. 
 x??
 
 ---
@@ -144,9 +138,7 @@ Background context: For more robust and trainable networks, sigmoid neurons are 
 ??x
 An example of an exponential sigmoid function is:
 
-\[
-f(x) = \frac{1}{1 + e^{-x}}
-\]
+$$f(x) = \frac{1}{1 + e^{-x}}$$
 
 This function maps any real-valued input to a value between 0 and 1, which makes it suitable for use in neural networks where outputs need to be in this range.
 x??
@@ -155,7 +147,7 @@ x??
 
 #### Coding a Single Neuron
 Background context: A software model of a single neuron can be implemented using NumPy. This helps in verifying calculations and ensuring that the neuron's behavior matches expectations.
-:p How does the provided code reproduce the hand calculation for \(\Sigma = -4\)?
+:p How does the provided code reproduce the hand calculation for $\Sigma = -4$?
 ??x
 The provided Python code uses NumPy to perform the weighted summation and activation function:
 
@@ -171,7 +163,7 @@ Sigma = w1 * x1 + w2 * x2
 print(Sigma)  # This should output -4
 ```
 
-This code snippet calculates \(\Sigma\) using the given weights and inputs. 
+This code snippet calculates $\Sigma$ using the given weights and inputs. 
 x??
 
 ---
@@ -181,7 +173,7 @@ Background context: A simple neural network consists of multiple layers, includi
 :p What is the architecture of the network shown in Figure 11.3?
 ??x
 The architecture of the network shown in Figure 11.3 includes:
-- Input Layer: Two neurons (receiving inputs \( x_1 \) and \( x_2 \)).
+- Input Layer: Two neurons (receiving inputs $x_1 $ and$x_2$).
 - Hidden Layer: Two neurons with connections to both input neurons.
 - Output Layer: One neuron that combines signals from the hidden layer.
 
@@ -240,48 +232,40 @@ The code defines correct and predicted outputs as NumPy arrays, then calculates 
 
 The calculated loss is:
 
-\[
-\text{Loss} = \frac{1}{N} \sum_{i=1}^N (y_c[i] - y_p[i])^2
-\]
+$$\text{Loss} = \frac{1}{N} \sum_{i=1}^N (y_c[i] - y_p[i])^2$$
 
-For this example, \( N = 4 \), and the loss value is 2.5.
+For this example,$N = 4$, and the loss value is 2.5.
 x??
 
 ---
 
 #### Loss Function and Its Derivatives
 
-Background context explaining the concept. The loss function, denoted by \(\mathcal{L}\), measures how well a neural network's predictions match the actual values. In this case, it is given that \(\mathcal{L} = 0.5\). The objective is to minimize this loss by adjusting the weights and biases.
+Background context explaining the concept. The loss function, denoted by $\mathcal{L}$, measures how well a neural network's predictions match the actual values. In this case, it is given that $\mathcal{L} = 0.5$. The objective is to minimize this loss by adjusting the weights and biases.
 
 Relevant formulas:
-- \(\frac{\partial \mathcal{L}}{\partial w_i} = 0\) for \(i=1,...,6\)
-- \(\frac{\partial \mathcal{L}}{\partial b_i} = 0\) for \(i=1,2,3\)
+- $\frac{\partial \mathcal{L}}{\partial w_i} = 0 $ for$i=1,...,6 $-$\frac{\partial \mathcal{L}}{\partial b_i} = 0 $ for$i=1,2,3$ If a complex network is used, there can be thousands of such equations, and the derivatives are typically computed numerically.
 
-If a complex network is used, there can be thousands of such equations, and the derivatives are typically computed numerically.
-
-:p What does the loss function \(\mathcal{L}\) represent in this context?
+:p What does the loss function $\mathcal{L}$ represent in this context?
 ??x
-The loss function \(\mathcal{L}\) represents how well the neural network's predictions match the actual values. A lower \(\mathcal{L}\) indicates better performance.
+The loss function $\mathcal{L}$ represents how well the neural network's predictions match the actual values. A lower $\mathcal{L}$ indicates better performance.
 x??
 
 ---
 
 #### Derivatives of the Loss with Respect to Weights
 
-Explanation: The derivatives of the loss function \(\mathcal{L}\) with respect to each weight \(w_i\) and bias \(b_i\) are needed to update these parameters during training. These derivatives help in moving towards a minimum.
+Explanation: The derivatives of the loss function $\mathcal{L}$ with respect to each weight $w_i$ and bias $b_i$ are needed to update these parameters during training. These derivatives help in moving towards a minimum.
 
 Relevant formulas:
-- \(\frac{\partial \mathcal{L}}{\partial w_1} = -2 \cdot N (y_c - y_p) \cdot \frac{\partial y_p}{\partial w_1}\)
-- The derivative of the sigmoid function: \(f(x) = \frac{1}{1 + e^{-x}} \Rightarrow f'(x) = e^{-x} (1 + e^{-x})^2\)
-
-:p How do you calculate the derivative of the loss with respect to a weight, like \(w_1\)?
+- $\frac{\partial \mathcal{L}}{\partial w_1} = -2 \cdot N (y_c - y_p) \cdot \frac{\partial y_p}{\partial w_1}$- The derivative of the sigmoid function:$ f(x) = \frac{1}{1 + e^{-x}} \Rightarrow f'(x) = e^{-x} (1 + e^{-x})^2 $:p How do you calculate the derivative of the loss with respect to a weight, like$ w_1$?
 ??x
-To calculate the derivative of the loss with respect to a weight, such as \(w_1\), we use the chain rule. This involves breaking down the problem into smaller parts and multiplying their derivatives.
+To calculate the derivative of the loss with respect to a weight, such as $w_1$, we use the chain rule. This involves breaking down the problem into smaller parts and multiplying their derivatives.
 
 For example:
-\[ \frac{\partial \mathcal{L}}{\partial w_1} = -2 \cdot N (y_c - y_p) \cdot \frac{\partial y_p}{\partial h_1} \cdot \frac{\partial h_1}{\partial w_1} \]
+$$\frac{\partial \mathcal{L}}{\partial w_1} = -2 \cdot N (y_c - y_p) \cdot \frac{\partial y_p}{\partial h_1} \cdot \frac{\partial h_1}{\partial w_1}$$
 
-Here, \(h_1\) is the activation of a neuron that depends on \(w_1\), and \(y_p\) is the predicted output. The derivative of the sigmoid function with respect to its input is straightforward.
+Here,$h_1 $ is the activation of a neuron that depends on$w_1 $, and $ y_p$ is the predicted output. The derivative of the sigmoid function with respect to its input is straightforward.
 
 In code, this would look like:
 ```java
@@ -307,20 +291,14 @@ x??
 Explanation: For the two-neuron network in Figure 11.3, specific derivatives need to be calculated step-by-step.
 
 Relevant formulas:
-- \(\frac{\partial y(p)_{out}}{\partial w_5} = h_1 \cdot f'(x)\)
-- \(f(x) = \frac{1}{1 + e^{-x}}\)
-
-:p How do you calculate the derivative of the output with respect to a weight, like \(w_5\)?
+- $\frac{\partial y(p)_{out}}{\partial w_5} = h_1 \cdot f'(x)$-$ f(x) = \frac{1}{1 + e^{-x}}$:p How do you calculate the derivative of the output with respect to a weight, like $ w_5$?
 ??x
-To calculate the derivative of the output \(y(p)_{out}\) with respect to a weight \(w_5\), we use the chain rule:
+To calculate the derivative of the output $y(p)_{out}$ with respect to a weight $w_5$, we use the chain rule:
 
-\[ \frac{\partial y(p)_{out}}{\partial w_5} = h_1 \cdot f'(w_5h_1 + w_6h_2 + b_3) \]
+$$\frac{\partial y(p)_{out}}{\partial w_5} = h_1 \cdot f'(w_5h_1 + w_6h_2 + b_3)$$
 
 Given that:
-- The sigmoid function's derivative is \(f(x) = \frac{1}{1 + e^{-x}}\)
-- And its derivative with respect to \(x\) is \(f'(x) = e^{-x} (1 + e^{-x})^2\)
-
-In code, this would be implemented as:
+- The sigmoid function's derivative is $f(x) = \frac{1}{1 + e^{-x}}$- And its derivative with respect to $ x$is $ f'(x) = e^{-x} (1 + e^{-x})^2$ In code, this would be implemented as:
 ```java
 public class Sigmoid {
     public double sigmoid(double x) {
@@ -341,23 +319,17 @@ x??
 Explanation: An example is provided to illustrate the calculations step-by-step. This includes evaluating the predictions and adjusting weights.
 
 Relevant formulas:
-- \(y(p)_{out} = f(w_5h_1 + w_6h_2 + b_3)\)
-
-:p Calculate the output of a simple network with specific parameters.
+- $y(p)_{out} = f(w_5h_1 + w_6h_2 + b_3)$:p Calculate the output of a simple network with specific parameters.
 ??x
 Given the parameters:
-- \(\mathbf{w_1, w_2, w_3, w_4, w_5, w_6} = 1\)
-- \(\mathbf{b_1, b_2, b_3} = 0\)
-- \(x_1 = -2\), \(x_2 = -1\)
-
-We can calculate the hidden neuron activations:
-\[ h_1 = f(w_1x_1 + w_2x_2 + b_1) = f(-2 - 1 + 0) = \frac{1}{1 + e^{-3}} = 0.0474 \]
-\[ h_2 = f(w_3x_1 + w_4x_2 + b_2) = f(-2 - 1 + 0) = \frac{1}{1 + e^{-3}} = 0.0474 \]
+- $\mathbf{w_1, w_2, w_3, w_4, w_5, w_6} = 1 $-$\mathbf{b_1, b_2, b_3} = 0 $-$ x_1 = -2 $,$ x_2 = -1$We can calculate the hidden neuron activations:
+$$h_1 = f(w_1x_1 + w_2x_2 + b_1) = f(-2 - 1 + 0) = \frac{1}{1 + e^{-3}} = 0.0474$$
+$$h_2 = f(w_3x_1 + w_4x_2 + b_2) = f(-2 - 1 + 0) = \frac{1}{1 + e^{-3}} = 0.0474$$
 
 Then, the output is:
-\[ y(p)_{out} = f(w_5h_1 + w_6h_2 + b_3) = f(0.0474 + 0.0474) = \frac{1}{1 + e^{-0.0948}} = 0.524 \]
+$$y(p)_{out} = f(w_5h_1 + w_6h_2 + b_3) = f(0.0474 + 0.0474) = \frac{1}{1 + e^{-0.0948}} = 0.524$$
 
-This result indicates that the network predicts a probability of \(0.524\) for Track A being a π particle.
+This result indicates that the network predicts a probability of $0.524$ for Track A being a π particle.
 
 In code, this would be:
 ```java

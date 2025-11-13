@@ -521,9 +521,9 @@ Background context: People who lack capacity, either legally or factually, are o
 Restitution ensures that both parties receive fair treatment when dealing with individuals who lack capacity. The provider receives compensation for the value of the benefit provided, even if the contract is not enforceable. The recipient is obligated to compensate the provider only for the reasonable value of the benefit.
 
 For example:
-- A hotel clerk sells a $100-a-night room for $1,000 to a drunk patron.
+- A hotel clerk sells a $100-a-night room for$1,000 to a drunk patron.
 ??x
-The patron can argue that the contract to pay $1,000 is voidable due to their intoxication. However, they are still liable in restitution for the reasonable value of $100.
+The patron can argue that the contract to pay $1,000 is voidable due to their intoxication. However, they are still liable in restitution for the reasonable value of$100.
 
 ```java
 public class Example {

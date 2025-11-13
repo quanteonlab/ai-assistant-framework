@@ -118,11 +118,11 @@ x??
 
 ---
 #### Burke’s Voluntary Bankruptcy
-Burke is a rancher with a $500,000 ranch valued nearly entirely in exempt property. She has eight creditors totaling $70,000 in debt.
+Burke is a rancher with a $500,000 ranch valued nearly entirely in exempt property. She has eight creditors totaling$70,000 in debt.
 :p Can Burke voluntarily petition into bankruptcy?
 ??x
 Under the Bankruptcy Code, a debtor can file for voluntary bankruptcy if they meet certain criteria:
-- The value of non-exempt assets must be sufficient to cover unsecured debts: In this case, Burke’s total debt is $70,000 and her ranch (with most property exempt) might only have about $50,000 in non-exempt value.
+- The value of non-exempt assets must be sufficient to cover unsecured debts: In this case, Burke’s total debt is $70,000 and her ranch (with most property exempt) might only have about$50,000 in non-exempt value.
 - There must be a clear inability to pay the debts as they come due. Given that she cannot currently meet her obligations, this criterion may also be met.
 Therefore, Burke can potentially file for voluntary bankruptcy if her non-exempt assets are insufficient to cover her debt and there is an inability to repay.
 x??
@@ -157,7 +157,7 @@ The distribution order generally follows:
 Thus:
 - Carlton: $2,500
 - Elmer: $3,375 (75% of his claim)
-- United Bank of the Rockies: $(1,125) (remaining $5,000 - $2,500 - $3,375)
+- United Bank of the Rockies: $(1,125) (remaining $5,000 - $2,500 -$3,375)
 
 The total distribution amounts to:
 ```java

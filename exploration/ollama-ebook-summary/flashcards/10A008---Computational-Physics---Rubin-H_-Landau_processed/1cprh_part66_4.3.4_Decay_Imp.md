@@ -6,22 +6,22 @@
 
 #### Monte Carlo Simulation for Exponential Decay
 
-Background context: The provided text discusses how to approximate exponential decay using Monte Carlo simulations. When dealing with a large number of particles, we can derive the differential equation from a difference equation, leading to the familiar exponential decay law. However, in nature, \(N(t)\) is often small, and statistical fluctuations become significant.
+Background context: The provided text discusses how to approximate exponential decay using Monte Carlo simulations. When dealing with a large number of particles, we can derive the differential equation from a difference equation, leading to the familiar exponential decay law. However, in nature, $N(t)$ is often small, and statistical fluctuations become significant.
 
 :p What is the key concept about exponential decay mentioned in this text?
 ??x
-The key concept discussed is that exponential decay is an accurate description when dealing with a large number of particles (\(N \rightarrow \infty\)). However, for smaller numbers of particles, the continuous nature of the process breaks down and statistical fluctuations become more significant. 
+The key concept discussed is that exponential decay is an accurate description when dealing with a large number of particles ($N \rightarrow \infty$). However, for smaller numbers of particles, the continuous nature of the process breaks down and statistical fluctuations become more significant. 
 x??
 
 #### Derivation of Exponential Decay Law
 
-Background context: The text explains that as \(N(t) \rightarrow \infty\) and \(\Delta t \rightarrow 0\), a difference equation transforms into a differential equation, leading to the exponential decay law. This process is derived from a basic radioactive decay equation.
+Background context: The text explains that as $N(t) \rightarrow \infty $ and$\Delta t \rightarrow 0$, a difference equation transforms into a differential equation, leading to the exponential decay law. This process is derived from a basic radioactive decay equation.
 
 :p How does the difference equation transform into a differential equation in this context?
 ??x
-As \(N(t) \rightarrow \infty\) and \(\Delta t \rightarrow 0\), the difference equation \(\frac{\Delta N(t)}{\Delta t} = -\lambda N(t)\) transforms into the differential equation \(\frac{dN(t)}{dt} = -\lambda N(t)\). This transformation allows us to derive the exponential decay law, \(N(t) = N(0)e^{-\lambda t}\).
+As $N(t) \rightarrow \infty $ and$\Delta t \rightarrow 0 $, the difference equation $\frac{\Delta N(t)}{\Delta t} = -\lambda N(t)$ transforms into the differential equation $\frac{dN(t)}{dt} = -\lambda N(t)$. This transformation allows us to derive the exponential decay law,$ N(t) = N(0)e^{-\lambda t}$.
 
-The relationship between the decay rate \(\lambda\) and the half-life \(\tau\) is given by \(\lambda = \frac{1}{\tau}\).
+The relationship between the decay rate $\lambda $ and the half-life$\tau $ is given by$\lambda = \frac{1}{\tau}$.
 x??
 
 #### Simulation Logic for Exponential Decay
@@ -30,7 +30,7 @@ Background context: The text describes a simple pseudocode for simulating radioa
 
 :p How does the pseudocode simulate the radioactive decay process?
 ??x
-The pseudocode incrementally checks whether each particle has decayed within a small time interval \(\Delta t\). If a random value \(r_i\) is less than the decay rate \(\lambda\), it signifies that the particle has decayed. The number of decays in the current step is summed up, and this total is used to update the remaining particles count.
+The pseudocode incrementally checks whether each particle has decayed within a small time interval $\Delta t $. If a random value $ r_i $is less than the decay rate$\lambda$, it signifies that the particle has decayed. The number of decays in the current step is summed up, and this total is used to update the remaining particles count.
 
 ```pseudocode
 input N (number of particles)
@@ -52,35 +52,35 @@ x??
 
 #### Handling Different Scales in Decay Simulation
 
-Background context: The text mentions that the choice of \(\lambda\) depends on the time scale used. If a different decay rate is given and a specific time unit is chosen, the random numbers generated should reflect this new \(\lambda\).
+Background context: The text mentions that the choice of $\lambda $ depends on the time scale used. If a different decay rate is given and a specific time unit is chosen, the random numbers generated should reflect this new$\lambda$.
 
-:p How does the choice of \(\lambda\) affect the simulation?
+:p How does the choice of $\lambda$ affect the simulation?
 ??x
-The choice of \(\lambda\) sets the timescale for the decay process. For example, if the actual decay rate is \(\lambda = 0.3 \times 10^6 \text{s}^{-1}\) and we measure time in units of \(10^{-6}s\), then random numbers generated should approximately match this value (e.g., \(\lambda \approx 0.3\)). This ensures that the simulation accurately reflects real-world decay rates within the chosen time scale.
+The choice of $\lambda $ sets the timescale for the decay process. For example, if the actual decay rate is$\lambda = 0.3 \times 10^6 \text{s}^{-1}$ and we measure time in units of $10^{-6}s$, then random numbers generated should approximately match this value (e.g.,$\lambda \approx 0.3$). This ensures that the simulation accurately reflects real-world decay rates within the chosen time scale.
 
-This is important because using a different \(\lambda\) can significantly alter how particles decay over time, affecting the overall behavior of the system.
+This is important because using a different $\lambda$ can significantly alter how particles decay over time, affecting the overall behavior of the system.
 x??
 
 #### Statistical Fluctuations in Small Particle Numbers
 
 Background context: The text highlights that for small particle numbers, statistical fluctuations become more significant. While the basic law remains valid, exponential decay predictions may not accurately describe the system due to these fluctuations.
 
-:p Why does exponential decay become less accurate with smaller \(N\)?
+:p Why does exponential decay become less accurate with smaller $N$?
 ??x
-Exponential decay becomes less accurate when dealing with a small number of particles (\(N\)) because the underlying process is no longer continuous. Instead, it behaves more like a discrete event process. For large \(N\), the continuous nature allows for smooth transitions between states, leading to the well-known exponential law. However, with fewer particles, each individual decay event has a larger impact on the overall state, leading to significant fluctuations and deviations from the expected continuous behavior.
+Exponential decay becomes less accurate when dealing with a small number of particles ($N $) because the underlying process is no longer continuous. Instead, it behaves more like a discrete event process. For large $ N$, the continuous nature allows for smooth transitions between states, leading to the well-known exponential law. However, with fewer particles, each individual decay event has a larger impact on the overall state, leading to significant fluctuations and deviations from the expected continuous behavior.
 
 This is why in simulations of small particle numbers, statistical methods are necessary to capture the true nature of the system.
 x??
 
 #### Half-Life and Decay Rate Relationship
 
-Background context: The text explains that \(\lambda\), the decay rate, can be related to the half-life \(\tau\) through the equation \(\lambda = \frac{1}{\tau}\).
+Background context: The text explains that $\lambda $, the decay rate, can be related to the half-life $\tau $ through the equation$\lambda = \frac{1}{\tau}$.
 
-:p What is the relationship between the decay rate \(\lambda\) and the half-life \(\tau\)?
+:p What is the relationship between the decay rate $\lambda $ and the half-life$\tau$?
 ??x
-The relationship between the decay rate \(\lambda\) and the half-life \(\tau\) is given by \(\lambda = \frac{1}{\tau}\). This means that if you know either quantity, you can calculate the other. The half-life \(\tau\) represents the time it takes for the number of particles to reduce to half its initial value, while \(\lambda\) measures how quickly this reduction occurs.
+The relationship between the decay rate $\lambda $ and the half-life$\tau $ is given by$\lambda = \frac{1}{\tau}$. This means that if you know either quantity, you can calculate the other. The half-life $\tau $ represents the time it takes for the number of particles to reduce to half its initial value, while $\lambda$ measures how quickly this reduction occurs.
 
-For example, if \(\lambda = 0.693 \text{s}^{-1}\), then \(\tau = \frac{1}{\lambda} = 1.443 \text{s}\). Conversely, if the half-life is known to be 2 seconds, then \(\lambda = \frac{1}{2} = 0.5 \text{s}^{-1}\).
+For example, if $\lambda = 0.693 \text{s}^{-1}$, then $\tau = \frac{1}{\lambda} = 1.443 \text{s}$. Conversely, if the half-life is known to be 2 seconds, then $\lambda = \frac{1}{2} = 0.5 \text{s}^{-1}$.
 
 This relationship helps in scaling and understanding the decay process over different time scales.
 x??
@@ -93,7 +93,7 @@ Background context: In simulations that rely on random numbers, it is crucial to
 
 :p What are some methods to visually check if a sequence of pseudo-random numbers generated by Python’s `random` method appears random?
 ??x
-To visually check the appearance of randomness, you can plot the generated numbers against their index or generate scatter plots. For instance, plotting \(r_i\) on the y-axis and \(i\) (index) on the x-axis should show a uniform distribution without any discernible pattern.
+To visually check the appearance of randomness, you can plot the generated numbers against their index or generate scatter plots. For instance, plotting $r_i $ on the y-axis and$i$(index) on the x-axis should show a uniform distribution without any discernible pattern.
 
 If applicable, add code examples with explanations:
 ```python
@@ -120,7 +120,7 @@ Background context: A quick visual test involves plotting the sequence of pseudo
 
 :p How can you perform a scatter plot test for randomness?
 ??x
-A scatter plot can be used to test for randomness by plotting \((r_i, r_{i+1})\) pairs. If the sequence is random, these points should fill a square uniformly without showing any discernible pattern or regularity.
+A scatter plot can be used to test for randomness by plotting $(r_i, r_{i+1})$ pairs. If the sequence is random, these points should fill a square uniformly without showing any discernible pattern or regularity.
 
 If applicable, add code examples with explanations:
 ```python
@@ -142,13 +142,14 @@ x??
 
 #### kth Moment as a Uniformity Test
 
-Background context: The \(k\)th moment of a distribution can be used to test if the numbers are uniformly distributed. For uniform distributions, the expected value of \(x^k\) is given by \(\frac{1}{k+1}\).
+Background context: The $k $ th moment of a distribution can be used to test if the numbers are uniformly distributed. For uniform distributions, the expected value of$x^k $ is given by$\frac{1}{k+1}$.
 
 :p How do you calculate and interpret the kth moment for a set of random numbers?
 ??x
-The \(k\)th moment can be calculated using the formula:
-\[ \langle x^k \rangle = \frac{1}{N} \sum_{i=1}^{N} x_i^k. \]
-For uniform distributions, if the numbers are truly uniformly distributed between 0 and 1, then the \(k\)th moment should be approximately equal to \(\frac{1}{k+1}\).
+The $k$ th moment can be calculated using the formula:
+$$\langle x^k \rangle = \frac{1}{N} \sum_{i=1}^{N} x_i^k.$$
+
+For uniform distributions, if the numbers are truly uniformly distributed between 0 and 1, then the $k $ th moment should be approximately equal to$\frac{1}{k+1}$.
 
 If applicable, add code examples with explanations:
 ```python
@@ -165,12 +166,13 @@ x??
 
 #### Near-Neighbor Correlation Test
 
-Background context: The near-neighbor correlation test checks for regularity by computing the sum of products of close neighbors, \(C(k) = \frac{1}{N}\sum_{i=1}^{N} x_i x_{i+k}\). If the sequence is random, these values should be close to zero.
+Background context: The near-neighbor correlation test checks for regularity by computing the sum of products of close neighbors, $C(k) = \frac{1}{N}\sum_{i=1}^{N} x_i x_{i+k}$. If the sequence is random, these values should be close to zero.
 
 :p How do you perform a near-neighbor correlation test?
 ??x
-To perform a near-neighbor correlation test, calculate the sum of products for small \(k\):
-\[ C(k) = \frac{1}{N} \sum_{i=1}^{N} x_i x_{i+k}, \quad (k=1,2,\ldots). \]
+To perform a near-neighbor correlation test, calculate the sum of products for small $k$:
+$$C(k) = \frac{1}{N} \sum_{i=1}^{N} x_i x_{i+k}, \quad (k=1,2,\ldots).$$
+
 If the sequence is random, these values should be close to zero. If there are noticeable regularities, it suggests that the sequence is not truly random.
 
 If applicable, add code examples with explanations:
@@ -191,16 +193,16 @@ x??
 
 #### Exponential Decay Simulation
 
-Background context: Simulating radioactive decay involves plotting \(\ln N(t)\) vs. time and \(\ln\frac{\Delta N}{\Delta t}\) vs. time to check for exponential behavior.
+Background context: Simulating radioactive decay involves plotting $\ln N(t)$ vs. time and $\ln\frac{\Delta N}{\Delta t}$ vs. time to check for exponential behavior.
 
 :p What are the steps involved in simulating and visualizing radioactive decay?
 ??x
 To simulate and visualize radioactive decay, follow these steps:
-1. Plot \(\ln N(t)\) vs. time.
-2. Check if the data looks like exponential decay when starting with large \(N(0)\).
-3. For small \(N(0)\), verify that the decay shows its stochastic nature.
-4. Create two plots: one showing that slopes of \(N(t)\) vs. time are independent of \(N(0)\) and another showing that these slopes are proportional to \(\lambda\).
-5. Verify that within expected statistical variations, \(\ln N(t)\) and \(\ln\frac{\Delta N}{\Delta t}\) are proportional.
+1. Plot $\ln N(t)$ vs. time.
+2. Check if the data looks like exponential decay when starting with large $N(0)$.
+3. For small $N(0)$, verify that the decay shows its stochastic nature.
+4. Create two plots: one showing that slopes of $N(t)$ vs. time are independent of $N(0)$ and another showing that these slopes are proportional to $\lambda$.
+5. Verify that within expected statistical variations, $\ln N(t)$ and $\ln\frac{\Delta N}{\Delta t}$ are proportional.
 
 If applicable, add code examples with explanations:
 ```python
@@ -234,16 +236,15 @@ Background context: The text describes a method to test whether random numbers g
 
 ??x
 To test whether your random numbers are uniform and independent, you can use the approximation provided by Equation (4.29):
+$$\left( \frac{1}{N} \sum_{i=1}^N x_i x_{i+k} \right) \approx \int_0^1 dx \int_0^1 dy xy P(x,y) = \int_0^1 dy y = \frac{1}{4}.$$
 
-\[ \left( \frac{1}{N} \sum_{i=1}^N x_i x_{i+k} \right) \approx \int_0^1 dx \int_0^1 dy xy P(x,y) = \int_0^1 dy y = \frac{1}{4}. \]
-
-If this equation holds for your random numbers, it indicates that the numbers are uniform and independent. Additionally, if the deviation from (4.29) varies as \( 1/\sqrt{N} \), it further confirms the randomness of the distribution.
+If this equation holds for your random numbers, it indicates that the numbers are uniform and independent. Additionally, if the deviation from (4.29) varies as $1/\sqrt{N}$, it further confirms the randomness of the distribution.
 
 You can implement this test by calculating:
 
-\[ \left| \frac{\frac{1}{\sqrt{N}} \sum_{i=1}^N x_i x_{i+k} - \frac{1}{4}}{\frac{1}{4}} \right|. \]
+$$\left| \frac{\frac{1}{\sqrt{N}} \sum_{i=1}^N x_i x_{i+k} - \frac{1}{4}}{\frac{1}{4}} \right|.$$
 
-For \( k = 1, 3, 7 \) and different values of \( N \), you should check that this expression is of order 1.
+For $k = 1, 3, 7 $ and different values of$N$, you should check that this expression is of order 1.
 
 Code example:
 ```python

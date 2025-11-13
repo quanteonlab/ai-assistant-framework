@@ -173,7 +173,7 @@ To use the `clinfo` command, simply open a terminal or command prompt and type `
 
 For example:
 ```
-$ clinfo
+$clinfo
 Number of platforms    1
 
 Platform Name            Apple
@@ -226,7 +226,7 @@ Here is an excerpt of the makefile:
 all: StreamTriad
 
 percent.inc : percent.cl
-    ./embed_source.pl $^ > $@
+    ./embed_source.pl $^ >$@
 
 StreamTriad.o: StreamTriad.c StreamTriad_kernel.inc
 ```
@@ -267,8 +267,7 @@ add_dependencies(StreamTriad StreamTriad_kernel_source)
 
 # Embed OpenCL source into executable
 add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/StreamTriad_kernel.inc
-                   COMMAND ${CMAKE_SOURCE_DIR}/embed_source.pl
-                           ${CMAKE_SOURCE_DIR}/StreamTriad_kernel.cl > StreamTriad_kernel.inc
+                   COMMAND ${CMAKE_SOURCE_DIR}/embed_source.pl${CMAKE_SOURCE_DIR}/StreamTriad_kernel.cl > StreamTriad_kernel.inc
                    DEPENDS StreamTriad_kernel.cl ${CMAKE_SOURCE_DIR}/embed_source.pl)
 
 add_custom_target(StreamTriad_kernel_source ALL DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/StreamTriad_kernel.inc)
@@ -546,7 +545,7 @@ CXXFLAGS = -std=c++17 -fsycl -O3
 all: StreamTriadListing
 
 StreamTriad: StreamTriad.o timer.o
-	$(CXX) $(CXXFLAGS) $^ -o $@
+	$(CXX)$(CXXFLAGS)$^ -o$@
 
 clean:
 - rm -f StreamTriad.o StreamTriad

@@ -546,7 +546,7 @@ Background context explaining how adding "statistically insignificant noise" can
 ??x
 Adding "statistically insignificant noise" to datasets, particularly for discrete values like age or gender, helps preserve the privacy of individuals. The idea is that small random fluctuations in the data make it difficult to infer exact values about an individual while still allowing the overall trends and patterns to be observed.
 
-For example, if you have a dataset where the average salary is $50,000, by adding some noise (e.g., randomly adjusting this value by a few hundred dollars), the resulting number might be something like $49,783. This small change can make it harder to pinpoint the exact salary of an individual while still providing useful aggregated information.
+For example, if you have a dataset where the average salary is $50,000, by adding some noise (e.g., randomly adjusting this value by a few hundred dollars), the resulting number might be something like$49,783. This small change can make it harder to pinpoint the exact salary of an individual while still providing useful aggregated information.
 
 The formula for adding noise could look like this:
 ```java

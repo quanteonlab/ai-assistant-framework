@@ -9,17 +9,17 @@ Background context: The text discusses the use of discounted returns in reinforc
 
 :p What would happen if we used a sequence of returns (Rt+1) with discounting to estimate the average reward?
 ??x
-Discounting each return in an infinite sequence without state boundaries can still lead to estimating the average reward, but it does so through a complex process. The discounted return \( R_{\text{discounted}}(t) = r_t + \gamma r_{t+1} + \gamma^2 r_{t+2} + ... \), where \( \gamma \) is the discount factor.
+Discounting each return in an infinite sequence without state boundaries can still lead to estimating the average reward, but it does so through a complex process. The discounted return $R_{\text{discounted}}(t) = r_t + \gamma r_{t+1} + \gamma^2 r_{t+2} + ...$, where $\gamma$ is the discount factor.
 
 However, averaging such returns over time would still tend to converge to an estimate of the average reward because each reward will appear in multiple positions with different discounts. The weight on the tth reward is given by the sum of a geometric series: 
-\[ 1 + \gamma + \gamma^2 + ... = \frac{1}{1 - \gamma} \]
+$$1 + \gamma + \gamma^2 + ... = \frac{1}{1 - \gamma}$$
 
 Thus, averaging these discounted returns over time effectively averages the rewards as if not discounted.
 
 :p How does discounting in continuous problems affect policy ranking?
 ??x
-Discounting has no effect on the problem formulation when using function approximation. The average of the discounted returns is always proportional to the average reward \( r(\pi) \). Specifically, for any policy \( \pi \), 
-\[ \text{Average of discounted returns} = \frac{r(\pi)}{1 - \gamma} \]
+Discounting has no effect on the problem formulation when using function approximation. The average of the discounted returns is always proportional to the average reward $r(\pi)$. Specifically, for any policy $\pi$, 
+$$\text{Average of discounted returns} = \frac{r(\pi)}{1 - \gamma}$$
 
 This means that optimizing discounted value over the on-policy distribution would yield the same ranking as optimizing undiscounted average reward.
 
@@ -27,10 +27,10 @@ This means that optimizing discounted value over the on-policy distribution woul
 ??x
 The text argues that discounting does not add any new information to the problem when states are represented by feature vectors and no clear state boundaries exist. Summing discounted values over the distribution with which states occur under a policy results in the same ordering as undiscounted average reward.
 
-Mathematically, 
-\[ J(\pi) = \sum_s \mu_\pi(s) v_\pi^{\gamma}(s) \]
-where \( v_\pi^{\gamma} \) is the discounted value function. This simplifies to:
-\[ r(\pi) + \gamma \sum_{s_0} v_\pi(s_0) \mu_\pi(s_0) = 1 - \frac{r(\pi)}{\gamma} \]
+Mathematically,$$
+
+J(\pi) = \sum_s \mu_\pi(s) v_\pi^{\gamma}(s)$$where $ v_\pi^{\gamma}$ is the discounted value function. This simplifies to:
+$$r(\pi) + \gamma \sum_{s_0} v_\pi(s_0) \mu_\pi(s_0) = 1 - \frac{r(\pi)}{\gamma}$$
 
 Thus, discounting does not change the ranking of policies.
 
@@ -40,9 +40,9 @@ Losing the policy improvement theorem means that improving a single state’s va
 
 In essence, without this theorem, we cannot guarantee that optimizing any of the reward formulations (total episodic, average reward, or discounted) will improve the overall policy meaningfully.
 
-:p Why might \(\epsilon\)-greedy strategies sometimes result in inferior policies?
+:p Why might $\epsilon$-greedy strategies sometimes result in inferior policies?
 ??x
-\(\epsilon\)-greedy strategies can lead to policies that oscillate between good policies rather than converging. This is because small perturbations (due to exploration with probability \(\epsilon\)) might not always lead to improvements, especially in complex continuous or function-approximated environments.
+$\epsilon $-greedy strategies can lead to policies that oscillate between good policies rather than converging. This is because small perturbations (due to exploration with probability $\epsilon$) might not always lead to improvements, especially in complex continuous or function-approximated environments.
 
 :p What does the lack of a policy improvement theorem imply for reinforcement learning methods?
 ??x
@@ -63,22 +63,21 @@ The key difference lies in how these settings handle the absence of clear state 
 - **Discounted Setting**: Rewards are discounted over time to emphasize earlier rewards.
 - **Average Reward Setting**: Policies are evaluated by their long-term average reward, which is simpler and more intuitive without assuming any discount factor.
 
-:p Why does the discount rate \(\gamma\) not affect policy ranking in continuous problems?
+:p Why does the discount rate $\gamma$ not affect policy ranking in continuous problems?
 ??x
-The discount rate \(\gamma\) does not influence the ordering of policies because the average of discounted returns converges to a constant multiple of the average reward. Specifically, for a policy \(\pi\),
-\[ \text{Average of discounted returns} = \frac{r(\pi)}{1 - \gamma} \]
+The discount rate $\gamma $ does not influence the ordering of policies because the average of discounted returns converges to a constant multiple of the average reward. Specifically, for a policy$\pi$,
+$$\text{Average of discounted returns} = \frac{r(\pi)}{1 - \gamma}$$
 
-Thus, changing \(\gamma\) only scales the value but does not change the relative ranking of policies.
+Thus, changing $\gamma$ only scales the value but does not change the relative ranking of policies.
 
 :p How is the discounted objective function related to the undiscounted average reward?
 ??x
 The discounted objective function sums discounted values over the distribution with which states occur under a policy. This results in an ordering identical to the undiscounted (average reward) objective:
-\[ J(\pi) = \sum_s \mu_\pi(s) v^{\gamma}(s) \]
+$$J(\pi) = \sum_s \mu_\pi(s) v^{\gamma}(s)$$
 
-This simplifies to 
-\[ r(\pi) + \gamma \sum_{s_0} v^\gamma(s_0) \mu_\pi(s_0) = 1 - \frac{r(\pi)}{\gamma} \]
+This simplifies to$$r(\pi) + \gamma \sum_{s_0} v^\gamma(s_0) \mu_\pi(s_0) = 1 - \frac{r(\pi)}{\gamma}$$
 
-Thus, the discount rate \(\gamma\) does not influence the ranking of policies.
+Thus, the discount rate $\gamma$ does not influence the ranking of policies.
 
 :x??
 
@@ -93,12 +92,12 @@ The lack of a policy improvement theorem means we cannot guarantee that improvin
 :x??
 
 ---
-#### \(\epsilon\)-greedy Strategy Issues
-Background context: The text discusses how \(\epsilon\)-greedy strategies can lead to oscillations between good policies rather than convergence.
+####$\epsilon$-greedy Strategy Issues
+Background context: The text discusses how $\epsilon$-greedy strategies can lead to oscillations between good policies rather than convergence.
 
-:p What might happen when using \(\epsilon\)-greedy strategies in complex environments?
+:p What might happen when using $\epsilon$-greedy strategies in complex environments?
 ??x
-In complex environments, especially with function approximation, \(\epsilon\)-greedy strategies can result in policies that oscillate among good policies without converging. Small random perturbations (exploration) due to the exploration probability \(\epsilon\) might not always lead to improvements.
+In complex environments, especially with function approximation, $\epsilon $-greedy strategies can result in policies that oscillate among good policies without converging. Small random perturbations (exploration) due to the exploration probability $\epsilon$ might not always lead to improvements.
 
 :p How does the policy-gradient theorem relate to the loss of the policy improvement theorem?
 ??x
@@ -127,31 +126,29 @@ x??
 
 ---
 #### n-step Return and TD Error
-The algorithm introduces an n-step return \( G_{t:t+n} \) and its differential form for use in semi-gradient updates. The TD error is derived from this n-step return, which helps in updating the value function weights using a gradient descent approach.
+The algorithm introduces an n-step return $G_{t:t+n}$ and its differential form for use in semi-gradient updates. The TD error is derived from this n-step return, which helps in updating the value function weights using a gradient descent approach.
 :p What are the key components of the Di↵erential Semi-gradient n-step Sarsa algorithm?
 ??x
 The key components of the Di↵erential Semi-gradient n-step Sarsa algorithm include:
-1. **n-step Return**: \( G_{t:t+n} = R_{t+1} - \bar{R}_{t+n-1} + \cdots + R_{t+n} - \bar{R}_{t+n} + \hat{q}(S_{t+n}, A_{t+n}, w) \)
-2. **TD Error**: \( \delta_t = G_{t:t+n} - \hat{q}(S_t, A_t, w) \)
-3. **Update Rule**: The weights are updated using the TD error and a gradient descent approach.
+1. **n-step Return**:$G_{t:t+n} = R_{t+1} - \bar{R}_{t+n-1} + \cdots + R_{t+n} - \bar{R}_{t+n} + \hat{q}(S_{t+n}, A_{t+n}, w)$2. **TD Error**:$\delta_t = G_{t:t+n} - \hat{q}(S_t, A_t, w)$3. **Update Rule**: The weights are updated using the TD error and a gradient descent approach.
 x??
 
 ---
 #### Step-size Parameter for Average Reward
-The step-size parameter for the average reward, \( \alpha \), needs to be small to make the average reward estimate accurate over time. However, this can lead to initial bias. An alternative is to use a sample average of observed rewards, which adapts quickly initially but also slowly in the long run.
+The step-size parameter for the average reward,$\alpha$, needs to be small to make the average reward estimate accurate over time. However, this can lead to initial bias. An alternative is to use a sample average of observed rewards, which adapts quickly initially but also slowly in the long run.
 :p What are the issues with using a constant step-size for the average reward in Di↵erential Semi-gradient n-step Sarsa?
 ??x
 Using a constant step-size for the average reward can lead to initial bias because the estimate starts from an arbitrary value and takes time to stabilize. This initial bias can make learning inefficient during the early stages of training.
 
-Alternatively, using a sample average of observed rewards initially adapts quickly but also adapts slowly in the long run due to the averaging effect. As the policy changes over time, the average reward \( \bar{R} \) should also change, making sample-average methods less suitable for this scenario.
+Alternatively, using a sample average of observed rewards initially adapts quickly but also adapts slowly in the long run due to the averaging effect. As the policy changes over time, the average reward $\bar{R}$ should also change, making sample-average methods less suitable for this scenario.
 x??
 
 ---
 #### Unbiased Constant-step-size Trick
-To address the issue with the step-size parameter for the average reward, one can use the unbiased constant-step-size trick from Exercise 2.7. This involves adjusting the update rule to ensure that the estimate of \( \bar{R} \) remains unbiased over time.
+To address the issue with the step-size parameter for the average reward, one can use the unbiased constant-step-size trick from Exercise 2.7. This involves adjusting the update rule to ensure that the estimate of $\bar{R}$ remains unbiased over time.
 :p How does the unbiased constant-step-size trick modify the Di↵erential Semi-gradient n-step Sarsa algorithm?
 ??x
-The unbiased constant-step-size trick modifies the update rule for the average reward \( \bar{R} \) by ensuring it remains unbiased. The specific changes involve updating both the value function weights and the average reward estimate in a way that maintains their relationship.
+The unbiased constant-step-size trick modifies the update rule for the average reward $\bar{R}$ by ensuring it remains unbiased. The specific changes involve updating both the value function weights and the average reward estimate in a way that maintains their relationship.
 
 Here's an example of how this can be implemented:
 ```java
@@ -162,7 +159,7 @@ if (t < n) { // Update average reward if within the first n steps
     R = (1 - β) * R + β * (Rt+1 - R) // Update average reward with a smaller step-size
 }
 ```
-In this example, \( \rho \) is the eligibility trace term and \( \beta \) is a small constant to ensure unbiased updating of \( \bar{R} \).
+In this example, $\rho $ is the eligibility trace term and$\beta $ is a small constant to ensure unbiased updating of$\bar{R}$.
 
 This adjustment ensures that both the value function weights and the average reward are updated in a way that maintains their relationship and reduces initial bias.
 x??
@@ -188,7 +185,7 @@ x??
 ---
 
 #### Semi-gradient Sarsa with Function Approximation Introduction
-Semi-gradient Sarsa with function approximation was first explored by Rummery and Niranjan (1994). While linear semi-gradient Sarsa combined with \(\epsilon\)-greedy action selection does not converge in the usual sense, it enters a bounded region near the best solution according to Gordon (1996a, 2001).
+Semi-gradient Sarsa with function approximation was first explored by Rummery and Niranjan (1994). While linear semi-gradient Sarsa combined with $\epsilon$-greedy action selection does not converge in the usual sense, it enters a bounded region near the best solution according to Gordon (1996a, 2001).
 
 :p What is the significance of semi-gradient Sarsa with function approximation?
 ??x
@@ -200,11 +197,11 @@ Precup and Perkins (2003) demonstrated the convergence of semi-gradient Sarsa wi
 
 :p What does Precup and Perkins' work reveal about semi-gradient Sarsa?
 ??x
-Precup and Perkins showed that while linear semi-gradient Sarsa with \(\epsilon\)-greedy action selection may not converge in the traditional sense, it can enter a bounded region close to the optimal solution. This is significant because it provides a practical approach for learning value functions even when convergence cannot be guaranteed.
+Precup and Perkins showed that while linear semi-gradient Sarsa with $\epsilon$-greedy action selection may not converge in the traditional sense, it can enter a bounded region close to the optimal solution. This is significant because it provides a practical approach for learning value functions even when convergence cannot be guaranteed.
 
 ---
 #### Episodic n-step Semi-gradient Sarsa
-Episodic n-step semi-gradient Sarsa is based on the forward Sarsa(\(\lambda\)) algorithm of van Seijen (2016). The empirical results presented here are unique to the second edition of this text.
+Episodic n-step semi-gradient Sarsa is based on the forward Sarsa($\lambda$) algorithm of van Seijen (2016). The empirical results presented here are unique to the second edition of this text.
 
 :p What distinguishes episodic n-step semi-gradient Sarsa from traditional semi-gradient methods?
 ??x
@@ -224,7 +221,7 @@ Oﬄ-policy methods are contrasted with on-policy learning primarily as two alte
 
 :p What are the key differences between oﬄ-policy and on-policy learning with function approximation?
 ??x
-In oﬄ-policy learning, the goal is to learn a value function for a target policy \(\pi\), given data generated by a different behavior policy \(b\). This introduces challenges in convergence due to the difference in policies. On the other hand, on-policy methods directly update based on the current policy. The extension of tabular oﬄ-policy methods to semi-gradient algorithms is less robust and more complex.
+In oﬄ-policy learning, the goal is to learn a value function for a target policy $\pi $, given data generated by a different behavior policy $ b$. This introduces challenges in convergence due to the difference in policies. On the other hand, on-policy methods directly update based on the current policy. The extension of tabular oﬄ-policy methods to semi-gradient algorithms is less robust and more complex.
 
 ---
 #### Challenges of Oﬄ-Policy Learning
@@ -248,7 +245,7 @@ function updateSarsa(o_t, a_t, r_t, s_tp1, a_tp1, w, alpha, gamma):
 
 :p What does this pseudocode represent?
 ??x
-This pseudocode represents an update step for oﬄ-policy Sarsa with function approximation. It calculates the eligibility trace and updates the weight vector \(w\) based on the difference between the actual return and the predicted value, ensuring that the learning process is biased towards the target policy.
+This pseudocode represents an update step for oﬄ-policy Sarsa with function approximation. It calculates the eligibility trace and updates the weight vector $w$ based on the difference between the actual return and the predicted value, ensuring that the learning process is biased towards the target policy.
 
 ---
 
@@ -258,17 +255,11 @@ Importance sampling techniques are discussed as a way to handle variance issues 
 ??x
 Importance sampling helps mitigate variance issues by adjusting the update targets based on the ratio of the current policy to the behavior policy at each step. This adjustment ensures that the updates are still valid even when using a different policy for generating data.
 For instance, the importance sampling ratio is given by:
-\[
-\pi_t = \frac{\rho_t}{b(At|St)}
-\]
-where \( \rho_t = \frac{p(At|St)}{b(At|St)} \) is the importance weight, and \( b(\cdot|\cdot) \) is the behavior policy.
+$$\pi_t = \frac{\rho_t}{b(At|St)}$$where $\rho_t = \frac{p(At|St)}{b(At|St)}$ is the importance weight, and $b(\cdot|\cdot)$ is the behavior policy.
 :p How does the one-step semi-gradient off-policy TD(0) algorithm update its weights using importance sampling?
 ??x
-The one-step semi-gradient off-policy TD(0) updates its weights by incorporating the importance sampling ratio into the update rule. The weight vector \( w \) is updated as follows:
-\[
-w_{t+1} = w_t + \alpha \pi_t (r_t + \hat{v}(S_{t+1}, w_t) - \hat{v}(S_t, w_t))
-\]
-where \( r_t \) is the reward at time step \( t \), and \( \pi_t \) is the importance sampling ratio.
+The one-step semi-gradient off-policy TD(0) updates its weights by incorporating the importance sampling ratio into the update rule. The weight vector $w$ is updated as follows:
+$$w_{t+1} = w_t + \alpha \pi_t (r_t + \hat{v}(S_{t+1}, w_t) - \hat{v}(S_t, w_t))$$where $ r_t $ is the reward at time step $ t $, and$\pi_t$ is the importance sampling ratio.
 :p What are the two general approaches to address the issue of off-policy learning with function approximation?
 ??x
 Two general approaches for addressing the challenge of off-policy learning with function approximation are:
@@ -278,24 +269,14 @@ Two general approaches for addressing the challenge of off-policy learning with 
 :p How does the one-step action-value (Q-value) algorithm, Expected Sarsa, adapt to function approximation using importance sampling?
 ??x
 The one-step action-value (Expected Sarsa) update rule in the context of off-policy learning with function approximation is:
-\[
-w_{t+1} = w_t + \alpha \pi_t (r_t + \sum_a \hat{q}(S_{t+1}, a, w_t) \cdot \hat{\pi}(a|S_{t+1}) - \hat{q}(S_t, A_t, w_t))
-\]
-where \( \pi_t = \frac{\rho_t}{b(A_t|S_t)} \), and the importance sampling weight is defined as:
-\[
-\rho_t = \frac{p(A_t|S_t)}{b(A_t|S_t)}
-\]
-
----
+$$w_{t+1} = w_t + \alpha \pi_t (r_t + \sum_a \hat{q}(S_{t+1}, a, w_t) \cdot \hat{\pi}(a|S_{t+1}) - \hat{q}(S_t, A_t, w_t))$$where $\pi_t = \frac{\rho_t}{b(A_t|S_t)}$, and the importance sampling weight is defined as:
+$$\rho_t = \frac{p(A_t|S_t)}{b(A_t|S_t)}$$---
 #### Stability of Semi-gradient Methods
 Semi-gradient methods are described as extensions of off-policy learning techniques that use function approximation. While they address the first part of the challenge by adapting update targets, they may not fully address the second part related to the distribution of updates.
 :p How do semi-gradient methods extend tabular o↵-policy algorithms for function approximation?
 ??x
 Semi-gradient methods extend tabular off-policy algorithms by replacing array updates with weight vector updates. For instance, the one-step state-value algorithm is extended to:
-\[
-w_{t+1} = w_t + \alpha \rho_t (r_t + \hat{v}(S_{t+1}, w_t) - \hat{v}(S_t, w_t))
-\]
-where \( \rho_t = \frac{\rho_t}{b(A_t|S_t)} \).
+$$w_{t+1} = w_t + \alpha \rho_t (r_t + \hat{v}(S_{t+1}, w_t) - \hat{v}(S_t, w_t))$$where $\rho_t = \frac{\rho_t}{b(A_t|S_t)}$.
 
 :p What are the conditions under which semi-gradient methods can be stable and asymptotically unbiased?
 ??x
@@ -304,10 +285,7 @@ Semi-gradient methods are guaranteed to be stable and asymptotically unbiased in
 :p How do the update rules for action values (Q-values) in off-policy learning differ from state values?
 ??x
 The update rule for action values (Expected Sarsa) in off-policy learning using function approximation is:
-\[
-w_{t+1} = w_t + \alpha \rho_t (r_t + \sum_a \hat{q}(S_{t+1}, a, w_t) \cdot \hat{\pi}(a|S_{t+1}) - \hat{q}(S_t, A_t, w_t))
-\]
-where \( \rho_t = \frac{\rho_t}{b(A_t|S_t)} \).
+$$w_{t+1} = w_t + \alpha \rho_t (r_t + \sum_a \hat{q}(S_{t+1}, a, w_t) \cdot \hat{\pi}(a|S_{t+1}) - \hat{q}(S_t, A_t, w_t))$$where $\rho_t = \frac{\rho_t}{b(A_t|S_t)}$.
 
 ---
 #### Challenges and Approaches
@@ -319,10 +297,7 @@ Importance sampling ratios are crucial as they help adjust the update targets ba
 :p How does the episodic state-value semi-gradient off-policy TD(0) algorithm handle rewards in its update rule?
 ??x
 In the episodic state-value semi-gradient off-policy TD(0) algorithm, the reward is handled as:
-\[
-w_{t+1} = w_t + \alpha \rho_t (r_t + \hat{v}(S_{t+1}, w_t) - \hat{v}(S_t, w_t))
-\]
-where \( r_t \) is the immediate reward at time step \( t \), and \( \rho_t = \frac{\rho_t}{b(A_t|S_t)} \).
+$$w_{t+1} = w_t + \alpha \rho_t (r_t + \hat{v}(S_{t+1}, w_t) - \hat{v}(S_t, w_t))$$where $ r_t $ is the immediate reward at time step $ t $, and$\rho_t = \frac{\rho_t}{b(A_t|S_t)}$.
 
 :p What are the two main approaches to address off-policy learning with function approximation?
 ??x
@@ -339,7 +314,7 @@ Practical considerations include ensuring stability through appropriate importan
 
 :p How does the per-step importance sampling ratio contribute to the success of off-policy algorithms in function approximation settings?
 ??x
-The per-step importance sampling ratio, \(\rho_t\), ensures that updates are aligned with the target policy by adjusting for the difference between the current policy and the behavior policy. This alignment is crucial for maintaining stability and unbiasedness in semi-gradient methods.
+The per-step importance sampling ratio, $\rho_t$, ensures that updates are aligned with the target policy by adjusting for the difference between the current policy and the behavior policy. This alignment is crucial for maintaining stability and unbiasedness in semi-gradient methods.
 
 ---
 
@@ -354,13 +329,12 @@ x??
 ---
 
 #### n-Step Semi-Gradient Expected Sarsa Algorithm
-Background context: The n-step semi-gradient Expected Sarsa algorithm involves importance sampling when updating the weight vector \( w \). This is because it considers multiple time steps and their respective discounts, making direct updates complex.
+Background context: The n-step semi-gradient Expected Sarsa algorithm involves importance sampling when updating the weight vector $w$. This is because it considers multiple time steps and their respective discounts, making direct updates complex.
 
 :p What is the formula for updating weights in the n-step semi-gradient Expected Sarsa algorithm?
 ??x
 The update rule for the n-step semi-gradient Expected Sarsa algorithm is given by:
-\[ w_{t+n} = w_{t+n-1} + \alpha \left[ \gamma^n \rho_t G_{t:t+n} - q(St, At; w_{t+n-1}) \right] \]
-where \( G_{t:t+n} \) is the return from time step \( t \) to \( t+n \), and \( \rho_t = 1/\pi(A_t|S_t) \).
+$$w_{t+n} = w_{t+n-1} + \alpha \left[ \gamma^n \rho_t G_{t:t+n} - q(St, At; w_{t+n-1}) \right]$$where $ G_{t:t+n}$is the return from time step $ t$to $ t+n $, and $\rho_t = 1/\pi(A_t|S_t)$.
 
 Example:
 ```java
@@ -384,8 +358,7 @@ Background context: The n-step tree-backup algorithm is an off-policy algorithm 
 :p What is the update rule for the n-step tree-backup algorithm?
 ??x
 The update rule for the n-step tree-backup algorithm is given by:
-\[ w_{t+n} = w_{t+n-1} + \alpha \left[ G_{t:t+n} - q(St, At; w_{t+n-1}) \right] \]
-where \( G_{t:t+n} \) is the return from time step \( t \) to \( t+n \).
+$$w_{t+n} = w_{t+n-1} + \alpha \left[ G_{t:t+n} - q(St, At; w_{t+n-1}) \right]$$where $ G_{t:t+n}$is the return from time step $ t$to $ t+n$.
 
 Example:
 ```java
@@ -414,8 +387,7 @@ Background context: The n-step Q(λ) algorithm is a unifying framework that comb
 :p How does the semi-gradient form of the n-step Q(λ) algorithm differ from other algorithms?
 ??x
 The semi-gradient form of the n-step Q(λ) algorithm differs by incorporating a temporal difference (TD) error weighted by a λ parameter, which allows it to adjust the impact of past experiences. The update rule is given by:
-\[ w_{t+n} = w_{t+n-1} + \alpha \left[ G_{t:t+n} - q(St, At; w_{t+n-1}) \right] e_{t} \]
-where \( G_{t:t+n} \) is the return from time step \( t \) to \( t+n \), and \( e_t = \lambda (G_{t:t+n} - q(S_t, A_t; w_{t+n-1})) + \gamma^{\lambda} \delta_{t+1} e_{t+1} \).
+$$w_{t+n} = w_{t+n-1} + \alpha \left[ G_{t:t+n} - q(St, At; w_{t+n-1}) \right] e_{t}$$where $ G_{t:t+n}$is the return from time step $ t$to $ t+n $, and $ e_t = \lambda (G_{t:t+n} - q(S_t, A_t; w_{t+n-1})) + \gamma^{\lambda} \delta_{t+1} e_{t+1}$.
 
 Example:
 ```java
@@ -449,89 +421,85 @@ x??
 
 ---
 #### Linear Function Approximation Setup
-In this scenario, two states are involved with feature vectors [1] and [2], respectively. The transition dynamics result in a deterministic move from the first state to the second state with a reward that depends on the parameter vector \( w \).
+In this scenario, two states are involved with feature vectors [1] and [2], respectively. The transition dynamics result in a deterministic move from the first state to the second state with a reward that depends on the parameter vector $w$.
 
 :p What is the value of the first state before any updates?
 ??x
-The initial value of the first state, based on its feature vector [1] and the parameter vector \( w = 10 \), is 10.
+The initial value of the first state, based on its feature vector [1] and the parameter vector $w = 10$, is 10.
 x??
 
 ---
 #### Transition Dynamics
-Given a transition from State 1 (with estimated value \( v(S_t) = 10 \)) to State 2 (with estimated value \( v(S_{t+1}) = 20 \)), the reward received is dependent on \( w \). For simplicity, assume the reward is \( R_t + 1 \).
+Given a transition from State 1 (with estimated value $v(S_t) = 10 $) to State 2 (with estimated value $ v(S_{t+1}) = 20 $), the reward received is dependent on$ w $. For simplicity, assume the reward is$ R_t + 1$.
 
-:p What is the expected transition effect in terms of \( w \) during this update?
+:p What is the expected transition effect in terms of $w$ during this update?
 ??x
-The transition from State 1 to State 2 results in an increase in \( w \), as the TD error tries to reduce the difference between the current and target values. Given that \( v(S_{t+1}) = 20 \) and \( v(S_t) = 10 \), the update aims to align these values.
+The transition from State 1 to State 2 results in an increase in $w $, as the TD error tries to reduce the difference between the current and target values. Given that $ v(S_{t+1}) = 20 $ and $ v(S_t) = 10$, the update aims to align these values.
 x??
 
 ---
 #### Off-Policy Semi-Gradient TD(0) Update
 The formula for the off-policy semi-gradient TD(0) update is given as:
-\[ w_{t+1} = w_t + \alpha \delta_t a(S_t, A_t; w_t) \]
-where \( \delta_t \) is the TD error and \( a(S_t, A_t; w_t) \) is the importance sampling ratio.
+$$w_{t+1} = w_t + \alpha \delta_t a(S_t, A_t; w_t)$$where $\delta_t $ is the TD error and$a(S_t, A_t; w_t)$ is the importance sampling ratio.
 
 :p What is the simplified form of the TD error in this specific scenario?
 ??x
 The TD error for this transition can be simplified as:
-\[ \delta_t = 0 + (2w - w) = (2\alpha - 1)w \]
-where \( \alpha \) is the step size.
+$$\delta_t = 0 + (2w - w) = (2\alpha - 1)w$$where $\alpha$ is the step size.
 x??
 
 ---
 #### Importance Sampling Ratio Calculation
-In the context of this example, since only one action is available from State 1, the importance sampling ratio \( \rho_t \) is 1. This means that the update rule for \( w \) simplifies further.
+In the context of this example, since only one action is available from State 1, the importance sampling ratio $\rho_t $ is 1. This means that the update rule for$w$ simplifies further.
 
-:p What does the importance sampling ratio \( \rho_t \) signify in this scenario?
+:p What does the importance sampling ratio $\rho_t$ signify in this scenario?
 ??x
-The importance sampling ratio \( \rho_t = 1 \) indicates that the action taken from State 1 under both the target and behavior policies has a probability of 1, making it straightforward to update \( w \).
+The importance sampling ratio $\rho_t = 1 $ indicates that the action taken from State 1 under both the target and behavior policies has a probability of 1, making it straightforward to update$w$.
 x??
 
 ---
-#### Update Rule for Parameter Vector \( w \)
-Considering the simplified TD error and importance sampling ratio, the parameter vector \( w \) updates according to:
-\[ w_{t+1} = w_t + \alpha (2w - w) \cdot 1 = w_t + \alpha (2\alpha - 1) w_t \]
-This simplifies to:
-\[ w_{t+1} = w_t (1 + \alpha (2\alpha - 1)) \]
+#### Update Rule for Parameter Vector $w $ Considering the simplified TD error and importance sampling ratio, the parameter vector$w$ updates according to:
+$$w_{t+1} = w_t + \alpha (2w - w) \cdot 1 = w_t + \alpha (2\alpha - 1) w_t$$
 
-:p What condition must be met for the system to become unstable?
+This simplifies to:
+$$w_{t+1} = w_t (1 + \alpha (2\alpha - 1))$$:p What condition must be met for the system to become unstable?
 ??x
-The system becomes unstable when the term \( 1 + \alpha (2\alpha - 1) \) is greater than 1. This occurs whenever \( \alpha > 0.5 \).
+The system becomes unstable when the term $1 + \alpha (2\alpha - 1)$ is greater than 1. This occurs whenever $\alpha > 0.5$.
 x??
 
 ---
 #### Divergence Condition
-For this simplified example, the parameter vector \( w \) diverges if:
-\[ 1 + \alpha (2\alpha - 1) > 1 \]
-This inequality simplifies to:
-\[ \alpha > 0.5 \]
+For this simplified example, the parameter vector $w$ diverges if:
+$$1 + \alpha (2\alpha - 1) > 1$$
 
-:p Why does the system become unstable when \( \alpha > 0.5 \)?
+This inequality simplifies to:
+$$\alpha > 0.5$$:p Why does the system become unstable when $\alpha > 0.5$?
 ??x
-The system becomes unstable because the parameter update rule amplifies \( w \), causing it to grow without bound as more updates are applied, particularly if \( \alpha (2\alpha - 1) > 0 \).
+The system becomes unstable because the parameter update rule amplifies $w $, causing it to grow without bound as more updates are applied, particularly if $\alpha (2\alpha - 1) > 0$.
 x??
 
 ---
 #### Stability Analysis
-Given that \( w_t \) is updated by:
-\[ w_{t+1} = w_t (1 + \alpha (2\alpha - 1)) \]
+Given that $w_t$ is updated by:
+$$w_{t+1} = w_t (1 + \alpha (2\alpha - 1))$$
+
 For stability, the term in parentheses must be less than or equal to 1. This ensures that the updates do not grow indefinitely.
 
-:p What is the condition for \( w \) to remain stable?
+:p What is the condition for $w$ to remain stable?
 ??x
-The parameter vector \( w \) remains stable if:
-\[ 1 + \alpha (2\alpha - 1) \leq 1 \]
+The parameter vector $w$ remains stable if:
+$$1 + \alpha (2\alpha - 1) \leq 1$$
+
 This inequality simplifies to:
-\[ \alpha \leq 0.5 \]
-x??
+$$\alpha \leq 0.5$$x??
 
 ---
 #### Importance of Repeated Transitions
-In the example, repeated transitions from State 1 to State 2 without updating \( w \) on other transitions cause divergence.
+In the example, repeated transitions from State 1 to State 2 without updating $w$ on other transitions cause divergence.
 
 :p Why does the system diverge if only one transition is considered repeatedly?
 ??x
-The system diverges because the importance sampling ratio remains fixed at 1 for the single available action. This causes the parameter vector \( w \) to be consistently updated in a way that increases its value, leading to unbounded growth.
+The system diverges because the importance sampling ratio remains fixed at 1 for the single available action. This causes the parameter vector $w$ to be consistently updated in a way that increases its value, leading to unbounded growth.
 x??
 
 ---
@@ -558,7 +526,7 @@ x??
 The state-value function is approximated using linear parameterization, with each state having a corresponding weight vector component. The goal is to find appropriate weights that minimize the difference between predicted and actual values.
 :p How is the state-value function estimated in this MDP?
 ??x
-The state-value function for each state is estimated using a linear combination of its features. For example, the value of the first state is approximated by \(2w_1 + w_8\), where \(w\) represents the weight vector.
+The state-value function for each state is estimated using a linear combination of its features. For example, the value of the first state is approximated by $2w_1 + w_8 $, where $ w$ represents the weight vector.
 ```python
 # Example Python code to represent the state-value approximation
 def approximate_value(state, weights):
@@ -570,10 +538,10 @@ x??
 ---
 
 #### Reward and Discount Rate Considerations
-The MDP has a reward of zero on all transitions. The discount rate \(\gamma = 0.99\) affects how much future rewards are valued, influencing the update rules during training.
+The MDP has a reward of zero on all transitions. The discount rate $\gamma = 0.99$ affects how much future rewards are valued, influencing the update rules during training.
 :p What role do the reward and discount rate play in this MDP?
 ??x
-In this MDP, the absence of non-zero rewards means that only the structure of transitions between states matters for value function estimation. The discount rate \(\gamma = 0.99\) ensures that future states are considered valuable but with diminishing importance over time.
+In this MDP, the absence of non-zero rewards means that only the structure of transitions between states matters for value function estimation. The discount rate $\gamma = 0.99$ ensures that future states are considered valuable but with diminishing importance over time.
 x??
 
 ---
@@ -589,15 +557,15 @@ x??
 
 ---
 #### Baird's Counterexample for TD(0) and DP Instability
-Background context explaining the concept. In this case, the feature vectors \(\{x(s): s \in S\}\) form a linearly independent set, making it favorable for linear function approximation. However, applying semi-gradient TD(0) or dynamic programming (DP) results in instability due to the way updates are performed.
+Background context explaining the concept. In this case, the feature vectors $\{x(s): s \in S\}$ form a linearly independent set, making it favorable for linear function approximation. However, applying semi-gradient TD(0) or dynamic programming (DP) results in instability due to the way updates are performed.
 
 :p What does Baird's counterexample demonstrate about the stability of semi-gradient TD(0) and DP?
 ??x
 Baird's counterexample demonstrates that even with linear function approximation and using semi-gradient methods, the system can become unstable if the updates are not done according to the on-policy distribution. Specifically, applying semi-gradient TD(0) or an expected update in dynamic programming results in weight vectors diverging to infinity for any positive step size.
 
 In the example provided:
-- The initial weights were \(w = (-1, -1, -1, -1, -1, 10, 1)^T\).
-- The step size was \(\alpha = 0.01\).
+- The initial weights were $w = (-1, -1, -1, -1, -1, 10, 1)^T$.
+- The step size was $\alpha = 0.01$.
 
 The instability occurs because the updates are not aligned with the on-policy distribution, leading to unbounded weight growth.
 
@@ -650,13 +618,13 @@ Background context explaining the concept. Even when using the best least-square
 Tsitsiklis and Van Roy's counterexample shows that even with the best least-squares approximation at each step, linear function approximation can still lead to instability if the feature vectors do not form a complete basis.
 
 In the example provided:
-- The system has two states: State 1 with an estimated value of \(w\), and State 2 with an estimated value of \(2w\).
-- The true values are zero at both states, which is exactly representable when \(w = 0\).
+- The system has two states: State 1 with an estimated value of $w $, and State 2 with an estimated value of $2w$.
+- The true values are zero at both states, which is exactly representable when $w = 0$.
 
 However, attempting to minimize the VE between the estimated value and the expected one-step return can lead to divergence:
-\[ w_{k+1} = \arg\min_w \sum_s (v(s,w) - E_\pi[R_{t+1} + v(S_{t+1}, w_k) | S_t = s])^2. \]
+$$w_{k+1} = \arg\min_w \sum_s (v(s,w) - E_\pi[R_{t+1} + v(S_{t+1}, w_k) | S_t = s])^2.$$
 
-The sequence \(w_k\) diverges when \(\gamma > \frac{5}{6}\) and \(w_0 \neq 0\).
+The sequence $w_k $ diverges when$\gamma > \frac{5}{6}$ and $w_0 \neq 0$.
 
 ```java
 // Pseudocode for Tsitsiklis and Van Roy's update rule

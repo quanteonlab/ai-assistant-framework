@@ -5,10 +5,10 @@
 ---
 
 #### Logarithmic Derivative Continuity Condition
-Background context: For probability and current to be continuous at \( x = x_m \), both \(\psi(x)\) and its first derivative, \(\psi'(x)\), must be continuous there. Requiring the logarithmic derivative, defined as \(\frac{\psi'(x)}{\psi(x)}\), to be continuous encapsulates these continuity conditions into a single condition.
+Background context: For probability and current to be continuous at $x = x_m $, both $\psi(x)$ and its first derivative,$\psi'(x)$, must be continuous there. Requiring the logarithmic derivative, defined as $\frac{\psi'(x)}{\psi(x)}$, to be continuous encapsulates these continuity conditions into a single condition.
 :p What is the importance of the logarithmic derivative in ensuring the continuity of wave functions?
 ??x
-The logarithmic derivative helps ensure that both \(\psi(x)\) and \(\psi'(x)\) are continuous at \( x = x_m \). This approach avoids dealing with two separate conditions, making it simpler to handle. The ratio \(\frac{\psi'(x)}{\psi(x)}\) is used because it remains independent of the normalization constant.
+The logarithmic derivative helps ensure that both $\psi(x)$ and $\psi'(x)$ are continuous at $ x = x_m $. This approach avoids dealing with two separate conditions, making it simpler to handle. The ratio $\frac{\psi'(x)}{\psi(x)}$ is used because it remains independent of the normalization constant.
 
 ```python
 def log_derivative(psi_prime, psi):
@@ -25,7 +25,7 @@ x??
 Background context: The ground-state energy is often sought after using numerical methods. A good initial guess can significantly improve the efficiency of finding the eigenvalue.
 :p What is a recommended starting value for the ground-state energy?
 ??x
-A good starting value for the ground-state energy should be slightly above the bottom of the well, \( E > -V_0 \). This ensures that we start within a reasonable range where bound states might exist.
+A good starting value for the ground-state energy should be slightly above the bottom of the well,$E > -V_0$. This ensures that we start within a reasonable range where bound states might exist.
 
 ```python
 initial_guess = -65  # in MeV, as an example
@@ -33,15 +33,15 @@ initial_guess = -65  # in MeV, as an example
 x??
 
 #### Mismatch and Energy Adjustment
-Background context: When integrating wave functions from the left and right sides of \( x_m \), they may not match exactly due to numerical approximations. The mismatch is quantified using the logarithmic derivative.
+Background context: When integrating wave functions from the left and right sides of $x_m$, they may not match exactly due to numerical approximations. The mismatch is quantified using the logarithmic derivative.
 :p How do you measure the mismatch between left and right wave functions?
 ??x
-The mismatch between the left and right wave functions at \( x = x_m \) can be measured by calculating the difference in their logarithmic derivatives:
+The mismatch between the left and right wave functions at $x = x_m$ can be measured by calculating the difference in their logarithmic derivatives:
 
-\[ \Delta(E, x) = \frac{\psi_L'(x)}{\psi_L(x)} - \frac{\psi_R'(x)}{\psi_R(x)} \]
+$$\Delta(E, x) = \frac{\psi_L'(x)}{\psi_L(x)} - \frac{\psi_R'(x)}{\psi_R(x)}$$
 
 Where:
-- \(\psi_L(x)\) and \(\psi_R(x)\) are the left and right wave functions respectively.
+- $\psi_L(x)$ and $\psi_R(x)$ are the left and right wave functions respectively.
 - The denominator is included to avoid large or small numbers.
 
 ```python
@@ -83,9 +83,9 @@ Background context: The bisection method can be combined with an ODE solver to f
 :p How do you implement a bisection algorithm to find eigenvalues?
 ??x
 To implement a bisection algorithm for finding eigenvalues, follow these steps:
-1. Define the initial step size \( h \).
-2. Implement a method to calculate the matching function \( \Delta(E, x) \) as a function of energy.
-3. Use this method within the bisection algorithm to search for the energy at which \( \Delta(E, x=2) \) vanishes.
+1. Define the initial step size $h$.
+2. Implement a method to calculate the matching function $\Delta(E, x)$ as a function of energy.
+3. Use this method within the bisection algorithm to search for the energy at which $\Delta(E, x=2)$ vanishes.
 
 Example code:
 ```python
@@ -541,14 +541,13 @@ x??
 (Note: The `plot` function and other utility functions are assumed to be part of a plotting library or framework, such as JavaFX or JFreeChart.)
 
 #### RK4 Method for Simultaneous ODEs
-Background context explaining the concept. The Runge-Kutta method of order 4 (RK4) is a numerical technique to solve ordinary differential equations (ODEs). For projectile motion with drag, we need to simultaneously solve two coupled first-order ODEs: one for the horizontal position \(x(t)\), and another for the vertical position \(y(t)\).
+Background context explaining the concept. The Runge-Kutta method of order 4 (RK4) is a numerical technique to solve ordinary differential equations (ODEs). For projectile motion with drag, we need to simultaneously solve two coupled first-order ODEs: one for the horizontal position $x(t)$, and another for the vertical position $ y(t)$.
 :p What is the primary method used to solve simultaneous ODEs in this context?
 ??x
 The Runge-Kutta method of order 4 (RK4) is applied. The ODEs are:
-\[
-\frac{dx}{dt} = v_x, \quad \frac{dy}{dt} = v_y
-\]
-Where \(v_x\) and \(v_y\) are the velocity components in the x and y directions respectively.
+$$\frac{dx}{dt} = v_x, \quad \frac{dy}{dt} = v_y$$
+
+Where $v_x $ and$v_y$ are the velocity components in the x and y directions respectively.
 ```java
 public void rk4(double[] dydt, double t, double h, double[] y) {
     double k1[], k2[], k3[], k4[];
@@ -565,18 +564,12 @@ x??
 ---
 
 #### Initial Conditions for Projectile Motion with Drag
-Background context explaining the concept. The initial conditions are crucial in ensuring that the numerical solution is accurate and reliable. For projectile motion, we start from an initial position \( (b, y_{\infty}) \) where the potential energy is small compared to the total energy.
+Background context explaining the concept. The initial conditions are crucial in ensuring that the numerical solution is accurate and reliable. For projectile motion, we start from an initial position $(b, y_{\infty})$ where the potential energy is small compared to the total energy.
 :p What are the typical initial conditions for solving projectile motion with drag?
 ??x
-The initial conditions typically include a horizontal position \( b \), and a vertical position \( y_{\infty} \) such that:
-\[
-\left| PE(y_{\infty}) \right| / E \leq 10^{-10}
-\]
-where \( PE \) is the potential energy, and \( E \) is the total energy. Good starting parameters are provided as:
-- Mass \( m = 0.5 \)
-- Initial vertical velocity \( v_y(0) = 0.5 \)
-- Initial horizontal velocity \( v_x(0) = 0.0 \)
-- Small change in \( b \): \( \Delta b = 0.05 \), with \( -1 \leq b \leq 1 \).
+The initial conditions typically include a horizontal position $b $, and a vertical position $ y_{\infty}$ such that:
+$$\left| PE(y_{\infty}) \right| / E \leq 10^{-10}$$where $ PE $ is the potential energy, and $ E$ is the total energy. Good starting parameters are provided as:
+- Mass $m = 0.5 $- Initial vertical velocity $ v_y(0) = 0.5 $- Initial horizontal velocity$ v_x(0) = 0.0 $- Small change in$ b $:$\Delta b = 0.05 $, with $-1 \leq b \leq 1$.
 x??
 
 ---
@@ -603,7 +596,7 @@ x??
 Background context explaining the concept. Phase space trajectories are plotted to analyze the dynamics of projectile motion with drag by examining both position and velocity components over time.
 :p What is a phase space plot for projectile motion?
 ??x
-A phase space plot shows \([ x(t), ̇x(t) ]\) and \([ y(t), ̇y(t) ]\). These differ from bound state trajectories as they capture the full dynamics, including velocity components over time.
+A phase space plot shows $[ x(t), ̇x(t) ]$ and $[ y(t), ̇y(t) ]$. These differ from bound state trajectories as they capture the full dynamics, including velocity components over time.
 ```java
 for (double b = -1; b <= 1; b += 0.05) {
     double[] x, y;
@@ -617,10 +610,10 @@ x??
 ---
 
 #### Determining Scattering Angle
-Background context explaining the concept. The scattering angle is determined by analyzing the velocity components of the projectile after it has left the interaction region, where \( \frac{PE}{E} \leq 10^{-10} \).
+Background context explaining the concept. The scattering angle is determined by analyzing the velocity components of the projectile after it has left the interaction region, where $\frac{PE}{E} \leq 10^{-10}$.
 :p How do you determine the scattering angle for a projectile?
 ??x
-The scattering angle \( \theta = \text{atan2}(V_x, V_y) \) is determined by calculating the velocity components of the scattered particle after it has left the interaction region. The condition \( \frac{PE}{E} \leq 10^{-10} \) ensures that the projectile is far enough from the interaction region.
+The scattering angle $\theta = \text{atan2}(V_x, V_y)$ is determined by calculating the velocity components of the scattered particle after it has left the interaction region. The condition $\frac{PE}{E} \leq 10^{-10}$ ensures that the projectile is far enough from the interaction region.
 ```java
 double scatteringAngle = Math.atan2(Vx, Vy);
 ```
@@ -629,10 +622,10 @@ x??
 ---
 
 #### Identifying Discontinuities in d𝜃/db
-Background context explaining the concept. Discontinuities in \( \frac{d\theta}{db} \) and thus \( \sigma(\theta) \) can be identified by analyzing characteristic features of trajectories.
+Background context explaining the concept. Discontinuities in $\frac{d\theta}{db}$ and thus $\sigma(\theta)$ can be identified by analyzing characteristic features of trajectories.
 :p What characteristics lead to discontinuities in the scattering angle?
 ??x
-Discontinuities in \( \frac{d\theta}{db} \) are caused by specific trajectory characteristics, such as sharp turns or sudden changes due to multiple scatterings. These discontinuities affect the differential cross-section \( \sigma(\theta) \).
+Discontinuities in $\frac{d\theta}{db}$ are caused by specific trajectory characteristics, such as sharp turns or sudden changes due to multiple scatterings. These discontinuities affect the differential cross-section $\sigma(\theta)$.
 ```java
 for (double b = -1; b <= 1; b += 0.05) {
     double[] x = new double[numPoints];
@@ -647,10 +640,10 @@ x??
 ---
 
 #### Time Delay and Impact Parameter
-Background context explaining the concept. The time delay \( T(b) \) is computed as a function of the impact parameter \( b \). High oscillatory regions are identified by plotting \( T(b) \) on a semilog plot, and finer scales are used for detailed analysis.
+Background context explaining the concept. The time delay $T(b)$ is computed as a function of the impact parameter $ b $. High oscillatory regions are identified by plotting $ T(b)$ on a semilog plot, and finer scales are used for detailed analysis.
 :p What is time delay in projectile motion?
 ??x
-Time delay \( T(b) \) measures the increase in travel time through an interaction region due to interactions with the potential. High oscillatory regions indicate complex behavior, often requiring finer scale simulations by setting \( b \approx b / 10 \).
+Time delay $T(b)$ measures the increase in travel time through an interaction region due to interactions with the potential. High oscillatory regions indicate complex behavior, often requiring finer scale simulations by setting $b \approx b / 10$.
 ```java
 double[] impactParams = new double[numBValues];
 for (int i = 0; i < impactParams.length; i++) {
@@ -663,7 +656,7 @@ x??
 ---
 
 #### Attractive Potential with Drag
-Background context explaining the concept. Simulations are run for both attractive and repulsive potentials, varying energy levels below and above \( V_{max} = \exp(-2) \). The goal is to determine if there is a physics explanation for balls appearing to "fall out of the sky."
+Background context explaining the concept. Simulations are run for both attractive and repulsive potentials, varying energy levels below and above $V_{max} = \exp(-2)$. The goal is to determine if there is a physics explanation for balls appearing to "fall out of the sky."
 :p What is the impact of an attractive potential on projectile motion?
 ??x
 An attractive potential may cause the projectile to be retained or significantly altered in its trajectory. Detailed simulations are needed to observe the behavior, including back-angle scattering and multiple interactions.
@@ -695,14 +688,13 @@ x??
 ---
 
 #### Modifying RK4 Program for Friction
-Background context explaining the concept. The Runge-Kutta method is modified to solve ODEs with friction, using \( n \) values of 1, 3/2, and 2 to model different velocities.
+Background context explaining the concept. The Runge-Kutta method is modified to solve ODEs with friction, using $n$ values of 1, 3/2, and 2 to model different velocities.
 :p How do you modify the RK4 program for projectile motion with drag?
 ??x
 The RK4 program is adapted to solve the coupled ODEs:
-\[
-\frac{dx}{dt} = v_x, \quad \frac{dy}{dt} = v_y
-\]
-Where \( n \) represents different models of air resistance. For low velocities (\( n=1 \)), medium (\( n=3/2 \)), and high (\( n=2 \)) velocities, appropriate values of \( k \) are adjusted to ensure the initial friction force is consistent.
+$$\frac{dx}{dt} = v_x, \quad \frac{dy}{dt} = v_y$$
+
+Where $n $ represents different models of air resistance. For low velocities ($n=1 $), medium ($ n=3/2 $), and high ($ n=2 $) velocities, appropriate values of$ k$ are adjusted to ensure the initial friction force is consistent.
 ```java
 public void rk4Friction(double[] dydt, double t, double h, double[] y) {
     // Adjust equations for friction based on n value

@@ -107,7 +107,7 @@ Background context: The Restatement (Second) of Contracts §59 states that a mod
 
 :p How does the Restatement view modifications of contracts?
 ??x
-The Restatement (Second) of Contracts §59 allows for modifications to be enforceable if they are considered fair and equitable. This means that a business and mall can agree on a reduction in rent from $1,000 to $800 per month without needing new consideration, given the mutual agreement.
+The Restatement (Second) of Contracts §59 allows for modifications to be enforceable if they are considered fair and equitable. This means that a business and mall can agree on a reduction in rent from $1,000 to$800 per month without needing new consideration, given the mutual agreement.
 
 x??
 
@@ -129,7 +129,7 @@ Background context: One way to provide consideration is by offering a peppercorn
 
 :p How can a peppercorn be used as consideration?
 ??x
-A peppercorn can be used as consideration in situations where formal consideration is needed. In the example, if the business promises to pay $800 per month and gives a peppercorn worth $200, this would satisfy the requirement for consideration.
+A peppercorn can be used as consideration in situations where formal consideration is needed. In the example, if the business promises to pay $800 per month and gives a peppercorn worth$200, this would satisfy the requirement for consideration.
 
 ```java
 public class Example {
@@ -290,7 +290,7 @@ Background context on an example where a written agreement for a specific amount
 
 :p How does the statute of frauds apply in modifying a contract?
 ??x
-In the case of modifying a written agreement from $1,000 to $800 for real estate leases over one year, even if oral modification is agreed upon, the agreement must be documented in writing because it falls under the statute of frauds.
+In the case of modifying a written agreement from $1,000 to$800 for real estate leases over one year, even if oral modification is agreed upon, the agreement must be documented in writing because it falls under the statute of frauds.
 x??
 
 ---
@@ -375,7 +375,7 @@ Background context: When one party has fully performed their obligations under a
 ??x
 Yes, the debtor can offer to pay less than the full amount owed. However, for this to be legally binding, both parties must form a new contract (accord) where the creditor agrees to accept partial payment in satisfaction of the debt.
 
-For instance, if a painter has completed work worth $10,000 and the owner offers to pay $8,000 instead:
+For instance, if a painter has completed work worth $10,000 and the owner offers to pay$8,000 instead:
 ```java
 public class AccordSatisfactionExample {
     public boolean isAccordValid(double totalAmount, double offeredAmount) {
@@ -394,7 +394,7 @@ Background context: An accord is a contract where one party agrees to accept les
 ??x
 An offer in an accord requires clear communication from the debtor indicating their intention to discharge the debt with a partial payment. If this is not explicitly stated, the creditor may interpret it as a mere payment on account.
 
-For example, if a debtor writes "Discharge of $10,000 debt with check for $8,000" in fine print on a check:
+For example, if a debtor writes "Discharge of $10,000 debt with check for$8,000" in fine print on a check:
 ```java
 public class AccordOfferExample {
     public boolean isAccordOfferValid(String note) {
@@ -426,7 +426,7 @@ x??
 Background context: For a modified agreement to be enforceable, it must involve new consideration. This means that the debtor must agree to do something additional or different from what was originally promised in the contract. The pre-existing duty rule states that promising to fulfill an obligation already existing does not count as new consideration.
 :p What is required for a modified agreement to pass the consideration test?
 ??x
-For a modified agreement to pass the consideration test, it must involve new consideration. This means that the debtor must agree to do something additional or different from what was originally promised in the contract. For example, if a debtor offers to pay $8,000 on May 31 instead of June 1 to settle a $10,000 debt, this constitutes new consideration because it involves performing an act that goes beyond the original obligation.
+For a modified agreement to pass the consideration test, it must involve new consideration. This means that the debtor must agree to do something additional or different from what was originally promised in the contract. For example, if a debtor offers to pay $8,000 on May 31 instead of June 1 to settle a$10,000 debt, this constitutes new consideration because it involves performing an act that goes beyond the original obligation.
 ```java
 // Example pseudocode for checking if there is valid consideration
 public boolean hasValidConsideration(Debt originalDebt, Offer modifiedOffer) {
@@ -441,7 +441,7 @@ x??
 Background context: The pre-existing duty rule states that a party’s promise to do what it is already bound to do does not constitute new consideration. This means that any agreement must involve something additional or different from the original terms for the modification to be enforceable.
 :p What is the pre-existing duty rule and why is it important?
 ??x
-The pre-existing duty rule states that a party’s promise to do what it is already bound to do does not constitute new consideration. This means that any agreement must involve something additional or different from the original terms for the modification to be enforceable. For example, if a debtor promises to pay $10,000 on June 1 as per the original contract and later offers to pay $8,000 on the same date, this does not constitute new consideration because the payment is part of the pre-existing obligation.
+The pre-existing duty rule states that a party’s promise to do what it is already bound to do does not constitute new consideration. This means that any agreement must involve something additional or different from the original terms for the modification to be enforceable. For example, if a debtor promises to pay $10,000 on June 1 as per the original contract and later offers to pay$8,000 on the same date, this does not constitute new consideration because the payment is part of the pre-existing obligation.
 ```java
 // Example pseudocode for checking the pre-existing duty rule
 public boolean violatesPreExistingDuty(Debt originalDebt, Offer modifiedOffer) {
@@ -456,7 +456,7 @@ x??
 Background context: In cases where a debt is unliquidated (i.e., the amount owed is not specified), or there are disputes over the amount, finding consideration involves resolving these issues. This can be done through liquidating the debt to a specific amount or settling disputed claims.
 :p How does liquidation of an unliquidated debt help in finding consideration?
 ??x
-Liquidation of an unliquidated debt helps in finding consideration by fixing the amount owed, thereby turning an ambiguous contract into one with clear terms. For example, if a painter offers to paint a homeowner's home for some unspecified amount and the owner accepts, the debt is initially unliquidated. However, if the painter later proposes $8,000 instead of $10,000 and the owner agrees, this constitutes consideration because they are settling on a specific amount.
+Liquidation of an unliquidated debt helps in finding consideration by fixing the amount owed, thereby turning an ambiguous contract into one with clear terms. For example, if a painter offers to paint a homeowner's home for some unspecified amount and the owner accepts, the debt is initially unliquidated. However, if the painter later proposes $8,000 instead of$10,000 and the owner agrees, this constitutes consideration because they are settling on a specific amount.
 ```java
 // Example pseudocode for liquidating an unliquidated debt
 public void liquidateDebt(Painter painter, HomeOwner owner) {
@@ -494,7 +494,7 @@ In the context of contract law, when a dispute arises regarding an agreed amount
 ??x
 In the context of contract law, an accord and satisfaction occurs when the disputing parties reach a mutual agreement to settle the dispute for a different amount than originally agreed. This agreement must be communicated and accepted by both parties for it to take effect. Consideration exists because each party gets something out of the settlement.
 ??x
-Explanation: When the homeowner agrees to pay $8,000 instead of the original $10,000 after the painter claims a poor job performance, this is an example of accord and satisfaction. The painter accepts less than originally due in exchange for not pursuing the full amount in court.
+Explanation: When the homeowner agrees to pay $8,000 instead of the original$10,000 after the painter claims a poor job performance, this is an example of accord and satisfaction. The painter accepts less than originally due in exchange for not pursuing the full amount in court.
 
 ---
 
@@ -502,7 +502,7 @@ Explanation: When the homeowner agrees to pay $8,000 instead of the original $10
 Accord and satisfaction is a method where parties resolve a dispute by agreeing to settle it for a different amount or on different terms. It’s particularly useful when dealing with unliquidated debts, meaning the exact amount of the debt isn't clearly defined.
 :p How does an accord and satisfaction work in practice?
 ??x
-When there's a dispute over a $10,000 debt but both parties agree to settle it for $8,000 instead, this is an accord and satisfaction. This agreement must be clear and accepted by both parties. If the debtor fails to pay the agreed amount, they breach the accord.
+When there's a dispute over a $10,000 debt but both parties agree to settle it for$8,000 instead, this is an accord and satisfaction. This agreement must be clear and accepted by both parties. If the debtor fails to pay the agreed amount, they breach the accord.
 ??x
 Explanation: In this scenario, the painter agrees to accept $8,000 in lieu of the original $10,000. The agreement is binding if both parties accept it. However, if the debtor (painter) doesn't pay $8,000, they are in breach of the accord.
 
@@ -512,7 +512,7 @@ Explanation: In this scenario, the painter agrees to accept $8,000 in lieu of th
 If a party breaches an accord by failing to satisfy the terms agreed upon in the settlement, the creditor can sue on either the underlying debt or the accord itself. The creditor may recover more or less depending on the outcome.
 :p What happens if the debtor fails to perform according to the terms of the accord?
 ??x
-If the debtor does not pay the $8,000 agreed upon in an accord to settle a disputed $10,000 debt, the creditor can sue either on the underlying debt for $10,000 or on the accord for $8,000. The debtor can still raise the original dispute as a defense.
+If the debtor does not pay the $8,000 agreed upon in an accord to settle a disputed $10,000 debt, the creditor can sue either on the underlying debt for $10,000 or on the accord for$8,000. The debtor can still raise the original dispute as a defense.
 ??x
 Explanation: If the painter fails to pay $8,000, the homeowner can sue for $8,000 (the settled amount) but cannot use the poor workmanship argument if they chose to accept the lower payment. Alternatively, the homeowner could sue for the full $10,000, but might recover less in court.
 
@@ -524,12 +524,12 @@ When representing a creditor with an unliquidated or disputed debt, it is advisa
 ??x
 When representing a creditor with an unliquidated or disputed $10,000 debt that was settled for $8,000, it is better to sue on the accord of $8,000. This is because the amount has been established and the debtor cannot raise the original dispute as a defense.
 ??x
-Explanation: If the homeowner sues on the underlying debt, they may recover less than the $8,000 agreed upon in the settlement due to potential defenses raised by the painter. By suing on the accord for $8,000, the creditor ensures that the debtor cannot contest this amount.
+Explanation: If the homeowner sues on the underlying debt, they may recover less than the $8,000 agreed upon in the settlement due to potential defenses raised by the painter. By suing on the accord for$8,000, the creditor ensures that the debtor cannot contest this amount.
 
 ---
 
 #### Example of Accord and Satisfaction
-Consider a scenario where a homeowner owes a painter $10,000 but agrees to pay $8,000 after the painter claims poor workmanship.
+Consider a scenario where a homeowner owes a painter $10,000 but agrees to pay$8,000 after the painter claims poor workmanship.
 :p Provide an example of how accord and satisfaction works in a real-world situation.
 ??x
 In this example, the painter and homeowner reach an agreement: the painter will accept $8,000 instead of $10,000. This is an accord and satisfaction because both parties agree to a different amount than originally stipulated. If the painter does not receive the $8,000, they can sue for $8,000 or the homeowner can sue for the full $10,000.
@@ -708,7 +708,7 @@ A liquidated and undisputed debt can still be discharged through accord and sati
 However, this discharge depends on following specific procedures established by the jurisdiction where the debt exists.
 
 Example scenario:
-If you owe $10,000 and agree to pay $8,000 in return for settling the debt, a court might allow this if both parties act in good faith. The key is ensuring that all required steps are followed as mandated by local laws.
+If you owe $10,000 and agree to pay$8,000 in return for settling the debt, a court might allow this if both parties act in good faith. The key is ensuring that all required steps are followed as mandated by local laws.
 
 x??
 

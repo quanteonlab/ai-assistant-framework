@@ -223,7 +223,7 @@ Kinetic energy refers to the energy of motion. It's derived from the Greek word 
 
 :p What is kinetic energy?
 ??x
-Kinetic energy represents the energy possessed by an object due to its motion. This concept originates from the Greek word "kinesis," which means movement. The formula for calculating kinetic energy is \( KE = \frac{1}{2} mv^2 \), where \( m \) is mass and \( v \) is velocity.
+Kinetic energy represents the energy possessed by an object due to its motion. This concept originates from the Greek word "kinesis," which means movement. The formula for calculating kinetic energy is $KE = \frac{1}{2} mv^2 $, where $ m $ is mass and $ v$ is velocity.
 x??
 
 ---
@@ -308,11 +308,11 @@ x??
 ---
 #### Probability Calculation for Rolling Dice
 
-Background context: This problem involves calculating the probability of not rolling a 5 on at least two dice. The probability of an event not occurring is given by \(1 - P(\text{event})\).
+Background context: This problem involves calculating the probability of not rolling a 5 on at least two dice. The probability of an event not occurring is given by $1 - P(\text{event})$.
 
 :p Calculate the probability of not rolling a 5 with two six-sided dice.
 ??x
-The probability of not rolling a 5 on one die is \(\frac{5}{6}\). Therefore, for two dice, it's \(\left(\frac{5}{6}\right)^2 = \frac{25}{36}\).
+The probability of not rolling a 5 on one die is $\frac{5}{6}$. Therefore, for two dice, it's $\left(\frac{5}{6}\right)^2 = \frac{25}{36}$.
 x??
 
 ---
@@ -322,17 +322,17 @@ Background context: To find the new salary after a percentage increase, you can 
 
 :p Calculate the new salary if an employee's base salary of $320 increases by 12.5%.
 ??x
-The increase in salary is \(320 \times 0.125 = 40\). Therefore, the new salary is \(320 + 40 = 360\).
+The increase in salary is $320 \times 0.125 = 40 $. Therefore, the new salary is $320 + 40 = 360$.
 x??
 
 ---
 #### Distance and Speed Calculation
 
-Background context: The relationship between distance, speed, and time can be described by the formula: Time = \(\frac{\text{Distance}}{\text{Speed}}\).
+Background context: The relationship between distance, speed, and time can be described by the formula: Time = $\frac{\text{Distance}}{\text{Speed}}$.
 
 :p Determine how long it will take to travel 135 miles at a speed of 45 miles per hour.
 ??x
-Using the formula \( \text{Time} = \frac{\text{Distance}}{\text{Speed}} \), we get: \(\frac{135}{45} = 3\) hours.
+Using the formula $\text{Time} = \frac{\text{Distance}}{\text{Speed}}$, we get:$\frac{135}{45} = 3$ hours.
 x??
 
 ---
@@ -340,19 +340,19 @@ x??
 
 Background context: A commission is typically calculated as a percentage of the total sales or salary. The formula for calculating commission is: Commission = Salary * Commission Rate.
 
-:p Calculate the weekly commission if a salesperson earns $800 and has a commission rate of 5%.
+:p Calculate the weekly commission if a salesperson earns$800 and has a commission rate of 5%.
 ??x
-The commission is \(800 \times 0.05 = 40\). Therefore, the weekly commission is $40.
+The commission is $800 \times 0.05 = 40 $. Therefore, the weekly commission is $40.
 x??
 
 ---
 #### Circle Proportion Calculation
 
-Background context: To find the proportion of a circle based on an angle, use the formula: \(\text{Proportion} = \frac{\text{Angle}}{360}\).
+Background context: To find the proportion of a circle based on an angle, use the formula: $\text{Proportion} = \frac{\text{Angle}}{360}$.
 
 :p Determine what fraction of a circle corresponds to 40 degrees.
 ??x
-The fraction is \(\frac{40}{360} = \frac{1}{9}\).
+The fraction is $\frac{40}{360} = \frac{1}{9}$.
 x??
 
 ---
@@ -362,7 +362,7 @@ Background context: To find the difference in time between two events, subtract 
 
 :p Calculate the additional time taken by a hot air balloon to reach 7 miles compared to an airplane that reached 6 miles.
 ??x
-The airplane took \(13 - \frac{12}{5} = 13 - 2.4 = 10.6\) hours, and the balloon took 16 + 1:39 = 17.65 hours. The difference is approximately 7 hours.
+The airplane took $13 - \frac{12}{5} = 13 - 2.4 = 10.6$ hours, and the balloon took 16 + 1:39 = 17.65 hours. The difference is approximately 7 hours.
 x??
 
 ---
@@ -372,7 +372,7 @@ Background context: The cost of shredding documents can be calculated based on t
 
 :p If an employee shreds 900 documents at a rate of 7 documents per minute, how many documents remain after shredding for 1.5 hours?
 ??x
-First, calculate the number of documents shredded in 1.5 hours: \(7 \times (60 \times 1.5) = 630\). Subtract this from the total to find remaining documents: \(900 - 630 = 270\).
+First, calculate the number of documents shredded in 1.5 hours:$7 \times (60 \times 1.5) = 630 $. Subtract this from the total to find remaining documents: $900 - 630 = 270$.
 x??
 
 ---
@@ -382,17 +382,17 @@ Background context: Depreciation is a reduction in value over time, often calcul
 
 :p If a stereo depreciates by 20% each year, what will its value be after two years if it initially costs $1200?
 ??x
-After the first year, the value is \(1200 \times (1 - 0.2) = 960\). After the second year, it becomes \(960 \times 0.8 = 768\).
+After the first year, the value is $1200 \times (1 - 0.2) = 960 $. After the second year, it becomes $960 \times 0.8 = 768$.
 x??
 
 ---
 #### Speed and Distance Calculation
 
-Background context: The speed of an aircraft can be calculated using the formula: Speed = \(\frac{\text{Distance}}{\text{Time}}\).
+Background context: The speed of an aircraft can be calculated using the formula: Speed = $\frac{\text{Distance}}{\text{Time}}$.
 
 :p An aircraft travels 120 miles in 12 minutes. How far will it travel in 5 hours?
 ??x
-First, find the speed: \(\frac{120}{12/60} = 600\) miles per hour. Then, calculate distance over 5 hours: \(600 \times 5 = 3000\) miles.
+First, find the speed: $\frac{120}{12/60} = 600 $ miles per hour. Then, calculate distance over 5 hours:$600 \times 5 = 3000$ miles.
 x??
 
 ---
@@ -402,7 +402,7 @@ Background context: The time taken for a task can be calculated by considering t
 
 :p If four members take 32 days to paint a house, how long will it take two members?
 ??x
-Since four members take 32 days, two members would take twice as much time: \(32 \times 2 = 64\) days.
+Since four members take 32 days, two members would take twice as much time:$32 \times 2 = 64$ days.
 x??
 
 ---
@@ -410,9 +410,9 @@ x??
 
 Background context: The difference in wage can be calculated by subtracting the hourly rates of two employees.
 
-:p Brian and Christina work at different wages. Brian earns $8 per hour, while Christina earns $10.50 per hour. What is their combined earnings gap?
+:p Brian and Christina work at different wages. Brian earns $8 per hour, while Christina earns$10.50 per hour. What is their combined earnings gap?
 ??x
-The difference in their hourly wages is \(10.50 - 8 = 2.50\).
+The difference in their hourly wages is $10.50 - 8 = 2.50$.
 x??
 
 ---
@@ -422,7 +422,7 @@ Background context: The total time between two events can be calculated by addin
 
 :p How much time passes from 8:30 a.m. to 11:15 a.m.?
 ??x
-The total time is 2 hours and 45 minutes, or \(2 + \frac{45}{60} = 2.75\) hours.
+The total time is 2 hours and 45 minutes, or $2 + \frac{45}{60} = 2.75$ hours.
 x??
 
 ---

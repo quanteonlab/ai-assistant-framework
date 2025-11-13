@@ -9,14 +9,14 @@ Background context explaining the role of the KL divergence loss term in a Varia
 
 :p How does the KL divergence loss term influence the latent space in a VAE?
 ??x
-The KL divergence loss term ensures that the encoded images' \( z \) values stay close to a standard normal distribution. This constraint helps maintain the continuity and structure of the latent space, making it easier for the decoder to generate meaningful images.
+The KL divergence loss term ensures that the encoded images' $z$ values stay close to a standard normal distribution. This constraint helps maintain the continuity and structure of the latent space, making it easier for the decoder to generate meaningful images.
 
 In mathematical terms, the loss function L consists of two parts: reconstruction loss (which measures how well the original image is reconstructed from its encoded representation) and KL divergence loss (which ensures the latent variables are normally distributed).
 
 The objective function can be represented as:
-\[ \text{Loss} = -\mathbb{E}_{z \sim q(z|x)}[\log p(x|z)] + D_{KL}(q(z|x)||p(z)) \]
+$$\text{Loss} = -\mathbb{E}_{z \sim q(z|x)}[\log p(x|z)] + D_{KL}(q(z|x)||p(z))$$
 
-Where \( q(z|x) \) is the approximate posterior distribution, and \( p(z) \) is the prior (which in this case is a standard normal distribution).
+Where $q(z|x)$ is the approximate posterior distribution, and $p(z)$ is the prior (which in this case is a standard normal distribution).
 
 :p
 ??x
@@ -51,7 +51,7 @@ The key difference lies in the nature of the encoding process:
 
 :p
 ??x
-This stochasticity helps in generating more diverse and realistic images. By sampling from the posterior \( q(z|x) \), we can explore different regions of the latent space, leading to a richer set of generated outputs.
+This stochasticity helps in generating more diverse and realistic images. By sampling from the posterior $q(z|x)$, we can explore different regions of the latent space, leading to a richer set of generated outputs.
 
 ```python
 import tensorflow as tf

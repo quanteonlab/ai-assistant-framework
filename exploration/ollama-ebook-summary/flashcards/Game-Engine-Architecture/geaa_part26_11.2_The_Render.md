@@ -7,14 +7,14 @@
 #### W-Buffering Technique
 Background context explaining the w-buffering technique. It is a method used to handle depth buffering, leveraging the homogeneous coordinates where the z-coordinate conveniently appears as the w-component of the clip-space coordinates.
 
-Recall from Equation (11.1) that \( p_h = \frac{p_V}{z} \). In the rendering pipeline, the view-space z-coordinates are stored in the w-component of our homogeneous clip-space coordinates. This allows us to use a single buffer for both depth and distance information. However, this introduces some complexity because while the z-buffer stores \(1/z\) (i.e., \(1/p_Vz\)), the w-buffer stores \(z\) (i.e., \(p_Vz\)).
+Recall from Equation (11.1) that $p_h = \frac{p_V}{z}$. In the rendering pipeline, the view-space z-coordinates are stored in the w-component of our homogeneous clip-space coordinates. This allows us to use a single buffer for both depth and distance information. However, this introduces some complexity because while the z-buffer stores $1/z $(i.e.,$1/p_Vz $), the w-buffer stores $ z $(i.e.,$ p_Vz$).
 
-The term "w-buffer" can be confusing since it does not directly store the actual z-coordinate but a transformed version of it. This transformation is necessary because linear interpolation on \(z\) in homogeneous coordinates would result in incorrect values, as they are non-linear.
+The term "w-buffer" can be confusing since it does not directly store the actual z-coordinate but a transformed version of it. This transformation is necessary because linear interpolation on $z$ in homogeneous coordinates would result in incorrect values, as they are non-linear.
 :p What is w-buffering and how does it work?
 ??x
-W-buffering is a technique used to handle depth buffering by leveraging the w-component of the clip-space coordinates. In this method, the view-space z-coordinate conveniently appears in the w-component during homogeneous coordinate transformations. The z-buffer stores \(1/z\) (i.e., \(1/p_Vz\)), while the w-buffer stores \(z\) (i.e., \(p_Vz\)). This approach introduces complexity because depths must be inverted prior to interpolation and re-inverted before storage.
+W-buffering is a technique used to handle depth buffering by leveraging the w-component of the clip-space coordinates. In this method, the view-space z-coordinate conveniently appears in the w-component during homogeneous coordinate transformations. The z-buffer stores $1/z $(i.e.,$1/p_Vz $), while the w-buffer stores $ z $(i.e.,$ p_Vz$). This approach introduces complexity because depths must be inverted prior to interpolation and re-inverted before storage.
 
-This technique is more expensive than its z-based counterpart due to the need for additional inversion steps during depth calculations. The logic behind this method can be understood through the transformation from view space to clip space, where \( p_h = \frac{p_V}{z} \), leading to \( w = z \).
+This technique is more expensive than its z-based counterpart due to the need for additional inversion steps during depth calculations. The logic behind this method can be understood through the transformation from view space to clip space, where $p_h = \frac{p_V}{z}$, leading to $ w = z$.
 ```java
 // Pseudocode for transforming view-space coordinates to clip-space with w-buffering
 void transformToClipSpace(float[] pv) {
@@ -124,7 +124,7 @@ Background context explaining how parallelization can be achieved both between s
 ??x
 Parallelization in rendering pipelines can be achieved both between different stages and within individual stages. Between stages, while one stage processes one data element, another stage can process the results from the previous stage.
 
-Within a single stage, if the computing hardware is duplicated \( N \) times on the die, \( N \) data elements can be processed in parallel by that stage. This allows for efficient use of computational resources and significantly improves performance.
+Within a single stage, if the computing hardware is duplicated $N $ times on the die,$ N$ data elements can be processed in parallel by that stage. This allows for efficient use of computational resources and significantly improves performance.
 
 Parallelization helps to balance latency across all stages and eliminate bottlenecks.
 ```java
@@ -715,12 +715,11 @@ x??
 #### Alpha Blending Function
 Background context explaining the concept. The alpha blending function is used to render semitransparent geometry, where each pixel's color is a weighted average of the existing frame buffer contents and the incoming fragment’s color. This process ensures that the final rendered image accurately reflects overlapping translucent surfaces.
 The formula for alpha blending is: 
-\[ C'_{D} = A_S \cdot C_S + (1 - A_S) \cdot C_D \]
-where \(A_S\) is the source alpha of the incoming fragment, and \(C_S\) and \(C_D\) are the source color and destination color respectively.
+$$C'_{D} = A_S \cdot C_S + (1 - A_S) \cdot C_D$$where $ A_S $ is the source alpha of the incoming fragment, and $ C_S $ and $ C_D$ are the source color and destination color respectively.
 
 :p What does the formula for alpha blending represent?
 ??x
-The formula represents how a pixel's color in the frame buffer (destination) is updated when drawing an opaque or translucent fragment. The new color (\(C'_{D}\)) is calculated as a weighted sum of the existing frame buffer color (\(C_D\)) and the incoming fragment’s color (\(C_S\)), with \(A_S\) being the weight factor.
+The formula represents how a pixel's color in the frame buffer (destination) is updated when drawing an opaque or translucent fragment. The new color ($C'_{D}$) is calculated as a weighted sum of the existing frame buffer color ($ C_D $) and the incoming fragment’s color ($ C_S $), with$ A_S$ being the weight factor.
 ```java
 // Pseudocode for Alpha Blending
 float alpha = sourceFragment.getAlpha();
@@ -753,8 +752,7 @@ x??
 Background context explaining the concept. The general blending equation allows for more flexible color compositing, where the output color is a weighted sum of the source and destination colors using weights determined by their alpha values.
 
 The formula is:
-\[ C'_{D} = (w_S \cdot C_S) + (w_D \cdot C_D) \]
-where \(w_S\) and \(w_D\) are weighting factors, which can be selected from predefined sets of values including 0, 1, source or destination color, and one minus the source or destination alpha.
+$$C'_{D} = (w_S \cdot C_S) + (w_D \cdot C_D)$$where $ w_S $ and $ w_D$ are weighting factors, which can be selected from predefined sets of values including 0, 1, source or destination color, and one minus the source or destination alpha.
 
 :p What is the general blending equation used for?
 ??x
@@ -1488,9 +1486,8 @@ Background context:
 Bounding volume culling is a technique used to optimize rendering by reducing the number of objects that need to be processed. One common approach uses spheres as bounding volumes due to their simplicity and efficiency in calculations.
 
 Relevant formulas:
-The perpendicular distance \( h \) from a point to a plane can be calculated using the formula:
-\[ h = ax + by + cz + d = n \cdot (P - P_0) \]
-where \( n \) is the normal vector of the plane, and \( P \) is the center of the bounding sphere. 
+The perpendicular distance $h$ from a point to a plane can be calculated using the formula:
+$$h = ax + by + cz + d = n \cdot (P - P_0)$$where $ n $ is the normal vector of the plane, and $ P$ is the center of the bounding sphere. 
 
 :p How do we determine if a bounding sphere is inside the frustum?
 ??x
@@ -1509,7 +1506,7 @@ public boolean isSphereInsideFrustum(Vector3 sphereCenter, float sphereRadius) {
 }
 ```
 
-The `distanceToPoint` method computes \( h \) using the provided formula. If for any plane \( h \) is less than -\( radius \), it means the sphere intersects or is outside the corresponding plane, so we return false.
+The `distanceToPoint` method computes $h $ using the provided formula. If for any plane$h $ is less than -$ radius$, it means the sphere intersects or is outside the corresponding plane, so we return false.
 
 x??
 
@@ -1950,7 +1947,7 @@ x??
 
 #### k-dimensional Trees (kd-trees)
 
-k-d trees are a generalization of BSP trees to \( k \) dimensions. In the context of rendering, a kd-tree divides space with a single plane at each level of recursion, making it suitable for handling higher-dimensional data.
+k-d trees are a generalization of BSP trees to $k$ dimensions. In the context of rendering, a kd-tree divides space with a single plane at each level of recursion, making it suitable for handling higher-dimensional data.
 
 :p What is the primary use of a kd-tree in 3D graphics?
 ??x

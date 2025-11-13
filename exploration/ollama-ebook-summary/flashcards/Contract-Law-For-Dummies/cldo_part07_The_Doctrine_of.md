@@ -53,7 +53,7 @@ The key elements of promissory estoppel (reliance) under Restatement § 90(1) in
 - Enforcement is necessary to avoid injustice.
 
 Formula: 
-\[ \text{Promissory Estoppel} = (\text{Inducement of Action/Forbearance}) \land (\text{Reasonable Expectation by Promisor}) \implies \text{Binding Promise if Injustice Averted Only by Enforcement} \]
+$$\text{Promissory Estoppel} = (\text{Inducement of Action/Forbearance}) \land (\text{Reasonable Expectation by Promisor}) \implies \text{Binding Promise if Injustice Averted Only by Enforcement}$$
 
 Example:
 - If Party X promises to sell goods to Party Y, and Party Y acts on this promise (e.g., pays a deposit), but no formal contract exists.
@@ -85,7 +85,7 @@ Background context: The Restatement is designed to provide guidance rather than 
 The Restatement allows flexibility in granting remedies by stating that just because all elements of promissory estoppel (reliance) are met, it doesn't necessarily mean an unlimited or full remedy will be granted. The court may limit the remedy based on what justice requires.
 
 Formula:
-\[ \text{Remedy} = (\text{All Elements Met}) \implies \text{Limited as Justice Requires} \]
+$$\text{Remedy} = (\text{All Elements Met}) \implies \text{Limited as Justice Requires}$$
 
 Example: 
 - Party X promises to pay a sum of money to Party Y for services rendered, but no formal contract exists.
@@ -98,7 +98,7 @@ public class LimitedRemedyExample {
         // Assume a partial remedy is more just in this case.
         double limitedRemedy = Math.min(incurredCost, breachAmount);
         
-        System.out.println("Limited remedy amount: $" + limitedRemedy);
+        System.out.println("Limited remedy amount:$" + limitedRemedy);
     }
 }
 ```
@@ -252,7 +252,7 @@ x??
 Background context: This example involves a rich uncle promising to give money for studying, which induced the nephew to purchase study aids. The court would likely limit recovery to the cost of the study aids purchased in reliance on the promise.
 :p How much is the nephew most likely to recover from his uncle?
 ??x
-The nephew is most likely to recover $200, the amount spent on study aids, rather than the full $1,000 promised by his rich uncle.
+The nephew is most likely to recover $200, the amount spent on study aids, rather than the full$1,000 promised by his rich uncle.
 x??
 
 ---
@@ -573,7 +573,7 @@ Background context: In cases where a material breach occurs (a significant failu
 ??x
 When a contractor breaches a contract significantly by stopping work, they can't recover for the portion of the project completed because it constitutes a material breach. However, if the injured party (the homeowner) receives significant benefits from the incomplete work, the court may order restitution to prevent unjust enrichment.
 Example:
-Suppose a contractor builds 40% of a house and stops, costing $80,000 in value to the homeowner for that portion. The court would likely order the homeowner to pay the contractor $80,000 to avoid unjust enrichment.
+Suppose a contractor builds 40% of a house and stops, costing $80,000 in value to the homeowner for that portion. The court would likely order the homeowner to pay the contractor$80,000 to avoid unjust enrichment.
 x??
 
 ---

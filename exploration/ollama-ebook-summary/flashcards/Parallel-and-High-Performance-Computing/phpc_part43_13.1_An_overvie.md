@@ -211,34 +211,35 @@ x?
 Conservation of mass is a fundamental principle used to model tsunamis. In the context of shallow water dynamics, this law states that the change in mass relative to time within a computational cell is equal to the sum of the mass fluxes across the x- and y-faces.
 
 The mathematical representation for conservation of mass in this scenario is:
-\[ \frac{\partial M}{\partial t} = \frac{\partial (vxM)}{\partial x} + \frac{\partial (vyM)}{\partial y} \]
+$$\frac{\partial M}{\partial t} = \frac{\partial (vxM)}{\partial x} + \frac{\partial (vyM)}{\partial y}$$
 
-Where \( M \) is the mass, and \( vx \), \( vy \) are the velocity components in the x- and y-directions respectively. Given that water is assumed to be incompressible, the density can be treated as constant.
+Where $M $ is the mass, and$vx $,$ vy$ are the velocity components in the x- and y-directions respectively. Given that water is assumed to be incompressible, the density can be treated as constant.
 
 :p What equation represents conservation of mass for tsunamis in shallow water dynamics?
 ??x
 The equation representing conservation of mass in this context is:
-\[ \frac{\partial M}{\partial t} = \frac{\partial (vxM)}{\partial x} + \frac{\partial (vyM)}{\partial y} \]
-This means that the rate of change of mass with respect to time within a cell is equal to the sum of the fluxes of mass across its boundaries. Since water density is constant, we can replace \( M \) (mass) with height (\( h \)), simplifying the equation to:
-\[ 0 = \frac{\partial h}{\partial t} + u \frac{\partial h}{\partial x} + v \frac{\partial h}{\partial y} \]
-where \( u \) and \( v \) are velocity components in the x- and y-directions respectively.
+$$\frac{\partial M}{\partial t} = \frac{\partial (vxM)}{\partial x} + \frac{\partial (vyM)}{\partial y}$$
+
+This means that the rate of change of mass with respect to time within a cell is equal to the sum of the fluxes of mass across its boundaries. Since water density is constant, we can replace $M $(mass) with height ($ h$), simplifying the equation to:
+$$0 = \frac{\partial h}{\partial t} + u \frac{\partial h}{\partial x} + v \frac{\partial h}{\partial y}$$where $ u $ and $ v$ are velocity components in the x- and y-directions respectively.
 x??
 
 ---
 
 #### Conservation of Momentum for Tsunamis
 Conservation of momentum is another key principle used to model tsunamis. It follows Newton's second law, where force equals mass times acceleration. In shallow water dynamics, this can be expressed as:
-\[ \frac{\partial (vmom)}{\partial t} = -\frac{\partial p}{\partial x} + g h^2/2 \]
+$$\frac{\partial (vmom)}{\partial t} = -\frac{\partial p}{\partial x} + g h^2/2$$
 
-Where \( mom \) is the momentum and \( p \) is pressure. The term \( gh^2/2 \) comes from integrating the work done by gravity over depth.
+Where $mom $ is the momentum and$p $ is pressure. The term$gh^2/2$ comes from integrating the work done by gravity over depth.
 
 :p What equation represents conservation of momentum for tsunamis in shallow water dynamics?
 ??x
 The equation representing conservation of momentum in this context is:
-\[ \frac{\partial (vmom)}{\partial t} = -\frac{\partial p}{\partial x} + \frac{1}{2} g h^2 \]
+$$\frac{\partial (vmom)}{\partial t} = -\frac{\partial p}{\partial x} + \frac{1}{2} g h^2$$
+
 This means that the rate of change of momentum with respect to time within a cell is equal to the negative partial derivative of pressure with respect to x plus half of gravity times the square of height.
 
-Here, \( mom = vx * M \) and \( p \) (pressure) is related to the depth of water. The term \( gh^2/2 \) accounts for the force due to gravity on a column of water.
+Here,$mom = vx * M $ and$p $(pressure) is related to the depth of water. The term$ gh^2/2$ accounts for the force due to gravity on a column of water.
 x??
 
 ---
@@ -246,16 +247,15 @@ x??
 #### Hydrostatic Pressure in Tsunamis
 Hydrostatic pressure plays a critical role in understanding how tsunamis propagate. It is caused by the weight of overlying water columns and can be approximated as linear with depth.
 
-The hydrostatic pressure at a given height \( z \) (from the surface) to a wave height \( h \) is:
-\[ p(z) = g \int_0^h z dz = \frac{1}{2} g h^2 \]
-
-:p How is hydrostatic pressure related to the depth of water in tsunamis?
+The hydrostatic pressure at a given height $z $(from the surface) to a wave height $ h$ is:
+$$p(z) = g \int_0^h z dz = \frac{1}{2} g h^2$$:p How is hydrostatic pressure related to the depth of water in tsunamis?
 ??x
-Hydrostatic pressure at a given height \( z \) from the surface to a wave height \( h \) can be calculated as:
-\[ p(z) = g \int_0^h z dz = \frac{1}{2} g h^2 \]
+Hydrostatic pressure at a given height $z $ from the surface to a wave height$h$ can be calculated as:
+$$p(z) = g \int_0^h z dz = \frac{1}{2} g h^2$$
+
 This means that the pressure increases quadratically with depth, and half of this value is used in the momentum equation for simplicity.
 
-For example, if we have a wave height \( h \):
+For example, if we have a wave height $h$:
 ```java
 // Pseudocode to calculate hydrostatic pressure
 double h = 5; // Wave height in meters
@@ -269,34 +269,36 @@ x??
 
 #### X-Momentum Conservation for Tsunamis
 In the context of tsunamis, conservation of x-momentum involves the x-velocity component and the momentum term. The equation is:
-\[ \frac{\partial (hu)}{\partial t} = -\frac{\partial (humom)}{\partial x} + g h u \]
+$$\frac{\partial (hu)}{\partial t} = -\frac{\partial (humom)}{\partial x} + g h u$$
 
-Where \( hu \) represents the x-momentum.
+Where $hu$ represents the x-momentum.
 
 :p What equation represents conservation of x-momentum for tsunamis?
 ??x
 The equation representing conservation of x-momentum in this context is:
-\[ \frac{\partial (hu)}{\partial t} = -\frac{\partial (humom)}{\partial x} + g h u \]
-This means that the rate of change of x-momentum with respect to time within a cell is equal to the negative partial derivative of \( humom \) with respect to x plus gravity times height times velocity in the x-direction.
+$$\frac{\partial (hu)}{\partial t} = -\frac{\partial (humom)}{\partial x} + g h u$$
 
-Here, \( humom = vx * mom \), and it accounts for both advection (flow of mass) and the gravitational force.
+This means that the rate of change of x-momentum with respect to time within a cell is equal to the negative partial derivative of $humom$ with respect to x plus gravity times height times velocity in the x-direction.
+
+Here,$humom = vx * mom$, and it accounts for both advection (flow of mass) and the gravitational force.
 x??
 
 ---
 
 #### Y-Momentum Conservation for Tsunamis
 Conservation of y-momentum involves the y-velocity component and the momentum term. The equation is:
-\[ \frac{\partial (hv)}{\partial t} = -\frac{\partial (hvmom)}{\partial y} + g h v \]
+$$\frac{\partial (hv)}{\partial t} = -\frac{\partial (hvmom)}{\partial y} + g h v$$
 
-Where \( hv \) represents the y-momentum.
+Where $hv$ represents the y-momentum.
 
 :p What equation represents conservation of y-momentum for tsunamis?
 ??x
 The equation representing conservation of y-momentum in this context is:
-\[ \frac{\partial (hv)}{\partial t} = -\frac{\partial (hvmom)}{\partial y} + g h v \]
-This means that the rate of change of y-momentum with respect to time within a cell is equal to the negative partial derivative of \( hvmom \) with respect to y plus gravity times height times velocity in the y-direction.
+$$\frac{\partial (hv)}{\partial t} = -\frac{\partial (hvmom)}{\partial y} + g h v$$
 
-Here, \( hvmom = vy * mom \), and it accounts for both advection (flow of mass) and the gravitational force.
+This means that the rate of change of y-momentum with respect to time within a cell is equal to the negative partial derivative of $hvmom$ with respect to y plus gravity times height times velocity in the y-direction.
+
+Here,$hvmom = vy * mom$, and it accounts for both advection (flow of mass) and the gravitational force.
 x??
 
 ---

@@ -128,19 +128,19 @@ x??
 ---
 
 #### CZ Gate Effects
-Background context: The controlled-Z (CZ) gate is a two-qubit quantum gate that applies a phase shift of \(-1\) to the \(|11\rangle\) state. It is often used in various quantum algorithms and circuits.
+Background context: The controlled-Z (CZ) gate is a two-qubit quantum gate that applies a phase shift of $-1 $ to the$|11\rangle$ state. It is often used in various quantum algorithms and circuits.
 
-:p Prove that \(CZ|00⟩=|00⟩\), \(CZ|01⟩=|01⟩\), \(CZ|10⟩=|10⟩\), and \(CZ|11⟩=−|11⟩\).
+:p Prove that $CZ|00⟩=|00⟩$,$ CZ|01⟩=|01⟩$,$ CZ|10⟩=|10⟩$, and $ CZ|11⟩=−|11⟩$.
 ??x
-The CZ gate applies a phase shift of \(-1\) only to the state \(|11\rangle\). For other states, it leaves them unchanged. Specifically:
-- For \(|00⟩\): The CZ gate does not apply any operation.
-  - Therefore, \(CZ|00⟩=|00⟩\).
-- For \(|01⟩\): The control qubit is in the state \(|0\rangle\), so the target qubit remains unchanged.
-  - Therefore, \(CZ|01⟩=|01⟩\).
-- For \(|10⟩\): The control qubit is in the state \(|1\rangle\), but the target qubit is not part of the phase shift.
-  - Therefore, \(CZ|10⟩=|10⟩\).
-- For \(|11⟩\): Both qubits are in the state \(|1\rangle\), so a phase shift of \(-1\) is applied to this state.
-  - Therefore, \(CZ|11⟩=−|11⟩\).
+The CZ gate applies a phase shift of $-1 $ only to the state$|11\rangle$. For other states, it leaves them unchanged. Specifically:
+- For $|00⟩$: The CZ gate does not apply any operation.
+  - Therefore, $CZ|00⟩=|00⟩$.
+- For $|01⟩$: The control qubit is in the state $|0\rangle$, so the target qubit remains unchanged.
+  - Therefore, $CZ|01⟩=|01⟩$.
+- For $|10⟩$: The control qubit is in the state $|1\rangle$, but the target qubit is not part of the phase shift.
+  - Therefore, $CZ|10⟩=|10⟩$.
+- For $|11⟩$: Both qubits are in the state $|1\rangle $, so a phase shift of $-1$ is applied to this state.
+  - Therefore,$CZ|11⟩=−|11⟩$.
 
 This can be verified by considering the action of the CZ gate on each basis state. :
 ```python
@@ -160,19 +160,19 @@ x??
 ---
 
 #### CNOT Gate Effects
-Background context: The controlled-NOT (CNOT) gate is a two-qubit quantum gate that flips the target qubit if the control qubit is in the state \(|1\rangle\). It is one of the most commonly used gates in quantum circuits.
+Background context: The controlled-NOT (CNOT) gate is a two-qubit quantum gate that flips the target qubit if the control qubit is in the state $|1\rangle$. It is one of the most commonly used gates in quantum circuits.
 
-:p Determine the effect of the CNOT gate on the states \(|10⟩\), \(|01⟩\), \(|00⟩\), and \(|11⟩\).
+:p Determine the effect of the CNOT gate on the states $|10⟩$,$|01⟩$,$|00⟩$, and $|11⟩$.
 ??x
-The CNOT gate flips the target qubit if the control qubit is \(|1\rangle\). Let's examine each state:
-- For \(|10⟩\): The control qubit is in the state \(|1\rangle\), so the target qubit is flipped.
-  - Therefore, \(CNOT|10⟩=|11⟩\).
-- For \(|01⟩\): The control qubit is in the state \(|0\rangle\), so no operation is performed on the target qubit.
-  - Therefore, \(CNOT|01⟩=|01⟩\).
-- For \(|00⟩\): The control qubit is in the state \(|0\rangle\), so no operation is performed on the target qubit.
-  - Therefore, \(CNOT|00⟩=|00⟩\).
-- For \(|11⟩\): The control qubit is in the state \(|1\rangle\), so the target qubit is flipped.
-  - Therefore, \(CNOT|11⟩=|10⟩\).
+The CNOT gate flips the target qubit if the control qubit is $|1\rangle$. Let's examine each state:
+- For $|10⟩$: The control qubit is in the state $|1\rangle$, so the target qubit is flipped.
+  - Therefore, $CNOT|10⟩=|11⟩$.
+- For $|01⟩$: The control qubit is in the state $|0\rangle$, so no operation is performed on the target qubit.
+  - Therefore, $CNOT|01⟩=|01⟩$.
+- For $|00⟩$: The control qubit is in the state $|0\rangle$, so no operation is performed on the target qubit.
+  - Therefore, $CNOT|00⟩=|00⟩$.
+- For $|11⟩$: The control qubit is in the state $|1\rangle$, so the target qubit is flipped.
+  - Therefore, $CNOT|11⟩=|10⟩$.
 
 This can be verified by considering the action of the CNOT gate on each basis state. :
 ```python
@@ -192,22 +192,17 @@ x??
 ---
 
 #### Bell State Creation
-Background context: A Bell state is a maximally entangled quantum state of two qubits. The Bell state \(|\beta_{11}\rangle = \frac{1}{\sqrt{2}}(|01⟩ - |10⟩)\) is one such example, and it can be created using a series of quantum gates.
+Background context: A Bell state is a maximally entangled quantum state of two qubits. The Bell state $|\beta_{11}\rangle = \frac{1}{\sqrt{2}}(|01⟩ - |10⟩)$ is one such example, and it can be created using a series of quantum gates.
 
-:p Create a quantum circuit for creating the entangled Bell state \(|\beta_{11}\rangle = \frac{1}{\sqrt{2}}(|01⟩ - |10⟩)\).
+:p Create a quantum circuit for creating the entangled Bell state $|\beta_{11}\rangle = \frac{1}{\sqrt{2}}(|01⟩ - |10⟩)$.
 ??x
-To create the Bell state \(|\beta_{11}\rangle = \frac{1}{\sqrt{2}}(|01⟩ - |10⟩)\), we can use a series of quantum gates as follows:
-- Apply an X gate to the second qubit to get \(|10\rangle\) from the initial \(|00\rangle\) state.
+To create the Bell state $|\beta_{11}\rangle = \frac{1}{\sqrt{2}}(|01⟩ - |10⟩)$, we can use a series of quantum gates as follows:
+- Apply an X gate to the second qubit to get $|10\rangle $ from the initial$|00\rangle$ state.
 - Apply a Hadamard (H) gate to the first qubit to put it in a superposition state.
 - Apply a CNOT gate with the first qubit as control and the second qubit as target.
 
 The circuit can be represented by the following steps:
-1. Initialize: \(|00\rangle\)
-2. Apply H on q0: \(\frac{1}{\sqrt{2}}(|00⟩ + |01⟩)\)
-3. Apply X on q1: \(\frac{1}{\sqrt{2}}(|01⟩ + |11⟩)\)
-4. Apply CNOT (q0 as control, q1 as target): \(\frac{1}{\sqrt{2}}(|01⟩ - |10⟩)\)
-
-This circuit creates the desired Bell state.
+1. Initialize:$|00\rangle $2. Apply H on q0:$\frac{1}{\sqrt{2}}(|00⟩ + |01⟩)$3. Apply X on q1:$\frac{1}{\sqrt{2}}(|01⟩ + |11⟩)$4. Apply CNOT (q0 as control, q1 as target):$\frac{1}{\sqrt{2}}(|01⟩ - |10⟩)$ This circuit creates the desired Bell state.
 ```python
 # Pseudocode for creating the Bell state using quantum gates
 def create_bell_state():
@@ -223,16 +218,15 @@ x??
 #### Half Adder Circuit
 Background context: A half adder is a basic combinational logic circuit that takes two binary inputs (qubits in this case) and produces their sum and carry. The sum output is the XOR of the two input qubits, while the carry output is 1 if both inputs are 1.
 
-:p Create a quantum circuit for a half-adder that adds the qubits \(q0\) and \(q1\), outputs the sum in \(y\), and sets the carry bit \(q2 = 1\) if \(q0 = q1 = 1\), else \(q2 = 0\). Verify the addition for 1 + 1, 1 + 0, and 0 + 1.
+:p Create a quantum circuit for a half-adder that adds the qubits $q0 $ and$q1 $, outputs the sum in $ y $, and sets the carry bit$ q2 = 1 $if$ q0 = q1 = 1 $, else$ q2 = 0$. Verify the addition for 1 + 1, 1 + 0, and 0 + 1.
 ??x
 To create a half adder circuit in quantum computing, we need to:
-- Perform an XOR operation on the inputs \(q0\) and \(q1\) to get the sum bit \(y\).
-- Use a CNOT gate with \(q0\) as control and \(q2\) as target to set the carry bit.
+- Perform an XOR operation on the inputs $q0 $ and$q1 $ to get the sum bit$y$.
+- Use a CNOT gate with $q0 $ as control and$q2$ as target to set the carry bit.
 
 The steps are as follows:
-1. Initialize qubits: \(|q0⟩|q1⟩|q2⟩ = |000⟩\)
-2. Apply an XOR operation on \(q0\) and \(q1\) using a CNOT gate.
-3. Use a CNOT gate with \(q0\) as control and \(q2\) as target to set the carry bit.
+1. Initialize qubits:$|q0⟩|q1⟩|q2⟩ = |000⟩$2. Apply an XOR operation on $ q0$and $ q1$ using a CNOT gate.
+3. Use a CNOT gate with $q0 $ as control and$q2$ as target to set the carry bit.
 
 The circuit can be represented by:
 ```python
@@ -245,9 +239,9 @@ def half_adder_circuit():
     return qc
 ```
 To verify the addition:
-- For \(q0 = 1\) and \(q1 = 1\): The sum is \(0\) and carry is \(1\).
-- For \(q0 = 1\) and \(q1 = 0\): The sum is \(1\) and carry is \(0\).
-- For \(q0 = 0\) and \(q1 = 1\): The sum is \(1\) and carry is \(0\).
+- For $q0 = 1 $ and$q1 = 1 $: The sum is $0 $ and carry is$1$.
+- For $q0 = 1 $ and$q1 = 0 $: The sum is$1 $ and carry is$0$.
+- For $q0 = 0 $ and$q1 = 1 $: The sum is$1 $ and carry is$0$.
 
 These can be verified by running the circuit with different input states. :
 ```python
@@ -260,17 +254,17 @@ x??
 ---
 
 #### 1-Qubit Quantum Fourier Transform (QFT)
-Background context: The QFT for a single qubit is computed using a simple formula involving the complex variable Z, where \(Z = e^{-2\pi i/N}\) for \(N=2^1 = 2\). This results in transformations that can be implemented with just one qubit and a few operations.
+Background context: The QFT for a single qubit is computed using a simple formula involving the complex variable Z, where $Z = e^{-2\pi i/N}$ for $N=2^1 = 2$. This results in transformations that can be implemented with just one qubit and a few operations.
 :p What does the QFT do to a single qubit state?
 ??x
-The QFT transforms a single-qubit state into another form. Specifically, for a qubit \(|q\rangle\), the transformation is given by:
-\[QFT2|q⟩ = \frac{1}{\sqrt{2}}( |0\rangle + Z^{-q} |1\rangle ) \]
-where \(Z = e^{-i\pi/2}\) and represents a phase shift.
+The QFT transforms a single-qubit state into another form. Specifically, for a qubit $|q\rangle$, the transformation is given by:
+$$QFT2|q⟩ = \frac{1}{\sqrt{2}}( |0\rangle + Z^{-q} |1\rangle ) $$where $ Z = e^{-i\pi/2}$ and represents a phase shift.
 
 This means that for any input state, the output is a linear combination of basis states with appropriate phases.
 ??x
-The QFT on a single qubit state maps it to another form. Given an input state \(|q\rangle\), the output is:
-\[ \frac{1}{\sqrt{2}}( |0\rangle + e^{-i\pi q/2} |1\rangle ) \]
+The QFT on a single qubit state maps it to another form. Given an input state $|q\rangle$, the output is:
+$$\frac{1}{\sqrt{2}}( |0\rangle + e^{-i\pi q/2} |1\rangle )$$
+
 This effectively performs a Hadamard transform followed by a phase shift, as illustrated in Qiskit using the Hadamard gate and the controlled phase gate.
 
 Code example:
@@ -289,16 +283,16 @@ x??
 Background context: For two qubits, the QFT computes four components. The transformation involves complex exponentials and can be implemented with specific quantum gates in Qiskit.
 :p How does the QFT work for two qubits?
 ??x
-The QFT for two qubits transforms a state \(|y\rangle\) into another form represented by \(|Y\rangle\). Mathematically, it is expressed as:
-\[ |Y\rangle = \frac{1}{2} \sum_{k=0}^{3} \sum_{l=0}^{3} y_k Z^{-kl} |k\rangle \]
+The QFT for two qubits transforms a state $|y\rangle $ into another form represented by$|Y\rangle$. Mathematically, it is expressed as:
+$$|Y\rangle = \frac{1}{2} \sum_{k=0}^{3} \sum_{l=0}^{3} y_k Z^{-kl} |k\rangle$$
 
 In Qiskit, this can be implemented using a series of Hadamard gates and controlled phase shift gates.
 ??x
-The 2-qubit QFT transforms an input state \(|y\rangle\) into another form represented by \(|Y\rangle\):
-\[ |Y\rangle = \frac{1}{2} \left[ (y_0 Z^{0} + y_1 Z^{0} + y_2 Z^{0} + y_3 Z^{0}) |0\rangle \right. \]
-\[ + (y_0 Z^{0} + y_1 Z^{-1} + y_2 Z^{-2} + y_3 Z^{-3}) |1\rangle \]
-\[ + (y_0 Z^{0} + y_1 Z^{-2} + y_2 Z^{-4} + y_3 Z^{-6}) |2\rangle \]
-\[ + \left. (y_0 Z^{0} + y_1 Z^{-3} + y_2 Z^{-6} + y_3 Z^{-9}) |3\rangle \right] \]
+The 2-qubit QFT transforms an input state $|y\rangle $ into another form represented by$|Y\rangle$:
+$$|Y\rangle = \frac{1}{2} \left[ (y_0 Z^{0} + y_1 Z^{0} + y_2 Z^{0} + y_3 Z^{0}) |0\rangle \right.$$
+$$+ (y_0 Z^{0} + y_1 Z^{-1} + y_2 Z^{-2} + y_3 Z^{-3}) |1\rangle$$
+$$+ (y_0 Z^{0} + y_1 Z^{-2} + y_2 Z^{-4} + y_3 Z^{-6}) |2\rangle$$
+$$+ \left. (y_0 Z^{0} + y_1 Z^{-3} + y_2 Z^{-6} + y_3 Z^{-9}) |3\rangle \right]$$
 
 This can be implemented in Qiskit using the following code:
 ```python
@@ -314,11 +308,11 @@ x??
 ---
 
 #### n-Qubit Quantum Fourier Transform (QFT)
-Background context: The QFT for \(n\) qubits generalizes to transform an \(n\)-dimensional state. It involves direct products and complex exponentials, resulting in a transformation that can be applied using quantum gates.
+Background context: The QFT for $n $ qubits generalizes to transform an$n$-dimensional state. It involves direct products and complex exponentials, resulting in a transformation that can be applied using quantum gates.
 :p How is the n-qubit QFT implemented?
 ??x
-The n-qubit QFT transforms an input state \(|k\rangle\) into another form represented by:
-\[ |Y\rangle = \frac{1}{\sqrt{N}} \sum_{i=0}^{N-1} e^{-2\pi i k/N} |i\rangle \]
+The n-qubit QFT transforms an input state $|k\rangle$ into another form represented by:
+$$|Y\rangle = \frac{1}{\sqrt{N}} \sum_{i=0}^{N-1} e^{-2\pi i k/N} |i\rangle$$
 
 This can be implemented in Qiskit using a sequence of Hadamard gates and controlled phase shift gates. The implementation involves binary fraction notation for the exponents.
 
@@ -348,13 +342,13 @@ Background context: In Grover’s search algorithm, an oracle is used to mark th
 :p What are the steps involved in Grover’s search algorithm?
 ??x
 Grover's search algorithm involves the following key steps:
-1. **Initialization**: Start with \(n\) qubits initialized to \(|0\rangle\).
+1. **Initialization**: Start with $n $ qubits initialized to$|0\rangle$.
 2. **Superposition**: Apply Hadamard gates to create a superposition of all states.
 3. **Oracle Application**: Use an oracle to mark the target state by flipping its sign.
 4. **Diffuser Operation**: Apply a diffuser operator to amplify the amplitude of the marked state.
 
 Mathematically, this involves transforming the initial uniform superposition:
-\[ |ψ\rangle = \frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} |k\rangle \]
+$$|ψ\rangle = \frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} |k\rangle$$
 into a form that allows for faster search by increasing the probability amplitude of the target state.
 
 Code example (Grover oracle):

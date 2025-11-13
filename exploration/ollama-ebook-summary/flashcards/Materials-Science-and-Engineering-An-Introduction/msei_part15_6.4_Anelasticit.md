@@ -30,8 +30,9 @@ Background context: This example demonstrates how to compute the elongation in a
 :p What is the formula used to calculate the elongation (Δl) from a given stress (σ) and modulus of elasticity (E)?
 ??x
 The formula for calculating elongation due to an applied stress is:
-\[ \Delta l = \frac{\sigma l_0}{E} \]
-Where \( \sigma \) is the stress, \( l_0 \) is the original length, and \( E \) is the modulus of elasticity.
+$$\Delta l = \frac{\sigma l_0}{E}$$
+
+Where $\sigma $ is the stress,$l_0 $ is the original length, and$E$ is the modulus of elasticity.
 x??
 
 ---
@@ -42,7 +43,8 @@ Background context: Poisson's ratio (ν) is a measure of the lateral strain in r
 :p What does Poisson's ratio represent?
 ??x
 Poisson's ratio represents the negative ratio of lateral strain (εx or εy) to axial strain (εz). Mathematically, it is given by:
-\[ \nu = -\frac{\epsilon_x}{\epsilon_z} = -\frac{\epsilon_y}{\epsilon_z} \]
+$$\nu = -\frac{\epsilon_x}{\epsilon_z} = -\frac{\epsilon_y}{\epsilon_z}$$
+
 This indicates how much a material contracts laterally when stretched along its length.
 x??
 
@@ -53,8 +55,9 @@ Background context: The relationship between the modulus of elasticity (E) and s
 
 :p How are the elastic moduli E and G related?
 ??x
-The relationship between the modulus of elasticity \( E \), shear modulus \( G \), and Poisson's ratio \( \nu \) is given by:
-\[ E = 2G(1 + \nu) \]
+The relationship between the modulus of elasticity $E $, shear modulus $ G $, and Poisson's ratio$\nu$ is given by:
+$$E = 2G(1 + \nu)$$
+
 This equation shows that for isotropic materials, these elastic moduli are interrelated.
 x??
 
@@ -65,9 +68,10 @@ Background context: This example illustrates how to calculate the load required 
 
 :p How do you compute the applied force (F) when given a stress (σ), original diameter (d0), and cross-sectional area (A)?
 ??x
-The force \( F \) can be calculated using:
-\[ F = \sigma A_0 = \sigma \left( \frac{d_0^2}{4} \right) \pi \]
-Where \( \sigma \) is the stress, \( d_0 \) is the original diameter, and \( A_0 \) is the cross-sectional area.
+The force $F$ can be calculated using:
+$$F = \sigma A_0 = \sigma \left( \frac{d_0^2}{4} \right) \pi$$
+
+Where $\sigma $ is the stress,$d_0 $ is the original diameter, and$A_0$ is the cross-sectional area.
 x??
 
 ---
@@ -108,7 +112,7 @@ Background context: The yield strength of a material indicates the stress level 
 
 :p How is the yield strength defined for metals that experience gradual yielding?
 ??x
-The yield strength \(\sigma_y\) is defined as the stress corresponding to the intersection of a straight line parallel to the elastic portion of the stress-strain curve at a 0.002 strain offset and the actual curve in the plastic region.
+The yield strength $\sigma_y$ is defined as the stress corresponding to the intersection of a straight line parallel to the elastic portion of the stress-strain curve at a 0.002 strain offset and the actual curve in the plastic region.
 
 Explanation: This method ensures that a clear, measurable point can be identified where the material starts to deform plastically. The units for yield strength are typically MPa or psi.
 ```java
@@ -123,11 +127,11 @@ public class YieldStrengthTest {
 ```
 ---
 #### Nonlinear Elastic Region Considerations
-Background context: For materials with a nonlinear elastic region, the 0.002 strain offset method cannot be used to determine yield strength. Instead, the yield strength is defined as the stress required to produce a specific strain (e.g., \(\epsilon = 0.005\)).
+Background context: For materials with a nonlinear elastic region, the 0.002 strain offset method cannot be used to determine yield strength. Instead, the yield strength is defined as the stress required to produce a specific strain (e.g.,$\epsilon = 0.005$).
 
 :p How do you define the yield strength for materials with nonlinear elastic behavior?
 ??x
-The yield strength for such materials is typically defined based on the stress needed to achieve a specified strain, often \(\epsilon = 0.005\).
+The yield strength for such materials is typically defined based on the stress needed to achieve a specified strain, often $\epsilon = 0.005$.
 
 Explanation: This approach ensures that a consistent and measurable criterion can be applied across different materials, even if their initial elastic behavior deviates from linearity.
 ```java
@@ -244,8 +248,8 @@ Background context: The maximum load a material can sustain is calculated using 
 
 :p What is the maximum load that can be sustained by the brass specimen?
 ??x
-The maximum load (F) can be calculated using the formula \( F = \sigma A_0 \), where \( \sigma \) is the tensile strength and \( A_0 \) is the original cross-sectional area of the specimen. For a brass specimen with a tensile strength of 450 MPa and an original diameter of 12.8 mm, the maximum load is:
-\[ F = 450 \times 10^6 \text{ N/m}^2 \cdot \left(\frac{(12.8 \times 10^{-3} \text{ m})^2}{\pi}\right) = 57,900 \text{ N (13,000 lbf)} \]
+The maximum load (F) can be calculated using the formula $F = \sigma A_0 $, where $\sigma $ is the tensile strength and$A_0$ is the original cross-sectional area of the specimen. For a brass specimen with a tensile strength of 450 MPa and an original diameter of 12.8 mm, the maximum load is:
+$$F = 450 \times 10^6 \text{ N/m}^2 \cdot \left(\frac{(12.8 \times 10^{-3} \text{ m})^2}{\pi}\right) = 57,900 \text{ N (13,000 lbf)}$$
 ```java
 // Pseudocode to calculate maximum load
 double tensileStrength = 450e6; // in N/m^2
@@ -258,13 +262,12 @@ x??
 ---
 
 #### Change in Length of a Specimen under Tensile Stress
-Background context: The change in length (\(\Delta l\)) can be calculated using the strain and the original length of the specimen.
+Background context: The change in length ($\Delta l$) can be calculated using the strain and the original length of the specimen.
 
 :p What is the change in length of a 250 mm brass specimen under a tensile stress of 345 MPa?
 ??x
 The change in length can be found by multiplying the applied tensile stress (345 MPa) by the strain produced and then by the original length. The strain is approximately 0.06, as read from the stress-strain curve:
-\[ \Delta l = \epsilon \cdot L_0 = 0.06 \times 250 \text{ mm} = 15 \text{ mm} \]
-```java
+$$\Delta l = \epsilon \cdot L_0 = 0.06 \times 250 \text{ mm} = 15 \text{ mm}$$```java
 // Pseudocode to calculate change in length
 double tensileStress = 345e6; // in N/m^2
 double originalLength = 250; // in mm
@@ -280,15 +283,13 @@ x??
 Background context: Ductility is a measure of the degree of plastic deformation before fracture. It can be quantitatively expressed as percent elongation, which is defined by the formula given.
 
 Relevant formulas:
-\[ \text{percentEL} = \left( \frac{\Delta l}{l_0} \right) \times 100 \]
-where \( \Delta l = l_f - l_0 \), \( l_f \) is the length at fracture, and \( l_0 \) is the original gauge length.
+$$\text{percentEL} = \left( \frac{\Delta l}{l_0} \right) \times 100$$where $\Delta l = l_f - l_0 $, $ l_f $ is the length at fracture, and $ l_0$ is the original gauge length.
 
 Explanation: This formula calculates the percent elongation based on the change in length from the original to the final length after fracture.
 :p How is ductility measured as percent elongation?
 ??x
 Ductility is measured by calculating the percentage of plastic strain at fracture using the formula:
-\[ \text{percentEL} = \left( \frac{l_f - l_0}{l_0} \right) \times 100 \]
-where \( l_f \) is the length at fracture, and \( l_0 \) is the original gauge length. This measure indicates how much a material can be plastically deformed before fracturing.
+$$\text{percentEL} = \left( \frac{l_f - l_0}{l_0} \right) \times 100$$where $ l_f $ is the length at fracture, and $ l_0$ is the original gauge length. This measure indicates how much a material can be plastically deformed before fracturing.
 x??
 
 ---
@@ -296,15 +297,13 @@ x??
 Background context: Another way to quantify ductility is through percent reduction in area, which accounts for the decrease in cross-sectional area during deformation.
 
 Relevant formulas:
-\[ \text{percentRA} = \left( \frac{A_0 - A_f}{A_0} \right) \times 100 \]
-where \( A_0 \) is the original cross-sectional area, and \( A_f \) is the cross-sectional area at the point of fracture.
+$$\text{percentRA} = \left( \frac{A_0 - A_f}{A_0} \right) \times 100$$where $ A_0 $ is the original cross-sectional area, and $ A_f$ is the cross-sectional area at the point of fracture.
 
 Explanation: This formula calculates the reduction in area that occurs during deformation.
 :p How is ductility measured as percent reduction in area?
 ??x
 Ductility can be measured by calculating the percent reduction in area using the formula:
-\[ \text{percentRA} = \left( \frac{A_0 - A_f}{A_0} \right) \times 100 \]
-where \( A_0 \) is the original cross-sectional area, and \( A_f \) is the cross-sectional area at the point of fracture. This measure indicates how much the material's cross-section decreases during deformation.
+$$\text{percentRA} = \left( \frac{A_0 - A_f}{A_0} \right) \times 100$$where $ A_0 $ is the original cross-sectional area, and $ A_f$ is the cross-sectional area at the point of fracture. This measure indicates how much the material's cross-section decreases during deformation.
 x??
 
 ---
@@ -370,22 +369,20 @@ x??
 Background context: The modulus of resilience is a measure of how much energy a material can absorb without undergoing permanent deformation. It is particularly useful for materials that are subjected to repeated loading, such as springs.
 
 Relevant formulas:
-- \( U_r = \int_{0}^{\epsilon_y} \sigma d\epsilon \) (6.13a)
-- For linear elastic behavior: \( U_r = \frac{1}{2}\sigma_y\epsilon_y \) (6.13b)
+- $U_r = \int_{0}^{\epsilon_y} \sigma d\epsilon$(6.13a)
+- For linear elastic behavior:$U_r = \frac{1}{2}\sigma_y\epsilon_y$(6.13b)
 
 Explanation: The modulus of resilience is the energy per unit volume required to stress a material from an unloaded state up to the point where it starts to yield.
 
 :p What is the definition and formula for the modulus of resilience?
 ??x
-The modulus of resilience \( U_r \) is defined as the strain energy per unit volume required to stress a material from an unloaded state up to the yielding point. Mathematically, it can be calculated using the integral:
-
-\[ U_r = \int_{0}^{\epsilon_y} \sigma d\epsilon \]
+The modulus of resilience $U_r$ is defined as the strain energy per unit volume required to stress a material from an unloaded state up to the yielding point. Mathematically, it can be calculated using the integral:
+$$U_r = \int_{0}^{\epsilon_y} \sigma d\epsilon$$
 
 For linear elastic behavior, this simplifies to:
+$$
 
-\[ U_r = \frac{1}{2}\sigma_y\epsilon_y \]
-
-where \( \sigma_y \) is the yield stress and \( \epsilon_y \) is the strain at yielding.
+U_r = \frac{1}{2}\sigma_y\epsilon_y$$where $\sigma_y $ is the yield stress and$\epsilon_y$ is the strain at yielding.
 x??
 
 ---
@@ -395,17 +392,14 @@ x??
 Background context: The modulus of resilience can be calculated more directly when material behavior follows linear elastic deformation up to the yield point. This simplification is useful in engineering applications where such a relationship holds.
 
 Relevant formulas:
-- \( U_r = \frac{1}{2} \sigma_y^2 / E \) (6.14)
+- $U_r = \frac{1}{2} \sigma_y^2 / E$(6.14)
 
 Explanation: When the stress-strain curve behaves linearly up to the yield point, the modulus of resilience can be derived by incorporating Hooke's Law into the general formula.
 
 :p How is the modulus of resilience calculated for materials with linear elastic behavior?
 ??x
-For materials exhibiting linear elastic behavior up to the yield point, the modulus of resilience \( U_r \) can be calculated using:
-
-\[ U_r = \frac{1}{2} \sigma_y^2 / E \]
-
-where \( \sigma_y \) is the yield stress and \( E \) is the Young's modulus.
+For materials exhibiting linear elastic behavior up to the yield point, the modulus of resilience $U_r$ can be calculated using:
+$$U_r = \frac{1}{2} \sigma_y^2 / E$$where $\sigma_y $ is the yield stress and$E$ is the Young's modulus.
 x??
 
 ---
@@ -415,13 +409,13 @@ x??
 Background context: Materials with high yield strengths and low elastic moduli are more resilient. This property makes them suitable for applications where repeated loading needs to be absorbed without permanent deformation.
 
 Relevant formulas:
-- None specific, but the relationship between \( \sigma_y \), \( E \), and \( U_r \) is key.
+- None specific, but the relationship between $\sigma_y $, $ E $, and$ U_r$ is key.
 
 Explanation: Materials with high yield strengths (ability to resist plastic deformation before yielding) combined with low elastic moduli (ability to absorb energy elastically) are more resilient. This combination allows materials like spring steel to store significant amounts of energy without undergoing permanent deformation.
 
 :p Which properties determine the resilience of a material?
 ??x
-The resilience of a material is determined by its yield strength \( \sigma_y \) and Young's modulus \( E \). Materials with high yield strengths and low elastic moduli are more resilient, making them suitable for applications such as spring design.
+The resilience of a material is determined by its yield strength $\sigma_y $ and Young's modulus$E$. Materials with high yield strengths and low elastic moduli are more resilient, making them suitable for applications such as spring design.
 x??
 
 ---
@@ -463,22 +457,21 @@ x??
 Background context: The modulus of resilience can be visually represented as the area under the stress-strain curve up to the yield point.
 
 Relevant formulas:
-- \( U_r = \int_{0}^{\epsilon_y} \sigma d\epsilon \)
+- $U_r = \int_{0}^{\epsilon_y} \sigma d\epsilon$
 
 Explanation: By integrating the area under the stress-strain curve from zero strain to the yield strain, one can determine the modulus of resilience for a material. This graphical representation helps in understanding how much energy is stored elastically before plastic deformation starts.
 
 :p How is the modulus of resilience visually represented?
 ??x
-The modulus of resilience \( U_r \) is visually represented as the area under the stress-strain curve from zero strain up to the yield point (\( \epsilon_y \)). This area indicates the total elastic energy absorbed by the material before yielding.
+The modulus of resilience $U_r $ is visually represented as the area under the stress-strain curve from zero strain up to the yield point ($\epsilon_y$). This area indicates the total elastic energy absorbed by the material before yielding.
 x??
 
 ---
 
 #### True Stress and Strain Definition
-True stress is defined as the load \(F\) divided by the instantaneous cross-sectional area \(A_i\), where deformation is occurring (i.e., the neck, past the tensile point). The formula for true stress \(\sigma_T\) is:
-\[
-\sigma_T = \frac{F}{A_i}
-\]
+True stress is defined as the load $F $ divided by the instantaneous cross-sectional area$A_i $, where deformation is occurring (i.e., the neck, past the tensile point). The formula for true stress$\sigma_T$ is:
+$$\sigma_T = \frac{F}{A_i}$$
+
 This definition accounts for the reduction in cross-sectional area during deformation.
 :p What does true stress account for that engineering stress does not?
 ??x
@@ -487,41 +480,24 @@ x??
 
 ---
 #### True Strain Definition
-True strain \(\epsilon_T\) is defined as:
-\[
-\epsilon_T = \ln \left( \frac{l_i}{l_0} \right)
-\]
-where \(l_i\) is the instantaneous length and \(l_0\) is the original length.
+True strain $\epsilon_T$ is defined as:
+$$\epsilon_T = \ln \left( \frac{l_i}{l_0} \right)$$where $ l_i $ is the instantaneous length and $ l_0$ is the original length.
 :p What is the formula for true strain?
 ??x
 The formula for true strain is given by:
-\[
-\epsilon_T = \ln \left( \frac{l_i}{l_0} \right)
-\]
-where \(l_i\) is the instantaneous length and \(l_0\) is the original length.
+$$\epsilon_T = \ln \left( \frac{l_i}{l_0} \right)$$where $ l_i $ is the instantaneous length and $ l_0$ is the original length.
 x??
 
 ---
 #### True Stress-True Strain Relationship
 For materials that do not experience significant volume changes, true stress and engineering stress are related by:
-\[
-\sigma_T = \sigma (1 + \epsilon)
-\]
-and
-\[
-\epsilon_T = \ln(1 + \epsilon)
-\]
+$$\sigma_T = \sigma (1 + \epsilon)$$and$$\epsilon_T = \ln(1 + \epsilon)$$
+
 These equations are valid until the onset of necking. Beyond this point, actual load, cross-sectional area, and gauge length measurements must be used.
 :p How do true stress and engineering strain relate in materials with no significant volume change?
 ??x
 In materials without significant volume changes, true stress and engineering stress are related by:
-\[
-\sigma_T = \sigma (1 + \epsilon)
-\]
-and
-\[
-\epsilon_T = \ln(1 + \epsilon)
-\]
+$$\sigma_T = \sigma (1 + \epsilon)$$and$$\epsilon_T = \ln(1 + \epsilon)$$
 These relationships hold until the onset of necking. After this point, actual measurements should be used.
 x??
 
@@ -535,49 +511,33 @@ x??
 
 ---
 #### True Stress-Strain Curve Equation for Plastic Deformation
-For some metals and alloys, the true stress-\(\epsilon_T\) relationship from the onset of plastic deformation to the point at which necking begins can be approximated by:
-\[
-\sigma_T = K \epsilon_T^n
-\]
-where \(K\) and \(n\) are constants. The parameter \(n\) is often termed the strain-hardening exponent, with a value less than unity.
+For some metals and alloys, the true stress-$\epsilon_T$ relationship from the onset of plastic deformation to the point at which necking begins can be approximated by:
+$$\sigma_T = K \epsilon_T^n$$where $ K $ and $ n $ are constants. The parameter $ n$ is often termed the strain-hardening exponent, with a value less than unity.
 :p What equation describes the true stress-strain relationship in the plastic region of deformation?
 ??x
-The equation that describes the true stress-\(\epsilon_T\) relationship in the plastic region of deformation is:
-\[
-\sigma_T = K \epsilon_T^n
-\]
-where \(K\) and \(n\) are constants, and \(n\) (the strain-hardening exponent) is less than unity.
+The equation that describes the true stress-$\epsilon_T$ relationship in the plastic region of deformation is:
+$$\sigma_T = K \epsilon_T^n$$where $ K $ and $ n $ are constants, and $ n$(the strain-hardening exponent) is less than unity.
 x??
 
 ---
 #### Ductility Calculation Using True Stress-Strain Curve
-Ductility can be calculated as the percentage reduction in area. For a cylindrical specimen of steel with an original diameter of 12.8 mm and a fracture cross-sectional diameter of 10.7 mm, the ductility \(RA\) is:
-\[
-RA = \frac{(d_0^2 - d_f^2) \pi}{d_0^2 \pi} \times 100
-\]
-:p How is ductility calculated using the true stress-strain curve?
+Ductility can be calculated as the percentage reduction in area. For a cylindrical specimen of steel with an original diameter of 12.8 mm and a fracture cross-sectional diameter of 10.7 mm, the ductility $RA$ is:
+$$RA = \frac{(d_0^2 - d_f^2) \pi}{d_0^2 \pi} \times 100$$:p How is ductility calculated using the true stress-strain curve?
 ??x
-Ductility can be calculated as the percentage reduction in area. For a cylindrical specimen of steel with an original diameter \(d_0\) and a fracture cross-sectional diameter \(d_f\), the ductility \(RA\) is:
-\[
-RA = \frac{(d_0^2 - d_f^2) \pi}{d_0^2 \pi} \times 100
-\]
+Ductility can be calculated as the percentage reduction in area. For a cylindrical specimen of steel with an original diameter $d_0 $ and a fracture cross-sectional diameter$d_f $, the ductility $ RA$is:
+$$RA = \frac{(d_0^2 - d_f^2) \pi}{d_0^2 \pi} \times 100$$
+
 This formula accounts for the reduction in cross-sectional area due to deformation.
 x??
 
 ---
 #### True Stress at Fracture Calculation
 The true stress at fracture can be calculated using:
-\[
-\sigma_T = \frac{F}{A_f}
-\]
-where \(F\) is the load at fracture and \(A_f\) is the cross-sectional area at fracture. The load at fracture must first be computed from the fracture strength.
+$$\sigma_T = \frac{F}{A_f}$$where $ F $ is the load at fracture and $ A_f$ is the cross-sectional area at fracture. The load at fracture must first be computed from the fracture strength.
 :p How is the true stress at fracture determined?
 ??x
 The true stress at fracture can be calculated using:
-\[
-\sigma_T = \frac{F}{A_f}
-\]
-where \(F\) is the load at fracture and \(A_f\) is the cross-sectional area at fracture. The load at fracture must first be computed from the fracture strength.
+$$\sigma_T = \frac{F}{A_f}$$where $ F $ is the load at fracture and $ A_f$ is the cross-sectional area at fracture. The load at fracture must first be computed from the fracture strength.
 x??
 
 ---

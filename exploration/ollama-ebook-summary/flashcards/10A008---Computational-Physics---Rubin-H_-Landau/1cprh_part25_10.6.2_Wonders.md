@@ -5,7 +5,7 @@
 ---
 
 #### Modifying Program to Output Input Signal
-Background context: When performing a Discrete Wavelet Transform (DWT) on signals like the chirp signal \( y(t) = \sin(60t^2) \), it's crucial to verify that the input data is correctly processed. This involves outputting and checking the original signal values before any transformations are applied.
+Background context: When performing a Discrete Wavelet Transform (DWT) on signals like the chirp signal $y(t) = \sin(60t^2)$, it's crucial to verify that the input data is correctly processed. This involves outputting and checking the original signal values before any transformations are applied.
 
 :p How can you modify Listing 10.2 to output the input signal values to a file?
 ??x
@@ -31,7 +31,7 @@ x??
 
 #### Reproducing Scale-Time Diagrams for Chirp Signal
 
-Background context: The DWT of the chirp signal \( y(t) = \sin(60t^2) \) can be visualized through scale-time diagrams, which show how different scales (or resolutions) capture various frequency components. These diagrams are crucial for understanding the temporal and spectral characteristics of non-stationary signals like chirps.
+Background context: The DWT of the chirp signal $y(t) = \sin(60t^2)$ can be visualized through scale-time diagrams, which show how different scales (or resolutions) capture various frequency components. These diagrams are crucial for understanding the temporal and spectral characteristics of non-stationary signals like chirps.
 
 :p How would you reproduce the scale-time diagram shown in Figure 10.11 using DWT?
 
@@ -249,9 +249,9 @@ Background context on calculating variance within PCA.
 :p How do you calculate variance in a dataset?
 
 ??x
-Variance \(\sigma^2(z)\) in a dataset of \(N\) points is a measure of how dispersed the data points are from their mean \(z\):
-\[ z = \frac{1}{N} \sum_{i=1}^{N} z_i \]
-\[ \sigma^2(z) \equiv \text{Var}(z) \text{def}= \frac{1}{N-1} \sum_{i=1}^{N} (z_i - z)^2. \]
+Variance $\sigma^2(z)$ in a dataset of $N$ points is a measure of how dispersed the data points are from their mean $z$:
+$$z = \frac{1}{N} \sum_{i=1}^{N} z_i$$
+$$\sigma^2(z) \equiv \text{Var}(z) \text{def}= \frac{1}{N-1} \sum_{i=1}^{N} (z_i - z)^2.$$
 
 This formula quantifies the spread of data points around their mean.
 x??
@@ -266,7 +266,10 @@ Background context on collecting and processing high-dimensional data.
 
 ??x
 In a complex dataset, each detector records multiple observables (e.g., position, angle, intensity) over time. For instance, if four detectors record spatial data at one instant of time:
-\[ X' = [x'_A, y'_A, x'_B, y'_B, x'_C, y'_C, x'_D, y'_D] \]
+$$
+
+X' = [x'_A, y'_A, x'_B, y'_B, x'_C, y'_C, x'_D, y'_D]$$
+
 This 8-dimensional vector represents the combined data from all four detectors.
 x??
 
@@ -335,18 +338,16 @@ x??
 ---
 
 #### Covariance Calculation for 2D Datasets
-Background context: The covariance between two centered datasets \( A \) and \( B \) is calculated using the formula provided in the text. This helps in understanding the correlation between the data points of different detectors.
+Background context: The covariance between two centered datasets $A $ and$B$ is calculated using the formula provided in the text. This helps in understanding the correlation between the data points of different detectors.
 :p How do we calculate the covariance between two centered datasets?
 ??x
-To calculate the covariance between two centered datasets \( A \) and \( B \), you use the following formula:
+To calculate the covariance between two centered datasets $A $ and$B$, you use the following formula:
 
-\[
-cov(A, B) = \frac{1}{N-1} \sum_{i=1}^{N} a_i b_i
-\]
+$$cov(A, B) = \frac{1}{N-1} \sum_{i=1}^{N} a_i b_i$$
 
 Where:
-- \( N \) is the number of data points.
-- \( a_i \) and \( b_i \) are the centered values in datasets A and B, respectively.
+- $N$ is the number of data points.
+- $a_i $ and$b_i$ are the centered values in datasets A and B, respectively.
 
 This formula measures how much the centered data from both datasets change together.
 x??
@@ -357,15 +358,12 @@ x??
 Background context: The symmetric covariance matrix combines variances of each dataset and their cross-correlations into a single matrix. This helps in understanding the overall structure of multidimensional data by capturing correlations between different variables.
 :p What is the symmetric covariance matrix, and how is it useful?
 ??x
-The symmetric covariance matrix \( C_{AB} \) combines the variances of datasets A and B with their cross-correlations into a single symmetric matrix. It is represented as:
-
-\[
-C_{AB} = 
+The symmetric covariance matrix $C_{AB}$ combines the variances of datasets A and B with their cross-correlations into a single symmetric matrix. It is represented as:
+$$C_{AB} = 
 \begin{bmatrix}
 cov(A, A) & cov(A, B) \\
 cov(B, A) & cov(B, B)
-\end{bmatrix}
-\]
+\end{bmatrix}$$
 
 This matrix is useful because it provides a comprehensive view of the relationships between different variables in multidimensional datasets. It helps in identifying patterns and correlations that can be used for further analysis.
 x??
@@ -377,18 +375,17 @@ x??
 Background context explaining the concept. The idea is to generalize covariance matrix calculations from a 2D case to higher dimensions, using data from multiple detectors or measurements over time.
 
 The covariancematrix can be written as:
+$$
 
-\[
-C_{AB} = \frac{1}{N-1} A^T B
-\]
+C_{AB} = \frac{1}{N-1} A^T B$$
 
-With the new notation, we define row subvectors for each of \( M \) detectors:
-
-\[ x_1 = A, x_2 = B, \ldots, x_M = M \]
+With the new notation, we define row subvectors for each of $M$ detectors:
+$$x_1 = A, x_2 = B, \ldots, x_M = M$$
 
 Combining these into an extended matrix:
+$$
 
-\[ X = \begin{bmatrix} 
+X = \begin{bmatrix} 
 x_1 \\ 
 \vdots \\
 x_M 
@@ -397,25 +394,23 @@ x_M
 \Rightarrow & \text{All } B \text{ measurements} \\ 
 \Downarrow & \text{Time } C \text{ measurements} \\ 
 \Rightarrow & \text{Measurements of } D
-\end{bmatrix} \]
+\end{bmatrix}$$
 
 Each row contains all the measurements from a particular detector, while each column contains all measurements for a particular time.
 
-With this notation (and \( x = 0 \)), the covariance matrix can be written in a concise form:
+With this notation (and $x = 0$), the covariance matrix can be written in a concise form:
 
-\[ C = \frac{1}{N-1} X X^T \]
+$$C = \frac{1}{N-1} X X^T$$
 
-This can be thought of as a generalization of the familiar dot product of two 2D vectors, \( x \cdot x = x^T x \), as a measure of their overlap.
+This can be thought of as a generalization of the familiar dot product of two 2D vectors,$x \cdot x = x^T x$, as a measure of their overlap.
 
 :p How is the covariance matrix generalized to higher dimensions?
 ??x
-The covariance matrix is generalized by considering multiple measurements from different detectors or over time. The new form involves combining these measurements into an extended data matrix and then computing the covariance using matrix operations. Specifically, each row vector \( x_i \) represents all measurements from a particular detector at various times, and the entire matrix \( X \) combines these rows.
+The covariance matrix is generalized by considering multiple measurements from different detectors or over time. The new form involves combining these measurements into an extended data matrix and then computing the covariance using matrix operations. Specifically, each row vector $x_i $ represents all measurements from a particular detector at various times, and the entire matrix$X$ combines these rows.
 
 The concise formula for the covariance matrix is:
 
-\[ C = \frac{1}{N-1} X X^T \]
-
-where \( N \) is the total number of measurements (rows in \( X \)). This captures the variance between all pairs of detectors and time points.
+$$C = \frac{1}{N-1} X X^T$$where $ N $ is the total number of measurements (rows in $ X$). This captures the variance between all pairs of detectors and time points.
 x??
 
 ---
@@ -425,8 +420,8 @@ x??
 Background context explaining PCA. The objective is to find directions in which the data has maximum variance, which helps in understanding the underlying structure of the data.
 
 Steps involved in performing PCA:
-1. Assume that the direction with the largest variance indicates "principal" component \( PC_1 \) or \( p_1 \).
-2. Find an orthogonal basis vector \( p_2 \) to \( p_1 \).
+1. Assume that the direction with the largest variance indicates "principal" component $PC_1 $ or$p_1$.
+2. Find an orthogonal basis vector $p_2 $ to$p_1$.
 3. Repeat until you have all M principal components.
 
 The eigenvectors and eigenvalues are ordered according to their corresponding variances.
@@ -457,19 +452,15 @@ pc1 = find_first_principal_component(X)
 
 :p What is the first step in performing Principal Component Analysis (PCA)?
 ??x
-The first step in performing PCA involves finding the direction that maximizes the variance of the data. This direction is referred to as the "principal" component \( PC_1 \) or \( p_1 \).
+The first step in performing PCA involves finding the direction that maximizes the variance of the data. This direction is referred to as the "principal" component $PC_1 $ or$p_1$.
 
 In detail:
 - **Center the Data**: Subtract the mean from each feature to ensure the dataset has a zero mean.
 - **Compute the Covariance Matrix**: Calculate the covariance matrix using the centered data. The formula is:
 
-  \[
-  C = \frac{1}{N-1} X^T X
-  \]
-
-- **Find Eigenvalues and Eigenvectors**: Solve for the eigenvalues and eigenvectors of the covariance matrix.
+  $$C = \frac{1}{N-1} X^T X$$- **Find Eigenvalues and Eigenvectors**: Solve for the eigenvalues and eigenvectors of the covariance matrix.
   
-The first principal component \( p_1 \) corresponds to the eigenvector associated with the largest eigenvalue.
+The first principal component $p_1$ corresponds to the eigenvector associated with the largest eigenvalue.
 
 ```python
 # Example Python code snippet
@@ -515,13 +506,9 @@ C/Java code for finding all principal components involves:
 The principal components in Principal Component Analysis (PCA) are found by solving for the eigenvectors of the covariance matrix, ordered by their corresponding variances. Here’s a detailed step-by-step process:
 
 1. **Centering the Data**: Subtract the mean from each feature to ensure the dataset has zero mean.
-2. **Computing the Covariance Matrix**: Use the centered data to compute the covariance matrix \( C \):
+2. **Computing the Covariance Matrix**: Use the centered data to compute the covariance matrix $C$:
 
-   \[
-   C = \frac{1}{N-1} X^T X
-   \]
-
-3. **Finding Eigenvectors and Eigenvalues**: Solve for the eigenvalues and eigenvectors of the covariance matrix:
+   $$C = \frac{1}{N-1} X^T X$$3. **Finding Eigenvectors and Eigenvalues**: Solve for the eigenvalues and eigenvectors of the covariance matrix:
 
    ```python
    import numpy as np
@@ -558,30 +545,26 @@ x??
 
 Background context explaining how PCA diagonalizes the covariance matrix using eigenvectors. The goal is to transform the data into a new coordinate system where the covariance matrix becomes a diagonal matrix.
 
-The formula for finding \( Y \) from \( X \):
+The formula for finding $Y $ from$X$:
 
-\[ C_y = \frac{1}{N-1} Y^T Y = \text{diagonal}, \quad \text{where } Y = PX. \]
+$$C_y = \frac{1}{N-1} Y^T Y = \text{diagonal}, \quad \text{where } Y = PX.$$
 
 C/Java code to perform this transformation involves:
 
 1. Centering the data.
-2. Calculating the covariance matrix \( C \).
-3. Finding the eigenvectors and eigenvalues of \( X^T X \).
-4. Constructing a matrix \( P \) whose columns are the principal components.
-5. Transforming the data using \( Y = PX \).
+2. Calculating the covariance matrix $C$.
+3. Finding the eigenvectors and eigenvalues of $X^T X$.
+4. Constructing a matrix $P$ whose columns are the principal components.
+5. Transforming the data using $Y = PX$.
 
 :p How does PCA transform the data to diagonalize the covariance matrix?
 ??x
 PCA transforms the data into a new coordinate system where the covariance matrix becomes a diagonal matrix by using the eigenvectors of the covariance matrix.
 
 1. **Center the Data**: Subtract the mean from each feature to ensure zero mean.
-2. **Compute Covariance Matrix**: Calculate \( C \) using:
+2. **Compute Covariance Matrix**: Calculate $C$ using:
 
-   \[
-   C = \frac{1}{N-1} X^T X
-   \]
-
-3. **Find Eigenvectors and Eigenvalues**: Solve for the eigenvalues and eigenvectors of \( C \):
+   $$C = \frac{1}{N-1} X^T X$$3. **Find Eigenvectors and Eigenvalues**: Solve for the eigenvalues and eigenvectors of $ C$:
 
    ```python
    import numpy as np
@@ -606,17 +589,14 @@ PCA transforms the data into a new coordinate system where the covariance matrix
    pc_matrix = find_principal_components(X)
    ```
 
-4. **Construct Matrix \( P \)**: Form a matrix where each column is a principal component vector.
+4. **Construct Matrix $P$**: Form a matrix where each column is a principal component vector.
 
 5. **Transform Data**: Transform the data using:
 
-   \[
-   Y = PX
-   \]
+   $$Y = PX$$
 
-The covariance matrix of the transformed data \( Y \) will be diagonal:
-
-\[ C_y = \frac{1}{N-1} Y^T Y = \text{diagonal} \]
+The covariance matrix of the transformed data $Y$ will be diagonal:
+$$C_y = \frac{1}{N-1} Y^T Y = \text{diagonal}$$
 
 This diagonalization simplifies the analysis and allows us to understand the variance along each principal component.
 x??
@@ -624,11 +604,11 @@ x??
 ---
 
 #### Entering Data as an Array
-Background context: We are entering the data from Table 10.1 into an array for Principal Component Analysis (PCA). The first two columns of the table represent the variables \( x \) and \( y \).
+Background context: We are entering the data from Table 10.1 into an array for Principal Component Analysis (PCA). The first two columns of the table represent the variables $x $ and$y$.
 
 :p How do we enter the data from Table 10.1 as an array?
 ??x
-We can enter the data in a Python list or NumPy array format, where each row corresponds to a single data point, and each column represents one of the variables (e.g., \( x \) or \( y \)).
+We can enter the data in a Python list or NumPy array format, where each row corresponds to a single data point, and each column represents one of the variables (e.g., $x $ or$y$).
 
 ```python
 import numpy as np
@@ -668,11 +648,9 @@ Background context: The covariance matrix is a key step in PCA. It measures how 
 
 :p How do we calculate the covariance matrix for the dataset?
 ??x
-The covariance matrix \( C \) can be calculated using the formula:
+The covariance matrix $C$ can be calculated using the formula:
 
-\[ C = \frac{1}{N-1} \sum_{i=1}^{N} (x_i - \bar{x})(y_i - \bar{y}) \]
-
-where \( N \) is the number of data points, and \( \bar{x} \), \( \bar{y} \) are the means of \( x \) and \( y \).
+$$C = \frac{1}{N-1} \sum_{i=1}^{N} (x_i - \bar{x})(y_i - \bar{y})$$where $ N $ is the number of data points, and $\bar{x}$,$\bar{y}$ are the means of $ x $ and $y$.
 
 ```python
 # Calculate covariance matrix using NumPy's cov function
@@ -687,7 +665,7 @@ Background context: After calculating the covariance matrix, we compute its eige
 
 :p How do we calculate the unit eigenvector and eigenvalues of the covariance matrix?
 ??x
-We can use NumPy's `linalg.eig` function to compute the eigenvalues and eigenvectors of the covariance matrix \( C \). The eigenvectors are normalized to have a unit length.
+We can use NumPy's `linalg.eig` function to compute the eigenvalues and eigenvectors of the covariance matrix $C$. The eigenvectors are normalized to have a unit length.
 
 ```python
 import numpy as np
@@ -707,7 +685,7 @@ Background context: Once we have the principal components, we can express our da
 
 :p How do we express the data in terms of its principal components?
 ??x
-We form feature matrices \( F_1 \) and \( F_2 \), which keep the major principal component(s). Then, we multiply the transpose of these feature matrices by the transposed adjusted data matrix to get the transformed data.
+We form feature matrices $F_1 $ and$F_2$, which keep the major principal component(s). Then, we multiply the transpose of these feature matrices by the transposed adjusted data matrix to get the transformed data.
 
 ```python
 # Forming feature matrices
@@ -732,7 +710,7 @@ Background context: The eigenvector with the largest eigenvalue is considered th
 ??x
 Principal components are linear combinations of the original variables that capture the most significant patterns and variability in the dataset. The first principal component, corresponding to the largest eigenvalue, is the direction of greatest variation in the data. Subsequent components are orthogonal to each other and to previous components.
 
-In this example, \( PC1 \) (the eigenvector with the largest eigenvalue) points in the direction of major variance, while \( PC2 \) is orthogonal to it and represents a smaller component.
+In this example, $PC1 $(the eigenvector with the largest eigenvalue) points in the direction of major variance, while $ PC2$ is orthogonal to it and represents a smaller component.
 
 ```python
 # Extract principal components
@@ -753,7 +731,7 @@ Principal Component Analysis is a statistical method used to identify patterns i
 ??x
 PCA is a technique that transforms the original variables into a new set of variables, which are linear combinations of the original variables. These new variables are called principal components (PCs), and they are orthogonal to each other. The first principal component accounts for the largest possible variance in the data, and each subsequent PC explains the most of the remaining variance.
 
-For example, if you have a dataset with two features \(X_1\) and \(X_2\), PCA can transform them into two new components \(PC_1\) and \(PC_2\). The transformation matrix is derived from the eigenvectors of the covariance matrix.
+For example, if you have a dataset with two features $X_1 $ and$X_2 $, PCA can transform them into two new components$ PC_1 $and$ PC_2$. The transformation matrix is derived from the eigenvectors of the covariance matrix.
 x??
 
 #### Using Principal Eigenvectors for PCA
@@ -892,7 +870,7 @@ Artificial neural networks are modeled after biological neurons, with simple mod
 ??x
 An artificial neuron typically consists of inputs, a weighted sum operation, an activation function, and outputs.
 Inputs: Features or values that influence the output.
-Weighted Sum: \(\sum (w_i * x_i)\)
+Weighted Sum: $\sum (w_i * x_i)$
 Activation Function: Converts the sum into a decision value.
 Output: The final decision or value.
 

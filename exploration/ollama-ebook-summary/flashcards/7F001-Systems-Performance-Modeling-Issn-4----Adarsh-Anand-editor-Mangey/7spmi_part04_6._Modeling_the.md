@@ -2156,11 +2156,11 @@ It means that the rate at which data is generated can change over time without a
 ??x
 
 #### Set A and Attributes
-Background context: This section introduces the concept of attributes, which are used to quantify a specific aspect or concept. Equation (6.1) defines the set \(A\) as a collection of potential attributes, where each element is an attribute.
+Background context: This section introduces the concept of attributes, which are used to quantify a specific aspect or concept. Equation (6.1) defines the set $A$ as a collection of potential attributes, where each element is an attribute.
 
 :p What does equation (6.1) represent in this context?
 ??x
-Equation (6.1) represents the definition of the set \(A\), which includes all possible attributes that can be used to monitor or measure certain concepts or events. Each element in this set, denoted as \(a\), is an attribute.
+Equation (6.1) represents the definition of the set $A $, which includes all possible attributes that can be used to monitor or measure certain concepts or events. Each element in this set, denoted as $ a$, is an attribute.
 ```java
 // Pseudocode to define a simple set A with some example attributes
 Set<String> attributes = new HashSet<>();
@@ -2172,13 +2172,13 @@ x??
 ---
 
 #### Obtaining Values from Attributes
-Background context: Equation (6.2) describes how values are obtained from the attributes defined in equation (6.1). The set \(M\) represents all the values that can be derived through a function applied to an attribute.
+Background context: Equation (6.2) describes how values are obtained from the attributes defined in equation (6.1). The set $M$ represents all the values that can be derived through a function applied to an attribute.
 
-:p According to equation (6.2), what does the set \(M\) represent?
+:p According to equation (6.2), what does the set $M$ represent?
 ??x
-The set \(M\) represents all the possible values that can be obtained by applying a function over a given attribute from the set \(A\). The type of results depends on the nature of the defined function and the method used.
+The set $M $ represents all the possible values that can be obtained by applying a function over a given attribute from the set$A$. The type of results depends on the nature of the defined function and the method used.
 
-For example, if we have an attribute "corporate temperature" (denoted as \(a\)), the set \(M\) would include all possible temperatures that can be measured using some device.
+For example, if we have an attribute "corporate temperature" (denoted as $a $), the set $ M$ would include all possible temperatures that can be measured using some device.
 ```java
 // Pseudocode to define a function for obtaining values from attributes
 public Set<Double> getTemperatureValues() {
@@ -2194,7 +2194,7 @@ Background context: Equation (6.3) defines an exclusive positional data stream a
 
 :p What does equation (6.3) describe in terms of data streams?
 ??x
-Equation (6.3) describes an exclusive positional data stream where the unbounded sequence of values for an attribute \(a\) is ordered by the arrival order of each obtained value. However, this stream contains single values without any temporal stamp; the order is based on position only.
+Equation (6.3) describes an exclusive positional data stream where the unbounded sequence of values for an attribute $a$ is ordered by the arrival order of each obtained value. However, this stream contains single values without any temporal stamp; the order is based on position only.
 
 For example, if we have a temperature attribute and obtain the following numerical values: 36.0, 36.1, 36.1, 36.08, 36.07, 36.06, etc., these form an exclusive numerical positional data stream.
 ```java
@@ -2214,7 +2214,7 @@ Background context: Equation (6.8) defines an exclusive temporal data stream, wh
 
 :p According to equation (6.8), what is a key feature of a temporal data stream?
 ??x
-A key feature of a temporal data stream as defined in equation (6.8) is that it includes both the value and a timestamp corresponding to the monitored attribute. The value \(m_i\) is obtained at time \(t_i\). Importantly, every ordered pair \((m_i, t_i)\) must have a valid timestamp; otherwise, it does not form part of the data stream.
+A key feature of a temporal data stream as defined in equation (6.8) is that it includes both the value and a timestamp corresponding to the monitored attribute. The value $m_i $ is obtained at time$t_i $. Importantly, every ordered pair $(m_i, t_i)$ must have a valid timestamp; otherwise, it does not form part of the data stream.
 
 For instance, if we are monitoring corporate temperature over time and record values along with timestamps: (36.0, 2023-10-01T10:00), (36.1, 2023-10-01T10:05), etc., these form a temporal data stream.
 ```java
@@ -2359,13 +2359,11 @@ x??
 #### Physical Window Definition
 Physical windows are time-based and define data streams arriving at a processing unit within a specific interval. The equations (6.11) and (6.12) provide the temporal boundaries for these windows.
 
-Equation 6.11: 
-\[ \forall s \in S_{p} : \exists wT / C26s = wT : RTS - wishedTime \leq at(s) \leq RTS \]
+Equation 6.11:
+$$\forall s \in S_{p} : \exists wT / C26s = wT : RTS - wishedTime \leq at(s) \leq RTS$$
 
 Equation 6.12:
-\[ \forall s \in S_{t} : \exists wT / C26s = wT : RTS - wishedTime \leq t_i \leq RTS \]
-
-:w What are the key features of physical windows as described in the text?
+$$\forall s \in S_{t} : \exists wT / C26s = wT : RTS - wishedTime \leq t_i \leq RTS$$:w What are the key features of physical windows as described in the text?
 ??x
 Physical windows are time-based and define data streams arriving at a processing unit within a specific interval. The equations (6.11) and (6.12) establish that the window "wT" will contain data values arriving between RTS - wishedTime and RTS, where "RTS" is the current timestamp and "wishedTime" is a relative temporal magnitude such as 1 minute.
 
@@ -2390,12 +2388,10 @@ x??
 Logical windows are based on data volume and retain a certain number of elements based on a threshold. Equations (6.13) and (6.14) define these windows, which do not differ structurally from physical windows in terms of their definitions.
 
 Equation 6.13:
-\[ \forall s \in S_{p} : \exists wL / C26s = wL : wL_jj \leq Threshold \]
+$$\forall s \in S_{p} : \exists wL / C26s = wL : wL_jj \leq Threshold$$
 
 Equation 6.14:
-\[ \forall s \in S_{t} : \exists wL / C26s = wL : wL_jj \leq Threshold \]
-
-:w How are logical windows defined differently from physical windows?
+$$\forall s \in S_{t} : \exists wL / C26s = wL : wL_jj \leq Threshold$$:w How are logical windows defined differently from physical windows?
 ??x
 Logical windows are data volume-based, meaning they retain a certain number of elements based on a threshold (e.g., 1000). Equations (6.13) and (6.14) show that the window "wL" will contain up to the defined threshold of elements. The logical windows do not differ structurally from physical windows, but they are limited by data volume instead of time.
 
@@ -2425,12 +2421,10 @@ x??
 Sliding windows keep the established limits but update the extremes for replacing old elements with new ones. The equations (6.15) and (6.16) define sliding windows based on current timestamps, making their lower and upper endpoints variable.
 
 Equation 6.15:
-\[ \forall s \in S_{p} : \exists wT / C26s = wT : CTS - wishedTime \leq at(s) \leq CTS \]
+$$\forall s \in S_{p} : \exists wT / C26s = wT : CTS - wishedTime \leq at(s) \leq CTS$$
 
 Equation 6.16:
-\[ \forall s \in S_{t} : \exists wT / C26s = wT : CTS - wishedTime \leq t_i \leq CTS \]
-
-:w How do sliding windows differ from physical windows?
+$$\forall s \in S_{t} : \exists wT / C26s = wT : CTS - wishedTime \leq t_i \leq CTS$$:w How do sliding windows differ from physical windows?
 ??x
 Sliding windows keep the established time limits but update them continuously with the current timestamp (CTS). This means that data can be present in the window at any given moment, but it will be discarded as time passes. The equations (6.15) and (6.16) show that the lower and upper endpoints of the sliding windows are variable, updating with CTS.
 
@@ -2581,19 +2575,19 @@ Equation 6.21 describes the formal definition for a cooperative positional data 
 
 ---
 #### Data Structure Monitoring
-The data structure to be monitored through a cooperative data stream is defined in Equation 6.19 as \( \forall a \in A, j \in N = \{a_1, a_2,...,a_j / C0/C1\} \). This equation specifies the set of attributes and their value domains that are to be monitored.
+The data structure to be monitored through a cooperative data stream is defined in Equation 6.19 as $\forall a \in A, j \in N = \{a_1, a_2,...,a_j / C0/C1\}$. This equation specifies the set of attributes and their value domains that are to be monitored.
 
 :p What does Equation 6.19 represent?
 ??x
-Equation 6.19 represents the data structure (i.e., DS) to be monitored through a cooperative data stream, specifying the set of attributes \( A \) and their order. It defines the attribute definitions along with their value domains, ensuring that once the data structure is established, it remains unchanged.
+Equation 6.19 represents the data structure (i.e., DS) to be monitored through a cooperative data stream, specifying the set of attributes $A$ and their order. It defines the attribute definitions along with their value domains, ensuring that once the data structure is established, it remains unchanged.
 
 ---
 #### Value Vectors in Data Stream
-The set of valued vectors (i.e., ~m) from the defined attributes (i.e., ~a) is integrated into the set of all valued vectors known as \( M \), represented by Equation 6.20: \( f \{ \tilde{a}_i \}_{i=1}^{n} / C0/C1 = \{\tilde{m}\}_{...}, \forall a / C26 \tilde{a}^i, j \in N\} \).
+The set of valued vectors (i.e., ~m) from the defined attributes (i.e., ~a) is integrated into the set of all valued vectors known as $M $, represented by Equation 6.20: $ f \{ \tilde{a}_i \}_{i=1}^{n} / C0/C1 = \{\tilde{m}\}_{...}, \forall a / C26 \tilde{a}^i, j \in N\}$.
 
 :p What does Equation 6.20 describe?
 ??x
-Equation 6.20 describes the set of valued vectors (i.e., \( \tilde{m} \)) from the defined attributes (i.e., \( \tilde{a} \)), which integrate into the set of all known valued vectors as \( M \). This equation captures how these values are structured and integrated within the data stream.
+Equation 6.20 describes the set of valued vectors (i.e., $\tilde{m}$) from the defined attributes (i.e.,$\tilde{a}$), which integrate into the set of all known valued vectors as $ M$. This equation captures how these values are structured and integrated within the data stream.
 
 ---
 #### Timestamps in Data Streams
@@ -2601,15 +2595,15 @@ The text does not provide a specific formula for timestamps, but it implies that
 
 :p How do timestamps fit into the cooperative data stream definition?
 ??x
-Timestamps can fit into the cooperative data stream definition as part of the attribute definitions (i.e., \( \tilde{a} \)). They provide a temporal context for when each value was recorded or transmitted, which is crucial for understanding the sequence and timing of events within the data stream.
+Timestamps can fit into the cooperative data stream definition as part of the attribute definitions (i.e., $\tilde{a}$). They provide a temporal context for when each value was recorded or transmitted, which is crucial for understanding the sequence and timing of events within the data stream.
 
 ---
 #### Unbounded Sequence in Cooperative Data Stream
-Equation 6.21 provides the formal definition of a cooperative positional data stream as an unbounded sequence of valued vectors from a set of attributes (i.e., \( \tilde{a} \)), ordered based on their arrival: \( \forall a / C26 \tilde{a}, i \in N = Sp_{co} = \{\tilde{a}(i),\tilde{a}(i+1),\tilde{a}(i+2),...\}/C8/C9 = \{\tilde{m}_i, \tilde{m}_{i+1}, \tilde{m}_{i+2}, ...\} \).
+Equation 6.21 provides the formal definition of a cooperative positional data stream as an unbounded sequence of valued vectors from a set of attributes (i.e., $\tilde{a}$), ordered based on their arrival:$\forall a / C26 \tilde{a}, i \in N = Sp_{co} = \{\tilde{a}(i),\tilde{a}(i+1),\tilde{a}(i+2),...\}/C8/C9 = \{\tilde{m}_i, \tilde{m}_{i+1}, \tilde{m}_{i+2}, ...\}$.
 
 :p What does Equation 6.21 represent in the context of a cooperative data stream?
 ??x
-Equation 6.21 represents the formal definition for a cooperative positional data stream as an unbounded sequence of valued vectors from a set of attributes (i.e., \( \tilde{a} \)), ordered based on their arrival. This equation describes how each attribute "a" can be considered a tuple, and the data stream is an unbounded sequence of these tuples.
+Equation 6.21 represents the formal definition for a cooperative positional data stream as an unbounded sequence of valued vectors from a set of attributes (i.e., $\tilde{a}$), ordered based on their arrival. This equation describes how each attribute "a" can be considered a tuple, and the data stream is an unbounded sequence of these tuples.
 
 ---
 #### Missing Values in Cooperative Data Stream
@@ -2679,8 +2673,8 @@ Background context: The concept of the physical window is extended based on the 
 :p How is the physical window extended according to the text?
 
 ??x
-The physical window is extended by defining a window \( wT \) that contains vectors collected within a specific time range. Specifically, it is defined such that for any vector \( s \) in the set of cooperative streams \( S_{co} \), the timestamp \( t_i \) satisfies:
-\[ RTS - wishedTime \leq t_i \leq RTS \]
+The physical window is extended by defining a window $wT $ that contains vectors collected within a specific time range. Specifically, it is defined such that for any vector$s $ in the set of cooperative streams$S_{co}$, the timestamp $ t_i$ satisfies:
+$$RTS - wishedTime \leq t_i \leq RTS$$
 
 The pseudocode to implement this logic could be as follows:
 
@@ -2699,7 +2693,7 @@ Background context: The logical window is similarly extended based on the provid
 :p How is the logical window extended according to the text?
 
 ??x
-The logical window is extended by defining a window \( wL \) that contains a specific number of vectors. Specifically, it is defined such that for any vector \( s \) in the set of cooperative streams \( S_{co} \), the absolute value of the threshold \( wLjj \) must be less than or equal to the threshold.
+The logical window is extended by defining a window $wL $ that contains a specific number of vectors. Specifically, it is defined such that for any vector$s $ in the set of cooperative streams$S_{co}$, the absolute value of the threshold $ wLjj$ must be less than or equal to the threshold.
 
 The pseudocode to implement this logic could be as follows:
 
@@ -2733,7 +2727,7 @@ Cardinality applies to both physical and logical windows by focusing on the coun
 - For physical windows, it is about the number of vectors collected between two timestamps.
 - For logical windows, it refers to the threshold of vector counts or time differences.
 
-For example, in a physical window \( wT \), the cardinality would be the count of vectors within the timestamp range defined by \( RTS - wishedTime \leq t_i \leq RTS \).
+For example, in a physical window $wT $, the cardinality would be the count of vectors within the timestamp range defined by $ RTS - wishedTime \leq t_i \leq RTS$.
 x??
 
 ---
@@ -2771,15 +2765,10 @@ Background context: The text provides specific equations (6.27) and (6.28) to sp
 Equations (6.27) and (6.28) are used to define the boundaries of a sliding window in terms of time or position for positional and temporal cooperative data streams, respectively. They help determine which data points fall within the current window.
 
 For positional data:
-\[
-\forall s \in Sp : wT/C_26s = wT:CTS - wishedTime \leq at(s) \leq CTS
-\]
-For temporal data:
-\[
-\forall s \in St : wT/C_26s = wT:CTS - wishedTime \leq t_i \leq CTS
-\]
+$$\forall s \in Sp : wT/C_26s = wT:CTS - wishedTime \leq at(s) \leq CTS$$
 
-x??
+For temporal data:
+$$\forall s \in St : wT/C_26s = wT:CTS - wishedTime \leq t_i \leq CTS$$x??
 
 ---
 
@@ -2791,15 +2780,10 @@ Background context: The text also discusses landmark windows, which are specifie
 Equations (6.29) and (6.30) define the boundaries of a landmark window in terms of time or position for positional and temporal cooperative data streams, respectively. These windows are useful when specific points or events need to be considered.
 
 For positional data:
-\[
-\forall s \in Sp : wT/C_26s = wT:CTS - milestone \leq at(s) \leq CTS
-\]
-For temporal data:
-\[
-\forall s \in St : wT/C_26s = wT:CTS - milestone \leq t_i \leq CTS
-\]
+$$\forall s \in Sp : wT/C_26s = wT:CTS - milestone \leq at(s) \leq CTS$$
 
-x??
+For temporal data:
+$$\forall s \in St : wT/C_26s = wT:CTS - milestone \leq t_i \leq CTS$$x??
 
 ---
 
@@ -3367,7 +3351,7 @@ x??
 
 Background context: The difference operation (A - B) is used to find elements present in set A but not in set B. This operation faces limitations similar to those of intersection and Cartesian product, requiring finite sets when dealing with unbounded data streams.
 
-Relevant formulas or explanations: Given the expression \( A - B \), the result will contain all elements belonging to the set "A" that are not present in the set "B".
+Relevant formulas or explanations: Given the expression $A - B$, the result will contain all elements belonging to the set "A" that are not present in the set "B".
 
 :p What is the difference operation used for?
 ??x

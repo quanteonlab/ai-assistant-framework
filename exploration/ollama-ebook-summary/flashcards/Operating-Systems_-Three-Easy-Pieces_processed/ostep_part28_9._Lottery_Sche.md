@@ -28,12 +28,12 @@ Example:
 Total tickets = 100 (A + B)
 
 Probability of Process A getting the CPU:
-\[ P(A) = \frac{75}{100} = 0.75 \]
+$$P(A) = \frac{75}{100} = 0.75$$
 
 Probability of Process B getting the CPU:
-\[ P(B) = \frac{25}{100} = 0.25 \]
+$$
 
-:p What is an example scenario where lottery scheduling might be applied?
+P(B) = \frac{25}{100} = 0.25$$:p What is an example scenario where lottery scheduling might be applied?
 ??x
 Lottery scheduling can be used in scenarios where processes need to share resources fairly according to predefined shares. For instance, in a batch processing system, different jobs might require different levels of CPU time based on their importance or urgency.
 
@@ -283,7 +283,7 @@ Background context: The text discusses lottery scheduling, a fairness mechanism 
 ??x
 Unfairness in lottery scheduling refers to the difference in completion times between jobs that are given the same number of tickets and have the same runtime. It's quantified as the time the first job completes divided by the time the second job completes.
 
-For example, if \( R = 10 \) (runtime), and Job A finishes at time 10 while Job B finishes at time 20, then unfairness \( U = \frac{10}{20} = 0.5 \).
+For example, if $R = 10 $(runtime), and Job A finishes at time 10 while Job B finishes at time 20, then unfairness $ U = \frac{10}{20} = 0.5$.
 
 Code examples are not typically used for this concept as it's more about the mathematical definition.
 x??
@@ -303,11 +303,11 @@ x??
 ---
 
 #### Example of Job Completion Time in Lottery Scheduling
-Background context: The text provides an example where two jobs, each with 100 tickets and same runtime \( R \), compete. The goal is for both jobs to complete at roughly the same time, but due to randomness, this isn't always achieved. Unfairness \( U \) measures how close they are in terms of completion times.
+Background context: The text provides an example where two jobs, each with 100 tickets and same runtime $R $, compete. The goal is for both jobs to complete at roughly the same time, but due to randomness, this isn't always achieved. Unfairness $ U$ measures how close they are in terms of completion times.
 
-:p How do you define "unfairness" (\( U \)) in this context?
+:p How do you define "unfairness" ($U$) in this context?
 ??x
-Unfairness \( U \) is defined as the ratio of the time one job completes to the time another job completes. For example, if Job A finishes at 10 and Job B at 20, with both having a runtime of 10, then \( U = \frac{Time(A)}{Time(B)} = \frac{10}{20} = 0.5 \).
+Unfairness $U $ is defined as the ratio of the time one job completes to the time another job completes. For example, if Job A finishes at 10 and Job B at 20, with both having a runtime of 10, then$U = \frac{Time(A)}{Time(B)} = \frac{10}{20} = 0.5$.
 
 This metric helps quantify how evenly distributed the completion times are among competing jobs.
 x??
@@ -334,8 +334,7 @@ Background context: Stride scheduling is proposed as an alternative deterministi
 Stride scheduling is a deterministic approach where each job has a stride value, calculated inversely proportional to the number of tickets assigned. The scheduler picks the process with the lowest pass value (incremented by its stride) for execution. This ensures that jobs are selected in proportion to their ticket count over time.
 
 Here's how it works:
-- Compute the stride: \( \text{Stride} = \frac{\text{Constant}}{\text{Number of Tickets}} \)
-- For example, if a job has 100 tickets and you use 10,000 as your constant, its stride would be \( \frac{10000}{100} = 100 \).
+- Compute the stride: $\text{Stride} = \frac{\text{Constant}}{\text{Number of Tickets}}$- For example, if a job has 100 tickets and you use 10,000 as your constant, its stride would be $\frac{10000}{100} = 100$.
 
 Pseudocode:
 ```java

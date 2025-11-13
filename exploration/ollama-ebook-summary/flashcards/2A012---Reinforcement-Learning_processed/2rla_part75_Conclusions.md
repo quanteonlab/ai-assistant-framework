@@ -9,28 +9,20 @@
 Eligibility traces help manage the variance and convergence speed of learning algorithms like Temporal Difference (TD) methods. The concept is crucial for balancing Monte Carlo and TD learning techniques.
 
 The update rule for eligibility traces is given by:
-\[ \omega_{t+1} = \omega_t + \alpha_t z_t^{\prime} \]
-where \(z_t\) is the eligibility trace, defined as:
-\[ z_{t+1} = \gamma t_t z_t + M_t x_t^\top z_t \]
-with
-\[ z_0 = 0, \quad M_t = \gamma t I_t + (1 - \gamma) F_t \]
-and \(F_t\) is the followon trace term.
+$$\omega_{t+1} = \omega_t + \alpha_t z_t^{\prime}$$where $ z_t$ is the eligibility trace, defined as:
+$$z_{t+1} = \gamma t_t z_t + M_t x_t^\top z_t$$with$$z_0 = 0, \quad M_t = \gamma t I_t + (1 - \gamma) F_t$$and $ F_t$ is the followon trace term.
 
-In the on-policy case (\(\gamma_t = 1\)), Emphatic-TD(λ) becomes similar to conventional TD(λ), but it still differs significantly in its guarantees and behavior. Emphatic-TD(λ) converges for all state-dependent \(\lambda\) functions, whereas TD(λ) only converges if \(\lambda\) is constant.
+In the on-policy case ($\gamma_t = 1 $), Emphatic-TD(λ) becomes similar to conventional TD(λ), but it still differs significantly in its guarantees and behavior. Emphatic-TD(λ) converges for all state-dependent $\lambda $ functions, whereas TD(λ) only converges if$\lambda$ is constant.
 
 :p What is the update rule for eligibility traces?
 ??x
 The update rule involves adjusting weights based on eligibility traces:
-\[ \omega_{t+1} = \omega_t + \alpha_t z_t^{\prime} \]
-where \(z_t^\prime\) captures recent activity. The eligibility trace itself updates as:
-\[ z_{t+1} = \gamma t_t z_t + M_t x_t^\top z_t \]
-with
-\[ z_0 = 0, \quad M_t = \gamma t I_t + (1 - \gamma) F_t \]
-and \(F_t\) tracks recent usage.
+$$\omega_{t+1} = \omega_t + \alpha_t z_t^{\prime}$$where $ z_t^\prime$ captures recent activity. The eligibility trace itself updates as:
+$$z_{t+1} = \gamma t_t z_t + M_t x_t^\top z_t$$with$$z_0 = 0, \quad M_t = \gamma t I_t + (1 - \gamma) F_t$$and $ F_t$ tracks recent usage.
 
 ??x
 The answer with detailed explanations.
-This update rule allows for dynamic adjustment of weights based on recent state visits and actions. The eligibility trace \(z_t\) helps in shifting focus between Monte Carlo and TD learning by giving more weight to recently visited states and actions, thus improving the efficiency and convergence rate of the algorithm.
+This update rule allows for dynamic adjustment of weights based on recent state visits and actions. The eligibility trace $z_t$ helps in shifting focus between Monte Carlo and TD learning by giving more weight to recently visited states and actions, thus improving the efficiency and convergence rate of the algorithm.
 
 ```java
 public class EmphaticTD {
@@ -67,15 +59,15 @@ x??
 
 #### On-Policy Case of Emphatic-TD(λ)
 
-In the on-policy case where \(\gamma_t = 1\), the update rule for Emphatic-TD(λ) is similar to conventional TD(λ).
+In the on-policy case where $\gamma_t = 1$, the update rule for Emphatic-TD(λ) is similar to conventional TD(λ).
 
 :p How does Emphatic-TD(λ) behave in the on-policy case?
 ??x
-In the on-policy case (\(\gamma_t = 1\)), Emphatic-TD(λ) behaves similarly to conventional TD(λ). However, it still offers significant differences. For instance, while both methods are guaranteed to converge for constant \(\lambda\) functions in TD(λ), Emphatic-TD(λ) ensures convergence for all state-dependent \(\lambda\) functions.
+In the on-policy case ($\gamma_t = 1 $), Emphatic-TD(λ) behaves similarly to conventional TD(λ). However, it still offers significant differences. For instance, while both methods are guaranteed to converge for constant $\lambda $ functions in TD(λ), Emphatic-TD(λ) ensures convergence for all state-dependent$\lambda$ functions.
 
 ??x
 The answer with detailed explanations.
-In the on-policy case where \(\gamma_t = 1\), the update rule simplifies, but the core mechanism of eligibility traces remains. This means that both methods will adjust their weights based on immediate rewards and past values, but Emphatic-TD(λ) provides a more flexible way to handle varying discount factors over time.
+In the on-policy case where $\gamma_t = 1$, the update rule simplifies, but the core mechanism of eligibility traces remains. This means that both methods will adjust their weights based on immediate rewards and past values, but Emphatic-TD(λ) provides a more flexible way to handle varying discount factors over time.
 
 ```java
 public class OnPolicyEmphaticTD {
@@ -113,7 +105,7 @@ Implementations of eligibility traces in tabular methods are actually simpler be
 
 ??x
 The answer with detailed explanations.
-Despite the initial complexity, implementations can be efficient by focusing on states that have non-zero eligibility traces. Since most of the time, the majority of state values have negligible trace values, the system can keep track of only those few significant updates. This results in a computational overhead that is usually just a small multiple (depending on \(\lambda\) and \(\alpha\)) of a one-step method.
+Despite the initial complexity, implementations can be efficient by focusing on states that have non-zero eligibility traces. Since most of the time, the majority of state values have negligible trace values, the system can keep track of only those few significant updates. This results in a computational overhead that is usually just a small multiple (depending on $\lambda $ and$\alpha$) of a one-step method.
 
 ```java
 public class SparseEligibilityTraces {
@@ -615,9 +607,8 @@ x??
 ---
 
 #### Policy Gradient Methods Overview
-Policy gradient methods are a different approach from action-value methods, where policies are learned directly without explicitly learning value functions. These methods aim to maximize performance by approximating the gradient of some scalar performance measure with respect to the policy parameter vector \(\theta\). The update rule for the policy parameter is given by:
-\[ \theta_{t+1} = \theta_t + \alpha \nabla J(\theta_t) \]
-where \(J(\theta)\) is a scalar performance measure, and \(\alpha\) is a learning rate.
+Policy gradient methods are a different approach from action-value methods, where policies are learned directly without explicitly learning value functions. These methods aim to maximize performance by approximating the gradient of some scalar performance measure with respect to the policy parameter vector $\theta$. The update rule for the policy parameter is given by:
+$$\theta_{t+1} = \theta_t + \alpha \nabla J(\theta_t)$$where $ J(\theta)$is a scalar performance measure, and $\alpha$ is a learning rate.
 
 :p What distinguishes policy gradient methods from action-value methods?
 ??x
@@ -627,9 +618,8 @@ x??
 ---
 
 #### Soft-Max Parameterization for Discrete Action Spaces
-In policy gradient methods, particularly when dealing with discrete action spaces, a common parameterization is to use soft-max preferences \(h(s, a, \theta)\) for each state-action pair. This method converts the preference values into probabilities:
-\[ \pi(a|s, \theta) = \frac{e^{h(s,a,\theta)}}{\sum_a e^{h(s,b,\theta)}} \]
-where \(h(s, a, \theta)\) are arbitrary parameterized functions.
+In policy gradient methods, particularly when dealing with discrete action spaces, a common parameterization is to use soft-max preferences $h(s, a, \theta)$ for each state-action pair. This method converts the preference values into probabilities:
+$$\pi(a|s, \theta) = \frac{e^{h(s,a,\theta)}}{\sum_a e^{h(s,b,\theta)}}$$where $ h(s, a, \theta)$ are arbitrary parameterized functions.
 
 :p How does soft-max parameterization work in policy gradient methods?
 ??x
@@ -639,7 +629,7 @@ x??
 ---
 
 #### Advantages of Soft-Max Parameterization
-One advantage of soft-max parameterization in policy gradient methods is its ability to handle stochastic policies effectively. Unlike \(\epsilon\)-greedy action selection, which always has some probability of selecting a random action, the soft-max distribution allows for more flexible probabilities.
+One advantage of soft-max parameterization in policy gradient methods is its ability to handle stochastic policies effectively. Unlike $\epsilon$-greedy action selection, which always has some probability of selecting a random action, the soft-max distribution allows for more flexible probabilities.
 
 :p What are the advantages of using soft-max parameterization?
 ??x
@@ -650,8 +640,7 @@ x??
 
 #### Handling Continuous Action Spaces
 Policy gradient methods can also be applied to continuous action spaces, but require a different parameterization. One common approach is to use linear approximations based on features:
-\[ h(s, a, \theta) = \theta^T x(s, a) \]
-where \(x(s, a)\) are feature vectors constructed from state-action pairs.
+$$h(s, a, \theta) = \theta^T x(s, a)$$where $ x(s, a)$ are feature vectors constructed from state-action pairs.
 
 :p How do policy gradient methods handle continuous action spaces?
 ??x
@@ -661,7 +650,7 @@ x??
 ---
 
 #### Example: Short Corridor with Switched Actions
-Consider a simple gridworld where state-action pairs have different outcomes based on the current state. The goal is to find an optimal policy using policy gradient methods, which can handle stochastic policies more effectively compared to \(\epsilon\)-greedy selection.
+Consider a simple gridworld where state-action pairs have different outcomes based on the current state. The goal is to find an optimal policy using policy gradient methods, which can handle stochastic policies more effectively compared to $\epsilon$-greedy selection.
 
 :p What does this example demonstrate about policy gradient methods?
 ??x
@@ -709,18 +698,16 @@ The policy gradient theorem provides an analytic expression for estimating the p
 ??x
 The policy gradient theorem provides a way to compute the gradient of the expected return (performance measure) with respect to the policy parameters, even when the exact state distribution is unknown. This is achieved by leveraging the relationship between the state-value function and the action-value function.
 
-Mathematically, it states that for an episodic case starting from state \(s_0\), the gradient of the expected return \(J(\theta)\) can be expressed as:
-\[ \nabla_{\theta} J(\theta) = \mathbb{E}_{s_t \sim \pi_\theta(s)}[r_t + \gamma v_\pi(s_{t+1}) - v_\pi(s_t)] \]
+Mathematically, it states that for an episodic case starting from state $s_0 $, the gradient of the expected return $ J(\theta)$ can be expressed as:
+$$\nabla_{\theta} J(\theta) = \mathbb{E}_{s_t \sim \pi_\theta(s)}[r_t + \gamma v_\pi(s_{t+1}) - v_\pi(s_t)]$$
 
 This formula is derived from the value functions and action probabilities. It simplifies to:
-\[ \nabla_{\theta} J(\theta) = \sum_s \pi_\theta(a|s) [r(s, a) + \gamma q_\pi(s, a) - v_\pi(s)] \]
-
-:p How can this formula be simplified further?
+$$\nabla_{\theta} J(\theta) = \sum_s \pi_\theta(a|s) [r(s, a) + \gamma q_\pi(s, a) - v_\pi(s)]$$:p How can this formula be simplified further?
 ??x
 The formula can be simplified by considering the recursive nature of the value function and the policy:
-\[ \nabla_{\theta} J(\theta) = \sum_s \sum_{s'} \sum_a \pi_\theta(a|s) p(s'|s, a) [r(s, a) + \gamma r(s', A(s'))] - v_\pi(s) \]
+$$\nabla_{\theta} J(\theta) = \sum_s \sum_{s'} \sum_a \pi_\theta(a|s) p(s'|s, a) [r(s, a) + \gamma r(s', A(s'))] - v_\pi(s)$$
 
-Where \(A(s')\) is the action taken at state \(s'\), and \(p(s'|s, a)\) is the transition probability from state \(s\) to state \(s'\) under policy \(\pi\).
+Where $A(s')$ is the action taken at state $s'$, and $ p(s'|s, a)$is the transition probability from state $ s$to state $ s'$under policy $\pi$.
 
 This recursive form helps in understanding how changes in the policy parameters affect both the current state's value and future states' values.
 x??
@@ -728,14 +715,14 @@ x??
 ---
 
 #### Episodic Case Performance Measure
-In the episodic case, the performance measure is defined as the value of the start state of the episode. This means that for an episode starting at \(s_0\), we focus on optimizing policies to maximize the expected return from this initial state.
+In the episodic case, the performance measure is defined as the value of the start state of the episode. This means that for an episode starting at $s_0$, we focus on optimizing policies to maximize the expected return from this initial state.
 
 :p How is the performance measure defined in the episodic case?
 ??x
 In the episodic case, the performance measure is defined as:
-\[ J(\theta) = v_{\pi_\theta}(s_0) \]
+$$J(\theta) = v_{\pi_\theta}(s_0)$$
 
-Where \(v_{\pi_\theta}\) is the true value function for the policy \(\pi_\theta\) determined by the parameters \(\theta\), and \(s_0\) is the start state of the episode.
+Where $v_{\pi_\theta}$ is the true value function for the policy $\pi_\theta$ determined by the parameters $\theta$, and $ s_0$ is the start state of the episode.
 
 This definition helps in formulating policies that are optimized to achieve high returns starting from a specific initial state, which can be particularly useful in tasks where the goal is to maximize performance from a given starting point.
 x??
@@ -747,13 +734,13 @@ The policy gradient theorem provides an analytic expression for the gradient of 
 
 :p How is the gradient of the expected return calculated using the policy gradient theorem?
 ??x
-Using the policy gradient theorem, the gradient of the expected return \(J(\theta)\) can be computed as:
-\[ \nabla_{\theta} J(\theta) = \mathbb{E}_{s_t \sim \pi_\theta(s)}[r_t + \gamma v_{\pi}(s_{t+1}) - v_{\pi}(s_t)] \]
+Using the policy gradient theorem, the gradient of the expected return $J(\theta)$ can be computed as:
+$$\nabla_{\theta} J(\theta) = \mathbb{E}_{s_t \sim \pi_\theta(s)}[r_t + \gamma v_{\pi}(s_{t+1}) - v_{\pi}(s_t)]$$
 
 This gradient is derived from the relationship between state-value functions and action probabilities. It can be expanded as:
-\[ \nabla_{\theta} J(\theta) = \sum_s \pi_\theta(a|s) [r(s, a) + \gamma q_\pi(s, a) - v_\pi(s)] \]
+$$\nabla_{\theta} J(\theta) = \sum_s \pi_\theta(a|s) [r(s, a) + \gamma q_\pi(s, a) - v_\pi(s)]$$
 
-Where \(q_\pi\) is the action-value function and \(v_\pi\) is the state-value function under policy \(\pi\).
+Where $q_\pi $ is the action-value function and$v_\pi $ is the state-value function under policy $\pi$.
 
 This formula helps in directly optimizing policies by adjusting parameters to increase expected returns.
 x??

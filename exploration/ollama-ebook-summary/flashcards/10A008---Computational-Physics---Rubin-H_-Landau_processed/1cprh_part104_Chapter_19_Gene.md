@@ -9,32 +9,27 @@
 Einstein’s theory of General Relativity (GR) postulates that matter or energy distorts spacetime, leading to gravitational forces. The equations describing this are known as the Einstein field equations.
 
 The Einstein field equations can be stated succinctly as:
-\[ R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{\kappa T_{\mu\nu}}{c^4}, \]
-
-where \( \kappa = 8\pi G/c^4 \), and the cosmological constant \( \Lambda \) is a term added by Einstein initially to explain a static universe, now believed necessary to account for dark energy.
+$$R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{\kappa T_{\mu\nu}}{c^4},$$where $\kappa = 8\pi G/c^4 $, and the cosmological constant $\Lambda$ is a term added by Einstein initially to explain a static universe, now believed necessary to account for dark energy.
 
 :p What are the Einstein field equations?
 ??x
 The Einstein field equations describe how matter and energy distort spacetime. They are given by:
-\[ R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{\kappa T_{\mu\nu}}{c^4}, \]
-where \( R_{\mu\nu} \) and \( R \) are the Ricci tensor and scalar curvature, respectively, which describe spacetime curvature. The term \( \Lambda g_{\mu\nu} \) is related to dark energy or vacuum energy, and \( T_{\mu\nu} \) represents the stress-energy tensor.
+$$R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{\kappa T_{\mu\nu}}{c^4},$$where $ R_{\mu\nu}$and $ R$are the Ricci tensor and scalar curvature, respectively, which describe spacetime curvature. The term $\Lambda g_{\mu\nu}$ is related to dark energy or vacuum energy, and $T_{\mu\nu}$ represents the stress-energy tensor.
 
-The parameter \( \kappa = 8\pi G/c^4 \) where \( G \) is Newton's gravitational constant.
+The parameter $\kappa = 8\pi G/c^4 $ where$G$ is Newton's gravitational constant.
 x??
 
 ---
 
 #### The Metric Tensor
 
-The metric tensor \( g_{\mu\nu} \) provides a description of local spacetime. It defines how distance between two points in spacetime is computed.
+The metric tensor $g_{\mu\nu}$ provides a description of local spacetime. It defines how distance between two points in spacetime is computed.
 
 For example, the metric in spherical coordinates can be expressed as:
-\[ ds^2 = -dt^2 + dr^2 + r^2 (d\theta^2 + \sin^2(\theta) d\phi^2). \]
-
-:p What is the metric tensor?
+$$ds^2 = -dt^2 + dr^2 + r^2 (d\theta^2 + \sin^2(\theta) d\phi^2).$$:p What is the metric tensor?
 ??x
-The metric tensor \( g_{\mu\nu} \) describes how to compute distances in spacetime. For example, in spherical coordinates, the line element can be expressed as:
-\[ ds^2 = -dt^2 + dr^2 + r^2 (d\theta^2 + \sin^2(\theta) d\phi^2). \]
+The metric tensor $g_{\mu\nu}$ describes how to compute distances in spacetime. For example, in spherical coordinates, the line element can be expressed as:
+$$ds^2 = -dt^2 + dr^2 + r^2 (d\theta^2 + \sin^2(\theta) d\phi^2).$$
 
 This tensor is crucial for understanding how spacetime is curved.
 x??
@@ -43,31 +38,25 @@ x??
 
 #### Christoffel Symbols
 
-The Christoffel symbols \( \Gamma^\mu_{\alpha\nu} \) are derived from the metric tensor and help in calculating the Ricci curvature tensor.
+The Christoffel symbols $\Gamma^\mu_{\alpha\nu}$ are derived from the metric tensor and help in calculating the Ricci curvature tensor.
 
 The formula to calculate the Christoffel symbols is:
-\[ \Gamma^\mu_{\alpha\nu} = \frac{1}{2} g^{\mu\lambda} (\partial_\nu g_{\lambda\alpha} + \partial_\alpha g_{\lambda\nu} - \partial_\lambda g_{\alpha\nu}). \]
-
-:p How are Christoffel symbols calculated?
+$$\Gamma^\mu_{\alpha\nu} = \frac{1}{2} g^{\mu\lambda} (\partial_\nu g_{\lambda\alpha} + \partial_\alpha g_{\lambda\nu} - \partial_\lambda g_{\alpha\nu}).$$:p How are Christoffel symbols calculated?
 ??x
-Christoffel symbols \( \Gamma^\mu_{\alpha\nu} \) are derived from the metric tensor and help in understanding spacetime curvature. They are calculated using the formula:
-\[ \Gamma^\mu_{\alpha\nu} = \frac{1}{2} g^{\mu\lambda} (\partial_\nu g_{\lambda\alpha} + \partial_\alpha g_{\lambda\nu} - \partial_\lambda g_{\alpha\nu}). \]
+Christoffel symbols $\Gamma^\mu_{\alpha\nu}$ are derived from the metric tensor and help in understanding spacetime curvature. They are calculated using the formula:
+$$\Gamma^\mu_{\alpha\nu} = \frac{1}{2} g^{\mu\lambda} (\partial_\nu g_{\lambda\alpha} + \partial_\alpha g_{\lambda\nu} - \partial_\lambda g_{\alpha\nu}).$$
 
-This formula involves the inverse of the metric tensor \( g^{\mu\lambda} \) and the partial derivatives of the metric tensor components.
+This formula involves the inverse of the metric tensor $g^{\mu\lambda}$ and the partial derivatives of the metric tensor components.
 x??
 
 ---
 
 #### Ricci Curvature Tensor
 
-The Ricci curvature tensor is derived from Christoffel symbols. It gives information about how spacetime curves.
-
-\[ R_{\mu\nu} = \partial_\nu \Gamma^\alpha_{\mu\nu} - \partial_\mu \Gamma^\alpha_{\nu\nu} + \Gamma^\alpha_{\mu\lambda} \Gamma^\lambda_{\nu\nu} - \Gamma^\alpha_{\nu\lambda} \Gamma^\lambda_{\mu\nu}. \]
-
-:p What is the Ricci curvature tensor?
+The Ricci curvature tensor is derived from Christoffel symbols. It gives information about how spacetime curves.$$R_{\mu\nu} = \partial_\nu \Gamma^\alpha_{\mu\nu} - \partial_\mu \Gamma^\alpha_{\nu\nu} + \Gamma^\alpha_{\mu\lambda} \Gamma^\lambda_{\nu\nu} - \Gamma^\alpha_{\nu\lambda} \Gamma^\lambda_{\mu\nu}.$$:p What is the Ricci curvature tensor?
 ??x
-The Ricci curvature tensor \( R_{\mu\nu} \) gives information about how spacetime curves. It can be derived from Christoffel symbols using the formula:
-\[ R_{\mu\nu} = \partial_\nu \Gamma^\alpha_{\mu\nu} - \partial_\mu \Gamma^\alpha_{\nu\nu} + \Gamma^\alpha_{\mu\lambda} \Gamma^\lambda_{\nu\nu} - \Gamma^\alpha_{\nu\lambda} \Gamma^\lambda_{\mu\nu}. \]
+The Ricci curvature tensor $R_{\mu\nu}$ gives information about how spacetime curves. It can be derived from Christoffel symbols using the formula:
+$$R_{\mu\nu} = \partial_\nu \Gamma^\alpha_{\mu\nu} - \partial_\mu \Gamma^\alpha_{\nu\nu} + \Gamma^\alpha_{\mu\lambda} \Gamma^\lambda_{\nu\nu} - \Gamma^\alpha_{\nu\lambda} \Gamma^\lambda_{\mu\nu}.$$
 
 This tensor is a contraction of the Riemann curvature tensor and provides insight into the geometry of spacetime.
 x??
@@ -76,15 +65,13 @@ x??
 
 #### Stress-Energy Tensor
 
-The stress-energy tensor \( T^{\mu\nu} \) describes the source of spacetime curvature, arising from matter and energy.
+The stress-energy tensor $T^{\mu\nu}$ describes the source of spacetime curvature, arising from matter and energy.
 
 The time-time component of the stress-energy tensor is given by:
-\[ T^{00} = \rho c^2 + \frac{1}{c^2}\left(\frac{1}{2\epsilon_0} E^2 + \frac{1}{2\mu_0} B^2\right). \]
-
-:p What is the stress-energy tensor?
+$$T^{00} = \rho c^2 + \frac{1}{c^2}\left(\frac{1}{2\epsilon_0} E^2 + \frac{1}{2\mu_0} B^2\right).$$:p What is the stress-energy tensor?
 ??x
-The stress-energy tensor \( T^{\mu\nu} \) describes how matter and energy are distributed in spacetime, which is the source of its curvature. The time-time component can be expressed as:
-\[ T^{00} = \rho c^2 + \frac{1}{c^2}\left(\frac{1}{2\epsilon_0} E^2 + \frac{1}{2\mu_0} B^2\right). \]
+The stress-energy tensor $T^{\mu\nu}$ describes how matter and energy are distributed in spacetime, which is the source of its curvature. The time-time component can be expressed as:
+$$T^{00} = \rho c^2 + \frac{1}{c^2}\left(\frac{1}{2\epsilon_0} E^2 + \frac{1}{2\mu_0} B^2\right).$$
 
 This tensor includes contributions from mass density and electromagnetic fields.
 x??
@@ -93,17 +80,12 @@ x??
 
 #### Geodesic Equation
 
-The geodesic equation describes the motion of a freely falling particle in spacetime.
-
-\[ \frac{d^2 x^\mu}{ds^2} = - \Gamma^\mu_{\alpha\beta} \frac{dx^\alpha}{ds} \frac{dx^\beta}{ds}, \]
-
-where \( s \) is the scalar proper time and \( \Gamma^\mu_{\alpha\beta} \) are Christoffel symbols.
+The geodesic equation describes the motion of a freely falling particle in spacetime.$$\frac{d^2 x^\mu}{ds^2} = - \Gamma^\mu_{\alpha\beta} \frac{dx^\alpha}{ds} \frac{dx^\beta}{ds},$$where $ s $ is the scalar proper time and $\Gamma^\mu_{\alpha\beta}$ are Christoffel symbols.
 
 :p What is the geodesic equation?
 ??x
 The geodesic equation describes how a freely falling particle moves in spacetime. It is given by:
-\[ \frac{d^2 x^\mu}{ds^2} = - \Gamma^\mu_{\alpha\beta} \frac{dx^\alpha}{ds} \frac{dx^\beta}{ds}, \]
-where \( s \) is the scalar proper time and \( \Gamma^\mu_{\alpha\beta} \) are Christoffel symbols.
+$$\frac{d^2 x^\mu}{ds^2} = - \Gamma^\mu_{\alpha\beta} \frac{dx^\alpha}{ds} \frac{dx^\beta}{ds},$$where $ s $ is the scalar proper time and $\Gamma^\mu_{\alpha\beta}$ are Christoffel symbols.
 
 This equation generalizes Newton's first law of motion to curved spacetime.
 x??
@@ -116,10 +98,7 @@ Background context: The geodesic equation in General Relativity describes the mo
 :p What does the geodesic equation represent in the context of General Relativity?
 ??x
 The geodesic equation represents the path that a test particle follows in a gravitational field. It is given by:
-\[
-\frac{d^2 x^\mu}{ds^2} + \Gamma^\mu_{\alpha \beta} \frac{dx^\alpha}{ds} \frac{dx^\beta}{ds} = 0
-\]
-where \(s\) is the proper time, and \(\Gamma^\mu_{\alpha \beta}\) are the Christoffel symbols that encode the curvature of spacetime. For non-relativistic motion, terms quadratic and cubic in velocity can be ignored, leading to a simplified form similar to Galileo's hypothesis.
+$$\frac{d^2 x^\mu}{ds^2} + \Gamma^\mu_{\alpha \beta} \frac{dx^\alpha}{ds} \frac{dx^\beta}{ds} = 0$$where $ s $ is the proper time, and $\Gamma^\mu_{\alpha \beta}$ are the Christoffel symbols that encode the curvature of spacetime. For non-relativistic motion, terms quadratic and cubic in velocity can be ignored, leading to a simplified form similar to Galileo's hypothesis.
 
 If applicable, add code examples with explanations:
 ```python
@@ -138,11 +117,8 @@ Background context: The Riemann tensor is a measure of curvature in General Rela
 
 :p How is the Riemann tensor calculated using the geodesic deviation equation?
 ??x
-The Riemann tensor \(R_{\alpha \mu \nu \sigma}\) is calculated by taking the second derivative of a vector along two geodesics and relating it to the Christoffel symbols. Specifically, for infinitesimally close geodesics \(x_a(\tau)\) and \(x_b(\tau)\), the Riemann tensor can be derived as:
-\[
-(R_{\alpha \mu \nu \sigma})_\alpha = (\frac{d^2 n^\alpha}{d\tau^2}) = (\partial_\sigma \Gamma^\alpha_{\mu\nu} - \partial_\nu \Gamma^\alpha_{\mu\sigma} + \Gamma^\alpha_{\sigma \gamma} \Gamma^\gamma_{\mu\nu} - \Gamma^\alpha_{\nu \gamma} \Gamma^\gamma_{\mu\sigma})
-\]
-where \(n(\tau)\) is the vector connecting the two geodesics.
+The Riemann tensor $R_{\alpha \mu \nu \sigma}$ is calculated by taking the second derivative of a vector along two geodesics and relating it to the Christoffel symbols. Specifically, for infinitesimally close geodesics $x_a(\tau)$ and $x_b(\tau)$, the Riemann tensor can be derived as:
+$$(R_{\alpha \mu \nu \sigma})_\alpha = (\frac{d^2 n^\alpha}{d\tau^2}) = (\partial_\sigma \Gamma^\alpha_{\mu\nu} - \partial_\nu \Gamma^\alpha_{\mu\sigma} + \Gamma^\alpha_{\sigma \gamma} \Gamma^\gamma_{\mu\nu} - \Gamma^\alpha_{\nu \gamma} \Gamma^\gamma_{\mu\sigma})$$where $ n(\tau)$ is the vector connecting the two geodesics.
 
 If applicable, add code examples with explanations:
 ```python
@@ -164,18 +140,15 @@ x??
 ---
 
 #### Calculating the Ricci Tensor and Scalar
-Background context: The Ricci tensor is a contraction of the Riemann tensor, providing a scalar measure of curvature. This scalar, known as the Ricci scalar \(R\), is crucial for solving Einstein's field equations.
+Background context: The Ricci tensor is a contraction of the Riemann tensor, providing a scalar measure of curvature. This scalar, known as the Ricci scalar $R$, is crucial for solving Einstein's field equations.
 
 :p How is the Ricci scalar calculated from the Riemann tensor?
 ??x
-The Ricci scalar \(R\) is obtained by contracting the Ricci tensor \(R_{\mu\nu}\) with the metric tensor \(g^{\mu\nu}\):
-\[
-R = g^{\mu\nu} R_{\mu\nu}
-\]
-where the Ricci tensor itself is a contraction of the Riemann tensor:
-\[
-R_{\alpha \beta} = R^\gamma_{\alpha \gamma \beta}
-\]
+The Ricci scalar $R $ is obtained by contracting the Ricci tensor$R_{\mu\nu}$ with the metric tensor $g^{\mu\nu}$:
+$$R = g^{\mu\nu} R_{\mu\nu}$$where the Ricci tensor itself is a contraction of the Riemann tensor:
+$$
+
+R_{\alpha \beta} = R^\gamma_{\alpha \gamma \beta}$$
 
 If applicable, add code examples with explanations:
 ```python
@@ -193,23 +166,15 @@ x??
 ---
 
 #### Event Horizons and Black Holes
-Background context: The event horizon of a black hole is the boundary beyond which nothing can escape from the gravitational pull. For the Schwarzschild metric, this radius \(r_s\) (Schwarzschild radius) is given by:
-\[
-r_h = r_s \equiv 2 \frac{GM}{c^2}
-\]
-
-:p How do you calculate the event horizon for a black hole?
+Background context: The event horizon of a black hole is the boundary beyond which nothing can escape from the gravitational pull. For the Schwarzschild metric, this radius $r_s$(Schwarzschild radius) is given by:
+$$r_h = r_s \equiv 2 \frac{GM}{c^2}$$:p How do you calculate the event horizon for a black hole?
 ??x
 The event horizon of a black hole can be calculated using the Schwarzschild radius formula:
-\[
-r_h = r_s \equiv 2 \frac{GM}{c^2}
-\]
-where \(G\) is the gravitational constant, \(M\) is the mass of the object, and \(c\) is the speed of light.
+$$r_h = r_s \equiv 2 \frac{GM}{c^2}$$where $ G $is the gravitational constant,$ M $is the mass of the object, and$ c$ is the speed of light.
 
 For example, for a black hole with mass equal to that of the Earth:
-\[
-r_h = 2 \frac{(6.67430 \times 10^{-8} \text{ cm}^3/\text{g s}^2) (5.972 \times 10^{24} \text{ g})}{(2.998 \times 10^{10} \text{ cm/s})^2}
-\]
+$$r_h = 2 \frac{(6.67430 \times 10^{-8} \text{ cm}^3/\text{g s}^2) (5.972 \times 10^{24} \text{ g})}{(2.998 \times 10^{10} \text{ cm/s})^2}$$
+
 This calculation gives the radius at which the event horizon occurs.
 
 If applicable, add code examples with explanations:
@@ -238,10 +203,7 @@ Background context: Gravitational lensing occurs when the path of light is bent 
 Gravitational lensing occurs due to the curvature of spacetime caused by a massive object. Light rays follow geodesics, which are paths that locally minimize distance in curved spacetime. When these paths pass near a massive body, they get bent, leading to phenomena such as multiple images or rings.
 
 The geodesic equation for this scenario is:
-\[
-\frac{du}{d\phi^2} = 3GMu^2 - u
-\]
-where \(u = \frac{1}{r}\) and \(\phi\) is the angle parameterizing the path of light.
+$$\frac{du}{d\phi^2} = 3GMu^2 - u$$where $ u = \frac{1}{r}$and $\phi$ is the angle parameterizing the path of light.
 
 If applicable, add code examples with explanations:
 ```python
@@ -280,10 +242,7 @@ Background context: The numerical solution of the geodesic equation can be used 
 :p How do you solve the ODE for gravitational lensing?
 ??x
 To solve the ODE for gravitational lensing, we use numerical methods such as Runge-Kutta or Euler's method. The given ODE is:
-\[
-\frac{du}{d\phi^2} = 3GMu^2 - u
-\]
-where \(u = \frac{1}{r}\) and \(\phi\) is the angle parameterizing the path of light.
+$$\frac{du}{d\phi^2} = 3GMu^2 - u$$where $ u = \frac{1}{r}$and $\phi$ is the angle parameterizing the path of light.
 
 Here is a pseudocode example using Python's `solve_ivp` from SciPy:
 ```python
@@ -310,10 +269,7 @@ Background context: The geodesic equation for gravitational lensing is a nonline
 :p How do you verify the solution of the nonlinear ODE for gravitational lensing?
 ??x
 To verify the solution of the nonlinear ODE for gravitational lensing, we compare the numerical result with an approximate analytic expression. For example, we know that:
-\[
-\phi \approx 4 \frac{GM}{c^2 r_h}
-\]
-where \(r_h\) is the Schwarzschild radius.
+$$\phi \approx 4 \frac{GM}{c^2 r_h}$$where $ r_h$ is the Schwarzschild radius.
 
 Here is a pseudocode example to verify the solution:
 ```python
@@ -347,7 +303,7 @@ x??
 --- 
 
 #### Gravitational Lensing Path Plotting
-Background context: The path of light in the presence of a massive object can be plotted using the numerical solution to the geodesic equation. This involves converting the radial solutions into \(x\) and \(y\) coordinates.
+Background context: The path of light in the presence of a massive object can be plotted using the numerical solution to the geodesic equation. This involves converting the radial solutions into $x $ and$y$ coordinates.
 
 :p How do you plot the paths of photons in gravitational lensing?
 ??x
@@ -601,7 +557,7 @@ To numerically solve and plot the path of a photon in gravitational lensing, we 
 
 1. Define the geodesic equation as a nonlinear ordinary differential equation (ODE).
 2. Use a numerical solver to find the solution.
-3. Convert the radial solution into \(x\) and \(y\) coordinates.
+3. Convert the radial solution into $x $ and$y$ coordinates.
 4. Plot the resulting path.
 
 Here is a pseudocode example:
@@ -830,7 +786,7 @@ To numerically solve and plot the path of a photon in gravitational lensing, fol
 
 1. Define the geodesic equation as a nonlinear ordinary differential equation (ODE).
 2. Use a numerical solver to find the solution.
-3. Convert the radial solution into \(x\) and \(y\) coordinates.
+3. Convert the radial solution into $x $ and$y$ coordinates.
 4. Plot the resulting path.
 
 Here is a Python code example that performs these steps:
@@ -866,7 +822,7 @@ plt.show()
 In this code:
 - The `lens_equation` function defines the geodesic equation for the photon's path.
 - The `solve_ivp` function from SciPy is used to solve the ODE numerically.
-- The solution `r_solution` contains the radial values, which are converted into \(x\) and \(y\) coordinates using the appropriate conversion factor.
+- The solution `r_solution` contains the radial values, which are converted into $x $ and$y$ coordinates using the appropriate conversion factor.
 - Finally, the `matplotlib` library is used to plot the path of the photon.
 
 You can run this code with specific values for `mass_sun` and `G` (gravitational parameter) to see the numerical solution plotted. x??
@@ -890,7 +846,7 @@ To numerically solve the geodesic equation for gravitational lensing and visuali
    Use a numerical solver like `solve_ivp` from SciPy to solve the ODE system.
 
 4. **Convert Radial Solutions to Cartesian Coordinates:**
-   Transform the radial solutions into \(x\) and \(y\) coordinates for visualization.
+   Transform the radial solutions into $x $ and$y$ coordinates for visualization.
 
 5. **Plot the Path:**
    Use `matplotlib` to plot the path of the photon.
@@ -954,7 +910,7 @@ plt.show()
    The `solve_ivp` function from SciPy is used to solve the ODE system over a specified time span.
 
 4. **Conversion to Cartesian Coordinates:**
-   The radial and angular solutions are transformed into \(x\) and \(y\) coordinates for plotting.
+   The radial and angular solutions are transformed into $x $ and$y$ coordinates for plotting.
 
 5. **Plotting:**
    The path of the photon is plotted using `matplotlib`.
@@ -980,7 +936,7 @@ To set up and solve the geodesic equation for a photon near a massive object usi
    Use a numerical solver to solve the ODE system over a specified time span or coordinate range.
 
 4. **Convert Radial Solutions to Cartesian Coordinates:**
-   Transform the radial solutions into \(x\) and \(y\) coordinates for visualization.
+   Transform the radial solutions into $x $ and$y$ coordinates for visualization.
 
 5. **Plot the Path:**
    Use `matplotlib` to plot the path of the photon.
@@ -1038,7 +994,7 @@ plt.show()
 1. **Constants and Initial Conditions:**
    - `mass_sun` is set to an example value (28 solar masses).
    - `G` is the gravitational parameter.
-   - Initial conditions are given for the radial distance \(r\) and initial angle \(\theta\).
+   - Initial conditions are given for the radial distance $r $ and initial angle$\theta$.
 
 2. **Geodesic Equation:**
    The geodesic equation in the Schwarzschild metric is simplified into a system of first-order ODEs.
@@ -1047,7 +1003,7 @@ plt.show()
    The `solve_ivp` function from SciPy is used to solve the ODE system over a specified time span or coordinate range.
 
 4. **Conversion to Cartesian Coordinates:**
-   The radial and angular solutions are transformed into \(x\) and \(y\) coordinates for plotting.
+   The radial and angular solutions are transformed into $x $ and$y$ coordinates for plotting.
 
 5. **Plotting:**
    The path of the photon is plotted using `matplotlib`.
@@ -1063,7 +1019,7 @@ To ensure clarity, here's a concise summary of the steps:
 1. **Define Constants and Initial Conditions:**
    - `mass_sun` (example value: 28 solar masses).
    - `G` (GM parameter: 1477.1 m³/s²).
-   - Initial radial distance \( r_0 \) and initial angle \( \theta_0 \).
+   - Initial radial distance $r_0 $ and initial angle$\theta_0$.
 
 2. **Set Up the ODE System:**
    Convert the geodesic equation into a system of first-order ODEs.
@@ -1072,7 +1028,7 @@ To ensure clarity, here's a concise summary of the steps:
    Use `solve_ivp` from SciPy to solve the ODE system over a specified time span or coordinate range.
 
 4. **Convert Radial Solutions to Cartesian Coordinates:**
-   Transform the radial and angular solutions into \( x \) and \( y \) coordinates for plotting.
+   Transform the radial and angular solutions into $x $ and$y$ coordinates for plotting.
 
 5. **Plotting:**
    Use `matplotlib` to visualize the path of the photon.
@@ -1086,17 +1042,14 @@ If you have any further questions or need additional assistance with this or rel
 Thank you for the detailed explanation and code example. To ensure I fully understand the process, let's consider a scenario where we want to simulate the path of a photon near a black hole rather than the Sun. How would we modify the code to account for the different gravitational parameters of a black hole? Additionally, could you provide an estimate of the radius of influence (Event Horizon) around the black hole?
 Certainly! To modify the code for simulating the path of a photon near a black hole, we need to adjust the gravitational parameter `G` and the mass of the black hole. The event horizon or radius of influence (also known as the Schwarzschild radius) can be calculated using the formula:
 
-\[ R_s = \frac{2 G M}{c^2} \]
+$$R_s = \frac{2 G M}{c^2}$$where:
+- $R_s$ is the Schwarzschild radius.
+- $G $ is the gravitational constant ($6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}$).
+- $M$ is the mass of the black hole.
+- $c $ is the speed of light ($3.00 \times 10^8 \, \text{m/s}$).
 
-where:
-- \( R_s \) is the Schwarzschild radius.
-- \( G \) is the gravitational constant (\(6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}\)).
-- \( M \) is the mass of the black hole.
-- \( c \) is the speed of light (\(3.00 \times 10^8 \, \text{m/s}\)).
-
-Let's assume a black hole with a mass of \(10\) solar masses for this example. The Schwarzschild radius for such a black hole would be:
-
-\[ R_s = \frac{2 \times 6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2} \times (10 \times 1.989 \times 10^{30} \, \text{kg})}{(3.00 \times 10^8 \, \text{m/s})^2} \]
+Let's assume a black hole with a mass of $10$ solar masses for this example. The Schwarzschild radius for such a black hole would be:
+$$R_s = \frac{2 \times 6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2} \times (10 \times 1.989 \times 10^{30} \, \text{kg})}{(3.00 \times 10^8 \, \text{m/s})^2}$$
 
 Let's calculate this value and then modify the code accordingly:
 
@@ -1159,7 +1112,7 @@ plt.show()
    - Used `G` (gravitational constant) and the mass `M_black_hole` for 10 solar masses.
    
 2. **Schwarzschild Radius Calculation:**
-   - Calculated \( R_s \) using the given formula.
+   - Calculated $R_s$ using the given formula.
 
 3. **Initial Conditions:**
    - Adjusted initial radial distance to a value appropriate for a black hole scenario.
@@ -1177,7 +1130,7 @@ Let's go through the key steps again:
 
 1. **Constants and Initial Conditions:**
    - Defined `G` (gravitational constant) and `M_black_hole` for a black hole with a mass of 10 solar masses.
-   - Calculated the Schwarzschild radius \( R_s \).
+   - Calculated the Schwarzschild radius $R_s$.
 
 2. **Geodesic Equations:**
    - Modified the radial and angular equations to account for the presence of the event horizon.
@@ -1186,7 +1139,7 @@ Let's go through the key steps again:
    - Used `solve_ivp` from SciPy to solve the ODE system numerically.
 
 4. **Conversion to Cartesian Coordinates:**
-   - Converted the radial and angular solutions into \( x \) and \( y \) coordinates for plotting.
+   - Converted the radial and angular solutions into $x $ and$y$ coordinates for plotting.
 
 5. **Plotting:**
    - Plotted the path of the photon using `matplotlib`.
@@ -1200,7 +1153,7 @@ If you have any more questions or need further modifications to this scenario, f
 Thank you for the detailed explanation and the updated Python code. Let's say we want to simulate a more complex scenario where multiple black holes are present in the vicinity of our photon path. How would we modify the code to account for multiple gravitational sources? Additionally, could you provide an example with two black holes?
 Certainly! To simulate a scenario with multiple gravitational sources (e.g., two black holes), we need to extend the geodesic equations to include contributions from each source. We will sum up the effects of all black holes in the system.
 
-Let's assume two black holes with masses \( M_1 \) and \( M_2 \). The modified geodesic equations will consider the gravitational influence of both black holes.
+Let's assume two black holes with masses $M_1 $ and$M_2$. The modified geodesic equations will consider the gravitational influence of both black holes.
 
 Here’s how you can modify the code to handle multiple black holes:
 
@@ -1215,7 +1168,7 @@ Here’s how you can modify the code to handle multiple black holes:
    - Solve the ODE system numerically with the updated equations.
 
 4. **Conversion to Cartesian Coordinates:**
-   - Convert the radial and angular solutions into \( x \) and \( y \) coordinates for plotting.
+   - Convert the radial and angular solutions into $x $ and$y$ coordinates for plotting.
 
 5. **Plotting:**
    - Plot the path of the photon using `matplotlib`.
@@ -4344,37 +4297,34 @@ By running this code, you can visualize how a photon
 
 #### Effective Potential in General Relativity
 
-Background context: The classical Newtonian gravitational potential is fine for most applications near Earth, but general relativity (GR) introduces corrections that are crucial for high-precision GPS. A modified effective potential \( V_{\text{eff}}(r') \) includes terms from GR, which slightly alter the behavior of orbits.
+Background context: The classical Newtonian gravitational potential is fine for most applications near Earth, but general relativity (GR) introduces corrections that are crucial for high-precision GPS. A modified effective potential $V_{\text{eff}}(r')$ includes terms from GR, which slightly alter the behavior of orbits.
 
 Relevant formulas:
-\[ V_{\text{eff}}(r') = -\frac{G M}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G M \ell'^2}{r'^3} \]
-where \( G \) is the gravitational constant, \( \ell' \) is the angular momentum per unit rest mass, and \( M \) is the mass of the star.
+$$V_{\text{eff}}(r') = -\frac{G M}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G M \ell'^2}{r'^3}$$where $ G $is the gravitational constant,$\ell'$ is the angular momentum per unit rest mass, and $M$ is the mass of the star.
 
 The dimensionless potential is given by:
-\[ V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3} \]
-with \( r' = \frac{r}{M} \) and \( \ell' = \frac{\ell}{M} \).
+$$V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3}$$with $ r' = \frac{r}{M}$and $\ell' = \frac{\ell}{M}$.
 
 :p What is the effective potential formula in terms of dimensionless variables?
 ??x
 The effective potential formula in terms of dimensionless variables:
-\[ V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3} \]
+$$V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3}$$
+
 This includes the gravitational attraction and an additional strong attraction at short distances due to GR corrections.
 x??
 
 ---
 
-#### Plotting \( V_{\text{eff}}(r') \)
-
-Background context: To visualize the behavior of orbits, we need to plot the effective potential \( V_{\text{eff}}(r') \) for a given angular momentum per unit rest mass.
+#### Plotting $V_{\text{eff}}(r')$ Background context: To visualize the behavior of orbits, we need to plot the effective potential $V_{\text{eff}}(r')$ for a given angular momentum per unit rest mass.
 
 Relevant formulas:
-\[ V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3} \]
+$$V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3}$$
 
-The task is to plot this potential for \( \ell' = 4.3 \).
+The task is to plot this potential for $\ell' = 4.3$.
 
-:p How would you plot the effective potential \( V_{\text{eff}}(r') \) for \( \ell' = 4.3 \)?
+:p How would you plot the effective potential $V_{\text{eff}}(r')$ for $\ell' = 4.3$?
 ??x
-To plot the effective potential \( V_{\text{eff}}(r') \) for \( \ell' = 4.3 \), use a plotting library (like Matplotlib in Python). The code might look like this:
+To plot the effective potential $V_{\text{eff}}(r')$ for $\ell' = 4.3$, use a plotting library (like Matplotlib in Python). The code might look like this:
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -4404,18 +4354,16 @@ x??
 
 #### Behavior of Orbits with Energy
 
-Background context: The effective potential determines the behavior of orbits. The shape and location of maxima and minima in \( V_{\text{eff}}(r') \) influence the orbit characteristics.
+Background context: The effective potential determines the behavior of orbits. The shape and location of maxima and minima in $V_{\text{eff}}(r')$ influence the orbit characteristics.
 
 Relevant formulas:
-\[ V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3} \]
-
-:p How do orbits change with different energy levels?
+$$V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3}$$:p How do orbits change with different energy levels?
 ??x
-Orbits are influenced by the effective potential \( V_{\text{eff}}(r') \). The behavior changes based on the energy level:
+Orbits are influenced by the effective potential $V_{\text{eff}}(r')$. The behavior changes based on the energy level:
 - **Maximum**: At high energies, orbits can be more circular or elliptical.
 - **Minimum**: Lower energy levels lead to tighter orbits, possibly forming circular orbits at specific radii.
 
-To find maxima and minima, solve \( dV_{\text{eff}}/dr' = 0 \).
+To find maxima and minima, solve $dV_{\text{eff}}/dr' = 0$.
 
 x??
 
@@ -4426,15 +4374,14 @@ x??
 Background context: The effective potential's extrema indicate the stability of orbits. Maximum values correspond to unstable orbits, while minimum values can lead to stable circular orbits.
 
 Relevant formulas:
-\[ V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3} \]
-
-:p At what values of \( r' \) does the effective potential have a maximum and a minimum?
+$$V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3}$$:p At what values of $ r'$ does the effective potential have a maximum and a minimum?
 ??x
 To find maxima and minima, solve:
-\[ \frac{dV_{\text{eff}}(r')}{dr'} = 0 \]
-This results in finding roots of the derivative. For \( V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3} \), this involves solving a polynomial equation.
+$$\frac{dV_{\text{eff}}(r')}{dr'} = 0$$
 
-For specific values, use numerical methods or symbolic computation tools. For \( \ell' = 4.3 \), the maxima and minima can be found numerically.
+This results in finding roots of the derivative. For $V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3}$, this involves solving a polynomial equation.
+
+For specific values, use numerical methods or symbolic computation tools. For $\ell' = 4.3$, the maxima and minima can be found numerically.
 
 x??
 
@@ -4445,15 +4392,12 @@ x??
 Background context: Circular orbits occur where the radial acceleration balances the effective potential gradient. These points are critical for understanding the stability of orbits in GR.
 
 Relevant formulas:
-\[ V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3} \]
-
-:p At what value of \( r' \) does a circular orbit exist?
+$$V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3}$$:p At what value of $ r'$ does a circular orbit exist?
 ??x
 A circular orbit exists where the effective potential has a minimum and the force is balanced. For GR, this occurs when:
-\[ dV_{\text{eff}}/dr' = 0 \]
-and the second derivative test confirms stability.
+$$dV_{\text{eff}}/dr' = 0$$and the second derivative test confirms stability.
 
-For \( \ell' = 4.3 \), solve for \( r' \) using the condition that the effective potential has a minimum and the force is balanced.
+For $\ell' = 4.3 $, solve for $ r'$ using the condition that the effective potential has a minimum and the force is balanced.
 
 x??
 
@@ -4461,14 +4405,12 @@ x??
 
 #### Range of Values
 
-Background context: The range of values for \( r' \) determines the physical region where orbits are possible. This range can be found by analyzing the behavior of the effective potential.
+Background context: The range of values for $r'$ determines the physical region where orbits are possible. This range can be found by analyzing the behavior of the effective potential.
 
 Relevant formulas:
-\[ V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3} \]
-
-:p Determine the range of \( r' \) values that occur for \( \ell' = 4.3 \).
+$$V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3}$$:p Determine the range of $ r'$values that occur for $\ell' = 4.3$.
 ??x
-The range of \( r' \) is determined by analyzing where the effective potential is defined and stable. For \( \ell' = 4.3 \), this involves finding the interval where the effective potential has a minimum.
+The range of $r'$ is determined by analyzing where the effective potential is defined and stable. For $\ell' = 4.3$, this involves finding the interval where the effective potential has a minimum.
 
 For specific values, use numerical methods or symbolic computation tools to find the critical points and stability intervals.
 
@@ -4481,16 +4423,14 @@ x??
 Background context: Using an ODE solver can help explore various orbits corresponding to different initial conditions and energies. This helps in understanding orbit behavior around massive bodies.
 
 Relevant formulas:
-\[ E = \frac{1}{2} \left( \frac{dr'}{d\phi} \right)^2 - G r' + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3} \]
+$$E = \frac{1}{2} \left( \frac{dr'}{d\phi} \right)^2 - G r' + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3}$$
 
 The ODE to solve is:
-\[ \frac{d^2 u}{d\phi^2} = -u + \frac{GM \ell^2}{\ell^2 + 3 GM u^2}, \quad u' = M r, \ell' = \frac{\ell}{M} \]
-
-:p Use an ODE solver to numerically explore various orbits corresponding to different initial conditions and energies.
+$$\frac{d^2 u}{d\phi^2} = -u + \frac{GM \ell^2}{\ell^2 + 3 GM u^2}, \quad u' = M r, \ell' = \frac{\ell}{M}$$:p Use an ODE solver to numerically explore various orbits corresponding to different initial conditions and energies.
 ??x
 To use an ODE solver for exploring orbits:
 1. Set up the ODE solver with the given formulas.
-2. Choose specific values of energy \( E \) and angular momentum \( \ell' \).
+2. Choose specific values of energy $E $ and angular momentum$\ell'$.
 3. Use numerical methods (e.g., Runge-Kutta) to solve the differential equation.
 
 For example, using `scipy.integrate.solve_ivp` in Python:
@@ -4525,21 +4465,19 @@ x??
 
 #### Circular Orbit Stability
 
-Background context: The stability of circular orbits is determined by the effective potential's behavior. Stable orbits correspond to minima in \( V_{\text{eff}}(r') \).
+Background context: The stability of circular orbits is determined by the effective potential's behavior. Stable orbits correspond to minima in $V_{\text{eff}}(r')$.
 
 Relevant formulas:
-\[ V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3} \]
-
-:p Can you find initial conditions that lead to a circular orbit, and is it stable?
+$$V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3}$$:p Can you find initial conditions that lead to a circular orbit, and is it stable?
 ??x
 To find initial conditions for a circular orbit:
-1. Solve \( dV_{\text{eff}}/dr' = 0 \) to find the radius.
+1. Solve $dV_{\text{eff}}/dr' = 0$ to find the radius.
 2. Ensure the second derivative test confirms stability.
 
-For example, at \( r' = R_c \), where \( R_c \) is found by solving \( V_{\text{eff}}'(R_c) = 0 \):
-\[ dV_{\text{eff}}/dr' = -\frac{G}{r'^2} - \frac{\ell'^2}{r'^3} + \frac{3 G \ell'^2}{r'^4} = 0 \]
+For example, at $r' = R_c $, where $ R_c $ is found by solving $ V_{\text{eff}}'(R_c) = 0$:
+$$dV_{\text{eff}}/dr' = -\frac{G}{r'^2} - \frac{\ell'^2}{r'^3} + \frac{3 G \ell'^2}{r'^4} = 0$$
 
-If \( V_{\text{eff}}''(R_c) > 0 \), the orbit is stable.
+If $V_{\text{eff}}''(R_c) > 0$, the orbit is stable.
 
 x??
 
@@ -4550,15 +4488,13 @@ x??
 Background context: The sensitivity of orbits to initial conditions can reveal chaotic behavior. Analyzing nearby orbits helps understand how small changes affect the trajectory.
 
 Relevant formulas:
-\[ V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3} \]
-
-:p Investigate the effect of gradually decreasing angular momentum and plot nearby orbits. Examine their sensitivity to initial conditions.
+$$V_{\text{eff}}(r') = -\frac{G}{r'} + \frac{\ell'^2}{2 r'^2} - \frac{G \ell'^2}{r'^3}$$:p Investigate the effect of gradually decreasing angular momentum and plot nearby orbits. Examine their sensitivity to initial conditions.
 ??x
-To investigate the sensitivity, gradually decrease \( \ell' \) and solve for the resulting orbits:
-1. Set up the ODE solver with different values of \( \ell' \).
+To investigate the sensitivity, gradually decrease $\ell'$ and solve for the resulting orbits:
+1. Set up the ODE solver with different values of $\ell'$.
 2. Plot the orbits using a numerical method (e.g., Runge-Kutta).
 
-For example, plot orbits for \( \ell' = 4.3, 4.0, 3.7 \):
+For example, plot orbits for $\ell' = 4.3, 4.0, 3.7$:
 ```python
 # Constants and initial conditions
 G = 1

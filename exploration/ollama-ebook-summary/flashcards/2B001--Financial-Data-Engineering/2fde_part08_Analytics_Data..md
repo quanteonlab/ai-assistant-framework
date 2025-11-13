@@ -312,7 +312,7 @@ In case of a stock split, the number of shares and strike price need to be adjus
 
 :p How should reference data be adjusted after a corporate action like a stock split?
 ??x
-After a stock split, the number of shares and strike price in reference data need to be updated. For example, if a two-for-one stock split event takes place on an option with a strike price of $100 for 100 shares, the system should adjust the specifications to reflect 200 shares with a new strike price of $50.
+After a stock split, the number of shares and strike price in reference data need to be updated. For example, if a two-for-one stock split event takes place on an option with a strike price of $100 for 100 shares, the system should adjust the specifications to reflect 200 shares with a new strike price of$50.
 
 ```java
 public class OptionSplitAdjustment {

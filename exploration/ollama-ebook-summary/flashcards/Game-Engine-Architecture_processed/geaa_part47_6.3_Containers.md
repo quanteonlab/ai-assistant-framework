@@ -876,7 +876,7 @@ The Big O notation (T=O(n)) helps in determining the overall order of the functi
 
 :p How can we describe the performance of an operation that depends on the square of the number of elements?
 ??x
-We use Big O notation to describe such operations. If an operation's execution time is proportional to the square of the number of elements, we would write it as \( T = O(n^2) \).
+We use Big O notation to describe such operations. If an operation's execution time is proportional to the square of the number of elements, we would write it as $T = O(n^2)$.
 
 ```cpp
 // Example pseudo code for a quadratic-time operation
@@ -898,7 +898,7 @@ Binary search is a classic example of a divide-and-conquer algorithm where the l
 
 :p What is the time complexity of a binary search?
 ??x
-The time complexity of a binary search is \( O(\log n) \). This is because in each step, half of the remaining elements are eliminated, leading to logarithmic growth in the number of steps required to find an element.
+The time complexity of a binary search is $O(\log n)$. This is because in each step, half of the remaining elements are eliminated, leading to logarithmic growth in the number of steps required to find an element.
 
 ```cpp
 // Pseudo code for Binary Search
@@ -920,11 +920,11 @@ x??
 
 Background context explaining the concept. When analyzing algorithms that involve nested loops, understanding how multiple iterations affect overall performance is crucial.
 
-If two nested loops each visit every element once, the algorithm's complexity will be \( O(n^2) \).
+If two nested loops each visit every element once, the algorithm's complexity will be $O(n^2)$.
 
 :p What is the time complexity of an operation with two nested loops, each visiting all elements exactly once?
 ??x
-The time complexity of such an operation would be \( O(n^2) \). This is because both outer and inner loops iterate over every element in a collection of n items.
+The time complexity of such an operation would be $O(n^2)$. This is because both outer and inner loops iterate over every element in a collection of n items.
 
 ```cpp
 // Pseudo code for nested loop example

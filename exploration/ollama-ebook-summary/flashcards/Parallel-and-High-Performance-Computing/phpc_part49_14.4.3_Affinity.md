@@ -407,9 +407,9 @@ THREADS_PER_CORE=`lscpu | grep '^Thread(s) per core:' | cut -d':' -f 2`
 LOGICAL_PES_AVAILABLE=`lscpu | grep '^CPU(s):' | cut -d':' -f 2`
 SOCKETS_AVAILABLE=`lscpu | grep '^Socket(s):' | cut -d':' -f 2`
 
-HW_PES_PER_PROCESS=$((${OMP_NUM_THREADS} / ${THREADS_PER_CORE}))
-MPI_RANKS=$((${LOGICAL_PES_AVAILABLE} / ${OMP_NUM_THREADS}))
-PES_PER_SOCKET=$((${MPI_RANKS} / ${SOCKETS_AVAILABLE}))
+HW_PES_PER_PROCESS=$((${OMP_NUM_THREADS} /${THREADS_PER_CORE}))
+MPI_RANKS=$((${LOGICAL_PES_AVAILABLE} /${OMP_NUM_THREADS}))
+PES_PER_SOCKET=$((${MPI_RANKS} /${SOCKETS_AVAILABLE}))
 ```
 x??
 
@@ -422,7 +422,7 @@ The `mpirun` command is configured to run jobs based on the calculated values.
 ??x
 An MPI job can be run with specific affinity settings using the `mpirun` command. The script constructs a string that includes necessary parameters:
 ```bash
-RUN_STRING="mpirun -n ${MPI_RANKS} --map-by ppr:${PES_PER_SOCKET}:socket:PE=${HW_PES_PER_PROCESS} ./StreamTriad ${POST_PROCESS}"
+RUN_STRING="mpirun -n ${MPI_RANKS} --map-by ppr:${PES_PER_SOCKET}:socket:PE=${HW_PES_PER_PROCESS} ./StreamTriad${POST_PROCESS}"
 echo ${RUN_STRING}
 eval ${RUN_STRING}
 ```
@@ -443,11 +443,11 @@ THREAD_LIST_FULL="2 4 11 22 44"
 for num_threads in ${THREAD_LIST_FULL}
 do
     export OMP_NUM_THREADS=${num_threads}}
-    HW_PES_PER_PROCESS=$((${OMP_NUM_THREADS} / ${THREADS_PER_CORE}))
-    MPI_RANKS=$((${LOGICAL_PES_AVAILABLE} / ${OMP_NUM_THREADS}))
-    PES_PER_SOCKET=$((${MPI_RANKS} / ${SOCKETS_AVAILABLE}))
+    HW_PES_PER_PROCESS=$((${OMP_NUM_THREADS} /${THREADS_PER_CORE}))
+    MPI_RANKS=$((${LOGICAL_PES_AVAILABLE} /${OMP_NUM_THREADS}))
+    PES_PER_SOCKET=$((${MPI_RANKS} /${SOCKETS_AVAILABLE}))
 
-    RUN_STRING="mpirun -n ${MPI_RANKS} --map-by ppr:${PES_PER_SOCKET}:socket:PE=${HW_PES_PER_PROCESS} ./StreamTriad ${POST_PROCESS}"
+    RUN_STRING="mpirun -n ${MPI_RANKS} --map-by ppr:${PES_PER_SOCKET}:socket:PE=${HW_PES_PER_PROCESS} ./StreamTriad${POST_PROCESS}"
     echo ${RUN_STRING}
     eval ${RUN_STRING}
 done
@@ -516,7 +516,7 @@ for core in ${PROC_LIST}
 do
     OUTPUT="$OUTPUT -np 1"
     OUTPUT="${OUTPUT} hwloc-bind core:${core}"
-    OUTPUT="${OUTPUT} ${EXEC_NAME} :"
+    OUTPUT="${OUTPUT}${EXEC_NAME} :"
 done
 OUTPUT=$(echo ${OUTPUT} | sed -e 's/:$/ /')
 eval ${OUTPUT}

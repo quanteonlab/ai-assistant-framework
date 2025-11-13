@@ -380,9 +380,9 @@ Background context: To effectively utilize GPUs, it is important to understand t
 ??x
 To estimate the theoretical performance of a GPU, consider its specifications such as the number of cores and the frequency at which they operate. Theoretical performance can be calculated using the following formula:
 
-\[ \text{Theoretical Performance} = (\text{Number of Cores}) \times (\text{Frequency (in Hz)}) \]
+$$\text{Theoretical Performance} = (\text{Number of Cores}) \times (\text{Frequency (in Hz)})$$
 
-For example, if a GPU has 2048 cores running at 1500 MHz, its theoretical performance would be \( 2048 \times 1500 = 3072000 \) operations per second.
+For example, if a GPU has 2048 cores running at 1500 MHz, its theoretical performance would be $2048 \times 1500 = 3072000$ operations per second.
 x??
 
 ---

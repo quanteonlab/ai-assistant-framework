@@ -8,159 +8,155 @@
 #### Finding the Largest Fraction
 Background context: The problem involves comparing fractions to find which is the largest. Common denominators are used for comparison, as it allows direct comparison of numerators.
 
-:p How do you determine the largest fraction among \(\frac{2}{5}\), \(\frac{16}{30}\), and \(\frac{7}{8}\)?
+:p How do you determine the largest fraction among $\frac{2}{5}$,$\frac{16}{30}$, and $\frac{7}{8}$?
 
 ??x
 To find the largest fraction, first identify a common denominator for all fractions. In this case, 80 works as it is divisible by 5, 2, and 8.
 
 Convert each fraction to have the same denominator:
-- \(\frac{2}{5} = \frac{2 \times 16}{5 \times 16} = \frac{32}{80}\)
-- \(\frac{16}{30} = \frac{16 \times \frac{4}{2}}{30 \times \frac{4}{2}} = \frac{64}{120} = \frac{64 \div 4}{120 \div 4} = \frac{16}{30}\)
-- Simplifying \(\frac{16}{30}\) further: \(\frac{16 \times 2.5}{30 \times 2.5} = \frac{40}{75} = \frac{8 \times 5}{15 \times 5} = \frac{8}{15}\)
-- \(\frac{8}{15} = \frac{8 \times 5.333}{15 \times 5.333} = \frac{42.664}{79.995} = \approx \frac{43}{80}\)
+- $\frac{2}{5} = \frac{2 \times 16}{5 \times 16} = \frac{32}{80}$-$\frac{16}{30} = \frac{16 \times \frac{4}{2}}{30 \times \frac{4}{2}} = \frac{64}{120} = \frac{64 \div 4}{120 \div 4} = \frac{16}{30}$- Simplifying $\frac{16}{30}$ further:$\frac{16 \times 2.5}{30 \times 2.5} = \frac{40}{75} = \frac{8 \times 5}{15 \times 5} = \frac{8}{15}$-$\frac{8}{15} = \frac{8 \times 5.333}{15 \times 5.333} = \frac{42.664}{79.995} = \approx \frac{43}{80}$ Thus, comparing the numerators of the converted fractions:
+- $\frac{32}{80}$-$\frac{64}{120} \rightarrow \frac{43}{80}$-$\frac{56}{80}$ The largest fraction is $\frac{56}{80}$ which simplifies to $\frac{7}{10}$.
 
-Thus, comparing the numerators of the converted fractions:
-- \(\frac{32}{80}\)
-- \(\frac{64}{120} \rightarrow \frac{43}{80}\)
-- \(\frac{56}{80}\)
-
-The largest fraction is \(\frac{56}{80}\) which simplifies to \(\frac{7}{10}\).
-
-Therefore, the largest fraction is \(\boxed{\frac{7}{10}}\).
+Therefore, the largest fraction is $\boxed{\frac{7}{10}}$.
 x??
 
 ---
 #### Solving for an Unknown
-Background context: The problem involves solving for an unknown variable \(x\) in a simple algebraic equation.
+Background context: The problem involves solving for an unknown variable $x$ in a simple algebraic equation.
 
-:p Given the equation \(24 = 2 + x\), what is the value of \(x\)?
-
-??x
-To solve for \(x\), isolate \(x\) on one side of the equation. Start by subtracting 2 from both sides:
-
-\[24 - 2 = 2 + x - 2\]
-
-This simplifies to:
-\[22 = x\]
-
-Therefore, \(x = 22\).
-
-:p To check your answer, substitute \(x = 22\) back into the original equation and verify.
+:p Given the equation $24 = 2 + x $, what is the value of $ x$?
 
 ??x
-Substitute \(x = 22\) into the original equation:
-
-\[24 = 2 + 22\]
+To solve for $x $, isolate $ x$on one side of the equation. Start by subtracting 2 from both sides:
+$$24 - 2 = 2 + x - 2$$
 
 This simplifies to:
-\[24 = 24\]
+$$22 = x$$
+
+Therefore,$x = 22$.
+
+:p To check your answer, substitute $x = 22$ back into the original equation and verify.
+
+??x
+Substitute $x = 22$ into the original equation:
+$$24 = 2 + 22$$
+
+This simplifies to:
+$$24 = 24$$
 
 The left side equals the right side, confirming that the solution is correct.
 
-Therefore, the value of \(x\) is \(\boxed{22}\).
+Therefore, the value of $x $ is$\boxed{22}$.
 x??
 
 ---
 #### Calculating Circumference and Diameter
-Background context: The relationship between the circumference (\(C\)) and diameter (\(d\)) of a circle involves the constant \(\pi\). The formula used is \(C = \pi d\).
+Background context: The relationship between the circumference ($C $) and diameter ($ d $) of a circle involves the constant$\pi $. The formula used is $ C = \pi d$.
 
 :p Given that the circumference of a circle is 24 feet, what is the approximate diameter in feet?
 
 ??x
 Given:
-\[ C = 24 \text{ feet} \]
+$$C = 24 \text{ feet}$$
 
 Using the formula for the circumference of a circle:
-\[ C = \pi d \]
+$$
 
-To find \(d\), rearrange the formula to solve for \(d\):
-\[ d = \frac{C}{\pi} \]
+C = \pi d$$
 
-Substitute the given value of \(C\) and use \(\pi \approx 3.14\):
+To find $d $, rearrange the formula to solve for$ d$:
+$$d = \frac{C}{\pi}$$
 
-\[ d = \frac{24}{3.14} \approx 7.64 \text{ feet} \]
+Substitute the given value of $C $ and use$\pi \approx 3.14$:
 
-Therefore, the diameter is approximately \(\boxed{7.64}\) feet.
+$$d = \frac{24}{3.14} \approx 7.64 \text{ feet}$$
+
+Therefore, the diameter is approximately $\boxed{7.64}$ feet.
 x??
 
 ---
 #### Calculating Volume
-Background context: The formula for calculating the volume of a rectangular prism involves multiplying length (\(l\)), width (\(w\)), and height (\(h\)). The formula used is \(V = lwh\).
+Background context: The formula for calculating the volume of a rectangular prism involves multiplying length ($l $), width ($ w $), and height ($ h $). The formula used is$ V = lwh$.
 
 :p Calculate the volume of a rectangular prism with dimensions 16 feet, 8 feet, and 2 feet.
 
 ??x
 Given:
-\[ l = 16 \text{ feet} \]
-\[ w = 8 \text{ feet} \]
-\[ h = 2 \text{ feet} \]
+$$l = 16 \text{ feet}$$
+$$w = 8 \text{ feet}$$
+$$h = 2 \text{ feet}$$
 
 Using the formula for volume of a rectangular prism:
-\[ V = lwh \]
+$$
+
+V = lwh$$
 
 Substitute the given dimensions into the formula:
+$$
 
-\[ V = 16 \times 8 \times 2 \]
+V = 16 \times 8 \times 2$$
 
 This simplifies to:
-\[ V = 256 \text{ cubic feet} \]
+$$
 
-Therefore, the volume is \(\boxed{256}\) cubic feet.
+V = 256 \text{ cubic feet}$$
+
+Therefore, the volume is $\boxed{256}$ cubic feet.
 x??
 
 ---
 #### Properties of an Equilateral Triangle
-Background context: An equilateral triangle has three equal sides and three equal angles. Each angle measures \(60^\circ\).
+Background context: An equilateral triangle has three equal sides and three equal angles. Each angle measures $60^\circ$.
 
 :p What is a key property of an equilateral triangle?
 
 ??x
-A key property of an equilateral triangle is that all three sides are equal in length, and each internal angle is exactly \(60^\circ\).
+A key property of an equilateral triangle is that all three sides are equal in length, and each internal angle is exactly $60^\circ$.
 
-Therefore, the key property is: \(\boxed{\text{All sides are equal and all angles are } 60^\circ}\).
+Therefore, the key property is: $\boxed{\text{All sides are equal and all angles are } 60^\circ}$.
 x??
 
 ---
 #### Sum of Angles in a Quadrilateral
-Background context: The sum of the interior angles of any quadrilateral is always \(360^\circ\).
+Background context: The sum of the interior angles of any quadrilateral is always $360^\circ$.
 
 :p What is the sum of the interior angles of a quadrilateral?
 
 ??x
 The sum of the interior angles of a quadrilateral is always:
 
-\[ 360^\circ \]
+$$360^\circ$$
 
-Therefore, the sum of the interior angles is \(\boxed{360^\circ}\).
+Therefore, the sum of the interior angles is $\boxed{360^\circ}$.
 x??
 
 ---
 #### Complementary Angles
-Background context: Two angles are complementary if their measures add up to \(90^\circ\).
+Background context: Two angles are complementary if their measures add up to $90^\circ$.
 
-:p If two angles in a right triangle measure \(25^\circ\) and \(65^\circ\), what is the relationship between these angles?
+:p If two angles in a right triangle measure $25^\circ $ and$65^\circ$, what is the relationship between these angles?
 
 ??x
-Two angles that add up to \(90^\circ\) are called complementary angles. In this case, the given angles are \(25^\circ\) and \(65^\circ\):
+Two angles that add up to $90^\circ $ are called complementary angles. In this case, the given angles are$25^\circ $ and$65^\circ$:
 
-\[ 25^\circ + 65^\circ = 90^\circ \]
+$$25^\circ + 65^\circ = 90^\circ$$
 
-Therefore, these two angles are \(\boxed{\text{complementary}}\).
+Therefore, these two angles are $\boxed{\text{complementary}}$.
 x??
 
 ---
 #### Ohm's Law
-Background context: Ohm’s law states that the voltage (\(V\)) across a resistor is proportional to the current (\(I\)) flowing through it and inversely proportional to the resistance (\(R\)). The formula used is \(V = IR\).
+Background context: Ohm’s law states that the voltage ($V $) across a resistor is proportional to the current ($ I $) flowing through it and inversely proportional to the resistance ($ R $). The formula used is$ V = IR$.
 
-:p According to Ohm's law, what does \(V\) represent?
+:p According to Ohm's law, what does $V$ represent?
 
 ??x
 According to Ohm’s law:
-\[ V = IR \]
+$$V = IR$$
 
-\(V\) represents the voltage across a resistor. It measures the electrical potential difference in volts.
+$V$ represents the voltage across a resistor. It measures the electrical potential difference in volts.
 
-Therefore, according to Ohm's law, \(V\) is \(\boxed{\text{the voltage}}\).
+Therefore, according to Ohm's law,$V $ is$\boxed{\text{the voltage}}$.
 x??
 
 ---
@@ -180,7 +176,7 @@ For example, in a brown-black-red resistor:
 - Black = 0 (second digit)
 - Red = 2 (additional zeros)
 
-Therefore, the color bands represent the resistance value as \(\boxed{1.0 \times 10^2}\) ohms or \(100\) ohms.
+Therefore, the color bands represent the resistance value as $\boxed{1.0 \times 10^2}$ ohms or $100$ ohms.
 x??
 
 ---
@@ -192,19 +188,19 @@ Background context: Safety regulations require that certain components in a stru
 ??x
 Safety regulations require that components such as heaters, pumps, stairs, diving boards, railings, and rebar must be bonded together using a minimum #8 gauge wire. This ensures that any electrical current can safely pass through the system without causing harm.
 
-Therefore, the bonding requirement is to use \(\boxed{\text{a minimum } #8 \text{ gauge wire}}\) for safety purposes.
+Therefore, the bonding requirement is to use $\boxed{\text{a minimum } #8 \text{ gauge wire}}$ for safety purposes.
 x??
 
 ---
 #### Electrical Potential Difference
-Background context: Voltage is commonly used as a short name for electrical potential difference and is measured in volts (\(V\)).
+Background context: Voltage is commonly used as a short name for electrical potential difference and is measured in volts ($V$).
 
 :p What does the term "voltage" refer to?
 
 ??x
-The term "voltage" refers to the measure of the electric potential difference between two points in an electrical circuit. It represents how much energy is available per unit charge to move through a conductor, and it is measured in volts (\(V\)).
+The term "voltage" refers to the measure of the electric potential difference between two points in an electrical circuit. It represents how much energy is available per unit charge to move through a conductor, and it is measured in volts ($V$).
 
-Therefore, voltage refers to \(\boxed{\text{the electrical potential difference}}\).
+Therefore, voltage refers to $\boxed{\text{the electrical potential difference}}$.
 x??
 
 ---
@@ -221,7 +217,7 @@ A SIM (Subscriber Identity Module) card is an integrated circuit card embedded i
 
 The SIM card enables users to switch between different cellular networks without changing their phones, making it easier to use multiple cellphones.
 
-Therefore, a SIM card is \(\boxed{\text{an integrated circuit storing user information and facilitating network switching}}\).
+Therefore, a SIM card is $\boxed{\text{an integrated circuit storing user information and facilitating network switching}}$.
 x??
 
 ---
@@ -233,7 +229,7 @@ Background context: A resistor resists the flow of current in an electrical circ
 ??x
 A resistor resists (or inhibits) the flow of current in an electrical circuit based on its resistance value. This means it helps control how much current can pass through different parts of the circuit, thereby regulating voltage and power distribution.
 
-Therefore, a resistor \(\boxed{\text{resists or inhibits the flow of current}}\).
+Therefore, a resistor $\boxed{\text{resists or inhibits the flow of current}}$.
 x??
 
 ---
@@ -245,7 +241,7 @@ Background context: A diode has two terminals (an anode and cathode) and allows 
 ??x
 The primary function of a diode is to allow current to flow in only one direction, acting as a one-way valve for electricity. This property makes it useful in various applications like voltage regulation and signal processing.
 
-Therefore, the primary function of a diode is \(\boxed{\text{to allow current flow in only one direction}}\).
+Therefore, the primary function of a diode is $\boxed{\text{to allow current flow in only one direction}}$.
 x??
 
 ---
@@ -255,69 +251,76 @@ Background context: Radar can operate at extremely high frequencies, up to 100,0
 :p What is the highest operating frequency for radar?
 
 ??x
-The highest operating frequency for radar can be as high as \(100,000 \text{ MHz}\) (megahertz).
+The highest operating frequency for radar can be as high as $100,000 \text{ MHz}$(megahertz).
 
-Therefore, the highest operating frequency for radar is \(\boxed{100,000 \text{ MHz}}\).
+Therefore, the highest operating frequency for radar is $\boxed{100,000 \text{ MHz}}$.
 x??
 
 ---
 #### Current vs. Voltage
-Background context: Current (\(I\)) is the flow of electric charge and voltage (\(V\)) is the measure of potential difference in an electrical circuit.
+Background context: Current ($I $) is the flow of electric charge and voltage ($ V$) is the measure of potential difference in an electrical circuit.
 
 :p What does current represent in an electrical circuit?
 
 ??x
 Current represents the flow of electric charge through a conductor. It measures how much charge passes a given point per unit time, typically expressed in amperes (A).
 
-Therefore, current represents \(\boxed{\text{the flow of electric charge}}\).
+Therefore, current represents $\boxed{\text{the flow of electric charge}}$.
 x??
 
 ---
 #### Calculating Diameter from Circumference
-Background context: The relationship between the diameter (\(d\)) and circumference (\(C\)) of a circle is given by \(C = \pi d\). To find \(d\), rearrange the formula to solve for \(d\).
+Background context: The relationship between the diameter ($d $) and circumference ($ C $) of a circle is given by$ C = \pi d $. To find$ d $, rearrange the formula to solve for$ d$.
 
 :p Given that the circumference of a circular track is 75 feet, what is its approximate diameter?
 
 ??x
 Given:
-\[ C = 75 \text{ feet} \]
+$$C = 75 \text{ feet}$$
 
 Using the formula for the circumference of a circle:
-\[ C = \pi d \]
+$$
 
-To find \(d\), rearrange the formula to solve for \(d\):
-\[ d = \frac{C}{\pi} \]
+C = \pi d$$
 
-Substitute the given value of \(C\) and use \(\pi \approx 3.14\):
+To find $d $, rearrange the formula to solve for$ d$:
+$$d = \frac{C}{\pi}$$
 
-\[ d = \frac{75}{3.14} \approx 23.89 \text{ feet} \]
+Substitute the given value of $C $ and use$\pi \approx 3.14$:
 
-Therefore, the diameter is approximately \(\boxed{23.89}\) feet.
+$$d = \frac{75}{3.14} \approx 23.89 \text{ feet}$$
+
+Therefore, the diameter is approximately $\boxed{23.89}$ feet.
 x??
 
 ---
 #### Rectangular Prism Dimensions
-Background context: The volume (\(V\)) of a rectangular prism can be calculated using the formula \(V = lwh\), where \(l\) is length, \(w\) is width, and \(h\) is height.
+Background context: The volume ($V $) of a rectangular prism can be calculated using the formula $ V = lwh $, where$ l $is length,$ w $is width, and$ h$ is height.
 
 :p Calculate the volume of a rectangular prism with dimensions 10 feet by 5 feet by 2 feet.
 
 ??x
 Given:
-\[ l = 10 \text{ feet} \]
-\[ w = 5 \text{ feet} \]
-\[ h = 2 \text{ feet} \]
+$$l = 10 \text{ feet}$$
+$$w = 5 \text{ feet}$$
+$$h = 2 \text{ feet}$$
 
 Using the formula for volume of a rectangular prism:
-\[ V = lwh \]
+$$
+
+V = lwh$$
 
 Substitute the given dimensions into the formula:
+$$
 
-\[ V = 10 \times 5 \times 2 \]
+V = 10 \times 5 \times 2$$
 
 This simplifies to:
-\[ V = 100 \text{ cubic feet} \]
+$$
 
-Therefore, the volume is \(\boxed{100}\) cubic feet.
+V = 100 \text{ cubic feet}$$
+
+Therefore, the volume is $\boxed{100}$ cubic feet.
 x??
 
 ---
@@ -638,7 +641,7 @@ x??
 Background context explaining how power is calculated and the formula used. Understanding that power is determined by work divided by time.
 :p How is power calculated in this scenario?
 ??x
-Power is calculated using the formula \( \text{Power} = \frac{\text{Work}}{\text{Time}} \). This means you need to know both the amount of work done and the time it took to do that work. If given specific values for work and time, you can plug them into this formula to find the power.
+Power is calculated using the formula $\text{Power} = \frac{\text{Work}}{\text{Time}}$. This means you need to know both the amount of work done and the time it took to do that work. If given specific values for work and time, you can plug them into this formula to find the power.
 x??
 
 ---

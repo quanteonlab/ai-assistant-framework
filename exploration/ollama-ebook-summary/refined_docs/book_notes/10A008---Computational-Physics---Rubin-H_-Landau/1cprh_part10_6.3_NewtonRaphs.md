@@ -11,7 +11,7 @@ Background context: The bisection method is a root-finding algorithm that repeat
 
 :p What is the basic idea behind the bisection method?
 ??x
-The basic idea is to repeatedly halve the interval where the root might exist based on the sign changes of the function. This ensures that if \( f(a) \cdot f(b) < 0 \), there must be at least one zero in the interval [a, b]. 
+The basic idea is to repeatedly halve the interval where the root might exist based on the sign changes of the function. This ensures that if $f(a) \cdot f(b) < 0$, there must be at least one zero in the interval [a, b]. 
 ```python
 def bisection(f, a, b, tol):
     plus = b
@@ -34,7 +34,7 @@ x??
 
 
 #### Bisection Example Problem Setup
-Background context: For the given function \( f(E) = \sqrt{10 - E} \tan(\sqrt{10 - E}) - \sqrt{E} \), plotting or creating a table can help identify approximate values at which \( f(EB) = 0 \). This step is crucial for determining initial intervals.
+Background context: For the given function $f(E) = \sqrt{10 - E} \tan(\sqrt{10 - E}) - \sqrt{E}$, plotting or creating a table can help identify approximate values at which $ f(EB) = 0$. This step is crucial for determining initial intervals.
 
 :p How should you approach identifying zeros of the function?
 ??x
@@ -130,7 +130,7 @@ def newton_raphson(f, df_dx, initial_guess, tol, max_iter):
     
     return "Failed to converge"
 ```
-Here, \( \Delta x = -\frac{f(x)}{f'(x)} \).
+Here, $\Delta x = -\frac{f(x)}{f'(x)}$.
 x??
 
 ---
@@ -158,8 +158,8 @@ x??
 
 Background context: The Newton-Raphson algorithm is a method for finding successively better approximations to the roots (or zeroes) of a real-valued function. However, it can fail if the initial guess is not close enough to the root or if the derivative vanishes at the starting point.
 
-The algorithm updates the current approximation \(x_n\) using the formula:
-\[ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)} \]
+The algorithm updates the current approximation $x_n$ using the formula:
+$$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
 
 If the function has a local extremum (where the derivative is zero), this can lead to division by zero or an infinite loop.
 
@@ -168,14 +168,14 @@ Backtracking is a technique used when the correction step leads to a larger magn
 :p What are the potential problems with the Newton-Raphson algorithm as described in the text?
 ??x
 The potential problems include:
-- Starting at a local extremum where \(f'(x) = 0\), leading to division by zero.
+- Starting at a local extremum where $f'(x) = 0$, leading to division by zero.
 - Entering an infinite loop when the step size leads to a larger magnitude of the function.
 
 Backtracking can be used to handle these issues by reducing the step size if it results in a worse approximation. This helps ensure convergence towards the root rather than diverging or oscillating indefinitely.
 
 ??x
 The answer with detailed explanations:
-- If \(f'(x) = 0\), the next update step becomes undefined (division by zero).
+- If $f'(x) = 0$, the next update step becomes undefined (division by zero).
 - An infinite loop occurs when the correction step increases the function value, suggesting that the initial guess was too far from the root.
 Backtracking helps by reducing the step size in such cases to find a more suitable path towards the root.
 
@@ -205,22 +205,25 @@ x??
 
 #### Magnetization Search Problem
 
-Background context: The problem involves determining the magnetization \(M(T)\) as a function of temperature for simple magnetic materials. This is done using statistical mechanics principles, specifically the Boltzmann distribution law.
+Background context: The problem involves determining the magnetization $M(T)$ as a function of temperature for simple magnetic materials. This is done using statistical mechanics principles, specifically the Boltzmann distribution law.
 
 The relevant formulas are:
-\[ N_L = \frac{N e^{\mu B / (k_B T)}}{e^{\mu B / (k_B T)} + e^{-\mu B / (k_B T)}} \]
-\[ N_U = \frac{N e^{-\mu B / (k_B T)}}{e^{\mu B / (k_B T)} + e^{-\mu B / (k_B T)}} \]
+$$N_L = \frac{N e^{\mu B / (k_B T)}}{e^{\mu B / (k_B T)} + e^{-\mu B / (k_B T)}}$$
+$$
 
-Where \(N_L\) and \(N_U\) are the number of particles in the lower and upper energy states respectively. The magnetization is given by:
-\[ M(T) = N \mu \tanh(\lambda \mu M(T) / k_B T) \]
-Here, \(\lambda\) is a constant related to the molecular magnetic field.
+N_U = \frac{N e^{-\mu B / (k_B T)}}{e^{\mu B / (k_B T)} + e^{-\mu B / (k_B T)}}$$
 
-The goal is to find \(M(T)\) numerically since there's no analytic solution.
+Where $N_L $ and$N_U$ are the number of particles in the lower and upper energy states respectively. The magnetization is given by:
+$$M(T) = N \mu \tanh(\lambda \mu M(T) / k_B T)$$
+
+Here,$\lambda$ is a constant related to the molecular magnetic field.
+
+The goal is to find $M(T)$ numerically since there's no analytic solution.
 
 :p What is the magnetization equation for simple magnetic materials?
-??x
-\[ M(T) = N \mu \tanh\left(\frac{\lambda \mu M(T)}{k_B T}\right) \]
-This equation relates the magnetization \(M\) to the temperature \(T\), where \(\mu\) is the magnetic moment, \(\lambda\) is related to the molecular magnetic field, and \(N\) is the number of particles.
+??x$$M(T) = N \mu \tanh\left(\frac{\lambda \mu M(T)}{k_B T}\right)$$
+
+This equation relates the magnetization $M $ to the temperature$T $, where$\mu $ is the magnetic moment,$\lambda $ is related to the molecular magnetic field, and$N$ is the number of particles.
 
 x??
 
@@ -231,7 +234,7 @@ x??
 
 Background context: The backtracking method can be used when the Newton-Raphson algorithm fails due to large correction steps leading to an increase in function magnitude. By reducing the step size incrementally, a more stable path towards the root is ensured.
 
-:p How does backtracking work in the context of solving for \(M(T)\) using the Newton-Raphson method?
+:p How does backtracking work in the context of solving for $M(T)$ using the Newton-Raphson method?
 ??x
 Backtracking works by adjusting the step size if the correction step leads to an increase in the function value. Specifically:
 - If the new estimate increases the function value, reduce the step size and try again.
@@ -267,17 +270,17 @@ x??
 
 #### Solving for Magnetization Using Bisection and Newton-Raphson Algorithms
 
-Background context: The magnetization \(M(T)\) can be solved numerically using the bisection method or the Newton-Raphson algorithm. Each method has its advantages:
+Background context: The magnetization $M(T)$ can be solved numerically using the bisection method or the Newton-Raphson algorithm. Each method has its advantages:
 - **Bisection Method**: Guaranteed to converge but slower.
 - **Newton-Raphson Algorithm**: Faster but requires a good initial guess and may fail if not close enough.
 
-:p How would you find the root of \(f(m, t) = m - \tanh(m/t)\) for a given \(t\) using the bisection algorithm?
+:p How would you find the root of $f(m, t) = m - \tanh(m/t)$ for a given $t$ using the bisection algorithm?
 ??x
-To find the root of \(f(m, t) = m - \tanh(m/t)\) using the bisection method:
-1. Choose an interval [a, b] such that \(f(a)\) and \(f(b)\) have opposite signs.
-2. Calculate the midpoint \(c\) and evaluate \(f(c)\).
-3. If \(f(c) = 0\), then \(c\) is the root.
-4. Otherwise, if \(f(a) \cdot f(c) < 0\), set \(b = c\); else, set \(a = c\).
+To find the root of $f(m, t) = m - \tanh(m/t)$ using the bisection method:
+1. Choose an interval [a, b] such that $f(a)$ and $f(b)$ have opposite signs.
+2. Calculate the midpoint $c $ and evaluate$f(c)$.
+3. If $f(c) = 0 $, then $ c$ is the root.
+4. Otherwise, if $f(a) \cdot f(c) < 0 $, set $ b = c $; else, set$ a = c$.
 5. Repeat until convergence.
 
 Here's a pseudocode example:
@@ -303,12 +306,12 @@ x??
 
 Background context: Both algorithms can be used to find roots of a function. The bisection method is guaranteed to converge but is slower, while the Newton-Raphson algorithm converges faster if given a good initial guess.
 
-:p What are some key differences between using the bisection and Newton-Raphson methods for solving \(f(m, t) = m - \tanh(m/t)\)?
+:p What are some key differences between using the bisection and Newton-Raphson methods for solving $f(m, t) = m - \tanh(m/t)$?
 ??x
 - **Bisection Method**:
   - Guaranteed to converge.
   - Slower but more robust since it always reduces the interval where the root lies.
-  - Requires an initial interval [a, b] such that \(f(a) \cdot f(b) < 0\).
+  - Requires an initial interval [a, b] such that $f(a) \cdot f(b) < 0$.
 
 - **Newton-Raphson Algorithm**:
   - Faster convergence if a good initial guess is provided.
@@ -388,7 +391,7 @@ x??
 
 
 #### Least-Squares Fitting
-Background context: The text discusses fitting a theoretical function \(f(E) = f_r (E - E_r)^2 + \Gamma^2 / 4\) to experimental data, where parameters like \(f_r\), \(E_r\), and \(\Gamma\) need to be adjusted.
+Background context: The text discusses fitting a theoretical function $f(E) = f_r (E - E_r)^2 + \Gamma^2 / 4 $ to experimental data, where parameters like$f_r $,$ E_r $, and$\Gamma$ need to be adjusted.
 
 :p How do you perform least-squares fitting on the given theoretical function?
 ??x
@@ -424,10 +427,8 @@ Background context: The text provides the formula for Lagrange interpolation and
 
 :p What is the Lagrange interpolation formula?
 ??x
-The Lagrange interpolation formula for an \(n\)-th degree polynomial through \(n\) points \((x_i, g(x_i))\) is given by:
-\[ g(x) ≃ g_1\lambda_1(x) + g_2\lambda_2(x) + ... + g_n\lambda_n(x), \]
-where
-\[ \lambda_i(x) = \prod_{j \neq i} \frac{x - x_j}{x_i - x_j}. \]
+The Lagrange interpolation formula for an $n $-th degree polynomial through $ n $points$(x_i, g(x_i))$ is given by:
+$$g(x) ≃ g_1\lambda_1(x) + g_2\lambda_2(x) + ... + g_n\lambda_n(x),$$where$$\lambda_i(x) = \prod_{j \neq i} \frac{x - x_j}{x_i - x_j}.$$
 
 For example, for three points:
 ```python

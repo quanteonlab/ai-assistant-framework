@@ -7,16 +7,19 @@
 ---
 #### Larger Page Sizes as a Solution
 Background context explaining the concept. With 32-bit address spaces, using smaller page sizes (4KB) results in large linear page tables. A formula to illustrate this is: 
-\[ \text{Number of entries} = \frac{\text{Address space}}{\text{Page size}} \]
+$$\text{Number of entries} = \frac{\text{Address space}}{\text{Page size}}$$
+
 For a 32-bit address space and 4KB pages:
-\[ \text{Number of entries} = \frac{2^{32}}{2^{12}} = 2^{20} = 1,048,576 \]
-Each entry being 4 bytes leads to a page table size of \( 1,048,576 \times 4 \) bytes or 4MB.
+$$\text{Number of entries} = \frac{2^{32}}{2^{12}} = 2^{20} = 1,048,576$$
+
+Each entry being 4 bytes leads to a page table size of $1,048,576 \times 4$ bytes or 4MB.
 
 :p How can we reduce the size of the linear page table?
 ??x
 We can use larger pages. For example, with 16KB pages (2^14 bytes), each virtual address would consist of an 18-bit Virtual Page Number (VPN) and a 14-bit offset:
-\[ \text{Number of entries} = \frac{2^{32}}{2^{14}} = 2^{18} = 262,144 \]
-Each entry still being 4 bytes leads to a page table size of \( 262,144 \times 4 \) bytes or 1MB. This is significantly smaller than the original 4MB.
+$$\text{Number of entries} = \frac{2^{32}}{2^{14}} = 2^{18} = 262,144$$
+
+Each entry still being 4 bytes leads to a page table size of $262,144 \times 4$ bytes or 1MB. This is significantly smaller than the original 4MB.
 
 ```java
 public class Example {
@@ -653,7 +656,7 @@ To determine the number of bits needed for each index:
 - Virtual Address Size = 30 bits
 - PTEs per Page = 4KB / 4B = 128
 
-The number of levels required is calculated by determining how many bits are needed to fit into a page. The first level uses the topmost bits (e.g., 14 bits for \(2^{14}\) entries), and subsequent levels use the remaining bits.
+The number of levels required is calculated by determining how many bits are needed to fit into a page. The first level uses the topmost bits (e.g., 14 bits for $2^{14}$ entries), and subsequent levels use the remaining bits.
 
 In this case:
 - Number of bits used in Page Directory = log2(128) = 7

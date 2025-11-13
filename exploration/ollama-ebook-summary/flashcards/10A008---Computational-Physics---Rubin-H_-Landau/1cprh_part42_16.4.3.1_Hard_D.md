@@ -9,7 +9,7 @@ Background context: The behavior of a nonlinear pendulum, driven by external sin
 
 :p What are the major frequencies contained in one-, three-, and five-cycle structures of a chaotic pendulum?
 ??x
-The major frequencies in these structures can be deduced from the driving frequency \(\omega\) and the natural frequency \(\omega_0\). For a three-cycle structure, you would typically find three Fourier components corresponding to \(3\omega\), \(\omega\), and possibly other harmonics. Similarly, for a five-cycle structure, more complex combinations of frequencies are expected.
+The major frequencies in these structures can be deduced from the driving frequency $\omega $ and the natural frequency$\omega_0 $. For a three-cycle structure, you would typically find three Fourier components corresponding to $3\omega $, $\omega$, and possibly other harmonics. Similarly, for a five-cycle structure, more complex combinations of frequencies are expected.
 
 To analyze these structures:
 1. Dust off your program for analyzing signals into Fourier components.
@@ -68,13 +68,13 @@ Background context: The double pendulum has two coupled motions, making its equa
 :p What are the equations of motion for the double pendulum?
 ??x
 The equations of motion for the double pendulum can be derived from the Lagrangian formulation:
-\[ L = \frac{1}{2}(m_1 + m_2)l_1^2\dot{\theta}_1^2 + \frac{1}{2}m_2 l_2^2\dot{\theta}_2^2 + m_2 l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \cos(\theta_1 - \theta_2) + (m_1 + m_2)g l_1 \cos(\theta_1) + m_2 g l_2 \cos(\theta_2) \]
+$$L = \frac{1}{2}(m_1 + m_2)l_1^2\dot{\theta}_1^2 + \frac{1}{2}m_2 l_2^2\dot{\theta}_2^2 + m_2 l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \cos(\theta_1 - \theta_2) + (m_1 + m_2)g l_1 \cos(\theta_1) + m_2 g l_2 \cos(\theta_2)$$
 
 From this Lagrangian, the equations of motion are:
-\[ \ddot{\theta}_1 = -\frac{m_2 l_2}{I_{12}} \sin(\theta_1 - \theta_2) + \frac{g (m_1 + m_2) \cos(\theta_1)}{l_1} \]
-\[ \ddot{\theta}_2 = \frac{m_2 l_1}{I_{12}} \sin(\theta_1 - \theta_2) - \frac{g m_2 \cos(\theta_2)}{l_2} \]
+$$\ddot{\theta}_1 = -\frac{m_2 l_2}{I_{12}} \sin(\theta_1 - \theta_2) + \frac{g (m_1 + m_2) \cos(\theta_1)}{l_1}$$
+$$\ddot{\theta}_2 = \frac{m_2 l_1}{I_{12}} \sin(\theta_1 - \theta_2) - \frac{g m_2 \cos(\theta_2)}{l_2}$$
 
-Where \( I_{12} = (m_1 + m_2) l_1^2 + m_2 l_2^2 - m_2 l_1 l_2 \cos(\theta_1 - \theta_2) \).
+Where $I_{12} = (m_1 + m_2) l_1^2 + m_2 l_2^2 - m_2 l_1 l_2 \cos(\theta_1 - \theta_2)$.
 
 Code Example (Pseudocode):
 ```java
@@ -102,7 +102,7 @@ To compute trajectories for the given billiard systems:
 1. Define the geometry of each type of billiard.
 2. Use initial conditions to track the particle’s path as it bounces off the walls.
 
-For example, in a square billiard (Figure 16.12a and 16.12c), the particle will follow straight lines until it hits one of the four walls. Upon hitting a wall, the particle reflects according to the law of reflection: \(\theta_i = \theta_r\).
+For example, in a square billiard (Figure 16.12a and 16.12c), the particle will follow straight lines until it hits one of the four walls. Upon hitting a wall, the particle reflects according to the law of reflection: $\theta_i = \theta_r$.
 
 Code Example (Pseudocode):
 ```java
@@ -160,21 +160,18 @@ public class MultipleScattering {
 x??
 
 #### Hard Disk Scattering Background
-In this problem, we consider point particles scattering elastically from stationary disks on a flat billiard table. The disks have radius \( R \), and their center-to-center separations are \( a \). For three disks arranged in an equilateral triangle, some internal scatterings can lead to trapped, periodic orbits that become chaotic under certain conditions.
+In this problem, we consider point particles scattering elastically from stationary disks on a flat billiard table. The disks have radius $R $, and their center-to-center separations are $ a$. For three disks arranged in an equilateral triangle, some internal scatterings can lead to trapped, periodic orbits that become chaotic under certain conditions.
 
 The relevant equations for the motion of particles involve conservation of momentum and energy:
-- Conservation of momentum: \( m_1 V_{1i} + m_2 V_{2i} = m_1 V_{1f} + m_2 V_{2f} \)
-- Conservation of kinetic energy: \( \frac{1}{2}m_1 V_{1i}^2 + \frac{1}{2}m_2 V_{2i}^2 = \frac{1}{2}m_1 V_{1f}^2 + \frac{1}{2}m_2 V_{2f}^2 \)
-
-Here, \( m_i \) and \( V_{ij} \) represent the mass and velocity components of each particle.
+- Conservation of momentum: $m_1 V_{1i} + m_2 V_{2i} = m_1 V_{1f} + m_2 V_{2f}$- Conservation of kinetic energy:$\frac{1}{2}m_1 V_{1i}^2 + \frac{1}{2}m_2 V_{2i}^2 = \frac{1}{2}m_1 V_{1f}^2 + \frac{1}{2}m_2 V_{2f}^2 $ Here,$m_i $ and$V_{ij}$ represent the mass and velocity components of each particle.
 :p What is the background context for hard disk scattering?
 ??x
 The problem involves simulating point particles colliding elastically with stationary disks on a 2D billiard table. The dynamics can lead to periodic orbits that become chaotic, especially in configurations like three disks forming an equilateral triangle.
 
 In this setup:
 - Each collision is elastic.
-- The disks have finite radius \( R \).
-- The center-to-center separation between the disks is \( a \).
+- The disks have finite radius $R$.
+- The center-to-center separation between the disks is $a$.
 
 For the three-disk case, there are infinitely many trapped periodic orbits, which can lead to chaotic behavior. The code provided in Listing 24.2 (`QMdisks.py`) can be used as a starting point for modeling these interactions.
 x??
@@ -182,7 +179,7 @@ x??
 ---
 
 #### Hard Disk Scattering: Trajectory Visualization
-To visualize trajectories, we plot \( [x(t), y(t)] \) of particles scattered from the disks. This includes both usual and unusual behaviors like back-angle scattering, which requires multiple collisions.
+To visualize trajectories, we plot $[x(t), y(t)]$ of particles scattered from the disks. This includes both usual and unusual behaviors like back-angle scattering, which requires multiple collisions.
 
 The goal is to observe how these trajectories differ from those of bound states.
 :p How do you plot trajectories for hard disk scattering?
@@ -234,7 +231,7 @@ x??
 ---
 
 #### Hard Disk Scattering: Phase Space Trajectories
-To explore phase space behavior, we plot \( [x(t), \dot{x}(t)] \) and \( [y(t), \dot{y}(t)] \). These differ from bound state trajectories by showing the velocity components over time.
+To explore phase space behavior, we plot $[x(t), \dot{x}(t)]$ and $[y(t), \dot{y}(t)]$. These differ from bound state trajectories by showing the velocity components over time.
 
 Phase space plots provide insight into the system's dynamics.
 :p How do you plot phase space trajectories for hard disk scattering?
@@ -291,16 +288,16 @@ x??
 ---
 
 #### Hard Disk Scattering: Impact Parameter Analysis
-Starting with a projectile at \( x \approx -\infty \), we vary its initial distance from the center of scattering region, \( y = b \). The task is to determine the scattering angle \( \theta = \arctan2(V_x, V_y) \).
+Starting with a projectile at $x \approx -\infty $, we vary its initial distance from the center of scattering region, $ y = b $. The task is to determine the scattering angle$\theta = \arctan2(V_x, V_y)$.
 
 This analysis helps identify different scattering behaviors based on impact parameters.
 :p How do you analyze scattering behavior based on impact parameter?
 ??x
-To analyze the scattering behavior based on impact parameters, we start by setting up initial conditions where the projectile is far from the disk(s), specifically at \( x \approx -\infty \). We vary the distance \( b = y \) and compute the scattering angle \( \theta \).
+To analyze the scattering behavior based on impact parameters, we start by setting up initial conditions where the projectile is far from the disk(s), specifically at $x \approx -\infty $. We vary the distance $ b = y $ and compute the scattering angle $\theta$.
 
 Here's a step-by-step approach:
 
-1. **Initial Setup**: Set the projectile position to a large negative value, e.g., \( x_0 = -100R \).
+1. **Initial Setup**: Set the projectile position to a large negative value, e.g., $x_0 = -100R$.
 2. **Velocity Components**: Define initial velocity components.
 3. **Collision Detection and Handling**: Detect collisions with disks and update velocities accordingly.
 
@@ -336,14 +333,14 @@ def handle_collision(x, y, dxdt, dydt):
     pass
 ```
 
-Determine \( \theta = \arctan2(V_x, V_y) \):
+Determine $\theta = \arctan2(V_x, V_y)$:
 
 ```python
 Vx, Vy = simulate_scattering(b, Vx_init, Vy_init)
 theta = math.atan2(Vy, Vx)
 ```
 
-Finally, plot \( d\theta / db \) and \( \sigma(\theta) \):
+Finally, plot $d\theta / db $ and$\sigma(\theta)$:
 ```python
 def compute_theta_derivative(db, b_values):
     thetas = [math.atan2(simulate_scattering(b + db/2, Vx_init, Vy_init)[3], simulate_scattering(b - db/2, Vx_init, Vy_init)[3]) for b in b_values]
@@ -366,7 +363,7 @@ plt.ylabel('σ(θ)')
 plt.show()
 ```
 
-This code simulates the scattering process and calculates \( \theta \) as a function of impact parameter.
+This code simulates the scattering process and calculates $\theta$ as a function of impact parameter.
 x??
 
 ---
@@ -375,35 +372,23 @@ x??
 In 1961, Edward Lorenz simplified atmospheric convection models to predict weather patterns. He accidentally used the truncated value `0.506` instead of `0.506127`, leading to vastly different results that initially seemed like numerical errors but later revealed chaotic behavior.
 
 The equations for these attractors are:
-- \( \dot{x} = \sigma (y - x) \)
-- \( \dot{y} = x (\rho - z) - y \)
-- \( \dot{z} = -\beta z + xy \)
-
-Where \( \sigma, \rho, \beta \) are parameters, and the terms involving \( z \), \( x \), and \( y \) make these equations nonlinear.
+- $\dot{x} = \sigma (y - x)$-$\dot{y} = x (\rho - z) - y $-$\dot{z} = -\beta z + xy $ Where$\sigma, \rho, \beta $ are parameters, and the terms involving$z $,$ x $, and$ y$ make these equations nonlinear.
 :p What is the background context for Lorenz attractors?
 ??x
 In 1961, Edward Lorenz was studying atmospheric convection using a simplified model. To save time, he entered `0.506` instead of the full value `0.506127`. The results were significantly different, leading him to initially suspect numerical errors but later recognizing chaotic behavior.
 
 This led to the discovery that certain nonlinear systems can exhibit unpredictable and complex dynamics even with simple equations:
-- \( \dot{x} = \sigma (y - x) \)
-- \( \dot{y} = x (\rho - z) - y \)
-- \( \dot{z} = -\beta z + xy \)
-
-The parameters \( \sigma, \rho, \beta \) control the system's behavior. The presence of nonlinear terms like \( zxy \) makes these equations chaotic.
+- $\dot{x} = \sigma (y - x)$-$\dot{y} = x (\rho - z) - y $-$\dot{z} = -\beta z + xy $ The parameters$\sigma, \rho, \beta $ control the system's behavior. The presence of nonlinear terms like$zxy$ makes these equations chaotic.
 x??
 
 ---
 
 #### Lorenz Attractors: ODE Solver
 To simulate the Lorenz attractor equations, we need to modify our Ordinary Differential Equation (ODE) solver to handle three simultaneous equations:
-- \( \dot{x} = \sigma (y - x) \)
-- \( \dot{y} = x (\rho - z) - y \)
-- \( \dot{z} = -\beta z + xy \)
-
-We use initial parameter values: \( \sigma = 10 \), \( \beta = \frac{8}{3} \), and \( \rho = 28 \).
+- $\dot{x} = \sigma (y - x)$-$\dot{y} = x (\rho - z) - y $-$\dot{z} = -\beta z + xy $ We use initial parameter values:$\sigma = 10 $, $\beta = \frac{8}{3}$, and $\rho = 28$.
 :p How do you modify an ODE solver for the Lorenz attractor equations?
 ??x
-To modify an ODE solver for the Lorenz attractor, we need to define a function that returns the derivatives of \( x \), \( y \), and \( z \):
+To modify an ODE solver for the Lorenz attractor, we need to define a function that returns the derivatives of $x $, $ y $, and$ z$:
 
 ```python
 def lorenz(xyz, t, sigma=10.0, rho=28.0, beta=8/3):
@@ -411,7 +396,7 @@ def lorenz(xyz, t, sigma=10.0, rho=28.0, beta=8/3):
     return [sigma * (y - x), x * (rho - z) - y, -beta * z + x * y]
 ```
 
-This function `lorenz` takes the current state vector \( \mathbf{x} = [x, y, z] \) and time \( t \), and returns the derivatives at that point.
+This function `lorenz` takes the current state vector $\mathbf{x} = [x, y, z]$ and time $t$, and returns the derivatives at that point.
 
 Next, we can use a numerical solver like `scipy.integrate.solve_ivp` to integrate these equations over time:
 ```python
@@ -444,12 +429,12 @@ x??
 ---
 
 #### Lorenz Attractors: Phase Space Plot
-To explore phase space behavior, we plot \( [x(t), y(t)] \) for the solutions obtained from the ODE solver. This helps visualize the chaotic dynamics of the system.
+To explore phase space behavior, we plot $[x(t), y(t)]$ for the solutions obtained from the ODE solver. This helps visualize the chaotic dynamics of the system.
 
 Phase space plots are crucial in understanding complex behaviors.
 :p How do you plot phase space trajectories for Lorenz attractors?
 ??x
-To plot phase space trajectories for the Lorenz attractor, we use the \( x \) and \( y \) components of the solution vector obtained from the ODE solver. Here's how to do it:
+To plot phase space trajectories for the Lorenz attractor, we use the $x $ and$y$ components of the solution vector obtained from the ODE solver. Here's how to do it:
 
 ```python
 import matplotlib.pyplot as plt
@@ -462,7 +447,7 @@ plt.title('Lorenz Attractor Phase Space')
 plt.show()
 ```
 
-This code generates a plot showing the evolution of \( x \) and \( y \) over time in phase space. You can also animate this to better visualize the chaotic behavior:
+This code generates a plot showing the evolution of $x $ and$y$ over time in phase space. You can also animate this to better visualize the chaotic behavior:
 
 ```python
 from mpl_toolkits.mplot3d import Axes3D
@@ -487,20 +472,21 @@ x??
 #### van der Pol Oscillator
 
 **Background context:** The van der Pol oscillator is a mathematical model of an oscillator with nonlinear damping. It is described by the differential equation:
-\[ \frac{d^2x}{dt^2} + \mu (x^2 - x_0^2) \frac{dx}{dt} + \omega_0^2 x = 0 \]
-This system exhibits interesting behavior, including limit cycles and chaotic dynamics. The term \(\mu (x^2 - x_0^2)\) represents a nonlinear damping force that depends on the position \(x\).
+$$\frac{d^2x}{dt^2} + \mu (x^2 - x_0^2) \frac{dx}{dt} + \omega_0^2 x = 0$$
+
+This system exhibits interesting behavior, including limit cycles and chaotic dynamics. The term $\mu (x^2 - x_0^2)$ represents a nonlinear damping force that depends on the position $x$.
 
 **Objective:** To understand why this equation describes an oscillator with position-dependent damping.
 
 :p Explain why the van der Pol oscillator equation describes an oscillator with position-dependent damping.
 ??x
-The term \(\mu (x^2 - x_0^2)\) in the equation acts as a nonlinear damping force. This term varies depending on the value of \(x\), which means that the damping is not constant but changes as the position \(x\) changes.
+The term $\mu (x^2 - x_0^2)$ in the equation acts as a nonlinear damping force. This term varies depending on the value of $x$, which means that the damping is not constant but changes as the position $ x$ changes.
 
-If \(x = x_0\), the term \(\mu (x^2 - x_0^2)\) becomes zero, and there is no nonlinear damping. If \(x > x_0\) or \(x < x_0\), the term will be non-zero, leading to a position-dependent damping effect.
+If $x = x_0 $, the term $\mu (x^2 - x_0^2)$ becomes zero, and there is no nonlinear damping. If $x > x_0$ or $x < x_0$, the term will be non-zero, leading to a position-dependent damping effect.
 
 For example:
-- When \(x = 1\) and \(x_0 = 0.5\), \(\mu (x^2 - x_0^2) = \mu ((1)^2 - (0.5)^2) = \mu (1 - 0.25) = 0.75\mu\).
-- When \(x = 0.5\) and \(x_0 = 1\), \(\mu (x^2 - x_0^2) = \mu ((0.5)^2 - (1)^2) = \mu (-0.75)\).
+- When $x = 1 $ and$x_0 = 0.5 $,$\mu (x^2 - x_0^2) = \mu ((1)^2 - (0.5)^2) = \mu (1 - 0.25) = 0.75\mu$.
+- When $x = 0.5 $ and$x_0 = 1 $,$\mu (x^2 - x_0^2) = \mu ((0.5)^2 - (1)^2) = \mu (-0.75)$.
 
 This shows that the damping force is position-dependent, which can lead to complex behavior in the oscillator.
 
@@ -511,9 +497,7 @@ This shows that the damping force is position-dependent, which can lead to compl
 #### Duffing Oscillator
 
 **Background context:** The Duffing oscillator is another example of a damped, driven nonlinear oscillator. It is described by the differential equation:
-\[ \frac{d^2x}{dt^2} = -2\gamma \frac{dx}{dt} - \alpha x - \beta x^3 + F \cos(\omega t) \]
-
-**Objective:** To modify an ODE solver to solve this equation.
+$$\frac{d^2x}{dt^2} = -2\gamma \frac{dx}{dt} - \alpha x - \beta x^3 + F \cos(\omega t)$$**Objective:** To modify an ODE solver to solve this equation.
 
 :p Modify your ODE solver to solve the Duffing oscillator equation.
 ??x
@@ -536,7 +520,7 @@ t = np.linspace(0, 100, 1000)  # Time points
 sol = odeint(duffing_ode, x0, t, args=(params,))
 ```
 
-This function `duffing_ode` takes the current state and time as input and returns the derivatives of position and velocity. The parameters \(\gamma\), \(\alpha\), \(\beta\), \(\omega\), and \(F\) are passed as a tuple.
+This function `duffing_ode` takes the current state and time as input and returns the derivatives of position and velocity. The parameters $\gamma $, $\alpha $, $\beta $, $\omega $, and $ F$ are passed as a tuple.
 
 ??x
 
@@ -590,7 +574,7 @@ plt.show()
 # Look for three distinct points that repeat every three cycles.
 ```
 
-The code integrates the system for 100 cycles to eliminate transients and then plots \(v(t)\) versus \(x(t)\). By examining this phase space plot, you can identify any period-three solutions.
+The code integrates the system for 100 cycles to eliminate transients and then plots $v(t)$ versus $x(t)$. By examining this phase space plot, you can identify any period-three solutions.
 
 ??x
 
@@ -602,9 +586,9 @@ The code integrates the system for 100 cycles to eliminate transients and then p
 
 **Objective:** To modify parameters and observe the behavior similar to an Ueda oscillator.
 
-:p Change your parameters to \(\omega = 1\) and \(\alpha = 0\) to model an Ueda oscillator.
+:p Change your parameters to $\omega = 1 $ and$\alpha = 0$ to model an Ueda oscillator.
 ??x
-To model an Ueda oscillator with \(\omega = 1\) and \(\alpha = 0\), we need to adjust the parameters of the Duffing oscillator equation. Here is how you might implement this in Python:
+To model an Ueda oscillator with $\omega = 1 $ and$\alpha = 0$, we need to adjust the parameters of the Duffing oscillator equation. Here is how you might implement this in Python:
 
 ```python
 def duffing_ode(t, x, params):
@@ -641,7 +625,7 @@ plt.show()
 # Analyze the plot to see if it exhibits behavior similar to an Ueda oscillator.
 ```
 
-The code integrates the system with \(\omega = 1\) and \(\alpha = 0\). By plotting \(v(t)\) versus \(x(t)\), you can observe if the system behaves in a manner consistent with an Ueda oscillator.
+The code integrates the system with $\omega = 1 $ and$\alpha = 0 $. By plotting $ v(t)$versus $ x(t)$, you can observe if the system behaves in a manner consistent with an Ueda oscillator.
 
 ??x
 

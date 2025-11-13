@@ -76,10 +76,10 @@ x??
 
 ---
 #### Local Timeline of Animation Clips
-Background context: Every animation clip has a local timeline, often denoted by an independent variable \( t \). At the start, \( t = 0 \), and at the end, \( t = T \), where \( T \) is the duration of the clip. Each unique value of \( t \) within this range is called a time index.
+Background context: Every animation clip has a local timeline, often denoted by an independent variable $t $. At the start, $ t = 0 $, and at the end,$ t = T $, where$ T $ is the duration of the clip. Each unique value of $ t$ within this range is called a time index.
 :p What is a local timeline in animation?
 ??x
-A local timeline refers to the specific sequence of events or poses within an individual animation clip, which is independent from other clips and defined by the variable \( t \). The start point (\( t = 0 \)) and end point (\( t = T \)) are fixed for each clip.
+A local timeline refers to the specific sequence of events or poses within an individual animation clip, which is independent from other clips and defined by the variable $t $. The start point ($ t = 0 $) and end point ($ t = T$) are fixed for each clip.
 x??
 
 ---
@@ -90,8 +90,8 @@ Background context: In both film and game animations, animators do not create po
 Pose interpolation allows the animation engine to calculate intermediate poses between key frames by linear or curve-based methods. This process helps create smooth animations without requiring an animator to define every single frame.
 
 For example, consider two keyposes:
-- At \( t = 0 \), the character stands still.
-- At \( t = T \), the character jumps up and down.
+- At $t = 0$, the character stands still.
+- At $t = T$, the character jumps up and down.
 
 Using linear interpolation between these two poses, the engine can generate a series of intermediate poses that make the motion look natural. Here is an illustrative pseudocode for simple linear interpolation:
 ```pseudocode
@@ -112,7 +112,7 @@ x??
 
 ---
 #### Continuous and Scalable Timeline in Game Animation
-Background context: Unlike film animation which is strictly sampled at fixed intervals (24, 30, or 60 frames per second), game animations can be continuous and scaled based on the real-time frame rate, CPU/GPU load, and time scaling requirements. This means that poses can be calculated for any time index \( t \) during an animation clip.
+Background context: Unlike film animation which is strictly sampled at fixed intervals (24, 30, or 60 frames per second), game animations can be continuous and scaled based on the real-time frame rate, CPU/GPU load, and time scaling requirements. This means that poses can be calculated for any time index $t$ during an animation clip.
 :p What are the key differences between film and game animations in terms of timing?
 ??x
 Film animation is typically constrained to fixed frame rates (24, 30, or 60 frames per second), where poses are only evaluated at integral frame indices. In contrast, game animations can be continuous and scaled based on varying real-time factors such as the current CPU/GPU load and time scaling adjustments for speed changes.
@@ -132,12 +132,12 @@ Background context: Since an animation's timeline is continuous, it is best meas
 ??x
 Time units in animations are typically measured in seconds for continuous and scalable timelines. This is necessary because the exact timing of events may vary depending on factors like real-time performance and time scaling.
 
-For instance, if an animation has a duration \( T \) (in seconds), it can be represented as:
-\[ t = 0 \text{ to } T \]
+For instance, if an animation has a duration $T$ (in seconds), it can be represented as:
+$$t = 0 \text{ to } T$$
 
-Additionally, for compatibility with hardware frame rates, the number of frames per second (\( fps \)) is often used to measure time. For example, in game development, common values are:
-- \( fps = 30 \) (frames per second)
-- \( t = n / 30 \), where \( n \) is the frame index.
+Additionally, for compatibility with hardware frame rates, the number of frames per second ($fps$) is often used to measure time. For example, in game development, common values are:
+- $fps = 30$ (frames per second)
+- $t = n / 30 $, where $ n$ is the frame index.
 
 This dual approach allows for both continuous timing and discrete, hardware-compatible representations of time.
 x??
@@ -165,14 +165,14 @@ x??
 
 Background context: In animation systems, loops are clips designed to be repeated. For proper looping, the last sample must match the first one.
 
-If a clip is non-looping, an N-frame animation will have \(N+1\) unique samples. If a clip is looping, it will have only \(N\) unique samples because the last and first samples coincide in time.
+If a clip is non-looping, an N-frame animation will have $N+1 $ unique samples. If a clip is looping, it will have only$N$ unique samples because the last and first samples coincide in time.
 
 :p What are the rules for determining the number of samples in a looped or non-looped clip?
 ??x
 For non-looping clips:
-- An N-frame animation has \(N+1\) unique samples.
+- An N-frame animation has $N+1$ unique samples.
 For looping clips:
-- An N-frame animation has \(N\) unique samples because the last sample is redundant and matches the first one.
+- An N-frame animation has $N$ unique samples because the last sample is redundant and matches the first one.
 
 Example:
 A 30-frame (one-second) animation at 30 fps would have:
@@ -198,7 +198,7 @@ x??
 
 Background context: Normalized time or phase is a way of measuring time relative to the start and end points of an animation, independent of its actual duration.
 
-Normalized time \(u\) ranges from 0 at the start to 1 at the end of the animation. This concept is particularly useful when synchronizing multiple animations that may have different durations.
+Normalized time $u$ ranges from 0 at the start to 1 at the end of the animation. This concept is particularly useful when synchronizing multiple animations that may have different durations.
 
 :p What is normalized time (phase) used for in animation systems?
 ??x
@@ -248,17 +248,17 @@ x??
 
 #### Global Timeline
 
-Background context: Every character in a game has its own global timeline, which starts when the character is spawned into the game world. The global time variable \( t \) measures time from this point.
+Background context: Every character in a game has its own global timeline, which starts when the character is spawned into the game world. The global time variable $t$ measures time from this point.
 
 :p How do we play an animation starting at a specific global time?
 ??x
-To play an animation clip starting at a specific global time \( t_{\text{start}} \), you map the local timeline of the clip onto the character's global timeline. The local time \( t \) can be calculated from the global time using the formula:
+To play an animation clip starting at a specific global time $t_{\text{start}}$, you map the local timeline of the clip onto the character's global timeline. The local time $ t$ can be calculated from the global time using the formula:
 
-\[ t = (t - t_{\text{start}})R \]
+$$t = (t - t_{\text{start}})R$$
 
 Where:
-- \( R \) is the playback rate.
-- \( t_{\text{start}} \) is the global start time of the animation.
+- $R$ is the playback rate.
+- $t_{\text{start}}$ is the global start time of the animation.
 
 ```java
 // Pseudocode for playing an animation at a specific global time
@@ -278,15 +278,15 @@ Background context: Time-scaling is used to play an animation at a different spe
 
 :p What does time-scaling involve?
 ??x
-Time-scaling involves adjusting the playback rate \( R \) and scaling the image of the clip accordingly when it is laid down on the global timeline. For example, to play an animation at twice the speed (R=2), you would scale the local timeline by a factor of 1/2.
+Time-scaling involves adjusting the playback rate $R$ and scaling the image of the clip accordingly when it is laid down on the global timeline. For example, to play an animation at twice the speed (R=2), you would scale the local timeline by a factor of 1/2.
 
 Formula:
-\[ t = (t - t_{\text{start}}) \times R \]
+$$t = (t - t_{\text{start}}) \times R$$
 
 Where:
-- \( R \) is the playback rate.
-- \( t_{\text{start}} \) is the global start time of the animation.
-- \( t \) is the local time on the clip.
+- $R$ is the playback rate.
+- $t_{\text{start}}$ is the global start time of the animation.
+- $t$ is the local time on the clip.
 
 ```java
 // Pseudocode for time-scaling an animation
@@ -307,16 +307,16 @@ Background context: Looping animations are repeated multiple times on a global t
 
 :p How does looping work in animations?
 ??x
-Looping animations involve laying down multiple copies of the clip back-to-back onto the global timeline. The number of times the animation loops is denoted by \( N \), and each copy starts after the previous one ends, creating a continuous loop.
+Looping animations involve laying down multiple copies of the clip back-to-back onto the global timeline. The number of times the animation loops is denoted by $N$, and each copy starts after the previous one ends, creating a continuous loop.
 
 For finite loops:
-\[ t = (t - t_{\text{start}})R + kT \]
+$$t = (t - t_{\text{start}})R + kT$$
 
 Where:
-- \( R \) is the playback rate.
-- \( T \) is the duration of the clip.
-- \( k \) is the number of times the clip has looped.
-- \( N \) is the total number of loops.
+- $R$ is the playback rate.
+- $T$ is the duration of the clip.
+- $k$ is the number of times the clip has looped.
+- $N$ is the total number of loops.
 
 ```java
 // Pseudocode for playing a looping animation
@@ -334,18 +334,17 @@ x??
 
 #### Reversing Animations
 
-Background context: Playing an animation in reverse involves using a time scale of \(-1\). This effectively flips the animation timeline, making it play backwards.
+Background context: Playing an animation in reverse involves using a time scale of $-1$. This effectively flips the animation timeline, making it play backwards.
 
 :p How can you play an animation in reverse?
 ??x
-To play an animation in reverse, you use a time scale of \(-1\), which means the local timeline is flipped. The local time \( t \) can be calculated from the global time using the formula:
+To play an animation in reverse, you use a time scale of $-1 $, which means the local timeline is flipped. The local time $ t$ can be calculated from the global time using the formula:
 
-\[ t = t_{\text{start}} + (1 - R)(t - t_{\text{start}}) \]
+$$t = t_{\text{start}} + (1 - R)(t - t_{\text{start}})$$
 
 Where:
-- \( R = -1 \)
-- \( t_{\text{start}} \) is the global start time of the animation.
-- \( t \) is the local time on the clip.
+- $R = -1 $-$ t_{\text{start}}$ is the global start time of the animation.
+- $t$ is the local time on the clip.
 
 ```java
 // Pseudocode for reversing an animation
@@ -365,7 +364,7 @@ Background context: When animating, it's essential to handle how animations loop
 
 :p How should we handle a non-looping animation in terms of sampling poses?
 ??x
-To handle a non-looping animation, you simply clamp the time \( t \) to be within the valid range [0, T]. This means that if \( t \) falls outside this range, it is adjusted to fit back into the range.
+To handle a non-looping animation, you simply clamp the time $t $ to be within the valid range [0, T]. This means that if$t$ falls outside this range, it is adjusted to fit back into the range.
 
 ```c++
 float tstart = 0; // Start of the clip
@@ -380,11 +379,11 @@ x??
 ---
 
 #### Infinite Looping with Modulo Operation
-Background context: For infinite looping animations (N=∞), the animation should loop indefinitely without any specific end point. The modulo operation is used to ensure that the time \( t \) stays within a single cycle of the animation.
+Background context: For infinite looping animations (N=∞), the animation should loop indefinitely without any specific end point. The modulo operation is used to ensure that the time $t$ stays within a single cycle of the animation.
 
 :p How do we handle an animation that loops forever?
 ??x
-For an animation that loops forever, you use the modulo operator to bring \( t \) into the range [0, T]. This ensures that even after many cycles, the sampled pose will still be from within one complete loop of the animation.
+For an animation that loops forever, you use the modulo operator to bring $t$ into the range [0, T]. This ensures that even after many cycles, the sampled pose will still be from within one complete loop of the animation.
 
 ```c++
 float tstart = 0; // Start of the clip
@@ -399,11 +398,11 @@ x??
 ---
 
 #### Finite Looping with Clamping and Modulo Operation
-Background context: When an animation loops a finite number of times (1 < N < ∞), you first clamp \( t \) to ensure it stays within the range [0, NT], then use the modulo operation to bring it back into one cycle.
+Background context: When an animation loops a finite number of times (1 < N < ∞), you first clamp $t$ to ensure it stays within the range [0, NT], then use the modulo operation to bring it back into one cycle.
 
 :p How do we handle animations that loop a finite number of times?
 ??x
-For animations that loop a finite number of times (1 < N < ∞), you first clamp \( t \) to ensure it stays within the range [0, NT] and then use the modulo operation to bring it back into one cycle.
+For animations that loop a finite number of times (1 < N < ∞), you first clamp $t$ to ensure it stays within the range [0, NT] and then use the modulo operation to bring it back into one cycle.
 
 ```c++
 float tstart = 0; // Start of the clip
@@ -423,7 +422,7 @@ Background context: In animation systems, there are two main approaches to manag
 
 :p What is a local clock approach?
 ??x
-In the local clock approach, each clip has its own local clock. The origin (t=0) of this clock coincides with when the clip starts playing. Advancing the animation involves incrementing the local clock by scaled time based on the playback rate \( R \).
+In the local clock approach, each clip has its own local clock. The origin (t=0) of this clock coincides with when the clip starts playing. Advancing the animation involves incrementing the local clock by scaled time based on the playback rate $R$.
 
 ```c++
 float t = 0; // Local time index
@@ -441,13 +440,9 @@ Background context: In contrast to local clocks, the global clock approach uses 
 
 :p What is a global clock approach?
 ??x
-In the global clock approach, the character has a global clock measured in seconds. Each clip records the global start time \( t_{start} \). The local clock of each clip is then calculated from this information using the formula:
+In the global clock approach, the character has a global clock measured in seconds. Each clip records the global start time $t_{start}$. The local clock of each clip is then calculated from this information using the formula:
 
-\[
-t = (globalTime - t_{start}) / R
-\]
-
-where \( R \) is the playback rate.
+$$t = (globalTime - t_{start}) / R$$where $ R$ is the playback rate.
 
 ```c++
 float globalTime; // Current global time in seconds
@@ -807,12 +802,11 @@ Background context explaining the mathematical process of finding a matrix that 
 To mathematically represent the skinning, we need to find a skinning matrix (also known as a blend matrix) that can transform the vertices of a skinned mesh from their original bind pose positions into new positions corresponding to the current skeleton pose. This is achieved by considering the effect of each joint on the vertex's position.
 
 The process involves combining the local transformations of multiple joints, weighted by their influence over the vertex. The skinning matrix for each vertex can be represented as a linear combination of transformation matrices derived from the joint matrices:
-
-\[ M_{\text{skin}} = \sum_{j=0}^{N-1} w_j \cdot M_j \]
+$$M_{\text{skin}} = \sum_{j=0}^{N-1} w_j \cdot M_j$$
 
 Where:
-- \( M_j \) is the local transformation matrix of the j-th joint.
-- \( w_j \) is the weighting factor for the j-th joint.
+- $M_j$ is the local transformation matrix of the j-th joint.
+- $w_j$ is the weighting factor for the j-th joint.
 
 :p How does a typical skinned vertex data structure look?
 ??x
@@ -837,12 +831,11 @@ Background context explaining the overall process of attaching a 3D mesh to a po
 :p How does per-vertex skinning work for vertices bound to multiple joints?
 ??x
 For vertices bound to two or more joints, their position is computed as a weighted average of the positions it would have assumed had it been bound to each joint independently. The weights are used to blend these contributions:
-
-\[ \text{New Position} = w_0 \cdot P_{j0} + w_1 \cdot P_{j1} + \dots + w_n \cdot P_{jn} \]
+$$\text{New Position} = w_0 \cdot P_{j0} + w_1 \cdot P_{j1} + \dots + w_n \cdot P_{jn}$$
 
 Where:
-- \( P_{ji} \) is the position of the vertex under the influence of joint \( j_i \).
-- \( w_i \) is the weighting factor for joint \( i \).
+- $P_{ji}$ is the position of the vertex under the influence of joint $j_i$.
+- $w_i $ is the weighting factor for joint$i$.
 
 :p What constraints are typically placed on the number of joints a single vertex can be bound to?
 ??x
@@ -863,7 +856,7 @@ Background context: The text introduces the concept of model space (denoted by s
 ??x
 Model space (subscript M) is where the vertex positions are initially defined when the skeleton is in its bind pose. Joint space (subscript J) refers to the coordinate system of a single joint, which remains constant for that joint regardless of how it moves.
 
-In code terms, if we have a vertex position \( v_{MB} \) in model space and we want to transform it into joint space, this involves a matrix transformation. The bind pose matrix \( B^j_M \) transforms the vertex from joint space coordinates to model space coordinates.
+In code terms, if we have a vertex position $v_{MB}$ in model space and we want to transform it into joint space, this involves a matrix transformation. The bind pose matrix $B^j_M$ transforms the vertex from joint space coordinates to model space coordinates.
 ```java
 // Pseudocode for transforming vertex position from joint space to model space
 Matrix B_j_M = getBindPoseMatrix(jointIndex); // Get the bind pose matrix for the specific joint
@@ -878,7 +871,7 @@ Background context: The text explains that a vertex's position can be represente
 
 :p How does a vertex's position change from bind pose to current pose?
 ??x
-In bind pose, the vertex's position in model space \( v_{MB} \) remains constant. However, when the joint moves to its current pose, the vertex's coordinates need to be recalculated in model space as \( v_{MC} \). This involves a series of transformations: from model space to joint space, moving the joint, and then back to model space.
+In bind pose, the vertex's position in model space $v_{MB}$ remains constant. However, when the joint moves to its current pose, the vertex's coordinates need to be recalculated in model space as $v_{MC}$. This involves a series of transformations: from model space to joint space, moving the joint, and then back to model space.
 
 Here is an example of how this might look in code:
 ```java
@@ -903,7 +896,7 @@ Background context: The text describes a process where vertices are skinned to j
 :p What is the skinning transformation process?
 ??x
 The skinning transformation process involves several steps:
-1. Convert the vertex position \( v_{MB} \) from model space to joint space using the bind pose matrix \( B^j_M \).
+1. Convert the vertex position $v_{MB}$ from model space to joint space using the bind pose matrix $B^j_M$.
 2. Adjust the position of the joint to its current pose.
 3. Convert the transformed position back into model space.
 
@@ -933,7 +926,7 @@ Background context: The text explains that a vertex's coordinates in joint space
 ??x
 Vertices maintain their coordinates in joint space because the coordinate system of each joint remains fixed relative to that joint. This means that no matter where the joint is positioned (current pose), the vertex's position in joint space will not change, making it easier to track its movement.
 
-For example, if a vertex has coordinates \( v_j = (1, 3) \) in joint space during bind pose and the joint moves to its current pose, the same vertex will still have coordinates \( v_j = (1, 3) \). Only when converting back to model space does the position change.
+For example, if a vertex has coordinates $v_j = (1, 3)$ in joint space during bind pose and the joint moves to its current pose, the same vertex will still have coordinates $v_j = (1, 3)$. Only when converting back to model space does the position change.
 
 Here is an example of how a vertex might be transformed:
 ```java
@@ -973,7 +966,7 @@ x??
 Background context: The transformation formulas derived for single joints can be extended to multiple joints in a skeleton. This involves calculating individual bind and current pose matrices for each joint, then generating skinning matrices for all joints.
 :p How does one extend the skinning concept from single joints to multi-jointed skeletons?
 ??x
-To extend the skinning concept to multi-jointed skeletons, we calculate bind and current pose matrices for each joint individually. Then, we compute a skinning matrix \( K_j \) for each joint using the formula \( K_j = (B_j.M)^{-1}C_j.M \). These skinning matrices are stored in what is known as a matrix palette, which is passed to the rendering engine during the rendering process.
+To extend the skinning concept to multi-jointed skeletons, we calculate bind and current pose matrices for each joint individually. Then, we compute a skinning matrix $K_j $ for each joint using the formula$K_j = (B_j.M)^{-1}C_j.M$. These skinning matrices are stored in what is known as a matrix palette, which is passed to the rendering engine during the rendering process.
 ```java
 // Pseudocode for generating a matrix palette
 Matrix4x4[] skinningMatrices = new Matrix4x4[numJoints];
@@ -994,7 +987,7 @@ x??
 Background context: After transforming vertices to model space using the appropriate skinning matrices, they must be transformed to world space. This can be done by pre-multiplying the palette of skinning matrices with the object's model-to-world transform matrix.
 :p What is the process for incorporating the model-to-world transform into the skinning matrices?
 ??x
-To incorporate the model-to-world transform into the skinning matrices, we concatenate the model-to-world transform to the regular skinning matrix equation. The new equation becomes \( (K_j)_W = (B_j.M)^{-1}C_j.MM.W \), where \( MM.W \) is the object's model-to-world transform.
+To incorporate the model-to-world transform into the skinning matrices, we concatenate the model-to-world transform to the regular skinning matrix equation. The new equation becomes $(K_j)_W = (B_j.M)^{-1}C_j.MM.W $, where $ MM.W$ is the object's model-to-world transform.
 ```java
 // Pseudocode for updating skinning matrices with model-to-world transform
 Matrix4x4[] skinnedMatricesWithWorldTransform = new Matrix4x4[numJoints];
@@ -1051,11 +1044,10 @@ Background context: This section provides the method of linear interpolation (LE
 :p How can we find an intermediate pose between two skeletal poses using LERP?
 ??x
 We can use Linear Interpolation (LERP) to interpolate the local poses of each joint in two given skeletal poses. The formula for LERP is:
-\[
-(PLERP)_j = \text{LERP}((PA)_j, (PB)_j, b)
-= (1 - b)(PA)_j + b(PB)_j
-\]
-Where \(b\) is the blend percentage or blend factor. When \(b = 0\), the final pose matches \(P_{skel A}\); when \(b = 1\), it matches \(P_{skel B}\). Intermediate values of \(b\) produce an intermediate pose.
+$$(PLERP)_j = \text{LERP}((PA)_j, (PB)_j, b)
+= (1 - b)(PA)_j + b(PB)_j$$
+
+Where $b $ is the blend percentage or blend factor. When$b = 0 $, the final pose matches$ P_{skel A}$; when $ b = 1$, it matches $ P_{skel B}$. Intermediate values of $ b$ produce an intermediate pose.
 
 ```java
 public class Pose {
@@ -1171,15 +1163,14 @@ x??
 ---
 
 #### Linear Interpolation of Translation Component T
-Background context: The translation component \( T \) is interpolated linearly using vector LERP, where \( (T_{LERP})_j = LERP((T_A)_j, (T_B)_j, b) = (1-b)(T_A)_j + b(T_B)_j \).
+Background context: The translation component $T $ is interpolated linearly using vector LERP, where$(T_{LERP})_j = LERP((T_A)_j, (T_B)_j, b) = (1-b)(T_A)_j + b(T_B)_j$.
 
 :p What is the formula for linearly interpolating the translation component?
 ??x
-The formula for linearly interpolating the translation component \( T \) between two points \( A \) and \( B \) using a blend factor \( b \) is given by:
-\[
-(T_{LERP})_j = (1-b)(T_A)_j + b(T_B)_j.
-\]
-This formula ensures that as \( b \) varies from 0 to 1, the translation smoothly transitions between points \( A \) and \( B \).
+The formula for linearly interpolating the translation component $T $ between two points$A $ and$ B $ using a blend factor $b$ is given by:
+$$(T_{LERP})_j = (1-b)(T_A)_j + b(T_B)_j.$$
+
+This formula ensures that as $b $ varies from 0 to 1, the translation smoothly transitions between points$A $ and$B$.
 ??x
 ```java
 // Pseudocode for linearly interpolating the translation component T
@@ -1192,14 +1183,13 @@ x??
 ---
 
 #### Linear Interpolation of Rotation Component Q
-Background context: The rotation component \( Q \) is interpolated using either quaternion LERP or SLERP. Quaternion LERP involves normalizing the result after linear interpolation, while SLERP uses a different formula that preserves angular distance between quaternions.
+Background context: The rotation component $Q$ is interpolated using either quaternion LERP or SLERP. Quaternion LERP involves normalizing the result after linear interpolation, while SLERP uses a different formula that preserves angular distance between quaternions.
 
 :p What is the formula for quaternion LERP (LERP)?
 ??x
-The formula for quaternion LERP (linear interpolation) of the rotation component \( Q \) between two quaternions \( A \) and \( B \) using a blend factor \( b \) is given by:
-\[
-(Q_{LERP})_j = \text{normalize}((1-b)(Q_A)_j + b(Q_B)_j).
-\]
+The formula for quaternion LERP (linear interpolation) of the rotation component $Q $ between two quaternions$A $ and$ B $ using a blend factor $b$ is given by:
+$$(Q_{LERP})_j = \text{normalize}((1-b)(Q_A)_j + b(Q_B)_j).$$
+
 This ensures that the interpolated quaternion remains normalized, preserving its validity as a rotation.
 ??x
 ```java
@@ -1213,14 +1203,13 @@ x??
 ---
 
 #### Linear Interpolation of Scale Component S
-Background context: The scale component \( S \) is interpolated linearly using vector LERP for both uniform and non-uniform scales. This ensures a smooth transition between the scaling values.
+Background context: The scale component $S$ is interpolated linearly using vector LERP for both uniform and non-uniform scales. This ensures a smooth transition between the scaling values.
 
 :p What is the formula for scalar or vector LERP of the scale component?
 ??x
-The formula for linearly interpolating the scale component \( S \) between two scales \( A \) and \( B \) using a blend factor \( b \) is given by:
-\[
-(S_{LERP})_j = (1-b)(S_A)_j + b(S_B)_j.
-\]
+The formula for linearly interpolating the scale component $S $ between two scales$A $ and$ B $ using a blend factor $b$ is given by:
+$$(S_{LERP})_j = (1-b)(S_A)_j + b(S_B)_j.$$
+
 This formula applies to both scalar and vector scaling, ensuring that the scale transitions smoothly from one value to another.
 
 For vectors specifically:
@@ -1267,16 +1256,13 @@ Background context: Game animations are often sampled at non-integer frame indic
 
 :p How can we use LERP to find an intermediate pose at a specific time?
 ??x
-To find an intermediate pose \( P_j(t) \) at a given time \( t \) between two sampled poses \( P_j(t1) \) and \( P_j(t2) \), linear interpolation (LERP) can be used. The blend factor \( b(t) \) is determined by the ratio of the difference between times:
-\[
-b(t) = \frac{t - t1}{t2 - t1}.
-\]
-The pose at time \( t \) is then interpolated as follows:
-\[
-P_j(t) = LERP(P_j(t1), P_j(t2), b(t)) = (1 - b(t))P_j(t1) + b(t)P_j(t2).
-\]
+To find an intermediate pose $P_j(t)$ at a given time $ t $ between two sampled poses $P_j(t1)$ and $P_j(t2)$, linear interpolation (LERP) can be used. The blend factor $ b(t)$ is determined by the ratio of the difference between times:
+$$b(t) = \frac{t - t1}{t2 - t1}.$$
 
-For example, to find the pose at time \( t = 2.18 \Delta t \) between poses sampled at times \( t_1 = 2\Delta t \) and \( t_2 = 3\Delta t \):
+The pose at time $t$ is then interpolated as follows:
+$$P_j(t) = LERP(P_j(t1), P_j(t2), b(t)) = (1 - b(t))P_j(t1) + b(t)P_j(t2).$$
+
+For example, to find the pose at time $t = 2.18 \Delta t $ between poses sampled at times$t_1 = 2\Delta t $ and$t_2 = 3\Delta t$:
 ```java
 // Pseudocode for temporal interpolation using LERP
 public Pose tempInterpolate(Pose poseA, Pose poseB, float timeA, float timeB, float targetTime) {
@@ -1320,7 +1306,7 @@ Background context explaining cross-fading between clips in animation blending. 
 
 :p How does cross-fading between clips work?
 ??x
-Cross-fading between clips involves overlapping the timelines of two animations by a certain duration (∆tblend) and then blending the two clips together. The blend percentage \( b \) starts at 0 when the cross-fade begins, gradually increasing until it reaches 1 at time \( t_{end} \), making only clip B visible.
+Cross-fading between clips involves overlapping the timelines of two animations by a certain duration (∆tblend) and then blending the two clips together. The blend percentage $b $ starts at 0 when the cross-fade begins, gradually increasing until it reaches 1 at time$t_{end}$, making only clip B visible.
 ```java
 public class CrossFade {
     private double startTime;
@@ -1350,7 +1336,7 @@ Background context explaining smooth transitions in cross-fading, where both ani
 
 :p How does a smooth transition work during cross-fading?
 ??x
-A smooth transition during cross-fading involves playing both clips A and B simultaneously as the blend percentage \( b \) increases from 0 to 1. For this to work well, the two clips must be looping animations with synchronized timelines so that the positions of legs and arms match roughly between the two clips.
+A smooth transition during cross-fading involves playing both clips A and B simultaneously as the blend percentage $b$ increases from 0 to 1. For this to work well, the two clips must be looping animations with synchronized timelines so that the positions of legs and arms match roughly between the two clips.
 ```java
 public class SmoothTransition {
     private double start;
@@ -1403,19 +1389,14 @@ x??
 ---
 
 #### Smooth Transition Using Bézier Curves
-Smooth transitions between clips can be achieved by varying the blend factor \( b \) non-linearly. This example discusses using a cubic function, specifically a one-dimensional Bézier curve, to control the transition smoothly.
+Smooth transitions between clips can be achieved by varying the blend factor $b$ non-linearly. This example discusses using a cubic function, specifically a one-dimensional Bézier curve, to control the transition smoothly.
 
 :p How does a Bézier ease-in/ease-out curve work for smooth animation blending?
 ??x
-A Bézier ease-in/ease-out curve varies the blend factor \( b \) according to a non-linear function. Specifically, it uses a cubic polynomial that is defined between the start time \( t_{start} \) and the end time \( t_{end} \). The formula for this curve is given by:
+A Bézier ease-in/ease-out curve varies the blend factor $b $ according to a non-linear function. Specifically, it uses a cubic polynomial that is defined between the start time$t_{start}$ and the end time $t_{end}$. The formula for this curve is given by:
 
-\[ b(t) = (v^3)b_{start} + 3(v^2u)T_{start} + 3(vu^2)T_{end} + u^3b_{end} \]
-
-where:
-- \( v = \frac{1}{u} \)
-- \( u = \frac{t - t_{start}}{t_{end} - t_{start}} \)
-
-The parameters \( T_{start} \) and \( T_{end} \) are taken to be equal to the corresponding blend factors \( b_{start} \) and \( b_{end} \), respectively. This ensures that the curve starts and ends smoothly.
+$$b(t) = (v^3)b_{start} + 3(v^2u)T_{start} + 3(vu^2)T_{end} + u^3b_{end}$$where:
+- $v = \frac{1}{u}$-$ u = \frac{t - t_{start}}{t_{end} - t_{start}}$The parameters $ T_{start}$and $ T_{end}$are taken to be equal to the corresponding blend factors $ b_{start}$and $ b_{end}$, respectively. This ensures that the curve starts and ends smoothly.
 
 In pseudocode, this can be implemented as follows:
 
@@ -1429,7 +1410,7 @@ public double easeInOutBézier(double t, double u, double bStart, double bEnd) {
 }
 ```
 
-This function calculates the blend factor \( b \) at any time \( t \) within the transition interval.
+This function calculates the blend factor $b $ at any time$t$ within the transition interval.
 
 x??
 
@@ -1442,7 +1423,7 @@ Ease-in curves are used for clips that start from a stationary state and ease in
 ??x
 An ease-in curve is applied to a new clip that is being blended in. It starts with a low blend factor at the beginning of the transition and gradually increases the blend factor as time progresses, creating a smooth start to the motion. This mimics natural human movement where an action often starts gently and builds up momentum.
 
-For example, if you are blending from an idle pose (low \( b \)) into a walking pose (higher \( b \)), an ease-in curve would make the transition smoother by starting with a low blend factor at the start of the transition interval.
+For example, if you are blending from an idle pose (low $b $) into a walking pose (higher $ b$), an ease-in curve would make the transition smoother by starting with a low blend factor at the start of the transition interval.
 
 x??
 
@@ -1455,7 +1436,7 @@ Ease-out curves are used for clips that are being blended out, meaning they star
 ??x
 An ease-out curve is applied to a currently running clip that is being blended out. It starts with a high blend factor at the beginning of the transition interval, representing full motion, and gradually decreases it towards zero as time progresses. This mimics natural human movement where actions often have a gradual reduction in intensity before coming to a stop.
 
-For example, if you are blending from a walking pose (high \( b \)) into an idle pose (low \( b \)), an ease-out curve would make the transition smoother by starting with a high blend factor at the start of the transition interval and reducing it over time.
+For example, if you are blending from a walking pose (high $b $) into an idle pose (low $ b$), an ease-out curve would make the transition smoother by starting with a high blend factor at the start of the transition interval and reducing it over time.
 
 x??
 
@@ -1499,11 +1480,11 @@ Background context: The targeted movement system involves creating separate loop
 
 If the character's facing direction is fixed at 0 degrees (forward), the desired movement direction can be determined on the semicircle. Two adjacent clips are selected, and their blending is performed using linear interpolation (LERP).
 
-Relevant formulas: Blending percentage \( b \) is determined based on how close the angle of movement is to the angles of two adjacent clips.
+Relevant formulas: Blending percentage $b$ is determined based on how close the angle of movement is to the angles of two adjacent clips.
 
 :p How does targeted movement for forward motion work?
 ??x
-Blending between directional locomotion clips involves fixing the character's facing direction at 0 degrees. For a given desired movement direction, the system selects the two nearest clips (e.g., one for moving forward and another for slightly turning left or right) and blends them using LERP-based blending. The blend percentage \( b \) is calculated based on how close the desired angle of movement is to the angles of these adjacent clips.
+Blending between directional locomotion clips involves fixing the character's facing direction at 0 degrees. For a given desired movement direction, the system selects the two nearest clips (e.g., one for moving forward and another for slightly turning left or right) and blends them using LERP-based blending. The blend percentage $b$ is calculated based on how close the desired angle of movement is to the angles of these adjacent clips.
 
 For example:
 - If you want to move 45 degrees to the right, the system would blend forward motion with right strafe.
@@ -1589,18 +1570,17 @@ x??
 ---
 
 #### Generalized One-Dimensional LERP Blending
-Background context: One-dimensional Linear Interpolation (LERP) blending can be extended to handle more than two animation clips. This technique involves defining a blend parameter \( b \) that lies within any desired linear range, allowing for an arbitrary number of clips positioned at different points along this range.
+Background context: One-dimensional Linear Interpolation (LERP) blending can be extended to handle more than two animation clips. This technique involves defining a blend parameter $b$ that lies within any desired linear range, allowing for an arbitrary number of clips positioned at different points along this range.
 
 The key formula is given by:
-\[ b(t) = \frac{b - b_1}{b_2 - b_1} \]
+$$b(t) = \frac{b - b_1}{b_2 - b_1}$$
 
-This equation determines the blend percentage between two adjacent clips when \( b \) lies within the range defined by \( b_1 \) and \( b_2 \).
+This equation determines the blend percentage between two adjacent clips when $b $ lies within the range defined by$b_1 $ and$b_2$.
 
 :p What does the generalized one-dimensional LERP blending technique involve?
 ??x
-The generalized one-dimensional LERP blending technique involves defining a new blend parameter \( b \) that can lie in any linear range (e.g., from -1 to 1, or from 0 to 1). This allows for an arbitrary number of animation clips positioned at various points along this range. For any given value of \( b \), the two adjacent clips are blended together using a blend percentage determined by the formula:
-\[ b(t) = \frac{b - b_1}{b_2 - b_1} \]
-where \( b_1 \) and \( b_2 \) are the positions of the two adjacent clips.
+The generalized one-dimensional LERP blending technique involves defining a new blend parameter $b $ that can lie in any linear range (e.g., from -1 to 1, or from 0 to 1). This allows for an arbitrary number of animation clips positioned at various points along this range. For any given value of$b$, the two adjacent clips are blended together using a blend percentage determined by the formula:
+$$b(t) = \frac{b - b_1}{b_2 - b_1}$$where $ b_1 $ and $ b_2$ are the positions of the two adjacent clips.
 
 This technique is particularly useful for handling more complex animation blends, such as targeted movement where angles can be used to define the blend parameter.
 x??
@@ -1608,38 +1588,36 @@ x??
 ---
 
 #### Targeted Movement Using One-Dimensional LERP Blending
-Background context: Targeted movement is a special case of one-dimensional LERP blending. In this scenario, circular directional clips are straightened out and positioned on a linear range using the angle \( \theta \) as the blend parameter.
+Background context: Targeted movement is a special case of one-dimensional LERP blending. In this scenario, circular directional clips are straightened out and positioned on a linear range using the angle $\theta$ as the blend parameter.
 
 The relevant formula for determining the blend percentage in such a setup is:
-\[ b(t) = \frac{b - b_1}{b_2 - b_1} \]
-where \( b_1 \) and \( b_2 \) are the angular positions of the clips on the linear range.
+$$b(t) = \frac{b - b_1}{b_2 - b_1}$$where $ b_1 $ and $ b_2$ are the angular positions of the clips on the linear range.
 
 :p How does targeted movement utilize one-dimensional LERP blending?
 ??x
-Targeted movement utilizes one-dimensional LERP blending by treating circular directional clips as lying along a straight line. The angle \( \theta \), which represents the direction, is used as the blend parameter. This allows for smooth transitions between different directions of motion.
+Targeted movement utilizes one-dimensional LERP blending by treating circular directional clips as lying along a straight line. The angle $\theta$, which represents the direction, is used as the blend parameter. This allows for smooth transitions between different directions of motion.
 
 The formula to determine the blend percentage between two adjacent clips is:
-\[ b(t) = \frac{b - b_1}{b_2 - b_1} \]
-where \( b_1 \) and \( b_2 \) are the angular positions of the clips on the linear range. This approach ensures that as the angle changes, the animation smoothly transitions between the specified directions.
+$$b(t) = \frac{b - b_1}{b_2 - b_1}$$where $ b_1 $ and $ b_2$ are the angular positions of the clips on the linear range. This approach ensures that as the angle changes, the animation smoothly transitions between the specified directions.
 x??
 
 ---
 
 #### Simple Two-Dimensional LERP Blending
-Background context: For scenarios where multiple aspects of character motion need to be blended simultaneously (e.g., aiming a weapon vertically and horizontally), one-dimensional LERP blending can be extended to two dimensions. This involves positioning clips at the corners of a square region and using blend vectors for both horizontal (\( b_x \)) and vertical (\( b_y \)) factors.
+Background context: For scenarios where multiple aspects of character motion need to be blended simultaneously (e.g., aiming a weapon vertically and horizontally), one-dimensional LERP blending can be extended to two dimensions. This involves positioning clips at the corners of a square region and using blend vectors for both horizontal ($b_x $) and vertical ($ b_y$) factors.
 
 The relevant formula for finding intermediate poses is:
-\[ b(t) = [b_x, b_y] \]
+$$b(t) = [b_x, b_y]$$
 
 This allows us to perform two one-dimensional LERP blends: first horizontally and then vertically, resulting in a final blended pose.
 
 :p How does simple two-dimensional LERP blending work?
 ??x
-Simple two-dimensional LERP blending works by positioning four clips at the corners of a square region. The blend factor \( b \) becomes a vector \( [b_x, b_y] \), where \( b_x \) and \( b_y \) are used to perform one-dimensional LERP blends.
+Simple two-dimensional LERP blending works by positioning four clips at the corners of a square region. The blend factor $b $ becomes a vector$[b_x, b_y]$, where $ b_x$and $ b_y$ are used to perform one-dimensional LERP blends.
 
 To find the final blended pose:
-1. Perform two one-dimensional LERP blends using the horizontal (\( b_x \)) blend factor.
-2. Use the vertical (\( b_y \)) blend factor to interpolate between the intermediate poses obtained from step 1.
+1. Perform two one-dimensional LERP blends using the horizontal ($b_x$) blend factor.
+2. Use the vertical ($b_y$) blend factor to interpolate between the intermediate poses obtained from step 1.
 
 This approach ensures smooth blending of multiple aspects of character motion simultaneously.
 
@@ -1658,17 +1636,17 @@ x??
 ---
 
 #### Triangular Two-Dimensional LERP Blending
-Background context: To handle an arbitrary number of clips positioned at different locations in a 2D blend space, triangular two-dimensional LERP blending can be used. This involves forming a triangle with the blend coordinates \( b_i = [b_{ix}, b_{iy}] \) and finding the interpolated pose for an arbitrary point within this triangle.
+Background context: To handle an arbitrary number of clips positioned at different locations in a 2D blend space, triangular two-dimensional LERP blending can be used. This involves forming a triangle with the blend coordinates $b_i = [b_{ix}, b_{iy}]$ and finding the interpolated pose for an arbitrary point within this triangle.
 
-The key idea is to perform linear interpolation (LERP) between the three clips corresponding to the vertices of the triangle, using the weighted average of their poses based on the position of the target blend coordinate \( b \).
+The key idea is to perform linear interpolation (LERP) between the three clips corresponding to the vertices of the triangle, using the weighted average of their poses based on the position of the target blend coordinate $b$.
 
 :p How does triangular two-dimensional LERP blending work?
 ??x
-Triangular two-dimensional LERP blending works by forming a triangle with the blend coordinates \( b_i = [b_{ix}, b_{iy}] \) for three clips. The goal is to find the interpolated pose of the skeleton corresponding to an arbitrary point \( b \) within this triangle.
+Triangular two-dimensional LERP blending works by forming a triangle with the blend coordinates $b_i = [b_{ix}, b_{iy}]$ for three clips. The goal is to find the interpolated pose of the skeleton corresponding to an arbitrary point $b$ within this triangle.
 
-The process involves performing linear interpolation between the poses defined by each clip, weighted by their respective influence over the target blend coordinate \( b \).
+The process involves performing linear interpolation between the poses defined by each clip, weighted by their respective influence over the target blend coordinate $b$.
 
-For a given point \( b = [bx, by] \) and three clips with positions \( b_1, b_2, b_3 \):
+For a given point $b = [bx, by]$ and three clips with positions $b_1, b_2, b_3$:
 1. Calculate the weights for each vertex using barycentric coordinates.
 2. Use these weights to interpolate between the poses defined by the three clips.
 
@@ -1692,15 +1670,13 @@ Background context: This concept explains how to blend three animation clips usi
 
 :p How can we calculate a LERP blend between three animation clips?
 ??x
-To calculate the LERP blend between three animation clips, you use the barycentric coordinates of the blend vector relative to the triangle formed by the three clips. The weights (a, b, g) are found such that they satisfy the equation \(b = ab_0 + bb_1 + gb_2\) and sum up to 1.
+To calculate the LERP blend between three animation clips, you use the barycentric coordinates of the blend vector relative to the triangle formed by the three clips. The weights (a, b, g) are found such that they satisfy the equation $b = ab_0 + bb_1 + gb_2$ and sum up to 1.
 
 The formula for the final pose is:
-\[
-(P_{LERP})_j = a(P_0)_j + b(P_1)_j + g(P_2)_j
-\]
+$$(P_{LERP})_j = a(P_0)_j + b(P_1)_j + g(P_2)_j$$
 
 Where:
-- \( (P_0)_j, (P_1)_j, (P_2)_j \) are the poses of the respective clips for joint j.
+- $(P_0)_j, (P_1)_j, (P_2)_j$ are the poses of the respective clips for joint j.
 - a, b, and g are the blend weights.
 
 C/Java code to find the weights could look like this:
@@ -1743,7 +1719,7 @@ Delaunay triangulation helps by dividing the space containing multiple animation
 
 The basic idea is to:
 1. Determine the Delaunay triangulation given the positions of the various animation clips.
-2. Find the triangle that encloses the desired blend point \( b \).
+2. Find the triangle that encloses the desired blend point $b$.
 3. Perform a three-clip LERP blend using the barycentric coordinates derived from the chosen triangle.
 
 C/Java code to illustrate this concept:
@@ -1834,7 +1810,7 @@ x??
 
 #### Partial-Skeleton Blending
 
-Background context: In animation systems, partial-skeleton blending extends regular LERP (Linear Interpolation) blending by allowing different blend percentages for each joint. This technique is described using equations (12.5) and (12.6), where a single blend percentage \( b \) was used for every joint in the skeleton during regular LERP blending.
+Background context: In animation systems, partial-skeleton blending extends regular LERP (Linear Interpolation) blending by allowing different blend percentages for each joint. This technique is described using equations (12.5) and (12.6), where a single blend percentage $b$ was used for every joint in the skeleton during regular LERP blending.
 
 :p What is partial-skeleton blending, and how does it differ from regular LERP blending?
 ??x
@@ -1845,11 +1821,11 @@ x??
 
 #### Blend Mask
 
-Background context: A blend mask is created with separate blend percentages \( b_j \) for each joint, often used in partial-skeleton blending. The set of all blend percentages for the entire skeleton is sometimes called a "blend mask" because it can be used to "mask out" certain joints by setting their blend percentages to zero.
+Background context: A blend mask is created with separate blend percentages $b_j$ for each joint, often used in partial-skeleton blending. The set of all blend percentages for the entire skeleton is sometimes called a "blend mask" because it can be used to "mask out" certain joints by setting their blend percentages to zero.
 
 :p What is a blend mask, and how does it work?
 ??x
-A blend mask is a set of separate blend percentages \( b_j \) defined for each joint in the skeleton. By setting these percentages appropriately, one can "mask out" specific joints so that they are not blended into the final animation.
+A blend mask is a set of separate blend percentages $b_j$ defined for each joint in the skeleton. By setting these percentages appropriately, one can "mask out" specific joints so that they are not blended into the final animation.
 x??
 
 ---
@@ -1860,7 +1836,7 @@ Background context: To create a character that appears to wave while walking or 
 
 :p How can you use partial-skeleton blending to create a character who waves while walking or running?
 ??x
-You would define three full-body animations: Walk, Run, and Stand. Additionally, a waving animation (Wave) is created. A blend mask is defined with \( b_j = 1 \) for the right arm joints and \( b_j = 0 \) elsewhere. When blending Walk or Run with Wave using this blend mask, it results in the character appearing to wave while walking or running.
+You would define three full-body animations: Walk, Run, and Stand. Additionally, a waving animation (Wave) is created. A blend mask is defined with $b_j = 1 $ for the right arm joints and$b_j = 0$ elsewhere. When blending Walk or Run with Wave using this blend mask, it results in the character appearing to wave while walking or running.
 x??
 
 ---
@@ -1929,7 +1905,7 @@ Background context: A difference clip represents the difference between two regu
 
 :p What is a difference clip, and how does it work?
 ??x
-A difference clip \( D \) is created by subtracting one animation clip from another (\( D = S - R \)). When this difference clip \( D \) is added to its original reference clip \( R \), you get the source clip \( S \). This technique allows for creating complex animations through simple additions.
+A difference clip $D $ is created by subtracting one animation clip from another ($D = S - R $). When this difference clip$ D $ is added to its original reference clip $ R $, you get the source clip$ S$. This technique allows for creating complex animations through simple additions.
 x??
 
 ---
@@ -1939,7 +1915,7 @@ Background context: The text explains that a difference animation is created by 
 
 :p What is a difference animation and how is it defined?
 ??x
-A difference animation D is the result of subtracting a reference pose Rj from a source pose Sj for any joint j in the skeleton, which mathematically means \(D_j = S_jR^{-1}_j\).
+A difference animation D is the result of subtracting a reference pose Rj from a source pose Sj for any joint j in the skeleton, which mathematically means $D_j = S_jR^{-1}_j$.
 
 This operation yields a transformation that captures only the changes needed to transform one pose into another. It's useful for creating specific effects or blending animations.
 
@@ -1959,11 +1935,10 @@ x??
 #### Adding a Difference Pose to a Target Pose
 Background context: Once a difference pose is calculated, it can be added to other poses (target clips) to create new animations. This process involves concatenating the difference transform and the target transform.
 
-:p How do you add a difference pose \(D_j\) to a target pose \(T_j\)?
+:p How do you add a difference pose $D_j $ to a target pose$T_j$?
 ??x
-To add a difference pose \(D_j\) to a target pose \(T_j\), we concatenate the difference transform with the target transform. The new additive pose \(A_j\) is given by:
-
-\[ A_j = D_j T_j = (S_j R^{-1}_j) T_j \]
+To add a difference pose $D_j $ to a target pose$T_j $, we concatenate the difference transform with the target transform. The new additive pose$ A_j$is given by:
+$$A_j = D_j T_j = (S_j R^{-1}_j) T_j$$
 
 This results in a new combined transformation that reflects both the original target and the additional changes defined by the difference pose.
 
@@ -1987,13 +1962,11 @@ Background context: Since game animations are not sampled on integer frame indic
 ??x
 Temporal interpolation for difference clips works in the same way as for regular animation clips. We use the linear interpolation formulas from Section 12.4.1.1:
 
-For any time \( t \) between \( t_1 \) and \( t_2 \):
+For any time $t $ between$t_1 $ and$t_2$:
 
-\[ D(t) = (1 - \alpha)D_1 + \alpha D_2 \]
-where
-\[ \alpha = \frac{t - t_1}{t_2 - t_1} \]
+$$D(t) = (1 - \alpha)D_1 + \alpha D_2$$where$$\alpha = \frac{t - t_1}{t_2 - t_1}$$
 
-This ensures that we smoothly transition between the poses at times \( t_1 \) and \( t_2 \).
+This ensures that we smoothly transition between the poses at times $t_1 $ and$t_2$.
 
 ```java
 public class PoseTemporalInterpolation {
@@ -2016,11 +1989,11 @@ Background context: The text explains that adding a difference animation back on
 ??x
 To verify this, we use the equation:
 
-\[ A_j = D_j R_j \]
+$$A_j = D_j R_j$$
 
-Substituting \(D_j = S_j R^{-1}_j\):
+Substituting $D_j = S_j R^{-1}_j$:
 
-\[ A_j = (S_j R^{-1}_j) R_j = S_j \]
+$$A_j = (S_j R^{-1}_j) R_j = S_j$$
 
 This confirms that adding a difference pose back to the reference animation results in the original source animation, as expected.
 

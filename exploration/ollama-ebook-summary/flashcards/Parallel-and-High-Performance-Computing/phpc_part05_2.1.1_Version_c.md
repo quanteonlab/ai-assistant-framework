@@ -525,13 +525,13 @@ For example, to compare two HDF5 files:
 ```bash
 h5diff -t 1e-6 file1.h5 file2.h5 > diff_report.txt
 ```
-This command compares `file1.h5` and `file2.h5`, considering numerical differences greater than the tolerance of \(1 \times 10^{-6}\) as significant.
+This command compares `file1.h5` and `file2.h5`, considering numerical differences greater than the tolerance of $1 \times 10^{-6}$ as significant.
 
 Similarly, NetCDF files can be compared using a similar approach:
 ```bash
 ncdiff -t 1e-6 file1.nc file2.nc > diff_report.txt
 ```
-This command compares `file1.nc` and `file2.nc`, considering numerical differences greater than the tolerance of \(1 \times 10^{-6}\) as significant.
+This command compares `file1.nc` and `file2.nc`, considering numerical differences greater than the tolerance of $1 \times 10^{-6}$ as significant.
 ??x
 Using these tools, you can ensure that small numerical variations do not indicate actual errors. This is particularly useful in parallel computing where minor discrepancies might arise due to different compiler optimizations or hardware configurations.
 
@@ -600,8 +600,7 @@ You can invoke tests using commands like `make test` or simply `ctest`. Addition
 ??x
 You can run individual tests by specifying a regular expression with the `-R` flag when invoking `ctest`. This command allows running only the tests that match the specified pattern. For example, to run all tests related to "mpi", use:
 
-```bash
-$ ctest -R mpi
+```bash$ ctest -R mpi
 ```
 x??
 
@@ -666,8 +665,7 @@ Additional tools include:
 
 ```bash
 # Installation commands for dependencies (example)
-$ brew install openmpi cmake gcc # On macOS with Homebrew
-$ sudo apt-get install libopenmpi-dev cmake g++ # On Ubuntu with Synaptic
+$brew install openmpi cmake gcc # On macOS with Homebrew$ sudo apt-get install libopenmpi-dev cmake g++ # On Ubuntu with Synaptic
 ```
 x??
 
@@ -705,7 +703,7 @@ This script runs multiple instances of a parallel and serial application, compar
 
 :p What does `ndiff --relative-error` do in this context?
 ??x
-The command `ndiff --relative-error 1.0e-4 run1.out run2.out` is used to compare two files (`run1.out` and `run2.out`) with a relative error tolerance of \(1 \times 10^{-4}\). It returns an exit status code indicating if the difference between the two files falls within the specified tolerance.
+The command `ndiff --relative-error 1.0e-4 run1.out run2.out` is used to compare two files (`run1.out` and `run2.out`) with a relative error tolerance of $1 \times 10^{-4}$. It returns an exit status code indicating if the difference between the two files falls within the specified tolerance.
 x??
 
 ---

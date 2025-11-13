@@ -84,13 +84,11 @@ Background context: The passage discusses how agents, when performing tasks invo
 The increase in the number of steps reduces the overall accuracy exponentially. If each step has a 95% success rate, over 10 steps, the cumulative accuracy drops to approximately 60%, and over 100 steps, it decreases to only about 0.6%.
 
 This can be calculated using the formula:
-\[ \text{Overall Accuracy} = (\text{Accuracy per Step})^{\text{Number of Steps}} \]
+$$\text{Overall Accuracy} = (\text{Accuracy per Step})^{\text{Number of Steps}}$$
 
 For example, with a step accuracy of 95% (or 0.95):
-\[ \text{Overall Accuracy after 10 steps} = 0.95^{10} \approx 0.60 \]
-\[ \text{Overall Accuracy after 100 steps} = 0.95^{100} \approx 0.006 \]
-
-x??
+$$\text{Overall Accuracy after 10 steps} = 0.95^{10} \approx 0.60$$
+$$\text{Overall Accuracy after 100 steps} = 0.95^{100} \approx 0.006$$x??
 
 ---
 
@@ -229,7 +227,7 @@ Background context: A specific example given is scheduling a two-week trip from 
 
 :p Can you provide an example of a complex task for a foundation model agent?
 ??x
-An example of a complex task is scheduling a two-week trip from San Francisco to India with a budget of $5,000. The goal is the two-week trip, and the constraint is the budget.
+An example of a complex task is scheduling a two-week trip from San Francisco to India with a budget of$5,000. The goal is the two-week trip, and the constraint is the budget.
 x??
 
 ---

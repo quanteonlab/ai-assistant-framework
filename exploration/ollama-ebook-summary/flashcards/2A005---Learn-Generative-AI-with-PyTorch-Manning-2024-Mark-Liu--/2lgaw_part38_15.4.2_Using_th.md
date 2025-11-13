@@ -8,7 +8,7 @@
 Background context: The denoising U-Net model is a type of diffusion model used to generate images by progressively removing noise. It involves training on a dataset and using a trained model to reverse this process, starting from random noise and moving towards clean images through multiple steps.
 :p What is the denoising U-Net model used for?
 ??x
-The denoising U-Net model is used to generate images by reversing the diffusion process. Starting with random noise at time \(t = 1000\), the model iteratively removes noise until a clean image is obtained at time \(t = 0\).
+The denoising U-Net model is used to generate images by reversing the diffusion process. Starting with random noise at time $t = 1000 $, the model iteratively removes noise until a clean image is obtained at time $ t = 0$.
 x??
 
 ---
@@ -16,7 +16,7 @@ x??
 Background context: The `generate` method in the `DDIMScheduler` class, defined within the local module `ch15util.py`, is responsible for generating images by progressively denoising random noise. This process involves multiple steps and uses a trained U-Net model to predict and remove noise at each step.
 :p What does the `generate` method do?
 ??x
-The `generate` method creates images by gradually removing noise from an initial noisy image using a trained U-Net model over multiple inference steps. It starts with random noise (at \(t = 1000\)) and iteratively denoises it to produce cleaner images, eventually reaching \(t = 0\), which represents a clean image.
+The `generate` method creates images by gradually removing noise from an initial noisy image using a trained U-Net model over multiple inference steps. It starts with random noise (at $t = 1000 $) and iteratively denoises it to produce cleaner images, eventually reaching $ t = 0$, which represents a clean image.
 ```python
 @torch.no_grad()
 def generate(self,model,device,batch_size=1,generator=None,
@@ -38,10 +38,10 @@ x??
 
 ---
 #### Generating Clean Images with the Trained Model
-Background context: To generate clean images using a trained denoising U-Net model, we start with random noise at \(t = 1000\) and iteratively denoise it over 50 steps to reach a time of \(t = 0\), where a clean image is expected. This process is implemented through the `generate` method.
+Background context: To generate clean images using a trained denoising U-Net model, we start with random noise at $t = 1000 $ and iteratively denoise it over 50 steps to reach a time of$t = 0$, where a clean image is expected. This process is implemented through the `generate` method.
 :p How do you generate clean images using the trained model?
 ??x
-To generate clean images, we use random noise at \(t = 1000\) as the starting point and iteratively denoise it over 50 steps to reach a time of \(t = 0\). This is done by calling the `generate` method with parameters that specify the model, device, number of inference steps, and other settings.
+To generate clean images, we use random noise at $t = 1000 $ as the starting point and iteratively denoise it over 50 steps to reach a time of$t = 0$. This is done by calling the `generate` method with parameters that specify the model, device, number of inference steps, and other settings.
 ```python
 sd=torch.load('files/diffusion.pth',map_location=device)
 model.load_state_dict(sd)

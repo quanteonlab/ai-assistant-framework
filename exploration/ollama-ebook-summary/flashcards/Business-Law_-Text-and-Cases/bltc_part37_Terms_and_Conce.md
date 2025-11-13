@@ -75,7 +75,7 @@ The case law from Vinueza v. Scotto, Gallwitz v. Novel, U.S. Bank, N.A. v. Gaita
 A promissory note must be payable on demand or at a definite time to be considered negotiable. If the note does not specify a repayment date, it may be deemed non-negotiable and less enforceable in court.
 
 For example, in Gallwitz v. Novel:
-- The note read: "Glen Gallwitz 1-8-2002 loaned me $5,000 at 6 percent interest a total of $10,000.00."
+- The note read: "Glen Gallwitz 1-8-2002 loaned me $5,000 at 6 percent interest a total of$10,000.00."
 - Since it did not state a time for repayment, the court likely would consider this non-negotiable.
 
 ??x

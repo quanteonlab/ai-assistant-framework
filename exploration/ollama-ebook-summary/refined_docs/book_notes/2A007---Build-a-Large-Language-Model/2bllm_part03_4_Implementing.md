@@ -170,12 +170,12 @@ Layer normalization is a technique that normalizes the inputs to each layer by s
 
 The formula for layer normalization is:
 
-\[ \text{layer\_norm}(x) = \frac{x - \mu}{\sqrt{\sigma^2 + \epsilon}} \cdot \gamma + \beta \]
+$$\text{layer\_norm}(x) = \frac{x - \mu}{\sqrt{\sigma^2 + \epsilon}} \cdot \gamma + \beta$$
 
 Where:
-- \( x \) is the input tensor.
-- \( \mu \) and \( \sigma^2 \) are mean and variance over the hidden units, respectively.
-- \( \gamma \) and \( \beta \) are learnable parameters that adjust the normalized output.
+- $x$ is the input tensor.
+- $\mu $ and$\sigma^2$ are mean and variance over the hidden units, respectively.
+- $\gamma $ and$\beta$ are learnable parameters that adjust the normalized output.
 
 :p How does layer normalization stabilize training in deep neural networks?
 
@@ -1484,13 +1484,12 @@ These flashcards cover key concepts in calculating text generation loss, providi
 
 #### Softmax Function and Probability Conversion
 
-Background context explaining how logits are converted to probabilities using the softmax function. The formula for softmax is: \[ \text{softmax}(z_i) = \frac{\exp(z_i)}{\sum_{j} \exp(z_j)} \]
-
-:p What does the softmax function do, and what is its formula?
+Background context explaining how logits are converted to probabilities using the softmax function. The formula for softmax is:
+$$\text{softmax}(z_i) = \frac{\exp(z_i)}{\sum_{j} \exp(z_j)}$$:p What does the softmax function do, and what is its formula?
 ??x
-The softmax function converts logits into probabilities by normalizing them. For a given set of logits \( z \), each element in the output vector is computed as:
+The softmax function converts logits into probabilities by normalizing them. For a given set of logits $z$, each element in the output vector is computed as:
 
-\[ p_i = \frac{\exp(z_i)}{\sum_{j} \exp(z_j)} \]
+$$p_i = \frac{\exp(z_i)}{\sum_{j} \exp(z_j)}$$
 
 This ensures that all elements sum up to 1 and are between 0 and 1, making them valid probabilities.
 
@@ -1526,15 +1525,13 @@ x??
 
 #### Token IDs Generation Using Argmax
 
-Background context explaining how argmax is used to convert probability scores into token IDs. The formula for argmax is: \[ \text{argmax}(p_i) = \underset{i}{\operatorname{arg\,max}}(p_i) \]
-
-:p How does the argmax function help in generating token IDs from probability scores?
+Background context explaining how argmax is used to convert probability scores into token IDs. The formula for argmax is:
+$$\text{argmax}(p_i) = \underset{i}{\operatorname{arg\,max}}(p_i)$$:p How does the argmax function help in generating token IDs from probability scores?
 ??x
 The argmax function selects the index of the maximum value in a probability vector. This is used to convert the highest-probability score back into a token ID.
 
 For example, given probability scores for three tokens as follows:
-
-\[ \text{probas} = [0.1, 0.7, 0.2] \]
+$$\text{probas} = [0.1, 0.7, 0.2]$$
 
 Applying argmax would result in selecting the index corresponding to the second element (since it has the highest score).
 
@@ -1665,7 +1662,7 @@ Background context explaining how softmax probability is calculated for target t
 :p What are initial softmax probability scores for target tokens before training?
 
 ??x
-The initial softmax probability scores for the target tokens can be very low since the starting random values are around \( \frac{1}{50,257} \) (since there are 50,257 tokens in the vocabulary). For example, if we have two input texts and their respective target token IDs, the initial probabilities might look like this:
+The initial softmax probability scores for the target tokens can be very low since the starting random values are around $\frac{1}{50,257}$(since there are 50,257 tokens in the vocabulary). For example, if we have two input texts and their respective target token IDs, the initial probabilities might look like this:
 
 Text 1: tensor([7.4541e-05, 3.1061e-05, 1.1563e-05])
 Text 2: tensor([3.9836e-05, 1.6783e-05, 4.7559e-06])
@@ -1744,8 +1741,7 @@ Background context explaining what cross entropy loss is and how it is calculate
 Cross entropy loss represents a measure of how far off the model's predicted probabilities are from the actual target values. In the context of training an LLM, this loss needs to be minimized to ensure that the model generates high probability predictions for the correct tokens.
 
 The formula for cross-entropy (CE) loss is:
-\[ CE = -\sum_{i} y_i \log(p_i) \]
-where \( y_i \) are the true labels and \( p_i \) are the predicted probabilities.
+$$CE = -\sum_{i} y_i \log(p_i)$$where $ y_i $ are the true labels and $ p_i$ are the predicted probabilities.
 
 In practice, we typically average this over multiple examples. The negative log likelihood score obtained from backpropagation can be directly interpreted as cross-entropy loss.
 
@@ -1767,9 +1763,8 @@ x??
 
 #### Cross Entropy Loss Overview
 Background context: The cross entropy loss is a popular measure used to evaluate the performance of classification models, particularly in tasks like language modeling where we predict token sequences. It quantifies the difference between two probability distributions—the true distribution of labels (target tokens) and the predicted distribution from a model.
-The formula for cross entropy loss \( L \) when considering a single sample is:
-\[ L = -\sum_{i} p_i \log q_i \]
-where \( p_i \) are the target probabilities and \( q_i \) are the predicted probabilities.
+The formula for cross entropy loss $L$ when considering a single sample is:
+$$L = -\sum_{i} p_i \log q_i$$where $ p_i $ are the target probabilities and $ q_i$ are the predicted probabilities.
 
 :p What is the role of cross entropy loss in machine learning models?
 ??x
@@ -1779,7 +1774,7 @@ x??
 ---
 
 #### Flattening Logits and Targets
-Background context: Before applying cross entropy loss in PyTorch, we need to ensure the logits and targets tensors are compatible. The logits tensor has a shape \( [batch\_size, sequence\_length, vocabulary\_size] \), while the targets have a shape \( [batch\_size, sequence\_length] \). We flatten these tensors to combine them over the batch dimension.
+Background context: Before applying cross entropy loss in PyTorch, we need to ensure the logits and targets tensors are compatible. The logits tensor has a shape $[batch\_size, sequence\_length, vocabulary\_size]$, while the targets have a shape $[batch\_size, sequence\_length]$. We flatten these tensors to combine them over the batch dimension.
 
 :p How do we prepare the logits and targets for cross entropy loss in PyTorch?
 ??x
@@ -1791,8 +1786,7 @@ targets_flat = targets.flatten()
 This flattens the first two dimensions of `logits` (batch size and sequence length) into a single dimension. The `targets` tensor is flattened along its only dimension.
 
 The resulting shapes are:
-- Flattened logits: \( [batch\_size \times sequence\_length, vocabulary\_size] \)
-- Flattened targets: \( [batch\_size \times sequence\_length] \)
+- Flattened logits: $[batch\_size \times sequence\_length, vocabulary\_size]$- Flattened targets:$[batch\_size \times sequence\_length]$
 
 x??
 
@@ -1818,8 +1812,7 @@ x??
 Background context: Perplexity is another metric used alongside cross entropy to evaluate model performance. It measures the effective vocabulary size that the model is uncertain about at each step and provides an interpretable measure of prediction uncertainty.
 
 Formula for perplexity:
-\[ \text{Perplexity} = 2^{-\frac{\sum_{i} p_i \log q_i}{n}} \]
-where \( n \) is the total number of tokens, \( p_i \) are target probabilities, and \( q_i \) are predicted probabilities.
+$$\text{Perplexity} = 2^{-\frac{\sum_{i} p_i \log q_i}{n}}$$where $ n $is the total number of tokens,$ p_i $ are target probabilities, and $ q_i$ are predicted probabilities.
 
 :p How do we calculate perplexity from cross entropy loss?
 ??x
@@ -1838,21 +1831,19 @@ x??
 #### Loss Calculation for Training and Validation Sets
 Background context explaining the concept of loss calculation. This involves understanding cross-entropy, which is a common loss function used in training language models to measure the difference between predicted probabilities and actual outcomes.
 
-The formula for cross-entropy \( H \) can be expressed as:
-\[ H(p, q) = -\sum_{i=1}^{n} p_i \log(q_i) \]
-where \( p \) is the true probability distribution over tokens, and \( q \) is the predicted probability distribution.
+The formula for cross-entropy $H$ can be expressed as:
+$$H(p, q) = -\sum_{i=1}^{n} p_i \log(q_i)$$where $ p $ is the true probability distribution over tokens, and $ q$ is the predicted probability distribution.
 
 :p How do we calculate cross-entropy loss for the training and validation sets?
 ??x
 To calculate the cross-entropy loss, we use the formula mentioned above. Given a model's predictions and the ground truth labels (which represent the true probabilities), we compute the difference between them to measure how well the model is performing.
 
 For example, if our model predicts token probabilities for a sequence of tokens:
-\[ q = [0.1, 0.2, 0.7] \]
-and the actual token probability distribution is:
-\[ p = [0.3, 0.4, 0.3] \]
+$$q = [0.1, 0.2, 0.7]$$and the actual token probability distribution is:
+$$p = [0.3, 0.4, 0.3]$$
 
-The cross-entropy loss \( H \) would be calculated as follows:
-\[ H(p, q) = - (0.3 \log(0.1) + 0.4 \log(0.2) + 0.3 \log(0.7)) \]
+The cross-entropy loss $H$ would be calculated as follows:
+$$H(p, q) = - (0.3 \log(0.1) + 0.4 \log(0.2) + 0.3 \log(0.7))$$
 
 In practice, we use the `torch.nn.functional.cross_entropy` function in PyTorch to compute this loss efficiently.
 ```python
@@ -1914,10 +1905,8 @@ Training large language models such as Llama 2 involves substantial computationa
 - 184,320 GPU hours on expensive A100 GPUs.
 - Processing 2 trillion tokens.
 
-At the time of writing, running an 8xA100 cloud server on AWS costs around $30 per hour. Therefore, a rough estimate of the total training cost is:
-\[ \text{Total cost} = \frac{184,320 \text{ hours}}{8} \times \$30 = \$690,000 \]
-
-This high cost underscores the importance of efficient algorithms and hardware for large-scale model training.
+At the time of writing, running an 8xA100 cloud server on AWS costs around$30 per hour. Therefore, a rough estimate of the total training cost is:
+$$ \text{Total cost} = \frac{184,320 \text{ hours}}{8} \times \$30 = \$690,000 $$This high cost underscores the importance of efficient algorithms and hardware for large-scale model training.
 
 While this example uses a small dataset like "The Verdict" for simplicity, in practice, larger datasets are used. For instance, using more than 60,000 public domain books from Project Gutenberg could be used to train an LLM.
 x??
@@ -1932,7 +1921,7 @@ Background context explaining the importance of tokenization in preparing text d
 Tokenization is the process of converting raw text into a sequence of tokens, which are discrete units (e.g., words or subwords) that can be input into a model. This step is crucial because most machine learning models operate on numerical inputs rather than raw text.
 
 For example, consider the sentence "The cat sat on the mat." After tokenization with a tokenizer like `sentencepiece`, it might be transformed to:
-\[ ["<s>", "the", "cat", "sat", "on", "the", "mat", "</s>"] \]
+$$["<s>", "the", "cat", "sat", "on", "the", "mat", "</s>"]$$
 
 Here, `<s>` and `</s>` are special tokens indicating the start and end of sentences. This tokenized representation can then be fed into a model for training or inference.
 
@@ -2083,11 +2072,11 @@ x??
 ---
 
 #### Concept: Shape of Input and Target Data
-Background context on how the shapes of the input (\( x \)) and target (\( y \)) data are related, especially in text generation tasks.
+Background context on how the shapes of the input ($x $) and target ($ y$) data are related, especially in text generation tasks.
 :p What is the relationship between the shape of the input batch and the target batch in a text generation task?
 ??x
-In a text generation task, both the input batch \( (x) \) and the target batch \( (y) \) have the same shape because the targets are essentially the inputs shifted by one position. This means that each token in the input sequence corresponds to predicting the next token, making their shapes identical.
-For example, if an input batch has a shape of \((2, 10)\), where 2 is the batch size and 10 is the number of tokens per batch, then the target batch would also have the same shape \((2, 10)\).
+In a text generation task, both the input batch $(x)$ and the target batch $(y)$ have the same shape because the targets are essentially the inputs shifted by one position. This means that each token in the input sequence corresponds to predicting the next token, making their shapes identical.
+For example, if an input batch has a shape of $(2, 10)$, where 2 is the batch size and 10 is the number of tokens per batch, then the target batch would also have the same shape $(2, 10)$.
 x??
 
 ---
@@ -2495,16 +2484,13 @@ x??
 #### Temperature Scaling in Softmax Function
 Background context explaining the concept. The softmax function is used to convert a vector of arbitrary real values into a probability distribution. However, sometimes we want to control how "confident" or "diverse" this distribution should be, and that's where temperature scaling comes into play.
 
-The formula for applying temperature scaling to the logits \( \mathbf{z} = [z_1, z_2, ..., z_n] \) is:
-\[ \text{softmax}_{\text{T}}(\mathbf{z}) = \frac{\exp\left(\frac{z_i}{T}\right)}{\sum_{j=1}^{n} \exp\left(\frac{z_j}{T}\right)} \]
-where \( T > 0 \) is the temperature parameter.
+The formula for applying temperature scaling to the logits $\mathbf{z} = [z_1, z_2, ..., z_n]$ is:
+$$\text{softmax}_{\text{T}}(\mathbf{z}) = \frac{\exp\left(\frac{z_i}{T}\right)}{\sum_{j=1}^{n} \exp\left(\frac{z_j}{T}\right)}$$where $ T > 0$ is the temperature parameter.
 
-If \( T = 1 \), this reduces to the standard softmax function:
-\[ \text{softmax}_1(\mathbf{z}) = \frac{\exp(z_i)}{\sum_{j=1}^{n} \exp(z_j)} \]
-
-:p What is temperature scaling, and how does it affect the probability distribution?
+If $T = 1$, this reduces to the standard softmax function:
+$$\text{softmax}_1(\mathbf{z}) = \frac{\exp(z_i)}{\sum_{j=1}^{n} \exp(z_j)}$$:p What is temperature scaling, and how does it affect the probability distribution?
 ??x
-Temperature scaling is a technique used to control the "sharpness" of the softmax probabilities. It involves dividing the logits by a positive number \( T \) before applying the softmax function. When \( T > 1 \), the probabilities become more uniform; when \( T < 1 \), the distribution becomes more confident, with higher probability for the most likely token.
+Temperature scaling is a technique used to control the "sharpness" of the softmax probabilities. It involves dividing the logits by a positive number $T $ before applying the softmax function. When$T > 1 $, the probabilities become more uniform; when$ T < 1$, the distribution becomes more confident, with higher probability for the most likely token.
 x??
 
 ---

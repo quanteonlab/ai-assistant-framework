@@ -60,8 +60,7 @@ Background context explaining the connection between classical conditioning expe
 ??x
 The TD algorithm in reinforcement learning mirrors classical conditioning by predicting the reinforcing stimulus based on events within a trial. This is akin to how animals learn through association, where behaviors are reinforced when they predict rewards.
 In formal terms, the update rule for the Rescorla-Wagner model can be expressed as:
-\[ \Delta V(s) = \alpha (R + \gamma V(s') - V(s)) \]
-where \(V(s)\) is the value of state \(s\), \(\alpha\) is the learning rate, and \(\gamma\) is the discount factor.
+$$\Delta V(s) = \alpha (R + \gamma V(s') - V(s))$$where $ V(s)$is the value of state $ s$,$\alpha $ is the learning rate, and$\gamma$ is the discount factor.
 
 x??
 
@@ -128,9 +127,8 @@ Background context on eligibility traces, which track the influence of recent ev
 
 :p What role do eligibility traces play in reinforcement learning?
 ??x
-Eligibility traces help determine when past events should still affect the current value function update. They allow for more flexible and distributed updates, much like how secondary reinforcers provide immediate evaluative feedback in classical conditioning. For instance, an eligibility trace \(\delta_t\) can be updated as:
-\[ \delta_t = \gamma \lambda \delta_{t-1} + 1 \]
-where \(0 < \lambda \leq 1\) is the trace decay parameter.
+Eligibility traces help determine when past events should still affect the current value function update. They allow for more flexible and distributed updates, much like how secondary reinforcers provide immediate evaluative feedback in classical conditioning. For instance, an eligibility trace $\delta_t$ can be updated as:
+$$\delta_t = \gamma \lambda \delta_{t-1} + 1$$where $0 < \lambda \leq 1$ is the trace decay parameter.
 
 x??
 
@@ -680,7 +678,7 @@ x??
 #### Temporal-Difference (TD) Errors and Dopamine
 Background context: One of the most significant parallels between reinforcement learning (RL) and neuroscience is the role of dopamine, a chemical messenger in the brain. TD errors play a crucial role in both RL algorithms and how the nervous system processes rewards.
 
-Relevant formulas or data: In RL, the TD error is calculated as \(\delta = r + \gamma V(s') - V(s)\), where \(r\) is the reward received, \(\gamma\) is the discount factor, and \(V(s)\) and \(V(s')\) are the predicted values of states \(s\) and the next state \(s'\).
+Relevant formulas or data: In RL, the TD error is calculated as $\delta = r + \gamma V(s') - V(s)$, where $ r$is the reward received,$\gamma $ is the discount factor, and$V(s)$ and $V(s')$ are the predicted values of states $s$ and the next state $s'$.
 
 Explanation: Dopamine neurons in the brain seem to encode this TD error. When a prediction about a future reward (value function) does not match the actual reward received, a "prediction error" or "TD error" is generated.
 
@@ -696,9 +694,8 @@ x??
 #### Eligibility Traces
 Background context: The concept of eligibility traces is fundamental in reinforcement learning and relates closely to how synapses in the brain function.
 
-Relevant formulas or data: An eligibility trace \(E_t\) can be updated as follows:
-\[ E_t = \gamma \lambda E_{t-1} + A_t \]
-where \(\lambda\) is a decay factor, \(A_t\) represents the advantage at time step \(t\), and \(E_0 = 0\).
+Relevant formulas or data: An eligibility trace $E_t$ can be updated as follows:
+$$E_t = \gamma \lambda E_{t-1} + A_t$$where $\lambda $ is a decay factor,$A_t $ represents the advantage at time step$t $, and$ E_0 = 0$.
 
 Explanation: In RL, eligibility traces help in attributing credit to actions taken over multiple steps. They keep track of which states have recently been visited and are used for updating value functions.
 
@@ -735,7 +732,7 @@ x??
 Background context: The reward prediction error hypothesis is a significant contribution to understanding the neural basis of reward-related learning. It suggests that dopamine neuron activity corresponds to TD errors in reinforcement learning.
 
 Relevant formulas or data: The formula for the TD error, as mentioned earlier:
-\[ \delta = r + \gamma V(s') - V(s) \]
+$$\delta = r + \gamma V(s') - V(s)$$
 
 Explanation: According to this hypothesis, when a reward is unexpectedly high (positive prediction error), there's an increase in dopamine release. Conversely, if a reward is lower than expected (negative prediction error), there's a decrease in dopamine.
 
@@ -754,15 +751,14 @@ x??
 Background context: Besides the dopamine/TD-error parallel, there are other aspects of reinforcement learning that have parallels with neuroscientific findings. These include concepts like value functions and Q-values.
 
 Relevant formulas or data:
-- Value function \(V(s)\) = expected discounted future reward from state \(s\)
-- Q-value \(Q(s, a)\) = expected discounted future reward for taking action \(a\) in state \(s\)
+- Value function $V(s)$= expected discounted future reward from state $ s$- Q-value $ Q(s, a)$= expected discounted future reward for taking action $ a$in state $ s$
 
 Explanation: While the dopamine/TD-error parallel is particularly strong, other concepts like value functions and Q-values also have interesting parallels with brain structures involved in reward processing.
 
 :p What are some other reinforcement learning concepts that have parallels with neuroscience?
 ??x
 Other RL concepts that align with neuroscientific findings include:
-- Value Functions (\(V(s)\)) and Q-values (\(Q(s, a)\)): These represent expected future rewards. In the brain, these could be related to the activity of specific neural circuits or groups of neurons that encode value.
+- Value Functions ($V(s)$) and Q-values ($ Q(s, a)$): These represent expected future rewards. In the brain, these could be related to the activity of specific neural circuits or groups of neurons that encode value.
 - Reinforcement Learning Algorithms: The overall framework of how RL algorithms learn from experiences can be mirrored in how animals learn through trial and error.
 
 These parallels suggest that understanding one domain (RL) can provide insights into the other (neuroscience).
@@ -1074,7 +1070,7 @@ x??
 ---
 
 #### Reward Signals
-Background context explaining reward signals. According to reinforcement learning theory, \(R_t\) represents a reward signal that is not an object or event in the animal's environment but rather a concept used by the agent. This reward signal, along with the environment, defines the problem that a reinforcement learning agent needs to solve.
+Background context explaining reward signals. According to reinforcement learning theory, $R_t$ represents a reward signal that is not an object or event in the animal's environment but rather a concept used by the agent. This reward signal, along with the environment, defines the problem that a reinforcement learning agent needs to solve.
 If relevant, add code examples with explanations.
 :p What are reward signals according to reinforcement learning theory?
 ??x
@@ -1207,17 +1203,14 @@ Background context explaining the TD error, including its relation to reinforcem
 
 :p What is a TD error and how is it defined?
 ??x
-A TD (Temporal Difference) error represents the difference between the current estimate of reward and the updated estimate after observing new information. It is used in reinforcement learning to adjust value estimates over time. The formula for the TD error at time \( t \) is given by:
-
-\[
-\delta_t = R_{t+1} + V(S_{t+1}) - V(S_t)
-\]
+A TD (Temporal Difference) error represents the difference between the current estimate of reward and the updated estimate after observing new information. It is used in reinforcement learning to adjust value estimates over time. The formula for the TD error at time $t$ is given by:
+$$\delta_t = R_{t+1} + V(S_{t+1}) - V(S_t)$$
 
 This equation measures how much the reward and value estimates differ from what was expected.
 
 ??x
 The answer with detailed explanations.
-A TD error, denoted as \(\delta_t\) at time \( t \), is calculated by taking the difference between the actual future reward plus the estimated value of the next state (\(R_{t+1} + V(S_{t+1})\)) and the current estimate of the value of the current state (\(V(S_t)\)). This adjustment helps in refining the value function over time. The formula reflects how well the agent's expectations align with the actual outcomes.
+A TD error, denoted as $\delta_t $ at time$t $, is calculated by taking the difference between the actual future reward plus the estimated value of the next state ($ R_{t+1} + V(S_{t+1})$) and the current estimate of the value of the current state ($ V(S_t)$). This adjustment helps in refining the value function over time. The formula reflects how well the agent's expectations align with the actual outcomes.
 
 ---
 #### Reward Prediction Error (RPE)
@@ -1269,24 +1262,22 @@ The RPE hypothesis proposes that changes in dopamine neuron activity (phasic act
 
 ---
 #### TD Error and Its Representation
-Background context: The text discusses how the Temporal Difference (TD) error is related to the activity of dopamine neurons, specifically mentioning the work by Montague et al. (1996). It explains that a one-step TD error can be expressed as \( V(S_{t+1}) - V(S_t) \), which represents the difference between the value function at time step \( t+1 \) and \( t \).
+Background context: The text discusses how the Temporal Difference (TD) error is related to the activity of dopamine neurons, specifically mentioning the work by Montague et al. (1996). It explains that a one-step TD error can be expressed as $V(S_{t+1}) - V(S_t)$, which represents the difference between the value function at time step $ t+1$and $ t$.
 
 :p What is the expression for the TD error?
 ??x
 The expression for the TD error is given by:
-\[ V(S_{t+1}) - V(S_t) \]
-where \( S_t \) is the state at time step \( t \), and \( S_{t+1} \) is the next state.
+$$V(S_{t+1}) - V(S_t)$$where $ S_t $ is the state at time step $ t $, and$ S_{t+1}$ is the next state.
 x??
 
 ---
 #### Dopamine Neuron Activity
-Background context: The text highlights that dopamine neuron activity is positively correlated with TD errors, especially when a reward is unpredicted. It mentions that a negative TD error corresponds to a drop in the firing rate of a dopamine neuron below its background level \( b_t \).
+Background context: The text highlights that dopamine neuron activity is positively correlated with TD errors, especially when a reward is unpredicted. It mentions that a negative TD error corresponds to a drop in the firing rate of a dopamine neuron below its background level $b_t$.
 
 :p How does a negative TD error affect the firing rate of a dopamine neuron?
 ??x
-A negative TD error indicates an unexpected lack of reward, which leads to a decrease in the firing rate of a dopamine neuron. If the baseline firing rate is denoted by \( b_t \), then the effective activity level can be modeled as:
-\[ V(S_{t+1}) - V(S_t) + b_t \]
-where \( V(S_{t+1}) - V(S_t) \) represents the TD error, and if this value is negative, it results in a drop below the baseline firing rate.
+A negative TD error indicates an unexpected lack of reward, which leads to a decrease in the firing rate of a dopamine neuron. If the baseline firing rate is denoted by $b_t$, then the effective activity level can be modeled as:
+$$V(S_{t+1}) - V(S_t) + b_t$$where $ V(S_{t+1}) - V(S_t)$ represents the TD error, and if this value is negative, it results in a drop below the baseline firing rate.
 x??
 
 ---
@@ -1304,13 +1295,12 @@ x??
 
 ---
 #### Comparison with TD Model
-Background context: Montague et al. compared the TD errors from the semi-gradient-descent TD(\( \lambda \)) algorithm with the phasic activity of dopamine neurons during classical conditioning experiments.
+Background context: Montague et al. compared the TD errors from the semi-gradient-descent TD($\lambda$) algorithm with the phasic activity of dopamine neurons during classical conditioning experiments.
 
 :p What assumption did Montague et al. make regarding the background firing rate?
 ??x
 Montague et al. assumed that the activity corresponding to a dopamine neuron's firing is given by:
-\[ V(S_{t+1}) - V(S_t) + b_t \]
-where \( b_t \) represents the background firing rate of the neuron. A negative TD error, which corresponds to a drop in firing below this baseline, allows for the representation of unexpected events.
+$$V(S_{t+1}) - V(S_t) + b_t$$where $ b_t$ represents the background firing rate of the neuron. A negative TD error, which corresponds to a drop in firing below this baseline, allows for the representation of unexpected events.
 x??
 
 ---

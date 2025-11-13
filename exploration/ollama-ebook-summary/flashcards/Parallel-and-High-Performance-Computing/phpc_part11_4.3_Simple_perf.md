@@ -107,13 +107,13 @@ Branch prediction can significantly impact performance. The cost associated with
 
 The formula for the total branch penalty (Bp) includes both the branch prediction cost (Bc) and the missed prefetch cost (Pc):
 
-\[ Bp = \frac{NbBf(Bc + Pc)}{v} \]
+$$Bp = \frac{NbBf(Bc + Pc)}{v}$$
 
 Where:
-- \( Nb \) is the number of times the branch is encountered.
-- \( Bf \) is the branch miss frequency.
+- $Nb$ is the number of times the branch is encountered.
+- $Bf$ is the branch miss frequency.
 
-For typical architectures, \( Bc \approx 16 \) cycles and \( Pc \approx 112 \) cycles are used as empirical values.
+For typical architectures,$Bc \approx 16 $ cycles and$Pc \approx 112$ cycles are used as empirical values.
 
 ```java
 // Pseudocode to calculate branch penalty
@@ -129,12 +129,11 @@ Loop overhead is another key factor in performance modeling, especially for smal
 :p What does the loop penalty (Lp) represent?
 ??x
 The loop penalty (Lp) represents the cost associated with looping constructs, including branch handling and control flow management. For small loops of unknown length, a typical estimate is about 20 cycles per exit:
-
-\[ Lp = \frac{Lc}{v} \]
+$$Lp = \frac{Lc}{v}$$
 
 Where:
-- \( Lc \) is the loop overhead cost.
-- \( v \) is the processor frequency.
+- $Lc$ is the loop overhead cost.
+- $v$ is the processor frequency.
 
 ```java
 // Pseudocode to calculate loop penalty
@@ -316,21 +315,15 @@ The performance model for the cell-dominant loop structure includes several comp
 - `flops = Nc(2FfNm + 1)`
 
 Where:
-- \(N_c\) is the number of cells.
-- \(N_m\) is the number of materials.
-- \(F_f\) is the filled fraction.
+- $N_c$ is the number of cells.
+- $N_m$ is the number of materials.
+- $F_f$ is the filled fraction.
 
 The performance model (PM) formula is:
-
-\[ PM = \frac{N_c(N_m + F_f N_m + 2)}{8/\text{Stream}} + B_p F_f N_c N_m \]
+$$PM = \frac{N_c(N_m + F_f N_m + 2)}{8/\text{Stream}} + B_p F_f N_c N_m$$
 
 Given values:
-- \(B_p = 0.7\)
-- \(B_c = 16\)
-- \(P_c = 16\)
-- \(\nu = 2.7\)
-
-The performance is estimated to be around 67.2 ms.
+- $B_p = 0.7 $-$ B_c = 16 $-$ P_c = 16 $-$\nu = 2.7$ The performance is estimated to be around 67.2 ms.
 
 ```java
 // Example pseudo-code for the cell-dominant loop structure
@@ -360,12 +353,11 @@ The performance model for the material-dominant loop structure includes several 
 - `flops = 2NcNm + Nc`
 
 Where:
-- \(N_c\) is the number of cells.
-- \(N_m\) is the number of materials.
+- $N_c$ is the number of cells.
+- $N_m$ is the number of materials.
 
 The performance model (PM) formula is:
-
-\[ PM = 4Nc(Nm + 1) \times \frac{8}{\text{Stream}} \]
+$$PM = 4Nc(Nm + 1) \times \frac{8}{\text{Stream}}$$
 
 Given values and estimated performance are provided in the example.
 
@@ -396,12 +388,12 @@ Using a conditional access pattern in the algorithm can lead to significant perf
 - The probability of a branch prediction miss is high because branches are taken infrequently.
 
 The overall performance model (PM) includes these factors:
+$$
 
-\[ PM = \frac{4N_c(N_m + 1)}{8/\text{Stream}} + B_p F_f N_c N_m \]
+PM = \frac{4N_c(N_m + 1)}{8/\text{Stream}} + B_p F_f N_c N_m$$
 
 Where:
-- \(B_p = 0.7\)
-- \(F_f\) is the filled fraction.
+- $B_p = 0.7 $-$ F_f$ is the filled fraction.
 
 This results in a higher memory bandwidth requirement, making the algorithm slower compared to simply skipping conditional checks and adding zeros.
 

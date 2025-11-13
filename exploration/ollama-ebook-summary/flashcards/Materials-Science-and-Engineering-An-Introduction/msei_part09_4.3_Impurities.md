@@ -8,16 +8,15 @@
 Background context: The problem involves calculating the equilibrium number of vacancies per cubic meter for copper at a specified temperature. Key steps include determining the atomic sites per volume and using the Arrhenius equation to find the vacancy concentration.
 
 Formula used:
-\[ N_{Cu} = \frac{N_A \rho}{A_{Cu}} \]
-Where \( N_A \) is Avogadro's number, \( \rho \) is density, and \( A_{Cu} \) is atomic weight of copper.
-Also,
-\[ N_\gamma = N Cu e^{-Q_\gamma / kT} \]
+$$N_{Cu} = \frac{N_A \rho}{A_{Cu}}$$
 
-:p What is the formula used to calculate the number of atomic sites per cubic meter for a metal like copper?
+Where $N_A $ is Avogadro's number,$\rho $ is density, and$A_{Cu}$ is atomic weight of copper.
+Also,$$N_\gamma = N Cu e^{-Q_\gamma / kT}$$:p What is the formula used to calculate the number of atomic sites per cubic meter for a metal like copper?
 ??x
 The formula used is:
-\[ N_{Cu} = \frac{N_A \rho}{A_{Cu}} \]
-where \( N_A \) (Avogadro's number), \( \rho \) (density of copper), and \( A_{Cu} \) (atomic weight of copper).
+$$
+
+N_{Cu} = \frac{N_A \rho}{A_{Cu}}$$where $ N_A $(Avogadro's number),$\rho $(density of copper), and $ A_{Cu}$(atomic weight of copper).
 
 This helps in determining the atomic sites per volume for calculating vacancies.
 x??
@@ -67,34 +66,31 @@ In FCC structures, there are two types of interstitial sites:
 2. Octahedral: with a coordination number of 6.
 
 The representative coordinates for these sites in an FCC unit cell are given as follows:
-- For tetrahedral sites: \( \left( \frac{1}{4}, \frac{3}{4}, \frac{1}{4} \right) \)
-- For octahedral sites: \( \left( 0, \frac{1}{2}, \frac{1}{2} \right) \) and \( \left( \frac{1}{2}, \frac{1}{2}, 0 \right) \)
-
-x??
+- For tetrahedral sites:$\left( \frac{1}{4}, \frac{3}{4}, \frac{1}{4} \right)$- For octahedral sites:$\left( 0, \frac{1}{2}, \frac{1}{2} \right)$ and $\left( \frac{1}{2}, \frac{1}{2}, 0 \right)$ x??
 
 ---
 #### Carbon in Iron as an Interstitial Solid Solution
-Background context: Carbon forms an interstitial solid solution when added to iron, and the maximum concentration of carbon is about 2%. The atomic radii of carbon and iron are \( 0.071 \text{ nm} \) and \( 0.124 \text{ nm} \), respectively.
+Background context: Carbon forms an interstitial solid solution when added to iron, and the maximum concentration of carbon is about 2%. The atomic radii of carbon and iron are $0.071 \text{ nm}$ and $0.124 \text{ nm}$, respectively.
 
 :p What is the maximum concentration of carbon that can form an interstitial solid solution with iron?
 ??x
 The maximum concentration of carbon in iron, forming an interstitial solid solution, is about 2%.
 
-This limit is due to the atomic radii difference between carbon and iron. Carbon's atomic radius (\(0.071 \text{ nm}\)) being significantly smaller than that of iron (\(0.124 \text{ nm}\)), allows it to fit into interstitial sites without introducing significant lattice strain.
+This limit is due to the atomic radii difference between carbon and iron. Carbon's atomic radius ($0.071 \text{ nm}$) being significantly smaller than that of iron ($0.124 \text{ nm}$), allows it to fit into interstitial sites without introducing significant lattice strain.
 x??
 
 ---
 #### Radius Calculation for BCC Interstitial Sites
-Background context: To compute the radius \( r \) of an impurity atom that just fits into a BCC octahedral site in terms of the atomic radius \( R \) of the host atom, we need to consider the geometry without introducing lattice strains.
+Background context: To compute the radius $r $ of an impurity atom that just fits into a BCC octahedral site in terms of the atomic radius$R$ of the host atom, we need to consider the geometry without introducing lattice strains.
 
-:p What is the formula used to calculate the radius \( r \) of an interstitial atom that fits into a BCC octahedral site?
+:p What is the formula used to calculate the radius $r$ of an interstitial atom that fits into a BCC octahedral site?
 ??x
-To compute the radius \( r \) of an interstitial atom that just fits into a BCC octahedral site, we use the geometry without introducing lattice strains.
+To compute the radius $r$ of an interstitial atom that just fits into a BCC octahedral site, we use the geometry without introducing lattice strains.
 
 For a BCC structure:
-- The representative coordinates for an octahedral site are \( (0.5, 0.5, 0) \).
+- The representative coordinates for an octahedral site are $(0.5, 0.5, 0)$.
 
-The radius \( r \) can be derived by considering the distance from the center of the host atom to the edge of the interstitial atom at this site.
+The radius $r$ can be derived by considering the distance from the center of the host atom to the edge of the interstitial atom at this site.
 
 x??
 
@@ -103,19 +99,19 @@ x??
 #### Interstitial Atom Placement in BCC Unit Cell
 Background context: This section explains how an interstitial atom is positioned within a body-centered cubic (BCC) unit cell, touching two adjacent corner atoms. The edge length of the unit cell is derived using both geometric and atomic radius relationships.
 
-:p What is the relationship between the interstitial atom's radius \( r \) and the host atom's radius \( R \)?
+:p What is the relationship between the interstitial atom's radius $r $ and the host atom's radius$R$?
 ??x
 The relation can be found by equating the unit cell edge lengths calculated from two different methods: 
-1. The distance between the centers of the corner atoms, which equals \( 4R\sqrt{3} \).
-2. Twice the sum of the radii of a host atom and an interstitial atom positioned at the cube edge, i.e., \( 2(R + r) \).
+1. The distance between the centers of the corner atoms, which equals $4R\sqrt{3}$.
+2. Twice the sum of the radii of a host atom and an interstitial atom positioned at the cube edge, i.e., $2(R + r)$.
 
 Equating these two expressions:
-\[ 2(R + r) = 4R\sqrt{3} \]
+$$2(R + r) = 4R\sqrt{3}$$
 
-Solving for \( r \):
-\[ 2r = 4R\sqrt{3} - 2R \]
-\[ 2r = 2(2\sqrt{3} - 1)R \]
-\[ r = (2\sqrt{3} - 1)R \approx 0.155R \]
+Solving for $r$:
+$$2r = 4R\sqrt{3} - 2R$$
+$$2r = 2(2\sqrt{3} - 1)R$$
+$$r = (2\sqrt{3} - 1)R \approx 0.155R$$
 
 This derivation shows the precise relationship between the host atom radius and the interstitial atom radius in a BCC structure.
 ??x
@@ -136,13 +132,11 @@ Background context: The text discusses the two common ways to specify compositio
 
 :p What is the formula for calculating weight percent (wt%) of an element in a binary alloy?
 ??x
-The weight percent \( C_1 \) of element 1 is calculated as:
-\[ C_1 = \frac{m_1}{m_1 + m_2} \times 100 \]
-where \( m_1 \) and \( m_2 \) are the weights (or masses) of elements 1 and 2, respectively.
+The weight percent $C_1$ of element 1 is calculated as:
+$$C_1 = \frac{m_1}{m_1 + m_2} \times 100$$where $ m_1 $ and $ m_2$ are the weights (or masses) of elements 1 and 2, respectively.
 
 For a binary alloy containing more than two elements:
-\[ C_1 = \frac{m_1}{\sum m_i} \times 100 \]
-where \( \sum m_i \) is the total weight of all components.
+$$C_1 = \frac{m_1}{\sum m_i} \times 100$$where $\sum m_i$ is the total weight of all components.
 ??x
 The formula explains how to determine the weight percent composition of an element in a binary alloy.
 
@@ -161,13 +155,11 @@ Background context: The text explains the basis of atom percent calculations, wh
 
 :p What is the formula for calculating atom percent (at%) of element 1 in a binary alloy?
 ??x
-The atom percent \( C_1' \) of element 1 is calculated as:
-\[ C_1' = \frac{n_{m1}}{n_{m1} + n_{m2}} \times 100 \]
-where \( n_{m1} \) and \( n_{m2} \) are the number of moles of elements 1 and 2, respectively.
+The atom percent $C_1'$ of element 1 is calculated as:
+$$C_1' = \frac{n_{m1}}{n_{m1} + n_{m2}} \times 100$$where $ n_{m1}$and $ n_{m2}$ are the number of moles of elements 1 and 2, respectively.
 
 For a binary alloy containing more than two elements:
-\[ C_1' = \frac{n_{m1}}{\sum n_{m_i}} \times 100 \]
-where \( \sum n_{m_i} \) is the total number of moles of all components.
+$$C_1' = \frac{n_{m1}}{\sum n_{m_i}} \times 100$$where $\sum n_{m_i}$ is the total number of moles of all components.
 ??x
 The formula describes how to determine the atom percent composition of an element in a binary alloy.
 
@@ -187,14 +179,20 @@ Background context: The text explains how to convert between weight percent and 
 :p What is the formula for converting from weight percent to atom percent?
 ??x
 The conversion equations are:
-\[ C_1' = \frac{C_1 A_2}{C_1 A_2 + C_2 A_1} \times 100 \]
-\[ C_2' = \frac{C_2 A_1}{C_1 A_2 + C_2 A_1} \times 100 \]
+$$C_1' = \frac{C_1 A_2}{C_1 A_2 + C_2 A_1} \times 100$$
+$$
+
+C_2' = \frac{C_2 A_1}{C_1 A_2 + C_2 A_1} \times 100$$
 
 For a binary alloy, the simplifications are:
-\[ C_1' = \frac{C_1 A_2}{(C_1 A_2 + C_2 A_1) \times 100} \]
-\[ C_2' = \frac{C_2 A_1}{(C_1 A_2 + C_2 A_1) \times 100} \]
+$$
 
-Where \( C_1, C_2 \) are the weight percent concentrations and \( A_1, A_2 \) are the atomic weights.
+C_1' = \frac{C_1 A_2}{(C_1 A_2 + C_2 A_1) \times 100}$$
+$$
+
+C_2' = \frac{C_2 A_1}{(C_1 A_2 + C_2 A_1) \times 100}$$
+
+Where $C_1, C_2 $ are the weight percent concentrations and$A_1, A_2$ are the atomic weights.
 ??x
 The formulas explain how to convert weight percent concentration of elements in a binary alloy to atom percent.
 
@@ -232,17 +230,14 @@ Background context: The text discusses the composition of solid materials, parti
 :p What formula is used to calculate the atomic percent of an element in a binary alloy?
 ??x
 The formula used to calculate the atomic percent of an element in a binary alloy, as shown in the text, is:
-
-\[ C'X = \frac{C_X A_Y}{C_X A_Y + C_Y A_X} \times 100\% \]
-
-where:
-- \( C'X \) is the atomic percent of the element X.
-- \( C_X \) and \( C_Y \) are the number of atoms of elements X and Y, respectively.
-- \( A_X \) and \( A_Y \) are the atomic weights (in g/mol) of elements X and Y.
+$$C'X = \frac{C_X A_Y}{C_X A_Y + C_Y A_X} \times 100\%$$where:
+- $C'X$ is the atomic percent of the element X.
+- $C_X $ and$C_Y$ are the number of atoms of elements X and Y, respectively.
+- $A_X $ and$A_Y$ are the atomic weights (in g/mol) of elements X and Y.
 
 For example:
-- For carbon in aluminum-copper (Al-Cu) alloy: \( C'Al = \frac{(97)(63.55 \text{ g/mol})}{(97)(63.55 \text{ g/mol}) + (3)(26.98 \text{ g/mol})} \times 100\% = 98.7 \) at percent.
-- For copper in aluminum-copper alloy: \( C'Cu = \frac{(3)(26.98 \text{ g/mol})}{(3)(26.98 \text{ g/mol}) + (97)(63.55 \text{ g/mol})} \times 100\% = 1.30 \) at percent.
+- For carbon in aluminum-copper (Al-Cu) alloy:$C'Al = \frac{(97)(63.55 \text{ g/mol})}{(97)(63.55 \text{ g/mol}) + (3)(26.98 \text{ g/mol})} \times 100\% = 98.7$ at percent.
+- For copper in aluminum-copper alloy:$C'Cu = \frac{(3)(26.98 \text{ g/mol})}{(3)(26.98 \text{ g/mol}) + (97)(63.55 \text{ g/mol})} \times 100\% = 1.30$ at percent.
 
 x??
 

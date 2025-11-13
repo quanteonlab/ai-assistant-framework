@@ -182,7 +182,8 @@ The Marine Corps computes its three line scores for job qualification by adding 
 :p What are the components used to calculate the General Technical (GT) line score in the Marine Corps?
 ??x
 To calculate the General Technical (GT) line score, the Marine Corps uses the standard scores from Verbal Expression (VE) and Arithmetic Reasoning (AR). The formula is:
-\[ GT = VE + AR \]
+$$GT = VE + AR$$
+
 This combination helps evaluate a candidate's verbal reasoning and mathematical abilities.
 
 ```java
@@ -226,9 +227,9 @@ The Marine Corps and the Air Force use line scores to determine job qualificatio
 :p How does the Marine Corps calculate its Electronics (EL) line score?
 ??x
 To calculate the Electronics (EL) line score, the Marine Corps combines standard scores from General Science (GS), Arithmetic Reasoning (AR), Mathematics Knowledge (MK), and Electronics Information (EI). The formula is:
-\[ EL = GS + AR + MK + EI \]
+$$
 
-```java
+EL = GS + AR + MK + EI$$```java
 // Example Java code to calculate the Electronics line score in the Marine Corps
 public class MarineCorpsLineScores {
     public int calculateElectronicsScore(int generalScience, int arithmeticReasoning, 
@@ -247,9 +248,9 @@ For the Air Force, the key subtests used to calculate MAGE scores are Mechanical
 :p What subtests are used for the Engineering and Electronics (BEE) line score in the Marine Corps?
 ??x
 The Marine Corps calculates the Engineering and Electronics (BEE) line score using Arithmetic Reasoning (AR), General Science (GS), and two times Mathematics Knowledge (MK). The formula is:
-\[ BEE = AR + GS + 2 \times MK \]
+$$
 
-```java
+BEE = AR + GS + 2 \times MK$$```java
 // Example Java code to calculate the BEE line score in the Marine Corps
 public class MarineCorpsLineScores {
     public int calculateEngineeringAndElectronicsScore(int arithmeticReasoning, 
@@ -269,7 +270,9 @@ The Armed Forces Qualification Test (AFQT) score is a critical component used by
 :p How is the AFQT score calculated?
 ??x
 The AFQT score is computed by combining the standard scores from four ASVAB subtests: Verbal Expression (VE), Arithmetic Reasoning (AR), Mathematics Knowledge (MK), and Paragraph Comprehension (PC). The formula for the AFQT score is:
-\[ AFQT = 2 \times VE + PC + MK - 31 \]
+$$
+
+AFQT = 2 \times VE + PC + MK - 31$$
 
 ```java
 // Example Java code to calculate the AFQT score

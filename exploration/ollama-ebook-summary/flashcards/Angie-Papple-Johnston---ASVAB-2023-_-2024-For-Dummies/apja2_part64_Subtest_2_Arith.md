@@ -7,23 +7,17 @@
 #### Profit Calculation for Donuts
 Background context: The problem involves calculating the profit a baker makes from selling donuts, taking into account both sales and production costs.
 
-:p A baker sells a dozen donuts for $3.99. The cost to make three donuts is $0.45. How much is the total profit on 5 dozen donuts?
+:p A baker sells a dozen donuts for $3.99. The cost to make three donuts is$0.45. How much is the total profit on 5 dozen donuts?
 ??x
 To calculate the total profit, first determine the number of individual donuts sold (60 donuts = 5 dozen) and their selling price per unit ($3.99/12). Next, find out how many sets of three donuts are made for 60 donuts and then multiply by the cost to make each set.
 
 1. **Calculate revenue from sales**:
-\[ \text{Revenue} = 5 \times 12 \times \frac{3.99}{12} = 60 \times \frac{3.99}{12} = \$19.95 \]
-
-2. **Calculate cost of production**:
-Since three donuts cost $0.45, the cost for one dozen (12/3 = 4 sets) would be:
-\[ \text{Cost per dozen} = 4 \times 0.45 = \$1.80 \]
-So, for 5 dozen:
-\[ \text{Total production cost} = 5 \times 1.80 = \$9.00 \]
-
-3. **Calculate profit**:
-\[ \text{Profit} = \text{Revenue} - \text{Cost} = \$19.95 - \$9.00 = \$10.95 \]
-??x
-The total profit on 5 dozen donuts is $10.95.
+$$ \text{Revenue} = 5 \times 12 \times \frac{3.99}{12} = 60 \times \frac{3.99}{12} = \$19.95 $$2. **Calculate cost of production**:
+Since three donuts cost$0.45, the cost for one dozen (12/3 = 4 sets) would be:
+$$ \text{Cost per dozen} = 4 \times 0.45 = \$1.80 $$So, for 5 dozen:
+$$ \text{Total production cost} = 5 \times 1.80 = \$9.00 $$3. **Calculate profit**:
+$$ \text{Profit} = \text{Revenue} - \text{Cost} = \$19.95 - \$9.00 = \$10.95 $$??x
+The total profit on 5 dozen donuts is$10.95.
 x??
 
 ---
@@ -33,21 +27,21 @@ Background context: The problem involves determining the number of dimes in a pi
 
 :p Your piggy bank contains $19.75 in dimes and quarters. There are 100 coins in all. How many dimes are there?
 ??x
-Let \(d\) represent the number of dimes and \(q\) represent the number of quarters. We have two equations based on the given information:
-\[ d + q = 100 \]
-\[ 0.10d + 0.25q = 19.75 \]
+Let $d $ represent the number of dimes and$q$ represent the number of quarters. We have two equations based on the given information:
+$$d + q = 100$$
+$$0.10d + 0.25q = 19.75$$
 
-From the first equation, express \(q\) in terms of \(d\):
-\[ q = 100 - d \]
+From the first equation, express $q $ in terms of$d$:
+$$q = 100 - d$$
 
 Substitute this into the second equation:
-\[ 0.10d + 0.25(100 - d) = 19.75 \]
-\[ 0.10d + 25 - 0.25d = 19.75 \]
-\[ -0.15d + 25 = 19.75 \]
-\[ -0.15d = 19.75 - 25 \]
-\[ -0.15d = -5.25 \]
-\[ d = \frac{5.25}{0.15} \]
-\[ d = 35 \]
+$$0.10d + 0.25(100 - d) = 19.75$$
+$$0.10d + 25 - 0.25d = 19.75$$
+$$-0.15d + 25 = 19.75$$
+$$-0.15d = 19.75 - 25$$
+$$-0.15d = -5.25$$
+$$d = \frac{5.25}{0.15}$$
+$$d = 35$$
 
 So, there are 35 dimes.
 ??x
@@ -59,15 +53,14 @@ x??
 #### Cost of Patio Laying
 Background context: The problem involves calculating the cost for a bricklayer to lay a patio given the dimensions and the rate per square foot.
 
-:p A bricklayer charges $8 per square foot to lay a patio. How much would it cost for the brick-layer to lay a 12-foot-by-16-foot patio?
+:p A bricklayer charges$8 per square foot to lay a patio. How much would it cost for the brick-layer to lay a 12-foot-by-16-foot patio?
 ??x
 To find the total cost, first calculate the area of the patio:
-\[ \text{Area} = 12 \times 16 = 192 \text{ square feet} \]
+$$\text{Area} = 12 \times 16 = 192 \text{ square feet}$$
 
 Next, multiply the area by the rate per square foot:
-\[ \text{Total Cost} = 192 \times 8 = \$1536 \]
-??x
-The cost for laying a 12-foot-by-16-foot patio is $1536.
+$$ \text{Total Cost} = 192 \times 8 = \$1536 $$??x
+The cost for laying a 12-foot-by-16-foot patio is$1536.
 x??
 
 ---
@@ -75,20 +68,28 @@ x??
 #### Hourly Wage Calculation
 Background context: The problem involves solving for an individual’s hourly wage using algebraic equations based on the earnings of multiple individuals.
 
-:p Terry earns three times more per hour than Tim. Tim earns $2 more per hour than Angie. As a group, they earn $43 per hour. What’s Angie’s hourly wage?
+:p Terry earns three times more per hour than Tim. Tim earns $2 more per hour than Angie. As a group, they earn$43 per hour. What’s Angie’s hourly wage?
 ??x
-Let \(A\) represent Angie's hourly wage. Then:
-\[ T = A + 2 \]
-\[ T_r = 3T = 3(A + 2) \]
+Let $A$ represent Angie's hourly wage. Then:
+$$T = A + 2$$
+$$
+
+T_r = 3T = 3(A + 2)$$
 
 The total earnings equation is:
-\[ A + (A + 2) + 3(A + 2) = 43 \]
-\[ A + A + 2 + 3A + 6 = 43 \]
-\[ 5A + 8 = 43 \]
-\[ 5A = 35 \]
-\[ A = 7 \]
+$$
 
-So, Angie's hourly wage is $7.00.
+A + (A + 2) + 3(A + 2) = 43$$
+$$
+
+A + A + 2 + 3A + 6 = 43$$
+$$5A + 8 = 43$$
+$$5A = 35$$
+$$
+
+A = 7$$
+
+So, Angie's hourly wage is$7.00.
 ??x
 Angie’s hourly wage is $7.00.
 x??
@@ -101,11 +102,10 @@ Background context: The problem involves determining the number of machines two 
 :p If four people can run eight machines, how many machines can two people run?
 ??x
 To determine the number of machines two people can run, first find out how many machines one person can operate:
-\[ \text{Machines per person} = \frac{8}{4} = 2 \]
+$$\text{Machines per person} = \frac{8}{4} = 2$$
 
 So, two people can run:
-\[ 2 \times 2 = 4 \]
-??x
+$$2 \times 2 = 4$$??x
 Two people can run 4 machines.
 x??
 
@@ -114,14 +114,14 @@ x??
 #### Season Pass Cost Calculation
 Background context: The problem involves calculating the number of trips needed for a season pass to be cost-effective compared to daily admission.
 
-:p The price of daily admission at an amusement park is $36. The park sells an unlimited season pass for $240. How many trips would you need to make with the season pass in order for it to cost less than paying the daily admission rate?
+:p The price of daily admission at an amusement park is $36. The park sells an unlimited season pass for$240. How many trips would you need to make with the season pass in order for it to cost less than paying the daily admission rate?
 ??x
 To find out how many trips are needed, divide the total cost of the season pass by the daily admission price:
-\[ \text{Number of Trips} = \frac{240}{36} \]
-\[ \text{Number of Trips} \approx 6.67 \]
+$$\text{Number of Trips} = \frac{240}{36}$$
+$$\text{Number of Trips} \approx 6.67$$
 
 Since you can’t make a fraction of a trip, round up to the nearest whole number:
-\[ \text{Number of Trips} = 7 \]
+$$\text{Number of Trips} = 7$$
 
 So, you need to make at least 7 trips for the season pass to be cost-effective.
 ??x
@@ -136,7 +136,8 @@ Background context: The problem involves calculating the time required to type a
 :p Rafael can type 9 pages an hour. How long will it take him to type 126 pages?
 ??x
 To find out how many hours it takes, divide the total number of pages by the typing rate:
-\[ \text{Time} = \frac{126}{9} = 14 \]
+$$\text{Time} = \frac{126}{9} = 14$$
+
 So, Rafael will need 14 hours.
 ??x
 Rafael will take 14 hours to type 126 pages.
@@ -150,10 +151,11 @@ Background context: The problem involves calculating the time each student shoul
 :p In a 60-minute gym class, 48 students want to play volleyball, but only 12 can play at a time. For each player to get the same amount of playing time, how many minutes should each person play?
 ??x
 First, determine the total number of playing slots available in one hour:
-\[ \text{Total Slots} = 60 \times 12 = 720 \]
+$$\text{Total Slots} = 60 \times 12 = 720$$
 
 Next, divide this by the number of students to find out how much time each student gets:
-\[ \text{Playing Time per Student} = \frac{720}{48} = 15 \]
+$$\text{Playing Time per Student} = \frac{720}{48} = 15$$
+
 So, each student should play for 15 minutes.
 ??x
 Each student should play for 15 minutes.
@@ -166,13 +168,14 @@ Background context: The problem involves calculating the number of days a DVD wa
 
 :p The public library charges $2.00 for the first day a borrowed DVD is overdue and $1.25 for each day after that. If a person paid $8.25 in late fees, how many days was the DVD overdue?
 ??x
-Let \(d\) be the number of days overdue beyond the first day. The total fee equation is:
-\[ 2 + 1.25(d) = 8.25 \]
+Let $d$ be the number of days overdue beyond the first day. The total fee equation is:
+$$2 + 1.25(d) = 8.25$$
 
 Subtract 2 from both sides:
-\[ 1.25d = 6.25 \]
+$$1.25d = 6.25$$
+
 Divide by 1.25:
-\[ d = \frac{6.25}{1.25} = 5 \]
+$$d = \frac{6.25}{1.25} = 5$$
 
 So, the DVD was overdue for 5 days plus one day initially, making it a total of 6 days.
 ??x
@@ -184,13 +187,14 @@ x??
 #### Calorie Equivalence Calculation
 Background context: The problem involves comparing calories in different foods and calculating how much of one food equals the calories in another.
 
-:p A half-cup of pudding has 150 calories. The same amount of broccoli has 60 calories. How much broccoli can a person eat to equal the same number of calories in the \(\frac{1}{2}\) cup of pudding?
+:p A half-cup of pudding has 150 calories. The same amount of broccoli has 60 calories. How much broccoli can a person eat to equal the same number of calories in the $\frac{1}{2}$ cup of pudding?
 ??x
-First, determine how many calories are equivalent to the \(\frac{1}{2}\) cup of pudding:
-\[ \text{Calories in } 0.5 \text{ cup of pudding} = 150 \]
+First, determine how many calories are equivalent to the $\frac{1}{2}$ cup of pudding:
+$$\text{Calories in } 0.5 \text{ cup of pudding} = 150$$
 
 Next, find out how much broccoli is needed to get 150 calories:
-\[ \text{Broccoli needed} = \frac{150}{60} = 2.5 \]
+$$\text{Broccoli needed} = \frac{150}{60} = 2.5$$
+
 So, a person can eat 2.5 cups of broccoli to equal the calories in 0.5 cup of pudding.
 ??x
 A person can eat 2.5 cups of broccoli to equal the calories in 0.5 cup of pudding.
@@ -204,10 +208,10 @@ Background context: The problem involves calculating how many times a dog barks 
 :p The neighbor’s dog barks at a raccoon every 15 minutes at night. If it first barks at 10 p.m., when you’re trying to fall asleep, how many times will it have barked by 2 a.m., when you give up trying to sleep and decide to read a book instead?
 ??x
 Calculate the total time from 10 p.m. to 2 a.m.:
-\[ \text{Time} = 3 \text{ hours} = 3 \times 60 = 180 \text{ minutes} \]
+$$\text{Time} = 3 \text{ hours} = 3 \times 60 = 180 \text{ minutes}$$
 
 Divide this by the barking interval of 15 minutes to find out how many times the dog barked:
-\[ \text{Number of Barks} = \frac{180}{15} = 12 \]
+$$\text{Number of Barks} = \frac{180}{15} = 12$$
 So, the dog will have barked 12 times.
 ??x
 The neighbor’s dog will have barked 12 times by 2 a.m.

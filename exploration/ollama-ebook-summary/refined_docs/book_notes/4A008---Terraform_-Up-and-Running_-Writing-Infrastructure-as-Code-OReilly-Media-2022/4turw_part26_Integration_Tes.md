@@ -68,7 +68,7 @@ Here’s how the command looks:
 ??x
 You can run all the tests by executing the following command in your terminal:
 ```sh
-$ ruby web-server-test.rb
+$ruby web-server-test.rb
 ```
 This command runs all the test methods defined in `web-server-test.rb` and provides a summary of the results.
 x??
@@ -237,8 +237,7 @@ Background context: The provided text demonstrates a typical workflow where cert
 ??x
 To run tests while skipping deploy and teardown stages for both the database and application, you would set the appropriate environment variables as follows:
 
-```sh
-$ SKIP_teardown_db=true \
+```sh$ SKIP_teardown_db=true \
   SKIP_teardown_app=true \
   go test -timeout 30m -run 'TestHelloWorldAppStageWithStages'
 ```

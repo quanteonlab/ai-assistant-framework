@@ -10,12 +10,14 @@ Background context: The sine-Gordon equation (SGE) is a nonlinear partial differ
 :p What is the sine-Gordon equation and how does it simplify when assuming a traveling wave solution?
 ??x
 The sine-Gordon equation (SGE) is given by:
-\[ \frac{\partial^2 \theta}{\partial t^2} - \frac{\partial^2 \theta}{\partial x^2} + \sin(\theta) = 0. \]
-Assuming a traveling wave solution of the form \( \theta(x,t) = \theta(\xi) \), where \( \xi = x - vt \) or \( \xi = x + vt \), it simplifies to:
-\[ \frac{d^2 \theta}{d\xi^2} = v^2 (v^2 - 1) \sin(\theta). \]
-This ODE is solvable and resembles the equation of motion for a pendulum without external forces. The velocity \( v \) separates different regimes:
-- For \( v < 1 \), the pendulum starts in an initial state that is stable.
-- For \( v > 1 \), the pendulum's initial state is unstable.
+$$\frac{\partial^2 \theta}{\partial t^2} - \frac{\partial^2 \theta}{\partial x^2} + \sin(\theta) = 0.$$
+
+Assuming a traveling wave solution of the form $\theta(x,t) = \theta(\xi)$, where $\xi = x - vt $ or $\xi = x + vt$, it simplifies to:
+$$\frac{d^2 \theta}{d\xi^2} = v^2 (v^2 - 1) \sin(\theta).$$
+
+This ODE is solvable and resembles the equation of motion for a pendulum without external forces. The velocity $v$ separates different regimes:
+- For $v < 1$, the pendulum starts in an initial state that is stable.
+- For $v > 1$, the pendulum's initial state is unstable.
 
 ??x
 ```java
@@ -42,8 +44,9 @@ Background context: The two-dimensional sine-Gordon equation (2DSGE) is a genera
 :p What is the 2D sine-Gordon equation, and how does it differ from the 1D version?
 ??x
 The two-dimensional sine-Gordon equation (2DSGE) is given by:
-\[ \frac{1}{c^2} \frac{\partial^2 u}{\partial t^2} - \frac{\partial^2 u}{\partial x^2} - \frac{\partial^2 u}{\partial y^2} = \sin(u). \]
-This equation differs from the 1D SGE by including a term for the second spatial derivative in both \(x\) and \(y\) directions, making it describe wave propagation in two dimensions rather than one.
+$$\frac{1}{c^2} \frac{\partial^2 u}{\partial t^2} - \frac{\partial^2 u}{\partial x^2} - \frac{\partial^2 u}{\partial y^2} = \sin(u).$$
+
+This equation differs from the 1D SGE by including a term for the second spatial derivative in both $x $ and$y$ directions, making it describe wave propagation in two dimensions rather than one.
 
 ??x
 ```java
@@ -201,13 +204,13 @@ public class ParticleModel {
 x??
 
 #### Advection Equation Using Lax–Wendroff Scheme
-Background context: The provided Python script uses the Lax-Wendroff scheme to solve the advection equation, which is a partial differential equation of the form \(\frac{\partial u}{\partial t} + c \cdot \frac{\partial(u^2/2)}{\partial x} = 0\). Here, \(u(x,t)\) represents the state variable, and \(c\) is the speed of advection. The script initializes a Gaussian wave function at \(t=0\) and evolves it over time using numerical methods.
+Background context: The provided Python script uses the Lax-Wendroff scheme to solve the advection equation, which is a partial differential equation of the form $\frac{\partial u}{\partial t} + c \cdot \frac{\partial(u^2/2)}{\partial x} = 0 $. Here, $ u(x,t)$represents the state variable, and $ c$is the speed of advection. The script initializes a Gaussian wave function at $ t=0$ and evolves it over time using numerical methods.
 
 :p What is the purpose of the `AdvecLax.py` script?
 ??x
 The purpose of the `AdvecLax.py` script is to numerically solve the one-dimensional advection equation using the Lax-Wendroff scheme. This method is chosen for its ability to provide a more accurate solution compared to simpler schemes like forward Euler or upwind methods.
 
-Code Explanation: The script initializes variables and parameters, sets up initial conditions, and then iterates over time steps to update the state \(u(x,t)\) using the Lax-Wendroff scheme. This is detailed in the following pseudocode:
+Code Explanation: The script initializes variables and parameters, sets up initial conditions, and then iterates over time steps to update the state $u(x,t)$ using the Lax-Wendroff scheme. This is detailed in the following pseudocode:
 
 ```python
 def numerical():
@@ -232,12 +235,9 @@ Background context: The `Soliton.py` script is designed to solve the Korteweg-de
 :p What is the Korteweg-de Vries equation, and how does `Soliton.py` handle it?
 ??x
 The Korteweg-de Vries (KdV) equation is a nonlinear partial differential equation that models waves on shallow water surfaces. It has the form:
+$$\frac{\partial u}{\partial t} + 6u \cdot \frac{\partial u}{\partial x} + \frac{\partial^3 u}{\partial x^3} = 0$$
 
-\[
-\frac{\partial u}{\partial t} + 6u \cdot \frac{\partial u}{\partial x} + \frac{\partial^3 u}{\partial x^3} = 0
-\]
-
-The `Soliton.py` script handles this equation by using a finite difference method to approximate the derivatives and iteratively update the wave function \(u(x,t)\) over time. It starts with an initial bore condition and evolves it through multiple time steps.
+The `Soliton.py` script handles this equation by using a finite difference method to approximate the derivatives and iteratively update the wave function $u(x,t)$ over time. It starts with an initial bore condition and evolves it through multiple time steps.
 
 Code Explanation: The script initializes the grid, sets up the initial conditions for the wave, and then iterates over time steps using a finite difference method to update the wave profile. Here is a simplified version of the time-stepping loop:
 
@@ -270,7 +270,7 @@ Background context: The provided script not only computes the numerical solution
 
 :p How does the `AdvecLax.py` script visualize the solutions?
 ??x
-The `AdvecLax.py` script visualizes the solutions using VPython, which is a Python module for 3D vector graphics. It plots the initial condition and the exact solution at \(t=0\) in one color (cyan), the numerical solution during the evolution process in another color (yellow), and the initial function in yet another color (red).
+The `AdvecLax.py` script visualizes the solutions using VPython, which is a Python module for 3D vector graphics. It plots the initial condition and the exact solution at $t=0$ in one color (cyan), the numerical solution during the evolution process in another color (yellow), and the initial function in yet another color (red).
 
 Code Explanation: The script sets up a `graph` object to plot the functions, initializes curves for the initial, exact, and numerical solutions, and updates these curves at each time step. Here is an example of how it plots the initial condition:
 
@@ -295,19 +295,16 @@ x??
 ---
 
 #### Time Evolution Using Lax-Wendroff Scheme
-Background context: The script updates the state variable \(u(x,t)\) using the Lax-Wendroff scheme, which is a second-order accurate method in both space and time for solving hyperbolic partial differential equations. This method provides better accuracy compared to first-order methods.
+Background context: The script updates the state variable $u(x,t)$ using the Lax-Wendroff scheme, which is a second-order accurate method in both space and time for solving hyperbolic partial differential equations. This method provides better accuracy compared to first-order methods.
 
-:p How does the `AdvecLax.py` script update the state variables \(u(x,t)\)?
+:p How does the `AdvecLax.py` script update the state variables $u(x,t)$?
 ??x
-The `AdvecLax.py` script updates the state variable \(u(x,t)\) using the Lax-Wendroff scheme, which is a second-order accurate method in both space and time. The scheme updates the state based on the values at previous time steps and positions.
+The `AdvecLax.py` script updates the state variable $u(x,t)$ using the Lax-Wendroff scheme, which is a second-order accurate method in both space and time. The scheme updates the state based on the values at previous time steps and positions.
 
 Code Explanation: The update formula for the Lax-Wendroff scheme is:
+$$u_{i}^{n+1} = \left(1 - \beta^2\right) u_i^n + 0.5 \beta (1 - \beta) u_{i-1}^{n+1} + 0.5 \beta (1 + \beta) u_{i+1}^n$$
 
-\[
-u_{i}^{n+1} = \left(1 - \beta^2\right) u_i^n + 0.5 \beta (1 - \beta) u_{i-1}^{n+1} + 0.5 \beta (1 + \beta) u_{i+1}^n
-\]
-
-Here, \(u_i^n\) represents the state at position \(x_i\) and time step \(t_n\). The script updates the state variables in a nested loop structure:
+Here,$u_i^n $ represents the state at position$x_i $ and time step$ t_n$. The script updates the state variables in a nested loop structure:
 
 ```python
 for j in range(0, n+1):  # Time loop
@@ -321,7 +318,7 @@ for j in range(0, n+1):  # Time loop
         numfn.plot(pos=(0.01*i, u[i]))  # Plot numeric solution
 ```
 
-The script ensures that boundary conditions are handled correctly by setting \(u[0]\) and \(u[m-1]\) to zero.
+The script ensures that boundary conditions are handled correctly by setting $u[0]$ and $u[m-1]$ to zero.
 
 x??
 
@@ -333,14 +330,11 @@ Background context: The script initializes the grid with specific initial condit
 :p What are the initial conditions set by `Soliton.py`?
 ??x
 The initial conditions in the `Soliton.py` script represent a bore, which is a localized disturbance. The initial condition is defined as:
-
-\[
-u(x,0) = 0.5 \left(1 - \frac{\exp(2 (0.2ds \cdot i - 5)) - 1}{\exp(2 (0.2ds \cdot i - 5)) + 1}\right)
-\]
+$$u(x,0) = 0.5 \left(1 - \frac{\exp(2 (0.2ds \cdot i - 5)) - 1}{\exp(2 (0.2ds \cdot i - 5)) + 1}\right)$$
 
 This formula creates a Gaussian-like initial disturbance that evolves over time according to the Korteweg-de Vries equation.
 
-The script also sets boundary conditions for \(u(x,0)\) at the ends of the grid:
+The script also sets boundary conditions for $u(x,0)$ at the ends of the grid:
 
 ```python
 u[0, 1] = 1.; u[0, 2] = 1.
@@ -365,14 +359,11 @@ Background context: The script initializes the grid with specific initial condit
 :p What are the initial conditions set by `Soliton.py`?
 ??x
 The initial conditions in the `Soliton.py` script represent a bore, which is a localized disturbance. The initial condition is defined as:
-
-\[
-u(x,0) = 0.5 \left(1 - \frac{\exp(2 (0.2ds \cdot i - 5)) - 1}{\exp(2 (0.2ds \cdot i - 5)) + 1}\right)
-\]
+$$u(x,0) = 0.5 \left(1 - \frac{\exp(2 (0.2ds \cdot i - 5)) - 1}{\exp(2 (0.2ds \cdot i - 5)) + 1}\right)$$
 
 This formula creates a Gaussian-like initial disturbance that evolves over time according to the Korteweg-de Vries equation.
 
-The script also sets boundary conditions for \(u(x,0)\) at the ends of the grid:
+The script also sets boundary conditions for $u(x,0)$ at the ends of the grid:
 
 ```python
 u[0, 1] = 1.; u[0, 2] = 1.
@@ -390,7 +381,7 @@ Background context: The script not only computes the numerical solution but also
 
 :p How does the `AdvecLax.py` script visualize the solutions?
 ??x
-The `AdvecLax.py` script visualizes the solutions using VPython, which is a Python module for 3D vector graphics. It plots the initial condition and the exact solution at \(t=0\) in one color (cyan), the numerical solution during the evolution process in another color (yellow), and the initial function in yet another color (red).
+The `AdvecLax.py` script visualizes the solutions using VPython, which is a Python module for 3D vector graphics. It plots the initial condition and the exact solution at $t=0$ in one color (cyan), the numerical solution during the evolution process in another color (yellow), and the initial function in yet another color (red).
 
 Code Explanation: The script sets up a `graph` object to plot the functions, initializes curves for the initial, exact, and numerical solutions, and updates these curves at each time step. Here is an example of how it plots the initial condition:
 
@@ -415,19 +406,16 @@ x??
 ---
 
 #### Time Evolution Using Lax-Wendroff Scheme in `AdvecLax.py`
-Background context: The script updates the state variable \(u(x,t)\) using the Lax-Wendroff scheme, which is a second-order accurate method in both space and time for solving hyperbolic partial differential equations. This method provides better accuracy compared to first-order methods.
+Background context: The script updates the state variable $u(x,t)$ using the Lax-Wendroff scheme, which is a second-order accurate method in both space and time for solving hyperbolic partial differential equations. This method provides better accuracy compared to first-order methods.
 
-:p How does the `AdvecLax.py` script update the state variables \(u(x,t)\)?
+:p How does the `AdvecLax.py` script update the state variables $u(x,t)$?
 ??x
-The `AdvecLax.py` script updates the state variable \(u(x,t)\) using the Lax-Wendroff scheme, which is a second-order accurate method in both space and time. The scheme updates the state based on the values at previous time steps and positions.
+The `AdvecLax.py` script updates the state variable $u(x,t)$ using the Lax-Wendroff scheme, which is a second-order accurate method in both space and time. The scheme updates the state based on the values at previous time steps and positions.
 
 Code Explanation: The update formula for the Lax-Wendroff scheme is:
+$$u_{i}^{n+1} = \left(1 - \beta^2\right) u_i^n + 0.5 \beta (1 - \beta) u_{i-1}^{n+1} + 0.5 \beta (1 + \beta) u_{i+1}^n$$
 
-\[
-u_{i}^{n+1} = \left(1 - \beta^2\right) u_i^n + 0.5 \beta (1 - \beta) u_{i-1}^{n+1} + 0.5 \beta (1 + \beta) u_{i+1}^n
-\]
-
-Here, \(u_i^n\) represents the state at position \(x_i\) and time step \(t_n\). The script updates the state variables in a nested loop structure:
+Here,$u_i^n $ represents the state at position$x_i $ and time step$ t_n$. The script updates the state variables in a nested loop structure:
 
 ```python
 def numerical():
@@ -442,7 +430,7 @@ def numerical():
             numfn.plot(pos=(0.01*i, u[i]))  # Plot numeric solution
 ```
 
-The script ensures that boundary conditions are handled correctly by setting \(u[0]\) and \(u[m-1]\) to zero.
+The script ensures that boundary conditions are handled correctly by setting $u[0]$ and $u[m-1]$ to zero.
 
 x??
 
@@ -453,7 +441,7 @@ Background context: The provided script not only computes the numerical solution
 
 :p How does the `AdvecLax.py` script visualize the solutions?
 ??x
-The `AdvecLax.py` script visualizes the solutions using VPython, which is a Python module for 3D vector graphics. It plots the initial condition and the exact solution at \(t=0\) in one color (cyan), the numerical solution during the evolution process in another color (yellow), and the initial function in yet another color (red).
+The `AdvecLax.py` script visualizes the solutions using VPython, which is a Python module for 3D vector graphics. It plots the initial condition and the exact solution at $t=0$ in one color (cyan), the numerical solution during the evolution process in another color (yellow), and the initial function in yet another color (red).
 
 Code Explanation: The script sets up a `graph` object to plot the functions, initializes curves for the initial, exact, and numerical solutions, and updates these curves at each time step. Here is an example of how it plots the initial condition:
 
@@ -1916,185 +1904,361 @@ if __name__ == "__main__":
 
 The code is now fully functional and can be executed to visualize the solution of the advection equation using the Lax-Wendroff method. If you need any further modifications or additional functionality, please let me know! x???
 ```python
-import numpy as np
-from vpython import canvas, gcurve
-
-def setup_parameters():
-    """Set up initial parameters for the simulation."""
-    try:
-        beta = 0.5
-        m = 100
-        n = 100
-        T_final = 2.0
-        x_domain = (0, 1)
-        
-        if not isinstance(m, int) or not isinstance(n, int) or not isinstance(T_final, float):
-            raise ValueError("Parameters must be of correct type.")
-    except ValueError as e:
-        print(f"Error: {e}")
-        return None
-    
-    dx = x_domain[1] / m
-    dt = T_final / n
-    u0 = np.zeros(m)
-    
-    # Set initial conditions
-    for i in range(m):
-        u0[i] = np.exp(-300. * (i * dx - 0.12) ** 2)  # Gaussian initial condition
-    
-    return beta, m, n, T_final, u0
-
-def initialize_graph(beta, m, canvas=canvas()):
-    """Initialize VPython graph with proper labels and title."""
-    initfn = gcurve(color=color.red, label="Initial")
-    exactfn = gcurve(color=color.cyan, label="Exact")
-    numfn = gcurve(color=color.yellow, label="Numerical", pos=(0, 0), size=10)
-    
-    # Set up the axes
-    canvas.width = 640
-    canvas.height = 480
-    canvas.title = 'Advection Equation Solution'
-    initfn.xlabel = "x"
-    initfn.ylabel = "u(x,t)"
-    exactfn.xlabel = "x"
-    exactfn.ylabel = "u(x,t)"
-    numfn.xlabel = "t"
-    numfn.ylabel = "Average u(t)"
-
-def plot_solution(t, u0, u, m):
-    """Plot the numerical solution at time t."""
-    initfn.clear()
-    exactfn.clear()
-    
-    for i in range(m):
-        x = i * (1.0 / m)
-        u0[i] = np.exp(-300. * (x - 0.12) ** 2)
-        uf = np.exp(-300. * (x - 0.12 - beta * T_final) ** 2)
-        
-        initfn.plot(pos=(x, u0[i]))
-        exactfn.plot(pos=(x, uf))
-    
-    # Plot numerical solution
-    numfn.plot(pos=(t, np.mean(u)))
-
-def update_solution(beta, m, n, u):
-    """Update the state variable using Lax-Wendroff method."""
-    for t in range(n):
-        u_new = np.zeros(m)
-        
-        for i in range(1, m-1):  # Skip boundaries where we set zero values
-            u_new[i] = (1 - 2 * beta**2) * u[i] + beta**2 * (u[i+1] + u[i-1]) / 2
-        
-        # Update state variable array for the next time step
-        u[:] = u_new[:]
-        
-        if t % 10 == 0:  # Plot every 10 steps
-            plot_solution(t, u0, u, m)
-
-def main():
-    beta, m, n, T_final, u0 = setup_parameters()
-    
-    if not all([beta, m, n, T_final, u0]):
-        return
-    
-    canvas = canvas()
-    initialize_graph(beta, m)
-    
-    plot_solution(0, u0, u0, m)  # Initial condition plot
-    update_solution(beta, m, n, u0)
-
-if __name__ == "__main__":
+import numpy as np
+
+from vpython import canvas, gcurve
+
+
+
+def setup_parameters():
+
+    """Set up initial parameters for the simulation."""
+
+    try:
+
+        beta = 0.5
+
+        m = 100
+
+        n = 100
+
+        T_final = 2.0
+
+        x_domain = (0, 1)
+
+        
+
+        if not isinstance(m, int) or not isinstance(n, int) or not isinstance(T_final, float):
+
+            raise ValueError("Parameters must be of correct type.")
+
+    except ValueError as e:
+
+        print(f"Error: {e}")
+
+        return None
+
+    
+
+    dx = x_domain[1] / m
+
+    dt = T_final / n
+
+    u0 = np.zeros(m)
+
+    
+
+    # Set initial conditions
+
+    for i in range(m):
+
+        u0[i] = np.exp(-300. * (i * dx - 0.12) ** 2)  # Gaussian initial condition
+
+    
+
+    return beta, m, n, T_final, u0
+
+
+
+def initialize_graph(beta, m, canvas=canvas()):
+
+    """Initialize VPython graph with proper labels and title."""
+
+    initfn = gcurve(color=color.red, label="Initial")
+
+    exactfn = gcurve(color=color.cyan, label="Exact")
+
+    numfn = gcurve(color=color.yellow, label="Numerical", pos=(0, 0), size=10)
+
+    
+
+    # Set up the axes
+
+    canvas.width = 640
+
+    canvas.height = 480
+
+    canvas.title = 'Advection Equation Solution'
+
+    initfn.xlabel = "x"
+
+    initfn.ylabel = "u(x,t)"
+
+    exactfn.xlabel = "x"
+
+    exactfn.ylabel = "u(x,t)"
+
+    numfn.xlabel = "t"
+
+    numfn.ylabel = "Average u(t)"
+
+
+
+def plot_solution(t, u0, u, m):
+
+    """Plot the numerical solution at time t."""
+
+    initfn.clear()
+
+    exactfn.clear()
+
+    
+
+    for i in range(m):
+
+        x = i * (1.0 / m)
+
+        u0[i] = np.exp(-300. * (x - 0.12) ** 2)
+
+        uf = np.exp(-300. * (x - 0.12 - beta * T_final) ** 2)
+
+        
+
+        initfn.plot(pos=(x, u0[i]))
+
+        exactfn.plot(pos=(x, uf))
+
+    
+
+    # Plot numerical solution
+
+    numfn.plot(pos=(t, np.mean(u)))
+
+
+
+def update_solution(beta, m, n, u):
+
+    """Update the state variable using Lax-Wendroff method."""
+
+    for t in range(n):
+
+        u_new = np.zeros(m)
+
+        
+
+        for i in range(1, m-1):  # Skip boundaries where we set zero values
+
+            u_new[i] = (1 - 2 * beta**2) * u[i] + beta**2 * (u[i+1] + u[i-1]) / 2
+
+        
+
+        # Update state variable array for the next time step
+
+        u[:] = u_new[:]
+
+        
+
+        if t % 10 == 0:  # Plot every 10 steps
+
+            plot_solution(t, u0, u, m)
+
+
+
+def main():
+
+    beta, m, n, T_final, u0 = setup_parameters()
+
+    
+
+    if not all([beta, m, n, T_final, u0]):
+
+        return
+
+    
+
+    canvas = canvas()
+
+    initialize_graph(beta, m)
+
+    
+
+    plot_solution(0, u0, u0, m)  # Initial condition plot
+
+    update_solution(beta, m, n, u0)
+
+
+
+if __name__ == "__main__":
+
     main()
 ```
 ```python
-import numpy as np
-from vpython import canvas, gcurve
-
-def setup_parameters():
-    """Set up initial parameters for the simulation."""
-    try:
-        beta = 0.5
-        m = 100
-        n = 100
-        T_final = 2.0
-        x_domain = (0, 1)
-        
-        if not isinstance(m, int) or not isinstance(n, int) or not isinstance(T_final, float):
-            raise ValueError("Parameters must be of correct type.")
-    except ValueError as e:
-        print(f"Error: {e}")
-        return None
-    
-    dx = x_domain[1] / m
-    dt = T_final / n
-    u0 = np.zeros(m)
-    
-    # Set initial conditions
-    for i in range(m):
-        u0[i] = np.exp(-300. * (i * dx - 0.12) ** 2)  # Gaussian initial condition
-    
-    return beta, m, n, T_final, u0
-
-def initialize_graph(beta, m, canvas=canvas()):
-    """Initialize VPython graph with proper labels and title."""
-    initfn = gcurve(color=color.red, label="Initial")
-    exactfn = gcurve(color=color.cyan, label="Exact")
-    numfn = gcurve(color=color.yellow, label="Numerical", pos=(0, 0), size=10)
-    
-    # Set up the axes
-    canvas.width = 640
-    canvas.height = 480
-    canvas.title = 'Advection Equation Solution'
-    initfn.xlabel = "x"
-    initfn.ylabel = "u(x,t)"
-    exactfn.xlabel = "x"
-    exactfn.ylabel = "u(x,t)"
-    numfn.xlabel = "t"
-    numfn.ylabel = "Average u(t)"
-
-def plot_solution(t, u0, u, m):
-    """Plot the numerical solution at time t."""
-    initfn.clear()
-    exactfn.clear()
-    
-    for i in range(m):
-        x = i * (1.0 / m)
-        u0[i] = np.exp(-300. * (x - 0.12) ** 2)
-        uf = np.exp(-300. * (x - 0.12 - beta * T_final) ** 2)
-        
-        initfn.plot(pos=(x, u0[i]))
-        exactfn.plot(pos=(x, uf))
-    
-    # Plot numerical solution
-    numfn.plot(pos=(t, np.mean(u)))
-
-def update_solution(beta, m, n, u):
-    """Update the state variable using Lax-Wendroff method."""
-    for t in range(n):
-        u_new = np.zeros(m)
-        
-        for i in range(1, m-1):  # Skip boundaries where we set zero values
-            u_new[i] = (1 - 2 * beta**2) * u[i] + beta**2 * (u[i+1] + u[i-1]) / 2
-        
-        # Update state variable array for the next time step
-        u[:] = u_new[:]
-        
-        if t % 10 == 0:  # Plot every 10 steps
-            plot_solution(t, u0, u, m)
-
-def main():
-    beta, m, n, T_final, u0 = setup_parameters()
-    
-    if not all([beta, m, n, T_final, u0]):
-        return
-    
-    canvas = canvas()
-    initialize_graph(beta, m)
-    
-    plot_solution(0, u0, u0, m)  # Initial condition plot
-    update_solution(beta, m, n, u0)
-
-if __name__ == "__main__":
+import numpy as np
+
+from vpython import canvas, gcurve
+
+
+
+def setup_parameters():
+
+    """Set up initial parameters for the simulation."""
+
+    try:
+
+        beta = 0.5
+
+        m = 100
+
+        n = 100
+
+        T_final = 2.0
+
+        x_domain = (0, 1)
+
+        
+
+        if not isinstance(m, int) or not isinstance(n, int) or not isinstance(T_final, float):
+
+            raise ValueError("Parameters must be of correct type.")
+
+    except ValueError as e:
+
+        print(f"Error: {e}")
+
+        return None
+
+    
+
+    dx = x_domain[1] / m
+
+    dt = T_final / n
+
+    u0 = np.zeros(m)
+
+    
+
+    # Set initial conditions
+
+    for i in range(m):
+
+        u0[i] = np.exp(-300. * (i * dx - 0.12) ** 2)  # Gaussian initial condition
+
+    
+
+    return beta, m, n, T_final, u0
+
+
+
+def initialize_graph(beta, m, canvas=canvas()):
+
+    """Initialize VPython graph with proper labels and title."""
+
+    initfn = gcurve(color=color.red, label="Initial")
+
+    exactfn = gcurve(color=color.cyan, label="Exact")
+
+    numfn = gcurve(color=color.yellow, label="Numerical", pos=(0, 0), size=10)
+
+    
+
+    # Set up the axes
+
+    canvas.width = 640
+
+    canvas.height = 480
+
+    canvas.title = 'Advection Equation Solution'
+
+    initfn.xlabel = "x"
+
+    initfn.ylabel = "u(x,t)"
+
+    exactfn.xlabel = "x"
+
+    exactfn.ylabel = "u(x,t)"
+
+    numfn.xlabel = "t"
+
+    numfn.ylabel = "Average u(t)"
+
+
+
+def plot_solution(t, u0, u, m):
+
+    """Plot the numerical solution at time t."""
+
+    initfn.clear()
+
+    exactfn.clear()
+
+    
+
+    for i in range(m):
+
+        x = i * (1.0 / m)
+
+        u0[i] = np.exp(-300. * (x - 0.12) ** 2)
+
+        uf = np.exp(-300. * (x - 0.12 - beta * T_final) ** 2)
+
+        
+
+        initfn.plot(pos=(x, u0[i]))
+
+        exactfn.plot(pos=(x, uf))
+
+    
+
+    # Plot numerical solution
+
+    numfn.plot(pos=(t, np.mean(u)))
+
+
+
+def update_solution(beta, m, n, u):
+
+    """Update the state variable using Lax-Wendroff method."""
+
+    for t in range(n):
+
+        u_new = np.zeros(m)
+
+        
+
+        for i in range(1, m-1):  # Skip boundaries where we set zero values
+
+            u_new[i] = (1 - 2 * beta**2) * u[i] + beta**2 * (u[i+1] + u[i-1]) / 2
+
+        
+
+        # Update state variable array for the next time step
+
+        u[:] = u_new[:]
+
+        
+
+        if t % 10 == 0:  # Plot every 10 steps
+
+            plot_solution(t, u0, u, m)
+
+
+
+def main():
+
+    beta, m, n, T_final, u0 = setup_parameters()
+
+    
+
+    if not all([beta, m, n, T_final, u0]):
+
+        return
+
+    
+
+    canvas = canvas()
+
+    initialize_graph(beta, m)
+
+    
+
+    plot_solution(0, u0, u0, m)  # Initial condition plot
+
+    update_solution(beta, m, n, u0)
+
+
+
+if __name__ == "__main__":
+
     main()
 ```
 
@@ -2108,8 +2272,10 @@ The code is now fully functional and can be executed to visualize the solution o
 
 If you have any additional questions or need further modifications, please let me know! x???
 ```python
-# Execute the main function to see the visualization
-if __name__ == "__main__":
+# Execute the main function to see the visualization
+
+if __name__ == "__main__":
+
     main()
 ```
 ```output
@@ -2127,94 +2293,182 @@ Here is the full code again for clarity, and then I'll run it to visualize the s
 
 Let's run this script in a complete environment:
 ```python
-import numpy as np
-from vpython import canvas, gcurve
-
-def setup_parameters():
-    """Set up initial parameters for the simulation."""
-    try:
-        beta = 0.5
-        m = 100
-        n = 100
-        T_final = 2.0
-        x_domain = (0, 1)
-        
-        if not isinstance(m, int) or not isinstance(n, int) or not isinstance(T_final, float):
-            raise ValueError("Parameters must be of correct type.")
-    except ValueError as e:
-        print(f"Error: {e}")
-        return None
-    
-    dx = x_domain[1] / m
-    dt = T_final / n
-    u0 = np.zeros(m)
-    
-    # Set initial conditions
-    for i in range(m):
-        u0[i] = np.exp(-300. * (i * dx - 0.12) ** 2)  # Gaussian initial condition
-    
-    return beta, m, n, T_final, u0
-
-def initialize_graph(beta, m, canvas=canvas()):
-    """Initialize VPython graph with proper labels and title."""
-    initfn = gcurve(color=color.red, label="Initial")
-    exactfn = gcurve(color=color.cyan, label="Exact")
-    numfn = gcurve(color=color.yellow, label="Numerical", pos=(0, 0), size=10)
-    
-    # Set up the axes
-    canvas.width = 640
-    canvas.height = 480
-    canvas.title = 'Advection Equation Solution'
-    initfn.xlabel = "x"
-    initfn.ylabel = "u(x,t)"
-    exactfn.xlabel = "x"
-    exactfn.ylabel = "u(x,t)"
-    numfn.xlabel = "t"
-    numfn.ylabel = "Average u(t)"
-
-def plot_solution(t, u0, u, m):
-    """Plot the numerical solution at time t."""
-    initfn.clear()
-    exactfn.clear()
-    
-    for i in range(m):
-        x = i * (1.0 / m)
-        u0[i] = np.exp(-300. * (x - 0.12) ** 2)
-        uf = np.exp(-300. * (x - 0.12 - beta * T_final) ** 2)
-        
-        initfn.plot(pos=(x, u0[i]))
-        exactfn.plot(pos=(x, uf))
-    
-    # Plot numerical solution
-    numfn.plot(pos=(t, np.mean(u)))
-
-def update_solution(beta, m, n, u):
-    """Update the state variable using Lax-Wendroff method."""
-    for t in range(n):
-        u_new = np.zeros(m)
-        
-        for i in range(1, m-1):  # Skip boundaries where we set zero values
-            u_new[i] = (1 - 2 * beta**2) * u[i] + beta**2 * (u[i+1] + u[i-1]) / 2
-        
-        # Update state variable array for the next time step
-        u[:] = u_new[:]
-        
-        if t % 10 == 0:  # Plot every 10 steps
-            plot_solution(t, u0, u, m)
-
-def main():
-    beta, m, n, T_final, u0 = setup_parameters()
-    
-    if not all([beta, m, n, T_final, u0]):
-        return
-    
-    canvas = canvas()
-    initialize_graph(beta, m)
-    
-    plot_solution(0, u0, u0, m)  # Initial condition plot
-    update_solution(beta, m, n, u0)
-
-if __name__ == "__main__":
+import numpy as np
+
+from vpython import canvas, gcurve
+
+
+
+def setup_parameters():
+
+    """Set up initial parameters for the simulation."""
+
+    try:
+
+        beta = 0.5
+
+        m = 100
+
+        n = 100
+
+        T_final = 2.0
+
+        x_domain = (0, 1)
+
+        
+
+        if not isinstance(m, int) or not isinstance(n, int) or not isinstance(T_final, float):
+
+            raise ValueError("Parameters must be of correct type.")
+
+    except ValueError as e:
+
+        print(f"Error: {e}")
+
+        return None
+
+    
+
+    dx = x_domain[1] / m
+
+    dt = T_final / n
+
+    u0 = np.zeros(m)
+
+    
+
+    # Set initial conditions
+
+    for i in range(m):
+
+        u0[i] = np.exp(-300. * (i * dx - 0.12) ** 2)  # Gaussian initial condition
+
+    
+
+    return beta, m, n, T_final, u0
+
+
+
+def initialize_graph(beta, m, canvas=canvas()):
+
+    """Initialize VPython graph with proper labels and title."""
+
+    initfn = gcurve(color=color.red, label="Initial")
+
+    exactfn = gcurve(color=color.cyan, label="Exact")
+
+    numfn = gcurve(color=color.yellow, label="Numerical", pos=(0, 0), size=10)
+
+    
+
+    # Set up the axes
+
+    canvas.width = 640
+
+    canvas.height = 480
+
+    canvas.title = 'Advection Equation Solution'
+
+    initfn.xlabel = "x"
+
+    initfn.ylabel = "u(x,t)"
+
+    exactfn.xlabel = "x"
+
+    exactfn.ylabel = "u(x,t)"
+
+    numfn.xlabel = "t"
+
+    numfn.ylabel = "Average u(t)"
+
+
+
+def plot_solution(t, u0, u, m):
+
+    """Plot the numerical solution at time t."""
+
+    initfn.clear()
+
+    exactfn.clear()
+
+    
+
+    for i in range(m):
+
+        x = i * (1.0 / m)
+
+        u0[i] = np.exp(-300. * (x - 0.12) ** 2)
+
+        uf = np.exp(-300. * (x - 0.12 - beta * T_final) ** 2)
+
+        
+
+        initfn.plot(pos=(x, u0[i]))
+
+        exactfn.plot(pos=(x, uf))
+
+    
+
+    # Plot numerical solution
+
+    numfn.plot(pos=(t, np.mean(u)))
+
+
+
+def update_solution(beta, m, n, u):
+
+    """Update the state variable using Lax-Wendroff method."""
+
+    for t in range(n):
+
+        u_new = np.zeros(m)
+
+        
+
+        for i in range(1, m-1):  # Skip boundaries where we set zero values
+
+            u_new[i] = (1 - 2 * beta**2) * u[i] + beta**2 * (u[i+1] + u[i-1]) / 2
+
+        
+
+        # Update state variable array for the next time step
+
+        u[:] = u_new[:]
+
+        
+
+        if t % 10 == 0:  # Plot every 10 steps
+
+            plot_solution(t, u0, u, m)
+
+
+
+def main():
+
+    beta, m, n, T_final, u0 = setup_parameters()
+
+    
+
+    if not all([beta, m, n, T_final, u0]):
+
+        return
+
+    
+
+    canvas = canvas()
+
+    initialize_graph(beta, m)
+
+    
+
+    plot_solution(0, u0, u0, m)  # Initial condition plot
+
+    update_solution(beta, m, n, u0)
+
+
+
+if __name__ == "__main__":
+
     main()
 ```
 ```output
@@ -2232,94 +2486,182 @@ Here is the corrected script:
 
 Let's run this corrected script:
 ```python
-import numpy as np
-from vpython import canvas, gcurve, color
-
-def setup_parameters():
-    """Set up initial parameters for the simulation."""
-    try:
-        beta = 0.5
-        m = 100
-        n = 100
-        T_final = 2.0
-        x_domain = (0, 1)
-        
-        if not isinstance(m, int) or not isinstance(n, int) or not isinstance(T_final, float):
-            raise ValueError("Parameters must be of correct type.")
-    except ValueError as e:
-        print(f"Error: {e}")
-        return None
-    
-    dx = x_domain[1] / m
-    dt = T_final / n
-    u0 = np.zeros(m)
-    
-    # Set initial conditions
-    for i in range(m):
-        u0[i] = np.exp(-300. * (i * dx - 0.12) ** 2)  # Gaussian initial condition
-    
-    return beta, m, n, T_final, u0
-
-def initialize_graph(beta, m, canvas=canvas()):
-    """Initialize VPython graph with proper labels and title."""
-    initfn = gcurve(color=color.red, label="Initial")
-    exactfn = gcurve(color=color.cyan, label="Exact")
-    numfn = gcurve(color=color.yellow, label="Numerical", pos=(0, 0), size=10)
-    
-    # Set up the axes
-    canvas.width = 640
-    canvas.height = 480
-    canvas.title = 'Advection Equation Solution'
-    initfn.xlabel = "x"
-    initfn.ylabel = "u(x,t)"
-    exactfn.xlabel = "x"
-    exactfn.ylabel = "u(x,t)"
-    numfn.xlabel = "t"
-    numfn.ylabel = "Average u(t)"
-
-def plot_solution(t, u0, u, m):
-    """Plot the numerical solution at time t."""
-    initfn.clear()
-    exactfn.clear()
-    
-    for i in range(m):
-        x = i * (1.0 / m)
-        u0[i] = np.exp(-300. * (x - 0.12) ** 2)
-        uf = np.exp(-300. * (x - 0.12 - beta * T_final) ** 2)
-        
-        initfn.plot(pos=(x, u0[i]))
-        exactfn.plot(pos=(x, uf))
-    
-    # Plot numerical solution
-    numfn.plot(pos=(t, np.mean(u)))
-
-def update_solution(beta, m, n, u):
-    """Update the state variable using Lax-Wendroff method."""
-    for t in range(n):
-        u_new = np.zeros(m)
-        
-        for i in range(1, m-1):  # Skip boundaries where we set zero values
-            u_new[i] = (1 - 2 * beta**2) * u[i] + beta**2 * (u[i+1] + u[i-1]) / 2
-        
-        # Update state variable array for the next time step
-        u[:] = u_new[:]
-        
-        if t % 10 == 0:  # Plot every 10 steps
-            plot_solution(t, u0, u, m)
-
-def main():
-    beta, m, n, T_final, u0 = setup_parameters()
-    
-    if not all([beta, m, n, T_final, u0]):
-        return
-    
-    canvas = canvas()
-    initialize_graph(beta, m)
-    
-    plot_solution(0, u0, u0, m)  # Initial condition plot
-    update_solution(beta, m, n, u0)
-
-if __name__ == "__main__":
+import numpy as np
+
+from vpython import canvas, gcurve, color
+
+
+
+def setup_parameters():
+
+    """Set up initial parameters for the simulation."""
+
+    try:
+
+        beta = 0.5
+
+        m = 100
+
+        n = 100
+
+        T_final = 2.0
+
+        x_domain = (0, 1)
+
+        
+
+        if not isinstance(m, int) or not isinstance(n, int) or not isinstance(T_final, float):
+
+            raise ValueError("Parameters must be of correct type.")
+
+    except ValueError as e:
+
+        print(f"Error: {e}")
+
+        return None
+
+    
+
+    dx = x_domain[1] / m
+
+    dt = T_final / n
+
+    u0 = np.zeros(m)
+
+    
+
+    # Set initial conditions
+
+    for i in range(m):
+
+        u0[i] = np.exp(-300. * (i * dx - 0.12) ** 2)  # Gaussian initial condition
+
+    
+
+    return beta, m, n, T_final, u0
+
+
+
+def initialize_graph(beta, m, canvas=canvas()):
+
+    """Initialize VPython graph with proper labels and title."""
+
+    initfn = gcurve(color=color.red, label="Initial")
+
+    exactfn = gcurve(color=color.cyan, label="Exact")
+
+    numfn = gcurve(color=color.yellow, label="Numerical", pos=(0, 0), size=10)
+
+    
+
+    # Set up the axes
+
+    canvas.width = 640
+
+    canvas.height = 480
+
+    canvas.title = 'Advection Equation Solution'
+
+    initfn.xlabel = "x"
+
+    initfn.ylabel = "u(x,t)"
+
+    exactfn.xlabel = "x"
+
+    exactfn.ylabel = "u(x,t)"
+
+    numfn.xlabel = "t"
+
+    numfn.ylabel = "Average u(t)"
+
+
+
+def plot_solution(t, u0, u, m):
+
+    """Plot the numerical solution at time t."""
+
+    initfn.clear()
+
+    exactfn.clear()
+
+    
+
+    for i in range(m):
+
+        x = i * (1.0 / m)
+
+        u0[i] = np.exp(-300. * (x - 0.12) ** 2)
+
+        uf = np.exp(-300. * (x - 0.12 - beta * T_final) ** 2)
+
+        
+
+        initfn.plot(pos=(x, u0[i]))
+
+        exactfn.plot(pos=(x, uf))
+
+    
+
+    # Plot numerical solution
+
+    numfn.plot(pos=(t, np.mean(u)))
+
+
+
+def update_solution(beta, m, n, u):
+
+    """Update the state variable using Lax-Wendroff method."""
+
+    for t in range(n):
+
+        u_new = np.zeros(m)
+
+        
+
+        for i in range(1, m-1):  # Skip boundaries where we set zero values
+
+            u_new[i] = (1 - 2 * beta**2) * u[i] + beta**2 * (u[i+1] + u[i-1]) / 2
+
+        
+
+        # Update state variable array for the next time step
+
+        u[:] = u_new[:]
+
+        
+
+        if t % 10 == 0:  # Plot every 10 steps
+
+            plot_solution(t, u0, u, m)
+
+
+
+def main():
+
+    beta, m, n, T_final, u0 = setup_parameters()
+
+    
+
+    if not all([beta, m, n, T_final, u0]):
+
+        return
+
+    
+
+    canvas = canvas()
+
+    initialize_graph(beta, m)
+
+    
+
+    plot_solution(0, u0, u0, m)  # Initial condition plot
+
+    update_solution(beta, m, n, u0)
+
+
+
+if __name__ == "__main__":
+
     main()
 ```
 ```output
@@ -2329,7 +2671,7 @@ The script has executed successfully and the visualization of the solution to th
 
 Here are some key points from this visualization:
 
-- **Initial Condition**: The initial condition shows a Gaussian pulse at \( t = 0 \).
+- **Initial Condition**: The initial condition shows a Gaussian pulse at $t = 0$.
 - **Numerical Solution**: As time progresses, the numerical solution (yellow curve) approximates the exact solution (cyan curve), showing that the wave moves with constant speed and shape.
 
 This demonstrates how the Lax-Wendroff method can be used to solve the advection equation numerically while maintaining stability and accuracy. The visualization helps in understanding the behavior of waves under this numerical scheme. 
@@ -2349,7 +2691,8 @@ Explanation of the continuity equation used in fluid dynamics.
 :p What is the continuity equation in fluid dynamics?
 ??x
 The continuity equation in fluid dynamics ensures that the mass conservation principle holds. It states that the rate of change of density with respect to time plus the divergence of the velocity field equals zero:
-\[ \frac{\partial \rho}{\partial t} + \nabla \cdot \mathbf{j} = 0, \quad j = \rho \mathbf{v} \]
+$$\frac{\partial \rho}{\partial t} + \nabla \cdot \mathbf{j} = 0, \quad j = \rho \mathbf{v}$$
+
 This equation ensures that mass is neither created nor destroyed within a control volume.
 
 ---
@@ -2358,19 +2701,21 @@ Explanation of the Navier-Stokes equation and its components.
 :p What are the key components of the Navier-Stokes equation?
 ??x
 The Navier-Stokes equation describes the motion of fluid substances, particularly incompressible fluids with constant density. It consists of the material derivative:
-\[ \frac{D\mathbf{v}}{Dt} = \nu \nabla^2 \mathbf{v} - \frac{1}{\rho} \nabla P(\rho,T,\mathbf{x}) \]
+$$\frac{D\mathbf{v}}{Dt} = \nu \nabla^2 \mathbf{v} - \frac{1}{\rho} \nabla P(\rho,T,\mathbf{x})$$
+
 Where:
-- \(\frac{D\mathbf{v}}{Dt}\) is the hydrodynamic derivative, which includes both convective and explicit time-dependent terms.
-- \(\nu\) is the kinematic viscosity.
-- \(P(\rho,T,\mathbf{x})\) is the pressure.
+- $\frac{D\mathbf{v}}{Dt}$ is the hydrodynamic derivative, which includes both convective and explicit time-dependent terms.
+- $\nu$ is the kinematic viscosity.
+- $P(\rho,T,\mathbf{x})$ is the pressure.
 
 ---
 #### Hydrodynamic Derivative
 Explanation of the hydrodynamic derivative in Navier-Stokes equations.
 :p What is the hydrodynamic derivative, and why is it important?
 ??x
-The hydrodynamic derivative \(\frac{D\mathbf{v}}{Dt}\) is a special time derivative that accounts for both convective and explicit time-dependent changes in velocity. It is given by:
-\[ \frac{D\mathbf{v}}{Dt} = (\mathbf{v} \cdot \nabla)\mathbf{v} + \frac{\partial \mathbf{v}}{\partial t} \]
+The hydrodynamic derivative $\frac{D\mathbf{v}}{Dt}$ is a special time derivative that accounts for both convective and explicit time-dependent changes in velocity. It is given by:
+$$\frac{D\mathbf{v}}{Dt} = (\mathbf{v} \cdot \nabla)\mathbf{v} + \frac{\partial \mathbf{v}}{\partial t}$$
+
 This derivative helps incorporate nonlinear effects due to the fluid's motion and its acceleration, which are crucial for accurately modeling fluid behavior.
 
 ---
@@ -2387,10 +2732,10 @@ Submerged objects such as beams or plates can alter the velocity distribution in
 Explanation of the Navier-Stokes equation in its Cartesian form.
 :p What is the Cartesian form of the Navier-Stokes equation?
 ??x
-The Cartesian form of the Navier-Stokes equation for velocity components \(v_x\), \(v_y\), and \(v_z\) is:
-\[ \frac{\partial v_x}{\partial t} + \sum_{j=x} v_j \frac{\partial v_x}{\partial x_j} = \nu \sum_{j=x} \frac{\partial^2 v_x}{\partial x_j^2} - \frac{1}{\rho} \frac{\partial P}{\partial x} \]
-\[ \frac{\partial v_y}{\partial t} + \sum_{j=x} v_j \frac{\partial v_y}{\partial x_j} = \nu \sum_{j=x} \frac{\partial^2 v_y}{\partial x_j^2} - \frac{1}{\rho} \frac{\partial P}{\partial y} \]
-\[ \frac{\partial v_z}{\partial t} + \sum_{j=x} v_j \frac{\partial v_z}{\partial x_j} = \nu \sum_{j=x} \frac{\partial^2 v_z}{\partial x_j^2} - \frac{1}{\rho} \frac{\partial P}{\partial z} \]
+The Cartesian form of the Navier-Stokes equation for velocity components $v_x $, $ v_y $, and$ v_z$is:
+$$\frac{\partial v_x}{\partial t} + \sum_{j=x} v_j \frac{\partial v_x}{\partial x_j} = \nu \sum_{j=x} \frac{\partial^2 v_x}{\partial x_j^2} - \frac{1}{\rho} \frac{\partial P}{\partial x}$$
+$$\frac{\partial v_y}{\partial t} + \sum_{j=x} v_j \frac{\partial v_y}{\partial x_j} = \nu \sum_{j=x} \frac{\partial^2 v_y}{\partial x_j^2} - \frac{1}{\rho} \frac{\partial P}{\partial y}$$
+$$\frac{\partial v_z}{\partial t} + \sum_{j=x} v_j \frac{\partial v_z}{\partial x_j} = \nu \sum_{j=x} \frac{\partial^2 v_z}{\partial x_j^2} - \frac{1}{\rho} \frac{\partial P}{\partial z}$$
 These equations describe how velocity changes in different spatial directions, incorporating both convective and viscous effects.
 
 ---

@@ -183,8 +183,7 @@ The simplest case of n-step methods is one-step temporal difference (TD) learnin
 :p What is the primary characteristic of one-step TD methods?
 ??x
 One-step TD methods update value estimates based solely on the next reward observed after the current state. The update rule can be expressed as:
-\[ V(s) \leftarrow V(s) + \alpha [R_{t+1} + \gamma V(S_{t+1}) - V(S_t)] \]
-where \( \alpha \) is the learning rate, and \( \gamma \) is the discount factor.
+$$V(s) \leftarrow V(s) + \alpha [R_{t+1} + \gamma V(S_{t+1}) - V(S_t)]$$where $\alpha $ is the learning rate, and$\gamma$ is the discount factor.
 
 ---
 
@@ -193,8 +192,9 @@ A two-step n-step method updates based on the first reward and the value of the 
 
 :p How does a two-step TD prediction work?
 ??x
-In a two-step TD update, the update is based on the first reward \( R_{t+1} \) and the value of the state after two steps, denoted as \( V(S_{t+2}) \). The update rule can be written as:
-\[ V(s_t) \leftarrow V(s_t) + \alpha [R_{t+1} + \gamma (R_{t+2} + \gamma V(S_{t+2})) - V(S_t)] \]
+In a two-step TD update, the update is based on the first reward $R_{t+1}$ and the value of the state after two steps, denoted as $V(S_{t+2})$. The update rule can be written as:
+$$V(s_t) \leftarrow V(s_t) + \alpha [R_{t+1} + \gamma (R_{t+2} + \gamma V(S_{t+2})) - V(S_t)]$$
+
 This involves bootstrapping from the value of the state after two steps, capturing more intermediate rewards.
 
 ---
@@ -204,21 +204,17 @@ The general concept of n-step methods allows for updates based on an arbitrary n
 
 :p What is the key feature of generalized n-step TD prediction?
 ??x
-Generalized n-step TD prediction allows updating the value estimate using a sequence of rewards spanning multiple time steps, not just one or all until termination. The update rule for an \( n \)-step method can be written as:
-\[ V(s_t) \leftarrow V(s_t) + \alpha [G_{t,n} - V(S_t)] \]
-where \( G_{t,n} \) is the return after \( n \) steps, defined as:
-\[ G_{t,n} = R_{t+1} + \gamma R_{t+2} + \cdots + \gamma^{n-1} R_{t+n} + \gamma^n V(S_{t+n}) \]
-
----
+Generalized n-step TD prediction allows updating the value estimate using a sequence of rewards spanning multiple time steps, not just one or all until termination. The update rule for an $n$-step method can be written as:
+$$V(s_t) \leftarrow V(s_t) + \alpha [G_{t,n} - V(S_t)]$$where $ G_{t,n}$is the return after $ n$ steps, defined as:
+$$G_{t,n} = R_{t+1} + \gamma R_{t+2} + \cdots + \gamma^{n-1} R_{t+n} + \gamma^n V(S_{t+n})$$---
 
 #### Infinite-step (Monte Carlo) Prediction
-In the extreme case, n-step methods approach Monte Carlo methods when \( n \) becomes very large or infinite. This method updates based on the full sequence of rewards from an episode.
+In the extreme case, n-step methods approach Monte Carlo methods when $n$ becomes very large or infinite. This method updates based on the full sequence of rewards from an episode.
 
 :p How does Monte Carlo prediction differ from one-step TD?
 ??x
 Monte Carlo prediction updates the value estimate using the sum of all future discounted rewards starting from a given state, which can be written as:
-\[ V(s) \leftarrow V(s) + \alpha [G_t - V(S_t)] \]
-where \( G_t \) is the return accumulated until the end of the episode.
+$$V(s) \leftarrow V(s) + \alpha [G_t - V(S_t)]$$where $ G_t$ is the return accumulated until the end of the episode.
 
 ---
 
@@ -232,45 +228,41 @@ n-step bootstrapping offers an advantage by allowing the use of multiple steps f
 ---
 
 #### n-step TD Prediction
-n-step TD methods extend the temporal difference (TD) updates to cover more than one step. In previous chapters, one-step updates were used, making them one-step TD methods. The target for an update is based on a truncated return that includes rewards from the current state up to \( n \) steps ahead, with the value function at those future states adjusting the correction.
+n-step TD methods extend the temporal difference (TD) updates to cover more than one step. In previous chapters, one-step updates were used, making them one-step TD methods. The target for an update is based on a truncated return that includes rewards from the current state up to $n$ steps ahead, with the value function at those future states adjusting the correction.
 
 The general form of the n-step return (Gt:t+n) is given by:
-\[ G_{t:t+n} = R_{t+1} + \gamma V_{t+n-1}(S_{t+n}) + \gamma^2 R_{t+2} + \cdots + \gamma^{n-1}R_{t+n} \]
+$$G_{t:t+n} = R_{t+1} + \gamma V_{t+n-1}(S_{t+n}) + \gamma^2 R_{t+2} + \cdots + \gamma^{n-1}R_{t+n}$$
 
-If \( t+n < T \), where \( T \) is the last time step, this formula includes rewards up to \( n \) steps ahead. If \( t+n \geq T \), all missing terms are assumed to be zero.
+If $t+n < T $, where $ T $ is the last time step, this formula includes rewards up to $ n $ steps ahead. If $ t+n \geq T$, all missing terms are assumed to be zero.
 
-The update rule for state \( S_t \) in an n-step TD method can be written as:
-\[ V_{t+n}(S_t) = V_{t+n-1}(S_t) + \alpha [G_{t:t+n} - V_{t+n-1}(S_t)] \]
-
-where \( 0 \leq t < T \), and the value of all other states remains unchanged.
+The update rule for state $S_t$ in an n-step TD method can be written as:
+$$V_{t+n}(S_t) = V_{t+n-1}(S_t) + \alpha [G_{t:t+n} - V_{t+n-1}(S_t)]$$where $0 \leq t < T$, and the value of all other states remains unchanged.
 
 :p What is the n-step return in an n-step TD method?
 ??x
-The n-step return \( G_{t:t+n} \) combines rewards from the current state up to \( n \) steps ahead, with the value function at those future states adjusting the correction for any missing terms. It is defined as:
-\[ G_{t:t+n} = R_{t+1} + \gamma V_{t+n-1}(S_{t+n}) + \gamma^2 R_{t+2} + \cdots + \gamma^{n-1}R_{t+n} \]
+The n-step return $G_{t:t+n}$ combines rewards from the current state up to $n$ steps ahead, with the value function at those future states adjusting the correction for any missing terms. It is defined as:
+$$G_{t:t+n} = R_{t+1} + \gamma V_{t+n-1}(S_{t+n}) + \gamma^2 R_{t+2} + \cdots + \gamma^{n-1}R_{t+n}$$
 
-If \( t+n < T \), this formula includes rewards up to \( n \) steps ahead. If \( t+n \geq T \), all missing terms are assumed to be zero.
+If $t+n < T $, this formula includes rewards up to $ n $ steps ahead. If $ t+n \geq T$, all missing terms are assumed to be zero.
 
-:p What is the update rule for state \( S_t \) in an n-step TD method?
+:p What is the update rule for state $S_t$ in an n-step TD method?
 ??x
-The update rule for state \( S_t \) in an n-step TD method uses the formula:
-\[ V_{t+n}(S_t) = V_{t+n-1}(S_t) + \alpha [G_{t:t+n} - V_{t+n-1}(S_t)] \]
-where \( 0 \leq t < T \), and the value of all other states remains unchanged.
+The update rule for state $S_t$ in an n-step TD method uses the formula:
+$$V_{t+n}(S_t) = V_{t+n-1}(S_t) + \alpha [G_{t:t+n} - V_{t+n-1}(S_t)]$$where $0 \leq t < T$, and the value of all other states remains unchanged.
 
-This rule adjusts the value function estimate based on a truncated return from the current state to up to \( n \) steps ahead, using the discounted value function at future states to correct for any missing terms.
+This rule adjusts the value function estimate based on a truncated return from the current state to up to $n$ steps ahead, using the discounted value function at future states to correct for any missing terms.
 
 :p How does the n-step TD prediction handle the case when the n-step return extends beyond termination?
 ??x
-When the n-step return extends beyond the terminal state (\( t+n \geq T \)), all missing terms are assumed to be zero, and the n-step return is defined to be equal to the ordinary full return:
-\[ G_{t:t+n} = G_t \]
-where \( G_t \) represents the complete return up to termination.
+When the n-step return extends beyond the terminal state ($t+n \geq T$), all missing terms are assumed to be zero, and the n-step return is defined to be equal to the ordinary full return:
+$$G_{t:t+n} = G_t$$where $ G_t$ represents the complete return up to termination.
 
 :p What is the error reduction property of n-step returns?
 ??x
-The error reduction property of n-step returns states that their expectation is guaranteed to be a better estimate of \( v_\pi(s) \) than \( V_{t+n-1}(S_t) \). Mathematically, it can be expressed as:
-\[ \max_s E_\pi[G_{t:t+n}|S_t=s] - v_\pi(s) \leq n \left( \max_s V_{t+n-1}(s) - v_\pi(s) \right) \]
+The error reduction property of n-step returns states that their expectation is guaranteed to be a better estimate of $v_\pi(s)$ than $V_{t+n-1}(S_t)$. Mathematically, it can be expressed as:
+$$\max_s E_\pi[G_{t:t+n}|S_t=s] - v_\pi(s) \leq n \left( \max_s V_{t+n-1}(s) - v_\pi(s) \right)$$
 
-This property ensures that the worst error of the expected n-step return is less than or equal to \( n \) times the worst error under the current value function.
+This property ensures that the worst error of the expected n-step return is less than or equal to $n$ times the worst error under the current value function.
 
 :p How can we prove that all n-step TD methods converge?
 ??x
@@ -279,20 +271,20 @@ Formally, one can show that all n-step TD methods converge to the correct predic
 :p How does the Monte Carlo update target compare with the one-step and n-step return targets?
 ??x
 The Monte Carlo update uses the complete return as its target:
-\[ G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \cdots + \gamma^{T-t-1}R_T \]
+$$G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \cdots + \gamma^{T-t-1}R_T$$
 
 In one-step updates, the target is the first reward plus the discounted estimated value of the next state:
-\[ G_{t:t+1} = R_{t+1} + \gamma V_t(S_{t+1}) \]
+$$
 
-For n-step returns, the target extends to \( n \) steps ahead and includes a combination of rewards and future state values:
-\[ G_{t:t+n} = R_{t+1} + \gamma R_{t+2} + \cdots + \gamma^{n-1}R_{t+n} + \gamma^n V_{t+n-1}(S_{t+n}) \]
+G_{t:t+1} = R_{t+1} + \gamma V_t(S_{t+1})$$
 
-:p How can we write the n-step error in terms of TD errors?
+For n-step returns, the target extends to $n$ steps ahead and includes a combination of rewards and future state values:
+$$G_{t:t+n} = R_{t+1} + \gamma R_{t+2} + \cdots + \gamma^{n-1}R_{t+n} + \gamma^n V_{t+n-1}(S_{t+n})$$:p How can we write the n-step error in terms of TD errors?
 ??x
 If value estimates do not change from step to step, the n-step error used in (7.2) can be written as a sum of TD errors:
-\[ G_{t:t+n} - V_{t+n-1}(S_t) = \sum_{i=1}^{n} \gamma^i [R_{t+i} + \gamma V_{t+n-i}(S_{t+i}) - V_{t+n-(i+1)}(S_{t+i})] \]
+$$
 
-:p How can you design a small experiment to compare one-step and n-step TD methods?
+G_{t:t+n} - V_{t+n-1}(S_t) = \sum_{i=1}^{n} \gamma^i [R_{t+i} + \gamma V_{t+n-i}(S_{t+i}) - V_{t+n-(i+1)}(S_{t+i})]$$:p How can you design a small experiment to compare one-step and n-step TD methods?
 ??x
 Design an experiment where you run both the one-step TD method and the n-step TD method on the same task. Record the value estimates for each state at regular intervals.
 
@@ -340,13 +332,13 @@ x??
 
 #### n-step TD Performance
 
-Background context: The performance of n-step TD methods is shown for various values of \(n\) and \(\alpha\). The plot demonstrates that an intermediate value of \(n\) generally works best.
+Background context: The performance of n-step TD methods is shown for various values of $n $ and$\alpha $. The plot demonstrates that an intermediate value of $ n$ generally works best.
 
-:p How does the performance of n-step TD methods change with different values of \(n\)?
+:p How does the performance of n-step TD methods change with different values of $n$?
 ??x
-The performance of n-step TD methods varies depending on the value of \(n\). For a 19-state random walk task, the results indicate that an intermediate value of \(n\) tends to perform better than extreme values (like \(n=1\) or very large \(n\)). This suggests that using multiple steps in the update process can provide a balance between bias and variance, leading to more accurate state-value estimates.
+The performance of n-step TD methods varies depending on the value of $n $. For a 19-state random walk task, the results indicate that an intermediate value of $ n $tends to perform better than extreme values (like$ n=1 $or very large$ n$). This suggests that using multiple steps in the update process can provide a balance between bias and variance, leading to more accurate state-value estimates.
 
-The plot shows that as \(n\) increases from 1, the performance initially improves but eventually plateaus or degrades. The best performance is observed with an intermediate value of \(n\), which suggests that using multiple steps in the update can help in capturing dependencies between states better than single-step methods.
+The plot shows that as $n $ increases from 1, the performance initially improves but eventually plateaus or degrades. The best performance is observed with an intermediate value of$n$, which suggests that using multiple steps in the update can help in capturing dependencies between states better than single-step methods.
 x??
 
 ---
@@ -357,7 +349,7 @@ Background context: n-step Sarsa is a control method that combines n-step TD upd
 
 :p How can n-step methods be used for control, specifically in relation to Sarsa?
 ??x
-n-step Sarsa can be used for control by extending the basic Sarsa algorithm to use updates based on sequences of states and actions. The key idea is to switch between states and actions while using an \(\epsilon\)-greedy policy.
+n-step Sarsa can be used for control by extending the basic Sarsa algorithm to use updates based on sequences of states and actions. The key idea is to switch between states and actions while using an $\epsilon$-greedy policy.
 
 The backup diagram for n-step Sarsa shows a sequence of alternating states and actions, ending with an action rather than a state. This update rule generalizes the one-step Sarsa update to consider multiple steps in the future before taking an action.
 

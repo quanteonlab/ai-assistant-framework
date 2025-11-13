@@ -5,17 +5,16 @@
 ---
 
 #### Newton's Law of Gravitation and Planetary Orbits
-Background context explaining how Newton used his laws to explain planetary motion. The formula for gravitational force between a planet \(m\) and the sun \(M\) is given by:
-\[ F_g = -\frac{G m M}{r^2} \]
-where \( r \) is the distance from the planet to the sun, and \( G \) is the universal gravitational constant. The equations of motion are derived from Newton's second law:
-\[ F_x = F_{gx} r = F_g \cos\theta \sqrt{x^2 + y^2}, \]
-\[ F_y = F_{gy} r = -F_g \sin\theta \sqrt{x^2 + y^2}. \]
+Background context explaining how Newton used his laws to explain planetary motion. The formula for gravitational force between a planet $m $ and the sun$M$ is given by:
+$$F_g = -\frac{G m M}{r^2}$$where $ r $ is the distance from the planet to the sun, and $ G$ is the universal gravitational constant. The equations of motion are derived from Newton's second law:
+$$F_x = F_{gx} r = F_g \cos\theta \sqrt{x^2 + y^2},$$
+$$
 
-:p What are the equations of motion for a planet under the influence of gravity from the sun?
+F_y = F_{gy} r = -F_g \sin\theta \sqrt{x^2 + y^2}.$$:p What are the equations of motion for a planet under the influence of gravity from the sun?
 ??x
 The equations of motion are:
-\[ d^2x/dt^2 = -\frac{GM x}{(x^2+y^2)^{3/2}}, \]
-\[ d^2y/dt^2 = -\frac{GM y}{(x^2+y^2)^{3/2}}. \]
+$$d^2x/dt^2 = -\frac{GM x}{(x^2+y^2)^{3/2}},$$
+$$d^2y/dt^2 = -\frac{GM y}{(x^2+y^2)^{3/2}}.$$
 
 These equations are derived from Newton's second law and the gravitational force formula.
 
@@ -124,7 +123,7 @@ Background context on how Neptune was discovered by observing perturbations in U
 ??x
 To predict Neptune's influence on Uranus using orbital mechanics:
 
-1. Define the constants for gravitational constant \( G \), mass of the sun \( M_s \), and masses and distances of both planets.
+1. Define the constants for gravitational constant $G $, mass of the sun $ M_s$, and masses and distances of both planets.
 2. Calculate their angular velocities based on their periods.
 3. Initialize their initial positions and velocities.
 4. Use a numerical integration method like RK4 to update the positions and velocities over time.
@@ -163,11 +162,11 @@ x??
 
 ---
 #### Effect of Gravitational Power Law on Planetary Orbits
-Background context explaining how varying the gravitational power law affects planetary orbits. The force is given by \( F_g \propto 1/r^{2+\alpha} \).
+Background context explaining how varying the gravitational power law affects planetary orbits. The force is given by $F_g \propto 1/r^{2+\alpha}$.
 
-:p What happens when the gravitational force law changes to \( F_g \propto 1/r^{2+\alpha} \)?
+:p What happens when the gravitational force law changes to $F_g \propto 1/r^{2+\alpha}$?
 ??x
-When the gravitational force law changes to \( F_g \propto 1/r^{2+\alpha} \) with a small non-zero value of \( \alpha \), it causes the orbits to precess or rotate. This effect is even more pronounced for small values of \( \alpha \).
+When the gravitational force law changes to $F_g \propto 1/r^{2+\alpha}$ with a small non-zero value of $\alpha$, it causes the orbits to precess or rotate. This effect is even more pronounced for small values of $\alpha$.
 
 ```java
 // Pseudocode for simulating the effect of varying gravitational power law
@@ -210,7 +209,7 @@ Background context on using numerical integration methods like RK4 to simulate p
 To implement the simulation for precessing orbits, follow these steps:
 
 1. Define the constants and initial conditions.
-2. Modify the force components based on the new power law \( F_g \propto 1/r^{2+\alpha} \).
+2. Modify the force components based on the new power law $F_g \propto 1/r^{2+\alpha}$.
 3. Use RK4 to integrate the equations of motion over a period.
 
 ```java
@@ -273,7 +272,7 @@ Background context on using numerical methods to simulate the precession of plan
 
 :p How can you simulate the precession effect in an orbit with a modified gravitational force?
 ??x
-To simulate the precession effect in an orbit with a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \), follow these steps:
+To simulate the precession effect in an orbit with a modified gravitational force $F_g \propto 1/r^{2+\alpha}$, follow these steps:
 
 1. Define the constants and initial conditions.
 2. Implement the modified force components based on the power law.
@@ -342,7 +341,7 @@ Background context on implementing a numerical integration method (e.g., RK4) to
 To implement the numerical integration method for simulating precessing orbits, follow these steps:
 
 1. Define the constants and initial conditions.
-2. Implement the modified force components based on the power law \( F_g \propto 1/r^{2+\alpha} \).
+2. Implement the modified force components based on the power law $F_g \propto 1/r^{2+\alpha}$.
 3. Use a numerical integration method like RK4 to update positions and velocities over time.
 
 ```java
@@ -402,11 +401,11 @@ x??
 --- 
 #### Conclusion on Simulating Precessing Orbits
 
-In conclusion, to simulate the precession effect in an orbit with a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \), we have implemented a numerical integration method using the Runge-Kutta 4th order (RK4) algorithm. This approach involves defining constants and initial conditions for the orbit, implementing the modified force components based on the power law, and updating positions and velocities over time.
+In conclusion, to simulate the precession effect in an orbit with a modified gravitational force $F_g \propto 1/r^{2+\alpha}$, we have implemented a numerical integration method using the Runge-Kutta 4th order (RK4) algorithm. This approach involves defining constants and initial conditions for the orbit, implementing the modified force components based on the power law, and updating positions and velocities over time.
 
 The key steps are:
 1. Define the constants and initial conditions.
-2. Implement the modified force components with the power law \( F_g \propto 1/r^{2+\alpha} \).
+2. Implement the modified force components with the power law $F_g \propto 1/r^{2+\alpha}$.
 3. Use the RK4 method to integrate the equations of motion.
 
 This simulation allows us to observe the precession behavior of orbits under this non-Newtonian gravitational model, providing insights into how small perturbations can affect the dynamics of celestial bodies. The results from such simulations are crucial for understanding and predicting the long-term stability and behavior of planetary systems.
@@ -415,11 +414,11 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In summary, the simulation of precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using numerical methods like the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. The implementation involves setting up initial conditions and iteratively updating positions and velocities based on the modified force components.
+In summary, the simulation of precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using numerical methods like the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. The implementation involves setting up initial conditions and iteratively updating positions and velocities based on the modified force components.
 
 The key steps are:
-1. **Define Constants and Initial Conditions**: Set the gravitational constant \( G \), masses, distances, and initial angular velocity.
-2. **Implement Modified Force Components**: Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+1. **Define Constants and Initial Conditions**: Set the gravitational constant $G$, masses, distances, and initial angular velocity.
+2. **Implement Modified Force Components**: Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 3. **Numerical Integration**: Use RK4 to integrate the equations of motion over time.
 
 This approach allows us to observe and analyze precession effects in orbits, which can be critical for understanding long-term behavior in celestial mechanics. The simulation highlights how small deviations from Newtonian physics can significantly impact orbital dynamics, making such models important tools in astrophysics and planetary science.
@@ -428,14 +427,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, the simulation of precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using numerical methods like the Runge-Kutta 4th order (RK4) algorithm offers valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, the simulation of precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using numerical methods like the Runge-Kutta 4th order (RK4) algorithm offers valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**: 
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
    
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -448,14 +447,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using numerical methods like the Runge-Kutta 4th order (RK4) algorithm provides significant insights into the dynamics of such systems. Here are the key points to consider:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using numerical methods like the Runge-Kutta 4th order (RK4) algorithm provides significant insights into the dynamics of such systems. Here are the key points to consider:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -470,14 +469,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In summary, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
+In summary, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -492,14 +491,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -512,14 +511,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -532,14 +531,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -552,14 +551,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -572,14 +571,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -592,14 +591,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides significant insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides significant insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -612,14 +611,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -632,14 +631,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -652,14 +651,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -672,14 +671,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -692,14 +691,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -712,14 +711,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -732,14 +731,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -752,14 +751,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -772,14 +771,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -792,14 +791,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -812,14 +811,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -832,14 +831,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -852,14 +851,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -872,14 +871,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -892,14 +891,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -912,14 +911,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -932,14 +931,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -952,14 +951,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -972,14 +971,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -992,14 +991,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1012,14 +1011,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1032,14 +1031,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1052,14 +1051,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1072,14 +1071,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1092,14 +1091,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1112,14 +1111,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1132,14 +1131,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1152,14 +1151,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1172,14 +1171,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1192,14 +1191,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1212,14 +1211,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1232,14 +1231,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key points:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1252,14 +1251,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1272,14 +1271,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1292,14 +1291,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1312,14 +1311,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1332,14 +1331,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1352,14 +1351,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1372,14 +1371,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1392,14 +1391,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1412,14 +1411,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1432,14 +1431,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1452,14 +1451,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1472,14 +1471,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1492,14 +1491,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1512,14 +1511,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1532,14 +1531,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1552,14 +1551,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1572,14 +1571,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1592,14 +1591,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1612,14 +1611,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1632,14 +1631,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1652,14 +1651,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1672,14 +1671,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1692,14 +1691,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1712,14 +1711,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1732,14 +1731,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1752,14 +1751,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1772,14 +1771,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1792,14 +1791,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1812,14 +1811,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1832,14 +1831,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1852,14 +1851,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1872,14 +1871,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1892,14 +1891,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1912,14 +1911,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1932,14 +1931,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1952,14 +1951,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1972,14 +1971,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -1992,14 +1991,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2012,14 +2011,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2032,14 +2031,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2052,14 +2051,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2072,14 +2071,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2092,14 +2091,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2112,14 +2111,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2132,14 +2131,14 @@ x??
 --- 
 #### Final Thoughts on Precessing Orbits
 
-In conclusion, simulating precessing orbits under a modified gravitational force \( F_g \propto 1/r^{2+\alpha} \) using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
+In conclusion, simulating precessing orbits under a modified gravitational force $F_g \propto 1/r^{2+\alpha}$ using the Runge-Kutta 4th order (RK4) algorithm offers significant insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2156,11 +2155,11 @@ It seems that there was an error with the previous response. Let's summarize the
 In conclusion, simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm provides valuable insights into the dynamics of such systems. Here are the key takeaways:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2172,11 +2171,11 @@ By simulating these orbits, we gain a deeper understanding of the complex intera
 If you have any specific questions or need further details on any step, feel free to ask! --- The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm are as follows:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define the masses, distances, and initial angular velocity of the orbit.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration using the power law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration using the power law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2190,11 +2189,11 @@ If you have any specific questions or need further details on any step, feel fre
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm are:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define the masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2204,11 +2203,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2218,11 +2217,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm are:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2232,11 +2231,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2246,11 +2245,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm are:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2260,11 +2259,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2274,11 +2273,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm are:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2288,11 +2287,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2302,11 +2301,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm are:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2316,11 +2315,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2330,11 +2329,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm are:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2344,11 +2343,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2358,11 +2357,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm are:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2372,11 +2371,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2386,11 +2385,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm are:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2400,11 +2399,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2414,11 +2413,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm are:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2428,11 +2427,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2442,11 +2441,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm are:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2456,11 +2455,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2470,11 +2469,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm are:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2484,11 +2483,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2498,11 +2497,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm are:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2512,11 +2511,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2526,11 +2525,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm are:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2540,11 +2539,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2554,11 +2553,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm are:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2568,11 +2567,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2582,11 +2581,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm are:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2596,11 +2595,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2610,11 +2609,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm are:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2624,11 +2623,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2638,11 +2637,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2652,11 +2651,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2666,11 +2665,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2680,11 +2679,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2694,11 +2693,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2708,11 +2707,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2722,11 +2721,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2736,11 +2735,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2750,11 +2749,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2764,11 +2763,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2778,11 +2777,11 @@ This approach is useful for studying precession and other deviations from Newton
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2792,11 +2791,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2806,11 +2805,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2820,11 +2819,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2834,11 +2833,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2848,11 +2847,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2862,11 +2861,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2876,11 +2875,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2890,11 +2889,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2904,11 +2903,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2918,11 +2917,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2932,11 +2931,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2946,11 +2945,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2960,11 +2959,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2974,11 +2973,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -2988,11 +2987,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -3002,11 +3001,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -3016,11 +3015,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -3030,11 +3029,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -3044,11 +3043,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -3058,11 +3057,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -3072,11 +3071,11 @@ This method helps us understand precession effects and other deviations from New
 The key takeaways from simulating precessing orbits under a modified gravitational force using the Runge-Kutta 4th order (RK4) algorithm include:
 
 1. **Define Constants and Initial Conditions**:
-   - Set the gravitational constant \( G \).
+   - Set the gravitational constant $G$.
    - Define masses, distances, and initial angular velocity.
 
 2. **Implement Modified Force Components**:
-   - Update acceleration with the modified gravitational force law \( F_g = -\frac{G m}{r^2 (1 + \alpha / r)} \).
+   - Update acceleration with the modified gravitational force law $F_g = -\frac{G m}{r^2 (1 + \alpha / r)}$.
 
 3. **Numerical Integration**:
    - Use RK4 to integrate the equations of motion over time.
@@ -3116,7 +3115,7 @@ The `Numerov` function computes the wave function values given a set of paramete
 
 :p What does the `setk2` function do in this context?
 ??x
-The `setk2` function calculates the value of \( k^2 \) (where \( k = \sqrt{2m(E - V(x))} / \hbar c \)) at each point `i` in the computational domain. This value is used by the Numerov method to solve for the wave functions.
+The `setk2` function calculates the value of $k^2 $(where $ k = \sqrt{2m(E - V(x))} / \hbar c$) at each point `i` in the computational domain. This value is used by the Numerov method to solve for the wave functions.
 
 ```python
 def setk2(e):
@@ -3137,7 +3136,7 @@ Background context: The code initializes the left (`uL`) and right (`uR`) wave f
 ??x
 The purpose of `uL` and `uR` is to store the computed values of the left and right wave functions, respectively. These wave functions are used by the Numerov method to solve the time-independent Schrödinger equation iteratively.
 
-These arrays are initialized with specific boundary conditions, such as \( u(0) = 0 \), and then updated using the Numerov algorithm at each step.
+These arrays are initialized with specific boundary conditions, such as $u(0) = 0$, and then updated using the Numerov algorithm at each step.
 x??
 
 ---
@@ -3178,10 +3177,10 @@ x??
 ---
 
 #### Bisection Algorithm for Finding Eigenvalues
-Background context: The provided Python script uses a bisection algorithm to find an eigenvalue \(E\) that satisfies a specific condition. This is done by repeatedly dividing the interval between two guesses, \(E_{max}\) and \(E_{min}\), until the difference in the derivative of the wave function at the boundaries falls below a specified tolerance \(\epsilon\). The script also uses a function `diff(E, h)` to evaluate the condition.
+Background context: The provided Python script uses a bisection algorithm to find an eigenvalue $E $ that satisfies a specific condition. This is done by repeatedly dividing the interval between two guesses,$ E_{max}$ and $E_{min}$, until the difference in the derivative of the wave function at the boundaries falls below a specified tolerance $\epsilon$. The script also uses a function `diff(E, h)` to evaluate the condition.
 :p What is the primary method used in this script to find an eigenvalue?
 ??x
-The bisection algorithm. This method repeatedly narrows down the interval between \(E_{max}\) and \(E_{min}\) by evaluating the derivative difference at the boundaries of the current interval, halving it each time until the desired tolerance is met.
+The bisection algorithm. This method repeatedly narrows down the interval between $E_{max}$ and $E_{min}$ by evaluating the derivative difference at the boundaries of the current interval, halving it each time until the desired tolerance is met.
 
 Code Example:
 ```python
@@ -3208,10 +3207,10 @@ x??
 ---
 
 #### Iterative Process for Eigenvalue Calculation
-Background context: The script iteratively calculates an eigenvalue \(E\) using a bisection algorithm. It starts with initial guesses for \(E_{max}\) and \(E_{min}\), then repeatedly narrows the interval by evaluating the function `diff(E, h)` until the difference in derivatives at both ends of the interval falls below a specified tolerance \(\epsilon\).
+Background context: The script iteratively calculates an eigenvalue $E $ using a bisection algorithm. It starts with initial guesses for$E_{max}$ and $E_{min}$, then repeatedly narrows the interval by evaluating the function `diff(E, h)` until the difference in derivatives at both ends of the interval falls below a specified tolerance $\epsilon$.
 :p What happens during each iteration of the main loop?
 ??x
-During each iteration, the script calculates the midpoint \(E = (E_{max} + E_{min}) / 2\) and evaluates the function `diff(E, h)` to determine if the current interval should be adjusted. If the product of `Diff` and the derivative at the upper boundary is positive, it updates \(E_{max}\) to the midpoint; otherwise, it updates \(E_{min}\). The loop continues until the absolute value of `Diff` falls below \(\epsilon\) or a maximum number of iterations (`count_max`) is reached.
+During each iteration, the script calculates the midpoint $E = (E_{max} + E_{min}) / 2 $ and evaluates the function `diff(E, h)` to determine if the current interval should be adjusted. If the product of `Diff` and the derivative at the upper boundary is positive, it updates$E_{max}$ to the midpoint; otherwise, it updates $E_{min}$. The loop continues until the absolute value of `Diff` falls below $\epsilon$ or a maximum number of iterations (`count_max`) is reached.
 
 Code Example:
 ```python
@@ -3256,7 +3255,7 @@ x??
 Background context: The script uses the Runge-Kutta (RK4) method to numerically integrate the wave function. This is a fourth-order method that provides a good balance between accuracy and computational efficiency.
 :p What does the `rk4` function do in this script?
 ??x
-The `rk4` function performs a single step of the fourth-order Runge-Kutta (RK4) integration method. It calculates the intermediate values \(k1\), \(k2\), \(k3\), and \(k4\) to estimate the slope at different points, then uses these slopes to determine the next value of the wave function.
+The `rk4` function performs a single step of the fourth-order Runge-Kutta (RK4) integration method. It calculates the intermediate values $k1 $, $ k2 $,$ k3 $, and$ k4$ to estimate the slope at different points, then uses these slopes to determine the next value of the wave function.
 
 Code Example:
 ```python
@@ -3286,7 +3285,7 @@ x??
 ---
 
 #### Projectile Motion with Air Resistance
-Background context: The script models the trajectory of a projectile in two scenarios: one without air resistance and another with air resistance using a drag coefficient \(kf\). It calculates the time to reach maximum height, total flight time, and range for both cases. Then it uses numerical integration (RK4) to plot the trajectory with and without air resistance.
+Background context: The script models the trajectory of a projectile in two scenarios: one without air resistance and another with air resistance using a drag coefficient $kf$. It calculates the time to reach maximum height, total flight time, and range for both cases. Then it uses numerical integration (RK4) to plot the trajectory with and without air resistance.
 :p What are the main differences between the trajectories calculated in this script?
 ??x
 The main difference is that the trajectory with air resistance follows a different path compared to the one without air resistance due to the drag force. The projectile with air resistance will reach its maximum height more quickly, have a shorter range, and follow a parabolic path that is less symmetrical than the frictionless case.
@@ -3373,22 +3372,18 @@ Background context: The fractal dimension of an object can be determined by anal
 
 :p How does the density change for successive structures in a Sierpiński gasket?
 ??x
-The density of the Sierpiński gasket changes according to the relationship given by Equation (14.7). For each new structure, the density is proportional to \( C L^{d_f - 2} \), where \( d_f \) is the fractal dimension and \( L \) is the length.
+The density of the Sierpiński gasket changes according to the relationship given by Equation (14.7). For each new structure, the density is proportional to $C L^{d_f - 2}$, where $ d_f$is the fractal dimension and $ L$ is the length.
 
 For the first few iterations:
-- When \( L = r \):
-\[ \rho(L=r) \propto M r^2 = m r^2 \text{def}=\rho_0. \]
-- For an equilateral triangle with side length \( L = 2r \):
-\[ \rho(L=2r) \propto (M = 3m)(2r)^2 = 3/4 \cdot \rho_0. \]
-- For the structure in Figure 14.1C, when \( L = 4r \):
-\[ \rho(L=4r) \propto (M = 9m)(4r)^2 = (3/4)^2 \cdot \rho_0. \]
+- When $L = r$:
+$$\rho(L=r) \propto M r^2 = m r^2 \text{def}=\rho_0.$$- For an equilateral triangle with side length $ L = 2r$:
+$$\rho(L=2r) \propto (M = 3m)(2r)^2 = 3/4 \cdot \rho_0.$$- For the structure in Figure 14.1C, when $ L = 4r$:
+$$\rho(L=4r) \propto (M = 9m)(4r)^2 = (3/4)^2 \cdot \rho_0.$$
 
-From this pattern, we see that the density of each new structure is \( \frac{3}{4} \) of the previous one.
+From this pattern, we see that the density of each new structure is $\frac{3}{4}$ of the previous one.
 
 To find the fractal dimension:
-\[ d_f = 2 + \Delta \log(\rho(L)) / \Delta \log(L) = 2 + \log(1 - \log(3/4)) / \log(1 - \log(2)) \approx 1.58496. \]
-
-x??
+$$d_f = 2 + \Delta \log(\rho(L)) / \Delta \log(L) = 2 + \log(1 - \log(3/4)) / \log(1 - \log(2)) \approx 1.58496.$$x??
 
 ---
 
@@ -3408,29 +3403,24 @@ x??
 ---
 
 #### Measuring Fractal Dimension Empirically
-Background context: The fractal dimension can be empirically determined by analyzing how the total mass \( M \) of an object scales with its size \( L \). For a Sierpiński gasket, each dot has a mass of 1, and the density is defined as the mass per unit area.
+Background context: The fractal dimension can be empirically determined by analyzing how the total mass $M $ of an object scales with its size$L$. For a Sierpiński gasket, each dot has a mass of 1, and the density is defined as the mass per unit area.
 
 :p How can you determine the fractal dimension empirically for a Sierpiński gasket?
 ??x
-To determine the fractal dimension empirically, you need to analyze how the total mass \( M \) scales with the size \( L \). For a Sierpiński gasket:
+To determine the fractal dimension empirically, you need to analyze how the total mass $M $ scales with the size$L$. For a Sierpiński gasket:
 
 1. **Mass and Length Relationship**: Assume each dot has a mass of 1.
-2. **Density Calculation**: The density \( \rho \) is given by:
-   \[ \rho = \frac{M}{\text{Area}}. \]
-3. **Scaling Relationship**: For successive iterations, the density changes according to:
-   - For \( L = r \): 
-     \[ \rho(L=r) \propto M r^2 = m r^2 \text{def}=\rho_0. \]
-   - For \( L = 2r \):
-     \[ \rho(L=2r) \propto (M = 3m)(2r)^2 = 3/4 \cdot \rho_0. \]
-   - For \( L = 4r \):
-     \[ \rho(L=4r) \propto (M = 9m)(4r)^2 = (3/4)^2 \cdot \rho_0. \]
+2. **Density Calculation**: The density $\rho$ is given by:
+   $$\rho = \frac{M}{\text{Area}}.$$3. **Scaling Relationship**: For successive iterations, the density changes according to:
+   - For $L = r$: 
+     $$\rho(L=r) \propto M r^2 = m r^2 \text{def}=\rho_0.$$- For $ L = 2r$:
+     $$\rho(L=2r) \propto (M = 3m)(2r)^2 = 3/4 \cdot \rho_0.$$- For $ L = 4r$:
+     $$\rho(L=4r) \propto (M = 9m)(4r)^2 = (3/4)^2 \cdot \rho_0.$$
 
-Using these relationships, you can plot \( \log(\rho) \) versus \( \log(L) \) and find the slope of the line, which corresponds to \( d_f - 2 \).
+Using these relationships, you can plot $\log(\rho)$ versus $\log(L)$ and find the slope of the line, which corresponds to $d_f - 2$.
 
 The fractal dimension is then:
-\[ d_f = 2 + \Delta \log(\rho(L)) / \Delta \log(L). \]
-
-x??
+$$d_f = 2 + \Delta \log(\rho(L)) / \Delta \log(L).$$x??
 
 ---
 
@@ -3439,15 +3429,10 @@ x??
 Background context: The concept of self-similarity is central to understanding fractals. Self-similarity means that parts of an object are similar to the whole, but not necessarily identical. This property is evident in nature through phenomena like ferns where each frond resembles the entire plant.
 
 Formula for scaling and translation:
-\[
-(x',y') = s(x,y) = (sx,sy)
-\]
-Translation formula:
-\[
-(x',y') = (x,y) + (ax,ay)
-\]
+$$(x',y') = s(x,y) = (sx,sy)$$
 
-:p What is self-similarity in fractals?
+Translation formula:
+$$(x',y') = (x,y) + (ax,ay)$$:p What is self-similarity in fractals?
 ??x
 Self-similarity in fractals means that each part of the object bears a similar relationship to its ancestors as the whole does. This property allows objects like ferns and trees to exhibit regularity despite being generated by random processes.
 x??
@@ -3459,11 +3444,7 @@ x??
 Background context: Affine transformations include scaling, rotation, and translation operations. These transformations are important in generating fractals because they can create self-similar patterns. Even when there are contractions or reflections involved, the object remains affine if the overall structure is self-similar.
 
 Formula for an affine transformation:
-\[
-(x',y') = s(x,y) + (a_x x, a_y y)
-\]
-
-:p What are affine transformations?
+$$(x',y') = s(x,y) + (a_x x, a_y y)$$:p What are affine transformations?
 ??x
 Affine transformations are combinations of scaling, rotation, and translation operations that can be used to generate fractals. They allow the creation of self-similar patterns by ensuring each step leads to new parts of the object that bear the same relationship to their ancestors as the ancestors did.
 x??
@@ -3475,53 +3456,41 @@ x??
 Background context: Barnsley’s fern is a famous example of how affine transformations and randomness can be combined to generate complex, natural-looking structures. The algorithm uses four different affine transformations with varying probabilities.
 
 Formula for generating points in Barnsley's fern:
-\[
-(x_{n+1}, y_{n+1}) = 
+$$(x_{n+1}, y_{n+1}) = 
 \begin{cases}
 (0.5, 0.27y_n), & \text{with } 2\% \text{ probability} \\
 (-0.139x_n + 0.263y_n + 0.57, 0.246x_n + 0.224y_n - 0.036), & \text{with } 15\% \text{ probability} \\
 (0.17x_n - 0.215y_n + 0.408, 0.222x_n + 0.176y_n + 0.0893), & \text{with } 13\% \text{ probability} \\
 (0.781x_n + 0.034y_n + 0.1075, -0.032x_n + 0.739y_n + 0.27), & \text{with } 70\% \text{ probability}
-\end{cases}
-\]
-
-:p What is the algorithm used to generate Barnsley's fern?
+\end{cases}$$:p What is the algorithm used to generate Barnsley's fern?
 ??x
 The algorithm for generating Barnsley’s fern uses four affine transformations with specific probabilities:
-1. \( (0.5, 0.27y_n) \) with a 2% chance.
-2. \( (-0.139x_n + 0.263y_n + 0.57, 0.246x_n + 0.224y_n - 0.036) \) with a 15% chance.
-3. \( (0.17x_n - 0.215y_n + 0.408, 0.222x_n + 0.176y_n + 0.0893) \) with a 13% chance.
-4. \( (0.781x_n + 0.034y_n + 0.1075, -0.032x_n + 0.739y_n + 0.27) \) with a 70% chance.
+1.$(0.5, 0.27y_n)$ with a 2% chance.
+2.$(-0.139x_n + 0.263y_n + 0.57, 0.246x_n + 0.224y_n - 0.036)$ with a 15% chance.
+3.$(0.17x_n - 0.215y_n + 0.408, 0.222x_n + 0.176y_n + 0.0893)$ with a 13% chance.
+4.$(0.781x_n + 0.034y_n + 0.1075, -0.032x_n + 0.739y_n + 0.27)$ with a 70% chance.
 
 :p How does the code select which transformation to apply?
 ??x
-The selection of a transformation is based on random numbers. A uniform random number \( r \) between 0 and 1 is generated, and then one of the transformations is chosen according to its probability range:
-\[
-P = 
+The selection of a transformation is based on random numbers. A uniform random number $r$ between 0 and 1 is generated, and then one of the transformations is chosen according to its probability range:
+$$P = 
 \begin{cases}
 2\%, & r < 0.02 \\
 15\%, & 0.02 \leq r < 0.17 \\
 13\%, & 0.17 < r \leq 0.3 \\
 70\%, & 0.3 < r < 1
-\end{cases}
-\]
-
-:p What is the full algorithm for generating Barnsley's fern?
+\end{cases}$$:p What is the full algorithm for generating Barnsley's fern?
 ??x
 The full algorithm combines the selection of transformations with their probabilities into one step:
-\[
-(x_{n+1}, y_{n+1}) = 
+$$(x_{n+1}, y_{n+1}) = 
 \begin{cases}
 (0.5, 0.27y_n), & r < 0.02 \\
 (-0.139x_n + 0.263y_n + 0.57, 0.246x_n + 0.224y_n - 0.036), & 0.02 \leq r < 0.17 \\
 (0.17x_n - 0.215y_n + 0.408, 0.222x_n + 0.176y_n + 0.0893), & 0.17 < r \leq 0.3 \\
 (0.781x_n + 0.034y_n + 0.1075, -0.032x_n + 0.739y_n + 0.27), & 0.3 < r < 1
-\end{cases}
-\]
-
-:p What is the starting point for Barnsley’s fern?
+\end{cases}$$:p What is the starting point for Barnsley’s fern?
 ??x
-The starting point for generating Barnsley's fern is \( (x_1, y_1) = (0.5, 0.0) \).
+The starting point for generating Barnsley's fern is $(x_1, y_1) = (0.5, 0.0)$.
 
 :p How does the code generate points in Barnsley’s fern?
 ??x

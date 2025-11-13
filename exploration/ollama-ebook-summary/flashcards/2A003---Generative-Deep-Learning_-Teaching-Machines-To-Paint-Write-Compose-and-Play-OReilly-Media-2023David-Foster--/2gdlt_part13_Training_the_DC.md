@@ -257,13 +257,14 @@ Background context: The provided text explains that the Wasserstein GAN uses a n
 
 :p What is the formula for the Wasserstein loss for the discriminator?
 ??x
-The Wasserstein loss for the discriminator \( D \) can be expressed as:
-\[ L_D = E_{\mathbf{x} \sim p_\text{data}} [D(\mathbf{x})] - E_{\mathbf{z} \sim p_Z} [D(G(\mathbf{z}))] \]
+The Wasserstein loss for the discriminator $D$ can be expressed as:
+$$L_D = E_{\mathbf{x} \sim p_\text{data}} [D(\mathbf{x})] - E_{\mathbf{z} \sim p_Z} [D(G(\mathbf{z}))]$$
+
 This loss function is simpler and more stable compared to the traditional binary cross-entropy loss used in GANs.
 
 Where:
-- \( D(x) \) is the discriminator's prediction for a real image.
-- \( D(G(z)) \) is the discriminator's prediction for a generated image.
+- $D(x)$ is the discriminator's prediction for a real image.
+- $D(G(z))$ is the discriminator's prediction for a generated image.
 x??
 
 ---
@@ -275,7 +276,8 @@ Background context: The generator's objective is to minimize its loss by produci
 :p What is the formula for the generator's loss in WGAN-GP?
 ??x
 The generator’s loss in WGAN-GP can be expressed as:
-\[ L_G = -E_{\mathbf{z} \sim p_Z} [D(G(\mathbf{z}))] \]
+$$L_G = -E_{\mathbf{z} \sim p_Z} [D(G(\mathbf{z}))]$$
+
 This means that the generator aims to maximize the expected value of the discriminator's prediction for generated images, effectively trying to fool the discriminator.
 x??
 
@@ -291,9 +293,10 @@ The purpose of adding a gradient penalty in WGAN-GP is to ensure that the discri
 
 :p What is the formula for the gradient penalty term?
 ??x
-The gradient penalty term \( \lambda \) can be expressed as:
-\[ \text{Gradient Penalty} = E_{\mathbf{\hat{x}} \sim p_\text{interpolated}} [(\|\nabla_{\mathbf{\hat{x}}} D(\mathbf{\hat{x}})\|_2 - 1)^2] \]
-Where \( \mathbf{\hat{x}} \) is a point on the line between a real sample and a generated sample, and \( p_\text{interpolated} \) denotes the distribution of these interpolated points.
+The gradient penalty term $\lambda$ can be expressed as:
+$$\text{Gradient Penalty} = E_{\mathbf{\hat{x}} \sim p_\text{interpolated}} [(\|\nabla_{\mathbf{\hat{x}}} D(\mathbf{\hat{x}})\|_2 - 1)^2]$$
+
+Where $\mathbf{\hat{x}}$ is a point on the line between a real sample and a generated sample, and $p_\text{interpolated}$ denotes the distribution of these interpolated points.
 x??
 
 ---
@@ -329,35 +332,32 @@ x??
 ---
 
 #### GAN Generator Loss Minimization
-Background context: In a standard Generative Adversarial Network (GAN), the generator \(G\) is trained to minimize the loss function given by the discriminator \(D\). The goal is for the generator to produce images that fool the discriminator into believing they are real.
-Formula: \[ \min_G - \mathbb{E}_{z \sim p_Z}[\log D(G(z))] \]
-
-:p What does the GAN generator aim to minimize?
+Background context: In a standard Generative Adversarial Network (GAN), the generator $G $ is trained to minimize the loss function given by the discriminator$D$. The goal is for the generator to produce images that fool the discriminator into believing they are real.
+Formula: $$\min_G - \mathbb{E}_{z \sim p_Z}[\log D(G(z))]$$:p What does the GAN generator aim to minimize?
 ??x
-The GAN generator aims to minimize the loss function by generating images that are difficult for the discriminator \(D\) to distinguish from real data. This is achieved by minimizing \(-\mathbb{E}_{z \sim p_Z}[\log D(G(z))] \), which encourages the generator to produce realistic outputs.
+The GAN generator aims to minimize the loss function by generating images that are difficult for the discriminator $D $ to distinguish from real data. This is achieved by minimizing$-\mathbb{E}_{z \sim p_Z}[\log D(G(z))]$, which encourages the generator to produce realistic outputs.
 x??
 
 ---
 
 #### Wasserstein Loss Function
 Background context: The Wasserstein loss function, used in WGANs (Wasserstein GANs), provides a different way of comparing real and generated images. Unlike traditional GANs where the discriminator's output is constrained between 0 and 1 via a sigmoid activation, in WGANs, the discriminator outputs scores directly without any constraints.
-Formula: \[ -\sum_{i=1}^n y_i p_i \]
-
-:p What is the Wasserstein loss function used for?
+Formula: $$-\sum_{i=1}^n y_i p_i$$:p What is the Wasserstein loss function used for?
 ??x
-The Wasserstein loss function is used to compare predictions of real images \(p_i = D(x_i)\) with those of generated images \(p_i = D(G(z_i))\) by maximizing the difference between them. This encourages the discriminator (critic in WGAN terminology) to provide meaningful scores rather than probabilities.
+The Wasserstein loss function is used to compare predictions of real images $p_i = D(x_i)$ with those of generated images $p_i = D(G(z_i))$ by maximizing the difference between them. This encourages the discriminator (critic in WGAN terminology) to provide meaningful scores rather than probabilities.
 x??
 
 ---
 
 #### 1-Lipschitz Constraint
-Background context: The Wasserstein loss function requires an additional constraint on the critic \(D\), ensuring it is a 1-Lipschitz continuous function. This means that for any two input images, the absolute difference in their predictions should not increase more than the pixelwise absolute difference between the inputs.
-Formula: \[ \left| D(x_1) - D(x_2) \right| \leq \left\| x_1 - x_2 \right\| \]
-Where \(x_1\) and \(x_2\) are two images, and \(\left\| x_1 - x_2 \right\|\) is the average pixelwise absolute difference.
+Background context: The Wasserstein loss function requires an additional constraint on the critic $D$, ensuring it is a 1-Lipschitz continuous function. This means that for any two input images, the absolute difference in their predictions should not increase more than the pixelwise absolute difference between the inputs.
+Formula: $$\left| D(x_1) - D(x_2) \right| \leq \left\| x_1 - x_2 \right\|$$
+
+Where $x_1 $ and$x_2 $ are two images, and $\left\| x_1 - x_2 \right\|$ is the average pixelwise absolute difference.
 
 :p What does it mean for a function to be 1-Lipschitz continuous?
 ??x
-A function \(D\) is 1-Lipschitz continuous if the rate of change in its output cannot exceed the rate of change in its input. Mathematically, this means that for any two images \(x_1\) and \(x_2\), the absolute difference between their predictions should not be more than the pixelwise distance between them.
+A function $D $ is 1-Lipschitz continuous if the rate of change in its output cannot exceed the rate of change in its input. Mathematically, this means that for any two images$x_1 $ and$x_2$, the absolute difference between their predictions should not be more than the pixelwise distance between them.
 x??
 
 ---
@@ -367,17 +367,17 @@ Background context: In a WGAN, the generator's objective is to produce images th
 
 :p What does the WGAN generator aim to minimize?
 ??x
-The WGAN generator aims to minimize the loss function \(-\mathbb{E}_{z \sim p_Z}[\log D(G(z))]\) by generating images that are scored highly by the critic. This means producing images that are indistinguishable from real data, effectively fooling the critic.
+The WGAN generator aims to minimize the loss function $-\mathbb{E}_{z \sim p_Z}[\log D(G(z))]$ by generating images that are scored highly by the critic. This means producing images that are indistinguishable from real data, effectively fooling the critic.
 x??
 
 ---
 
 #### WGAN Critic Training
-Background context: In a WGAN, the critic \(D\) is trained to maximize the difference between its predictions for real and generated images. The objective is to make the predictions as accurate as possible so that the generator can produce more realistic outputs.
+Background context: In a WGAN, the critic $D$ is trained to maximize the difference between its predictions for real and generated images. The objective is to make the predictions as accurate as possible so that the generator can produce more realistic outputs.
 
 :p How does the WGAN critic train?
 ??x
-The WGAN critic trains by calculating the loss when comparing predictions for real images \(p_i = D(x_i)\) (with response \(y_i = 1\)) and generated images \(p_i = D(G(z_i))\) (with response \(y_i = -1\)). The objective is to maximize the difference between these predictions, ensuring that the critic can effectively distinguish real from generated images.
+The WGAN critic trains by calculating the loss when comparing predictions for real images $p_i = D(x_i)$(with response $ y_i = 1$) and generated images $ p_i = D(G(z_i))$(with response $ y_i = -1$). The objective is to maximize the difference between these predictions, ensuring that the critic can effectively distinguish real from generated images.
 x??
 
 ---
@@ -387,7 +387,7 @@ Background context: To enforce the 1-Lipschitz constraint on the critic in a WGA
 
 :p What is the purpose of adding the Lipschitz constraint to the WGAN?
 ??x
-The purpose of adding the 1-Lipschitz constraint to the WGAN is to ensure that the critic \(D\) provides meaningful and stable gradients. This prevents large fluctuations in the loss values and ensures that the training process remains robust, making it easier for both the generator and the critic to converge.
+The purpose of adding the 1-Lipschitz constraint to the WGAN is to ensure that the critic $D$ provides meaningful and stable gradients. This prevents large fluctuations in the loss values and ensures that the training process remains robust, making it easier for both the generator and the critic to converge.
 x??
 
 ---
@@ -397,7 +397,7 @@ Background context: The gradient penalty term helps enforce the 1-Lipschitz cons
 
 :p What is the gradient penalty in WGAN-GP?
 ??x
-The gradient penalty in WGAN-GP involves calculating gradients of the critic \(D\) with respect to a linearly interpolated image \(\tilde{x} = x + \epsilon(z - x)\) where \(\epsilon \in [0, 1]\). The penalty is then added to the loss function to enforce the 1-Lipschitz constraint.
+The gradient penalty in WGAN-GP involves calculating gradients of the critic $D $ with respect to a linearly interpolated image$\tilde{x} = x + \epsilon(z - x)$ where $\epsilon \in [0, 1]$. The penalty is then added to the loss function to enforce the 1-Lipschitz constraint.
 x??
 
 ---
@@ -406,8 +406,9 @@ x??
 Background context: In the context of Generative Adversarial Networks (GANs), particularly Wasserstein GAN with Gradient Penalty (WGAN-GP), ensuring that the critic's predictions are Lipschitz continuous is crucial. This means the function should not change too rapidly, which helps in obtaining more stable and meaningful gradients for training.
 :p What does it mean for a function to be Lipschitz continuous?
 ??x
-A function \( f \) is said to be Lipschitz continuous if there exists a constant \( K \) such that for all \( x_1 \) and \( x_2 \),
-\[ |f(x_1) - f(x_2)| \leq K \|x_1 - x_2\|. \]
+A function $f $ is said to be Lipschitz continuous if there exists a constant$K $ such that for all$ x_1 $ and $x_2$,
+$$|f(x_1) - f(x_2)| \leq K \|x_1 - x_2\|.$$
+
 This means the function's slope is bounded, preventing sudden jumps in predictions.
 x??
 
@@ -438,8 +439,9 @@ Background context: The gradient penalty in WGAN-GP measures the squared differe
 :p What does the gradient penalty loss measure?
 ??x
 The gradient penalty loss measures the squared difference between the norm of the gradient of the critic's predictions with respect to input images and 1:
-\[ \text{GP} = \frac{1}{2} \mathbb{E}_{\alpha, x} [( \| \nabla_{\alpha x} f(x) \|_2 - 1 )^2] \]
-Where \( \alpha \) is a random scalar between 0 and 1, \( x \) is an interpolated image, and \( f(x) \) are the critic's predictions.
+$$\text{GP} = \frac{1}{2} \mathbb{E}_{\alpha, x} [( \| \nabla_{\alpha x} f(x) \|_2 - 1 )^2]$$
+
+Where $\alpha $ is a random scalar between 0 and 1,$x $ is an interpolated image, and$f(x)$ are the critic's predictions.
 x??
 
 ---
@@ -464,7 +466,7 @@ def gradient_penalty(self, batch_size, real_images, fake_images):
     gp = tf.reduce_mean((norm - 1.0) ** 2)
     return gp
 ```
-The code creates random weights \( \alpha \), interpolates between real and fake images, computes gradients of the critic's predictions with respect to these interpolated images, and calculates the penalty based on the norm difference.
+The code creates random weights $\alpha$, interpolates between real and fake images, computes gradients of the critic's predictions with respect to these interpolated images, and calculates the penalty based on the norm difference.
 x??
 
 ---

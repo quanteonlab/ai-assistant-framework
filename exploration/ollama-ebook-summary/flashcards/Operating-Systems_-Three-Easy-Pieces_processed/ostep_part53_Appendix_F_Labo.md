@@ -460,7 +460,7 @@ Background context: A clean target in a makefile is used to remove unnecessary f
 The clean target removes all generated object files and the executable. It's often used when you want to start with an empty project or reset it entirely:
 ```makefile
 clean:
-    rm -f $(OBJS) $(TARG)
+    rm -f $(OBJS)$(TARG)
 ```
 
 This command uses `rm` to delete specified files, making sure your build directory is clean.

@@ -200,7 +200,7 @@ public class MarketConditionAdjustment {
             double adjustedPrice = originalPrice * (1 + (marketDemandIncrease / 100));
             System.out.println("New price: " + adjustedPrice);
         } else if (costReduction > 0) {
-            System.out.println("Reducing cost by " + costReduction + "$ due to new technology.");
+            System.out.println("Reducing cost by " + costReduction + "$due to new technology.");
             double adjustedPrice = originalPrice - costReduction;
             System.out.println("New price: " + adjustedPrice);
         }
@@ -255,9 +255,9 @@ public class CaseCandeloreTinder {
         int userAge = 30; // Example user age
         
         if (userAge >= 30) {
-            System.out.println("Charging $19.99 per month for Tinder Plus.");
+            System.out.println("Charging$19.99 per month for Tinder Plus.");
         } else {
-            System.out.println("Charging between $9.99 and $14.99 per month for Tinder Plus.");
+            System.out.println("Charging between $9.99 and$14.99 per month for Tinder Plus.");
         }
     }
 }
@@ -317,17 +317,15 @@ x??
 #### Herfindahl-Hirschman Index (HHI)
 Background context explaining the HHI. The HHI is a formula used to measure market concentration by summing the squared market shares of all firms in a market.
 The HHI is calculated as:
-\[ \text{HHI} = \sum_{i=1}^{n} s_i^2 \]
-where \( s_i \) represents the market share of firm i, and n is the total number of firms.
+$$\text{HHI} = \sum_{i=1}^{n} s_i^2$$where $ s_i$ represents the market share of firm i, and n is the total number of firms.
 
 :p How is the Herfindahl-Hirschman Index (HHI) calculated?
 ??x
 The HHI is calculated by:
-\[ \text{HHI} = \sum_{i=1}^{n} s_i^2 \]
-where \( s_i \) represents the market share of each firm, and n is the total number of firms in the market.
+$$\text{HHI} = \sum_{i=1}^{n} s_i^2$$where $ s_i$ represents the market share of each firm, and n is the total number of firms in the market.
 
 For example, if there are two firms with 40% and 60% market shares:
-\[ \text{HHI} = (0.4)^2 + (0.6)^2 = 0.16 + 0.36 = 0.52 \]
+$$\text{HHI} = (0.4)^2 + (0.6)^2 = 0.16 + 0.36 = 0.52$$
 The HHI is often expressed as a percentage.
 
 x??

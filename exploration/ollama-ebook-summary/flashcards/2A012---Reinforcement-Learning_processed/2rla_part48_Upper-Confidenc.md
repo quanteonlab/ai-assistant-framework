@@ -5,13 +5,13 @@
 ---
 
 #### Optimistic Initial Values
-Background context: Methods discussed so far rely on initial action-value estimates, \( Q_1(a) \). These methods are biased by their initial estimates. For sample-average methods, this bias disappears once all actions have been selected at least once. However, for methods with a constant step size (\(\alpha\)), the bias is permanent but decreases over time as given by (2.6).
+Background context: Methods discussed so far rely on initial action-value estimates, $Q_1(a)$. These methods are biased by their initial estimates. For sample-average methods, this bias disappears once all actions have been selected at least once. However, for methods with a constant step size ($\alpha$), the bias is permanent but decreases over time as given by (2.6).
 
 :p What does optimistic initial values mean in the context of multi-armed bandits?
 ??x
 Optimistic initial values refer to setting the initial action-value estimates higher than their true values. This encourages exploration because actions with initially high estimates will be tried even if their actual rewards are lower.
 
-For instance, setting \( Q_1(a) = +5 \) for all actions in a 10-armed bandit problem where the true optimal action's value is drawn from a normal distribution with mean 0 and variance 1. The initial estimate of +5 is optimistic but encourages exploration by making some actions more attractive initially.
+For instance, setting $Q_1(a) = +5$ for all actions in a 10-armed bandit problem where the true optimal action's value is drawn from a normal distribution with mean 0 and variance 1. The initial estimate of +5 is optimistic but encourages exploration by making some actions more attractive initially.
 
 ```java
 public class OptimisticInitialValues {
@@ -26,13 +26,13 @@ public class OptimisticInitialValues {
 x??
 
 #### Comparison with Greedy Methods and Exploration
-Background context: A greedy method using \( Q_1(a) = +5 \) for all actions performs poorly initially because it explores more due to its optimistic estimates. Over time, as rewards are collected, these actions become less attractive, leading to better performance overall.
+Background context: A greedy method using $Q_1(a) = +5$ for all actions performs poorly initially because it explores more due to its optimistic estimates. Over time, as rewards are collected, these actions become less attractive, leading to better performance overall.
 
 :p How does an "optimistic" method using positive initial values compare with a standard greedy method on the 10-armed bandit problem?
 ??x
-An optimistic method that starts with positive initial values (e.g., \( Q_1(a) = +5 \)) initially explores more because it misleads the algorithm into thinking actions are better than they actually are. This can lead to slower learning and poorer performance early on. However, as the actual rewards are collected, these actions become less attractive, reducing exploration and potentially improving overall performance.
+An optimistic method that starts with positive initial values (e.g., $Q_1(a) = +5$) initially explores more because it misleads the algorithm into thinking actions are better than they actually are. This can lead to slower learning and poorer performance early on. However, as the actual rewards are collected, these actions become less attractive, reducing exploration and potentially improving overall performance.
 
-In contrast, a standard greedy method with \( Q_1(a) = 0 \) is more conservative initially but benefits from accurate estimates of action values over time.
+In contrast, a standard greedy method with $Q_1(a) = 0$ is more conservative initially but benefits from accurate estimates of action values over time.
 
 ```java
 public class OptimisticVsGreedy {
@@ -55,14 +55,12 @@ Background context: UCB action selection is a strategy that balances exploration
 ??x
 The UCB method balances exploration and exploitation by selecting actions based on a combination of their estimated values and the uncertainty in those estimates. The formula for selecting the next action is:
 
-\[ A_t = \arg\max_a [Q_t(a) + c \sqrt{\frac{2 \ln t}{N_t(a)}}] \]
+$$A_t = \arg\max_a [Q_t(a) + c \sqrt{\frac{2 \ln t}{N_t(a)}}]$$where:
+- $Q_t(a)$ is the current estimate of the value of action $a$.
+- $N_t(a)$ is the number of times action $ a $ has been selected up to time $t$.
+- $c > 0$ controls the degree of exploration.
 
-where:
-- \( Q_t(a) \) is the current estimate of the value of action \( a \).
-- \( N_t(a) \) is the number of times action \( a \) has been selected up to time \( t \).
-- \( c > 0 \) controls the degree of exploration.
-
-The term \( c \sqrt{\frac{2 \ln t}{N_t(a)}} \) represents an upper confidence bound on the true value of action \( a \). Actions with higher values and lower uncertainty (smaller \( N_t(a) \)) are given more preference, encouraging exploration of potentially better actions.
+The term $c \sqrt{\frac{2 \ln t}{N_t(a)}}$ represents an upper confidence bound on the true value of action $ a $. Actions with higher values and lower uncertainty (smaller $ N_t(a)$) are given more preference, encouraging exploration of potentially better actions.
 
 ```java
 public class UCBActionSelection {
@@ -135,116 +133,93 @@ x??
 ---
 
 #### Gradient Bandit Algorithms Overview
-Background context explaining the gradient bandit algorithms, which learn numerical preferences for actions instead of estimating action values directly. The preference \(H_t(a)\) affects the probability of selecting an action according to a soft-max distribution.
+Background context explaining the gradient bandit algorithms, which learn numerical preferences for actions instead of estimating action values directly. The preference $H_t(a)$ affects the probability of selecting an action according to a soft-max distribution.
 
 :p What is the main difference between traditional methods and gradient bandit algorithms in multi-armed bandits?
 ??x
-Gradient bandit algorithms estimate a numerical preference \(H_t(a)\) for each action, rather than directly estimating the expected reward. The preferences are used to determine action selection probabilities using a soft-max distribution.
+Gradient bandit algorithms estimate a numerical preference $H_t(a)$ for each action, rather than directly estimating the expected reward. The preferences are used to determine action selection probabilities using a soft-max distribution.
 x??
 
 ---
 
 #### Soft-Max Distribution Formula
-The probability of selecting action \(a\) at time \(t\) is given by:
-\[
-Pr(A_t = a) = \frac{e^{H_t(a)}}{\sum_{b=1}^K e^{H_t(b)}}
-\]
-where \(K\) is the number of actions.
+The probability of selecting action $a $ at time$t$ is given by:
+$$Pr(A_t = a) = \frac{e^{H_t(a)}}{\sum_{b=1}^K e^{H_t(b)}}$$where $ K$ is the number of actions.
 
 :p What is the formula for calculating the probability of selecting an action using the soft-max distribution?
 ??x
-The probability of selecting action \(a\) at time \(t\) is given by:
-\[
-Pr(A_t = a) = \frac{e^{H_t(a)}}{\sum_{b=1}^K e^{H_t(b)}}
-\]
+The probability of selecting action $a $ at time$t$ is given by:
+$$Pr(A_t = a) = \frac{e^{H_t(a)}}{\sum_{b=1}^K e^{H_t(b)}}$$
+
 This formula ensures that the sum of probabilities across all actions equals 1 and that the action with higher preference has a higher probability of being selected.
 x??
 
 ---
 
 #### Stochastic Gradient Ascent Algorithm
-The algorithm updates the preferences based on the difference between the received reward \(R_t\) and an average baseline \(\bar{R}_t\):
-\[
-H_{t+1}(A_t) = H_t(A_t) + \alpha \frac{R_t - \bar{R}_t}{\pi_t(A_t)}
-\]
-and for all other actions:
-\[
-H_{t+1}(a) = H_t(a) - \alpha \left( R_t - \bar{R}_t \right) \pi_t(a)
-\]
+The algorithm updates the preferences based on the difference between the received reward $R_t $ and an average baseline$\bar{R}_t$:
+$$H_{t+1}(A_t) = H_t(A_t) + \alpha \frac{R_t - \bar{R}_t}{\pi_t(A_t)}$$and for all other actions:
+$$
 
-:p What is the update rule for the preference \(H_t(a)\) in gradient bandit algorithms?
+H_{t+1}(a) = H_t(a) - \alpha \left( R_t - \bar{R}_t \right) \pi_t(a)$$:p What is the update rule for the preference $ H_t(a)$ in gradient bandit algorithms?
 ??x
-The update rule for the preference \(H_t(a)\) in gradient bandit algorithms is:
-\[
-H_{t+1}(A_t) = H_t(A_t) + \alpha \frac{R_t - \bar{R}_t}{\pi_t(A_t)}
-\]
-and for all other actions:
-\[
-H_{t+1}(a) = H_t(a) - \alpha \left( R_t - \bar{R}_t \right) \pi_t(a)
-\]
-where \(\alpha\) is the step-size parameter, and \(\bar{R}_t\) is the average of all rewards up to time \(t\).
+The update rule for the preference $H_t(a)$ in gradient bandit algorithms is:
+$$H_{t+1}(A_t) = H_t(A_t) + \alpha \frac{R_t - \bar{R}_t}{\pi_t(A_t)}$$and for all other actions:
+$$
+
+H_{t+1}(a) = H_t(a) - \alpha \left( R_t - \bar{R}_t \right) \pi_t(a)$$where $\alpha $ is the step-size parameter, and$\bar{R}_t $ is the average of all rewards up to time$t$.
 x??
 
 ---
 
 #### Baseline Term Importance
-The baseline term \(\bar{R}_t\) helps in adjusting the action preferences based on deviations from an expected reward level. Without the baseline term, performance can be significantly degraded.
+The baseline term $\bar{R}_t$ helps in adjusting the action preferences based on deviations from an expected reward level. Without the baseline term, performance can be significantly degraded.
 
 :p Why is the baseline term important in gradient bandit algorithms?
 ??x
-The baseline term \(\bar{R}_t\) is crucial because it allows the algorithm to adjust the action preferences relative to a reference point (average reward). This ensures that when rewards are higher than expected, the probability of taking an action increases, and vice versa. Without the baseline term, performance would be significantly worse.
+The baseline term $\bar{R}_t$ is crucial because it allows the algorithm to adjust the action preferences relative to a reference point (average reward). This ensures that when rewards are higher than expected, the probability of taking an action increases, and vice versa. Without the baseline term, performance would be significantly worse.
 x??
 
 ---
 
 #### Expected Reward Gradient
 The exact gradient of the expected reward is:
-\[
-\frac{\partial E[R_t]}{\partial H_t(a)} = \sum_x \pi_t(x) \cdot \alpha \left( R_t - \bar{R}_t \right)
-\]
-This can be approximated as:
-\[
-H_{t+1}(a) = H_t(a) + \alpha \frac{R_t - \bar{R}_t}{\pi_t(A_t)}
-\]
+$$\frac{\partial E[R_t]}{\partial H_t(a)} = \sum_x \pi_t(x) \cdot \alpha \left( R_t - \bar{R}_t \right)$$
 
-:p How does the exact performance gradient relate to the update rule in gradient bandit algorithms?
+This can be approximated as:
+$$
+
+H_{t+1}(a) = H_t(a) + \alpha \frac{R_t - \bar{R}_t}{\pi_t(A_t)}$$:p How does the exact performance gradient relate to the update rule in gradient bandit algorithms?
 ??x
 The exact performance gradient is:
-\[
-\frac{\partial E[R_t]}{\partial H_t(a)} = \sum_x \pi_t(x) \cdot \alpha \left( R_t - \bar{R}_t \right)
-\]
+$$\frac{\partial E[R_t]}{\partial H_t(a)} = \sum_x \pi_t(x) \cdot \alpha \left( R_t - \bar{R}_t \right)$$
+
 This can be approximated by the update rule in gradient bandit algorithms as:
-\[
-H_{t+1}(a) = H_t(a) + \alpha \frac{R_t - \bar{R}_t}{\pi_t(A_t)}
-\]
-where \(A_t\) is the action taken at time \(t\), and \(\pi_t(A_t)\) is the probability of taking that action.
+$$
+
+H_{t+1}(a) = H_t(a) + \alpha \frac{R_t - \bar{R}_t}{\pi_t(A_t)}$$where $ A_t $ is the action taken at time $ t $, and$\pi_t(A_t)$ is the probability of taking that action.
 x??
 
 ---
 
 #### Derivation of Partial Derivative
 The partial derivative can be derived as:
-\[
-\frac{\partial \pi_t(x)}{\partial H_t(a)} = \pi_t(x) - \pi_t(x) \cdot \frac{\pi_t(a)}{\sum_{y=1}^K \pi_t(y)}
-\]
-
-:p What is the derivation of the partial derivative \(\frac{\partial \pi_t(x)}{\partial H_t(a)}\)?
+$$\frac{\partial \pi_t(x)}{\partial H_t(a)} = \pi_t(x) - \pi_t(x) \cdot \frac{\pi_t(a)}{\sum_{y=1}^K \pi_t(y)}$$:p What is the derivation of the partial derivative $\frac{\partial \pi_t(x)}{\partial H_t(a)}$?
 ??x
 The partial derivative can be derived as:
-\[
-\frac{\partial \pi_t(x)}{\partial H_t(a)} = \pi_t(x) - \pi_t(x) \cdot \frac{\pi_t(a)}{\sum_{y=1}^K \pi_t(y)}
-\]
-This shows how the probability of an action changes with respect to a change in its preference \(H_t(a)\).
+$$\frac{\partial \pi_t(x)}{\partial H_t(a)} = \pi_t(x) - \pi_t(x) \cdot \frac{\pi_t(a)}{\sum_{y=1}^K \pi_t(y)}$$
+
+This shows how the probability of an action changes with respect to a change in its preference $H_t(a)$.
 x??
 
 ---
 
 #### Conclusion on Baseline Term
-The baseline term is crucial for adapting the algorithm to changes in reward levels, ensuring robust performance. It can be set as the average reward \(\bar{R}_t\) or other values.
+The baseline term is crucial for adapting the algorithm to changes in reward levels, ensuring robust performance. It can be set as the average reward $\bar{R}_t$ or other values.
 
 :p What role does the baseline term play in gradient bandit algorithms?
 ??x
-The baseline term plays a crucial role by helping the algorithm adapt to changes in reward levels. Using it ensures that actions are adjusted based on deviations from an expected reward level, leading to better performance. The baseline can be set as \(\bar{R}_t\) or other values depending on the problem context.
+The baseline term plays a crucial role by helping the algorithm adapt to changes in reward levels. Using it ensures that actions are adjusted based on deviations from an expected reward level, leading to better performance. The baseline can be set as $\bar{R}_t$ or other values depending on the problem context.
 x??
 
 ---
@@ -482,14 +457,14 @@ For example, if we have three arms with changing reward distributions:
 ??x
 ---
 
-#### Constant-step-size \(\epsilon\)-greedy Algorithm
-Background context: The \(\epsilon\)-greedy algorithm is a popular exploration-exploitation strategy where with probability \(1-\epsilon\), the best arm (highest estimated mean reward) is selected, and with probability \(\epsilon\), a random arm is chosen. When combined with constant-step-size updates for action values, it forms a method to balance exploration and exploitation in nonstationary environments.
+#### Constant-step-size $\epsilon$-greedy Algorithm
+Background context: The $\epsilon $-greedy algorithm is a popular exploration-exploitation strategy where with probability $1-\epsilon $, the best arm (highest estimated mean reward) is selected, and with probability $\epsilon$, a random arm is chosen. When combined with constant-step-size updates for action values, it forms a method to balance exploration and exploitation in nonstationary environments.
 
-:p How does the constant-step-size \(\epsilon\)-greedy algorithm work?
+:p How does the constant-step-size $\epsilon$-greedy algorithm work?
 ??x
-The constant-step-size \(\epsilon\)-greedy algorithm works by using an \(\epsilon\) value to decide whether to exploit (choose the arm with the highest estimated mean reward) or explore (select a random arm). The action values are updated using a fixed step size.
+The constant-step-size $\epsilon $-greedy algorithm works by using an $\epsilon$ value to decide whether to exploit (choose the arm with the highest estimated mean reward) or explore (select a random arm). The action values are updated using a fixed step size.
 
-For example, if we have \(Q_t(a)\) as the estimate of the mean reward for action \(a\), and \(\alpha\) is the constant step size:
+For example, if we have $Q_t(a)$ as the estimate of the mean reward for action $a$, and $\alpha$ is the constant step size:
 
 ```java
 // Pseudocode for the algorithm
@@ -503,7 +478,7 @@ for each time step t:
         Q_{t+1}(a) = Q_t(a) + alpha * (r - Q_t(a))
 ```
 
-The choice of \(\epsilon\) and \(\alpha\) can significantly affect the performance, especially in nonstationary environments. A smaller \(\epsilon\) leads to more exploration, while a larger step size \(\alpha\) can lead to faster convergence but might be less stable.
+The choice of $\epsilon $ and$\alpha $ can significantly affect the performance, especially in nonstationary environments. A smaller$\epsilon $ leads to more exploration, while a larger step size$\alpha$ can lead to faster convergence but might be less stable.
 
 ??x
 ---
@@ -515,7 +490,7 @@ Background context: The performance measure mentioned involves evaluating algori
 ??x
 The performance measure used is the average reward over the last 100,000 steps. This metric evaluates how well algorithms perform as they continue to learn and adapt over time, especially relevant in nonstationary environments where optimal actions can change.
 
-For example, if we have \(R_t\) as the total accumulated reward up to step \(t\):
+For example, if we have $R_t $ as the total accumulated reward up to step$t$:
 
 ```java
 average_reward_last_100k = (1/100000) * sum(R_{t-99999} to R_t)
@@ -556,15 +531,14 @@ for each state-action pair:
     Q(s, a) = Q(s, a) + alpha * (reward + gamma * max(Q(s', a')) - Q(s, a))
 ```
 
-Here, \(\alpha\) is the learning rate and \(\gamma\) is the discount factor.
+Here, $\alpha $ is the learning rate and$\gamma$ is the discount factor.
 
 ??x
 ---
 
 #### Soft-max Action Selection Rule
 Background context explaining the soft-max action selection rule, which is a common strategy for balancing exploration and exploitation. The formula for this rule can be expressed as:
-\[ \text{Prob}(a|s) = \frac{\exp(\frac{Q(s,a)}{\tau})}{\sum_{a'} \exp(\frac{Q(s,a')}{\tau})} \]
-where \( Q(s, a) \) is the estimated value of action \( a \) in state \( s \), and \( \tau \) is a temperature parameter that controls exploration. When \( \tau \to 0 \), the selection becomes deterministic; when \( \tau \to \infty \), all actions are equally likely.
+$$\text{Prob}(a|s) = \frac{\exp(\frac{Q(s,a)}{\tau})}{\sum_{a'} \exp(\frac{Q(s,a')}{\tau})}$$where $ Q(s, a)$is the estimated value of action $ a$in state $ s $, and $\tau$ is a temperature parameter that controls exploration. When $\tau \to 0$, the selection becomes deterministic; when $\tau \to \infty$, all actions are equally likely.
 
 :p What does the soft-max action selection rule do?
 ??x

@@ -187,7 +187,7 @@ Explanation of how to calculate the theoretical bandwidth using the formula prov
 :p How do you calculate the theoretical bandwidth of a PCI bus?
 ??x
 To calculate the theoretical bandwidth of a PCI bus, use the following formula:
-\[ \text{Theoretical Bandwidth (GB/s)} = \text{Lanes} \times \text{TransferRate (GT/s)} \times \text{OverheadFactor(Gb/GT)} \times \frac{\text{byte}}{8\text{ bits}} \]
+$$\text{Theoretical Bandwidth (GB/s)} = \text{Lanes} \times \text{TransferRate (GT/s)} \times \text{OverheadFactor(Gb/GT)} \times \frac{\text{byte}}{8\text{ bits}}$$
 
 Where:
 - **Lanes** is the number of PCIe lanes.
@@ -208,12 +208,11 @@ Explanation on how to determine the number of PCIe lanes using tools like `lspci
 :p How can you find out the number of PCIe lanes in your system?
 ??x
 You can determine the number of PCIe lanes by using command-line utilities such as `lspci` or `dmidecode`. For example, with `lspci`, you can run:
-```bash
-$ lspci -vmm | grep "PCI bridge" -A2
+```bash$ lspci -vmm | grep "PCI bridge" -A2
 ```
 This will show information about the PCI bridges and indicate the number of lanes. Alternatively, `dmidecode` provides similar information:
 ```bash
-$ dmidecode | grep "PCI"
+$dmidecode | grep "PCI"
 ```
 For example, an output might include `(x16)` which indicates 16 lanes.
 x??
@@ -225,8 +224,7 @@ Explanation on how to find out the maximum transfer rate for a PCI bus by lookin
 :p How do you determine the maximum transfer rate of your PCI bus?
 ??x
 To determine the maximum transfer rate, you can use the `lspci` command with verbose output:
-```bash
-$ sudo lspci -vvv | grep -E 'PCI|LnkCap'
+```bash$ sudo lspci -vvv | grep -E 'PCI|LnkCap'
 ```
 This will provide information such as "Link Capacity: Port #2, Speed 8GT/s". The speed in GT/s indicates the maximum transfer rate per lane.
 x??
@@ -240,8 +238,7 @@ Explanation on how overhead affects data transfer efficiency and the different f
 The overhead factor impacts the effective bandwidth of data transfer across the PCI bus. For older generations (Gen 1 and Gen 2), an overhead of 20% reduces the effective bandwidth to 80%. Starting with Gen3, this overhead drops significantly to approximately 1.54%, making the theoretical bandwidth nearly equal to the nominal transfer rate.
 
 For example:
-- **Gen1**: \( \text{OverheadFactor} = 1 - 0.20 = 0.80 \)
-- **Gen3 and above**: \( \text{OverheadFactor} = 1 - 0.0154 = 0.9846 \)
+- **Gen1**: $\text{OverheadFactor} = 1 - 0.20 = 0.80 $- **Gen3 and above**:$\text{OverheadFactor} = 1 - 0.0154 = 0.9846$
 
 This means Gen3+ systems can achieve nearly the full theoretical bandwidth.
 x??

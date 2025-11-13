@@ -473,10 +473,10 @@ Background context: Determining the sample size needed to achieve a certain leve
 ??x
 The formula for determining the sample size (n) required for a 95% confidence interval with a specific margin of error (E) depends on the standard deviation (σ). The basic formula is:
 
-\[ n = \left(\frac{z_{\alpha/2} \times \sigma}{E}\right)^2 \]
+$$n = \left(\frac{z_{\alpha/2} \times \sigma}{E}\right)^2$$
 
 Where:
-- \( z_{\alpha/2} \) is the Z-value corresponding to a 95% confidence level (1.96).
+- $z_{\alpha/2}$ is the Z-value corresponding to a 95% confidence level (1.96).
 - σ is the standard deviation of the population.
 - E is the desired margin of error.
 

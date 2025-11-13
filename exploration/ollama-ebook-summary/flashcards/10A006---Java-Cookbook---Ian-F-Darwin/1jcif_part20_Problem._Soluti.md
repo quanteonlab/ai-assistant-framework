@@ -236,7 +236,7 @@ Background context: The provided code snippet demonstrates how to parse an Apach
 The regular expression plays a crucial role in extracting specific fields from Apache logfile entries. It helps in breaking down the log entry into meaningful components like IP address, user name, date/time, request, response code, bytes sent, referer URL, and user-agent string.
 
 ```java
-final static String logEntryPattern = "^([\\d.]+) (\\S+) (\\S+) \\[([\\w:/]+\\s[+-]\\d{4})\\] \"(.+?)\" (\\d{3}) (\\d+) \"([^\\"]+)\" \"([^\\"]+)\"";
+final static String logEntryPattern = "^([\\d.]+) (\\S+) (\\S+) \$$([\\w:/]+\\s[+-]\\d{4})\$$ \"(.+?)\" (\\d{3}) (\\d+) \"([^\\"]+)\" \"([^\\"]+)\"";
 ```
 x??
 

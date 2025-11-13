@@ -219,10 +219,7 @@ Background context: Once you have organized your project files under the live di
 ??x
 To initialize the modules folder as a Git repository, follow these commands:
 ```sh
-$ cd modules
-$ git init
-$ git add .
-$ git commit -m "Initial commit of modules repo"
+$cd modules $ git init$git add .$ git commit -m "Initial commit of modules repo"
 ```
 This will create an empty Git repository in the modules directory and stage and commit all files.
 x??
@@ -235,8 +232,7 @@ Background context: After initializing your Git repositories, you need to set up
 ??x
 You can add a remote origin and push the code using these commands:
 ```sh
-$ git remote add origin "(URL OF REMOTE GIT REPOSITORY)"
-$ git push origin main
+$git remote add origin "(URL OF REMOTE GIT REPOSITORY)"$ git push origin main
 ```
 Replace `(URL OF REMOTE GIT REPOSITORY)` with your actual Git repository URL.
 x??
@@ -297,9 +293,8 @@ Background context: When using versioned modules in Terraform, you need to instr
 
 :p What is the command used to initialize and download the specific version of a module?
 ??x
-The command used is `$ terraform init` followed by specifying the module source URL, for example:
-```
-$ terraform init -modules-scan-root=modules -module-version=0.3.0
+The command used is `$terraform init` followed by specifying the module source URL, for example:
+```$ terraform init -modules-scan-root=modules -module-version=0.3.0
 ```
 
 This command initializes the modules and downloads the specified version (e.g., `v0.3.0`) from a Git repository.
@@ -336,8 +331,7 @@ Background context: When making changes to a module, you need to commit the upda
 ??x
 To push a new tag to a Git repository, use the following command:
 ```
-$ git tag -a "v0.0.2" -m "Second release of webserver-cluster"
-$ git push origin main --follow-tags
+$git tag -a "v0.0.2" -m "Second release of webserver-cluster"$ git push origin main --follow-tags
 ```
 
 This process tags the commit and pushes it to the `origin` remote repository, ensuring that all relevant tags are also pushed.

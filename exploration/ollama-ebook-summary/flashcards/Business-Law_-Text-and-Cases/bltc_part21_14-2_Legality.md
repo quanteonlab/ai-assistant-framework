@@ -435,10 +435,10 @@ x??
 
 ---
 #### Unilateral Mistakes in Contract Example
-Background context: The text provides an example where Elena intended to sell her jet ski for $2,500 but mistakenly typed $1,500. Although the other party (Chin) did not know about this mistake, it serves as a practical illustration.
+Background context: The text provides an example where Elena intended to sell her jet ski for $2,500 but mistakenly typed$1,500. Although the other party (Chin) did not know about this mistake, it serves as a practical illustration.
 :p What is the scenario described in the example of a unilateral mistake?
 ??x
-Elena intends to sell her jet ski for $2,500 but accidentally types $1,500 in an email to Chin. Even though Chin accepted the offer based on this incorrect price, Elena intended to sell at a higher price.
+Elena intends to sell her jet ski for $2,500 but accidentally types$1,500 in an email to Chin. Even though Chin accepted the offer based on this incorrect price, Elena intended to sell at a higher price.
 
 In this case, even if there was no knowledge of the mistake by Chin, the contract is still enforceable as long as Chin had valid reasons to rely on the mistaken information.
 x??

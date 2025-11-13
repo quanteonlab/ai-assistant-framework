@@ -162,7 +162,7 @@ Understanding fractions and decimals is essential as they are used extensively i
 ??x
 To convert a fraction to a decimal, divide the numerator by the denominator.
 For example:
-- Convert 3/4 to a decimal: \( \frac{3}{4} = 0.75 \) (3 divided by 4)
+- Convert 3/4 to a decimal: $\frac{3}{4} = 0.75$ (3 divided by 4)
 
 x??
 ---
@@ -171,12 +171,9 @@ x??
 #### Algebraic Equations
 Algebra will involve solving equations and inequalities, which require understanding variables and constants. You'll need to isolate the variable on one side of the equation.
 
-:p What is the first step in solving a linear equation like \( x + 5 = 12 \)?
+:p What is the first step in solving a linear equation like $x + 5 = 12$?
 ??x
-The first step in solving this equation is to isolate the variable \( x \). Subtract 5 from both sides:
-\( x + 5 - 5 = 12 - 5 \)
-Simplify:
-\( x = 7 \)
+The first step in solving this equation is to isolate the variable $x $. Subtract 5 from both sides:$ x + 5 - 5 = 12 - 5 $Simplify:$ x = 7$
 
 x??
 ---
@@ -188,13 +185,11 @@ Geometry involves understanding properties of shapes and spatial relationships. 
 :p What is the formula for the area of a rectangle?
 ??x
 The formula for the area of a rectangle is:
-\[ \text{Area} = \text{length} \times \text{width} \]
+$$\text{Area} = \text{length} \times \text{width}$$
 
 For example:
 If length = 10 units and width = 5 units, then:
-\[ \text{Area} = 10 \times 5 = 50 \text{ square units} \]
-
-x??
+$$\text{Area} = 10 \times 5 = 50 \text{ square units}$$x??
 ---
 
 ---
@@ -214,8 +209,7 @@ For example, if a problem states: "John has 10 apples and gives away 4. How many
 - Understand: John’s initial number of apples and what is happening (giving away).
 - Identify: Initial amount = 10, given away = 4.
 - Plan: Use subtraction since you are finding the difference.
-- Solve: \( 10 - 4 = 6 \)
-- Check: Verify that giving away 4 from 10 leaves John with 6 apples.
+- Solve:$10 - 4 = 6$- Check: Verify that giving away 4 from 10 leaves John with 6 apples.
 
 x??
 ---
@@ -364,21 +358,20 @@ x??
 ---
 
 #### Example Calculation with Base and Exponent
-Background context: Understanding how to calculate expressions involving bases and exponents is crucial for solving problems on the ASVAB. This includes recognizing that \(a^n\) means \(a \times a \times ... \times a\) (n times).
+Background context: Understanding how to calculate expressions involving bases and exponents is crucial for solving problems on the ASVAB. This includes recognizing that $a^n $ means$a \times a \times ... \times a$(n times).
 
-:p Calculate \(2^3\).
+:p Calculate $2^3$.
 ??x
-\(2^3 = 2 \times 2 \times 2 = 8\)
-x??
+$2^3 = 2 \times 2 \times 2 = 8$ x??
 
 ---
 
 #### Example of Different Exponential Expressions
-Background context: It's important to understand that expressions like \(a^n\) and \(b^m\) are not necessarily equal, even if the bases or exponents are different.
+Background context: It's important to understand that expressions like $a^n $ and$b^m$ are not necessarily equal, even if the bases or exponents are different.
 
-:p Why is \(15^2 \neq 15^3\)?
+:p Why is $15^2 \neq 15^3$?
 ??x
-\(15^2 = 15 \times 15 = 225\), while \(15^3 = 15 \times 15 \times 15 = 3,375\). These are different values because the exponents are not the same.
+$15^2 = 15 \times 15 = 225 $, while $15^3 = 15 \times 15 \times 15 = 3,375$. These are different values because the exponents are not the same.
 x??
 
 ---
@@ -388,7 +381,7 @@ Background context: Squaring a number (raising it to the second power) means mul
 
 :p What is "15 squared"?
 ??x
-"15 squared" or \(15^2\) means \(15 \times 15 = 225\).
+"15 squared" or $15^2 $ means$15 \times 15 = 225$.
 x??
 
 ---
@@ -423,7 +416,7 @@ x??
 
 #### Square Root
 
-Square root is a fundamental mathematical operation where you find a number that, when multiplied by itself (squared), equals the original number. For example, the square root of 36 is 6 because \(6 \times 6 = 36\).
+Square root is a fundamental mathematical operation where you find a number that, when multiplied by itself (squared), equals the original number. For example, the square root of 36 is 6 because $6 \times 6 = 36$.
 
 :p What is the definition of the square root?
 ??x
@@ -434,7 +427,7 @@ x??
 
 #### Factorial
 
-A factorial is denoted by an exclamation mark (!) and represents the product of all positive integers up to a given number. For instance, \(6! = 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 720\). Factorials are used in calculating permutations, which determine the different possible orders or arrangements.
+A factorial is denoted by an exclamation mark (!) and represents the product of all positive integers up to a given number. For instance, $6! = 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 720$. Factorials are used in calculating permutations, which determine the different possible orders or arrangements.
 
 :p What is a factorial?
 ??x
@@ -445,11 +438,11 @@ x??
 
 #### Reciprocal
 
-The reciprocal of a fraction \(\frac{a}{b}\) is \(\frac{b}{a}\). For whole numbers, the reciprocal is the inverse where the numerator and denominator swap places. Zero does not have a reciprocal because division by zero is undefined.
+The reciprocal of a fraction $\frac{a}{b}$ is $\frac{b}{a}$. For whole numbers, the reciprocal is the inverse where the numerator and denominator swap places. Zero does not have a reciprocal because division by zero is undefined.
 
 :p What is the reciprocal of a number?
 ??x
-The reciprocal of a number \(x\) (if it's a fraction \(\frac{a}{b}\)) is \(\frac{b}{a}\). For whole numbers, it's simply 1 divided by that number.
+The reciprocal of a number $x $(if it's a fraction $\frac{a}{b}$) is $\frac{b}{a}$. For whole numbers, it's simply 1 divided by that number.
 x??
 
 ---
@@ -483,11 +476,11 @@ x??
 ---
 
 #### Multiplicative Inverse and Reciprocals
-The multiplicative inverse of a number is its reciprocal, which means turning the number upside down. The reciprocal of \( x \) is given by \( \frac{1}{x} \). For example, the reciprocal of \( 5 \) is \( \frac{1}{5} \), and it can also be written as just \( 0.2 \).
+The multiplicative inverse of a number is its reciprocal, which means turning the number upside down. The reciprocal of $x $ is given by$\frac{1}{x}$. For example, the reciprocal of $5 $ is $\frac{1}{5}$, and it can also be written as just $0.2$.
 
 :p What is the multiplicative inverse of a number?
 ??x
-The multiplicative inverse of a number \( x \) is its reciprocal, which is \( \frac{1}{x} \). For example, the multiplicative inverse of \( 5 \) is \( \frac{1}{5} \).
+The multiplicative inverse of a number $x $ is its reciprocal, which is$\frac{1}{x}$. For example, the multiplicative inverse of $5 $ is $\frac{1}{5}$.
 x??
 
 ---
@@ -503,34 +496,34 @@ The correct order of operations for solving a math problem is as follows:
 3. Carry out multiplication and division from left to right.
 4. Finally, perform addition and subtraction from left to right.
 
-For example, in the equation \( 3 \times (5 + 2) - 6^2 + 8 \), you would:
-1. Solve inside the parentheses: \( 5 + 2 = 7 \).
-2. Evaluate the exponent: \( 6^2 = 36 \).
-3. Multiply: \( 3 \times 7 = 21 \).
-4. Subtract and add from left to right: \( 21 - 36 + 8 \).
+For example, in the equation $3 \times (5 + 2) - 6^2 + 8$, you would:
+1. Solve inside the parentheses: $5 + 2 = 7$.
+2. Evaluate the exponent: $6^2 = 36$.
+3. Multiply: $3 \times 7 = 21$.
+4. Subtract and add from left to right: $21 - 36 + 8$.
 
-The final result is \( -7 \). This order ensures that the correct answer is obtained.
+The final result is $-7$. This order ensures that the correct answer is obtained.
 x??
 
 ---
 
 #### Problem-Solving with Order of Operations
-To solve a problem like \( 3 \times (5 + 2) - 6^2 + 8 \), you follow these steps:
+To solve a problem like $3 \times (5 + 2) - 6^2 + 8$, you follow these steps:
 
-1. **Parentheses**: Solve inside the parentheses first: \( 5 + 2 = 7 \).
-2. **Exponents**: Evaluate any exponents next: \( 6^2 = 36 \).
-3. **Multiplication and Division**: Perform multiplication from left to right: \( 3 \times 7 = 21 \).
-4. **Addition and Subtraction**: Finally, perform addition and subtraction from left to right: \( 21 - 36 + 8 \).
+1. **Parentheses**: Solve inside the parentheses first: $5 + 2 = 7$.
+2. **Exponents**: Evaluate any exponents next: $6^2 = 36$.
+3. **Multiplication and Division**: Perform multiplication from left to right: $3 \times 7 = 21$.
+4. **Addition and Subtraction**: Finally, perform addition and subtraction from left to right: $21 - 36 + 8$.
 
-:p What is the solution for the problem \( 3 \times (5 + 2) - 6^2 + 8 \)?
+:p What is the solution for the problem $3 \times (5 + 2) - 6^2 + 8$?
 ??x
-The solution for the problem \( 3 \times (5 + 2) - 6^2 + 8 \) involves following these steps:
-1. Solve inside the parentheses: \( 5 + 2 = 7 \).
-2. Evaluate the exponent: \( 6^2 = 36 \).
-3. Multiply: \( 3 \times 7 = 21 \).
-4. Subtract and add from left to right: \( 21 - 36 + 8 \).
+The solution for the problem $3 \times (5 + 2) - 6^2 + 8$ involves following these steps:
+1. Solve inside the parentheses: $5 + 2 = 7$.
+2. Evaluate the exponent: $6^2 = 36$.
+3. Multiply: $3 \times 7 = 21$.
+4. Subtract and add from left to right: $21 - 36 + 8$.
 
-The final result is \( -7 \). This ensures that the operations are performed correctly according to the order of operations.
+The final result is $-7$. This ensures that the operations are performed correctly according to the order of operations.
 x??
 
 ---
@@ -540,15 +533,15 @@ Number sequences test your ability to determine the next number in a series by i
 
 :p How do you solve a number sequence problem like 2, 4, 16, 256, ...?
 ??x
-To solve a number sequence problem like \( 2, 4, 16, 256, \ldots \), identify the pattern:
-- The first term is \( 2^1 = 2 \).
-- The second term is \( 2^2 = 4 \).
-- The third term is \( 2^4 = 16 \) (not \( 2^3 = 8 \)).
-- The fourth term is \( 2^8 = 256 \).
+To solve a number sequence problem like $2, 4, 16, 256, \ldots$, identify the pattern:
+- The first term is $2^1 = 2$.
+- The second term is $2^2 = 4$.
+- The third term is $2^4 = 16 $(not $2^3 = 8$).
+- The fourth term is $2^8 = 256$.
 
-The pattern seems to involve exponentiation where the exponent doubles each time: \( 1, 2, 4, 8, \ldots \). Therefore, the next exponent would be \( 16 \), so the next number in the sequence is \( 2^{16} = 65,536 \).
+The pattern seems to involve exponentiation where the exponent doubles each time: $1, 2, 4, 8, \ldots $. Therefore, the next exponent would be $16 $, so the next number in the sequence is $2^{16} = 65,536$.
 
-The answer is \( 65,536 \).
+The answer is $65,536$.
 x??
 
 ---
@@ -558,16 +551,16 @@ Arithmetic reasoning questions often test your ability to determine how numbers 
 
 :p How do you solve a sequence problem like 1, 2, 3, 6, 12, ...?
 ??x
-To solve the sequence \( 1, 2, 3, 6, 12, \ldots \), identify the pattern:
-- The first term is \( 1 \).
-- The second term is \( 1 + 1 = 2 \).
-- The third term is \( 2 + 1 = 3 \).
-- The fourth term is \( 3 + 3 = 6 \) (doubling the previous difference: \( 2 - 1 = 1 \), then \( 3 - 2 = 1 \)).
-- The fifth term is \( 6 + 6 = 12 \).
+To solve the sequence $1, 2, 3, 6, 12, \ldots$, identify the pattern:
+- The first term is $1$.
+- The second term is $1 + 1 = 2$.
+- The third term is $2 + 1 = 3$.
+- The fourth term is $3 + 3 = 6 $(doubling the previous difference:$2 - 1 = 1 $, then $3 - 2 = 1$).
+- The fifth term is $6 + 6 = 12$.
 
-The pattern involves adding the previous number plus the increment of the last addition. Therefore, the next step would be to add 12 (the previous number) plus 6 (the difference), which gives \( 12 + 6 = 18 \).
+The pattern involves adding the previous number plus the increment of the last addition. Therefore, the next step would be to add 12 (the previous number) plus 6 (the difference), which gives $12 + 6 = 18$.
 
-Thus, the next number in the sequence is \( 24 \).
+Thus, the next number in the sequence is $24$.
 x??
 
 ---

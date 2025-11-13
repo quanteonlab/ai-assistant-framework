@@ -72,8 +72,7 @@ Background context explaining the concept. The Variance Error (RE), or Mean Squa
 :p What is the formula for RE?
 ??x
 The formula for the RE in the on-policy case is given by:
-\[ \text{RE}(w) = E\left[ (G_t - v(S_t, w))^2 \right] = \text{VE}(w) + E\left[ (G_t - v_\pi(S_t))^2 \right] \]
-x??
+$$\text{RE}(w) = E\left[ (G_t - v(S_t, w))^2 \right] = \text{VE}(w) + E\left[ (G_t - v_\pi(S_t))^2 \right]$$x??
 
 ---
 
@@ -94,7 +93,7 @@ Background context explaining the concept. A counterexample is provided using tw
 
 :p What are the key differences between the left and right MRP in Example 11.4?
 ??x
-The left MRP has two distinct states, while the right MRP has three states where two of them, B and B0, must be given the same approximate value. The value function for state A is represented by one component of \( w \), while the values for states B and B0 are shared in another component.
+The left MRP has two distinct states, while the right MRP has three states where two of them, B and B0, must be given the same approximate value. The value function for state A is represented by one component of $w$, while the values for states B and B0 are shared in another component.
 x??
 
 ---
@@ -137,11 +136,11 @@ Each flashcard uses the provided structure and covers a specific aspect of the t
 
 #### MRP Design and BE Unlearnability
 
-Background context: The text discusses two Markov Reward Processes (MRPs) that generate identical observable data distributions but have different behaviors regarding the Bellman Error (BE). In the first MRP, a specific parameter \( w = 0 \) exactly solves for zero BE. However, in the second MRP, this solution is not optimal, leading to non-zero squared errors.
+Background context: The text discusses two Markov Reward Processes (MRPs) that generate identical observable data distributions but have different behaviors regarding the Bellman Error (BE). In the first MRP, a specific parameter $w = 0$ exactly solves for zero BE. However, in the second MRP, this solution is not optimal, leading to non-zero squared errors.
 
 :p What are the key differences between the two MRPs concerning their behaviors?
 ??x
-In the first MRP, when \( w = 0 \), the Bellman Error (BE) is exactly zero. In contrast, in the second MRP, setting \( w = 0 \) does not minimize the BE; instead, a more complex function of \( w \) minimizes it, and as \( \epsilon \to 1 \), the optimal value is approximately \( (\frac{1}{2}, 0) \). This shows that the BE is not learnable from data alone.
+In the first MRP, when $w = 0 $, the Bellman Error (BE) is exactly zero. In contrast, in the second MRP, setting $ w = 0 $ does not minimize the BE; instead, a more complex function of $ w $ minimizes it, and as $\epsilon \to 1 $, the optimal value is approximately $(\frac{1}{2}, 0)$. This shows that the BE is not learnable from data alone.
 x??
 
 ---
@@ -152,7 +151,7 @@ Background context: The text explains how the Bellman Error (BE) minimization ca
 
 :p How does the BE minimization behave differently between the two MRPs?
 ??x
-In the first MRP, \( w = 0 \) is the exact solution that minimizes the BE. However, in the second MRP, the optimal value of \( w \) is a complex function and approaches \( (\frac{1}{2}, 0) \) as \( \epsilon \to 1 \). This indicates that knowledge beyond just the data distribution is necessary to determine the optimal parameter values.
+In the first MRP, $w = 0 $ is the exact solution that minimizes the BE. However, in the second MRP, the optimal value of$w $ is a complex function and approaches$(\frac{1}{2}, 0)$ as $\epsilon \to 1$. This indicates that knowledge beyond just the data distribution is necessary to determine the optimal parameter values.
 
 The key difference lies in the fact that while both MRPs produce the same observable sequences, the underlying reward structures and state transitions are different. Therefore, the minimization of BE cannot be achieved purely from the data.
 x??
@@ -163,15 +162,15 @@ x??
 
 Background context: The text provides an example where a deterministic transition with a reward of 1 drives the value function towards a negative value to minimize the Bellman Error.
 
-:p Why does making \( vw(A) \) negative reduce the error upon arriving in A from B?
+:p Why does making $vw(A)$ negative reduce the error upon arriving in A from B?
 ??x
-When transitioning deterministically from state B to state A, which has a reward of 0 and a nearly zero value, the optimal action value \( vw(A) \) should ideally be close to -1. This is because the next state (B) has a value of approximately zero. Therefore, arriving at A with a value of -1 ensures that the transition from B to A incurs minimal error.
+When transitioning deterministically from state B to state A, which has a reward of 0 and a nearly zero value, the optimal action value $vw(A)$ should ideally be close to -1. This is because the next state (B) has a value of approximately zero. Therefore, arriving at A with a value of -1 ensures that the transition from B to A incurs minimal error.
 
 To minimize BE:
 - The reward on leaving B (which is 1) should be reflected in the value of A.
-- Since B’s value is nearly zero, A’s value must be driven towards \(-1\).
+- Since B’s value is nearly zero, A’s value must be driven towards $-1$.
 
-This explains why \( vw(A) \) needs to be negative rather than zero to achieve optimal behavior and minimize errors.
+This explains why $vw(A)$ needs to be negative rather than zero to achieve optimal behavior and minimize errors.
 
 ```java
 // Pseudocode for updating value function
@@ -190,14 +189,14 @@ x??
 
 Background context: The text discusses how a probability distribution over data trajectories can be defined, but this does not fully capture the Markov Decision Process (MDP).
 
-:p What is the significance of knowing \( P(\textbf{d}) \) versus knowing an MDP?
+:p What is the significance of knowing $P(\textbf{d})$ versus knowing an MDP?
 ??x
-Knowing \( P(\textbf{d}) \), which represents the probability distribution over a finite sequence of data trajectories, gives information about the statistics of the observed data. However, it does not provide complete knowledge of the underlying MDP because:
+Knowing $P(\textbf{d})$, which represents the probability distribution over a finite sequence of data trajectories, gives information about the statistics of the observed data. However, it does not provide complete knowledge of the underlying MDP because:
 
-- The MDP includes additional details such as transition probabilities and reward functions that are not captured by \( P(\textbf{d}) \).
-- While \( P(\textbf{d}) \) can determine the probability of specific sequences occurring, it cannot infer the optimal policy or value function without further information.
+- The MDP includes additional details such as transition probabilities and reward functions that are not captured by $P(\textbf{d})$.
+- While $P(\textbf{d})$ can determine the probability of specific sequences occurring, it cannot infer the optimal policy or value function without further information.
 
-Thus, while \( P(\textbf{d}) \) is crucial for understanding data statistics, full knowledge of the MDP requires more detailed information about state transitions and rewards.
+Thus, while $P(\textbf{d})$ is crucial for understanding data statistics, full knowledge of the MDP requires more detailed information about state transitions and rewards.
 x??
 
 ---
@@ -211,8 +210,8 @@ Background context: The text illustrates that even with identical observable dat
 The Bellman Error (BE) cannot be learned solely from the data distribution because it depends on the underlying structure of the MDP, including transition probabilities and reward functions. Even if two MRPs generate identical observable sequences, they can have different optimal solutions for minimizing BE.
 
 For example:
-- In one MRP, setting \( w = 0 \) might exactly minimize the BE.
-- In another MRP with the same data distribution, a more complex function of \( w \) (approaching \((\frac{1}{2}, 0)\)) minimizes the BE.
+- In one MRP, setting $w = 0$ might exactly minimize the BE.
+- In another MRP with the same data distribution, a more complex function of $w $(approaching $(\frac{1}{2}, 0)$) minimizes the BE.
 
 This demonstrates that knowing only the data distribution is insufficient to determine the optimal solution for minimizing BE; additional knowledge about the MDP structure is necessary.
 x??
@@ -256,10 +255,10 @@ x??
 ---
 
 #### Probability Distribution of Trajectories
-Background context: The text explains that while a probability distribution \( P \) over data trajectories can provide complete characterization of a source of data, it does not fully determine the underlying MDP. This includes the ability to compute objectives like VE and BE from an MDP but cannot be determined solely from \( P \).
-:p How does the probability distribution \( P \) relate to the MDP structure?
+Background context: The text explains that while a probability distribution $P $ over data trajectories can provide complete characterization of a source of data, it does not fully determine the underlying MDP. This includes the ability to compute objectives like VE and BE from an MDP but cannot be determined solely from$P$.
+:p How does the probability distribution $P$ relate to the MDP structure?
 ??x
-The probability distribution \( P \) over data trajectories provides a complete characterization of the source of data. However, it does not fully determine the underlying MDP structure. While \( P \) can be used to compute objectives like Value Error (VE) and Behavior Error (BE), these computations require additional information about the MDP beyond what is provided by \( P \).
+The probability distribution $P $ over data trajectories provides a complete characterization of the source of data. However, it does not fully determine the underlying MDP structure. While$P $ can be used to compute objectives like Value Error (VE) and Behavior Error (BE), these computations require additional information about the MDP beyond what is provided by$P$.
 x??
 
 ---
@@ -297,7 +296,7 @@ Background context: The text explains that even though two MDPs can generate the
 
 :p How do the BE values of the first and second MDPs compare?
 ??x
-The first MDP's BE is exactly zero when using the value function \(v = 0\), while the second MDP has a non-zero BE of \(\sqrt{\frac{2}{3}}\) for states B and B'. This difference arises due to the identical observable data but different state representations.
+The first MDP's BE is exactly zero when using the value function $v = 0 $, while the second MDP has a non-zero BE of $\sqrt{\frac{2}{3}}$ for states B and B'. This difference arises due to the identical observable data but different state representations.
 x??
 
 ---
@@ -307,7 +306,7 @@ Background context: The text discusses minimal-BE value functions, noting that w
 
 :p What is the minimal-BE value function for each MDP?
 ??x
-For the first MDP, the minimal-BE value function is \(v = 0\). For the second MDP, it's more intricate and depends on the state representations.
+For the first MDP, the minimal-BE value function is $v = 0$. For the second MDP, it's more intricate and depends on the state representations.
 x??
 
 ---
@@ -315,9 +314,9 @@ x??
 #### Data Trajectory Probability Distribution (P)
 Background context: The text introduces the concept of a probability distribution over data trajectories, denoted as P, which characterizes the statistics of observed data but does not fully determine the underlying MDP.
 
-:p What is the significance of the probability distribution \(P\)?
+:p What is the significance of the probability distribution $P$?
 ??x
-The distribution \(P\) provides the probabilities of observing specific sequences in data trajectories. However, knowing \(P\) alone is insufficient to fully understand the MDP because it doesn't capture all aspects like the exact state transitions or rewards.
+The distribution $P $ provides the probabilities of observing specific sequences in data trajectories. However, knowing$P$ alone is insufficient to fully understand the MDP because it doesn't capture all aspects like the exact state transitions or rewards.
 x??
 
 ---
@@ -369,7 +368,7 @@ Background context: This concept discusses how two different Markov Decision Pro
 ??x
 The first MDP has a clear structure where states are represented distinctly, making it easier to find an exact solution for the value function. The second MDP, however, shares state representations, leading to a different minimal-BE value function.
 
-In the first example, with two distinct states (A and B), the BE is zero if the value function \( v = 0 \) is used as it's an exact solution. In contrast, in the second example with three states where B and B' are identical, using \( v = 0 \) leads to a non-zero error.
+In the first example, with two distinct states (A and B), the BE is zero if the value function $v = 0 $ is used as it's an exact solution. In contrast, in the second example with three states where B and B' are identical, using$v = 0$ leads to a non-zero error.
 
 The key takeaway is that the observable data alone cannot determine the BE; additional information about the MDP structure beyond just the observed sequence is necessary.
 ??x
@@ -382,10 +381,10 @@ Background context: The example illustrates how different MDPs can have distinct
 :p What are the minimal-BE value functions for the two MDPs mentioned?
 ??x
 For the first MDP:
-- The minimal-BE value function is \( v = 0 \) because it perfectly matches the exact solution in this case.
+- The minimal-BE value function is $v = 0$ because it perfectly matches the exact solution in this case.
   
 For the second MDP:
-- The minimal-BE value function is also \( v = 0 \), but this is approximate due to the shared states B and B'. This leads to a non-zero error of 1 in both these states, making the total BE \( p^2/3 \).
+- The minimal-BE value function is also $v = 0 $, but this is approximate due to the shared states B and B'. This leads to a non-zero error of 1 in both these states, making the total BE $ p^2/3$.
 
 The key point here is that while the exact solution might not always be optimal for all MDPs, it can still provide good approximations under certain conditions.
 ??x
@@ -399,9 +398,8 @@ Background context: The concept of Behavioral Error (BE) measures how well a giv
 ??x
 Behavioral Error (BE) quantifies the discrepancy between the observed behavior of an agent acting according to a given value function and the ideal behavior dictated by the true MDP. In simpler terms, it measures how well a particular value function aligns with the actual rewards and transitions in the environment.
 
-For example, if we have a value function \( v \) for an MDP, BE is calculated as:
-\[ \text{BE} = \sum_{i=1}^{n} |v_i - v'_i| \]
-where \( v_i \) are the values predicted by the value function and \( v'_i \) are the actual observed values in each state.
+For example, if we have a value function $v$ for an MDP, BE is calculated as:
+$$\text{BE} = \sum_{i=1}^{n} |v_i - v'_i|$$where $ v_i $ are the values predicted by the value function and $ v'_i$ are the actual observed values in each state.
 
 In the provided examples, BE helps to differentiate between the exact solutions of MDPs that generate identical observable data.
 ??x
@@ -415,7 +413,7 @@ Background context: This concept addresses how certain error functions, like Beh
 ??x
 Behavioral Error (BE) is unobservable because it requires knowledge of the true MDP structure beyond just the observable sequence of states and rewards. However, this does not mean BE cannot be used in learning settings.
 
-The key point is that while we may not directly measure BE, we can infer the value function that minimizes it by analyzing the data and the structure of the MDP. For instance, even though the exact solution \( v = 0 \) might not minimize BE perfectly due to shared states in some MDPs, it still provides a good approximation.
+The key point is that while we may not directly measure BE, we can infer the value function that minimizes it by analyzing the data and the structure of the MDP. For instance, even though the exact solution $v = 0$ might not minimize BE perfectly due to shared states in some MDPs, it still provides a good approximation.
 
 In practical applications like reinforcement learning, we often use such error functions indirectly through algorithms that approximate the optimal policy and value function.
 ??x
@@ -427,12 +425,11 @@ Background context: The example also introduces the concept of Value Error (VE),
 
 :p How do Value Error (VE) and Behavioral Error (BE) differ?
 ??x
-Value Error (VE) measures the difference between the true state values \( v^* \) and the predicted state values \( v \):
-\[ \text{VE} = |v - v^*| \]
+Value Error (VE) measures the difference between the true state values $v^*$ and the predicted state values $v$:
+$$\text{VE} = |v - v^*|$$
 
 Behavioral Error (BE), on the other hand, is concerned with how well the actions derived from a value function align with the optimal policy:
-\[ \text{BE} = \sum_{i=1}^{n} |v_i - v'_i| \]
-where \( v_i \) are predicted values and \( v'_i \) are actual observed values.
+$$\text{BE} = \sum_{i=1}^{n} |v_i - v'_i|$$where $ v_i $ are predicted values and $ v'_i$ are actual observed values.
 
 The key difference is that VE focuses on the accuracy of value predictions, whereas BE looks at how well the actions derived from these values match the optimal policy. In practice, both error measures can be used to guide learning algorithms, but they serve different purposes and require different types of data or structural knowledge.
 ??x
@@ -448,7 +445,7 @@ Background context: This section discusses two simple MDPs, each with distinct o
 ??x
 The first MDP has two distinctly valued states, while the second MDP has three states with two represented identically. The actions (or lack thereof) make these MDPs effectively Markov chains where transitions occur with equal probability.
 
-In the first MDP, the value function \(v = 0\) is an exact solution, resulting in zero overall bias error (BE). In contrast, for the second MDP, this same value function results in a BE of \(\sqrt{2/3}\) if states B and B' are equally weighted by d.
+In the first MDP, the value function $v = 0 $ is an exact solution, resulting in zero overall bias error (BE). In contrast, for the second MDP, this same value function results in a BE of$\sqrt{2/3}$ if states B and B' are equally weighted by d.
 
 The observable data from both MDPs is identical: they produce sequences starting with A followed by 0, then a series of Bs each followed by an -1, except the last which is followed by a 1, and this pattern repeats.
 ??x
@@ -462,9 +459,9 @@ Background context: The text discusses how bias error (BE) cannot be estimated f
 :p How does the BE relate to the structure of an MDP?
 
 ??x
-The BE is a measure of the error introduced by approximating the value function of an MDP. In some cases, such as the first described MDP where \(v = 0\) is exact, the BE can be zero. However, in other MDPs like the second example, this same solution introduces non-zero bias.
+The BE is a measure of the error introduced by approximating the value function of an MDP. In some cases, such as the first described MDP where $v = 0$ is exact, the BE can be zero. However, in other MDPs like the second example, this same solution introduces non-zero bias.
 
-For the second MDP, if states B and B' are equally weighted by d, then the BE for the value function \(v = 0\) would be \(\sqrt{2/3}\).
+For the second MDP, if states B and B' are equally weighted by d, then the BE for the value function $v = 0 $ would be$\sqrt{2/3}$.
 
 The key point is that while observable data can tell us about the behavior of an MDP, it does not reveal its underlying structure or the minimal-BE value functions. Thus, additional information beyond the data is required to accurately determine BE.
 ??x
@@ -478,7 +475,7 @@ Background context: The text illustrates two MDPs with different state represent
 :p How do the value functions of the two described MDPs compare?
 
 ??x
-The minimal-BE value function for the first MDP is \(v = 0\) for any \(\delta\), as it exactly solves the problem. However, in the second MDP, this solution introduces an error of 1 at states B and B', resulting in a BE of \(\sqrt{2/3}\) if these states are equally weighted by d.
+The minimal-BE value function for the first MDP is $v = 0 $ for any$\delta $, as it exactly solves the problem. However, in the second MDP, this solution introduces an error of 1 at states B and B', resulting in a BE of $\sqrt{2/3}$ if these states are equally weighted by d.
 
 Thus, despite having identical observable data, different MDP structures can lead to varying minimal-BE value functions.
 ??x
@@ -492,9 +489,9 @@ Background context: The text explains how the probability distribution over data
 :p What is the significance of the distribution P in understanding an MDP?
 
 ??x
-The distribution \(P\) defines the probability of any finite sequence occurring as part of a trajectory. Knowing \(P\) gives complete statistical information about the data but does not reveal the underlying structure or value functions of the MDP.
+The distribution $P $ defines the probability of any finite sequence occurring as part of a trajectory. Knowing$P$ gives complete statistical information about the data but does not reveal the underlying structure or value functions of the MDP.
 
-For instance, while \(P\) can be computed from an MDP and used to determine the VE (Value Error) or BE objectives, these cannot be determined solely from \(P\).
+For instance, while $P $ can be computed from an MDP and used to determine the VE (Value Error) or BE objectives, these cannot be determined solely from$P$.
 ??x
 
 ---
@@ -508,7 +505,7 @@ Background context: The text contrasts the concepts of value error and bias erro
 ??x
 The Value Error (VE) is a measure related to how well a value function approximates the true optimal value function. While it may not be directly observable from data alone, determining its minimizing value can still provide useful insights for learning settings.
 
-In the context of the examples given, VE and BE objectives are computed from the MDP but cannot be determined solely from the distribution \(P\) of data trajectories.
+In the context of the examples given, VE and BE objectives are computed from the MDP but cannot be determined solely from the distribution $P$ of data trajectories.
 ??x
 
 ---
@@ -520,7 +517,7 @@ Background context: The text emphasizes that even when two MDPs generate identic
 :p How do minimal-BE value functions vary between different MDPs?
 
 ??x
-Minimal-BE value functions are the optimal solutions that minimize bias error in an MDP. For the first described MDP, any \(v = 0\) is a minimal-BE solution because it perfectly matches the true values. However, for the second MDP, the same value function introduces errors at states B and B', leading to a non-zero BE.
+Minimal-BE value functions are the optimal solutions that minimize bias error in an MDP. For the first described MDP, any $v = 0$ is a minimal-BE solution because it perfectly matches the true values. However, for the second MDP, the same value function introduces errors at states B and B', leading to a non-zero BE.
 
 This example highlights that minimal-BE value functions can differ significantly between structurally different but observationally identical MDPs.
 ??x
@@ -553,7 +550,7 @@ x??
 Background context explaining the concept. The Value Error (BE) is a measure of how well an approximate value function fits the true value function in an MDP. In different MDPs that generate the same data, the BE can vary significantly due to structural differences.
 :p How does the Value Error (BE) differ between two MDPs with the same observable data?
 ??x
-The Value Error (BE) differs between two MDPs even if they produce the same observable data because their internal structures and value functions are distinct. For instance, in one MDP, a constant value function \(v = 0\) might be an exact solution, while for another, it could produce significant errors.
+The Value Error (BE) differs between two MDPs even if they produce the same observable data because their internal structures and value functions are distinct. For instance, in one MDP, a constant value function $v = 0$ might be an exact solution, while for another, it could produce significant errors.
 ```java
 // Pseudocode to calculate BE for different MDPs
 public class ValueError {
@@ -650,73 +647,59 @@ The primary goal of Gradient-TD methods is to provide a stochastic gradient desc
 
 #### Matrix Formulation of PBE
 The Performance Bellman Error (PBE) is reformulated in matrix terms for easier computation and understanding. The expression for the PBE using matrix notation is given by:
-\[ \text{PBE}(w) = x^T D \bar{\xi} w - x^T X (X^TDX)^{-1} X^T D \bar{\xi} w \]
-
-:p How is the Performance Bellman Error (PBE) expressed in matrix terms?
+$$\text{PBE}(w) = x^T D \bar{\xi} w - x^T X (X^TDX)^{-1} X^T D \bar{\xi} w$$:p How is the Performance Bellman Error (PBE) expressed in matrix terms?
 ??x
 The PBE can be expressed as:
-\[ \text{PBE}(w) = x^T D \bar{\xi} w - x^T X (X^TDX)^{-1} X^T D \bar{\xi} w \]
+$$\text{PBE}(w) = x^T D \bar{\xi} w - x^T X (X^TDX)^{-1} X^T D \bar{\xi} w$$
+
 This form allows for more straightforward computation and manipulation, especially when using matrix operations.
 
 ---
 
 #### Derivation of the Gradient
-The gradient of the PBE with respect to \(w\) is derived as:
-\[ r\text{PBE}(w) = 2 x^T D \bar{\xi} w (X (X^TDX)^{-1} X^T D \bar{\xi} w)^T \]
-
-:p What is the gradient of the PBE with respect to \(w\)?
+The gradient of the PBE with respect to $w$ is derived as:
+$$r\text{PBE}(w) = 2 x^T D \bar{\xi} w (X (X^TDX)^{-1} X^T D \bar{\xi} w)^T$$:p What is the gradient of the PBE with respect to $ w$?
 ??x
-The gradient of the PBE with respect to \(w\) is:
-\[ r\text{PBE}(w) = 2 x^T D \bar{\xi} w (X (X^TDX)^{-1} X^T D \bar{\xi} w)^T \]
-This expression shows how changes in \(w\) affect the PBE.
+The gradient of the PBE with respect to $w$ is:
+$$r\text{PBE}(w) = 2 x^T D \bar{\xi} w (X (X^TDX)^{-1} X^T D \bar{\xi} w)^T$$
+
+This expression shows how changes in $w$ affect the PBE.
 
 ---
 
 #### Expectations and SGD Formulation
 To convert this gradient into an SGD method, expectations under the behavior policy distribution are used. The gradient is rewritten as:
-\[ r\text{PBE}(w) = 2 E[ (x_{t+1} - x_t)^T \xi_t^T ] E[x_t x_t^T]^{-1} E[\xi_t x_t^T] \]
-
-:p How is the gradient expressed in terms of expectations?
+$$r\text{PBE}(w) = 2 E[ (x_{t+1} - x_t)^T \xi_t^T ] E[x_t x_t^T]^{-1} E[\xi_t x_t^T]$$:p How is the gradient expressed in terms of expectations?
 ??x
 The gradient can be expressed as:
-\[ r\text{PBE}(w) = 2 E[ (x_{t+1} - x_t)^T \xi_t^T ] E[x_t x_t^T]^{-1} E[\xi_t x_t^T] \]
-where \(E[x_t x_t^T]^{-1}\) is the inverse of the expected outer-product matrix of feature vectors, and the other terms are expectations under the behavior policy.
+$$r\text{PBE}(w) = 2 E[ (x_{t+1} - x_t)^T \xi_t^T ] E[x_t x_t^T]^{-1} E[\xi_t x_t^T]$$where $ E[x_t x_t^T]^{-1}$ is the inverse of the expected outer-product matrix of feature vectors, and the other terms are expectations under the behavior policy.
 
 ---
 
 #### Estimation of Parameters
-The parameters are estimated using a Least Mean Squares (LMS) rule. The vector \(v\) is learned as:
-\[ v \approx E[ x_t x_t^T ]^{-1} E[\xi_t x_t^T] \]
-
-:p What method is used to estimate the parameter vector \(v\)?
+The parameters are estimated using a Least Mean Squares (LMS) rule. The vector $v$ is learned as:
+$$v \approx E[ x_t x_t^T ]^{-1} E[\xi_t x_t^T]$$:p What method is used to estimate the parameter vector $ v$?
 ??x
-The parameter vector \(v\) is estimated using a Least Mean Squares (LMS) rule. The update for \(v\) is:
-\[ v_{t+1} = v_t + \alpha (\xi_t - v_t^T x_t) x_t \]
-where \(\alpha > 0\) is the step-size parameter.
+The parameter vector $v $ is estimated using a Least Mean Squares (LMS) rule. The update for$v$ is:
+$$v_{t+1} = v_t + \alpha (\xi_t - v_t^T x_t) x_t$$where $\alpha > 0$ is the step-size parameter.
 
 ---
 
 #### Algorithm Implementation: GTD2
-The algorithm, known as GTD2, updates the main parameter vector \(w\) using:
-\[ w_{t+1} = w_t + \gamma E[ (x_t - x_{t+1})^T \xi_t ] v_t \]
-
-:p What is the update rule for the main parameter vector in GTD2?
+The algorithm, known as GTD2, updates the main parameter vector $w$ using:
+$$w_{t+1} = w_t + \gamma E[ (x_t - x_{t+1})^T \xi_t ] v_t$$:p What is the update rule for the main parameter vector in GTD2?
 ??x
-The update rule for the main parameter vector \(w\) in GTD2 is:
-\[ w_{t+1} = w_t + \gamma E[ (x_t - x_{t+1})^T \xi_t ] v_t \]
-where \(v_t\) is the learned vector that approximates the inverse of the outer-product matrix.
+The update rule for the main parameter vector $w$ in GTD2 is:
+$$w_{t+1} = w_t + \gamma E[ (x_t - x_{t+1})^T \xi_t ] v_t$$where $ v_t$ is the learned vector that approximates the inverse of the outer-product matrix.
 
 ---
 
 #### Algorithm Implementation: TDC
 The alternative algorithm, known as TDC or GTD(0), updates the main parameter vector using:
-\[ w_{t+1} = w_t + \gamma (x_t - x_{t+1})^T v_t E[ \xi_t ] \]
-
-:p What is the update rule for the main parameter vector in TDC?
+$$w_{t+1} = w_t + \gamma (x_t - x_{t+1})^T v_t E[ \xi_t ]$$:p What is the update rule for the main parameter vector in TDC?
 ??x
-The update rule for the main parameter vector \(w\) in TDC is:
-\[ w_{t+1} = w_t + \gamma (x_t - x_{t+1})^T v_t E[ \xi_t ] \]
-where \(v_t\) approximates the inverse of the outer-product matrix, and \(E[\xi_t]\) is the expectation under the behavior policy.
+The update rule for the main parameter vector $w$ in TDC is:
+$$w_{t+1} = w_t + \gamma (x_t - x_{t+1})^T v_t E[ \xi_t ]$$where $ v_t $ approximates the inverse of the outer-product matrix, and $ E[\xi_t]$ is the expectation under the behavior policy.
 
 ---
 
@@ -725,7 +708,7 @@ The figure shows a typical run of TDC on Baird’s counterexample. The PBE falls
 
 :p How does the TDC algorithm behave on Baird's counterexample?
 ??x
-On Baird’s counterexample, the PBE falls to zero as intended. However, the individual components of the parameter vector do not approach zero and remain far from the optimal value \(w^*\).
+On Baird’s counterexample, the PBE falls to zero as intended. However, the individual components of the parameter vector do not approach zero and remain far from the optimal value $w^*$.
 
 ---
 
@@ -740,11 +723,11 @@ x??
 ---
 
 #### Linear Semi-Gradient TD Methods Stability
-Linear semi-gradient TD methods are efficient and stable when trained under the on-policy distribution because of the positive definiteness of matrix \(A\). The state distribution is matched to the target policy's state-transition probabilities.
+Linear semi-gradient TD methods are efficient and stable when trained under the on-policy distribution because of the positive definiteness of matrix $A$. The state distribution is matched to the target policy's state-transition probabilities.
 
 :p Why are linear semi-gradient TD methods generally stable?
 ??x
-Linear semi-gradient TD methods are stable due to the positive definiteness of matrix \(A\) and a match between the on-policy state distribution \(\mu_\pi\) and the state-transition probabilities \(p(s|s',a)\) under the target policy. This ensures that the updates align well with the expected future rewards, leading to convergence.
+Linear semi-gradient TD methods are stable due to the positive definiteness of matrix $A $ and a match between the on-policy state distribution$\mu_\pi $ and the state-transition probabilities$p(s|s',a)$ under the target policy. This ensures that the updates align well with the expected future rewards, leading to convergence.
 x??
 
 ---
@@ -774,15 +757,15 @@ The one-step Emphatic-TD algorithm updates the state value estimates by reweight
 
 :p How does the one-step Emphatic-TD algorithm update state values?
 ??x
-The one-step Emphatic-TD algorithm updates state values using formulas that adjust for the importance of each transition. It uses a sequence interest vector \(I_t\) and emphasis vector \(M_t\):
+The one-step Emphatic-TD algorithm updates state values using formulas that adjust for the importance of each transition. It uses a sequence interest vector $I_t $ and emphasis vector$M_t$:
 ```python
 w_{t+1} = w_t + \alpha M_t \gamma^t (R_{t+1} - \hat{v}(S_{t+1}, w_t) + \hat{v}(S_t, w_t))
 ```
-Where \(\alpha\) is the learning rate, and \(M_t\) is updated as:
+Where $\alpha $ is the learning rate, and$M_t$ is updated as:
 ```python
 M_{t+1} = \gamma M_t + I_t
 ```
-Here, \(I_t\) represents the interest in state \(S_t\), indicating its importance.
+Here,$I_t $ represents the interest in state$S_t$, indicating its importance.
 x??
 
 ---

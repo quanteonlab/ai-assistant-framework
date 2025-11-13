@@ -130,7 +130,7 @@ To make changes and verify them in the Ruby web server example, follow these ste
 
 3. **Test the Change:** Use `curl` to test the new output of the server:
     ```bash
-    $ curl http://localhost:8000
+    $curl http://localhost:8000
     Hello, World v2
     ```
 
@@ -141,13 +141,12 @@ To make changes and verify them in the Ruby web server example, follow these ste
 To run a simple HTTP server using Ruby, follow these steps:
 
 1. Navigate to the directory containing the `web-server.rb` file:
-    ```bash
-    $ cd code/ruby/10-terraform/team
+    ```bash$ cd code/ruby/10-terraform/team
     ```
 
 2. Start the server by running the script with the Ruby interpreter:
     ```bash
-    $ ruby web-server.rb
+    $ruby web-server.rb
     ```
 
 The output should indicate that the server is up and running on port 8000.
@@ -155,8 +154,7 @@ The output should indicate that the server is up and running on port 8000.
 :p How do you test a locally run HTTP server using `curl`?
 ??x
 To test a locally run HTTP server using `curl`, use the following command:
-```bash
-$ curl http://localhost:8000
+```bash$ curl http://localhost:8000
 ```
 
 This command sends an HTTP GET request to the local server running on port 8000 and displays the response, which should be "Hello, World" by default.
@@ -165,7 +163,7 @@ This command sends an HTTP GET request to the local server running on port 8000 
 ??x
 To run automated tests for a Ruby application, use the `ruby` command followed by the path to the test file. For example:
 ```bash
-$ ruby web-server-test.rb
+$ruby web-server-test.rb
 ```
 
 The output will indicate whether all tests passed or if any failed.
@@ -181,8 +179,7 @@ Background context: After making and testing changes locally, you should commit 
 :p How do you commit local code changes?
 ??x
 To commit local code changes, use the `git commit` command followed by an appropriate message that describes the changes. For example:
-```bash
-$ git commit -m "Updated Hello, World text"
+```bash$ git commit -m "Updated Hello, World text"
 ```
 
 This command commits all staged changes to your current branch with a clear commit message.

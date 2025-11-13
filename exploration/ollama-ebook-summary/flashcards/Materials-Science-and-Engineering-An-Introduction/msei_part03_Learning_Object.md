@@ -5,11 +5,11 @@
 ---
 
 #### Nano Prefix and Dimensions
-Background context explaining the term "nano" and its significance. Note that nanometers (nm) are a unit of length, where 1 nm = \(10^{-9}\) meters.
+Background context explaining the term "nano" and its significance. Note that nanometers (nm) are a unit of length, where 1 nm = $10^{-9}$ meters.
 
 :p What does the nano prefix denote in terms of size for structural entities?
 ??x
-The nano prefix denotes that the dimensions of these structural entities are on the order of a nanometer (10\(^{-9}\) m), typically less than 100 nm, which is approximately the diameter of 500 atoms.
+The nano prefix denotes that the dimensions of these structural entities are on the order of a nanometer (10 $^{-9}$ m), typically less than 100 nm, which is approximately the diameter of 500 atoms.
 
 ---
 
@@ -36,7 +36,7 @@ Explanation on why small nanoparticles have high surface area-to-volume ratios a
 
 :p Why do small nanoparticles have a large surface area-to-volume ratio?
 ??x
-Small nanoparticles have a disproportionately large surface area relative to their volume. For example, a cube with side length \(a\) has a volume of \(a^3\) and a surface area of \(6a^2\). As the particle size decreases, the surface area increases more rapidly than the volume, leading to higher reactivity.
+Small nanoparticles have a disproportionately large surface area relative to their volume. For example, a cube with side length $a $ has a volume of$a^3 $ and a surface area of$6a^2$. As the particle size decreases, the surface area increases more rapidly than the volume, leading to higher reactivity.
 
 ---
 
@@ -565,15 +565,15 @@ Background context explaining the concept. The periodic table is used to classif
 The question pertains to understanding how to find the electron configuration for specific ions.
 :p What are the electron configurations of Fe3+ and S2− ions?
 ??x
-To determine the electron configuration of an ion, we first need to know the neutral atom's configuration. Iron (Fe) is element 26 with the following ground state electron configuration: \[1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^6\]
+To determine the electron configuration of an ion, we first need to know the neutral atom's configuration. Iron (Fe) is element 26 with the following ground state electron configuration: $$1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^6$$
 
 For Fe3+, we remove three electrons starting from the outermost shell (highest energy level) and moving inward. Thus, the configuration is:
-\[1s^2 2s^2 2p^6 3s^2 3p^6 3d^5\]
+$$1s^2 2s^2 2p^6 3s^2 3p^6 3d^5$$
 
-For S2−, we add two extra electrons to sulfur (S), element 16 with \[1s^2 2s^2 2p^6 3s^2 3p^4\]. Adding the two extra electrons fills its outermost shell:
-\[1s^2 2s^2 2p^6 3s^2 3p^6\]
+For S2−, we add two extra electrons to sulfur (S), element 16 with$$1s^2 2s^2 2p^6 3s^2 3p^4$$. Adding the two extra electrons fills its outermost shell:
+$$1s^2 2s^2 2p^6 3s^2 3p^6$$
 
-In summary, Fe3+ has \[1s^2 2s^2 2p^6 3s^2 3p^6 3d^5\] and S2− has \[1s^2 2s^2 2p^6 3s^2 3p^6\].
+In summary, Fe3+ has$$1s^2 2s^2 2p^6 3s^2 3p^6 3d^5$$and S2− has$$1s^2 2s^2 2p^6 3s^2 3p^6$$.
 x??
 
 ---

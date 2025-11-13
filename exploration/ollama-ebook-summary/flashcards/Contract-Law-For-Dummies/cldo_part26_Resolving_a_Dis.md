@@ -249,7 +249,7 @@ Background context: A creditor beneficiary is created when performance of one pa
 
 :p What is a creditor beneficiary in contract law?
 ??x
-A creditor beneficiary is someone who can enforce a promise made by one party (the promisor) to another party (the promisee) if performance of the promise will satisfy an obligation of the promisee to pay money to the creditor beneficiary. In this context, John sells a widget to Peter for $100 and tells Peter to pay the $100 to Terry instead of to himself.
+A creditor beneficiary is someone who can enforce a promise made by one party (the promisor) to another party (the promisee) if performance of the promise will satisfy an obligation of the promisee to pay money to the creditor beneficiary. In this context, John sells a widget to Peter for $100 and tells Peter to pay the$100 to Terry instead of to himself.
 x??
 
 ---

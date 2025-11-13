@@ -74,12 +74,7 @@ To add and configure middleware in your ASP.NET Core project:
 
            public async Task Invoke(HttpContext context, DataContext dataContext) {
                if (context.Request.Path == "/test") {
-                   await context.Response.WriteAsync($"There are " +
-                       $"{dataContext.Products.Count()} products" +
-                       $"There are " +
-                       $"{dataContext.Categories.Count()} categories" +
-                       $"There are " +
-                       $"{dataContext.Suppliers.Count()} suppliers");
+                   await context.Response.WriteAsync($"There are " +$"{dataContext.Products.Count()} products" +$"There are " +$"{dataContext.Categories.Count()} categories" +$"There are " +$"{dataContext.Suppliers.Count()} suppliers");
                } else {
                    await nextDelegate(context);
                }

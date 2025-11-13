@@ -6,7 +6,7 @@
 
 #### Relaxation and Overrelaxation Methods
 
-Background context: The Jacobi method is a simple approach to solving partial differential equations (PDEs) by iteratively updating potential values on a grid. However, it can be slow due to its lack of symmetry between iterations. The Gauss-Seidel method improves upon this by using the latest available values during each iteration, which generally leads to faster convergence. Successive Overrelaxation (SOR) further accelerates the process by adding an amplification factor \(\omega\) to the correction term.
+Background context: The Jacobi method is a simple approach to solving partial differential equations (PDEs) by iteratively updating potential values on a grid. However, it can be slow due to its lack of symmetry between iterations. The Gauss-Seidel method improves upon this by using the latest available values during each iteration, which generally leads to faster convergence. Successive Overrelaxation (SOR) further accelerates the process by adding an amplification factor $\omega$ to the correction term.
 
 :p What is the difference between the Jacobi and Gauss-Seidel methods?
 ??x
@@ -16,16 +16,14 @@ x??
 ---
 #### Successive Overrelaxation (SOR)
 
-Background context: SOR is an iterative technique that modifies the basic Jacobi or Gauss-Seidel methods to achieve faster convergence. It introduces a parameter \(\omega\) which scales the correction term \(r_i, j\), aiming for even quicker convergence when properly tuned.
+Background context: SOR is an iterative technique that modifies the basic Jacobi or Gauss-Seidel methods to achieve faster convergence. It introduces a parameter $\omega $ which scales the correction term$r_i, j$, aiming for even quicker convergence when properly tuned.
 
 :p How does Successive Overrelaxation (SOR) modify the update formula?
 ??x
-The SOR method modifies the basic Jacobi or Gauss-Seidel update rule by adding an amplification factor \(\omega\) to the correction term \(r_i, j\):
-\[ U_{new}^{i,j} = U_{old}^{i,j} + \omega r^{i,j}, \]
-where
-\[ r^{i,j} = \frac{1}{4}[U_{old}^{i+1,j} + U_{new}^{i-1,j} + U_{old}^{i,j+1} + U_{new}^{i,j-1}] - U_{old}^{i,j}. \]
+The SOR method modifies the basic Jacobi or Gauss-Seidel update rule by adding an amplification factor $\omega $ to the correction term$r_i, j$:
+$$U_{new}^{i,j} = U_{old}^{i,j} + \omega r^{i,j},$$where$$r^{i,j} = \frac{1}{4}[U_{old}^{i+1,j} + U_{new}^{i-1,j} + U_{old}^{i,j+1} + U_{new}^{i,j-1}] - U_{old}^{i,j}.$$
 
-The value of \(\omega\) can range from 1 to 2, with values greater than 1 leading to overrelaxation and potentially faster convergence.
+The value of $\omega$ can range from 1 to 2, with values greater than 1 leading to overrelaxation and potentially faster convergence.
 x??
 
 ---
@@ -54,10 +52,9 @@ Background context: In real capacitors, electric fields vary near the edges due 
 :p How would you model a realistic capacitor with finite-width plates?
 ??x
 To model a realistic capacitor with finite-width plates, solve Poisson's equation in the region including the plates:
-\[ \nabla^2 U(x,y) = -\frac{\rho}{\epsilon_0}, \]
-where \(\rho\) is the charge density on the plates. Outside this region, use Laplace's equation.
+$$\nabla^2 U(x,y) = -\frac{\rho}{\epsilon_0},$$where $\rho$ is the charge density on the plates. Outside this region, use Laplace's equation.
 
-Experiment with different values of \(\rho\) to achieve a potential similar to that shown in Figure 21.5.
+Experiment with different values of $\rho$ to achieve a potential similar to that shown in Figure 21.5.
 x??
 
 ---
@@ -68,10 +65,9 @@ Background context: For capacitors with finite-thickness conducting plates, char
 :p How would you model the charge distribution on finite conducting plates?
 ??x
 To model the charge distribution on finite conducting plates:
-1. Solve Laplace’s equation for \(U(x, y)\) with appropriate boundary conditions (e.g., 100V at top and -100V at bottom).
-2. Substitute \(U(x,y)\) into Poisson's equation to determine the charge density \(\rho\):
-\[ \rho = \epsilon_0 \left( \nabla^2 U(x, y) \right). \]
-x??
+1. Solve Laplace’s equation for $U(x, y)$ with appropriate boundary conditions (e.g., 100V at top and -100V at bottom).
+2. Substitute $U(x,y)$ into Poisson's equation to determine the charge density $\rho$:
+$$\rho = \epsilon_0 \left( \nabla^2 U(x, y) \right).$$x??
 
 ---
 #### Arbitrary Boundary Conditions
@@ -81,10 +77,13 @@ Background context: The numerical solution can be applied to arbitrary boundary 
 :p How would you model a triangular boundary condition?
 ??x
 For a triangular boundary, define:
-\[ U(x) = \begin{cases} 
+$$
+
+U(x) = \begin{cases} 
 200 \frac{x}{w}, & x \leq w/2 \\
 100(1 - \frac{x}{w}), & x \geq w/2 
-\end{cases}. \]
+\end{cases}.$$
+
 This defines a piecewise linear function that can be used as an initial boundary condition for the simulation.
 x??
 
@@ -97,7 +96,7 @@ Background context: Designing equipment with square conductors involves solving 
 ??x
 To model the electric field between two square conductors:
 1. Set up the boundary conditions for a small metal box at 100V and a larger grounded one.
-2. Solve for the potential \(U(x, y)\) using the appropriate method (e.g., SOR).
+2. Solve for the potential $U(x, y)$ using the appropriate method (e.g., SOR).
 3. Plot the potential and equipotential surfaces.
 4. Sketch in the electric field lines to deduce where the field is most intense.
 
@@ -122,7 +121,7 @@ To model the effect of a small crack in a cylindrical capacitor:
 1. Place an inner cylinder at -100V and an outer cylinder at 100V.
 2. Introduce a small crack to connect them.
 3. Ensure both cylinders are within a large, grounded box to maintain uniqueness.
-4. Solve Laplace's equation for the potential \(U(x, y)\) in this configuration.
+4. Solve Laplace's equation for the potential $U(x, y)$ in this configuration.
 
 This setup helps determine how the field is affected by the presence of the crack.
 x??
@@ -182,7 +181,7 @@ x??
 ---
 
 #### Successive Overrelaxation (SOR) Method
-Background context: The SOR method can accelerate convergence by adjusting the relaxation parameter \(\omega\). This involves finding a good value of \(\omega\) through trial and error to double the speed of the algorithm.
+Background context: The SOR method can accelerate convergence by adjusting the relaxation parameter $\omega $. This involves finding a good value of $\omega$ through trial and error to double the speed of the algorithm.
 
 :p How do you implement the SOR technique in `LaplaceLine.py`?
 ??x
@@ -196,14 +195,14 @@ for i in range(1, Nmax - 1):
         V[i, j] = (1 - omega) * 0.25 * (V[i + 1, j] + V[i - 1, j] + V[i, j + 1] + V[i, j - 1]) + omega * V[i, j]
 ```
 
-You can experiment with different values of \(\omega\) to find the optimal one that doubles the convergence rate.
+You can experiment with different values of $\omega$ to find the optimal one that doubles the convergence rate.
 
 x??
 
 ---
 
 #### Visualization of Equipotential and Electric Field Lines
-Background context: After obtaining the potential distribution, you need to visualize it as equipotential lines. The electric field \(E = -\nabla U\) can be derived using central differences for better visualization.
+Background context: After obtaining the potential distribution, you need to visualize it as equipotential lines. The electric field $E = -\nabla U$ can be derived using central differences for better visualization.
 
 :p How do you compute the electric field from the potential?
 ??x
@@ -214,7 +213,7 @@ Ex[i, j] = (V[i + 1, j] - V[i - 1, j]) / (2 * Δ)
 Ey[i, j] = (V[i, j + 1] - V[i, j - 1]) / (2 * Δ)
 ```
 
-Where \(\Delta\) is the grid spacing.
+Where $\Delta$ is the grid spacing.
 
 To visualize these fields, you can use arrows or lines:
 
@@ -231,7 +230,7 @@ x??
 ---
 
 #### Realistic Capacitor Simulation
-Background context: For a more realistic capacitor, reduce the plate separation to about \( \frac{1}{10} \) of the plate length. This will make the electric field more condensed and uniform between the plates.
+Background context: For a more realistic capacitor, reduce the plate separation to about $\frac{1}{10}$ of the plate length. This will make the electric field more condensed and uniform between the plates.
 
 :p How do you modify `LaplaceLine.py` for a realistic capacitor?
 ??x
@@ -254,7 +253,7 @@ x??
 ---
 
 #### Comparison with Analytic Solution
-Background context: Compare your numerical solution to the analytic one for a parallel-plate capacitor given by \( U(x, y) = V_0 \frac{y}{d} \), where \( d \) is the plate separation. Note that high precision may require summing many terms.
+Background context: Compare your numerical solution to the analytic one for a parallel-plate capacitor given by $U(x, y) = V_0 \frac{y}{d}$, where $ d$ is the plate separation. Note that high precision may require summing many terms.
 
 :p How do you compare the numerical and analytical solutions?
 ??x
@@ -286,18 +285,14 @@ x??
 #### Parabolic Heat Equation
 
 Background context: The heat equation describes how temperature distributes over time within a material. For a one-dimensional bar, it is given by:
-\[
-\frac{\partial T(x,t)}{\partial t} = \frac{K}{C \rho} \frac{\partial^2 T(x,t)}{\partial x^2}
-\]
-where \( K \) is thermal conductivity, \( C \) is specific heat, and \( \rho \) is density.
+$$\frac{\partial T(x,t)}{\partial t} = \frac{K}{C \rho} \frac{\partial^2 T(x,t)}{\partial x^2}$$where $ K $is thermal conductivity,$ C $ is specific heat, and $\rho$ is density.
 
 :p What is the parabolic heat equation for a one-dimensional bar?
 ??x
 The parabolic heat equation describes how temperature distributes over time within a material in one dimension:
-\[
-\frac{\partial T(x,t)}{\partial t} = \frac{K}{C \rho} \frac{\partial^2 T(x,t)}{\partial x^2}
-\]
-This equation is used to model the flow of heat through the bar, where \( K \) is thermal conductivity, \( C \) is specific heat capacity, and \( \rho \) is density.
+$$\frac{\partial T(x,t)}{\partial t} = \frac{K}{C \rho} \frac{\partial^2 T(x,t)}{\partial x^2}$$
+
+This equation is used to model the flow of heat through the bar, where $K $ is thermal conductivity,$C $ is specific heat capacity, and$\rho$ is density.
 x??
 
 ---
@@ -305,18 +300,18 @@ x??
 #### Analytic Solution via Separation of Variables
 
 Background context: The solution can be obtained by assuming a product form for the temperature function:
-\[
-T(x,t) = X(x)\Theta(t)
-\]
+$$T(x,t) = X(x)\Theta(t)$$
+
 This leads to two ordinary differential equations (ODEs).
 
 :p What is the analytic solution approach for the heat equation?
 ??x
 The analytic solution involves assuming that the temperature function separates into spatial and temporal parts:
-\[
-T(x,t) = X(x)\Theta(t)
-\]
-Substituting this into the heat equation results in two ODEs, one for each part. These are solved to find specific functions \( X(x) \) and \( \Theta(t) \), leading to a general solution.
+$$
+
+T(x,t) = X(x)\Theta(t)$$
+
+Substituting this into the heat equation results in two ODEs, one for each part. These are solved to find specific functions $X(x)$ and $\Theta(t)$, leading to a general solution.
 x??
 
 ---
@@ -328,22 +323,17 @@ Background context: The leapfrog algorithm is used for time-stepping problems. I
 :p What is the leapfrog algorithm?
 ??x
 The leapfrog algorithm is an explicit method for solving PDEs by discretizing both space and time. For the heat equation, it uses a forward difference for the time derivative and a central difference for the spatial second derivative.
-\[
-T(x,t+\Delta t) - T(x,t) = \frac{K}{C \rho} \left[ T(x+\Delta x, t) + T(x-\Delta x, t) - 2T(x,t) \right] \Delta t
-\]
+$$T(x,t+\Delta t) - T(x,t) = \frac{K}{C \rho} \left[ T(x+\Delta x, t) + T(x-\Delta x, t) - 2T(x,t) \right] \Delta t$$
+
 This is rearranged to:
-\[
-T_{i,j+1} = T_{i,j} + \eta [T_{i+1,j} + T_{i-1,j} - 2T_{i,j}]
-\]
-where \( \eta = \frac{K \Delta t}{C \rho (\Delta x)^2} \).
+$$
+
+T_{i,j+1} = T_{i,j} + \eta [T_{i+1,j} + T_{i-1,j} - 2T_{i,j}]$$where $\eta = \frac{K \Delta t}{C \rho (\Delta x)^2}$.
 
 :p What is the formula for the leapfrog algorithm?
 ??x
 The formula for the leapfrog algorithm in the context of the heat equation is:
-\[
-T_{i,j+1} = T_{i,j} + \eta [T_{i+1,j} + T_{i-1,j} - 2T_{i,j}]
-\]
-where \( \eta = \frac{K \Delta t}{C \rho (\Delta x)^2} \).
+$$T_{i,j+1} = T_{i,j} + \eta [T_{i+1,j} + T_{i-1,j} - 2T_{i,j}]$$where $\eta = \frac{K \Delta t}{C \rho (\Delta x)^2}$.
 
 This formula is used to step the temperature forward in time using known values from an earlier time and adjacent spatial points.
 x??
@@ -352,19 +342,15 @@ x??
 
 #### Von Neumann Stability Analysis
 
-Background context: The stability of numerical solutions can be analyzed through von Neumann's method. For a linear equation, the solution form after \( j \) steps is:
-\[
-T_{i,j} = \zeta(k)^j e^{ik \Delta x}
-\]
-where \( k \) and \( \zeta(k) \) are unknown wave vector and amplification factor.
+Background context: The stability of numerical solutions can be analyzed through von Neumann's method. For a linear equation, the solution form after $j$ steps is:
+$$T_{i,j} = \zeta(k)^j e^{ik \Delta x}$$where $ k $ and $\zeta(k)$ are unknown wave vector and amplification factor.
 
 :p What is von Neumann's stability analysis used for?
 ??x
-Von Neumann's stability analysis is used to determine the conditions under which a numerical solution to a PDE converges. For linear equations, it involves assuming that after \( j \) time steps, the approximate solution has the form:
-\[
-T_{i,j} = \zeta(k)^j e^{ik \Delta x}
-\]
-The stability condition requires that the amplification factor \( |\zeta(k)| < 1 \).
+Von Neumann's stability analysis is used to determine the conditions under which a numerical solution to a PDE converges. For linear equations, it involves assuming that after $j$ time steps, the approximate solution has the form:
+$$T_{i,j} = \zeta(k)^j e^{ik \Delta x}$$
+
+The stability condition requires that the amplification factor $|\zeta(k)| < 1$.
 
 This analysis helps ensure that numerical solutions do not diverge and provide a reliable approximation to the true solution.
 x??
@@ -374,19 +360,14 @@ x??
 #### Initial and Boundary Conditions
 
 Background context: The initial conditions for the problem are given as:
-\[
-T(x, t=0) = 100^\circ C
-\]
-and boundary conditions at both ends of the bar:
-\[
-T(0,t) = T(L,t) \equiv 0^\circ C
-\]
+$$T(x, t=0) = 100^\circ C$$and boundary conditions at both ends of the bar:
+$$
 
-:p What are the initial and boundary conditions for the aluminum bar?
+T(0,t) = T(L,t) \equiv 0^\circ C$$:p What are the initial and boundary conditions for the aluminum bar?
 ??x
 The initial and boundary conditions for the aluminum bar are:
-- Initial condition: The entire bar is initially at \( 100^\circ C \).
-- Boundary conditions: Both ends of the bar are in contact with ice, so their temperature remains \( 0^\circ C \) at all times.
+- Initial condition: The entire bar is initially at $100^\circ C$.
+- Boundary conditions: Both ends of the bar are in contact with ice, so their temperature remains $0^\circ C$ at all times.
 
 These conditions ensure that heat flows from the hot interior to the cold boundaries.
 x??

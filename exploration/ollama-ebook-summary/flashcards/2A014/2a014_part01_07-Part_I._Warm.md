@@ -40,9 +40,9 @@ Collaborative Filtering can be broken down into two main types:
 - Item-Based Collaborative Filtering: Suggests items based on the similarity of their attributes or descriptions.
 
 Matrix Factorization is a powerful technique often used in collaborative filtering to reduce dimensionality and capture latent factors that influence user preferences. It can be formulated as follows:
-\[ \min_{P, Q} \sum_{(u,i) \in R} (r_{ui} - p_u^T q_i)^2 + \lambda (\|p_u\|^2 + \|q_i\|^2) \]
+$$\min_{P, Q} \sum_{(u,i) \in R} (r_{ui} - p_u^T q_i)^2 + \lambda (\|p_u\|^2 + \|q_i\|^2)$$
 
-Where \( P \) and \( Q \) are matrices of user and item latent factors, \( r_{ui} \) is the observed rating for user \( u \) on item \( i \), and \( \lambda \) is a regularization parameter.
+Where $P $ and$Q $ are matrices of user and item latent factors,$ r_{ui}$ is the observed rating for user $ u $ on item $ i $, and $\lambda$ is a regularization parameter.
 :p What type of collaborative filtering suggests items based on users with similar tastes?
 ??x
 User-Based Collaborative Filtering (UBCF) suggests items to a user by finding other users who have rated similar items in the past. These "similar" users are typically those whose behavior has historical ratings that correlate closely with the target user's interests.
@@ -52,7 +52,7 @@ The process involves:
 2. Recommending items from highly correlated users' histories.
 3. Weighing recommendations based on the strength of the correlation.
 
-For instance, to calculate the cosine similarity between two users \( u_1 \) and \( u_2 \):
+For instance, to calculate the cosine similarity between two users $u_1 $ and$u_2$:
 ```java
 public double cosineSimilarity(Map<String, Integer> userRatings1, Map<String, Integer> userRatings2) {
     // Calculate numerator: dot product of ratings vectors

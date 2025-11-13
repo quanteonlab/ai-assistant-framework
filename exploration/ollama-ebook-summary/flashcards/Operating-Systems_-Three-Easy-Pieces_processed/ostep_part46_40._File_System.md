@@ -194,9 +194,7 @@ Background context: An inode is a structure used to store metadata for each file
 ??x
 With a block size of 4 KB (which is 4096 bytes), and given that each inode takes 256 bytes, we can calculate the number of inodes per block as follows:
 
-\[
-\text{Number of Inodes} = \frac{\text{Block Size}}{\text{Inode Size}} = \frac{4096}{256} = 16
-\]
+$$\text{Number of Inodes} = \frac{\text{Block Size}}{\text{Inode Size}} = \frac{4096}{256} = 16$$
 
 So, one 4 KB block can hold up to 16 inodes.
 x??
@@ -209,16 +207,10 @@ Background context: The inode table is a portion of the disk reserved for storin
 :p How many inodes does this implementation have, assuming 5 out of 64 blocks are used for inodes?
 ??x
 Assuming that we use 5 out of 64 blocks for inodes, the total number of inodes can be calculated as follows:
-
-\[
-\text{Number of Inodes} = \frac{\text{Number of Inode Blocks}}{\text{Inodes per Block}} = \frac{5}{16} \approx 0.3125
-\]
+$$\text{Number of Inodes} = \frac{\text{Number of Inode Blocks}}{\text{Inodes per Block}} = \frac{5}{16} \approx 0.3125$$
 
 However, since we need a whole number and each block can hold up to 16 inodes, the total number of inodes is:
-
-\[
-\text{Number of Inodes} = 5 \times 16 = 80
-\]
+$$\text{Number of Inodes} = 5 \times 16 = 80$$
 
 Thus, this implementation has a maximum of 80 inodes.
 x??
@@ -528,12 +520,11 @@ The example provided assumes a 4 KB block size and 4-byte pointers. This setup a
 With a 4 KB block size and 4-byte pointers, the total number of blocks (both direct, single indirect, and double indirect) is calculated as follows:
 
 1. Direct pointers: 12 blocks.
-2. Single indirect block: Can point to up to \(2^{32}\) blocks (since each pointer is 4 bytes).
+2. Single indirect block: Can point to up to $2^{32}$ blocks (since each pointer is 4 bytes).
 3. Double indirect block: Can point to an even larger number of blocks, further extending the file size.
 
 The formula for the maximum file size that can be handled by this structure is:
-
-\[ \text{Max File Size} = (12 + \text{Single Indirect Blocks} + \text{Double Indirect Blocks}) \times 4 KB \]
+$$\text{Max File Size} = (12 + \text{Single Indirect Blocks} + \text{Double Indirect Blocks}) \times 4 KB$$
 
 Assuming one single indirect block and one double indirect block, the total number of blocks can accommodate a file size much larger than 4 GB. Adding a triple-indirect block would significantly increase this limit.
 
@@ -1966,12 +1957,10 @@ Given:
 - Transfer rate = 40 MB/s
 
 The formula used is derived as follows:
-\[ \text{Chunk Size} = \frac{\text{Transfer Rate}}{\text{Seek Time}} \times \text{Average Seek Time} \]
+$$\text{Chunk Size} = \frac{\text{Transfer Rate}}{\text{Seek Time}} \times \text{Average Seek Time}$$
 
 Where:
-\[ \text{Chunk Size} = 40 \, \text{MB/s} \times \frac{1024 \, \text{KB}}{1 \, \text{MB}} \times \frac{1000 \, \text{ms}}{1 \, \text{sec}} \times \frac{10 \, \text{ms}}{1} = 409.6 \, \text{KB} \]
-
-:p What is the size of each chunk to spend half your time seeking and half transferring?
+$$\text{Chunk Size} = 40 \, \text{MB/s} \times \frac{1024 \, \text{KB}}{1 \, \text{MB}} \times \frac{1000 \, \text{ms}}{1 \, \text{sec}} \times \frac{10 \, \text{ms}}{1} = 409.6 \, \text{KB}$$:p What is the size of each chunk to spend half your time seeking and half transferring?
 ??x
 The answer involves calculating the chunk size that balances seek and transfer times.
 
@@ -2004,8 +1993,7 @@ To achieve different percentages of peak bandwidth, you need larger or smaller c
 :p What formula is used to calculate the chunk size for a desired percentage of peak performance?
 ??x
 The formula involves adjusting the chunk size based on the desired fraction of the peak transfer rate:
-
-\[ \text{Chunk Size} = \frac{\text{Transfer Rate} \times \text{Desired Fraction}}{\text{Seek Time}} \]
+$$\text{Chunk Size} = \frac{\text{Transfer Rate} \times \text{Desired Fraction}}{\text{Seek Time}}$$
 
 For example, to achieve 90% of peak performance:
 ```java

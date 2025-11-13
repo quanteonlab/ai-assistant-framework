@@ -41,9 +41,9 @@ x??
 #### PostgreSQL Transaction Management for Loan Payment
 This example uses a `DO` block in PostgreSQL to manage transactions and operations within a single database session.
 
-:p What is the purpose of using a `BEGIN; DO $$ ... $$; COMMIT;` structure in this context?
+:p What is the purpose of using a `BEGIN; DO $$...$$; COMMIT;` structure in this context?
 ??x
-The `BEGIN; DO $$ ... $$; COMMIT;` structure ensures that all actions are executed as part of a single transaction. This means if any step fails, none of the steps will be committed, ensuring data integrity and consistency.
+The `BEGIN; DO $$...$$; COMMIT;` structure ensures that all actions are executed as part of a single transaction. This means if any step fails, none of the steps will be committed, ensuring data integrity and consistency.
 
 ```sql
 BEGIN;

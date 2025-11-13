@@ -38,14 +38,12 @@ x??
 ---
 #### Scheduling Metrics - Turnaround Time
 Background context explaining the concept of scheduling metrics. The text introduces turnaround time as a metric to measure the effectiveness of scheduling policies. It is defined as the difference between completion time and arrival time, given by:
-\[ T_{\text{turnaround}} = T_{\text{completion}} - T_{\text{arrival}} \]
-
-:p What is the definition of turnaround time in scheduling?
+$$T_{\text{turnaround}} = T_{\text{completion}} - T_{\text{arrival}}$$:p What is the definition of turnaround time in scheduling?
 ??x
-Turnaround time \(T_{\text{turnaround}}\) in scheduling is defined as the difference between the completion time and the arrival time of a job. Mathematically, it can be expressed as:
-\[ T_{\text{turnaround}} = T_{\text{completion}} - T_{\text{arrival}} \]
+Turnaround time $T_{\text{turnaround}}$ in scheduling is defined as the difference between the completion time and the arrival time of a job. Mathematically, it can be expressed as:
+$$T_{\text{turnaround}} = T_{\text{completion}} - T_{\text{arrival}}$$
 
-In this context, if all jobs arrive at the same time (which is assumed to be 0), then \(T_{\text{arrival}} = 0\) and thus \(T_{\text{turnaround}} = T_{\text{completion}}\).
+In this context, if all jobs arrive at the same time (which is assumed to be 0), then $T_{\text{arrival}} = 0 $ and thus$T_{\text{turnaround}} = T_{\text{completion}}$.
 
 For example, consider a job that arrives at time 0 and completes at time 10:
 ```java
@@ -201,7 +199,7 @@ For instance:
 - Job A (120 seconds) starts at t=30 and ends at t=150.
 
 The average turnaround time is calculated as:
-\[ \frac{10 + 20 + 120}{3} = 50 \text{ seconds} \]
+$$\frac{10 + 20 + 120}{3} = 50 \text{ seconds}$$
 
 This shows a significant improvement over the original scenario, where the average turnaround was 110 seconds.
 x??
@@ -269,8 +267,8 @@ The average turnaround time can be calculated as follows:
 - Job B: 110 - 10 = 100 seconds (it starts at 20 and finishes at 110, but had a 10-second wait)
 - Job C: 120 - 10 = 110 seconds (it starts at 40 and finishes at 120, but had a 10-second wait)
 
-The total turnaround time is \(100 + 100 + 110 = 310\) seconds.
-Average: \(\frac{310}{3} = 103.33\) seconds.
+The total turnaround time is $100 + 100 + 110 = 310$ seconds.
+Average:$\frac{310}{3} = 103.33$ seconds.
 
 x??
 
@@ -290,8 +288,8 @@ The average turnaround time can be calculated as follows:
 - Job B: 20 - 10 = 10 seconds (it starts at 10 and finishes at 20, with a 10-second wait)
 - Job C: 30 - 10 = 20 seconds (it starts at 10 and finishes at 30, with a 10-second wait)
 
-The total turnaround time is \(120 + 10 + 20 = 150\) seconds.
-Average: \(\frac{150}{3} = 50\) seconds.
+The total turnaround time is $120 + 10 + 20 = 150$ seconds.
+Average:$\frac{150}{3} = 50$ seconds.
 
 x??
 
@@ -302,15 +300,11 @@ Background context: In time-shared systems, users expect fast and responsive per
 
 :p How is the response time calculated?
 ??x
-Response time \(T_{response}\) is calculated using the formula:
-\[ T_{response} = T_{firstrun} - T_{arrival} \]
+Response time $T_{response}$ is calculated using the formula:
+$$T_{response} = T_{firstrun} - T_{arrival}$$
 
 For example, with jobs A (arriving at 0 and running to 100), B (arriving at 10 and completing at 20), and C (arriving at 10 and completing at 30):
-- Job A: \(T_{response} = 100 - 0 = 0\)
-- Job B: \(T_{response} = 20 - 10 = 10\)
-- Job C: \(T_{response} = 30 - 10 = 20\)
-
-The average response time is \(\frac{0 + 10 + 20}{3} = 10\) seconds.
+- Job A:$T_{response} = 100 - 0 = 0 $- Job B:$ T_{response} = 20 - 10 = 10 $- Job C:$ T_{response} = 30 - 10 = 20 $The average response time is$\frac{0 + 10 + 20}{3} = 10$ seconds.
 
 x??
 

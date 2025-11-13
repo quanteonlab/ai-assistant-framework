@@ -40,7 +40,7 @@ Pressure is calculated as Force divided by Area (P = F/A). In this problem, P200
 
 :p How do you calculate pressure?
 ??x
-You can calculate pressure using the formula \( P = \frac{F}{A} \), where \( P \) is pressure, \( F \) is force, and \( A \) is area. For example, if a force of 200 units is applied over an area of 10 square units, the pressure would be 20 units.
+You can calculate pressure using the formula $P = \frac{F}{A}$, where $ P$is pressure,$ F $ is force, and $ A$ is area. For example, if a force of 200 units is applied over an area of 10 square units, the pressure would be 20 units.
 x??
 
 ---
@@ -58,11 +58,11 @@ x??
 
 #### Mechanical Advantage of an Inclined Plane
 
-The mechanical advantage (MA) of an inclined plane can be calculated using \( \text{MA} = \frac{\text{Length of Ramp}}{\text{Height of Ramp}} \). For the given values, MA is 100.
+The mechanical advantage (MA) of an inclined plane can be calculated using $\text{MA} = \frac{\text{Length of Ramp}}{\text{Height of Ramp}}$. For the given values, MA is 100.
 
 :p What formula calculates the mechanical advantage of an inclined plane?
 ??x
-The mechanical advantage (MA) of an inclined plane can be calculated using \( \text{MA} = \frac{\text{Length of Ramp}}{\text{Height of Ramp}} \). For example, if the length of the ramp is 6 feet and the height is 0.32 feet, then the MA would be approximately 18.75.
+The mechanical advantage (MA) of an inclined plane can be calculated using $\text{MA} = \frac{\text{Length of Ramp}}{\text{Height of Ramp}}$. For example, if the length of the ramp is 6 feet and the height is 0.32 feet, then the MA would be approximately 18.75.
 x??
 
 ---
@@ -183,7 +183,7 @@ Applying the leverage formula helps determine how forces are distributed in a le
 
 :p How do you apply the leverage formula?
 ??x
-The leverage formula \( \frac{\text{Length of Effort Arm}}{\text{Length of Resistance Arm}} = \frac{\text{Resistance Force}}{\text{Effort Force}} \) can be used to determine how forces are distributed. For example, if the effort arm is 9 units and the resistance arm is 321 units, then the effort force is \( \frac{9}{321} \times 7 = \frac{63}{321} \approx 0.196 \) of the resistance force.
+The leverage formula $\frac{\text{Length of Effort Arm}}{\text{Length of Resistance Arm}} = \frac{\text{Resistance Force}}{\text{Effort Force}}$ can be used to determine how forces are distributed. For example, if the effort arm is 9 units and the resistance arm is 321 units, then the effort force is $\frac{9}{321} \times 7 = \frac{63}{321} \approx 0.196$ of the resistance force.
 x??
 
 ---
@@ -224,7 +224,7 @@ Background context: This concept deals with understanding how gear sizes affect 
 
 :p If Gear 1 turns at 10 rpm and Gear 2 is half the size of Gear 1, what is Gear 2's RPM?
 ??x
-Gear 2 will turn twice as fast as Gear 1 because it has fewer teeth. Therefore, if Gear 1 rotates at 10 rpm, Gear 2 will rotate at \(2 \times 10 = 20\) rpm.
+Gear 2 will turn twice as fast as Gear 1 because it has fewer teeth. Therefore, if Gear 1 rotates at 10 rpm, Gear 2 will rotate at $2 \times 10 = 20$ rpm.
 x??
 
 ---

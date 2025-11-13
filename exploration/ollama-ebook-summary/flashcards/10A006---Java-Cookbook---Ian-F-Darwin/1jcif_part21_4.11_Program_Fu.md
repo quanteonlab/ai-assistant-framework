@@ -13,7 +13,7 @@ A regular expression is a sequence of characters that defines a search pattern w
 
 ```java
 // Example regex for matching HTTP request logs
-String patternStr = "^\\d+\\.\\d+\\.\\d+\\.\\d+ - - \\[\\w+/\\d{2}/\\d{4}:\\d{2}:\\d{2}:\\d{2} [+-]\\d{4}\\] \"GET /\\S+ HTTP/1.0\" \\d{3} \\d+";
+String patternStr = "^\\d+\\.\\d+\\.\\d+\\.\\d+ - - \$$\\w+/\\d{2}/\\d{4}:\\d{2}:\\d{2}:\\d{2} [+-]\\d{4}\$$ \"GET /\\S+ HTTP/1.0\" \\d{3} \\d+";
 Pattern pattern = Pattern.compile(patternStr);
 ```
 x??

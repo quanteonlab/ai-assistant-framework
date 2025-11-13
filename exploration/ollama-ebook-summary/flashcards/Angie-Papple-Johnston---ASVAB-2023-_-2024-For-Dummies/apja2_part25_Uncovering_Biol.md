@@ -129,9 +129,10 @@ This table shows conversions between imperial units and their metric equivalents
 :p How do you convert inches to centimeters?
 ??x
 To convert inches to centimeters, use the formula:
-\[ \text{centimeters} = \text{inches} \times 2.54 \]
+$$\text{centimeters} = \text{inches} \times 2.54$$
+
 For example, if you have 5 inches, it would be converted to:
-\[ 5 \text{ inches} \times 2.54 = 12.7 \text{ cm} \]
+$$5 \text{ inches} \times 2.54 = 12.7 \text{ cm}$$
 
 ```java
 public class Conversion {

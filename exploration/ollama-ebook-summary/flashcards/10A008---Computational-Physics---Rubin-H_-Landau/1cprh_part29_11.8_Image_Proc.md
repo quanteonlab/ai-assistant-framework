@@ -8,8 +8,8 @@
 Background context: The `tf.keras.layers.Dense` function is used to create dense layers, which are fundamental components of neural networks. These layers process input data and pass it on to subsequent layers through various operations involving weights, biases, and activation functions.
 
 Relevant formulas: 
-- Weighted sum: \( z = \sum_{i=1}^{n} w_i x_i + b \), where \( w_i \) are the weights, \( x_i \) are the inputs, and \( b \) is the bias.
-- Activation function application: \( a = f(z) \), where \( f \) can be sigmoid, ReLU, tanh, or others.
+- Weighted sum: $z = \sum_{i=1}^{n} w_i x_i + b $, where $ w_i $ are the weights, $ x_i $ are the inputs, and $ b$ is the bias.
+- Activation function application: $a = f(z)$, where $ f$ can be sigmoid, ReLU, tanh, or others.
 
 :p What does the `tf.keras.layers.Dense` function do?
 ??x
@@ -38,7 +38,7 @@ x??
 Background context: The provided example demonstrates how to fit a straight line to Hubble's data using the `tf.keras.layers.Dense` layer in Python with TensorFlow, as part of training a simple neural network.
 
 Relevant formulas:
-- Loss function (e.g., mean squared error): \( \text{MSE} = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2 \), where \( y_i \) are the actual values and \( \hat{y}_i \) are the predicted values.
+- Loss function (e.g., mean squared error): $\text{MSE} = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2 $, where $ y_i $ are the actual values and $\hat{y}_i$ are the predicted values.
 
 :p What is the Keras command used to fit Hubble's data with a single dense layer?
 ??x
@@ -257,11 +257,12 @@ Activation function definition:
 ```python
 def f(x): return 1./(1. + np.exp(-x))
 ```
-This is a simple sigmoid function which introduces non-linearity into the model by transforming the input \( x \) to produce an output between 0 and 1.
+This is a simple sigmoid function which introduces non-linearity into the model by transforming the input $x$ to produce an output between 0 and 1.
 :p What is the activation function used in these examples?
 ??x
 The activation function used here is the sigmoid function, defined as:
-\[ f(x) = \frac{1}{1 + e^{-x}} \]
+$$f(x) = \frac{1}{1 + e^{-x}}$$
+
 This transformation helps introduce non-linearity into the model by mapping any real-valued number to a value between 0 and 1.
 x??
 
@@ -282,7 +283,7 @@ class Neuron:
         sum = np.dot(self.weights, inputs) + self.bias
         return f(sum)
 ```
-This Neuron class takes a set of weights and a bias. The `feedforward` method computes the weighted sum of the inputs plus the bias, then applies the activation function \( f \).
+This Neuron class takes a set of weights and a bias. The `feedforward` method computes the weighted sum of the inputs plus the bias, then applies the activation function $f$.
 :p What is the purpose of the `Neuron` class in these examples?
 ??x
 The `Neuron` class serves as a fundamental building block for implementing simple neural networks. It processes input data through weights and biases, applying an activation function to produce outputs.
@@ -396,12 +397,12 @@ x??
 
 ---
 #### KMeans Clustering Overview
-KMeans is an unsupervised learning algorithm used for clustering data into \(k\) distinct, non-overlapping subsets. It aims to partition the dataset such that each member of a cluster belongs to the nearest cluster center.
+KMeans is an unsupervised learning algorithm used for clustering data into $k$ distinct, non-overlapping subsets. It aims to partition the dataset such that each member of a cluster belongs to the nearest cluster center.
 
 The objective is to minimize the within-cluster sum of squares (WCSS), which measures the variance within each cluster.
 :p What is KMeans Clustering used for?
 ??x
-KMeans clustering is used for unsupervised learning, specifically for partitioning a dataset into \(k\) clusters in which each observation belongs to the cluster with the nearest mean. It is useful for exploratory data analysis and pattern recognition.
+KMeans clustering is used for unsupervised learning, specifically for partitioning a dataset into $k$ clusters in which each observation belongs to the cluster with the nearest mean. It is useful for exploratory data analysis and pattern recognition.
 
 The algorithm works by iteratively assigning observations to the closest centroid and updating the centroids until convergence.
 x??
@@ -455,16 +456,14 @@ x??
 The perceptron is a linear classifier used for binary classification tasks. It updates its weights based on the misclassified examples to minimize the error between predicted and actual class labels.
 
 The update rule for the perceptron algorithm is:
-\[ \mathbf{w} = \mathbf{w} + y_i (\mathbf{x}_i - \mathbf{w}) \]
-where \(\mathbf{w}\) are the weights, \(y_i\) is the label of example \(\mathbf{x}_i\), and the update happens only when a misclassification occurs.
+$$\mathbf{w} = \mathbf{w} + y_i (\mathbf{x}_i - \mathbf{w})$$where $\mathbf{w}$ are the weights,$y_i $ is the label of example$\mathbf{x}_i$, and the update happens only when a misclassification occurs.
 
 :p What does the perceptron algorithm do?
 ??x
 The perceptron algorithm performs binary classification by updating its weights to correctly classify input data. It starts with random initial weights and iteratively updates them based on incorrectly classified examples until convergence or for a fixed number of iterations.
 
-If an example is misclassified, the weight vector \(\mathbf{w}\) is updated as follows:
-\[ \mathbf{w} = \mathbf{w} + y_i (\mathbf{x}_i - \mathbf{w}) \]
-where \(y_i\) is the label of example \(\mathbf{x}_i\), and the update only occurs if there's a misclassification.
+If an example is misclassified, the weight vector $\mathbf{w}$ is updated as follows:
+$$\mathbf{w} = \mathbf{w} + y_i (\mathbf{x}_i - \mathbf{w})$$where $ y_i $ is the label of example $\mathbf{x}_i$, and the update only occurs if there's a misclassification.
 x??
 
 ---
@@ -560,10 +559,10 @@ x??
 ---
 
 #### Hubble's Law Fit using TensorFlow
-Background context: This section demonstrates fitting a linear model to Hubble’s law data using TensorFlow. Hubble's law describes the expansion of the universe, where the velocity \(v\) of galaxies is proportional to their distance \(r\). The relationship can be expressed as \( v = m \cdot r + b \), where \(m\) is the slope (Hubble constant) and \(b\) is the intercept.
+Background context: This section demonstrates fitting a linear model to Hubble’s law data using TensorFlow. Hubble's law describes the expansion of the universe, where the velocity $v $ of galaxies is proportional to their distance$r $. The relationship can be expressed as$ v = m \cdot r + b $, where$ m $is the slope (Hubble constant) and$ b$ is the intercept.
 :p What is the objective of this TensorFlow code snippet?
 ??x
-The objective is to fit a linear model to Hubble’s law data using TensorFlow, demonstrating the use of gradient descent for optimization. The code initializes variables `r` as distances in Mpc (megaparsecs) and `v` as velocities in km/s, then uses these to fit a line \( y = mx + b \).
+The objective is to fit a linear model to Hubble’s law data using TensorFlow, demonstrating the use of gradient descent for optimization. The code initializes variables `r` as distances in Mpc (megaparsecs) and `v` as velocities in km/s, then uses these to fit a line $y = mx + b$.
 ??x
 ```python
 import tensorflow as tf
@@ -797,7 +796,7 @@ Background context: The provided text does not cover this concept. If you were t
 
 :p What is the logic behind defining hyperplanes?
 ??x
-In a multi-class classification scenario, hyperplanes are used to separate different classes in the feature space. For each class, there is a set of parameters (weights and bias) that defines the hyperplane equation \( w_0 x + w_1 y + b = 0 \). These hyperplanes help in deciding which side of the line a data point falls into.
+In a multi-class classification scenario, hyperplanes are used to separate different classes in the feature space. For each class, there is a set of parameters (weights and bias) that defines the hyperplane equation $w_0 x + w_1 y + b = 0$. These hyperplanes help in deciding which side of the line a data point falls into.
 
 For example, if you have two classes, you would plot two lines (hyperplanes), one for each class, using the weights and intercepts from the model.
 ```python

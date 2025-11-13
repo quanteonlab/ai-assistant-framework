@@ -566,12 +566,12 @@ In a state that allows joint and several liability, all partners are jointly lia
 For example:
 - **Joint and Several Liability:**
   ```plaintext
-  If Zach and Lyla are partners in an LLP and both have committed malpractice leading to $100,000 in damages, they can be held jointly liable. Each partner could be individually responsible for paying up to the full $100,000.
+  If Zach and Lyla are partners in an LLP and both have committed malpractice leading to $100,000 in damages, they can be held jointly liable. Each partner could be individually responsible for paying up to the full$100,000.
   ```
 
 - **Proportionate Liability:**
   ```plaintext
-  In a state with proportionate liability laws, if Zach is found to be 70% at fault and Lyla 30%, Zach would only be liable for 70% of the $100,000 or $70,000.
+  In a state with proportionate liability laws, if Zach is found to be 70% at fault and Lyla 30%, Zach would only be liable for 70% of the $100,000 or$70,000.
   ```
 x??
 

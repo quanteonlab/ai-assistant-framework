@@ -177,11 +177,11 @@ x??
 ---
 
 #### Integers in Fixed-Point Representation
-In fixed-point representation with \(N\) bits, the integer part is stored using a two’s complement format. Typically, integers are represented over 32 bits and fall within the range \(-2^{31}\) to \(2^{31} - 1\).
+In fixed-point representation with $N $ bits, the integer part is stored using a two’s complement format. Typically, integers are represented over 32 bits and fall within the range$-2^{31}$ to $2^{31} - 1$.
 
 :p What is the typical range for 4-byte (32-bit) integers in fixed-point representation?
 ??x
-The typical range for 4-byte (32-bit) integers in fixed-point representation is from \(-2,147,483,648\) to \(2,147,483,647\).
+The typical range for 4-byte (32-bit) integers in fixed-point representation is from $-2,147,483,648 $ to$2,147,483,647$.
 ```java
 // Example in Java
 int minInteger = -2_147_483_648;
@@ -292,12 +292,12 @@ x??
 ---
 
 #### Sign, Exponent, and Mantissa in IEEE 754
-Background context: In the IEEE 754 standard, a floating-point number is represented using three components: sign (s), exponent (e), and mantissa (f). The formula used for storing a floating-point number is \( x_{\text{float}} = (-1)^s \times 1.f \times 2^{(e - \text{bias})} \).
+Background context: In the IEEE 754 standard, a floating-point number is represented using three components: sign (s), exponent (e), and mantissa (f). The formula used for storing a floating-point number is $x_{\text{float}} = (-1)^s \times 1.f \times 2^{(e - \text{bias})}$.
 
 :p How are the sign, exponent, and mantissa represented in IEEE 754 standard?
 ??x
 In the IEEE 754 standard:
-- The **sign** (s) is a single bit where \( s = 0 \) for positive and \( s = 1 \) for negative.
+- The **sign** (s) is a single bit where $s = 0 $ for positive and$s = 1$ for negative.
 - The **exponent** (e) is stored as an offset from the actual value by adding a bias. For single precision, the bias is 127; for double precision, it is 1023.
 - The **mantissa** (f), or fraction part of the mantissa, stores the fractional bits after the binary point.
 
@@ -325,11 +325,11 @@ Background context: The IEEE 754 standard includes representations for normal nu
 :p What are the different cases of floating-point number representation according to the IEEE 754 standard?
 ??x
 IEEE 754 defines several types of representations:
-- **Normal Numbers**: These have \( 0 < e < 255 \) where the first bit of the mantissa is implicitly assumed to be 1.
-- **Subnormal Numbers**: These have \( e = 0 \) and \( f \neq 0 \), representing very small values that cannot be represented as normal numbers.
-- **Signed Zero (\( ±0 \))**: This represents zero with a sign, where the exponent is 0 and the mantissa is all zeros.
-- **Positive Infinity (+∞)**: Represented by \( e = 255 \) and \( f = 0 \).
-- **Negative Infinity (-∞)**: Also represented by \( e = 255 \), but with a sign bit set to 1.
+- **Normal Numbers**: These have $0 < e < 255$ where the first bit of the mantissa is implicitly assumed to be 1.
+- **Subnormal Numbers**: These have $e = 0 $ and$f \neq 0$, representing very small values that cannot be represented as normal numbers.
+- **Signed Zero ($±0$)**: This represents zero with a sign, where the exponent is 0 and the mantissa is all zeros.
+- **Positive Infinity (+∞)**: Represented by $e = 255 $ and$f = 0$.
+- **Negative Infinity (-∞)**: Also represented by $e = 255$, but with a sign bit set to 1.
 - **Not-a-Number (NaN)**: Represented by setting both the exponent and mantissa fields.
 
 ```java
@@ -421,8 +421,7 @@ Background context: For normalized numbers in singles, the exponent range is fro
 :p How do you calculate the value represented by a single precision floating-point number?
 ??x
 The value of a single-precision floating-point number is calculated using the formula:
-\[ \text{Value} = (-1)^s \times 1.f \times 2^{(e - 127)} \]
-where \( s \) is the sign bit, \( f \) is the fractional part of the mantissa, and \( e \) is the exponent adjusted by bias.
+$$\text{Value} = (-1)^s \times 1.f \times 2^{(e - 127)}$$where $ s $is the sign bit,$ f $ is the fractional part of the mantissa, and $ e$ is the exponent adjusted by bias.
 
 ```java
 // Pseudocode to calculate a single precision floating-point number value
@@ -445,8 +444,7 @@ Background context: Subnormal numbers occur when the exponent is 0 and the manti
 :p What is the representation of subnormal single-precision floating-point numbers?
 ??x
 Subnormal single-precision floating-point numbers are represented as:
-\[ \text{Value} = (-1)^s \times 0.f \times 2^{(e - 126)} \]
-where \( s \) is the sign bit, and \( f \) is the full mantissa.
+$$\text{Value} = (-1)^s \times 0.f \times 2^{(e - 126)}$$where $ s $ is the sign bit, and $ f$ is the full mantissa.
 
 ```java
 // Pseudocode to handle subnormal single precision floating-point numbers
@@ -463,16 +461,17 @@ x??
 ---
 
 #### Largest and Smallest Values in Singles
-Background context: The largest positive normal single-precision floating-point number is \( 3.4 \times 10^{38} \), while the smallest positive subnormal number is approximately \( 1.4 \times 10^{-45} \).
+Background context: The largest positive normal single-precision floating-point number is $3.4 \times 10^{38}$, while the smallest positive subnormal number is approximately $1.4 \times 10^{-45}$.
 
 :p What are the maximum and minimum values for a single precision floating-point number?
 ??x
 The largest positive normal value in single-precision floating-point representation is:
-\[ X_{\text{max}} = 2^{128} - 2^{113} \approx 3.4 \times 10^{38} \]
-The smallest positive subnormal number is approximately:
-\[ X_{\text{min}} \approx 2^{-149} \approx 1.4 \times 10^{-45} \]
+$$X_{\text{max}} = 2^{128} - 2^{113} \approx 3.4 \times 10^{38}$$
 
-```java
+The smallest positive subnormal number is approximately:
+$$
+
+X_{\text{min}} \approx 2^{-149} \approx 1.4 \times 10^{-45}$$```java
 // Pseudocode to calculate the maximum and minimum values in single precision
 public class SinglePrecisionLimits {
     public static double getMaxValue() { return 3.4 * Math.pow(10, 38); }
@@ -506,13 +505,12 @@ x??
 ---
 
 #### Largest and Smallest Values in Doubles
-Background context: The largest positive normal double-precision floating-point number is approximately \( 1.8 \times 10^{308} \), while the smallest positive subnormal number is about \( 4.9 \times 10^{-324} \).
+Background context: The largest positive normal double-precision floating-point number is approximately $1.8 \times 10^{308}$, while the smallest positive subnormal number is about $4.9 \times 10^{-324}$.
 
 :p What are the magnitude ranges for double precision floating-point numbers?
 ??x
 The magnitude range for double-precision floating-point numbers includes:
-- **Maximum Value**: Approximately \( 1.8 \times 10^{308} \)
-- **Minimum Positive Subnormal Value**: Approximately \( 4.9 \times 10^{-324} \)
+- **Maximum Value**: Approximately $1.8 \times 10^{308}$- **Minimum Positive Subnormal Value**: Approximately $4.9 \times 10^{-324}$
 
 ```java
 // Pseudocode to calculate limits for double precision
@@ -530,9 +528,9 @@ Background context: Singles have a limited range and precision (6-7 decimal plac
 
 :p What is the difference in precision and magnitude between single and double precision?
 ??x
-Single precision numbers provide about 6-7 significant decimal digits with magnitudes ranging from \( 1.4 \times 10^{-45} \) to \( 3.4 \times 10^{38} \).
+Single precision numbers provide about 6-7 significant decimal digits with magnitudes ranging from $1.4 \times 10^{-45}$ to $3.4 \times 10^{38}$.
 
-Double precision, on the other hand, offers approximately 16 decimal places of precision and a much wider range from \( 4.9 \times 10^{-324} \) to \( 1.8 \times 10^{308} \).
+Double precision, on the other hand, offers approximately 16 decimal places of precision and a much wider range from $4.9 \times 10^{-324}$ to $1.8 \times 10^{308}$.
 
 ```java
 // Summary Pseudocode for precision and magnitude ranges
@@ -549,21 +547,21 @@ Background context explaining the representation scheme for IEEE doubles. This i
 ??x
 The structure of an IEEE double precision number consists of several parts: 
 - Sign bit (s): 1 bit to indicate if the number is positive or negative.
-- Exponent field (e): 11 bits used to represent the exponent, biased by 1023. The actual exponent value \( E \) is calculated as \( e - 1023 \).
+- Exponent field (e): 11 bits used to represent the exponent, biased by 1023. The actual exponent value $E $ is calculated as$e - 1023$.
 - Fraction field (a and f combined): 52 bits which, when normalized, form a binary fraction 1.f where 'f' represents the fractional part.
 
 This gives us the formula for a normal number: 
-\[ (-1)^s \times 2^{(e - 1023)} \times 1.f \]
+$$(-1)^s \times 2^{(e - 1023)} \times 1.f$$
 
-For subnormal numbers, \( e = 0 \) and \( f \neq 0 \), resulting in:
-\[ (-1)^s \times 2^{-1022} \times 0.f \]
+For subnormal numbers,$e = 0 $ and$f \neq 0$, resulting in:
+$$(-1)^s \times 2^{-1022} \times 0.f$$
 
 Signed zeros occur when the exponent is zero (or all bits of the exponent are zero except for the sign bit).
-Infinity occurs at \( e = 2047 \) and \( f = 0 \), leading to either positive or negative infinity based on the sign bit.
+Infinity occurs at $e = 2047 $ and$f = 0$, leading to either positive or negative infinity based on the sign bit.
 
-NaN values arise from other combinations of \( e = 2047 \) and \( f \neq 0 \).
+NaN values arise from other combinations of $e = 2047 $ and$f \neq 0$.
 
-Overflow conditions happen when a number exceeds \( 2^{128} \). Underflow occurs when a number is smaller than \( 2^{-128} \), often resulting in the value being set to zero.
+Overflow conditions happen when a number exceeds $2^{128}$. Underflow occurs when a number is smaller than $2^{-128}$, often resulting in the value being set to zero.
 x??
 
 ---
@@ -585,9 +583,9 @@ x??
 Background context discussing how overflows and underflows are handled in floating-point arithmetic. It explains the default behavior where overflows may result in NaN or undefined patterns, while underflows typically set the result to zero but this can be configured via compiler options.
 :p What happens during overflow and underflow in floating-point operations?
 ??x
-During an overflow in floating-point operations, if a number exceeds \( 2^{128} \), it may lead to the result being an undefined pattern or NaN (Not-a-Number). This is because the hardware cannot represent such large numbers accurately.
+During an overflow in floating-point operations, if a number exceeds $2^{128}$, it may lead to the result being an undefined pattern or NaN (Not-a-Number). This is because the hardware cannot represent such large numbers accurately.
 
-Underflows occur when a number smaller than \( 2^{-128} \) is encountered. By default, most systems handle underflows by setting the result to zero. However, this behavior can be altered using compiler options to allow more precise handling of very small values. While setting underflows to zero is generally safe and beneficial for many applications, converting overflows to zero might lead to significant errors in calculations.
+Underflows occur when a number smaller than $2^{-128}$ is encountered. By default, most systems handle underflows by setting the result to zero. However, this behavior can be altered using compiler options to allow more precise handling of very small values. While setting underflows to zero is generally safe and beneficial for many applications, converting overflows to zero might lead to significant errors in calculations.
 
 The choice between these behaviors depends on the specific application's needs.
 x??
@@ -598,7 +596,7 @@ x??
 Background context explaining that the only difference between how positive and negative numbers are represented on a computer is through the sign bit. This implies that similar considerations apply for both types of numbers when dealing with overflow, underflow, and other numerical issues.
 :p How does the representation of signed zero affect operations in floating-point arithmetic?
 ??x
-Signed zeros in floating-point representations mean that there is a distinct difference between \( +0 \) and \( -0 \). This distinction can be important in various operations and comparisons. For example, during division by zero or other edge cases, results may return positive or negative infinity with the correct sign.
+Signed zeros in floating-point representations mean that there is a distinct difference between $+0 $ and$-0$. This distinction can be important in various operations and comparisons. For example, during division by zero or other edge cases, results may return positive or negative infinity with the correct sign.
 
 However, for most arithmetic operations involving multiplication, addition, and subtraction, signed zeros behave similarly to regular zeros because they do not change the overall magnitude of the number. The main impact is seen in comparisons and special functions that depend on the exact representation.
 x??

@@ -160,14 +160,14 @@ Background context: The uniform interface of ASCII text is a fundamental aspect 
 
 :p What are the issues with using ASCII text for log analysis?
 ??x
-The use of ASCII text in log analysis can be less readable and intuitive compared to more descriptive syntax. For example, extracting a URL might require cumbersome commands like `{print $7}` instead of a more meaningful command such as `{print $request_url}`.
+The use of ASCII text in log analysis can be less readable and intuitive compared to more descriptive syntax. For example, extracting a URL might require cumbersome commands like `{print $7}` instead of a more meaningful command such as `{print$ request_url}`.
 
 ```bash
 # Example of current practice
-$ awk '{print $7}' logfile.log
+$awk '{print$7}' logfile.log
 
 # Ideal scenario
-$ awk '{print $request_url}' logfile.log
+$awk '{print$ request_url}' logfile.log
 ```
 x??
 
@@ -182,10 +182,9 @@ Integrating different programs today often requires significant effort due to la
 
 ```bash
 # Example of Unix tool integration
-$ grep 'error' logfile.log | sort | uniq -c
+$grep 'error' logfile.log | sort | uniq -c
 
-# Difficulties in achieving similar integration today
-$ grep 'error' email_account.txt > temp.txt; python script.py < temp.txt > processed_data.csv; post_to_social_network processed_data.csv
+# Difficulties in achieving similar integration today$ grep 'error' email_account.txt > temp.txt; python script.py < temp.txt > processed_data.csv; post_to_social_network processed_data.csv
 ```
 x??
 
@@ -200,7 +199,7 @@ Using `stdin` and `stdout` benefits program design by promoting loose coupling a
 
 ```bash
 # Example of using stdin and stdout in a pipeline
-$ cat file.txt | grep 'pattern' | sort | uniq -c
+$cat file.txt | grep 'pattern' | sort | uniq -c
 ```
 x??
 
@@ -236,8 +235,7 @@ Background context: Unix tools excel at creating data processing pipelines where
 Pipes in a Unix pipeline connect the `stdout` of one process directly to the `stdin` of another process, facilitating seamless data flow without writing intermediate results to disk. Pipes use a small in-memory buffer for efficient data transfer.
 
 ```bash
-# Example of using pipes
-$ ls -l | grep 'file'
+# Example of using pipes$ ls -l | grep 'file'
 ```
 x??
 

@@ -171,7 +171,7 @@ set CLASSPATH="C:\classes;C:\classes\darwinsys-api.jar"
 
 On Unix or Mac (assuming a similar setup):
 ```shell
-export CLASSPATH="$HOME/classes:$HOME/classes/darwinsys-api.jar"
+export CLASSPATH="$HOME/classes:$ HOME/classes/darwinsys-api.jar"
 ```
 x??
 
@@ -261,7 +261,7 @@ set CLASSPATH="C:\classes;C:\classes\darwinsys-api.jar"
 
 On Unix:
 ```shell
-export CLASSPATH="$HOME/classes:$HOME/classes/darwinsys-api.jar"
+export CLASSPATH="$HOME/classes:$ HOME/classes/darwinsys-api.jar"
 ```
 x??
 
@@ -282,7 +282,7 @@ set CLASSPATH="C:\classes;C:\classes\darwinsys-api-1.0.jar"
 
 On Unix:
 ```shell
-export CLASSPATH="$HOME/classes:$HOME/classes/darwinsys-api-1.0.jar"
+export CLASSPATH="$HOME/classes:$ HOME/classes/darwinsys-api-1.0.jar"
 ```
 x??
 

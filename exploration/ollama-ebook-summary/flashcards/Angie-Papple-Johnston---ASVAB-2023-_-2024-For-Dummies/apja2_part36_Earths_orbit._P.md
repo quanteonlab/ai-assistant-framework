@@ -274,16 +274,20 @@ These flashcards cover various aspects of the provided text, focusing on key con
 
 ---
 #### Temperature Conversion from Fahrenheit to Celsius
-Background context: The conversion formula between Fahrenheit (F) and Celsius (C) is \( C = \frac{5}{9} \times (F - 32) \). This formula helps convert temperatures measured on different scales for various applications.
+Background context: The conversion formula between Fahrenheit (F) and Celsius (C) is $C = \frac{5}{9} \times (F - 32)$. This formula helps convert temperatures measured on different scales for various applications.
 
 :p If the temperature in Fahrenheit is 212 degrees, what is it in Celsius?
 ??x
 The answer: The temperature in Celsius is 100 degrees. 
 
-Explanation: Using the conversion formula \( C = \frac{5}{9} \times (F - 32) \):
-\[ C = \frac{5}{9} \times (212 - 32) \]
-\[ C = \frac{5}{9} \times 180 \]
-\[ C = 100 \]
+Explanation: Using the conversion formula $C = \frac{5}{9} \times (F - 32)$:
+$$C = \frac{5}{9} \times (212 - 32)$$
+$$
+
+C = \frac{5}{9} \times 180$$
+$$
+
+C = 100$$
 
 No code is necessary for this question, as it is a straightforward calculation.
 x??
@@ -461,7 +465,7 @@ x??
 #### Boiling Point of Water
 Background context explaining the boiling point and its measurement. The boiling point is the temperature at which a liquid changes to a vapor within the liquid itself, under standard atmospheric pressure.
 
-To convert from Fahrenheit (F) to Celsius (C), use the formula \( C = \frac{5}{9}(F - 32) \).
+To convert from Fahrenheit (F) to Celsius (C), use the formula $C = \frac{5}{9}(F - 32)$.
 
 :p What is the boiling point of water in Celsius?
 ??x
@@ -622,16 +626,10 @@ Background context: Understanding simple machines like levers, pulleys, wheels a
 ??x
 The principle behind a lever involves using a fulcrum (pivot point) to amplify force by increasing the length of the effort arm compared to the load arm. The formula for calculating the mechanical advantage (MA) of a lever is:
 
-\[
-\text{Mechanical Advantage} = \frac{\text{Length of Effort Arm}}{\text{Length of Load Arm}}
-\]
+$$\text{Mechanical Advantage} = \frac{\text{Length of Effort Arm}}{\text{Length of Load Arm}}$$
 
 For example, if the effort arm is 10 cm and the load arm is 2 cm, then the mechanical advantage would be:
-
-\[
-\text{MA} = \frac{10}{2} = 5
-\]
-x??
+$$\text{MA} = \frac{10}{2} = 5$$x??
 
 ---
 #### Calculations Involving Mechanical Principles
@@ -640,17 +638,10 @@ Background context: Applying mathematical concepts to understand how forces work
 :p How do you calculate the force required at one end of a lever given the load and mechanical advantage?
 ??x
 To calculate the force required at one end of a lever (effort), given the load and the mechanical advantage, use the formula:
-
-\[
-\text{Effort} = \frac{\text{Load}}{\text{Mechanical Advantage}}
-\]
+$$\text{Effort} = \frac{\text{Load}}{\text{Mechanical Advantage}}$$
 
 For example, if the load is 100 N and the mechanical advantage is 5, then the effort required would be:
-
-\[
-\text{Effort} = \frac{100}{5} = 20 \, \text{N}
-\]
-x??
+$$\text{Effort} = \frac{100}{5} = 20 \, \text{N}$$x??
 
 ---
 #### Principles of Electricity
@@ -659,16 +650,14 @@ Background context: Knowledge of basic electrical principles such as voltage (V)
 :p What is Ohm's Law?
 ??x
 Ohm's Law states that the current (I) flowing through a conductor between two points is directly proportional to the voltage (V) across the two points and inversely proportional to the resistance (R). The formula for Ohm's Law is:
+$$
 
-\[
-I = \frac{V}{R}
-\]
+I = \frac{V}{R}$$
 
 For example, if the voltage across a resistor is 12 V and its resistance is 3 Ω, then the current flowing through it would be:
+$$
 
-\[
-I = \frac{12}{3} = 4 \, \text{A}
-\]
+I = \frac{12}{3} = 4 \, \text{A}$$
 x??
 
 ---

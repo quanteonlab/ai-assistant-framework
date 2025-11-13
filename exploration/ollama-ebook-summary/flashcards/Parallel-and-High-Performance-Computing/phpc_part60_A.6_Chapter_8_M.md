@@ -311,7 +311,7 @@ Intel Xeon E5-4660 has a thermal design power (TDP) of 130 W, while Nvidia’s T
 
 :p Determine the required speedup for your application to run more efficiently on a GPU.
 ??x
-To determine if running your application on a GPU is more energy-efficient, you need to achieve at least a 2.3x speedup over its CPU counterpart. This means that the processing time on the GPU should be less than \(\frac{1}{2.3}\) of the time taken by the CPU.
+To determine if running your application on a GPU is more energy-efficient, you need to achieve at least a 2.3x speedup over its CPU counterpart. This means that the processing time on the GPU should be less than $\frac{1}{2.3}$ of the time taken by the CPU.
 
 ```java
 // Pseudocode for calculating speedup
@@ -373,7 +373,7 @@ enable_testing()
 
 2. Add a test that runs a build instruction (e.g., `build.ctest`):
 ```cmake
-add_test(NAME make WORKING_DIRECTORY ${CMAKE_BINARY_DIRECTORY}
+add_test(NAME make WORKING_DIRECTORY${CMAKE_BINARY_DIRECTORY}
              COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/build.ctest)
 ```
 
@@ -450,12 +450,11 @@ Profiling involves various tools depending on the system architecture and progra
 
 Example of measuring CPU frequency:
 ```bash
-$ cpufreq-info -c 0
+$cpufreq-info -c 0
 ```
 
 Example of measuring energy consumption (macOS):
-```bash
-$ powermetrics --samplers smc --report cpu_power --stream-format csv
+```bash$ powermetrics --samplers smc --report cpu_power --stream-format csv
 ```
 
 x??
@@ -473,7 +472,7 @@ To measure memory bandwidth using the STREAM benchmark:
 
 Example command:
 ```bash
-$ ./stream <problem size> <data type>
+$./stream <problem size> <data type>
 ```
 
 x??
@@ -493,8 +492,7 @@ To generate a call graph with KCachegrind:
 Example using `kcachegrind`:
 1. Run your application with a profiling tool that supports `kcachegrind`.
 2. Use the generated `.callgrind` file as input to KCachegrind.
-```bash
-$ kcachegrind <path/to/callgrind/file>
+```bash$ kcachegrind <path/to/callgrind/file>
 ```
 
 x??
@@ -512,7 +510,7 @@ To measure arithmetic intensity, follow these steps:
 
 Example using Intel Advisor:
 ```bash
-$ advizor -collect performance <path/to/executable>
+$advizor -collect performance <path/to/executable>
 ```
 
 x??
@@ -529,13 +527,12 @@ To measure these parameters:
 2. Use power monitoring tools to get energy consumption data.
 
 Example (macOS):
-```bash
-$ powermetrics --samplers cpu_power --report high_resolution_timer --stream-format csv
+```bash$ powermetrics --samplers cpu_power --report high_resolution_timer --stream-format csv
 ```
 
 Example (Linux with `powerTOP`):
 ```bash
-$ powertop
+$powertop
 ```
 
 x??
@@ -549,13 +546,12 @@ Background context: Knowing the memory footprint of your application is essentia
 To measure memory usage, use tools like `pmap`, `valgrind` with memory profiling, or `truss`.
 
 Example using `pmap`:
-```bash
-$ pmap <PID>
+```bash$ pmap <PID>
 ```
 
 Example using `valgrind`:
 ```bash
-$ valgrind --tool=massif ./your_program
+$valgrind --tool=massif ./your_program
 ```
 
 x??
@@ -565,7 +561,7 @@ x??
 #### 2D Contiguous Memory Allocator for Lower-Left Triangular Matrix
 Background context: This concept involves allocating memory for a lower-left triangular matrix, which is stored contiguously in memory. A contiguous allocation means that all elements of the matrix are placed next to each other without any gaps. In C or similar languages, this typically requires careful calculation and memory management.
 
-The number of elements in the triangular array can be calculated by \( \frac{jmax * (imax + 1)}{2} \). This formula accounts for the fact that only the lower-left triangle is stored, including the diagonal.
+The number of elements in the triangular array can be calculated by $\frac{jmax * (imax + 1)}{2}$. This formula accounts for the fact that only the lower-left triangle is stored, including the diagonal.
 :p What is the purpose of the function `malloc2Dtri`?
 ??x
 The purpose of the function `malloc2Dtri` is to allocate memory for a contiguous block representing a lower-left triangular matrix. The function calculates and reserves enough space for both row pointers and the 2D array itself, ensuring that the elements are stored in a continuous manner.

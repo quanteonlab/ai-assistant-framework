@@ -9,7 +9,7 @@
 Potential energy is the stored energy an object possesses due to its position or state. When this energy is released, it transforms into kinetic energy, which is the energy of motion. For instance, a book held above a table has potential energy that converts to kinetic energy when dropped.
 :p What happens to a book’s energy when it is dropped from a height?
 ??x
-When a book is dropped, its gravitational potential energy (PE = mgh, where \(m\) is mass, \(g\) is acceleration due to gravity, and \(h\) is height) is converted into kinetic energy (KE = \(\frac{1}{2}mv^2\), where \(v\) is velocity). The book’s potential energy decreases as it falls and its kinetic energy increases.
+When a book is dropped, its gravitational potential energy (PE = mgh, where $m $ is mass,$g $ is acceleration due to gravity, and$h $ is height) is converted into kinetic energy (KE =$\frac{1}{2}mv^2 $, where $ v$ is velocity). The book’s potential energy decreases as it falls and its kinetic energy increases.
 x??
 
 ---
@@ -49,16 +49,12 @@ x??
 ---
 #### Power Definition and Calculation
 Power is the rate at which work is done. Mathematically, it can be expressed as:
-
-\[ \text{Power} = \frac{\text{Work}}{\text{Time}} \]
-
-- Work is usually measured in joules (J).
+$$\text{Power} = \frac{\text{Work}}{\text{Time}}$$- Work is usually measured in joules (J).
 - Time is measured in seconds (s).
 - Power is then measured in watts (W).
 
 Alternatively, power can also be measured in horsepower. For this unit, the formula changes to:
-
-\[ \text{Horsepower} = \frac{\text{Work}}{\text{Time}} \]
+$$\text{Horsepower} = \frac{\text{Work}}{\text{Time}}$$
 
 Where:
 - Work is measured in foot-pounds.
@@ -70,12 +66,10 @@ Where:
 :p What is the formula for calculating power and how are different units used?
 ??x
 The formula for calculating power in terms of joules and seconds is:
-
-\[ \text{Power (W)} = \frac{\text{Work (J)}}{\text{Time (s)}} \]
+$$\text{Power (W)} = \frac{\text{Work (J)}}{\text{Time (s)}}$$
 
 For horsepower, it’s:
-
-\[ \text{Horsepower} = \frac{\text{Work (ft-lbs)}}{\text{Time (min)}} \]
+$$\text{Horsepower} = \frac{\text{Work (ft-lbs)}}{\text{Time (min)}}$$
 
 In both cases, the formula measures the rate at which work is done.
 
@@ -116,10 +110,7 @@ x??
 ---
 #### Levers and Mechanical Advantage
 Levers are simple machines that work by using a fulcrum to reduce resistance and multiply the effect of effort. The mechanical advantage (MA) of a lever is determined by:
-
-\[ \text{Mechanical Advantage} = \frac{\text{Length of Effort Arm}}{\text{Length of Resistance Arm}} \]
-
-- Effort arm: Distance from the fulcrum where effort is applied.
+$$\text{Mechanical Advantage} = \frac{\text{Length of Effort Arm}}{\text{Length of Resistance Arm}}$$- Effort arm: Distance from the fulcrum where effort is applied.
 - Resistance arm: Distance from the fulcrum where resistance is applied.
 
 The longer the effort arm compared to the resistance arm, the greater the mechanical advantage.
@@ -132,8 +123,7 @@ A lever works by using a fulcrum (a pivot point) to reduce the force needed to m
 - Load/Resistance: The weight that needs to be moved.
 
 The mechanical advantage can be calculated using:
-
-\[ \text{Mechanical Advantage} = \frac{\text{Length of Effort Arm}}{\text{Length of Resistance Arm}} \]
+$$\text{Mechanical Advantage} = \frac{\text{Length of Effort Arm}}{\text{Length of Resistance Arm}}$$
 
 For example, if an effort arm is 6 inches and a resistance arm is 3 inches, the MA would be 2.
 
@@ -183,11 +173,7 @@ x??
 
 ---
 #### Inclined Plane
-An inclined plane, also known as a ramp, is another simple machine that makes moving an object easier. It spreads the work over a longer distance, reducing the force needed to do the work.
-
-\[ \text{Mechanical Advantage} = \frac{\text{Length of Ramp}}{\text{Height of Ramp}} \]
-
-:p What is an inclined plane and how does it work?
+An inclined plane, also known as a ramp, is another simple machine that makes moving an object easier. It spreads the work over a longer distance, reducing the force needed to do the work.$$\text{Mechanical Advantage} = \frac{\text{Length of Ramp}}{\text{Height of Ramp}}$$:p What is an inclined plane and how does it work?
 ??x
 An inclined plane or ramp makes moving heavy objects easier by spreading out the effort over a longer distance. For example, to lift a 50-pound barrel 3 feet using a 6-foot long ramp, you would only need half as much force (25 pounds) because the mechanical advantage is 2.
 
@@ -206,14 +192,14 @@ x??
 
 #### Inclined Planes (Ramps and Wedges)
 Background context: Inclined planes, such as ramps or wedges, can reduce the force needed to move an object. The formula for the mechanical advantage of a ramp is given by:
-\[ \text{Mechanical Advantage} = \frac{\text{Length of Ramp}}{\text{Height of Ramp}} \]
+$$\text{Mechanical Advantage} = \frac{\text{Length of Ramp}}{\text{Height of Ramp}}$$
 
 Wedges are a type of inclined plane that can be used to split or lift heavy objects.
 
 :p What is the mechanical advantage of an object being moved up a 10-foot ramp with a height of 2 feet?
 ??x
 The mechanical advantage would be:
-\[ \frac{\text{Length of Ramp}}{\text{Height of Ramp}} = \frac{10\, \text{feet}}{2\, \text{feet}} = 5 \]
+$$\frac{\text{Length of Ramp}}{\text{Height of Ramp}} = \frac{10\, \text{feet}}{2\, \text{feet}} = 5$$
 This means that the force required to move the object up the ramp is reduced by a factor of 5.
 
 x??

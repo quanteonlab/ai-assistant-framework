@@ -72,9 +72,9 @@ x??
 Background context: Linear congruential generators (LCGs) are a fast and simple method for generating sequences of pseudorandom numbers. They are sometimes used in C standard libraries but may not always produce high-quality random numbers.
 
 The basic formula for an LCG is:
-\[ X_{n+1} = (aX_n + c) \mod m \]
+$$X_{n+1} = (aX_n + c) \mod m$$
 
-Where \( X_n \) is the current value, and \( a \), \( c \), and \( m \) are constants. However, these generators do not produce high-quality pseudorandom sequences due to their simple deterministic nature.
+Where $X_n $ is the current value, and$a $,$ c $, and$ m$ are constants. However, these generators do not produce high-quality pseudorandom sequences due to their simple deterministic nature.
 
 :p What are some drawbacks of using linear congruential generators?
 ??x
@@ -94,7 +94,7 @@ x??
 
 Background context: The Mersenne Twister (MT) is a pseudorandom number generator designed to address the various problems associated with linear congruential generators. It offers several advantages:
 
-1. **Long Period**: The period of MT is \( 2^{19937} - 1 \).
+1. **Long Period**: The period of MT is $2^{19937} - 1$.
 2. **High Equidistribution**: Good statistical properties and minimal serial correlation.
 3. **Passes Statistical Tests**: MT passes numerous tests for randomness, including the Diehard tests.
 4. **Fast Implementation**: Various implementations are available, often optimized for speed.
@@ -103,7 +103,7 @@ Background context: The Mersenne Twister (MT) is a pseudorandom number generator
 ??x
 The Mersenne Twister is superior to linear congruential generators (LCGs) due to several key advantages:
 
-1. **Long Period**: The period of MT is extremely long, \( 2^{19937} - 1 \), which far exceeds the practical needs for most applications.
+1. **Long Period**: The period of MT is extremely long, $2^{19937} - 1$, which far exceeds the practical needs for most applications.
 2. **Equidistribution**: MT has a high order of dimensional equidistribution, ensuring that successive values are not correlated and cover the space evenly.
 3. **Statistical Tests**: It passes rigorous statistical randomness tests, including the Diehard battery of tests.
 4. **Speed**: Despite being more complex, many implementations of MT are fast.
@@ -712,7 +712,7 @@ Background context: This section discusses an efficient memory management techni
 ??x
 This method saves memory by placing free list pointers directly in the free memory blocks instead of using separate metadata. Since these blocks were unused otherwise, repurposing them for storing pointers optimizes space usage.
 
-For example, if you have a pool containing 16-bit integers (2 bytes each), and your free list pointer also needs to be 16 bits, you can use the index as the next pointer in the linked list. This works well until there are more than \(2^{16} = 65,536\) elements.
+For example, if you have a pool containing 16-bit integers (2 bytes each), and your free list pointer also needs to be 16 bits, you can use the index as the next pointer in the linked list. This works well until there are more than $2^{16} = 65,536$ elements.
 x??
 
 ---
@@ -776,16 +776,16 @@ void* AllocAligned(size_t bytes, size_t align) {
 ```
 The `AlignPointer` function is responsible for shifting the address to meet the alignment requirement. This ensures that any misalignment in the initial allocation is corrected before returning the pointer.
 
-For example, if you need a 16-byte aligned memory block and get back an unaligned pointer ending in 0x1, the function will shift this pointer up by 15 bytes (since \(2^{4} - 1 = 15\)) to make it correctly align.
+For example, if you need a 16-byte aligned memory block and get back an unaligned pointer ending in 0x1, the function will shift this pointer up by 15 bytes (since $2^{4} - 1 = 15$) to make it correctly align.
 x??
 
 ---
 
 #### Aligning Addresses to a Boundary
-Background context: This section explains how to align addresses to specific byte boundaries, such as 16 bytes. It mentions that given an address and a desired alignment `L`, you can shift the address up by \( L - 1 \) bits and then apply a bitmask to strip off the least-significant \( N = \log_2(L) \) bits.
+Background context: This section explains how to align addresses to specific byte boundaries, such as 16 bytes. It mentions that given an address and a desired alignment `L`, you can shift the address up by $L - 1 $ bits and then apply a bitmask to strip off the least-significant$N = \log_2(L)$ bits.
 :p How do we align an address to an L-byte boundary?
 ??x
-To align an address to an `L`-byte boundary, first shift the address up by `L - 1` bits. Then, apply a bitmask that has binary 1s in the \( N = \log_2(L) \) least-significant bits and binary 0s elsewhere. This can be done using a bitwise AND operation with `addr & ~mask`, where `~mask` is the inverted mask.
+To align an address to an `L`-byte boundary, first shift the address up by `L - 1` bits. Then, apply a bitmask that has binary 1s in the $N = \log_2(L)$ least-significant bits and binary 0s elsewhere. This can be done using a bitwise AND operation with `addr & ~mask`, where `~mask` is the inverted mask.
 ```c
 void* alignedAddress = originalAddress | (L - 1);
 unsigned int mask = ~(L - 1);
@@ -813,7 +813,7 @@ x??
 Background context: The code needs to handle cases where the raw address returned by `new` might already be aligned. To ensure there is always space to store the shift value, allocate an extra byte more than necessary and always align the pointer.
 :p What should we do if the raw address is already aligned?
 ??x
-To handle the case where the raw address might already be aligned, allocate `align` bytes instead of `L - 1` bytes. This ensures that even if the raw address is already aligned, there will still be enough space to store the shift value (which can range from 1 byte to \( L \) bytes).
+To handle the case where the raw address might already be aligned, allocate `align` bytes instead of `L - 1` bytes. This ensures that even if the raw address is already aligned, there will still be enough space to store the shift value (which can range from 1 byte to $L$ bytes).
 ```c
 size_t actualBytes = bytes + align;
 U8* pRawMem = new U8[actualBytes];

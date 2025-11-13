@@ -16,7 +16,7 @@ x??
 
 ---
 #### Inclined Plane Efficiency
-Background context: An inclined plane reduces the effort needed to lift an object by allowing the work to be done over a longer distance. The mechanical advantage (MA) can be calculated using the formula \( MA = \frac{\text{length of the incline}}{\text{height of the incline}} \). If the MA is 0.5, the force required is halved.
+Background context: An inclined plane reduces the effort needed to lift an object by allowing the work to be done over a longer distance. The mechanical advantage (MA) can be calculated using the formula $MA = \frac{\text{length of the incline}}{\text{height of the incline}}$. If the MA is 0.5, the force required is halved.
 
 :p An inclined plane will reduce the amount of effort required to move a barrel by half if it is how long?
 ??x
@@ -26,7 +26,7 @@ x??
 
 ---
 #### Work Done on Football Throwing
-Background context: Work (W) done is calculated using the formula \( W = F \times d \), where \( F \) is force and \( d \) is distance. The units of work are joules, which are newton-meters.
+Background context: Work (W) done is calculated using the formula $W = F \times d $, where $ F $ is force and $ d$ is distance. The units of work are joules, which are newton-meters.
 
 :p How much work does Dan do on a football if he exerts a forward force of 50 newtons and pushes it 1.2 meters?
 ??x
@@ -66,7 +66,7 @@ x??
 
 ---
 #### Wheel Speed Comparison
-Background context: The linear distance covered by wheels is directly proportional to their circumference. Circumference \( C \) is given by \( C = \pi d \), where \( d \) is the diameter.
+Background context: The linear distance covered by wheels is directly proportional to their circumference. Circumference $C $ is given by$C = \pi d $, where$ d$ is the diameter.
 
 :p If Wheel A has a diameter of 9 feet and Wheel B has a diameter of 12 feet, and both wheels revolve at the same rate, how does Wheel B cover a linear distance compared to Wheel A?
 ??x
@@ -76,7 +76,7 @@ x??
 
 ---
 #### Shock Absorber Spring Constant
-Background context: The spring constant \( k \) is calculated using Hooke's Law \( F = kx \), where \( F \) is force, and \( x \) is displacement. This law helps determine the stiffness of a spring.
+Background context: The spring constant $k $ is calculated using Hooke's Law$F = kx $, where$ F $is force, and$ x$ is displacement. This law helps determine the stiffness of a spring.
 
 :p If Jonas’s car hits a pothole with 600 pounds of force and the shock absorber compresses 3 inches, what is its spring constant in pounds per inch?
 ??x
@@ -88,7 +88,7 @@ x??
 #### Weight Distribution on Scales
 Background context: When a weight is placed on a balanced board, the weights on both sides must be equal to balance the system. The principle involves moments or torques.
 
-:p If a 600-pound weight is placed on a 10-pound board that has been evenly balanced between two scales and the weight is closer to the left by \(\frac{2}{3}\), how much does the left scale measure?
+:p If a 600-pound weight is placed on a 10-pound board that has been evenly balanced between two scales and the weight is closer to the left by $\frac{2}{3}$, how much does the left scale measure?
 ??x
 The left scale measures 405 pounds.
 x??
@@ -136,7 +136,7 @@ x??
 
 ---
 #### Seesaw Balance Calculation
-Background context: The principle of moments or torque must be balanced on a seesaw for it to be in equilibrium. Torque \( \tau = F \times d \), where \( F \) is force and \( d \) is distance from the fulcrum.
+Background context: The principle of moments or torque must be balanced on a seesaw for it to be in equilibrium. Torque $\tau = F \times d $, where $ F $ is force and $ d$ is distance from the fulcrum.
 
 :p Mr. Roth’s children weigh 80, 60, and 50 pounds respectively, and they all sit on the same side of a seesaw together. Jake sits 3 feet from the fulcrum, Paul sits 5 feet from the fulcrum, and Jill sits 6 feet from the fulcrum. How far from the fulcrum must Mr. Roth sit on the other side to balance the seesaw if he weighs 200 pounds?
 ??x
@@ -192,14 +192,14 @@ x??
 #### Inclined Plane Calculation
 
 To determine how an inclined plane reduces effort, the formula is: 
-\[ \text{Length of Ramp} / \text{Height of Ramp} = \text{Weight of Object} / \text{Force} \]
+$$\text{Length of Ramp} / \text{Height of Ramp} = \text{Weight of Object} / \text{Force}$$
 
 In this problem, if you want to reduce the force needed by half (100 newtons), then 100 is equivalent to half the object's weight.
 
 :p What formula is used to determine how an inclined plane reduces effort?
 ??x
 The formula used to determine how an inclined plane reduces effort is:
-\[ \text{Length of Ramp} / \text{Height of Ramp} = \text{Weight of Object} / \text{Force} \]
+$$\text{Length of Ramp} / \text{Height of Ramp} = \text{Weight of Object} / \text{Force}$$
 
 By setting the force to half the object's weight, you can calculate the required length of the ramp.
 x??
@@ -209,14 +209,12 @@ x??
 #### Work Calculation
 
 Work done by a force is calculated using the formula:
-\[ \text{Work} = \text{Force} \times \text{Distance} \]
-where 1 newton-meter equals 1 joule.
+$$\text{Work} = \text{Force} \times \text{Distance}$$where 1 newton-meter equals 1 joule.
 
 :p How do you calculate work?
 ??x
 You calculate work using the formula:
-\[ \text{Work} = \text{Force} \times \text{Distance} \]
-where force is in newtons and distance is in meters. One newton-meter (Nm) equals one joule (J).
+$$\text{Work} = \text{Force} \times \text{Distance}$$where force is in newtons and distance is in meters. One newton-meter (Nm) equals one joule (J).
 x??
 
 ---
@@ -224,12 +222,11 @@ x??
 #### Mechanical Advantage of Block and Tackle
 
 The mechanical advantage (MA) of a block and tackle can be calculated using the formula:
-\[ \text{Mechanical Advantage} = \frac{\text{Output Force}}{\text{Input Force}} \]
-
-:p How do you calculate the mechanical advantage of a block and tackle?
+$$\text{Mechanical Advantage} = \frac{\text{Output Force}}{\text{Input Force}}$$:p How do you calculate the mechanical advantage of a block and tackle?
 ??x
 You calculate the mechanical advantage of a block and tackle using the formula:
-\[ \text{Mechanical Advantage} = \frac{\text{Output Force}}{\text{Input Force}} \]
+$$\text{Mechanical Advantage} = \frac{\text{Output Force}}{\text{Input Force}}$$
+
 For example, if the output force is 740 newtons and the input force is 6239 newtons, the calculation would be:
 ```python
 output_force = 740
@@ -280,8 +277,9 @@ A hydraulic jack uses an incompressible fluid to maintain equal pressure through
 :p How does a hydraulic jack work?
 ??x
 A hydraulic jack works by using an incompressible fluid, ensuring that the pressure is the same everywhere. The formula for this is:
-\[ P_1 A_1 = P_2 A_2 \]
-where \(P\) is pressure and \(A\) is area. If the output area (where force is applied) is five times the input area (where James applies the force), then the exerted force will be five times the applied force.
+$$
+
+P_1 A_1 = P_2 A_2$$where $ P $ is pressure and $ A$ is area. If the output area (where force is applied) is five times the input area (where James applies the force), then the exerted force will be five times the applied force.
 x??
 
 ---
@@ -322,16 +320,13 @@ x??
 #### Understanding Current, Voltage, and Power
 
 Background context: In electronics, current (I), voltage (V), and power (P) are fundamental concepts. These can be represented by formulas:
-- **Current** (I): The rate at which electric charge flows through a conductor. It is measured in Amperes (A).
-  \[ I = \frac{Q}{t} \]
-  Where \( Q \) is the charge and \( t \) is time.
+- **Current** (I): The rate at which electric charge flows through a conductor. It is measured in Amperes (A).$$I = \frac{Q}{t}$$
+
+Where $Q $ is the charge and$t$ is time.
   
 - **Voltage** (V): The difference of potential between two points in an electrical circuit, typically measured in Volts (V).
 
-- **Power** (P): The rate at which energy is transferred or converted, often measured in Watts (W).
-  \[ P = V \times I \]
-
-:p What are the basic concepts of current, voltage, and power in electronics?
+- **Power** (P): The rate at which energy is transferred or converted, often measured in Watts (W).$$P = V \times I$$:p What are the basic concepts of current, voltage, and power in electronics?
 ??x
 Current is the rate at which electric charge flows through a conductor. Voltage measures the difference of potential between two points, while power is the rate at which energy is transferred or converted.
 x??
@@ -373,11 +368,11 @@ x??
 
 #### Measuring Power
 
-Background context: Power is measured in Watts (W), and can be calculated as \( P = V \times I \). Energy usage over time is often expressed in kilowatt-hours (kWh).
+Background context: Power is measured in Watts (W), and can be calculated as $P = V \times I$. Energy usage over time is often expressed in kilowatt-hours (kWh).
 
 :p How is power used to measure energy consumption?
 ??x
-Power is measured using the formula \( P = V \times I \) where \( P \) is power, \( V \) is voltage, and \( I \) is current. Energy usage over time can be expressed in kilowatt-hours (kWh).
+Power is measured using the formula $P = V \times I $ where$P $ is power,$V $ is voltage, and$I$ is current. Energy usage over time can be expressed in kilowatt-hours (kWh).
 x??
 
 ---

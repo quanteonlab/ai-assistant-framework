@@ -372,11 +372,10 @@ Background context explaining the Rescorla-Wagner model, an influential explanat
 ??x
 The Rescorla–Wagner model provides a mathematical framework to explain classical conditioning by considering how unexpectedness (surprise) influences learning. It challenges the idea that simple temporal contiguity is sufficient for conditioning, proposing that prediction error drives learning.
 
-Formula: \( A \leftarrow A + k (r - A) \times I(t) \)
-- \( A \): Expected outcome.
-- \( r \): Actual outcome.
-- \( k \): Learning rate.
-- \( I(t) \): Prediction error at time t.
+Formula: $A \leftarrow A + k (r - A) \times I(t)$-$ A$: Expected outcome.
+- $r$: Actual outcome.
+- $k$: Learning rate.
+- $I(t)$: Prediction error at time t.
 
 For blocking, the model suggests that if a CS is repeatedly paired with a US and then used in conjunction with another CS, the new CS does not elicit a CR because it is no longer predictive of the US. In other words, the prediction error for the new CS becomes zero or negative due to the presence of the previously learned CS.
 
@@ -511,15 +510,15 @@ where:
 - ↵A Y and ↵X Y are step-size parameters, which depend on the identities of CS components and the US.
 - RY is the asymptotic level of associative strength that the US Y can support.
 
-:p How does the model ensure that the aggregate associative strength \(V_{AX}\) equals \(VA + VX\)?
+:p How does the model ensure that the aggregate associative strength $V_{AX}$ equals $VA + VX$?
 ??x
-The model ensures that the aggregate associative strength \(V_{AX} = VA + VX\). This means that the total associative strength for a given CS component is the sum of its individual strengths.
+The model ensures that the aggregate associative strength $V_{AX} = VA + VX$. This means that the total associative strength for a given CS component is the sum of its individual strengths.
 
 :p What is the key assumption about the aggregate associative strength in this model?
 ??x
-The key assumption is that the aggregate associative strength \(V_{AX}\) is equal to the sum of the individual associative strengths \(VA\) and \(VX\):
+The key assumption is that the aggregate associative strength $V_{AX}$ is equal to the sum of the individual associative strengths $VA$ and $VX$:
 
-\[ V_{AX} = VA + VX \]
+$$V_{AX} = VA + VX$$
 
 This means that the total associative strength for a CS component is the combined effect of its individual parts.
 
@@ -527,8 +526,8 @@ This means that the total associative strength for a CS component is the combine
 ??x
 Blocking occurs when adding a new component to a compound CS, where prior learning blocks further acquisition. Specifically:
 
-- As long as \(V_{AX} < RY\), the prediction error is positive.
-- Over successive trials, \(VA\) and \(VX\) increase until \(V_{AX}\) equals \(RY\).
+- As long as $V_{AX} < RY$, the prediction error is positive.
+- Over successive trials, $VA $ and$VX $ increase until$V_{AX}$ equals $RY$.
 - When adding a new component to an already conditioned compound CS, no further increase in associative strength occurs because the prediction error has been reduced.
 
 :p How does the TD model relate to Rescorla-Wagner's model?
@@ -540,21 +539,18 @@ The TD (Temporal Difference) model relates to the Rescorla-Wagner model by recas
 
 :p What is the role of states in the context of this model?
 ??x
-States are used to label each trial based on which component stimuli are present. A state \(s\) is described by a vector \(x(s) = (x_1(s), x_2(s), ..., x_d(s))\), where \(x_i(s) = 1\) if the ith CS is present and 0 otherwise.
+States are used to label each trial based on which component stimuli are present. A state $s $ is described by a vector$x(s) = (x_1(s), x_2(s), ..., x_d(s))$, where $ x_i(s) = 1$ if the ith CS is present and 0 otherwise.
 
-:p How is the aggregate associative strength for trial type \(s\) calculated in this model?
+:p How is the aggregate associative strength for trial type $s$ calculated in this model?
 ??x
-The aggregate associative strength for trial type \(s\) is calculated as:
-
-\[ \hat{v}(s, w) = w > x(s), \]
-
-where:
-- \(w\) is the d-dimensional vector of associative strengths.
-- \(x(s)\) is a real-valued vector of features describing the presence or absence of CS components.
+The aggregate associative strength for trial type $s$ is calculated as:
+$$\hat{v}(s, w) = w > x(s),$$where:
+- $w$ is the d-dimensional vector of associative strengths.
+- $x(s)$ is a real-valued vector of features describing the presence or absence of CS components.
 
 :p How does this model account for blocking?
 ??x
-This model accounts for blocking by noting that once the aggregate associative strength \(V_{AX}\) equals \(RY\), further conditioning with additional components will not significantly increase their associative strengths because the prediction error is already minimized.
+This model accounts for blocking by noting that once the aggregate associative strength $V_{AX}$ equals $RY$, further conditioning with additional components will not significantly increase their associative strengths because the prediction error is already minimized.
 
 #### Rescorla-Wagner Model Overview
 The Rescorla-Wagner model is a mechanism for explaining how associative learning occurs, particularly classical conditioning. In this model, the updating of associative strengths is driven by prediction errors and temporal contiguity.
@@ -573,13 +569,11 @@ Temporal contiguity, in the context of the Rescorla-Wagner model, refers to how 
 ??x
 Temporal contiguity plays a crucial role in the Rescorla-Wagner model. For two stimuli, the CS and US, to form an association, they must be presented close enough in time for one to influence the other. The prediction error quantifies how much this association is violated or supported during learning.
 
-The prediction error  \(\Delta w_t\) at trial \(t\) is calculated as:
-\[ \Delta w_t = R_t - \hat{v}(S_t, w_t) \]
-where \(R_t\) is the target magnitude of the US and \(\hat{v}(S_t, w_t)\) is the predicted value based on the current associative strengths.
+The prediction error  $\Delta w_t $ at trial$t$ is calculated as:
+$$\Delta w_t = R_t - \hat{v}(S_t, w_t)$$where $ R_t $ is the target magnitude of the US and $\hat{v}(S_t, w_t)$ is the predicted value based on the current associative strengths.
 
 This error drives the update in associative strength:
-\[ w_{t+1} = w_t + \alpha \Delta w_t x(S_t) \]
-where \(\alpha\) is the step-size parameter and \(x(S_t)\) indicates which CS components are present at time \(t\).
+$$w_{t+1} = w_t + \alpha \Delta w_t x(S_t)$$where $\alpha $ is the step-size parameter and$x(S_t)$ indicates which CS components are present at time $t$.
 
 The model suggests that only the CS components present during a trial contribute to the learning update.
 x??
@@ -593,13 +587,11 @@ In the Rescorla-Wagner model, associative strengths between stimuli can be updat
 ??x
 The Rescorla-Wagner model updates associative strengths using a simple rule that mimics error correction and curve-fitting techniques used in machine learning. The update rule is given by:
 
-\[ w_{t+1} = w_t + \alpha \Delta w_t x(S_t) \]
-
-where:
-- \(w_t\) is the current associative strength.
-- \(\alpha\) is the step-size parameter that controls how much the weights are adjusted.
-- \(\Delta w_t = R_t - \hat{v}(S_t, w_t)\) is the prediction error, representing the difference between the actual US magnitude and the predicted value.
-- \(x(S_t)\) is an indicator function that specifies which CS components are present during trial \(t\).
+$$w_{t+1} = w_t + \alpha \Delta w_t x(S_t)$$where:
+- $w_t$ is the current associative strength.
+- $\alpha$ is the step-size parameter that controls how much the weights are adjusted.
+- $\Delta w_t = R_t - \hat{v}(S_t, w_t)$ is the prediction error, representing the difference between the actual US magnitude and the predicted value.
+- $x(S_t)$ is an indicator function that specifies which CS components are present during trial $t$.
 
 This update rule effectively adjusts only those associative strengths corresponding to the present CS components.
 
@@ -639,7 +631,7 @@ The Rescorla-Wagner model is similar to the LMS rule used in machine learning fo
 
 Key differences include:
 - For LMS, input vectors can have any real numbers as components.
-- The step-size parameter \(\alpha\) in LMS does not depend on the input vector or stimulus identity.
+- The step-size parameter $\alpha$ in LMS does not depend on the input vector or stimulus identity.
 
 In the Rescorla-Wagner model:
 - Only associative strengths corresponding to present CS components are updated.
@@ -675,12 +667,11 @@ The TD model introduces a new concept called the "TD error," which is used to de
 :p What is the formula for calculating the TD error?
 ??x
 The TD error, denoted by t, is calculated as follows:
-
-\[ \delta_t = R_{t+1} + v(S_{t+1}, w) - v(S_t, w) \]
+$$\delta_t = R_{t+1} + v(S_{t+1}, w) - v(S_t, w)$$
 
 Where:
-- \( R_{t+1} \) is the prediction target at time \( t+1 \),
-- \( v(S_{t+1}, w) \) and \( v(S_t, w) \) are the predicted values at times \( t+1 \) and \( t \), respectively.
+- $R_{t+1}$ is the prediction target at time $t+1$,
+- $v(S_{t+1}, w)$ and $v(S_t, w)$ are the predicted values at times $ t+1 $ and $t$, respectively.
 
 The discount factor  (between 0 and 1) is used to weight future predictions more heavily than immediate ones.
 
@@ -702,13 +693,13 @@ Eligibility traces in the TD model are used to keep track of which parts of the 
 
 :p How does the eligibility trace update work in the TD model?
 ??x
-In the TD model, eligibility traces \( z_t \) increment or decrement according to the component of the feature vector that is active at time step \( t \), and they decay with a rate determined by . The update rule for the eligibility trace is:
+In the TD model, eligibility traces $z_t $ increment or decrement according to the component of the feature vector that is active at time step$t$, and they decay with a rate determined by . The update rule for the eligibility trace is:
 
-\[ z_{t+1} = \alpha z_t + x(S_t) \]
+$$z_{t+1} = \alpha z_t + x(S_t)$$
 
 Where:
-- \( \alpha \) is the eligibility trace decay parameter,
-- \( x(S_t) \) represents the state features at time step \( t \).
+- $\alpha$ is the eligibility trace decay parameter,
+- $x(S_t)$ represents the state features at time step $t$.
 
 This ensures that recently active states have a higher influence on the current update.
 
@@ -728,17 +719,17 @@ x??
 ---
 
 #### State Representations in TD Model
-The TD model allows for flexible state representations. Each state \( s \) is represented by a feature vector \( x(s) \), which can describe the external stimuli an animal experiences or internal neural activity patterns.
+The TD model allows for flexible state representations. Each state $s $ is represented by a feature vector$x(s)$, which can describe the external stimuli an animal experiences or internal neural activity patterns.
 
 :p What are the key features of state representations in the TD model?
 ??x
 State representations in the TD model are flexible and not limited to just the CS components present on a trial. They can represent detailed aspects of how stimuli are perceived by the animal, including both external stimuli and their effects on the brain's neural activity patterns.
 
-The feature vector \( x(s) \) for state \( s \) is represented as:
+The feature vector $x(s)$ for state $s$ is represented as:
 
-\[ x(s) = (x_1(s), x_2(s), ..., x_n(s))^T \]
+$$x(s) = (x_1(s), x_2(s), ..., x_n(s))^T$$
 
-Where each component \( x_i(s) \) represents a specific feature of the state.
+Where each component $x_i(s)$ represents a specific feature of the state.
 
 ```java
 public class StateRepresentation {
@@ -948,8 +939,8 @@ Background context explaining how the presence representation works within the T
 
 :p How does the presence representation work in the TD model?
 ??x
-In the presence representation, for each CS component \(CS_i\) present on a trial, and for each time step \(t\), there is a separate feature \(x_{t,i}\) where:
-\[ x_{t,i}(S_t^0)=1 \text{ if } t=t_0 \text{ for any } t_0 \text{ at which } CS_i \text{ is present, and equals 0 otherwise.} \]
+In the presence representation, for each CS component $CS_i $ present on a trial, and for each time step$t $, there is a separate feature $ x_{t,i}$ where:
+$$x_{t,i}(S_t^0)=1 \text{ if } t=t_0 \text{ for any } t_0 \text{ at which } CS_i \text{ is present, and equals 0 otherwise.}$$
 
 This means that the model tracks when a specific component of the CS is active during each time step, allowing it to capture the temporal dynamics of conditioning.
 

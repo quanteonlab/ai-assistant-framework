@@ -76,7 +76,7 @@ Example shell script for data ingestion:
 data=$(curl -s "http://source-system.com/data")
 
 # Transform the data (e.g., convert to JSON)
-transformed_data=$(python3 transform.py "$data")
+transformed_data=$(python3 transform.py "$ data")
 
 # Upload transformed data to S3
 aws s3 cp ./output.json s3://bucket-name/

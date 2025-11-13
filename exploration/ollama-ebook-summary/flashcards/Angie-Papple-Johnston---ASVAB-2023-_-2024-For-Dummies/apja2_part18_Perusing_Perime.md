@@ -68,19 +68,19 @@ x??
 ---
 
 #### Sample Geometry Question
-Background context: A typical geometry question might involve finding the area of a rectangle given its length and width. The formula for the area of a rectangle is \( \text{Area} = \text{length} \times \text{width} \).
+Background context: A typical geometry question might involve finding the area of a rectangle given its length and width. The formula for the area of a rectangle is $\text{Area} = \text{length} \times \text{width}$.
 :p What is the formula for the area of a rectangle?
 ??x
-The formula for the area of a rectangle is \( \text{Area} = \text{length} \times \text{width} \).
+The formula for the area of a rectangle is $\text{Area} = \text{length} \times \text{width}$.
 x??
 
 ---
 
 #### Volume Calculation in Geometry
-Background context: Calculating the volume of three-dimensional shapes, such as cylinders or cones, often appears on the ASVAB. The formula for the volume of a cylinder is \( V = \pi r^2 h \), where \( r \) is the radius and \( h \) is the height.
+Background context: Calculating the volume of three-dimensional shapes, such as cylinders or cones, often appears on the ASVAB. The formula for the volume of a cylinder is $V = \pi r^2 h $, where $ r $ is the radius and $ h$ is the height.
 :p What is the formula for the volume of a cylinder?
 ??x
-The formula for the volume of a cylinder is \( V = \pi r^2 h \), where \( r \) is the radius and \( h \) is the height.
+The formula for the volume of a cylinder is $V = \pi r^2 h $, where $ r $ is the radius and $ h$ is the height.
 x??
 
 ---
@@ -90,30 +90,27 @@ x??
 Background context: The perimeter is the distance around a shape, which for polygons can be calculated by adding the lengths of all sides. For a circle, the formula involves π (pi).
 
 Formula:
-- Rectangle: \(P = 2 \times (length + width)\)
-- Circle: \(P = 2\pi r\) where \(r\) is the radius
+- Rectangle: $P = 2 \times (length + width)$- Circle:$ P = 2\pi r $where$ r$ is the radius
 
 :p What is the perimeter of a rectangle with length 10 units and width 5 units?
 ??x
 The perimeter of the rectangle is calculated as follows:
-\[ P = 2 \times (length + width) = 2 \times (10 + 5) = 30 \text{ units} \]
-x??
+$$P = 2 \times (length + width) = 2 \times (10 + 5) = 30 \text{ units}$$x??
 
 ---
 #### Area of 2D Shapes
 Background context: The area measures the flat space inside a shape. For rectangles and squares, it is length times width; for circles, it involves π.
 
 Formula:
-- Rectangle/Square: \(A = length \times width\)
-- Circle: \(A = \pi r^2\) where \(r\) is the radius
+- Rectangle/Square:$A = length \times width $- Circle:$ A = \pi r^2 $where$ r$ is the radius
 
 :p What is the area of a circle with a radius of 4 units?
 ??x
 The area of the circle can be calculated using the formula:
-\[ A = \pi r^2 = \pi (4)^2 = 16\pi \text{ square units} \]
-Approximating \(\pi\) as \(3.14\):
-\[ A \approx 16 \times 3.14 = 50.24 \text{ square units} \]
-x??
+$$A = \pi r^2 = \pi (4)^2 = 16\pi \text{ square units}$$
+
+Approximating $\pi $ as$3.14$:
+$$A \approx 16 \times 3.14 = 50.24 \text{ square units}$$x??
 
 ---
 #### Angles in Geometry
@@ -122,17 +119,14 @@ Background context: Angles are formed where two lines intersect, typically measu
 Types:
 - Straight line: 180°
 - Right angle: 90°
-- Acute angle: \(0° < \theta < 90°\)
-- Obtuse angle: \(90° < \theta < 180°\)
-- Reflex angle: \(180° < \theta < 360°\)
-- Complementary angles: Sum to 90°
+- Acute angle:$0° < \theta < 90°$- Obtuse angle:$90° < \theta < 180°$- Reflex angle:$180° < \theta < 360°$- Complementary angles: Sum to 90°
 - Supplementary angles: Sum to 180°
 
 :p What is the definition of complementary and supplementary angles?
 ??x
-Complementary angles are two angles that add up to exactly 90 degrees. For example, if one angle measures 30°, its complement would be 60° because \(30° + 60° = 90°\).
+Complementary angles are two angles that add up to exactly 90 degrees. For example, if one angle measures 30°, its complement would be 60° because $30° + 60° = 90°$.
 
-Supplementary angles are two angles that sum to 180 degrees. If one angle is 120°, the supplementary angle would be 60° since \(120° + 60° = 180°\).
+Supplementary angles are two angles that sum to 180 degrees. If one angle is 120°, the supplementary angle would be 60° since $120° + 60° = 180°$.
 x??
 
 ---
@@ -141,7 +135,7 @@ Background context: When two lines intersect, they form angles that are opposite
 
 :p What property do vertical angles share?
 ??x
-Vertical angles always have the same measure. This means if angle a is \(45°\), then angle b (its vertical counterpart) will also be \(45°\).
+Vertical angles always have the same measure. This means if angle a is $45°$, then angle b (its vertical counterpart) will also be $45°$.
 x??
 
 ---
@@ -179,26 +173,26 @@ Triangles consist of three sides intersecting at vertices, with their angles sum
 - **Equilateral Triangle**: All sides are equal, and each angle measures 60°.
 - **Right Triangle**: Contains one right angle (90°), with the remaining two angles being complementary. The side opposite the right angle is called the hypotenuse, which is the longest side.
 
-The area of a triangle can be calculated using \( A = \frac{1}{2}bh \).
+The area of a triangle can be calculated using $A = \frac{1}{2}bh$.
 :p What formula is used to find the area of an equilateral triangle?
 ??x
 For an equilateral triangle with all sides equal and each angle measuring 60°, you can use the specific formula for its area: 
-\[ A = \frac{\sqrt{3}}{4} s^2 \]
-where \( s \) is the length of a side.
+$$A = \frac{\sqrt{3}}{4} s^2$$where $ s$ is the length of a side.
 x??
 
 ---
 
 #### Pythagorean Theorem
 The Pythagorean theorem applies to right-angled triangles and states that in such a triangle, the square of the hypotenuse (the longest side) is equal to the sum of the squares of the other two sides. This relationship can be expressed as:
-\[ c^2 = a^2 + b^2 \]
+$$c^2 = a^2 + b^2$$
 
-Given \( a = 3 \) and \( b = 4 \), you need to find \( c \).
+Given $a = 3 $ and$b = 4 $, you need to find$ c$.
 :p What is the length of the hypotenuse when given triangle sides 3 and 4?
 ??x
 Using the Pythagorean theorem:
-\[ c^2 = 3^2 + 4^2 = 9 + 16 = 25 \]
-Taking the square root of both sides, we get \( c = 5 \).
+$$c^2 = 3^2 + 4^2 = 9 + 16 = 25$$
+
+Taking the square root of both sides, we get $c = 5$.
 x??
 
 ---
@@ -213,40 +207,36 @@ Quadrilaterals are shapes with four sides and their angles sum up to 360°. Diff
 - **Trapezoids**: Exactly two sides are parallel.
 
 The area formulas vary depending on the type. For example:
-\[ \text{Area} = l \times w \] for squares and rectangles, where \( l \) is length and \( w \) is width.
+$$\text{Area} = l \times w$$for squares and rectangles, where $ l $ is length and $ w$ is width.
 
-For parallelograms: 
-\[ \text{Area} = b \times h \]
-where \( b \) is base and \( h \) is height.
+For parallelograms:
+$$\text{Area} = b \times h$$where $ b $ is base and $ h$ is height.
 :p What formula calculates the area of a rhombus?
 ??x
 The area of a rhombus can be calculated using:
-\[ A = \frac{1}{2}pq \]
-where \( p \) and \( q \) are the lengths of the diagonals. This formula divides by 2 because the diagonals bisect each other at right angles, forming four smaller triangles.
+$$A = \frac{1}{2}pq$$where $ p $ and $ q$ are the lengths of the diagonals. This formula divides by 2 because the diagonals bisect each other at right angles, forming four smaller triangles.
 x??
 
 ---
 
 #### Area Formulas for Quadrilaterals
 For a square or rectangle:
-\[ A = l \times w \]
+$$A = l \times w$$
 
 For a parallelogram:
-\[ A = b \times h \]
-where \( b \) is the base and \( h \) is the height.
+$$
+
+A = b \times h$$where $ b $ is the base and $ h$ is the height.
 
 For a rhombus:
-\[ A = \frac{1}{2} pq \]
-where \( p \) and \( q \) are the lengths of the diagonals.
+$$A = \frac{1}{2} pq$$where $ p $ and $ q$ are the lengths of the diagonals.
 
 For a trapezoid, the area is given by:
-\[ A = \frac{1}{2}(a + b)h \]
-where \( a \) and \( b \) are the lengths of the parallel sides, and \( h \) is the height.
+$$A = \frac{1}{2}(a + b)h$$where $ a $ and $ b $ are the lengths of the parallel sides, and $ h$ is the height.
 :p What formula finds the area of a parallelogram?
 ??x
 The area of a parallelogram can be found using the formula:
-\[ A = b \times h \]
-where \( b \) represents the base (length of one side), and \( h \) represents the height, which is the perpendicular distance from the base to the opposite side.
+$$A = b \times h$$where $ b $ represents the base (length of one side), and $ h$ represents the height, which is the perpendicular distance from the base to the opposite side.
 x??
 
 ---

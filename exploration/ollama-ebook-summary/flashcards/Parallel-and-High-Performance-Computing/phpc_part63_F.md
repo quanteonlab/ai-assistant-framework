@@ -191,15 +191,14 @@ x??
 Background context: Flop stands for floating-point operations and is a measure of computational performance, especially in computing. It can be used to express the speed at which a computer processor performs numerical calculations.
 
 To calculate peak theoretical flops, you use the formula:
-\[ \text{Peak Theoretical Flops} = 2 \times N \times FMA \]
-where \(N\) is the number of processing elements and \(FMA\) (fused multiply-add) is a single operation performed by each element.
+$$\text{Peak Theoretical Flops} = 2 \times N \times FMA$$where $ N $ is the number of processing elements and $ FMA$(fused multiply-add) is a single operation performed by each element.
 
 :p What is the peak theoretical flops calculation for a system with 100 processing elements, assuming each can perform one fused multiply-add per cycle?
 ??x
 The peak theoretical flops would be:
-\[ \text{Peak Theoretical Flops} = 2 \times 100 \times 1 = 200 \]
+$$\text{Peak Theoretical Flops} = 2 \times 100 \times 1 = 200$$
 
-Explanation: Each processing element performs two flops (one multiplication and one addition) in a single FMA operation. Therefore, for 100 such elements, the peak theoretical performance is \(2 \times N \times FMA\).
+Explanation: Each processing element performs two flops (one multiplication and one addition) in a single FMA operation. Therefore, for 100 such elements, the peak theoretical performance is $2 \times N \times FMA$.
 
 ```c
 // Pseudocode to calculate peak theoretical flops
@@ -308,7 +307,7 @@ Background context: The Fast Fourier Transform (FFT) is a widely used algorithm 
 
 :p What is the advantage of using FFT over the direct computation of DFT?
 ??x
-The primary advantage of using FFT over the direct computation of DFT is that it drastically reduces the computational complexity, making the transformation much faster and more efficient. The time complexity of a direct DFT is \(O(N^2)\), whereas an FFT algorithm can achieve a time complexity of \(O(N \log N)\).
+The primary advantage of using FFT over the direct computation of DFT is that it drastically reduces the computational complexity, making the transformation much faster and more efficient. The time complexity of a direct DFT is $O(N^2)$, whereas an FFT algorithm can achieve a time complexity of $ O(N \log N)$.
 
 Explanation: By exploiting the symmetries in the DFT, FFT algorithms break down large transforms into smaller ones, reducing the number of required operations significantly. This makes it feasible to process very large datasets efficiently.
 

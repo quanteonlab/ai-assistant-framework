@@ -253,41 +253,25 @@ x??
 #### Buffering Strategy for Log-Structured Filesystems (LFS)
 Background context: In LFS, updates are first buffered in memory before being written to disk as a segment. The size of these segments affects the efficiency of I/O operations. A larger segment reduces the number of writes but may increase latency if positioning overhead is significant.
 
-The formula for determining how much data should be buffered \(D\) before writing to achieve an effective rate close to peak rate \(R_{peak}\) is derived as follows:
+The formula for determining how much data should be buffered $D $ before writing to achieve an effective rate close to peak rate$R_{peak}$ is derived as follows:
+$$T_{write} = T_{position} + \frac{D}{R_{peak}}$$
 
-\[
-T_{write} = T_{position} + \frac{D}{R_{peak}}
-\]
+$$
 
-\[
-Reffective = \frac{D}{T_{position} + D / R_{peak}} 
-\]
+Reffective = \frac{D}{T_{position} + D / R_{peak}}$$
 
-We want the effective write rate to be a fraction \(F\) of the peak rate:
+We want the effective write rate to be a fraction $F$ of the peak rate:
+$$Reffective = F \times R_{peak}$$
 
-\[
-Reffective = F \times R_{peak}
-\]
+From this, we can solve for $D$:
 
-From this, we can solve for \(D\):
-
-\[
-D = \frac{F \times R_{peak} \times T_{position}}{1 - F}
-\]
-
-:p How much data should LFS buffer before writing to achieve a specific effective write rate?
+$$D = \frac{F \times R_{peak} \times T_{position}}{1 - F}$$:p How much data should LFS buffer before writing to achieve a specific effective write rate?
 ??x
-To determine the amount of data \(D\) that LFS should buffer, use the formula derived from balancing positioning overhead with transfer time:
+To determine the amount of data $D$ that LFS should buffer, use the formula derived from balancing positioning overhead with transfer time:
+$$D = \frac{F \times R_{peak} \times T_{position}}{1 - F}$$
 
-\[
-D = \frac{F \times R_{peak} \times T_{position}}{1 - F}
-\]
-
-For example, if we want 90% of peak write rate (\(F=0.9\)), a disk with \(T_{position}=10\) milliseconds and \(R_{peak}=100\) MB/s, the buffer size would be:
-
-\[
-D = \frac{0.9 \times 100MB/s \times 0.01seconds}{1 - 0.9} = 9MB
-\]
+For example, if we want 90% of peak write rate ($F=0.9 $), a disk with $ T_{position}=10 $milliseconds and$ R_{peak}=100$MB/s, the buffer size would be:
+$$D = \frac{0.9 \times 100MB/s \times 0.01seconds}{1 - 0.9} = 9MB$$
 
 This formula helps in optimizing the buffer size to approach peak write performance while considering positioning overhead.
 x??
@@ -299,28 +283,20 @@ Background context: The example provided calculates how much data should be buff
 
 :p Calculate how much data LFS should buffer if we want 95% of the peak bandwidth.
 ??x
-To find the amount of data \(D\) that needs to be buffered for a target effective write rate:
-
-\[
-D = \frac{F \times R_{peak} \times T_{position}}{1 - F}
-\]
+To find the amount of data $D$ that needs to be buffered for a target effective write rate:
+$$D = \frac{F \times R_{peak} \times T_{position}}{1 - F}$$
 
 Given:
-- \(F = 0.95\)
-- \(R_{peak} = 100\) MB/s
-- \(T_{position} = 10\) milliseconds
+- $F = 0.95 $-$ R_{peak} = 100$ MB/s
+- $T_{position} = 10$ milliseconds
 
 Substitute the values into the formula:
-
-\[
-D = \frac{0.95 \times 100MB/s \times 0.01seconds}{1 - 0.95} 
-\]
+$$D = \frac{0.95 \times 100MB/s \times 0.01seconds}{1 - 0.95}$$
 
 Calculate the result:
+$$
 
-\[
-D = \frac{0.95 \times 100MB/s \times 0.01seconds}{0.05} = 19MB
-\]
+D = \frac{0.95 \times 100MB/s \times 0.01seconds}{0.05} = 19MB$$
 
 Thus, LFS should buffer approximately 19 MB of data to achieve 95% of peak bandwidth.
 x??
@@ -332,28 +308,20 @@ Background context: This example extends the previous calculation to determine h
 
 :p Calculate how much data LFS should buffer if we want 99% of the peak bandwidth.
 ??x
-To find the amount of data \(D\) that needs to be buffered for a target effective write rate:
-
-\[
-D = \frac{F \times R_{peak} \times T_{position}}{1 - F}
-\]
+To find the amount of data $D$ that needs to be buffered for a target effective write rate:
+$$D = \frac{F \times R_{peak} \times T_{position}}{1 - F}$$
 
 Given:
-- \(F = 0.99\)
-- \(R_{peak} = 100\) MB/s
-- \(T_{position} = 10\) milliseconds
+- $F = 0.99 $-$ R_{peak} = 100$ MB/s
+- $T_{position} = 10$ milliseconds
 
 Substitute the values into the formula:
-
-\[
-D = \frac{0.99 \times 100MB/s \times 0.01seconds}{1 - 0.99}
-\]
+$$D = \frac{0.99 \times 100MB/s \times 0.01seconds}{1 - 0.99}$$
 
 Calculate the result:
+$$
 
-\[
-D = \frac{0.99 \times 100MB/s \times 0.01seconds}{0.01} = 99MB
-\]
+D = \frac{0.99 \times 100MB/s \times 0.01seconds}{0.01} = 99MB$$
 
 Thus, LFS should buffer approximately 99 MB of data to achieve 99% of peak bandwidth.
 x??
@@ -734,7 +702,7 @@ Background context: For efficient cleaning, LFS needs a mechanism to identify wh
 
 :p How does LFS determine the liveness of blocks within an on-disk segment?
 ??x
-LFS adds metadata to each segment to track block liveness. Specifically, for each data block \(D\) within a segment \(S\), it records the inode number (which file it belongs to) and its offset (its position in the file). This information is stored in the segment summary block at the head of the segment.
+LFS adds metadata to each segment to track block liveness. Specifically, for each data block $D $ within a segment$S$, it records the inode number (which file it belongs to) and its offset (its position in the file). This information is stored in the segment summary block at the head of the segment.
 x??
 
 ---

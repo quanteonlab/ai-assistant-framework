@@ -77,10 +77,10 @@ Background context explaining RBFs. Unlike binary features which are either pres
 
 :p What is the formula for calculating an RBF feature?
 ??x
-The formula for an RBF feature \( x_i(s) \) with respect to state \( s \), center state \( c_i \), and width \( \sigma_i \) is:
-\[ x_i(s) = e^{-\frac{\|s - c_i\|^2}{2\sigma_i^2}} \]
+The formula for an RBF feature $x_i(s)$ with respect to state $ s $, center state $ c_i$, and width $\sigma_i$ is:
+$$x_i(s) = e^{-\frac{\|s - c_i\|^2}{2\sigma_i^2}}$$
 
-This formula computes the Gaussian response of feature \( i \) at state \( s \). The value decreases as the distance from the center increases, creating a smooth transition.
+This formula computes the Gaussian response of feature $i $ at state$s$. The value decreases as the distance from the center increases, creating a smooth transition.
 
 ```java
 // Pseudocode for RBF calculation
@@ -139,21 +139,21 @@ x??
 ---
 
 #### Step-Size Parameter Selection for SGD
-Most stochastic gradient descent (SGD) methods require selecting an appropriate step-size parameter \( \alpha \). While theoretical considerations are limited in practical applicability, common choices like \( \alpha_t = 1/t \) are not suitable for all scenarios.
+Most stochastic gradient descent (SGD) methods require selecting an appropriate step-size parameter $\alpha $. While theoretical considerations are limited in practical applicability, common choices like $\alpha_t = 1/t$ are not suitable for all scenarios.
 
 :p How is the step-size parameter typically selected in SGD?
 ??x
-The step-size parameter \( \alpha \) in SGD is typically selected manually. Theoretical conditions suggest a slowly decreasing sequence, but such settings often result in overly slow learning. Common manual choices include \( \alpha = 1/t \), which works well for some algorithms like tabular Monte Carlo methods but may not be appropriate for others, especially nonstationary problems or those using function approximation.
+The step-size parameter $\alpha $ in SGD is typically selected manually. Theoretical conditions suggest a slowly decreasing sequence, but such settings often result in overly slow learning. Common manual choices include$\alpha = 1/t$, which works well for some algorithms like tabular Monte Carlo methods but may not be appropriate for others, especially nonstationary problems or those using function approximation.
 x??
 
 ---
 
 #### Intuition for Step-Size Selection
-For linear methods with recursive least squares (RLS), optimal matrix step sizes can be set. These can be extended to temporal difference learning as in the LSTD method, but they require \( O(d^2) \) parameters, making them impractical for large problems.
+For linear methods with recursive least squares (RLS), optimal matrix step sizes can be set. These can be extended to temporal difference learning as in the LSTD method, but they require $O(d^2)$ parameters, making them impractical for large problems.
 
 :p What are the challenges of using RLS for setting step-sizes?
 ??x
-Using recursive least squares (RLS) for setting step-sizes poses significant challenges, particularly when applied to large problems. RLS requires \( O(d^2) \) step-size parameters, which is \( d \) times more than the number of parameters being learned. This makes it impractical for large-scale function approximation scenarios.
+Using recursive least squares (RLS) for setting step-sizes poses significant challenges, particularly when applied to large problems. RLS requires $O(d^2)$ step-size parameters, which is $d$ times more than the number of parameters being learned. This makes it impractical for large-scale function approximation scenarios.
 x??
 
 ---
@@ -161,9 +161,9 @@ x??
 #### Manual Step-Size Intuition
 To set the step-size manually in a tabular case, you can use intuition based on experiences with states and their targets.
 
-:p How can we intuitively determine the step-size parameter \( \alpha \)?
+:p How can we intuitively determine the step-size parameter $\alpha$?
 ??x
-Intuitively, to determine the step-size parameter \( \alpha \), consider that a step size of \( \alpha = 1 \) results in complete elimination of sample error after one target. For more practical learning rates, you might set \( \alpha = 1/10 \) for about 10 experiences or \( \alpha = 1/100 \) for convergence within 100 experiences. Generally, if \( \alpha = 1/\tau \), the tabular estimate will approach the mean of its targets over about \( \tau \) experiences with a state.
+Intuitively, to determine the step-size parameter $\alpha $, consider that a step size of $\alpha = 1 $ results in complete elimination of sample error after one target. For more practical learning rates, you might set$\alpha = 1/10 $ for about 10 experiences or$\alpha = 1/100 $ for convergence within 100 experiences. Generally, if$\alpha = 1/\tau $, the tabular estimate will approach the mean of its targets over about $\tau$ experiences with a state.
 x??
 
 ---
@@ -185,23 +185,13 @@ Background context: The passage discusses using tile coding to transform a seven
 ??x
 To determine the appropriate step-size parameter (α), we need to consider the number of presentations (⌧) required before learning nears its asymptote. Given that you want learning to be gradual, taking about 10 presentations with the same feature vector before learning nears its asymptote, and using equation (9.19):
 
-\[
-\alpha = \frac{\Delta E}{\text{x}^T \text{x}} 
-\]
-
-where \(E\) is the expected value of a random feature vector chosen from the distribution of input vectors used in SGD.
+$$\alpha = \frac{\Delta E}{\text{x}^T \text{x}}$$where $ E$ is the expected value of a random feature vector chosen from the distribution of input vectors used in SGD.
 
 Given that you have 56 individual tilings and an additional 21 conjunctive tilings, making a total of 98 tilings. Assuming each tiling contributes equally to the variance (which can be approximated as constant for simplicity), we estimate:
+$$\text{x}^T \text{x} \approx 98$$
 
-\[
-\text{x}^T \text{x} \approx 98 
-\]
-
-And since you want learning over about 10 presentations, we can assume a learning rate that gradually converges. A common heuristic is setting \(E\) close to the number of presentations required, so:
-
-\[
-\alpha = \frac{10}{98} \approx 0.102 
-\]
+And since you want learning over about 10 presentations, we can assume a learning rate that gradually converges. A common heuristic is setting $E$ close to the number of presentations required, so:
+$$\alpha = \frac{10}{98} \approx 0.102$$
 
 Thus, you should use a step-size parameter (α) approximately equal to 0.102.
 
@@ -223,7 +213,7 @@ x??
 ---
 
 #### Semi-linear Units in Feedforward ANNs
-Background context: The passage mentions that units in feedforward ANNs are typically semi-linear, meaning they compute a weighted sum of their input signals and then apply a nonlinear activation function to produce the unit’s output. Commonly used activation functions include S-shaped or sigmoid functions like the logistic function \(f(x) = \frac{1}{1 + e^{-x}}\).
+Background context: The passage mentions that units in feedforward ANNs are typically semi-linear, meaning they compute a weighted sum of their input signals and then apply a nonlinear activation function to produce the unit’s output. Commonly used activation functions include S-shaped or sigmoid functions like the logistic function $f(x) = \frac{1}{1 + e^{-x}}$.
 
 :p What is an example of a semi-linear unit in feedforward ANNs?
 ??x
@@ -260,15 +250,12 @@ x??
 ---
 
 #### Logistic Function as Activation Function
-Background context: The passage mentions using S-shaped or sigmoid functions such as the logistic function \(f(x) = \frac{1}{1 + e^{-x}}\) for activation. This function maps any real-valued number into the range (0, 1), making it useful in scenarios where a binary decision is needed.
+Background context: The passage mentions using S-shaped or sigmoid functions such as the logistic function $f(x) = \frac{1}{1 + e^{-x}}$ for activation. This function maps any real-valued number into the range (0, 1), making it useful in scenarios where a binary decision is needed.
 
 :p What is the formula for the logistic function?
 ??x
-The formula for the logistic function \(f(x)\) is:
-
-\[
-f(x) = \frac{1}{1 + e^{-x}}
-\]
+The formula for the logistic function $f(x)$ is:
+$$f(x) = \frac{1}{1 + e^{-x}}$$
 
 This function maps any real-valued number to a value between 0 and 1, which can be interpreted as a probability. The logistic function has an S-shaped curve and is commonly used in binary classification problems.
 
@@ -277,15 +264,12 @@ x??
 ---
 
 #### Rectifier Nonlinearity
-Background context: In addition to the logistic function, the passage mentions that sometimes the rectifier nonlinearity \(f(x) = \max(0, x)\) is used as an activation function. This function returns 0 for any negative input and retains the value of positive inputs.
+Background context: In addition to the logistic function, the passage mentions that sometimes the rectifier nonlinearity $f(x) = \max(0, x)$ is used as an activation function. This function returns 0 for any negative input and retains the value of positive inputs.
 
 :p What is the rectifier nonlinearity (ReLU) and how does it work?
 ??x
 The rectifier nonlinearity, also known as ReLU (Rectified Linear Unit), works by returning 0 for any negative input and retaining the value of positive inputs. Mathematically, it can be represented as:
-
-\[
-f(x) = \max(0, x)
-\]
+$$f(x) = \max(0, x)$$
 
 This function is simple to compute and has been found to work well in many deep learning applications due to its simplicity and efficiency.
 
@@ -300,8 +284,7 @@ Background context explaining the concept. ANNs are used to approximate complex 
 Artificial Neural Networks (ANNs) are computational models inspired by biological neural networks, which consist of interconnected nodes or "neurons." These networks approximate complex functions through a series of layers: input, hidden, and output. Each neuron computes a weighted sum of its inputs, applies an activation function to this sum, and passes the result to the next layer.
 
 For instance, a simple feedforward ANN can be represented as:
-\[ \text{Output} = f(WX + b) \]
-where \( W \) is the weight matrix, \( X \) is the input vector, \( b \) is the bias vector, and \( f \) is the activation function.
+$$\text{Output} = f(WX + b)$$where $ W $is the weight matrix,$ X $is the input vector,$ b $ is the bias vector, and $ f$ is the activation function.
 
 :p Can you explain why ANNs with a single hidden layer can approximate any continuous function?
 ??x
@@ -348,8 +331,7 @@ Background context explaining the concept. The objective function is used to mea
 :p What is an objective function in the context of training ANNs?
 ??x
 An objective function, also known as a loss function or cost function, measures how well the neural network's predictions match the true values. For example, in regression tasks, mean squared error (MSE) might be used:
-\[ \text{MSE} = \frac{1}{N}\sum_{i=1}^{N}(y_i - \hat{y}_i)^2 \]
-where \( y_i \) is the true output and \( \hat{y}_i \) is the predicted output.
+$$\text{MSE} = \frac{1}{N}\sum_{i=1}^{N}(y_i - \hat{y}_i)^2$$where $ y_i $ is the true output and $\hat{y}_i$ is the predicted output.
 
 :p How does SGD work in minimizing an objective function?
 ??x
@@ -514,17 +496,17 @@ Batch normalization uses statistics from subsets (mini-batches) of training exam
 Batch normalization normalizes the outputs of deep layers during both the forward pass and backpropagation in a neural network. This process standardizes the inputs, making them more consistent, which can lead to faster training convergence.
 
 Here's how it works:
-1. For each mini-batch of data, compute the mean (\(\mu\)) and variance (\(\sigma^2\)).
+1. For each mini-batch of data, compute the mean ($\mu $) and variance ($\sigma^2$).
 2. Normalize the activations using these statistics.
-3. Scale and shift by learned parameters \(\gamma\) (scale) and \(\beta\) (shift).
+3. Scale and shift by learned parameters $\gamma $(scale) and $\beta$(shift).
 
 The formula for batch normalization is:
-\[ x_{\text{norm}} = \frac{x - \mu}{\sqrt{\sigma^2 + \epsilon}} \cdot \gamma + \beta \]
+$$x_{\text{norm}} = \frac{x - \mu}{\sqrt{\sigma^2 + \epsilon}} \cdot \gamma + \beta$$
 
 Where:
-- \(x\) is the input feature.
-- \(\mu\) and \(\sigma^2\) are the mean and variance of the mini-batch.
-- \(\epsilon\) is a small constant to avoid division by zero.
+- $x$ is the input feature.
+- $\mu $ and$\sigma^2$ are the mean and variance of the mini-batch.
+- $\epsilon$ is a small constant to avoid division by zero.
 
 Example implementation in Python:
 ```python
@@ -679,39 +661,33 @@ x??
 #### Estimation Formulas in LSTD
 Background context: In LSTD, estimates of matrices A and b are computed using sums over time steps, ensuring that these approximations can be updated incrementally.
 
-:p What formulas are used to estimate \( \mathbf{b}_A^t \) and \( \mathbf{b}^t \)?
+:p What formulas are used to estimate $\mathbf{b}_A^t $ and$\mathbf{b}^t$?
 ??x
-The formulas for estimating \( \mathbf{b}_A^t \) and \( \mathbf{b}^t \) in LSTD are given by:
-\[
-\mathbf{b}_{A,t} = \sum_{k=0}^{t-1} x_k (x_k - x_{k+1})^\top + \epsilon I
-\]
-\[
-\mathbf{b}^t = \sum_{k=0}^{t-1} R_{k+1} x_k
-\]
-where \( I \) is the identity matrix and \( \epsilon > 0 \) ensures that \( \mathbf{b}_A^t \) is always invertible.
+The formulas for estimating $\mathbf{b}_A^t $ and$\mathbf{b}^t$ in LSTD are given by:
+$$\mathbf{b}_{A,t} = \sum_{k=0}^{t-1} x_k (x_k - x_{k+1})^\top + \epsilon I$$
+$$\mathbf{b}^t = \sum_{k=0}^{t-1} R_{k+1} x_k$$where $ I $ is the identity matrix and $\epsilon > 0 $ ensures that$\mathbf{b}_A^t$ is always invertible.
 x??
 
 ---
 
 #### Computational Complexity of LSTD
-Background context: Despite potentially high initial complexity, LSTD can be made computationally efficient through incremental updates. The outer product in the computation of \( \mathbf{b}_{A,t} \) requires careful handling to maintain efficiency.
+Background context: Despite potentially high initial complexity, LSTD can be made computationally efficient through incremental updates. The outer product in the computation of $\mathbf{b}_{A,t}$ requires careful handling to maintain efficiency.
 
-:p What is the computational complexity of updating \( \mathbf{b}_A^t \)?
+:p What is the computational complexity of updating $\mathbf{b}_A^t$?
 ??x
-The update for \( \mathbf{b}_{A,t} \) involves an outer product, which has a computational complexity of O(d²). However, this can be managed incrementally using techniques from earlier chapters to ensure constant time per step.
+The update for $\mathbf{b}_{A,t}$ involves an outer product, which has a computational complexity of O(d²). However, this can be managed incrementally using techniques from earlier chapters to ensure constant time per step.
 x??
 
 ---
 
 #### Sherman-Morrison Formula Application
-Background context: The Sherman-Morrison formula is used to update the inverse matrix \( \mathbf{b}A^{-1}_t \) incrementally. This ensures that the inversion can be computed in O(d²) operations.
+Background context: The Sherman-Morrison formula is used to update the inverse matrix $\mathbf{b}A^{-1}_t$ incrementally. This ensures that the inversion can be computed in O(d²) operations.
 
 :p How does LSTD use the Sherman-Morrison formula?
 ??x
-LSTD uses the Sherman-Morrison formula to maintain and compute the inverse of \( \mathbf{b}_{A,t} \). The update is given by:
-\[
-\mathbf{b}A^{-1}_t = (\mathbf{b}A^{-1}_{t-1} + x_t (x_t - x_{t+1})^\top)^{-1}
-\]
+LSTD uses the Sherman-Morrison formula to maintain and compute the inverse of $\mathbf{b}_{A,t}$. The update is given by:
+$$\mathbf{b}A^{-1}_t = (\mathbf{b}A^{-1}_{t-1} + x_t (x_t - x_{t+1})^\top)^{-1}$$
+
 This allows for efficient incremental updates of the inverse matrix.
 x??
 
@@ -722,10 +698,9 @@ Background context: The final step in LSTD involves using the computed matrices 
 
 :p How is the TD fixed point estimated in LSTD?
 ??x
-The TD fixed point \( \mathbf{w}_t \) in LSTD is estimated by:
-\[
-\mathbf{w}_t = (\mathbf{b}_{A,t}^{-1})^\top \mathbf{b}^t
-\]
+The TD fixed point $\mathbf{w}_t$ in LSTD is estimated by:
+$$\mathbf{w}_t = (\mathbf{b}_{A,t}^{-1})^\top \mathbf{b}^t$$
+
 This step uses the incremental updates to efficiently compute the fixed point without iterative methods.
 x??
 
@@ -746,7 +721,7 @@ Background context: LSTD’s lack of a step-size parameter can be an advantage b
 
 :p What are the potential issues with using LSTD in reinforcement learning scenarios?
 ??x
-In reinforcement learning, particularly for methods like GPI where the target policy \( \pi \) changes over time, LSTD’s inability to forget previous data can be problematic. While this property is sometimes desirable, it can hinder adaptability when the environment or policy conditions change.
+In reinforcement learning, particularly for methods like GPI where the target policy $\pi$ changes over time, LSTD’s inability to forget previous data can be problematic. While this property is sometimes desirable, it can hinder adaptability when the environment or policy conditions change.
 x??
 
 ---
@@ -757,7 +732,7 @@ Background context: This section discusses on-policy prediction, which involves 
 
 :p What is the purpose of LSTD in on-policy prediction?
 ??x
-The purpose of LSTD in on-policy prediction is to estimate the value function \( \hat{v} = w^T x(\cdot|\pi)\ ) for a given policy \( \pi \) using linear approximation methods. The goal is to minimize the error between predicted and actual values by adjusting parameters based on feature representations.
+The purpose of LSTD in on-policy prediction is to estimate the value function $\hat{v} = w^T x(\cdot|\pi)\ ) for a given policy \( \pi$ using linear approximation methods. The goal is to minimize the error between predicted and actual values by adjusting parameters based on feature representations.
 x??
 
 ---
@@ -790,7 +765,7 @@ Background context: One simple form of memory-based function approximation is th
 
 :p How does the nearest neighbor method work?
 ??x
-The nearest neighbor method works by finding the training example in memory where the state is closest to the query state and returning that example’s value as the approximate value for the query state. If the query state is \( s \), and \( s_0 \) is the example in memory whose state is closest to \( s \), then \( g(s_0) \) is returned as the approximate value of \( s \).
+The nearest neighbor method works by finding the training example in memory where the state is closest to the query state and returning that example’s value as the approximate value for the query state. If the query state is $s $, and $ s_0 $ is the example in memory whose state is closest to $ s $, then$ g(s_0)$is returned as the approximate value of $ s$.
 x??
 
 ---
@@ -834,7 +809,7 @@ Background context: The curse of dimensionality refers to the exponential growth
 
 :p How do memory-based methods address the curse of dimensionality?
 ??x
-Memory-based methods address the curse of dimensionality by storing examples for each state or state-action pair, requiring only linear memory proportional to the number of states \( n \) and not exponentially with the number of dimensions \( k \). This makes them more efficient in high-dimensional spaces.
+Memory-based methods address the curse of dimensionality by storing examples for each state or state-action pair, requiring only linear memory proportional to the number of states $n $ and not exponentially with the number of dimensions$k$. This makes them more efficient in high-dimensional spaces.
 x??
 
 ---

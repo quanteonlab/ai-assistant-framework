@@ -112,7 +112,7 @@ Yes, Williams can raise the universal defense of material alteration. According 
 - The other parties had knowledge before the transaction was made or gave consent in writing.
 - The other parties are notified immediately upon learning of the alteration.
 
-In this case, Stein altered the check to increase its amount from $1,000 to $10,000. Boz took the check for value, in good faith, and without notice of the alteration, making him a holder in due course (HDC). Therefore, Williams can assert that the material alteration nullifies his liability.
+In this case, Stein altered the check to increase its amount from $1,000 to$10,000. Boz took the check for value, in good faith, and without notice of the alteration, making him a holder in due course (HDC). Therefore, Williams can assert that the material alteration nullifies his liability.
 
 ```java
 // Pseudocode for understanding material alterations
@@ -332,7 +332,7 @@ Background context: When a check is altered, the bank has an implicit duty to ex
 ??x
 If a bank fails to detect an alteration on a check, it is liable to its customer for the loss because it did not pay as the customer ordered. The bank’s liability is the difference between the original amount of the check and the altered amount.
 
-Explanation: For example, if Hailey Lyonne writes a check for $11 but it is altered to $111 by someone else, her account will be charged $11 (the amount she ordered), while the bank is responsible for the remaining $100.
+Explanation: For example, if Hailey Lyonne writes a check for $11 but it is altered to $111 by someone else, her account will be charged $11 (the amount she ordered), while the bank is responsible for the remaining$100.
 
 ```java
 // Pseudocode for calculating bank's liability due to alteration

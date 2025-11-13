@@ -5,7 +5,7 @@
 ---
 
 #### Chaotic Pendulum Analysis
-Background context: The chaotic behavior of a driven pendulum, particularly when it has one-, three-, and five-cycle structures, involves analyzing its Fourier components to understand the periodic behaviors and transitions between them. The natural frequency \(\omega_0\) and driving frequency \(\omega\) play crucial roles in determining these behaviors.
+Background context: The chaotic behavior of a driven pendulum, particularly when it has one-, three-, and five-cycle structures, involves analyzing its Fourier components to understand the periodic behaviors and transitions between them. The natural frequency $\omega_0 $ and driving frequency$\omega$ play crucial roles in determining these behaviors.
 
 :p What is the goal of this analysis?
 ??x
@@ -30,7 +30,7 @@ Background context: The double pendulum system has two coupled degrees of freedo
 :p What are the key differences between a simple pendulum and a double pendulum?
 ??x
 Key differences include:
-- A double pendulum has two coupled degrees of freedom (\(\theta_1\) and \(\theta_2\)).
+- A double pendulum has two coupled degrees of freedom ($\theta_1 $ and$\theta_2$).
 - It can exhibit chaotic behavior, even without external driving forces.
 - The Lagrangian formulation accounts for the coupling between the two motions.
 x??
@@ -152,9 +152,9 @@ x??
 Background context: You need to determine the scattering angle as a function of impact parameter and then plot the discontinuities in this relationship. This involves detailed analysis of how particles scatter off disks and the resulting changes in their trajectory angles.
 :p What is the task for determining and plotting the discontinuities in d𝜃/db?
 ??x
-The task requires computing the scattering angle \(\theta\) as a function of the impact parameter \(b\), where \(b = y_0 - y_c\) (the vertical distance from the center of the disk to the initial position of the particle). You need to determine this for each particle that exits the interaction region with minimal energy loss, i.e., when the potential energy divided by total energy is less than or equal to 10^-10.
+The task requires computing the scattering angle $\theta $ as a function of the impact parameter$b $, where$ b = y_0 - y_c$(the vertical distance from the center of the disk to the initial position of the particle). You need to determine this for each particle that exits the interaction region with minimal energy loss, i.e., when the potential energy divided by total energy is less than or equal to 10^-10.
 
-Once \(\theta\) is calculated as a function of \(b\), you can plot \(\sigma(\theta) = \left| \frac{d\theta}{db} \right|\) versus \(b \sin(\theta)\). This will help identify any discontinuities or sharp changes in the scattering angle.
+Once $\theta $ is calculated as a function of$b $, you can plot $\sigma(\theta) = \left| \frac{d\theta}{db} \right|$ versus $b \sin(\theta)$. This will help identify any discontinuities or sharp changes in the scattering angle.
 
 Here's how to implement this:
 ```python
@@ -188,11 +188,7 @@ Background context: The Lorenz attractor is a classic example of chaotic behavio
 ??x
 The task involves setting up an ODE solver to handle three simultaneous differential equations representing the Lorenz attractor:
 
-1. \( \dot{x} = \sigma (y - x) \)
-2. \( \dot{y} = x (\rho - z) - y \)
-3. \( \dot{z} = -\beta z + xy \)
-
-Where \(\sigma, \rho,\) and \(\beta\) are parameters with specific values.
+1. $\dot{x} = \sigma (y - x)$2.$\dot{y} = x (\rho - z) - y $3.$\dot{z} = -\beta z + xy $ Where$\sigma, \rho,$ and $\beta$ are parameters with specific values.
 
 You need to ensure the solver uses a sufficiently small step size for accurate results and avoid numerical errors.
 ```python
@@ -240,12 +236,10 @@ x??
 Background context: The phase space plots of the Lorenz attractor provide a visual representation of how trajectories evolve over time. These plots can reveal the characteristic "butterfly" shape associated with chaos.
 :p What are the steps to create 2D and 3D phase space plots for the Lorenz attractor?
 ??x
-To create the phase space plots, you need to plot the state variables \(x\), \(y\), and \(z\) against each other. The 2D phase space plots will show how these variables evolve with respect to each other over time.
+To create the phase space plots, you need to plot the state variables $x $, $ y $, and$ z$ against each other. The 2D phase space plots will show how these variables evolve with respect to each other over time.
 
 For example:
-1. Plot \(z(t)\) vs. \(x(t)\)
-2. Plot \(y(t)\) vs. \(x(t)\) and \(y(t)\) vs. \(z(t)\)
-3. Create a 3D plot of \(x(t)\), \(y(t)\), and \(z(t)\)
+1. Plot $z(t)$ vs.$ x(t)$2. Plot $ y(t)$ vs.$ x(t)$and $ y(t)$ vs.$ z(t)$3. Create a 3D plot of $ x(t)$,$ y(t)$, and $ z(t)$
 
 Here's how to implement this:
 ```python
@@ -293,15 +287,15 @@ x??
 Background context: The chaotic behavior of the Lorenz attractor is highly sensitive to initial conditions and parameters. This property can be exploited to explore how small changes in parameters lead to different dynamical behaviors.
 :p How can you check if the given parameters lead to chaotic solutions?
 ??x
-To verify that the given parameters (\(\sigma=10\), \(\beta=\frac{8}{3}\), and \(\rho=28\)) indeed produce chaotic behavior, you need to make small changes to these parameters and observe if it eventually leads to different solutions.
+To verify that the given parameters ($\sigma=10 $, $\beta=\frac{8}{3}$, and $\rho=28$) indeed produce chaotic behavior, you need to make small changes to these parameters and observe if it eventually leads to different solutions.
 
 Here’s a step-by-step approach:
 1. Run the simulation with the given parameters.
-2. Make minor adjustments to one of the parameters (e.g., change \(\sigma\) by 0.1).
+2. Make minor adjustments to one of the parameters (e.g., change $\sigma$ by 0.1).
 3. Re-run the simulation with the new parameter values.
 4. Compare the results and check if they differ significantly.
 
-For instance, you can modify \(\sigma\) slightly:
+For instance, you can modify $\sigma$ slightly:
 ```python
 # Change sigma by a small amount
 new_sigma = 10.1
@@ -321,20 +315,21 @@ x??
 
 #### Van der Pol Oscillator
 Background context: The van der Pol oscillator is a nonlinear oscillator that exhibits self-sustained oscillations. It is described by the differential equation:
-\[ \frac{d^2 x}{dt^2} + \mu(x^2 - x_0^2) \frac{dx}{dt} + \omega_0^2 x = 0. \]
-The term \( \mu(x^2 - x_0^2) \frac{dx}{dt} \) represents a nonlinear damping force, which is dependent on the amplitude of the oscillator.
+$$\frac{d^2 x}{dt^2} + \mu(x^2 - x_0^2) \frac{dx}{dt} + \omega_0^2 x = 0.$$
+
+The term $\mu(x^2 - x_0^2) \frac{dx}{dt}$ represents a nonlinear damping force, which is dependent on the amplitude of the oscillator.
 
 :p Explain why (16.25) describes an oscillator with x-dependent damping.
 ??x
-This equation describes an x-dependent damping because the term \( \mu(x^2 - x_0^2) \frac{dx}{dt} \) includes a nonlinear factor that depends on the amplitude of the oscillation \( x \). The coefficient \( \mu \) scales the damping force, and when \( x = x_0 \), the damping vanishes. This results in a more complex behavior compared to linear systems.
+This equation describes an x-dependent damping because the term $\mu(x^2 - x_0^2) \frac{dx}{dt}$ includes a nonlinear factor that depends on the amplitude of the oscillation $ x $. The coefficient $\mu $ scales the damping force, and when $x = x_0$, the damping vanishes. This results in a more complex behavior compared to linear systems.
 x??
 
 ---
 
 #### Phasespace Plots for Van der Pol Oscillator
-Background context: Phasespace plots are useful tools for visualizing the behavior of dynamical systems. For the van der Pol oscillator, we plot \( \dot{x} \) (the time derivative of \( x \)) versus \( x \).
+Background context: Phasespace plots are useful tools for visualizing the behavior of dynamical systems. For the van der Pol oscillator, we plot $\dot{x}$(the time derivative of $ x$) versus $ x$.
 
-:p Create phasespace plots \( \dot{x}(t) \) versus \( x(t) \).
+:p Create phasespace plots $\dot{x}(t)$ versus $x(t)$.
 ??x
 To create these plots, you would numerically integrate the van der Pol equation using a method like Runge-Kutta. The plot will show how the state of the system evolves over time in phase space.
 
@@ -373,7 +368,8 @@ x??
 
 #### Duffing Oscillator
 Background context: The Duffing oscillator is a driven, damped nonlinear system. It is described by the differential equation:
-\[ \frac{d^2 x}{dt^2} = -2\gamma \frac{dx}{dt} - \alpha x - \beta x^3 + F \cos(\omega t). \]
+$$\frac{d^2 x}{dt^2} = -2\gamma \frac{dx}{dt} - \alpha x - \beta x^3 + F \cos(\omega t).$$
+
 This model includes both linear and cubic damping terms, as well as a driving force.
 
 :p Modify your ODE solver to solve (16.26).
@@ -440,10 +436,11 @@ x??
 
 #### Ueda Oscillator
 Background context: The Ueda oscillator is another form of a forced Duffing oscillator. It is described by the same equation but with specific parameter values:
-\[ \frac{d^2 x}{dt^2} = -2\gamma \frac{dx}{dt} - \alpha x - \beta x^3 + F \cos(\omega t). \]
-For modeling an Ueda oscillator, \( \omega = 1.0 \) and \( \alpha = 0 \).
+$$\frac{d^2 x}{dt^2} = -2\gamma \frac{dx}{dt} - \alpha x - \beta x^3 + F \cos(\omega t).$$
 
-:p Change your parameters to \(\omega=1\) and \(\alpha=0\).
+For modeling an Ueda oscillator,$\omega = 1.0 $ and$\alpha = 0$.
+
+:p Change your parameters to $\omega=1 $ and$\alpha=0$.
 ??x
 To model the Ueda oscillator with the specified parameters, you can update the parameter values in your Duffing oscillator function:
 ```python
@@ -482,7 +479,7 @@ Background context: The provided code simulates the motion of a particle inside 
 ??x
 The code simulates the motion of a ball on a square billiard table by tracking its position and velocity over time, adjusting based on collisions at the edges. The key steps are:
 
-1. Set initial conditions: Position \( (Xo, Yo) \), initial velocity \( v \).
+1. Set initial conditions: Position $(Xo, Yo)$, initial velocity $ v$.
 2. Define the boundaries.
 3. Use a loop to update the ball's position over discrete time steps.
 

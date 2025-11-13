@@ -5,7 +5,7 @@
 ---
 
 #### Entropy
-Background context explaining the concept of entropy and its relation to information. The formula for entropy is given as \(H = -\sum p_i \log_2(p_i)\), where \(p_i\) represents the probability of a token.
+Background context explaining the concept of entropy and its relation to information. The formula for entropy is given as $H = -\sum p_i \log_2(p_i)$, where $ p_i$ represents the probability of a token.
 
 :p What is entropy in the context of language models?
 ??x
@@ -34,7 +34,7 @@ x??
 ---
 
 #### Cross Entropy
-Background context explaining the concept of cross entropy and its relevance to language models. The formula for cross entropy is given as \(H(P||Q) = -\sum p_i \log_2(q_i)\), where \(P\) represents the true distribution of training data, and \(Q\) is the distribution learned by the model.
+Background context explaining the concept of cross entropy and its relevance to language models. The formula for cross entropy is given as $H(P||Q) = -\sum p_i \log_2(q_i)$, where $ P$represents the true distribution of training data, and $ Q$ is the distribution learned by the model.
 
 :p What does cross entropy measure in a language model?
 ??x
@@ -91,7 +91,7 @@ Background context explaining the concept of BPC and its relation to entropy and
 
 :p What is bits-per-character in language models?
 ??x
-Bits-Per-Character (BPC) measures how many bits are required on average to represent a character, based on the distribution learned by the model. It can be calculated as \(\text{BPC} = -\frac{\log_2(P(x_{i+1}|x_i))}{n}\), where \(P(x_{i+1}|x_i)\) is the probability of the next token given a context, and \(n\) is the number of tokens.
+Bits-Per-Character (BPC) measures how many bits are required on average to represent a character, based on the distribution learned by the model. It can be calculated as $\text{BPC} = -\frac{\log_2(P(x_{i+1}|x_i))}{n}$, where $ P(x_{i+1}|x_i)$is the probability of the next token given a context, and $ n$ is the number of tokens.
 ```java
 public class BPCExample {
     public static double calculateBPC(double crossEntropy, int nTokens) {
@@ -115,7 +115,7 @@ Background context explaining the concept of BPB and its relation to BPC.
 
 :p What is bits-per-byte in language models?
 ??x
-Bits-Per-Byte (BPB) measures how many bits are required on average to represent a byte, based on the distribution learned by the model. It can be calculated as \(\text{BPB} = -\frac{\log_2(P(x_{i+1}|x_i))}{n/8}\), where \(P(x_{i+1}|x_i)\) is the probability of the next token given a context, and \(n\) is the number of bytes in the dataset.
+Bits-Per-Byte (BPB) measures how many bits are required on average to represent a byte, based on the distribution learned by the model. It can be calculated as $\text{BPB} = -\frac{\log_2(P(x_{i+1}|x_i))}{n/8}$, where $ P(x_{i+1}|x_i)$is the probability of the next token given a context, and $ n$ is the number of bytes in the dataset.
 ```java
 public class BPBExample {
     public static double calculateBPB(double crossEntropy, int nBytes) {
@@ -136,21 +136,23 @@ x??
 
 ---
 #### Cross Entropy and Kullback-Leibler Divergence
-Cross entropy is a measure of the difference between two probability distributions. It quantifies how much one distribution (Q) deviates from another reference distribution (P). The formula for cross entropy \( H(P, Q) \) with respect to P is given by:
-\[ H(P, Q) = -\sum_{x} P(x) \log Q(x) \]
+Cross entropy is a measure of the difference between two probability distributions. It quantifies how much one distribution (Q) deviates from another reference distribution (P). The formula for cross entropy $H(P, Q)$ with respect to P is given by:
+$$H(P, Q) = -\sum_{x} P(x) \log Q(x)$$
 
 The Kullback-Leibler (KL) divergence measures the difference between these distributions in a way that is not symmetric. It quantifies how one probability distribution diverges from a second, expected probability distribution and is given by:
-\[ D_{KL}(P || Q) = H(P, Q) - H(P) \]
+$$
 
-The cross entropy isn't symmetric; \( H(P, Q) \neq H(Q, P) \). The KL divergence of Q with respect to P is:
-\[ D_{KL}(P || Q) = \sum_{x} P(x) \log \left( \frac{P(x)}{Q(x)} \right) \]
+D_{KL}(P || Q) = H(P, Q) - H(P)$$
+
+The cross entropy isn't symmetric;$H(P, Q) \neq H(Q, P)$. The KL divergence of Q with respect to P is:
+$$D_{KL}(P || Q) = \sum_{x} P(x) \log \left( \frac{P(x)}{Q(x)} \right)$$
 
 A language model trained to minimize its cross entropy with respect to the training data will approximate the true distribution of the training data. If it learns perfectly, the cross entropy would match the entropy of the training data, and the KL divergence would be 0.
 
-:p What is the formula for cross entropy \( H(P, Q) \)?
+:p What is the formula for cross entropy $H(P, Q)$?
 ??x
 The formula for cross entropy between two probability distributions P and Q is:
-\[ H(P, Q) = -\sum_{x} P(x) \log Q(x) \]
+$$H(P, Q) = -\sum_{x} P(x) \log Q(x)$$
 
 This quantifies how much distribution Q deviates from the reference distribution P.
 x??
@@ -161,9 +163,9 @@ Cross entropy measures the difficulty for a model to predict the next token in a
 
 :p How does cross entropy and KL divergence differ in their application?
 ??x
-Cross entropy \( H(P, Q) \) measures how well a model predicts the next token. It quantifies the expected number of bits required to encode messages generated by P using codes optimized for Q.
+Cross entropy $H(P, Q)$ measures how well a model predicts the next token. It quantifies the expected number of bits required to encode messages generated by P using codes optimized for Q.
 
-KL Divergence \( D_{KL}(P || Q) \), on the other hand, measures the difference between two probability distributions. Specifically, it tells us how much information is needed to change distribution Q to match P.
+KL Divergence $D_{KL}(P || Q)$, on the other hand, measures the difference between two probability distributions. Specifically, it tells us how much information is needed to change distribution Q to match P.
 x??
 
 ---
@@ -171,15 +173,13 @@ x??
 Bits per character (BPC) measures the efficiency of a language model in representing each token as bits. It helps compare models that use different tokenization methods.
 
 For example, if a model has a cross entropy of 6 bits and each token on average consists of 2 characters:
-\[ \text{BPC} = \frac{\text{Cross Entropy (bits)}}{\text{Average Characters per Token}} \]
+$$\text{BPC} = \frac{\text{Cross Entropy (bits)}}{\text{Average Characters per Token}}$$
 
 If BPC is 3 and ASCII encoding uses 7 bits, the bits-per-byte (BPB) can be calculated as:
-\[ \text{BPB} = \frac{\text{Bits per Character}}{\text{Bits per Character in Encoding Scheme}} \]
-
-:p What is the formula for calculating Bits-per-Character (BPC)?
+$$\text{BPB} = \frac{\text{Bits per Character}}{\text{Bits per Character in Encoding Scheme}}$$:p What is the formula for calculating Bits-per-Character (BPC)?
 ??x
 The formula for calculating Bits-per-Character (BPC) is:
-\[ \text{BPC} = \frac{\text{Cross Entropy (bits)}}{\text{Average Characters per Token}} \]
+$$\text{BPC} = \frac{\text{Cross Entropy (bits)}}{\text{Average Characters per Token}}$$
 
 This metric helps in understanding how efficiently a language model can represent text.
 x??
@@ -187,18 +187,22 @@ x??
 ---
 #### Perplexity
 Perplexity measures the uncertainty or surprise of a model's predictions. It is derived from cross entropy and is defined as:
-\[ PPL(P) = 2^{H(P)} \]
-For a dataset with true distribution \(P\) and learned distribution \(Q\):
-\[ PPL(P, Q) = 2^{H(P, Q)} \]
+$$
+
+PPL(P) = 2^{H(P)}$$
+
+For a dataset with true distribution $P $ and learned distribution$Q$:
+$$PPL(P, Q) = 2^{H(P, Q)}$$
 
 Perplexity provides insight into the model's uncertainty when predicting the next token in a sequence.
 
 :p What is the formula for Perplexity?
 ??x
 The formula for Perplexity is:
-\[ \text{PPL} = 2^{\text{Cross Entropy}} \]
-For a dataset with true distribution \( P \) and learned distribution \( Q \):
-\[ \text{PPL}(P, Q) = 2^{H(P, Q)} \]
+$$\text{PPL} = 2^{\text{Cross Entropy}}$$
+
+For a dataset with true distribution $P $ and learned distribution$Q$:
+$$\text{PPL}(P, Q) = 2^{H(P, Q)}$$
 
 Perplexity measures the uncertainty of predictions, making it useful in evaluating how well a model can predict sequences.
 x??
@@ -206,21 +210,19 @@ x??
 ---
 
 #### Bit vs. Nat for Entropy and Cross Entropy
-Background context explaining the concept. The text discusses the use of bits and nats as units for measuring entropy and cross entropy. Bits represent 2 unique values, while nats use the base \(e\). Popular frameworks like TensorFlow and PyTorch use nats.
+Background context explaining the concept. The text discusses the use of bits and nats as units for measuring entropy and cross entropy. Bits represent 2 unique values, while nats use the base $e$. Popular frameworks like TensorFlow and PyTorch use nats.
 :p What are the differences between using bits and nats in measuring entropy and cross entropy?
 ??x
-Bits and nats are used to measure entropy and cross entropy differently due to their bases. Bits are based on a binary system (base 2), which means each bit can represent two unique values, \(0\) or \(1\). In contrast, nats use the natural logarithm base \(e \approx 2.718\).
+Bits and nats are used to measure entropy and cross entropy differently due to their bases. Bits are based on a binary system (base 2), which means each bit can represent two unique values, $0 $ or$1 $. In contrast, nats use the natural logarithm base $ e \approx 2.718$.
 
-Using bits for these measurements involves calculations with base 2 logarithms, while using nats involves calculations with the natural logarithm (base \(e\)). For example:
-- Entropy in bits: \(H(X) = -\sum_{i} p(x_i) \log_2(p(x_i))\)
-- Entropy in nats: \(H(X) = -\sum_{i} p(x_i) \ln(p(x_i))\)
-
-Consequently, perplexity calculations differ based on the unit used. When using bits, perplexity is given by:
-\[ PPL(P,Q) = 2^{H(P,Q)} \]
+Using bits for these measurements involves calculations with base 2 logarithms, while using nats involves calculations with the natural logarithm (base $e$). For example:
+- Entropy in bits: $H(X) = -\sum_{i} p(x_i) \log_2(p(x_i))$- Entropy in nats:$ H(X) = -\sum_{i} p(x_i) \ln(p(x_i))$ Consequently, perplexity calculations differ based on the unit used. When using bits, perplexity is given by:
+$$PPL(P,Q) = 2^{H(P,Q)}$$
 
 However, when using nats, perplexity becomes:
-\[ PPL(P,Q) = e^{H(P,Q)} \]
-x??
+$$
+
+PPL(P,Q) = e^{H(P,Q)}$$x??
 
 ---
 
@@ -360,12 +362,13 @@ x??
 #### Perplexity Calculation for Language Models
 Background context: Perplexity is a measure used to evaluate how well a language model predicts a given sequence of tokens. It provides insight into the complexity of generating a particular piece of text. The lower the perplexity, the better the model's performance.
 Relevant formula:
-\[ P(x_1,x_2,...,x_n) = \left( \prod_{i=1}^{n} \frac{1}{P(x_i|x_1,...,x_{i-1})} \right)^{\frac{1}{n}} \]
-where \(P(xi|xi−1)\) is the probability that the model assigns to the token \(xi\) given the previous tokens.
+$$
+
+P(x_1,x_2,...,x_n) = \left( \prod_{i=1}^{n} \frac{1}{P(x_i|x_1,...,x_{i-1})} \right)^{\frac{1}{n}}$$where $ P(xi|xi−1)$is the probability that the model assigns to the token $ xi$ given the previous tokens.
 
 :p How do you calculate the perplexity of a sequence using a language model?
 ??x
-To calculate the perplexity, you need to compute the product of the reciprocal probabilities of each token in the sequence conditioned on all preceding tokens. This is then raised to the power of \(\frac{1}{n}\), where \(n\) is the length of the sequence.
+To calculate the perplexity, you need to compute the product of the reciprocal probabilities of each token in the sequence conditioned on all preceding tokens. This is then raised to the power of $\frac{1}{n}$, where $ n$ is the length of the sequence.
 ```java
 public class PerplexityCalculator {
     public double calculatePerplexity(List<String> tokens, LanguageModel model) {
@@ -765,9 +768,9 @@ x??
 
 Background context explaining the concept. Include any relevant formulas or data here.
 
-The similarity between two embeddings can be computed using metrics such as cosine similarity. Two embeddings that are exactly the same have a similarity score of 1. Two opposite embeddings have a similarity score of –1. Mathematically, let A be an embedding of the generated response, and B be an embedding of a reference response. The cosine similarity between A and B is computed as \(\frac{A·B}{||A|| ||B||}\), with:
-- \(A·B\) being the dot product of A and B
-- \(||A||\) being the Euclidean norm (also known as L2 norm) of A.
+The similarity between two embeddings can be computed using metrics such as cosine similarity. Two embeddings that are exactly the same have a similarity score of 1. Two opposite embeddings have a similarity score of –1. Mathematically, let A be an embedding of the generated response, and B be an embedding of a reference response. The cosine similarity between A and B is computed as $\frac{A·B}{||A|| ||B||}$, with:
+- $A·B$ being the dot product of A and B
+- $||A||$ being the Euclidean norm (also known as L2 norm) of A.
 
 :p How do you calculate cosine similarity between two embeddings?
 ??x

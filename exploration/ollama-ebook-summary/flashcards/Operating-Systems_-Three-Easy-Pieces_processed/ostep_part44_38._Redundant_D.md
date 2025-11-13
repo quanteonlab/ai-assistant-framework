@@ -170,15 +170,12 @@ Background context explaining how to map logical blocks to physical locations us
 
 :p Given a logical block address A, how can we determine the correct disk and offset?
 ??x
-Given a logical block address \(A\), we can calculate the desired disk and offset with the following simple equations:
-- Disk = \(A \% \text{number_of_disks}\)
-- Offset = \(A / \text{number_of_disks}\)
-
-Here, `%%` denotes integer division.
+Given a logical block address $A$, we can calculate the desired disk and offset with the following simple equations:
+- Disk = $A \% \text{number_of_disks}$- Offset =$ A / \text{number_of_disks}$ Here, `%%` denotes integer division.
 
 For example, if a request arrives for block 14 on four disks, we compute:
-- Disk: \(14 \% 4 = 2\), so the disk is 2.
-- Offset: \(14 / 4 = 3\), so the offset within the disk is 3 (since indexing starts at 0).
+- Disk:$14 \% 4 = 2$, so the disk is 2.
+- Offset: $14 / 4 = 3$, so the offset within the disk is 3 (since indexing starts at 0).
 
 Thus, block 14 should be found on the fourth block (block 3, starting at 0) of the third disk (disk 2, starting at 0).
 ??x
@@ -204,22 +201,16 @@ Background context explaining how the equations change with different chunk size
 
 :p How would we modify the equation for chunk size = 1 block (4KB) if we were to support larger chunk sizes?
 ??x
-For a larger chunk size, say \(C\) blocks per stripe:
-- Disk = \(A \% \text{number_of_disks}\)
-- Offset = \((A / C) \% \text{number_of_disks}\)
-
-For example, with a chunk size of 2 blocks (8KB):
-- Disk = \(14 \% 4 = 2\)
-- Offset = \((14 / 2) \% 4 = 7 \% 4 = 3\)
-
-This indicates that block 14 is on the fourth block (block 3, starting at 0) of the third disk (disk 2, starting at 0).
+For a larger chunk size, say $C$ blocks per stripe:
+- Disk =$A \% \text{number_of_disks}$- Offset =$(A / C) \% \text{number_of_disks}$ For example, with a chunk size of 2 blocks (8KB):
+- Disk =$14 \% 4 = 2 $- Offset =$(14 / 2) \% 4 = 7 \% 4 = 3$ This indicates that block 14 is on the fourth block (block 3, starting at 0) of the third disk (disk 2, starting at 0).
 ??x
 
 #### RAID-0 Striping Capacity, Reliability, and Performance
 Background context explaining the concept of RAID-0 striping. RAID-0 is a technique for combining multiple disks into an array to increase read and write performance by spreading data across all disks simultaneously. It provides no redundancy; if any disk fails, the entire array becomes unusable.
 
 From the perspective of capacity:
-- Given N disks each of size B blocks, striping delivers \(N \times B\) blocks of useful capacity.
+- Given N disks each of size B blocks, striping delivers $N \times B$ blocks of useful capacity.
 
 From the standpoint of reliability:
 - Any single disk failure will result in complete data loss for the RAID-0 array. This is because there's no redundancy mechanism to recover the lost data.
@@ -228,7 +219,7 @@ From performance:
 - All disks are utilized, often in parallel, to service user I/O requests, making it ideal for high-performance environments.
 :p What is the primary advantage of RAID-0 from a capacity standpoint?
 ??x
-RAID-0 provides full capacity utilization by combining multiple disks without any overhead. If you have N disks each of size B blocks, the total usable capacity is \(N \times B\).
+RAID-0 provides full capacity utilization by combining multiple disks without any overhead. If you have N disks each of size B blocks, the total usable capacity is $N \times B$.
 x??
 
 ---
@@ -274,7 +265,7 @@ x??
 #### Disk Transfer Rate under Different Workload Types
 Background context explaining how disks perform differently under sequential versus random access.
 
-A disk can transfer data at \(S\) MB/s under a sequential workload but only \(R\) MB/s when under a random workload. This difference is due to the nature of seeks and rotations required for random access compared to continuous rotation in sequential access.
+A disk can transfer data at $S $ MB/s under a sequential workload but only$R$ MB/s when under a random workload. This difference is due to the nature of seeks and rotations required for random access compared to continuous rotation in sequential access.
 
 :p How does a disk's performance differ between sequential and random workloads?
 ??x
@@ -287,11 +278,10 @@ x??
 
 Background context explaining the concept. Given disk characteristics, we calculate sequential (S) and random (R) access bandwidths to understand how striping works. The calculations involve seeking time, rotational delay, and transfer rate.
 
-:p What is \( S \) in this context?
-??x
-\( S \), or sequential bandwidth, is calculated by considering the total time taken for a 10 MB sequential read operation. This includes seek time (7 ms), rotation wait (3 ms), and data transfer time (200 ms). Thus, the formula is:
+:p What is $S$ in this context?
+??x $S$, or sequential bandwidth, is calculated by considering the total time taken for a 10 MB sequential read operation. This includes seek time (7 ms), rotation wait (3 ms), and data transfer time (200 ms). Thus, the formula is:
 
-\[ S = \frac{\text{Data Size}}{\text{Total Time}} = \frac{10MB}{210ms} = 47.62 MB/s \]
+$$S = \frac{\text{Data Size}}{\text{Total Time}} = \frac{10MB}{210ms} = 47.62 MB/s$$
 
 This value is close to the peak bandwidth of the disk because seek and rotational costs are amortized over a large data transfer.
 x??
@@ -301,13 +291,12 @@ x??
 
 Background context explaining the concept. Random access involves smaller block sizes, so the calculation differs significantly from sequential access due to less time spent in data transfer.
 
-:p What is \( R \) in this context?
-??x
-\( R \), or random bandwidth, is calculated by considering a 10 KB read operation on average. This includes seek and rotation times but negligible transfer time (0.195 ms). Thus, the formula is:
+:p What is $R$ in this context?
+??x $R$, or random bandwidth, is calculated by considering a 10 KB read operation on average. This includes seek and rotation times but negligible transfer time (0.195 ms). Thus, the formula is:
 
-\[ R = \frac{\text{Data Size}}{\text{Total Time}} = \frac{10KB}{0.195ms} = 0.981 MB/s \]
+$$R = \frac{\text{Data Size}}{\text{Total Time}} = \frac{10KB}{0.195ms} = 0.981 MB/s$$
 
-This value is much lower than \( S \) due to the shorter data transfer period.
+This value is much lower than $S$ due to the shorter data transfer period.
 x??
 
 ---
@@ -319,9 +308,9 @@ Background context explaining the concept. Striped RAID-0 improves performance b
 ??x
 RAID-0 improves performance in two key ways:
 1. **Latency**: For single-block requests, the latency is similar to a single disk since the request is simply redirected to one of its disks.
-2. **Throughput**: In steady-state conditions, the throughput equals \( N \times S \), where \( N \) is the number of disks and \( S \) is the sequential bandwidth of a single disk.
+2. **Throughput**: In steady-state conditions, the throughput equals $N \times S $, where $ N $ is the number of disks and $ S$ is the sequential bandwidth of a single disk.
 
-For random I/Os, all disks can be used simultaneously, providing \( N \times R \) MB/s. These are considered upper bounds for comparison with other RAID levels.
+For random I/Os, all disks can be used simultaneously, providing $N \times R$ MB/s. These are considered upper bounds for comparison with other RAID levels.
 x??
 
 ---
@@ -348,7 +337,7 @@ x??
 ---
 
 #### RAID-1 Capacity Analysis
-RAID-1 involves mirroring, which means data is duplicated across two disks. For a given number of disks \(N\) and blocks per disk \(B\), the useful capacity is \((N·B)/2\).
+RAID-1 involves mirroring, which means data is duplicated across two disks. For a given number of disks $N $ and blocks per disk$B $, the useful capacity is$(N·B)/2$.
 :p How does RAID-1 affect storage capacity?
 ??x
 RAID-1 reduces the effective storage capacity by half because each piece of data must be stored on two different disks to ensure redundancy. For example, if you have 4 disks and each can store 100GB of data, with RAID-1, you would only get a total usable space of 200GB (4 disks * 100GB - the duplicate set of 100GB).
@@ -516,7 +505,7 @@ x??
 Background context: RAID-4 uses 1 disk for parity information, leading to a useful capacity of (N−1)·B per RAID group. This means that out of N disks, one is used for parity, and the remaining N-1 are available for data storage.
 :p What is the formula for calculating the capacity of RAID-4?
 ??x
-The capacity formula for RAID-4 is \((N - 1) \cdot B\), where \(N\) represents the total number of disks in the RAID group and \(B\) is the block size. This means that out of the total \(N\) disks, one disk is used for parity information, leaving \(N - 1\) disks available for data storage.
+The capacity formula for RAID-4 is $(N - 1) \cdot B $, where $ N $represents the total number of disks in the RAID group and$ B $is the block size. This means that out of the total$ N $disks, one disk is used for parity information, leaving$ N - 1$ disks available for data storage.
 x??
 
 ---
@@ -525,16 +514,16 @@ x??
 Background context: RAID-4 can tolerate 1 disk failure but not more than one. If a second disk fails while another has already failed, the data cannot be reconstructed because there is no redundancy to fill in the missing parity information.
 :p How many disks can fail in a RAID-4 setup?
 ??x
-RAID-4 can tolerate exactly 1 disk failure but will fail if more than one disk fails. The system requires at least \(N - 1\) functioning disks to reconstruct data, where \(N\) is the total number of disks.
+RAID-4 can tolerate exactly 1 disk failure but will fail if more than one disk fails. The system requires at least $N - 1 $ functioning disks to reconstruct data, where$N$ is the total number of disks.
 x??
 
 ---
 
 #### RAID-4 Sequential Read Performance
-Background context: For sequential reads, all disks except the parity disk can be utilized simultaneously. This leads to a peak effective bandwidth of \((N - 1) \cdot SMB/s\), where \(SMB\) is the speed per data disk.
+Background context: For sequential reads, all disks except the parity disk can be utilized simultaneously. This leads to a peak effective bandwidth of $(N - 1) \cdot SMB/s $, where $ SMB$ is the speed per data disk.
 :p What is the maximum read throughput for RAID-4 in sequential access?
 ??x
-The maximum read throughput for RAID-4 in sequential access is \((N - 1) \cdot SMB/s\). This means that all but one of the disks can be used to deliver this throughput, as the parity disk does not contribute to data reads.
+The maximum read throughput for RAID-4 in sequential access is $(N - 1) \cdot SMB/s$. This means that all but one of the disks can be used to deliver this throughput, as the parity disk does not contribute to data reads.
 x??
 
 ---
@@ -569,10 +558,10 @@ x??
 ---
 
 #### Random Read Performance in RAID-4
-Background context: For random reads, only the data disks are accessed as the parity disk does not contain actual data. This results in an effective bandwidth of \((N - 1) \cdot RMB/s\), where \(RMB\) is the read speed per data disk.
+Background context: For random reads, only the data disks are accessed as the parity disk does not contain actual data. This results in an effective bandwidth of $(N - 1) \cdot RMB/s $, where $ RMB$ is the read speed per data disk.
 :p What is the effective throughput for RAID-4 during a random read operation?
 ??x
-The effective throughput for RAID-4 during a random read operation is \((N - 1) \cdot RMB/s\). This means that only the data disks are accessed, and the parity disk does not contribute to the read process.
+The effective throughput for RAID-4 during a random read operation is $(N - 1) \cdot RMB/s$. This means that only the data disks are accessed, and the parity disk does not contribute to the read process.
 x??
 
 ---
@@ -611,7 +600,7 @@ x??
 ---
 
 #### Subtractive Parity Method
-Background context explaining how subtractive parity works. It involves reading old data and parity, comparing them to determine if a parity bit needs to be flipped. The formula given is \( P_{\text{new}} = (\text{C}_{\text{old}} \oplus \text{C}_{\text{new}}) \oplus \text{P}_{\text{old}} \).
+Background context explaining how subtractive parity works. It involves reading old data and parity, comparing them to determine if a parity bit needs to be flipped. The formula given is $P_{\text{new}} = (\text{C}_{\text{old}} \oplus \text{C}_{\text{new}}) \oplus \text{P}_{\text{old}}$.
 
 :p What is the subtractive parity method and how does it work?
 ??x
@@ -752,15 +741,15 @@ x??
 ---
 
 #### RAID-5 Bandwidth Calculation for Small Writes
-RAID-5 can achieve a total bandwidth of \( N \cdot R / 4 \) for small writes. This improvement comes from the ability to distribute writes across multiple disks, thereby increasing parallelism.
+RAID-5 can achieve a total bandwidth of $N \cdot R / 4$ for small writes. This improvement comes from the ability to distribute writes across multiple disks, thereby increasing parallelism.
 
 :p What is the formula for calculating the total bandwidth for small writes in RAID-5?
 ??x
-The formula for the total bandwidth for small writes in RAID-5 is \( N \cdot R / 4 \). This reflects that each write operation still incurs a cost of four I/O operations (one for the data and three for parity), but these can be spread across multiple disks.
+The formula for the total bandwidth for small writes in RAID-5 is $N \cdot R / 4$. This reflects that each write operation still incurs a cost of four I/O operations (one for the data and three for parity), but these can be spread across multiple disks.
 
 For example, if you have 4 disks:
 - Each write operation involves writing to one disk and updating parity on another three.
-- This results in \( 4 \cdot R / 4 = R \) writes per second.
+- This results in $4 \cdot R / 4 = R$ writes per second.
 
 Here is a simplified model of the calculation:
 ```java

@@ -176,7 +176,7 @@ COBRA protects employees' rights to continued group health insurance coverage ev
 Background context: HIPAA was enacted to improve health insurance portability and accountability, particularly with respect to electronic healthcare transactions. It includes provisions that affect employer-sponsored group health plans regarding the collection, use, and disclosure of health information.
 :p What does HIPAA require for employers in terms of employee privacy?
 ??x
-HIPAA requires employers to designate privacy officials, distribute privacy notices, and train employees to ensure proper handling of health information, preventing unauthorized disclosures. Failure to comply can result in civil penalties up to $100 per person per violation with a maximum annual cap of $25,000.
+HIPAA requires employers to designate privacy officials, distribute privacy notices, and train employees to ensure proper handling of health information, preventing unauthorized disclosures. Failure to comply can result in civil penalties up to $100 per person per violation with a maximum annual cap of$25,000.
 ??x
 
 ---

@@ -131,11 +131,11 @@ Background context: When a party performs only partially and then breaches, cour
 
 :p What happens if the breaching party substantially performs?
 ??x
-If the breaching party substantially performs, they can recover on the contract (Chapter 14 for details). They would recover whatever was promised them in the contract minus the damages due the other party. For example, a contractor completes 90 percent of the work on a $200,000 house and then quits; the owner finishes the remaining 10 percent at a cost of $30,000.
+If the breaching party substantially performs, they can recover on the contract (Chapter 14 for details). They would recover whatever was promised them in the contract minus the damages due the other party. For example, a contractor completes 90 percent of the work on a $200,000 house and then quits; the owner finishes the remaining 10 percent at a cost of$30,000.
 
 The breaching party can recover the contract price ($200,000) minus the damages ($30,000), which is $170,000. The owner gets an expectancy of a fully completed house worth $200,000 by paying the initial contractor $170,000 and the second contractor $30,000.
 
-If the cost to complete is lower, say $15,000, most courts would limit the breaching party's recovery to the pro rata part of the contract that was completed. If the breacher did 90 percent of a $200,000 project, they should get no more than 90 percent of the contract price: $200,000 × 0.90 = $180,000.
+If the cost to complete is lower, say $15,000, most courts would limit the breaching party's recovery to the pro rata part of the contract that was completed. If the breacher did 90 percent of a $200,000 project, they should get no more than 90 percent of the contract price: $200,000 × 0.90 =$180,000.
 
 :p How does the court handle situations where the breaching party doesn't substantially perform?
 ??x
@@ -143,15 +143,15 @@ If the court finds that the breaching party didn’t substantially perform, they
 
 Most courts allow a breaching party to recover restitution but vary widely in measuring it. Some courts treat the situation as if the breaching party had substantially performed, starting with the contract price and subtracting the amount required to put the non-breaching party where he would’ve been had he received what was promised.
 
-Other courts start with the value of the benefit conferred on the non-breaching party but cap the restitution to give the non-breaching party their expectancy. For example, a contractor does 50 percent of the work on a $200,000 house and then quits; the owner hires another contractor at a cost of $110,000.
+Other courts start with the value of the benefit conferred on the non-breaching party but cap the restitution to give the non-breaching party their expectancy. For example, a contractor does 50 percent of the work on a $200,000 house and then quits; the owner hires another contractor at a cost of$110,000.
 
-If you start with the contract price, restitution based on the value conferred is 50 percent of the contract price: $200,000 × 0.50 = $100,000. However, because the owner hired a second contractor at $110,000, the first contractor can’t recover more than $90,000.
+If you start with the contract price, restitution based on the value conferred is 50 percent of the contract price: $200,000 × 0.50 =$100,000. However, because the owner hired a second contractor at $110,000, the first contractor can’t recover more than$90,000.
 
 If you start with the value of the benefit conferred on the owner, the contractor might claim the value is $110,000. However, this doesn't necessarily reflect the true worth, and a better approach is to measure it from the non-breaching party's perspective—how much is the work worth to them?
 
 :p How does the court measure the value of the benefit conferred?
 ??x
-The value of the benefit conferred should be measured from the perspective of the non-breaching party. This means asking how much the work is worth to the owner. The maximum possible recovery would be $90,000 in the example above ($200,000 × 0.50 - $110,000), but it might be less if the work was of poor quality.
+The value of the benefit conferred should be measured from the perspective of the non-breaching party. This means asking how much the work is worth to the owner. The maximum possible recovery would be $90,000 in the example above ($200,000 × 0.50 -$110,000), but it might be less if the work was of poor quality.
 
 The court aims to provide financial justice while avoiding excessive penalties or rewards for performing parties who breach contracts partially. The goal is to ensure that both parties are treated fairly and receive what they reasonably deserve based on their contributions and the value of services rendered.
 
@@ -165,7 +165,7 @@ The key concept is that the breaching party can recover part of their costs or l
 ??x
 Substantial performance is determined based on whether the breaching party completed a significant portion of the work that constitutes a material breach. If the breaching party substantially performs, they can recover damages or the contract price minus any additional costs incurred by the non-breaching party to complete the project.
 
-For example, if a contractor completes 90 percent of a $200,000 house and then quits, the court might find that substantial performance occurred. The breacher would be entitled to recover the full contract price ($200,000) minus the cost of finishing by another contractor ($30,000), resulting in a recovery of $170,000.
+For example, if a contractor completes 90 percent of a $200,000 house and then quits, the court might find that substantial performance occurred. The breacher would be entitled to recover the full contract price ($200,000) minus the cost of finishing by another contractor ($30,000), resulting in a recovery of$170,000.
 
 :p What is the difference between substantially performing and not performing?
 ??x
@@ -402,16 +402,14 @@ To calculate cover damages, follow this step-by-step process:
 4. Calculate any **expenses saved by the breach**, such as reduced shipping costs.
 
 The formula looks like this:
-\[ \text{Damages} = (\text{Cover Price} - \text{Contract Price}) + \text{Incidental and Consequential Damages} - \text{Expenses Saved by Breach} \]
+$$\text{Damages} = (\text{Cover Price} - \text{Contract Price}) + \text{Incidental and Consequential Damages} - \text{Expenses Saved by Breach}$$
 
-For example, in the case of a buyer in Boston who contracted to buy 100,000 bushels of winter wheat at $7.50 per bushel with $50,000 shipping costs:
-- Cover price: $8.00 per bushel (from Minneapolis) \(\times\) 100,000 = $800,000
-- Contract price: $7.50 per bushel \(\times\) 100,000 + $50,000 shipping costs = $750,000 + $50,000 = $800,000
+For example, in the case of a buyer in Boston who contracted to buy 100,000 bushels of winter wheat at $7.50 per bushel with$50,000 shipping costs:
+- Cover price: $8.00 per bushel (from Minneapolis)$\times $100,000 =$800,000
+- Contract price: $7.50 per bushel $\times $100,000 +$50,000 shipping costs =$750,000 +$50,000 =$800,000
 
 The formula for damages would be:
-\[ (800,000 - 800,000) + 0 - 20,000 = \$30,000 \]
-
-Thus, the buyer is entitled to $30,000 in damages.
+$$ (800,000 - 800,000) + 0 - 20,000 = \$30,000 $$Thus, the buyer is entitled to$30,000 in damages.
 x??
 
 ---
@@ -426,14 +424,12 @@ The key elements include:
 1. **Contract Price**: The initial price agreed upon in the contract.
 2. **Current Market Value**: The current price for similar goods available in the market after the breach occurred.
 
-Example: Suppose a buyer contracted to buy 100,000 bushels of wheat at $7.50 per bushel but the market price rises to $9.00 per bushel due to supply shortages caused by the seller's breach.
-- Contract Price = $7.50 \(\times\) 100,000 = $750,000
-- Current Market Value = $9.00 \(\times\) 100,000 = $900,000
+Example: Suppose a buyer contracted to buy 100,000 bushels of wheat at $7.50 per bushel but the market price rises to$9.00 per bushel due to supply shortages caused by the seller's breach.
+- Contract Price = $7.50 $\times $100,000 =$750,000
+- Current Market Value = $9.00 $\times $100,000 =$900,000
 
 The difference is:
-\[ \$900,000 - \$750,000 = \$150,000 \]
-
-Thus, the buyer can recover $150,000 as market damages.
+$$ \$900,000 - \$750,000 = \$150,000 $$Thus, the buyer can recover$150,000 as market damages.
 x??
 
 ---
@@ -448,7 +444,7 @@ x??
 ---
 
 #### Example Scenario with Car Purchase
-Background context: If you sold me a car worth $11,000 for $10,000 and breached, I could cover by purchasing a similar car but elect not to. The market price difference ($11,000 - $10,000 = $1,000) would be the damages recoverable.
+Background context: If you sold me a car worth $11,000 for $10,000 and breached, I could cover by purchasing a similar car but elect not to. The market price difference ($11,000 -$10,000 =$1,000) would be the damages recoverable.
 :p How much can you claim in damages if the market value of the car increases after your breach?
 ??x
 You can claim $1,000 in damages because that is the difference between the contract price ($10,000) and the market price ($11,000) at the time I learned of your breach.
@@ -466,11 +462,11 @@ x??
 ---
 
 #### Wheat Purchase Scenario with Anticipatory Repudiation
-Background context: If you agreed to sell 100,000 bushels of winter wheat at $7.50 per bushel and on August 1 informed me that you won't perform, the buyer can recover damages based on the market price at October 1 ($8.00) minus the contract price ($7.50 * 100,000 = $750,000). However, mitigating by buying at the time of repudiation could reduce damages.
+Background context: If you agreed to sell 100,000 bushels of winter wheat at $7.50 per bushel and on August 1 informed me that you won't perform, the buyer can recover damages based on the market price at October 1 ($8.00) minus the contract price ($7.50 * 100,000 =$750,000). However, mitigating by buying at the time of repudiation could reduce damages.
 :p How much can the buyer claim in damages if they use the market price on October 1?
 ??x
-The buyer can claim $50,000 in damages based on the difference between the market price of $8.00 per bushel ($800,000) and the contract price of $750,000.
-However, if they mitigate by buying at the time of repudiation (August 1), where the market price was $7.75, their damages would be only $25,000 ($775,000 - $750,000).
+The buyer can claim $50,000 in damages based on the difference between the market price of $8.00 per bushel ($800,000) and the contract price of$750,000.
+However, if they mitigate by buying at the time of repudiation (August 1), where the market price was $7.75, their damages would be only $25,000 ($775,000 -$750,000).
 x??
 
 ---
@@ -579,10 +575,10 @@ Assume:
 - A 500-gigabyte hard drive sells for $1,000 (warranted price).
 - A 250-gigabyte hard drive sells for $950 (actual price).
 
-The difference in value = $1,000 - $950 = $50.
+The difference in value = $1,000 -$950 =$50.
 
 Alternatively:
-If the cost to replace a 250-gigabyte drive with a 500-gigabyte one is $100, then the buyer can claim $100 as the difference in value.
+If the cost to replace a 250-gigabyte drive with a 500-gigabyte one is $100, then the buyer can claim$100 as the difference in value.
 x??
 
 ---

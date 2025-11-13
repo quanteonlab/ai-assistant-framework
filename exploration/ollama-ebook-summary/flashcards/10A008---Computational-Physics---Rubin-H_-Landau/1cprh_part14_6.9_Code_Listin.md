@@ -5,11 +5,11 @@
 ---
 
 #### Bisection Method Implementation
-Background context: The bisection method is a root-finding algorithm that repeatedly bisects an interval and then selects a subinterval in which a root must lie for further processing. It is particularly useful when you have a continuous function over a closed interval \([a, b]\) where the function changes sign.
+Background context: The bisection method is a root-finding algorithm that repeatedly bisects an interval and then selects a subinterval in which a root must lie for further processing. It is particularly useful when you have a continuous function over a closed interval $[a, b]$ where the function changes sign.
 
 :p What does the Bisection Method do?
 ??x
-The Bisection method repeatedly divides an interval into two halves and selects one half that contains the root based on the sign of the function at the endpoints. If \(f(a) \cdot f(b) < 0\), then there is a root in \([a, b]\).
+The Bisection method repeatedly divides an interval into two halves and selects one half that contains the root based on the sign of the function at the endpoints. If $f(a) \cdot f(b) < 0 $, then there is a root in $[a, b]$.
 
 Code example:
 ```python
@@ -132,7 +132,7 @@ Background context: The least squares method is used to find the best fit parabo
 
 :p How does the code perform a least squares fit?
 ??x
-The code calculates the coefficients \(a_0\), \(a_1\), and \(a_2\) of the quadratic equation \(y = a_0 + a_1 x + a_2 x^2\) that best fits the data points by minimizing the sum of the squared residuals.
+The code calculates the coefficients $a_0 $, $ a_1 $, and$ a_2 $of the quadratic equation$ y = a_0 + a_1 x + a_2 x^2$ that best fits the data points by minimizing the sum of the squared residuals.
 
 Code example:
 ```python
@@ -864,17 +864,17 @@ x??
 The provided code snippets are designed to solve the given problems using Python. Here is a summary of what each snippet does:
 
 1. **Bisection Method Example Code:**
-   - This code defines a function `bisection` that uses the bisection method to find a root of the equation \(2 \cos(x) - x = 0\).
+   - This code defines a function `bisection` that uses the bisection method to find a root of the equation $2 \cos(x) - x = 0$.
    - The initial interval `[a, b]` is set to `[0.0, 7.0]`, and the maximum number of iterations `Nmax` is set to `100`.
    - The function `bisection` iteratively narrows down the interval until it finds a root within the specified tolerance.
 
 2. **Newton's Method Example Code:**
-   - This code defines functions `f(x)` and `df(x)` for the equation \(2 \cos(x) - x = 0\) and its derivative.
+   - This code defines functions `f(x)` and `df(x)` for the equation $2 \cos(x) - x = 0$ and its derivative.
    - It uses Newton's method to find the root of the equation, with an initial guess `x` set to `1111.0`, a step size `dx` of `3.e-4`, a tolerance `eps` of `0.002`, and a maximum number of iterations `Nmax` of `100`.
    - The method iteratively updates the guess until the function value is within the specified tolerance.
 
 3. **Least Squares Parabola Fit Example Code:**
-   - This code uses the least squares method to fit a parabolic curve \(a \cdot x^2 + b \cdot x + c\) to given data points.
+   - This code uses the least squares method to fit a parabolic curve $a \cdot x^2 + b \cdot x + c$ to given data points.
    - The `parabola` function defines the form of the parabola.
    - The data points `x` and corresponding values `y` are provided, and `A` is constructed as a matrix that will be used in the least squares calculation.
    - The `linalg.lstsq(A.T, y)` call computes the coefficients `[a_fit, b_fit, c_fit]` of the parabola that best fits the data.
@@ -912,12 +912,8 @@ print('Coefficients: a =', a_fit, ', b =', b_fit, ', c =', c_fit)
 Coefficients: a = 3.574207186490637 , b = -7.595732285036445 , c = 10.13922237854713
 ```
 The coefficients of the least squares fit for the parabolic curve to the given data points are:
-- \( a \approx 3.574 \)
-- \( b \approx -7.596 \)
-- \( c \approx 10.139 \)
-
-This means that the best-fitting parabola is given by the equation:
-\[ y = 3.574 x^2 - 7.596 x + 10.139 \]
+- $a \approx 3.574 $-$ b \approx -7.596 $-$ c \approx 10.139$ This means that the best-fitting parabola is given by the equation:
+$$y = 3.574 x^2 - 7.596 x + 10.139$$
 
 The plot of the original data points (in blue) and the fitted curve (in red) can be seen below:
 
@@ -925,54 +921,73 @@ The plot of the original data points (in blue) and the fitted curve (in red) can
 
 This completes the execution of the least squares fitting example. If you have any further questions or need additional assistance, feel free to ask! --- 
 ```python
-import numpy as np
-
-# Data points
-x = np.array([0., 0.12, 0.25, 0.37, 0.5, 0.62, 0.75, 0.87, 0.99])
-y = np.array([10.6, 16.0, 45.0, 83.5, 52.8, 19.9, 10.8, 8.25, 4.7])
-
-# Construct the matrix A
-A = np.column_stack((x**2, x, np.ones_like(x)))
-
-# Least squares fit
-a_fit, b_fit, c_fit = np.linalg.lstsq(A, y)[0]
-
-# Calculate the fitted values
-y_fit = a_fit * x**2 + b_fit * x + c_fit
-
-# Plotting the results
-import matplotlib.pyplot as plt
-
-plt.plot(x, y, 'bo', label='Original data', markersize=10)
-plt.plot(x, y_fit, 'r*', label='Fitted curve')
-plt.legend()
-plt.show()
-
+import numpy as np
+
+
+
+# Data points
+
+x = np.array([0., 0.12, 0.25, 0.37, 0.5, 0.62, 0.75, 0.87, 0.99])
+
+y = np.array([10.6, 16.0, 45.0, 83.5, 52.8, 19.9, 10.8, 8.25, 4.7])
+
+
+
+# Construct the matrix A
+
+A = np.column_stack((x**2, x, np.ones_like(x)))
+
+
+
+# Least squares fit
+
+a_fit, b_fit, c_fit = np.linalg.lstsq(A, y)[0]
+
+
+
+# Calculate the fitted values
+
+y_fit = a_fit * x**2 + b_fit * x + c_fit
+
+
+
+# Plotting the results
+
+import matplotlib.pyplot as plt
+
+
+
+plt.plot(x, y, 'bo', label='Original data', markersize=10)
+
+plt.plot(x, y_fit, 'r*', label='Fitted curve')
+
+plt.legend()
+
+plt.show()
+
+
+
 print('Coefficients: a =', a_fit, ', b =', b_fit, ', c =', c_fit)
 ```
 
 #### Masses on a String and N–D Searching Overview
-This problem involves determining the angles assumed by strings connecting two masses and the tensions exerted by these strings. The setup consists of two masses (W1=10, W2=20) connected by three pieces of string with given lengths (L1=3, L2=4, L3=4), hanging from a horizontal bar of length \(L=8\). The key equations derived are based on geometric constraints and static equilibrium conditions.
+This problem involves determining the angles assumed by strings connecting two masses and the tensions exerted by these strings. The setup consists of two masses (W1=10, W2=20) connected by three pieces of string with given lengths (L1=3, L2=4, L3=4), hanging from a horizontal bar of length $L=8$. The key equations derived are based on geometric constraints and static equilibrium conditions.
 :p What is the main problem being addressed in this section?
 ??x
-The main problem involves determining the angles \(\theta_1, \theta_2, \theta_3\) and the tensions \(T_1, T_2, T_3\) for a system of two masses connected by strings with given lengths. The setup is constrained by geometric and static equilibrium conditions.
+The main problem involves determining the angles $\theta_1, \theta_2, \theta_3 $ and the tensions$T_1, T_2, T_3$ for a system of two masses connected by strings with given lengths. The setup is constrained by geometric and static equilibrium conditions.
 x??
 
 ---
 
 #### Geometric Constraints
-The problem starts with three key geometric constraints ensuring that the total horizontal length matches \(L=8\), and that the strings begin and end at the same height:
-1. Horizontal constraint: \( L_1 \cos(\theta_1) + L_2 \cos(\theta_2) + L_3 \cos(\theta_3) = L \)
-2. Vertical constraint: \( L_1 \sin(\theta_1) + L_2 \sin(\theta_2) - L_3 \sin(\theta_3) = 0 \)
-3. Trigonometric identities: \( \sin^2(\theta_i) + \cos^2(\theta_i) = 1 \) for each \(i\).
+The problem starts with three key geometric constraints ensuring that the total horizontal length matches $L=8$, and that the strings begin and end at the same height:
+1. Horizontal constraint: $L_1 \cos(\theta_1) + L_2 \cos(\theta_2) + L_3 \cos(\theta_3) = L $2. Vertical constraint:$ L_1 \sin(\theta_1) + L_2 \sin(\theta_2) - L_3 \sin(\theta_3) = 0 $3. Trigonometric identities:$\sin^2(\theta_i) + \cos^2(\theta_i) = 1 $ for each$i$.
 
 These constraints ensure that the structure is consistent with physical principles.
 :p What are the geometric constraints in this problem?
 ??x
 The geometric constraints in this problem include:
-- Horizontal constraint: \( L_1 \cos(\theta_1) + L_2 \cos(\theta_2) + L_3 \cos(\theta_3) = L \)
-- Vertical constraint: \( L_1 \sin(\theta_1) + L_2 \sin(\theta_2) - L_3 \sin(\theta_3) = 0 \)
-- Trigonometric identities: \( \sin^2(\theta_i) + \cos^2(\theta_i) = 1 \) for each \(i\).
+- Horizontal constraint: $L_1 \cos(\theta_1) + L_2 \cos(\theta_2) + L_3 \cos(\theta_3) = L $- Vertical constraint:$ L_1 \sin(\theta_1) + L_2 \sin(\theta_2) - L_3 \sin(\theta_3) = 0 $- Trigonometric identities:$\sin^2(\theta_i) + \cos^2(\theta_i) = 1 $ for each$i$.
 
 These constraints ensure the structure is consistent with physical principles.
 x??
@@ -981,19 +996,13 @@ x??
 
 #### Static Equilibrium Conditions
 The static equilibrium conditions in this problem are derived from the sum of forces in the x and y directions being zero:
-1. Horizontal force balance: \( T_1 \sin(\theta_1) - T_2 \sin(\theta_2) - W_1 = 0 \)
-2. Vertical force balance for mass 1: \( T_1 \cos(\theta_1) - T_2 \cos(\theta_2) = 0 \)
-3. Horizontal force balance (continued): \( T_2 \sin(\theta_2) + T_3 \sin(\theta_3) - W_2 = 0 \)
-4. Vertical force balance for mass 2: \( T_2 \cos(\theta_2) - T_3 \cos(\theta_3) = 0 \)
+1. Horizontal force balance: $T_1 \sin(\theta_1) - T_2 \sin(\theta_2) - W_1 = 0 $2. Vertical force balance for mass 1:$ T_1 \cos(\theta_1) - T_2 \cos(\theta_2) = 0 $3. Horizontal force balance (continued):$ T_2 \sin(\theta_2) + T_3 \sin(\theta_3) - W_2 = 0 $4. Vertical force balance for mass 2:$ T_2 \cos(\theta_2) - T_3 \cos(\theta_3) = 0$
 
 These equations ensure that there is no net acceleration in any direction.
 :p What are the static equilibrium conditions in this problem?
 ??x
 The static equilibrium conditions in this problem are:
-1. Horizontal force balance: \( T_1 \sin(\theta_1) - T_2 \sin(\theta_2) - W_1 = 0 \)
-2. Vertical force balance for mass 1: \( T_1 \cos(\theta_1) - T_2 \cos(\theta_2) = 0 \)
-3. Horizontal force balance (continued): \( T_2 \sin(\theta_2) + T_3 \sin(\theta_3) - W_2 = 0 \)
-4. Vertical force balance for mass 2: \( T_2 \cos(\theta_2) - T_3 \cos(\theta_3) = 0 \)
+1. Horizontal force balance: $T_1 \sin(\theta_1) - T_2 \sin(\theta_2) - W_1 = 0 $2. Vertical force balance for mass 1:$ T_1 \cos(\theta_1) - T_2 \cos(\theta_2) = 0 $3. Horizontal force balance (continued):$ T_2 \sin(\theta_2) + T_3 \sin(\theta_3) - W_2 = 0 $4. Vertical force balance for mass 2:$ T_2 \cos(\theta_2) - T_3 \cos(\theta_3) = 0$
 
 These equations ensure that there is no net acceleration in any direction.
 x??
@@ -1001,57 +1010,53 @@ x??
 ---
 
 #### Vector Formulation of Equations
-The nine unknowns (angles and tensions) are treated as a vector \(y\):
-\[ y= \begin{bmatrix}
+The nine unknowns (angles and tensions) are treated as a vector $y$:
+$$y= \begin{bmatrix}
 \sin(\theta_1) & \sin(\theta_2) & \sin(\theta_3) \\
 \cos(\theta_1) & \cos(\theta_2) & \cos(\theta_3) \\
 T_1 & T_2 & T_3
-\end{bmatrix} \]
+\end{bmatrix}$$
 
-These variables are used to formulate the system of equations as a vector \(f(y)\):
-\[ f(y)= \begin{bmatrix}
+These variables are used to formulate the system of equations as a vector $f(y)$:
+$$f(y)= \begin{bmatrix}
 f_1(y) & f_2(y) & ... & f_9(y)
-\end{bmatrix} = 0. \]
-:p How are the unknowns represented in this problem?
+\end{bmatrix} = 0.$$:p How are the unknowns represented in this problem?
 ??x
-The unknowns (angles and tensions) in this problem are represented as a vector \(y\) containing:
-\[ y= \begin{bmatrix}
+The unknowns (angles and tensions) in this problem are represented as a vector $y$ containing:
+$$y= \begin{bmatrix}
 \sin(\theta_1) & \sin(\theta_2) & \sin(\theta_3) \\
 \cos(\theta_1) & \cos(\theta_2) & \cos(\theta_3) \\
 T_1 & T_2 & T_3
-\end{bmatrix}. \]
+\end{bmatrix}.$$
 
-These variables are used to formulate the system of equations as a vector \(f(y)\):
-\[ f(y)= \begin{bmatrix}
+These variables are used to formulate the system of equations as a vector $f(y)$:
+$$f(y)= \begin{bmatrix}
 f_1(y) & f_2(y) & ... & f_9(y)
-\end{bmatrix} = 0. \]
-x??
+\end{bmatrix} = 0.$$x??
 
 ---
 
 #### Newton-Raphson Method for Solving Nonlinear Equations
-The problem is solved using the Newton-Raphson method, which involves guessing a solution and then linearizing the nonlinear equations around that guess. The Jacobian matrix \(J\) of the system is used to solve for corrections \(\Delta y\):
-\[ J = \begin{bmatrix}
+The problem is solved using the Newton-Raphson method, which involves guessing a solution and then linearizing the nonlinear equations around that guess. The Jacobian matrix $J $ of the system is used to solve for corrections$\Delta y$:
+$$J = \begin{bmatrix}
 \frac{\partial f_1}{\partial y_1} & ... & \frac{\partial f_9}{\partial y_9} \\
 \vdots & \ddots & \vdots \\
 \frac{\partial f_9}{\partial y_1} & ... & \frac{\partial f_9}{\partial y_9}
 \end{bmatrix}, \quad
-J \Delta y = -f(y). \]
+J \Delta y = -f(y).$$
 
 This process is repeated iteratively until the solution converges.
 :p How does the Newton-Raphson method solve nonlinear equations in this problem?
 ??x
 The Newton-Raphson method solves nonlinear equations by:
-1. Guessing an initial solution \(y\).
-2. Linearizing the system of equations around this guess to form a Jacobian matrix \(J\):
-\[ J = \begin{bmatrix}
+1. Guessing an initial solution $y$.
+2. Linearizing the system of equations around this guess to form a Jacobian matrix $J$:
+$$J = \begin{bmatrix}
 \frac{\partial f_1}{\partial y_1} & ... & \frac{\partial f_9}{\partial y_9} \\
 \vdots & \ddots & \vdots \\
 \frac{\partial f_9}{\partial y_1} & ... & \frac{\partial f_9}{\partial y_9}
-\end{bmatrix}. \]
-3. Solving for corrections \(\Delta y\) using the equation:
-\[ J \Delta y = -f(y). \]
-4. Updating the guess with the correction: \(y_{new} = y + \Delta y\).
+\end{bmatrix}.$$3. Solving for corrections $\Delta y$ using the equation:
+$$J \Delta y = -f(y).$$4. Updating the guess with the correction:$ y_{new} = y + \Delta y$.
 5. Repeating until convergence.
 
 This process is iterated until the solution converges.
@@ -1069,31 +1074,27 @@ Background context: The text discusses solving systems of linear equations using
 The system of nonlinear equations can be represented in matrix form as follows:
 
 Given:
-\[ f + F' \Delta x = 0 \]
+$$f + F' \Delta x = 0$$
+
 This can be rewritten using matrices as:
-\[ F' \Delta x = -f \]
+$$
+
+F' \Delta x = -f$$
 
 Where:
-- \( \Delta x = \begin{bmatrix} \Delta x_1 \\ \Delta x_2 \\ \vdots \\ \Delta x_n \end{bmatrix} \)
-- \( f = \begin{bmatrix} f_1 \\ f_2 \\ \vdots \\ f_n \end{bmatrix} \)
-- \( F' = \begin{bmatrix}
+- $\Delta x = \begin{bmatrix} \Delta x_1 \\ \Delta x_2 \\ \vdots \\ \Delta x_n \end{bmatrix}$-$ f = \begin{bmatrix} f_1 \\ f_2 \\ \vdots \\ f_n \end{bmatrix}$-$ F' = \begin{bmatrix}
 \frac{\partial f_1}{\partial x_1} & \cdots & \frac{\partial f_1}{\partial x_n} \\
 \frac{\partial f_2}{\partial x_1} & \cdots & \frac{\partial f_2}{\partial x_n} \\
 \vdots & \ddots & \vdots \\
 \frac{\partial f_n}{\partial x_1} & \cdots & \frac{\partial f_n}{\partial x_n}
-\end{bmatrix} \)
+\end{bmatrix} $The equation $ F' \Delta x = -f$ is in the standard form of a linear system, often written as:
+$$A \Delta x = b$$where $ A = F'$,$\Delta x $ is the vector of unknowns, and$b = -f$.
 
-The equation \( F' \Delta x = -f \) is in the standard form of a linear system, often written as:
-\[ A \Delta x = b \]
-where \( A = F' \), \( \Delta x \) is the vector of unknowns, and \( b = -f \).
-
-The solution to this equation can be obtained by multiplying both sides by the inverse of the matrix \( F' \):
-\[ \Delta x = -F'^{-1} f \]
+The solution to this equation can be obtained by multiplying both sides by the inverse of the matrix $F'$:
+$$\Delta x = -F'^{-1} f$$
 
 However, if an exact derivative is not available or too complex, a forward-difference approximation can be used:
-\[ \frac{\partial f_i}{\partial x_j} \approx \frac{f(x_j + \delta x_j) - f(x_j)}{\delta x_j} \]
-
-x??
+$$\frac{\partial f_i}{\partial x_j} \approx \frac{f(x_j + \delta x_j) - f(x_j)}{\delta x_j}$$x??
 
 ---
 
@@ -1104,11 +1105,10 @@ Background context: The text discusses the use of numerical derivatives to solve
 :p How is a forward-difference approximation used to estimate partial derivatives?
 
 ??x
-A forward-difference approximation can be used to estimate partial derivatives when exact forms are difficult or impractical. The formula for estimating the partial derivative of \( f_i \) with respect to \( x_j \) is:
+A forward-difference approximation can be used to estimate partial derivatives when exact forms are difficult or impractical. The formula for estimating the partial derivative of $f_i $ with respect to$x_j$ is:
+$$\frac{\partial f_i}{\partial x_j} \approx \frac{f(x_j + \delta x_j) - f(x_j)}{\delta x_j}$$
 
-\[ \frac{\partial f_i}{\partial x_j} \approx \frac{f(x_j + \delta x_j) - f(x_j)}{\delta x_j} \]
-
-Here, each individual \( x_j \) is varied independently by an arbitrary small change \( \delta x_j \).
+Here, each individual $x_j $ is varied independently by an arbitrary small change$\delta x_j$.
 
 :p How would you implement the forward-difference approximation for a function with multiple variables in pseudocode?
 
@@ -1141,7 +1141,7 @@ function forwardDifferenceApproximation(f, x, delta_x)
     return derivatives
 ```
 
-This pseudocode iterates over each variable, perturbs its value by \( \delta x \), evaluates the function at both the perturbed and original points, and then calculates the finite difference approximation.
+This pseudocode iterates over each variable, perturbs its value by $\delta x$, evaluates the function at both the perturbed and original points, and then calculates the finite difference approximation.
 
 x??
 
@@ -1154,27 +1154,25 @@ Background context: The text introduces the eigenvalue problem, which is a speci
 :p What is the eigenvalue problem in the context of linear algebra?
 
 ??x
-The eigenvalue problem in linear algebra involves finding scalars \( \lambda \) and corresponding non-zero vectors \( x \), such that:
+The eigenvalue problem in linear algebra involves finding scalars $\lambda $ and corresponding non-zero vectors$x$, such that:
 
-\[ A x = \lambda x \]
+$$A x = \lambda x$$where $ A $is a known square matrix,$ x $ is an unknown vector, and $\lambda $ is the scalar eigenvalue. To solve this problem, we can rewrite it in a form involving the identity matrix$I$:
 
-where \( A \) is a known square matrix, \( x \) is an unknown vector, and \( \lambda \) is the scalar eigenvalue. To solve this problem, we can rewrite it in a form involving the identity matrix \( I \):
+$$(A - \lambda I) x = 0$$
 
-\[ (A - \lambda I) x = 0 \]
+For non-trivial solutions ($x \neq 0 $), the matrix $ A - \lambda I$ must be singular, meaning its determinant must be zero:
 
-For non-trivial solutions (\( x \neq 0 \)), the matrix \( A - \lambda I \) must be singular, meaning its determinant must be zero:
+$$\det(A - \lambda I) = 0$$
 
-\[ \det(A - \lambda I) = 0 \]
-
-The values of \( \lambda \) that satisfy this equation are the eigenvalues of the matrix \( A \).
+The values of $\lambda $ that satisfy this equation are the eigenvalues of the matrix$A$.
 
 :p How would you solve for the eigenvalues using a computer program?
 
 ??x
 To find the eigenvalues, you can follow these steps:
 
-1. **Calculate the determinant**: First, write a function to calculate the determinant of the matrix \( A - \lambda I \).
-2. **Solve the characteristic equation**: Set up and solve the equation \( \det(A - \lambda I) = 0 \).
+1. **Calculate the determinant**: First, write a function to calculate the determinant of the matrix $A - \lambda I$.
+2. **Solve the characteristic equation**: Set up and solve the equation $\det(A - \lambda I) = 0$.
 
 Here’s an example in Python using NumPy:
 
@@ -1200,7 +1198,7 @@ print(eigenvalues)
 ```
 
 In this code:
-- `det_A_minus_lambdaI` calculates the determinant of \( A - \lambda I \).
+- `det_A_minus_lambdaI` calculates the determinant of $A - \lambda I$.
 - `np.roots` is used to solve the polynomial equation derived from the characteristic polynomial.
 
 x??
@@ -1256,20 +1254,20 @@ x??
 
 #### Processing Time and Complexity
 
-Background context: The text explains that matrix operations like inversion have a complexity of \( O(N^3) \), where \( N \) is the dimension of the square matrix. This affects how processing time increases with larger matrices.
+Background context: The text explains that matrix operations like inversion have a complexity of $O(N^3)$, where $ N$ is the dimension of the square matrix. This affects how processing time increases with larger matrices.
 
 :p What is the computational complexity of inverting a 2D square matrix, and why does it matter?
 
 ??x
-The computational complexity of inverting a 2D square matrix (or any square matrix of dimension \( N \)) is \( O(N^3) \). This means that if you double the size of a 2D square matrix, the processing time increases by a factor of eight.
+The computational complexity of inverting a 2D square matrix (or any square matrix of dimension $N $) is $ O(N^3)$. This means that if you double the size of a 2D square matrix, the processing time increases by a factor of eight.
 
 For example:
 - Doubling the number of integration steps for a 2D problem would result in an eightfold increase in processing time due to the cubic relationship between the matrix dimension and the computational complexity.
 
-:p How can we illustrate the \( O(N^3) \) complexity with an example?
+:p How can we illustrate the $O(N^3)$ complexity with an example?
 
 ??x
-To illustrate the \( O(N^3) \) complexity, consider a simple Python example:
+To illustrate the $O(N^3)$ complexity, consider a simple Python example:
 
 ```python
 def invert_matrix(matrix):
@@ -1305,9 +1303,9 @@ print(f"Ratio of processing times: {time_ratio}")
 ```
 
 In this example:
-- We measure the time taken to invert a \( 10 \times 10 \) matrix.
-- Then we double the size to \( 20 \times 20 \) and measure the time again.
-- The ratio of these times should be approximately eight, reflecting the \( O(N^3) \) complexity.
+- We measure the time taken to invert a $10 \times 10$ matrix.
+- Then we double the size to $20 \times 20$ and measure the time again.
+- The ratio of these times should be approximately eight, reflecting the $O(N^3)$ complexity.
 
 x??
 

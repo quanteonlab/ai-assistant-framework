@@ -152,10 +152,10 @@ Encoder-decoder techniques handle complex relationships within data by transform
 Each flashcard is designed to cover key concepts from the provided text with detailed explanations and relevant examples.
 
 #### Sample Space
-The sample space  is the complete set of all values an observation can take. For example, in our generative model of a world map in two dimensions, the sample space consists of all points of latitude and longitude  = \(x_1, x_2\). Points within this space are either part of the true data-generating distribution or not.
+The sample space  is the complete set of all values an observation can take. For example, in our generative model of a world map in two dimensions, the sample space consists of all points of latitude and longitude  = $x_1, x_2$. Points within this space are either part of the true data-generating distribution or not.
 :p What is the definition of the sample space?
 ??x
-The sample space is defined as the complete set of all values an observation can take. In our example, it includes every possible point on a world map in terms of latitude and longitude. Points like \( (40.7306, -73.9352) \) represent New York City, which are part of the data-generating distribution.
+The sample space is defined as the complete set of all values an observation can take. In our example, it includes every possible point on a world map in terms of latitude and longitude. Points like $(40.7306, -73.9352)$ represent New York City, which are part of the data-generating distribution.
 x??
 
 ---
@@ -164,30 +164,32 @@ x??
 A probability density function (or simply density function) is a function  that maps a point in the sample space to a number between 0 and 1. The integral of the density function over all points in the sample space must equal 1, so it's a well-defined probability distribution.
 :p What is a probability density function?
 ??x
-A probability density function \( p \) assigns a value between 0 and 1 to each point in the sample space. This value represents how likely that specific point is under the given distribution. For example, if we have a model for the world map with an orange box as our density function, it would be constant within the box and zero outside.
+A probability density function $p$ assigns a value between 0 and 1 to each point in the sample space. This value represents how likely that specific point is under the given distribution. For example, if we have a model for the world map with an orange box as our density function, it would be constant within the box and zero outside.
 x??
 
 ---
 
 #### Parametric Modeling
-Parametric modeling is a technique where we structure our approach to finding a suitable \( p_{\text{model}} \) using a family of density functions \( p_{\theta} \). A parametric model can be described with a finite number of parameters, \(\theta\).
+Parametric modeling is a technique where we structure our approach to finding a suitable $p_{\text{model}}$ using a family of density functions $p_{\theta}$. A parametric model can be described with a finite number of parameters,$\theta$.
 :p What is parametric modeling?
 ??x
-Parametric modeling involves defining a family of probability distributions that are indexed by a finite set of parameters \(\theta\). These models allow us to parameterize different shapes or configurations within the sample space. For instance, if we assume a uniform distribution, then drawing boxes on the map can be seen as an example of parametric modeling with four parameters: the coordinates of the bottom-left (\(\theta_1, \theta_2\)) and top-right (\(\theta_3, \theta_4\)) corners.
+Parametric modeling involves defining a family of probability distributions that are indexed by a finite set of parameters $\theta $. These models allow us to parameterize different shapes or configurations within the sample space. For instance, if we assume a uniform distribution, then drawing boxes on the map can be seen as an example of parametric modeling with four parameters: the coordinates of the bottom-left ($\theta_1, \theta_2 $) and top-right ($\theta_3, \theta_4$) corners.
 x??
 
 ---
 
 #### Likelihood
-The likelihood \( \mathcal{L}_{\theta} \) of a parameter set \(\theta\) is a function that measures the plausibility of \(\theta\), given some observed point . It is defined as \( \mathcal{L}_{\theta} = p_{\theta}(x) \). For multiple points, it is the product of individual likelihoods.
+The likelihood $\mathcal{L}_{\theta}$ of a parameter set $\theta$ is a function that measures the plausibility of $\theta$, given some observed point . It is defined as $\mathcal{L}_{\theta} = p_{\theta}(x)$. For multiple points, it is the product of individual likelihoods.
 :p What is the definition of likelihood?
 ??x
-The likelihood \(\mathcal{L}_{\theta}\) of a parameter set \(\theta\) is defined as the value of the density function \(p_{\theta}\) at a given point . Mathematically, it's represented as:
-\[ \mathcal{L}_{\theta} = p_{\theta}(x) \]
-For multiple points, if we have a dataset \(X = \{x_1, x_2, ..., x_n\}\), the likelihood is defined as the product of individual densities:
-\[ \mathcal{L}_{\theta} = \prod_{i=1}^{n} p_{\theta}(x_i) \]
-To simplify computational complexity, we often use the log-likelihood \(l_{\theta}\):
-\[ l_{\theta} = \sum_{i=1}^{n} \log p_{\theta}(x_i) \]
+The likelihood $\mathcal{L}_{\theta}$ of a parameter set $\theta$ is defined as the value of the density function $p_{\theta}$ at a given point . Mathematically, it's represented as:
+$$\mathcal{L}_{\theta} = p_{\theta}(x)$$
+
+For multiple points, if we have a dataset $X = \{x_1, x_2, ..., x_n\}$, the likelihood is defined as the product of individual densities:
+$$\mathcal{L}_{\theta} = \prod_{i=1}^{n} p_{\theta}(x_i)$$
+
+To simplify computational complexity, we often use the log-likelihood $l_{\theta}$:
+$$l_{\theta} = \sum_{i=1}^{n} \log p_{\theta}(x_i)$$
 x??
 
 ---

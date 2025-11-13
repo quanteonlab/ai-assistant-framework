@@ -78,8 +78,7 @@ x??
 
 #### SARSA Algorithm Overview
 The SARSA (State-Action-Reward-State-Action) algorithm is a model-free reinforcement learning method used to find the optimal policy by estimating the Q-function, which represents the expected sum of future rewards given the current state and action. The Q-function update rule is:
-\[Q(s,a) \rightarrow Q(s,a) + \eta(r + \beta Q(s',a') - Q(s,a))\]
-where \(r\) is the received reward and \(\eta\) is the learning rate.
+$$Q(s,a) \rightarrow Q(s,a) + \eta(r + \beta Q(s',a') - Q(s,a))$$where $ r $ is the received reward and $\eta$ is the learning rate.
 
 :p What does SARSA stand for and what is its primary function in reinforcement learning?
 ??x
@@ -90,28 +89,24 @@ x??
 
 #### Q-Function Update Rule
 The update rule for the Q-function in SARSA is:
-\[Q(s,a) \rightarrow Q(s,a) + \eta(r + \beta Q(s',a') - Q(s,a))\]
-where \(r\) is the reward received after taking action \(a\) from state \(s\), and \(Q(s',a')\) is the expected future discounted reward. The learning rate \(\eta\) controls how much new information overrides old estimates.
+$$Q(s,a) \rightarrow Q(s,a) + \eta(r + \beta Q(s',a') - Q(s,a))$$where $ r $ is the reward received after taking action $ a $ from state $ s $, and$ Q(s',a')$is the expected future discounted reward. The learning rate $\eta$ controls how much new information overrides old estimates.
 
 :p What is the formula for updating the Q-function in SARSA?
 ??x
 The update rule for the Q-function in SARSA is:
-\[Q(s,a) \rightarrow Q(s,a) + \eta(r + \beta Q(s',a') - Q(s,a))\]
-where \(r\) is the reward received after taking action \(a\) from state \(s\), and \(Q(s',a')\) is the expected future discounted reward. The learning rate \(\eta\) controls how much new information overrides old estimates.
+$$Q(s,a) \rightarrow Q(s,a) + \eta(r + \beta Q(s',a') - Q(s,a))$$where $ r $ is the reward received after taking action $ a $ from state $ s $, and$ Q(s',a')$is the expected future discounted reward. The learning rate $\eta$ controls how much new information overrides old estimates.
 x??
 
 ---
 
 #### Policy Calculation
-The policy \(\pi_{as}\) that encodes the probability of choosing an action at a given state can be derived from the Q-function using a Boltzmann-like expression:
-\[\pi_{as} \propto \exp\left(\frac{C_0 - \hat{Q}(s,a)}{C_1 4 \tau_{temp}}\right)\]
-where \(C_0\) and \(C_1\) are constants, and \(\tau_{temp}\) is the effective "temperature" parameter. When \(\tau_{temp} \approx 291\), actions are weakly dependent on the Q-function; for small \(\tau_{temp}\), the policy greedily chooses the action with the highest Q-value.
+The policy $\pi_{as}$ that encodes the probability of choosing an action at a given state can be derived from the Q-function using a Boltzmann-like expression:
+$$\pi_{as} \propto \exp\left(\frac{C_0 - \hat{Q}(s,a)}{C_1 4 \tau_{temp}}\right)$$where $ C_0 $ and $ C_1 $ are constants, and $\tau_{temp}$ is the effective "temperature" parameter. When $\tau_{temp} \approx 291$, actions are weakly dependent on the Q-function; for small $\tau_{temp}$, the policy greedily chooses the action with the highest Q-value.
 
 :p How is the policy derived from the Q-function in SARSA?
 ??x
-The policy \(\pi_{as}\) that encodes the probability of choosing an action at a given state can be derived from the Q-function using a Boltzmann-like expression:
-\[\pi_{as} \propto \exp\left(\frac{C_0 - \hat{Q}(s,a)}{C_1 4 \tau_{temp}}\right)\]
-where \(C_0\) and \(C_1\) are constants, and \(\tau_{temp}\) is the effective "temperature" parameter. When \(\tau_{temp} \approx 291\), actions are weakly dependent on the Q-function; for small \(\tau_{temp}\), the policy greedily chooses the action with the highest Q-value.
+The policy $\pi_{as}$ that encodes the probability of choosing an action at a given state can be derived from the Q-function using a Boltzmann-like expression:
+$$\pi_{as} \propto \exp\left(\frac{C_0 - \hat{Q}(s,a)}{C_1 4 \tau_{temp}}\right)$$where $ C_0 $ and $ C_1 $ are constants, and $\tau_{temp}$ is the effective "temperature" parameter. When $\tau_{temp} \approx 291$, actions are weakly dependent on the Q-function; for small $\tau_{temp}$, the policy greedily chooses the action with the highest Q-value.
 x??
 
 ---
@@ -414,8 +409,9 @@ Background context: The learning algorithm employed was one-step Sarsa, using a 
 :p What is the formula used to compute the action preferences in this study?
 ??x
 The action preferences are calculated by normalizing the approximate action values to the interval [0, 1] and then dividing by a positive "temperature parameter" ⌧. The specific equation provided is:
-\[ h(s, a, \theta) = \frac{\max_b q(s, b, \theta) - \min_b q(s, b, \theta)}{\max_b q(s, b, \theta) - \min_b q(s, b, \theta) + \epsilon} \]
-Where \( \epsilon \) is a small positive constant to avoid division by zero.
+$$h(s, a, \theta) = \frac{\max_b q(s, b, \theta) - \min_b q(s, b, \theta)}{\max_b q(s, b, \theta) - \min_b q(s, b, \theta) + \epsilon}$$
+
+Where $\epsilon$ is a small positive constant to avoid division by zero.
 x??
 
 ---
@@ -486,13 +482,13 @@ x??
 ---
 
 #### Temperature Parameter Adjustment During Learning
-Background context: The temperature parameter \(\tau\) was initialized to 2.0 and incrementally decreased to 0.2 during learning. This parameter influences how action preferences are calculated based on estimated action values.
+Background context: The temperature parameter $\tau$ was initialized to 2.0 and incrementally decreased to 0.2 during learning. This parameter influences how action preferences are calculated based on estimated action values.
 
 :p How did the temperature parameter affect the calculation of action preferences?
 ??x
-The temperature parameter \(\tau\) influenced the scaling of action preferences such that the action with the maximum estimated action value received a preference of \(1/\tau\), while the action with the minimum estimated action value received a preference of 0. The preferences for other actions were scaled between these extremes.
+The temperature parameter $\tau $ influenced the scaling of action preferences such that the action with the maximum estimated action value received a preference of$1/\tau$, while the action with the minimum estimated action value received a preference of 0. The preferences for other actions were scaled between these extremes.
 
-For example, if \(\tau = 2.0\), then an action with the highest estimated action value would receive a preference of \(1/2 = 0.5\). As \(\tau\) decreases to 0.2, this scaling becomes more pronounced, increasing the preference for actions with higher values and reducing it for those with lower values.
+For example, if $\tau = 2.0 $, then an action with the highest estimated action value would receive a preference of $1/2 = 0.5 $. As $\tau$ decreases to 0.2, this scaling becomes more pronounced, increasing the preference for actions with higher values and reducing it for those with lower values.
 
 ```java
 public void updatePreferences(double tau) {
@@ -515,17 +511,14 @@ x??
 ---
 
 #### Action Preferences Calculation Logic
-Background context: The action preferences were computed based on the current estimates of the action values. Actions with higher estimated values received a preference closer to \(1/\tau\), while those with lower values got a preference of 0, and others were scaled accordingly.
+Background context: The action preferences were computed based on the current estimates of the action values. Actions with higher estimated values received a preference closer to $1/\tau$, while those with lower values got a preference of 0, and others were scaled accordingly.
 
 :p How was the preference for each action calculated?
 ??x
-The preference for an action was determined by its estimated value relative to the maximum and minimum estimated values. The action with the highest estimated value received a preference of \(1/\tau\), while the one with the lowest got 0. Other actions were scaled linearly between these two extremes.
+The preference for an action was determined by its estimated value relative to the maximum and minimum estimated values. The action with the highest estimated value received a preference of $1/\tau$, while the one with the lowest got 0. Other actions were scaled linearly between these two extremes.
 
-For instance, if \(\tau = 2.0\) and the highest estimated value is 5.0 while the lowest is -3.0, then an action with a value of 4.0 would receive a preference of:
-
-\[
-\text{Preference} = (1 - \frac{\text{Estimated Value}}{\text{Min Value}}) \times \left(\frac{1}{\tau}\right)
-\]
+For instance, if $\tau = 2.0$ and the highest estimated value is 5.0 while the lowest is -3.0, then an action with a value of 4.0 would receive a preference of:
+$$\text{Preference} = (1 - \frac{\text{Estimated Value}}{\text{Min Value}}) \times \left(\frac{1}{\tau}\right)$$
 
 ```java
 public double calculatePreference(double estimatedValue, double minVal, double tau) {
@@ -539,13 +532,13 @@ x??
 ---
 
 #### Learning Parameters and Episode Structure
-Background context: The learning process involved fixed step-size (\(\alpha = 0.1\)) and discount rate (\(\gamma = 0.98\)). Each episode lasted 2.5 minutes with a 1-second time step, representing simulated flight in turbulent air currents.
+Background context: The learning process involved fixed step-size ($\alpha = 0.1 $) and discount rate ($\gamma = 0.98$). Each episode lasted 2.5 minutes with a 1-second time step, representing simulated flight in turbulent air currents.
 
 :p What are the key parameters of the learning process?
 ??x
 The key learning parameters were:
-- Step-size (\(\alpha\)): Set to 0.1.
-- Discount rate (\(\gamma\)): Fixed at 0.98.
+- Step-size ($\alpha$): Set to 0.1.
+- Discount rate ($\gamma$): Fixed at 0.98.
 These parameters controlled how actions were updated based on their rewards and future expected values.
 
 ```java
@@ -631,13 +624,13 @@ x??
 ---
 
 #### Discount Rate's Impact on Performance
-Background context: Reddy et al. observed that the altitude gained in an episode increased as the discount rate \(\gamma\) increased, reaching a maximum for \(\gamma = 0.99\). This indicated the importance of considering long-term effects of control decisions.
+Background context: Reddy et al. observed that the altitude gained in an episode increased as the discount rate $\gamma $ increased, reaching a maximum for$\gamma = 0.99$. This indicated the importance of considering long-term effects of control decisions.
 
 :p What was the effect of the discount rate on learning performance?
 ??x
-The discount rate \(\gamma\) significantly influenced the learning performance and altitude gain during episodes:
-- As \(\gamma\) increased, so did the altitude gained.
-- The maximum altitude gain was observed for \(\gamma = 0.99\).
+The discount rate $\gamma$ significantly influenced the learning performance and altitude gain during episodes:
+- As $\gamma$ increased, so did the altitude gained.
+- The maximum altitude gain was observed for $\gamma = 0.99$.
 
 This suggested that effective thermal soaring requires considering long-term consequences of control decisions, as higher discount rates promote more strategic behavior.
 
@@ -669,20 +662,20 @@ x??
 
 ---
 #### General Value Functions and Auxiliary Tasks
-Background context: This section discusses extending the concept of value functions to include predictions about arbitrary signals beyond just rewards. It introduces the idea of a general value function (GVF) that can predict various signals over different time horizons. The formal definition includes a termination function \(\alpha\) that allows for varying discount rates at each step and a cumulant signal \(C_t\).
+Background context: This section discusses extending the concept of value functions to include predictions about arbitrary signals beyond just rewards. It introduces the idea of a general value function (GVF) that can predict various signals over different time horizons. The formal definition includes a termination function $\alpha $ that allows for varying discount rates at each step and a cumulant signal$C_t$.
 
 The key concept here is to generalize the notion of value functions from predicting rewards to predicting arbitrary signals, which could be useful in reinforcement learning beyond just long-term reward maximization. This leads to the idea of auxiliary tasks—additional goals that can help improve performance on the main task.
 
 :p What are general value functions (GVFs) and how do they differ from traditional value functions?
 ??x
-General value functions extend the concept of value functions by allowing predictions about arbitrary signals, not just rewards. They use a cumulant signal \(C_t\) to predict the sum of future values of that signal starting at time step \(t\). The formal definition is given by:
-\[ v_\pi, \alpha, C(s) = E\left[\sum_{k=t}^{\infty} \prod_{i=t+1}^{k} \alpha(S_i) C_k | S_t=s, A_t:1 \sim \pi\right]. \]
+General value functions extend the concept of value functions by allowing predictions about arbitrary signals, not just rewards. They use a cumulant signal $C_t $ to predict the sum of future values of that signal starting at time step$t$. The formal definition is given by:
+$$v_\pi, \alpha, C(s) = E\left[\sum_{k=t}^{\infty} \prod_{i=t+1}^{k} \alpha(S_i) C_k | S_t=s, A_t:1 \sim \pi\right].$$
 
-This differs from traditional value functions like \(v_\pi\) or \(q^\star\), which predict the sum of future rewards. GVF does not have a direct connection to reward and can be used for controlling various signals.
+This differs from traditional value functions like $v_\pi $ or$q^\star$, which predict the sum of future rewards. GVF does not have a direct connection to reward and can be used for controlling various signals.
 
 ??x
 The answer with detailed explanations.
-General value functions (GVFs) are an extension of conventional value functions that allow predictions about arbitrary signals, rather than just long-term rewards. They use a cumulant signal \(C_t\) which represents the future values of any desired signal, not necessarily reward. The formula given above shows how these GVF predictions can be made over time using a termination function \(\alpha\) that allows for different discount rates at each step.
+General value functions (GVFs) are an extension of conventional value functions that allow predictions about arbitrary signals, rather than just long-term rewards. They use a cumulant signal $C_t $ which represents the future values of any desired signal, not necessarily reward. The formula given above shows how these GVF predictions can be made over time using a termination function$\alpha$ that allows for different discount rates at each step.
 
 These functions are useful because they enable an agent to learn to predict and control various signals, which can constitute a powerful kind of environmental model. For example, predicting sensor changes or other internal processed signals could help the agent make better decisions.
 ```java
@@ -783,7 +776,7 @@ Background context: The core idea here is leveraging the MDP formalism across mu
 
 :p How can we use options in an MDP framework to handle tasks with different time scales?
 ??x
-We can define "options" as extended courses of action that cover multiple time steps, allowing the agent to plan at a higher level. These options include a policy (\(\pi\)) for executing actions and a termination condition (T), which determines when to switch from one option to another.
+We can define "options" as extended courses of action that cover multiple time steps, allowing the agent to plan at a higher level. These options include a policy ($\pi$) for executing actions and a termination condition (T), which determines when to switch from one option to another.
 
 For example, consider an autonomous vehicle's decision process:
 - At a micro-level: The car decides on steering adjustments.
@@ -883,27 +876,25 @@ x??
 
 #### Options as Generalized Actions
 
-Options are a generalized notion of actions, extending the action space for agents. An option is executed by obtaining an action \( A_t \) from a policy \( \pi(.|S_t) \), and terminating at time \( t+1 \) with probability \( \delta(S_{t+1}) \). If it does not terminate, the next action \( A_{t+1} \) is selected according to the same policy until termination.
+Options are a generalized notion of actions, extending the action space for agents. An option is executed by obtaining an action $A_t $ from a policy$\pi(.|S_t)$, and terminating at time $ t+1$with probability $\delta(S_{t+1})$. If it does not terminate, the next action $ A_{t+1}$ is selected according to the same policy until termination.
 
 Low-level actions can be seen as special cases of options where the policy picks a single action and has zero termination probability at each step. This flexibility allows agents to choose between executing low-level actions or extended options that may last for multiple time steps before terminating.
 
 :p What are options, and how do they extend the concept of actions in reinforcement learning?
 ??x
-Options extend the traditional notion of actions by allowing an agent to select either a simple action (low-level) or a sequence of actions (extended option). They provide more flexibility and can model complex behaviors that might span multiple time steps. This is achieved through a policy \( \pi(.|S_t) \) which determines the next action, and a termination function \( \delta(S_{t+1}) \) that decides whether to end the option or continue.
+Options extend the traditional notion of actions by allowing an agent to select either a simple action (low-level) or a sequence of actions (extended option). They provide more flexibility and can model complex behaviors that might span multiple time steps. This is achieved through a policy $\pi(.|S_t)$ which determines the next action, and a termination function $\delta(S_{t+1})$ that decides whether to end the option or continue.
 x??
 
 ---
 
 #### Option-Value Function
 
-The value of an option can be defined in terms of the expected return starting from a state, executing the option until termination, and then following a policy. This extends the traditional action-value function \( q_\pi(s,a) \).
+The value of an option can be defined in terms of the expected return starting from a state, executing the option until termination, and then following a policy. This extends the traditional action-value function $q_\pi(s,a)$.
 
 :p How does the option-value function generalize the concept of action-value functions?
 ??x
-The option-value function generalizes the action-value function by considering not just an individual action but an entire sequence (option) that might span multiple time steps. For a given state and option, it returns the expected return starting from that state, executing the option until termination, and then following the policy \( \pi \). This is formally expressed as:
-\[ q_{\pi}(s, .) = E[R_1 + \delta R_2 + \delta^2 R_3 + ... | S_0=s, A_0 : \delta \sim \pi(.|S), \delta \leq 1] \]
-
-where \( \delta \) is the discount factor and represents the random time step at which the option terminates.
+The option-value function generalizes the action-value function by considering not just an individual action but an entire sequence (option) that might span multiple time steps. For a given state and option, it returns the expected return starting from that state, executing the option until termination, and then following the policy $\pi$. This is formally expressed as:
+$$q_{\pi}(s, .) = E[R_1 + \delta R_2 + \delta^2 R_3 + ... | S_0=s, A_0 : \delta \sim \pi(.|S), \delta \leq 1]$$where $\delta$ is the discount factor and represents the random time step at which the option terminates.
 x??
 
 ---
@@ -923,19 +914,21 @@ x??
 
 #### Generalized Environmental Model
 
-The environmental model in the context of options considers both state transitions resulting from executing an option and expected cumulative rewards. The reward part for an option \( \delta(s,.) \) is defined as:
-\[ r(s, .) = E[R_1 + \delta R_2 + \delta^2 R_3 + ... | S_0=s, A_0 : \delta \sim \pi(.|S), \delta \leq 1] \]
+The environmental model in the context of options considers both state transitions resulting from executing an option and expected cumulative rewards. The reward part for an option $\delta(s,.)$ is defined as:
+$$r(s, .) = E[R_1 + \delta R_2 + \delta^2 R_3 + ... | S_0=s, A_0 : \delta \sim \pi(.|S), \delta \leq 1]$$
 
 The state transition part is more complex and accounts for the probability of ending in each possible state after various time steps.
 
 :p How does the environmental model generalize to options?
 ??x
 For options, the environment's model includes two main components: state transitions resulting from executing an option and expected cumulative rewards. The reward aspect generalizes the expected reward for state-action pairs as:
-\[ r(s, .) = E[R_1 + \delta R_2 + \delta^2 R_3 + ... | S_0=s, A_0 : \delta \sim \pi(.|S), \delta \leq 1] \]
+$$r(s, .) = E[R_1 + \delta R_2 + \delta^2 R_3 + ... | S_0=s, A_0 : \delta \sim \pi(.|S), \delta \leq 1]$$
+
 This accounts for the sequence of rewards that may occur after executing an option.
 
 The state transition part characterizes the probability of each possible resulting state, but now this state might result after various time steps. The model is given by:
-\[ p(s_0 | s, .) = \sum_{k=1}^{\infty} \delta^k P\{S_k=s_0, T=k | S_0=s, A_0: \delta \sim \pi(.|S), \delta \leq 1\} \]
+$$p(s_0 | s, .) = \sum_{k=1}^{\infty} \delta^k P\{S_k=s_0, T=k | S_0=s, A_0: \delta \sim \pi(.|S), \delta \leq 1\}$$
+
 This accounts for the discounted probability of transitioning to different states after various time steps.
 x??
 
@@ -946,7 +939,7 @@ Background context explaining the transition part of the option model. The trans
 
 :p What does the transition part of an option model involve?
 ??x
-The transition part of an option model defines how a state \( s \) evolves into another state \( s' \) based on the chosen action or option. This is essential for calculating the future states in a hierarchical policy, which can significantly improve planning efficiency by allowing large jumps through time steps.
+The transition part of an option model defines how a state $s $ evolves into another state$s'$ based on the chosen action or option. This is essential for calculating the future states in a hierarchical policy, which can significantly improve planning efficiency by allowing large jumps through time steps.
 
 ```java
 public class OptionModel {
@@ -970,11 +963,11 @@ Explanation of the general Bellman equation used in hierarchical policies and it
 
 :p What is the general Bellman equation for state values in hierarchical policies?
 ??x
-The general Bellman equation for state values \( v_\pi(s) \) in hierarchical policies is given by:
-\[ v_\pi(s) = \sum_{\alpha \in \Delta(s)} \pi(\alpha|s) \left[ r(s, .) + \mathbb{E}_{s' \sim p(. | s, \alpha)} [v_\pi(s')] \right] \]
+The general Bellman equation for state values $v_\pi(s)$ in hierarchical policies is given by:
+$$v_\pi(s) = \sum_{\alpha \in \Delta(s)} \pi(\alpha|s) \left[ r(s, .) + \mathbb{E}_{s' \sim p(. | s, \alpha)} [v_\pi(s')] \right]$$
 
-If the set of options \( \Delta(s) \) includes only low-level actions (i.e., no options are considered), this equation reduces to a version of the usual Bellman equation:
-\[ v_\pi(s) = r(s, .) + \sum_{s' \sim p(. | s, .)} \mathbb{E}_{a \sim \pi_a} [v_\pi(s')] \]
+If the set of options $\Delta(s)$ includes only low-level actions (i.e., no options are considered), this equation reduces to a version of the usual Bellman equation:
+$$v_\pi(s) = r(s, .) + \sum_{s' \sim p(. | s, .)} \mathbb{E}_{a \sim \pi_a} [v_\pi(s')]$$
 
 This reduction shows that when only low-level actions are considered, the hierarchical policy essentially collapses to a traditional policy.
 
@@ -988,10 +981,9 @@ Explanation of how value iteration works in the context of options and its conve
 :p What is the value iteration algorithm analogous to (4.10) when using options?
 ??x
 The value iteration algorithm with options, analogous to (4.10), updates the state values as follows:
-\[ v^{k+1}(s) = \max_{\alpha \in \Delta(s)} \left[ r(s, .) + \sum_{s' \sim p(. | s, \alpha)} v^k(s') \right] \]
-for all \( s \in S \).
+$$v^{k+1}(s) = \max_{\alpha \in \Delta(s)} \left[ r(s, .) + \sum_{s' \sim p(. | s, \alpha)} v^k(s') \right]$$for all $ s \in S$.
 
-If the set of options \( \Delta(s) \) includes all low-level actions available in each state \( s \), then this algorithm converges to the conventional optimal policy and value function. However, if only a subset of possible options is considered, it will converge to the best hierarchical policy limited to that restricted set of options.
+If the set of options $\Delta(s)$ includes all low-level actions available in each state $s$, then this algorithm converges to the conventional optimal policy and value function. However, if only a subset of possible options is considered, it will converge to the best hierarchical policy limited to that restricted set of options.
 
 ```java
 public class ValueIteration {
@@ -1030,13 +1022,13 @@ Explanation of how to learn option models by formulating them as collections of 
 :p How can an option model be learned as a collection of GVFs?
 ??x
 An option model can be learned by formulating it as a collection of GVFs. Specifically, for the reward part of the option model:
-- Choose one GVF's cumulant to be the reward \( C_t = R_t \).
-- Set its policy to match the option’s policy \( \pi = \pi_{\alpha} \).
-- Define its termination function as the discount rate times the option’s termination function \( \gamma \cdot \omega(s) \).
+- Choose one GVF's cumulant to be the reward $C_t = R_t$.
+- Set its policy to match the option’s policy $\pi = \pi_{\alpha}$.
+- Define its termination function as the discount rate times the option’s termination function $\gamma \cdot \omega(s)$.
 
 For the state-transition part:
 - Allocate one GVF for each possible terminal state.
-- Set the cumulant of the GVF that predicts transition to state \( s' \) to be \( C_t = \gamma \cdot \omega(s') \).
+- Set the cumulant of the GVF that predicts transition to state $s'$ to be $C_t = \gamma \cdot \omega(s')$.
 - Ensure these GVFs do not accumulate anything except when the option terminates in the appropriate state.
 
 The true GVF then equals the reward or transition part of the option model, and the learning methods described in this book can be used to approximate it.

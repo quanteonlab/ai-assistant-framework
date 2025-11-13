@@ -11,35 +11,35 @@ Background context: The text discusses generalizing recursive equations for off-
 :p How do you generalize the three recursive equations to their truncated versions?
 
 ??x
-To generalize the recursive equations to their truncated versions, we focus on approximating \(G_{s,t}\) using sums of state-based TD errors. The original equation for the non-truncated return is:
-
-\[ G_{s,t} = \gamma^t (R_{t+1} + \pi(St+1) - V(St)) + \gamma^t V(St) \]
+To generalize the recursive equations to their truncated versions, we focus on approximating $G_{s,t}$ using sums of state-based TD errors. The original equation for the non-truncated return is:
+$$G_{s,t} = \gamma^t (R_{t+1} + \pi(St+1) - V(St)) + \gamma^t V(St)$$
 
 However, in practice, we often use a truncated version of this return. The truncated version can be approximated by:
+$$
 
-\[ G_{s,t} \approx V(St) + \sum_{k=t}^{h-1} \delta_k \prod_{i=t+1}^k (1-\gamma) \]
+G_{s,t} \approx V(St) + \sum_{k=t}^{h-1} \delta_k \prod_{i=t+1}^k (1-\gamma)$$
 
 Where:
-- \(V(St)\) is the approximate value function.
-- \(\delta_k = R_{t+k+1} + \pi(S_{t+k+1}) - V(S_{t+k+1})\) is the TD error.
+- $V(St)$ is the approximate value function.
+- $\delta_k = R_{t+k+1} + \pi(S_{t+k+1}) - V(S_{t+k+1})$ is the TD error.
 
 For state-based returns, this generalizes to:
-
-\[ G_{s,t} = \gamma^t (R_{t+1} + \pi(St+1) - v(St)) + \gamma^t v(St) \]
+$$G_{s,t} = \gamma^t (R_{t+1} + \pi(St+1) - v(St)) + \gamma^t v(St)$$
 
 The truncated version of this return can be approximated as:
+$$
 
-\[ G_{s,t} \approx v(St) + \sum_{k=t}^{h-1} \delta_k \prod_{i=t+1}^k (1-\gamma) \]
+G_{s,t} \approx v(St) + \sum_{k=t}^{h-1} \delta_k \prod_{i=t+1}^k (1-\gamma)$$
 
 Where:
-- \(v(St)\) is the approximate state value function.
-- \(\delta_k = R_{t+k+1} + \pi(S_{t+k+1}) - v(S_{t+k+1})\) is the TD error.
+- $v(St)$ is the approximate state value function.
+- $\delta_k = R_{t+k+1} + \pi(S_{t+k+1}) - v(S_{t+k+1})$ is the TD error.
 
-For simplicity, consider the case of \(h=0\), and use the notation:
+For simplicity, consider the case of $h=0$, and use the notation:
 
-\[ V_k = v(S_k) \]
+$$V_k = v(S_k)$$
 
-The truncated version becomes exact if the value function does not change over time. This can be proven by showing that the sum of the errors from time \(t\) to \(h-1\) converges to zero.
+The truncated version becomes exact if the value function does not change over time. This can be proven by showing that the sum of the errors from time $t $ to$h-1$ converges to zero.
 
 ??x
 The answer is derived from understanding the approximation process and its convergence properties under constant value functions.
@@ -58,36 +58,36 @@ x??
 
 Background context: The text discusses incorporating importance sampling into off-policy methods using control variates. It generalizes the return for state-based and action-based cases.
 
-:p How is the generalized \( \epsilon \)-return for off-policy methods defined?
+:p How is the generalized $\epsilon$-return for off-policy methods defined?
 
 ??x
-The generalized \( \epsilon \)-return for off-policy methods, in the case of state-based returns, is defined as:
+The generalized $\epsilon$-return for off-policy methods, in the case of state-based returns, is defined as:
 
-\[ G_{s,t} = \rho_t (R_{t+1} + \pi(S_{t+1}) - v(S_{t})) + \rho_t v(S_{t}) \]
+$$G_{s,t} = \rho_t (R_{t+1} + \pi(S_{t+1}) - v(S_{t})) + \rho_t v(S_{t})$$
 
 Where:
-- \( \rho_t = \frac{\pi(A_t|S_t)}{b(A_t|S_t)} \) is the importance sampling ratio.
-- \( R_{t+1} \) is the next reward.
-- \( \pi(S_{t+1}) \) and \( v(S_{t}) \) are the value under the target policy and behavior policy, respectively.
+- $\rho_t = \frac{\pi(A_t|S_t)}{b(A_t|S_t)}$ is the importance sampling ratio.
+- $R_{t+1}$ is the next reward.
+- $\pi(S_{t+1})$ and $v(S_{t})$ are the value under the target policy and behavior policy, respectively.
 
 The truncated version of this return can be approximated as:
-
-\[ G_{s,t} \approx v(S_t) + \sum_{k=t}^{h-1} \delta_k (1 - \rho_t) \prod_{i=t+1}^k (1-\gamma) \]
+$$G_{s,t} \approx v(S_t) + \sum_{k=t}^{h-1} \delta_k (1 - \rho_t) \prod_{i=t+1}^k (1-\gamma)$$
 
 Where:
-- \( \delta_k = R_{t+k+1} + \pi(S_{t+k+1}) - v(S_{t+k+1}) \).
+- $\delta_k = R_{t+k+1} + \pi(S_{t+k+1}) - v(S_{t+k+1})$.
 
-For simplicity, consider the case of \( h=0 \):
+For simplicity, consider the case of $h=0$:
 
-\[ G_{s,t} = v(S_t) + (R_{t+1} + \pi(S_{t+1}) - v(S_{t+1})) \]
+$$G_{s,t} = v(S_t) + (R_{t+1} + \pi(S_{t+1}) - v(S_{t+1}))$$
 
 This approximation becomes exact if the value function does not change. The update for this is:
+$$
 
-\[ V(S_t) = V(S_t) + \alpha (\rho_t G_{s,t} - r(\pi, S_t)) \]
+V(S_t) = V(S_t) + \alpha (\rho_t G_{s,t} - r(\pi, S_t))$$
 
 Where:
-- \( \alpha \) is the learning rate.
-- \( r(\pi, S_t) \) is the actual reward.
+- $\alpha$ is the learning rate.
+- $r(\pi, S_t)$ is the actual reward.
 
 ??x
 The answer involves understanding how importance sampling and control variates are used to approximate off-policy returns in a truncated manner.
@@ -106,37 +106,38 @@ x??
 
 Background context: The text discusses the off-policy traces and their application to action values. It extends these concepts from state-based returns to action-based ones.
 
-:p How is the generalized \( \epsilon \)-return defined for action values?
+:p How is the generalized $\epsilon$-return defined for action values?
 
 ??x
-The generalized \( \epsilon \)-return for action values, in the case of off-policy methods, is defined as:
+The generalized $\epsilon$-return for action values, in the case of off-policy methods, is defined as:
 
-\[ G_{a,t} = R_{t+1} + \rho_{t+1} \left( (1 - \rho_{t+1}) \bar{V}_{t}(S_{t+1}) + \rho_{t+1} (\gamma G_{a, t+1} - q(S_{t+1}, A_{t+1})) \right) \]
+$$G_{a,t} = R_{t+1} + \rho_{t+1} \left( (1 - \rho_{t+1}) \bar{V}_{t}(S_{t+1}) + \rho_{t+1} (\gamma G_{a, t+1} - q(S_{t+1}, A_{t+1})) \right)$$
 
 Where:
-- \( R_{t+1} \) is the next reward.
-- \( \bar{V}_{t}(S_{t+1}) = E_{\pi}[R_{t+2} + \gamma V(S_{t+2}) | S_{t+1}] \).
-- \( q(S_{t+1}, A_{t+1}) \) is the action-value function.
-- \( \rho_{t+1} = \frac{\pi(A_{t+1}|S_{t+1})}{b(A_{t+1}|S_{t+1})} \).
+- $R_{t+1}$ is the next reward.
+- $\bar{V}_{t}(S_{t+1}) = E_{\pi}[R_{t+2} + \gamma V(S_{t+2}) | S_{t+1}]$.
+- $q(S_{t+1}, A_{t+1})$ is the action-value function.
+- $\rho_{t+1} = \frac{\pi(A_{t+1}|S_{t+1})}{b(A_{t+1}|S_{t+1})}$.
 
 The truncated version of this return can be approximated as:
 
-\[ G_{a,t} \approx q(S_t, A_t) + \sum_{k=t}^{h-1} \delta_k (1 - \rho_t) \prod_{i=t+1}^k (1-\gamma) \]
+$$G_{a,t} \approx q(S_t, A_t) + \sum_{k=t}^{h-1} \delta_k (1 - \rho_t) \prod_{i=t+1}^k (1-\gamma)$$
 
 Where:
-- \( \delta_k = R_{t+k+1} + \bar{V}_{t+k+1} - q(S_{t+k+1}, A_{t+k+1}) \).
+- $\delta_k = R_{t+k+1} + \bar{V}_{t+k+1} - q(S_{t+k+1}, A_{t+k+1})$.
 
-For simplicity, consider the case of \( h=0 \):
+For simplicity, consider the case of $h=0$:
 
-\[ G_{a,t} = q(S_t, A_t) + (R_{t+1} + \bar{V}_{t+1} - q(S_{t+1}, A_{t+1})) \]
+$$G_{a,t} = q(S_t, A_t) + (R_{t+1} + \bar{V}_{t+1} - q(S_{t+1}, A_{t+1}))$$
 
 This approximation becomes exact if the value function does not change. The update for this is:
+$$
 
-\[ Q(S_t, A_t) = Q(S_t, A_t) + \alpha (\rho_t G_{a,t} - r(\pi, S_t)) \]
+Q(S_t, A_t) = Q(S_t, A_t) + \alpha (\rho_t G_{a,t} - r(\pi, S_t))$$
 
 Where:
-- \( \alpha \) is the learning rate.
-- \( r(\pi, S_t) \) is the actual reward.
+- $\alpha$ is the learning rate.
+- $r(\pi, S_t)$ is the actual reward.
 
 ??x
 The answer involves understanding how importance sampling and control variates are used to approximate off-policy returns in a truncated manner for action values.
@@ -155,25 +156,25 @@ x??
 
 Background context: The text discusses the off-policy TD update for state and action values using importance sampling and control variates. It focuses on the logic behind these updates.
 
-:p How is the off-policy TD update derived from the generalized \( \epsilon \)-return?
+:p How is the off-policy TD update derived from the generalized $\epsilon$-return?
 
 ??x
-The off-policy TD update can be derived from the generalized \( \epsilon \)-return equations for both state-based and action-based values. For state-based returns, the update rule is:
+The off-policy TD update can be derived from the generalized $\epsilon$-return equations for both state-based and action-based values. For state-based returns, the update rule is:
 
-\[ V(S_t) = V(S_t) + \alpha (\rho_t G_{s,t} - r(\pi, S_t)) \]
+$$V(S_t) = V(S_t) + \alpha (\rho_t G_{s,t} - r(\pi, S_t))$$
 
 Where:
-- \( \rho_t = \frac{\pi(A_t|S_t)}{b(A_t|S_t)} \) is the importance sampling ratio.
-- \( G_{s,t} \approx v(S_t) + (R_{t+1} + \pi(S_{t+1}) - v(S_{t+1})) \).
-- \( r(\pi, S_t) \) is the actual reward.
+- $\rho_t = \frac{\pi(A_t|S_t)}{b(A_t|S_t)}$ is the importance sampling ratio.
+- $G_{s,t} \approx v(S_t) + (R_{t+1} + \pi(S_{t+1}) - v(S_{t+1}))$.
+- $r(\pi, S_t)$ is the actual reward.
 
 For action values, the update rule is:
 
-\[ Q(S_t, A_t) = Q(S_t, A_t) + \alpha (\rho_t G_{a,t} - r(\pi, S_t)) \]
+$$Q(S_t, A_t) = Q(S_t, A_t) + \alpha (\rho_t G_{a,t} - r(\pi, S_t))$$
 
 Where:
-- \( \bar{V}_{t}(S_{t+1}) = E_{\pi}[R_{t+2} + \gamma V(S_{t+2}) | S_{t+1}] \).
-- \( G_{a,t} \approx q(S_t, A_t) + (R_{t+1} + \bar{V}_{t+1} - q(S_{t+1}, A_{t+1})) \).
+- $\bar{V}_{t}(S_{t+1}) = E_{\pi}[R_{t+2} + \gamma V(S_{t+2}) | S_{t+1}]$.
+- $G_{a,t} \approx q(S_t, A_t) + (R_{t+1} + \bar{V}_{t+1} - q(S_{t+1}, A_{t+1}))$.
 
 The derivation involves substituting the generalized return into the TD update formula and simplifying it.
 
@@ -246,18 +247,19 @@ The detailed equations for TB(λ) involve weighted tree-backup updates based on 
 :p What is the key equation for calculating Gt in Tree-Backup(λ)?
 ??x
 The key equation for calculating Gt in Tree-Backup(λ) is:
-\[ G_{a,t} = R_{t+1} + \lambda t+1 \left[ (1 - \lambda t+1)\bar{V}_t(S_{t+1}) + \lambda t+1 \sum_{a' \neq A_{t+1}} \pi(a'|S_{t+1}) q(S_{t+1}, a', w_t) + \pi(A_{t+1}|S_{t+1}) G_{A,t+1} \right] \]
+$$G_{a,t} = R_{t+1} + \lambda t+1 \left[ (1 - \lambda t+1)\bar{V}_t(S_{t+1}) + \lambda t+1 \sum_{a' \neq A_{t+1}} \pi(a'|S_{t+1}) q(S_{t+1}, a', w_t) + \pi(A_{t+1}|S_{t+1}) G_{A,t+1} \right]$$
+
 This equation captures the weighted sum of immediate rewards and discounted future returns.
 x??
 
 ---
 #### Eligibility Trace Update for Tree-Backup(λ)
 The eligibility trace update involves target-policy probabilities of selected actions. The formula is:
-\[ z_t = \lambda t \pi(A_t|S_t) z_{t-1} + r q(S_t, A_t, w_t) \]
-:p What is the eligibility trace update for Tree-Backup(λ)?
+$$z_t = \lambda t \pi(A_t|S_t) z_{t-1} + r q(S_t, A_t, w_t)$$:p What is the eligibility trace update for Tree-Backup(λ)?
 ??x
 The eligibility trace update for Tree-Backup(λ) is:
-\[ z_t = \lambda t \pi(A_t|S_t) z_{t-1} + r q(S_t, A_t, w_t) \]
+$$z_t = \lambda t \pi(A_t|S_t) z_{t-1} + r q(S_t, A_t, w_t)$$
+
 This formula updates the eligibility traces based on the target-policy probabilities of selected actions and the reward.
 x??
 
@@ -281,7 +283,7 @@ For example, if ES uses a Q-value update rule like:
 w = w + alpha * delta * (x - w^T x)
 ```
 
-Where \( \delta \) is the TD error, and \( x \) is the feature vector. With eligibility traces, this becomes more complex but allows for more nuanced updates.
+Where $\delta $ is the TD error, and$x$ is the feature vector. With eligibility traces, this becomes more complex but allows for more nuanced updates.
 
 ```java
 // Pseudocode for ES with Eligibility Traces
@@ -301,7 +303,7 @@ Background context: The Generalized Temporal Difference (GTD) algorithm with eli
 
 :p What is the update rule for the GTD(λ) algorithm?
 ??x
-The update rule for the GTD(λ) algorithm involves two key components: a parameter vector \( w \) and a vector of eligibility traces \( z \).
+The update rule for the GTD(λ) algorithm involves two key components: a parameter vector $w $ and a vector of eligibility traces$z$.
 
 The update rules are as follows:
 
@@ -316,25 +318,25 @@ The update rules are as follows:
    ```
 
 Where:
-- \( \alpha_t \) is the step size for updates.
-- \( delta_t \) is the TD error, calculated as: 
+- $\alpha_t$ is the step size for updates.
+- $delta_t$ is the TD error, calculated as: 
    ```java
    delta_t = R_{t+1} + gamma * v_t - v_t
    ```
-- \( z_t \) and \( z_{t-1} \) are eligibility traces.
+- $z_t $ and$z_{t-1}$ are eligibility traces.
 
-If initialized with \( v_0 = 0 \), the algorithm iteratively updates these values to learn state-value estimates from off-policy data.
+If initialized with $v_0 = 0$, the algorithm iteratively updates these values to learn state-value estimates from off-policy data.
 
 x??
 
 ---
 
 #### GQ(λ) Algorithm for Action-Values
-Background context: The Gradient-TD (GTD) algorithm extended to action-values is introduced. This method aims to learn action-value functions using eligibility traces, which can be used as a control algorithm when the target policy is \(\epsilon\)-greedy.
+Background context: The Gradient-TD (GTD) algorithm extended to action-values is introduced. This method aims to learn action-value functions using eligibility traces, which can be used as a control algorithm when the target policy is $\epsilon$-greedy.
 
 :p What is the update rule for the GQ(λ) algorithm?
 ??x
-The update rule for the GQ(λ) algorithm involves updating the parameter vector \( w \) and the eligibility trace vector \( z \).
+The update rule for the GQ(λ) algorithm involves updating the parameter vector $w $ and the eligibility trace vector$z$.
 
 1. Update the eligibility trace:
    ```java
@@ -347,17 +349,17 @@ The update rule for the GQ(λ) algorithm involves updating the parameter vector 
    ```
 
 Where:
-- \( \alpha_t \) is the step size for updates.
-- \( delta_t \) is the TD error, calculated as: 
+- $\alpha_t$ is the step size for updates.
+- $delta_t$ is the TD error, calculated as: 
    ```java
    delta_t = R_{t+1} + gamma * v_t - v_t
    ```
-- \( bar_x_t \) is the average feature vector under the target policy:
+- $bar_x_t$ is the average feature vector under the target policy:
    ```java
    bar_x_t = sum_{a in A} pi(a|S_t) * x(S_t, a)
    ```
 
-If initialized with \( v_0 = 0 \), the algorithm iteratively updates these values to learn action-value estimates from off-policy data.
+If initialized with $v_0 = 0$, the algorithm iteratively updates these values to learn action-value estimates from off-policy data.
 
 x??
 
@@ -368,7 +370,7 @@ Background context: The Hybrid TD (HTD) algorithm combines aspects of GTD and TD
 
 :p What is the update rule for HTD(λ)?
 ??x
-The HTD(λ) update rule involves updating both a weight vector \( w \) and an additional set of eligibility traces \( z \).
+The HTD(λ) update rule involves updating both a weight vector $w $ and an additional set of eligibility traces$z$.
 
 1. Update the primary weight vector:
    ```java
@@ -381,18 +383,18 @@ The HTD(λ) update rule involves updating both a weight vector \( w \) and an ad
    ```
 
 Where:
-- \( alpha \) and \( beta \) are step size parameters.
-- \( delta \) is the TD error: 
+- $alpha $ and$beta$ are step size parameters.
+- $delta$ is the TD error: 
    ```java
    delta = R_{t+1} + gamma * v_t - v_t
    ```
-- \( z \) and \( b_z \) are eligibility traces:
+- $z $ and$b_z$ are eligibility traces:
    ```java
    z_t = gamma * lambda * z_{t-1} + delta_t * x_t
    b_z_t = delta_t * (z_{t-1} - b_z_{t-1}) / (lambda + 1)
    ```
 
-If initialized with \( v_0 = 0 \), the algorithm iteratively updates these values to learn state-value estimates from off-policy data.
+If initialized with $v_0 = 0$, the algorithm iteratively updates these values to learn state-value estimates from off-policy data.
 
 x??
 
@@ -406,7 +408,7 @@ Background context: The Emphatic-TD (ETD) algorithm is extended to eligibility t
 The ETD(λ) algorithm extends the one-step Emphatic-TD algorithm by incorporating eligibility traces. This extension allows for more flexible bootstrapping and retains strong off-policy convergence guarantees.
 
 The key updates involve:
-1. Updating the primary weight vector \( w \):
+1. Updating the primary weight vector $w$:
    ```java
    w_{t+1} = w_t + alpha * (delta * z - v_t) * x_t
    ```
@@ -418,14 +420,14 @@ The key updates involve:
    ```
 
 Where:
-- \( alpha \) is the step size.
-- \( delta \) is the TD error: 
+- $alpha$ is the step size.
+- $delta$ is the TD error: 
    ```java
    delta = R_{t+1} + gamma * v_t - v_t
    ```
-- \( bar_x_t \) is the average feature vector under the target policy.
+- $bar_x_t$ is the average feature vector under the target policy.
 
-The algorithm ensures that when all \( \lambda_t = 1 \), it reduces to the one-step ETD algorithm, providing a balance between stability and flexibility in off-policy learning.
+The algorithm ensures that when all $\lambda_t = 1$, it reduces to the one-step ETD algorithm, providing a balance between stability and flexibility in off-policy learning.
 
 x??
 

@@ -461,10 +461,10 @@ x??
 #### Spheres as Collision Primitives
 Spheres are one of the simplest three-dimensional volumes, representing a perfect round shape. They are particularly efficient for collision checks because their geometry is simple.
 
-A sphere can be represented by a center point \((cx, cy, cz)\) and a radius \(r\). This information can be stored in a four-element floating-point vector.
+A sphere can be represented by a center point $(cx, cy, cz)$ and a radius $r$. This information can be stored in a four-element floating-point vector.
 :p How is a sphere defined as a collision primitive?
 ??x
-A sphere is defined by a center point \((cx, cy, cz)\) and a radius \(r\). It can be represented using a four-element floating-point vector containing the coordinates of the center and the radius. This format works well with SIMD math libraries.
+A sphere is defined by a center point $(cx, cy, cz)$ and a radius $r$. It can be represented using a four-element floating-point vector containing the coordinates of the center and the radius. This format works well with SIMD math libraries.
 ```java
 class Sphere {
     float cx, cy, cz; // Center coordinates
@@ -485,10 +485,10 @@ x??
 #### Capsules as Collision Primitives
 Capsules are pill-shaped volumes composed of a cylinder and two hemispherical end caps. They can be thought of as swept spheres, representing the shape traced out by a moving sphere.
 
-A capsule is often represented using two points \((p1, p2)\) defining its endpoints and a radius \(r\).
+A capsule is often represented using two points $(p1, p2)$ defining its endpoints and a radius $r$.
 :p What defines a capsule?
 ??x
-A capsule is defined by two points \((p1, p2)\) which represent the endpoints of the cylinder part, and a radius \(r\) for the hemispherical end caps. It can be visualized as a swept sphere, representing the shape traced out by a moving sphere.
+A capsule is defined by two points $(p1, p2)$ which represent the endpoints of the cylinder part, and a radius $r$ for the hemispherical end caps. It can be visualized as a swept sphere, representing the shape traced out by a moving sphere.
 ```java
 class Capsule {
     Vector3 p1; // Start point
@@ -512,7 +512,7 @@ Axis-aligned bounding boxes (AABBs) are rectangular volumes whose faces are para
 An AABB can be defined by two points: one containing the minimum coordinates along each axis, and another containing the maximum coordinates.
 :p How is an Axis-Aligned Bounding Box (AABB) defined?
 ??x
-An AABB is defined by two points: one containing the minimum coordinates \((minX, minY, minZ)\) and the other containing the maximum coordinates \((maxX, maxY, maxZ)\). This allows for efficient collision detection with other axis-aligned boxes.
+An AABB is defined by two points: one containing the minimum coordinates $(minX, minY, minZ)$ and the other containing the maximum coordinates $(maxX, maxY, maxZ)$. This allows for efficient collision detection with other axis-aligned boxes.
 ```java
 class Aabb {
     Vector3 min; // Minimum coordinates
@@ -690,15 +690,15 @@ x??
 Background context: Determining whether a point lies within a sphere involves calculating the distance between the point and the center of the sphere. If this distance is less than or equal to the radius, the point is inside; otherwise, it's outside.
 
 Relevant formula:
-\[ s = c - p \]
-\[ \text{if } |s| \leq r, \text{ then the point lies inside the sphere} \]
-
-:p How do you determine if a point lies within a sphere?
+$$s = c - p$$
+$$\text{if } |s| \leq r, \text{ then the point lies inside the sphere}$$:p How do you determine if a point lies within a sphere?
 ??x
-To determine if a point \( p \) lies within a sphere with center \( c \) and radius \( r \), calculate the vector from the center to the point:
-\[ s = c - p \]
+To determine if a point $p $ lies within a sphere with center$c $ and radius$r$, calculate the vector from the center to the point:
+$$s = c - p$$
+
 Then, check if the length of this vector is less than or equal to the radius:
-\[ |s| \leq r \]
+$$|s| \leq r$$
+
 If true, the point lies inside the sphere; otherwise, it's outside.
 x??
 
@@ -709,15 +709,15 @@ x??
 Background context: Determining intersection between two spheres involves checking if the distance between their centers is smaller than or equal to the sum of their radii.
 
 Relevant formula:
-\[ s = c1 - c2 \]
-\[ \text{if } |s| \leq (r1 + r2), \text{ then the spheres intersect} \]
-
-:p How do you determine if two spheres intersect?
+$$s = c1 - c2$$
+$$\text{if } |s| \leq (r1 + r2), \text{ then the spheres intersect}$$:p How do you determine if two spheres intersect?
 ??x
-To determine if two spheres with centers \( c1 \) and \( c2 \) and radii \( r1 \) and \( r2 \) intersect, calculate the vector between their centers:
-\[ s = c1 - c2 \]
+To determine if two spheres with centers $c1 $ and$c2 $ and radii$ r1 $ and $r2$ intersect, calculate the vector between their centers:
+$$s = c1 - c2$$
+
 Then, check if the length of this vector is less than or equal to the sum of the spheres' radii:
-\[ |s| \leq (r1 + r2) \]
+$$|s| \leq (r1 + r2)$$
+
 If true, the spheres intersect; otherwise, they do not.
 x??
 
@@ -728,8 +728,8 @@ x??
 Background context: This theorem states that if a line can be found such that one object is entirely on one side of the line and another object is entirely on the other side, then the objects do not overlap. If no such line exists, and both shapes are convex, they must intersect.
 
 Relevant formula:
-For projection intervals \([c1min, c1max]\) and \([c2min, c2max]\):
-\[ \text{if } [c1min, c1max] \cap [c2min, c2max] = \emptyset, \text{ then objects do not overlap} \]
+For projection intervals $[c1min, c1max]$ and $[c2min, c2max]$:
+$$\text{if } [c1min, c1max] \cap [c2min, c2max] = \emptyset, \text{ then objects do not overlap}$$
 
 :p How does the separating axis theorem work?
 ??x
@@ -739,7 +739,7 @@ For example:
 - In 2D: Check all edges of both objects as potential separating axes.
 - In 3D: Check faces and edges of both objects.
 
-If for any axis the projection intervals do not overlap (\([c1min, c1max] \cap [c2min, c2max] = \emptyset\)), no intersection exists. If all projections overlap, the shapes intersect.
+If for any axis the projection intervals do not overlap ($[c1min, c1max] \cap [c2min, c2max] = \emptyset$), no intersection exists. If all projections overlap, the shapes intersect.
 
 Here's a simplified pseudocode example:
 ```java
@@ -762,11 +762,9 @@ Background context: The separating axis theorem (SAT) is a method used to determ
 
 If any of the projection intervals are disjoint, then no separating axis exists, implying that the shapes do not intersect. If an axis separates them, it means they do not overlap along this direction.
 
-Formula: The intervals \([cA_{\text{min}}, cA_{\text{max}}]\) and \([cB_{\text{min}}, cB_{\text{max}}]\) are disjoint if:
-- \(cA_{\text{max}} < cB_{\text{min}}\) or 
-- \(cB_{\text{max}} < cA_{\text{min}}\)
-
-:p What is the separating axis theorem used for?
+Formula: The intervals $[cA_{\text{min}}, cA_{\text{max}}]$ and $[cB_{\text{min}}, cB_{\text{max}}]$ are disjoint if:
+- $cA_{\text{max}} < cB_{\text{min}}$ or 
+- $cB_{\text{max}} < cA_{\text{min}}$:p What is the separating axis theorem used for?
 ??x
 The separating axis theorem (SAT) is used to determine whether two convex shapes intersect. It works by projecting both shapes onto potential separating axes and checking if their projections overlap.
 
@@ -926,7 +924,7 @@ x??
 ---
 
 #### Minkowski Difference
-Background context explaining the concept. The Minkowski difference between two shapes A and B is defined as the set of all possible differences \(A_i - B_j\), where \(A_i\) is a point in shape A and \(B_j\) is a point in shape B.
+Background context explaining the concept. The Minkowski difference between two shapes A and B is defined as the set of all possible differences $A_i - B_j $, where $ A_i $is a point in shape A and$ B_j$ is a point in shape B.
 :p What is the Minkowski difference?
 ??x
 The Minkowski difference between two shapes A and B is the set of all points obtained by subtracting every point in B from every point in A. This operation results in a new set of points that, when applied to convex shapes, will contain the origin if and only if A and B intersect.

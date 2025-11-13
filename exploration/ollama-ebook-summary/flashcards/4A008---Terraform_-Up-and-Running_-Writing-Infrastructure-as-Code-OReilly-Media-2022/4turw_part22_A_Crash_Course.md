@@ -13,13 +13,12 @@ Explanation: If you try to access a service running inside a container on `local
 ??x
 When you run a Docker container without mapping ports, the service running inside the container will be accessible only from within the container. Attempting to access it via `localhost` on the host machine will result in a "Connection refused" error.
 ```bash
-$ docker run -it training/webapp python app.py
+$docker run -it training/webapp python app.py
 ```
 
 You then try:
 
-```bash
-$ curl localhost:5000
+```bash$ curl localhost:5000
 curl: (7) Failed to connect to localhost port 5000: Connection refused
 ```
 x??
@@ -35,7 +34,7 @@ Explanation: For stopping a container that's running as part of an interactive s
 ??x
 To stop a Docker container gracefully, press `Ctrl+C` in the terminal where it is running. This will send a SIGINT signal to the process inside the container.
 ```bash
-$ docker run -it training/webapp python app.py  # Run an interactive shell session
+$docker run -it training/webapp python app.py  # Run an interactive shell session
 
 # Press Ctrl+C here to terminate the execution and stop the container
 ```
@@ -52,8 +51,7 @@ Explanation: The command `docker run -p 5000:5000 training/webapp` tells Docker 
 ??x
 To map a port from a Docker container to the host machine, use the `-p` flag followed by the host and container ports in the format `docker run -p <host_port>:<container_port> <image_name>`. For example:
 
-```bash
-$ docker run -p 5000:5000 training/webapp
+```bash$ docker run -p 5000:5000 training/webapp
 ```
 
 This command exposes port 5000 of the container on port 5000 of the host machine.
@@ -72,13 +70,12 @@ To clean up unused Docker containers, you can use the `docker rm <CONTAINER_ID>`
 
 Example:
 ```bash
-$ docker rm <CONTAINER_ID>
+$docker rm <CONTAINER_ID>
 ```
 
 Or:
 
-```bash
-$ docker run --rm training/webapp
+```bash$ docker run --rm training/webapp
 ```
 x??
 
@@ -122,9 +119,7 @@ To enable Kubernetes on Docker Desktop, check the "Enable Kubernetes" checkbox i
 
 ```bash
 # Install kubectl and configure it.
-$ curl -LO https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/stable-server/binaries.list | grep /linux/amd64/kubectl)
-$ chmod +x ./kubectl
-$ sudo mv ./kubectl /usr/local/bin/
+$curl -LO https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/stable-server/binaries.list | grep /linux/amd64/kubectl)$ chmod +x ./kubectl$ sudo mv ./kubectl /usr/local/bin/
 ```
 
 You will need to update the configuration file located in `$HOME/.kube/config` so that `kubectl` knows which Kubernetes cluster to connect to. When you enable Kubernetes through Docker Desktop, it updates this config file for you by adding a `docker-desktop` entry.
@@ -135,14 +130,13 @@ You will need to update the configuration file located in `$HOME/.kube/config` s
 To use the `docker-desktop` context with `kubectl`, run:
 
 ```bash
-$ kubectl config use-context docker-desktop
+$kubectl config use-context docker-desktop
 Switched to context "docker-desktop".
 ```
 
 This command tells `kubectl` which cluster configuration to use. After running this, you can check if your Kubernetes cluster is working by using the following command:
 
-```bash
-$ kubectl get nodes
+```bash$ kubectl get nodes
 ```
 
 If everything is set up correctly, you should see information about the node(s) in your local cluster.
@@ -222,8 +216,7 @@ To deploy resources like Deployments and Services, you use the `kubectl apply` c
 Example usage:
 
 ```bash
-$ kubectl apply -f deployment.yaml
-$ kubectl apply -f service.yaml
+$kubectl apply -f deployment.yaml$ kubectl apply -f service.yaml
 ```
 
 Here, `-f` specifies the file containing the YAML configuration for the Deployment or Service you want to create.
@@ -1064,7 +1057,7 @@ Background context: This section explains how to deploy an application using Ter
 The command used to run `terraform apply` is:
 
 ```sh
-$ terraform apply
+$terraform apply
 ```
 
 The output indicates that the resources have been successfully added without any changes or destroyed resources. The `outputs` section shows details like the service endpoint.
@@ -1089,8 +1082,7 @@ Background context: After deploying an application using Terraform with EKS, it'
 ??x
 You can test the application by using the `curl` command on the `service_endpoint` provided in the Terraform output:
 
-```sh
-$ curl http://774696355.us-east-2.elb.amazonaws.com
+```sh$ curl http://774696355.us-east-2.elb.amazonaws.com
 ```
 
 This command sends a request to the load balancer, and if everything is set up correctly, you should receive a response like "Hello Terraform." This confirms that the application is running and accessible via the provided URL.
@@ -1135,13 +1127,12 @@ Background context: After deploying an application using Terraform on EKS, you c
 You can authenticate `kubectl` to interact with an EKS cluster by running:
 
 ```sh
-$ aws eks update-kubeconfig --region <REGION> --name <EKS_CLUSTER_NAME>
+$aws eks update-kubeconfig --region <REGION> --name <EKS_CLUSTER_NAME>
 ```
 
 Replace `<REGION>` and `<EKS_CLUSTER_NAME>` with the appropriate values. For example, if your region is `us-east-2` and your cluster name is `kubernetes-example`, you would run:
 
-```sh
-$ aws eks update-kubeconfig --region us-east-2 --name kubernetes-example
+```sh$ aws eks update-kubeconfig --region us-east-2 --name kubernetes-example
 ```
 
 This command updates your local Kubernetes configuration file (`~/.kube/config`) with the necessary credentials to interact with the specified EKS cluster.

@@ -239,7 +239,7 @@ x??
 ---
 
 #### Beam Support Forces
-Background context: A beam of length \( L \) supported at two points with a sliding box on it is analyzed to calculate the forces exerted by each support.
+Background context: A beam of length $L$ supported at two points with a sliding box on it is analyzed to calculate the forces exerted by each support.
 
 :p How would you model the system where a box slides along a beam supported at two points?
 ??x
@@ -320,7 +320,7 @@ for x in arange(-5., +5.1, 0.1):
 
 :p What does the `gcurve` method do?
 ??x
-The `gcurve` method creates a curve plot on the graph display and allows for plotting multiple points that form a smooth curve. It is used here to plot the function \( f(x) = 5 \cdot \cos(2x) \cdot e^{-0.4x} \).
+The `gcurve` method creates a curve plot on the graph display and allows for plotting multiple points that form a smooth curve. It is used here to plot the function $f(x) = 5 \cdot \cos(2x) \cdot e^{-0.4x}$.
 x??
 
 ---
@@ -355,7 +355,7 @@ for x in arange(-5., 5.1, 0.1):
 
 :p What is the purpose of using `gvbars` in this script?
 ??x
-The `gvbars` method creates a plot with vertical bars at each specified point on the x-axis. It is used here to visually represent the function \( y = \cos^2(x) / 3 \) as vertical bars, providing a different visual representation compared to curves or dots.
+The `gvbars` method creates a plot with vertical bars at each specified point on the x-axis. It is used here to visually represent the function $y = \cos^2(x) / 3$ as vertical bars, providing a different visual representation compared to curves or dots.
 x??
 
 ---
@@ -424,8 +424,8 @@ ax.plot(x1, y1, 'c', linewidth=4)
 ax.set_xlim((0, 2 * np.pi))
 ax.set_ylim((0, 5))
 ax.set_xticks([0, np.pi, 2 * np.pi])
-ax.set_xticklabels(['0', '\(\pi\)', '2\(\pi\)'])
-ax.set_ylabel(r'\(f(x) = x \,\sin^2 x \)', fontsize=20)
+ax.set_xticklabels(['0', '$\pi $', '2 $\pi$'])
+ax.set_ylabel(r'$f(x) = x \,\sin^2 x$', fontsize=20)
 ax.set_xlabel('x', fontsize=20)
 fig.patch.set_visible(False)
 
@@ -437,7 +437,7 @@ j = 0  # Counter for points inside the curve
 
 :p What is the role of `fx(x)` in this script?
 ??x
-The `fx(x)` function defines the integrand \( f(x) = x \cdot \sin^2(x) \), which represents the mathematical function to be integrated. This function is used later in the integration process, specifically when using the von Neumann rejection method for Monte Carlo simulation.
+The `fx(x)` function defines the integrand $f(x) = x \cdot \sin^2(x)$, which represents the mathematical function to be integrated. This function is used later in the integration process, specifically when using the von Neumann rejection method for Monte Carlo simulation.
 x??
 
 --- 

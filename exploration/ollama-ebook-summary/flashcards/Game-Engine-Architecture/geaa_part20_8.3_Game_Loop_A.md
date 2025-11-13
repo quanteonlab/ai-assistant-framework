@@ -257,10 +257,10 @@ x??
 ---
 
 #### CPU-Dependent Games
-Background context: In many early video games, programmers did not measure the elapsed real time during the game loop. Instead, they specified object speeds directly in terms of distance per frame, essentially using \(\Delta t\) as a constant across frames. This approach resulted in game speeds being highly dependent on the frame rate of the hardware on which the game was running.
+Background context: In many early video games, programmers did not measure the elapsed real time during the game loop. Instead, they specified object speeds directly in terms of distance per frame, essentially using $\Delta t$ as a constant across frames. This approach resulted in game speeds being highly dependent on the frame rate of the hardware on which the game was running.
 :p What are CPU-dependent games and how do they operate?
 ??x
-CPU-dependent games refer to early video games where the object speeds were specified directly in terms of distance per frame, ignoring \(\Delta t\). This meant that the perceived speed of objects was entirely dependent on the actual frame rate achieved by the game. For instance, if run on a faster CPU, these games would appear to be running in fast forward.
+CPU-dependent games refer to early video games where the object speeds were specified directly in terms of distance per frame, ignoring $\Delta t$. This meant that the perceived speed of objects was entirely dependent on the actual frame rate achieved by the game. For instance, if run on a faster CPU, these games would appear to be running in fast forward.
 
 For example:
 ```java
@@ -271,7 +271,7 @@ x??
 
 ---
 #### Updating Based on Elapsed Time
-Background context: To make games CPU-independent, it is essential to measure \(\Delta t\) during each frame. This can be achieved by reading the value of the high-resolution timer at the beginning and end of a frame, then subtracting these values to get an accurate measure of \(\Delta t\). This delta time (\(\Delta t\)) can then be used across various engine subsystems.
+Background context: To make games CPU-independent, it is essential to measure $\Delta t $ during each frame. This can be achieved by reading the value of the high-resolution timer at the beginning and end of a frame, then subtracting these values to get an accurate measure of$\Delta t $. This delta time ($\Delta t$) can then be used across various engine subsystems.
 :p How do you update game objects based on elapsed time?
 ??x
 Updating game objects based on elapsed time involves measuring the time between frames using a high-resolution timer. By doing so, you ensure that object speeds and movements are consistent regardless of the frame rate.
@@ -295,10 +295,10 @@ x??
 
 ---
 #### Frame-Rate Spike Problem
-Background context: Using \(\Delta t\) from the previous frame to estimate the upcoming frame's duration can lead to inaccuracies. This is because real-world factors might cause a significant deviation in actual frame time, which we call a "frame-rate spike." Such deviations can create a "vicious cycle" of poor frame times.
+Background context: Using $\Delta t$ from the previous frame to estimate the upcoming frame's duration can lead to inaccuracies. This is because real-world factors might cause a significant deviation in actual frame time, which we call a "frame-rate spike." Such deviations can create a "vicious cycle" of poor frame times.
 :p What is a frame-rate spike and how does it affect game performance?
 ??x
-A frame-rate spike occurs when an event causes the current frame to take much more or less time than the previous frame. This deviation from the expected \(\Delta t\) can disrupt the consistency in gameplay, leading to what's known as a "vicious cycle" of poor frame times.
+A frame-rate spike occurs when an event causes the current frame to take much more or less time than the previous frame. This deviation from the expected $\Delta t$ can disrupt the consistency in gameplay, leading to what's known as a "vicious cycle" of poor frame times.
 
 For example:
 ```java
@@ -335,7 +335,7 @@ if (previousFrameTime > idealFrameTime) {
 x??
 ---
 #### Using a Running Average
-Background context: Game loops often maintain some frame-to-frame coherence, meaning that subsequent frames might have similar characteristics to the previous one. Averaging frame-time measurements over multiple frames can help smooth out spikes and provide a more stable estimate for \(\Delta t\).
+Background context: Game loops often maintain some frame-to-frame coherence, meaning that subsequent frames might have similar characteristics to the previous one. Averaging frame-time measurements over multiple frames can help smooth out spikes and provide a more stable estimate for $\Delta t$.
 
 :p How does averaging frame times help in dealing with variable performance?
 ??x
@@ -595,9 +595,7 @@ Background context explaining the resolution of high-resolution timers, specific
 ??x
 The resolution of the high-resolution timer on a 3 GHz Pentium processor is approximately 0.333 nanoseconds (ns). This is because the TSC increments once per CPU cycle, and at 3 billion cycles per second, it results in:
 
-\[ \text{Resolution} = \frac{1}{3\text{ billion}} = 3.33 \times 10^{-10}\text{s} = 0.333\text{ns} \]
-
-x??
+$$\text{Resolution} = \frac{1}{3\text{ billion}} = 3.33 \times 10^{-10}\text{s} = 0.333\text{ns}$$x??
 
 ---
 
@@ -607,12 +605,10 @@ Background context explaining the potential issue of timer wraparound, highlight
 :p How often does the high-resolution timer on a 3 GHz Pentium processor wrap around?
 ??x
 The high-resolution timer on a 3 GHz Pentium processor wraps around approximately once every 195 years. This is calculated using the maximum value of a 64-bit unsigned integer:
+$$\text{Maximum Value} = 0xFFFFFFFFFFFFFFFF = 2^{64} - 1 \approx 1.8 \times 10^{19}$$
 
-\[ \text{Maximum Value} = 0xFFFFFFFFFFFFFFFF = 2^{64} - 1 \approx 1.8 \times 10^{19} \]
-
-Given that the timer increments once per CPU cycle at 3 billion cycles per second, it will take about \( \frac{2^{64}}{3\text{ billion}} \) seconds for the timer to wrap around:
-
-\[ \frac{2^{64}}{3 \times 10^9} \approx 1.84 \times 10^{19} / (3 \times 10^9) = 6.13 \times 10^9 \text{s} \approx 195 \text{ years} \]
+Given that the timer increments once per CPU cycle at 3 billion cycles per second, it will take about $\frac{2^{64}}{3\text{ billion}}$ seconds for the timer to wrap around:
+$$\frac{2^{64}}{3 \times 10^9} \approx 1.84 \times 10^{19} / (3 \times 10^9) = 6.13 \times 10^9 \text{s} \approx 195 \text{ years}$$
 
 x??
 

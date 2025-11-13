@@ -553,9 +553,9 @@ The suppression technique involves replacing all values of direct identifiers su
 Table 5-3. Anonymized data after suppression
 
  ID          Company name    CEO           Headquarters   Revenues      Market capitalization
- ********    ********        John Smith     New York      $45 mln       $400 mln
- ********    ********        Lesly Charles Las Vegas     $5.5 bln      $50 bln
- ********    ********        Mary Jackson   Chicago       $650 mln      $10 bln
+ ********    ********        John Smith     New York      $45 mln$400 mln
+ ********    ********        Lesly Charles Las Vegas     $5.5 bln$50 bln
+ ********    ********        Mary Jackson   Chicago       $650 mln$10 bln
 ```
 x??
 
@@ -574,9 +574,9 @@ For example, if we want to alter the values for revenues by multiplying each num
 Table 5-4. Anonymized data after distortion
 
  ID          Company name    CEO           Headquarters   Revenues      Market capitalization
- XYA12F      Standard Steel Corporation John Smith     New York      $49.5 mln     $520 mln
- BFG76D      Northwest Bank Lesly Charles Las Vegas     $6.05 bln     $65 bln
- M47GK       General Bicycles Corporation Mary Jackson  Chicago      $715 mln      $13 bln
+ XYA12F      Standard Steel Corporation John Smith     New York      $49.5 mln$520 mln
+ BFG76D      Northwest Bank Lesly Charles Las Vegas     $6.05 bln$65 bln
+ M47GK       General Bicycles Corporation Mary Jackson  Chicago      $715 mln$13 bln
 ```
 x??
 
@@ -593,9 +593,9 @@ The swapping technique involves shuffling the data within one or more fields. Fo
 Table 5-5. Anonymized data after swapping
 
  ID          Company name    CEO           Headquarters   Revenues      Market capitalization
- XYA12F      Northwest Bank John Smith     New York      $45 mln       $400 mln
- BFG76D      General Bicycles Corporation Lesly Charles Las Vegas     $5.5 bln      $50 bln
- M47GK       Standard Steel Corporation Mary Jackson   Chicago      $650 mln      $10 bln
+ XYA12F      Northwest Bank John Smith     New York      $45 mln$400 mln
+ BFG76D      General Bicycles Corporation Lesly Charles Las Vegas     $5.5 bln$50 bln
+ M47GK       Standard Steel Corporation Mary Jackson   Chicago      $650 mln$10 bln
 ```
 x??
 
@@ -612,9 +612,9 @@ The masking technique involves obfuscating sensitive data by using a modified ve
 Table 5-6. Anonymized data after masking
 
  ID          Company name    CEO           Headquarters   Revenues      Market capitalization
- X11001      Standard Steel Corporation John Smith     New York      $45 mln       $400 mln
- B11001      Northwest Bank Lesly Charles Las Vegas     $5.5 bln      $50 bln
- M0011       General Bicycles Corporation Mary Jackson   Chicago      $650 mln      $10 bln
+ X11001      Standard Steel Corporation John Smith     New York      $45 mln$400 mln
+ B11001      Northwest Bank Lesly Charles Las Vegas     $5.5 bln$50 bln
+ M0011       General Bicycles Corporation Mary Jackson   Chicago      $650 mln$10 bln
 ```
 x??
 

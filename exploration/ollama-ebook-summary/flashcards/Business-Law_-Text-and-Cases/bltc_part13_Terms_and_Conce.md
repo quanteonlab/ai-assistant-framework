@@ -187,7 +187,7 @@ The answer with detailed explanations.
 Spam consists of unsolicited junk emails that are often used for promotional purposes or contain irrelevant content. Initially considered a minor nuisance, spam has evolved into a significant problem on the Internet, accounting for about 75% of all emails sent.
 
 This can be represented as:
-\[ \text{Percentage of spam in total email traffic} = 0.75 \times 100\% \]
+$$\text{Percentage of spam in total email traffic} = 0.75 \times 100\%$$
 ```
 x??
 

@@ -399,7 +399,7 @@ Explanation:
 - Percentage of speakers: 18.15%
 - Percentage in Common Crawl: 45.88%
 
-Ratio = \(\frac{\text{Percentage in Common Crawl}}{\text{Percentage of Speakers}} = \frac{45.88\%}{18.15\%} = 2.526 \approx 0.40\) (for comparison)
+Ratio = $\frac{\text{Percentage in Common Crawl}}{\text{Percentage of Speakers}} = \frac{45.88\%}{18.15\%} = 2.526 \approx 0.40$ (for comparison)
 
 x??
 

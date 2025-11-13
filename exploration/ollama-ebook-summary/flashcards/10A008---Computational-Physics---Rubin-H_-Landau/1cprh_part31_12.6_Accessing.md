@@ -137,7 +137,7 @@ x??
 ---
 
 #### Quantum Circuit Operation Using Cirq
-Background context: The provided Python code snippet demonstrates how to create and simulate a simple quantum circuit using the Cirq library. Specifically, it includes appending controlled-NOT (CNOT) gates between qubits \(q1\) and \(q2\), as well as between \(q0\) and \(q1\). This operation is common in quantum computing circuits.
+Background context: The provided Python code snippet demonstrates how to create and simulate a simple quantum circuit using the Cirq library. Specifically, it includes appending controlled-NOT (CNOT) gates between qubits $q1 $ and$q2 $, as well as between$ q0 $and$ q1$. This operation is common in quantum computing circuits.
 :p What is the purpose of the code snippet provided?
 ??x
 The code snippet aims to create a simple quantum circuit using Cirq, append specific gates (CNOT) to manipulate qubits, and simulate this circuit. The purpose here is to familiarize with basic operations on qubits and how they can be represented programmatically.
@@ -184,7 +184,7 @@ These steps are necessary to gain access to IBM Quantum’s resources, including
 x??
 
 #### IBM Quantum Composer Overview
-Background context: The IBM Quantum Composer is a graphical tool for creating quantum circuits by dragging and dropping operators. It can be run on the IBM Quantum system or as a simulator. The text provides a screenshot of its layout and an example circuit used to generate a Bell state \(|\beta_{00}\rangle\).
+Background context: The IBM Quantum Composer is a graphical tool for creating quantum circuits by dragging and dropping operators. It can be run on the IBM Quantum system or as a simulator. The text provides a screenshot of its layout and an example circuit used to generate a Bell state $|\beta_{00}\rangle$.
 :p What does the IBM Quantum Composer allow users to do?
 ??x
 The IBM Quantum Composer allows users to graphically create quantum circuits by dragging and dropping operators, which can then be run on the IBM Quantum system or as a simulator. It provides an intuitive interface for designing and visualizing quantum circuits.
@@ -194,17 +194,17 @@ For example, using the Composer, you can:
 - Drag and drop different quantum gates to design circuits.
 - Run these circuits on real hardware or simulate them locally.
 
-The provided screenshot (Figure 12.5) shows an example circuit used to generate the Bell state \(|\beta_{00}\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)\), along with its generated computational basis states in both histogram and numerical forms.
+The provided screenshot (Figure 12.5) shows an example circuit used to generate the Bell state $|\beta_{00}\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)$, along with its generated computational basis states in both histogram and numerical forms.
 x??
 
 ---
 
 #### Quantum Circuit Basics
-In quantum computing, a circuit is constructed using various quantum gates to manipulate qubits. The Hadamard gate \(H\) and controlled-NOT (CNOT) gate are commonly used for this purpose.
+In quantum computing, a circuit is constructed using various quantum gates to manipulate qubits. The Hadamard gate $H$ and controlled-NOT (CNOT) gate are commonly used for this purpose.
 
 :p What is the sequence of operations performed on the qubits in the provided circuit?
 ??x
-The sequence involves applying the Hadamard gate (\(H\)) to qubit 0, followed by a CNOT gate with qubit 0 as the control and qubit 1 as the target.
+The sequence involves applying the Hadamard gate ($H$) to qubit 0, followed by a CNOT gate with qubit 0 as the control and qubit 1 as the target.
 ```python
 # Applying H to q[0]
 circuit.h(q[0])
@@ -217,12 +217,12 @@ x??
 ---
 
 #### Reversed Dirac Notation for IBM Quantum
-IBM Quantum uses a reversed order of qubits in their notation. Specifically, \(|qn-1…q1q0⟩\) is used instead of the conventional \(|q0q1…qn-1⟩\).
+IBM Quantum uses a reversed order of qubits in their notation. Specifically, $|qn-1…q1q0⟩$ is used instead of the conventional $|q0q1…qn-1⟩$.
 
-:p How does the IBM Quantum represent the state \(|01⟩\)?
+:p How does the IBM Quantum represent the state $|01⟩$?
 ??x
-In IBM's notation, the state \(|01⟩\) corresponds to \(||q1=0⟩ \otimes ||q0=1⟩ = |01⟩\), which can be represented as:
-\[ [1 0] \otimes [0 1] = \begin{bmatrix} 0 & 0 \\ 1 & 0 \end{bmatrix}. \]
+In IBM's notation, the state $|01⟩$ corresponds to $||q1=0⟩ \otimes ||q0=1⟩ = |01⟩$, which can be represented as:
+$$[1 0] \otimes [0 1] = \begin{bmatrix} 0 & 0 \\ 1 & 0 \end{bmatrix}.$$
 x??
 
 ---

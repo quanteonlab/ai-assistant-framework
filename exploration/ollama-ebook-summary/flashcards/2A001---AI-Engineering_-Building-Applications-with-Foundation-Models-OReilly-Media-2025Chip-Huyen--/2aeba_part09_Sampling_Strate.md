@@ -8,15 +8,13 @@
 
 Logits are raw scores output by a language model, which do not directly represent probabilities. To convert logits to probabilities, a softmax layer is often used.
 
-Logits for each token \(x_1, x_2, ..., x_N\) in the vocabulary can be converted into probabilities using the formula:
-\[ p_i = \text{softmax}(x_i) = \frac{e^{x_i}}{\sum_{j=1}^N e^{x_j}} \]
-
-:p What is the role of logits and softmax in a language model?
+Logits for each token $x_1, x_2, ..., x_N$ in the vocabulary can be converted into probabilities using the formula:
+$$p_i = \text{softmax}(x_i) = \frac{e^{x_i}}{\sum_{j=1}^N e^{x_j}}$$:p What is the role of logits and softmax in a language model?
 ??x
 Logits are the raw scores output by the model for each token, which do not directly represent probabilities. The softmax function converts these logits into probabilities that sum up to one, allowing them to be used as a probability distribution.
 
-The formula for converting logits \(x_1, x_2, ..., x_N\) into probabilities is:
-\[ p_i = \frac{e^{x_i}}{\sum_{j=1}^N e^{x_j}} \]
+The formula for converting logits $x_1, x_2, ..., x_N$ into probabilities is:
+$$p_i = \frac{e^{x_i}}{\sum_{j=1}^N e^{x_j}}$$
 
 This ensures that the generated probabilities are valid and can be used to sample tokens.
 x??
@@ -27,10 +25,10 @@ x??
 
 Sampling strategies in language models allow for generating text with specific characteristics, such as creativity or predictability.
 
-One common strategy is **temperature sampling**, which involves adjusting the probability distribution of token selection by dividing the logits by a temperature parameter \(T\). This affects how often the model selects high-probability tokens versus low-probability tokens.
+One common strategy is **temperature sampling**, which involves adjusting the probability distribution of token selection by dividing the logits by a temperature parameter $T$. This affects how often the model selects high-probability tokens versus low-probability tokens.
 
-The adjusted logit for the \(i\)th token with a given temperature \(T\) is:
-\[ \frac{x_i}{T} \]
+The adjusted logit for the $i $ th token with a given temperature$T$ is:
+$$\frac{x_i}{T}$$
 
 Softmax is then applied to this adjusted logit instead of the original logits.
 
@@ -39,9 +37,9 @@ Softmax is then applied to this adjusted logit instead of the original logits.
 Temperature affects how often the model selects high-probability tokens versus low-probability tokens. A higher temperature causes the probability distribution to be more chaotic, allowing lower-probability tokens to surface more frequently. Conversely, a lower temperature makes the model more consistent by favoring high-probability tokens.
 
 For example:
-- With \(T = 1\), the probabilities are distributed as normal.
-- With \(T < 1\) (e.g., 0.5), higher probabilities are reduced, and lower probabilities are increased.
-- With \(T > 1\), higher probabilities are increased further, making the model more creative but potentially less coherent.
+- With $T = 1$, the probabilities are distributed as normal.
+- With $T < 1$(e.g., 0.5), higher probabilities are reduced, and lower probabilities are increased.
+- With $T > 1$, higher probabilities are increased further, making the model more creative but potentially less coherent.
 
 This parameter can be adjusted to balance between creativity and coherence in generated text.
 x??
@@ -53,8 +51,8 @@ x??
 The temperature parameter affects how often the model selects high-probability tokens versus low-probability tokens. A lower temperature makes the model's output more consistent, while a higher temperature increases the likelihood of selecting less probable but potentially more creative outputs.
 
 For example:
-- If logits are [1, 2], and we apply temperature \(T = 0.5\), the adjusted logit for token B (with a higher original logit) will be increased, making it more likely to be selected.
-- Conversely, with \(T = 1\), the probabilities remain unchanged.
+- If logits are [1, 2], and we apply temperature $T = 0.5$, the adjusted logit for token B (with a higher original logit) will be increased, making it more likely to be selected.
+- Conversely, with $T = 1$, the probabilities remain unchanged.
 
 The effect can be visualized as:
 - As temperature decreases towards 0, the probability of selecting the highest-probability token increases.
@@ -65,9 +63,9 @@ The effect can be visualized as:
 Changing the temperature parameter affects the model's output by influencing how often it selects high-probability versus low-probability tokens. Lower temperatures increase the probability of selecting common or frequent tokens, making the output more consistent but potentially less creative. Higher temperatures make the selection process more chaotic, increasing the likelihood of rare and less obvious tokens being selected.
 
 For example:
-- With \(T = 1\), the probabilities remain unchanged.
-- With \(T < 1\) (e.g., 0.5), higher probabilities are reduced, making lower-probability tokens more likely to be chosen.
-- With \(T > 1\), higher probabilities are increased further, making the model's outputs more creative but less coherent.
+- With $T = 1$, the probabilities remain unchanged.
+- With $T < 1$(e.g., 0.5), higher probabilities are reduced, making lower-probability tokens more likely to be chosen.
+- With $T > 1$, higher probabilities are increased further, making the model's outputs more creative but less coherent.
 
 This parameter can be tuned based on the desired characteristics of the generated text.
 x??
@@ -274,14 +272,13 @@ Explanation on how the best of N technique works. This method involves randomly 
 
 :p How does the best of N technique work in test time compute?
 ??x
-The best of N technique is a simple way to implement test time compute by randomly generating \(N\) different responses for a given input. After generating these outputs, you evaluate each output and select the one with the highest probability or score. For example, if you set `best_of = 10`, OpenAI models will return the response that has the highest average log probability out of 10 different outputs.
+The best of N technique is a simple way to implement test time compute by randomly generating $N$ different responses for a given input. After generating these outputs, you evaluate each output and select the one with the highest probability or score. For example, if you set `best_of = 10`, OpenAI models will return the response that has the highest average log probability out of 10 different outputs.
 
 Hereâ€™s an example calculation:
 - Sequence: ["I", "love", "food"]
-- Probabilities: \( p("I") = 0.2 \), \( p("love" | "I") = 0.1 \), \( p("food" | "I", "love") = 0.3 \)
+- Probabilities:$p("I") = 0.2 $, $ p("love" | "I") = 0.1 $,$ p("food" | "I", "love") = 0.3$
 - Logprob of sequence: 
-\[ \log(0.2) + \log(0.1) + \log(0.3) \]
-- Average logprob for a set of sequences would be the sum divided by the number of sequences.
+$$\log(0.2) + \log(0.1) + \log(0.3)$$- Average logprob for a set of sequences would be the sum divided by the number of sequences.
 
 ```java
 public class Example {
@@ -391,11 +388,9 @@ Explanation of calculating log probabilities for sequence generation and why itâ
 ??x
 Log probability is often used in sequence models because working with logarithms can simplify numerical computations. The log probability of a sequence of tokens is the sum of the individual token probabilities, which avoids underflow issues common when dealing with very small probabilities.
 
-Given a sequence \( [t_1, t_2, ..., t_n] \), the log probability can be calculated as:
+Given a sequence $[t_1, t_2, ..., t_n]$, the log probability can be calculated as:
 
-\[ \logprob(t_1, t_2, ..., t_n) = \sum_{i=1}^{n} \log(p(t_i | t_{<i})) \]
-
-where \( p(t_i | t_{<i}) \) is the conditional probability of token \( t_i \) given all previous tokens.
+$$\logprob(t_1, t_2, ..., t_n) = \sum_{i=1}^{n} \log(p(t_i | t_{<i}))$$where $ p(t_i | t_{<i})$is the conditional probability of token $ t_i$ given all previous tokens.
 
 ```java
 public class LogProbCalculator {

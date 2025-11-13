@@ -188,7 +188,7 @@ async function login() {
         token = (await response.json()).token;
         displayData("Logged in", token);
     } else {
-        displayData(`Error: ${response.status}: ${response.statusText}`);
+        displayData(`Error: ${response.status}:${response.statusText}`);
     }
 }
 ```
@@ -213,9 +213,9 @@ async function getData() {
     });
     if (response.ok) {
         let jsonData = await response.json();
-        displayData(...jsonData.map(item => `${item.surname}, ${item.firstname}`));
+        displayData(...jsonData.map(item => `${item.surname},${item.firstname}`));
     } else {
-        displayData(`Error: ${response.status}: ${response.statusText}`);
+        displayData(`Error: ${response.status}:${response.statusText}`);
     }
 }
 ```

@@ -64,8 +64,8 @@ x??
 Background context: Normal vectors are often encoded using RGB color channels of a texture to represent surface orientation. This method overcomes the issue that RGB values are strictly positive, whereas normal vector components can be negative. Sometimes only two coordinates are stored, and the third is calculated at runtime under the assumption that surface normals are unit vectors.
 :p How do normal vectors get encoded in textures?
 ??x
-Normal vectors are typically represented using the red, green, and blue (RGB) channels of a texture map. Since RGB values cannot be negative but normal vector components can, a suitable bias is applied to encode negative values as positive ones. For example, if you have a normal vector \((n_x, n_y, n_z)\), it might get transformed into \((1 + 0.5 * n_x, 1 + 0.5 * n_y, 1 + 0.5 * n_z)\) to fit within the positive range of RGB values.
-In cases where only two coordinates are stored (e.g., \(n_x\) and \(n_y\)), the third component (\(n_z\)) can be computed at runtime using the relationship \((n_x, n_y, n_z) = 2(n_x - 0.5, n_y - 0.5, \sqrt{1 - (n_x - 0.5)^2 - (n_y - 0.5)^2})\), ensuring that the normal remains a unit vector.
+Normal vectors are typically represented using the red, green, and blue (RGB) channels of a texture map. Since RGB values cannot be negative but normal vector components can, a suitable bias is applied to encode negative values as positive ones. For example, if you have a normal vector $(n_x, n_y, n_z)$, it might get transformed into $(1 + 0.5 * n_x, 1 + 0.5 * n_y, 1 + 0.5 * n_z)$ to fit within the positive range of RGB values.
+In cases where only two coordinates are stored (e.g.,$n_x $ and$n_y $), the third component ($ n_z $) can be computed at runtime using the relationship$(n_x, n_y, n_z) = 2(n_x - 0.5, n_y - 0.5, \sqrt{1 - (n_x - 0.5)^2 - (n_y - 0.5)^2})$, ensuring that the normal remains a unit vector.
 ```java
 // Pseudocode for decoding normals from texture coordinates
 public Vector3f decodeNormal(float tx, float ty) {
@@ -146,11 +146,12 @@ Background context: A specular map or gloss map encodes the intensity and sharpn
 :p What is a specular map and why is it useful?
 ??x
 A specular map (also known as a gloss map) is a texture that encodes the intensity and sharpness of specular reflections on a surface. Each texel in this map represents the amount of specular highlight at that point, with higher values corresponding to more intense and sharper highlights.
-The overall specular reflectivity \(k_S\) and the specular power \(a\) are used to calculate the intensity of the specular component using the formula: 
-\[ I_{spec} = k_S \cdot (R \cdot V)^a \]
+The overall specular reflectivity $k_S $ and the specular power$a$ are used to calculate the intensity of the specular component using the formula:
+$$I_{spec} = k_S \cdot (R \cdot V)^a$$
+
 Where:
-- \( R \) is the reflection vector
-- \( V \) is the view direction vector
+- $R$ is the reflection vector
+- $V$ is the view direction vector
 
 A gloss map can be used to control how much specular reflection should be applied at each texel. For example, in a face with sweat and dirt, wet regions might have higher values (more specular highlights), while dry or dirty areas would have lower values.
 ```java

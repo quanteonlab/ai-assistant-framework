@@ -7,44 +7,36 @@
 #### Maximum Likelihood Estimation (MLE)
 Maximum likelihood estimation is a technique used to estimate the parameters of a probability distribution that are most likely to have generated the observed data. The parameter values that maximize the likelihood function are called the maximum likelihood estimates.
 
-Formally, given observed data \(D\), we aim to find \(\theta\) such that:
-
-\[
-\hat{\theta} = \arg\max_{\theta} p(D|\theta)
-\]
+Formally, given observed data $D $, we aim to find $\theta$ such that:
+$$\hat{\theta} = \arg\max_{\theta} p(D|\theta)$$
 
 This can also be expressed as minimizing the negative log-likelihood (NLL):
-
-\[
-\hat{\theta} = \arg\min_{\theta} -\log(p(D|\theta))
-\]
+$$\hat{\theta} = \arg\min_{\theta} -\log(p(D|\theta))$$
 
 In simpler terms, we are trying to find the set of parameters that make the observed data most probable.
 
 :p What is MLE and how does it relate to finding the most likely parameter values?
 ??x
-MLE is a method used in statistics for estimating the parameters of a probability distribution. The goal is to determine the parameter values \(\theta\) that maximize the likelihood function \(p(D|\theta)\) given some observed data \(D\). This can also be done by minimizing the negative log-likelihood, which simplifies calculations.
+MLE is a method used in statistics for estimating the parameters of a probability distribution. The goal is to determine the parameter values $\theta $ that maximize the likelihood function$p(D|\theta)$ given some observed data $D$. This can also be done by minimizing the negative log-likelihood, which simplifies calculations.
 
-In essence, we seek \(\hat{\theta}\), the set of parameters that best explain the observed data.
+In essence, we seek $\hat{\theta}$, the set of parameters that best explain the observed data.
 x??
 
 ---
 
 #### Generative Modeling as a Form of MLE
-Generative modeling is a type of machine learning problem where we aim to model the probability distribution of the training dataset. This can be framed as an MLE problem, where the goal is to find the parameters \(\theta\) that maximize the likelihood of observing the given data.
+Generative modeling is a type of machine learning problem where we aim to model the probability distribution of the training dataset. This can be framed as an MLE problem, where the goal is to find the parameters $\theta$ that maximize the likelihood of observing the given data.
 
-For high-dimensional problems, directly calculating \(p(D|\theta)\) (the density function) is intractable. Thus, different families of generative models are used to tackle this issue by approximating the density function in various ways.
+For high-dimensional problems, directly calculating $p(D|\theta)$(the density function) is intractable. Thus, different families of generative models are used to tackle this issue by approximating the density function in various ways.
 
 :p How can generative modeling be seen as a form of MLE?
 ??x
-Generative modeling can be viewed as an MLE problem where we seek to find the parameters \(\theta\) that maximize the likelihood of observing the given data. This is equivalent to minimizing the negative log-likelihood.
+Generative modeling can be viewed as an MLE problem where we seek to find the parameters $\theta$ that maximize the likelihood of observing the given data. This is equivalent to minimizing the negative log-likelihood.
 
 Formally, in this context:
-\[
-\hat{\theta} = \arg\min_{\theta} -\log p(D|\theta)
-\]
+$$\hat{\theta} = \arg\min_{\theta} -\log p(D|\theta)$$
 
-Where \(D\) represents the observed data.
+Where $D$ represents the observed data.
 x??
 
 ---
@@ -60,9 +52,9 @@ The taxonomy of generative models categorizes them based on how they model the d
 ??x
 The taxonomy of generative models categorizes them into three broad approaches based on how they handle the modeling of the probability density function:
 
-1. **Explicitly model and constrain the density function**: This approach aims to estimate the exact form of \(p(D|\theta)\) but imposes constraints like ordering in autoregressive models or using invertible functions in normalizing flows.
-2. **Model a tractable approximation**: Here, the focus is on creating an approximated form of \(p(D|\theta)\).
-3. **Implicitly model through a stochastic process**: This approach does not aim to estimate \(p(D|\theta)\) directly but instead generates data using a stochastic process.
+1. **Explicitly model and constrain the density function**: This approach aims to estimate the exact form of $p(D|\theta)$ but imposes constraints like ordering in autoregressive models or using invertible functions in normalizing flows.
+2. **Model a tractable approximation**: Here, the focus is on creating an approximated form of $p(D|\theta)$.
+3. **Implicitly model through a stochastic process**: This approach does not aim to estimate $p(D|\theta)$ directly but instead generates data using a stochastic process.
 
 Each method has its strengths and is suited for different types of problems.
 x??
@@ -76,7 +68,7 @@ For example, autoregressive models impose a sequential generation process (e.g.,
 
 :p What are explicit density models and how do they work?
 ??x
-Explicit density models directly model the probability density function \(p(D|\theta)\) with some constraints to make it tractable. This can be done either by optimizing the exact form of the density function or by modeling a tractable approximation.
+Explicit density models directly model the probability density function $p(D|\theta)$ with some constraints to make it tractable. This can be done either by optimizing the exact form of the density function or by modeling a tractable approximation.
 
 For example, autoregressive models impose an ordering on the input features, making it possible to generate data sequentially (e.g., generating words one after another).
 
@@ -120,7 +112,7 @@ An example of an implicit generative model is a Generative Adversarial Network (
 
 :p What are implicit density models and how do they work?
 ??x
-Implicit density models generate data directly through a stochastic process without explicitly modeling the probability density function \(p(D|\theta)\). This approach is commonly used in GANs, where:
+Implicit density models generate data directly through a stochastic process without explicitly modeling the probability density function $p(D|\theta)$. This approach is commonly used in GANs, where:
 
 - A generator network creates synthetic data samples.
 - A discriminator network evaluates whether the generated samples are real or fake.
@@ -171,7 +163,7 @@ Background context: VAEs are a type of generative model that introduce a latent 
 
 :p What is the main objective of Variational Autoencoders (VAEs)?
 ??x
-The primary goal of VAEs is to approximate the joint probability distribution \(p(x)\) by introducing a latent variable \(z\) and optimizing an approximation using variational inference. This allows for learning complex representations while maintaining computational tractability.
+The primary goal of VAEs is to approximate the joint probability distribution $p(x)$ by introducing a latent variable $z$ and optimizing an approximation using variational inference. This allows for learning complex representations while maintaining computational tractability.
 x??
 
 ---
@@ -181,7 +173,7 @@ Background context: Unlike VAEs, which use variational methods, EBMs utilize app
 
 :p How do Energy-Based Models differ from Variational Autoencoders in their approach?
 ??x
-Energy-based models (EBMs) differ fundamentally from VAEs by focusing on modeling the energy of a system through Markov chain sampling. In contrast to VAEs, which optimize an approximation of the joint density function \(p(x)\), EBMs aim to learn the underlying energy function that determines the probability of a configuration.
+Energy-based models (EBMs) differ fundamentally from VAEs by focusing on modeling the energy of a system through Markov chain sampling. In contrast to VAEs, which optimize an approximation of the joint density function $p(x)$, EBMs aim to learn the underlying energy function that determines the probability of a configuration.
 x??
 
 ---
@@ -191,7 +183,7 @@ Background context: Diffusion models approximate the density function by trainin
 
 :p How do diffusion models work?
 ??x
-Diffusion models work by first corrupting a clean image with increasing levels of noise over multiple steps. Then, the model is trained to learn the inverse process, gradually denoising the noisy images back to their original form. This process can be mathematically described as adding noise \( \epsilon_t \) at each step and learning a denoising function \( p_\theta(x_{t-1} | x_t) \).
+Diffusion models work by first corrupting a clean image with increasing levels of noise over multiple steps. Then, the model is trained to learn the inverse process, gradually denoising the noisy images back to their original form. This process can be mathematically described as adding noise $\epsilon_t $ at each step and learning a denoising function$p_\theta(x_{t-1} | x_t)$.
 x??
 
 ---
@@ -348,9 +340,9 @@ Background context explaining that understanding discriminative modeling is cruc
 ??x
 Generative and discriminative models differ in their primary focus:
 - **Discriminative Models**: Focus on directly learning a function that maps inputs to outputs (e.g., classification tasks). They aim to find the decision boundary between classes.
-- **Generative Models**: Aim to model the joint probability distribution \(P(X, Y)\) of input-output pairs. This allows them to generate new data points and understand how different parts of the input space are related.
+- **Generative Models**: Aim to model the joint probability distribution $P(X, Y)$ of input-output pairs. This allows them to generate new data points and understand how different parts of the input space are related.
 
-For example, in a discriminative approach like logistic regression, you might directly estimate \(P(Y|X)\). In a generative approach, you would model \(P(X, Y)\) and then use it to infer \(P(Y|X)\).
+For example, in a discriminative approach like logistic regression, you might directly estimate $P(Y|X)$. In a generative approach, you would model $ P(X, Y)$and then use it to infer $ P(Y|X)$.
 
 x??
 

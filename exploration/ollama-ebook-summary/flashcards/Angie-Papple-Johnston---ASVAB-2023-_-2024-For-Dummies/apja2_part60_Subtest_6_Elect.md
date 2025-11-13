@@ -628,7 +628,7 @@ x?? x??
 It seems like you're looking for a confirmation on some of these answers. Let me summarize and confirm the key points:
 
 1. **Block-and-Tackle Effort Calculation:**
-   - If 21.0 pounds is the total load and there are 3 ropes, each rope must be pulled with \( \frac{21}{3} = 7.0 \) pounds of force.
+   - If 21.0 pounds is the total load and there are 3 ropes, each rope must be pulled with $\frac{21}{3} = 7.0$ pounds of force.
 
 2. **Seesaw Dynamics Recap:**
    - Moving Anvil A toward the middle (fulcrum) will cause Anvil B to rise because it reduces the torque on Anvil A, creating a net upward force on Anvil B.
@@ -640,7 +640,7 @@ x?? x??
 Sure! Here are some additional clarifications and confirmations:
 
 1. **Block-and-Tackle Effort Calculation:**
-   - If the total load is 21 pounds and there are 3 ropes in a block-and-tackle system, each rope must be pulled with \( \frac{21}{3} = 7.0 \) pounds of force.
+   - If the total load is 21 pounds and there are 3 ropes in a block-and-tackle system, each rope must be pulled with $\frac{21}{3} = 7.0$ pounds of force.
 
 2. **Seesaw Dynamics Recap:**
    - Moving Anvil A toward the middle (fulcrum) will cause Anvil B to rise because it reduces the torque on Anvil A, creating a net upward force on Anvil B.

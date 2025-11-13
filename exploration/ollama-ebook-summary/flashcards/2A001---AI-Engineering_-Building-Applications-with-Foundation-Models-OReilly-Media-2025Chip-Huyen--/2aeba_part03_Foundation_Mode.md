@@ -98,7 +98,7 @@ x??
 Background context: The text discusses the increasing popularity of AI coding tools, with specific examples like GitHub Copilot, Magic, and Anysphere. It highlights the rapid growth and significant funding these tools have received. 
 :p How has the success of AI coding tools been demonstrated?
 ??x
-The success of AI coding tools is evidenced by their widespread adoption and substantial financial backing. For instance, GitHub Copilot achieved an annual recurring revenue of $100 million within two years after its launch. Additionally, Magic and Anysphere raised large amounts of funding—$320 million for Magic and $60 million for Anysphere in August 2024.
+The success of AI coding tools is evidenced by their widespread adoption and substantial financial backing. For instance, GitHub Copilot achieved an annual recurring revenue of $100 million within two years after its launch. Additionally, Magic and Anysphere raised large amounts of funding—$320 million for Magic and$60 million for Anysphere in August 2024.
 x??
 
 ---

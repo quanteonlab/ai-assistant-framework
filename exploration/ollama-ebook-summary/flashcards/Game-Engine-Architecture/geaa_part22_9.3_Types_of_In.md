@@ -181,9 +181,9 @@ x??
 Background context: The Wiimote and DualShock controllers use accelerometers to estimate their orientation during gameplay. The Earth's gravity (1g or approximately 9.8 m/s²) is a crucial reference point for these calculations.
 
 The basic principle involves detecting the acceleration along three axes (x, y, z). When the controller is held level, the vertical (z) axis should read around 1g. Tilting the controller changes the detected values:
-- Holding it perfectly level: \[z = 1g\]
-- Upright with IR sensor pointing up: \[y = 1g; z = 0g\]
-- At a 45-degree angle: \[y = z = 0.707g\]
+- Holding it perfectly level: $$z = 1g$$- Upright with IR sensor pointing up:
+$$y = 1g; z = 0g$$- At a 45-degree angle:
+$$y = z = 0.707g$$
 
 Calibration is needed to find the zero points along each axis, and then pitch, yaw, and roll can be calculated using inverse sine and cosine operations.
 
@@ -193,7 +193,7 @@ The Wiimote uses its three-axis accelerometer to detect gravity (1g) in differen
 - Zero points are found by holding the controller still.
 - Pitch, yaw, and roll are calculated using inverse trigonometric functions.
 
-Example pseudocode for calculating pitch (\(\theta\)):
+Example pseudocode for calculating pitch ($\theta$):
 ```java
 double accZ = getAccelerometerValue(Z_AXIS);
 double theta = asin(accZ - 1.0) * (180 / PI); // Convert radians to degrees
@@ -214,7 +214,7 @@ The Wiimote uses its infrared (IR) camera to detect a sensor bar with two LEDs, 
 - The position of the Wiimote relative to the TV.
 - The orientation of the Wiimote using the line segment formed by the dots.
 
-Example pseudocode for determining distance (\(d\)) between the dots:
+Example pseudocode for determining distance ($d$) between the dots:
 ```java
 int dot1X = getDotPositionX(0);
 int dot2X = getDotPositionX(1);
@@ -364,7 +364,7 @@ x??
 
 #### Dead Zones
 
-Background context explaining the concept. When using analog devices like joysticks, thumb sticks, or triggers, they produce input values ranging between predefined minimum and maximum values (Imin and Imax). However, due to physical or electronic noise, these inputs may fluctuate around a neutral point \( I_0 \), which ideally should be zero for centered controls. Introducing a dead zone around \( I_0 \) helps in filtering out these small fluctuations.
+Background context explaining the concept. When using analog devices like joysticks, thumb sticks, or triggers, they produce input values ranging between predefined minimum and maximum values (Imin and Imax). However, due to physical or electronic noise, these inputs may fluctuate around a neutral point $I_0 $, which ideally should be zero for centered controls. Introducing a dead zone around $ I_0$ helps in filtering out these small fluctuations.
 
 :p What is the purpose of using a dead zone in HID systems?
 ??x
@@ -386,13 +386,13 @@ x??
 
 #### Dead Zone Calculation
 
-For a joystick with symmetric dead zones, the dead zone around \( I_0 \) might be defined as [I0 - d, I0 + d]. The value within this range is clamped to zero.
+For a joystick with symmetric dead zones, the dead zone around $I_0$ might be defined as [I0 - d, I0 + d]. The value within this range is clamped to zero.
 
 :p How do you calculate the size of the dead zone for a joystick?
 ??x
-The size of the dead zone for a joystick can be calculated based on the minimum and maximum values (Imin and Imax) and the neutral point \( I_0 \). Typically, the dead zone is defined as [I0 - d, I0 + d], where 'd' represents half the width of the dead zone. The actual value of 'd' can be chosen based on empirical testing to ensure noise is filtered out without affecting responsiveness.
+The size of the dead zone for a joystick can be calculated based on the minimum and maximum values (Imin and Imax) and the neutral point $I_0$. Typically, the dead zone is defined as [I0 - d, I0 + d], where 'd' represents half the width of the dead zone. The actual value of 'd' can be chosen based on empirical testing to ensure noise is filtered out without affecting responsiveness.
 
-For example, if \( I_0 \) is 0 and the maximum deviation due to noise is 10%, then a typical choice for 'd' might be 5% (or 0.05 * Imax).
+For example, if $I_0$ is 0 and the maximum deviation due to noise is 10%, then a typical choice for 'd' might be 5% (or 0.05 * Imax).
 
 ```c
 float d = 0.05f * Imax; // Example calculation
@@ -409,21 +409,20 @@ A first-order low-pass filter can be implemented to smooth out the raw input dat
 ??x
 A discrete first-order low-pass filter can be implemented using a combination of the current unfiltered input value and the filtered value from the previous frame. The formula for this is:
 
-\[ f(t) = (1 - \alpha)f(t - \Delta t) + \alpha u(t) \]
+$$f(t) = (1 - \alpha)f(t - \Delta t) + \alpha u(t)$$
 
 Where:
-- \( f(t) \) is the filtered value at time 't'.
-- \( u(t) \) is the unfiltered input value at time 't'.
-- \( \alpha \) is a constant that determines how much weight to give to the current input vs. the previous filtered value.
-- \( \Delta t \) is the frame duration.
+- $f(t)$ is the filtered value at time 't'.
+- $u(t)$ is the unfiltered input value at time 't'.
+- $\alpha$ is a constant that determines how much weight to give to the current input vs. the previous filtered value.
+- $\Delta t$ is the frame duration.
 
-The parameter \( \alpha \) can be calculated as:
-
-\[ \alpha = \frac{\Delta t}{RC + \Delta t} \]
+The parameter $\alpha$ can be calculated as:
+$$\alpha = \frac{\Delta t}{RC + \Delta t}$$
 
 Where:
-- \( R \) and \( C \) are resistance and capacitance values from a traditional RC low-pass filter circuit, respectively.
-- \( \Delta t \) is the frame duration.
+- $R $ and$C$ are resistance and capacitance values from a traditional RC low-pass filter circuit, respectively.
+- $\Delta t$ is the frame duration.
 
 In practice, this can be implemented in C or C++ as follows:
 
@@ -1029,11 +1028,10 @@ Background context: This section explains how to detect rapid button tapping by 
 :p How does the system track and calculate the frequency of a button press?
 
 ??x
-The system tracks the last timestamp \(T_{\text{last}}\) when a button was pressed. When a new button-down event occurs, it calculates the time difference \(\Delta T = T_{\text{cur}} - T_{\text{last}}\), where \(T_{\text{cur}}\) is the current time. The frequency \(f\) of the taps can be calculated as:
+The system tracks the last timestamp $T_{\text{last}}$ when a button was pressed. When a new button-down event occurs, it calculates the time difference $\Delta T = T_{\text{cur}} - T_{\text{last}}$, where $ T_{\text{cur}}$is the current time. The frequency $ f$ of the taps can be calculated as:
+$$f = \frac{1}{\Delta T}$$
 
-\[ f = \frac{1}{\Delta T} \]
-
-If this frequency meets or exceeds a minimum threshold \(f_{\text{min}}\), then it updates \(T_{\text{last}}\) with the new timestamp.
+If this frequency meets or exceeds a minimum threshold $f_{\text{min}}$, then it updates $ T_{\text{last}}$ with the new timestamp.
 
 ```cpp
 class ButtonTapDetector {
@@ -1070,12 +1068,12 @@ x??
 
 #### Minimum Valid Frequency Check
 
-Background context: The system checks whether the detected frequency of button presses is above a minimum threshold \(f_{\text{min}}\) to determine if the gesture is valid.
+Background context: The system checks whether the detected frequency of button presses is above a minimum threshold $f_{\text{min}}$ to determine if the gesture is valid.
 
 :p How does the system handle the validation of the button tap frequency?
 
 ??x
-The system compares the calculated frequency \(f\) against the minimum acceptable frequency \(f_{\text{min}}\). If the current detected frequency meets or exceeds this threshold, it updates the last time stamp with the new timestamp. Otherwise, the gesture is considered invalid.
+The system compares the calculated frequency $f $ against the minimum acceptable frequency$f_{\text{min}}$. If the current detected frequency meets or exceeds this threshold, it updates the last time stamp with the new timestamp. Otherwise, the gesture is considered invalid.
 
 ```cpp
 class ButtonTapDetector {
@@ -1106,7 +1104,7 @@ Background context: This section describes how to detect a specific sequence of 
 :p How does the system detect and validate a multibutton sequence?
 
 ??x
-The system uses an index \(i\) to track the current step in the sequence. It also maintains a start time \(T_{\text{start}}\) for the entire sequence. For each button press, it checks if the pressed button matches the expected next button in the sequence. If so, and within the valid time window, it advances to the next button; otherwise, it resets the index to the beginning of the sequence.
+The system uses an index $i $ to track the current step in the sequence. It also maintains a start time$T_{\text{start}}$ for the entire sequence. For each button press, it checks if the pressed button matches the expected next button in the sequence. If so, and within the valid time window, it advances to the next button; otherwise, it resets the index to the beginning of the sequence.
 
 ```cpp
 class MultibuttonSequenceDetector {

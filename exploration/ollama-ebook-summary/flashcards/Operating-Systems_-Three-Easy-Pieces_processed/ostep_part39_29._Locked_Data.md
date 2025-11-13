@@ -203,7 +203,7 @@ Background context explaining the concept of local-to-global transfer and its im
 
 :p What determines how often the local-to-global transfer occurs?
 ??x
-The threshold \( S \) determines how often the local-to-global transfer occurs. A smaller \( S \) means more frequent transfers, making the counter behave more like a non-scalable one (i.e., it would be less scalable but more accurate in real-time). Conversely, a larger \( S \) means fewer but larger transfers, which makes the counter more scalable but may result in a greater discrepancy between the global count and the actual value.
+The threshold $S $ determines how often the local-to-global transfer occurs. A smaller$S $ means more frequent transfers, making the counter behave more like a non-scalable one (i.e., it would be less scalable but more accurate in real-time). Conversely, a larger$S$ means fewer but larger transfers, which makes the counter more scalable but may result in a greater discrepancy between the global count and the actual value.
 
 ```c
 int threshold; // update frequency
@@ -217,11 +217,11 @@ x??
 ---
 
 #### Threshold S and Its Impact on Scalability and Accuracy
-Background context explaining how the threshold \( S \) affects both scalability and accuracy of the counter. A smaller threshold means more frequent updates but less scalability; a larger threshold increases scalability at the cost of accuracy.
+Background context explaining how the threshold $S$ affects both scalability and accuracy of the counter. A smaller threshold means more frequent updates but less scalability; a larger threshold increases scalability at the cost of accuracy.
 
-:p How does the size of the threshold \( S \) affect the counter's behavior?
+:p How does the size of the threshold $S$ affect the counter's behavior?
 ??x
-A smaller threshold \( S \) results in more frequent transfers from local counters to the global counter, making the counter behave more like a non-scalable one. This means that it would be less scalable but more accurate at reflecting the current count. Conversely, a larger threshold \( S \) makes the counter more scalable by reducing the number of transfers, but it might lead to a greater discrepancy between the global value and the actual count.
+A smaller threshold $S $ results in more frequent transfers from local counters to the global counter, making the counter behave more like a non-scalable one. This means that it would be less scalable but more accurate at reflecting the current count. Conversely, a larger threshold$S$ makes the counter more scalable by reducing the number of transfers, but it might lead to a greater discrepancy between the global value and the actual count.
 
 ```c
 if (c->local[cpu] >= c->threshold) { // transfer to global
@@ -240,7 +240,7 @@ Background context explaining the implementation details of an approximate count
 
 :p How does the `update` function handle local-to-global transfers?
 ??x
-The `update` function handles local-to-global transfers by checking if the local count has reached or exceeded the specified threshold \( S \). If so, it acquires the global lock to update the global counter with the accumulated local value and then resets the local counter.
+The `update` function handles local-to-global transfers by checking if the local count has reached or exceeded the specified threshold $S$. If so, it acquires the global lock to update the global counter with the accumulated local value and then resets the local counter.
 
 ```c
 void update(counter_t *c, int threadID, int amt) {
@@ -263,9 +263,9 @@ x??
 #### Performance of Approximate Counters
 Background context explaining the performance benefits of using approximate counters with high thresholds. The example provided shows how these counters can achieve good scalability while maintaining acceptable accuracy.
 
-:p What is the performance benefit of using an approximate counter with a threshold \( S \) of 1024?
+:p What is the performance benefit of using an approximate counter with a threshold $S$ of 1024?
 ??x
-Using an approximate counter with a threshold \( S \) of 1024 provides excellent performance, as it allows for efficient scaling across multiple processors. The time taken to update the counter four million times on four processors is nearly identical to updating it one million times on one processor. This efficiency comes at the cost of some accuracy, as there may be discrepancies between the global value and the actual count.
+Using an approximate counter with a threshold $S$ of 1024 provides excellent performance, as it allows for efficient scaling across multiple processors. The time taken to update the counter four million times on four processors is nearly identical to updating it one million times on one processor. This efficiency comes at the cost of some accuracy, as there may be discrepancies between the global value and the actual count.
 
 ```c
 // Example of performance with a threshold S of 1024
@@ -280,12 +280,11 @@ x??
 
 ---
 
-#### Importance of Threshold \( S \)
-Background context explaining why the threshold \( S \) is crucial in balancing between scalability and accuracy. Different values of \( S \) can significantly impact how often transfers occur, thus affecting both performance and precision.
+#### Importance of Threshold $S $ Background context explaining why the threshold$S $ is crucial in balancing between scalability and accuracy. Different values of$S$ can significantly impact how often transfers occur, thus affecting both performance and precision.
 
-:p Why is the threshold \( S \) important in managing counters across multiple processors?
+:p Why is the threshold $S$ important in managing counters across multiple processors?
 ??x
-The threshold \( S \) is critical because it controls how frequently local counts are transferred to the global counter. A smaller \( S \) leads to more frequent updates, which improves accuracy but reduces scalability due to increased contention on the global lock. Conversely, a larger \( S \) increases scalability by reducing the number of transfers but decreases accuracy as the global value may lag behind the actual count.
+The threshold $S $ is critical because it controls how frequently local counts are transferred to the global counter. A smaller$S $ leads to more frequent updates, which improves accuracy but reduces scalability due to increased contention on the global lock. Conversely, a larger$S$ increases scalability by reducing the number of transfers but decreases accuracy as the global value may lag behind the actual count.
 
 ```c
 // Example initialization with different thresholds
@@ -302,10 +301,10 @@ Background context explaining approximate counters and their trade-off between a
 
 :p What are approximate counters, and what trade-off do they offer?
 ??x
-Approximate counters provide an efficient way to count or track values with some level of inaccuracy for improved performance. The key parameter \( S \) affects this trade-off: when \( S \) is low, the performance is poor but the global count remains quite accurate; conversely, if \( S \) is high, performance is excellent but the global count lags by at most a factor proportional to the number of CPUs multiplied by \( S \).
+Approximate counters provide an efficient way to count or track values with some level of inaccuracy for improved performance. The key parameter $S $ affects this trade-off: when$S $ is low, the performance is poor but the global count remains quite accurate; conversely, if$ S $ is high, performance is excellent but the global count lags by at most a factor proportional to the number of CPUs multiplied by $S$.
 ??x
 The answer with detailed explanations.
-There's no single formula for approximate counters, as they are designed through algorithms that balance accuracy and speed. However, understanding \( S \) helps in deciding when higher performance is more critical than precise counts.
+There's no single formula for approximate counters, as they are designed through algorithms that balance accuracy and speed. However, understanding $S$ helps in deciding when higher performance is more critical than precise counts.
 
 ---
 #### Example Figure 29.5 (Not provided)
@@ -313,12 +312,12 @@ Background context regarding the approximate counter implementation shown in Fig
 
 :p Describe what an approximate counter might look like if represented graphically.
 ??x
-An approximate counter would likely show a curve or plot where the y-axis represents accuracy and x-axis performance. When \( S \) is low, the curve will be closer to perfect accuracy at lower performance levels. As \( S \) increases, the curve moves towards better performance but with more variance in accuracy.
+An approximate counter would likely show a curve or plot where the y-axis represents accuracy and x-axis performance. When $S $ is low, the curve will be closer to perfect accuracy at lower performance levels. As$S$ increases, the curve moves towards better performance but with more variance in accuracy.
 ??x
 The answer with detailed explanations.
 There's no specific figure here, so we imagine a hypothetical plot where:
-- When \( S = 1 \), the line is closer to ideal performance and accuracy.
-- As \( S \) increases (e.g., \( S = 4 \)), the line moves towards better performance but shows more fluctuation in accuracy.
+- When $S = 1$, the line is closer to ideal performance and accuracy.
+- As $S $ increases (e.g.,$ S = 4$), the line moves towards better performance but shows more fluctuation in accuracy.
 
 ---
 #### Concurrent Linked List Insertion with Locks
@@ -405,10 +404,10 @@ Background context on both concepts, comparing their implementation strategies a
 
 :p What are the key differences between implementing approximate counters and concurrent linked lists?
 ??x
-Implementing approximate counters involves balancing accuracy with performance through a parameter \( S \). Concurrent linked list operations focus on ensuring thread safety using locks but can optimize by minimizing lock usage. Approximate counters often sacrifice some precision for speed, while linked lists balance correctness and efficiency in data structure management.
+Implementing approximate counters involves balancing accuracy with performance through a parameter $S$. Concurrent linked list operations focus on ensuring thread safety using locks but can optimize by minimizing lock usage. Approximate counters often sacrifice some precision for speed, while linked lists balance correctness and efficiency in data structure management.
 ??x
 The answer with detailed explanations.
-Approximate counters use parameters like \( S \) to trade off between accuracy and performance, whereas concurrent linked list operations need careful locking strategies to ensure both safety and efficiency. Both aim at optimizing for different scenarios but approach the problem from distinct perspectives.
+Approximate counters use parameters like $S$ to trade off between accuracy and performance, whereas concurrent linked list operations need careful locking strategies to ensure both safety and efficiency. Both aim at optimizing for different scenarios but approach the problem from distinct perspectives.
 
 ---
 

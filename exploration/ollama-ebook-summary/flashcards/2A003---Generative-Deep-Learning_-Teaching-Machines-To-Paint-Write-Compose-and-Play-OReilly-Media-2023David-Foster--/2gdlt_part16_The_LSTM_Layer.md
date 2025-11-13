@@ -7,20 +7,20 @@
 #### Recurrent Layer Overview
 Recurrent layers are designed to handle sequential data, allowing them to maintain a hidden state that captures information from previous timesteps. This is crucial for tasks such as language modeling and time series analysis.
 
-The general mechanism involves updating the hidden state \( h_t \) at each timestep \( t \):
+The general mechanism involves updating the hidden state $h_t $ at each timestep$t$:
 
-\[ h_t = f(h_{t-1}, x_t) \]
+$$h_t = f(h_{t-1}, x_t)$$
 
 Where:
-- \( h_t \) is the hidden state at time step \( t \).
-- \( h_{t-1} \) is the hidden state from the previous time step.
-- \( x_t \) is the input data at time step \( t \).
+- $h_t $ is the hidden state at time step$t$.
+- $h_{t-1}$ is the hidden state from the previous time step.
+- $x_t $ is the input data at time step$t$.
 
-Once all elements in the sequence have been processed, the final hidden state \( h_n \) is used as input to the next layer.
+Once all elements in the sequence have been processed, the final hidden state $h_n$ is used as input to the next layer.
 
 :p What is a key characteristic of recurrent layers that allows them to process sequential data?
 ??x
-Recurrent layers maintain a hidden state \( h_t \) across time steps, which captures information from previous timesteps. This allows the network to have memory and understand the context of the sequence.
+Recurrent layers maintain a hidden state $h_t$ across time steps, which captures information from previous timesteps. This allows the network to have memory and understand the context of the sequence.
 x??
 
 ---
@@ -28,14 +28,14 @@ x??
 #### Unrolling Recurrent Layers
 To better visualize how a single sequence is processed through a recurrent layer, we can unroll it over multiple timesteps.
 
-Consider an input sequence \( x_1, x_2, \ldots, x_n \):
+Consider an input sequence $x_1, x_2, \ldots, x_n$:
 
-- At each time step \( t \), the cell uses \( h_{t-1} \) and \( x_t \) to compute \( h_t \).
-- The final hidden state \( h_n \) is then passed on to subsequent layers.
+- At each time step $t $, the cell uses $ h_{t-1}$and $ x_t$to compute $ h_t$.
+- The final hidden state $h_n$ is then passed on to subsequent layers.
 
 :p How does unrolling a recurrent layer help in understanding its operation?
 ??x
-Unrolling a recurrent layer helps visualize the step-by-step processing of each element in the sequence. It shows how the current hidden state \( h_{t-1} \) and input data \( x_t \) are combined to produce the next hidden state \( h_t \). This unrolled view clarifies the flow of information through the network.
+Unrolling a recurrent layer helps visualize the step-by-step processing of each element in the sequence. It shows how the current hidden state $h_{t-1}$ and input data $ x_t $ are combined to produce the next hidden state $h_t$. This unrolled view clarifies the flow of information through the network.
 x??
 
 ---
@@ -63,9 +63,9 @@ x??
 #### LSTM Layer Components
 LSTM cells include three main components: input gate, forget gate, and output gate.
 
-- **Input Gate**: Controls what new information is added to the cell state \( C_t \).
+- **Input Gate**: Controls what new information is added to the cell state $C_t$.
 - **Forget Gate**: Decides which parts of the previous cell state are discarded.
-- **Output Gate**: Determines what part of the current cell state is used as the hidden state \( h_t \).
+- **Output Gate**: Determines what part of the current cell state is used as the hidden state $h_t$.
 
 :p What are the main components of an LSTM cell?
 ??x
@@ -101,7 +101,7 @@ h_t, C_t = lstm_cell(x_t, h_t_minus_1, C_t_minus_1)
 
 :p What does the LSTM cell pseudocode illustrate?
 ??x
-The pseudocode illustrates the core operations of an LSTM cell. It shows how gates (input, forget, output) are used to update the cell state \( C_t \) and compute the hidden state \( h_t \). This helps in managing long-term dependencies more effectively than traditional RNNs.
+The pseudocode illustrates the core operations of an LSTM cell. It shows how gates (input, forget, output) are used to update the cell state $C_t $ and compute the hidden state$h_t$. This helps in managing long-term dependencies more effectively than traditional RNNs.
 x??
 
 ---
@@ -121,7 +121,7 @@ The text differentiates between the hidden state and the cell state within an LS
 
 :p How does the hidden state differ from the cell state?
 ??x
-The hidden state, denoted as \( h_t \), is output by the LSTM at each time step and represents the current context or information. The cell state, denoted as \( C_t \), serves as a memory component that stores information over multiple timesteps.
+The hidden state, denoted as $h_t $, is output by the LSTM at each time step and represents the current context or information. The cell state, denoted as $ C_t$, serves as a memory component that stores information over multiple timesteps.
 x??
 
 ---
@@ -131,7 +131,7 @@ This mechanism determines which parts of the previous cell state should be disca
 
 :p How does the forget gate in an LSTM work?
 ??x
-The forget gate is a dense layer with its own weights and biases. It takes the concatenation of the previous hidden state \( h_{t-1} \) and the current input \( x_t \), passes it through a sigmoid function, producing a vector \( f_t \). Each element in \( f_t \) (of length equal to the number of units in the cell) is between 0 and 1, indicating how much of each unit from the previous cell state \( C_{t-1} \) should be discarded.
+The forget gate is a dense layer with its own weights and biases. It takes the concatenation of the previous hidden state $h_{t-1}$ and the current input $ x_t $, passes it through a sigmoid function, producing a vector $ f_t$. Each element in $ f_t$(of length equal to the number of units in the cell) is between 0 and 1, indicating how much of each unit from the previous cell state $ C_{t-1}$ should be discarded.
 
 Example Code:
 ```java
@@ -160,7 +160,7 @@ This mechanism decides how much new information should be added to the cell stat
 
 :p What is the role of the input gate in an LSTM?
 ??x
-The input gate, similar to the forget gate, takes the concatenation of the previous hidden state \( h_{t-1} \) and the current input \( x_t \), passes it through a sigmoid function. This produces a vector \( i_t \) where each element is between 0 and 1, indicating how much new information should be added to the cell state.
+The input gate, similar to the forget gate, takes the concatenation of the previous hidden state $h_{t-1}$ and the current input $ x_t $, passes it through a sigmoid function. This produces a vector $ i_t$ where each element is between 0 and 1, indicating how much new information should be added to the cell state.
 
 Example Code:
 ```java
@@ -189,7 +189,7 @@ The cell generates a new vector based on the input gate's decision.
 
 :p How does the LSTM generate new information to be stored in the cell state?
 ??x
-After passing the concatenation of \( h_{t-1} \) and \( x_t \) through an input gate, it is passed through a dense layer with a tanh activation function. This produces a vector \( C_t \), which contains values between -1 and 1 and represents new information to be stored in the cell state.
+After passing the concatenation of $h_{t-1}$ and $ x_t $ through an input gate, it is passed through a dense layer with a tanh activation function. This produces a vector $C_t$, which contains values between -1 and 1 and represents new information to be stored in the cell state.
 
 Example Code:
 ```java
@@ -218,7 +218,7 @@ This step combines the forget and input gates to update the cell state.
 
 :p How does the LSTM update its cell state?
 ??x
-The updated cell state \( C_t \) is calculated by first multiplying the forget gate vector \( f_t \) element-wise with the previous cell state \( C_{t-1} \). This is then added to the result of multiplying the input gate vector \( i_t \) and the generated new information vector \( C'_{t} \).
+The updated cell state $C_t $ is calculated by first multiplying the forget gate vector$f_t $ element-wise with the previous cell state$C_{t-1}$. This is then added to the result of multiplying the input gate vector $ i_t$and the generated new information vector $ C'_{t}$.
 
 Example Code:
 ```java
@@ -247,7 +247,7 @@ The output gate decides what part of the cell state should be output.
 
 :p What does the output gate do in an LSTM?
 ??x
-The output gate is another dense layer that takes the concatenated vector \( [h_{t-1}, x_t] \) and produces a vector \( o_t \). This vector contains values between 0 and 1, indicating how much of the updated cell state \( C_t \) should be output as the new hidden state \( h_t \).
+The output gate is another dense layer that takes the concatenated vector $[h_{t-1}, x_t]$ and produces a vector $ o_t $. This vector contains values between 0 and 1, indicating how much of the updated cell state $ C_t$should be output as the new hidden state $ h_t$.
 
 Example Code:
 ```java
@@ -272,16 +272,15 @@ x??
 ---
 
 #### Element-wise Multiplication and Tanh Activation
-Background context explaining how the element-wise multiplication of \( \text{ot} \) with the updated cell state \( C_t \), after applying a tanh activation function, produces the new hidden state \( h_t \). The formula for this is:
-\[ h_t = \sigma(ot) \cdot \tanh(C_t) \]
-where \( \sigma \) is the sigmoid function.
+Background context explaining how the element-wise multiplication of $\text{ot}$ with the updated cell state $ C_t $, after applying a tanh activation function, produces the new hidden state $ h_t$. The formula for this is:
+$$h_t = \sigma(ot) \cdot \tanh(C_t)$$where $\sigma$ is the sigmoid function.
 
-:p What is the process of obtaining the new hidden state \( h_t \) in an LSTM?
+:p What is the process of obtaining the new hidden state $h_t$ in an LSTM?
 ??x
-The process involves applying a tanh activation to the updated cell state \( C_t \), which normalizes it between -1 and 1. Then, element-wise multiplication with the output gate \( \text{ot} \) is performed. The formula for this is:
-\[ h_t = \sigma(ot) \cdot \tanh(C_t) \]
+The process involves applying a tanh activation to the updated cell state $C_t $, which normalizes it between -1 and 1. Then, element-wise multiplication with the output gate $\text{ot}$ is performed. The formula for this is:
+$$h_t = \sigma(ot) \cdot \tanh(C_t)$$
 
-Here, \( \sigma(ot) \) acts as a gating mechanism that controls how much of the updated cell state should be included in the new hidden state.
+Here,$\sigma(ot)$ acts as a gating mechanism that controls how much of the updated cell state should be included in the new hidden state.
 x??
 
 ---

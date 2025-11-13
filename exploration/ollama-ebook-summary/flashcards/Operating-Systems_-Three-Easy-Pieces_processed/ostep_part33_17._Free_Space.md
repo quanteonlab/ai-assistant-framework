@@ -377,7 +377,7 @@ For example:
 - Header size: 8 bytes
 - Requested size: 100 bytes
 
-The total allocated memory is \( 100 + 8 = 108 \) bytes (including the header). The remaining free space is \( 4088 - 108 = 3980 \) bytes.
+The total allocated memory is $100 + 8 = 108 $ bytes (including the header). The remaining free space is$4088 - 108 = 3980$ bytes.
 
 If we denote the virtual address of the heap as `base`, the allocation and splitting process can be visualized as follows:
 
@@ -409,7 +409,7 @@ For example:
 - Header size: 8 bytes
 - Allocated regions: 108 * 3 = 324 bytes
 
-The freed region can merge with adjacent free chunks, or it remains as a single free chunk. The new state of the heap would have three headers and three 100-byte allocated regions, leaving a remaining free space of \( 3980 - (100 + 8) * 3 = 3764 \) bytes.
+The freed region can merge with adjacent free chunks, or it remains as a single free chunk. The new state of the heap would have three headers and three 100-byte allocated regions, leaving a remaining free space of $3980 - (100 + 8) * 3 = 3764$ bytes.
 
 The reinsertion process can be visualized as:
 
@@ -1229,7 +1229,7 @@ Background context explaining how to calculate TLB hit rates and their significa
 :p How do you calculate the TLB hit rate during array access?
 ??x
 The TLB hit rate is calculated as follows:
-\[ \text{TLB Hit Rate} = \frac{\text{Number of Hits}}{\text{Total Number of Accesses}} \]
+$$\text{TLB Hit Rate} = \frac{\text{Number of Hits}}{\text{Total Number of Accesses}}$$
 
 For example, in a scenario where 7 out of 10 accesses are successful hits:
 
@@ -1261,7 +1261,7 @@ Background context explaining caching principles, including temporal and spatial
 
 :p What are temporal and spatial locality?
 ??x
-Temporal locality refers to the tendency for a program to access an instruction or data item that has been recently accessed again in the near future. Spatial locality means that if a program accesses memory at address \( x \), it is likely to soon access addresses close to \( x \).
+Temporal locality refers to the tendency for a program to access an instruction or data item that has been recently accessed again in the near future. Spatial locality means that if a program accesses memory at address $x $, it is likely to soon access addresses close to $ x$.
 
 For example:
 - In a loop, variables are often re-used multiple times within consecutive iterations.

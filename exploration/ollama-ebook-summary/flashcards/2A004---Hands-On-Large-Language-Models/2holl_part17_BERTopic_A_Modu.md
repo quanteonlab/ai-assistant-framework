@@ -55,10 +55,10 @@ BERTopic addresses the limitations of the document-level bag-of-words representa
 2. Applying a class-based variant of TF-IDF (c-TF-IDF) that emphasizes words significant to specific clusters while downweighting common stop words.
 
 The c-TF-IDF is calculated as follows:
-\[ \text{c-TF-IDF} = \text{c-TF} \times \text{IDF} \]
-Where \( \text{c-TF} \) is the frequency of a word within its cluster, and \( \text{IDF} \) is defined as:
+$$\text{c-TF-IDF} = \text{c-TF} \times \text{IDF}$$
 
-\[ \text{IDF}(w) = \log\left(\frac{\text{total number of clusters}}{1 + \text{frequency of } w \text{ across all clusters}}\right) \]
+Where $\text{c-TF}$ is the frequency of a word within its cluster, and $\text{IDF}$ is defined as:
+$$\text{IDF}(w) = \log\left(\frac{\text{total number of clusters}}{1 + \text{frequency of } w \text{ across all clusters}}\right)$$
 
 This weighting helps in identifying more meaningful topics by giving higher scores to words that are important within specific clusters.
 x??

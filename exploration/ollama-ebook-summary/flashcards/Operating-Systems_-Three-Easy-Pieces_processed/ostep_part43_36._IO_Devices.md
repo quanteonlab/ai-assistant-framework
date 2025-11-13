@@ -1056,7 +1056,7 @@ Background context: In a simple disk with a single track, the latency for readin
 In a single-track hard disk, the primary factor contributing to latency is the **rotational delay**. This is the time required for the desired sector to rotate under the disk head. For instance, at 10,000 RPM, each rotation takes about 6 ms, and reading or writing any given sector involves waiting approximately half a rotation.
 
 Formula:
-\[ \text{Rotational Delay} = \frac{\text{RPM}}{2 \times 60} \]
+$$\text{Rotational Delay} = \frac{\text{RPM}}{2 \times 60}$$
 
 For example, if the drive rotates at 10,000 RPM:
 ```java
@@ -1202,16 +1202,14 @@ Next, we use known conversion factors:
 - 1 second = 1000 milliseconds
 
 Given that the disk rotates at 10,000 RPM (rotations per minute), we can set up the following equation:
-
-\[ \text{Time(ms)} \cdot 1\text{Rotation} = 1 \text{minute} \cdot \frac{10,000 \text{Rotations}}{60 \text{seconds}} \cdot \frac{1000 \text{ms}}{1 \text{second}} \]
+$$\text{Time(ms)} \cdot 1\text{Rotation} = 1 \text{minute} \cdot \frac{10,000 \text{Rotations}}{60 \text{seconds}} \cdot \frac{1000 \text{ms}}{1 \text{second}}$$
 
 Simplifying the equation:
+$$\text{Time(ms)} \cdot 1\text{Rotation} = \frac{10,000 \times 1000}{60} \text{ms} / \text{rotation}$$
 
-\[ \text{Time(ms)} \cdot 1\text{Rotation} = \frac{10,000 \times 1000}{60} \text{ms} / \text{rotation} \]
+$$\text{Time(ms)} \cdot 1\text{Rotation} = \frac{10,000,000}{60} \text{ms} / \text{rotation}$$
 
-\[ \text{Time(ms)} \cdot 1\text{Rotation} = \frac{10,000,000}{60} \text{ms} / \text{rotation} \]
-
-\[ \text{Time(ms)} \cdot 1\text{Rotation} = 166,667 \text{ms} / \text{rotation} \approx 167 \text{ms} \]
+$$\text{Time(ms)} \cdot 1\text{Rotation} = 166,667 \text{ms} / \text{rotation} \approx 167 \text{ms}$$
 
 Thus, the time for one rotation of a disk at 10,000 RPM is approximately 167 milliseconds.
 ??x
@@ -1230,8 +1228,9 @@ The three major components of I/O time are:
 3. Transfer Time (Ttransfer)
 
 The total I/O time is given by:
+$$
 
-\[ T_{\text{I/O}} = T_{\text{seek}} + T_{\text{rotation}} + T_{\text{transfer}} \]
+T_{\text{I/O}} = T_{\text{seek}} + T_{\text{rotation}} + T_{\text{transfer}}$$
 
 Each component can be individually measured or estimated, and their sum provides a comprehensive view of the overall I/O operation.
 x??
@@ -1243,12 +1242,14 @@ Background context: The transfer rate (R_I/O) is often used to compare disk driv
 :p How do we calculate the transfer rate from I/O time?
 ??x
 The transfer rate (R_I/O) is calculated using the following formula:
+$$
 
-\[ R_{\text{I/O}} = \frac{\text{Size of Transfer}}{\text{Time taken for I/O operation}} \]
+R_{\text{I/O}} = \frac{\text{Size of Transfer}}{\text{Time taken for I/O operation}}$$
 
 For example, if a 512 KB block takes 5 milliseconds to transfer, the transfer rate would be:
+$$
 
-\[ R_{\text{I/O}} = \frac{512 \text{ KB}}{5 \text{ ms}} = 102.4 \text{ KB/ms} \]
+R_{\text{I/O}} = \frac{512 \text{ KB}}{5 \text{ ms}} = 102.4 \text{ KB/ms}$$
 
 This calculation provides a direct measure of how much data can be transferred per unit time.
 x??
@@ -1305,11 +1306,14 @@ To calculate the total I/O time (TI/O) for a random workload on the Seagate Chee
 - Transfer Time (TTransfer): 30 microseconds for a 4KB read.
 
 The total I/O time is the sum of these times:
-\[ TI/O = Tseek + TRotation + TTransfer \]
+$$
+
+TI/O = Tseek + TRotation + TTransfer$$
 
 For the Cheetah, this would be:
-\[ TI/O = 4\text{ms} + 2\text{ms} + 30\mu s = 6.03\text{ms} \]
-x??
+$$
+
+TI/O = 4\text{ms} + 2\text{ms} + 30\mu s = 6.03\text{ms}$$x??
 
 ---
 #### I/O Rate for Cheetah Drive
@@ -1318,10 +1322,14 @@ Explanation on how to calculate the transfer rate (RI/O) based on the total I/O 
 :p How do you calculate the transfer rate (RI/O) for a random workload on the Seagate Cheetah 15K.5?
 ??x
 To calculate the transfer rate (RI/O), we use the formula:
-\[ RI/O = \frac{\text{Size of Transfer}}{\text{Total I/O Time}} \]
+$$
+
+RI/O = \frac{\text{Size of Transfer}}{\text{Total I/O Time}}$$
 
 For a 4KB read and total I/O time of approximately 6 ms, the calculation is:
-\[ RI/O = \frac{4096\text{ bytes}}{6.03\text{ms} \times 1000\mu s/\text{ms}} \approx 0.67\text{MB/s} \]
+$$
+
+RI/O = \frac{4096\text{ bytes}}{6.03\text{ms} \times 1000\mu s/\text{ms}} \approx 0.67\text{MB/s}$$
 
 This represents the throughput of the drive under random workload conditions.
 x??
@@ -1352,11 +1360,12 @@ To calculate the total I/O time (TI/O) for a random workload on the Seagate Barr
 - Transfer Time (TTransfer): 30 microseconds.
 
 For a more conservative estimate, assume:
-\[ TI/O = Tseek + TRotation + TTransfer \]
+$$
 
-Given the higher seek time and rotational delay, this would be significantly longer than the Cheetah. For example, if \( Tseek = 8\text{ms} \) and \( TRotation = 8\text{ms} \):
-\[ TI/O = 8\text{ms} + 8\text{ms} + 30\mu s = 16.03\text{ms} \]
-x??
+TI/O = Tseek + TRotation + TTransfer$$
+
+Given the higher seek time and rotational delay, this would be significantly longer than the Cheetah. For example, if $Tseek = 8\text{ms}$ and $TRotation = 8\text{ms}$:
+$$TI/O = 8\text{ms} + 8\text{ms} + 30\mu s = 16.03\text{ms}$$x??
 
 ---
 #### I/O Rate for Barracuda Drive
@@ -1365,10 +1374,14 @@ Explanation on how to calculate the transfer rate (RI/O) based on the total I/O 
 :p How do you calculate the transfer rate (RI/O) for a random workload on the Seagate Barracuda?
 ??x
 To calculate the transfer rate (RI/O), we use the formula:
-\[ RI/O = \frac{\text{Size of Transfer}}{\text{Total I/O Time}} \]
+$$
+
+RI/O = \frac{\text{Size of Transfer}}{\text{Total I/O Time}}$$
 
 For a 4KB read and total I/O time of approximately 16 ms, the calculation is:
-\[ RI/O = \frac{4096\text{ bytes}}{16.03\text{ms} \times 1000\mu s/\text{ms}} \approx 0.257\text{MB/s} \]
+$$
+
+RI/O = \frac{4096\text{ bytes}}{16.03\text{ms} \times 1000\mu s/\text{ms}} \approx 0.257\text{MB/s}$$
 
 This represents a significantly lower throughput compared to the Cheetah, emphasizing the trade-off between performance and capacity.
 x??
@@ -1439,10 +1452,9 @@ Background context: The text explains the calculation of the average seek distan
 
 ??x
 The average seek distance on a disk can be calculated by first summing up all possible seek distances and then dividing by the number of different possible seeks. For a disk with N tracks, the formula for the total seek distance is:
+$$\sum_{x=0}^{N-1} \sum_{y=0}^{N-1} |x - y|$$
 
-\[ \sum_{x=0}^{N-1} \sum_{y=0}^{N-1} |x - y| \]
-
-The average seek distance is this sum divided by \( N^2 \).
+The average seek distance is this sum divided by $N^2$.
 
 ```java
 // Pseudocode to calculate average seek distance
@@ -2052,7 +2064,7 @@ For different seek rates, adjust the skew accordingly. If the seek rate is faste
 :p Could you write a formula to figure out the skew?
 ??x
 A simple way to calculate the skew could be:
-\[ \text{Skew} = \frac{\text{Seek Rate}}{\text{Average Request Distance}} \]
+$$\text{Skew} = \frac{\text{Seek Rate}}{\text{Average Request Distance}}$$
 
 Where:
 - Seek Rate is in ms/track.
@@ -2079,9 +2091,9 @@ Running random requests on a disk with varying densities can result in varied se
 :p What is the bandwidth (in sectors per unit time) on the outer, middle, and inner tracks?
 ??x
 The bandwidth can be calculated by dividing the number of sectors read or written by the total time taken. For example:
-- Outer track: If 100 sectors are transferred in 2 seconds, the bandwidth is \( \frac{100}{2} = 50 \) sectors/second.
-- Middle track: If 75 sectors are transferred in 3 seconds, the bandwidth is \( \frac{75}{3} = 25 \) sectors/second.
-- Inner track: If 50 sectors are transferred in 4 seconds, the bandwidth is \( \frac{50}{4} = 12.5 \) sectors/second.
+- Outer track: If 100 sectors are transferred in 2 seconds, the bandwidth is $\frac{100}{2} = 50$ sectors/second.
+- Middle track: If 75 sectors are transferred in 3 seconds, the bandwidth is $\frac{75}{3} = 25$ sectors/second.
+- Inner track: If 50 sectors are transferred in 4 seconds, the bandwidth is $\frac{50}{4} = 12.5$ sectors/second.
 
 :p Use different random seeds.
 ??x

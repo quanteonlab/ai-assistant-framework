@@ -11,9 +11,9 @@ Background context explaining the difference between mass and weight. Include an
 Mass is a measure of how much matter an object contains, whereas weight is a measure of the force exerted on that object by gravity. 
 
 The formula for weight can be expressed as:
-\[ \text{Weight} = \text{mass} \times \text{gravity} \]
+$$\text{Weight} = \text{mass} \times \text{gravity}$$
 
-On Earth, the standard acceleration due to gravity \( g \) is approximately 9.81 m/s².
+On Earth, the standard acceleration due to gravity $g$ is approximately 9.81 m/s².
 
 If you weigh 150 pounds on Earth and go to the moon, your mass remains constant, but your weight decreases because the moon's gravity is about a sixth of that on Earth.
 
@@ -28,8 +28,8 @@ x??
 
 Background context explaining what density measures and how it relates to matter and volume.
 
-Density (\(\rho\)) of an object can be calculated using the formula:
-\[ \rho = \frac{\text{mass}}{\text{volume}} \]
+Density ($\rho$) of an object can be calculated using the formula:
+$$\rho = \frac{\text{mass}}{\text{volume}}$$
 
 For example, iron is denser than water because its mass per unit volume is greater. A one-gallon bag of iron will feel heavier and have less volume compared to a one-gallon bag of water.
 
@@ -42,20 +42,19 @@ x??
 
 #### Relativity and Mass-Energy Equivalence
 
-Background context explaining Albert Einstein's theory of special relativity and the famous equation \(E = mc^2\).
+Background context explaining Albert Einstein's theory of special relativity and the famous equation $E = mc^2$.
 
 Albert Einstein proposed that mass and energy are interchangeable forms of the same thing. The formula for mass-energy equivalence is:
-\[ E = mc^2 \]
-where:
-- \(E\) is the total energy,
-- \(m\) is the mass, and
-- \(c\) is the speed of light (approximately 300,000 km/s).
+$$E = mc^2$$where:
+- $E$ is the total energy,
+- $m$ is the mass, and
+- $c$ is the speed of light (approximately 300,000 km/s).
 
 This means that a small amount of mass can be converted into a large amount of energy.
 
-:p What does Einstein's equation \(E = mc^2\) mean?
+:p What does Einstein's equation $E = mc^2$ mean?
 ??x
-The equation states that energy (\(E\)) and mass (\(m\)) are equivalent and interchangeable. A small amount of mass can be converted into a significant amount of energy.
+The equation states that energy ($E $) and mass ($ m$) are equivalent and interchangeable. A small amount of mass can be converted into a significant amount of energy.
 x??
 
 ---
@@ -137,15 +136,16 @@ x??
 #### Understanding Force and Motion
 
 Background context: Applying force allows changes in the velocity (speed and direction) of an object. A change in velocity is known as acceleration, and it can be calculated using the formula:
-\[ \text{Force} = \text{Mass} \times \text{Acceleration} \]
+$$\text{Force} = \text{Mass} \times \text{Acceleration}$$
 
 This concept is crucial for understanding how mechanical devices function and is tested on the ASVAB.
 
 :p What is the relationship between force, mass, and acceleration?
 ??x
 The relationship between force, mass, and acceleration is described by Newton's Second Law of Motion. According to this law, the force applied to an object is directly proportional to its mass and the acceleration it undergoes. Mathematically, it can be expressed as:
-\[ F = m \times a \]
-where \( F \) is the force, \( m \) is the mass, and \( a \) is the acceleration.
+$$
+
+F = m \times a$$where $ F $is the force,$ m $ is the mass, and $ a$ is the acceleration.
 
 This formula helps us understand how much force is needed to move an object of a given mass at a certain rate.
 x??
@@ -192,7 +192,7 @@ In the context of martial arts, force, mass, and acceleration are related as fol
 - However, a smaller fighter can usually accelerate more quickly due to having less mass.
 
 The relationship is given by:
-\[ \text{Force} = \text{Mass} \times \text{Acceleration} \]
+$$\text{Force} = \text{Mass} \times \text{Acceleration}$$
 
 This means that even if the force applied by both fighters is the same, the smaller fighter will experience greater acceleration. This higher acceleration allows them to break boards and bricks just as effectively as larger fighters.
 
@@ -233,10 +233,10 @@ Static equilibrium refers to a state where all forces acting on an object are ba
 x??
 ---
 #### Understanding Pressure
-Background context: Pressure is defined as force per unit area and is commonly measured in pounds per square inch (psi). The formula for pressure is \( \text{Pressure} = \frac{\text{Force}}{\text{Area}} \).
+Background context: Pressure is defined as force per unit area and is commonly measured in pounds per square inch (psi). The formula for pressure is $\text{Pressure} = \frac{\text{Force}}{\text{Area}}$.
 :p How do you calculate the pressure exerted on a surface?
 ??x
-To calculate the pressure exerted on a surface, use the formula: Pressure = Force/Area. For example, if 50 pounds of force are applied to an area of 10 square inches, the resulting pressure is \( \frac{50}{10} = 5 \) psi.
+To calculate the pressure exerted on a surface, use the formula: Pressure = Force/Area. For example, if 50 pounds of force are applied to an area of 10 square inches, the resulting pressure is $\frac{50}{10} = 5$ psi.
 x??
 ---
 #### Static Equilibrium Example

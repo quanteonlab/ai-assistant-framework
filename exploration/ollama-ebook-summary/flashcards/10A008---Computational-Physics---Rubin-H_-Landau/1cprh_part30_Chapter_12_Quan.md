@@ -5,79 +5,56 @@
 ---
 
 #### Dirac Notation in Quantum Mechanics
-Background context: In quantum mechanics, states are represented using Dirac's notation. The ket \( | \psi \rangle \) denotes a state vector in an abstract Hilbert space, while the bra \( \langle x | \) is its dual adjoint or covector space representation. The wave function \( \psi(x) \) can be obtained from the inner product of the bra and ket: 
-\[
-\psi(x) = \langle x | \psi \rangle.
-\]
+Background context: In quantum mechanics, states are represented using Dirac's notation. The ket $| \psi \rangle $ denotes a state vector in an abstract Hilbert space, while the bra$\langle x |$ is its dual adjoint or covector space representation. The wave function $\psi(x)$ can be obtained from the inner product of the bra and ket: 
+$$\psi(x) = \langle x | \psi \rangle.$$
+
 This inner product provides a projection of the state vector onto the basis vectors.
 
 :p What is Dirac notation, and how does it represent quantum states?
 ??x
-Dirac notation uses \( | \psi \rangle \) to denote a state vector in an abstract Hilbert space. The corresponding dual adjoint or covector space representation is given by the bra \( \langle x | \). The wave function \( \psi(x) \), which gives the probability amplitude of finding the state at position \( x \), can be obtained via the inner product:
-\[
-\psi(x) = \langle x | \psi \rangle.
-\]
+Dirac notation uses $| \psi \rangle $ to denote a state vector in an abstract Hilbert space. The corresponding dual adjoint or covector space representation is given by the bra$\langle x |$. The wave function $\psi(x)$, which gives the probability amplitude of finding the state at position $ x$, can be obtained via the inner product:
+$$\psi(x) = \langle x | \psi \rangle.$$
+
 This represents a projection of the state vector onto the basis vectors. 
 ??x
 
 ---
 
 #### Qubits and Quantum Gates
-Background context: In quantum computing, qubits are fundamental units of information that can exist in multiple states simultaneously (superposition). The state of \( n \) qubits is represented as a vector in a Hilbert space with dimension \( 2^n \). Quantum gates manipulate these states. Commonly used gates include the Pauli-X gate (bit flip), Hadamard gate, and CNOT gate.
+Background context: In quantum computing, qubits are fundamental units of information that can exist in multiple states simultaneously (superposition). The state of $n $ qubits is represented as a vector in a Hilbert space with dimension$2^n$. Quantum gates manipulate these states. Commonly used gates include the Pauli-X gate (bit flip), Hadamard gate, and CNOT gate.
 
 :p What are qubits, and how do they differ from classical bits?
 ??x
 Qubits are quantum mechanical analogs of classical bits that can exist in multiple states simultaneously due to superposition. Unlike a classical bit which is either 0 or 1, a qubit can be represented as:
-\[
-| \psi \rangle = a |0\rangle + b |1\rangle,
-\]
-where \(a\) and \(b\) are complex numbers representing the probability amplitudes.
+$$| \psi \rangle = a |0\rangle + b |1\rangle,$$where $ a $ and $ b$ are complex numbers representing the probability amplitudes.
 
 In contrast to classical bits, where operations like NOT (X) simply flip 0 to 1 or 1 to 0, quantum gates can perform more sophisticated transformations such as the Hadamard gate which puts a qubit into a superposition state:
-\[
-H | \psi \rangle = H(a |0\rangle + b |1\rangle) = \frac{a+b}{\sqrt{2}}|0\rangle + \frac{a-b}{\sqrt{2}}|1\rangle.
-\]
-??x
+$$H | \psi \rangle = H(a |0\rangle + b |1\rangle) = \frac{a+b}{\sqrt{2}}|0\rangle + \frac{a-b}{\sqrt{2}}|1\rangle.$$??x
 
 ---
 
 #### Operators and Inner Products
-Background context: Operators in Dirac notation, such as \( O = |\phi\rangle \langle \psi| \), are represented by matrices. The inner product of two states is denoted as:
-\[
-\langle \phi | \psi \rangle.
-\]
-The scalar or inner product between the states \(|\phi\rangle\) and \(|\psi\rangle\) is given by:
-\[
-\langle \phi | \psi \rangle = (\phi, \psi) = \langle \psi | \phi \rangle^*,
-\]
-where \( * \) denotes complex conjugation.
+Background context: Operators in Dirac notation, such as $O = |\phi\rangle \langle \psi|$, are represented by matrices. The inner product of two states is denoted as:
+$$\langle \phi | \psi \rangle.$$
+
+The scalar or inner product between the states $|\phi\rangle $ and$|\psi\rangle$ is given by:
+$$\langle \phi | \psi \rangle = (\phi, \psi) = \langle \psi | \phi \rangle^*,$$where $*$ denotes complex conjugation.
 
 :p What are the properties of operators and inner products in Dirac notation?
 ??x
 Operators in Dirac notation are represented as matrices. For example:
-\[
-O = |\phi\rangle \langle \psi| = [a b; c d] \begin{bmatrix} x \\ y \end{bmatrix},
-\]
-where \(|\phi\rangle\) and \(|\psi\rangle\) are vectors.
+$$O = |\phi\rangle \langle \psi| = [a b; c d] \begin{bmatrix} x \\ y \end{bmatrix},$$where $|\phi\rangle $ and$|\psi\rangle$ are vectors.
 
 The inner product between two states is denoted as:
-\[
-\langle \phi | \psi \rangle.
-\]
+$$\langle \phi | \psi \rangle.$$
+
 Properties include:
 
-- The scalar or inner product of the states \( |\phi\rangle \) and \( |\psi\rangle \):
-  \[
-  \langle \phi | \psi \rangle = (\phi, \psi) = \langle \psi | \phi \rangle^*,
-  \]
-  where the asterisk denotes complex conjugation.
+- The scalar or inner product of the states $|\phi\rangle $ and$|\psi\rangle$:
+  $$\langle \phi | \psi \rangle = (\phi, \psi) = \langle \psi | \phi \rangle^*,$$where the asterisk denotes complex conjugation.
 
-- An operator like \( O \) changes one state into another:
-  \[
-  O|\psi\rangle = |\phi\rangle.
-  \]
-
-??x
+- An operator like $O$ changes one state into another:
+$$O|\psi\rangle = |\phi\rangle.$$??x
 
 ---
 
@@ -153,54 +130,46 @@ This code creates a simple quantum circuit, compiles it for execution on the QAS
 ??x
 
 #### Qubits and Quantum States
-In quantum computing, information is stored using qubits, which are quantum bits. Unlike classical bits that can be either 0 or 1, a single qubit state is expressed as a linear combination of two basis states \(|0⟩\) and \(|1⟩\):
-\[ |𝜓⟩ = u|0⟩ + v|1⟩ \]
-where \(u\) and \(v\) are complex numbers satisfying the normalization condition:
-\[ |u|^2 + |v|^2 = 1. \]
+In quantum computing, information is stored using qubits, which are quantum bits. Unlike classical bits that can be either 0 or 1, a single qubit state is expressed as a linear combination of two basis states $|0⟩$ and $|1⟩$:
+$$|𝜓⟩ = u|0⟩ + v|1⟩$$where $ u $ and $ v$ are complex numbers satisfying the normalization condition:
+$$|u|^2 + |v|^2 = 1.$$
 
-The state can also be represented geometrically on a Bloch sphere, where the angle \(\theta\) and phase \(\phi\) determine its position.
+The state can also be represented geometrically on a Bloch sphere, where the angle $\theta $ and phase$\phi$ determine its position.
 :p What is a qubit and how is it different from a classical bit?
 ??x
-A qubit is a quantum mechanical system that stores information in superposition states of \(|0⟩\) and \(|1⟩\), allowing for complex combinations represented by the equation:
-\[ |𝜓⟩ = u|0⟩ + v|1⟩ \]
-where \(u\) and \(v\) are complex numbers. This is different from a classical bit, which can only be 0 or 1.
+A qubit is a quantum mechanical system that stores information in superposition states of $|0⟩$ and $|1⟩$, allowing for complex combinations represented by the equation:
+$$|𝜓⟩ = u|0⟩ + v|1⟩$$where $ u $ and $ v$ are complex numbers. This is different from a classical bit, which can only be 0 or 1.
 x??
 
 ---
 #### Bloch Sphere Representation
 The state of a qubit can be represented geometrically using the Bloch sphere, where:
-\[ |𝜓⟩ = \cos(\frac{\theta}{2})|0⟩ + e^{i\phi}\sin(\frac{\theta}{2})|1⟩ \]
-with \(\theta \in [0, \pi]\) and \(\phi \in [0, 2\pi)\).
+$$|𝜓⟩ = \cos(\frac{\theta}{2})|0⟩ + e^{i\phi}\sin(\frac{\theta}{2})|1⟩$$with $\theta \in [0, \pi]$ and $\phi \in [0, 2\pi)$.
 
-This representation shows that a pure \(|0⟩\) state lies on the \(+z\) axis and a pure \(|1⟩\) state on the \(-z\) axis.
+This representation shows that a pure $|0⟩$ state lies on the $+z$ axis and a pure $|1⟩$ state on the $-z$ axis.
 :p How can the qubit state be represented using the Bloch sphere?
 ??x
 The qubit state can be represented on the Bloch sphere with:
-\[ |𝜓⟩ = \cos(\frac{\theta}{2})|0⟩ + e^{i\phi}\sin(\frac{\theta}{2})|1⟩ \]
-where \(\theta\) is the polar angle and \(\phi\) is the azimuthal angle. This geometric representation helps visualize the state of a qubit.
+$$|𝜓⟩ = \cos(\frac{\theta}{2})|0⟩ + e^{i\phi}\sin(\frac{\theta}{2})|1⟩$$where $\theta $ is the polar angle and$\phi$ is the azimuthal angle. This geometric representation helps visualize the state of a qubit.
 x??
 
 ---
 #### Composite Qubits
 When combining two qubits, their states are represented in an expanded Hilbert space created by the tensor product:
-\[ H_{AB} = H_A \otimes H_B \]
-The combined state is given by:
-\[ |\psi_{AB}⟩ = |\psi_A⟩ \otimes |\psi_B⟩. \]
+$$H_{AB} = H_A \otimes H_B$$
 
-For example, if \(|\psi_A⟩ = u_1|0⟩ + v_1|1⟩\) and \(|\psi_B⟩ = u_2|0⟩ + v_2|1⟩\), then:
-\[ |\psi_{AB}⟩ = (u_1|0⟩ + v_1|1⟩) \otimes (u_2|0⟩ + v_2|1⟩) \]
-which expands to a four-dimensional state vector.
+The combined state is given by:
+$$|\psi_{AB}⟩ = |\psi_A⟩ \otimes |\psi_B⟩.$$
+
+For example, if $|\psi_A⟩ = u_1|0⟩ + v_1|1⟩$ and $|\psi_B⟩ = u_2|0⟩ + v_2|1⟩$, then:
+$$|\psi_{AB}⟩ = (u_1|0⟩ + v_1|1⟩) \otimes (u_2|0⟩ + v_2|1⟩)$$which expands to a four-dimensional state vector.
 
 :p How are multiple qubits combined in quantum computing?
 ??x
 Multiple qubits can be combined using the tensor product of their individual Hilbert spaces. For instance, if:
-\[ |\psi_A⟩ = u_1|0⟩ + v_1|1⟩ \]
-and
-\[ |\psi_B⟩ = u_2|0⟩ + v_2|1⟩ \]
-then their combined state is:
-\[ |\psi_{AB}⟩ = (u_1|0⟩ + v_1|1⟩) \otimes (u_2|0⟩ + v_2|1⟩) \]
-which expands to:
-\[ |\psi_{AB}⟩ = u_1u_2|00⟩ + u_1v_2|01⟩ + v_1u_2|10⟩ + v_1v_2|11⟩. \]
+$$|\psi_A⟩ = u_1|0⟩ + v_1|1⟩$$and$$|\psi_B⟩ = u_2|0⟩ + v_2|1⟩$$then their combined state is:
+$$|\psi_{AB}⟩ = (u_1|0⟩ + v_1|1⟩) \otimes (u_2|0⟩ + v_2|1⟩)$$which expands to:
+$$|\psi_{AB}⟩ = u_1u_2|00⟩ + u_1v_2|01⟩ + v_1u_2|10⟩ + v_1v_2|11⟩.$$
 
 This results in a four-dimensional state vector.
 x??
@@ -212,11 +181,11 @@ Background context explaining how vectors and states can be combined using direc
 
 :p What are the basis vectors for a two-qubit system?
 ??x
-The basis vectors for a two-qubit system are \(|0A⟩\), \(|1A⟩\), \(|0B⟩\), and \(|1B⟩\). These can be represented as:
-\[ |0A⟩ = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad |1A⟩ = \begin{bmatrix} 0 \\ 1 \end{bmatrix} \]
-\[ |0B⟩ = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad |1B⟩ = \begin{bmatrix} 0 \\ 1 \end{bmatrix} \]
+The basis vectors for a two-qubit system are $|0A⟩$,$|1A⟩$,$|0B⟩$, and $|1B⟩$. These can be represented as:
+$$|0A⟩ = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad |1A⟩ = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$$
+$$|0B⟩ = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad |1B⟩ = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$$
 
-These vectors can form the basis for a 4-dimensional Hilbert space, such as \(|Ψ⟩ = [a \; b] ⊗ [c \; d]\).
+These vectors can form the basis for a 4-dimensional Hilbert space, such as $|Ψ⟩ = [a \; b] ⊗ [c \; d]$.
 
 ??x
 The answer with detailed explanations.
@@ -242,11 +211,11 @@ Background context explaining the difference between separable and entangled sta
 
 :p How do you prove that the Bell states are entangled using the definition of separability?
 ??x
-To prove that the Bell states are entangled, we use the fact that a state is separable if and only if \(wz = xy\). The Bell states are:
-\[ |β00⟩ = \frac{1}{\sqrt{2}}(|00⟩ + |11⟩) \]
-\[ |β01⟩ = \frac{1}{\sqrt{2}}(|01⟩ + |10⟩) \]
-\[ |β10⟩ = \frac{1}{\sqrt{2}}(|00⟩ - |11⟩) \]
-\[ |β11⟩ = \frac{1}{\sqrt{2}}(|01⟩ - |10⟩) \]
+To prove that the Bell states are entangled, we use the fact that a state is separable if and only if $wz = xy$. The Bell states are:
+$$|β00⟩ = \frac{1}{\sqrt{2}}(|00⟩ + |11⟩)$$
+$$|β01⟩ = \frac{1}{\sqrt{2}}(|01⟩ + |10⟩)$$
+$$|β10⟩ = \frac{1}{\sqrt{2}}(|00⟩ - |11⟩)$$
+$$|β11⟩ = \frac{1}{\sqrt{2}}(|01⟩ - |10⟩)$$
 
 These states cannot be written as a direct product of individual qubit states, indicating they are entangled.
 
@@ -272,20 +241,16 @@ Background context explaining the density matrix, which is used to describe quan
 
 :p What is a density matrix and how is it defined?
 ??x
-A density matrix \(\rho\) describes the state of an ensemble of pure states. It is defined as:
-\[ \rho = \sum_i p_i |\psi_i⟩⟨\psi_i| \]
-where \(p_i\) is the probability that the pure state \(|\psi_i⟩\) is present in the ensemble.
+A density matrix $\rho$ describes the state of an ensemble of pure states. It is defined as:
+$$\rho = \sum_i p_i |\psi_i⟩⟨\psi_i|$$where $ p_i $ is the probability that the pure state $|\psi_i⟩$ is present in the ensemble.
 
 :p Show how separability can be checked using a density matrix.
 ??x
 To check if a system is separable, we examine its density matrix. A 4-dimensional system (two qubits) is separable if and only if:
-\[ \rho_{12} = \rho_A \otimes \rho_B \]
-where \(\rho_A\) and \(\rho_B\) are the reduced density matrices for subsystems A and B.
+$$\rho_{12} = \rho_A \otimes \rho_B$$where $\rho_A $ and$\rho_B$ are the reduced density matrices for subsystems A and B.
 
-For example, a state \(|\psi⟩ = [a \; b] ⊗ [c \; d]\) would be separable if:
-\[ w z = x y \]
-
-??x
+For example, a state $|\psi⟩ = [a \; b] ⊗ [c \; d]$ would be separable if:
+$$w z = x y$$??x
 The answer with detailed explanations.
 ```java
 // Example of calculating the density matrix in Java using matrices
@@ -311,19 +276,17 @@ x??
 #### Two Entangled Dipoles and Hamiltonian
 Background context explaining the interaction between two magnetic dipoles, represented by their Pauli matrices. The Hamiltonian for this system is given.
 
-:p Show that the direct product of states forms a basis in \(\mathbb{C}^4\).
+:p Show that the direct product of states forms a basis in $\mathbb{C}^4$.
 ??x
 The basis vectors for the 4-dimensional Hilbert space formed by the direct product of two qubits are:
-\[ |00⟩ = [1, 0] ⊗ [1, 0], \]
-\[ |01⟩ = [1, 0] ⊗ [0, 1], \]
-\[ |10⟩ = [0, 1] ⊗ [1, 0], \]
-\[ |11⟩ = [0, 1] ⊗ [0, 1]. \]
+$$|00⟩ = [1, 0] ⊗ [1, 0],$$
+$$|01⟩ = [1, 0] ⊗ [0, 1],$$
+$$|10⟩ = [0, 1] ⊗ [1, 0],$$
+$$|11⟩ = [0, 1] ⊗ [0, 1].$$
 
 These states can be written in matrix form as:
-\[ |00⟩ = \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}, \quad |01⟩ = \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}, \]
-\[ |10⟩ = \begin{bmatrix} 0 \\ 0 \\ 1 \\ 0 \end{bmatrix}, \quad |11⟩ = \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix}. \]
-
-??x
+$$|00⟩ = \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}, \quad |01⟩ = \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix},$$
+$$|10⟩ = \begin{bmatrix} 0 \\ 0 \\ 1 \\ 0 \end{bmatrix}, \quad |11⟩ = \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix}.$$??x
 The answer with detailed explanations.
 ```java
 // Example of creating basis vectors for two-qubit states in Java using arrays to represent vectors
@@ -345,13 +308,13 @@ x??
 ---
 
 #### Quantum Entanglement and Eigenstates
-Background context: The provided text discusses eigenstates of a quantum system, specifically focusing on entangled states. The eigenstates mentioned are \(\phi_3\) and \(\phi_4\), where \(\phi_3 = |00\rangle\) is a separable state and \(\phi_4 = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)\) is an entangled state.
+Background context: The provided text discusses eigenstates of a quantum system, specifically focusing on entangled states. The eigenstates mentioned are $\phi_3 $ and$\phi_4 $, where $\phi_3 = |00\rangle $ is a separable state and$\phi_4 = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)$ is an entangled state.
 
 :p Identify which eigenstates are separable and which are entangled.
 ??x
-The eigenstate \(\phi_3 = |00\rangle\) is separable, while \(\phi_4 = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)\) is entangled.
+The eigenstate $\phi_3 = |00\rangle $ is separable, while$\phi_4 = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)$ is entangled.
 
-Explanation: A state is separable if it can be written as a product of individual states. Here, \(|00\rangle\) is simply the tensor product of two qubits in the state \(|0\rangle\). On the other hand, \(\phi_4 = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)\) cannot be written as a simple tensor product and represents an entangled state.
+Explanation: A state is separable if it can be written as a product of individual states. Here,$|00\rangle $ is simply the tensor product of two qubits in the state$|0\rangle $. On the other hand, $\phi_4 = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)$ cannot be written as a simple tensor product and represents an entangled state.
 
 ??x
 To confirm this, consider the form of the states:
@@ -382,16 +345,11 @@ x??
 #### Hamiltonian Matrix Evaluation
 Background context: The text discusses evaluating a Hamiltonian matrix in a given basis of eigenstates. The Hamiltonian is expressed in matrix form and should ideally diagonalize if the states are correctly chosen.
 
-:p Calculate the Hamiltonian matrix \(H\) for the given eigenstates.
+:p Calculate the Hamiltonian matrix $H$ for the given eigenstates.
 ??x
-To calculate the Hamiltonian matrix \(H\), we need to evaluate the expectation values \(\langle \phi_i | H | \phi_j \rangle\) for all pairs of basis states. The provided states are:
+To calculate the Hamiltonian matrix $H $, we need to evaluate the expectation values $\langle \phi_i | H | \phi_j \rangle$ for all pairs of basis states. The provided states are:
 
-- \(\phi_1 = |00\rangle\)
-- \(\phi_2 = |01\rangle\)
-- \(\phi_3 = |10\rangle\)
-- \(\phi_4 = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)\)
-
-Assuming \(H\) is a simple matrix, we can represent it as:
+- $\phi_1 = |00\rangle $-$\phi_2 = |01\rangle $-$\phi_3 = |10\rangle $-$\phi_4 = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)$ Assuming $H$ is a simple matrix, we can represent it as:
 
 ```python
 import numpy as np
@@ -422,9 +380,9 @@ x??
 ---
 
 #### Controlled NOT (CNOT) Gate Effect
-Background context: The CNOT gate is a fundamental two-qubit quantum gate that flips the target qubit if the control qubit is \(|1\rangle\).
+Background context: The CNOT gate is a fundamental two-qubit quantum gate that flips the target qubit if the control qubit is $|1\rangle$.
 
-:p Determine the effect of the CNOT gate on the states \(|10\rangle, |01\rangle, |00\rangle,\) and \(|11\rangle\).
+:p Determine the effect of the CNOT gate on the states $|10\rangle, |01\rangle, |00\rangle,$ and $|11\rangle$.
 ??x
 The CNOT gate operates as follows:
 - If the control qubit is 0, it does not change the target qubit.
@@ -432,10 +390,10 @@ The CNOT gate operates as follows:
 
 Let's calculate the effect of CNOT on each state:
 
-- \(|10\rangle\): Control qubit is 1, so target qubit is flipped. Result: \(\text{CNOT} |10\rangle = |11\rangle\).
-- \(|01\rangle\): Control qubit is 0, so target qubit remains unchanged. Result: \(\text{CNOT} |01\rangle = |01\rangle\).
-- \(|00\rangle\): Control qubit is 0, so target qubit remains unchanged. Result: \(\text{CNOT} |00\rangle = |00\rangle\).
-- \(|11\rangle\): Control qubit is 1, so target qubit is flipped. Result: \(\text{CNOT} |11\rangle = |10\rangle\).
+- $|10\rangle $: Control qubit is 1, so target qubit is flipped. Result: $\text{CNOT} |10\rangle = |11\rangle$.
+- $|01\rangle $: Control qubit is 0, so target qubit remains unchanged. Result: $\text{CNOT} |01\rangle = |01\rangle$.
+- $|00\rangle $: Control qubit is 0, so target qubit remains unchanged. Result: $\text{CNOT} |00\rangle = |00\rangle$.
+- $|11\rangle $: Control qubit is 1, so target qubit is flipped. Result: $\text{CNOT} |11\rangle = |10\rangle$.
 
 ```python
 from qiskit import QuantumCircuit
@@ -473,20 +431,20 @@ x??
 ---
 
 #### Controlled Z (CZ) Gate Effect
-Background context: The controlled-Z gate applies a phase shift of \(-1\) to the \(|11\rangle\) state, leaving other states unchanged.
+Background context: The controlled-Z gate applies a phase shift of $-1 $ to the$|11\rangle$ state, leaving other states unchanged.
 
-:p Verify the effect of the CZ gate on the states \(|00\rangle, |01\rangle, |10\rangle,\) and \(|11\rangle\).
+:p Verify the effect of the CZ gate on the states $|00\rangle, |01\rangle, |10\rangle,$ and $|11\rangle$.
 ??x
 The controlled-Z (CZ) gate operates as follows:
 - If the control qubit is 0, it does not change any state.
-- If the control qubit is 1, it applies a phase shift of \(-1\) to the target qubit.
+- If the control qubit is 1, it applies a phase shift of $-1$ to the target qubit.
 
 Let's calculate the effect of CZ on each state:
 
-- \(|00\rangle\): Control qubit is 0, so no change. Result: \(\text{CZ} |00\rangle = |00\rangle\).
-- \(|01\rangle\): Control qubit is 0, so no change. Result: \(\text{CZ} |01\rangle = |01\rangle\).
-- \(|10\rangle\): Control qubit is 1, so apply a phase shift to the target qubit. Result: \(\text{CZ} |10\rangle = -|10\rangle\).
-- \(|11\rangle\): Control qubit is 1, so apply a phase shift to the target qubit. Result: \(\text{CZ} |11\rangle = -|11\rangle\).
+- $|00\rangle $: Control qubit is 0, so no change. Result: $\text{CZ} |00\rangle = |00\rangle$.
+- $|01\rangle $: Control qubit is 0, so no change. Result: $\text{CZ} |01\rangle = |01\rangle$.
+- $|10\rangle $: Control qubit is 1, so apply a phase shift to the target qubit. Result: $\text{CZ} |10\rangle = -|10\rangle$.
+- $|11\rangle $: Control qubit is 1, so apply a phase shift to the target qubit. Result: $\text{CZ} |11\rangle = -|11\rangle$.
 
 ```python
 from qiskit import QuantumCircuit
@@ -521,14 +479,14 @@ x??
 ---
 
 #### Bell State Creation with Gates
-Background context: The provided text describes creating entangled Bell states using quantum gates. Specifically, it mentions using a Hadamard gate followed by a CNOT gate to create the \(\frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)\) state.
+Background context: The provided text describes creating entangled Bell states using quantum gates. Specifically, it mentions using a Hadamard gate followed by a CNOT gate to create the $\frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)$ state.
 
-:p Explain how to create an entangled state \(|\beta_{00}\rangle\) using the given quantum circuit.
+:p Explain how to create an entangled state $|\beta_{00}\rangle$ using the given quantum circuit.
 ??x
-To create the entangled Bell state \(|\beta_{00}\rangle = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)\), we can use a Hadamard gate followed by a CNOT gate. Here's how:
+To create the entangled Bell state $|\beta_{00}\rangle = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)$, we can use a Hadamard gate followed by a CNOT gate. Here's how:
 
-1. Start with the initial state \(|00\rangle\).
-2. Apply the Hadamard gate to the first qubit, transforming it into \(\frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)\).
+1. Start with the initial state $|00\rangle$.
+2. Apply the Hadamard gate to the first qubit, transforming it into $\frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)$.
 3. Use a CNOT gate where the first qubit is the control and the second qubit is the target.
 
 This sequence of gates will produce the desired entangled state:
@@ -551,13 +509,12 @@ x??
 
 #### Hadamard Gate Introduction
 Background context: The Hadamard gate is a fundamental single-qubit gate used to create superposition states. It transforms eigenstates of the Z operator into eigenstates of the X operator. The Hadamard matrix, which performs this transformation, can be represented as:
-\[ H = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} \]
-
-:p What is a Hadamard gate and what does it do?
+$$H = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$$:p What is a Hadamard gate and what does it do?
 ??x
-The Hadamard gate creates superposition states from base states. For example, applying the Hadamard gate to \(|0\rangle\) results in:
-\[ H|0\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle) \]
-This state is a superposition of \(|0\rangle\) and \(|1\rangle\).
+The Hadamard gate creates superposition states from base states. For example, applying the Hadamard gate to $|0\rangle$ results in:
+$$H|0\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)$$
+
+This state is a superposition of $|0\rangle $ and$|1\rangle$.
 x??
 
 ---
@@ -568,18 +525,18 @@ Background context: Applying the Hadamard gate twice on any qubit should return 
 :p How do two consecutive Hadamard gates behave?
 ??x
 Two consecutive Hadamard gates applied to a qubit act as the identity operator because each Hadamard gate transforms between eigenstates of Z and X, and applying it twice brings back the original state. For instance:
-\[ H(H|0\rangle) = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle) \rightarrow H(\frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)) = |0\rangle \]
-x??
+$$H(H|0\rangle) = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle) \rightarrow H(\frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)) = |0\rangle$$x??
 
 ---
 
 #### X and Hadamard Gates
-Background context: The combination of an X gate, which flips the state from \(|0\rangle\) to \(|1\rangle\), followed by a Hadamard gate creates an eigenstate of the X operator. This is because applying an X gate to \(|0\rangle\) results in \(|1\rangle\).
+Background context: The combination of an X gate, which flips the state from $|0\rangle $ to$|1\rangle $, followed by a Hadamard gate creates an eigenstate of the X operator. This is because applying an X gate to $|0\rangle $ results in$|1\rangle$.
 
 :p How do you create an eigenstate of the X operator using X and H gates?
 ??x
-To create an eigenstate of the X operator, first apply an X gate to a qubit initially in state \(|0\rangle\) and then apply a Hadamard gate. The resulting state is:
-\[ XH|0\rangle = X\left(\frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)\right) = \frac{1}{\sqrt{2}}(|1\rangle - |0\rangle) \]
+To create an eigenstate of the X operator, first apply an X gate to a qubit initially in state $|0\rangle$ and then apply a Hadamard gate. The resulting state is:
+$$XH|0\rangle = X\left(\frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)\right) = \frac{1}{\sqrt{2}}(|1\rangle - |0\rangle)$$
+
 This is an eigenstate of the X operator.
 x??
 
@@ -611,15 +568,16 @@ x??
 ---
 
 #### CNOT Gate with Two Qubits
-Background context: The controlled-NOT (CNOT) gate is a two-qubit gate where the target qubit is flipped if the control qubit is \(|1\rangle\).
+Background context: The controlled-NOT (CNOT) gate is a two-qubit gate where the target qubit is flipped if the control qubit is $|1\rangle$.
 
 :p How does the CNOT gate operate?
 ??x
 The CNOT gate operates such that it performs:
-\[ \text{CNOT}(q_0, q_1) = \begin{cases} (q_0, q_1), & \text{if } q_0 = 0 \\ (q_0, 1 - q_1), & \text{if } q_0 = 1 \end{cases} \]
+$$\text{CNOT}(q_0, q_1) = \begin{cases} (q_0, q_1), & \text{if } q_0 = 0 \\ (q_0, 1 - q_1), & \text{if } q_0 = 1 \end{cases}$$
+
 For instance:
-- If \(q_0 = 0\) and \(q_1 = 0\), the output is \((0, 0)\).
-- If \(q_0 = 1\) and \(q_1 = 0\), the output is \((1, 1)\).
+- If $q_0 = 0 $ and$q_1 = 0 $, the output is $(0, 0)$.
+- If $q_0 = 1 $ and$q_1 = 0 $, the output is$(1, 1)$.
 
 Circuit Example:
 ```python
@@ -635,21 +593,22 @@ s = cirq.Simulator()
 results = s.simulate(circuit)
 print(results)
 ```
-This code creates a CNOT gate between \(q_0\) and \(q_1\), flips \(q_0\) using an X gate, and applies Z to \(q_1\). The output state is \((1, 1)\).
+This code creates a CNOT gate between $q_0 $ and$q_1 $, flips$ q_0 $using an X gate, and applies Z to$ q_1 $. The output state is$(1, 1)$.
 x??
 
 ---
 
 #### Toffoli Gate with Three Qubits
-Background context: The Toffoli or CCNOT gate is a three-qubit controlled-controlled-NOT gate. It inverts the third qubit if the first two qubits are both \(|1\rangle\).
+Background context: The Toffoli or CCNOT gate is a three-qubit controlled-controlled-NOT gate. It inverts the third qubit if the first two qubits are both $|1\rangle$.
 
 :p What does the Toffoli (CCNOT) gate do?
 ??x
 The Toffoli gate performs:
-\[ \text{Toffoli}(q_0, q_1, q_2) = \begin{cases} (q_0, q_1, q_2), & \text{if } q_0 \neq 1 \text{ or } q_1 \neq 1 \\ (q_0, q_1, 1 - q_2), & \text{if } q_0 = 1 \text{ and } q_1 = 1 \end{cases} \]
+$$\text{Toffoli}(q_0, q_1, q_2) = \begin{cases} (q_0, q_1, q_2), & \text{if } q_0 \neq 1 \text{ or } q_1 \neq 1 \\ (q_0, q_1, 1 - q_2), & \text{if } q_0 = 1 \text{ and } q_1 = 1 \end{cases}$$
+
 For example:
-- If \(q_0 = 1\), \(q_1 = 1\), and \(q_2 = 0\), the output is \((1, 1, 1)\).
-- If any of \(q_0\) or \(q_1\) are not \(1\), the state remains unchanged.
+- If $q_0 = 1 $, $ q_1 = 1 $, and$ q_2 = 0 $, the output is$(1, 1, 1)$.
+- If any of $q_0 $ or$q_1 $ are not$1$, the state remains unchanged.
 
 Circuit Example:
 ```python
@@ -665,7 +624,7 @@ s = cirq.Simulator()
 results = s.simulate(circuit)
 print(results)
 ```
-This code creates a Toffoli gate between \(q_0\), \(q_1\), and \(q_2\), flips \(q_0\) using an X gate, applies Z to \(q_2\), and the output state is \((1, 0, 1)\).
+This code creates a Toffoli gate between $q_0 $, $ q_1 $, and$ q_2 $, flips$ q_0 $using an X gate, applies Z to$ q_2 $, and the output state is$(1, 0, 1)$.
 x??
 
 --- 

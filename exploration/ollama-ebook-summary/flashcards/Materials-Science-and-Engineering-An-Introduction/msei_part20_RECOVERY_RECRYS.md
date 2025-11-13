@@ -7,25 +7,17 @@
 ---
 #### Percent Cold Work Calculation
 To determine the percent cold work, we use Equation 7.8: 
-\[
-\text{percentCW} = \left(\frac{\left(\frac{d_i}{2}\right)^2 - \left(\frac{d_f}{2}\right)^2}{\left(\frac{d_i}{2}\right)^2}\right) \times 100
-\]
-where \(d_i\) is the initial diameter and \(d_f\) is the final diameter.
+$$\text{percentCW} = \left(\frac{\left(\frac{d_i}{2}\right)^2 - \left(\frac{d_f}{2}\right)^2}{\left(\frac{d_i}{2}\right)^2}\right) \times 100$$where $ d_i $ is the initial diameter and $ d_f$ is the final diameter.
 
 :p Calculate the percent cold work for a cylindrical copper rod that was initially 15.2 mm in diameter and reduced to 12.2 mm.
 ??x
 The percent cold work can be calculated using the provided formula:
-\[
-\text{percentCW} = \left(\frac{\left(\frac{15.2}{2}\right)^2 - \left(\frac{12.2}{2}\right)^2}{\left(\frac{15.2}{2}\right)^2}\right) \times 100
-\]
-First, we calculate the areas:
-- Initial area: \(\pi \left(\frac{15.2}{2}\right)^2 = 74.396 \text{ mm}^2\)
-- Final area: \(\pi \left(\frac{12.2}{2}\right)^2 = 46.680 \text{ mm}^2\)
+$$\text{percentCW} = \left(\frac{\left(\frac{15.2}{2}\right)^2 - \left(\frac{12.2}{2}\right)^2}{\left(\frac{15.2}{2}\right)^2}\right) \times 100$$
 
-Then, we substitute these values into the formula:
-\[
-\text{percentCW} = \left(\frac{74.396 - 46.680}{74.396}\right) \times 100 = 35.6 \%
-\]
+First, we calculate the areas:
+- Initial area:$\pi \left(\frac{15.2}{2}\right)^2 = 74.396 \text{ mm}^2 $- Final area:$\pi \left(\frac{12.2}{2}\right)^2 = 46.680 \text{ mm}^2$ Then, we substitute these values into the formula:
+$$\text{percentCW} = \left(\frac{74.396 - 46.680}{74.396}\right) \times 100 = 35.6 \%$$
+
 The answer is: **35.6%**.
 x??
 
@@ -205,7 +197,7 @@ Background context: For pure metals, the recrystallization temperature is approx
 
 :p What formula relates recrystallization temperature to melting temperature?
 ??x
-For pure metals, the recrystallization temperature (TR) can be estimated using the formula \( TR \approx 0.4 \times T_m \), where \( T_m \) is the absolute melting temperature.
+For pure metals, the recrystallization temperature (TR) can be estimated using the formula $TR \approx 0.4 \times T_m $, where $ T_m$ is the absolute melting temperature.
 x??
 
 ---
@@ -295,17 +287,12 @@ To achieve this, follow these steps:
 1. **Initial Diameter**: The initial diameter of the brass rod is 6.4 mm.
 2. **Final Diameter Requirement**: The final diameter after cold working should be 5.1 mm.
 3. **Percent Cold Work Calculation**:
-   \[
-   \text{percentCW} = \left( \frac{(d_0^2 - d_i^2) \cdot 100}{d_0^2} \right)
-   \]
-   Where \( d_0 = 6.4 \, \text{mm} \) and \( d_i = 5.1 \, \text{mm} \).
+   $$\text{percentCW} = \left( \frac{(d_0^2 - d_i^2) \cdot 100}{d_0^2} \right)$$
+
+Where $d_0 = 6.4 \, \text{mm}$ and $d_i = 5.1 \, \text{mm}$.
 
    Plugging in the values:
-   \[
-   \text{percentCW} = \left( \frac{(6.4^2 - 5.1^2) \cdot 100}{6.4^2} \right) = 36.5\%
-   \]
-
-4. **Cold Working Process**: Cold work the brass rod by drawing it to reduce its diameter from 6.4 mm to 5.1 mm, achieving a 36.5% cold work deformation.
+   $$\text{percentCW} = \left( \frac{(6.4^2 - 5.1^2) \cdot 100}{6.4^2} \right) = 36.5\%$$4. **Cold Working Process**: Cold work the brass rod by drawing it to reduce its diameter from 6.4 mm to 5.1 mm, achieving a 36.5% cold work deformation.
 5. **Mechanical Properties**:
    - Ensure the cold-working process results in a yield strength of at least 345 MPa (50,000 psi).
    - Ensure ductility is more than 20% elongation.
@@ -336,13 +323,13 @@ x??
 #### Calculating Final Diameter for Drawing Operations
 Background context: The text calculates the final diameter after two drawing operations using cold work percentages and Equation 7.8.
 
-:p How is the initial diameter \(d_0'\) calculated for the first drawing operation?
+:p How is the initial diameter $d_0'$ calculated for the first drawing operation?
 ??x
-The initial diameter \(d_0'\) can be calculated by solving the equation derived from Equation 7.8:
-\[21.5\% \text{ CW} = \left(\frac{d_0'^2 - (5.1 \text{ mm})^2}{\pi d_0'^2}\right) \times 100\]
-After solving for \(d_0'\), it is found that:
-\[d_0' = 5.8 \text{ mm} (0.226 \text{ in.})\]
-x??
+The initial diameter $d_0'$ can be calculated by solving the equation derived from Equation 7.8:
+$$21.5\% \text{ CW} = \left(\frac{d_0'^2 - (5.1 \text{ mm})^2}{\pi d_0'^2}\right) \times 100$$
+
+After solving for $d_0'$, it is found that:
+$$d_0' = 5.8 \text{ mm} (0.226 \text{ in.})$$x??
 
 ---
 #### Grain Growth in Polycrystalline Materials
@@ -357,11 +344,10 @@ x??
 #### Grain Size and Time Relationship
 Background context: The text presents Equation 7.9 to describe how grain size changes with time during heat treatment.
 
-:p How does the grain diameter \(d_n\) change over time according to Equation 7.9?
+:p How does the grain diameter $d_n$ change over time according to Equation 7.9?
 ??x
-The grain diameter \(d_n\) increases over time according to the relationship:
-\[d_n - d_0 = Kt\]
-where \(d_0\) is the initial grain diameter, and \(K\) and \(n\) are time-independent constants.
+The grain diameter $d_n$ increases over time according to the relationship:
+$$d_n - d_0 = Kt$$where $ d_0 $ is the initial grain diameter, and $ K $ and $ n$ are time-independent constants.
 x??
 
 ---
@@ -380,8 +366,9 @@ Background context: The text provides a worked example problem where the grain s
 :p How is the grain diameter computed when a metal specimen is heated for 100 minutes at 500°C?
 ??x
 The grain diameter can be computed using Equation 7.9:
-\[d_2 - d_0 = Kt\]
-Given \(n = 2\), we need to solve for \(K\) first, and then use it to find the new grain size after heating for 100 minutes at 500°C.
+$$d_2 - d_0 = Kt$$
+
+Given $n = 2 $, we need to solve for$ K$ first, and then use it to find the new grain size after heating for 100 minutes at 500°C.
 x??
 
 ---

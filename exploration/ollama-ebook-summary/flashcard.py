@@ -394,7 +394,8 @@ def process_csv_for_flashcards(input_file: str, config: Config, api_base: str,
                                chapters_per_file: int = 3, max_text_size: int = 50000,
                                enable_rating: bool = False, rating_threshold: int = 8,
                                rating_model: str = None, relevancy_target: str = None,
-                               start_from_part: int = None):
+                               start_from_part: int = None, prompt_alias: str = 'flashcards',
+                               rating_prompt_alias: str = 'flashcard_rating'):
     """
     Process CSV input files and generate flashcards split across multiple files.
 
@@ -423,8 +424,8 @@ def process_csv_for_flashcards(input_file: str, config: Config, api_base: str,
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
 
-    # Get flashcard prompt
-    flashcard_prompt = config.get_prompt('flashcards')
+    # Get flashcard prompt using the provided alias
+    flashcard_prompt = config.get_prompt(prompt_alias)
 
     # Output files
     base_name = os.path.splitext(os.path.basename(input_file))[0]
@@ -442,7 +443,7 @@ def process_csv_for_flashcards(input_file: str, config: Config, api_base: str,
     rating_prompt = None
     actual_rating_model = rating_model or model
     if enable_rating:
-        rating_prompt = config.get_prompt('flashcard_rating')
+        rating_prompt = config.get_prompt(rating_prompt_alias)
         # Add relevancy target context if provided
         if relevancy_target:
             rating_prompt = f"Focus area for this book: {relevancy_target}\n\n{rating_prompt}"
@@ -880,6 +881,8 @@ def main():
     parser.add_argument('--relevancy-target', help='Target focus for relevancy evaluation (e.g., "programming techniques")')
     parser.add_argument('--start-from-part', type=int, help='Resume from specific part number (for timeout recovery)')
     parser.add_argument('--no-training-data', action='store_true', help='Disable saving training data to CSV')
+    parser.add_argument('-p', '--prompt', default='flashcards', help='Prompt alias to use for flashcard generation (default: flashcards)')
+    parser.add_argument('--rating-prompt', default='flashcard_rating', help='Prompt alias to use for rating flashcards (default: flashcard_rating)')
     parser.add_argument('--help', action='store_true', help='Show help message and exit')
     parser.add_argument('-v', '--verbose', action='store_true', help='Display flashcards as they are generated')
     parser.add_argument('input_file', nargs='?', help='Input file path')
@@ -909,12 +912,14 @@ def main():
     rating_model = args.rating_model
     relevancy_target = getattr(args, 'relevancy_target', None)
     start_from_part = getattr(args, 'start_from_part', None)
+    prompt_alias = getattr(args, 'prompt', 'flashcards')
+    rating_prompt_alias = getattr(args, 'rating_prompt', 'flashcard_rating')
 
     # Process the CSV
     process_csv_for_flashcards(input_file, config, api_base, model, output_dir, args.verbose,
                               min_length, save_training_data, chapters_per_file, max_text_size,
                               enable_rating, rating_threshold, rating_model, relevancy_target,
-                              start_from_part)
+                              start_from_part, prompt_alias, rating_prompt_alias)
 
 if __name__ == "__main__":
     main()

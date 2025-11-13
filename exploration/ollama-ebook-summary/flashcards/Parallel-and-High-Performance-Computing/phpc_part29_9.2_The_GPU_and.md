@@ -230,10 +230,10 @@ Background context: By understanding the hardware specifications of a GPU, we ca
 :p How do you calculate the peak theoretical FLOPS for a GPU?
 ??x
 Calculating peak theoretical FLOPS involves using the formula: 
-\[ \text{Peak FLOPS} = \text{Clock Rate (MHz)} \times \text{Number of FP32 Cores/CU} \times 2^{\text{Bits}} \]
+$$\text{Peak FLOPS} = \text{Clock Rate (MHz)} \times \text{Number of FP32 Cores/CU} \times 2^{\text{Bits}}$$
 
 For example, for an NVIDIA V100 with a clock rate of 1290 MHz and 64 FP32 cores per CU:
-\[ \text{Peak FLOPS (FP32)} = 1290 \times 64 \times 2^{32} \]
+$$\text{Peak FLOPS (FP32)} = 1290 \times 64 \times 2^{32}$$
 
 For double precision, it would be half the number of FP32 cores due to their ratio.
 
@@ -272,10 +272,8 @@ x??
 
 Background context: To understand how GPUs achieve their peak theoretical performance, it is important to know the formula for calculating the peak theoretical floating-point operations per second (Flops/s) or GFlops. This involves the clock rate of the GPU in MHz, the number of compute units, the processing units within each compute unit, and the flops per cycle.
 
-Formula: 
-\[ \text{Peak Theoretical Flops} = \text{Clock Rate (MHz)} \times \text{Compute Units} \times \text{Processing Units} \times \text{Flops/cycle} \]
-
-:p How do you calculate the peak theoretical floating-point operations for a GPU?
+Formula:
+$$\text{Peak Theoretical Flops} = \text{Clock Rate (MHz)} \times \text{Compute Units} \times \text{Processing Units} \times \text{Flops/cycle}$$:p How do you calculate the peak theoretical floating-point operations for a GPU?
 ??x
 To calculate the peak theoretical floating-point operations, multiply the clock rate in MHz by the number of compute units, then by the processing units within each compute unit, and finally by the flops per cycle.
 For example:
@@ -292,9 +290,7 @@ x??
 Background context: Understanding how to calculate the theoretical peak memory bandwidth is crucial for assessing GPU performance. The formula involves the memory clock rate (in GHz), the width of memory transactions in bits, and a transaction multiplier.
 
 Formula:
-\[ \text{Theoretical Bandwidth} = \text{Memory Clock Rate (GHz)} \times \text{Memory Bus (bits)} \times \left(\frac{\text{1 byte}}{8 \text{ bits}}\right) \times \text{transaction multiplier} \]
-
-:p How do you calculate the theoretical peak memory bandwidth for a GPU?
+$$\text{Theoretical Bandwidth} = \text{Memory Clock Rate (GHz)} \times \text{Memory Bus (bits)} \times \left(\frac{\text{1 byte}}{8 \text{ bits}}\right) \times \text{transaction multiplier}$$:p How do you calculate the theoretical peak memory bandwidth for a GPU?
 ??x
 To calculate the theoretical peak memory bandwidth, multiply the memory clock rate in GHz by the width of memory transactions (in bits), divide by 8 to convert bytes to bits, and then multiply by the transaction multiplier.
 For example:
@@ -332,13 +328,11 @@ x??
 Background context: Several leading GPUs are highlighted with their theoretical peak floating-point performance. This section provides formulas and examples to calculate these values.
 
 Example Calculation Formula:
-\[ \text{Theoretical Peak Flops} = 2 \times \text{Clock Rate (MHz)} \times \text{Compute Units} \times \text{Processing Units} \times \text{Flops/cycle} / 10^6 \]
-
-:p What are the theoretical peak floating-point operations for NVIDIA V100?
+$$\text{Theoretical Peak Flops} = 2 \times \text{Clock Rate (MHz)} \times \text{Compute Units} \times \text{Processing Units} \times \text{Flops/cycle} / 10^6$$:p What are the theoretical peak floating-point operations for NVIDIA V100?
 ??x
 Theoretical Peak Flops for NVIDIA V100:
-\[ 2 \times 1530 \times 80 \times 64 / 10^6 = 15.6 \text{ TFlops (single precision)} \]
-\[ 2 \times 1530 \times 80 \times 32 / 10^6 = 7.8 \text{ TFlops (double precision)} \]
+$$2 \times 1530 \times 80 \times 64 / 10^6 = 15.6 \text{ TFlops (single precision)}$$
+$$2 \times 1530 \times 80 \times 32 / 10^6 = 7.8 \text{ TFlops (double precision)}$$
 
 Example Code:
 ```java
@@ -354,7 +348,7 @@ x??
 Background context: This section provides a formula and examples to calculate the theoretical peak memory bandwidth of GPUs.
 
 Formula:
-\[ \text{Theoretical Bandwidth} = \text{Memory Clock Rate (GHz)} \times \text{Memory Bus (bits)} \times \left(\frac{\text{1 byte}}{8 \text{ bits}}\right) \times \text{transaction multiplier} \]
+$$\text{Theoretical Bandwidth} = \text{Memory Clock Rate (GHz)} \times \text{Memory Bus (bits)} \times \left(\frac{\text{1 byte}}{8 \text{ bits}}\right) \times \text{transaction multiplier}$$
 
 :p How do you calculate the theoretical peak memory bandwidth for a GPU?
 ??x

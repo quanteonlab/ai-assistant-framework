@@ -100,14 +100,13 @@ The Quantum Fourier Transform (QFT) is a quantum version of the Discrete Fourier
 
 :p What is QFT and how does it differ from DFT?
 ??x
-The Quantum Fourier Transform (QFT) is a quantum analog of the Discrete Fourier Transform (DFT). While DFT operates on classical data points in the time domain, transforming them into frequency components, QFT operates on qubits and transforms an N-qubit state into its spectral representation. Unlike classical DFT, which has a complexity of \(O(N^2)\), QFT can be performed using only \(O(N \log N)\) quantum gates.
+The Quantum Fourier Transform (QFT) is a quantum analog of the Discrete Fourier Transform (DFT). While DFT operates on classical data points in the time domain, transforming them into frequency components, QFT operates on qubits and transforms an N-qubit state into its spectral representation. Unlike classical DFT, which has a complexity of $O(N^2)$, QFT can be performed using only $ O(N \log N)$ quantum gates.
 
 The QFT is defined as:
-\[ \text{QFT} |x\rangle = \frac{1}{\sqrt{N}} \sum_{y=0}^{N-1} e^{-2\pi i x y / N} |y\rangle \]
+$$\text{QFT} |x\rangle = \frac{1}{\sqrt{N}} \sum_{y=0}^{N-1} e^{-2\pi i x y / N} |y\rangle$$
 
-For a 2-qubit system, the QFT can be implemented using Hadamard and controlled phase gates. The general formula for the QFT of \(n\) qubits is:
-\[ \text{QFT}|x\rangle = \frac{1}{\sqrt{N}} \sum_{y=0}^{N-1} e^{-2\pi i x y / N} |y\rangle \]
-where \(x\) and \(y\) are binary representations of the qubit state.
+For a 2-qubit system, the QFT can be implemented using Hadamard and controlled phase gates. The general formula for the QFT of $n$ qubits is:
+$$\text{QFT}|x\rangle = \frac{1}{\sqrt{N}} \sum_{y=0}^{N-1} e^{-2\pi i x y / N} |y\rangle$$where $ x $ and $ y$ are binary representations of the qubit state.
 
 ```python
 from qiskit import QuantumCircuit
@@ -126,19 +125,18 @@ x??
 ---
 
 #### Controlled-Z (CZ) Gate Analysis
-The CZ gate is a two-qubit quantum gate that performs the operation \(|00\rangle \rightarrow |00\rangle\), \(|01\rangle \rightarrow |01\rangle\), \(|10\rangle \rightarrow |10\rangle\), and \(|11\rangle \rightarrow -|11\rangle\).
+The CZ gate is a two-qubit quantum gate that performs the operation $|00\rangle \rightarrow |00\rangle $, $|01\rangle \rightarrow |01\rangle $, $|10\rangle \rightarrow |10\rangle $, and $|11\rangle \rightarrow -|11\rangle$.
 
 :p What is the effect of the CZ gate on different input states?
 ??x
 The Controlled-Z (CZ) gate operates as follows:
-- It leaves the state \(|00\rangle\) unchanged.
-- It leaves the state \(|01\rangle\) unchanged.
-- It leaves the state \(|10\rangle\) unchanged.
-- It applies a phase factor of \(-1\) to the state \(|11\rangle\).
+- It leaves the state $|00\rangle$ unchanged.
+- It leaves the state $|01\rangle$ unchanged.
+- It leaves the state $|10\rangle$ unchanged.
+- It applies a phase factor of $-1 $ to the state$|11\rangle$.
 
 This can be mathematically represented as:
-\[ \text{CZ} |x\rangle = -1^{\langle x| 11\rangle} |x\rangle \]
-where \(\langle x| 11\rangle\) is the inner product of \(|x\rangle\) with the state \(|11\rangle\).
+$$\text{CZ} |x\rangle = -1^{\langle x| 11\rangle} |x\rangle$$where $\langle x| 11\rangle $ is the inner product of$|x\rangle $ with the state$|11\rangle$.
 
 ```python
 from qiskit import QuantumCircuit
@@ -154,22 +152,16 @@ x??
 ---
 
 #### CNOT Gate Operation on Different States
-The CNOT (Controlled-NOT) gate is a fundamental two-qubit quantum logic gate. It flips the target qubit if the control qubit is in state \(|1\rangle\). The effect of CNOT on different states can be summarized as:
-- \(|00\rangle \rightarrow |00\rangle\)
-- \(|01\rangle \rightarrow |01\rangle\)
-- \(|10\rangle \rightarrow |11\rangle\)
-- \(|11\rangle \rightarrow |10\rangle\)
-
-:p What is the effect of CNOT on different input states?
+The CNOT (Controlled-NOT) gate is a fundamental two-qubit quantum logic gate. It flips the target qubit if the control qubit is in state $|1\rangle$. The effect of CNOT on different states can be summarized as:
+- $|00\rangle \rightarrow |00\rangle $-$|01\rangle \rightarrow |01\rangle $-$|10\rangle \rightarrow |11\rangle $-$|11\rangle \rightarrow |10\rangle$:p What is the effect of CNOT on different input states?
 ??x
 The CNOT gate operates as follows:
-- It leaves the state \(|00\rangle\) unchanged.
-- It leaves the state \(|01\rangle\) unchanged.
-- It flips the target qubit if the control qubit is in state \(|1\rangle\), so \(|10\rangle \rightarrow |11\rangle\) and \(|11\rangle \rightarrow |10\rangle\).
+- It leaves the state $|00\rangle$ unchanged.
+- It leaves the state $|01\rangle$ unchanged.
+- It flips the target qubit if the control qubit is in state $|1\rangle $, so $|10\rangle \rightarrow |11\rangle $ and$|11\rangle \rightarrow |10\rangle$.
 
 This can be represented by:
-\[ \text{CNOT} |x\rangle = |0x\rangle + (-1)^{\langle x| 1\rangle}|1\overline{x}\rangle \]
-where \(\langle x| 1\rangle\) is the inner product of \(|x\rangle\) with the state \(|1\rangle\).
+$$\text{CNOT} |x\rangle = |0x\rangle + (-1)^{\langle x| 1\rangle}|1\overline{x}\rangle$$where $\langle x| 1\rangle $ is the inner product of$|x\rangle $ with the state$|1\rangle$.
 
 ```python
 from qiskit import QuantumCircuit
@@ -185,11 +177,11 @@ x??
 ---
 
 #### Creating Bell State with Qiskit
-The Bell state \(|\beta_{11}\rangle = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)\) can be created using a quantum circuit. This involves applying an H gate to the first qubit and then a CNOT between the two qubits.
+The Bell state $|\beta_{11}\rangle = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)$ can be created using a quantum circuit. This involves applying an H gate to the first qubit and then a CNOT between the two qubits.
 
-:p How do you create the Bell state \(|\beta_{11}\rangle\)?
+:p How do you create the Bell state $|\beta_{11}\rangle$?
 ??x
-To create the Bell state \(|\beta_{11}\rangle = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)\), you can follow these steps:
+To create the Bell state $|\beta_{11}\rangle = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)$, you can follow these steps:
 1. Apply a Hadamard (H) gate to the first qubit.
 2. Apply a CNOT gate between the two qubits, where the first qubit is the control and the second qubit is the target.
 
@@ -241,7 +233,7 @@ x??
 ---
 
 #### 1-Qubit Quantum Fourier Transform (QFT)
-Background context: The QFT is a quantum algorithm that transforms a quantum state representing a signal into another state. For one qubit, it computes \(N = 2^1\) components using Equation 12.77.
+Background context: The QFT is a quantum algorithm that transforms a quantum state representing a signal into another state. For one qubit, it computes $N = 2^1$ components using Equation 12.77.
 
 :p What is the purpose of the 1-qubit Quantum Fourier Transform (QFT)?
 ??x
@@ -270,11 +262,11 @@ x??
 ---
 
 #### 2-Qubit Quantum Fourier Transform (QFT)
-Background context: The QFT for two qubits computes \(N = 2^2\) components using Equation 12.80, resulting in a transformation matrix given by Equation 12.81.
+Background context: The QFT for two qubits computes $N = 2^2$ components using Equation 12.80, resulting in a transformation matrix given by Equation 12.81.
 
 :p What does the QFT do with two qubits?
 ??x
-The 2-qubit QFT transforms a quantum state representing a signal into another state by computing four components. This is represented by the matrix \(QFT_4\) defined in Equation (12.81).
+The 2-qubit QFT transforms a quantum state representing a signal into another state by computing four components. This is represented by the matrix $QFT_4$ defined in Equation (12.81).
 
 Example: The QFT for two qubits can be expressed as:
 
@@ -294,11 +286,11 @@ x??
 ---
 
 #### General n-Qubit Quantum Fourier Transform (QFT)
-Background context: The QFT for \(n\) qubits computes \(N = 2^n\) components. It uses the binary representation of the state to apply a series of Hadamard and phase shift gates as shown in Equation 12.95.
+Background context: The QFT for $n $ qubits computes$N = 2^n$ components. It uses the binary representation of the state to apply a series of Hadamard and phase shift gates as shown in Equation 12.95.
 
 :p How does the n-qubit QFT work?
 ??x
-The n-qubit QFT works by transforming an \(n\)-qubit state into another state that represents the Fourier components using a sequence of Hadamard and phase shift gates, as described in Equations (12.88) to (12.95).
+The n-qubit QFT works by transforming an $n$-qubit state into another state that represents the Fourier components using a sequence of Hadamard and phase shift gates, as described in Equations (12.88) to (12.95).
 
 Example: The Python-Qiskit implementation of this n-qubit QFT is given by:
 
@@ -315,12 +307,12 @@ x??
 ---
 
 #### Oracle + Diffuser = Grover's Search Algorithm
-Background context: The goal is to search through a database of \(N = 2^n\) elements using quantum computing. This involves initializing the system, applying an oracle, and then using a diffuser (amplifier) to increase the amplitude of the target state.
+Background context: The goal is to search through a database of $N = 2^n$ elements using quantum computing. This involves initializing the system, applying an oracle, and then using a diffuser (amplifier) to increase the amplitude of the target state.
 
 :p What are the steps in Grover's Search Algorithm?
 ??x
 Grover's Search Algorithm involves the following steps:
-1. Initialize the \(n\)-qubit system into the ground state.
+1. Initialize the $n$-qubit system into the ground state.
 2. Apply Hadamard gates to create a superposition state.
 3. Use an oracle to mark the target state by flipping its phase.
 4. Apply a diffuser (amplifier) to increase the amplitude of the marked state.

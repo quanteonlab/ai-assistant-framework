@@ -1030,11 +1030,10 @@ Background context: When using different versions of Terraform, it can lead to i
 ??x
 To ensure consistency, you can use the `tfenv` tool to manage different versions of Terraform. This involves installing a specific version using the command `tfenv install <version>`, and then setting up your project to use that version.
 ```sh
-$ tfenv install 1.2.3
+$tfenv install 1.2.3
 ```
 Once installed, you can set the default version for your environment by running:
-```sh
-$ tfenv use 1.2.3
+```sh$ tfenv use 1.2.3
 ```
 You can also specify versions in `.terraform-version` files within project directories to automatically use a specific version in that directory and its subdirectories.
 x??
@@ -1049,7 +1048,7 @@ To configure a specific Terraform version for a particular directory, create or 
 
 For example:
 ```sh
-$ echo "1.2.3" > stage/vpc/.terraform-version
+$echo "1.2.3" > stage/vpc/.terraform-version
 ```
 This sets the `stage/vpc` directory and its subdirectories to use Terraform version 1.2.3 by default.
 x??
@@ -1064,15 +1063,13 @@ To work around the issue with `tfenv` on Apple Silicon, you need to manually set
 
 The steps are:
 1. Export the `TFENV_ARCH` variable:
-   ```sh
-   $ export TFENV_ARCH=arm64
+   ```sh$ export TFENV_ARCH=arm64
    ```
 2. Install the desired version using `tfenv install <version>`.
 
 For example:
 ```sh
-$ export TFENV_ARCH=arm64
-$ tfenv install 1.2.3
+$export TFENV_ARCH=arm64$ tfenv install 1.2.3
 ```
 This will ensure that `tfenv` installs the correct version of Terraform for Apple Silicon.
 x??
@@ -1088,11 +1085,10 @@ To set up different Terraform versions for the `stage` and `prod` environments, 
 For example:
 - In the `live/stage/` directory:
   ```sh
-  $ echo "1.2.3" > stage/.terraform-version
+  $echo "1.2.3" > stage/.terraform-version
   ```
 - In the `live/prod/` directory:
-  ```sh
-  $ echo "1.0.0" > prod/.terraform-version
+  ```sh$ echo "1.0.0" > prod/.terraform-version
   ```
 
 These files will instruct `tfenv` to use Terraform version 1.2.3 in the `stage` environment and version 1.0.0 in the `prod` environment.
@@ -1219,8 +1215,7 @@ Background context explaining how versioning can be applied to software developm
 ??x
 To create and push a Git tag with semantic versioning, use the following commands:
 ```sh
-$ git tag -a "v0.0.5" -m "Create new hello-world-app module"
-$ git push --follow-tags
+$git tag -a "v0.0.5" -m "Create new hello-world-app module"$ git push --follow-tags
 ```
 These commands create an annotated tag named `v0.0.5` and push it along with any associated tags.
 x??
@@ -1253,8 +1248,7 @@ module "hello_world_app"  {
 Then, initialize and apply the Terraform configuration:
 
 ```sh
-$ terraform init
-$ terraform apply
+$terraform init$ terraform apply
 ```
 x??
 

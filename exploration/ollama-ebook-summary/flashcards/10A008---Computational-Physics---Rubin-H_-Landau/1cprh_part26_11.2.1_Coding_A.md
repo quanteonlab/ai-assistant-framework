@@ -43,28 +43,27 @@ Each flashcard is designed to cover different aspects of artificial neural netwo
 
 #### Weighted Summation and Activation Function in Perceptron
 
-**Background context:** A simple perceptron consists of a cell body where input signals are weighted summed, followed by an activation function that decides whether to fire or not. The output is given by \( y = f(x_1 w_1 + x_2 w_2 + b) \), where \( \Sigma = w_1x_1 + w_2x_2 \) and \( b \) is the bias.
+**Background context:** A simple perceptron consists of a cell body where input signals are weighted summed, followed by an activation function that decides whether to fire or not. The output is given by $y = f(x_1 w_1 + x_2 w_2 + b)$, where $\Sigma = w_1x_1 + w_2x_2 $ and $b$ is the bias.
 
-If we have weights \( w_1 = -1, w_2 = 1 \) and a bias \( b = 0 \), with inputs \( x_1 = 12, x_2 = 8 \), then:
+If we have weights $w_1 = -1, w_2 = 1 $ and a bias$b = 0 $, with inputs$ x_1 = 12, x_2 = 8$, then:
 
-- The weighted sum \( \Sigma = -1 \times 12 + 1 \times 8 = -4 \).
-- If the activation function is simply the identity function \( f(x) = x \), the output would be \( y = -4 \).
+- The weighted sum $\Sigma = -1 \times 12 + 1 \times 8 = -4$.
+- If the activation function is simply the identity function $f(x) = x $, the output would be $ y = -4$.
 
 However, using a binary perceptron with outputs restricted to 0 or 1 makes training more challenging. A sigmoid neuron can have an output between 0 and 1, given by functions like:
 
-\[ f(x) = \frac{1}{1 + e^{-x}}, \quad f(x) = \tanh(x), \quad f_{ReLU}(x) = max(0, x). \]
+$$f(x) = \frac{1}{1 + e^{-x}}, \quad f(x) = \tanh(x), \quad f_{ReLU}(x) = max(0, x).$$
 
-For simplicity, we will use the exponential sigmoid function \( f(x) = \frac{1}{1 + e^{-x}} \).
+For simplicity, we will use the exponential sigmoid function $f(x) = \frac{1}{1 + e^{-x}}$.
 
 :p What is the weighted sum and output of a perceptron with given weights and inputs?
 ??x
-The weighted sum \( \Sigma \) is calculated as:
+The weighted sum $\Sigma$ is calculated as:
 
-\[ \Sigma = -1 \times 12 + 1 \times 8 = -4. \]
+$$\Sigma = -1 \times 12 + 1 \times 8 = -4.$$
 
-Using the exponential sigmoid function for activation, the output \( y \) would be:
-
-\[ y = \frac{1}{1 + e^{-(-4)}}. \]
+Using the exponential sigmoid function for activation, the output $y$ would be:
+$$y = \frac{1}{1 + e^{-(-4)}}.$$
 
 This can be computed using code:
 ```python
@@ -134,19 +133,18 @@ x??
 
 **Background context:** In a simple network with two neurons in the input layer, two in the hidden layer, and one in the output layer (Figure 11.3), each connection has a weight, and the activation function can be different for each neuron. The output is calculated based on these weights.
 
-Given \( x_1 = 2 \) and \( x_2 = 3 \), with weights \( w_1 = 0 \) and \( w_2 = 1 \), the expected output should be 0.7216 for an exponential sigmoid activation function.
+Given $x_1 = 2 $ and$x_2 = 3 $, with weights$ w_1 = 0 $and$ w_2 = 1$, the expected output should be 0.7216 for an exponential sigmoid activation function.
 
 :p Calculate the expected output of the network in Figure 11.3 using given inputs.
 ??x
-Given the input values \( x_1 = 2 \) and \( x_2 = 3 \), with weights \( w_1 = 0 \) and \( w_2 = 1 \):
+Given the input values $x_1 = 2 $ and$x_2 = 3 $, with weights$ w_1 = 0 $and$ w_2 = 1$:
 
 The weighted sum is calculated as:
 
-\[ \Sigma = 0 \times 2 + 1 \times 3 = 3. \]
+$$\Sigma = 0 \times 2 + 1 \times 3 = 3.$$
 
 Using the exponential sigmoid function for activation, the output would be:
-
-\[ y = \frac{1}{1 + e^{-3}}. \]
+$$y = \frac{1}{1 + e^{-3}}.$$
 
 This can be computed using code:
 ```python
@@ -202,11 +200,11 @@ x??
 Background context explaining how loss functions are used to optimize neural networks, including the concept of minimizing the loss function. The provided formulas (11.7) illustrate that an extremum in the loss occurs when partial derivatives with respect to weights and biases are zero.
 If applicable, add code examples with explanations.
 
-:p What is the significance of the equation \(\frac{\partial \mathcal{L}}{\partial w_i} = 0\) for \(i=1,...,6\), and \(\frac{\partial \mathcal{L}}{\partial b_i} = 0\) for \(i=1,2,3\) in the context of optimizing a neural network?
+:p What is the significance of the equation $\frac{\partial \mathcal{L}}{\partial w_i} = 0 $ for$i=1,...,6 $, and $\frac{\partial \mathcal{L}}{\partial b_i} = 0 $ for$i=1,2,3$ in the context of optimizing a neural network?
 ??x
 This equation signifies that at an extremum (minimum or maximum) point in the loss function, the partial derivatives with respect to each weight and bias are zero. In other words, if we can find these points, they might be potential solutions where the error is minimized.
 
-To understand this better, consider a simple neural network with two neurons as illustrated in Figure 11.3. Here, there are six weights (w1 through w6) and three biases (b1, b2, b3). The goal is to adjust these parameters so that the loss function \(\mathcal{L}\) is minimized.
+To understand this better, consider a simple neural network with two neurons as illustrated in Figure 11.3. Here, there are six weights (w1 through w6) and three biases (b1, b2, b3). The goal is to adjust these parameters so that the loss function $\mathcal{L}$ is minimized.
 
 For a complex network with thousands of parameters, we use numerical methods to approximate the derivatives. Weights and biases are adjusted iteratively until the loss function reaches its minimum.
 x??
@@ -216,79 +214,53 @@ x??
 #### Partial Derivatives in Loss Function
 Background context explaining how partial derivatives are computed for weights and biases in the loss function. The provided formulas (11.8) through (11.13) illustrate the process of using the chain rule to compute these derivatives.
 
-:p How do you compute \(\frac{\partial \mathcal{L}}{\partial w_1}\) for a two-neuron network?
+:p How do you compute $\frac{\partial \mathcal{L}}{\partial w_1}$ for a two-neuron network?
 ??x
-To compute \(\frac{\partial \mathcal{L}}{\partial w_1}\), we use the chain rule. Specifically, this involves computing the derivative of the loss with respect to the output \(y^{(p)}\), then with respect to hidden neuron \(h_1\), and finally with respect to weight \(w_1\).
+To compute $\frac{\partial \mathcal{L}}{\partial w_1}$, we use the chain rule. Specifically, this involves computing the derivative of the loss with respect to the output $ y^{(p)}$, then with respect to hidden neuron $ h_1$, and finally with respect to weight $ w_1$.
 
 From the given formulas:
-\[
-\frac{\partial \mathcal{L}}{\partial w_1} = \frac{\partial \mathcal{L}}{\partial y^{(p)}_{out}} \cdot \frac{\partial y^{(p)}_{out}}{\partial h_1} \cdot \frac{\partial h_1}{\partial w_1}
-\]
+$$\frac{\partial \mathcal{L}}{\partial w_1} = \frac{\partial \mathcal{L}}{\partial y^{(p)}_{out}} \cdot \frac{\partial y^{(p)}_{out}}{\partial h_1} \cdot \frac{\partial h_1}{\partial w_1}$$
 
-Here, \(y^{(p)}_{out}\) is the predicted output from the network. The sigmoid function \(f(x)\) and its derivative are used in this computation:
-\[
-f(x) = \frac{1}{1 + e^{-x}} \implies \frac{df(x)}{dx} = \frac{e^{-x}}{(1 + e^{-x})^2}
-\]
+Here,$y^{(p)}_{out}$ is the predicted output from the network. The sigmoid function $f(x)$ and its derivative are used in this computation:
+$$f(x) = \frac{1}{1 + e^{-x}} \implies \frac{df(x)}{dx} = \frac{e^{-x}}{(1 + e^{-x})^2}$$
 
-Given the output \(y^{(p)}_{out}\):
-\[
-y^{(p)}_{out} = f(w_5h_1 + w_6h_2 + b_3)
-\]
+Given the output $y^{(p)}_{out}$:
+$$y^{(p)}_{out} = f(w_5h_1 + w_6h_2 + b_3)$$
+
 The derivatives are:
-\[
-\frac{\partial y^{(p)}_{out}}{\partial h_1} = w_5 \cdot \frac{df(x)}{dx}(x = w_5h_1 + w_6h_2 + b_3)
-\]
+$$\frac{\partial y^{(p)}_{out}}{\partial h_1} = w_5 \cdot \frac{df(x)}{dx}(x = w_5h_1 + w_6h_2 + b_3)$$
 
-Finally, for \(w_1\):
-\[
-\frac{\partial h_1}{\partial w_1} = x_1 \cdot \frac{df(x)}{dx}(x = w_1x_1 + w_2x_2 + b_1)
-\]
+Finally, for $w_1$:
+$$\frac{\partial h_1}{\partial w_1} = x_1 \cdot \frac{df(x)}{dx}(x = w_1x_1 + w_2x_2 + b_1)$$
 
 Combining these:
-\[
-\frac{\partial \mathcal{L}}{\partial w_1} = -2 \left(\frac{y^{(c)}_{out} - y^{(p)}_{out}}{N}\right) \cdot w_5 \cdot \frac{df(x)}{dx}(x = w_5h_1 + w_6h_2 + b_3) \cdot x_1 \cdot \frac{df(x)}{dx}(x = w_1x_1 + w_2x_2 + b_1)
-\]
-x??
+$$\frac{\partial \mathcal{L}}{\partial w_1} = -2 \left(\frac{y^{(c)}_{out} - y^{(p)}_{out}}{N}\right) \cdot w_5 \cdot \frac{df(x)}{dx}(x = w_5h_1 + w_6h_2 + b_3) \cdot x_1 \cdot \frac{df(x)}{dx}(x = w_1x_1 + w_2x_2 + b_1)$$x??
 
 ---
 
 #### Evaluation of Loss for a Simple Example
 Background context explaining the evaluation of the loss function for a simple example. The provided formulas (11.9) through (11.17) illustrate how to compute the partial derivatives for specific parameters in a neural network.
 
-:p How do you evaluate \(\frac{\partial y^{(p)}_{out}}{\partial w_5}\)?
+:p How do you evaluate $\frac{\partial y^{(p)}_{out}}{\partial w_5}$?
 ??x
-To evaluate \(\frac{\partial y^{(p)}_{out}}{\partial w_5}\), we use the chain rule. Given that \(y^{(p)}_{out} = f(w_5h_1 + w_6h_2 + b_3)\) and knowing the derivative of the sigmoid function:
-\[
-f(x) = \frac{1}{1 + e^{-x}} \implies \frac{df(x)}{dx} = \frac{e^{-x}}{(1 + e^{-x})^2}
-\]
+To evaluate $\frac{\partial y^{(p)}_{out}}{\partial w_5}$, we use the chain rule. Given that $ y^{(p)}_{out} = f(w_5h_1 + w_6h_2 + b_3)$ and knowing the derivative of the sigmoid function:
+$$f(x) = \frac{1}{1 + e^{-x}} \implies \frac{df(x)}{dx} = \frac{e^{-x}}{(1 + e^{-x})^2}$$
 
 The partial derivative is:
-\[
-\frac{\partial y^{(p)}_{out}}{\partial w_5} = h_1 \cdot \frac{df(x)}{dx}(x = w_5h_1 + w_6h_2 + b_3)
-\]
+$$\frac{\partial y^{(p)}_{out}}{\partial w_5} = h_1 \cdot \frac{df(x)}{dx}(x = w_5h_1 + w_6h_2 + b_3)$$
 
-Given that \(h_1\) is a function of \(w_1, w_2, x_1, x_2\), we can substitute the values as follows:
-\[
-h_1 = f(w_1x_1 + w_2x_2 + b_1) \implies \frac{\partial h_1}{\partial w_1} = x_1 \cdot \frac{df(x)}{dx}(x = w_1x_1 + w_2x_2 + b_1)
-\]
+Given that $h_1 $ is a function of$w_1, w_2, x_1, x_2$, we can substitute the values as follows:
+$$h_1 = f(w_1x_1 + w_2x_2 + b_1) \implies \frac{\partial h_1}{\partial w_1} = x_1 \cdot \frac{df(x)}{dx}(x = w_1x_1 + w_2x_2 + b_1)$$
 
-So the final expression for \(\frac{\partial y^{(p)}_{out}}{\partial w_5}\) is:
-\[
-\frac{\partial y^{(p)}_{out}}{\partial w_5} = h_1 \cdot \frac{e^{-x}}{(1 + e^{-x})^2}(x = w_5h_1 + w_6h_2 + b_3)
-\]
+So the final expression for $\frac{\partial y^{(p)}_{out}}{\partial w_5}$ is:
+$$\frac{\partial y^{(p)}_{out}}{\partial w_5} = h_1 \cdot \frac{e^{-x}}{(1 + e^{-x})^2}(x = w_5h_1 + w_6h_2 + b_3)$$
 
 With specific values:
-\[
-h_1 = f(-2 - 1) = \frac{1}{1 + e^{-3}} \approx 0.0474
-\]
-\[
-y^{(p)}_{out} = f(0.0474 + 0.0474) = \frac{1}{1 + e^{-0.0948}} \approx 0.524
-\]
+$$h_1 = f(-2 - 1) = \frac{1}{1 + e^{-3}} \approx 0.0474$$
+$$y^{(p)}_{out} = f(0.0474 + 0.0474) = \frac{1}{1 + e^{-0.0948}} \approx 0.524$$
 
 Thus:
-\[
-\frac{\partial y^{(p)}_{out}}{\partial w_5} = 0.0474 \cdot \frac{e^{-0.0948}}{(1 + e^{-0.0948})^2} \approx 0.0474 \times 0.249
-\]
+$$\frac{\partial y^{(p)}_{out}}{\partial w_5} = 0.0474 \cdot \frac{e^{-0.0948}}{(1 + e^{-0.0948})^2} \approx 0.0474 \times 0.249$$
 x??
 
 ---

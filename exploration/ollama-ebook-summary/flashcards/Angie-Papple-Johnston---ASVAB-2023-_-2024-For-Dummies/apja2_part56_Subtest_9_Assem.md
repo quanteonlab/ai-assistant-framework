@@ -70,21 +70,17 @@ x??
 ---
 
 #### Speed and Distance Calculation
-Background context: The problem involves calculating the distance between two moving objects based on their speeds and travel time. The formula used is \( \text{Distance} = \text{Speed} \times \text{Time} \).
+Background context: The problem involves calculating the distance between two moving objects based on their speeds and travel time. The formula used is $\text{Distance} = \text{Speed} \times \text{Time}$.
 
 :p A train headed for Wichita traveled at 55 miles/hour, while a train headed for Des Moines traveled at 70 miles/hour. Both trains have been traveling for three hours. How many miles apart are the two trains?
 ??x
 To determine the distance between the two trains after three hours, we calculate the individual distances each has traveled and then sum these distances.
 
-- Distance traveled by the train to Wichita: \(55 \text{ miles/hour} \times 3 \text{ hours} = 165 \text{ miles}\)
-- Distance traveled by the train to Des Moines: \(70 \text{ miles/hour} \times 3 \text{ hours} = 210 \text{ miles}\)
+- Distance traveled by the train to Wichita: $55 \text{ miles/hour} \times 3 \text{ hours} = 165 \text{ miles}$- Distance traveled by the train to Des Moines:$70 \text{ miles/hour} \times 3 \text{ hours} = 210 \text{ miles}$ Adding these distances together:
+$$165 \text{ miles} + 210 \text{ miles} = 375 \text{ miles}$$
 
-Adding these distances together:
-\[ 165 \text{ miles} + 210 \text{ miles} = 375 \text{ miles} \]
-
-Alternatively, you can add the rates of speed and multiply by the time: 
-\[ (55 \text{ mph} + 70 \text{ mph}) \times 3 \text{ hours} = 125 \text{ mph} \times 3 \text{ hours} = 375 \text{ miles} \]
-x??
+Alternatively, you can add the rates of speed and multiply by the time:
+$$(55 \text{ mph} + 70 \text{ mph}) \times 3 \text{ hours} = 125 \text{ mph} \times 3 \text{ hours} = 375 \text{ miles}$$x??
 
 ---
 
@@ -95,17 +91,12 @@ Background context: The problem involves converting feet and inches into a singl
 ??x
 First, convert the mixed number (feet and inches) to inches:
 
-- Convert feet to inches: \(3 \text{ feet} = 36 \text{ inches}\)
-- Add the remaining inches: \(36 \text{ inches} + 8 \text{ inches} = 44 \text{ inches}\)
-
-Since you need four sections:
-\[ 44 \text{ inches/section} \times 4 \text{ sections} = 176 \text{ inches} \]
+- Convert feet to inches:$3 \text{ feet} = 36 \text{ inches}$- Add the remaining inches:$36 \text{ inches} + 8 \text{ inches} = 44 \text{ inches}$ Since you need four sections:
+$$44 \text{ inches/section} \times 4 \text{ sections} = 176 \text{ inches}$$
 
 Convert the total length from inches to feet:
 
-- \(176 \text{ inches} / 12 \text{ inches/foot} = 14.67 \text{ feet}\)
-
-The shortest board length necessary is therefore at least 15 feet.
+- $176 \text{ inches} / 12 \text{ inches/foot} = 14.67 \text{ feet}$ The shortest board length necessary is therefore at least 15 feet.
 x??
 
 ---
@@ -113,20 +104,13 @@ x??
 #### Cost Calculation
 Background context: The problem involves calculating the total cost of two turkey breasts with different prices.
 
-:p Two turkey breasts are priced differently. One costs $8.50 minus 10% and the other is full price at $8.50. What is the total cost?
+:p Two turkey breasts are priced differently. One costs $8.50 minus 10% and the other is full price at$8.50. What is the total cost?
 ??x
 First, calculate the discounted price for the first turkey breast:
 
-- Discount: \(10\% \text{ of } \$8.50 = 0.10 \times 8.50 = \$0.85\)
-- Price after discount: \(\$8.50 - \$0.85 = \$7.65\)
-
-The second turkey breast is full price:
-\[ \$8.50 \]
-
-Add the two prices together:
-
-\[ \$7.65 + \$8.50 = \$16.15 \]
-x??
+- Discount: $10\% \text{ of } \$8.50 = 0.10 \times 8.50 = \$0.85 $- Price after discount:$\$8.50 - \$0.85 = \$7.65$ The second turkey breast is full price:
+$$ \$8.50 $$Add the two prices together:
+$$ \$7.65 + \$8.50 = \$16.15 $$x??
 
 ---
 
@@ -135,10 +119,10 @@ Background context: The problem involves finding a fraction of a total workweek 
 
 :p Find 2/5 of a 40-hour workweek.
 ??x
-To find \( \frac{2}{5} \) of a 40-hour workweek:
+To find $\frac{2}{5}$ of a 40-hour workweek:
 
 - Multiply the number of hours in the workweek by the fraction:
-\[ 40 \text{ hours} \times \frac{2}{5} = 16 \text{ hours} \]
+$$40 \text{ hours} \times \frac{2}{5} = 16 \text{ hours}$$
 
 So, the recruiter travels 16 hours weekly.
 x??

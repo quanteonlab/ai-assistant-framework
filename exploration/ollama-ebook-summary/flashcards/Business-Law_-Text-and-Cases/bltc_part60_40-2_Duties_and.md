@@ -179,7 +179,7 @@ Cumulative voting is a system designed to give minority shareholders a better ch
 In cumulative voting, each shareholder gets a total number of votes equal to the number of directors to be elected times the number of voting shares that the shareholder owns. These votes can be cast for one candidate or spread among several nominees. The key is that all these votes must be used by the shareholder.
 
 For example:
-- If 3 directors are to be elected and a shareholder owns 1,000 shares, they have \(3 \times 1,000 = 3,000\) votes.
+- If 3 directors are to be elected and a shareholder owns 1,000 shares, they have $3 \times 1,000 = 3,000$ votes.
 - These 3,000 votes can be cast in any combination among the candidates.
 
 :p Can you provide an example of cumulative voting?
@@ -190,9 +190,9 @@ Sure. Consider a corporation with 10,000 shares issued and outstanding:
 Three board members are to be elected.
 
 Example 40.6: 
-- The minority shareholders have \(3 \times 3,000 = 9,000\) votes.
+- The minority shareholders have $3 \times 3,000 = 9,000$ votes.
 - They can use all their votes for one candidate (Dovrik) or split them among the nominees.
-- The majority shareholders have \(3 \times 7,000 = 21,000\) votes but must distribute these among their three nominees.
+- The majority shareholders have $3 \times 7,000 = 21,000$ votes but must distribute these among their three nominees.
 
 The principle is that if the minority shareholders cast all their 9,000 votes for Dovrik, they can outvote any combination of how the majority shareholders use their 21,000 votes.
 

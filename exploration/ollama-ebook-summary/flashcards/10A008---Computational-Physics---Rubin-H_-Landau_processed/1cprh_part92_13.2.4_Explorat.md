@@ -5,7 +5,7 @@
 ---
 
 #### Logarithmic Derivative and Wavefunction Continuity
-Background context explaining that for probability and current to be continuous at \( x = x_m \), both \( \psi(x) \) and its first derivative \( \psi'(x) \) must be continuous. The logarithmic derivative, defined as \( \frac{\psi'(x)}{\psi(x)} \), encapsulates both continuity conditions into a single condition, making it independent of the normalization of \( \psi \).
+Background context explaining that for probability and current to be continuous at $x = x_m $, both $\psi(x)$ and its first derivative $\psi'(x)$ must be continuous. The logarithmic derivative, defined as $\frac{\psi'(x)}{\psi(x)}$, encapsulates both continuity conditions into a single condition, making it independent of the normalization of $\psi$.
 :p What is the role of the logarithmic derivative in wavefunction analysis?
 ??x
 The logarithmic derivative helps ensure that probability and current are continuous at specific points. It combines the continuity requirements for the wavefunction and its first derivative into one condition, simplifying the analysis.
@@ -14,19 +14,19 @@ x??
 ---
 
 #### Initial Guess for Ground-State Energy
-Background context explaining that a starting value is needed for energy \( \varepsilon \) to use an ODE solver, and a good initial guess for ground-state energy can be slightly above the bottom of the well, \( E > -V_0 \).
+Background context explaining that a starting value is needed for energy $\varepsilon $ to use an ODE solver, and a good initial guess for ground-state energy can be slightly above the bottom of the well,$ E > -V_0$.
 :p What should be the initial guess for the ground-state energy?
 ??x
-A good initial guess for the ground-state energy is a value somewhat up from that at the bottom of the well: \( E > -V_0 \).
+A good initial guess for the ground-state energy is a value somewhat up from that at the bottom of the well: $E > -V_0$.
 x??
 
 ---
 
 #### Matching Function and Energy Adjustment
 Background context explaining how the mismatch between left and right wavefunctions can be measured by calculating the difference in logarithmic derivatives, leading to iterative adjustments of the energy until the wavefunctions match within a tolerance.
-:p How is the matching function \( \Delta(E,x) \) used to adjust the energy?
+:p How is the matching function $\Delta(E,x)$ used to adjust the energy?
 ??x
-The matching function \( \Delta(E,x) = \frac{\psi_L'(x)}{\psi_L(x)} - \frac{\psi_R'(x)}{\psi_R(x)} \), where \( x = x_m \), is used to measure how well the left and right wavefunctions match. By trying different energies and observing how much \( \Delta(E) \) changes, a better guess for the energy can be deduced.
+The matching function $\Delta(E,x) = \frac{\psi_L'(x)}{\psi_L(x)} - \frac{\psi_R'(x)}{\psi_R(x)}$, where $ x = x_m$, is used to measure how well the left and right wavefunctions match. By trying different energies and observing how much $\Delta(E)$ changes, a better guess for the energy can be deduced.
 x??
 
 ---
@@ -35,7 +35,7 @@ x??
 Background context explaining that the fourth-order Runge-Kutta method is generally recommended but not used if there are no first derivatives in the ODE. The Numerov algorithm is specialized for such cases, providing additional precision and speed.
 :p What is the advantage of using the Numerov algorithm?
 ??x
-The Numerov algorithm provides higher accuracy (O(\(h^6\))) compared to Runge-Kutta methods while solving second-order differential equations without first derivatives, making it faster and more precise.
+The Numerov algorithm provides higher accuracy (O($h^6$)) compared to Runge-Kutta methods while solving second-order differential equations without first derivatives, making it faster and more precise.
 x??
 
 ---
@@ -45,27 +45,21 @@ Background context explaining that for a square well potential, the Numerov meth
 :p How is the Numerov algorithm derived from the Taylor expansion?
 ??x
 The Numerov algorithm derives from the Taylor expansion of the wave function:
-\[
-\psi(x+h) \approx \psi(x) + h\psi'(x) + \frac{h^2}{2}\psi''(x) + \frac{h^3}{6}\psi'''(x) + \cdots
-\]
-and
-\[
-\psi(x-h) \approx \psi(x) - h\psi'(x) + \frac{h^2}{2}\psi''(x) - \frac{h^3}{6}\psi'''(x) + \cdots
-\]
-By adding and subtracting these expansions, the odd powers of \( h \) cancel out:
-\[
-\psi(x+h) + \psi(x-h) \approx 2\psi(x) + \frac{h^2}{12}\psi''(x)
-\]
+$$\psi(x+h) \approx \psi(x) + h\psi'(x) + \frac{h^2}{2}\psi''(x) + \frac{h^3}{6}\psi'''(x) + \cdots$$and$$\psi(x-h) \approx \psi(x) - h\psi'(x) + \frac{h^2}{2}\psi''(x) - \frac{h^3}{6}\psi'''(x) + \cdots$$
+
+By adding and subtracting these expansions, the odd powers of $h$ cancel out:
+$$\psi(x+h) + \psi(x-h) \approx 2\psi(x) + \frac{h^2}{12}\psi''(x)$$
+
 From this, we can obtain an expression for the second derivative and implement it in the Numerov algorithm.
 x??
 
 ---
 
 #### Bisection Algorithm Implementation
-Background context explaining that combining a bisection search program with an ODE solver can be used to find eigenvalues. The initial guess is set at \( E \approx -65 \) MeV, and the process continues until the logarithmic derivative changes in only the fourth decimal place.
+Background context explaining that combining a bisection search program with an ODE solver can be used to find eigenvalues. The initial guess is set at $E \approx -65$ MeV, and the process continues until the logarithmic derivative changes in only the fourth decimal place.
 :p What is the stopping criterion for the bisection algorithm?
 ??x
-The stopping criterion for the bisection algorithm is that the change in the matching function \( \Delta(E,x) \) should be within a tolerance of four decimal places. The code should print out the energy value at each iteration to monitor convergence and measure precision.
+The stopping criterion for the bisection algorithm is that the change in the matching function $\Delta(E,x)$ should be within a tolerance of four decimal places. The code should print out the energy value at each iteration to monitor convergence and measure precision.
 x??
 
 ---
@@ -87,10 +81,10 @@ x??
 ---
 
 #### Example Code: QuantumEigen.py
-Background context explaining the implementation of the bisection algorithm to find eigenvalues using an ODE solver. The initial guess is set at \( E \approx -65 \) MeV, and the process continues until the logarithmic derivative changes in only the fourth decimal place.
+Background context explaining the implementation of the bisection algorithm to find eigenvalues using an ODE solver. The initial guess is set at $E \approx -65$ MeV, and the process continues until the logarithmic derivative changes in only the fourth decimal place.
 :p What does the `quantum_eigen` function do?
 ??x
-The `quantum_eigen` function uses a bisection algorithm to find the eigenvalues by calculating the matching function \( \Delta(E,x) \). It starts with an initial energy guess and iterates until the change in \( \Delta(E) \) is within four decimal places.
+The `quantum_eigen` function uses a bisection algorithm to find the eigenvalues by calculating the matching function $\Delta(E,x)$. It starts with an initial energy guess and iterates until the change in $\Delta(E)$ is within four decimal places.
 x??
 
 ---
@@ -160,7 +154,7 @@ Background context explaining the importance of node counting in determining the
 ??x
 To determine whether a solution is a ground state or an excited state, we count the number of nodes in the wave function. A node is a point where the wave function equals zero. Ground states have no nodes (one node), while excited states have one or more nodes.
 
-For symmetry, if the wave function \( \psi(x) = \psi(-x) \), it is even; otherwise, it is odd.
+For symmetry, if the wave function $\psi(x) = \psi(-x)$, it is even; otherwise, it is odd.
 
 Here’s an example in pseudocode:
 
@@ -193,7 +187,7 @@ Background context explaining the importance of marking the energy level of the 
 :p How do you include a horizontal line representing the ground state energy?
 
 ??x
-To include a horizontal line indicating the energy of the ground state, we need to determine this energy value and then plot it on the y-axis. This can be done after solving for the ground state wave function and its corresponding energy \( E \).
+To include a horizontal line indicating the energy of the ground state, we need to determine this energy value and then plot it on the y-axis. This can be done after solving for the ground state wave function and its corresponding energy $E$.
 
 Here’s an example in pseudocode:
 
@@ -250,9 +244,9 @@ Background context explaining the classical scattering problem and its relation 
 ??x
 The model for classical chaotic scattering involves a point particle scattering from a 2D potential with circularly symmetric peaks, represented by:
 
-\[ V(x,y) = x^2 y^2 e^{-(x^2 + y^2)} \]
+$$V(x,y) = x^2 y^2 e^{-(x^2 + y^2)}$$
 
-This potential has four peaks at \( (x=\pm1, y=\pm1) \), making it possible for the particle to experience multiple internal scatterings. The dynamics of this system can lead to chaotic behavior.
+This potential has four peaks at $(x=\pm1, y=\pm1)$, making it possible for the particle to experience multiple internal scatterings. The dynamics of this system can lead to chaotic behavior.
 
 Here’s an example in pseudocode:
 
@@ -375,7 +369,7 @@ Background context explaining the classical scattering problem and its relation 
 :p How do you implement the classical scattering model described in the text?
 
 ??x
-To implement the classical scattering model, define initial conditions for a point particle and solve Newton’s equations of motion using the given potential. Then, calculate the scattering angle from the trajectory at large \( y \) values.
+To implement the classical scattering model, define initial conditions for a point particle and solve Newton’s equations of motion using the given potential. Then, calculate the scattering angle from the trajectory at large $y$ values.
 
 Here’s an example in pseudocode:
 
@@ -724,9 +718,7 @@ Sure, let's dive deeper into some of these topics. Here are detailed explanation
 **Explanation:**
 The finite difference method (FDM) is a numerical technique to approximate solutions to differential equations by replacing derivatives with finite differences. For the one-dimensional time-independent Schrödinger equation:
 
-\[ -\frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} + V(x)\psi(x) = E\psi(x) \]
-
-we can approximate the second derivative using finite differences.
+$$-\frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} + V(x)\psi(x) = E\psi(x)$$we can approximate the second derivative using finite differences.
 
 **Code Snippet:**
 ```python
@@ -1269,11 +1261,11 @@ print("Energies:", energies)
 ```
 
 #### Concept: Initial Conditions and Energy Consideration
-Background context explaining how initial conditions are set for the projectile motion with drag. The energy condition \( \left|PE(y_{\infty})\right|/E \leq 10^{-10} \) ensures the system is in a stable state.
+Background context explaining how initial conditions are set for the projectile motion with drag. The energy condition $\left|PE(y_{\infty})\right|/E \leq 10^{-10}$ ensures the system is in a stable state.
 
 :p What are the initial conditions and energy constraints for solving the ODEs of projectile motion with drag?
 ??x
-The initial conditions are given as \( (x=b, y=y_{\infty}) \), where \( b \) varies between -1 to 1. The energy condition ensures that the potential energy at the initial height is very small compared to the total energy, i.e., \( \left|PE(y_{\infty})\right|/E \leq 10^{-10} \).
+The initial conditions are given as $(x=b, y=y_{\infty})$, where $ b$varies between -1 to 1. The energy condition ensures that the potential energy at the initial height is very small compared to the total energy, i.e.,$\left|PE(y_{\infty})\right|/E \leq 10^{-10}$.
 This helps in setting up a stable state for the numerical integration using the Runge-Kutta method.
 ??x
 ```java
@@ -1299,12 +1291,8 @@ Background context explaining how to apply the Runge-Kutta method (RK4) to solve
 ??x
 The RK4 method is a numerical technique used to approximate solutions of ordinary differential equations. For projectile motion with drag, we need to numerically integrate the coupled first-order differential equations.
 Given:
-\[
-d2x/dt2 = -k \cdot |v|^{n-1} \cdot v_x / |v|
-\]
-\[
-d2y/dt2 = -g - k \cdot |v|^{n-1} \cdot v_y / |v|
-\]
+$$d2x/dt2 = -k \cdot |v|^{n-1} \cdot v_x / |v|$$
+$$d2y/dt2 = -g - k \cdot |v|^{n-1} \cdot v_y / |v|$$
 
 The RK4 method involves computing four stages (k1, k2, k3, k4) for each variable at each step. The stages are computed as follows:
 ```java
@@ -1338,9 +1326,7 @@ Background context explaining how to plot trajectories [x(t), y(t)] for usual an
 To plot the trajectory [x(t), y(t)] for projectile motion with drag, we use the numerical solution obtained from the RK4 method. The trajectory can show both usual behaviors (e.g., standard parabolic trajectories) and unusual behaviors like back-angle scattering.
 
 For phasespace analysis:
-\[
-[x(t), \dot{x}(t)], [y(t), \dot{y}(t)]
-\]
+$$[x(t), \dot{x}(t)], [y(t), \dot{y}(t)]$$
 
 These differ from bound states in that the phase space for a projectile involves continuous motion under an external force (gravity + drag), whereas bound states typically represent closed orbits or periodic motion.
 
@@ -1359,11 +1345,11 @@ x??
 ---
 
 #### Concept: Determining Scattering Angle
-Background context explaining how to determine the scattering angle \(\theta\) using the velocity components of the scattered particle after it has left the interaction region.
+Background context explaining how to determine the scattering angle $\theta$ using the velocity components of the scattered particle after it has left the interaction region.
 
-:p How do you determine the scattering angle \(\theta = atan2(V_x, V_y)\) for a projectile?
+:p How do you determine the scattering angle $\theta = atan2(V_x, V_y)$ for a projectile?
 ??x
-The scattering angle \(\theta\) can be determined by calculating the tangent of the angle between the final velocity vector \((V_x, V_y)\) and the x-axis. The `atan2` function is used to handle all quadrants correctly.
+The scattering angle $\theta $ can be determined by calculating the tangent of the angle between the final velocity vector$(V_x, V_y)$ and the x-axis. The `atan2` function is used to handle all quadrants correctly.
 
 Code example:
 ```java
@@ -1377,13 +1363,13 @@ x??
 ---
 
 #### Concept: Time Delay Analysis
-Background context explaining how to analyze time delay \(T(b)\) as a function of the impact parameter \(b\) and look for unusual behavior.
+Background context explaining how to analyze time delay $T(b)$ as a function of the impact parameter $b$ and look for unusual behavior.
 
-:p How do you compute the time delay \(T(b)\) for projectile motion with drag?
+:p How do you compute the time delay $T(b)$ for projectile motion with drag?
 ??x
-The time delay \(T(b)\) is computed by measuring the increase in travel time through the interaction region due to interactions. For unusual behaviors, highly oscillatory regions are identified using a semilog plot of \(T(b)\).
+The time delay $T(b)$ is computed by measuring the increase in travel time through the interaction region due to interactions. For unusual behaviors, highly oscillatory regions are identified using a semilog plot of $T(b)$.
 
-If oscillatory structures are found, the simulation can be repeated at a finer scale by setting \(b \approx b/10\). This process reveals fractal structures.
+If oscillatory structures are found, the simulation can be repeated at a finer scale by setting $b \approx b/10$. This process reveals fractal structures.
 
 Code example for computing time delay:
 ```java
@@ -1400,11 +1386,11 @@ x??
 ---
 
 #### Concept: Attractive Potential and Discontinuities
-Background context explaining the behavior of trajectories under attractive potentials and identifying discontinuities in \(\frac{d\theta}{db}\) leading to changes in scattering cross-section.
+Background context explaining the behavior of trajectories under attractive potentials and identifying discontinuities in $\frac{d\theta}{db}$ leading to changes in scattering cross-section.
 
 :p How do you analyze trajectories for an attractive potential?
 ??x
-For an attractive potential, the trajectory analysis focuses on identifying regions where the projectile may get captured or experience significant interactions. Discontinuities in \(\frac{d\theta}{db}\) can indicate multiple scatterings and thus affect the scattering cross-section \(\sigma(\theta)\).
+For an attractive potential, the trajectory analysis focuses on identifying regions where the projectile may get captured or experience significant interactions. Discontinuities in $\frac{d\theta}{db}$ can indicate multiple scatterings and thus affect the scattering cross-section $\sigma(\theta)$.
 
 Key steps:
 1. Run simulations for both attractive and repulsive potentials.
@@ -1428,15 +1414,13 @@ Background context explaining how to determine if air resistance causes the proj
 
 :p How do you model the effect of air resistance on a projectile's trajectory?
 ??x
-Air resistance is modeled using a force proportional to some power \(n\) of the velocity:
-\[
-F(f) = -k \cdot |v|^n \cdot v/|v|
-\]
+Air resistance is modeled using a force proportional to some power $n$ of the velocity:
+$$F(f) = -k \cdot |v|^n \cdot v/|v|$$
 
-For different values of \(n\):
-- \(n=1\) for low velocities.
-- \(n=3/2\) for medium velocities.
-- \(n=2\) for high velocities.
+For different values of $n$:
+- $n=1$ for low velocities.
+- $n=3/2$ for medium velocities.
+- $n=2$ for high velocities.
 
 By comparing the trajectory with and without air resistance, we can determine if the effect is due to air resistance or just a perception issue.
 

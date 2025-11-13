@@ -5,13 +5,16 @@
 ---
 
 #### Discrete Wavelet Transforms (DWT)
-Background context: The discrete wavelet transform (DWT) is used when time signals are measured at only \(N\) discrete times, and we need to determine only the \(N\)-independent components of the transform \(Y\). This approach ensures consistency with the uncertainty principle by computing only the required independent components that can reproduce the signal.
+Background context: The discrete wavelet transform (DWT) is used when time signals are measured at only $N $ discrete times, and we need to determine only the$N $-independent components of the transform$ Y$. This approach ensures consistency with the uncertainty principle by computing only the required independent components that can reproduce the signal.
 :p What is the DWT and how does it differ from other transforms in terms of time and frequency analysis?
 ??x
-The discrete wavelet transform (DWT) evaluates the transform using discrete values for the scaling parameter \(s = 2^j\) and the translation parameter \(\tau = k / 2^j\). These parameters are based on powers of 2, known as a dyadic grid arrangement. The DWT can be expressed by:
-\[ \psi_{j,k}(t) = \Psi\left(\frac{t - k/2^j}{2^j}\right) = \Psi\left(\frac{t}{2^j} - k\right) / \sqrt{2^j} \]
+The discrete wavelet transform (DWT) evaluates the transform using discrete values for the scaling parameter $s = 2^j $ and the translation parameter$\tau = k / 2^j$. These parameters are based on powers of 2, known as a dyadic grid arrangement. The DWT can be expressed by:
+$$\psi_{j,k}(t) = \Psi\left(\frac{t - k/2^j}{2^j}\right) = \Psi\left(\frac{t}{2^j} - k\right) / \sqrt{2^j}$$
+
 The transform is given by:
-\[ Y_{j,k} = \int_{-\infty}^{+\infty} dt \psi_{j,k}(t) y(t) \approx \sum_m \psi_{j,k}(t_m) y(t_m) \]
+$$
+
+Y_{j,k} = \int_{-\infty}^{+\infty} dt \psi_{j,k}(t) y(t) \approx \sum_m \psi_{j,k}(t_m) y(t_m)$$
 
 This transform is particularly useful for time-frequency analysis because it provides both temporal and frequency localization.
 x??
@@ -19,11 +22,12 @@ x??
 ---
 
 #### Dyadic Grid Arrangement
-Background context: The choice of scaling parameter \(s = 2^j\) and translation parameter \(\tau = k / 2^j\) forms a dyadic grid arrangement, which allows the DWT to automatically perform scalings and translations at different timescales. This is central to wavelet analysis.
+Background context: The choice of scaling parameter $s = 2^j $ and translation parameter$\tau = k / 2^j$ forms a dyadic grid arrangement, which allows the DWT to automatically perform scalings and translations at different timescales. This is central to wavelet analysis.
 :p How does the dyadic grid arrangement work in the context of discrete wavelet transforms?
 ??x
-The dyadic grid arrangement ensures that time scales are scaled by powers of 2, specifically \(s = 2^j\), where \(j\) is an integer. The translation parameter \(\tau\) is then defined as:
-\[ \tau = k / 2^j \]
+The dyadic grid arrangement ensures that time scales are scaled by powers of 2, specifically $s = 2^j $, where $ j $is an integer. The translation parameter$\tau$ is then defined as:
+$$\tau = k / 2^j$$
+
 This setup allows the DWT to handle different timescales naturally and consistently with the uncertainty principle.
 x??
 
@@ -31,26 +35,28 @@ x??
 
 #### Discrete Inverse Transform
 Background context: For an orthonormal wavelet basis, the inverse discrete transform can be written using the wavelet basis functions:
-\[ y(t) = \sum_{j,k=-\infty}^{+\infty} Y_{j,k} \psi_{j,k}(t) \]
-This inversion will exactly reproduce the input signal at \(N\) input points if an infinite number of terms are summed. Practical calculations are less exact.
+$$y(t) = \sum_{j,k=-\infty}^{+\infty} Y_{j,k} \psi_{j,k}(t)$$
+
+This inversion will exactly reproduce the input signal at $N$ input points if an infinite number of terms are summed. Practical calculations are less exact.
 :p What is the inverse discrete transform in the context of wavelet analysis?
 ??x
-The inverse discrete transform for a given time signal \(y(t)\) using orthonormal wavelet basis functions \(\psi_{j,k}(t)\) can be expressed as:
-\[ y(t) = \sum_{j,k=-\infty}^{+\infty} Y_{j,k} \psi_{j,k}(t) \]
-This formula allows us to reconstruct the original signal from its wavelet coefficients \(Y_{j,k}\), provided we sum over an infinite number of terms. Practical implementations will be less exact due to computational limitations.
+The inverse discrete transform for a given time signal $y(t)$ using orthonormal wavelet basis functions $\psi_{j,k}(t)$ can be expressed as:
+$$y(t) = \sum_{j,k=-\infty}^{+\infty} Y_{j,k} \psi_{j,k}(t)$$
+
+This formula allows us to reconstruct the original signal from its wavelet coefficients $Y_{j,k}$, provided we sum over an infinite number of terms. Practical implementations will be less exact due to computational limitations.
 x??
 
 ---
 
 #### Time and Frequency Resolution
-Background context: The DWT ensures that time and frequency resolutions are balanced by using a dyadic grid arrangement for the scaling parameter \(s = 2^j\) and translation parameter \(\tau = k / 2^j\). This setup is constrained by the uncertainty principle, which states:
-\[ \Delta\omega \Delta t \geq 2\pi \]
-where \(\Delta\omega\) is the width of the wave packet in frequency domain, and \(\Delta t\) is its width in time domain.
+Background context: The DWT ensures that time and frequency resolutions are balanced by using a dyadic grid arrangement for the scaling parameter $s = 2^j $ and translation parameter$\tau = k / 2^j$. This setup is constrained by the uncertainty principle, which states:
+$$\Delta\omega \Delta t \geq 2\pi$$where $\Delta\omega $ is the width of the wave packet in frequency domain, and$\Delta t$ is its width in time domain.
 :p How does the dyadic grid arrangement relate to time and frequency resolution?
 ??x
-The dyadic grid arrangement for the DWT uses \(s = 2^j\) for scaling and \(\tau = k / 2^j\) for translation. This ensures that the time-frequency resolution is balanced according to the uncertainty principle, with:
-\[ \Delta\omega \Delta t \geq 2\pi \]
-This constraint means that as frequency resolution increases (smaller \(\Delta\omega\)), time resolution must decrease (larger \(\Delta t\)) and vice versa.
+The dyadic grid arrangement for the DWT uses $s = 2^j $ for scaling and$\tau = k / 2^j$ for translation. This ensures that the time-frequency resolution is balanced according to the uncertainty principle, with:
+$$\Delta\omega \Delta t \geq 2\pi$$
+
+This constraint means that as frequency resolution increases (smaller $\Delta\omega $), time resolution must decrease (larger $\Delta t$) and vice versa.
 x??
 
 ---
@@ -77,16 +83,14 @@ x??
 ---
 
 #### Wavelet Basis Functions
-Background context: The basis functions \(\psi_{j,k}(t)\) are orthonormal, meaning they satisfy the orthogonality and normalization conditions:
-\[ \int_{-\infty}^{+\infty} dt \ \psi^*_{j,k}(t) \psi_{j',k'}(t) = \delta_{jj'}\delta_{kk'} \]
-where \(\delta_{m,n}\) is the Kronecker delta function, indicating that each wavelet basis has "unit energy" and is independent of others.
+Background context: The basis functions $\psi_{j,k}(t)$ are orthonormal, meaning they satisfy the orthogonality and normalization conditions:
+$$\int_{-\infty}^{+\infty} dt \ \psi^*_{j,k}(t) \psi_{j',k'}(t) = \delta_{jj'}\delta_{kk'}$$where $\delta_{m,n}$ is the Kronecker delta function, indicating that each wavelet basis has "unit energy" and is independent of others.
 :p What are the properties of orthonormal wavelet basis functions?
 ??x
 Orthonormal wavelet basis functions have the following properties:
-1. **Normalization**: Each wavelet basis \(\psi_{j,k}(t)\) is normalized such that its integral over all time equals 1, i.e., it has "unit energy":
-\[ \int_{-\infty}^{+\infty} dt \ \psi^*_{j,k}(t) \psi_{j',k'}(t) = \delta_{jj'}\delta_{kk'} \]
-2. **Orthogonality**: Each basis function is independent of the others:
-\[ \int_{-\infty}^{+\infty} dt \ \psi^*_{j,k}(t) \psi_{j',k'}(t) = 0 \text{ for } (j,k) \neq (j',k') \]
+1. **Normalization**: Each wavelet basis $\psi_{j,k}(t)$ is normalized such that its integral over all time equals 1, i.e., it has "unit energy":
+$$\int_{-\infty}^{+\infty} dt \ \psi^*_{j,k}(t) \psi_{j',k'}(t) = \delta_{jj'}\delta_{kk'}$$2. **Orthogonality**: Each basis function is independent of the others:
+$$\int_{-\infty}^{+\infty} dt \ \psi^*_{j,k}(t) \psi_{j',k'}(t) = 0 \text{ for } (j,k) \neq (j',k')$$
 
 These properties ensure that wavelet transforms are both efficient and accurate in representing signals.
 x??
@@ -141,8 +145,7 @@ The transform matrix operation is used to filter and reorder the input signal.
 :p What is the formula for applying the transformation matrix?
 ??x
 The transformation matrix for a DWT is applied as follows:
-\[
-\begin{bmatrix}
+$$\begin{bmatrix}
 Y_0 \\
 Y_1 \\
 Y_2 \\
@@ -159,8 +162,8 @@ y_0 \\
 y_1 \\
 y_2 \\
 y_3
-\end{bmatrix}.
-\]
+\end{bmatrix}.$$
+
 The matrix operation effectively applies a filtering and downsampling process.
 x??
 
@@ -186,8 +189,7 @@ The inverse process of DWT involves using the transpose matrix to reconstruct th
 :p How is the inverse transformation performed?
 ??x
 The inverse transformation uses the transpose (inverse) of the transfer matrix at each stage:
-\[
-\begin{bmatrix}
+$$\begin{bmatrix}
 y_0 \\
 y_1 \\
 y_2 \\
@@ -204,8 +206,8 @@ Y_0 \\
 Y_1 \\
 Y_2 \\
 Y_3
-\end{bmatrix}.
-\]
+\end{bmatrix}.$$
+
 This process reconstructs the original signal from its transformed coefficients.
 x??
 
@@ -276,32 +278,36 @@ The analysis focuses on these components separately, leading to outputs that hav
 #### Daubechies Wavelets Filters
 Daubechies wavelet filters were discovered by Ingrid Daubechies in 1988. They are used to represent low-pass (L) and high-pass (H) filters using filter coefficients.
 
-:p How are the Low-Pass Filter \( L \) and High-Pass Filter \( H \) represented?
+:p How are the Low-Pass Filter $L $ and High-Pass Filter$H$ represented?
 ??x
-The Low-Pass Filter \( L \) and High-Pass Filter \( H \) are represented as follows:
+The Low-Pass Filter $L $ and High-Pass Filter$H$ are represented as follows:
 
 Low-Pass Filter:
-\[ L = [c_0 + c_1, c_2 + c_3] \]
+$$L = [c_0 + c_1, c_2 + c_3]$$
 
 High-Pass Filter:
-\[ H = [c_3 - c_2, c_1 - c_0] \]
+$$
 
-Where \( c_i \) are the filter coefficients.
+H = [c_3 - c_2, c_1 - c_0]$$
+
+Where $c_i$ are the filter coefficients.
 
 ---
 
 #### Applying Filters to Signal Elements
 The filters act on a vector containing signal elements. The low-pass and high-pass filters output single numbers representing weighted averages or differences of input signal elements.
 
-:p How do the Low-Pass Filter \( L \) and High-Pass Filter \( H \) operate on a signal?
+:p How do the Low-Pass Filter $L $ and High-Pass Filter$H$ operate on a signal?
 ??x
 The filters operate as follows:
 
 Low-Pass Filter:
-\[ Y_0 = c_0y_0 + c_1y_1 + c_2y_2 + c_3y_3 \]
+$$Y_0 = c_0y_0 + c_1y_1 + c_2y_2 + c_3y_3$$
 
 High-Pass Filter:
-\[ Y_1 = c_3y_0 - c_2y_1 + c_1y_2 - c_0y_3 \]
+$$
+
+Y_1 = c_3y_0 - c_2y_1 + c_1y_2 - c_0y_3$$
 
 These equations show how the filters transform input elements into weighted sums or differences, leading to smooth and detailed outputs respectively.
 
@@ -310,13 +316,12 @@ These equations show how the filters transform input elements into weighted sums
 #### Determining Filter Coefficients
 To ensure orthogonality in wavelet transformations, specific demands are placed on the filter coefficients. The filters must satisfy conditions derived from orthogonal matrices.
 
-:p How do we determine the values of the filter coefficients \( c_i \) for a Daubechies 4 (Daub4) wavelet?
+:p How do we determine the values of the filter coefficients $c_i$ for a Daubechies 4 (Daub4) wavelet?
 ??x
-To determine the values of the filter coefficients \( c_i \), we need to ensure that the transform is orthogonal. This means:
+To determine the values of the filter coefficients $c_i$, we need to ensure that the transform is orthogonal. This means:
 
 1. The matrix product must equal the identity matrix:
-   \[ 
-   \begin{bmatrix} 
+   $$\begin{bmatrix} 
    c_0 & c_3 & c_2 & c_1 \\ 
    c_1 - c_2 & c_3 - c_0 & c_1 & c_2 \\ 
    c_2 & c_1 & c_0 & c_3 \\ 
@@ -334,28 +339,17 @@ To determine the values of the filter coefficients \( c_i \), we need to ensure 
    0 & 1 & 0 & 0 \\ 
    0 & 0 & 1 & 0 \\ 
    0 & 0 & 0 & 1 
-   \end{bmatrix}
-   \]
-
-2. Additionally, the filters must satisfy specific scale and time conditions:
-   - \( c_0 + c_1 = 1 \)
-   - \( c_3 - c_2 = 1 \)
-
-Solving these equations yields the coefficients:
-
-\[ c_0 \approx 0.482962913144534, \quad c_1 \approx 0.836516303737807, \quad c_2 \approx 0.224143868042014, \quad c_3 \approx 0.129409522551260 \]
-
----
+   \end{bmatrix}$$2. Additionally, the filters must satisfy specific scale and time conditions:
+   -$c_0 + c_1 = 1 $-$ c_3 - c_2 = 1$ Solving these equations yields the coefficients:
+$$c_0 \approx 0.482962913144534, \quad c_1 \approx 0.836516303737807, \quad c_2 \approx 0.224143868042014, \quad c_3 \approx 0.129409522551260$$---
 
 #### Constructing Filter Matrices
-Daubechies wavelet filter matrices are constructed by placing the row versions of \( L \) and \( H \) along the diagonal, with successive pairs displaced two columns to the right.
+Daubechies wavelet filter matrices are constructed by placing the row versions of $L $ and$H$ along the diagonal, with successive pairs displaced two columns to the right.
 
 :p How do we construct a filter matrix for 8 elements using Daub4 coefficients?
 ??x
 To construct a filter matrix for 8 elements:
-
-\[ 
-\begin{bmatrix} 
+$$\begin{bmatrix} 
 c_0 & c_1 & c_2 & c_3 & 0 & 0 & 0 & 0 \\ 
 0 & c_3 - c_2 & c_1 - c_0 & 0 & 0 & 0 & 0 & 0 \\ 
 0 & 0 & c_0 & c_1 & c_2 & c_3 & 0 & 0 \\ 
@@ -364,17 +358,14 @@ c_0 & c_1 & c_2 & c_3 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & c_3 - c_2 & c_1 - c_0 & 0 \\ 
 0 & 0 & 0 & 0 & 0 & 0 & c_0 & c_1 \\ 
 0 & 0 & 0 & 0 & 0 & 0 & 0 & c_3 - c_2 
-\end{bmatrix} 
-\]
-
----
+\end{bmatrix}$$---
 
 #### Time Dependencies of Daubechies Wavelets
 Wavelets constructed using inverse transformations show how the wavelets have different time and scale positions.
 
 :p How are the time dependencies of Daubechies wavelets represented?
 ??x
-The time dependencies of Daubechies wavelets can be visualized by constructing them through an inverse transformation. For example, to get a specific wavelet \( y_{1,1}(t) \):
+The time dependencies of Daubechies wavelets can be visualized by constructing them through an inverse transformation. For example, to get a specific wavelet $y_{1,1}(t)$:
 
 - Input it into the filter and ensure the transform equals 1.
 - To reconstruct the wavelet, apply the inverse transform to a vector with a 1 in one position and zeros elsewhere.
@@ -392,7 +383,7 @@ Wavelets are constructed using filter coefficients through an inverse transforma
 ??x
 To construct a specific wavelet from the Daubechies filter coefficients:
 
-1. Use the inverse transform to get \( y_{1,1}(t) \), ensuring it transforms back to 1.
+1. Use the inverse transform to get $y_{1,1}(t)$, ensuring it transforms back to 1.
 2. Apply this process to vectors with 1 in one position and zeros elsewhere to obtain different wavelets.
 
 For example:

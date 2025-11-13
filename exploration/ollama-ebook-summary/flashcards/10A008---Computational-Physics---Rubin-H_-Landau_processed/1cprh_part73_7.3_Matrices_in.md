@@ -429,7 +429,7 @@ x??
 
 NumPy’s `linalg` module provides tools for linear algebra operations. It can treat 2D arrays as mathematical matrices and perform various matrix computations using LAPACK libraries.
 
-Here's an example of solving a system of linear equations \(Ax = b\) where \(A\) is a known 3x3 matrix, and \(b\) is a 3x1 vector:
+Here's an example of solving a system of linear equations $Ax = b $ where$A $ is a known 3x3 matrix, and$b$ is a 3x1 vector:
 
 ```python
 from numpy import *
@@ -445,7 +445,7 @@ x = solve(A, b)  # This uses LAPACK to perform the solution.
 
 :p How does NumPy’s `solve` function work?
 ??x
-The `numpy.linalg.solve` function solves a linear matrix equation or system of linear scalar equations. It finds the exact or approximate solutions to \(Ax = b\), where \(A\) is an N x N non-singular matrix, and \(b\) can be any shape that is compatible with \(A\).
+The `numpy.linalg.solve` function solves a linear matrix equation or system of linear scalar equations. It finds the exact or approximate solutions to $Ax = b $, where $ A $is an N x N non-singular matrix, and$ b $can be any shape that is compatible with$ A$.
 
 Here's how it works in code:
 ```python
@@ -457,7 +457,7 @@ x = solve(A, b)
 
 The `solve` function internally uses LAPACK to perform the solution efficiently. It returns a vector `x` such that `Ax ≈ b`.
 
-Example of solving \(Ax = b\):
+Example of solving $Ax = b$:
 ```python
 A = array([[1,2,3], [22,32,42], [55,66,100]])
 b = array([1,2,3])
@@ -474,7 +474,7 @@ x??
 
 NumPy’s `linalg` module also provides the function `inv` to compute the inverse of a matrix, which can be used in solving linear equations.
 
-Here's how you can calculate the inverse of a matrix \(A\) and use it to solve the equation \(Ax = b\):
+Here's how you can calculate the inverse of a matrix $A $ and use it to solve the equation$Ax = b$:
 
 ```python
 from numpy.linalg import inv
@@ -489,9 +489,9 @@ print(dot(A, A_inv))  # Should output an array close to the identity matrix
 x = dot(A_inv, b)
 ```
 
-:p How can you solve \(Ax = b\) using the inverse of a matrix?
+:p How can you solve $Ax = b$ using the inverse of a matrix?
 ??x
-To solve \(Ax = b\) using the inverse of matrix \(A\), you first compute the inverse of \(A\) and then multiply it by \(b\). The result is the vector \(x\) that satisfies the equation.
+To solve $Ax = b $ using the inverse of matrix$A $, you first compute the inverse of $ A $and then multiply it by$ b $. The result is the vector$ x$ that satisfies the equation.
 
 Here's how to do this in code:
 ```python
@@ -525,11 +525,11 @@ x??
 ---
 
 #### Numerical Inverse of a Matrix
-Background context: The task is to find the numerical inverse of a given matrix \( A \) and verify its correctness. This involves checking both directions of multiplication, i.e., \( AA^{-1} = I \) and \( A^{-1}A = I \). This also helps in understanding the precision of your calculation.
+Background context: The task is to find the numerical inverse of a given matrix $A $ and verify its correctness. This involves checking both directions of multiplication, i.e.,$AA^{-1} = I $ and$A^{-1}A = I$. This also helps in understanding the precision of your calculation.
 
-:p Find the numerical inverse of matrix \( A \) and check its accuracy.
+:p Find the numerical inverse of matrix $A$ and check its accuracy.
 ??x
-To find the numerical inverse of matrix \( A \), we can use NumPy's `linalg.inv` function. After obtaining the inverse, we need to verify that multiplying the original matrix by its inverse yields the identity matrix.
+To find the numerical inverse of matrix $A$, we can use NumPy's `linalg.inv` function. After obtaining the inverse, we need to verify that multiplying the original matrix by its inverse yields the identity matrix.
 
 Here is how you can do it in Python:
 
@@ -552,15 +552,15 @@ print("AA^-1: \n", identity_check_1)
 print("A^-1A: \n", identity_check_2)
 ```
 
-The output should show that both products are very close to the 3x3 identity matrix \( I \). The small differences (like `1.11022302e-16`) indicate numerical precision limits.
+The output should show that both products are very close to the 3x3 identity matrix $I$. The small differences (like `1.11022302e-16`) indicate numerical precision limits.
 x??
 
 #### Solving Linear Equations
-Background context: This exercise involves solving a system of linear equations using NumPy's capabilities. Given the matrix equation \( Ax = b \), you will solve for multiple vectors \( x \) corresponding to different right-hand side (RHS) vectors \( b \).
+Background context: This exercise involves solving a system of linear equations using NumPy's capabilities. Given the matrix equation $Ax = b $, you will solve for multiple vectors $ x $ corresponding to different right-hand side (RHS) vectors $ b$.
 
-:p Solve the linear equation systems for the given matrix \( A \) and RHS vectors \( b1, b2, b3 \).
+:p Solve the linear equation systems for the given matrix $A $ and RHS vectors$b1, b2, b3$.
 ??x
-To solve the system of linear equations \( Ax = b \), we can use NumPy's `linalg.solve` function. Here is how you can implement it:
+To solve the system of linear equations $Ax = b$, we can use NumPy's `linalg.solve` function. Here is how you can implement it:
 
 ```python
 import numpy as np
@@ -588,19 +588,17 @@ print("Solution x3: \n", x3)
 ```
 
 The solutions should match the provided results:
-- \( x1 = [1, -2, 4] \)
-- \( x2 ≈ [0.312, -0.038, 2.677] \)
-- \( x3 ≈ [2.319, -2.965, 4.790] \)
+- $x1 = [1, -2, 4]$-$ x2 ≈ [0.312, -0.038, 2.677]$-$ x3 ≈ [2.319, -2.965, 4.790]$
 
 This demonstrates the accuracy of your solution process.
 x??
 
 #### Eigenvalue Problem
-Background context: The task is to find the eigenvalues and eigenvectors for a given matrix using NumPy's `linalg.eig` function. For the matrix \( A = [\alpha -\beta; -\beta \alpha] \), you need to verify that the eigenvalues are complex conjugates, and the eigenvectors satisfy the eigenvalue equation.
+Background context: The task is to find the eigenvalues and eigenvectors for a given matrix using NumPy's `linalg.eig` function. For the matrix $A = [\alpha -\beta; -\beta \alpha]$, you need to verify that the eigenvalues are complex conjugates, and the eigenvectors satisfy the eigenvalue equation.
 
 :p Verify the eigenvalues and eigenvectors of the given matrix.
 ??x
-To solve the eigenvalue problem for a matrix \( A = [\alpha -\beta; -\beta \alpha] \), you can use NumPy's `linalg.eig` function. Here, we'll choose specific values for \(\alpha\) and \(\beta\), say \(\alpha = 1\) and \(\beta = 1\).
+To solve the eigenvalue problem for a matrix $A = [\alpha -\beta; -\beta \alpha]$, you can use NumPy's `linalg.eig` function. Here, we'll choose specific values for $\alpha $ and $\beta$, say $\alpha = 1 $ and $\beta = 1$.
 
 ```python
 import numpy as np
@@ -617,8 +615,7 @@ print("Eigenvectors: \n", eigenvectors)
 ```
 
 The output should show that the eigenvalues are indeed complex conjugates:
-- \( \lambda_1 = 1 + i \)
-- \( \lambda_2 = 1 - i \)
+- $\lambda_1 = 1 + i $-$\lambda_2 = 1 - i$
 
 And the corresponding eigenvectors satisfy the eigenvalue equation.
 
@@ -626,13 +623,13 @@ For verification, you can check if multiplying matrix A by one of its eigenvecto
 x??
 
 #### Matrix with Double Roots
-Background context: The task involves finding the eigenvalues and eigenvectors for a specific matrix \( A \) with double roots. This problem is interesting because it deals with degenerate cases where the eigenvectors are not unique.
+Background context: The task involves finding the eigenvalues and eigenvectors for a specific matrix $A$ with double roots. This problem is interesting because it deals with degenerate cases where the eigenvectors are not unique.
 
 :p Find the eigenvalues and verify one of them.
 ??x
 To find the eigenvalues and eigenvectors for the given matrix:
 
-\[ A = \begin{bmatrix} -2 & 2 \\ 3 & 1 \end{bmatrix} \]
+$$A = \begin{bmatrix} -2 & 2 \\ 3 & 1 \end{bmatrix}$$
 
 We can use NumPy's `linalg.eig` function to solve this.
 
@@ -651,10 +648,9 @@ print("Eigenvalues: \n", eigenvalues)
 
 The output will show the eigenvalues:
 
-- \( \lambda_1 = 5 \)
-- \( \lambda_2 = -3 \) (with multiplicity 2)
+- $\lambda_1 = 5 $-$\lambda_2 = -3$(with multiplicity 2)
 
-To verify that one of the eigenvalues, say \( \lambda_1 = 5 \), is correct, we can check if multiplying matrix A by its eigenvector yields a result proportional to that eigenvector scaled by 5.
+To verify that one of the eigenvalues, say $\lambda_1 = 5$, is correct, we can check if multiplying matrix A by its eigenvector yields a result proportional to that eigenvector scaled by 5.
 
 ```python
 # Verify for lambda_1 = 5
@@ -668,19 +664,19 @@ print("Result of Ax1: \n", Ax1)
 print("Expected result (5*x1): \n", expected_x1)
 ```
 
-This should show that \( Ax_1 \) is indeed proportional to \( 5x_1 \), confirming the correctness of the eigenvalue and eigenvector.
+This should show that $Ax_1 $ is indeed proportional to$5x_1$, confirming the correctness of the eigenvalue and eigenvector.
 
-For the double root \( \lambda = -3 \), since it has multiplicity 2, you need two linearly independent eigenvectors. You can solve the system \( (A + 3I)v = 0 \) to find these.
+For the double root $\lambda = -3 $, since it has multiplicity 2, you need two linearly independent eigenvectors. You can solve the system $(A + 3I)v = 0$ to find these.
 x??
 
 #### Solving a Large System of Linear Equations
-Background context: This exercise involves solving a large system of linear equations where the matrix \( A \) is known, and you need to find the solution vector \( x \). The example uses the Hilbert matrix for \( A \), which is well-known for its ill-conditioning.
+Background context: This exercise involves solving a large system of linear equations where the matrix $A $ is known, and you need to find the solution vector$x $. The example uses the Hilbert matrix for$ A$, which is well-known for its ill-conditioning.
 
 :p Solve the system of linear equations using the given Hilbert matrix and RHS vector.
 ??x
-To solve a large system of linear equations with the given Hilbert matrix \( A \) and its first column as the right-hand side vector \( b \), we can use NumPy's `linalg.solve` function. The Hilbert matrix is defined as:
+To solve a large system of linear equations with the given Hilbert matrix $A $ and its first column as the right-hand side vector$b$, we can use NumPy's `linalg.solve` function. The Hilbert matrix is defined as:
 
-\[ [a_{ij}] = \frac{1}{i + j - 1} \]
+$$[a_{ij}] = \frac{1}{i + j - 1}$$
 
 Here’s how you can set up and solve this system in Python:
 
@@ -700,7 +696,7 @@ x = np.linalg.solve(A_hilbert, b)
 print("Solution x: \n", x)
 ```
 
-The output will give you the solution vector \( x \) that solves the equation \( Ax = b \).
+The output will give you the solution vector $x $ that solves the equation$Ax = b$.
 
 This problem highlights the challenges of solving ill-conditioned systems like those involving the Hilbert matrix. The large condition number of such matrices can lead to significant numerical errors in solutions.
 x??

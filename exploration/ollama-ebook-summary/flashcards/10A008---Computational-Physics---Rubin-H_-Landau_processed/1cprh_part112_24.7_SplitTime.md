@@ -34,7 +34,7 @@ x??
 ---
 
 #### FDTD Simulation of EM Waves
-Background context: The Finite Difference Time Domain (FDTD) method is used to simulate electromagnetic waves by calculating solutions on a spacetime lattice using finite difference and timestepping. This method couples the electric \( E \) and magnetic \( H \) fields, with variations in one generating the other.
+Background context: The Finite Difference Time Domain (FDTD) method is used to simulate electromagnetic waves by calculating solutions on a spacetime lattice using finite difference and timestepping. This method couples the electric $E $ and magnetic$H$ fields, with variations in one generating the other.
 
 :p Plot the time delay versus the wave packet momentum.
 ??x
@@ -61,7 +61,7 @@ x??
 ---
 
 #### Sinusoidal EM Fields in a Region
-Background context: Given a region \(0 \leq z \leq 200\) where the electric \(E_x\) and magnetic \(H_y\) fields have sinusoidal spatial variation.
+Background context: Given a region $0 \leq z \leq 200 $ where the electric$E_x $ and magnetic$H_y$ fields have sinusoidal spatial variation.
 
 :p Determine the fields for all subsequent times.
 ??x
@@ -69,15 +69,15 @@ To determine the fields for all subsequent times, we can use the FDTD method:
 
 ```pseudocode
 function simulateEMFields(initialConditions, gridParameters):
-    1. Initialize the electric \(E_x\) and magnetic \(H_y\) fields based on initial conditions.
+    1. Initialize the electric $E_x $ and magnetic$H_y$ fields based on initial conditions.
     2. For each time step:
         a. Update the electric field using Maxwell's equations (Equations 24.26 and 24.27).
         b. Update the magnetic field using Maxwell's equations.
 
    function updateFields(E, H, t):
-        1. For each space point \(z\):
-            a. Calculate the time derivative of \(E_x\) using central difference.
-            b. Calculate the time derivative of \(H_y\) using central difference.
+        1. For each space point $z$:
+            a. Calculate the time derivative of $E_x$ using central difference.
+            b. Calculate the time derivative of $H_y$ using central difference.
             c. Update the fields based on these derivatives.
 
    // Example usage
@@ -89,21 +89,17 @@ x??
 ---
 
 #### Split-Time FDTD Method
-Background context: The split-time FDTD method involves solving Maxwell's equations with a spatial and temporal lattice that allows for accurate and robust simulations of EM waves. This method requires interlacing between electric (\(E\)) and magnetic (\(H\)) fields.
+Background context: The split-time FDTD method involves solving Maxwell's equations with a spatial and temporal lattice that allows for accurate and robust simulations of EM waves. This method requires interlacing between electric ($E $) and magnetic ($ H$) fields.
 
-:p Explain the algorithm for using known values of \(Ex\) and \(Hy\) at two earlier times, and three different space positions.
+:p Explain the algorithm for using known values of $Ex $ and$Hy$ at two earlier times, and three different space positions.
 ??x
 The split-time FDTD algorithm involves updating both the electric and magnetic fields based on their interactions:
 
 ```pseudocode
 function updateFields(k, n):
-    1. For each spatial position \(k\):
+    1. For each spatial position $k$:
         a. Update the electric field using:
-           \(E_{k,n+1/2}^x = E_{k,n-1/2}^x - \frac{\Delta t}{\epsilon_0 \Delta z} (H_{k+1/2,n}^y - H_{k-1/2,n}^y)\)
-        b. Update the magnetic field using:
-           \(H_{k+1/2,n+1}^y = H_{k+1/2,n}^y - \frac{\Delta t}{\mu_0 \Delta z} (E_{k+1,n+1/2}^x - E_{k,n+1/2}^x)\)
-
-   // Example usage
+           $E_{k,n+1/2}^x = E_{k,n-1/2}^x - \frac{\Delta t}{\epsilon_0 \Delta z} (H_{k+1/2,n}^y - H_{k-1/2,n}^y)$ b. Update the magnetic field using:$ H_{k+1/2,n+1}^y = H_{k+1/2,n}^y - \frac{\Delta t}{\mu_0 \Delta z} (E_{k+1,n+1/2}^x - E_{k,n+1/2}^x)$// Example usage
    for k in range(0, N):
        updateFields(k, n)
 ```
@@ -113,25 +109,15 @@ x??
 ---
 
 #### Maxwell’s Equations for EM Waves
-Background context: Maxwell's equations describe the propagation of electromagnetic waves. For one-dimensional propagation in just the \(z\) direction with no sources or sinks, there are four coupled partial differential equations.
+Background context: Maxwell's equations describe the propagation of electromagnetic waves. For one-dimensional propagation in just the $z$ direction with no sources or sinks, there are four coupled partial differential equations.
 
 :p Write down the four Maxwell’s equations for the given scenario.
 ??x
-The four Maxwell’s equations for the given scenario (one-dimensional propagation along the \(z\) axis) are:
+The four Maxwell’s equations for the given scenario (one-dimensional propagation along the $z$ axis) are:
 
-1. Gauss's law for electric fields: \(\nabla \cdot E = 0\)
-   - \(\frac{\partial E_x(z,t)}{\partial x} = 0\)
-
-2. Gauss's law for magnetic fields: \(\nabla \cdot H = 0\)
-   - \(\frac{\partial H_y(z,t)}{\partial y} = 0\)
-
-3. Faraday's law:
-   - \(\frac{\partial E_x(z,t)}{\partial t} = -\frac{1}{\epsilon_0} \frac{\partial H_y(z,t)}{\partial z}\)
-
-4. Ampere’s law (with Maxwell addition):
-   - \(\frac{\partial H_y(z,t)}{\partial t} = -\frac{1}{\mu_0} \frac{\partial E_x(z,t)}{\partial z}\)
-
-These equations describe the interplay between electric and magnetic fields in an electromagnetic wave.
+1. Gauss's law for electric fields:$\nabla \cdot E = 0 $-$\frac{\partial E_x(z,t)}{\partial x} = 0 $2. Gauss's law for magnetic fields:$\nabla \cdot H = 0 $-$\frac{\partial H_y(z,t)}{\partial y} = 0$3. Faraday's law:
+   -$\frac{\partial E_x(z,t)}{\partial t} = -\frac{1}{\epsilon_0} \frac{\partial H_y(z,t)}{\partial z}$4. Ampere’s law (with Maxwell addition):
+   -$\frac{\partial H_y(z,t)}{\partial t} = -\frac{1}{\mu_0} \frac{\partial E_x(z,t)}{\partial z}$ These equations describe the interplay between electric and magnetic fields in an electromagnetic wave.
 
 x??
 
@@ -142,52 +128,49 @@ x??
 Background context: The provided text describes the implementation and assessment of the split-time finite-difference time-domain (FDTD) algorithm, a numerical method used to solve Maxwell's equations. This method is particularly useful for simulating electromagnetic wave propagation in various media.
 
 The key equations are:
-1. Equation (24.36): \( \tilde{E}_{k,n+1/2}^x = \tilde{E}_{k,n-1/2}^x + \beta(H_{k-1/2,n}^y - H_{k+1/2,n}^y) \)
-2. Equation (24: \( H_{k+1/2,n+1}^y = H_{k+1/2,n}^y + \beta(\tilde{E}_{k,n+1/2}^x - \tilde{E}_{k+1,n+1/2}^x) \)
-3. Equation (24.38): \( \beta = c \frac{\Delta z}{\Delta t}, \quad c = \sqrt{\frac{1}{\epsilon_0 \mu_0}} \)
+1. Equation (24.36):$\tilde{E}_{k,n+1/2}^x = \tilde{E}_{k,n-1/2}^x + \beta(H_{k-1/2,n}^y - H_{k+1/2,n}^y)$2. Equation (24:$ H_{k+1/2,n+1}^y = H_{k+1/2,n}^y + \beta(\tilde{E}_{k,n+1/2}^x - \tilde{E}_{k+1,n+1/2}^x)$3. Equation (24.38):$\beta = c \frac{\Delta z}{\Delta t}, \quad c = \sqrt{\frac{1}{\epsilon_0 \mu_0}}$ Where:
+- $\tilde{E}_{k,n+1/2}^x $ and$H_{k+1/2,n+1}^y $ are the electric and magnetic field components at time step$n+1/2$.
+- $c$ is the speed of light in a vacuum.
+- $\beta$ is the ratio of the speed of light to the grid velocity.
 
-Where:
-- \( \tilde{E}_{k,n+1/2}^x \) and \( H_{k+1/2,n+1}^y \) are the electric and magnetic field components at time step \( n+1/2 \).
-- \( c \) is the speed of light in a vacuum.
-- \( \beta \) is the ratio of the speed of light to the grid velocity.
-
-The space step \( \Delta z \) and the time step \( \Delta t \) must be chosen such that the algorithm remains stable. Typically, at least 10 grid points should fit within a wavelength: 
-\[ \Delta z \leq \frac{\lambda}{10} \]
+The space step $\Delta z $ and the time step$\Delta t$ must be chosen such that the algorithm remains stable. Typically, at least 10 grid points should fit within a wavelength: 
+$$\Delta z \leq \frac{\lambda}{10}$$
 
 The time step is determined by the Courant stability condition:
-\[ \beta = c \frac{\Delta z}{\Delta t} \leq \frac{1}{2} \]
+$$\beta = c \frac{\Delta z}{\Delta t} \leq \frac{1}{2}$$
+
 Which implies that making the time step smaller improves precision and maintains stability, but reducing the space step requires a corresponding decrease in the time step to maintain stability.
 
-:p What is the significance of the parameter \( \beta \) in the FDTD algorithm?
+:p What is the significance of the parameter $\beta$ in the FDTD algorithm?
 ??x
-The parameter \( \beta \) represents the Courant number and is defined as the ratio of the speed of light to the grid velocity. It ensures that the numerical scheme remains stable by balancing the spatial and temporal discretization.
+The parameter $\beta$ represents the Courant number and is defined as the ratio of the speed of light to the grid velocity. It ensures that the numerical scheme remains stable by balancing the spatial and temporal discretization.
 
-In the context of the FDTD algorithm, \( \beta = c \frac{\Delta z}{\Delta t} \), where:
-- \( c \) is the speed of light in a vacuum.
-- \( \Delta z \) is the space step size.
-- \( \Delta t \) is the time step.
+In the context of the FDTD algorithm,$\beta = c \frac{\Delta z}{\Delta t}$, where:
+- $c$ is the speed of light in a vacuum.
+- $\Delta z$ is the space step size.
+- $\Delta t$ is the time step.
 
-By ensuring that \( \beta \leq \frac{1}{2} \), the algorithm maintains numerical stability while allowing for accurate propagation of electromagnetic waves. This relationship between \( c \), \( \Delta z \), and \( \Delta t \) is crucial for the correct implementation of the FDTD method.
+By ensuring that $\beta \leq \frac{1}{2}$, the algorithm maintains numerical stability while allowing for accurate propagation of electromagnetic waves. This relationship between $ c$,$\Delta z $, and $\Delta t$ is crucial for the correct implementation of the FDTD method.
 x??
 
 ---
 #### Implementation Example in Code
 
-Background context: The provided text includes an example of implementing the split-time FDTD algorithm using a simple lattice structure with 200 sites. This implementation produces output showing the electric (\( E \)) and magnetic (\( H \)) fields at different times.
+Background context: The provided text includes an example of implementing the split-time FDTD algorithm using a simple lattice structure with 200 sites. This implementation produces output showing the electric ($E $) and magnetic ($ H$) fields at different times.
 
 The initial conditions are given by:
-\[ E_x(z, t=0) = 0.1 \sin\left(\frac{2 \pi z}{100}\right), \quad H_y(z, t=0) = 0.1 \sin\left(\frac{2 \pi z}{100}\right) \]
+$$E_x(z, t=0) = 0.1 \sin\left(\frac{2 \pi z}{100}\right), \quad H_y(z, t=0) = 0.1 \sin\left(\frac{2 \pi z}{100}\right)$$
 
 The algorithm then steps out in time for as long as required.
 
-:p What is the initial condition for \( E_x \) at \( t = 0 \)?
+:p What is the initial condition for $E_x $ at$t = 0$?
 ??x
-The initial condition for \( E_x \) at \( t = 0 \) is given by:
-\[ E_x(z, t=0) = 0.1 \sin\left(\frac{2 \pi z}{100}\right) \]
+The initial condition for $E_x $ at$t = 0$ is given by:
+$$E_x(z, t=0) = 0.1 \sin\left(\frac{2 \pi z}{100}\right)$$
 
 This represents a sinusoidal variation of the electric field component along the z-axis with an amplitude of 0.1 and a wavelength of 100 units.
 
-The code snippet to initialize \( E_x \) can be:
+The code snippet to initialize $E_x$ can be:
 ```java
 double[] Ex = new double[200];
 for (int k = 0; k < 200; k++) {
@@ -202,21 +185,21 @@ x??
 Background context: The Courant stability condition ensures that the numerical solution of the FDTD algorithm remains stable and converges to the exact solution as the discretization steps approach zero.
 
 The stability condition is given by:
-\[ \beta = c \frac{\Delta z}{\Delta t} \leq \frac{1}{2} \]
+$$\beta = c \frac{\Delta z}{\Delta t} \leq \frac{1}{2}$$
 
-Where \( \beta \) is the Courant number, \( c \) is the speed of light in a vacuum, and \( \Delta z \) and \( \Delta t \) are the space step size and time step, respectively.
+Where $\beta $ is the Courant number,$c $ is the speed of light in a vacuum, and$\Delta z $ and$\Delta t$ are the space step size and time step, respectively.
 
 :p How does decreasing the time step affect the stability of the FDTD algorithm?
 ??x
-Decreasing the time step improves the precision of the numerical solution but also requires adjusting the spatial step (\( \Delta z \)) to maintain stability. Specifically, reducing \( \Delta t \) leads to a smaller Courant number \( \beta \).
+Decreasing the time step improves the precision of the numerical solution but also requires adjusting the spatial step ($\Delta z $) to maintain stability. Specifically, reducing $\Delta t $ leads to a smaller Courant number$\beta$.
 
 The relationship between the time step and space step is given by:
-\[ \beta = c \frac{\Delta z}{\Delta t} \]
+$$\beta = c \frac{\Delta z}{\Delta t}$$
 
-To ensure numerical stability while improving precision, both \( \Delta z \) and \( \Delta t \) must be reduced proportionally. This adjustment maintains the Courant number within the allowable range (\( \leq \frac{1}{2} \)).
+To ensure numerical stability while improving precision, both $\Delta z $ and$\Delta t $ must be reduced proportionally. This adjustment maintains the Courant number within the allowable range ($\leq \frac{1}{2}$).
 
-For example, if you halve \( \Delta t \), you would need to adjust \( \Delta z \) such that:
-\[ c \frac{\Delta z_{\text{new}}}{\Delta t_{\text{new}}} = \beta_{\text{original}} / 2 \]
+For example, if you halve $\Delta t $, you would need to adjust $\Delta z$ such that:
+$$c \frac{\Delta z_{\text{new}}}{\Delta t_{\text{new}}} = \beta_{\text{original}} / 2$$
 
 This ensures that the time and space steps are balanced, maintaining the stability of the algorithm.
 x??
@@ -226,17 +209,19 @@ x??
 
 Background context: The provided text mentions the use of periodic boundary conditions at the ends of the spatial region. This means that a wave propagating in one direction continues into another part of the simulation domain.
 
-For example, if \( z = 0 \) is the start of the lattice and \( z = 200 \) is the end, a wave that reaches \( z = 200 \) will continue at \( z = 0 \).
+For example, if $z = 0 $ is the start of the lattice and$z = 200 $ is the end, a wave that reaches$ z = 200 $ will continue at $z = 0$.
 
 :p What are periodic boundary conditions in the context of FDTD simulations?
 ??x
 Periodic boundary conditions in the context of FDTD simulations mean that the fields and their derivatives repeat across the boundaries of the computational domain. This ensures that waves propagating through one end of the lattice will continue into the other end without abrupt discontinuities.
 
-For instance, if \( z = 0 \) is the start and \( z = 200 \) is the end of a 200-site lattice, the electric and magnetic fields at these boundaries are connected such that the field at \( z = 200 \) continues as if it starts at \( z = 0 \).
+For instance, if $z = 0 $ is the start and$z = 200 $ is the end of a 200-site lattice, the electric and magnetic fields at these boundaries are connected such that the field at$ z = 200 $ continues as if it starts at $z = 0$.
 
 This can be implemented by setting:
-\[ E_x(0, t) = E_x(200, t) \]
-\[ H_y(0, t) = H_y(200, t) \]
+$$E_x(0, t) = E_x(200, t)$$
+$$
+
+H_y(0, t) = H_y(200, t)$$
 
 In code, this might look like:
 ```java
@@ -265,7 +250,7 @@ Background context explaining how boundary conditions affect numerical solutions
 :p How do you impose boundary conditions that make all fields vanish on the boundaries?
 
 ??x
-To ensure that all field values are zero at the spatial endpoints (k=0 and k=xmax-1), periodic boundary conditions can be applied. This means that the value of a field at \( k = 0 \) is equal to the value at \( k = xmax - 1 \), and vice versa.
+To ensure that all field values are zero at the spatial endpoints (k=0 and k=xmax-1), periodic boundary conditions can be applied. This means that the value of a field at $k = 0 $ is equal to the value at$k = xmax - 1$, and vice versa.
 
 ```python
 # Pseudocode for applying periodic boundary conditions
@@ -280,12 +265,12 @@ x??
 
 #### Courant Condition Test
 
-Background context explaining the significance of the Courant condition in ensuring numerical stability. The condition is given by \( \Delta t \leq \frac{\Delta z}{c} \).
+Background context explaining the significance of the Courant condition in ensuring numerical stability. The condition is given by $\Delta t \leq \frac{\Delta z}{c}$.
 
-:p How do you test the stability of the solution using different values of \(\Delta z\) and \(\Delta t\)? 
+:p How do you test the stability of the solution using different values of $\Delta z $ and$\Delta t$? 
 
 ??x
-To test the stability, vary the time step \(\Delta t\) and spatial step \(\Delta z\) while ensuring that they satisfy the Courant condition \( \Delta t \leq \frac{\Delta z}{c} \). By examining how small changes in these parameters affect the solution's stability, you can determine their optimal values.
+To test the stability, vary the time step $\Delta t $ and spatial step$\Delta z $ while ensuring that they satisfy the Courant condition$\Delta t \leq \frac{\Delta z}{c}$. By examining how small changes in these parameters affect the solution's stability, you can determine their optimal values.
 
 ```python
 # Pseudocode for testing stability with different dt and dz
@@ -313,7 +298,7 @@ Background context explaining the role of relative phases between electric (E) a
 :p How does changing the initial conditions affect the direction of wave propagation?
 
 ??x
-By setting an initial H field with a phase difference from the E field, you can change the direction of pulse propagation. For example, if \( \phi_x = 0 \) and \( \phi_y = \pi/2 \), pulses will propagate in both directions (right and left). If \( \phi_x = 0 \) or \( \phi_x = \pi \), the relative phase difference is zero or π, leading to different propagation behaviors.
+By setting an initial H field with a phase difference from the E field, you can change the direction of pulse propagation. For example, if $\phi_x = 0 $ and$\phi_y = \pi/2 $, pulses will propagate in both directions (right and left). If $\phi_x = 0 $ or$\phi_x = \pi$, the relative phase difference is zero or π, leading to different propagation behaviors.
 
 ```python
 # Pseudocode for setting initial conditions with different phases
@@ -384,7 +369,7 @@ Background context explaining how a medium with periodic permittivity acts as a 
 :p How do you simulate a medium with periodic permittivity acting as a frequency-dependent filter?
 
 ??x
-Simulating a medium with periodic permittivity involves modifying the dielectric constant \(\epsilon(z)\) in space. This can be done by defining a function that varies periodically and filters out specific frequencies based on this variation.
+Simulating a medium with periodic permittivity involves modifying the dielectric constant $\epsilon(z)$ in space. This can be done by defining a function that varies periodically and filters out specific frequencies based on this variation.
 
 ```python
 # Pseudocode for simulating frequency-dependent filtering
@@ -409,7 +394,7 @@ Background context explaining how to simulate a dielectric material within the z
 :p How do you extend the algorithm to include the effect of entering, propagating through, and exiting a dielectric material?
 
 ??x
-To extend the algorithm for a dielectric material, introduce different \(\epsilon\) and \(\mu\) values in the region where the material is present. This changes the wave propagation properties, leading to transmission and reflection at the boundaries.
+To extend the algorithm for a dielectric material, introduce different $\epsilon $ and$\mu$ values in the region where the material is present. This changes the wave propagation properties, leading to transmission and reflection at the boundaries.
 
 ```python
 # Pseudocode for simulating dielectric material
@@ -436,7 +421,7 @@ Background context explaining the difference between linear and circular polariz
 :p How do you simulate a circularly polarized wave?
 
 ??x
-To simulate a circularly polarized wave, set initial conditions with appropriate phases for \(E\) and \(H\) fields. Use sine and cosine functions with phase differences to achieve the desired polarization.
+To simulate a circularly polarized wave, set initial conditions with appropriate phases for $E $ and$H$ fields. Use sine and cosine functions with phase differences to achieve the desired polarization.
 
 ```python
 # Pseudocode for setting initial conditions of circularly polarized waves
@@ -460,7 +445,7 @@ Background context explaining the role of wave plates in converting linearly pol
 :p How do you develop a numerical model for a wave plate that converts a linearly polarized electromagnetic wave into a circularly polarized one?
 
 ??x
-To develop a numerical model, start with linearly polarized waves and introduce phase shifts in the fields as they pass through the wave plate. A quarter-wave plate introduces a relative phase of \(\lambda / 4\).
+To develop a numerical model, start with linearly polarized waves and introduce phase shifts in the fields as they pass through the wave plate. A quarter-wave plate introduces a relative phase of $\lambda / 4$.
 
 ```python
 # Pseudocode for simulating a wave plate
@@ -477,13 +462,11 @@ x??
 ---
 
 #### Quantum Wave Packets and EM Waves
-Background context: This section discusses wave propagation along a transmission line, specifically focusing on quantum wave packets. It mentions that for an electromagnetic (EM) wave, there are coupled magnetic field components (\(H_x\) and \(H_y\)) which need to be computed. Maxwell's equations for wave propagation along the z-axis are provided.
+Background context: This section discusses wave propagation along a transmission line, specifically focusing on quantum wave packets. It mentions that for an electromagnetic (EM) wave, there are coupled magnetic field components ($H_x $ and$H_y$) which need to be computed. Maxwell's equations for wave propagation along the z-axis are provided.
 
 Relevant formulas:
-\[ \frac{\partial H_x}{\partial t} = +\frac{1}{\mu_0}\frac{\partial E_y}{\partial z}, \quad \frac{\partial H_y}{\partial t} = -\frac{1}{\mu_0}\frac{\partial E_x}{\partial z} \]
-\[ \frac{\partial E_x}{\partial t} = -\frac{1}{\epsilon_0}\frac{\partial H_y}{\partial z}, \quad \frac{\partial E_y}{\partial t} = +\frac{1}{\epsilon_0}\frac{\partial H_x}{\partial z} \]
-
-:p What are the Maxwell's equations for wave propagation along the z-axis?
+$$\frac{\partial H_x}{\partial t} = +\frac{1}{\mu_0}\frac{\partial E_y}{\partial z}, \quad \frac{\partial H_y}{\partial t} = -\frac{1}{\mu_0}\frac{\partial E_x}{\partial z}$$
+$$\frac{\partial E_x}{\partial t} = -\frac{1}{\epsilon_0}\frac{\partial H_y}{\partial z}, \quad \frac{\partial E_y}{\partial t} = +\frac{1}{\epsilon_0}\frac{\partial H_x}{\partial z}$$:p What are the Maxwell's equations for wave propagation along the z-axis?
 ??x
 The Maxwell's equations describe how electric and magnetic fields evolve over time. They show that changes in the electric field produce a change in the magnetic field, and vice versa.
 ```python
@@ -509,15 +492,15 @@ x??
 Background context: The text discusses the transmission line model for a twin-lead transmission line, which consists of two parallel wires with alternating current or pulses. It introduces the telegrapher's equations and their application to lossless transmission lines.
 
 Relevant formulas:
-\[ \frac{\partial V(x,t)}{\partial x} = -RI - L\frac{\partial I(x,t)}{\partial t} \]
-\[ \frac{\partial I(x,t)}{\partial x} = -GV - C\frac{\partial V(x,t)}{\partial t} \]
+$$\frac{\partial V(x,t)}{\partial x} = -RI - L\frac{\partial I(x,t)}{\partial t}$$
+$$\frac{\partial I(x,t)}{\partial x} = -GV - C\frac{\partial V(x,t)}{\partial t}$$
 
 For lossless transmission lines:
-\[ \frac{\partial V(x,t)}{\partial x} = -L\frac{\partial I(x,t)}{\partial t} \]
-\[ \frac{\partial I(x,t)}{\partial x} = -C\frac{\partial V(x,t)}{\partial t} \]
+$$\frac{\partial V(x,t)}{\partial x} = -L\frac{\partial I(x,t)}{\partial t}$$
+$$\frac{\partial I(x,t)}{\partial x} = -C\frac{\partial V(x,t)}{\partial t}$$
 
 These equations lead to the 1D wave equation:
-\[ \frac{\partial^2 V(x,t)}{c^2 \partial t^2} - \frac{\partial^2 V(x,t)}{\partial x^2} = 0, \quad c = \frac{1}{\sqrt{LC}} \]
+$$\frac{\partial^2 V(x,t)}{c^2 \partial t^2} - \frac{\partial^2 V(x,t)}{\partial x^2} = 0, \quad c = \frac{1}{\sqrt{LC}}$$
 
 :p What are the telegrapher's equations for a lossless transmission line?
 ??x
@@ -537,17 +520,23 @@ x??
 ---
 
 #### FDTD Algorithm and Exercise
-Background context: The text describes the Finite-Difference Time-Domain (FDTD) approach for solving wave propagation problems. It outlines how to update electric field (\(E_x\)) and magnetic field (\(H_y\)) components using known values from three earlier times and space positions.
+Background context: The text describes the Finite-Difference Time-Domain (FDTD) approach for solving wave propagation problems. It outlines how to update electric field ($E_x $) and magnetic field ($ H_y$) components using known values from three earlier times and space positions.
 
 Relevant formulas:
-\[ E_{k,n+1}^x = E_{k,n}^x + \beta (H_{k+1,n}^y - H_{k,n}^y) \]
-\[ E_{k,n+1}^y = E_{k,n}^y + \beta (H_{k+1,n}^x - H_{k,n}^x) \]
-\[ H_{k,n+1}^x = H_{k,n}^x + \beta (E_{k+1,n}^y - E_{k,n}^y) \]
-\[ H_{k,n+1}^y = H_{k,n}^y + \beta (E_{k+1,n}^x - E_{k,n}^x) \]
+$$E_{k,n+1}^x = E_{k,n}^x + \beta (H_{k+1,n}^y - H_{k,n}^y)$$
+$$
+
+E_{k,n+1}^y = E_{k,n}^y + \beta (H_{k+1,n}^x - H_{k,n}^x)$$
+$$
+
+H_{k,n+1}^x = H_{k,n}^x + \beta (E_{k+1,n}^y - E_{k,n}^y)$$
+$$
+
+H_{k,n+1}^y = H_{k,n}^y + \beta (E_{k+1,n}^x - E_{k,n}^x)$$
 
 :p What are the FDTD equations for updating electric and magnetic fields?
 ??x
-The FDTD equations update the electric (\(E_x\)) and magnetic (\(H_y\)) field components using values from three earlier time steps and positions. This method allows solving wave propagation problems in a structured manner.
+The FDTD equations update the electric ($E_x $) and magnetic ($ H_y$) field components using values from three earlier time steps and positions. This method allows solving wave propagation problems in a structured manner.
 ```python
 # Example of applying FDTD algorithm (simplified)
 def update_fields(k, n):
@@ -569,13 +558,11 @@ x??
 Background context: The text describes the model of a twin-lead transmission line consisting of two parallel wires. It introduces the telegrapher's equations for alternating current or pulses and explains how these equations simplify to 1D wave equations for lossless lines.
 
 Relevant formulas:
-\[ \frac{\partial V(x,t)}{\partial x} = -RI - L\frac{\partial I(x,t)}{\partial t} \]
-\[ \frac{\partial I(x,t)}{\partial x} = -GV - C\frac{\partial V(x,t)}{\partial t} \]
+$$\frac{\partial V(x,t)}{\partial x} = -RI - L\frac{\partial I(x,t)}{\partial t}$$
+$$\frac{\partial I(x,t)}{\partial x} = -GV - C\frac{\partial V(x,t)}{\partial t}$$
 
 For lossless lines:
-\[ \frac{\partial^2 V(x,t)}{c^2 \partial t^2} - \frac{\partial^2 V(x,t)}{\partial x^2} = 0, \quad c = \frac{1}{\sqrt{LC}} \]
-
-:p What are the telegrapher's equations for a twin-lead transmission line?
+$$\frac{\partial^2 V(x,t)}{c^2 \partial t^2} - \frac{\partial^2 V(x,t)}{\partial x^2} = 0, \quad c = \frac{1}{\sqrt{LC}}$$:p What are the telegrapher's equations for a twin-lead transmission line?
 ??x
 The telegrapher's equations describe how voltage and current propagate along two parallel wires. These equations account for inductance (L), resistance (R), capacitance (C), and conductance (G).
 ```python
@@ -597,11 +584,11 @@ x??
 
 #### Experimenting with Δx and Δt for Precision and Speed
 
-Background context: In numerical simulations, adjusting the step sizes \(\Delta x\) and \(\Delta t\) can significantly affect both the precision of the solution and the computational speed. Smaller step sizes generally lead to more accurate results but increase computation time.
+Background context: In numerical simulations, adjusting the step sizes $\Delta x $ and$\Delta t$ can significantly affect both the precision of the solution and the computational speed. Smaller step sizes generally lead to more accurate results but increase computation time.
 
-:p Experiment with different values of \(\Delta x\) and \(\Delta t\). What are you trying to achieve?
+:p Experiment with different values of $\Delta x $ and$\Delta t$. What are you trying to achieve?
 ??x
-By experimenting with different values of \(\Delta x\) and \(\Delta t\), we aim to find a balance between precision and computational efficiency. Smaller step sizes (\(\Delta x\) and \(\Delta t\)) can provide more accurate solutions but increase the number of iterations, which may not be practical for large systems.
+By experimenting with different values of $\Delta x $ and$\Delta t $, we aim to find a balance between precision and computational efficiency. Smaller step sizes ($\Delta x $ and$\Delta t$) can provide more accurate solutions but increase the number of iterations, which may not be practical for large systems.
 
 Code example:
 ```python
@@ -613,15 +600,17 @@ x??
 
 #### Boundary Conditions V(0,t) and V(L,t)
 
-Background context: In the context of solving partial differential equations (PDEs), boundary conditions play a crucial role in defining the solution's behavior at specific points in space or time. The given problem specifies homogeneous Dirichlet boundary conditions, which set the potential \(V\) to zero at both ends of the transmission line.
+Background context: In the context of solving partial differential equations (PDEs), boundary conditions play a crucial role in defining the solution's behavior at specific points in space or time. The given problem specifies homogeneous Dirichlet boundary conditions, which set the potential $V$ to zero at both ends of the transmission line.
 
 :p What are the boundary conditions for this scenario?
 ??x
 The boundary conditions are:
-\[ V(0,t) = 0 \]
-\[ V(L,t) = 0 \]
+$$V(0,t) = 0$$
+$$
 
-These conditions imply that the potential is fixed to zero at both endpoints \(x=0\) and \(x=L\), where \(L\) is the length of the transmission line.
+V(L,t) = 0$$
+
+These conditions imply that the potential is fixed to zero at both endpoints $x=0 $ and$x=L $, where$ L$ is the length of the transmission line.
 
 x??
 
@@ -629,15 +618,15 @@ x??
 
 #### Initial Conditions for a Pulse
 
-Background context: The initial condition describes the state of the system at time \(t = 0\). Here, we use an exponential decay function to model a pulse with constant voltage. The partial derivative \(\frac{\partial V(x,t)}{\partial t}\) is set to zero initially.
+Background context: The initial condition describes the state of the system at time $t = 0 $. Here, we use an exponential decay function to model a pulse with constant voltage. The partial derivative $\frac{\partial V(x,t)}{\partial t}$ is set to zero initially.
 
 :p What are the initial conditions for this problem?
 ??x
 The initial conditions are:
-\[ V(x,t=0) = 10e^{-\frac{x^2}{0.1}} \]
-\[ \frac{\partial V(x,t)}{\partial t} = 0 \]
+$$V(x,t=0) = 10e^{-\frac{x^2}{0.1}}$$
+$$\frac{\partial V(x,t)}{\partial t} = 0$$
 
-These conditions specify that at \(t = 0\), the potential varies as an exponential decay function, and there is no initial temporal variation.
+These conditions specify that at $t = 0$, the potential varies as an exponential decay function, and there is no initial temporal variation.
 
 x??
 
@@ -645,13 +634,13 @@ x??
 
 #### Effect of Zero Conductance (G) and Resistance (R)
 
-Background context: The conductance (\(G\)) and resistance (\(R\)) influence how current flows in the system. Setting \(G = 0\) implies infinite resistance, which can lead to interesting effects on the pulse propagation.
+Background context: The conductance ($G $) and resistance ($ R $) influence how current flows in the system. Setting$ G = 0$ implies infinite resistance, which can lead to interesting effects on the pulse propagation.
 
-:p What happens when zero values are set for conductance \(G\) and resistance \(R\)?
+:p What happens when zero values are set for conductance $G $ and resistance$R$?
 ??x
-When \(G = 0\) (infinite resistance), no current can flow through the system. This would result in the pulse not propagating or severely distorting, as there is no path for charge to move.
+When $G = 0$(infinite resistance), no current can flow through the system. This would result in the pulse not propagating or severely distorting, as there is no path for charge to move.
 
-For non-zero \(R\), the pulse may distort due to the dissipative nature of the medium. The exact point at which the pulse becomes unrecognizable depends on the values of \(R\) and \(\Delta t\).
+For non-zero $R $, the pulse may distort due to the dissipative nature of the medium. The exact point at which the pulse becomes unrecognizable depends on the values of $ R $and$\Delta t$.
 
 x??
 
@@ -663,7 +652,7 @@ Background context: When a rectangular pulse is sent down the transmission line,
 
 :p At what point would you say the pulse shape becomes unrecognizable?
 ??x
-The exact point where the pulse shape becomes unrecognizable depends on the values of \(R\), \(\Delta t\), and the initial conditions. Typically, this happens when the pulse's amplitude or width significantly changes beyond recognizable limits.
+The exact point where the pulse shape becomes unrecognizable depends on the values of $R $, $\Delta t$, and the initial conditions. Typically, this happens when the pulse's amplitude or width significantly changes beyond recognizable limits.
 
 For example, if after 100 time steps the pulse has lost more than 95% of its initial peak value, you might consider it unrecognizable.
 
@@ -732,11 +721,11 @@ x??
 
 #### Maxwell's Equations via FDTD Algorithm
 
-Background context: The provided script `FDTD.py` uses the Finite-Difference Time-Domain (FDTD) algorithm to solve Maxwell's equations for linearly polarized wave propagation in the \(z\)-direction. This method is widely used in computational electromagnetics.
+Background context: The provided script `FDTD.py` uses the Finite-Difference Time-Domain (FDTD) algorithm to solve Maxwell's equations for linearly polarized wave propagation in the $z$-direction. This method is widely used in computational electromagnetics.
 
 :p What does the `FDTD.py` script do?
 ??x
-The `FDTD.py` script implements the FDTD algorithm to solve Maxwell's equations for linearly polarized waves propagating in the \(z\)-direction. It updates the electromagnetic field components (electric and magnetic fields) over time using finite difference methods.
+The `FDTD.py` script implements the FDTD algorithm to solve Maxwell's equations for linearly polarized waves propagating in the $z$-direction. It updates the electromagnetic field components (electric and magnetic fields) over time using finite difference methods.
 
 Example code:
 ```python
@@ -766,7 +755,7 @@ x??
 
 ---
 #### FDTD Algorithm for 1D Maxwell’s Equations
-Background context explaining the concept. The Finite-Difference Time-Domain (FDTD) method is used to solve Maxwell's equations numerically. This example demonstrates solving the equations for a 1D scenario with periodic boundary conditions. Relevant formulas include those for updating electric field \( E \) and magnetic field \( H \).
+Background context explaining the concept. The Finite-Difference Time-Domain (FDTD) method is used to solve Maxwell's equations numerically. This example demonstrates solving the equations for a 1D scenario with periodic boundary conditions. Relevant formulas include those for updating electric field $E $ and magnetic field$H$.
 
 :p What is the FDTD algorithm being used for in this context?
 ??x
@@ -809,19 +798,13 @@ x??
 #### Initialization and Updating of Fields
 Explanation on how the field variables are initialized and updated in the FDTD algorithm. The fields are updated at each time step using specific formulas.
 
-:p How are the fields \(Exx\), \(Eyy\), \(Hxx\), and \(Hyy\) initialized and updated?
+:p How are the fields $Exx $, $ Eyy $,$ Hxx $, and$ Hyy$ initialized and updated?
 ??x
-The electric (\(Exx\)) and magnetic (\(Eyy, Hxx, Hyy\)) field variables are first initialized to their initial conditions. At each time step, these fields are updated using the FDTD algorithm formulas:
+The electric ($Exx $) and magnetic ($ Eyy, Hxx, Hyy$) field variables are first initialized to their initial conditions. At each time step, these fields are updated using the FDTD algorithm formulas:
 
 1. **Update Electric Fields:**
-   - \(Exx[1:len(E) - 1] = Exx[1:len(E) - 1] + beta * (Hyy[0:len(H) - 2] - Hyy[2:len(H)])\)
-   - \(Eyy[1:len(E) - 1] = Eyy[1:len(E) - 1] + beta * (Hxx[0:len(H) - 2] - Hxx[2:len(H)])\)
-
-2. **Update Magnetic Fields:**
-   - \(Hyy[1:len(E) - 1] = Hyy[1:len(E) - 1] + beta * (Exx[0:len(H) - 2] - Exx[2:len(H)])\)
-   - \(Hxx[1:len(E) - 1] = Hxx[1:len(E) - 1] + beta * (Eyy[0:len(H) - 2] - Eyy[2:len(H)])\)
-
-3. **Periodic Boundary Conditions:**
+   - $Exx[1:len(E) - 1] = Exx[1:len(E) - 1] + beta * (Hyy[0:len(H) - 2] - Hyy[2:len(H)])$-$ Eyy[1:len(E) - 1] = Eyy[1:len(E) - 1] + beta * (Hxx[0:len(H) - 2] - Hxx[2:len(H)])$2. **Update Magnetic Fields:**
+   -$Hyy[1:len(E) - 1] = Hyy[1:len(E) - 1] + beta * (Exx[0:len(H) - 2] - Exx[2:len(H)])$-$ Hxx[1:len(E) - 1] = Hxx[1:len(E) - 1] + beta * (Eyy[0:len(H) - 2] - Eyy[2:len(H)])$3. **Periodic Boundary Conditions:**
    - For the boundary conditions, the fields are updated cyclically to maintain periodicity.
 
 Example code:
@@ -848,7 +831,7 @@ Explanation on the importance of periodic boundary conditions for maintaining th
 Periodic boundary conditions ensure that the field variables at the boundaries of the computational domain behave as if they were wrapped around to form a closed loop. This is crucial for simulating phenomena like wave propagation over an extended or infinite medium, where the behavior at one end should mirror the other.
 
 For example, in this FDTD simulation:
-- The electric fields \(Exx\) and magnetic fields \(Eyy, Hxx, Hyy\) are updated to reflect the periodic nature of the problem.
+- The electric fields $Exx $ and magnetic fields$Eyy, Hxx, Hyy$ are updated to reflect the periodic nature of the problem.
 - Boundary conditions enforce that the values at the start and end of the domain remain consistent with their neighbors across the boundary.
 
 Example code:
@@ -874,9 +857,9 @@ x??
 #### Plotting Fields in FDTD
 Explanation on how the fields are plotted at each time step to visualize their evolution.
 
-:p How are the fields \(Ex\) and \(Ey\) plotted over time steps?
+:p How are the fields $Ex $ and$Ey$ plotted over time steps?
 ??x
-The fields \(Ex\) and \(Ey\) are plotted at each time step to visualize their temporal and spatial behavior. This helps in understanding the propagation of electromagnetic waves and other phenomena being simulated by the FDTD method.
+The fields $Ex $ and$Ey$ are plotted at each time step to visualize their temporal and spatial behavior. This helps in understanding the propagation of electromagnetic waves and other phenomena being simulated by the FDTD method.
 
 Example code:
 ```python
@@ -900,9 +883,8 @@ Explanation on the simulation of circularly polarized waves using the FDTD metho
 The purpose of simulating circular polarization in the FDTD algorithm is to model and visualize the propagation of circularly polarized electromagnetic waves. This involves updating the fields with a time-varying phase shift that introduces a rotation in the field vectors.
 
 In this example, the fields are updated by adding a periodic phase shift:
-- The electric fields \(Ex\) are updated using the formula: 
-  \[ Ex[k, t+1] = 0.1 \cos(-2\pi k/100 - 0.005 \pi (k-101) + 2\pi j/4996.004) \]
-- Similarly, the magnetic fields are updated.
+- The electric fields $Ex$ are updated using the formula:
+$$Ex[k, t+1] = 0.1 \cos(-2\pi k/100 - 0.005 \pi (k-101) + 2\pi j/4996.004)$$- Similarly, the magnetic fields are updated.
 
 This phase shift ensures that the fields exhibit circular polarization as they propagate through the computational domain.
 
@@ -923,17 +905,17 @@ A summary card to consolidate the key concepts and steps involved in implementin
 Key Concepts and Steps in Implementing the Finite-Difference Time-Domain (FDTD) Method:
 
 1. **Initialization:**
-   - Initialize field variables \(Exx\), \(Eyy\), \(Hxx\), and \(Hyy\) to their initial conditions.
+   - Initialize field variables $Exx $, $ Eyy $,$ Hxx $, and$ Hyy$ to their initial conditions.
 
 2. **Update Fields:**
-   - Update electric (\(Exx, Eyy\)) and magnetic (\(Hxx, Hyy\)) fields using specific FDTD formulas.
+   - Update electric ($Exx, Eyy $) and magnetic ($ Hxx, Hyy$) fields using specific FDTD formulas.
    - Apply periodic boundary conditions to maintain the continuity of the field variables across domain boundaries.
 
 3. **Periodic Boundary Conditions:**
    - Use cyclic updates for fields at the boundaries to simulate infinite or extended domains.
 
 4. **Plotting Fields:**
-   - Visualize the fields \(Ex\) and \(Ey\) over time steps to observe their evolution and behavior.
+   - Visualize the fields $Ex $ and$Ey$ over time steps to observe their evolution and behavior.
 
 5. **Circular Polarization Simulation:**
    - Introduce a phase shift in the field variables to simulate circularly polarized waves.
@@ -971,7 +953,7 @@ Explanation on the specific implementation details of the FDTD algorithm in term
 Detailed Steps to Implement the Finite-Difference Time-Domain (FDTD) Method:
 
 1. **Initialization:**
-   - Initialize all field variables \(Exx\), \(Eyy\), \(Hxx\), and \(Hyy\) with initial values.
+   - Initialize all field variables $Exx $, $ Eyy $,$ Hxx $, and$ Hyy$ with initial values.
    ```python
    Exx = [initial_values]  # Example initialization
    Eyy = [initial_values]
@@ -998,7 +980,7 @@ Detailed Steps to Implement the Finite-Difference Time-Domain (FDTD) Method:
      ```
 
 4. **Plotting Fields:**
-   - Plot the fields \(Ex\) and \(Ey\) over time steps to visualize their evolution:
+   - Plot the fields $Ex $ and$Ey$ over time steps to visualize their evolution:
      ```python
      k = np.arange(len(Ey))
      Exfield.x = 2 * (k - len(k))  # World to screen coordinates for Ex
@@ -1062,14 +1044,14 @@ A concise summary of the key points involved in implementing the FDTD method.
 Essential Components for Implementing the Finite-Difference Time-Domain (FDTD) Method:
 
 1. **Initialization:**
-   - Initialize all field variables \(Exx\), \(Eyy\), \(Hxx\), and \(Hyy\) with initial values.
+   - Initialize all field variables $Exx $, $ Eyy $,$ Hxx $, and$ Hyy$ with initial values.
 
 2. **Update Fields:**
    - Update fields using FDTD formulas at each time step.
    - Apply periodic boundary conditions to ensure continuity across the domain boundaries.
 
 3. **Plotting Fields:**
-   - Plot the fields \(Ex\) and \(Ey\) over time steps to visualize their evolution.
+   - Plot the fields $Ex $ and$Ey$ over time steps to visualize their evolution.
 
 4. **Circular Polarization Simulation:**
    - Introduce a phase shift in the field variables to simulate circularly polarized waves.
@@ -1119,7 +1101,7 @@ Explanation on how the simulation progresses through time steps.
 The Finite-Difference Time-Domain (FDTD) simulation progresses through time steps in a sequential manner. At each time step, the electric and magnetic fields are updated based on the current field values from previous time steps using the FDTD algorithm formulas.
 
 1. **Initialization:**
-   - Fields \(Exx\), \(Eyy\), \(Hxx\), and \(Hyy\) are initialized with their initial conditions.
+   - Fields $Exx $, $ Eyy $,$ Hxx $, and$ Hyy$ are initialized with their initial conditions.
    
 2. **Time Step Update:**
    - For each time step, update the fields according to the following equations:
@@ -1179,7 +1161,7 @@ Implementing Periodic Boundary Conditions in the Finite-Difference Time-Domain (
 Periodic boundary conditions ensure that the fields at the domain boundaries remain continuous, simulating an infinite or extended domain. This is achieved by "wrapping" the field values from one end of the domain to the other.
 
 1. **Initialization:**
-   - Initialize all field variables \(Exx\), \(Eyy\), \(Hxx\), and \(Hyy\) with initial conditions.
+   - Initialize all field variables $Exx $, $ Eyy $,$ Hxx $, and$ Hyy$ with initial conditions.
    
 2. **Time Step Update:**
    - At each time step, update the fields according to the FDTD algorithm formulas:
@@ -1247,26 +1229,14 @@ Explanation on the specific field update formulas used in the FDTD method.
 The specific field update formulas used in the Finite-Difference Time-Domain (FDTD) simulation for updating electric and magnetic fields are as follows:
 
 1. **Electric Field Update:**
-   - For a 2D grid, the electric field \(Ex\) is updated using:
-     \[
-     E_{xx}[i] = E_{xx}[i] + \beta \left( H_{yy}[i-1] - H_{yy}[i+1] \right)
-     \]
-   - For a 2D grid, the electric field \(Ey\) is updated using:
-     \[
-     E_{yy}[i] = E_{yy}[i] + \beta \left( H_{xx}[i-1] - H_{xx}[i+1] \right)
-     \]
+   - For a 2D grid, the electric field $Ex$ is updated using:
+$$E_{xx}[i] = E_{xx}[i] + \beta \left( H_{yy}[i-1] - H_{yy}[i+1] \right)$$- For a 2D grid, the electric field $ Ey$ is updated using:
+$$E_{yy}[i] = E_{yy}[i] + \beta \left( H_{xx}[i-1] - H_{xx}[i+1] \right)$$2. **Magnetic Field Update:**
+   - For a 2D grid, the magnetic field $Hx$ is updated using:
+$$H_{xx}[i] = H_{xx}[i] + \beta \left( E_{yy}[i-1] - E_{yy}[i+1] \right)$$- For a 2D grid, the magnetic field $ Hy$ is updated using:
+$$H_{yy}[i] = H_{yy}[i] + \beta \left( E_{xx}[i-1] - E_{xx}[i+1] \right)$$
 
-2. **Magnetic Field Update:**
-   - For a 2D grid, the magnetic field \(Hx\) is updated using:
-     \[
-     H_{xx}[i] = H_{xx}[i] + \beta \left( E_{yy}[i-1] - E_{yy}[i+1] \right)
-     \]
-   - For a 2D grid, the magnetic field \(Hy\) is updated using:
-     \[
-     H_{yy}[i] = H_{yy}[i] + \beta \left( E_{xx}[i-1] - E_{xx}[i+1] \right)
-     \]
-
-Where \( \beta \) is a time step parameter that depends on the grid spacing and material properties.
+Where $\beta$ is a time step parameter that depends on the grid spacing and material properties.
 
 Example code:
 ```python
@@ -1294,7 +1264,7 @@ Explanation on how to visualize the fields in the FDTD simulation.
 Visualizing the fields in the Finite-Difference Time-Domain (FDTD) simulation involves plotting the electric and magnetic field components at each time step. This helps in observing the evolution of these fields over time.
 
 1. **Field Initialization:**
-   - Initialize all field variables \(Exx\), \(Eyy\), \(Hxx\), and \(Hyy\) with initial conditions.
+   - Initialize all field variables $Exx $, $ Eyy $,$ Hxx $, and$ Hyy$ with initial conditions.
    
 2. **Time Step Update:**
    - At each time step, update the fields according to the FDTD algorithm formulas:
@@ -1391,16 +1361,16 @@ Setting up the grid for the Finite-Difference Time-Domain (FDTD) simulation invo
 
 1. **Grid Initialization:**
    - Define the number of grid points `N` in both the x and y directions.
-   - Determine the grid spacing \(\Delta x\) and \(\Delta y\).
+   - Determine the grid spacing $\Delta x $ and$\Delta y$.
 
 2. **Time Step Size:**
-   - Choose a time step size \(\Delta t\) that satisfies the Courant-Friedrichs-Lewy (CFL) condition, which ensures numerical stability.
+   - Choose a time step size $\Delta t$ that satisfies the Courant-Friedrichs-Lewy (CFL) condition, which ensures numerical stability.
 
 3. **Material Properties:**
    - Define the dielectric constants or permeabilities of the materials in the grid.
 
 4. **Initial Conditions:**
-   - Initialize the electric field components \(Exx\) and \(Eyy\), and magnetic field components \(Hxx\) and \(Hyy\) with appropriate initial values.
+   - Initialize the electric field components $Exx $ and$Eyy $, and magnetic field components $ Hxx $and$ Hyy$ with appropriate initial values.
 
 Example code for setting up the grid:
 ```python
@@ -1438,22 +1408,19 @@ Explanation on how to set up the simulation parameters for the FDTD method.
 Setting up the simulation parameters for the Finite-Difference Time-Domain (FDTD) method involves defining key parameters such as grid size, time step, and material properties. This ensures that the numerical scheme is stable and accurate. Here’s a detailed explanation:
 
 1. **Grid Size:**
-   - Define the number of grid points \( N \) in both the x and y directions.
-   - Determine the grid spacing \(\Delta x\) and \(\Delta y\).
+   - Define the number of grid points $N$ in both the x and y directions.
+   - Determine the grid spacing $\Delta x $ and$\Delta y$.
 
-2. **Time Step Size (\(\Delta t\)):**
+2. **Time Step Size ($\Delta t$):**
    - Choose a time step size that satisfies the Courant-Friedrichs-Lewy (CFL) condition, which ensures numerical stability:
-     \[
-     \Delta t \leq \frac{\Delta x}{c}
-     \]
-     where \( c \) is the speed of light in the medium.
+     $$\Delta t \leq \frac{\Delta x}{c}$$where $ c$ is the speed of light in the medium.
 
 3. **Material Properties:**
-   - Define the dielectric constants \(\epsilon\) and permeabilities \(\mu\) for different materials in the grid.
-   - The Courant number (which depends on \(\Delta t\), \(\Delta x\), \(\Delta y\), \(\epsilon\), and \(\mu\)) should be less than or equal to 0.5.
+   - Define the dielectric constants $\epsilon $ and permeabilities$\mu$ for different materials in the grid.
+   - The Courant number (which depends on $\Delta t $, $\Delta x $, $\Delta y $, $\epsilon $, and $\mu$) should be less than or equal to 0.5.
 
 4. **Initial Conditions:**
-   - Initialize the electric field components \(Exx\) and \(Eyy\), and magnetic field components \(Hxx\) and \(Hyy\) with appropriate initial values.
+   - Initialize the electric field components $Exx $ and$Eyy $, and magnetic field components$ Hxx $and$ Hyy$ with appropriate initial values.
 
 Example code for setting up the simulation parameters:
 ```python
@@ -1509,7 +1476,7 @@ Explanation on how to implement the main loop for the FDTD simulation.
 Implementing the main loop for the Finite-Difference Time-Domain (FDTD) simulation involves iterating over time steps, updating the electric and magnetic fields at each step, applying boundary conditions, and visualizing or storing the results. Here’s a detailed explanation:
 
 1. **Initialize Fields:**
-   - Initialize the electric field components \(Exx\) and \(Eyy\), and magnetic field components \(Hxx\) and \(Hyy\) with appropriate initial values.
+   - Initialize the electric field components $Exx $ and$Eyy $, and magnetic field components $ Hxx $and$ Hyy$ with appropriate initial values.
 
 2. **Time Step Loop:**
    - Iterate over each time step, updating the fields according to the FDTD update equations.
@@ -1579,7 +1546,7 @@ Explanation on how to interpret and analyze the results of an FDTD simulation.
 Interpreting and analyzing the results of a Finite-Difference Time-Domain (FDTD) simulation involves examining the behavior of the electric and magnetic fields over time and space. Here’s how to proceed:
 
 1. **Visualize Field Components:**
-   - Plot the field components \(Exx\) and \(Eyy\) as functions of position or time.
+   - Plot the field components $Exx $ and$Eyy$ as functions of position or time.
    - Use plots to identify patterns, such as wave propagation, reflections, and interactions.
 
 2. **Calculate Quantities of Interest:**
@@ -1670,7 +1637,7 @@ Interpreting and analyzing the results of a Finite-Difference Time-Domain (FDTD)
 ### 1. Visualize Field Components
 
 - **Plot Electric and Magnetic Fields:**
-  - Plot the electric field components \(Exx\) and \(Eyy\) as functions of position or time.
+  - Plot the electric field components $Exx $ and$Eyy$ as functions of position or time.
   - Use plots to identify patterns, such as wave propagation, reflections, and interactions.
 
 ```python
@@ -1801,7 +1768,7 @@ Interpreting and analyzing the results of a Finite-Difference Time-Domain (FDTD)
 ### 1. Visualize Field Components
 
 - **Plot Electric and Magnetic Fields:**
-  - Plot the electric field components \(Exx\) and \(Eyy\) as functions of position or time.
+  - Plot the electric field components $Exx $ and$Eyy$ as functions of position or time.
   - Use plots to identify patterns, such as wave propagation, reflections, and interactions.
 
 ```python
@@ -1947,7 +1914,7 @@ Interpreting and analyzing the results of a Finite-Difference Time-Domain (FDTD)
 ### 1. Visualize Field Components
 
 - **Plot Electric and Magnetic Fields:**
-  - Plot the electric field components \(Exx\) and \(Eyy\) as functions of position or time.
+  - Plot the electric field components $Exx $ and$Eyy$ as functions of position or time.
   - Use plots to identify patterns, such as wave propagation, reflections, and interactions.
 
 ```python
@@ -2089,7 +2056,7 @@ Explanation on how to interpret and analyze the results of an FDTD simulation.
 
 :p Here is a complete example of interpreting and analyzing the results of an FDTD simulation:
 
-1. **Visualize Field Components**: Plot the electric field components \(Exx\) and \(Eyy\) over time or position.
+1. **Visualize Field Components**: Plot the electric field components $Exx $ and$Eyy$ over time or position.
 2. **Calculate Quantities of Interest**: Compute energy density, amplitudes, and phases at specific points.
 3. **Compare with Theoretical Results**: Compare simulated results with theoretical predictions.
 4. **Validate Numerical Stability**: Check for any unexpected growth in field values.
@@ -2250,7 +2217,7 @@ Explanation on how to interpret and analyze the results of an FDTD simulation.
 
 :p Here is a complete example of interpreting and analyzing the results of an FDTD simulation:
 
-1. **Visualize Field Components**: Plot the electric field components \(Exx\) and \(Eyy\) over time or position.
+1. **Visualize Field Components**: Plot the electric field components $Exx $ and$Eyy$ over time or position.
 2. **Calculate Quantities of Interest**: Compute energy density, amplitudes, and phases at specific points.
 3. **Compare with Theoretical Results**: Compare simulated results with theoretical predictions.
 4. **Validate Numerical Stability**: Check for any unexpected growth in field values.
@@ -2411,7 +2378,7 @@ Explanation on how to interpret and analyze the results of an FDTD simulation.
 
 :p Here is a complete example of interpreting and analyzing the results of an FDTD simulation:
 
-1. **Visualize Field Components**: Plot the electric field components \(Exx\) and \(Eyy\) over time or position.
+1. **Visualize Field Components**: Plot the electric field components $Exx $ and$Eyy$ over time or position.
 2. **Calculate Quantities of Interest**: Compute energy density, amplitudes, and phases at specific points.
 3. **Compare with Theoretical Results**: Compare simulated results with theoretical predictions.
 4. **Validate Numerical Stability**: Check for any unexpected growth in field values.
@@ -2572,7 +2539,7 @@ Explanation on how to interpret and analyze the results of an FDTD simulation.
 
 :p Here is a complete example of interpreting and analyzing the results of an FDTD (Finite-Difference Time-Domain) simulation:
 
-1. **Visualize Field Components**: Plot the electric field components \(Exx\) and \(Eyy\) over time or position.
+1. **Visualize Field Components**: Plot the electric field components $Exx $ and$Eyy$ over time or position.
 2. **Calculate Quantities of Interest**: Compute energy density, amplitudes, and phases at specific points.
 3. **Compare with Theoretical Results**: Compare simulated results with theoretical predictions.
 4. **Validate Numerical Stability**: Check for any unexpected growth in field values.
@@ -2733,7 +2700,7 @@ Explanation on how to interpret and analyze the results of an FDTD (Finite-Diffe
 
 :p Here is a complete example of interpreting and analyzing the results of an FDTD simulation:
 
-1. **Visualize Field Components**: Plot the electric field components \(Exx\) and \(Eyy\) over time or position.
+1. **Visualize Field Components**: Plot the electric field components $Exx $ and$Eyy$ over time or position.
 2. **Calculate Quantities of Interest**: Compute energy density, amplitudes, and phases at specific points.
 3. **Compare with Theoretical Results**: Compare simulated results with theoretical predictions.
 4. **Validate Numerical Stability**: Check for any unexpected growth in field values.
@@ -2894,7 +2861,7 @@ Explanation on how to interpret and analyze the results of an FDTD (Finite-Diffe
 
 :p Here is a complete example of interpreting and analyzing the results of an FDTD simulation:
 
-1. **Visualize Field Components**: Plot the electric field components \(Exx\) and \(Eyy\) over time or position.
+1. **Visualize Field Components**: Plot the electric field components $Exx $ and$Eyy$ over time or position.
 2. **Calculate Quantities of Interest**: Compute energy density, amplitudes, and phases at specific points.
 3. **Compare with Theoretical Results**: Compare simulated results with theoretical predictions.
 4. **Validate Numerical Stability**: Check for any unexpected growth in field values.
@@ -3055,7 +3022,7 @@ Explanation on how to interpret and analyze the results of an FDTD (Finite-Diffe
 
 Here is a step-by-step guide for interpreting and analyzing the results of an FDTD simulation:
 
-1. **Visualize Field Components**: Plot the electric field components \(Exx\) and \(Eyy\) over time or position to understand how they evolve during the simulation.
+1. **Visualize Field Components**: Plot the electric field components $Exx $ and$Eyy$ over time or position to understand how they evolve during the simulation.
 2. **Calculate Quantities of Interest**: Compute energy density, amplitudes, and phases at specific points to gain insights into the behavior of the fields.
 3. **Compare with Theoretical Results**: Compare simulated results with theoretical predictions to validate the accuracy of your implementation.
 4. **Validate Numerical Stability**: Ensure that the numerical method used is stable by checking for any unexpected growth in field values.
@@ -3212,7 +3179,7 @@ Explanation on how to interpret and analyze the results of an FDTD (Finite-Diffe
 
 Here is a step-by-step guide for interpreting and analyzing the results of an FDTD simulation:
 
-1. **Visualize Field Components**: Plot the electric field components \(Exx\) and \(Eyy\) over time or position to understand how they evolve during the simulation.
+1. **Visualize Field Components**: Plot the electric field components $Exx $ and$Eyy$ over time or position to understand how they evolve during the simulation.
 2. **Calculate Quantities of Interest**: Compute energy density, amplitudes, and phases at specific points to gain insights into the behavior of the fields.
 3. **Compare with Theoretical Results**: Compare simulated results with theoretical predictions to validate the accuracy of your implementation.
 4. **Validate Numerical Stability**: Ensure that the numerical method used is stable by checking for any unexpected growth in field values.
@@ -3369,7 +3336,7 @@ Explanation on how to interpret and analyze the results of an FDTD (Finite-Diffe
 
 Here is a step-by-step guide for interpreting and analyzing the results of an FDTD simulation:
 
-1. **Visualize Field Components**: Plot the electric field components \(Exx\) and \(Eyy\) over time or position to understand how they evolve during the simulation.
+1. **Visualize Field Components**: Plot the electric field components $Exx $ and$Eyy$ over time or position to understand how they evolve during the simulation.
 2. **Calculate Quantities of Interest**: Compute energy density, amplitudes, and phases at specific points to gain insights into the behavior of the fields.
 3. **Compare with Theoretical Results**: Compare simulated results with theoretical predictions to validate the accuracy of your implementation.
 4. **Validate Numerical Stability**: Ensure that the numerical method used is stable by checking for any unexpected growth in field values.

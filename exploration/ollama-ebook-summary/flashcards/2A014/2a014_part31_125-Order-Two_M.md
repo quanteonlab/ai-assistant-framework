@@ -71,25 +71,29 @@ x??
 #### Order-Two Markov Chain
 An order-two Markov chain models the probability of a state based on the previous two states. This is useful for scenarios where the current state depends not only on the immediate past but also on further history.
 
-The transition probabilities are represented as \(P_{S_t, S_{t-1}, S_{t-2}}\), indicating the probability of moving from one set of states to another.
+The transition probabilities are represented as $P_{S_t, S_{t-1}, S_{t-2}}$, indicating the probability of moving from one set of states to another.
 :p What does an order-two Markov chain model?
 ??x
-An order-two Markov chain models the probability distribution of a state based on the previous two states. It is used when the current state depends not only on the immediate past but also on the state before that. The transition probabilities are given by \(P_{S_t, S_{t-1}, S_{t-2}}\), where \(S_t\) is today's state, \(S_{t-1}\) is yesterday’s state, and \(S_{t-2}\) is the day before yesterday's state.
+An order-two Markov chain models the probability distribution of a state based on the previous two states. It is used when the current state depends not only on the immediate past but also on the state before that. The transition probabilities are given by $P_{S_t, S_{t-1}, S_{t-2}}$, where $ S_t$is today's state,$ S_{t-1}$is yesterday’s state, and $ S_{t-2}$ is the day before yesterday's state.
 x??
 
 ---
 
 #### Transition Probabilities in Order-Two Markov Chain
 The transition probabilities for an order-two Markov chain can be represented using a three-dimensional tensor. For example:
-\[ PSS,S = 0.7 \]
-\[ PCS,S = 0.2 \]
-\[ PRS,S = 0.1 \]
+$$PSS,S = 0.7$$
+$$
+
+PCS,S = 0.2$$
+$$
+
+PRS,S = 0.1$$
 
 These represent the probability of transitioning from sunny (S) to sunny given that it was sunny and then cloudy (S, S, C).
 
 :p What are transition probabilities in an order-two Markov chain?
 ??x
-Transition probabilities in an order-two Markov chain are the chances of moving from one state to another based on the previous two states. These are represented using a three-dimensional tensor where each element \(P_{S_t, S_{t-1}, S_{t-2}}\) gives the probability of transitioning from state at time \(t\), given the state at times \(t-1\) and \(t-2\).
+Transition probabilities in an order-two Markov chain are the chances of moving from one state to another based on the previous two states. These are represented using a three-dimensional tensor where each element $P_{S_t, S_{t-1}, S_{t-2}}$ gives the probability of transitioning from state at time $t$, given the state at times $ t-1$and $ t-2$.
 x??
 
 ---
@@ -99,7 +103,7 @@ These transition probabilities can be visualized in a three-dimensional cube. Th
 
 :p How are transition probabilities typically visualized?
 ??x
-Transition probabilities in an order-two Markov chain are typically visualized using a three-dimensional tensor or cube. Each axis of the cube corresponds to one of the states: two axes represent today's and yesterday's states, and the other axis represents the state at time \(t+1\). This visualization helps in understanding the probability distribution across these states.
+Transition probabilities in an order-two Markov chain are typically visualized using a three-dimensional tensor or cube. Each axis of the cube corresponds to one of the states: two axes represent today's and yesterday's states, and the other axis represents the state at time $t+1$. This visualization helps in understanding the probability distribution across these states.
 x??
 
 ---
@@ -136,11 +140,11 @@ A more advanced approach is the Markov decision process (MDP), which extends the
 ??x
 A Markov Decision Process (MDP) is an extension of the basic Markov chain that includes actions and rewards. In the context of a recommender system, actions can represent recommendations, and rewards can be user responses to these recommendations. The goal is to learn a policy that maximizes the expected cumulative reward.
 
-An MDP is defined by a tuple \( (S, A, P, R) \), where:
-- \( S \) is the set of states
-- \( A \) is the set of actions
-- \( P \) is the state transition probability matrix
-- \( R \) is the reward function
+An MDP is defined by a tuple $(S, A, P, R)$, where:
+- $S$ is the set of states
+- $A$ is the set of actions
+- $P$ is the state transition probability matrix
+- $R$ is the reward function
 
 For example, in a movie recommender system:
 - States (S): Genres watched by users (e.g., Comedy, Drama, Action)

@@ -241,7 +241,7 @@ Explanation of pairwise LTR, which focuses on comparing pairs of items and minim
 
 :p What does the pairwise approach in learning to rank do?
 ??x
-The pairwise approach in learning to rank considers pairs of documents simultaneously in the loss function. The objective is to minimize the number of incorrectly ordered pairs by ensuring that for any given pair \((i, j)\), if item \(i\) should be ranked higher than item \(j\), then its score must be greater than or equal to the score of \(j\).
+The pairwise approach in learning to rank considers pairs of documents simultaneously in the loss function. The objective is to minimize the number of incorrectly ordered pairs by ensuring that for any given pair $(i, j)$, if item $ i$should be ranked higher than item $ j$, then its score must be greater than or equal to the score of $ j$.
 x??
 
 ---

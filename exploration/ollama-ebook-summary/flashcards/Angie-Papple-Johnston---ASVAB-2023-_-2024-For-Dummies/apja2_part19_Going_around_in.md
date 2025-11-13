@@ -9,31 +9,31 @@ Circles are fundamental geometric shapes where all points on the circle's edge a
 
 The formula for calculating the circumference (C) of a circle based on its diameter (d) is given by:
 
-\[ C = \pi d \]
+$$C = \pi d$$
 
-Additionally, since the radius (r) is half of the diameter (\( r = \frac{d}{2} \)), you can also calculate the circumference using the radius with this formula:
+Additionally, since the radius (r) is half of the diameter ($r = \frac{d}{2}$), you can also calculate the circumference using the radius with this formula:
 
-\[ C = 2\pi r \]
+$$C = 2\pi r$$
 
-To use these formulas in calculations, we often approximate \( \pi \) as either 3.14 or \(\frac{22}{7}\).
+To use these formulas in calculations, we often approximate $\pi $ as either 3.14 or$\frac{22}{7}$.
 
 :p What is the formula for calculating the circumference of a circle if you know its diameter?
 ??x
 The formula to calculate the circumference (C) when given the diameter (d) is:
 
-\[ C = \pi d \]
+$$C = \pi d$$
 
-If we use \( \pi \approx 3.14 \), then:
-\[ C \approx 3.14 \times d \]
+If we use $\pi \approx 3.14$, then:
+$$C \approx 3.14 \times d$$
 
 This can also be expressed as:
-\[ C = 2\pi r \]
-where \( r = \frac{d}{2} \).
+$$
+
+C = 2\pi r$$where $ r = \frac{d}{2}$.
 
 Example calculation for a circle with diameter of 9 inches:
 
-\[ C \approx 3.14 \times 9 \]
-```plaintext
+$$C \approx 3.14 \times 9$$```plaintext
 C ≈ 28.26 inches
 ```
 x??
@@ -46,13 +46,10 @@ A circle consists of several important parts, each serving different purposes in
 - **Diameter (d)**: It's a straight line passing through the center, connecting two points on the circumference. It’s twice the length of the radius.
 
 The relationship between these parts is:
-\[ d = 2r \]
-
-:p What is the relationship between the diameter and radius of a circle?
+$$d = 2r$$:p What is the relationship between the diameter and radius of a circle?
 ??x
 The relationship between the diameter (d) and the radius (r) of a circle is:
-
-\[ d = 2r \]
+$$d = 2r$$
 This means that the diameter is twice as long as the radius.
 
 For example, if you have a circle with a radius of 5 cm, then its diameter would be:
@@ -64,20 +61,18 @@ d = 10 cm
 x??
 
 #### Using Pi (π) in Calculations
-Pi (\(\pi\)) is an irrational number used to represent the ratio of a circle's circumference to its diameter. It’s approximately equal to 3.14 or \(\frac{22}{7}\).
+Pi ($\pi $) is an irrational number used to represent the ratio of a circle's circumference to its diameter. It’s approximately equal to 3.14 or $\frac{22}{7}$.
 
-When using \( \pi \), we generally approximate it, as the exact value has infinite decimal places.
+When using $\pi$, we generally approximate it, as the exact value has infinite decimal places.
 
 The formula for calculating the circumference is:
-\[ C = \pi d \]
-
-:p How do you use pi (π) to find the circumference of a circle?
+$$C = \pi d$$:p How do you use pi (π) to find the circumference of a circle?
 ??x
-To find the circumference of a circle using \( \pi \):
+To find the circumference of a circle using $\pi$:
 
-1. Use the formula: \( C = \pi d \).
+1. Use the formula: $C = \pi d$.
 2. Substitute the value of the diameter.
-3. Multiply by the approximation of \( \pi \).
+3. Multiply by the approximation of $\pi$.
 
 For example, if you have a circle with a diameter of 9 inches:
 ```plaintext
@@ -109,11 +104,11 @@ x??
 ---
 
 #### Calculating Area of a Circle
-Background context: The area of a circle is determined using the formula \( A = \pi r^2 \), where \( r \) is the radius of the circle. Since the diameter is twice the radius, we use half the diameter to find the radius.
+Background context: The area of a circle is determined using the formula $A = \pi r^2 $, where $ r$ is the radius of the circle. Since the diameter is twice the radius, we use half the diameter to find the radius.
 
 :p How do you calculate the area of a 9-inch-diameter pie?
 ??x
-To calculate the area of a 9-inch-diameter pie, first determine the radius by dividing the diameter by 2, which gives \( 4.5 \) inches. Then use the formula \( A = \pi r^2 \).
+To calculate the area of a 9-inch-diameter pie, first determine the radius by dividing the diameter by 2, which gives $4.5 $ inches. Then use the formula$A = \pi r^2$.
 
 ```plaintext
 A = π * (4.5)^2
@@ -125,16 +120,16 @@ x??
 ---
 
 #### Calculating Volume of a Rectangular Prism
-Background context: The volume of a rectangular prism is calculated using the formula \( V = lwh \), where \( l \) is length, \( w \) is width, and \( h \) is height. This works because all sides are consistent polygons.
+Background context: The volume of a rectangular prism is calculated using the formula $V = lwh $, where $ l $ is length, $ w $ is width, and $ h$ is height. This works because all sides are consistent polygons.
 
 :p What is the volume of this rectangular prism?
 ??x
-The volume of a rectangular prism can be found by multiplying its dimensions: \( V = lwh \).
+The volume of a rectangular prism can be found by multiplying its dimensions: $V = lwh$.
 
 Given values:
-- Length (\( l \)) = 10 inches
-- Width (\( w \)) = 2 inches
-- Height (\( h \)) = 4 inches
+- Length ($l$) = 10 inches
+- Width ($w$) = 2 inches
+- Height ($h$) = 4 inches
 
 ```plaintext
 V = 10 * 2 * 4
@@ -145,15 +140,15 @@ x??
 ---
 
 #### Calculating Volume of a Cylinder
-Background context: The volume of a cylinder is calculated using the formula \( V = \pi r^2 h \), where \( r \) is the radius and \( h \) is the height. This represents multiplying the area of the circular base by the height.
+Background context: The volume of a cylinder is calculated using the formula $V = \pi r^2 h $, where $ r $ is the radius and $ h$ is the height. This represents multiplying the area of the circular base by the height.
 
 :p What is the volume of this cylinder?
 ??x
-The volume of a cylinder can be found using the formula \( V = \pi r^2 h \).
+The volume of a cylinder can be found using the formula $V = \pi r^2 h$.
 
 Given values:
-- Radius (\( r \)) = 8 inches
-- Height (\( h \)) = 4 inches
+- Radius ($r$) = 8 inches
+- Height ($h$) = 4 inches
 
 ```plaintext
 V = π * (8)^2 * 4
@@ -165,14 +160,14 @@ x??
 ---
 
 #### Calculating Surface Area of a Cube
-Background context: The surface area of a cube is calculated using the formula \( SA = 6s^2 \), where \( s \) represents the length of each side.
+Background context: The surface area of a cube is calculated using the formula $SA = 6s^2 $, where $ s$ represents the length of each side.
 
 :p What is the surface area of this cube?
 ??x
-The surface area of a cube can be found by calculating the sum of the areas of all its faces. The formula is \( SA = 6s^2 \).
+The surface area of a cube can be found by calculating the sum of the areas of all its faces. The formula is $SA = 6s^2$.
 
 Given:
-- Side length (\( s \)) = 5 inches
+- Side length ($s$) = 5 inches
 
 ```plaintext
 SA = 6 * (5)^2
@@ -184,16 +179,16 @@ x??
 ---
 
 #### Calculating Surface Area of a Rectangular Prism
-Background context: The surface area of a rectangular prism is calculated using the formula \( SA = 2(ab + bc + ac) \), where \( a, b, and c \) represent the lengths of three different sides.
+Background context: The surface area of a rectangular prism is calculated using the formula $SA = 2(ab + bc + ac)$, where $ a, b, and c$ represent the lengths of three different sides.
 
 :p What is the surface area of this rectangular prism?
 ??x
-The surface area of a rectangular prism can be found by summing up the areas of all its faces. The formula is \( SA = 2(ab + bc + ac) \).
+The surface area of a rectangular prism can be found by summing up the areas of all its faces. The formula is $SA = 2(ab + bc + ac)$.
 
 Given:
-- Length (\( a \)) = 6 inches
-- Width (\( b \)) = 4 inches
-- Height (\( c \)) = 5 inches
+- Length ($a$) = 6 inches
+- Width ($b$) = 4 inches
+- Height ($c$) = 5 inches
 
 ```plaintext
 SA = 2 * (6*4 + 4*5 + 6*5)
@@ -206,11 +201,11 @@ x??
 ---
 
 #### Surface Area of a Rectangular Prism
-Background context: The surface area (SA) of a rectangular prism can be calculated using the formula \( SA = 2(ab + bc + ac) \), where \(a\), \(b\), and \(c\) are the lengths of the three different sides of the prism.
+Background context: The surface area (SA) of a rectangular prism can be calculated using the formula $SA = 2(ab + bc + ac)$, where $ a$,$ b $, and$ c$ are the lengths of the three different sides of the prism.
 
 :p What is the formula for the surface area of a rectangular prism?
 ??x
-The formula for the surface area of a rectangular prism is \( SA = 2(ab + bc + ac) \).
+The formula for the surface area of a rectangular prism is $SA = 2(ab + bc + ac)$.
 x??
 
 ---
@@ -228,13 +223,13 @@ Background context: In this example, a combined figure is presented as two recta
 
 :p How would you calculate the area of a combined figure that includes a half-circle and a rectangle?
 ??x
-You first find the area of the full circle using \( A = \pi r^2 \), then halve it since only a half-circle is present. Add this to the area of the rectangle, which is calculated as \( A = lw \).
+You first find the area of the full circle using $A = \pi r^2 $, then halve it since only a half-circle is present. Add this to the area of the rectangle, which is calculated as $ A = lw$.
 
 For example:
 - The radius of the circle is 2.5 inches.
-- The area of the full circle is \( \pi (2.5)^2 \).
-- Halve it for the half-circle: \( \frac{\pi (2.5)^2}{2} \).
-- Area of the rectangle: \( 10 \times 5 = 50 \) square inches.
+- The area of the full circle is $\pi (2.5)^2$.
+- Halve it for the half-circle: $\frac{\pi (2.5)^2}{2}$.
+- Area of the rectangle: $10 \times 5 = 50$ square inches.
 - Sum these areas to get the total area.
 
 Code Example:

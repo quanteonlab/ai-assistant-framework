@@ -41,30 +41,30 @@ x??
 #### 2D Convolutional Operation on Images
 The 2D convolution operation is fundamental in image processing and neural networks. It involves sliding a filter (also known as a kernel) over the input image to extract features like edges, textures, or patterns.
 
-Mathematically, if \( I \) represents an image of size \( H \times W \), and \( K \) represents a 2D kernel of size \( h \times w \), then the output feature map \( O \) can be calculated as:
+Mathematically, if $I $ represents an image of size$H \times W $, and$ K $represents a 2D kernel of size$ h \times w $, then the output feature map$ O$ can be calculated as:
 
-\[ O[i][j] = \sum_{m=0}^{h-1}\sum_{n=0}^{w-1} I[i+m][j+n] * K[m][n] + b \]
+$$O[i][j] = \sum_{m=0}^{h-1}\sum_{n=0}^{w-1} I[i+m][j+n] * K[m][n] + b$$
 
 Where:
-- \( i, j \) are the indices of the output feature map.
-- \( m, n \) are the indices within the kernel.
-- \( * \) denotes element-wise multiplication.
+- $i, j$ are the indices of the output feature map.
+- $m, n$ are the indices within the kernel.
+- $*$ denotes element-wise multiplication.
 
 :p What is the 2D convolution operation?
 ??x
 The 2D convolution operation involves using a filter (kernel) to slide over an image and compute dot products at each position. This process helps in extracting features like edges, textures, or patterns from images.
 
 Mathematically:
-\[ O[i][j] = \sum_{m=0}^{h-1}\sum_{n=0}^{w-1} I[i+m][j+n] * K[m][n] + b \]
+$$O[i][j] = \sum_{m=0}^{h-1}\sum_{n=0}^{w-1} I[i+m][j+n] * K[m][n] + b$$
 
 Here:
-- \( O \) is the output feature map.
-- \( I \) is the input image.
-- \( K \) is the kernel/filter.
-- \( h, w \) are the height and width of the kernel.
-- \( m, n \) index the elements within the kernel.
+- $O$ is the output feature map.
+- $I$ is the input image.
+- $K$ is the kernel/filter.
+- $h, w$ are the height and width of the kernel.
+- $m, n$ index the elements within the kernel.
 
-The bias term \( b \) can be added to improve model performance. This operation is crucial for feature extraction in image processing tasks.
+The bias term $b$ can be added to improve model performance. This operation is crucial for feature extraction in image processing tasks.
 
 ```python
 # Example Pseudocode
@@ -88,15 +88,15 @@ x??
 #### 2D Transposed Convolution and Upsampling
 The 2D transposed convolution operation, also known as a deconvolution or up-convolution, is used to generate higher-resolution feature maps. It effectively "upsamples" the input by inserting gaps between values.
 
-For an output feature map of size \( H \times W \) from a transposed convolution with kernel size \( h \times w \), and stride \( s \):
+For an output feature map of size $H \times W $ from a transposed convolution with kernel size$h \times w $, and stride$ s$:
 
-\[ O[i][j] = I\left[\frac{i}{s}\right]\left[\frac{j}{s}\right] + b \]
+$$O[i][j] = I\left[\frac{i}{s}\right]\left[\frac{j}{s}\right] + b$$
 
 Where:
-- \( O \) is the output feature map.
-- \( I \) is the input feature map.
-- \( h, w \) are the height and width of the kernel.
-- \( s \) is the stride.
+- $O$ is the output feature map.
+- $I$ is the input feature map.
+- $h, w$ are the height and width of the kernel.
+- $s$ is the stride.
 
 This operation can be seen as inserting zeros between values to increase spatial dimensions while maintaining feature information from the original image.
 
@@ -105,9 +105,9 @@ This operation can be seen as inserting zeros between values to increase spatial
 A 2D transposed convolution, or deconvolution, upsamples an input by generating new values (often initialized with zeros) and applying them in between existing values. This effectively increases the spatial dimensions of the feature map while preserving the information from the original image.
 
 Mathematically:
-\[ O[i][j] = I\left[\frac{i}{s}\right]\left[\frac{j}{s}\right] + b \]
+$$O[i][j] = I\left[\frac{i}{s}\right]\left[\frac{j}{s}\right] + b$$
 
-Here, \( O \) is the output feature map, and \( I \) is the input feature map. The stride \( s \) determines how many gaps are inserted between values.
+Here,$O $ is the output feature map, and$I $ is the input feature map. The stride$s$ determines how many gaps are inserted between values.
 
 For example, if the input is a 2x2 matrix and the stride is 2, the transposed convolution will insert zeros in between to produce an 8x8 output:
 ```python
@@ -137,14 +137,13 @@ x??
 Dense layers (fully connected layers) are used in both the generator and discriminator networks to process features. Each neuron in a dense layer is fully connected to every neuron in the previous and next layer.
 
 The output of a dense layer can be calculated as:
-
-\[ O = \sigma(WX + b) \]
+$$O = \sigma(WX + b)$$
 
 Where:
-- \( W \) is the weight matrix.
-- \( X \) is the input vector.
-- \( b \) is the bias term.
-- \( \sigma \) is an activation function (e.g., ReLU, sigmoid).
+- $W$ is the weight matrix.
+- $X$ is the input vector.
+- $b$ is the bias term.
+- $\sigma$ is an activation function (e.g., ReLU, sigmoid).
 
 Dense layers are effective for tasks requiring dense feature extraction but can result in a large number of parameters, making them computationally expensive.
 
@@ -153,14 +152,13 @@ Dense layers are effective for tasks requiring dense feature extraction but can 
 Dense layers, also known as fully connected layers, are used extensively in both the generator and discriminator networks to process features. Each neuron in a dense layer is connected to every neuron in the previous and next layer. This allows for complex feature extraction but can lead to a large number of parameters.
 
 The output of a dense layer is calculated using the formula:
-
-\[ O = \sigma(WX + b) \]
+$$O = \sigma(WX + b)$$
 
 Where:
-- \( W \) is the weight matrix.
-- \( X \) is the input vector.
-- \( b \) is the bias term.
-- \( \sigma \) is an activation function (e.g., ReLU, sigmoid).
+- $W$ is the weight matrix.
+- $X$ is the input vector.
+- $b$ is the bias term.
+- $\sigma$ is an activation function (e.g., ReLU, sigmoid).
 
 Dense layers are used to transform and process feature maps into higher-level representations.
 
@@ -189,7 +187,7 @@ Convolutional Neural Networks (CNNs) are particularly effective at handling high
 
 Each neuron in a CNN layer is connected only to a small region of the input, reducing the number of parameters and making the network more efficient. The local connectivity helps in capturing detailed features at various scales.
 
-For example, a Conv2D layer with kernel size \( h \times w \) will process each patch of the image of size \( h \times w \).
+For example, a Conv2D layer with kernel size $h \times w $ will process each patch of the image of size$h \times w$.
 
 :p Why are CNNs effective for high-resolution images?
 ??x
@@ -197,7 +195,7 @@ CNNs are effective for high-resolution images because they treat images as multi
 
 Each neuron in a CNN layer is connected only to a small region of the input, which reduces the number of parameters and makes the network more efficient compared to fully connected layers.
 
-The local connectivity helps in capturing detailed features at various scales. For example, a Conv2D layer with kernel size \( h \times w \) will process each patch of the image of size \( h \times w \).
+The local connectivity helps in capturing detailed features at various scales. For example, a Conv2D layer with kernel size $h \times w $ will process each patch of the image of size$h \times w$.
 
 This approach is particularly useful for tasks like generating high-resolution color images where spatial resolution and detail are crucial.
 
@@ -618,7 +616,7 @@ For example, if the first dense layer in the discriminator has 784 inputs and 10
 ??x
 Mirroring works by reversing the input-output counts of each corresponding dense layer. For instance:
 
-- In the discriminator, if a layer has `inputs -> outputs` configuration like \( A \rightarrow B \), then in the generator, that same layer will have the reversed configuration: \( B \rightarrow A \).
+- In the discriminator, if a layer has `inputs -> outputs` configuration like $A \rightarrow B $, then in the generator, that same layer will have the reversed configuration: $ B \rightarrow A$.
 
 Here's an example to illustrate this concept with two layers:
 
@@ -663,11 +661,11 @@ x??
 
 #### Modifying Generator G for Clothing Item Generation
 
-Background context: In this exercise, you need to modify the generator \(G\) so that it has different output sizes in its first three layers compared to the original. The new output sizes are 1000, 500, and 200 instead of 1024, 512, and 256 respectively. This modification ensures that the generator's architecture mirrors the discriminator's structure used in exercise 4.1.
+Background context: In this exercise, you need to modify the generator $G$ so that it has different output sizes in its first three layers compared to the original. The new output sizes are 1000, 500, and 200 instead of 1024, 512, and 256 respectively. This modification ensures that the generator's architecture mirrors the discriminator's structure used in exercise 4.1.
 
-:p How should you modify the generator \(G\) to match the new layer sizes?
+:p How should you modify the generator $G$ to match the new layer sizes?
 ??x
-To modify the generator \(G\), you need to adjust the number of outputs in its first three layers as follows:
+To modify the generator $G$, you need to adjust the number of outputs in its first three layers as follows:
 - The first layer should have 1000 outputs.
 - The second layer should have 500 outputs.
 - The third layer should have 200 outputs.
@@ -695,11 +693,11 @@ x??
 
 #### Defining Loss Function and Optimizers for GANs
 
-Background context: The loss function used in this exercise is binary cross-entropy (BCE) because the discriminator \(D\) performs a binary classification problem, determining whether an input image is real or fake. Both the generator \(G\) and the discriminator \(D\) will use the Adam optimizer with a learning rate of 0.0001.
+Background context: The loss function used in this exercise is binary cross-entropy (BCE) because the discriminator $D $ performs a binary classification problem, determining whether an input image is real or fake. Both the generator$G $ and the discriminator$D$ will use the Adam optimizer with a learning rate of 0.0001.
 
 :p What loss function and optimizers are used in this exercise?
 ??x
-The loss function used is binary cross-entropy (BCE), which is suitable for the binary classification problem performed by the discriminator \(D\). The optimizers for both the generator \(G\) and the discriminator \(D\) are Adam with a learning rate of 0.0001.
+The loss function used is binary cross-entropy (BCE), which is suitable for the binary classification problem performed by the discriminator $D $. The optimizers for both the generator $ G $and the discriminator$ D$ are Adam with a learning rate of 0.0001.
 
 ```python
 # Define the loss function and optimizers
@@ -781,7 +779,7 @@ The `see_output()` function generates 32 fake images by passing random noise thr
 
 1. **Generate Fake Samples**:
    - Generate 32 samples from a standard normal distribution.
-   - Pass this noise to the generator \(G\) to produce fake samples.
+   - Pass this noise to the generator $G$ to produce fake samples.
 
 2. **Visualize the Generated Images**:
    - Normalize and reshape the generated images.
@@ -1130,11 +1128,7 @@ tensor([[[[ 7., 14.],
 This output has a shape of (1, 1, 2, 2) and contains the values: 7, 14, 54, and 50.
 
 To understand how these values are generated:
-- Top left corner: \( 1 \times 1 + 1 \times 2 + 0 \times 3 + 1 \times 4 = 7 \)
-- Top right corner: \( 1 \times 1 + 1 \times 2 + 1 \times 3 + 2 \times 4 = 14 \)
-- Bottom left corner: \( 8 \times 1 + 7 \times 2 + 6 \times 3 + 0 \times 4 = 54 \)
-- Bottom right corner: \( 8 \times 1 + 7 \times 2 + 6 \times 3 + 2 \times 4 = 50 \)
-x??
+- Top left corner:$1 \times 1 + 1 \times 2 + 0 \times 3 + 1 \times 4 = 7 $- Top right corner:$1 \times 1 + 1 \times 2 + 1 \times 3 + 2 \times 4 = 14 $- Bottom left corner:$8 \times 1 + 7 \times 2 + 6 \times 3 + 0 \times 4 = 54 $- Bottom right corner:$8 \times 1 + 7 \times 2 + 6 \times 3 + 2 \times 4 = 50$ x??
 
 ---
 
@@ -1144,10 +1138,9 @@ The convolution operation involves sliding the filter over the image and perform
 :p How does the convolution operation work for a specific position on the input image?
 ??x
 For a given position, the convolution operation works as follows:
-- **Top left corner**: The filter covers the area \([[1, 1], [0, 1]]\).
-  - Element-wise multiplication: \(1 \times 1 + 1 \times 2 + 0 \times 3 + 1 \times 4 = 7\)
-- **Bottom right corner**: The filter covers the area \([[8, 6], [2, 4]]\).
-  - Element-wise multiplication: \(8 \times 1 + 6 \times 2 + 2 \times 3 + 4 \times 4 = 50\)
+- **Top left corner**: The filter covers the area $[[1, 1], [0, 1]]$.
+  - Element-wise multiplication: $1 \times 1 + 1 \times 2 + 0 \times 3 + 1 \times 4 = 7 $- **Bottom right corner**: The filter covers the area $[[8, 6], [2, 4]]$.
+  - Element-wise multiplication: $8 \times 1 + 6 \times 2 + 2 \times 3 + 4 \times 4 = 50$
 
 The values in the covered area are multiplied element-wise with the filter's weights and then summed up.
 x??

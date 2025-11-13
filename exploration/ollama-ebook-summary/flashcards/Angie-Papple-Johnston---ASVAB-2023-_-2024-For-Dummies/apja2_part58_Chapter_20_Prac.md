@@ -96,7 +96,7 @@ The magnitude of an earthquake on the Richter scale indicates its strength logar
 ??x
 The earthquake would be 100 times stronger.
 x??
-An earthquake measuring 4 on the Richter scale is approximately 31.6 times more powerful than a magnitude 2 earthquake. Since \(10^{(4-2)} = 10^2 = 100\), it can also be described as being 100 times stronger.
+An earthquake measuring 4 on the Richter scale is approximately 31.6 times more powerful than a magnitude 2 earthquake. Since $10^{(4-2)} = 10^2 = 100$, it can also be described as being 100 times stronger.
 
 ---
 #### Muscle Attachment
@@ -230,13 +230,13 @@ The liver plays a crucial role in detoxification. It filters blood from the dige
 
 ---
 #### Kinetic Energy
-Kinetic energy refers to the energy possessed by an object due to its motion. It is calculated using the formula \(KE = \frac{1}{2}mv^2\), where \(m\) is mass and \(v\) is velocity.
+Kinetic energy refers to the energy possessed by an object due to its motion. It is calculated using the formula $KE = \frac{1}{2}mv^2 $, where $ m $is mass and$ v$ is velocity.
 
 :p What type of energy does a moving object possess?
 ??x
 The energy that a moving object possesses is kinetic energy.
 x??
-Kinetic energy is defined as the energy an object has due to its motion. It can be calculated using the formula \(KE = \frac{1}{2}mv^2\), where \(m\) represents mass and \(v\) represents velocity.
+Kinetic energy is defined as the energy an object has due to its motion. It can be calculated using the formula $KE = \frac{1}{2}mv^2 $, where $ m $represents mass and$ v$ represents velocity.
 
 ---
 #### Terrestrial Planets
@@ -314,17 +314,17 @@ Background context: The question involves calculating probabilities related to r
 
 :p What is the probability of not rolling a five on either die?
 ??x
-The probability of rolling a five on one die is \( \frac{1}{6} \). Therefore, the probability of **not** rolling a five on one die is \( \frac{5}{6} \).
+The probability of rolling a five on one die is $\frac{1}{6}$. Therefore, the probability of **not** rolling a five on one die is $\frac{5}{6}$.
 
 Since the two dice rolls are independent events, the probability of not rolling a five on either die is:
-\[ \left( \frac{5}{6} \right) \times \left( \frac{5}{6} \right) = \frac{25}{36} \]
+$$\left( \frac{5}{6} \right) \times \left( \frac{5}{6} \right) = \frac{25}{36}$$
 
-Thus, the correct answer is \( 1 - \frac{25}{36} = \frac{11}{36} \).
+Thus, the correct answer is $1 - \frac{25}{36} = \frac{11}{36}$.
 
 However, this question asks for the probability of not rolling a five on **either** die. The direct calculation gives:
-\[ \left( \frac{5}{6} \right) \times \left( \frac{5}{6} \right) = \frac{25}{36} \]
+$$\left( \frac{5}{6} \right) \times \left( \frac{5}{6} \right) = \frac{25}{36}$$
 
-So, the correct choice is \( \frac{25}{36} \).
+So, the correct choice is $\frac{25}{36}$.
 
 ??x
 D
@@ -333,73 +333,67 @@ D
 #### Interest Calculation for Loan
 
 Background context: The question involves calculating simple interest. Simple interest can be calculated using the formula:
-\[ I = P \times r \times t \]
-where \( I \) is the interest, \( P \) is the principal amount (the initial sum of money), \( r \) is the annual interest rate (in decimal form), and \( t \) is the time in years.
+$$I = P \times r \times t$$where $ I $is the interest,$ P $is the principal amount (the initial sum of money),$ r $ is the annual interest rate (in decimal form), and $ t$ is the time in years.
 
 :p How much will Bob owe Jack after one year?
 ??x
 Given:
-- Principal (\( P \)) = $1,500
-- Annual interest rate (\( r \)) = 7% or 0.07
-- Time (\( t \)) = 1 year
+- Principal ($P $) = $1,500
+- Annual interest rate ($r$) = 7% or 0.07
+- Time ($t$) = 1 year
 
 Using the simple interest formula:
-\[ I = 1500 \times 0.07 \times 1 = 105 \]
+$$I = 1500 \times 0.07 \times 1 = 105$$
 
 The total amount Bob will owe Jack after one year is the principal plus the interest:
-\[ A = P + I = 1500 + 105 = 1605 \]
+$$
 
-??x
+A = P + I = 1500 + 105 = 1605$$??x
 C
 
 ---
 #### Tax Calculation for Truck
 
-Background context: The question involves calculating a tax on a truck based on its weight. Given that the truck weighs 2 tons and is taxed at $0.12 per pound, we need to convert the weight of the truck from tons to pounds (1 ton = 2000 pounds) and then apply the tax rate.
+Background context: The question involves calculating a tax on a truck based on its weight. Given that the truck weighs 2 tons and is taxed at$0.12 per pound, we need to convert the weight of the truck from tons to pounds (1 ton = 2000 pounds) and then apply the tax rate.
 
 :p What is the total tax bill for the 2-ton truck?
 ??x
 First, convert the weight of the truck into pounds:
-\[ \text{Weight in pounds} = 2 \times 2000 = 4000 \]
+$$\text{Weight in pounds} = 2 \times 2000 = 4000$$
 
-The tax per pound is $0.12, so the total tax is:
-\[ \text{Total tax} = 4000 \times 0.12 = 480 \]
-
-??x
+The tax per pound is$0.12, so the total tax is:
+$$\text{Total tax} = 4000 \times 0.12 = 480$$??x
 A
 
 ---
 #### Equation Solving for y
 
-Background context: The question involves solving an equation with variables \( a \) and \( b \). Given the values of \( ab^{10} \) and \( ab^{2230} \), we need to find the value of \( y \).
+Background context: The question involves solving an equation with variables $a $ and$b $. Given the values of$ ab^{10}$and $ ab^{2230}$, we need to find the value of $ y$.
 
-:p Solve for \( y \) in the equation \( y = ab^2 \).
+:p Solve for $y $ in the equation$y = ab^2$.
 ??x
 Given:
-- \( a b^{10} = 45 \)
-- \( a b^{2230} = 2230 \)
+- $a b^{10} = 45 $-$ a b^{2230} = 2230 $We need to find the value of$ y = ab^2$.
 
-We need to find the value of \( y = ab^2 \).
-
-From \( a b^{10} = 45 \), we can express \( a \) as:
-\[ a = \frac{45}{b^{10}} \]
+From $a b^{10} = 45 $, we can express $ a$ as:
+$$a = \frac{45}{b^{10}}$$
 
 Substitute this into the second equation:
-\[ \left( \frac{45}{b^{10}} \right) b^{2230} = 2230 \]
-\[ 45 b^{2220} = 2230 \]
-\[ b^{2220} = \frac{2230}{45} \approx 49.56 \]
+$$\left( \frac{45}{b^{10}} \right) b^{2230} = 2230$$
+$$45 b^{2220} = 2230$$
+$$b^{2220} = \frac{2230}{45} \approx 49.56$$
 
-Now, find \( y = ab^2 \):
-\[ y = a b^2 = \left( \frac{45}{b^{10}} \right) b^2 = \frac{45 b^2}{b^{10}} = \frac{45}{b^8} \]
+Now, find $y = ab^2$:
+$$y = a b^2 = \left( \frac{45}{b^{10}} \right) b^2 = \frac{45 b^2}{b^{10}} = \frac{45}{b^8}$$
 
-Since \( b^{2220} \approx 49.56 \), we can take the eighth root of both sides:
-\[ b \approx (49.56)^{\frac{1}{2220}} \]
-\[ y = \frac{45}{(b^8)} \]
+Since $b^{2220} \approx 49.56$, we can take the eighth root of both sides:
+$$b \approx (49.56)^{\frac{1}{2220}}$$
+$$y = \frac{45}{(b^8)}$$
 
-Given \( b^{2220} \approx 49.56 \), we find that the value of \( y \) is approximately:
-\[ y = 45 / (49.56)^{\frac{1}{277.5}} \approx 50 \]
+Given $b^{2220} \approx 49.56 $, we find that the value of $ y$ is approximately:
+$$y = 45 / (49.56)^{\frac{1}{277.5}} \approx 50$$
 
-Thus, the correct choice is \( y = 50 \).
+Thus, the correct choice is $y = 50$.
 
 ??x
 C
@@ -412,27 +406,21 @@ Background context: The question involves converting between units (half-pints a
 :p What part of a gallon is a half-pint?
 ??x
 There are 16 half-pints in a gallon. Therefore, one half-pint is:
-\[ \frac{1}{16} \text{ of a gallon} \]
-
-??x
+$$\frac{1}{16} \text{ of a gallon}$$??x
 C
 
 ---
 #### Percent Increase Calculation
 
 Background context: The question involves calculating the percent increase from an original value to a new value. The formula for percent increase is:
-\[ \text{Percent Increase} = \left( \frac{\text{New Value} - \text{Original Value}}{\text{Original Value}} \right) \times 100 \]
-
-:p What is the percent increase from $2.50 to $2.80?
+$$\text{Percent Increase} = \left( \frac{\text{New Value} - \text{Original Value}}{\text{Original Value}} \right) \times 100$$:p What is the percent increase from $2.50 to$2.80?
 ??x
 Given:
 - Original value = $2.50
 - New value = $2.80
 
 Using the formula for percent increase:
-\[ \text{Percent Increase} = \left( \frac{2.80 - 2.50}{2.50} \right) \times 100 = \left( \frac{0.30}{2.50} \right) \times 100 = 0.12 \times 100 = 12\% \]
-
-??x
+$$\text{Percent Increase} = \left( \frac{2.80 - 2.50}{2.50} \right) \times 100 = \left( \frac{0.30}{2.50} \right) \times 100 = 0.12 \times 100 = 12\%$$??x
 B
 
 ---
@@ -443,30 +431,23 @@ Background context: The question involves converting a salary into net pay after
 :p How much is the computer programmer’s net pay?
 ??x
 Given:
-- Gross Salary = $25,000
+- Gross Salary =$25,000
 - Percentage withheld for federal and state deductions = 28%
 
 The amount withheld for deductions is:
-\[ \text{Deductions} = 25000 \times 0.28 = 7000 \]
+$$\text{Deductions} = 25000 \times 0.28 = 7000$$
 
-Net Pay = Gross Salary - Deductions
-\[ \text{Net Pay} = 25000 - 7000 = 18000 \]
-
-??x
+Net Pay = Gross Salary - Deductions$$\text{Net Pay} = 25000 - 7000 = 18000$$??x
 D
 
 ---
 #### Angle Supplement Calculation
 
-Background context: The question involves finding the supplement of an angle. The supplement of an angle \( x \) is given by:
-\[ 180^\circ - x \]
-
-:p What is the supplement of a 55-degree angle?
+Background context: The question involves finding the supplement of an angle. The supplement of an angle $x$ is given by:
+$$180^\circ - x$$:p What is the supplement of a 55-degree angle?
 ??x
 The supplement of a 55-degree angle is calculated as follows:
-\[ 180^\circ - 55^\circ = 125^\circ \]
-
-??x
+$$180^\circ - 55^\circ = 125^\circ$$??x
 B
 
 ---
@@ -481,12 +462,10 @@ Given:
 - Thickness of each piece = 4 inches
 
 First, convert the height to inches (since the thickness is given in inches):
-\[ \text{Height in inches} = 6 \times 12 = 72 \]
+$$\text{Height in inches} = 6 \times 12 = 72$$
 
 Now, divide the total height by the thickness:
-\[ \text{Number of pieces} = \frac{72}{4} = 18 \]
-
-??x
+$$\text{Number of pieces} = \frac{72}{4} = 18$$??x
 B
 
 ---
@@ -501,17 +480,15 @@ Given:
 - Size of each paving stone = 8 inches by 8 inches
 
 First, convert the dimensions of the patio into inches (since the size of the stone is in inches):
-\[ \text{Length} = 12 \times 12 = 144 \text{ inches} \]
-\[ \text{Width} = 14 \times 12 = 168 \text{ inches} \]
+$$\text{Length} = 12 \times 12 = 144 \text{ inches}$$
+$$\text{Width} = 14 \times 12 = 168 \text{ inches}$$
 
 Now, calculate how many paving stones fit in the length and width:
-\[ \text{Number of stones along the length} = \frac{144}{8} = 18 \]
-\[ \text{Number of stones along the width} = \frac{168}{8} = 21 \]
+$$\text{Number of stones along the length} = \frac{144}{8} = 18$$
+$$\text{Number of stones along the width} = \frac{168}{8} = 21$$
 
 The total number of paving stones needed is:
-\[ \text{Total stones} = 18 \times 21 = 378 \]
-
-??x
+$$\text{Total stones} = 18 \times 21 = 378$$??x
 C
 
 ---
@@ -522,16 +499,13 @@ Background context: The question involves calculating the net pay after deductio
 :p How much is the computer programmer’s net pay?
 ??x
 Given:
-- Gross Salary = $25,000
+- Gross Salary =$25,000
 - Percentage withheld for federal and state deductions = 28%
 
 The amount withheld for deductions is:
-\[ \text{Deductions} = 25000 \times 0.28 = 7000 \]
+$$\text{Deductions} = 25000 \times 0.28 = 7000$$
 
-Net Pay = Gross Salary - Deductions
-\[ \text{Net Pay} = 25000 - 7000 = 18000 \]
-
-??x
+Net Pay = Gross Salary - Deductions$$\text{Net Pay} = 25000 - 7000 = 18000$$??x
 D
 
 ---
@@ -542,9 +516,7 @@ Background context: The question involves understanding the concept of supplemen
 :p What is the supplement of a 55-degree angle?
 ??x
 The supplement of a 55-degree angle is:
-\[ 180^\circ - 55^\circ = 125^\circ \]
-
-??x
+$$180^\circ - 55^\circ = 125^\circ$$??x
 B
 
 ---
@@ -555,9 +527,7 @@ Background context: The question involves understanding the concept of supplemen
 :p What is the supplement of that 55-degree angle?
 ??x
 The supplement of a 55-degree angle is:
-\[ 180^\circ - 55^\circ = 125^\circ \]
-
-??x
+$$180^\circ - 55^\circ = 125^\circ$$??x
 B
 
 ---
@@ -568,9 +538,7 @@ Background context: The question involves understanding the concept of supplemen
 :p What is the supplement of that 55-degree angle?
 ??x
 The supplement of a 55-degree angle is:
-\[ 180^\circ - 55^\circ = 125^\circ \]
-
-??x
+$$180^\circ - 55^\circ = 125^\circ$$??x
 B
 
 ---
@@ -581,9 +549,7 @@ Background context: The question involves understanding the concept of supplemen
 :p What is the supplement of that 55-degree angle?
 ??x
 The supplement of a 55-degree angle is:
-\[ 180^\circ - 55^\circ = 125^\circ \]
-
-??x
+$$180^\circ - 55^\circ = 125^\circ$$??x
 B
 
 ---
@@ -594,9 +560,7 @@ Background context: The question involves understanding the concept of supplemen
 :p What is the supplement of that 55-degree angle?
 ??x
 The supplement of a 55-degree angle is:
-\[ 180^\circ - 55^\circ = 125^\circ \]
-
-??x
+$$180^\circ - 55^\circ = 125^\circ$$??x
 B
 
 ---
@@ -607,9 +571,7 @@ Background context: The question involves understanding the concept of supplemen
 :p What is the supplement of that 55-degree angle?
 ??x
 The supplement of a 55-degree angle is:
-\[ 180^\circ - 55^\circ = 125^\circ \]
-
-??x
+$$180^\circ - 55^\circ = 125^\circ$$??x
 B
 
 ---
@@ -620,9 +582,7 @@ Background context: The question involves understanding the concept of supplemen
 :p What is the supplement of that 55-degree angle?
 ??x
 The supplement of a 55-degree angle is:
-\[ 180^\circ - 55^\circ = 125^\circ \]
-
-??x
+$$180^\circ - 55^\circ = 125^\circ$$??x
 B
 
 ---
@@ -633,9 +593,7 @@ Background context: The question involves understanding the concept of supplemen
 :p What is the supplement of that 55-degree angle?
 ??x
 The supplement of a 55-degree angle is:
-\[ 180^\circ - 55^\circ = 125^\circ \]
-
-??x
+$$180^\circ - 55^\circ = 125^\circ$$??x
 B
 
 ---
@@ -646,9 +604,7 @@ Background context: The question involves understanding the concept of supplemen
 :p What is the supplement of that 55-degree angle?
 ??x
 The supplement of a 55-degree angle is:
-\[ 180^\circ - 55^\circ = 125^\circ \]
-
-??x
+$$180^\circ - 55^\circ = 125^\circ$$??x
 B
 
 ---
@@ -659,9 +615,7 @@ Background context: The question involves understanding the concept of supplemen
 :p What is the supplement of that 55-degree angle?
 ??x
 The supplement of a 55-degree angle is:
-\[ 180^\circ - 55^\circ = 125^\circ \]
-
-??x
+$$180^\circ - 55^\circ = 125^\circ$$??x
 B
 
 ---
@@ -672,7 +626,7 @@ Background context: The question involves understanding the concept of supplemen
 :p What is the supplement of that 55-degree angle?
 ??x
 The supplement of a 55-degree angle is:
-\[ 180^\circ - 55^\circ = 125^\circ \]
+$$180^\circ - 55^\circ = 125^\circ$$
 
 ??x
 B

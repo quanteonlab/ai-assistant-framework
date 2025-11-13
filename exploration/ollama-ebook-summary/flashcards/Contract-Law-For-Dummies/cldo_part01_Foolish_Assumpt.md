@@ -288,7 +288,7 @@ The three essential elements of contract formation include:
 - **Consideration**: Something of value exchanged between parties, often money or services.
 
 For example, an offer and acceptance scenario could be:
-"Company X offers to sell 10 units of Product Y at $50 each. Company Z accepts by sending a check for $500."
+"Company X offers to sell 10 units of Product Y at $50 each. Company Z accepts by sending a check for$500."
 
 ```text
 Example Scenario:

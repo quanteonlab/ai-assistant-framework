@@ -41,11 +41,11 @@ x??
 #### Example with Two State Dimensions
 Suppose a reinforcement learning problem has states with two numerical dimensions. We can represent each state using its two dimensions directly or by including polynomial terms.
 
-:p How can we represent a single state \( s \) in a simple manner?
+:p How can we represent a single state $s$ in a simple manner?
 ??x
-A simple way to represent a single state \( s \) is by directly using its two dimensions, so that the feature vector \( x(s) = (s_1, s_2) \). However, this representation does not account for any interactions between these dimensions.
+A simple way to represent a single state $s $ is by directly using its two dimensions, so that the feature vector$x(s) = (s_1, s_2)$. However, this representation does not account for any interactions between these dimensions.
 
-For instance, if both dimensions are zero (\( s_1 = 0 \), \( s_2 = 0 \)), the approximate value must also be zero. This might not accurately reflect the state's true value in many reinforcement learning problems.
+For instance, if both dimensions are zero ($s_1 = 0 $, $ s_2 = 0$), the approximate value must also be zero. This might not accurately reflect the state's true value in many reinforcement learning problems.
 x??
 
 ---
@@ -56,11 +56,9 @@ Background context: In linear methods, feature vectors can be constructed to rep
 
 :p What is a polynomial basis feature?
 ??x
-Polynomial basis features enable the representation of highly complex interactions within a problem's state dimensions by constructing a set of features based on polynomials. Each feature \( x_i(s) \) can be written as:
+Polynomial basis features enable the representation of highly complex interactions within a problem's state dimensions by constructing a set of features based on polynomials. Each feature $x_i(s)$ can be written as:
 
-\[ xi(s)=\prod_{j=1}^{k}s_{i,j}^{\alpha_j}, \]
-
-where each \( s_{i,j} \in \mathbb{R} \) and \( \alpha_j \) is an integer in the set {0, 1, ..., n}. For a k-dimensional state space, there are (n+1)^k distinct features.
+$$xi(s)=\prod_{j=1}^{k}s_{i,j}^{\alpha_j},$$where each $ s_{i,j} \in \mathbb{R}$and $\alpha_j$ is an integer in the set {0, 1, ..., n}. For a k-dimensional state space, there are (n+1)^k distinct features.
 
 This approach allows for more accurate approximations of complicated functions but can grow exponentially with the dimensionality of the state space.
 x??
@@ -69,14 +67,13 @@ x??
 
 Background context: The example provided shows how to construct polynomial basis feature vectors in practice. By choosing specific values, we can create a vector that includes various orders of interactions between state variables.
 
-:p What parameters produce the feature vector \( x(s) = (1, s_1, s_2, s_1s_2, s_2^1, s_2^2, s_1s_2^2, s_2^1s_2, s_2^1s_2^2) \)?
+:p What parameters produce the feature vector $x(s) = (1, s_1, s_2, s_1s_2, s_2^1, s_2^2, s_1s_2^2, s_2^1s_2, s_2^1s_2^2)$?
 ??x
-The feature vector \( x(s) = (1, s_1, s_2, s_1s_2, s_2^1, s_2^2, s_1s_2^2, s_2^1s_2, s_2^1s_2^2) \) is constructed using a polynomial basis where \( n = 2 \). The parameters are:
+The feature vector $x(s) = (1, s_1, s_2, s_1s_2, s_2^1, s_2^2, s_1s_2^2, s_2^1s_2, s_2^1s_2^2)$ is constructed using a polynomial basis where $n = 2$. The parameters are:
 
-- \( n = 2 \)
-- \( c_{i,j} \) values: For the term \( s_1 \), we have \( c_{1,0} = 1 \); for \( s_2^1 \), \( c_{2,1} = 1 \); for \( s_2^2 \), \( c_{2,2} = 1 \); and so on.
+- $n = 2 $-$ c_{i,j}$values: For the term $ s_1$, we have $ c_{1,0} = 1$; for $ s_2^1$,$ c_{2,1} = 1 $; for$ s_2^2 $,$ c_{2,2} = 1$; and so on.
 
-The feature vector includes first-order interactions (like \( s_1 \) and \( s_2 \)), second-order interactions (\( s_1s_2 \), \( s_2^2 \), \( s_1s_2^2 \)), and higher-order interactions like \( s_2^1s_2 \).
+The feature vector includes first-order interactions (like $s_1 $ and$s_2 $), second-order interactions ($ s_1s_2 $,$ s_2^2 $,$ s_1s_2^2 $), and higher-order interactions like$ s_2^1s_2$.
 x??
 
 #### Fourier Basis Features
@@ -85,26 +82,26 @@ Background context: The Fourier basis is another method for linear function appr
 
 :p What does the Fourier series express?
 ??x
-The Fourier series expresses a periodic function as a weighted sum of sine and cosine basis functions of different frequencies. For a one-dimensional case, if \( f(x) \) is a function of period \( \tau \), it can be represented by:
+The Fourier series expresses a periodic function as a weighted sum of sine and cosine basis functions of different frequencies. For a one-dimensional case, if $f(x)$ is a function of period $\tau$, it can be represented by:
 
-\[ f(x) = \sum_{n=0}^{\infty} a_n \cos\left(\frac{2\pi n x}{\tau}\right) + b_n \sin\left(\frac{2\pi n x}{\tau}\right). \]
+$$f(x) = \sum_{n=0}^{\infty} a_n \cos\left(\frac{2\pi n x}{\tau}\right) + b_n \sin\left(\frac{2\pi n x}{\tau}\right).$$
 
-Here, the coefficients \( a_n \) and \( b_n \) are determined by simple formulae based on the function to be approximated.
+Here, the coefficients $a_n $ and$b_n$ are determined by simple formulae based on the function to be approximated.
 
-If you want to approximate an aperiodic function over a bounded interval, you can use these Fourier basis features with \( \tau \) set to the length of the interval. In reinforcement learning, this method is useful because it is easy to apply and can perform well in various problems.
+If you want to approximate an aperiodic function over a bounded interval, you can use these Fourier basis features with $\tau$ set to the length of the interval. In reinforcement learning, this method is useful because it is easy to apply and can perform well in various problems.
 x??
 
 #### Using Fourier Basis for Aperiodic Functions
 
-Background context: When dealing with aperiodic functions defined over a bounded interval, you can use Fourier basis features by setting \( \tau \) to the length of the interval. This transforms the function into one period of the periodic linear combination of sine and cosine features.
+Background context: When dealing with aperiodic functions defined over a bounded interval, you can use Fourier basis features by setting $\tau$ to the length of the interval. This transforms the function into one period of the periodic linear combination of sine and cosine features.
 
 :p How do you approximate an aperiodic function using Fourier basis?
 ??x
-To approximate an aperiodic function defined over a bounded interval, set the period \( \tau \) to twice the length of the interval and restrict your attention to half the interval [0, \( \tau/2 \)]. In this context, only cosine features are needed because:
+To approximate an aperiodic function defined over a bounded interval, set the period $\tau $ to twice the length of the interval and restrict your attention to half the interval [0,$\tau/2$]. In this context, only cosine features are needed because:
 
-1. Set \( \tau = 2L \), where \( L \) is the length of the interval.
-2. Over the interval [0, \( \tau/2 \)], use only the cosine terms:
-   \[ f(x) = \sum_{n=0}^{\infty} a_n \cos\left(\frac{2\pi n x}{2L}\right). \]
+1. Set $\tau = 2L $, where $ L$ is the length of the interval.
+2. Over the interval [0, $\tau/2$], use only the cosine terms:
+   $$f(x) = \sum_{n=0}^{\infty} a_n \cos\left(\frac{2\pi n x}{2L}\right).$$
 
 This approach simplifies the problem by leveraging the properties of Fourier series and ensuring that the function is represented accurately within the specified interval.
 x??
@@ -112,57 +109,55 @@ x??
 ---
 
 #### Fourier Cosine Basis Representation
-Background context explaining the concept. The text discusses how any function over the half-period \([0, \tau/2]\) can be approximated using cosine basis functions. These features are particularly useful for even functions and continuous functions that are well-behaved.
+Background context explaining the concept. The text discusses how any function over the half-period $[0, \tau/2]$ can be approximated using cosine basis functions. These features are particularly useful for even functions and continuous functions that are well-behaved.
 
-The one-dimensional order-n Fourier cosine basis consists of the \(n+1\) features:
-\[ x_i(s) = \cos(i\pi s), \quad s \in [0, 1], \quad i=0, ..., n. \]
-
-:p What is the general form of the one-dimensional Fourier cosine basis function?
+The one-dimensional order-n Fourier cosine basis consists of the $n+1$ features:
+$$x_i(s) = \cos(i\pi s), \quad s \in [0, 1], \quad i=0, ..., n.$$:p What is the general form of the one-dimensional Fourier cosine basis function?
 ??x
 The general form of the one-dimensional Fourier cosine basis function is:
-\[ x_i(s) = \cos(i\pi s), \quad s \in [0, 1], \quad i=0, ..., n. \]
-This means that for each integer \(i\) from 0 to \(n\), a cosine function with frequency \(i\) is used as a basis feature.
+$$x_i(s) = \cos(i\pi s), \quad s \in [0, 1], \quad i=0, ..., n.$$
+
+This means that for each integer $i $ from 0 to$n $, a cosine function with frequency$ i$ is used as a basis feature.
 
 ---
 #### Multi-dimensional Fourier Cosine Basis
 The text explains the multi-dimensional case where the state space corresponds to a vector of numbers, and how the Fourier cosine series approximation works in this context. Each feature is defined by:
-\[ x_i(s) = \cos(\pi s^T c_i), \quad s \in [0, 1]^k, \quad i=0, ..., (n+1)^k. \]
+$$x_i(s) = \cos(\pi s^T c_i), \quad s \in [0, 1]^k, \quad i=0, ..., (n+1)^k.$$
 
-Here, \(c_i\) is a vector of integers from \{0, ..., n\} for each dimension.
+Here,$c_i$ is a vector of integers from \{0, ..., n\} for each dimension.
 
 :p What is the general form of the multi-dimensional Fourier cosine basis function?
 ??x
 The general form of the multi-dimensional Fourier cosine basis function is:
-\[ x_i(s) = \cos(\pi s^T c_i), \quad s \in [0, 1]^k, \quad i=0, ..., (n+1)^k. \]
-This means that for each possible combination of integer vectors \(c_i\) in the range \{0, ..., n\} for each dimension, a cosine function with frequency determined by \(c_i\) is used as a basis feature.
+$$x_i(s) = \cos(\pi s^T c_i), \quad s \in [0, 1]^k, \quad i=0, ..., (n+1)^k.$$
+
+This means that for each possible combination of integer vectors $c_i $ in the range \{0, ..., n\} for each dimension, a cosine function with frequency determined by$c_i$ is used as a basis feature.
 
 ---
 #### Step-size Parameter Adjustment
-Konidaris et al. suggest adjusting the step-size parameter for each Fourier cosine feature when using learning algorithms like semi-gradient TD(0) or Sarsa. The basic step-size parameter is \(\alpha\), and the adjusted step-size for feature \(x_i\) is:
-\[ \alpha_i = \frac{\alpha}{\sqrt{c_{i1}^2 + \cdots + c_{ik}^2}}, \]
-where \(c_i = (c_{i1}, \ldots, c_{ik})\) is the vector defining the feature. If all components of \(c_i\) are zero, then \(\alpha_i = \alpha\).
+Konidaris et al. suggest adjusting the step-size parameter for each Fourier cosine feature when using learning algorithms like semi-gradient TD(0) or Sarsa. The basic step-size parameter is $\alpha $, and the adjusted step-size for feature $ x_i$is:
+$$\alpha_i = \frac{\alpha}{\sqrt{c_{i1}^2 + \cdots + c_{ik}^2}},$$where $ c_i = (c_{i1}, \ldots, c_{ik})$is the vector defining the feature. If all components of $ c_i$are zero, then $\alpha_i = \alpha$.
 
 :p How does one adjust the step-size parameter for each Fourier cosine feature?
 ??x
 The step-size parameter for each Fourier cosine feature is adjusted as follows:
-\[ \alpha_i = \frac{\alpha}{\sqrt{c_{i1}^2 + \cdots + c_{ik}^2}}, \]
-where \(c_i = (c_{i1}, \ldots, c_{ik})\) is the vector defining the feature. This adjustment ensures that features with higher frequencies are updated more slowly than those with lower frequencies.
+$$\alpha_i = \frac{\alpha}{\sqrt{c_{i1}^2 + \cdots + c_{ik}^2}},$$where $ c_i = (c_{i1}, \ldots, c_{ik})$ is the vector defining the feature. This adjustment ensures that features with higher frequencies are updated more slowly than those with lower frequencies.
 
 ---
 #### Example of Fourier Cosine Features in Two Dimensions
-The text provides an example where each state dimension can vary from 0 to 1 and shows how six different Fourier cosine features can be constructed for \(k=2\).
+The text provides an example where each state dimension can vary from 0 to 1 and shows how six different Fourier cosine features can be constructed for $k=2$.
 
-:p What does the vector \(c_i\) represent in a two-dimensional Fourier cosine feature?
+:p What does the vector $c_i$ represent in a two-dimensional Fourier cosine feature?
 ??x
-In a two-dimensional Fourier cosine feature, the vector \(c_i = (c_{i1}, c_{i2})\) represents the frequency components along each dimension. Each component of \(c_i\) is an integer from 0 to n, determining the frequency of the cosine function in that dimension.
+In a two-dimensional Fourier cosine feature, the vector $c_i = (c_{i1}, c_{i2})$ represents the frequency components along each dimension. Each component of $c_i$ is an integer from 0 to n, determining the frequency of the cosine function in that dimension.
 
 ---
 #### Interaction Between State Variables
-For features where neither component of \(c_i\) is zero, they represent interactions between state variables. The values of \(c_{i1}\) and \(c_{i2}\) determine the frequency along each dimension, and their ratio gives the direction of the interaction.
+For features where neither component of $c_i $ is zero, they represent interactions between state variables. The values of$c_{i1}$ and $c_{i2}$ determine the frequency along each dimension, and their ratio gives the direction of the interaction.
 
 :p How do Fourier cosine features represent interactions between state variables?
 ??x
-Fourier cosine features can represent interactions between state variables when both components of the vector \(c_i\) are non-zero. The values \(c_{i1}\) and \(c_{i2}\) determine the frequency along each dimension, with their ratio indicating the direction of interaction.
+Fourier cosine features can represent interactions between state variables when both components of the vector $c_i $ are non-zero. The values$c_{i1}$ and $c_{i2}$ determine the frequency along each dimension, with their ratio indicating the direction of interaction.
 
 ---
 #### Application Example
@@ -267,9 +262,7 @@ x??
 
 Background context: In machine learning, particularly in linear function approximation for on-policy prediction with approximation methods, coarse coding is a technique where states are represented by features that overlap in their receptive fields. These features can be thought of as circles (or more generally, any shape) in state space. If the state lies within a feature's receptive field, then the corresponding binary feature has a value of 1; otherwise, it has a value of 0.
 
-Relevant formulas: The value function approximation \( \hat{V}(s) \) is computed using linear combinations of features. Specifically,
-\[ \hat{V}(s) = w_1 f_1(s) + w_2 f_2(s) + ... + w_n f_n(s) \]
-where \( f_i(s) \) are the binary features corresponding to the receptive fields, and \( w_i \) are the weights associated with these features.
+Relevant formulas: The value function approximation $\hat{V}(s)$ is computed using linear combinations of features. Specifically,$$\hat{V}(s) = w_1 f_1(s) + w_2 f_2(s) + ... + w_n f_n(s)$$where $ f_i(s)$are the binary features corresponding to the receptive fields, and $ w_i$ are the weights associated with these features.
 
 :p What is coarse coding?
 ??x
@@ -407,7 +400,7 @@ The feature vector for a state in tile coding is constructed by having one compo
 
 :p How is the feature vector represented using tile coding?
 ??x
-In tile coding, the feature vector \( x(s) \) for a state \( s \) has one component for each active tile in each tiling. For example, if there are 4 tilings with 4×4 tiles each, resulting in 64 components (since 4 × 4 × 4 = 64). Only the components corresponding to the active tiles will be non-zero.
+In tile coding, the feature vector $x(s)$ for a state $s$ has one component for each active tile in each tiling. For example, if there are 4 tilings with 4×4 tiles each, resulting in 64 components (since 4 × 4 × 4 = 64). Only the components corresponding to the active tiles will be non-zero.
 
 For instance:
 ```java
@@ -433,11 +426,11 @@ x??
 
 ---
 #### Step-Size Parameter in Tile Coding
-The step-size parameter \( \alpha \) is set based on the number of tilings. Using multiple tilings with a single learning rate can achieve exact one-trial learning.
+The step-size parameter $\alpha$ is set based on the number of tilings. Using multiple tilings with a single learning rate can achieve exact one-trial learning.
 
 :p How do you determine the step-size parameter for tile coding?
 ??x
-To determine the step-size parameter \( \alpha \), it is often adjusted based on the number of tilings used. If using 50 tilings, setting \( \alpha = \frac{1}{n} \) where \( n \) is the number of tilings can result in exact one-trial learning.
+To determine the step-size parameter $\alpha $, it is often adjusted based on the number of tilings used. If using 50 tilings, setting $\alpha = \frac{1}{n}$ where $n$ is the number of tilings can result in exact one-trial learning.
 
 For example:
 ```java
@@ -530,7 +523,7 @@ Background context: Miller and Glanz (1996) recommend using displacement vectors
 
 :p What are the recommended displacement vectors according to Miller and Glanz (1996)?
 ??x
-The recommended displacement vectors consist of the first odd integers: \(1, 3, 5, 7, \ldots, 2k-1\). For example, if \(k = 2\), the vectors would be \((1, 3)\).
+The recommended displacement vectors consist of the first odd integers: $1, 3, 5, 7, \ldots, 2k-1 $. For example, if $ k = 2 $, the vectors would be$(1, 3)$.
 x??
 
 ---
@@ -538,11 +531,11 @@ x??
 #### Number of Tilings and Resolution
 Background context: The number of tilings and the size of tiles determine the resolution or fineness of the asymptotic approximation. Choosing a higher number of tilings along with larger tile sizes can improve the accuracy but may also increase computational complexity.
 
-:p How does the choice of \(n\) (number of tilings) and the displacement vector affect the resolution?
+:p How does the choice of $n$ (number of tilings) and the displacement vector affect the resolution?
 ??x
-Increasing the number of tilings (\(n\)) and choosing appropriate displacement vectors improves the resolution or fineness of the approximation. For a given dimension \(k\), setting \(n \geq 4^k\) is suggested to ensure adequate coverage of the continuous space.
+Increasing the number of tilings ($n $) and choosing appropriate displacement vectors improves the resolution or fineness of the approximation. For a given dimension $ k $, setting$ n \geq 4^k$ is suggested to ensure adequate coverage of the continuous space.
 
-For example, if \(k = 2\), then \(n = 2^{3} = 8\) (since at least \(4^2 = 16\) tilings are needed but we set it to an integer power of 2 greater than or equal to this value).
+For example, if $k = 2 $, then $ n = 2^{3} = 8 $(since at least$4^2 = 16$ tilings are needed but we set it to an integer power of 2 greater than or equal to this value).
 
 ```java
 public class TilingExample {
@@ -634,7 +627,7 @@ Background context: Conjunctive rectangular tiles are essential for learning spe
 ??x
 Conjunctive rectangular tiles are necessary because they allow the model to learn specific values for conjunctions of coordinates. Using only stripe tilings, such as horizontal or vertical stripes, would lead to bleed-through where a value learned for one state is applied to similar states with the same coordinate but different conjunctions.
 
-For example, if the model learns a value for \((x_1, x_2)\), this learning must not be shared with \((x_1, y_2)\) unless explicitly defined through conjunctive tiles. Conjunctive tiles ensure that specific state values are learned accurately without contamination from similar but distinct states.
+For example, if the model learns a value for $(x_1, x_2)$, this learning must not be shared with $(x_1, y_2)$ unless explicitly defined through conjunctive tiles. Conjunctive tiles ensure that specific state values are learned accurately without contamination from similar but distinct states.
 
 ```java
 public class ConjointTileExample {

@@ -26,7 +26,7 @@ public class ReplaceDemo2 {
         Pattern r = Pattern.compile(patt);
         Matcher m = r.matcher(input);
         m.find();
-        System.out.println("Replaced: " + m.replaceFirst("$2, $1"));
+        System.out.println("Replaced: " + m.replaceFirst("$2,$1"));
     }
 }
 ```

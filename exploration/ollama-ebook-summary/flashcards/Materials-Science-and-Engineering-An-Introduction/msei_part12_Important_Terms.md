@@ -5,56 +5,56 @@
 ---
 
 #### Average Atomic Weight of a Two-Component Alloy (4.11a)
-Background context: The average atomic weight (\(A_{\text{ave}}\)) of a two-component alloy can be calculated using the formula \(A_{\text{ave}} = C_1 A_1 + C_2 A_2\), where:
-- \(C_1\) and \(C_2\) are the atom percent of elements 1 and 2 in the alloy.
-- \(A_1\) and \(A_2\) are their respective atomic weights.
+Background context: The average atomic weight ($A_{\text{ave}}$) of a two-component alloy can be calculated using the formula $ A_{\text{ave}} = C_1 A_1 + C_2 A_2$, where:
+- $C_1 $ and$C_2$ are the atom percent of elements 1 and 2 in the alloy.
+- $A_1 $ and$A_2$ are their respective atomic weights.
 
 This concept is crucial for understanding the properties of alloys, as it directly impacts mechanical behavior and phase composition.
 
-:p What is the formula to calculate the average atomic weight (\(A_{\text{ave}}\)) of a two-component alloy?
+:p What is the formula to calculate the average atomic weight ($A_{\text{ave}}$) of a two-component alloy?
 ??x
-The formula to calculate the average atomic weight of a two-component alloy is \(A_{\text{ave}} = C_1 A_1 + C_2 A_2\), where \(C_1\) and \(C_2\) are the atom percent, and \(A_1\) and \(A_2\) are the atomic weights of elements 1 and 2 in the alloy.
+The formula to calculate the average atomic weight of a two-component alloy is $A_{\text{ave}} = C_1 A_1 + C_2 A_2 $, where $ C_1 $and$ C_2 $are the atom percent, and$ A_1 $and$ A_2$ are the atomic weights of elements 1 and 2 in the alloy.
 x??
 
 ---
 
 #### Mean Intercept Length (4.16)
-Background context: The mean intercept length (\(\ell\)) is a measure used to determine the average grain diameter in metals using the intercept technique. It is calculated as \(\ell = \frac{L_T P}{PM}\), where:
-- \(L_T\) is the total line length.
-- \(P\) is the number of grain boundary intersections.
-- \(M\) is the magnification.
+Background context: The mean intercept length ($\ell $) is a measure used to determine the average grain diameter in metals using the intercept technique. It is calculated as $\ell = \frac{L_T P}{PM}$, where:
+- $L_T$ is the total line length.
+- $P$ is the number of grain boundary intersections.
+- $M$ is the magnification.
 
 This method helps in understanding the microstructure and estimating grain size, which affects mechanical properties like strength and ductility.
 
-:p What is the formula for calculating the mean intercept length (\(\ell\))?
+:p What is the formula for calculating the mean intercept length ($\ell$)?
 ??x
-The formula for calculating the mean intercept length (\(\ell\)) using the intercept technique is \(\ell = \frac{L_T P}{PM}\), where \(L_T\) is the total line length, \(P\) is the number of grain boundary intersections, and \(M\) is the magnification.
+The formula for calculating the mean intercept length ($\ell $) using the intercept technique is $\ell = \frac{L_T P}{PM}$, where $ L_T$is the total line length,$ P $is the number of grain boundary intersections, and$ M$ is the magnification.
 x??
 
 ---
 
 #### Number of Grains per Square Inch at 100× Magnification (4.17)
-Background context: The number of grains (\(n\)) per square inch at a magnification of 100× can be calculated using the formula \(n = 2G - 1\), where \(G\) is the ASTM grain-size number.
+Background context: The number of grains ($n $) per square inch at a magnification of 100× can be calculated using the formula $ n = 2G - 1 $, where$ G$ is the ASTM grain-size number.
 
 This relationship helps in quantifying the microstructure and comparing it across different materials or samples.
 
-:p What is the formula for calculating the number of grains (\(n\)) per square inch at a magnification of 100×?
+:p What is the formula for calculating the number of grains ($n$) per square inch at a magnification of 100×?
 ??x
-The formula for calculating the number of grains (\(n\)) per square inch at a magnification of 100× is \(n = 2G - 1\), where \(G\) is the ASTM grain-size number.
+The formula for calculating the number of grains ($n $) per square inch at a magnification of 100× is $ n = 2G - 1 $, where$ G$ is the ASTM grain-size number.
 x??
 
 ---
 
 #### Number of Grains per Square Inch at Other Magnifications (4.18)
-Background context: The formula for calculating the number of grains (\(n_M\)) per square inch at a magnification other than 100× is given by \(n_M = \frac{(2G - 1)(100^2)}{M^2}\), where:
-- \(G\) is the ASTM grain-size number.
-- \(M\) is the magnification.
+Background context: The formula for calculating the number of grains ($n_M $) per square inch at a magnification other than 100× is given by $ n_M = \frac{(2G - 1)(100^2)}{M^2}$, where:
+- $G$ is the ASTM grain-size number.
+- $M$ is the magnification.
 
 This allows for the adjustment of grain size measurements to any given magnification, aiding in accurate analysis and comparison.
 
-:p What is the formula for calculating the number of grains (\(n_M\)) per square inch at a magnification other than 100×?
+:p What is the formula for calculating the number of grains ($n_M$) per square inch at a magnification other than 100×?
 ??x
-The formula for calculating the number of grains (\(n_M\)) per square inch at a magnification other than 100× is \(n_M = \frac{(2G - 1)(100^2)}{M^2}\), where \(G\) is the ASTM grain-size number and \(M\) is the magnification.
+The formula for calculating the number of grains ($n_M $) per square inch at a magnification other than 100× is $ n_M = \frac{(2G - 1)(100^2)}{M^2}$, where $ G$is the ASTM grain-size number and $ M$ is the magnification.
 x??
 
 ---
@@ -120,27 +120,25 @@ x??
 Background context: Fick’s laws describe the rate of mass transfer in solids, liquids, and gases due to the movement of particles from high concentration regions to low concentration regions.
 
 Fick's First Law:
-\[ J = -D \frac{\Delta c}{\Delta x} \]
+$$J = -D \frac{\Delta c}{\Delta x}$$
 
 Fick's Second Law:
-\[ \frac{\partial c}{\partial t} = D \frac{\partial^2 c}{\partial x^2} \]
+$$\frac{\partial c}{\partial t} = D \frac{\partial^2 c}{\partial x^2}$$
 
 Where:
-- \( J \) is the diffusional flux (mol/m²·s)
-- \( D \) is the diffusion coefficient (m²/s)
-- \( c \) is the concentration (mol/m³)
-- \( t \) is time (s)
-- \( x \) is position (m)
+- $J$ is the diffusional flux (mol/m²·s)
+- $D$ is the diffusion coefficient (m²/s)
+- $c$ is the concentration (mol/m³)
+- $t$ is time (s)
+- $x$ is position (m)
 
 :p Write Fick’s first and second laws in equation form and define all parameters.
 ??x
 Fick's First Law:
-\[ J = -D \frac{\Delta c}{\Delta x} \]
-where \( J \) is the diffusional flux, \( D \) is the diffusion coefficient, \( \Delta c \) is the concentration difference, and \( \Delta x \) is the distance.
+$$J = -D \frac{\Delta c}{\Delta x}$$where $ J $is the diffusional flux,$ D $is the diffusion coefficient,$\Delta c $ is the concentration difference, and$\Delta x$ is the distance.
 
 Fick's Second Law:
-\[ \frac{\partial c}{\partial t} = D \frac{\partial^2 c}{\partial x^2} \]
-where \( c \) is the concentration, \( t \) is time, and \( x \) is position.
+$$\frac{\partial c}{\partial t} = D \frac{\partial^2 c}{\partial x^2}$$where $ c $is the concentration,$ t $ is time, and $ x$ is position.
 x??
 ---
 
@@ -150,33 +148,31 @@ Background context: For diffusion into a semi-infinite solid with constant surfa
 
 :p Write the solution to Fick’s second law for diffusion into a semi-infinite solid when the concentration at the surface is held constant.
 ??x
-The solution to Fick's Second Law for diffusion into a semi-infinite solid, where the concentration \( c \) at the surface \( x = 0 \) is held constant and the initial condition is \( c(x, t=0) = 0 \), is given by:
+The solution to Fick's Second Law for diffusion into a semi-infinite solid, where the concentration $c $ at the surface$x = 0 $ is held constant and the initial condition is$c(x, t=0) = 0$, is given by:
 
-\[ c(x,t) = C_0 e^{-\frac{D t}{x^2}} \]
-
-where:
-- \( C_0 \) is the concentration at the surface,
-- \( D \) is the diffusion coefficient,
-- \( x \) is the distance from the surface,
-- \( t \) is time.
+$$c(x,t) = C_0 e^{-\frac{D t}{x^2}}$$where:
+- $C_0$ is the concentration at the surface,
+- $D$ is the diffusion coefficient,
+- $x$ is the distance from the surface,
+- $t$ is time.
 x??
 ---
 
 ---
 #### Diffusion Coefficient Calculation
-Background context: The diffusion coefficient (\( D \)) characterizes how fast atoms diffuse in a material. It can be calculated using appropriate constants and temperatures.
+Background context: The diffusion coefficient ($D$) characterizes how fast atoms diffuse in a material. It can be calculated using appropriate constants and temperatures.
 
 :p Calculate the diffusion coefficient for a material at a specified temperature, given the appropriate diffusion constants.
 ??x
-The diffusion coefficient \( D \) is typically calculated using the Arrhenius equation:
+The diffusion coefficient $D$ is typically calculated using the Arrhenius equation:
 
-\[ D = A e^{-\frac{E_a}{RT}} \]
+$$D = A e^{-\frac{E_a}{RT}}$$
 
 Where:
-- \( A \) is the pre-exponential factor,
-- \( E_a \) is the activation energy (J/mol),
-- \( R \) is the gas constant (\( 8.314 \, \text{J/(mol·K)} \)),
-- \( T \) is the temperature in Kelvin.
+- $A$ is the pre-exponential factor,
+- $E_a$ is the activation energy (J/mol),
+- $R $ is the gas constant ($8.314 \, \text{J/(mol·K)}$),
+- $T$ is the temperature in Kelvin.
 
 For example:
 ```java
@@ -241,32 +237,31 @@ Background context explaining the concept. The rate of mass transfer in diffusio
 
 :p What is the diffusion flux?
 ??x
-The diffusion flux \( J \) represents the rate at which an element diffuses through and perpendicular to a unit cross-sectional area of solid per unit time. It is mathematically represented as:
-\[ J = \frac{M}{A t} \]
-where \( M \) is the mass (or number of atoms) diffusing, \( A \) is the cross-sectional area across which diffusion occurs, and \( t \) is the elapsed diffusion time.
+The diffusion flux $J$ represents the rate at which an element diffuses through and perpendicular to a unit cross-sectional area of solid per unit time. It is mathematically represented as:
+$$J = \frac{M}{A t}$$where $ M $is the mass (or number of atoms) diffusing,$ A $ is the cross-sectional area across which diffusion occurs, and $ t$ is the elapsed diffusion time.
 x??
 
 ---
 
 ---
 #### Units for J
-Background context: The units of \(J\) are given as kilograms per meter squared per second (kg/m²·s) or atoms per meter squared per second (atoms/m²·s). This notation is used to describe the diffusion flux, which measures the rate at which particles move through a medium.
+Background context: The units of $J$ are given as kilograms per meter squared per second (kg/m²·s) or atoms per meter squared per second (atoms/m²·s). This notation is used to describe the diffusion flux, which measures the rate at which particles move through a medium.
 
-:p What are the units for \(J\)?
+:p What are the units for $J$?
 ??x
-The units for \(J\) are kilograms per meter squared per second (kg/m²·s) or atoms per meter squared per second (atoms/m²·s), representing the rate of particle movement.
+The units for $J$ are kilograms per meter squared per second (kg/m²·s) or atoms per meter squared per second (atoms/m²·s), representing the rate of particle movement.
 x??
 
 ---
 #### Fick’s First Law
-Background context: Fick's first law describes the steady-state diffusion flux in a single direction. The equation is given as \(J = -D \frac{dC}{dx}\), where \(J\) is the diffusion flux, \(D\) is the diffusion coefficient, and \(\frac{dC}{dx}\) is the concentration gradient.
+Background context: Fick's first law describes the steady-state diffusion flux in a single direction. The equation is given as $J = -D \frac{dC}{dx}$, where $ J$is the diffusion flux,$ D $is the diffusion coefficient, and$\frac{dC}{dx}$ is the concentration gradient.
 
 :p What does Fick's first law describe?
 ??x
-Fick's first law describes the steady-state diffusion flux in a single direction. The equation for this is \(J = -D \frac{dC}{dx}\), where:
-- \(J\) is the diffusion flux,
-- \(D\) is the diffusion coefficient, expressed in square meters per second (m²/s),
-- \(\frac{dC}{dx}\) is the concentration gradient.
+Fick's first law describes the steady-state diffusion flux in a single direction. The equation for this is $J = -D \frac{dC}{dx}$, where:
+- $J$ is the diffusion flux,
+- $D$ is the diffusion coefficient, expressed in square meters per second (m²/s),
+- $\frac{dC}{dx}$ is the concentration gradient.
 
 The negative sign indicates that diffusion occurs down the concentration gradient, from a high to a low concentration.
 x??
@@ -282,71 +277,63 @@ x??
 
 ---
 #### Concentration Profile and Gradient
-Background context: The concentration profile is a curve representing how concentration \(C\) varies with position \(x\). The concentration gradient \(\frac{dC}{dx}\) at any point on this curve can be calculated as \(\Delta C / \Delta x = \frac{CA - CB}{xA - xB}\), where \(CA\) and \(CB\) are concentrations at points \(xA\) and \(xB\).
+Background context: The concentration profile is a curve representing how concentration $C $ varies with position$x $. The concentration gradient $\frac{dC}{dx}$ at any point on this curve can be calculated as $\Delta C / \Delta x = \frac{CA - CB}{xA - xB}$, where $ CA$and $ CB$are concentrations at points $ xA$and $ xB$.
 
 :p What is the formula for concentration gradient?
 ??x
 The formula for the concentration gradient is:
-\[
-\frac{dC}{dx} = \frac{\Delta C}{\Delta x} = \frac{CA - CB}{xA - xB}
-\]
-where \(CA\) and \(CB\) are concentrations at points \(xA\) and \(xB\) respectively.
+$$\frac{dC}{dx} = \frac{\Delta C}{\Delta x} = \frac{CA - CB}{xA - xB}$$where $ CA $ and $ CB $ are concentrations at points $ xA $ and $ xB$ respectively.
 x??
 
 ---
 #### Diffusion Coefficient
-Background context: The diffusion coefficient \(D\) is a constant of proportionality in Fick's first law. It measures the rate of diffusion and is expressed in square meters per second (m²/s).
+Background context: The diffusion coefficient $D$ is a constant of proportionality in Fick's first law. It measures the rate of diffusion and is expressed in square meters per second (m²/s).
 
 :p What does the diffusion coefficient represent?
 ??x
-The diffusion coefficient \(D\) represents the rate at which particles diffuse through a medium, measured in square meters per second (m²/s).
+The diffusion coefficient $D$ represents the rate at which particles diffuse through a medium, measured in square meters per second (m²/s).
 x??
 
 ---
 
 #### Fick's First Law and Steady-State Diffusion
 Background context explaining the concept. Fick's first law is used to determine the diffusion flux under steady-state conditions. The formula given by Equation 5.2 is:
-\[ J = -D \frac{C_A - C_B}{x_A - x_B} \]
-
-:p What does Fick's first law calculate?
+$$J = -D \frac{C_A - C_B}{x_A - x_B}$$:p What does Fick's first law calculate?
 ??x
-Fick's first law calculates the diffusion flux (J) through a material under steady-state conditions, where \( D \) is the diffusion coefficient, and \( C_A - C_B \) and \( x_A - x_B \) represent the concentration difference and distance between two points respectively.
+Fick's first law calculates the diffusion flux (J) through a material under steady-state conditions, where $D $ is the diffusion coefficient, and$C_A - C_B $ and$x_A - x_B$ represent the concentration difference and distance between two points respectively.
 x??
 
 ---
 
 #### Nonsteady-State Diffusion
 Background context explaining the concept. When the condition of nonsteady state is achieved, Fick's second law (Equation 5.4a) is used:
-\[ \frac{\partial C}{\partial t} = D \frac{\partial^2 C}{\partial x^2} \]
-
-:p What is used to describe diffusion in a nonsteady-state condition?
+$$\frac{\partial C}{\partial t} = D \frac{\partial^2 C}{\partial x^2}$$:p What is used to describe diffusion in a nonsteady-state condition?
 ??x
-Fick's second law, given by the equation \( \frac{\partial C}{\partial t} = D \frac{\partial^2 C}{\partial x^2} \), is used to describe diffusion in a nonsteady-state condition.
+Fick's second law, given by the equation $\frac{\partial C}{\partial t} = D \frac{\partial^2 C}{\partial x^2}$, is used to describe diffusion in a nonsteady-state condition.
 x??
 
 ---
 
 #### Semi-Infinite Solid Solution for Nonsteady-State Diffusion
 Background context explaining the concept. For a semi-infinite solid with constant surface concentration, the solution to Fick's second law (Equation 5.5) is:
-\[ \frac{C_x - C_0}{C_s - C_0} = 1 - \text{erf}\left(\frac{x}{2\sqrt{D t}}\right) \]
-Where \( erf(z) \) is the Gaussian error function.
+$$\frac{C_x - C_0}{C_s - C_0} = 1 - \text{erf}\left(\frac{x}{2\sqrt{D t}}\right)$$
+
+Where $erf(z)$ is the Gaussian error function.
 
 :p What equation describes the concentration profile in a semi-infinite solid with constant surface concentration?
 ??x
 The equation that describes the concentration profile in a semi-infinite solid with constant surface concentration is:
-\[ \frac{C_x - C_0}{C_s - C_0} = 1 - \text{erf}\left(\frac{x}{2\sqrt{D t}}\right) \]
-x??
+$$\frac{C_x - C_0}{C_s - C_0} = 1 - \text{erf}\left(\frac{x}{2\sqrt{D t}}\right)$$x??
 
 ---
 
 #### Time Computation for Nonsteady-State Diffusion
-Background context explaining the concept. To compute the time required to achieve a specific concentration in a semi-infinite solid, Equation 5.5 is used with known parameters \( C_0 \), \( C_s \), and \( D \).
+Background context explaining the concept. To compute the time required to achieve a specific concentration in a semi-infinite solid, Equation 5.5 is used with known parameters $C_0 $, $ C_s $, and$ D$.
 
 :p How is the time computed for achieving a desired concentration in nonsteady-state diffusion?
 ??x
 The time is computed using the equation:
-\[ \frac{C_x - C_0}{C_s - C_0} = 1 - \text{erf}\left(\frac{x}{2\sqrt{D t}}\right) \]
-where \( x \), \( D \), and known concentrations \( C_0 \) and \( C_s \) are used to solve for time \( t \).
+$$\frac{C_x - C_0}{C_s - C_0} = 1 - \text{erf}\left(\frac{x}{2\sqrt{D t}}\right)$$where $ x $,$ D $, and known concentrations$ C_0 $ and $ C_s $ are used to solve for time $ t$.
 x??
 
 ---

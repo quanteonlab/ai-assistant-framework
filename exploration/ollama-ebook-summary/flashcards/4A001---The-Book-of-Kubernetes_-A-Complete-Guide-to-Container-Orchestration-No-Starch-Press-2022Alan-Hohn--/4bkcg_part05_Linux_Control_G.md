@@ -142,9 +142,7 @@ x??
 Background context: In this scenario, we are managing a container's CPU usage by setting an absolute quota. The system uses cgroups to limit resource utilization. We can adjust `cpu.cfs_quota_us` and `cpu.cfs_period_us` to control the amount of CPU time allowed per period.
 
 The formula for calculating the percentage of CPU is:
-\[ \text{Percentage of CPU} = \left( \frac{\text{quota}}{\text{period}} \right) \times 100 \]
-
-:p How can we set a quota on the stress container to limit its CPU usage?
+$$\text{Percentage of CPU} = \left( \frac{\text{quota}}{\text{period}} \right) \times 100$$:p How can we set a quota on the stress container to limit its CPU usage?
 ??x
 To set a quota, we first need to know the period defined by `cpu.cfs_period_us`. In this case, it is set to 100,000 μs (or 0.1 seconds). By updating `cpu.cfs_quota_us`, we can limit the amount of CPU time the container can use.
 
@@ -163,7 +161,7 @@ Background context: After setting the quota, we need to verify that the stress c
 ??x
 We can use `top` or other monitoring tools to check the CPU usage of the processes. For example:
 ```bash
-top -b -n 1 -p $(pgrep -d , stress)
+top -b -n 1 -p$(pgrep -d , stress)
 ```
 This command will show the current CPU usage percentage for the `stress` container.
 
@@ -215,7 +213,7 @@ Background context: After configuring, we can launch the container and verify th
 You can launch the container by specifying the pod and container configurations in `crictl`:
 ```bash
 PCL_ID=$(crictl runp po-clim.yaml)
-CCL_ID=$(crictl create $PCL_ID co-clim.yaml po-clim.yaml)
+CCL_ID=$(crictl create$ PCL_ID co-clim.yaml po-clim.yaml)
 crictl start $CCL_ID
 ```
 This command sequence creates the pod, attaches the container to it, and starts the container.
@@ -413,7 +411,7 @@ metadata:
 ```sh
 root@host01:~# cd /opt
 root@host01:/opt# PML_ID=$(crictl runp po-mlim.yaml)
-root@host01:/opt# CML_ID=$(crictl create $PML_ID co-mlim.yaml po-mlim.yaml)
+root@host01:/opt# CML_ID=$(crictl create$ PML_ID co-mlim.yaml po-mlim.yaml)
 root@host01:/opt# crictl start $CML_ID
 ```
 
@@ -545,7 +543,7 @@ To limit egress bandwidth, tools like `tc` (Traffic Control) can be used to appl
 The `tc qdisc add dev` command sets up a traffic control discipline on the specified network interface (`$IFACE`). Here, it adds a TBF (Token Bucket Filter) with a rate limit of 100mbit and burst size of 256kbit.
 
 ```bash
-root@host01:~# IFACE=$(ip -o addr | grep 192.168.61.11 | awk '{print $2}')
+root@host01:~# IFACE=$(ip -o addr | grep 192.168.61.11 | awk '{print$2}')
 root@host01:~# tc qdisc add dev $IFACE root tbf rate 100mbit \
     burst 256kbit latency 400ms
 ```

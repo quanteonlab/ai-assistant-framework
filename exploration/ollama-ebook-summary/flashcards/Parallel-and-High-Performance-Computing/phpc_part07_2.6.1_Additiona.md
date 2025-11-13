@@ -264,9 +264,7 @@ x??
 #### Arithmetic Intensity Definition
 Background context: In computational performance, arithmetic intensity measures how efficiently a program uses floating-point operations (FLOPs) compared to memory access. It is essential for understanding and optimizing application performance on modern computing hardware.
 
-Formula: \(\text{Arithmetic Intensity} = \frac{\text{Number of FLOPs}}{\text{Number of Memory Operations}}\)
-
-:p What is arithmetic intensity?
+Formula: $\text{Arithmetic Intensity} = \frac{\text{Number of FLOPs}}{\text{Number of Memory Operations}}$:p What is arithmetic intensity?
 ??x
 Arithmetic intensity measures the number of floating-point operations (FLOPs) performed per memory operation, helping to understand how efficiently a program utilizes computational resources compared to memory bandwidth.
 
@@ -283,9 +281,7 @@ x??
 #### Machine Balance Concept
 Background context: Machine balance indicates the capability of computing hardware to execute floating-point operations relative to its memory bandwidth. It is critical for understanding the performance limits of different systems.
 
-Formula: \(\text{Machine Balance} = \frac{\text{Total Flops}}{\text{Memory Bandwidth}}\)
-
-:p What does machine balance represent?
+Formula:$\text{Machine Balance} = \frac{\text{Total Flops}}{\text{Memory Bandwidth}}$:p What does machine balance represent?
 ??x
 Machine balance represents the ratio of the total number of floating-point operations (FLOPs) that can be executed to the memory bandwidth. It indicates how well a system can handle computational demands compared to data movement limits.
 
@@ -367,11 +363,10 @@ x??
 ---
 
 #### Cache Line Utilization and Memory Bandwidth
-Background context explaining the concept. The text mentions that using only one value out of each cache line can lead to inefficient use of memory bandwidth. A rough estimate for the memory band- width from this data access pattern is \( \frac{1}{8} \)th of the stream bandwidth (1 out of every 8 cache values used). This concept can be generalized by defining non-contiguous bandwidth (\( B_{nc} \)) in terms of the percentage of cache usage (\( U_{cache} \)) and empirical bandwidth (\( BE \)):
-\[ B_{nc} = U_{cache} \times BE \]
-:p How does the text describe memory bandwidth utilization when using only one value out of each cache line?
+Background context explaining the concept. The text mentions that using only one value out of each cache line can lead to inefficient use of memory bandwidth. A rough estimate for the memory band- width from this data access pattern is $\frac{1}{8}$ th of the stream bandwidth (1 out of every 8 cache values used). This concept can be generalized by defining non-contiguous bandwidth ($ B_{nc}$) in terms of the percentage of cache usage ($ U_{cache}$) and empirical bandwidth ($ BE$):
+$$B_{nc} = U_{cache} \times BE$$:p How does the text describe memory bandwidth utilization when using only one value out of each cache line?
 ??x
-When data is accessed in such a way that only one value out of each cache line is used, it results in inefficient use of memory bandwidth. This inefficiency can be estimated as approximately \( \frac{1}{8} \)th of the stream bandwidth. For instance, if you have 8 cache lines and access only 1 value from each line, on average, you are using just one out of eight values per access.
+When data is accessed in such a way that only one value out of each cache line is used, it results in inefficient use of memory bandwidth. This inefficiency can be estimated as approximately $\frac{1}{8}$ th of the stream bandwidth. For instance, if you have 8 cache lines and access only 1 value from each line, on average, you are using just one out of eight values per access.
 x??
 
 ---

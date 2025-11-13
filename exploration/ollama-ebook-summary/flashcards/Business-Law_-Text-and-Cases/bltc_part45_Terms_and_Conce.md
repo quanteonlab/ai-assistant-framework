@@ -54,8 +54,8 @@ x??
 ---
 
 #### Issue Spotter: Creating a Security Interest
-Background context explaining the concept. Nero needs $500 to buy textbooks and other supplies. Olivia agrees to loan Nero $500, accepting Nero’s computer as collateral. They put their agreement in writing.
-:p Nero needs $500 to buy textbooks and other supplies. Olivia agrees to loan Nero $500, accepting Nero’s computer as collateral. How can Olivia let other creditors know of her interest in the computer?
+Background context explaining the concept. Nero needs $500 to buy textbooks and other supplies. Olivia agrees to loan Nero$500, accepting Nero’s computer as collateral. They put their agreement in writing.
+:p Nero needs $500 to buy textbooks and other supplies. Olivia agrees to loan Nero$500, accepting Nero’s computer as collateral. How can Olivia let other creditors know of her interest in the computer?
 ??x
 Olivia should file a financing statement with the relevant state's office to perfect her security interest in the computer. This filing must include accurate information about the debtor (Nero) and the collateral (computer). By doing so, Olivia ensures that other creditors are aware of her interest, which is crucial for protecting her rights if Nero defaults on his loan.
 x??

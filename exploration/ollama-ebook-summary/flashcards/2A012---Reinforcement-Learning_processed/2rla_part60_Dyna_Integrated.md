@@ -19,9 +19,9 @@ Background context: The text introduces an example of how one-step tabular Q-lea
 :p How is random-sample one-step tabular Q-planning implemented?
 ??x
 Random-sample one-step tabular Q-planning iterates forever and updates the Q-values based on sampled experiences from a model. The key steps are:
-1. Randomly select a state \( S \) from the set of states \( S \).
-2. Choose an action \( A \) for the selected state.
-3. Use a sample model to simulate the next state \( S_0 \) and reward \( R \).
+1. Randomly select a state $S $ from the set of states$S$.
+2. Choose an action $A$ for the selected state.
+3. Use a sample model to simulate the next state $S_0 $ and reward$R$.
 4. Update the Q-value using one-step tabular Q-learning.
 
 Here is the pseudocode:
@@ -218,7 +218,7 @@ Background context: The acting process in Dyna-Q involves selecting an action ba
 
 :p What does the acting process in Dyna-Q entail?
 ??x
-The acting process in Dyna-Q entails selecting an action based on the current state using \(\epsilon\)-greedy selection (Step b) and then taking that action to observe a resultant reward \(R\) and next state \(S_0\) (Steps c). The Q-value for the taken action is updated using direct RL (Step d).
+The acting process in Dyna-Q entails selecting an action based on the current state using $\epsilon $-greedy selection (Step b) and then taking that action to observe a resultant reward $ R $and next state$ S_0$(Steps c). The Q-value for the taken action is updated using direct RL (Step d).
 x??
 
 ---
@@ -227,7 +227,7 @@ Background context: Model learning involves updating the model based on real exp
 
 :p How is the model updated during the acting and model-learning process?
 ??x
-The model is updated by storing observed next states and rewards (Step e). For example, if a deterministic environment is assumed, \(Model(S, A)\) would store the observed reward \(R\) and next state \(S_0\).
+The model is updated by storing observed next states and rewards (Step e). For example, if a deterministic environment is assumed,$Model(S, A)$ would store the observed reward $R$ and next state $S_0$.
 x??
 
 ---
@@ -236,7 +236,7 @@ Background context: The planning process involves using the model to generate si
 
 :p How is the planning process implemented in Dyna-Q?
 ??x
-The planning process in Dyna-Q implements \(n\) iterations of the Q-planning algorithm (Steps 1-3). Each iteration involves selecting a random previously observed state and action, generating simulated experiences from the model, and updating the Q-value as if it were a real experience.
+The planning process in Dyna-Q implements $n$ iterations of the Q-planning algorithm (Steps 1-3). Each iteration involves selecting a random previously observed state and action, generating simulated experiences from the model, and updating the Q-value as if it were a real experience.
 x??
 
 ---
@@ -251,13 +251,13 @@ x??
 ---
 
 #### Episode and Agent Performance
-Background context: The experiment involves Dyna-Q agents applied to a maze task with specific parameters. Agents vary in their number of planning steps per real step, denoted as \(n\). The goal is to reach the end state (G) from the start state (S), optimizing performance through episodes.
+Background context: The experiment involves Dyna-Q agents applied to a maze task with specific parameters. Agents vary in their number of planning steps per real step, denoted as $n$. The goal is to reach the end state (G) from the start state (S), optimizing performance through episodes.
 
-:p What does the experiment reveal about the relationship between the number of planning steps (\(n\)) and the agent's learning efficiency?
+:p What does the experiment reveal about the relationship between the number of planning steps ($n$) and the agent's learning efficiency?
 ??x
-The more planning steps an agent performs per real step, the faster it learns and reaches optimal performance. For instance, the \(n=0\) (nonplanning) agent took around 25 episodes to reach near-optimal performance, whereas the \(n=50\) agent achieved this in only three episodes.
+The more planning steps an agent performs per real step, the faster it learns and reaches optimal performance. For instance, the $n=0 $(nonplanning) agent took around 25 episodes to reach near-optimal performance, whereas the $ n=50$ agent achieved this in only three episodes.
 
-Example of a learning curve for \(n=50\):
+Example of a learning curve for $n=50$:
 ```plaintext
 2800       600
 400        200
@@ -270,11 +270,11 @@ x??
 ---
 
 #### Policy Development Without vs. With Planning
-Background context: The text illustrates the difference in policy development between nonplanning (\(n=0\)) and planning (\(n=50\)) Dyna-Q agents halfway through their second episode. Nonplanning agents only add one step to their policy per episode, while planning agents can develop a substantial policy that includes many steps.
+Background context: The text illustrates the difference in policy development between nonplanning ($n=0 $) and planning ($ n=50$) Dyna-Q agents halfway through their second episode. Nonplanning agents only add one step to their policy per episode, while planning agents can develop a substantial policy that includes many steps.
 
 :p How do the policies of nonplanning and planning agents differ in terms of development speed?
 ??x
-Nonplanning agents (\(n=0\)) incrementally learn one step at a time, meaning they only add the last step to their policy each episode. In contrast, planning agents (\(n=50\)) can develop an extensive policy during the first few episodes, effectively building steps back towards the start state (S) from near the goal state (G).
+Nonplanning agents ($n=0 $) incrementally learn one step at a time, meaning they only add the last step to their policy each episode. In contrast, planning agents ($ n=50$) can develop an extensive policy during the first few episodes, effectively building steps back towards the start state (S) from near the goal state (G).
 
 Here’s how this looks in the second episode:
 - Nonplanning agent: Only one step learned.
@@ -299,14 +299,14 @@ x??
 ---
 
 #### Episode Performance Across Agents
-Background context: The experiment measures how many steps each agent takes to reach the goal state (G) in each episode. Different numbers of planning steps (\(n\)) affect learning efficiency significantly. The \(n=0\) (nonplanning) agent is notably slower compared to agents with more planning steps.
+Background context: The experiment measures how many steps each agent takes to reach the goal state (G) in each episode. Different numbers of planning steps ($n $) affect learning efficiency significantly. The $ n=0$(nonplanning) agent is notably slower compared to agents with more planning steps.
 
-:p What does the graph indicate about the number of episodes needed for different values of \(n\)?
+:p What does the graph indicate about the number of episodes needed for different values of $n$?
 ??x
-The graph shows that as the number of planning steps (\(n\)) increases, the number of episodes required to achieve near-optimal performance decreases significantly. For example:
-- \(n=0\) (nonplanning) took around 25 episodes.
-- \(n=5\) achieved optimal performance in about five episodes.
-- \(n=50\) reached perfect performance in just three episodes.
+The graph shows that as the number of planning steps ($n$) increases, the number of episodes required to achieve near-optimal performance decreases significantly. For example:
+- $n=0$(nonplanning) took around 25 episodes.
+- $n=5$ achieved optimal performance in about five episodes.
+- $n=50$ reached perfect performance in just three episodes.
 
 This indicates that more planning steps lead to faster learning and better performance.
 
@@ -315,7 +315,7 @@ Example of average steps per episode:
 Episodes: 1, 6, 11
 Steps:    2800, 400, 200
 ```
-Here, the number of episodes taken to reach optimal performance decreases as \(n\) increases.
+Here, the number of episodes taken to reach optimal performance decreases as $n$ increases.
 
 x??
 
@@ -339,14 +339,14 @@ x??
 
 ---
 
-#### Discount Factor (\(\gamma\)) in Episodic Tasks
-Background context: The task is episodic with a discount factor \(\gamma = 0.95\). This means future rewards are valued less compared to immediate ones, influencing the agent's long-term planning.
+#### Discount Factor ($\gamma$) in Episodic Tasks
+Background context: The task is episodic with a discount factor $\gamma = 0.95$. This means future rewards are valued less compared to immediate ones, influencing the agent's long-term planning.
 
-:p How does the discount factor \(\gamma\) affect an agent's behavior?
+:p How does the discount factor $\gamma$ affect an agent's behavior?
 ??x
-The discount factor \(\gamma\) affects how agents value future rewards. A higher \(\gamma\) (closer to 1) encourages more long-term thinking and patience in seeking optimal solutions, while a lower \(\gamma\) makes agents more focused on immediate rewards.
+The discount factor $\gamma $ affects how agents value future rewards. A higher$\gamma $(closer to 1) encourages more long-term thinking and patience in seeking optimal solutions, while a lower $\gamma$ makes agents more focused on immediate rewards.
 
-For instance, with \(\gamma = 0.95\), the agent slightly values near-future rewards over distant ones but still considers them significantly important.
+For instance, with $\gamma = 0.95$, the agent slightly values near-future rewards over distant ones but still considers them significantly important.
 
 ```java
 double gamma = 0.95; // Discount factor

@@ -5,12 +5,12 @@
 ---
 
 #### Continuing Problems Definition and Performance Measure
-Background context: In continuing problems, episodes do not have natural boundaries. The performance of a policy is measured by its average rate of reward per time step, denoted as \( J(\theta) \).
+Background context: In continuing problems, episodes do not have natural boundaries. The performance of a policy is measured by its average rate of reward per time step, denoted as $J(\theta)$.
 
 Relevant formula:
-\[ J(\theta) = \lim_{t \rightarrow \infty} \frac{1}{t} E[R_t | S_0, A^0:t-1 \sim \pi] \]
+$$J(\theta) = \lim_{t \rightarrow \infty} \frac{1}{t} E[R_t | S_0, A^0:t-1 \sim \pi]$$
 
-Explanation: This formula indicates that the performance is defined as the limit of the average discounted reward over time. The policy \( \pi \) is parameterized by \( \theta \).
+Explanation: This formula indicates that the performance is defined as the limit of the average discounted reward over time. The policy $\pi $ is parameterized by$\theta$.
 
 :p What does the performance measure for continuing problems look like?
 ??x
@@ -20,18 +20,16 @@ x??
 ---
 
 #### Steady-State Distribution and Policy Gradient Context
-Background context: For a continuing problem, we need to define the steady-state distribution \( \mu(s) \), which describes the probability that the system is in state \( s \) when following policy \( \pi \).
+Background context: For a continuing problem, we need to define the steady-state distribution $\mu(s)$, which describes the probability that the system is in state $ s$when following policy $\pi$.
 
 Relevant formulas:
-\[ \mu(s) = \lim_{t \rightarrow \infty} P(S_t = s | A^0:t-1 \sim \pi) \]
-and
-\[ \sum_s \mu(s) \sum_a \pi(a|s, \theta) p(s'|s, a) = \mu(s') \]
+$$\mu(s) = \lim_{t \rightarrow \infty} P(S_t = s | A^0:t-1 \sim \pi)$$and$$\sum_s \mu(s) \sum_a \pi(a|s, \theta) p(s'|s, a) = \mu(s')$$
 
-Explanation: The steady-state distribution \( \mu(s) \) is the long-term probability of being in state \( s \), assuming the system follows policy \( \pi \). This condition ensures that if actions are chosen according to \( \pi \), the distribution remains unchanged over time.
+Explanation: The steady-state distribution $\mu(s)$ is the long-term probability of being in state $ s $, assuming the system follows policy $\pi $. This condition ensures that if actions are chosen according to $\pi$, the distribution remains unchanged over time.
 
 :p What is the role of the steady-state distribution in a continuing problem?
 ??x
-The steady-state distribution \( \mu(s) \) represents the long-term probability of being in state \( s \) when following policy \( \pi \). It ensures that if actions are chosen according to \( \pi \), the system's state distribution remains stable over time.
+The steady-state distribution $\mu(s)$ represents the long-term probability of being in state $ s $ when following policy $\pi$. It ensures that if actions are chosen according to $\pi$, the system's state distribution remains stable over time.
 x??
 
 ---
@@ -62,7 +60,7 @@ Loop forever (for each time step):
     S = S0
 ```
 
-Explanation: This pseudocode outlines the actor-critic algorithm for continuing problems. The policy \( \pi \) and state-value function \( ˆv \) are updated based on eligibility traces to ensure smooth convergence.
+Explanation: This pseudocode outlines the actor-critic algorithm for continuing problems. The policy $\pi $ and state-value function$ˆv$ are updated based on eligibility traces to ensure smooth convergence.
 
 :p What does this pseudocode illustrate?
 ??x
@@ -72,16 +70,16 @@ x??
 ---
 
 #### Policy Gradient Theorem in Continuing Problems
-Background context: The policy gradient theorem provides a way to compute the gradient of the performance measure with respect to the policy parameters \( \theta \) for continuing problems.
+Background context: The policy gradient theorem provides a way to compute the gradient of the performance measure with respect to the policy parameters $\theta$ for continuing problems.
 
 Relevant formula:
-\[ r J(\theta) = \sum_s \mu(s) \sum_a \pi(a|s, \theta) q_\pi (s, a) + \sum_s \mu(s) \sum_a \pi(a|s, \theta) \sum_{s'} p(s'|s,a) r \frac{\partial}{\partial \theta} v_\pi(s') - r \frac{\partial}{\partial \theta} v_\pi(s) \]
+$$r J(\theta) = \sum_s \mu(s) \sum_a \pi(a|s, \theta) q_\pi (s, a) + \sum_s \mu(s) \sum_a \pi(a|s, \theta) \sum_{s'} p(s'|s,a) r \frac{\partial}{\partial \theta} v_\pi(s') - r \frac{\partial}{\partial \theta} v_\pi(s)$$
 
-Explanation: This formula relates the gradient of the performance measure \( J(\theta) \) to the sum over all states and actions, weighted by the steady-state distribution.
+Explanation: This formula relates the gradient of the performance measure $J(\theta)$ to the sum over all states and actions, weighted by the steady-state distribution.
 
 :p What does this theorem state?
 ??x
-This theorem states that the gradient of the performance measure \( J(\theta) \) for a policy in a continuing problem can be computed as the sum over all states and actions, weighted by the steady-state distribution. It connects the policy's parameters \( \theta \) to the value functions and the state-action values.
+This theorem states that the gradient of the performance measure $J(\theta)$ for a policy in a continuing problem can be computed as the sum over all states and actions, weighted by the steady-state distribution. It connects the policy's parameters $\theta$ to the value functions and the state-action values.
 x??
 
 ---
@@ -90,14 +88,11 @@ x??
 Background context: The forward and backward view equations remain the same in continuing problems.
 
 Relevant formulas:
-- Forward view equation: \( r J(\theta) = \sum_s \mu(s) \sum_a \pi(a|s, \theta) q_\pi (s, a) + \sum_s \mu(s) \sum_a \pi(a|s, \theta) \sum_{s'} p(s'|s,a) r \frac{\partial}{\partial \theta} v_\pi(s') - r \frac{\partial}{\partial \theta} v_\pi(s) \)
-- Backward view equation: \( r J(\theta) = \sum_s \mu(s) \sum_a \pi(a|s, \theta) q_\pi (s, a) + \sum_s \mu(s) \sum_a \pi(a|s, \theta) \sum_{s'} p(s'|s,a) r \frac{\partial}{\partial \theta} v_\pi(s') - r \frac{\partial}{\partial \theta} v_\pi(s) \)
-
-Explanation: These equations provide a way to compute the gradient of the performance measure \( J(\theta) \).
+- Forward view equation:$r J(\theta) = \sum_s \mu(s) \sum_a \pi(a|s, \theta) q_\pi (s, a) + \sum_s \mu(s) \sum_a \pi(a|s, \theta) \sum_{s'} p(s'|s,a) r \frac{\partial}{\partial \theta} v_\pi(s') - r \frac{\partial}{\partial \theta} v_\pi(s)$- Backward view equation:$ r J(\theta) = \sum_s \mu(s) \sum_a \pi(a|s, \theta) q_\pi (s, a) + \sum_s \mu(s) \sum_a \pi(a|s, \theta) \sum_{s'} p(s'|s,a) r \frac{\partial}{\partial \theta} v_\pi(s') - r \frac{\partial}{\partial \theta} v_\pi(s)$Explanation: These equations provide a way to compute the gradient of the performance measure $ J(\theta)$.
 
 :p What are these equations used for?
 ??x
-These equations are used to compute the gradient of the performance measure \( J(\theta) \) in continuing problems, allowing the optimization of policies based on their long-term average reward.
+These equations are used to compute the gradient of the performance measure $J(\theta)$ in continuing problems, allowing the optimization of policies based on their long-term average reward.
 x??
 
 ---
@@ -107,30 +102,27 @@ x??
 Background context explaining the concept. The problem deals with continuous action spaces where actions are chosen from a normal (Gaussian) distribution. This method is used to avoid having to compute probabilities for each possible action, which can be computationally expensive or infeasible when dealing with an infinite number of actions.
 
 The probability density function for a normal distribution is given by:
-\[ p(x; \mu, \sigma^2) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}} \]
-where \(\mu\) and \(\sigma^2\) are the mean and variance of the normal distribution respectively.
+$$p(x; \mu, \sigma^2) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$where $\mu $ and$\sigma^2$ are the mean and variance of the normal distribution respectively.
 
-To parameterize a policy for continuous actions, the action \(a\) is drawn from a normal distribution with parameters that depend on the state \(s\) and a set of parameters \(\theta\). The policy can be defined as:
-\[ \pi(a|s; \theta) = \frac{1}{\sqrt{2\pi}\sigma(s;\theta)} e^{-\frac{(a-\mu(s;\theta))^2}{2\sigma^2(s;\theta)}} \]
-where \(\mu(s; \theta)\) and \(\sigma(s; \theta)\) are the mean and standard deviation of the normal distribution, respectively.
+To parameterize a policy for continuous actions, the action $a $ is drawn from a normal distribution with parameters that depend on the state$s $ and a set of parameters$\theta$. The policy can be defined as:
+$$\pi(a|s; \theta) = \frac{1}{\sqrt{2\pi}\sigma(s;\theta)} e^{-\frac{(a-\mu(s;\theta))^2}{2\sigma^2(s;\theta)}}$$where $\mu(s; \theta)$ and $\sigma(s; \theta)$ are the mean and standard deviation of the normal distribution, respectively.
 
-The parameters \(\mu(s; \theta)\) and \(\sigma(s; \theta)\) can be approximated using function approximators. For instance:
-\[ \mu(s; \theta_{\mu}) = \theta_{\mu}^T x_\mu(s) \]
-\[ \sigma(s; \theta_{\sigma}) = e^{\theta_{\sigma}^T x_\sigma(s)} \]
-where \(x_\mu(s)\) and \(x_\sigma(s)\) are state feature vectors.
+The parameters $\mu(s; \theta)$ and $\sigma(s; \theta)$ can be approximated using function approximators. For instance:
+$$\mu(s; \theta_{\mu}) = \theta_{\mu}^T x_\mu(s)$$
+$$\sigma(s; \theta_{\sigma}) = e^{\theta_{\sigma}^T x_\sigma(s)}$$where $ x_\mu(s)$and $ x_\sigma(s)$ are state feature vectors.
 
 :p What is the Gaussian policy parameterization?
 ??x
-The Gaussian policy parameterization involves using a normal distribution to model continuous actions. The parameters of this distribution, specifically the mean (\(\mu\)) and standard deviation (\(\sigma\)), are approximated by function approximators that depend on the current state \(s\) and some learned parameters \(\theta_{\mu}\) and \(\theta_{\sigma}\).
+The Gaussian policy parameterization involves using a normal distribution to model continuous actions. The parameters of this distribution, specifically the mean ($\mu $) and standard deviation ($\sigma $), are approximated by function approximators that depend on the current state $ s $and some learned parameters$\theta_{\mu}$ and $\theta_{\sigma}$.
 
 The policy can be defined as:
-\[ \pi(a|s; \theta) = \frac{1}{\sqrt{2\pi}\sigma(s;\theta)} e^{-\frac{(a-\mu(s;\theta))^2}{2\sigma^2(s;\theta)}} \]
+$$\pi(a|s; \theta) = \frac{1}{\sqrt{2\pi}\sigma(s;\theta)} e^{-\frac{(a-\mu(s;\theta))^2}{2\sigma^2(s;\theta)}}$$
 
 In practice, the mean and standard deviation are parameterized as follows:
-\[ \mu(s; \theta_{\mu}) = \theta_{\mu}^T x_\mu(s) \]
-\[ \sigma(s; \theta_{\sigma}) = e^{\theta_{\sigma}^T x_\sigma(s)} \]
+$$\mu(s; \theta_{\mu}) = \theta_{\mu}^T x_\mu(s)$$
+$$\sigma(s; \theta_{\sigma}) = e^{\theta_{\sigma}^T x_\sigma(s)}$$
 
-Where \(x_\mu(s)\) and \(x_\sigma(s)\) are state feature vectors.
+Where $x_\mu(s)$ and $x_\sigma(s)$ are state feature vectors.
 
 ---
 #### Eligibility Vector for Gaussian Policy
@@ -138,47 +130,46 @@ Where \(x_\mu(s)\) and \(x_\sigma(s)\) are state feature vectors.
 Background context explaining the concept. In policy gradient methods, the eligibility vector is used to accumulate gradients over time to update the parameters of the policy. For a Gaussian policy parameterization, the eligibility vector has two parts: one for the mean and another for the standard deviation.
 
 Given the policy:
-\[ \pi(a|s; \theta) = \frac{1}{\sqrt{2\pi}\sigma(s;\theta)} e^{-\frac{(a-\mu(s;\theta))^2}{2\sigma^2(s;\theta)}} \]
+$$\pi(a|s; \theta) = \frac{1}{\sqrt{2\pi}\sigma(s;\theta)} e^{-\frac{(a-\mu(s;\theta))^2}{2\sigma^2(s;\theta)}}$$
 
 The eligibility vectors are defined as follows:
 
 For the mean:
-\[ r_{ln\pi}(a|s, \theta_\mu) = r_\pi(a|s, \theta_\mu) - \frac{1}{\sigma(s; \theta)^2} a \left( a - \mu(s; \theta) \right) x_\mu(s) \]
+$$r_{ln\pi}(a|s, \theta_\mu) = r_\pi(a|s, \theta_\mu) - \frac{1}{\sigma(s; \theta)^2} a \left( a - \mu(s; \theta) \right) x_\mu(s)$$
 
 For the standard deviation:
-\[ r_{ln\pi}(a|s, \theta_\sigma) = r_\pi(a|s, \theta_\sigma) + \frac{\left( a - \mu(s; \theta) \right)^2}{\sigma^2(s; \theta)} x_\sigma(s) \]
+$$r_{ln\pi}(a|s, \theta_\sigma) = r_\pi(a|s, \theta_\sigma) + \frac{\left( a - \mu(s; \theta) \right)^2}{\sigma^2(s; \theta)} x_\sigma(s)$$
 
-Where \(r_\pi(a|s, \theta)\) is the discounted return.
+Where $r_\pi(a|s, \theta)$ is the discounted return.
 
 :p What are the parts of the eligibility vector for a Gaussian policy?
 ??x
 The eligibility vector for a Gaussian policy parameterization has two main parts: one for updating the mean and another for updating the standard deviation. Specifically:
 
 For the mean:
-\[ r_{ln\pi}(a|s, \theta_\mu) = r_\pi(a|s, \theta_\mu) - \frac{1}{\sigma(s; \theta)^2} a \left( a - \mu(s; \theta) \right) x_\mu(s) \]
+$$r_{ln\pi}(a|s, \theta_\mu) = r_\pi(a|s, \theta_\mu) - \frac{1}{\sigma(s; \theta)^2} a \left( a - \mu(s; \theta) \right) x_\mu(s)$$
 
 For the standard deviation:
-\[ r_{ln\pi}(a|s, \theta_\sigma) = r_\pi(a|s, \theta_\sigma) + \frac{\left( a - \mu(s; \theta) \right)^2}{\sigma^2(s; \theta)} x_\sigma(s) \]
+$$r_{ln\pi}(a|s, \theta_\sigma) = r_\pi(a|s, \theta_\sigma) + \frac{\left( a - \mu(s; \theta) \right)^2}{\sigma^2(s; \theta)} x_\sigma(s)$$
 
 Where:
-- \(r_\pi(a|s, \theta)\) is the discounted return.
-- \(\mu(s; \theta)\) and \(\sigma(s; \theta)\) are the mean and standard deviation of the Gaussian policy respectively.
+- $r_\pi(a|s, \theta)$ is the discounted return.
+- $\mu(s; \theta)$ and $\sigma(s; \theta)$ are the mean and standard deviation of the Gaussian policy respectively.
 
 This split helps in updating the parameters separately for better convergence.
 
 ---
 #### Bernoulli Logistic Unit
 
-Background context explaining the concept. The Bernoulli-logistic unit is a stochastic neuron-like unit used in some Artificial Neural Networks (ANNs). It outputs either 0 or 1 based on the input and a learned parameter \(\theta\).
+Background context explaining the concept. The Bernoulli-logistic unit is a stochastic neuron-like unit used in some Artificial Neural Networks (ANNs). It outputs either 0 or 1 based on the input and a learned parameter $\theta$.
 
-The probability \(P_t\) of outputting 1 can be expressed as:
-\[ P_t = \pi(1|S_t, \theta_t) = \frac{1}{1 + e^{-\theta^T x(S_t)}} \]
-where \(x(S_t)\) is the input feature vector and \(\theta\) are the weights.
+The probability $P_t$ of outputting 1 can be expressed as:
+$$P_t = \pi(1|S_t, \theta_t) = \frac{1}{1 + e^{-\theta^T x(S_t)}}$$where $ x(S_t)$is the input feature vector and $\theta$ are the weights.
 
 :p What is the Bernoulli-logistic unit?
 ??x
-The Bernoulli-logistic unit, also known as a stochastic neuron-like unit in some ANNs, outputs either 0 or 1 based on its input \(x(S_t)\) and learned parameters \(\theta\). The probability of outputting 1 is given by the logistic function:
-\[ P_t = \pi(1|S_t, \theta_t) = \frac{1}{1 + e^{-\theta^T x(S_t)}} \]
+The Bernoulli-logistic unit, also known as a stochastic neuron-like unit in some ANNs, outputs either 0 or 1 based on its input $x(S_t)$ and learned parameters $\theta$. The probability of outputting 1 is given by the logistic function:
+$$P_t = \pi(1|S_t, \theta_t) = \frac{1}{1 + e^{-\theta^T x(S_t)}}$$
 
 This unit helps introduce stochasticity into neural networks, allowing for probabilistic outputs.
 
@@ -204,10 +195,7 @@ x??
 The Policy Gradient Theorem (PGT) provides a formula to estimate how changes in the policy parameter affect performance. It states that the gradient of the expected return with respect to the parameters of the policy can be estimated using samples from that policy.
 
 Mathematically, it is expressed as:
-\[
-\nabla_\theta J(\pi_\theta) \approx \mathbb{E}_{s_t \sim \mu, a_t \sim \pi_\theta} [G_t \nabla_\theta \log \pi_\theta(a_t | s_t)]
-\]
-where \(J(\pi_\theta)\) is the expected return, and \(\pi_\theta\) represents the policy parameterized by \(\theta\).
+$$\nabla_\theta J(\pi_\theta) \approx \mathbb{E}_{s_t \sim \mu, a_t \sim \pi_\theta} [G_t \nabla_\theta \log \pi_\theta(a_t | s_t)]$$where $ J(\pi_\theta)$is the expected return, and $\pi_\theta$ represents the policy parameterized by $\theta$.
 
 :p What does the Policy Gradient Theorem provide in reinforcement learning?
 ??x

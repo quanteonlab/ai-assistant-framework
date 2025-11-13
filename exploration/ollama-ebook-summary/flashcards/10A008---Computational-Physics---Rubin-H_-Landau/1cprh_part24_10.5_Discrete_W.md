@@ -7,12 +7,9 @@
 #### Discrete Wavelet Transforms (DWT)
 Background context: DWT is a method used to analyze time signals that are measured at discrete times. Unlike continuous wavelet transforms, DWT deals with discrete values of scaling and translation parameters, making it suitable for practical applications where data is often sampled at discrete intervals.
 Relevant formulas:
-\[ \Psi\left[\frac{t - k2^j}{2^j}\right] = \psi_{j,k}(t) \sqrt{\frac{1}{2^j}} \]
-where \( s = 2^j, \tau = \frac{k}{2^j} \), and \( j, k \) are integers.
+$$\Psi\left[\frac{t - k2^j}{2^j}\right] = \psi_{j,k}(t) \sqrt{\frac{1}{2^j}}$$where $ s = 2^j, \tau = \frac{k}{2^j}$, and $ j, k$ are integers.
 The DWT is defined as:
-\[ Y_{j,k} \approx \sum_m \psi_{j,k}(t_m)y(t_m) \]
-
-:p What does the discrete wavelet transform (DWT) evaluate?
+$$Y_{j,k} \approx \sum_m \psi_{j,k}(t_m)y(t_m)$$:p What does the discrete wavelet transform (DWT) evaluate?
 ??x
 The DWT evaluates transforms using discrete values for scaling and translation parameters. It is used when time signals are measured at discrete times, allowing for a more practical approach to signal analysis.
 x??
@@ -22,8 +19,7 @@ x??
 #### Orthonormality of Basis Functions in DWT
 Background context: The orthonormal basis functions in the DWT ensure that each wavelet has unit energy and is independent of other basis functions. This leads to flexible data storage by ensuring low correlation between different transform components.
 Relevant formulas:
-\[ \int_{-\infty}^{\infty} dt\, \psi_{j,k}^*(t) \psi_{j',k'}(t) = \delta_{jj'} \delta_{kk'} \]
-where \( \delta_{m,n} \) is the Kronecker delta function.
+$$\int_{-\infty}^{\infty} dt\, \psi_{j,k}^*(t) \psi_{j',k'}(t) = \delta_{jj'} \delta_{kk'}$$where $\delta_{m,n}$ is the Kronecker delta function.
 
 :p What does the orthonormality of basis functions in DWT imply?
 ??x
@@ -33,24 +29,22 @@ x??
 ---
 
 #### Sampling Strategy in DWT
-Background context: When applying the DWT, it's important to sample the input signal at discrete times determined by integers \( j \) and \( k \). The number of steps required to cover each major feature should be sufficient for desired precision. A rule of thumb is to start with 100 steps per interval.
+Background context: When applying the DWT, it's important to sample the input signal at discrete times determined by integers $j $ and$k$. The number of steps required to cover each major feature should be sufficient for desired precision. A rule of thumb is to start with 100 steps per interval.
 Relevant formulas: None.
 
 :p How do we determine the sampling strategy in DWT?
 ??x
-We determine the sampling strategy by sampling the input signal at discrete times determined by integers \( j \) and \( k \). The number of steps should be sufficient to cover each major feature, with a rule of thumb being 100 steps per interval.
+We determine the sampling strategy by sampling the input signal at discrete times determined by integers $j $ and$k$. The number of steps should be sufficient to cover each major feature, with a rule of thumb being 100 steps per interval.
 x??
 
 ---
 
 #### Uncertainty Principle in DWT
-Background context: Just as in Fourier transforms, the uncertainty principle places constraints on the time intervals and frequency intervals. Specifically, the product of the widths of the wave packet and its Fourier transform must be at least \( 2\pi \).
+Background context: Just as in Fourier transforms, the uncertainty principle places constraints on the time intervals and frequency intervals. Specifically, the product of the widths of the wave packet and its Fourier transform must be at least $2\pi$.
 Relevant formulas:
-\[ \Delta\omega \cdot \Delta t \geq 2\pi \]
-
-:p How does the uncertainty principle apply to DWT?
+$$\Delta\omega \cdot \Delta t \geq 2\pi$$:p How does the uncertainty principle apply to DWT?
 ??x
-The uncertainty principle in DWT places constraints on the time intervals and frequency intervals, ensuring that the product of their widths is at least \( 2\pi \). This means higher-resolution frequency components require more sampling points in time.
+The uncertainty principle in DWT places constraints on the time intervals and frequency intervals, ensuring that the product of their widths is at least $2\pi$. This means higher-resolution frequency components require more sampling points in time.
 x??
 
 ---
@@ -225,23 +219,29 @@ x??
 
 ---
 #### Low-Pass Filter (L) and High-Pass Filter (H)
-Background context: The low-pass filter \( L \) and high-pass filter \( H \) are represented by a set of coefficients. These filters are used to decompose an input signal into smooth and detail components, respectively.
+Background context: The low-pass filter $L $ and high-pass filter$H$ are represented by a set of coefficients. These filters are used to decompose an input signal into smooth and detail components, respectively.
 
 The filters are defined as follows:
-\[ L = [c_0 + c_1, c_2 + c_3] \]
-\[ H = [c_3 - c_2, c_1 - c_0] \]
+$$L = [c_0 + c_1, c_2 + c_3]$$
+$$
 
-Where \( c_0, c_1, c_2, \) and \( c_3 \) are the filter coefficients.
+H = [c_3 - c_2, c_1 - c_0]$$
+
+Where $c_0, c_1, c_2,$ and $c_3$ are the filter coefficients.
 
 :p How do the low-pass and high-pass filters act on an input vector?
 ??x
-The low-pass filter \( L \) acts as a smoothing operation that outputs a weighted average of the input signal elements. For example:
-\[ L = [c_0, c_1, c_2, c_3] \]
-\[ L \times \begin{bmatrix} y_0 \\ y_1 \\ y_2 \\ y_3 \end{bmatrix} = c_0y_0 + c_1y_1 + c_2y_2 + c_3y_3 \]
+The low-pass filter $L$ acts as a smoothing operation that outputs a weighted average of the input signal elements. For example:
+$$L = [c_0, c_1, c_2, c_3]$$
+$$
 
-The high-pass filter \( H \) acts as a detail extraction operation that outputs weighted differences of the input signal elements. For example:
-\[ H = [c_3 - c_2, c_1 - c_0] \]
-\[ H \times \begin{bmatrix} y_0 \\ y_1 \\ y_2 \\ y_3 \end{bmatrix} = (c_3y_0 - c_2y_1) + (c_1y_2 - c_0y_3) \]
+L \times \begin{bmatrix} y_0 \\ y_1 \\ y_2 \\ y_3 \end{bmatrix} = c_0y_0 + c_1y_1 + c_2y_2 + c_3y_3$$
+
+The high-pass filter $H$ acts as a detail extraction operation that outputs weighted differences of the input signal elements. For example:
+$$H = [c_3 - c_2, c_1 - c_0]$$
+$$
+
+H \times \begin{bmatrix} y_0 \\ y_1 \\ y_2 \\ y_3 \end{bmatrix} = (c_3y_0 - c_2y_1) + (c_1y_2 - c_0y_3)$$
 
 The result of these operations is a set of coefficients representing the smooth and detail parts of the input signal.
 x??
@@ -251,27 +251,23 @@ x??
 Background context: For the wavelet transform to be orthogonal, the filter matrix must satisfy an orthogonality condition. This ensures that the transformation can reversibly reconstruct the original signal.
 
 The orthogonality condition is expressed as:
-\[ \begin{bmatrix} c_0 & c_1 & c_2 & c_3 \\ c_3 - c_2 & c_1 - c_0 & 0 & 0 \\ c_2 & c_3 & c_0 & c_1 \\ c_1 - c_0 & 0 & c_3 - c_2 & 0 \end{bmatrix} \times \begin{bmatrix} c_0 & 3 + \sqrt{3}/(4\sqrt{2}) & 3 - \sqrt{3}/(4\sqrt{2}) & 1 - \sqrt{3}/(4\sqrt{2}) \\ 1 - \sqrt{3}/(4\sqrt{2}) & c_0 & c_1 & c_2 \\ 3 - \sqrt{3}/(4\sqrt{2}) & 1 - \sqrt{3}/(4\sqrt{2}) & c_0 & c_1 \\ \sqrt{3}/(4\sqrt{2}) & 3 + \sqrt{3}/(4\sqrt{2}) & -c_0 & -c_1 \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} \]
-
-:p What is the orthogonality condition for wavelet filters?
+$$\begin{bmatrix} c_0 & c_1 & c_2 & c_3 \\ c_3 - c_2 & c_1 - c_0 & 0 & 0 \\ c_2 & c_3 & c_0 & c_1 \\ c_1 - c_0 & 0 & c_3 - c_2 & 0 \end{bmatrix} \times \begin{bmatrix} c_0 & 3 + \sqrt{3}/(4\sqrt{2}) & 3 - \sqrt{3}/(4\sqrt{2}) & 1 - \sqrt{3}/(4\sqrt{2}) \\ 1 - \sqrt{3}/(4\sqrt{2}) & c_0 & c_1 & c_2 \\ 3 - \sqrt{3}/(4\sqrt{2}) & 1 - \sqrt{3}/(4\sqrt{2}) & c_0 & c_1 \\ \sqrt{3}/(4\sqrt{2}) & 3 + \sqrt{3}/(4\sqrt{2}) & -c_0 & -c_1 \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix}$$:p What is the orthogonality condition for wavelet filters?
 ??x
 The orthogonality condition ensures that the wavelet transform matrix is invertible, allowing perfect reconstruction of the original signal. This is achieved by satisfying the following equation:
-\[ \begin{bmatrix} c_0 & c_1 & c_2 & c_3 \\ c_3 - c_2 & c_1 - c_0 & 0 & 0 \\ c_2 & c_3 & c_0 & c_1 \\ c_1 - c_0 & 0 & c_3 - c_2 & 0 \end{bmatrix} \times \begin{bmatrix} c_0 & 3 + \sqrt{3}/(4\sqrt{2}) & 3 - \sqrt{3}/(4\sqrt{2}) & 1 - \sqrt{3}/(4\sqrt{2}) \\ 1 - \sqrt{3}/(4\sqrt{2}) & c_0 & c_1 & c_2 \\ 3 - \sqrt{3}/(4\sqrt{2}) & 1 - \sqrt{3}/(4\sqrt{2}) & c_0 & c_1 \\ \sqrt{3}/(4\sqrt{2}) & 3 + \sqrt{3}/(4\sqrt{2}) & -c_0 & -c_1 \end{bmatrix} = I \]
+$$\begin{bmatrix} c_0 & c_1 & c_2 & c_3 \\ c_3 - c_2 & c_1 - c_0 & 0 & 0 \\ c_2 & c_3 & c_0 & c_1 \\ c_1 - c_0 & 0 & c_3 - c_2 & 0 \end{bmatrix} \times \begin{bmatrix} c_0 & 3 + \sqrt{3}/(4\sqrt{2}) & 3 - \sqrt{3}/(4\sqrt{2}) & 1 - \sqrt{3}/(4\sqrt{2}) \\ 1 - \sqrt{3}/(4\sqrt{2}) & c_0 & c_1 & c_2 \\ 3 - \sqrt{3}/(4\sqrt{2}) & 1 - \sqrt{3}/(4\sqrt{2}) & c_0 & c_1 \\ \sqrt{3}/(4\sqrt{2}) & 3 + \sqrt{3}/(4\sqrt{2}) & -c_0 & -c_1 \end{bmatrix} = I$$
 
-Where \( I \) is the identity matrix. This condition ensures that the filter matrix and its inverse are well-defined, enabling accurate reconstruction of the original signal.
+Where $I$ is the identity matrix. This condition ensures that the filter matrix and its inverse are well-defined, enabling accurate reconstruction of the original signal.
 x??
 
 ---
 #### Construction of Multi-Scale Wavelets
-Background context: The multi-scale wavelets are constructed by placing the row versions of \( L \) and \( H \) along the diagonal, with successive pairs displaced two columns to the right. This results in a larger filter matrix that can process multiple elements at once.
+Background context: The multi-scale wavelets are constructed by placing the row versions of $L $ and$H$ along the diagonal, with successive pairs displaced two columns to the right. This results in a larger filter matrix that can process multiple elements at once.
 
 For example, for 8 elements:
-\[ \begin{bmatrix} c_0 & c_1 & c_2 & c_3 & 0 & 0 & 0 & 0 \\ c_3 - c_2 & c_1 - c_0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & c_0 & c_1 & c_2 & c_3 & 0 & 0 \\ 0 & 0 & c_3 - c_2 & c_1 - c_0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & c_0 & c_1 & c_2 & c_3 \\ 0 & 0 & 0 & 0 & c_3 - c_2 & c_1 - c_0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & c_0 & c_1 \\ 0 & 0 & 0 & 0 & 0 & 0 & c_3 - c_2 & c_1 - c_0 \end{bmatrix} \times \begin{bmatrix} y_0 \\ y_1 \\ y_2 \\ y_3 \\ y_4 \\ y_5 \\ y_6 \\ y_7 \end{bmatrix} \]
-
-:p How are multi-scale wavelets constructed for a larger number of elements?
+$$\begin{bmatrix} c_0 & c_1 & c_2 & c_3 & 0 & 0 & 0 & 0 \\ c_3 - c_2 & c_1 - c_0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & c_0 & c_1 & c_2 & c_3 & 0 & 0 \\ 0 & 0 & c_3 - c_2 & c_1 - c_0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & c_0 & c_1 & c_2 & c_3 \\ 0 & 0 & 0 & 0 & c_3 - c_2 & c_1 - c_0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & c_0 & c_1 \\ 0 & 0 & 0 & 0 & 0 & 0 & c_3 - c_2 & c_1 - c_0 \end{bmatrix} \times \begin{bmatrix} y_0 \\ y_1 \\ y_2 \\ y_3 \\ y_4 \\ y_5 \\ y_6 \\ y_7 \end{bmatrix}$$:p How are multi-scale wavelets constructed for a larger number of elements?
 ??x
-Multi-scale wavelets are constructed by placing the row versions of \( L \) and \( H \) along the diagonal, with successive pairs displaced two columns to the right. For example, for 8 elements:
-\[ \begin{bmatrix} c_0 & c_1 & c_2 & c_3 & 0 & 0 & 0 & 0 \\ c_3 - c_2 & c_1 - c_0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & c_0 & c_1 & c_2 & c_3 & 0 & 0 \\ 0 & 0 & c_3 - c_2 & c_1 - c_0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & c_0 & c_1 & c_2 & c_3 \\ 0 & 0 & 0 & 0 & c_3 - c_2 & c_1 - c_0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & c_0 & c_1 \\ 0 & 0 & 0 & 0 & 0 & 0 & c_3 - c_2 & c_1 - c_0 \end{bmatrix} \times \begin{bmatrix} y_0 \\ y_1 \\ y_2 \\ y_3 \\ y_4 \\ y_5 \\ y_6 \\ y_7 \end{bmatrix} \]
+Multi-scale wavelets are constructed by placing the row versions of $L $ and$H$ along the diagonal, with successive pairs displaced two columns to the right. For example, for 8 elements:
+$$\begin{bmatrix} c_0 & c_1 & c_2 & c_3 & 0 & 0 & 0 & 0 \\ c_3 - c_2 & c_1 - c_0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & c_0 & c_1 & c_2 & c_3 & 0 & 0 \\ 0 & 0 & c_3 - c_2 & c_1 - c_0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & c_0 & c_1 & c_2 & c_3 \\ 0 & 0 & 0 & 0 & c_3 - c_2 & c_1 - c_0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & c_0 & c_1 \\ 0 & 0 & 0 & 0 & 0 & 0 & c_3 - c_2 & c_1 - c_0 \end{bmatrix} \times \begin{bmatrix} y_0 \\ y_1 \\ y_2 \\ y_3 \\ y_4 \\ y_5 \\ y_6 \\ y_7 \end{bmatrix}$$
 
 This construction ensures that the wavelet analysis can handle multiple elements simultaneously, providing a more comprehensive decomposition of the signal.
 x??
@@ -283,7 +279,7 @@ Background context: The inverse wavelet transform reconstructs the original sign
 :p How does the inverse wavelet transform work?
 ??x
 The inverse wavelet transform works by upsampled and reprocessing the filtered coefficients using both low-pass and high-pass filters. For example, given a set of transformed coefficients:
-\[ \begin{bmatrix} s_0 \\ d_1 \\ s_2 \\ d_3 \\ s_4 \\ d_5 \\ s_6 \\ d_7 \end{bmatrix} \]
+$$\begin{bmatrix} s_0 \\ d_1 \\ s_2 \\ d_3 \\ s_4 \\ d_5 \\ s_6 \\ d_7 \end{bmatrix}$$
 
 The process involves upsampled and reprocessing each pair with the appropriate filter to reconstruct the original signal. The details (d) are combined with the smoothed parts (s) at different stages to recover all N values of the original signal.
 x??
@@ -297,9 +293,9 @@ Background context: The Daubechies wavelets, specifically Daub4, are constructed
 Daubechies wavelets, specifically Daub4, are constructed by applying the inverse transform to a vector where only one element is set to 1 and all others to 0. This process results in a set of wavelet functions that can be used for detailed analysis.
 
 For example:
-- To obtain \( y_{6}(t) \), apply the inverse transform to a vector with a 1 in the 7th position and zeros elsewhere.
+- To obtain $y_{6}(t)$, apply the inverse transform to a vector with a 1 in the 7th position and zeros elsewhere.
 - The sum of Daub4 e10 and Daub4 1e58 wavelets, each corresponding to different scale and time displacements, can be visualized as:
-\[ y_{10}(t) + y_{58}(t) \]
+$$y_{10}(t) + y_{58}(t)$$
 
 These wavelet functions capture both the smooth and detailed features of the input signal.
 x??

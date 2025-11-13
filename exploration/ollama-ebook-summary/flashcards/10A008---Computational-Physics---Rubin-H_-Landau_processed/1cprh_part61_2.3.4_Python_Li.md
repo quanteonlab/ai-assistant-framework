@@ -467,7 +467,7 @@ from sympy import *
 x, y = symbols('x y')
 ```
 
-This code imports all symbols and functions from SymPy and declares two symbolic variables \( x \) and \( y \).
+This code imports all symbols and functions from SymPy and declares two symbolic variables $x $ and$y$.
 
 x??
 
@@ -487,7 +487,7 @@ df_dx = diff(f, x)  # First-order derivative of tan(x)
 print(df_dx)  # Output: tan(x)**2 + 1
 ```
 
-This code computes the first-order derivative of \(\tan(x)\), which is \(\tan^2(x) + 1\).
+This code computes the first-order derivative of $\tan(x)$, which is $\tan^2(x) + 1$.
 
 x??
 
@@ -507,7 +507,7 @@ d2f_dx2 = diff(f, x, 2)  # Second-order derivative of f(x)
 print(d2f_dx2)  # Output: 60*x**2 + 14
 ```
 
-This code computes the second-order derivative of \(5x^4 + 7x^2\), which is \(60x^2 + 14\).
+This code computes the second-order derivative of $5x^4 + 7x^2 $, which is $60x^2 + 14$.
 
 x??
 
@@ -528,14 +528,14 @@ print(expanded_expr)
 # Output: x**8 + 8*x**7*y + 28*x**6*y**2 + 56*x**5*y**3 + 70*x**4*y**4 + 56*x**3*y**5 + 28*x**2*y**6 + 8*x*y**7 + y**8
 ```
 
-This code expands the expression \((x + y)^8\), producing a polynomial with all terms expanded.
+This code expands the expression $(x + y)^8$, producing a polynomial with all terms expanded.
 
 x??
 
 #### Infinite Series and Expansion Points in SymPy
 Background context: This section introduces how to work with infinite series using SymPy. It demonstrates expanding trigonometric functions around different points.
 
-:p How do you compute an infinite series expansion of the sine function about \( x = 0 \) in SymPy?
+:p How do you compute an infinite series expansion of the sine function about $x = 0$ in SymPy?
 ??x
 To compute the series expansion of a function, use the `.series` method on the symbolic expression. For example:
 
@@ -548,7 +548,7 @@ print(sin_x_series)
 # Output: x - x**3/6 + O(x**4)
 ```
 
-This code computes the series expansion of \(\sin(x)\) around \(x = 0\), resulting in \(x - \frac{x^3}{6} + O(x^4)\).
+This code computes the series expansion of $\sin(x)$ around $x = 0$, resulting in $ x - \frac{x^3}{6} + O(x^4)$.
 
 x??
 
@@ -609,7 +609,7 @@ if __name__ == "__main__":
     main()
 ```
 
-This code defines a simple program that calculates and prints the area of a circle with radius \(r = 1.0\). The `pi` constant is imported from the `math` module to perform the calculation.
+This code defines a simple program that calculates and prints the area of a circle with radius $r = 1.0$. The `pi` constant is imported from the `math` module to perform the calculation.
 
 x??
 
@@ -695,11 +695,11 @@ x??
 
 ---
 #### Initializing Constants and Calculations
-The example given includes initializing constants like \( g \), \( V_0 \), and \( \theta \) before calculating other values such as range \( R \) and time of flight \( T \).
+The example given includes initializing constants like $g $, $ V_0 $, and$\theta $ before calculating other values such as range$R $ and time of flight $ T$.
 
 :p What are some initial steps when programming projectile motion?
 ??x
-Initial steps in programming projectile motion include storing or inputting constants like gravitational acceleration (\( g \)), initial velocity (\( V_0 \)), and angle of projection (\( \theta \)) before calculating other derived values such as the range \( R \) and time of flight \( T \).
+Initial steps in programming projectile motion include storing or inputting constants like gravitational acceleration ($g $), initial velocity ($ V_0 $), and angle of projection ($\theta $) before calculating other derived values such as the range $ R $ and time of flight $ T$.
 x??
 
 ---
@@ -708,7 +708,7 @@ The example also includes looping over time to calculate position at different p
 
 :p How can you implement a loop to handle multiple time calculations?
 ??x
-You can implement a loop to iterate through different times, calculating the position \( x(t) \) and \( y(t) \) at each step. This allows for handling multiple time intervals.
+You can implement a loop to iterate through different times, calculating the position $x(t)$ and $y(t)$ at each step. This allows for handling multiple time intervals.
 ```python
 for t in range(T):
     # Calculate x(t), y(t)
@@ -721,7 +721,7 @@ Background context explaining the concept of calculating areas and volumes, incl
 
 :p What is the objective when revising `Area.py` to calculate the volume of a sphere?
 ??x
-The objective is to modify the existing area calculation program to compute the volume of a sphere using the formula \( \frac{4}{3} \pi r^3 \), print it out correctly, and save the modified version as `Vol.py`. This exercise helps in understanding how to handle different geometric calculations and file operations.
+The objective is to modify the existing area calculation program to compute the volume of a sphere using the formula $\frac{4}{3} \pi r^3$, print it out correctly, and save the modified version as `Vol.py`. This exercise helps in understanding how to handle different geometric calculations and file operations.
 
 ```python
 # Vol.py
@@ -809,14 +809,14 @@ x??
 ---
 
 #### Machine Precision
-Background context on machine precision, including how it affects floating-point calculations and the importance of understanding truncation errors. This involves explaining the concept of machine epsilon (\(\epsilon_m\)) and its practical implications.
+Background context on machine precision, including how it affects floating-point calculations and the importance of understanding truncation errors. This involves explaining the concept of machine epsilon ($\epsilon_m$) and its practical implications.
 
 :p What is the significance of machine precision in numerical computations?
 ??x
 Machine precision refers to the smallest positive number that can be added to 1 without changing it on a computer. It highlights the inherent limitations in floating-point arithmetic due to finite word length, leading to truncation errors during calculations.
 
 For example, in single-precision (32-bit) floating point:
-- The machine epsilon (\(\epsilon_m\)) is approximately \(1.19 \times 10^{-7}\).
+- The machine epsilon ($\epsilon_m $) is approximately $1.19 \times 10^{-7}$.
 - This means that any number smaller than this cannot be represented precisely, and operations involving such small numbers may lead to truncation errors.
 
 The significance lies in understanding that real-world computations can introduce inaccuracies due to the finite precision of floating-point representations. For instance:
@@ -880,9 +880,9 @@ x??
 ---
 
 #### Determining Machine Precision
-Background context: The machine precision \( \epsilon_m \) of a computer system is crucial to understanding how accurately floating-point numbers can be represented and manipulated. This value helps in analyzing numerical errors that can occur during computations.
+Background context: The machine precision $\epsilon_m$ of a computer system is crucial to understanding how accurately floating-point numbers can be represented and manipulated. This value helps in analyzing numerical errors that can occur during computations.
 
-Relevant formulas: None specific, but the key idea is to find the smallest number such that \( 1 + \epsilon > 1 \).
+Relevant formulas: None specific, but the key idea is to find the smallest number such that $1 + \epsilon > 1$.
 
 Pseudocode provided:
 ```pseudocode
@@ -897,7 +897,7 @@ end do
 
 :p What is the purpose of this pseudocode?
 ??x
-The purpose of this pseudocode is to determine the machine precision \( \epsilon_m \) by iteratively halving a value until adding it to 1 no longer changes the result. This value indicates the smallest positive number that, when added to 1, yields a different value.
+The purpose of this pseudocode is to determine the machine precision $\epsilon_m$ by iteratively halving a value until adding it to 1 no longer changes the result. This value indicates the smallest positive number that, when added to 1, yields a different value.
 x??
 
 ---

@@ -85,7 +85,7 @@ Background context: Bilateral contracts involve mutual promises (one party offer
 
 :p What distinguishes a bilateral contract from a unilateral contract?
 ??x
-A bilateral contract involves both parties making reciprocal promises. For example, if A agrees to buy B's car for $1,000 and B agrees to sell it, both have made promises that are binding once accepted. In contrast, a unilateral contract requires one party to perform an act in exchange for the other’s promise. For instance, if C offers a reward of $500 for finding their lost dog, D finds the dog but does not claim the reward; no contract is formed.
+A bilateral contract involves both parties making reciprocal promises. For example, if A agrees to buy B's car for $1,000 and B agrees to sell it, both have made promises that are binding once accepted. In contrast, a unilateral contract requires one party to perform an act in exchange for the other’s promise. For instance, if C offers a reward of$500 for finding their lost dog, D finds the dog but does not claim the reward; no contract is formed.
 
 ```java
 public class BilateralContractExample {
@@ -311,7 +311,7 @@ x??
 
 #### Can Extrinsic Evidence Interpret the Meaning of the Bonus Term?
 
-Background context: In Ortegón v. Giddens, 638 Fed.Appx. 47 (2d Cir. 2016), Ortegón accepted LBI’s offer to work as a Business Chief Administrative Officer in its Fixed Income Division with a salary of $150,000 and an annual minimum bonus of $350,000. The letter stated that the bonus was tied to her performance on the job.
+Background context: In Ortegón v. Giddens, 638 Fed.Appx. 47 (2d Cir. 2016), Ortegón accepted LBI’s offer to work as a Business Chief Administrative Officer in its Fixed Income Division with a salary of $150,000 and an annual minimum bonus of$350,000. The letter stated that the bonus was tied to her performance on the job.
 
 The key question is whether extrinsic evidence can be admitted to interpret the meaning of the bonus term if LBI rescinded the offer before Ortegón started work.
 

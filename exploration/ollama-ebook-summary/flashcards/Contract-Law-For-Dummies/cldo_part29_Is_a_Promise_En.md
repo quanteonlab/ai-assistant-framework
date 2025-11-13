@@ -140,7 +140,7 @@ Background context: A breach occurs when one party fails to perform as promised.
 ??x
 Yes, the issue of breach arises when one party did not perform according to the contract terms. However, discharge may arise through modifications or accord and satisfaction.
 
-For example, suppose A agreed to sell B a widget for $400 but later agreed to reduce it to $350 after B’s request. If A then claims non-performance based on this modification, the court will determine if the modification was enforceable.
+For example, suppose A agreed to sell B a widget for $400 but later agreed to reduce it to$350 after B’s request. If A then claims non-performance based on this modification, the court will determine if the modification was enforceable.
 x??
 
 ---
@@ -149,7 +149,7 @@ Background context: Modifications can be made after an initial agreement is form
 
 :p How do you spot a modification issue in contract analysis?
 ??x
-Look for facts indicating parties changed their initial agreement after it was made. For example, if B asked A to reduce the price from $400 to $350 and A agreed, this constitutes a subsequent modification.
+Look for facts indicating parties changed their initial agreement after it was made. For example, if B asked A to reduce the price from $400 to$350 and A agreed, this constitutes a subsequent modification.
 
 If there is no NOM clause in the agreement, any oral modifications must be evaluated under the waiver doctrine to determine enforceability.
 x??

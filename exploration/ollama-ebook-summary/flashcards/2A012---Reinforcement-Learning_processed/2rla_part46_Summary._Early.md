@@ -82,11 +82,9 @@ Background context: The term "optimal control" was introduced in the late 1950s 
 
 :p What is the Bellman equation and its significance in optimal control?
 ??x
-The Bellman equation defines the value function \( V(s) \), which represents the optimal return from state \( s \). It states that the optimal value at any given state can be computed by considering all possible actions, their immediate rewards, and future discounted values.
+The Bellman equation defines the value function $V(s)$, which represents the optimal return from state $ s$. It states that the optimal value at any given state can be computed by considering all possible actions, their immediate rewards, and future discounted values.
 
-\[
-V^*(s) = \max_a \sum_{s',r} p(s', r | s, a)[r + \gamma V^*(s')]
-\]
+$$V^*(s) = \max_a \sum_{s',r} p(s', r | s, a)[r + \gamma V^*(s')]$$
 
 This equation is fundamental for solving optimal control problems using dynamic programming.
 ??x
@@ -188,7 +186,7 @@ Background context: Introduced by Bellman in 1957, MDPs are used to model decisi
 ??x
 An MDP (Markov Decision Process) models decision-making in situations with both randomness and control. It differs from traditional dynamic programming by incorporating probability distributions over the next states based on current actions, which makes it suitable for stochastic environments.
 
-In a traditional dynamic programming framework, state transitions are deterministic or known exactly. However, MDPs handle uncertainty through transition probabilities \( p(s', r | s, a) \), where \( s \) is the current state, \( a \) is the action taken, and \( (s', r) \) represents the next state and reward.
+In a traditional dynamic programming framework, state transitions are deterministic or known exactly. However, MDPs handle uncertainty through transition probabilities $p(s', r | s, a)$, where $ s$is the current state,$ a $ is the action taken, and $(s', r)$ represents the next state and reward.
 
 ```java
 public class MarkovDecisionProcess {
@@ -315,11 +313,7 @@ x??
 Background context explaining the concept. The term "neurodynamic programming" was coined by Dimitri Bertsekas and John Tsitsiklis to refer to the combination of dynamic programming (DP) and artificial neural networks (ANNs). Another term in use is "approximate dynamic programming," which focuses on solving problems where complete knowledge of the system is not available. These approaches emphasize different aspects but share an interest in circumventing classical shortcomings of DP, such as the need for full state space knowledge.
 
 Relevant formulas or data can include Bellman's optimality equation:
-\[
-v_{\pi}(s) = \sum_{s'} p(s' | s, a) [r(s, a, s') + \gamma v_{\pi}(s')]
-\]
-
-:p What is the term coined by Dimitri Bertsekas and John Tsitsiklis to refer to the combination of dynamic programming and artificial neural networks?
+$$v_{\pi}(s) = \sum_{s'} p(s' | s, a) [r(s, a, s') + \gamma v_{\pi}(s')]$$:p What is the term coined by Dimitri Bertsekas and John Tsitsiklis to refer to the combination of dynamic programming and artificial neural networks?
 ??x
 The term coined by Dimitri Bertsekas and John Tsitsiklis to refer to the combination of dynamic programming (DP) and artificial neural networks (ANNs) is "neurodynamic programming." This approach aims to address some of the limitations of traditional DP methods, such as the need for complete state space knowledge.
 
@@ -342,11 +336,7 @@ x??
 Background context explaining the concept. The text states that reinforcement learning (RL) is closely related to optimal control problems, especially stochastic optimal control problems formulated as Markov Decision Processes (MDPs). It emphasizes that many conventional methods in optimal control require complete knowledge of the system, which might not be practical in real-world scenarios.
 
 Relevant formulas or data can include Bellman's optimality equation:
-\[
-v_{\pi}(s) = \sum_{s'} p(s' | s, a) [r(s, a, s') + \gamma v_{\pi}(s')]
-\]
-
-:p How are reinforcement learning (RL) and optimal control related?
+$$v_{\pi}(s) = \sum_{s'} p(s' | s, a) [r(s, a, s') + \gamma v_{\pi}(s')]$$:p How are reinforcement learning (RL) and optimal control related?
 ??x
 Reinforcement learning (RL) is closely related to optimal control problems, especially stochastic optimal control problems formulated as Markov Decision Processes (MDPs). Many conventional methods in optimal control require complete knowledge of the system, which might not be practical in real-world scenarios. However, RL methods can handle situations where only partial or incomplete information about the system is available.
 
@@ -376,11 +366,7 @@ x??
 Background context explaining the concept. The idea of trial-and-error learning traces back to the 1850s with Alexander Bain's discussion of "groping and experiment," and more explicitly to Conway Lloyd Morgan’s use of the term in 1894 to describe his observations of animal behavior. Edward Thorndike succinctly expressed the essence of trial-and-error learning as a principle of learning.
 
 Relevant formulas or data can include Thorndike's Law of Effect:
-\[
-\text{If a response is followed by satisfaction, it will be more likely to recur; if discomfort, it will be less likely.}
-\]
-
-:p Who first succinctly expressed the essence of trial-and-error learning as a principle of learning?
+$$\text{If a response is followed by satisfaction, it will be more likely to recur; if discomfort, it will be less likely.}$$:p Who first succinctly expressed the essence of trial-and-error learning as a principle of learning?
 ??x
 Edward Thorndike was the first to succinctly express the essence of trial-and-error learning as a principle of learning. He stated that of several responses made to the same situation, those which are accompanied or closely followed by satisfaction will be more firmly connected with the situation and thus more likely to recur; conversely, those which are accompanied by discomfort will have their connections weakened.
 
@@ -1071,9 +1057,11 @@ Key concepts include:
 - Value functions: Functions that map states or state-action pairs to real numbers representing utility.
 
 Bellman equations help find optimal policies and value functions:
-\[ V(s) = \max_a \sum_{s',r} P(s', r | s, a)[r + \gamma V(s')] \]
+$$
 
-Where \( \gamma \) is the discount factor.
+V(s) = \max_a \sum_{s',r} P(s', r | s, a)[r + \gamma V(s')]$$
+
+Where $\gamma$ is the discount factor.
 x??
 
 ---
@@ -1158,20 +1146,20 @@ Key algorithms include Model-Based Q-Learning which combines TD updates with mod
 x??
 
 #### K-armed Bandit Problem Overview
-Background context: The k-armed bandit problem is a simplified setting of reinforcement learning where an agent must repeatedly choose among \(k\) options to maximize cumulative rewards. Each action selection yields a numerical reward chosen from a stationary probability distribution that depends on the selected action.
+Background context: The k-armed bandit problem is a simplified setting of reinforcement learning where an agent must repeatedly choose among $k$ options to maximize cumulative rewards. Each action selection yields a numerical reward chosen from a stationary probability distribution that depends on the selected action.
 
 :p What is the k-armed bandit problem?
 ??x
-The k-armed bandit problem involves choosing between \(k\) actions to maximize total expected reward over time steps. It's analogous to playing multiple slot machines, where each machine (action) pays out based on a hidden probability distribution.
+The k-armed bandit problem involves choosing between $k$ actions to maximize total expected reward over time steps. It's analogous to playing multiple slot machines, where each machine (action) pays out based on a hidden probability distribution.
 x??
 
 ---
 #### Actions and Rewards
 Background context: In the k-armed bandit setting, each action has an associated value or mean reward which is not known with certainty but can be estimated over time. The objective is to select actions that maximize total rewards.
 
-:p What are \(q^\)(a) and \(Q_t(a)\)?
+:p What are $q^$(a) and $ Q_t(a)$?
 ??x
-\(q^\)(a) represents the true expected reward of taking action \(a\), whereas \(Q_t(a)\) denotes the estimated value of action \(a\) at time step \(t\).
+$q^$(a) represents the true expected reward of taking action $ a$, whereas $ Q_t(a)$denotes the estimated value of action $ a$at time step $ t$.
 x??
 
 ---
@@ -1242,7 +1230,7 @@ x??
 
 ---
 #### Action Values and Uncertainty
-Background context: The value of an action \(a\) at time step \(t\), denoted as \(Q_t(a)\), is the estimated expected reward given that action \(a\) is selected. This estimate may be uncertain, especially in early stages.
+Background context: The value of an action $a $ at time step$t $, denoted as$ Q_t(a)$, is the estimated expected reward given that action $ a$ is selected. This estimate may be uncertain, especially in early stages.
 
 :p How does uncertainty affect the value estimates?
 ??x

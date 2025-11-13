@@ -157,7 +157,7 @@ x??
 The addressable space is divided into pages, which are chunks of memory that can be individually mapped between virtual and physical addresses. Page sizes vary but are typically powers of two (e.g., 4KiB or 8KiB).
 :p How does the operating system divide the addressable memory space?
 ??x
-The addressable memory space is conceptually divided into equally-sized contiguous chunks known as pages, which are usually a power of two in size. For instance, with a page size of 4 KiB (4096 bytes), a 32-bit address space can be divided into \( \frac{2^{32}}{4096} = 1,048,576 \) pages.
+The addressable memory space is conceptually divided into equally-sized contiguous chunks known as pages, which are usually a power of two in size. For instance, with a page size of 4 KiB (4096 bytes), a 32-bit address space can be divided into $\frac{2^{32}}{4096} = 1,048,576$ pages.
 x??
 
 ---
@@ -710,7 +710,7 @@ x??
 ---
 
 #### Instruction Cache and Data Cache
-Both instruction cache (I-cache, or I$) and data cache (D-cache, or D$) are crucial for high-performance systems. The I-cache preloads executable machine code before it runs, while the D-cache speeds up read and write operations.
+Both instruction cache (I-cache, or I $) and data cache (D-cache, or D$) are crucial for high-performance systems. The I-cache preloads executable machine code before it runs, while the D-cache speeds up read and write operations.
 :p What are the primary functions of an instruction cache and a data cache?
 ??x
 The primary function of an instruction cache is to preload executable machine code before execution, improving the speed at which instructions are fetched. The data cache speeds up read and write operations performed by that machine code.

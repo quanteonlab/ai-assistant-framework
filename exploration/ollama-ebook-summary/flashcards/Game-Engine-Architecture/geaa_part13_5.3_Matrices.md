@@ -26,8 +26,7 @@ Background context: Linear interpolation is used in game programming for smooth 
 :p What is linear interpolation (LERP) and how does it work?
 ??x
 Linear interpolation, often abbreviated as LERP, finds an intermediate point between two known points along a line segment. The operation is defined by the formula:
-\[ \mathbf{L} = \text{LERP}(\mathbf{A}, \mathbf{B}, b) = (1 - b)\mathbf{A} + b\mathbf{B} \]
-where \(0 \leq b \leq 1\) is a scalar parameter that determines the position along the line segment.
+$$\mathbf{L} = \text{LERP}(\mathbf{A}, \mathbf{B}, b) = (1 - b)\mathbf{A} + b\mathbf{B}$$where $0 \leq b \leq 1$ is a scalar parameter that determines the position along the line segment.
 
 Geometrically, LERP finds the point on the line between points A and B at distance b from A. For example:
 ```java
@@ -55,11 +54,11 @@ Background context: Matrices are essential for representing linear transformatio
 A matrix is a rectangular array of m x n scalars arranged in rows and columns. In the context of 3D game programming, matrices are used to represent linear transformations like translation, rotation, and scaling. Matrices can be thought of as grids of numbers enclosed in square brackets.
 
 For example, a 3x3 matrix M might look like this:
-\[ M = \begin{bmatrix}
+$$M = \begin{bmatrix}
     m_{11} & m_{12} & m_{13} \\
     m_{21} & m_{22} & m_{23} \\
     m_{31} & m_{32} & m_{33}
-\end{bmatrix} \]
+\end{bmatrix}$$
 
 Rows and columns of a 3x3 matrix can be considered as 3D vectors. If all the row and column vectors are unit magnitude, the matrix is called an orthogonal or orthonormal matrix, which represents pure rotations.
 
@@ -109,8 +108,8 @@ To calculate the matrix product P = AB, we take dot products between the rows of
 :p How is a matrix product calculated?
 ??x
 A matrix product P = AB is calculated by taking dot products between the rows of matrix A and the columns of matrix B. The result is a new matrix where each element is computed as the dot product of corresponding row from A and column from B.
-For example, if \( A \) and \( B \) are 3×3 matrices:
-\[ P = AB = \begin{pmatrix}
+For example, if $A $ and$B$ are 3×3 matrices:
+$$P = AB = \begin{pmatrix}
 P_{11} & P_{12} & P_{13} \\
 P_{21} & P_{22} & P_{23} \\
 P_{31} & P_{32} & P_{33}
@@ -118,14 +117,12 @@ P_{31} & P_{32} & P_{33}
 A_{row1} \cdot B_{col1} & A_{row1} \cdot B_{col2} & A_{row1} \cdot B_{col3} \\
 A_{row2} \cdot B_{col1} & A_{row2} \cdot B_{col2} & A_{row2} \cdot B_{col3} \\
 A_{row3} \cdot B_{col1} & A_{row3} \cdot B_{col2} & A_{row3} \cdot B_{col3}
-\end{pmatrix}
-\]
-x??
+\end{pmatrix}$$x??
 
 ---
 
 #### Matrix Multiplication Order
-Matrix multiplication is not commutative, meaning \( AB \neq BA \). The order in which matrices are multiplied affects the resulting transformation.
+Matrix multiplication is not commutative, meaning $AB \neq BA$. The order in which matrices are multiplied affects the resulting transformation.
 
 :p Why does matrix multiplication order matter?
 ??x
@@ -139,7 +136,7 @@ Concatenating transformation matrices means applying them sequentially. The prod
 
 :p What does concatenation mean in matrix multiplication?
 ??x
-Concatenation in matrix multiplication refers to combining multiple transformation matrices so that they are applied in sequence. If \( A, B, \) and \( C \) represent three consecutive transformations, their product \( (ABC) \) represents the combined effect of all these transformations.
+Concatenation in matrix multiplication refers to combining multiple transformation matrices so that they are applied in sequence. If $A, B,$ and $ C $ represent three consecutive transformations, their product $(ABC)$ represents the combined effect of all these transformations.
 x??
 
 ---
@@ -160,9 +157,10 @@ When using row vectors for transformations, they "read" from left to right. The 
 
 :p How do you read transformations when using row vectors?
 ??x
-When using row vectors, transformations are read from left to right. This means the first matrix in the sequence (closest to the vector) is applied first. For example, if \( v \) is a row vector and matrices \( A, B, C \) represent transformations:
-\[ v' = (((vA)B)C) \]
-Here, \( v \) is transformed by \( A \), then the result is transformed by \( B \), and finally by \( C \).
+When using row vectors, transformations are read from left to right. This means the first matrix in the sequence (closest to the vector) is applied first. For example, if $v $ is a row vector and matrices$A, B, C$ represent transformations:
+$$v' = (((vA)B)C)$$
+
+Here,$v $ is transformed by$A $, then the result is transformed by$ B $, and finally by$ C$.
 x??
 
 ---
@@ -172,9 +170,10 @@ When using column vectors for transformations, they "read" from right to left. T
 
 :p How do you read transformations when using column vectors?
 ??x
-When using column vectors, transformations are read from right to left. This means the last matrix in the sequence (farthest from the vector) is applied first. For example, if \( v \) is a column vector and matrices \( A, B, C \) represent transformations:
-\[ v' = (C^T(B^T(A^Tv^T))) \]
-Here, \( v \) is transformed by \( A \), then the result is transformed by \( B \), and finally by \( C \).
+When using column vectors, transformations are read from right to left. This means the last matrix in the sequence (farthest from the vector) is applied first. For example, if $v $ is a column vector and matrices$A, B, C$ represent transformations:
+$$v' = (C^T(B^T(A^Tv^T)))$$
+
+Here,$v $ is transformed by$A $, then the result is transformed by$ B $, and finally by$ C$.
 x??
 
 ---
@@ -187,19 +186,19 @@ Background context explaining the difference between column vectors and row vect
 ??x
 Column vectors have elements arranged vertically (n×1), while row vectors have elements arranged horizontally (1×n). When using column vectors, you need to transpose all matrices shown in this book because vector-matrix multiplications are written with the vector on the right of the matrix. 
 
-For example, if a vector \(\mathbf{v}\) is represented as a column vector:
+For example, if a vector $\mathbf{v}$ is represented as a column vector:
 ```java
 // Column Vector (Java representation)
 double[] v = {1, 2, 3};
 ```
-and you want to multiply it by a matrix \(\mathbf{M}\), the multiplication would be written as \(\mathbf{M} \cdot \mathbf{v}\).
+and you want to multiply it by a matrix $\mathbf{M}$, the multiplication would be written as $\mathbf{M} \cdot \mathbf{v}$.
 
 However, if row vectors are used instead:
 ```java
 // Row Vector (Java representation)
 double[] v = {1, 2, 3};
 ```
-the matrix-vector multiplication would be written as \(\mathbf{v} \cdot \mathbf{M}^T\), where \(\mathbf{M}^T\) is the transpose of \(\mathbf{M}\).
+the matrix-vector multiplication would be written as $\mathbf{v} \cdot \mathbf{M}^T $, where $\mathbf{M}^T $ is the transpose of$\mathbf{M}$.
 x??
 
 ---
@@ -208,7 +207,7 @@ Explanation of what an identity matrix is, including its properties and represen
 
 :p What is an identity matrix?
 ??x
-An identity matrix is a square matrix that yields the same matrix when multiplied by any other matrix. It is usually represented by the symbol \(I\). The identity matrix has 1’s along the diagonal and 0’s everywhere else. For example, for a 3×3 identity matrix:
+An identity matrix is a square matrix that yields the same matrix when multiplied by any other matrix. It is usually represented by the symbol $I$. The identity matrix has 1’s along the diagonal and 0’s everywhere else. For example, for a 3×3 identity matrix:
 ```java
 // Identity Matrix (Java representation)
 double[][] I = {
@@ -217,7 +216,7 @@ double[][] I = {
     {0, 0, 1}
 };
 ```
-The properties of the identity matrix are \(AI = IA \rightarrow A\).
+The properties of the identity matrix are $AI = IA \rightarrow A$.
 
 For a 3×3 identity matrix:
 ```java
@@ -227,7 +226,7 @@ double[][] I3x3 = {
     {0, 0, 1}
 };
 ```
-Multiplying any matrix \(A\) by the identity matrix \(I\) will yield the same matrix \(A\).
+Multiplying any matrix $A $ by the identity matrix$I $ will yield the same matrix$A$.
 x??
 
 ---
@@ -236,7 +235,7 @@ Explanation of what a matrix inverse is and how it works.
 
 :p What is a matrix inverse?
 ??x
-The inverse of a matrix \(A\) (denoted as \(A^{-1}\)) is another matrix that undoes the effects of matrix \(A\). For example, if \(A\) rotates objects by 37 degrees about the z-axis, then \(A^{-1}\) will rotate by -37 degrees about the z-axis. If a matrix scales objects to be twice their original size, then its inverse \(A^{-1}\) will scale objects to be half their size.
+The inverse of a matrix $A $(denoted as $ A^{-1}$) is another matrix that undoes the effects of matrix $ A$. For example, if $ A$rotates objects by 37 degrees about the z-axis, then $ A^{-1}$will rotate by -37 degrees about the z-axis. If a matrix scales objects to be twice their original size, then its inverse $ A^{-1}$ will scale objects to be half their size.
 
 The property of an inverse matrix is that when multiplied by the original matrix or vice versa, it results in the identity matrix:
 ```java
@@ -293,7 +292,7 @@ Explanation of homogeneous coordinates and their application in 2D rotation usin
 
 :p What are homogeneous coordinates?
 ??x
-Homogeneous coordinates are a method used to represent points in \(n+1\) dimensions as an \(n\)-dimensional vector. In the context of 2D rotations, a 2×2 matrix can be used to rotate a point by an angle \(\phi\). The rotation is achieved through the following transformation:
+Homogeneous coordinates are a method used to represent points in $n+1 $ dimensions as an$n $-dimensional vector. In the context of 2D rotations, a 2×2 matrix can be used to rotate a point by an angle $\phi$. The rotation is achieved through the following transformation:
 ```java
 // Rotation Matrix (Java representation)
 double[][] R = {
@@ -304,7 +303,7 @@ double[][] R = {
 // Original Vector (Column Vector, Java representation)
 double[] v = {1, 2};
 ```
-To rotate the vector \(r\) through an angle \(\phi\):
+To rotate the vector $r $ through an angle$\phi$:
 ```java
 // Rotated Vector Calculation
 double[][] M = R; // Rotation matrix
@@ -332,17 +331,17 @@ x??
 Background context explaining the concept. In 3D graphics, rotations are commonly represented using 3×3 matrices due to their simplicity and efficiency.
 
 In the given example:
-\[ \begin{bmatrix} r'_{x} \\ r'_{y} \\ z \end{bmatrix} = \begin{bmatrix} r_{x} & r_{y} & r_{z} \end{bmatrix} \cdot \begin{bmatrix} \cos\phi & \sin\phi & 0 \\ -\sin\phi & \cos\phi & 0 \\ 0 & 0 & 1 \end{bmatrix} \]
+$$\begin{bmatrix} r'_{x} \\ r'_{y} \\ z \end{bmatrix} = \begin{bmatrix} r_{x} & r_{y} & r_{z} \end{bmatrix} \cdot \begin{bmatrix} \cos\phi & \sin\phi & 0 \\ -\sin\phi & \cos\phi & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
 
-This is a rotation about the z-axis by an angle \(\phi\).
+This is a rotation about the z-axis by an angle $\phi$.
 
 :q Can a 3×3 matrix be used to represent translations in 3D space?
 ??x
-No, because translating a point requires adding the components of translation \(t\) to the corresponding components of the point \(r\) individually. Matrix multiplication involves both multiplication and addition of matrix elements, which cannot achieve the necessary summation form needed for translations.
+No, because translating a point requires adding the components of translation $t $ to the corresponding components of the point$r$ individually. Matrix multiplication involves both multiplication and addition of matrix elements, which cannot achieve the necessary summation form needed for translations.
 
 Here's why:
-- Consider the matrix \(\begin{bmatrix} A & B \\ C & D \end{bmatrix}\) and a column vector \(r = \begin{bmatrix} r_x \\ r_y \\ r_z \end{bmatrix}\).
-- The result of multiplying this with \(r\) would involve terms like \(A*r_x + B*r_y + C*r_z\), which cannot directly achieve the form \((r_x + t_x)\) needed for translation.
+- Consider the matrix $\begin{bmatrix} A & B \\ C & D \end{bmatrix}$ and a column vector $r = \begin{bmatrix} r_x \\ r_y \\ r_z \end{bmatrix}$.
+- The result of multiplying this with $r $ would involve terms like$A*r_x + B*r_y + C*r_z $, which cannot directly achieve the form$(r_x + t_x)$ needed for translation.
 
 Therefore, translations must be handled separately from rotations and scales using a different representation.
 x??
@@ -354,27 +353,26 @@ x??
 Background context explaining the concept. In 3D graphics, a combination of transformations (translation, rotation, scaling) is often required. A 4×4 matrix can handle all these operations effectively.
 
 A 4×4 transformation matrix in homogeneous coordinates looks like this:
-
-\[ T = \begin{bmatrix} 
+$$T = \begin{bmatrix} 
 1 & 0 & 0 & t_x \\ 
 0 & 1 & 0 & t_y \\ 
 0 & 0 & 1 & t_z \\ 
 0 & 0 & 0 & 1 
-\end{bmatrix} \]
+\end{bmatrix}$$
 
-Where \(t_x, t_y, t_z\) are the translation components.
+Where $t_x, t_y, t_z$ are the translation components.
 
 :q How can a 4×4 matrix represent translations in homogeneous coordinates?
 ??x
-A 4×4 matrix with a fourth column containing the translation components (e.g., \([0, 0, 1, 0]\) for rotation and scale, and \([t_x, t_y, t_z, 1]\) for translation) can be used to represent translations. By setting the fourth element of the position vector \(r\) to 1 (i.e., writing it in homogeneous coordinates), we can achieve the desired sums when multiplying by the matrix.
+A 4×4 matrix with a fourth column containing the translation components (e.g.,$[0, 0, 1, 0]$ for rotation and scale, and $[t_x, t_y, t_z, 1]$ for translation) can be used to represent translations. By setting the fourth element of the position vector $r$ to 1 (i.e., writing it in homogeneous coordinates), we can achieve the desired sums when multiplying by the matrix.
 
 For example:
-\[ \begin{bmatrix} r_x \\ r_y \\ r_z \\ 1 \end{bmatrix} \cdot \begin{bmatrix} 
+$$\begin{bmatrix} r_x \\ r_y \\ r_z \\ 1 \end{bmatrix} \cdot \begin{bmatrix} 
 1 & 0 & 0 & t_x \\ 
 0 & 1 & 0 & t_y \\ 
 0 & 0 & 1 & t_z \\ 
 0 & 0 & 0 & 1 
-\end{bmatrix} = \begin{bmatrix} (r_x + t_x) \\ (r_y + t_y) \\ (r_z + t_z) \\ 1 \end{bmatrix} \]
+\end{bmatrix} = \begin{bmatrix} (r_x + t_x) \\ (r_y + t_y) \\ (r_z + t_z) \\ 1 \end{bmatrix}$$
 
 This results in a vector with the translation applied.
 
@@ -388,7 +386,7 @@ Background context explaining the concept. When transforming vectors in 3D space
 
 For points (position vectors), both rotation and translation components of the matrix are applied.
 - Example:
-\[ \begin{bmatrix} r_x \\ r_y \\ r_z \\ 1 \end{bmatrix} \cdot M = \text{(Transformed Point)} \]
+$$\begin{bmatrix} r_x \\ r_y \\ r_z \\ 1 \end{bmatrix} \cdot M = \text{(Transformed Point)}$$
 
 For direction vectors, only the rotation component is applied. The translation part does not affect direction since it would change magnitude.
 
@@ -397,14 +395,14 @@ For direction vectors, only the rotation component is applied. The translation p
 Direction vectors are treated differently from points because they do not inherently have a translation component. Applying a translation to a direction vector would alter its magnitude, which is generally undesirable.
 
 In homogeneous coordinates:
-- Points use \(w = 1\).
-- Direction vectors use \(w = 0\).
+- Points use $w = 1$.
+- Direction vectors use $w = 0$.
 
 This ensures that only the rotation part of the transformation matrix affects direction vectors:
 
-\[ \begin{bmatrix} v_x \\ v_y \\ v_z \\ 0 \end{bmatrix} \cdot M = \begin{bmatrix} (v_x \times U_{1x}) + (v_y \times U_{2x}) + (v_z \times U_{3x}) \\ (v_x \times U_{1y}) + (v_y \times U_{2y}) + (v_z \times U_{3y}) \\ (v_x \times U_{1z}) + (v_y \times U_{2z}) + (v_z \times U_{3z}) \\ 0 \end{bmatrix} \]
+$$\begin{bmatrix} v_x \\ v_y \\ v_z \\ 0 \end{bmatrix} \cdot M = \begin{bmatrix} (v_x \times U_{1x}) + (v_y \times U_{2x}) + (v_z \times U_{3x}) \\ (v_x \times U_{1y}) + (v_y \times U_{2y}) + (v_z \times U_{3y}) \\ (v_x \times U_{1z}) + (v_y \times U_{2z}) + (v_z \times U_{3z}) \\ 0 \end{bmatrix}$$
 
-Here, the \(w = 0\) component ensures that no translation is applied.
+Here, the $w = 0$ component ensures that no translation is applied.
 
 x??
 
@@ -416,15 +414,14 @@ Background context explaining the concept. In some cases, it's necessary to conv
 
 :q How can a point in homogeneous coordinates be converted to 3D (non-homogeneous) coordinates?
 ??x
-A point in homogeneous coordinates can be converted to its 3D (non-homogeneous) form by dividing the \(x\), \(y\), and \(z\) components by the \(w\) component:
-
-\[ \begin{bmatrix} x \\ y \\ z \\ w \end{bmatrix} = \frac{1}{w} \begin{bmatrix} x \\ y \\ z \end{bmatrix} \]
+A point in homogeneous coordinates can be converted to its 3D (non-homogeneous) form by dividing the $x $, $ y $, and$ z $components by the$ w$component:
+$$\begin{bmatrix} x \\ y \\ z \\ w \end{bmatrix} = \frac{1}{w} \begin{bmatrix} x \\ y \\ z \end{bmatrix}$$
 
 For example, if a point is represented as:
-\[ \begin{bmatrix} 2 \\ 3 \\ 4 \\ 2 \end{bmatrix} \]
+$$\begin{bmatrix} 2 \\ 3 \\ 4 \\ 2 \end{bmatrix}$$
 
 The non-homogeneous form would be:
-\[ \begin{bmatrix} 1 \\ 1.5 \\ 2 \end{bmatrix} \]
+$$\begin{bmatrix} 1 \\ 1.5 \\ 2 \end{bmatrix}$$
 
 This conversion effectively normalizes the point to its original 3D coordinates.
 
@@ -440,10 +437,7 @@ Background context explaining the concept of homogeneous coordinates and why poi
 The w-component is set to 1 for points because dividing by 1 (which effectively means no change) does not alter the coordinates of the point. For vectors, setting the w-component to 0 implies that any attempt at translation would result in an undefined form, as division by zero is not defined.
 
 For example:
-- A point in homogeneous coordinates: \([x_p, y_p, z_p, 1]\)
-- A vector in homogeneous coordinates: \([x_v, y_v, z_v, 0]\)
-
-This treatment helps distinguish between points and vectors mathematically. The point at infinity is a special case where the w-component can be 0 but only for certain transformations like rotation.
+- A point in homogeneous coordinates:$[x_p, y_p, z_p, 1]$- A vector in homogeneous coordinates:$[x_v, y_v, z_v, 0]$ This treatment helps distinguish between points and vectors mathematically. The point at infinity is a special case where the w-component can be 0 but only for certain transformations like rotation.
 
 ---
 #### Affine Transformation Matrices
@@ -454,11 +448,10 @@ Background context explaining affine transformation matrices and how they are co
 An affine transformation matrix in 3D space can be created by concatenating transformations such as pure translations, rotations, scales, and shears. These atomic transformations form the building blocks for more complex transformations.
 
 The general form of an affine 4×4 transformation matrix is:
-\[ M_{\text{affine}} = \begin{bmatrix}
+$$M_{\text{affine}} = \begin{bmatrix}
 U & t \\
 0 & 1
-\end{bmatrix} \]
-where \( U \) is a 3×3 upper triangular matrix representing the rotation and/or scale, \( t \) is a 1×3 translation vector, and the last row ensures that when multiplying by homogeneous coordinates, we get back to a valid 4D point.
+\end{bmatrix}$$where $ U $is a 3×3 upper triangular matrix representing the rotation and/or scale,$ t$ is a 1×3 translation vector, and the last row ensures that when multiplying by homogeneous coordinates, we get back to a valid 4D point.
 
 For example:
 ```java
@@ -489,17 +482,16 @@ Background context explaining the specific case of translation within affine tra
 
 :p What is a translation matrix and how does it work?
 ??x
-A translation matrix translates a point by adding its 1×3 translation vector \( t \) to the point's coordinates. This operation ensures that points are moved in space while vectors remain unaffected due to their zero w-component.
+A translation matrix translates a point by adding its 1×3 translation vector $t$ to the point's coordinates. This operation ensures that points are moved in space while vectors remain unaffected due to their zero w-component.
 
 The general form of a translation matrix is:
-\[ T = \begin{bmatrix}
+$$T = \begin{bmatrix}
 I & t \\
 0 & 1
-\end{bmatrix} \]
-where \( I \) is the identity matrix and \( t \) is the translation vector. When applied, it performs the transformation:
-\[ [x', y', z', 1] = [x, y, z, 1] \cdot T \]
+\end{bmatrix}$$where $ I $ is the identity matrix and $ t$ is the translation vector. When applied, it performs the transformation:
+$$[x', y', z', 1] = [x, y, z, 1] \cdot T$$
 
-For example, a translation by \( (tx, ty, tz) \):
+For example, a translation by $(tx, ty, tz)$:
 ```java
 public class TranslationMatrix {
     private double[] t;
@@ -526,31 +518,31 @@ Background context explaining the specific forms of rotation matrices around dif
 
 :p What are the rotation matrices for each axis in 3D space?
 ??x
-Rotation matrices for each axis in 3D space follow a specific form. Each matrix rotates points about an axis by a given angle \( \theta \).
+Rotation matrices for each axis in 3D space follow a specific form. Each matrix rotates points about an axis by a given angle $\theta$.
 
 - Rotation about the x-axis:
-\[ R_x(\phi) = \begin{bmatrix}
+$$R_x(\phi) = \begin{bmatrix}
 1 & 0 & 0 & 0 \\
 0 & \cos(\phi) & -\sin(\phi) & 0 \\
 0 & \sin(\phi) & \cos(\phi) & 0 \\
 0 & 0 & 0 & 1
-\end{bmatrix} \]
+\end{bmatrix}$$- Rotation about the y-axis:
+$$
 
-- Rotation about the y-axis:
-\[ R_y(q) = \begin{bmatrix}
+R_y(q) = \begin{bmatrix}
 \cos(q) & 0 & -\sin(q) & 0 \\
 0 & 1 & 0 & 0 \\
 \sin(q) & 0 & \cos(q) & 0 \\
 0 & 0 & 0 & 1
-\end{bmatrix} \]
+\end{bmatrix}$$- Rotation about the z-axis:
+$$
 
-- Rotation about the z-axis:
-\[ R_z(\gamma) = \begin{bmatrix}
+R_z(\gamma) = \begin{bmatrix}
 \cos(\gamma) & -\sin(\gamma) & 0 & 0 \\
 \sin(\gamma) & \cos(\gamma) & 0 & 0 \\
 0 & 0 & 1 & 0 \\
 0 & 0 & 0 & 1
-\end{bmatrix} \]
+\end{bmatrix}$$
 
 These matrices allow for the rotation of points in 3D space around their respective axes.
 
@@ -601,9 +593,8 @@ x??
 ---
 
 #### Scaling Matrices
-Scaling matrices are used to scale a point \( \mathbf{r} = [x, y, z]^T \) by factors along each axis. The matrix for scaling is given as:
-
-\[ \mathbf{r_S} = \begin{bmatrix}
+Scaling matrices are used to scale a point $\mathbf{r} = [x, y, z]^T$ by factors along each axis. The matrix for scaling is given as:
+$$\mathbf{r_S} = \begin{bmatrix}
 x & y & z & 1 \\
 \end{bmatrix} 
 \begin{bmatrix}
@@ -617,13 +608,13 @@ s_x x \\
 s_y y \\
 s_z z \\
 1
-\end{bmatrix} = [s_x r_x, s_y r_y, s_z r_z, 1]^T \]
+\end{bmatrix} = [s_x r_x, s_y r_y, s_z r_z, 1]^T$$
 
-Here \( s_x, s_y, s_z \) are the scaling factors along the x, y, and z axes respectively.
+Here $s_x, s_y, s_z$ are the scaling factors along the x, y, and z axes respectively.
 
 :p How does a scaling matrix affect a point in 3D space?
 ??x
-A scaling matrix affects each coordinate of a point by multiplying it with a corresponding scaling factor. For example, if you have a point \( [x, y, z] \) and you apply a scaling matrix where the factors are \( s_x, s_y, s_z \), then the new coordinates become \( [s_x x, s_y y, s_z z] \).
+A scaling matrix affects each coordinate of a point by multiplying it with a corresponding scaling factor. For example, if you have a point $[x, y, z]$ and you apply a scaling matrix where the factors are $ s_x, s_y, s_z $, then the new coordinates become $[s_x x, s_y y, s_z z]$.
 
 For instance, if we want to scale a point by 2 along the x-axis, 3 along the y-axis and leave the z-axis unchanged (i.e., scaling factor is 1 for z), the matrix will be:
 
@@ -646,29 +637,28 @@ x??
 ---
 
 #### Inverting a Scaling Matrix
-To invert a scaling matrix, you simply replace \( s_x, s_y, \) and \( s_z \) with their reciprocals. This effectively undoes the original scaling.
+To invert a scaling matrix, you simply replace $s_x, s_y,$ and $s_z$ with their reciprocals. This effectively undoes the original scaling.
 
 For example, if we have a scaling matrix:
 
-\[ S = \begin{bmatrix}
+$$S = \begin{bmatrix}
 2 & 0 & 0 & 0 \\
 0 & 3 & 0 & 0 \\
 0 & 0 & 4 & 0 \\
 0 & 0 & 0 & 1
-\end{bmatrix} \]
+\end{bmatrix}$$
 
 The inverse scaling matrix would be:
+$$
 
-\[ S^{-1} = \begin{bmatrix}
+S^{-1} = \begin{bmatrix}
 1/2 & 0 & 0 & 0 \\
 0 & 1/3 & 0 & 0 \\
 0 & 0 & 1/4 & 0 \\
 0 & 0 & 0 & 1
-\end{bmatrix} \]
-
-:p How is an inverse scaling matrix calculated?
+\end{bmatrix}$$:p How is an inverse scaling matrix calculated?
 ??x
-An inverse scaling matrix is computed by taking the reciprocal of each non-zero diagonal element in the original scaling matrix. If \( S = [s_x, s_y, s_z] \), then \( S^{-1} = [1/s_x, 1/s_y, 1/s_z] \).
+An inverse scaling matrix is computed by taking the reciprocal of each non-zero diagonal element in the original scaling matrix. If $S = [s_x, s_y, s_z]$, then $ S^{-1} = [1/s_x, 1/s_y, 1/s_z]$.
 
 For example, given a scaling matrix with factors 2, 3, and 4 along the x, y, and z axes respectively:
 
@@ -698,15 +688,15 @@ x??
 ---
 
 #### Uniform vs. Nonuniform Scaling
-Uniform scaling occurs when the same scale factor is applied to all three axes (i.e., \( s_x = s_y = s_z \)). This means that shapes remain similar in form under uniform scaling, such as spheres remaining spherical.
+Uniform scaling occurs when the same scale factor is applied to all three axes (i.e., $s_x = s_y = s_z$). This means that shapes remain similar in form under uniform scaling, such as spheres remaining spherical.
 
-Non-uniform scaling, where each axis has a different scaling factor (\( s_x \neq s_y \neq s_z \)), results in non-similar transformations. For example, a sphere would become an ellipsoid.
+Non-uniform scaling, where each axis has a different scaling factor ($s_x \neq s_y \neq s_z$), results in non-similar transformations. For example, a sphere would become an ellipsoid.
 
 :p What is the difference between uniform and nonuniform scaling?
 ??x
-Uniform scaling involves applying the same scale factor to all axes (i.e., \( s_x = s_y = s_z \)). This type of transformation preserves the shape's proportions, ensuring that geometric properties like angles remain consistent. For instance, a sphere remains spherical under uniform scaling.
+Uniform scaling involves applying the same scale factor to all axes (i.e., $s_x = s_y = s_z$). This type of transformation preserves the shape's proportions, ensuring that geometric properties like angles remain consistent. For instance, a sphere remains spherical under uniform scaling.
 
-Non-uniform scaling uses different scale factors along each axis (\( s_x \neq s_y \neq s_z \)), which can distort shapes into non-similar forms. A typical example is how a sphere might be transformed into an ellipsoid.
+Non-uniform scaling uses different scale factors along each axis ($s_x \neq s_y \neq s_z$), which can distort shapes into non-similar forms. A typical example is how a sphere might be transformed into an ellipsoid.
 
 For uniform scaling:
 
@@ -737,11 +727,11 @@ x??
 ---
 
 #### Concatenating Uniform Scale and Rotation Matrices
-When the uniform scale matrix \( S_u \) is concatenated with a rotation matrix \( R \), the order of multiplication does not matter (i.e., \( S_uR = RS_u \)). This property only holds for uniform scaling.
+When the uniform scale matrix $S_u $ is concatenated with a rotation matrix$R $, the order of multiplication does not matter (i.e.,$ S_uR = RS_u$). This property only holds for uniform scaling.
 
 :p What happens when you concatenate a uniform scale matrix with a rotation matrix?
 ??x
-When a uniform scale matrix \( S_u \) is concatenated with a rotation matrix \( R \), the order of multiplication does not affect the final result. Mathematically, this means that both \( S_uR \) and \( RS_u \) yield the same transformation.
+When a uniform scale matrix $S_u $ is concatenated with a rotation matrix$R $, the order of multiplication does not affect the final result. Mathematically, this means that both$ S_uR $and$ RS_u$ yield the same transformation.
 
 For example, consider:
 
@@ -762,7 +752,7 @@ Matrix4f combinedRotationScale = rotationMatrix.mulLocal(scaleMatrix);
 // Both matrices should be identical if the operation is valid
 ```
 
-In this example, both \( S_uR \) and \( RS_u \) produce the same transformation matrix.
+In this example, both $S_uR $ and$RS_u$ produce the same transformation matrix.
 
 x??
 
@@ -805,7 +795,7 @@ Coordinate spaces are used to describe the position and orientation of objects r
 ??x
 Model space, also known as object space or local space, refers to a coordinate system where the positions of vertices in a mesh are defined relative to the object's local origin. This means that transformations applied directly affect the object itself without considering any external reference frames.
 
-For example, if you have an object represented by its model matrix \( M \), and you want to transform its vertices from model space to world space, you would multiply each vertex position by the model matrix:
+For example, if you have an object represented by its model matrix $M$, and you want to transform its vertices from model space to world space, you would multiply each vertex position by the model matrix:
 
 ```java
 // Model Matrix representing the transformation in model space
@@ -917,9 +907,7 @@ Background context: This section explains how an aircraft's position and orienta
 ??x
 When the aircraft is rotated by 90 degrees about the y-axis, its new coordinates for the left wingtip change from (5, 0, 0) in model space to (0, 0, -5) in world space. However, since the origin of the aircraft has been translated to (–25, 50, 8), we need to apply this translation to the new coordinates. The final position of the left wingtip is thus calculated as:
 
-\[
-(0 + (-25), 0 + 50, -5 + 8) = (-25, 50, 3)
-\]
+$$(0 + (-25), 0 + 50, -5 + 8) = (-25, 50, 3)$$
 
 This transformation accounts for both the rotation and translation required to represent the aircraft in world space.
 
@@ -1036,7 +1024,7 @@ x??
 ---
 
 #### Change of Basis Matrix Concept
-Background context: A change of basis matrix transforms points and directions from a child coordinate system (C) to its parent coordinate system (P). This transformation is crucial for understanding how positions and orientations are represented across different coordinate systems. The matrix \( M_{C.P} \) indicates the transformation from child space to parent space.
+Background context: A change of basis matrix transforms points and directions from a child coordinate system (C) to its parent coordinate system (P). This transformation is crucial for understanding how positions and orientations are represented across different coordinate systems. The matrix $M_{C.P}$ indicates the transformation from child space to parent space.
 
 :p What is the purpose of a change of basis matrix in game development?
 ??x
@@ -1045,21 +1033,18 @@ x??
 
 ---
 #### Formula for Change of Basis Matrix
-Background context: The change of basis matrix \( M_{C.P} \) is constructed from the translation vector \( t_C \), and unit vectors \( i_C, j_C, k_C \). These vectors are expressed in parent coordinates.
+Background context: The change of basis matrix $M_{C.P}$ is constructed from the translation vector $ t_C $, and unit vectors $ i_C, j_C, k_C$. These vectors are expressed in parent coordinates.
 
 Formula:
-\[ MC.P = 
+$$MC.P = 
 \begin{pmatrix}
 i_{Cx} & i_{Cy} & i_{Cz} & 0 \\
 j_{Cx} & j_{Cy} & j_{Cz} & 0 \\
 k_{Cx} & k_{Cy} & k_{Cz} & 0 \\
 t_{Cx} & t_{Cy} & t_{Cz} & 1
-\end{pmatrix}
-\]
-
-:p How is the change of basis matrix constructed?
+\end{pmatrix}$$:p How is the change of basis matrix constructed?
 ??x
-The change of basis matrix \( M_{C.P} \) is constructed using the translation vector \( t_C \), and unit vectors \( i_C, j_C, k_C \). The unit vectors represent the axes of the child coordinate system in parent space coordinates. The matrix has four columns: three for the unit vectors (forming a 3x3 rotation part) and one for the translation.
+The change of basis matrix $M_{C.P}$ is constructed using the translation vector $ t_C $, and unit vectors $ i_C, j_C, k_C$. The unit vectors represent the axes of the child coordinate system in parent space coordinates. The matrix has four columns: three for the unit vectors (forming a 3x3 rotation part) and one for the translation.
 
 ```java
 public static float[] buildChangeOfBasisMatrix(Vector3f iC, Vector3f jC, Vector3f kC, Vector3f tC) {
@@ -1091,38 +1076,33 @@ x??
 
 ---
 #### Rotation Matrix Example
-Background context: A simple example of a rotation by an angle \( \theta \) about the z-axis can be represented by:
+Background context: A simple example of a rotation by an angle $\theta$ about the z-axis can be represented by:
 
-\[ \text{rotate\_z}(\theta, g) =
+$$\text{rotate\_z}(\theta, g) =
 \begin{pmatrix}
 \cos(g) & -\sin(g) & 0 & 0 \\
 \sin(g) & \cos(g) & 0 & 0 \\
 0 & 0 & 1 & 0 \\
 0 & 0 & 0 & 1
-\end{pmatrix}
-\]
-
-:p How does the rotation matrix for a z-axis rotation look?
+\end{pmatrix}$$:p How does the rotation matrix for a z-axis rotation look?
 ??x
-The rotation matrix for a z-axis rotation by an angle \( \theta \) is given by:
-
-\[ \text{rotate\_z}(\theta, g) =
+The rotation matrix for a z-axis rotation by an angle $\theta$ is given by:
+$$\text{rotate\_z}(\theta, g) =
 \begin{pmatrix}
 \cos(g) & -\sin(g) & 0 & 0 \\
 \sin(g) & \cos(g) & 0 & 0 \\
 0 & 0 & 1 & 0 \\
 0 & 0 & 0 & 1
-\end{pmatrix}
-\]
+\end{pmatrix}$$
 
 This matrix rotates vectors in the x-y plane while keeping z and t (translation) components unchanged.
 
-For instance, if \( \theta = g \), then:
+For instance, if $\theta = g$, then:
 
-\[ i_C = [\cos(g) \sin(g) 0] \]
-\[ j_C = [-\sin(g) \cos(g) 0] \]
+$$i_C = [\cos(g) \sin(g) 0]$$
+$$j_C = [-\sin(g) \cos(g) 0]$$
 
-When these vectors are plugged into the change of basis matrix formula with \( k_C = [0, 0, 1] \), it matches the rotation matrix.
+When these vectors are plugged into the change of basis matrix formula with $k_C = [0, 0, 1]$, it matches the rotation matrix.
 
 ```java
 public static float[] buildRotationMatrixZ(float angle) {
@@ -1150,28 +1130,27 @@ x??
 
 ---
 #### Scaling of Child Axes
-Background context: Scaling the child coordinate system is achieved by scaling the unit basis vectors appropriately. If a child space is scaled up or down, this affects the lengths of the \( i_C \), \( j_C \), and \( k_C \) vectors.
+Background context: Scaling the child coordinate system is achieved by scaling the unit basis vectors appropriately. If a child space is scaled up or down, this affects the lengths of the $i_C $, $ j_C $, and$ k_C$ vectors.
 
 :p How does scaling affect the child axes in a change of basis matrix?
 ??x
-Scaling the child coordinate system changes the length of the unit basis vectors. For example, if the child space is scaled up by a factor of 2, then the unit basis vectors \( i_C \), \( j_C \), and \( k_C \) will be twice as long.
+Scaling the child coordinate system changes the length of the unit basis vectors. For example, if the child space is scaled up by a factor of 2, then the unit basis vectors $i_C $, $ j_C $, and$ k_C$ will be twice as long.
 
 If we scale up the axes, their new lengths would be:
-\[ i_C' = [i_C.x * scalingFactor, i_C.y * scalingFactor, i_C.z * scalingFactor] \]
-\[ j_C' = [j_C.x * scalingFactor, j_C.y * scalingFactor, j_C.z * scalingFactor] \]
-\[ k_C' = [k_C.x * scalingFactor, k_C.y * scalingFactor, k_C.z * scalingFactor] \]
+$$i_C' = [i_C.x * scalingFactor, i_C.y * scalingFactor, i_C.z * scalingFactor]$$
+$$j_C' = [j_C.x * scalingFactor, j_C.y * scalingFactor, j_C.z * scalingFactor]$$
+$$k_C' = [k_C.x * scalingFactor, k_C.y * scalingFactor, k_C.z * scalingFactor]$$
 
 The change of basis matrix would then be:
-\[ M_{C.P} =
+$$
+
+M_{C.P} =
 \begin{pmatrix}
 i_{Cx}' & i_{Cy}' & i_{Cz}' & 0 \\
 j_{Cx}' & j_{Cy}' & j_{Cz}' & 0 \\
 k_{Cx}' & k_{Cy}' & k_{Cz}' & 0 \\
 t_{Cx} & t_{Cy} & t_{Cz} & 1
-\end{pmatrix}
-\]
-
-```java
+\end{pmatrix}$$```java
 public static float[] scaleChangeOfBasisMatrix(float scalingFactor, Vector3f tC) {
     // Scaling the basis vectors
     Vector3f iCScaled = new Vector3f(iCx * scalingFactor, iCy * scalingFactor, iCz * scalingFactor);
@@ -1206,30 +1185,29 @@ x??
 
 ---
 #### Extracting Unit Basis Vectors from a Matrix
-Background context: Given an affine transformation matrix, we can extract the unit basis vectors \( i_C \), \( j_C \), and \( k_C \) by isolating specific rows of the matrix. This is useful for extracting information like orientation without needing to explicitly calculate it.
+Background context: Given an affine transformation matrix, we can extract the unit basis vectors $i_C $, $ j_C $, and$ k_C$ by isolating specific rows of the matrix. This is useful for extracting information like orientation without needing to explicitly calculate it.
 
 :p How can we extract the child-space basis vectors from a given affine transformation matrix?
 ??x
-To extract the unit basis vectors \( i_C \), \( j_C \), and \( k_C \) from an affine transformation matrix, you simply need to look at the appropriate rows of the matrix. For example:
+To extract the unit basis vectors $i_C $, $ j_C $, and$ k_C$ from an affine transformation matrix, you simply need to look at the appropriate rows of the matrix. For example:
 
-- The first three elements of the third row give \( k_C \).
-- The first three elements of the second row give \( j_C \).
-- The first three elements of the first row give \( i_C \).
+- The first three elements of the third row give $k_C$.
+- The first three elements of the second row give $j_C$.
+- The first three elements of the first row give $i_C$.
 
 For a transformation matrix:
-\[ M = 
+$$M = 
 \begin{pmatrix}
 a & b & c & 0 \\
 d & e & f & 0 \\
 g & h & i & 0 \\
 j & k & l & 1
-\end{pmatrix}
-\]
+\end{pmatrix}$$
 
 The basis vectors are:
-- \( i_C \) is [a, b, c]
-- \( j_C \) is [d, e, f]
-- \( k_C \) is [g, h, i]
+- $i_C$ is [a, b, c]
+- $j_C$ is [d, e, f]
+- $k_C$ is [g, h, i]
 
 ```java
 public static Vector3f extractK(Vector3f kC, float[] matrix) {
@@ -1243,12 +1221,12 @@ x??
 
 #### Transforming Coordinate Systems vs Vectors
 
-Background context: Matrices can be used to transform points and vectors from one coordinate system (child space) to another (parent space). The fourth row of a transformation matrix \(M_{C.P}\) contains the translation vector \(t_C\), which represents how the child's axes are translated relative to the world space. This can also be visualized as transforming the parent’s coordinate axes into the child’s axes, effectively reversing the direction in which points and vectors move.
+Background context: Matrices can be used to transform points and vectors from one coordinate system (child space) to another (parent space). The fourth row of a transformation matrix $M_{C.P}$ contains the translation vector $t_C$, which represents how the child's axes are translated relative to the world space. This can also be visualized as transforming the parent’s coordinate axes into the child’s axes, effectively reversing the direction in which points and vectors move.
 
-:p How does a transformation matrix \(M_{C.P}\) transform both points and coordinate axes?
+:p How does a transformation matrix $M_{C.P}$ transform both points and coordinate axes?
 
 ??x
-A transformation matrix \(M_{C.P}\) transforms points and directions (vectors) from the child space to the parent space. Conversely, it can also be seen as transforming the parent’s coordinate axes into the child's axes. This is because moving a point 20 units in one direction with fixed axes is equivalent to moving the axes 20 units in the opposite direction while keeping the point fixed.
+A transformation matrix $M_{C.P}$ transforms points and directions (vectors) from the child space to the parent space. Conversely, it can also be seen as transforming the parent’s coordinate axes into the child's axes. This is because moving a point 20 units in one direction with fixed axes is equivalent to moving the axes 20 units in the opposite direction while keeping the point fixed.
 
 ```java
 // Example of transforming a vector v from child space to parent space using matrix M_C.P
@@ -1271,7 +1249,7 @@ Background context: In the book, it is conventionally agreed that transformation
 :p How does choosing transformation conventions impact how you work with matrices?
 
 ??x
-Choosing conventions such as applying transformations to vectors over coordinate axes and representing vectors as rows impacts the readability and ease of working with matrices. It allows for straightforward reading of matrix multiplications from left to right, enabling intuitive cancellations like \(r_D = r_A \cdot M_{A.B} \cdot A.D\).
+Choosing conventions such as applying transformations to vectors over coordinate axes and representing vectors as rows impacts the readability and ease of working with matrices. It allows for straightforward reading of matrix multiplications from left to right, enabling intuitive cancellations like $r_D = r_A \cdot M_{A.B} \cdot A.D$.
 
 ```java
 // Example of vector transformation following chosen conventions
@@ -1294,7 +1272,7 @@ Background context: Normal vectors are special because they not only need to be 
 :p Why is it necessary to use the inverse transpose when transforming a normal vector?
 
 ??x
-It is essential to use the inverse transpose (\((M_{A.B}^{-1})^T\)) of the transformation matrix when transforming normal vectors to ensure that both their length and perpendicularity properties are maintained. Directly using \(M_{A.B}\) might alter these properties, making it necessary to use its inverse transpose.
+It is essential to use the inverse transpose ($(M_{A.B}^{-1})^T $) of the transformation matrix when transforming normal vectors to ensure that both their length and perpendicularity properties are maintained. Directly using $ M_{A.B}$ might alter these properties, making it necessary to use its inverse transpose.
 
 ```java
 // Example of normal vector transformation

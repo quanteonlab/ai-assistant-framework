@@ -231,8 +231,7 @@ Background context explaining the concept of CWD. On UNIX, there is one CWD, whe
 
 In a UNIX shell:
 ```sh
-$pwd  # To print the current working directory
-$cd /path/to/new/directory  # To change the current working directory
+$pwd  # To print the current working directory$ cd /path/to/new/directory  # To change the current working directory
 ```
 
 In a Windows command prompt:

@@ -75,11 +75,11 @@ x??
 ---
 
 #### Reward Prediction Error Hypothesis
-Background context explaining the concept. The reward prediction error hypothesis suggests that dopamine neuron activity signals reward prediction errors, not rewards themselves. This view is supported by reinforcement learning theory where a phasic response of dopamine neurons corresponds to \( \Delta V(t) = R_t + V(S_{t-1}) - V(S_t) \), rather than directly to \( R_t \).
+Background context explaining the concept. The reward prediction error hypothesis suggests that dopamine neuron activity signals reward prediction errors, not rewards themselves. This view is supported by reinforcement learning theory where a phasic response of dopamine neurons corresponds to $\Delta V(t) = R_t + V(S_{t-1}) - V(S_t)$, rather than directly to $ R_t$.
 If applicable, add code examples with explanations.
 :p What does the hypothesis suggest about dopamine neuron activity?
 ??x
-The hypothesis suggests that dopamine neuron activity signals reward prediction errors, not rewards themselves. This means that a phasic response of dopamine neurons corresponds to the change in value or reinforcement error: \( \Delta V(t) = R_t + V(S_{t-1}) - V(S_t) \), rather than directly to the actual reward \( R_t \).
+The hypothesis suggests that dopamine neuron activity signals reward prediction errors, not rewards themselves. This means that a phasic response of dopamine neurons corresponds to the change in value or reinforcement error: $\Delta V(t) = R_t + V(S_{t-1}) - V(S_t)$, rather than directly to the actual reward $ R_t$.
 x??
 
 ---
@@ -89,17 +89,17 @@ Background context explaining that phasic responses of dopamine neurons signal r
 If applicable, add code examples with explanations.
 :p How do phasic responses of dopamine neurons function in reinforcement learning?
 ??x
-Phasic responses of dopamine neurons act as reinforcement signals, signaling the difference between expected and actual reward (reward prediction error). In reinforcement learning, this is represented by \( \Delta V(t) = R_t + V(S_{t-1}) - V(S_t) \), rather than directly to \( R_t \).
+Phasic responses of dopamine neurons act as reinforcement signals, signaling the difference between expected and actual reward (reward prediction error). In reinforcement learning, this is represented by $\Delta V(t) = R_t + V(S_{t-1}) - V(S_t)$, rather than directly to $ R_t$.
 x??
 
 ---
 
 #### TD Model of Classical Conditioning
-Background context explaining the role of phasic responses in the Temporal Difference (TD) model. The TD model uses the formula \( \Delta V(t) = R_t + V(S_{t-1}) - V(S_t) \) to update value function estimates.
+Background context explaining the role of phasic responses in the Temporal Difference (TD) model. The TD model uses the formula $\Delta V(t) = R_t + V(S_{t-1}) - V(S_t)$ to update value function estimates.
 If applicable, add code examples with explanations.
 :p What is the role of phasic responses in the TD model?
 ??x
-Phasic responses play a crucial role in the TD model by acting as reinforcement signals. They are used to update value function estimates according to the formula \( \Delta V(t) = R_t + V(S_{t-1}) - V(S_t) \), where \( R_t \) is the reward, and \( V(S_t) \) and \( V(S_{t-1}) \) are the current and previous state values, respectively.
+Phasic responses play a crucial role in the TD model by acting as reinforcement signals. They are used to update value function estimates according to the formula $\Delta V(t) = R_t + V(S_{t-1}) - V(S_t)$, where $ R_t$is the reward, and $ V(S_t)$and $ V(S_{t-1})$ are the current and previous state values, respectively.
 x??
 
 ---
@@ -109,7 +109,7 @@ Background context explaining how reinforcement signals play a role in learning 
 If applicable, add code examples with explanations.
 :p How do reinforcement signals function in an actor-critic architecture?
 ??x
-In an actor-critic architecture, reinforcement signals are critical for learning both value functions and policies. These signals help update the value function (critic) and the policy (actor). The key equation involves the reinforcement signal \( \Delta V(t) = R_t + V(S_{t-1}) - V(S_t) \), which is used to adjust the value function estimates.
+In an actor-critic architecture, reinforcement signals are critical for learning both value functions and policies. These signals help update the value function (critic) and the policy (actor). The key equation involves the reinforcement signal $\Delta V(t) = R_t + V(S_{t-1}) - V(S_t)$, which is used to adjust the value function estimates.
 x??
 
 ---
@@ -467,14 +467,14 @@ x??
 
 Background context: The provided excerpt discusses how Temporal Difference (TD) learning, particularly using TD(0), can be related to the activity of dopamine neurons. In this context, we consider a task where an agent learns through reinforcement, updating its value function based on rewards received.
 
-Relevant formulas: \( \Delta V = \alpha [R + \gamma V(s') - V(s)] \)
+Relevant formulas: $\Delta V = \alpha [R + \gamma V(s') - V(s)]$
 
 Where:
-- \( \Delta V \) is the change in the value function.
-- \( R \) is the reward obtained at time step \( t \).
-- \( \gamma \) (discount factor, assumed to be close to 1 for this case) is a parameter of TD learning.
-- \( V(s') \) is the value of the next state.
-- \( V(s) \) is the current estimated value.
+- $\Delta V$ is the change in the value function.
+- $R $ is the reward obtained at time step$t$.
+- $\gamma$ (discount factor, assumed to be close to 1 for this case) is a parameter of TD learning.
+- $V(s')$ is the value of the next state.
+- $V(s)$ is the current estimated value.
 
 :p How does the behavior of the TD error correspond to the activation pattern of dopamine neurons during reinforcement learning?
 ??x
@@ -502,13 +502,11 @@ x??
 Background context: The text mentions a deterministic task where the agent moves through states in a trial until it reaches a rewarding state. In this scenario, the discount factor is very close to 1, meaning that future rewards are as important as immediate ones.
 
 Relevant formulas: None explicitly provided, but generally:
-- \( V(s) = \mathbb{E}[R_t + R_{t+1} + ... | S_t = s] \)
-
-Where \( V(s) \) is the value of state \( s \).
+- $V(s) = \mathbb{E}[R_t + R_{t+1} + ... | S_t = s]$ Where $V(s)$ is the value of state $s$.
 
 :p How does the discount factor affect the learning process in this deterministic task?
 ??x
-In a deterministic task with a discount factor close to 1, future rewards are treated as equally important as immediate ones. This means that the agent's value function will update its predictions based on both current and future rewards. However, since \( \gamma \) is nearly 1, the updates focus more on the immediate rewards, which helps in converging faster to a value function that accurately predicts the entire sequence of events leading up to the reward.
+In a deterministic task with a discount factor close to 1, future rewards are treated as equally important as immediate ones. This means that the agent's value function will update its predictions based on both current and future rewards. However, since $\gamma$ is nearly 1, the updates focus more on the immediate rewards, which helps in converging faster to a value function that accurately predicts the entire sequence of events leading up to the reward.
 
 ```java
 // Pseudocode for updating the value function in a deterministic task
@@ -532,9 +530,7 @@ x??
 Background context: The text describes states that predict future rewards in a trial. These states are crucial as they serve as indicators of upcoming positive outcomes, similar to the state marked by an instruction cue in experiments involving monkeys.
 
 Relevant formulas: None explicitly provided, but generally:
-- \( V(s) = \mathbb{E}[R_t + R_{t+1} + ... | S_t = s] \)
-
-Where \( V(s) \) is the value of state \( s \).
+- $V(s) = \mathbb{E}[R_t + R_{t+1} + ... | S_t = s]$ Where $V(s)$ is the value of state $s$.
 
 :p What are reward-predicting states in the context of TD learning?
 ??x
@@ -558,9 +554,7 @@ x??
 Background context: The text distinguishes between the earliest and latest reward-predicting states in a trial. The earliest predicts future rewards reliably from the start of the trial, while the latest is the state just before the rewarding state.
 
 Relevant formulas: None explicitly provided, but generally:
-- \( V(s) = \mathbb{E}[R_t + R_{t+1} + ... | S_t = s] \)
-
-Where \( V(s) \) is the value of state \( s \).
+- $V(s) = \mathbb{E}[R_t + R_{t+1} + ... | S_t = s]$ Where $V(s)$ is the value of state $s$.
 
 :p What are the characteristics of early and late reward-predicting states in a trial?
 ??x

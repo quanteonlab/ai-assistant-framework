@@ -578,7 +578,7 @@ for (int i=0; i < 1000; i++) {
 }
 ```
 This loop iterates over each point in the `cell` array, calculates the Euclidean distance from the origin using the formula:
-\[ \text{radius} = \sqrt{x^2 + y^2 + z^2} \]
+$$\text{radius} = \sqrt{x^2 + y^2 + z^2}$$
 
 The result is stored in the corresponding index of the `radius` array.
 ??x
@@ -596,7 +596,7 @@ for (int i=1; i < 1000; i++) {
 }
 ```
 This loop iterates over each point, starting from index 1 to avoid division by zero. It calculates the gradient of density in the x-direction using:
-\[ \text{gradient} = \frac{\text{density}[i] - \text{density}[i-1]}{\text{x}[i] - \text{x}[i-1]} \]
+$$\text{gradient} = \frac{\text{density}[i] - \text{density}[i-1]}{\text{x}[i] - \text{x}[i-1]}$$
 
 The result is stored in the corresponding index of the `density_gradient` array.
 ??x
@@ -975,7 +975,7 @@ Background context: An N-way set associative cache provides multiple locations t
 
 :p What is an N-way set associative cache and how does it differ from a direct-mapped cache?
 ??x
-An N-way set associative cache allows data blocks to be loaded into any of the \(N\) possible cache locations within a set. This provides more flexibility compared to a direct-mapped cache, where each block maps to exactly one location.
+An N-way set associative cache allows data blocks to be loaded into any of the $N$ possible cache locations within a set. This provides more flexibility compared to a direct-mapped cache, where each block maps to exactly one location.
 ```java
 // Example of addressing in an N-way set associative cache
 byte[] array1 = new byte[1024];
@@ -1110,7 +1110,7 @@ To calculate memory usage, the total number of references and stores are multipl
 :p How is the total memory used calculated?
 ??x
 The total memory used is calculated as follows:
-\[ \text{Total memory} = 2000 \times 2000 \times (\text{5 references + 1 store}) \times 8 \, \text{bytes} = 192 \, \text{MB} \]
+$$\text{Total memory} = 2000 \times 2000 \times (\text{5 references + 1 store}) \times 8 \, \text{bytes} = 192 \, \text{MB}$$
 
 This calculation takes into account that each element requires five reads (references) and one write (store), multiplied by the size of the data type.
 
@@ -1145,10 +1145,10 @@ Arithmetic intensity measures how much computation (flops) is performed per unit
 Arithmetic intensity is defined as the ratio of floating-point operations to bytes of memory accessed. It helps in understanding the efficiency of an algorithm, especially when considering cache usage.
 
 The formula for arithmetic intensity is:
-\[ \text{Arithmetic intensity} = \frac{\text{flops}}{\text{bytes}} \]
+$$\text{Arithmetic intensity} = \frac{\text{flops}}{\text{bytes}}$$
 
 In the given example, the arithmetic intensity is calculated as:
-\[ \text{Arithmetic intensity} = \frac{5 \times 2000 \times 2000}{64.1 \, \text{MB}} = 0.312 \, \text{FLOPs/byte} \]
+$$\text{Arithmetic intensity} = \frac{5 \times 2000 \times 2000}{64.1 \, \text{MB}} = 0.312 \, \text{FLOPs/byte}$$
 
 This value indicates that for every byte of data accessed, there are approximately 0.312 floating-point operations.
 

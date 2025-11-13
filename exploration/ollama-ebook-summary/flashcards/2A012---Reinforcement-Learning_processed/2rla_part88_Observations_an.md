@@ -10,25 +10,23 @@ Background context: The section discusses how discounting is often inappropriate
 
 :p What is the natural Bellman equation for a hierarchical policy in the average reward setting?
 ??x
-The natural Bellman equation for a hierarchical policy in the average reward setting would involve an update rule that accounts for the long-term average return rather than discounted returns. For an option \(\omega\) with value \(v_\omega\), the Bellman expectation equation can be adapted to consider the average reward setting, which focuses on the long-run average reward per time step.
+The natural Bellman equation for a hierarchical policy in the average reward setting would involve an update rule that accounts for the long-term average return rather than discounted returns. For an option $\omega $ with value$v_\omega$, the Bellman expectation equation can be adapted to consider the average reward setting, which focuses on the long-run average reward per time step.
 
-The key difference lies in how rewards are accumulated over time. In the average reward framework, the goal is to maximize the total discounted reward per unit of time as \(t\) approaches infinity. The Bellman equation for an option \(\omega\) would thus be:
+The key difference lies in how rewards are accumulated over time. In the average reward framework, the goal is to maximize the total discounted reward per unit of time as $t $ approaches infinity. The Bellman equation for an option$\omega$ would thus be:
+$$v_\omega = \mathbb{E}_{\pi_\omega} \left[ r + \gamma v_\omega(s') \right]$$
 
-\[ v_\omega = \mathbb{E}_{\pi_\omega} \left[ r + \gamma v_\omega(s') \right] \]
-
-However, in the average reward setting, we replace the discounted future rewards with a focus on long-term averages. The update rule for \(v_\omega\) might be:
-
-\[ v_\omega = \mathbb{E}_{\pi_\omega} \left[ r + v_\omega(s') \right] \]
+However, in the average reward setting, we replace the discounted future rewards with a focus on long-term averages. The update rule for $v_\omega$ might be:
+$$v_\omega = \mathbb{E}_{\pi_\omega} \left[ r + v_\omega(s') \right]$$
 
 Where:
-- \(r\) is the immediate reward,
-- \(s'\) is the next state after taking action according to option \(\omega\),
-- \(\pi_\omega\) represents the policy associated with the option.
+- $r$ is the immediate reward,
+- $s'$ is the next state after taking action according to option $\omega$,
+- $\pi_\omega$ represents the policy associated with the option.
 
 This equation reflects that in average-reward settings, we are more interested in the long-term performance of policies and options rather than short-term immediate rewards.
 
 ??x
-The answer includes a key difference between discounted returns and average reward settings. The Bellman expectation equation is adapted to consider the long-run average reward per time step by removing the discount factor \(\gamma\).
+The answer includes a key difference between discounted returns and average reward settings. The Bellman expectation equation is adapted to consider the long-run average reward per time step by removing the discount factor $\gamma$.
 
 ```java
 // Pseudocode for updating value of an option in average reward setting
@@ -49,25 +47,18 @@ Background context: The text mentions that the option model has two parts, simil
 
 :p What are the two parts of the option model analogous to (17.2) and (17.3) in the context of the average reward setting?
 ??x
-The two parts of the option model in the average reward setting can be understood by extending Equations (17.2) and (17.3), which typically define the value function of an option \(\omega\) as:
+The two parts of the option model in the average reward setting can be understood by extending Equations (17.2) and (17.3), which typically define the value function of an option $\omega$ as:
 
-- Equation analogous to (17.2): This equation defines how the value function \(v_\omega(s)\) is related to the state \(s\).
-\[ v_\omega(s) = \mathbb{E}_{\pi_\omega} [ r + \gamma v_\omega(s') | s ] \]
-
-- Equation analogous to (17.3): This equation defines how the value function of an option can be decomposed into the sum of the start state and the continuation value.
-\[ v_\omega = V_0 + c_\omega \]
+- Equation analogous to (17.2): This equation defines how the value function $v_\omega(s)$ is related to the state $s$.
+$$v_\omega(s) = \mathbb{E}_{\pi_\omega} [ r + \gamma v_\omega(s') | s ]$$- Equation analogous to (17.3): This equation defines how the value function of an option can be decomposed into the sum of the start state and the continuation value.$$v_\omega = V_0 + c_\omega$$
 
 In the average reward setting, we need to adapt these equations to account for long-term averages rather than discounted future rewards. Therefore, the two parts become:
 
-1. **Value Function Definition (Analogous to 17.2):**
-\[ v_\omega(s) = \mathbb{E}_{\pi_\omega} [ r + v_\omega(s') | s ] \]
-
-2. **Option Decomposition (Analogous to 17.3):**
-\[ v_\omega = \mathbb{E}_{\pi_\omega} [r] + c_\omega \]
+1. **Value Function Definition (Analogous to 17.2):**$$v_\omega(s) = \mathbb{E}_{\pi_\omega} [ r + v_\omega(s') | s ]$$2. **Option Decomposition (Analogous to 17.3):**$$v_\omega = \mathbb{E}_{\pi_\omega} [r] + c_\omega$$
 
 Here:
-- \(V_0\) is the value of starting in state 0.
-- \(c_\omega\) is the continuation value, which captures the average reward contribution from executing the option.
+- $V_0$ is the value of starting in state 0.
+- $c_\omega$ is the continuation value, which captures the average reward contribution from executing the option.
 
 The key change here is that we focus on the long-term average reward rather than discounted future rewards.
 
@@ -97,11 +88,11 @@ Parametric function approximations handle partial observability by parameterizin
 
 In many real-world scenarios, particularly with natural intelligences and robots, the environment's state cannot be fully observed due to occlusions, distance, or other constraints. Parametric function approximation allows for a more flexible representation that can work with partial information by focusing on observable features or signals.
 
-For instance, if there is a state variable \(s_i\) that is not directly observable, the parameterization can be chosen such that the approximate value does not depend on this unobservable state variable. This effectively treats the unobservable state as missing data and ensures that the value function remains valid under partial observability conditions.
+For instance, if there is a state variable $s_i$ that is not directly observable, the parameterization can be chosen such that the approximate value does not depend on this unobservable state variable. This effectively treats the unobservable state as missing data and ensures that the value function remains valid under partial observability conditions.
 
-To formalize this concept, consider a scenario where the environment emits observations \(o\) instead of states \(s\), and rewards are directly dependent on these observations:
+To formalize this concept, consider a scenario where the environment emits observations $o $ instead of states$s$, and rewards are directly dependent on these observations:
 
-\[ r = f(o) \]
+$$r = f(o)$$
 
 In such cases, the value function can be parameterized as a function of the observable features or signals derived from the observation space. This means that the policy and value functions can still be learned effectively even if some state information is missing.
 
@@ -126,21 +117,23 @@ Background context explaining the environmental interaction sequence. It describ
 
 :p What is described by this concept?
 ??x
-The environmental interaction is presented as an alternating sequence of actions \( A_t \) and observations \( O_t \), forming either a continuing infinite sequence like \( A_0, O_1, A_1, O_2, A_2, O_3, ... \) or episodes that end with a special terminal observation. This interaction forms the basis for understanding how agents interact with their environment over time.
+The environmental interaction is presented as an alternating sequence of actions $A_t $ and observations$O_t $, forming either a continuing infinite sequence like$ A_0, O_1, A_1, O_2, A_2, O_3, ...$ or episodes that end with a special terminal observation. This interaction forms the basis for understanding how agents interact with their environment over time.
 
 x??
 
 ---
 
 #### History and Markov State
-Background context on history \( H_t \), which is defined as the sequence of actions and observations up to some point in time: 
-\[ H_t = A_0, O_1, ..., A_{t-1}, O_t. \]
+Background context on history $H_t$, which is defined as the sequence of actions and observations up to some point in time: 
+$$H_t = A_0, O_1, ..., A_{t-1}, O_t.$$
+
 The concept introduces the idea that a state should be a compact summary of this history, known as a Markov state.
 
-:p What is a history \( H_t \) and how does it relate to states?
+:p What is a history $H_t$ and how does it relate to states?
 ??x
-A history \( H_t \) represents the entire sequence of actions and observations up to time step \( t \): 
-\[ H_t = A_0, O_1, ..., A_{t-1}, O_t. \]
+A history $H_t $ represents the entire sequence of actions and observations up to time step$t$: 
+$$H_t = A_0, O_1, ..., A_{t-1}, O_t.$$
+
 The state should be a compact summary of this history, called a Markov state, which must satisfy the Markov property.
 
 x??
@@ -148,13 +141,12 @@ x??
 ---
 
 #### Markov Property
-Explanation on how a function \( f \) mapping histories to states must have the Markov property for it to qualify as a state in reinforcement learning. The formal definition is given by equation 17.5.
+Explanation on how a function $f$ mapping histories to states must have the Markov property for it to qualify as a state in reinforcement learning. The formal definition is given by equation 17.5.
 
 :p What does the Markov property entail?
 ??x
-The Markov property requires that if two histories \( h \) and \( h_0 \) map to the same state under function \( f \), then they must also have the same probability for their next observation:
-\[ f(h) = f(h_0) \implies P(O_{t+1}=o|H_t=h, A_t=a) = P(O_{t+1}=o|H_t=h_0, A_t=a), \]
-for all \( o \in O \) and \( a \in A \).
+The Markov property requires that if two histories $h $ and$h_0 $ map to the same state under function$f$, then they must also have the same probability for their next observation:
+$$f(h) = f(h_0) \implies P(O_{t+1}=o|H_t=h, A_t=a) = P(O_{t+1}=o|H_t=h_0, A_t=a),$$for all $ o \in O $ and $ a \in A$.
 
 x??
 
@@ -165,10 +157,8 @@ Explanation on how the Markov state can be used to predict the future. It discus
 
 :p How does a Markov state help in prediction?
 ??x
-A Markov state helps in predicting future observations and actions. If \( f \) is Markov, then for any test sequence \( \tau \), its probability given two histories that map to the same state under \( f \) must be the same:
-\[ f(h) = f(h_0) \implies P(\tau|h) = P(\tau|h_0). \]
-
-x??
+A Markov state helps in predicting future observations and actions. If $f $ is Markov, then for any test sequence$\tau $, its probability given two histories that map to the same state under $ f$ must be the same:
+$$f(h) = f(h_0) \implies P(\tau|h) = P(\tau|h_0).$$x??
 
 ---
 
@@ -177,16 +167,15 @@ Explanation on the need for states to be compact summaries of histories, and how
 
 :p Why are compact Markov states important in reinforcement learning?
 ??x
-Compact Markov states are crucial because they summarize necessary information from the history efficiently. For instance, using the identity function as \( f \) results in a state that is not compact and grows with time (e.g., \( S_t = H_t \)), making it unwieldy and non-recurrent. This means the agent would never encounter the same state twice in a continuing task.
+Compact Markov states are crucial because they summarize necessary information from the history efficiently. For instance, using the identity function as $f $ results in a state that is not compact and grows with time (e.g.,$ S_t = H_t$), making it unwieldy and non-recurrent. This means the agent would never encounter the same state twice in a continuing task.
 
 x??
 
 ---
 
 #### State Update Function Overview
-Background context explaining how state update functions are used to efficiently compute states incrementally. The function \( u \) takes the current state and new data (action and observation) to produce the next state: 
-\[ S_{t+1} = u(S_t, A_t, O_{t+1}) \]
-for all \( t \geq 0 \), with an initial state \( S_0 \).
+Background context explaining how state update functions are used to efficiently compute states incrementally. The function $u$ takes the current state and new data (action and observation) to produce the next state: 
+$$S_{t+1} = u(S_t, A_t, O_{t+1})$$for all $ t \geq 0 $, with an initial state$ S_0$.
 
 :p What is a state update function?
 ??x
@@ -204,11 +193,11 @@ x??
 ---
 
 #### Identity Example in State Update Functions
-Background context explaining that when the function \( f \) is the identity (i.e., \( S_t = H_t \)), the state update function simply extends the state by appending new actions and observations.
+Background context explaining that when the function $f $ is the identity (i.e.,$ S_t = H_t$), the state update function simply extends the state by appending new actions and observations.
 
 :p What is an example of a simple state update function?
 ??x
-An example of a simple state update function, where \( f \) is the identity function, can be described as extending the current state by adding the latest action and observation. Here's how it could look in pseudocode:
+An example of a simple state update function, where $f$ is the identity function, can be described as extending the current state by adding the latest action and observation. Here's how it could look in pseudocode:
 
 ```java
 public State updateState(State currentState, Action action, Observation observation) {
@@ -226,22 +215,21 @@ x??
 ---
 
 #### Partially Observable Markov Decision Processes (POMDPs)
-Background context explaining POMDPs, where the environment has a latent state \( X_t \) that produces observations but is not directly observable by the agent. The natural Markov state for an agent in this scenario is called a belief state.
+Background context explaining POMDPs, where the environment has a latent state $X_t$ that produces observations but is not directly observable by the agent. The natural Markov state for an agent in this scenario is called a belief state.
 
 :p What are Partially Observable Markov Decision Processes (POMDPs)?
 ??x
-Partially Observable Markov Decision Processes (POMDPs) model environments where the internal state \( X_t \) of the environment produces observable outcomes but is never directly observed by the agent. The agent's state, known as a belief state \( S_t \), represents the probability distribution over possible latent states given the history.
+Partially Observable Markov Decision Processes (POMDPs) model environments where the internal state $X_t $ of the environment produces observable outcomes but is never directly observed by the agent. The agent's state, known as a belief state$S_t$, represents the probability distribution over possible latent states given the history.
 
-The belief state \( S_t \) can be represented as a vector with components:
-\[ s[i] = P(X_t=i | H_t) \]
-for all possible latent states \( i \in \{1, 2, ..., d\} \).
+The belief state $S_t$ can be represented as a vector with components:
+$$s[i] = P(X_t=i | H_t)$$for all possible latent states $ i \in \{1, 2, ..., d\}$.
 
 :p How is the belief state updated in POMDPs?
 ??x
 The belief state can be incrementally updated using Bayes' rule. The update function for the ith component of the belief state is given by:
-\[ u(s,a,o)[i] = \frac{\sum_{x=1}^d s[x] p(i, o|x, a)}{\sum_{x=1}^d \sum_{x'=1}^d s[x] p(x', o|x, a)} \]
+$$u(s,a,o)[i] = \frac{\sum_{x=1}^d s[x] p(i, o|x, a)}{\sum_{x=1}^d \sum_{x'=1}^d s[x] p(x', o|x, a)}$$
 
-Here, \( p(x', o | x, a) \) is the transition and observation probability function for POMDPs.
+Here,$p(x', o | x, a)$ is the transition and observation probability function for POMDPs.
 
 ```java
 public double updateBeliefStateComponent(double[] beliefState, Action action, Observation observation, int stateIndex) {
@@ -273,13 +261,13 @@ Background context explaining how PSRs address limitations of POMDPs by focusing
 
 :p What are Predictive State Representations (PSRs)?
 ??x
-Predictive State Representations (PSRs) offer an alternative approach to handling partial observability compared to POMDPs. While POMDPs focus on latent states \( X_t \), PSRs emphasize predictions about the environment's behavior and use these predictions to update their state representation.
+Predictive State Representations (PSRs) offer an alternative approach to handling partial observability compared to POMDPs. While POMDPs focus on latent states $X_t$, PSRs emphasize predictions about the environment's behavior and use these predictions to update their state representation.
 
 In essence, PSRs aim to represent the state in a way that captures the predictive information relevant for decision-making, rather than relying directly on unobservable latent states. This can lead to more efficient and interpretable representations of the state.
 
 :p How do belief states differ from belief states in POMDPs?
 ??x
-Belief states in POMDPs represent the probability distribution over possible latent states given the history \( H_t \), while belief states in PSRs are not directly tied to unobservable latent states. Instead, they capture predictive information that is relevant for making decisions and predicting future observations.
+Belief states in POMDPs represent the probability distribution over possible latent states given the history $H_t$, while belief states in PSRs are not directly tied to unobservable latent states. Instead, they capture predictive information that is relevant for making decisions and predicting future observations.
 
 The core difference lies in the focus: POMDPs ground their state updates on hidden states, whereas PSRs focus on predictions about how actions affect observable outcomes.
 x??
@@ -287,11 +275,11 @@ x??
 ---
 
 #### Observation and State Update Function
-Background context: The world receives actions \(A\) and emits observations \(O\). The state-update function \(u\) uses these observations and a copy of the action to produce a new state. This process is crucial for reinforcement learning, as it helps in updating the agent's understanding of its environment.
+Background context: The world receives actions $A $ and emits observations$O $. The state-update function$ u$ uses these observations and a copy of the action to produce a new state. This process is crucial for reinforcement learning, as it helps in updating the agent's understanding of its environment.
 
-:p What is the role of the state-update function \(u\) in reinforcement learning?
+:p What is the role of the state-update function $u$ in reinforcement learning?
 ??x
-The state-update function \(u\) plays a critical role by taking the current observation \(O_t\), action \(A_t\), and potentially past states or observations, to compute the next state \(S_{t+1}\). This function is essential for updating the agent's internal model of its environment.
+The state-update function $u $ plays a critical role by taking the current observation$O_t $, action $ A_t $, and potentially past states or observations, to compute the next state$ S_{t+1}$. This function is essential for updating the agent's internal model of its environment.
 
 ```java
 // Pseudocode for a simple state-update function
@@ -309,7 +297,7 @@ Background context: The information flow responsible for learning is shown by da
 
 :p How does the information flow through the system affect learning?
 ??x
-The information flow indicates how different components of the reinforcement learning process interact. Actions \(A_t\) and observations \(O_t\) along with a copy of the action are input into the state-update function \(u\). The new state is then used as an input to both the policy and value functions, producing the next action. Additionally, rewards \(R\) directly influence the policy and value functions, while they also modify the model that works closely with the planner to change these functions.
+The information flow indicates how different components of the reinforcement learning process interact. Actions $A_t $ and observations$O_t $ along with a copy of the action are input into the state-update function$ u $. The new state is then used as an input to both the policy and value functions, producing the next action. Additionally, rewards $ R$ directly influence the policy and value functions, while they also modify the model that works closely with the planner to change these functions.
 
 ```java
 // Pseudocode for information flow in learning process
@@ -323,11 +311,11 @@ x??
 ---
 
 #### Markov State and Partial Observability
-Background context: In dealing with partial observability, the concept of a Markov state is crucial. A Markov state \(S_t\) is defined as a vector of probabilities related to core tests that can be observed directly.
+Background context: In dealing with partial observability, the concept of a Markov state is crucial. A Markov state $S_t$ is defined as a vector of probabilities related to core tests that can be observed directly.
 
 :p What is a Markov state in the context of reinforcement learning?
 ??x
-A Markov state in reinforcement learning refers to a state representation where future observations and actions are predictable based on the current state. This state is defined by a vector of probabilities \(d\)-vector, which are specifically chosen “core” tests as mentioned (17.6). The state-update function \(u\) updates this vector, similar to Bayes' rule but grounded in observable data, making it easier to learn.
+A Markov state in reinforcement learning refers to a state representation where future observations and actions are predictable based on the current state. This state is defined by a vector of probabilities $d $-vector, which are specifically chosen “core” tests as mentioned (17.6). The state-update function $ u$ updates this vector, similar to Bayes' rule but grounded in observable data, making it easier to learn.
 
 ```java
 // Pseudocode for updating Markov State
@@ -341,11 +329,11 @@ x??
 ---
 
 #### Approximate States in Reinforcement Learning
-Background context: To handle partial observability, approximate states are introduced. The simplest example is using the latest observation \(S_t = O_t\), but this approach cannot handle hidden state information effectively.
+Background context: To handle partial observability, approximate states are introduced. The simplest example is using the latest observation $S_t = O_t$, but this approach cannot handle hidden state information effectively.
 
 :p How can we improve the handling of hidden state information in reinforcement learning?
 ??x
-To better handle hidden state information, a more sophisticated approach involves using a history of observations and actions, denoted as \(S_t = [O_{t-1}, A_{t-1}, O_{t-2}, ..., A_{t-k}]\) for some \(k \geq 1\). This kth-order history approach provides the agent with more context about past interactions without explicitly storing a large state space.
+To better handle hidden state information, a more sophisticated approach involves using a history of observations and actions, denoted as $S_t = [O_{t-1}, A_{t-1}, O_{t-2}, ..., A_{t-k}]$ for some $k \geq 1$. This kth-order history approach provides the agent with more context about past interactions without explicitly storing a large state space.
 
 ```java
 // Pseudocode for implementing kth order history states
@@ -566,11 +554,7 @@ Background context: Initializing the value function can help guide learning by p
 ??x
 Initializing the value function with an initial guess (v0) helps the agent learn more efficiently by setting a reasonable starting point for the optimal value function (v⇤). For example, using linear function approximation, one can initialize the value function as:
 
-\[
-\hat{v}(s,w) = w^T x(s) + v_0(s)
-\]
-
-where \( \hat{v} \) is the initial value function estimate, and \( w \) are the weights to be updated during training. If the initial weight vector \( w \) is zero, then the initial value function will be \( v_0 \), but the final solution quality will depend on the features \( x(s) \).
+$$\hat{v}(s,w) = w^T x(s) + v_0(s)$$where $\hat{v}$ is the initial value function estimate, and $ w $ are the weights to be updated during training. If the initial weight vector $ w $ is zero, then the initial value function will be $ v_0 $, but the final solution quality will depend on the features $ x(s)$.
 
 Example:
 ```java

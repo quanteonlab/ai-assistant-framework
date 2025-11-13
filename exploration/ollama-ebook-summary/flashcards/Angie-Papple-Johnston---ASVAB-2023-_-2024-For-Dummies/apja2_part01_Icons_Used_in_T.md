@@ -206,7 +206,7 @@ The AFQT score is a composite of four subtests: Arithmetic Reasoning (AR), Mathe
 
 The formula to calculate the AFQT score is:
 
-\[ \text{AFQT} = 2 \times (\text{AR}) + (\text{MK}) + (\text{PC}) + \left(0.6 \times (\text{VE})\right) \]
+$$\text{AFQT} = 2 \times (\text{AR}) + (\text{MK}) + (\text{PC}) + \left(0.6 \times (\text{VE})\right)$$
 
 This score measures your ability to be trained for military service and determines eligibility for various jobs.
 

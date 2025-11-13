@@ -5,41 +5,36 @@
 ---
 
 #### Loss Function and Weight Adjustment
-Background context: In neural networks, the loss function measures how well the network is performing. The goal during training is to minimize this loss by adjusting the weights of the network. The provided example focuses on a single weight adjustment for the first hidden layer node \(h1\).
+Background context: In neural networks, the loss function measures how well the network is performing. The goal during training is to minimize this loss by adjusting the weights of the network. The provided example focuses on a single weight adjustment for the first hidden layer node $h1$.
 Relevant formulas include:
-- \(\frac{\partial h1}{\partial w1} = -2df dx( w1x1 + w2x2 + b1) = -0.0904\)
-- \(\frac{\partial \mathcal{L}}{\partial w1} = 0.0214\)
-
-If we decrease \(w1\), the loss should get smaller, leading to better predictions.
-:p What is the value of \(\frac{\partial h1}{\partial w1}\) in this example?
+- $\frac{\partial h1}{\partial w1} = -2df dx( w1x1 + w2x2 + b1) = -0.0904 $-$\frac{\partial \mathcal{L}}{\partial w1} = 0.0214 $ If we decrease$w1$, the loss should get smaller, leading to better predictions.
+:p What is the value of $\frac{\partial h1}{\partial w1}$ in this example?
 ??x
-The value of \(\frac{\partial h1}{\partial w1}\) is \(-0.0904\). This indicates that a small change in \(w1\) will result in a corresponding change in the activation of the first hidden layer node, affecting the loss function.
+The value of $\frac{\partial h1}{\partial w1}$ is $-0.0904$. This indicates that a small change in $ w1$ will result in a corresponding change in the activation of the first hidden layer node, affecting the loss function.
 x??
 
 ---
 #### Loss Function and Weight Adjustment Calculation
-Background context: The calculation for adjusting weights involves understanding how changes in weight affect the loss function. Specifically, this example calculates \(\frac{\partial \mathcal{L}}{\partial w1}\) to determine whether reducing \(w1\) would improve the prediction accuracy.
+Background context: The calculation for adjusting weights involves understanding how changes in weight affect the loss function. Specifically, this example calculates $\frac{\partial \mathcal{L}}{\partial w1}$ to determine whether reducing $w1$ would improve the prediction accuracy.
 Relevant formulas include:
-- \(\frac{\partial h1}{\partial w1} = -0.0904\)
-- \(\frac{\partial \mathcal{L}}{\partial w1} = 0.0214\)
-
-:p What is the expression for calculating \(\frac{\partial \mathcal{L}}{\partial w1}\)?
+- $\frac{\partial h1}{\partial w1} = -0.0904 $-$\frac{\partial \mathcal{L}}{\partial w1} = 0.0214 $:p What is the expression for calculating $\frac{\partial \mathcal{L}}{\partial w1}$?
 ??x
-The expression for calculating \(\frac{\partial \mathcal{L}}{\partial w1}\) is:
-\[ \frac{\partial \mathcal{L}}{\partial w1} = -0.952 \times 0.249 \times (-0.0904) = 0.0214 \]
-This expression shows the influence of \(w1\) on the loss function, indicating that reducing \(w1\) would decrease the loss.
+The expression for calculating $\frac{\partial \mathcal{L}}{\partial w1}$ is:
+$$\frac{\partial \mathcal{L}}{\partial w1} = -0.952 \times 0.249 \times (-0.0904) = 0.0214$$
+
+This expression shows the influence of $w1 $ on the loss function, indicating that reducing$w1$ would decrease the loss.
 x??
 
 ---
 #### Weight Update Using Stochastic Gradient Descent
 Background context: To adjust weights in a neural network, we use optimization techniques like stochastic gradient descent. The formula for updating the weight is:
-\[ w(new)_1 \approx w(old)_1 - \eta \frac{\partial \mathcal{L}}{\partial w1} \]
-where \(\eta\) is the learning rate.
-:p What is the formula for updating \(w_1\) using stochastic gradient descent?
+$$w(new)_1 \approx w(old)_1 - \eta \frac{\partial \mathcal{L}}{\partial w1}$$where $\eta$ is the learning rate.
+:p What is the formula for updating $w_1$ using stochastic gradient descent?
 ??x
-The formula for updating \(w_1\) using stochastic gradient descent is:
-\[ w(new)_1 \approx w(old)_1 - \eta \frac{\partial \mathcal{L}}{\partial w1} \]
-Here, \(\eta\) (learning rate) determines the step size in adjusting the weights.
+The formula for updating $w_1$ using stochastic gradient descent is:
+$$w(new)_1 \approx w(old)_1 - \eta \frac{\partial \mathcal{L}}{\partial w1}$$
+
+Here,$\eta$(learning rate) determines the step size in adjusting the weights.
 x??
 
 ---
@@ -58,9 +53,9 @@ x??
 ---
 #### Plotting Loss Over Learning Trials
 Background context: After running a simple network, plotting the loss over learning trials helps visualize how the model is improving. The example provided shows that the initial loss was 0.164 and reduced to 0.002 after several iterations.
-:p How would you plot the loss versus the number of learning trials \(N\)?
+:p How would you plot the loss versus the number of learning trials $N$?
 ??x
-To plot the loss versus the number of learning trials \(N\), you can use a simple plotting library like matplotlib in Python:
+To plot the loss versus the number of learning trials $N$, you can use a simple plotting library like matplotlib in Python:
 ```python
 import matplotlib.pyplot as plt
 
@@ -133,11 +128,10 @@ Activation functions determine whether a neuron should be active or inactive bas
 Activation functions play a critical role in determining whether a neuron remains active or becomes inactive based on its weighted inputs. They help introduce non-linearity to the network and enable it to learn complex patterns.
 
 For example, the top node (h2,1) performs the combination:
-\[ 1 \times [◽x \\square x] + 1 \times [x \\square x \\square] = [◽ \\square \\square \\square] \]
+$$1 \times [◽x \\square x] + 1 \times [x \\square x \\square] = [◽ \\square \\square \\square]$$
 
 The second down node (h2,2) performs the combination:
-\[ -1 \times [◽x \\square x] + 1 \times [x \\square x \\square] = [x \\square x \\square] \]
-where the negation of white is defined as black.
+$$-1 \times [◽x \\square x] + 1 \times [x \\square x \\square] = [x \\square x \\square]$$where the negation of white is defined as black.
 
 These combinations are used to activate or deactivate nodes based on their inputs.
 x??
@@ -155,8 +149,7 @@ For example:
 - If the input is zero or negative, the output becomes 0.
 
 This function simplifies the activation logic and can be represented as:
-\[ \text{ReLU}(x) = \max(0, x) \]
-x??
+$$\text{ReLU}(x) = \max(0, x)$$x??
 
 ---
 #### Building a Neural Network for Distinguishing Combinations
@@ -245,11 +238,11 @@ x??
 ---
 
 #### Calculating Mass Number A in TensorFlow
-Background context: The mass number \(A\) of an element is the sum of its atomic number \(Z\) and neutron number \(N\). This can be calculated using basic operations in TensorFlow.
+Background context: The mass number $A $ of an element is the sum of its atomic number$Z $ and neutron number$N$. This can be calculated using basic operations in TensorFlow.
 
-:p How do you calculate the mass number \(A\) given \(Z\) and \(N\) in TensorFlow?
+:p How do you calculate the mass number $A $ given$Z $ and$N$ in TensorFlow?
 ??x
-To calculate the mass number \(A\) in TensorFlow, follow these steps:
+To calculate the mass number $A$ in TensorFlow, follow these steps:
 ```python
 import tensorflow as tf
 
@@ -270,8 +263,8 @@ A: tf.Tensor(3, shape=(), dtype=int32)
 The `tf.constant` function creates a constant tensor with the specified value. The `tf.add` function performs element-wise addition of the tensors.
 
 Explanation: 
-- \(A\) is calculated as \(Z + N\).
-- The output is a TensorFlow tensor object, which in this case has a shape of \((0,\), indicating it's a scalar.
+- $A $ is calculated as$Z + N$.
+- The output is a TensorFlow tensor object, which in this case has a shape of $(0,$, indicating it's a scalar.
 x??
 
 ---
@@ -279,9 +272,9 @@ x??
 #### Calculating Mass Excess for Hydrogen Isotopes
 Background context: In nuclear physics, the mass excess of an element gives the difference between its actual atomic mass and the sum of its constituent masses. This can be calculated using TensorFlow to handle tensor operations.
 
-:p How do you calculate the mass excess \(M - A \cdot u\) for hydrogen isotopes in TensorFlow?
+:p How do you calculate the mass excess $M - A \cdot u$ for hydrogen isotopes in TensorFlow?
 ??x
-To calculate the mass excess \(M - A \cdot u\) for hydrogen isotopes, follow these steps:
+To calculate the mass excess $M - A \cdot u$ for hydrogen isotopes, follow these steps:
 ```python
 import tensorflow as tf
 
@@ -304,8 +297,8 @@ print("Binding energy per nucleon:", B.numpy())
 ```
 
 Explanation:
-- The binding energy \(B\) is calculated as \(\frac{m_{H} + i \cdot m_N - m_A \cdot 931.494028}{A}\).
-- \(m_H\) and \(mN\) are the masses of hydrogen and a neutron in MeV/c².
+- The binding energy $B $ is calculated as$\frac{m_{H} + i \cdot m_N - m_A \cdot 931.494028}{A}$.
+- $m_H $ and$mN$ are the masses of hydrogen and a neutron in MeV/c².
 - The binding energy per nucleon is calculated for each isotope, from deuterium to helium-7.
 
 The output will be an array of binding energies per nucleon for each hydrogen isotope.

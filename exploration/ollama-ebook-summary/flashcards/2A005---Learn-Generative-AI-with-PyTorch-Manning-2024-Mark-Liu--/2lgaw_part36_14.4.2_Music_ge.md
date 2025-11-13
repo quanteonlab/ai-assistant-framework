@@ -194,8 +194,7 @@ x??
 #### Softmax Function and Temperature Parameter
 Background context: The softmax function is used to convert a vector of values into a probability distribution. In this case, it's applied to predict the next token (music index) in the sequence. The temperature parameter influences how strongly the model sticks to the most likely predictions.
 The formula for softmax is:
-\[ \text{softmax}(x_i) = \frac{e^{x_i / \tau}}{\sum_{j} e^{x_j / \tau}} \]
-where \( \tau \) is the temperature.
+$$\text{softmax}(x_i) = \frac{e^{x_i / \tau}}{\sum_{j} e^{x_j / \tau}}$$where $\tau$ is the temperature.
 
 :p What does the `temperature` parameter do in the `sample()` function?
 ??x
@@ -411,19 +410,18 @@ Background context: The forward diffusion process involves incrementally adding 
 :p What formula represents the addition of noise in one step during the forward diffusion?
 
 ??x
-The formula for the noisy image \( x_{t+1} \) at time step \( t+1 \) is given by:
-\[ x_{t+1} = \sqrt{1 - \beta_t} x_t + \sqrt{\beta_t} \epsilon_t \]
+The formula for the noisy image $x_{t+1}$ at time step $t+1$ is given by:
+$$x_{t+1} = \sqrt{1 - \beta_t} x_t + \sqrt{\beta_t} \epsilon_t$$
 
 Where:
-- \( x_t \) is the noisy image at time step \( t \)
-- \( \epsilon_t \) is the noise added at time step \( t \), which follows a standard normal distribution (mean 0, variance 1)
-- \( \beta_t \) measures the weight placed on the noise in each time step
+- $x_t $ is the noisy image at time step$t $-$\epsilon_t $ is the noise added at time step$t$, which follows a standard normal distribution (mean 0, variance 1)
+- $\beta_t$ measures the weight placed on the noise in each time step
 
 ??x
 The formula for adding noise to an image during one time step in the forward diffusion process is:
-\[ x_{t+1} = \sqrt{1 - \beta_t} x_t + \sqrt{\beta_t} \epsilon_t \]
+$$x_{t+1} = \sqrt{1 - \beta_t} x_t + \sqrt{\beta_t} \epsilon_t$$
 
-Explanation: This equation adds a small amount of Gaussian noise \( \epsilon_t \) to the clean image \( x_t \), scaled by \( \sqrt{\beta_t} \). The term \( \sqrt{1 - \beta_t} x_t \) ensures that the original image is still present, but gradually less so as more noise is introduced.
+Explanation: This equation adds a small amount of Gaussian noise $\epsilon_t $ to the clean image$x_t $, scaled by$\sqrt{\beta_t}$. The term $\sqrt{1 - \beta_t} x_t$ ensures that the original image is still present, but gradually less so as more noise is introduced.
 
 ---
 #### U-Net Architecture
@@ -526,12 +524,11 @@ Background context: The forward diffusion process is a method used to gradually 
 :p What is the forward diffusion process in denoising models?
 ??x
 The forward diffusion process involves starting with an original clean image `x0` and adding noise at each time step, transforming it into increasingly noisy images. This transformation can be represented as:
-\[ x_t = \sqrt{1 - \alpha_t} x_{t-1} + \sqrt{\alpha_t} \epsilon_t \]
-where \( \epsilon_t \) is a standard normal distribution and \( \alpha_t \) controls the amount of noise added.
+$$x_t = \sqrt{1 - \alpha_t} x_{t-1} + \sqrt{\alpha_t} \epsilon_t$$where $\epsilon_t $ is a standard normal distribution and$\alpha_t$ controls the amount of noise added.
 
 This process starts from `x0` (clean image), goes through multiple steps to add noise, ending up with a completely random noise state.
 ??x
-The forward diffusion process adds noise incrementally over time, starting from a clean image. Each step can be thought of as applying a small Gaussian blur and then adding a little bit more noise. The final noisy state at \( x_t \) is a combination of the original image corrupted by several layers of noise.
+The forward diffusion process adds noise incrementally over time, starting from a clean image. Each step can be thought of as applying a small Gaussian blur and then adding a little bit more noise. The final noisy state at $x_t$ is a combination of the original image corrupted by several layers of noise.
 
 ```java
 public class DiffusionProcess {

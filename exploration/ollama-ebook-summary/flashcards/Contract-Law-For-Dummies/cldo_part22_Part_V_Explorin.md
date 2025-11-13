@@ -25,15 +25,14 @@ The objective is to provide the non-breaching party with financial compensation 
 
 Background context involves understanding different methods courts use, such as reliance damages (costs incurred by the non-breaching party) and expectation damages (the benefit lost).
 
-Example: If Party A breaches a contract, causing Party B to lose $10,000 in profits, then Party B may seek $10,000 as expectation damages.
+Example: If Party A breaches a contract, causing Party B to lose $10,000 in profits, then Party B may seek$10,000 as expectation damages.
 :p How does a court typically calculate expectation damages?
 ??x
 A court would generally use the following formula:
-\[ \text{Expectation Damages} = \text{Value of Performance by Non-Breaching Party} - \text{Residual Value (or Benefit)} \]
+$$\text{Expectation Damages} = \text{Value of Performance by Non-Breaching Party} - \text{Residual Value (or Benefit)}$$
 
-For instance, if Party B expected to make $15,000 but ended up with only $5,000 due to the breach, then their expectation damages would be:
-\[ 15,000 - 5,000 = 10,000 \]
-x??
+For instance, if Party B expected to make $15,000 but ended up with only$5,000 due to the breach, then their expectation damages would be:
+$$15,000 - 5,000 = 10,000$$x??
 
 ---
 #### Concept: Common Law and UCC Remedies
@@ -89,7 +88,7 @@ Background context explains that reform may be necessary when a written agreemen
 ??x
 Contract reform, also known as reformation, involves amending an existing enforceable contract based on mutual mistake or fraud. This ensures that the written terms align with the actual agreement made by both parties.
 
-Example: If Party A and B sign a contract for a $100,000 project but it was mutually agreed to be $150,000, reform would involve altering the document to reflect the correct amount.
+Example: If Party A and B sign a contract for a $100,000 project but it was mutually agreed to be$150,000, reform would involve altering the document to reflect the correct amount.
 x??
 
 ---
@@ -131,7 +130,7 @@ Expectancy damages calculate the loss based on the difference between what the n
 2. Assessing the current position without performance.
 3. Determining the difference to compensate.
 
-For example, a seller promises to sell a car for $10,000, but it's actually worth $10,500. If breached before payment:
+For example, a seller promises to sell a car for $10,000, but it's actually worth$10,500. If breached before payment:
 - Full performance: Car worth $10,500 minus cost of $10,000 = $500 gain.
 - Current position: No car and no money.
 
@@ -186,19 +185,19 @@ x??
 ---
 
 #### Example: Car Purchase Scenario
-In a scenario where a party expects to buy a car for $10,500 but is not provided the car, they would expect to gain an additional $500 if the contract were fulfilled. If the initial loss was only $10,000, then the breaching party should compensate with this $500 difference.
+In a scenario where a party expects to buy a car for $10,500 but is not provided the car, they would expect to gain an additional $500 if the contract were fulfilled. If the initial loss was only $10,000, then the breaching party should compensate with this$500 difference.
 :p What does expectancy theory suggest in a scenario where a party expected to buy a car but didn't?
 ??x
-Expectancy theory suggests that the breaching party should compensate the non-breaching party for the difference between what they would have gained had the contract been fulfilled ($10,500 - $10,000 = $500) and their current loss ($10,000). This ensures both parties are in the position they expected to be in.
+Expectancy theory suggests that the breaching party should compensate the non-breaching party for the difference between what they would have gained had the contract been fulfilled ($10,500 -$10,000 =$500) and their current loss ($10,000). This ensures both parties are in the position they expected to be in.
 x??
 
 ---
 
 #### Construction Contract Example
-In a construction contract where a builder agrees to build a house for $200,000 with an anticipated profit of $10,000, if the owner breaches before any work starts, the builder is entitled to damages equivalent to the profit he expected. If work has already started and significant progress has been made, the compensation might differ based on current costs.
+In a construction contract where a builder agrees to build a house for $200,000 with an anticipated profit of$10,000, if the owner breaches before any work starts, the builder is entitled to damages equivalent to the profit he expected. If work has already started and significant progress has been made, the compensation might differ based on current costs.
 :p How does expectancy theory apply in a construction contract scenario?
 ??x
-In a construction contract, expectancy theory applies by calculating the difference between what the builder would have gained ($200,000) and their anticipated costs minus profit. If no work has started, the damages are $10,000 (expected profit). If significant work has been done at a cost of $90,000, the court might award $100,000 to bring the builder back to his expected gain position.
+In a construction contract, expectancy theory applies by calculating the difference between what the builder would have gained ($200,000) and their anticipated costs minus profit. If no work has started, the damages are $10,000 (expected profit). If significant work has been done at a cost of $90,000, the court might award$100,000 to bring the builder back to his expected gain position.
 x??
 
 ---
@@ -222,20 +221,20 @@ x??
 
 ---
 #### Mitigating Damages
-Background context: In an employment contract where one party breaches, the non-breaching party must take reasonable steps (mitigate) to minimize their losses. For example, if an employee is terminated without cause and finds another job earning $75,000 during the year of their original employment at a salary of $100,000, they are entitled only to $25,000 in damages ($100,000 - $75,000).
+Background context: In an employment contract where one party breaches, the non-breaching party must take reasonable steps (mitigate) to minimize their losses. For example, if an employee is terminated without cause and finds another job earning $75,000 during the year of their original employment at a salary of $100,000, they are entitled only to $25,000 in damages ($100,000 -$75,000).
 
 :p How do courts handle breaches in employment contracts where the employee is terminated without cause?
 ??x
-The court awards the employee damages based on the difference between what they would have earned under the original contract and their actual earnings. If an employee is terminated without cause and finds another job earning $75,000 during the year of their original employment at a salary of $100,000, they are entitled to $25,000 in damages ($100,000 - $75,000).
+The court awards the employee damages based on the difference between what they would have earned under the original contract and their actual earnings. If an employee is terminated without cause and finds another job earning $75,000 during the year of their original employment at a salary of $100,000, they are entitled to $25,000 in damages ($100,000 -$75,000).
 x??
 
 ---
 #### Mitigation Requirement for Non-Breach
-Background context: When an employee breaches the contract and leaves their job without cause, the employer can still claim damages based on its expectancy. If the employer hires a new person at a higher cost than the original salary ($110,000 instead of $100,000), they are entitled to the difference in costs.
+Background context: When an employee breaches the contract and leaves their job without cause, the employer can still claim damages based on its expectancy. If the employer hires a new person at a higher cost than the original salary ($110,000 instead of$100,000), they are entitled to the difference in costs.
 
 :p How does the court handle breaches where the employee terminates without cause?
 ??x
-The employer can claim damages based on its expectancy—the cost it would incur to get someone else to perform the same work. If an employer hires a new person for $110,000 instead of retaining the original employee at $100,000, the employer is entitled to $10,000 in damages ($110,000 - $100,000). However, if the employer can find someone willing to do the job for $100,000, no damages are owed.
+The employer can claim damages based on its expectancy—the cost it would incur to get someone else to perform the same work. If an employer hires a new person for $110,000 instead of retaining the original employee at $100,000, the employer is entitled to $10,000 in damages ($110,000 -$100,000). However, if the employer can find someone willing to do the job for$100,000, no damages are owed.
 x??
 
 ---
@@ -244,7 +243,7 @@ Background context: Contract law requires non-breaching parties to mitigate thei
 
 :p What does "mitigating" mean in a breach of contract?
 ??x
-Mitigating involves taking reasonable steps to minimize loss or damage. For example, if an employee is terminated without cause and finds another job earning $75,000 during the year of their original employment at a salary of $100,000, they are required to find other work to reduce their damages to $25,000 ($100,000 - $75,000).
+Mitigating involves taking reasonable steps to minimize loss or damage. For example, if an employee is terminated without cause and finds another job earning $75,000 during the year of their original employment at a salary of $100,000, they are required to find other work to reduce their damages to $25,000 ($100,000 -$75,000).
 x??
 
 ---
@@ -312,8 +311,8 @@ x??
 Economists describe a scenario where breach of contract can lead to better economic results than performance. This is known as efficient or Pareto-optimal breach, which leaves at least one party better off without making any other party worse off.
 
 In the given example:
-1. A contractor bids $10,000 for a job but discovers it will cost $12,000 to complete.
-2. If she breaches the contract and another contractor does the job for $12,000, she incurs only $2,000 in damages.
+1. A contractor bids $10,000 for a job but discovers it will cost$12,000 to complete.
+2. If she breaches the contract and another contractor does the job for $12,000, she incurs only$2,000 in damages.
 3. Breaching might be less costly than performance because the breaching party can use some of the savings to compensate the non-breaching party.
 
 :p What is an example scenario illustrating efficient breach?
@@ -328,7 +327,7 @@ The theory suggests that breach of contract may produce better economic results 
 
 :p How does the efficient breach theory work in practice?
 ??x
-In practice, an efficient breach occurs when a party breaches to take advantage of a better opportunity and uses some of the gains to pay damages to the non-breaching party. For instance, if an employee is offered another job that pays $120,000 but must break her contract to accept it, she can figure that her initial employer will incur out-of-pocket costs of about $12,000 for a replacement. By paying these damages, the employer remains at its expected cost of $100,000, and the employee is better off with an additional $8,000 after paying the damages.
+In practice, an efficient breach occurs when a party breaches to take advantage of a better opportunity and uses some of the gains to pay damages to the non-breaching party. For instance, if an employee is offered another job that pays $120,000 but must break her contract to accept it, she can figure that her initial employer will incur out-of-pocket costs of about $12,000 for a replacement. By paying these damages, the employer remains at its expected cost of $100,000, and the employee is better off with an additional$8,000 after paying the damages.
 x??
 
 ---

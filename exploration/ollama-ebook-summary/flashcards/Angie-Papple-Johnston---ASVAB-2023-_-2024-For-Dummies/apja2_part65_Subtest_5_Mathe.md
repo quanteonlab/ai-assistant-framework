@@ -7,102 +7,69 @@
 #### Simplifying Expressions Involving Exponents and Radicals
 Background context: This concept involves simplifying algebraic expressions that include exponents, radicals, and basic arithmetic operations. It is important to understand the properties of exponents and how to manipulate them.
 
-:p Simplify \(25^2x\).
+:p Simplify $25^2x$.
 ??x
-The expression \(25^2x\) can be simplified by recognizing that 25 is a perfect square (i.e., \(25 = 5^2\)). Therefore, \((5^2)^{2x} = 5^{4x}\).
+The expression $25^2x $ can be simplified by recognizing that 25 is a perfect square (i.e.,$25 = 5^2 $). Therefore, $(5^2)^{2x} = 5^{4x}$.
 
-: Simplify \(5^2x\).
+: Simplify $5^2x$.
 ??x
-The expression simplifies to \(5^{2x}\), which means the base remains 5 and the exponent is multiplied by 2.
+The expression simplifies to $5^{2x}$, which means the base remains 5 and the exponent is multiplied by 2.
 
 ---
 #### Solving Equations Involving Radicals
 Background context: This involves solving equations that contain radical expressions. The key steps are isolating the radical, squaring both sides of the equation, and then solving for the variable.
 
-:p Simplify \(x^3\).
+:p Simplify $x^3$.
 ??x
-The expression \(x^3\) is already in its simplest form unless additional context or constraints are provided. If you need to solve an equation like \(\sqrt[3]{x} = k\), cube both sides to isolate x: \(x = k^3\).
+The expression $x^3 $ is already in its simplest form unless additional context or constraints are provided. If you need to solve an equation like$\sqrt[3]{x} = k $, cube both sides to isolate x: $ x = k^3$.
 
-: Solve for \(x\) if \(\sqrt{x} = 5\).
+: Solve for $x $ if$\sqrt{x} = 5$.
 ??x
 Square both sides of the equation to eliminate the square root:
-\[
-(\sqrt{x})^2 = 5^2 \implies x = 25.
-\]
-
----
+$$(\sqrt{x})^2 = 5^2 \implies x = 25.$$---
 #### Factoring Polynomials
 Background context: Factoring polynomials involves breaking down a polynomial into simpler factors that, when multiplied together, give back the original polynomial. This is crucial for solving equations and simplifying expressions.
 
-:p Factor \(9x^2 + 18x\).
+:p Factor $9x^2 + 18x$.
 ??x
 To factor this expression, look for the greatest common factor (GCF) of the terms:
-\[
-9x^2 + 18x = 9x(x + 2).
-\]
-
-: Factor \(9x^2 - 18x\).
+$$9x^2 + 18x = 9x(x + 2).$$: Factor $9x^2 - 18x$.
 ??x
 Factor out the GCF from both terms:
-\[
-9x^2 - 18x = 9x(x - 2).
-\]
-
----
+$$9x^2 - 18x = 9x(x - 2).$$---
 #### Solving Equations Involving Quadratic Forms
-Background context: This involves solving equations that can be written in quadratic form, i.e., expressions like \(ax^2 + bx + c = 0\). The goal is to find the values of x that satisfy the equation.
+Background context: This involves solving equations that can be written in quadratic form, i.e., expressions like $ax^2 + bx + c = 0$. The goal is to find the values of x that satisfy the equation.
 
-:p Solve for \(x\) if \(57 - 62 + 42 - 3x = 18\).
+:p Solve for $x $ if$57 - 62 + 42 - 3x = 18$.
 ??x
 First, simplify the left side:
-\[
-57 - 62 + 42 - 3x = 37 - 3x.
-\]
-Set this equal to 18 and solve for \(x\):
-\[
-37 - 3x = 18 \implies -3x = 18 - 37 \implies -3x = -19 \implies x = \frac{19}{3}.
-\]
+$$57 - 62 + 42 - 3x = 37 - 3x.$$
 
-: Solve the equation \(57 - 62 + 42 - 3x = 18\) for \(x\).
+Set this equal to 18 and solve for $x$:
+$$37 - 3x = 18 \implies -3x = 18 - 37 \implies -3x = -19 \implies x = \frac{19}{3}.$$: Solve the equation $57 - 62 + 42 - 3x = 18 $ for$x$.
 ??x
 The solution is:
-\[
-x = \frac{19}{3}.
-\]
-
----
+$$x = \frac{19}{3}.$$---
 #### Calculating Areas and Volumes of Geometric Shapes
 Background context: This involves using geometric formulas to calculate areas and volumes. The key is recognizing the correct formula based on the shape given.
 
 :p What’s the area of a circle with a diameter of 10 inches?
 ??x
-The radius \(r\) of the circle is half the diameter, so:
-\[
-r = \frac{10}{2} = 5 \text{ inches}.
-\]
-Use the formula for the area of a circle, \(A = \pi r^2\):
-\[
-A = \pi (5)^2 = 25\pi.
-\]
+The radius $r$ of the circle is half the diameter, so:
+$$r = \frac{10}{2} = 5 \text{ inches}.$$
 
-: Calculate the volume of a cube with a side length of 4 inches.
+Use the formula for the area of a circle,$A = \pi r^2$:
+$$A = \pi (5)^2 = 25\pi.$$: Calculate the volume of a cube with a side length of 4 inches.
 ??x
-The volume \(V\) of a cube is given by:
-\[
-V = s^3,
-\]
-where \(s\) is the side length. For this problem, \(s = 4\):
-\[
-V = 4^3 = 64 \text{ cubic inches}.
-\]
-
----
+The volume $V$ of a cube is given by:
+$$V = s^3,$$where $ s $is the side length. For this problem,$ s = 4$:
+$$V = 4^3 = 64 \text{ cubic inches}.$$---
 #### Properties of Triangles
 Background context: This involves understanding the properties and types of triangles based on their sides and angles.
 
 :p What type of triangle is ABC if it has two equal sides?
 ??x
-If a triangle has two equal sides, it is an isosceles triangle. Therefore, \(\triangle ABC\) is an **isosceles triangle**.
+If a triangle has two equal sides, it is an isosceles triangle. Therefore,$\triangle ABC$ is an **isosceles triangle**.
 
 : Determine the type of quadrilateral whose interior angles are all 90 degrees.
 ??x
@@ -114,36 +81,27 @@ Background context: Understanding the sum of interior and exterior angles in pol
 
 :p What’s the sum of angles 1 and 2 if they are adjacent angles on a straight line?
 ??x
-The sum of adjacent angles on a straight line is always \(180\) degrees. Therefore, \(\text{Angle 1} + \text{Angle 2} = 180\) degrees.
+The sum of adjacent angles on a straight line is always $180 $ degrees. Therefore,$\text{Angle 1} + \text{Angle 2} = 180$ degrees.
 
 : What’s the total of interior angles in a triangle?
 ??x
-The sum of the interior angles in any triangle is \(180\) degrees.
+The sum of the interior angles in any triangle is $180$ degrees.
 
 ---
 #### Evaluating Algebraic Expressions
 Background context: This involves substituting values into algebraic expressions and simplifying them to find the result. Understanding the order of operations (PEMDAS/BODMAS) is crucial here.
 
-:p Evaluate the expression \(6a^3x^2y\) if \(a = 3\), \(x = 7\), and \(y = 4\).
+:p Evaluate the expression $6a^3x^2y $ if$a = 3 $, $ x = 7 $, and$ y = 4$.
 ??x
 Substitute the given values into the expression:
-\[
-6(3)^3(7)^2(4) = 6 \cdot 27 \cdot 49 \cdot 4.
-\]
-Calculate step-by-step:
-\[
-6 \cdot 27 = 162,
-\]
-\[
-162 \cdot 49 = 7938,
-\]
-\[
-7938 \cdot 4 = 31752.
-\]
+$$6(3)^3(7)^2(4) = 6 \cdot 27 \cdot 49 \cdot 4.$$
 
-: Simplify \(x^3\) if \(x = -2\).
+Calculate step-by-step:
+$$6 \cdot 27 = 162,$$
+$$162 \cdot 49 = 7938,$$
+$$7938 \cdot 4 = 31752.$$: Simplify $ x^3 $ if $ x = -2$.
 ??x
-Substitute \(x = -2\) into the expression:
+Substitute $x = -2$ into the expression:
 \[
 (-2)^3 = -8.
 

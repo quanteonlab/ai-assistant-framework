@@ -6,15 +6,14 @@
 
 #### Quantum Oracle and Grover's Algorithm
 
-Background context: Grover’s algorithm is a quantum search algorithm that uses an oracle to amplify the amplitude of a desired state. The key components are the oracle \( \mathcal{O} \) which marks the target state, and the diffuser operator \( U_\omega \) which reflects amplitudes about the average.
+Background context: Grover’s algorithm is a quantum search algorithm that uses an oracle to amplify the amplitude of a desired state. The key components are the oracle $\mathcal{O}$ which marks the target state, and the diffuser operator $U_\omega$ which reflects amplitudes about the average.
 
 Relevant formulas:
-- \( U_\psi = 2|\psi\rangle\langle\psi| - I \)
-- \( U_\psi \sum_k \alpha_k |k\rangle = \sum_k [\alpha + (\alpha - \alpha_k)] |k\rangle \)
+- $U_\psi = 2|\psi\rangle\langle\psi| - I $-$ U_\psi \sum_k \alpha_k |k\rangle = \sum_k [\alpha + (\alpha - \alpha_k)] |k\rangle$
 
 :p What is the role of the diffuser operator in Grover’s algorithm?
 ??x
-The diffuser operator \( U_\omega \) is crucial as it amplifies the amplitude of the target state by reflecting amplitudes about their average. It ensures that states with higher probability amplitudes are reduced, while those closer to zero gain more probability.
+The diffuser operator $U_\omega$ is crucial as it amplifies the amplitude of the target state by reflecting amplitudes about their average. It ensures that states with higher probability amplitudes are reduced, while those closer to zero gain more probability.
 
 Code example (pseudocode):
 ```python
@@ -48,15 +47,15 @@ x??
 
 #### Grover's Oracle Implementation with Qiskit
 
-Background context: In Grover’s algorithm, an oracle is a quantum circuit that marks the target state. For a 4-qubit system and \( i=15 \) (binary representation \( |1111\rangle \)), we need to flip the sign of this state.
+Background context: In Grover’s algorithm, an oracle is a quantum circuit that marks the target state. For a 4-qubit system and $i=15 $(binary representation $|1111\rangle$), we need to flip the sign of this state.
 
 Relevant formulas:
-- Oracle for \( |i\rangle \): A controlled-Z gate sandwiched between two Hadamard gates on each target qubit.
-- Example: For \( i=9 \) (binary representation \( |1001\rangle \)), add X-gates before and after the Z-gate.
+- Oracle for $|i\rangle$: A controlled-Z gate sandwiched between two Hadamard gates on each target qubit.
+- Example: For $i=9 $(binary representation $|1001\rangle$), add X-gates before and after the Z-gate.
 
 :p How is the oracle for a specific state implemented in Grover’s algorithm?
 ??x
-The oracle for a specific state is implemented by placing a controlled-Z gate between two Hadamard gates on the corresponding qubits. For \( i=15 \) (binary representation \( |1111\rangle \)), this means applying three H gates, a Z gate, and then three more H gates.
+The oracle for a specific state is implemented by placing a controlled-Z gate between two Hadamard gates on the corresponding qubits. For $i=15 $(binary representation $|1111\rangle$), this means applying three H gates, a Z gate, and then three more H gates.
 
 Code example:
 ```python
@@ -81,10 +80,10 @@ x??
 
 #### Shor’s Factoring Algorithm
 
-Background context: Shor’s algorithm is a quantum factoring algorithm that exploits the difficulty of classical factorization to efficiently find prime factors of large integers. It relies on finding the period \( T \) of a function defined as \( f(x) = r^x \mod N \).
+Background context: Shor’s algorithm is a quantum factoring algorithm that exploits the difficulty of classical factorization to efficiently find prime factors of large integers. It relies on finding the period $T $ of a function defined as$f(x) = r^x \mod N$.
 
 Relevant formulas:
-- Period-finding step: Find the smallest \( T \) such that \( rT \equiv 1 \mod N \).
+- Period-finding step: Find the smallest $T $ such that$rT \equiv 1 \mod N$.
 - Phase estimation for period finding.
 
 :p What is Shor’s algorithm used for?
@@ -118,21 +117,14 @@ x??
 
 #### Quantum Phase Estimation
 
-Background context: Quantum phase estimation is a key subroutine in Shor’s factoring algorithm. It estimates the phase \( \phi \) of an eigenvalue by measuring the state after applying quantum Fourier transform (QFT).
+Background context: Quantum phase estimation is a key subroutine in Shor’s factoring algorithm. It estimates the phase $\phi$ of an eigenvalue by measuring the state after applying quantum Fourier transform (QFT).
 
 Relevant formulas:
 - QFT on basis state |s⟩: 
-  \[
-  \text{QFT}_{2t}|s\rangle = \frac{1}{\sqrt{2^t}} \sum_{k=0}^{2^t - 1} e^{2\pi i s k / 2^t} |k\rangle
-  \]
-- Inverse QFT to recover the phase:
-  \[
-  |\phi\rangle = \text{QFT}_{2t}^{-1} [|\psi\rangle] \Rightarrow \phi = \frac{s}{2^t}
-  \]
-
-:p What is quantum phase estimation used for?
+  $$\text{QFT}_{2t}|s\rangle = \frac{1}{\sqrt{2^t}} \sum_{k=0}^{2^t - 1} e^{2\pi i s k / 2^t} |k\rangle$$- Inverse QFT to recover the phase:
+$$|\phi\rangle = \text{QFT}_{2t}^{-1} [|\psi\rangle] \Rightarrow \phi = \frac{s}{2^t}$$:p What is quantum phase estimation used for?
 ??x
-Quantum phase estimation is a technique used to determine the eigenvalues of unitary operators. In Shor’s algorithm, it helps in finding the period \( T \) by estimating the phase \( \phi = S/T \), where \( S \) is an integer between 0 and \( T-1 \).
+Quantum phase estimation is a technique used to determine the eigenvalues of unitary operators. In Shor’s algorithm, it helps in finding the period $T $ by estimating the phase$\phi = S/T $, where $ S $ is an integer between 0 and $ T-1$.
 
 Code example (pseudocode):
 ```python
@@ -373,7 +365,7 @@ x??
 These flashcards cover the key concepts and code examples from the provided text, focusing on explaining the context, background, and implementation details. Each card has a single question that prompts understanding of the concept described.
 
 #### Shor's Algorithm Introduction
-Shor’s algorithm is a quantum algorithm for integer factorization. It was published by Peter Shor in 1994 and can efficiently factorize large integers, which has significant implications for cryptography. The algorithm leverages the power of quantum computing to find the factors of an integer \( N \) exponentially faster than the best-known classical algorithms.
+Shor’s algorithm is a quantum algorithm for integer factorization. It was published by Peter Shor in 1994 and can efficiently factorize large integers, which has significant implications for cryptography. The algorithm leverages the power of quantum computing to find the factors of an integer $N$ exponentially faster than the best-known classical algorithms.
 
 :p What is Shor's Algorithm used for?
 ??x
@@ -383,14 +375,14 @@ x??
 ---
 
 #### Function `amod15`
-The function `amod15` takes an input \( a \) and performs certain operations based on the value of \( a \). It creates a Quantum Circuit that applies a series of swaps to simulate modular exponentiation modulo 15.
+The function `amod15` takes an input $a $ and performs certain operations based on the value of$a$. It creates a Quantum Circuit that applies a series of swaps to simulate modular exponentiation modulo 15.
 
 :p What does the `amod15` function do?
 ??x
-The `amod15` function constructs a quantum circuit that simulates the operation \( a^{2^k} \mod 15 \) by applying controlled NOT (CNOT) gates and swaps. The specific operations are based on the value of \( a \).
+The `amod15` function constructs a quantum circuit that simulates the operation $a^{2^k} \mod 15 $ by applying controlled NOT (CNOT) gates and swaps. The specific operations are based on the value of$a$.
 
 For example:
-- If \( a = 2, 13 \), it performs specific swap operations to simulate the modular exponentiation.
+- If $a = 2, 13$, it performs specific swap operations to simulate the modular exponentiation.
 - It sets up the quantum circuit with four qubits and applies these operations.
 
 The function is designed for use in Shor’s algorithm where such modular arithmetic is crucial.
@@ -435,7 +427,7 @@ The function `qpe` builds a Phase Estimation circuit, which is essential for the
 
 :p What does the `qpe` function do?
 ??x
-The `qpe` function constructs a quantum circuit to perform phase estimation on a given unitary operator \( U \) raised to powers of 2, up to \( 2^{t-1} \). The function uses controlled versions of the unitary gates and applies an inverse Quantum Fourier Transform (QFT) at the end.
+The `qpe` function constructs a quantum circuit to perform phase estimation on a given unitary operator $U $ raised to powers of 2, up to$2^{t-1}$. The function uses controlled versions of the unitary gates and applies an inverse Quantum Fourier Transform (QFT) at the end.
 
 The code snippet below provides a detailed view of how `qpe` works:
 
@@ -480,11 +472,11 @@ x??
 ---
 
 #### Main Function
-The main function of the script is responsible for running Shor's algorithm. It randomly selects an integer \( a \) and uses the `amod15` and `qpe` functions to find factors of 15.
+The main function of the script is responsible for running Shor's algorithm. It randomly selects an integer $a$ and uses the `amod15` and `qpe` functions to find factors of 15.
 
 :p What does the main part of the code do?
 ??x
-The main part of the script runs Shor’s algorithm to factorize the number 15. It iteratively selects random integers \( a \) between 2 and 14, checks if \( gcd(a, 15) = 1 \), and uses `amod15` and `qpe` functions to estimate the phase. Once a non-trivial factor is found, it prints the result.
+The main part of the script runs Shor’s algorithm to factorize the number 15. It iteratively selects random integers $a $ between 2 and 14, checks if$gcd(a, 15) = 1$, and uses `amod15` and `qpe` functions to estimate the phase. Once a non-trivial factor is found, it prints the result.
 
 ```python
 if __name__ == "__main__":
@@ -527,92 +519,77 @@ x??
 #### Quantum Eigenvalues for Arbitrary Potentials
 Background context: In quantum mechanics, particles are described by wave functions and their energy levels. The time-independent Schrödinger equation (13.1) is used to find these wave functions and corresponding energies.
 
-The problem involves finding the eigenvalues of the Hamiltonian operator in a potential that confines the particle within an atomic distance. For bound states (\(E < 0\)), the wave function \(\psi(x)\) must be normalizable, implying it decays exponentially at infinity (13.4).
+The problem involves finding the eigenvalues of the Hamiltonian operator in a potential that confines the particle within an atomic distance. For bound states ($E < 0 $), the wave function $\psi(x)$ must be normalizable, implying it decays exponentially at infinity (13.4).
 
-:p What is the Schrödinger equation for a particle with energy \(E\) and potential \(V(x)\)?
+:p What is the Schrödinger equation for a particle with energy $E $ and potential$V(x)$?
 ??x
 The time-independent Schrödinger equation for a one-dimensional system is given by:
-\[
--\frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} + V(x) \psi(x) = E \psi(x)
-\]
-where \(\psi(x)\) is the wave function, \(V(x)\) is the potential energy, and \(E\) is the particle's total energy.
+$$-\frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} + V(x) \psi(x) = E \psi(x)$$where $\psi(x)$ is the wave function,$ V(x)$ is the potential energy, and $E$ is the particle's total energy.
 
 The equation can be rewritten as:
-\[
-\frac{d^2\psi(x)}{dx^2} - 2m V(x) \frac{\psi(x)}{\hbar^2} = -\frac{\hbar^2}{2m} E
-\]
-For bound states, the wave function \(\psi(x)\) must satisfy certain boundary conditions at infinity. This turns the ODE into an eigenvalue problem.
+$$\frac{d^2\psi(x)}{dx^2} - 2m V(x) \frac{\psi(x)}{\hbar^2} = -\frac{\hbar^2}{2m} E$$
+
+For bound states, the wave function $\psi(x)$ must satisfy certain boundary conditions at infinity. This turns the ODE into an eigenvalue problem.
 
 x??
 
 ---
 
 #### Model: Nucleon in a Box
-Background context: A simple model of a particle (nucleon) confined within a finite potential well is introduced to illustrate solving the Schrödinger equation numerically. The potential \(V(x)\) for this box model is given by:
-\[
-V(x) = \begin{cases}
+Background context: A simple model of a particle (nucleon) confined within a finite potential well is introduced to illustrate solving the Schrödinger equation numerically. The potential $V(x)$ for this box model is given by:
+$$V(x) = \begin{cases}
 -83 \text{ MeV}, & |x| \leq 2 \text{ fm} \\
 0, & |x| > 2 \text{ fm}
-\end{cases}
-\]
+\end{cases}$$
 where the typical values for nuclear states are used.
 
 :p What is the form of the Schrödinger equation inside and outside the well?
 ??x
-Inside the well (\(|x| \leq a\)), the Schrödinger equation becomes:
-\[
-\frac{d^2\psi(x)}{dx^2} + 2m \left( -\frac{\hbar^2 V_0}{2m} - \frac{\hbar^2 E}{2m} \right) \psi(x) = 0
-\]
-or equivalently:
-\[
-\frac{d^2\psi(x)}{dx^2} + (2m \left( -\frac{\hbar^2 V_0}{2m} - \frac{\hbar^2 E}{2m} \right)) \psi(x) = 0
-\]
-Simplifying further:
-\[
-\frac{d^2\psi(x)}{dx^2} + (2m \left( -V_0 - \frac{E}{c^2} \right)) \psi(x) = 0
-\]
+Inside the well ($|x| \leq a$), the Schrödinger equation becomes:
+$$\frac{d^2\psi(x)}{dx^2} + 2m \left( -\frac{\hbar^2 V_0}{2m} - \frac{\hbar^2 E}{2m} \right) \psi(x) = 0$$or equivalently:
+$$\frac{d^2\psi(x)}{dx^2} + (2m \left( -\frac{\hbar^2 V_0}{2m} - \frac{\hbar^2 E}{2m} \right)) \psi(x) = 0$$
 
-Outside the well (\(|x| > a\)), it simplifies to:
-\[
-\frac{d^2\psi(x)}{dx^2} + \frac{\hbar^2 E}{2m} \psi(x) = 0
-\]
-where \(c\) is the speed of light.
+Simplifying further:
+$$\frac{d^2\psi(x)}{dx^2} + (2m \left( -V_0 - \frac{E}{c^2} \right)) \psi(x) = 0$$
+
+Outside the well ($|x| > a$), it simplifies to:
+$$\frac{d^2\psi(x)}{dx^2} + \frac{\hbar^2 E}{2m} \psi(x) = 0$$where $ c$ is the speed of light.
 
 x??
 
 ---
 
 #### Algorithm: ODE Solver + Search
-Background context: The algorithm combines a numerical integration (rk4ODE solver) with a search for an eigenvalue that satisfies both boundary conditions at infinity. This involves integrating from \(-\infty\) and \(\infty\) towards the well, ensuring continuity of the wave function.
+Background context: The algorithm combines a numerical integration (rk4ODE solver) with a search for an eigenvalue that satisfies both boundary conditions at infinity. This involves integrating from $-\infty $ and$\infty$ towards the well, ensuring continuity of the wave function.
 
 :p What are the steps to solve the eigenvalue problem numerically?
 ??x
-1. **Start at \(x = -x_{\infty}\) (extreme left)**: Assume an initial wave function that satisfies the boundary condition \(\psi_L(x = -x_\infty) = e^{-\psi x} = e^{\psi x_\infty}\).
+1. **Start at $x = -x_{\infty}$(extreme left)**: Assume an initial wave function that satisfies the boundary condition $\psi_L(x = -x_\infty) = e^{-\psi x} = e^{\psi x_\infty}$.
 
-2. **Integrate towards origin from \(x = -x_{\infty}\)**: Use the rk4ODE solver to integrate step-by-step, ensuring you are integrating over an increasing function.
+2. **Integrate towards origin from $x = -x_{\infty}$**: Use the rk4ODE solver to integrate step-by-step, ensuring you are integrating over an increasing function.
 
-3. **Match at matching radius \(x_m\)**: Integrate up to a point just beyond the right edge of the potential well (\(a\)).
+3. **Match at matching radius $x_m $**: Integrate up to a point just beyond the right edge of the potential well ($ a$).
 
-4. **Start at \(x = +x_{\infty}\) (extreme right)**: Assume an initial wave function that satisfies \(\psi_R(x = x_\infty) = e^{-\psi x} = e^{-\psi x_\infty}\).
+4. **Start at $x = +x_{\infty}$(extreme right)**: Assume an initial wave function that satisfies $\psi_R(x = x_\infty) = e^{-\psi x} = e^{-\psi x_\infty}$.
 
-5. **Integrate towards origin from \(x = +x_{\infty}\)**: Use the rk4ODE solver to integrate step-by-step, ensuring you are integrating over an increasing function.
+5. **Integrate towards origin from $x = +x_{\infty}$**: Use the rk4ODE solver to integrate step-by-step, ensuring you are integrating over an increasing function.
 
-6. **Match at matching radius \(x_m\)**: Integrate up to a point just beyond the right edge of the potential well (\(a\)).
+6. **Match at matching radius $x_m $**: Integrate up to a point just beyond the right edge of the potential well ($ a$).
 
-The solution is found by trial and error, adjusting the energy until both wave functions match at \(x = x_m\).
+The solution is found by trial and error, adjusting the energy until both wave functions match at $x = x_m$.
 
 x??
 
 ---
 
 #### Concept of Normalization
-Background context: For bound states, \(\psi(x)\) must be normalizable. This implies that as \(|x|\) approaches infinity (\(x \to \pm \infty\)), the potential \(V\) goes to zero, and \(\psi(x)\) should decay exponentially.
+Background context: For bound states, $\psi(x)$ must be normalizable. This implies that as $|x|$ approaches infinity ($x \to \pm \infty $), the potential$ V $goes to zero, and$\psi(x)$ should decay exponentially.
 
 :p What are the boundary conditions for a wave function in an infinite well?
 ??x
 For an infinite square well, the boundary conditions on the wave function at infinity are:
-1. At \(x = -\infty\), \(\psi_L(x = -\infty) = e^{\pm \psi x} = e^{-\psi x_\infty}\).
-2. At \(x = +\infty\), \(\psi_R(x = +\infty) = e^{\pm \psi x} = e^{-\psi x_\infty}\).
+1. At $x = -\infty $, $\psi_L(x = -\infty) = e^{\pm \psi x} = e^{-\psi x_\infty}$.
+2. At $x = +\infty $, $\psi_R(x = +\infty) = e^{\pm \psi x} = e^{-\psi x_\infty}$.
 
 These conditions ensure that the wave function decays exponentially as it approaches infinity, maintaining normalizability.
 
@@ -621,13 +598,13 @@ x??
 ---
 
 #### Concept of Matching
-Background context: The solution is found by integrating from both sides and matching the wave functions at a point \(x_m\) just beyond the well's edge. This ensures continuity and satisfies the boundary conditions.
+Background context: The solution is found by integrating from both sides and matching the wave functions at a point $x_m$ just beyond the well's edge. This ensures continuity and satisfies the boundary conditions.
 
-:p What does it mean to "match" the wave function at \(x_m\)?
+:p What does it mean to "match" the wave function at $x_m$?
 ??x
-Matching the wave function at \(x_m\) means ensuring that the value of \(\psi(x)\) from integrating towards the origin from both the left (\(-\infty\)) and right (\(+\infty\)) sides are equal at this point. This continuity condition is crucial for the solution to be valid within the well.
+Matching the wave function at $x_m $ means ensuring that the value of$\psi(x)$ from integrating towards the origin from both the left ($-\infty $) and right ($+\infty$) sides are equal at this point. This continuity condition is crucial for the solution to be valid within the well.
 
-The wave function integrated from the left must match the wave function integrated from the right at \(x_m\).
+The wave function integrated from the left must match the wave function integrated from the right at $x_m$.
 
 x??
 

@@ -6,22 +6,18 @@
 
 #### Initial Condition for Wave Equation
 Background context explaining how initial conditions are set and combined with central-difference approximation to extrapolate to negative time. Relevant formulas include:
-\[
-\frac{\partial y}{\partial t}(x,0) \simeq \frac{y(x,\Delta t) - y(x,-\Delta t)}{2\Delta t} = 0 \Rightarrow y_i^0 = y_i^2.
-\]
-Here, \( j = 1 \) represents the initial time, and so \( j = 0 \) corresponds to \( t = -\Delta t \). Substituting this relation into equation (23.21) yields:
-\[
-y_i^2 = y_i^1 + \frac{c^2}{2c'^2}[y_{i+1}^1 + y_{i-1}^1 - 2y_i^1] \quad \text{(for } j=2 \text{ only)}.
-\]
-This equation uses the solution throughout all space at the initial time \( t = 0 \) to propagate (leapfrog) it forward to a time \( \Delta t \).
+$$\frac{\partial y}{\partial t}(x,0) \simeq \frac{y(x,\Delta t) - y(x,-\Delta t)}{2\Delta t} = 0 \Rightarrow y_i^0 = y_i^2.$$
+
+Here,$j = 1 $ represents the initial time, and so$j = 0 $ corresponds to$t = -\Delta t$. Substituting this relation into equation (23.21) yields:
+$$y_i^2 = y_i^1 + \frac{c^2}{2c'^2}[y_{i+1}^1 + y_{i-1}^1 - 2y_i^1] \quad \text{(for } j=2 \text{ only)}.$$
+
+This equation uses the solution throughout all space at the initial time $t = 0 $ to propagate (leapfrog) it forward to a time$\Delta t$.
 
 :p What is the formula for extrapolating the wave equation's initial condition using central-difference approximation?
 ??x
 The given formula allows us to estimate the value of the function at an earlier time step by considering values from two future time steps. This is useful in solving wave equations where we might need to initialize our system with conditions that are not directly observable.
 
-\[
-y_i^2 = y_i^1 + \frac{c^2}{2c'^2}[y_{i+1}^1 + y_{i-1}^1 - 2y_i^1]
-\]
+$$y_i^2 = y_i^1 + \frac{c^2}{2c'^2}[y_{i+1}^1 + y_{i-1}^1 - 2y_i^1]$$
 
 This formula essentially interpolates the initial condition to a previous time step using neighboring values. The central-difference approximation helps in accurately propagating these values.
 x??
@@ -34,40 +30,29 @@ Background context explaining how the wave equation is solved for all times in o
 :p What is the formula for solving the wave equation through an initial step using the central-difference approximation?
 ??x
 The provided formula for solving the wave equation for the first time step is:
+$$y_i^2 = y_i^1 + \frac{c^2}{2c'^2}[y_{i+1}^1 + y_{i-1}^1 - 2y_i^1] \quad \text{(for } j=2 \text{ only)}$$
 
-\[
-y_i^2 = y_i^1 + \frac{c^2}{2c'^2}[y_{i+1}^1 + y_{i-1}^1 - 2y_i^1] \quad \text{(for } j=2 \text{ only)}
-\]
-
-This formula uses the values at \( t = \Delta t \) to estimate the value at \( t = 0 \), effectively using a leapfrog method to solve the wave equation. It incorporates both spatial and temporal differences in a manner that ensures stability, as per the Courant condition.
+This formula uses the values at $t = \Delta t $ to estimate the value at$t = 0$, effectively using a leapfrog method to solve the wave equation. It incorporates both spatial and temporal differences in a manner that ensures stability, as per the Courant condition.
 x??
 
 ---
 
 #### Von Neumann Stability Analysis
 Background context explaining how stability analysis is performed on difference equations derived from partial differential equations (PDEs). The analysis assumes eigenmodes of the form:
-\[
-y_{i,j} = \xi(k)^j e^{ik i \Delta x},
-\]
-where \( k \) and \( \xi(k) \) are unknown wave vector and amplification factor, respectively.
+$$y_{i,j} = \xi(k)^j e^{ik i \Delta x},$$where $ k $ and $\xi(k)$ are unknown wave vector and amplification factor, respectively.
 
 :p What is the key equation used in Von Neumann stability analysis for determining the stability of difference equations?
 ??x
 The key equation used in Von Neumann stability analysis to determine the stability of difference equations is:
+$$|\xi(k)| < 1.$$
 
-\[
-|\xi(k)| < 1.
-\]
-
-This condition ensures that the solution does not grow unboundedly with time. If \( |\xi(k)| \geq 1 \), the solution will become unstable and may lead to numerical artifacts or divergence.
+This condition ensures that the solution does not grow unboundedly with time. If $|\xi(k)| \geq 1$, the solution will become unstable and may lead to numerical artifacts or divergence.
 
 The Courant condition, which is derived from this analysis, states that for stability of general transport equations:
 
-\[
-c \leq c' = \frac{\Delta x}{\Delta t}.
-\]
+$$c \leq c' = \frac{\Delta x}{\Delta t}.$$
 
-This condition indicates that the solution gets better with smaller time steps but worse with smaller space steps (unless you simultaneously make the time step smaller). The asymmetry in sensitivities to time and space steps can be surprising because the wave equation is symmetric in \( x \) and \( t \), yet this symmetry is broken by nonsymmetric initial and boundary conditions.
+This condition indicates that the solution gets better with smaller time steps but worse with smaller space steps (unless you simultaneously make the time step smaller). The asymmetry in sensitivities to time and space steps can be surprising because the wave equation is symmetric in $x $ and$t$, yet this symmetry is broken by nonsymmetric initial and boundary conditions.
 x??
 
 ---
@@ -79,21 +64,15 @@ Background context explaining how much memory would be required to solve the wav
 ??x
 To estimate the memory requirement for solving the wave equation for all times in a single step, we need to consider the storage needed for the spatial grid points and their corresponding values at different time steps.
 
-If \( N \) is the number of spatial grid points:
-- For storing one time step: We need an array of size \( N \).
-- For two time steps: We need arrays of size \( N \times 2 \).
+If $N$ is the number of spatial grid points:
+- For storing one time step: We need an array of size $N$.
+- For two time steps: We need arrays of size $N \times 2$.
 
 Thus, the memory required for solving the wave equation in a single step would be:
 
-\[
-O(N)
-\]
+$$O(N)$$for one time step and$$
 
-for one time step and
-
-\[
-O(2N) = O(N)
-\]
+O(2N) = O(N)$$
 
 for two time steps. This linear growth with respect to the number of spatial grid points is due to storing both the current and previous time step values.
 
@@ -103,21 +82,21 @@ x??
 ---
 
 #### Stability Analysis of PDE Solutions
-Background context: When solving partial differential equations (PDEs), especially those involving time and space, it is crucial to ensure numerical stability. The choice of spatial step size (\(\Delta x\)) and time step size (\(\Delta t\)) can significantly affect the solution's reliability and accuracy. A common approach to assess this stability is through a **stability analysis**.
+Background context: When solving partial differential equations (PDEs), especially those involving time and space, it is crucial to ensure numerical stability. The choice of spatial step size ($\Delta x $) and time step size ($\Delta t$) can significantly affect the solution's reliability and accuracy. A common approach to assess this stability is through a **stability analysis**.
 
 :p What is the primary reason for performing a stability analysis when solving PDEs numerically?
 ??x
-Performing a stability analysis ensures that the numerical scheme used to solve PDEs does not produce unbounded or unrealistic results, which can occur if the step sizes (\(\Delta x\) and \(\Delta t\)) are too large. This helps in identifying appropriate values for these parameters to achieve both stability and accuracy.
+Performing a stability analysis ensures that the numerical scheme used to solve PDEs does not produce unbounded or unrealistic results, which can occur if the step sizes ($\Delta x $ and$\Delta t$) are too large. This helps in identifying appropriate values for these parameters to achieve both stability and accuracy.
 x??
 
 ---
 
 #### Implementing Wave Equation Solver with Fixed End Conditions
-Background context: The wave equation describes how waves propagate through a medium, such as a string. For a plucked string of length \(L\) with fixed ends, the initial conditions are set by the plucking action. This problem can be solved using numerical methods to understand wave propagation.
+Background context: The wave equation describes how waves propagate through a medium, such as a string. For a plucked string of length $L$ with fixed ends, the initial conditions are set by the plucking action. This problem can be solved using numerical methods to understand wave propagation.
 
 :p How would you implement the solution for the wave equation on a string with fixed end conditions?
 ??x
-To solve the wave equation numerically, we use finite difference methods to approximate derivatives and simulate the wave propagation. For a string of length \(L = 1 \, \text{m}\) with ends fixed at \(y(0,t)=0\) and \(y(L,t)=0\), the initial condition is given by a gentle plucking action.
+To solve the wave equation numerically, we use finite difference methods to approximate derivatives and simulate the wave propagation. For a string of length $L = 1 \, \text{m}$ with ends fixed at $y(0,t)=0$ and $y(L,t)=0$, the initial condition is given by a gentle plucking action.
 
 Here's a simplified pseudocode to implement this:
 
@@ -153,22 +132,16 @@ x??
 
 ---
 
-#### Exploring Different \(\Delta x\) and \(\Delta t\)
-Background context: The choice of spatial step size (\(\Delta x\)) and time step size (\(\Delta t\)) significantly affects the stability and accuracy of numerical solutions. The Courant condition, given by:
+#### Exploring Different $\Delta x $ and$\Delta t $ Background context: The choice of spatial step size ($\Delta x $) and time step size ($\Delta t$) significantly affects the stability and accuracy of numerical solutions. The Courant condition, given by:
 
-\[ c \frac{\Delta t}{\Delta x} < 1 \]
+$$c \frac{\Delta t}{\Delta x} < 1$$ensures that information cannot propagate faster than the speed of sound in the medium.
 
-ensures that information cannot propagate faster than the speed of sound in the medium.
-
-:p How does changing \(\Delta x\) and \(\Delta t\) affect the stability and accuracy of the numerical solution for the wave equation?
+:p How does changing $\Delta x $ and$\Delta t$ affect the stability and accuracy of the numerical solution for the wave equation?
 ??x
-Changing \(\Delta x\) and \(\Delta t\) can impact both the stability and accuracy of the numerical solution. If these step sizes are too large, the solution may become unstable or divergent, whereas decreasing them generally improves stability but might not necessarily improve accuracy if the Courant condition is violated.
+Changing $\Delta x $ and$\Delta t$ can impact both the stability and accuracy of the numerical solution. If these step sizes are too large, the solution may become unstable or divergent, whereas decreasing them generally improves stability but might not necessarily improve accuracy if the Courant condition is violated.
 
 To ensure a stable solution, it's essential to satisfy the Courant condition:
-
-\[ c \frac{\Delta t}{\Delta x} < 1 \]
-
-where \(c\) is the wave speed. However, simply decreasing \(\Delta x\) and \(\Delta t\) might not always lead to better results due to increased computational cost and potential numerical errors.
+$$c \frac{\Delta t}{\Delta x} < 1$$where $ c $ is the wave speed. However, simply decreasing $\Delta x $ and$\Delta t$ might not always lead to better results due to increased computational cost and potential numerical errors.
 
 Example pseudocode to explore different step sizes:
 
@@ -184,7 +157,7 @@ def test_wave_equation(dt_values, dx_values):
 test_wave_equation([0.0005, 0.001], [0.002, 0.004])
 ```
 
-This code tests different combinations of \(\Delta x\) and \(\Delta t\) to find a stable and reliable solution.
+This code tests different combinations of $\Delta x $ and$\Delta t$ to find a stable and reliable solution.
 x??
 
 ---
@@ -225,15 +198,12 @@ x??
 ---
 
 #### Propagation Velocity of Waves on a Plucked String
-Background context: The propagation velocity \(c\) of waves on a string can be derived from the wave equation:
+Background context: The propagation velocity $c$ of waves on a string can be derived from the wave equation:
+$$c = \sqrt{\frac{T}{\rho}}$$where $ T $ is the tension and $\rho$ is the linear density.
 
-\[ c = \sqrt{\frac{T}{\rho}} \]
-
-where \(T\) is the tension and \(\rho\) is the linear density.
-
-:p How do you estimate the propagation velocity \(c\) from the numerical solution?
+:p How do you estimate the propagation velocity $c$ from the numerical solution?
 ??x
-To estimate the propagation velocity \(c\) from the numerical solution, observe the motion of the peak wave packet over time. The velocity can be calculated by measuring the position of the peak as a function of time and fitting it to a linear relationship.
+To estimate the propagation velocity $c$ from the numerical solution, observe the motion of the peak wave packet over time. The velocity can be calculated by measuring the position of the peak as a function of time and fitting it to a linear relationship.
 
 Example pseudocode:
 
@@ -253,7 +223,7 @@ velocity = calculate_velocity(x_values, y_numerical)
 print(f"Estimated propagation velocity c: {velocity}")
 ```
 
-This code calculates the peak position over time and fits a linear model to estimate the propagation velocity \(c\).
+This code calculates the peak position over time and fits a linear model to estimate the propagation velocity $c$.
 x??
 
 ---
@@ -265,9 +235,9 @@ Background context: The initial plucking action on a string can be represented a
 ??x
 To solve the wave equation for a string initially placed in a single normal mode (standing wave), use the initial condition:
 
-\[ y(x,0) = 0.001 \sin(2\pi x), \quad \frac{\partial y}{\partial t}(x,0) = 0 \]
+$$y(x,0) = 0.001 \sin(2\pi x), \quad \frac{\partial y}{\partial t}(x,0) = 0$$
 
-This represents a single sine wave with frequency \(k=2\).
+This represents a single sine wave with frequency $k=2$.
 
 Example pseudocode:
 
@@ -291,9 +261,7 @@ Background context: Real-world scenarios often involve friction, which can dampe
 ??x
 To include friction in the wave equation, modify it to account for a damping term proportional to the velocity and the length of the string element. The new wave equation is:
 
-\[ \frac{\partial^2 y}{\partial t^2} = c^2 \frac{\partial^2 y}{\partial x^2} - 2\alpha \rho \frac{\partial y}{\partial t} \]
-
-where \(\alpha\) is a constant proportional to the viscosity of the medium.
+$$\frac{\partial^2 y}{\partial t^2} = c^2 \frac{\partial^2 y}{\partial x^2} - 2\alpha \rho \frac{\partial y}{\partial t}$$where $\alpha$ is a constant proportional to the viscosity of the medium.
 
 Example pseudocode:
 
@@ -333,11 +301,8 @@ Background context: Real strings often have varying tension or density along the
 
 :p How does variable tension and density affect the wave equation?
 ??x
-When the tension \(T\) and/or density \(\rho\) vary along the string, the constant wave speed \(c = \sqrt{T/\rho}\) is no longer applicable. The wave equation must be extended to account for these variations:
-
-\[ \frac{\partial^2 y}{\partial t^2} = c(x)^2 \frac{\partial^2 y}{\partial x^2} - 2\alpha(x) \rho(x) \frac{\partial y}{\partial t} \]
-
-where \(c(x)\) and \(\alpha(x)\) are the tension and damping coefficient, respectively, as functions of position.
+When the tension $T $ and/or density$\rho $ vary along the string, the constant wave speed$c = \sqrt{T/\rho}$ is no longer applicable. The wave equation must be extended to account for these variations:
+$$\frac{\partial^2 y}{\partial t^2} = c(x)^2 \frac{\partial^2 y}{\partial x^2} - 2\alpha(x) \rho(x) \frac{\partial y}{\partial t}$$where $ c(x)$and $\alpha(x)$ are the tension and damping coefficient, respectively, as functions of position.
 
 Example pseudocode:
 
@@ -373,46 +338,43 @@ This code demonstrates how to handle a string with varying tension and density.
 x??
 
 #### Variable Density and Tension in Wave Motion
-Background context: The provided text discusses deriving a wave equation for strings with variable density and tension, which is more general than assuming constant values. This involves applying Newton's second law to an element of a string where both the tension \(T(x)\) and the linear mass density \(\rho(x)\) are functions of position \(x\). The resulting differential equation accounts for these variations.
+Background context: The provided text discusses deriving a wave equation for strings with variable density and tension, which is more general than assuming constant values. This involves applying Newton's second law to an element of a string where both the tension $T(x)$ and the linear mass density $\rho(x)$ are functions of position $x$. The resulting differential equation accounts for these variations.
 
 :p What is the key differential equation derived for wave motion with variable density and tension?
 ??x
 The key differential equation derived is:
-\[ \frac{\partial T(x)}{\partial x} \frac{\partial y(x,t)}{\partial x} + T(x) \frac{\partial^2 y(x,t)}{\partial x^2} = \rho(x) \frac{\partial^2 y(x,t)}{\partial t^2}. \]
+$$\frac{\partial T(x)}{\partial x} \frac{\partial y(x,t)}{\partial x} + T(x) \frac{\partial^2 y(x,t)}{\partial x^2} = \rho(x) \frac{\partial^2 y(x,t)}{\partial t^2}.$$
+
 This equation accounts for the spatial variation in tension and density, leading to a more general form of the wave equation.
 x??
 
 ---
 
 #### Simplified Wave Equation with Proportional Density and Tension
-Background context: When assuming that both the density \(\rho(x)\) and the tension \(T(x)\) are proportional functions of position (i.e., \(\rho(x) = \rho_0 e^{\alpha x}\), \(T(x) = T_0 e^{\alpha x}\)), the wave equation simplifies to:
-\[ \frac{\partial^2 y(x,t)}{\partial x^2} + \alpha \frac{\partial y(x,t)}{\partial x} = \frac{1}{c^2} \frac{\partial^2 y(x,t)}{\partial t^2}, \]
-where \(c\) is a constant wave velocity.
+Background context: When assuming that both the density $\rho(x)$ and the tension $T(x)$ are proportional functions of position (i.e.,$\rho(x) = \rho_0 e^{\alpha x}$,$ T(x) = T_0 e^{\alpha x}$), the wave equation simplifies to:
+$$\frac{\partial^2 y(x,t)}{\partial x^2} + \alpha \frac{\partial y(x,t)}{\partial x} = \frac{1}{c^2} \frac{\partial^2 y(x,t)}{\partial t^2},$$where $ c$ is a constant wave velocity.
 
 :p What simplified form of the wave equation results from assuming proportional density and tension?
 ??x
-The simplified wave equation, when \(\rho(x) = \rho_0 e^{\alpha x}\) and \(T(x) = T_0 e^{\alpha x}\), is:
-\[ \frac{\partial^2 y(x,t)}{\partial x^2} + \alpha \frac{\partial y(x,t)}{\partial x} = \frac{1}{c^2} \frac{\partial^2 y(x,t)}{\partial t^2}, \]
-where \(c^2 = \frac{T_0}{\rho_0}\).
+The simplified wave equation, when $\rho(x) = \rho_0 e^{\alpha x}$ and $T(x) = T_0 e^{\alpha x}$, is:
+$$\frac{\partial^2 y(x,t)}{\partial x^2} + \alpha \frac{\partial y(x,t)}{\partial x} = \frac{1}{c^2} \frac{\partial^2 y(x,t)}{\partial t^2},$$where $ c^2 = \frac{T_0}{\rho_0}$.
 x??
 
 ---
 
 #### Wave Equation for a Catenary
-Background context: In the presence of gravity, the string assumes a catenary shape. The equilibrium shape \(u(x)\) and the tension \(T(x)\) are derived from balancing forces at each point along the string.
+Background context: In the presence of gravity, the string assumes a catenary shape. The equilibrium shape $u(x)$ and the tension $T(x)$ are derived from balancing forces at each point along the string.
 
 :p How does the wave equation change when considering the effect of gravity on the string?
 ??x
 When considering the effect of gravity, the wave equation becomes:
-\[ \frac{\partial^2 y(x,t)}{\partial x^2} + \alpha \frac{\partial y(x,t)}{\partial x} = \frac{1}{c^2} \frac{\partial^2 y(x,t)}{\partial t^2}, \]
-where the term involving \(\alpha\) accounts for the spatial variation in tension due to gravity, and \(c^2 = \frac{T_0}{\rho g}\).
+$$\frac{\partial^2 y(x,t)}{\partial x^2} + \alpha \frac{\partial y(x,t)}{\partial x} = \frac{1}{c^2} \frac{\partial^2 y(x,t)}{\partial t^2},$$where the term involving $\alpha $ accounts for the spatial variation in tension due to gravity, and$c^2 = \frac{T_0}{\rho g}$.
 
 The differential equation describing the catenary shape is:
-\[ \frac{d^2 u(x)}{dx^2} = \frac{1}{D \sqrt{1 + \left(\frac{du}{dx}\right)^2}}, \]
-where \(D = \frac{T_0}{\rho g}\).
+$$\frac{d^2 u(x)}{dx^2} = \frac{1}{D \sqrt{1 + \left(\frac{du}{dx}\right)^2}},$$where $ D = \frac{T_0}{\rho g}$.
 
 The solution to this equation is:
-\[ u(x) = D \cosh\left(\frac{x}{D}\right). \]
+$$u(x) = D \cosh\left(\frac{x}{D}\right).$$
 
 This accounts for the variation in tension along the string due to gravity.
 x??
@@ -424,27 +386,25 @@ Background context: The derivation of the catenary shape involves balancing forc
 
 :p How is the statics problem for a hanging string solved to derive its catenary shape?
 ??x
-The statics problem is solved by balancing vertical and horizontal components of tension \(T(x)\) with the weight \(\rho g s\) at each point. The equations are:
-\[ T(x) \sin \theta = W = \rho g s, \]
-\[ T(x) \cos \theta = T_0, \]
+The statics problem is solved by balancing vertical and horizontal components of tension $T(x)$ with the weight $\rho g s$ at each point. The equations are:
+$$T(x) \sin \theta = W = \rho g s,$$
+$$
 
-which lead to:
-\[ \tan \theta = \frac{\rho g s}{T_0}. \]
+T(x) \cos \theta = T_0,$$which lead to:
+$$\tan \theta = \frac{\rho g s}{T_0}.$$
 
-By converting the slope \( \tan \theta \) into a derivative and taking the derivative with respect to \(x\), we get:
-\[ \frac{du}{dx} = \frac{\rho g}{T_0} s, \]
-\[ \frac{d^2 u}{dx^2} = \frac{\rho g}{T_0} \frac{ds}{dx}. \]
+By converting the slope $\tan \theta $ into a derivative and taking the derivative with respect to$x$, we get:
+$$\frac{du}{dx} = \frac{\rho g}{T_0} s,$$
+$$\frac{d^2 u}{dx^2} = \frac{\rho g}{T_0} \frac{ds}{dx}.$$
 
-Since \( ds = \sqrt{dx^2 + du^2} \), we obtain:
-\[ d^2 u = \frac{1}{D \sqrt{1 + \left(\frac{du}{dx}\right)^2}}, \]
-where \( D = \frac{T_0}{\rho g} \).
+Since $ds = \sqrt{dx^2 + du^2}$, we obtain:
+$$d^2 u = \frac{1}{D \sqrt{1 + \left(\frac{du}{dx}\right)^2}},$$where $ D = \frac{T_0}{\rho g}$.
 
 The final differential equation for the catenary is:
-\[ \frac{d^2 u(x)}{dx^2} = \frac{1}{D \sqrt{1 + \left(\frac{du}{dx}\right)^2}}. \]
+$$\frac{d^2 u(x)}{dx^2} = \frac{1}{D \sqrt{1 + \left(\frac{du}{dx}\right)^2}}.$$
 
 This leads to the solution:
-\[ u(x) = D \cosh\left(\frac{x}{D}\right). \]
-x??
+$$u(x) = D \cosh\left(\frac{x}{D}\right).$$x??
 
 ---
 
@@ -454,11 +414,10 @@ Background context: The numerical solution for the catenary shape involves using
 :p What is the central difference approximation used to solve the wave equation for a hanging string?
 ??x
 The central difference approximation for solving the wave equation numerically is:
-\[ y_{i,j+1} = 2y_{i,j} - y_{i,j-1} + \frac{\alpha c^2 (\Delta t)^2}{2 \Delta x} [y_{i+1,j} - y_{i,j}] + \frac{c^2}{c'^2} [y_{i+1,j} + y_{i-1,j} - 2y_{i,j}], \]
-where \( c' = D \).
+$$y_{i,j+1} = 2y_{i,j} - y_{i,j-1} + \frac{\alpha c^2 (\Delta t)^2}{2 \Delta x} [y_{i+1,j} - y_{i,j}] + \frac{c^2}{c'^2} [y_{i+1,j} + y_{i-1,j} - 2y_{i,j}],$$where $ c' = D$.
 
 The initial condition is:
-\[ y_{i,2} = y_{i,1} + \frac{c^2}{c'^2} [y_{i+1,1} + y_{i-1,1} - 2y_{i,1}] + \frac{\alpha c^2 (\Delta t)^2}{2 \Delta x} [y_{i+1,1} - y_{i,1}]. \]
+$$y_{i,2} = y_{i,1} + \frac{c^2}{c'^2} [y_{i+1,1} + y_{i-1,1} - 2y_{i,1}] + \frac{\alpha c^2 (\Delta t)^2}{2 \Delta x} [y_{i+1,1} - y_{i,1}].$$
 
 These equations are used to simulate the catenary shape over time.
 x??
@@ -471,7 +430,7 @@ Background context: The problem involves solving wave equations for a catenary w
 
 :p How does one modify EqStringMat.py to solve waves on a catenary including friction?
 ??x
-To modify `EqStringMat.py` for solving waves on a catenary with friction, you need to update the wave equation to account for the varying tension and density along the string. Given the conditions \( \alpha = 0.5 \), \( T_0 = 40 \) N, and \( \rho_0 = 0.01 \) kg/m, you will incorporate these into your wave equation.
+To modify `EqStringMat.py` for solving waves on a catenary with friction, you need to update the wave equation to account for the varying tension and density along the string. Given the conditions $\alpha = 0.5 $, $ T_0 = 40 $ N, and $\rho_0 = 0.01$ kg/m, you will incorporate these into your wave equation.
 
 Here's a pseudocode snippet to illustrate the modifications:
 
@@ -508,7 +467,7 @@ Background context: The task involves creating surface plots to visualize the so
 
 :p How can one create surface plots for the wave solutions shown in Figure 23.5?
 ??x
-To create surface plots, you need to generate a three-dimensional plot of the wave displacement \( u(x,t) \) over time. Here's an example using Python with Matplotlib:
+To create surface plots, you need to generate a three-dimensional plot of the wave displacement $u(x,t)$ over time. Here's an example using Python with Matplotlib:
 
 ```python
 import numpy as np
@@ -537,11 +496,11 @@ x??
 
 #### Normal Modes of the Catenary Wave Equation
 
-Background context: The objective is to find normal mode solutions for a wave equation with variable tension. These modes are sinusoidal in nature and vary as \( u(x,t) = A \cos(\omega t) \sin(\gamma x) \).
+Background context: The objective is to find normal mode solutions for a wave equation with variable tension. These modes are sinusoidal in nature and vary as $u(x,t) = A \cos(\omega t) \sin(\gamma x)$.
 
 :p How can one implement code to search for normal modes of the catenary wave equation?
 ??x
-To find normal mode solutions, you need to assume that the solution takes the form \( u(x,t) = A \cos(\omega t) \sin(\gamma x) \). The goal is to determine if this form leads to a consistent solution. Here's an example of how you might implement it:
+To find normal mode solutions, you need to assume that the solution takes the form $u(x,t) = A \cos(\omega t) \sin(\gamma x)$. The goal is to determine if this form leads to a consistent solution. Here's an example of how you might implement it:
 
 ```python
 def find_normal_modes(wave_speed, tension, density):
@@ -576,11 +535,11 @@ x??
 
 #### Standing Wave Patterns in a Catenary
 
-Background context: The task is to build standing wave patterns by continuously shaking one end of the string. This requires implementing a boundary condition that \( y(x=0,t) = A \sin(\omega t) \).
+Background context: The task is to build standing wave patterns by continuously shaking one end of the string. This requires implementing a boundary condition that $y(x=0,t) = A \sin(\omega t)$.
 
 :p How can one implement code to simulate standing waves at one end of a catenary?
 ??x
-To simulate standing waves, you need to apply a boundary condition such that the displacement at one end is given by \( y(0,t) = A \sin(\omega t) \). Here's an example implementation:
+To simulate standing waves, you need to apply a boundary condition such that the displacement at one end is given by $y(0,t) = A \sin(\omega t)$. Here's an example implementation:
 
 ```python
 def update_string_with_shake(x, t, A, omega):
@@ -635,7 +594,7 @@ x??
 
 #### Catenary Wave Equation with Nonlinear Terms
 
-Background context: The task involves extending the wave equation by including nonlinear terms, specifically the next order in displacements. This requires modifying the wave equation to include a term proportional to \( \left(1 + \frac{\partial^2 u}{\partial x^2}\right)^2 \).
+Background context: The task involves extending the wave equation by including nonlinear terms, specifically the next order in displacements. This requires modifying the wave equation to include a term proportional to $\left(1 + \frac{\partial^2 u}{\partial x^2}\right)^2$.
 
 :p How can one extend the leapfrog algorithm to solve this nonlinear wave equation?
 ??x
@@ -668,7 +627,7 @@ x??
 
 #### Vibrating Membrane with Initial Conditions
 
-Background context: The problem involves solving for a vibrating membrane that is initially displaced in a specific manner. The initial condition given is \( u(x,y,t=0) = \sin(2x)\sin(y) \).
+Background context: The problem involves solving for a vibrating membrane that is initially displaced in a specific manner. The initial condition given is $u(x,y,t=0) = \sin(2x)\sin(y)$.
 
 :p How can one describe the motion of a membrane released from rest?
 ??x
@@ -702,7 +661,7 @@ Background context: The objective is to search for normal modes of the catenary 
 
 :p How can one implement code to use the first two normal modes as initial conditions for the catenary?
 ??x
-To use the first two normal modes as initial conditions for the catenary, you need to assume that these modes are given by \( u(x,t) = A \cos(\omega t) \sin(\gamma x) \). You can then initialize your wave displacement with these modes.
+To use the first two normal modes as initial conditions for the catenary, you need to assume that these modes are given by $u(x,t) = A \cos(\omega t) \sin(\gamma x)$. You can then initialize your wave displacement with these modes.
 
 Here’s an example implementation:
 
@@ -726,15 +685,13 @@ u_initial = initialize_modes(2)
 
 x??
 
-#### Nonlinear Wave Equation with \( k(x) \)
+#### Nonlinear Wave Equation with $k(x)$ Background context: The goal is to improve the representation of normal modes by including some x-dependence in $k$. This involves updating the approximation for wave velocity and checking if it provides a better solution.
 
-Background context: The goal is to improve the representation of normal modes by including some x-dependence in \( k \). This involves updating the approximation for wave velocity and checking if it provides a better solution.
-
-:p How can one include x-dependence in \( k \) to get a better representation of normal modes?
+:p How can one include x-dependence in $k$ to get a better representation of normal modes?
 ??x
-To include x-dependence in \( k \), you need to update your approximation for the wave velocity squared. The key is to use the given formula:
+To include x-dependence in $k$, you need to update your approximation for the wave velocity squared. The key is to use the given formula:
 
-\[ c(x)^2 \approx T(x) / \rho = T_0 \cosh(x/d) / (\rho_0 (1 + \alpha \sinh(x/d))) \]
+$$c(x)^2 \approx T(x) / \rho = T_0 \cosh(x/d) / (\rho_0 (1 + \alpha \sinh(x/d)))$$
 
 Here’s an example implementation in pseudocode:
 
@@ -758,169 +715,144 @@ x??
 
 #### Small Section of an Oscillating Membrane Forces
 Background context: The tension is constant over a small area, but there will be an net vertical force on the displayed segment if the angle of incline of the membrane varies as we move through space. This results in a net force in the z direction.
-Relevant formula: 
-\[ \sum F_z(x) = T\Delta x\sin\theta - T\Delta x\sin\phi, \]
-where \( \theta \) is the angle of incline at \( y + \Delta y \), and \( \phi \) is the angle at \( y \).
+Relevant formula:
+$$\sum F_z(x) = T\Delta x\sin\theta - T\Delta x\sin\phi,$$where $\theta $ is the angle of incline at$y + \Delta y $, and$\phi $ is the angle at$y$.
 If displacements and angles are small, we can approximate:
-\[ \sin\theta \approx \tan\theta = \frac{\partial u}{\partial y}\Bigg|_{y+\Delta y}, \quad \sin\phi \approx \tan\phi = \frac{\partial u}{\partial y}\Bigg|_y. \]
-Thus, the net force in the z direction as a result of the change in \( y \) is:
-\[ \sum F_z(x_{fixed}) = T\Delta x\left( \frac{\partial u}{\partial y}\Bigg|_{y+\Delta y} - \frac{\partial u}{\partial y}\Bigg|_y \right) \approx T\Delta x\frac{\partial^2 u}{\partial y^2}\Delta y. \]
+$$\sin\theta \approx \tan\theta = \frac{\partial u}{\partial y}\Bigg|_{y+\Delta y}, \quad \sin\phi \approx \tan\phi = \frac{\partial u}{\partial y}\Bigg|_y.$$
 
-:p What is the net force in the z direction due to the change in \( y \)?
+Thus, the net force in the z direction as a result of the change in $y$ is:
+$$\sum F_z(x_{fixed}) = T\Delta x\left( \frac{\partial u}{\partial y}\Bigg|_{y+\Delta y} - \frac{\partial u}{\partial y}\Bigg|_y \right) \approx T\Delta x\frac{\partial^2 u}{\partial y^2}\Delta y.$$:p What is the net force in the z direction due to the change in $ y$?
 ??x
-The net force in the z direction, as a result of the variation in \( y \), can be approximated by:
-\[ \sum F_z(x_{fixed}) = T\Delta x\left( \frac{\partial u}{\partial y}\Bigg|_{y+\Delta y} - \frac{\partial u}{\partial y}\Bigg|_y \right) \approx T\Delta x\frac{\partial^2 u}{\partial y^2}\Delta y. \]
+The net force in the z direction, as a result of the variation in $y$, can be approximated by:
+$$\sum F_z(x_{fixed}) = T\Delta x\left( \frac{\partial u}{\partial y}\Bigg|_{y+\Delta y} - \frac{\partial u}{\partial y}\Bigg|_y \right) \approx T\Delta x\frac{\partial^2 u}{\partial y^2}\Delta y.$$
+
 This approximation holds because the membrane's angles and displacements are small, allowing us to use the linear approximations for sine and tangent functions.
 
 ---
-#### Net Force in the z Direction Due to Variation in \( x \)
-Background context: Similarly, the net force in the z direction due to the variation in \( x \) is given by:
-\[ \sum F_z(y_{fixed}) = T\Delta y\left( \frac{\partial u}{\partial x}\Bigg|_{x+\Delta x} - \frac{\partial u}{\partial x}\Bigg|_x \right) \approx T\Delta y\frac{\partial^2 u}{\partial x^2}\Delta x. \]
-
-:p What is the net force in the z direction due to the variation in \( x \)?
+#### Net Force in the z Direction Due to Variation in $x $ Background context: Similarly, the net force in the z direction due to the variation in$x$ is given by:
+$$\sum F_z(y_{fixed}) = T\Delta y\left( \frac{\partial u}{\partial x}\Bigg|_{x+\Delta x} - \frac{\partial u}{\partial x}\Bigg|_x \right) \approx T\Delta y\frac{\partial^2 u}{\partial x^2}\Delta x.$$:p What is the net force in the z direction due to the variation in $ x$?
 ??x
-The net force in the z direction, as a result of the change in \( x \), can be approximated by:
-\[ \sum F_z(y_{fixed}) = T\Delta y\left( \frac{\partial u}{\partial x}\Bigg|_{x+\Delta x} - \frac{\partial u}{\partial x}\Bigg|_x \right) \approx T\Delta y\frac{\partial^2 u}{\partial x^2}\Delta x. \]
+The net force in the z direction, as a result of the change in $x$, can be approximated by:
+$$\sum F_z(y_{fixed}) = T\Delta y\left( \frac{\partial u}{\partial x}\Bigg|_{x+\Delta x} - \frac{\partial u}{\partial x}\Bigg|_x \right) \approx T\Delta y\frac{\partial^2 u}{\partial x^2}\Delta x.$$
+
 This approximation is valid because the membrane's angles and displacements are small, allowing us to use linear approximations for sine and tangent functions.
 
 ---
 #### Mass of Membrane Section
-Background context: The membrane section has a mass \( \rho \Delta x \Delta y \), where \( \rho \) is the membrane’s mass per unit area. Newton's second law is applied to determine the acceleration of the membrane section in the z direction.
+Background context: The membrane section has a mass $\rho \Delta x \Delta y $, where $\rho$ is the membrane’s mass per unit area. Newton's second law is applied to determine the acceleration of the membrane section in the z direction.
 Relevant formula:
-\[ \rho \Delta x \Delta y \frac{\partial^2 u}{\partial t^2} = T \Delta x \frac{\partial^2 u}{\partial y^2} \Delta y + T \Delta y \frac{\partial^2 u}{\partial x^2} \Delta x. \]
-This simplifies to:
-\[ 1/c^2 \frac{\partial^2 u}{\partial t^2} = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}, \quad c = \sqrt{T/\rho}. \]
+$$\rho \Delta x \Delta y \frac{\partial^2 u}{\partial t^2} = T \Delta x \frac{\partial^2 u}{\partial y^2} \Delta y + T \Delta y \frac{\partial^2 u}{\partial x^2} \Delta x.$$
 
-:p What is the mass of a membrane section?
+This simplifies to:
+$$1/c^2 \frac{\partial^2 u}{\partial t^2} = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}, \quad c = \sqrt{T/\rho}.$$:p What is the mass of a membrane section?
 ??x
-The mass of a membrane section with dimensions \( \Delta x \) and \( \Delta y \) is given by:
-\[ \text{Mass} = \rho \Delta x \Delta y, \]
-where \( \rho \) is the membrane’s mass per unit area.
+The mass of a membrane section with dimensions $\Delta x $ and$\Delta y$ is given by:
+$$\text{Mass} = \rho \Delta x \Delta y,$$where $\rho$ is the membrane’s mass per unit area.
 
 ---
 #### Boundary Conditions for Membrane
-Background context: The boundary conditions hold for all times and are given when it is stated that the membrane is attached securely to a square box of side length \( \pi \):
-\[ u(x=0,y,t) = u(x=\pi, y,t) = 0, \]
-\[ u(x, y=0, t) = u(x, y=\pi, t) = 0. \]
-
-:p What are the boundary conditions for the membrane?
+Background context: The boundary conditions hold for all times and are given when it is stated that the membrane is attached securely to a square box of side length $\pi$:
+$$u(x=0,y,t) = u(x=\pi, y,t) = 0,$$
+$$u(x, y=0, t) = u(x, y=\pi, t) = 0.$$:p What are the boundary conditions for the membrane?
 ??x
 The boundary conditions for the membrane are:
-\[ u(x=0,y,t) = u(x=\pi, y,t) = 0, \]
-\[ u(x, y=0, t) = u(x, y=\pi, t) = 0. \]
+$$u(x=0,y,t) = u(x=\pi, y,t) = 0,$$
+$$u(x, y=0, t) = u(x, y=\pi, t) = 0.$$
+
 These conditions indicate that the membrane is fixed at all four sides of the square box.
 
 ---
 #### Initial Conditions for Membrane
-Background context: The initial conditions include both the shape of the membrane at \( t = 0 \) and the velocity of each point on the membrane:
-\[ u(x, y, t=0) = \sin(2x)\sin(y), \quad 0 \leq x \leq \pi, \quad 0 \leq y \leq \pi. \]
-The initial release condition is that the membrane is released from rest:
-\[ \frac{\partial u}{\partial t}\Bigg|_{t=0} = 0. \]
+Background context: The initial conditions include both the shape of the membrane at $t = 0$ and the velocity of each point on the membrane:
+$$u(x, y, t=0) = \sin(2x)\sin(y), \quad 0 \leq x \leq \pi, \quad 0 \leq y \leq \pi.$$
 
-:p What are the initial conditions for the membrane?
+The initial release condition is that the membrane is released from rest:
+$$\frac{\partial u}{\partial t}\Bigg|_{t=0} = 0.$$:p What are the initial conditions for the membrane?
 ??x
 The initial conditions for the membrane are:
-1. Initial configuration: 
-\[ u(x, y, t=0) = \sin(2x)\sin(y), \quad 0 \leq x \leq \pi, \quad 0 \leq y \leq \pi. \]
-2. Released from rest condition:
-\[ \frac{\partial u}{\partial t}\Bigg|_{t=0} = 0. \]
-
----
+1. Initial configuration:
+$$u(x, y, t=0) = \sin(2x)\sin(y), \quad 0 \leq x \leq \pi, \quad 0 \leq y \leq \pi.$$2. Released from rest condition:
+$$\frac{\partial u}{\partial t}\Bigg|_{t=0} = 0.$$---
 #### Analytical Solution for Membrane Wave Equation
-Background context: The partial differential equation (PDE) for the wave on a membrane is solved using separation of variables, leading to solutions that are sinusoidal standing waves in both \( x \) and \( y \) directions.
+Background context: The partial differential equation (PDE) for the wave on a membrane is solved using separation of variables, leading to solutions that are sinusoidal standing waves in both $x $ and$y$ directions.
 Relevant formula:
-\[ u(x, y, t) = X(x)Y(y)T(t). \]
-After substituting into the PDE and dividing by \( X(x)Y(y)T(t) \), we obtain:
-\[ \frac{1}{c^2} \frac{d^2 T(t)}{dt^2} = -\xi^2 = \frac{1}{X(x)} \frac{d^2 X(x)}{dx^2} + \frac{1}{Y(y)} \frac{d^2 Y(y)}{dy^2}. \]
+$$u(x, y, t) = X(x)Y(y)T(t).$$
+
+After substituting into the PDE and dividing by $X(x)Y(y)T(t)$, we obtain:
+$$\frac{1}{c^2} \frac{d^2 T(t)}{dt^2} = -\xi^2 = \frac{1}{X(x)} \frac{d^2 X(x)}{dx^2} + \frac{1}{Y(y)} \frac{d^2 Y(y)}{dy^2}.$$
+
 This leads to the separated equations:
-\[ \frac{1}{X(x)} \frac{d^2 X(x)}{dx^2} = -k^2, \quad \frac{1}{Y(y)} \frac{d^2 Y(y)}{dy^2} = -q^2, \]
-where \( q^2 = \xi^2 - k^2 \).
+$$\frac{1}{X(x)} \frac{d^2 X(x)}{dx^2} = -k^2, \quad \frac{1}{Y(y)} \frac{d^2 Y(y)}{dy^2} = -q^2,$$where $ q^2 = \xi^2 - k^2$.
 
 :p What is the form of the solution for the membrane wave equation?
 ??x
 The analytical solution for the wave on a membrane has the form:
-\[ u(x, y, t) = X(x)Y(y)T(t). \]
-This leads to separated equations that are solutions of sinusoidal standing waves in both \( x \) and \( y \) directions:
-\[ X(x) = A\sin(kx) + B\cos(kx), \quad Y(y) = C\sin(qy) + D\cos(qy), \]
-and the time-dependent part is:
-\[ T(t) = E\sin(\xi t) + F\cos(\xi t). \]
+$$u(x, y, t) = X(x)Y(y)T(t).$$
 
----
+This leads to separated equations that are solutions of sinusoidal standing waves in both $x $ and$y$ directions:
+$$X(x) = A\sin(kx) + B\cos(kx), \quad Y(y) = C\sin(qy) + D\cos(qy),$$and the time-dependent part is:
+$$
+
+T(t) = E\sin(\xi t) + F\cos(\xi t).$$---
 #### Differentiation of Separated Equations
-Background context: The separated equations are differentiated to find specific solutions for \( X(x) \), \( Y(y) \), and \( T(t) \):
-\[ \frac{1}{X(x)} \frac{d^2 X(x)}{dx^2} = -k^2, \quad \frac{1}{Y(y)} \frac{d^2 Y(y)}{dy^2} = -q^2. \]
+Background context: The separated equations are differentiated to find specific solutions for $X(x)$,$ Y(y)$, and $ T(t)$:
+$$\frac{1}{X(x)} \frac{d^2 X(x)}{dx^2} = -k^2, \quad \frac{1}{Y(y)} \frac{d^2 Y(y)}{dy^2} = -q^2.$$
+
 The solutions are:
-\[ X(x) = A\sin(kx) + B\cos(kx), \quad Y(y) = C\sin(qy) + D\cos(qy). \]
+$$
 
-:p What are the solutions for \( X(x) \) and \( Y(y) \)?
+X(x) = A\sin(kx) + B\cos(kx), \quad Y(y) = C\sin(qy) + D\cos(qy).$$:p What are the solutions for $ X(x)$and $ Y(y)$?
 ??x
-The solutions for \( X(x) \) and \( Y(y) \) are sinusoidal functions:
-\[ X(x) = A\sin(kx) + B\cos(kx), \]
-\[ Y(y) = C\sin(qy) + D\cos(qy). \]
+The solutions for $X(x)$ and $Y(y)$ are sinusoidal functions:
+$$X(x) = A\sin(kx) + B\cos(kx),$$
+$$
 
----
+Y(y) = C\sin(qy) + D\cos(qy).$$---
 #### Time-Dependent Solution
-Background context: The time-dependent solution \( T(t) \) is derived as:
-\[ T(t) = E\sin(\xi t) + F\cos(\xi t), \]
-where \( \xi^2 = k^2 + q^2 \).
+Background context: The time-dependent solution $T(t)$ is derived as:
+$$T(t) = E\sin(\xi t) + F\cos(\xi t),$$where $\xi^2 = k^2 + q^2$.
 
 :p What is the form of the time-dependent solution?
 ??x
 The time-dependent solution for the membrane wave equation has the form:
-\[ T(t) = E\sin(\xi t) + F\cos(\xi t), \]
-where \( \xi^2 = k^2 + q^2 \).
+$$T(t) = E\sin(\xi t) + F\cos(\xi t),$$where $\xi^2 = k^2 + q^2$.
 
 #### Boundary Conditions Application
 Background context: In solving the 2D wave equation, specific boundary conditions are applied to determine the form of the solution. The boundary conditions given are:
-- \( u(x=0,y,t) = u(x=\pi,y,z) = 0 \Rightarrow B = 0, k = 1,2,... \)
-- \( u(x,y=0,t) = u(x,y=\pi,t) = 0 \Rightarrow D = 0, q = 1,2,... \)
+- $u(x=0,y,t) = u(x=\pi,y,z) = 0 \Rightarrow B = 0, k = 1,2,...$-$ u(x,y=0,t) = u(x,y=\pi,t) = 0 \Rightarrow D = 0, q = 1,2,...$
 
 From these boundary conditions, the spatial components of the solution are derived as:
-\[ X(x) = A\sin(kx), Y(y) = C\sin(qy). \]
-
-:p What is the significance of applying the given boundary conditions to the wave equation?
+$$X(x) = A\sin(kx), Y(y) = C\sin(qy).$$:p What is the significance of applying the given boundary conditions to the wave equation?
 ??x
-Applying the boundary conditions helps in determining the form of the solution that satisfies both spatial and temporal aspects. Specifically, these conditions ensure that certain modes are zero at the boundaries, leading to a unique set of eigenvalues \(k\) and \(q\). The orthogonality properties of sine functions help in solving for coefficients \(A\) and \(C\).
+Applying the boundary conditions helps in determining the form of the solution that satisfies both spatial and temporal aspects. Specifically, these conditions ensure that certain modes are zero at the boundaries, leading to a unique set of eigenvalues $k $ and$q $. The orthogonality properties of sine functions help in solving for coefficients $ A $and$ C$.
 x??
 
 ---
 
 #### Eigenvalues and Modes
 Background context: From the boundary conditions, we derive that:
-- \( X(x) = A\sin(kx) \)
-- \( Y(y) = C\sin(qy) \)
-
-The fixed values of eigenvalues \(m\) and \(n\) for describing modes in \(X\) and \(Y\) are equivalent to fixed values for constants \(q^2\) and \(k^2\). Given that:
-\[ q^2 + k^2 = \xi^2, \]
-
-we must also have a fixed value for \(\xi^2\):
-\[ \xi^2 = q^2 + k^2 \Rightarrow \xi_kq = \pi \sqrt{k^2+q^2}. \]
-
-:p What is the relationship between \(k\) and \(q\) in this context?
+- $X(x) = A\sin(kx)$-$ Y(y) = C\sin(qy)$The fixed values of eigenvalues $ m$and $ n$ for describing modes in $ X $ and $ Y $ are equivalent to fixed values for constants $ q^2 $ and $ k^2$. Given that:
+$$q^2 + k^2 = \xi^2,$$we must also have a fixed value for $\xi^2$:
+$$\xi^2 = q^2 + k^2 \Rightarrow \xi_kq = \pi \sqrt{k^2+q^2}.$$:p What is the relationship between $ k $ and $ q$ in this context?
 ??x
-The relationship between \(k\) and \(q\) is derived from the eigenvalue conditions set by the boundary values. Specifically, since:
-\[ q^2 + k^2 = \xi^2, \]
-where \(\xi\) represents a fixed value for the wave number, we can express this in terms of \(k\) and \(q\):
-\[ \xi_kq = \pi \sqrt{k^2+q^2}. \]
+The relationship between $k $ and$q$ is derived from the eigenvalue conditions set by the boundary values. Specifically, since:
+$$q^2 + k^2 = \xi^2,$$where $\xi $ represents a fixed value for the wave number, we can express this in terms of$k $ and$q$:
+$$\xi_kq = \pi \sqrt{k^2+q^2}.$$
 
-This equation ensures that both \(k\) and \(q\) satisfy the necessary boundary conditions for the standing waves.
+This equation ensures that both $k $ and$q$ satisfy the necessary boundary conditions for the standing waves.
 x??
 
 ---
 
 #### Full Space-Time Solution
 Background context: The full space-time solution takes the form:
-\[ u_{kq} = [G_{kq}\cos c\xi t + H_{kq}\sin c\xi t] \sin kx \sin qy, \]
-where \(k\) and \(q\) are integers.
+$$u_{kq} = [G_{kq}\cos c\xi t + H_{kq}\sin c\xi t] \sin kx \sin qy,$$where $ k $ and $ q$ are integers.
 
-Since the wave equation is linear in \(u\), its most general solution is a linear combination of these eigenmodes:
-\[ u(x,y,t) = \sum_{k=1}^{\infty}\sum_{q=1}^{\infty} [G_{kq}\cos c\xi t + H_{kq}\sin c\xi t] \sin kx \sin qy. \]
-
-:p What is the form of the full space-time solution for the wave equation?
+Since the wave equation is linear in $u$, its most general solution is a linear combination of these eigenmodes:
+$$u(x,y,t) = \sum_{k=1}^{\infty}\sum_{q=1}^{\infty} [G_{kq}\cos c\xi t + H_{kq}\sin c\xi t] \sin kx \sin qy.$$:p What is the form of the full space-time solution for the wave equation?
 ??x
 The full space-time solution for the wave equation is a linear combination of eigenmodes:
-\[ u(x,y,t) = \sum_{k=1}^{\infty}\sum_{q=1}^{\infty} [G_{kq}\cos c\xi t + H_{kq}\sin c\xi t] \sin kx \sin qy, \]
-where \(G_{kq}\) and \(H_{kq}\) are coefficients determined by initial conditions.
+$$u(x,y,t) = \sum_{k=1}^{\infty}\sum_{q=1}^{\infty} [G_{kq}\cos c\xi t + H_{kq}\sin c\xi t] \sin kx \sin qy,$$where $ G_{kq}$and $ H_{kq}$ are coefficients determined by initial conditions.
 
 This solution accounts for the spatial and temporal variations of the wave.
 x??
@@ -929,28 +861,24 @@ x??
 
 #### Numerical Solution Algorithm
 Background context: For numerically solving the 2D wave equation, central differences are used to approximate second derivatives:
-\[ \frac{\partial^2 u(x,y,t)}{\partial t^2} = \frac{u(x,y,t+\Delta t) + u(x,y,t-\Delta t) - 2u(x,y,t)}{(\Delta t)^2}, \]
-\[ \frac{\partial^2 u(x,y,t)}{\partial x^2} = \frac{u(x+\Delta x,y,t) + u(x-\Delta x,y,t) - 2u(x,y,t)}{(\Delta x)^2}, \]
-\[ \frac{\partial^2 u(x,y,t)}{\partial y^2} = \frac{u(x,y+\Delta y,t) + u(x,y-\Delta y,t) - 2u(x,y,t)}{(\Delta y)^2}. \]
+$$\frac{\partial^2 u(x,y,t)}{\partial t^2} = \frac{u(x,y,t+\Delta t) + u(x,y,t-\Delta t) - 2u(x,y,t)}{(\Delta t)^2},$$
+$$\frac{\partial^2 u(x,y,t)}{\partial x^2} = \frac{u(x+\Delta x,y,t) + u(x-\Delta x,y,t) - 2u(x,y,t)}{(\Delta x)^2},$$
+$$\frac{\partial^2 u(x,y,t)}{\partial y^2} = \frac{u(x,y+\Delta y,t) + u(x,y-\Delta y,t) - 2u(x,y,t)}{(\Delta y)^2}.$$
 
-After discretizing the variables, \(u(x=i\Delta x, y=i\Delta y, t=k\Delta t) \equiv u_{k i,j}\), we obtain a time-stepping algorithm:
-\[ u_{k+1 i,j} = 2u_{k i,j} - u_{k-1 i,j} c^2 c'^2 [u_{i+1 j,k} + u_{i-1 j,k} - 4u_{i j,k} + u_{i, j+1, k} + u_{i, j-1, k}], \]
-where \(c'\) is defined as \(\frac{\Delta x}{\Delta t}\).
+After discretizing the variables,$u(x=i\Delta x, y=i\Delta y, t=k\Delta t) \equiv u_{k i,j}$, we obtain a time-stepping algorithm:
+$$u_{k+1 i,j} = 2u_{k i,j} - u_{k-1 i,j} c^2 c'^2 [u_{i+1 j,k} + u_{i-1 j,k} - 4u_{i j,k} + u_{i, j+1, k} + u_{i, j-1, k}],$$where $ c'$is defined as $\frac{\Delta x}{\Delta t}$.
 
 To initialize the algorithm, we use the fact that the membrane is released from rest:
-\[ 0 = \frac{\partial u(t=0)}{\partial t} \approx \frac{u_{1 i,j} - u_{-1 i,j}}{2\Delta t}, \Rightarrow u_{-1 i,j} = u_{1 i,j}. \]
+$$0 = \frac{\partial u(t=0)}{\partial t} \approx \frac{u_{1 i,j} - u_{-1 i,j}}{2\Delta t}, \Rightarrow u_{-1 i,j} = u_{1 i,j}.$$
 
 Substituting into the algorithm, we get:
-\[ u_{1 i,j} = u_{0 i,j} + c^2 \frac{u_{i+1,j,k} + u_{i-1,j,k} - 4u_{i,j,k} + u_{i,j+1,k} + u_{i,j-1,k}}{2c'^2}. \]
-
-:p What is the time-stepping algorithm for solving the 2D wave equation numerically?
+$$u_{1 i,j} = u_{0 i,j} + c^2 \frac{u_{i+1,j,k} + u_{i-1,j,k} - 4u_{i,j,k} + u_{i,j+1,k} + u_{i,j-1,k}}{2c'^2}.$$:p What is the time-stepping algorithm for solving the 2D wave equation numerically?
 ??x
 The time-stepping algorithm for solving the 2D wave equation numerically is:
-\[ u_{k+1 i,j} = 2u_{k i,j} - u_{k-1 i,j} c^2 c'^2 [u_{i+1 j,k} + u_{i-1 j,k} - 4u_{i j,k} + u_{i, j+1, k} + u_{i, j-1, k}], \]
-where \(c'\) is defined as \(\frac{\Delta x}{\Delta t}\).
+$$u_{k+1 i,j} = 2u_{k i,j} - u_{k-1 i,j} c^2 c'^2 [u_{i+1 j,k} + u_{i-1 j,k} - 4u_{i j,k} + u_{i, j+1, k} + u_{i, j-1, k}],$$where $ c'$is defined as $\frac{\Delta x}{\Delta t}$.
 
 To initialize the algorithm, we use:
-\[ u_{-1 i,j} = u_{1 i,j}. \]
+$$u_{-1 i,j} = u_{1 i,j}.$$
 
 This initialization ensures that the initial conditions are correctly set for the wave equation.
 x??
@@ -961,11 +889,7 @@ x??
 Background context: The Wave2D.py program in Listing 23.2 solves the 2D wave equation using a leapfrog algorithm, while Waves2Danal.py computes the analytical solution.
 
 The shape of the membrane at different times is shown in Figure 23.7:
-- At \(t = 45\)
-- At \(t = 3\)
-- At \(t = 20\)
-
-:p What program is used to solve the 2D wave equation using a leapfrog algorithm?
+- At $t = 45 $- At $ t = 3 $- At$ t = 20$:p What program is used to solve the 2D wave equation using a leapfrog algorithm?
 ??x
 The program used to solve the 2D wave equation using a leapfrog algorithm is Wave2D.py.
 
@@ -1004,7 +928,7 @@ The leapfrog method is used to update the displacement of each point on the stri
 :p How does the `animate` function implement the leapfrog method for updating the string's displacement?
 ??x
 In the `animate` function, the leapfrog method is implemented by first updating the displacement at each point using its previous two states. The equation used is:
-\[ u[i, 2] = 2 \cdot u[i, 1] - u[i, 0] + \text{ratio} \cdot (u[i+1, 1] + u[i-1, 1] - 2 \cdot u[i, 1]) \]
+$$u[i, 2] = 2 \cdot u[i, 1] - u[i, 0] + \text{ratio} \cdot (u[i+1, 1] + u[i-1, 1] - 2 \cdot u[i, 1])$$
 
 Here, `xi` is a three-column array where:
 - `xi[:, 0]`: Current state
@@ -1032,7 +956,7 @@ This section provides a Python script to simulate the waves on a vibrating membr
 :p What is the initial shape of the membrane in the `vibration` function?
 ??x
 The initial shape of the membrane in the `vibration` function is set by the following equation:
-\[ u[i][j][0] = 3 \cdot \sin(2.0 \cdot x) \cdot \sin(y) \]
+$$u[i][j][0] = 3 \cdot \sin(2.0 \cdot x) \cdot \sin(y)$$
 
 Where `i` and `j` are indices in the grid, and `x` and `y` are positions on the membrane.
 
@@ -1055,7 +979,7 @@ This section describes a Python script to simulate the waves on a catenary strin
 :p What is the initial condition (IC) set in the `CatFriction` function?
 ??x
 The initial condition (IC) for the catenary wave is defined as:
-\[ x[i][0] = -0.08 \cdot \sin(\pi \cdot i \cdot dx) \]
+$$x[i][0] = -0.08 \cdot \sin(\pi \cdot i \cdot dx)$$
 
 This sets up a sine wave with an amplitude of 0.08 and wavelength adjusted by `dx`.
 

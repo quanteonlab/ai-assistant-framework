@@ -356,7 +356,7 @@ public class ProductListTagHelper : TagHelper {
         var products = _productService.GetProducts();
         output.Content.SetContent("<ul>");
         foreach (var product in products) {
-            output.Content.AppendHtml($"<li>{product.Name} - ${product.Price:C2}</li>");
+            output.Content.AppendHtml($"<li>{product.Name} -${product.Price:C2}</li>");
         }
         output.Content.AppendHtml("</ul>");
     }

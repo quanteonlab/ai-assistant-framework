@@ -141,10 +141,10 @@ x??
 ---
 
 #### Capacity Evaluation in RAID
-Background context: The capacity of a RAID system affects its usefulness for storing data. With no redundancy, the total capacity is simply \(N \times B\) (where \(N\) is the number of disks and \(B\) is the block size). In mirroring schemes, each block has two copies, reducing the useful capacity to \((N \times B) / 2\).
+Background context: The capacity of a RAID system affects its usefulness for storing data. With no redundancy, the total capacity is simply $N \times B $(where $ N $is the number of disks and$ B $is the block size). In mirroring schemes, each block has two copies, reducing the useful capacity to$(N \times B) / 2$.
 :p How does capacity differ between non-redundant and mirrored RAID systems?
 ??x
-In a non-redundant (RAID-0 or striping) system, the total usable storage is \(N \times B\) because there are no redundant copies. In contrast, in a mirroring system, each block has two copies stored on different disks, so the useful capacity is halved to \((N \times B) / 2\).
+In a non-redundant (RAID-0 or striping) system, the total usable storage is $N \times B $ because there are no redundant copies. In contrast, in a mirroring system, each block has two copies stored on different disks, so the useful capacity is halved to$(N \times B) / 2$.
 x??
 
 ---
@@ -190,7 +190,7 @@ x??
 Background context: A simple example of striping involves distributing blocks across a 4-disk array in a round-robin fashion. Each disk stores a sequential block starting from the first.
 :p How is data striped across disks in RAID Level 0?
 ??x
-In RAID Level 0, data is striped across multiple disks using a round-robin approach. For instance, with a 4-disk array and assuming \(B\) blocks:
+In RAID Level 0, data is striped across multiple disks using a round-robin approach. For instance, with a 4-disk array and assuming $B$ blocks:
 - Disk 0: Block 0, 4, 8, ...
 - Disk 1: Block 1, 5, 9, ...
 - Disk 2: Block 2, 6, 10, ...
@@ -218,15 +218,14 @@ For a simple example, if we have 4 disks and each disk holds one block (chunk si
 :p How is the disk and offset calculated for a logical block address in a RAID array with chunk size = 1?
 ??x
 The disk number can be calculated using:
-\[ \text{Disk} = A \% \text{number\_of\_disks} \]
+$$\text{Disk} = A \% \text{number\_of\_disks}$$
+
 And the exact block on that disk using:
-\[ \text{Offset} = \lfloor \frac{A}{\text{number\_of\_disks}} \rfloor \]
+$$\text{Offset} = \lfloor \frac{A}{\text{number\_of\_disks}} \rfloor$$
 
 For example, if a request arrives for block 14 and there are 4 disks, then:
-- Disk = \( 14 \% 4 = 2 \) (disk 2)
-- Offset = \( \lfloor \frac{14}{4} \rfloor = 3 \)
-
-So, the block should be found on the fourth block (block 3, starting at 0) of disk 2.
+- Disk =$14 \% 4 = 2$(disk 2)
+- Offset =$\lfloor \frac{14}{4} \rfloor = 3$ So, the block should be found on the fourth block (block 3, starting at 0) of disk 2.
 x??
 
 ---
@@ -255,14 +254,11 @@ Given a logical block address A, we can map it to its disk and offset with simpl
 :p How are the equations used to map a logical block address to a physical disk and offset?
 ??x
 The equations provided in the text:
-\[ \text{Disk} = A \% \text{number\_of\_disks} \]
-\[ \text{Offset} = \lfloor \frac{A}{\text{number\_of\_disks}} \rfloor \]
+$$\text{Disk} = A \% \text{number\_of\_disks}$$
+$$\text{Offset} = \lfloor \frac{A}{\text{number\_of\_disks}} \rfloor$$
 
-For example, if \( A = 14 \) and there are 4 disks:
-- Disk = \( 14 \% 4 = 2 \)
-- Offset = \( \lfloor \frac{14}{4} \rfloor = 3 \)
-
-This means block 14 is on the fourth block (offset 3, starting at 0) of disk 2.
+For example, if $A = 14$ and there are 4 disks:
+- Disk =$14 \% 4 = 2 $- Offset =$\lfloor \frac{14}{4} \rfloor = 3$ This means block 14 is on the fourth block (offset 3, starting at 0) of disk 2.
 x??
 
 ---
@@ -322,8 +318,8 @@ The performance characteristics of a disk change significantly depending on whet
 - **Random Access**: Most time spent seeking and waiting for rotation, relatively little time spent transferring data.
 
 To model this difference in performance:
-- A disk can transfer data at \(S\) MB/s under a sequential workload.
-- A disk can transfer data at \(R\) MB/s when under a random workload.
+- A disk can transfer data at $S$ MB/s under a sequential workload.
+- A disk can transfer data at $R$ MB/s when under a random workload.
 
 This difference is crucial in understanding the overall throughput of RAID systems. For example, if a RAID system needs to handle both types of workloads, it must account for varying performance levels.
 x??
@@ -336,8 +332,8 @@ Background context: Given different transfer rates for sequential and random acc
 :p How would you model the disk's data transfer rate in a RAID system?
 ??x
 To model the disk’s data transfer rate in a RAID system, consider the following:
-- \(S\) MB/s as the sequential data transfer rate.
-- \(R\) MB/s as the random data transfer rate.
+- $S$ MB/s as the sequential data transfer rate.
+- $R$ MB/s as the random data transfer rate.
 
 For simplicity, assume a scenario where the RAID system processes both types of workloads. Here is an example in pseudocode:
 
@@ -359,7 +355,7 @@ x??
 
 #### Sequential Bandwidth (S) Calculation
 
-Background context: In this scenario, we are calculating the sequential bandwidth for a disk system. The formula used is \( S = \frac{\text{Amount of Data}}{\text{Time to access}} \).
+Background context: In this scenario, we are calculating the sequential bandwidth for a disk system. The formula used is $S = \frac{\text{Amount of Data}}{\text{Time to access}}$.
 
 Given characteristics:
 - Sequential transfer size: 10 MB
@@ -369,15 +365,13 @@ Given characteristics:
 
 :p How do we calculate the sequential bandwidth (S)?
 ??x
-To calculate \( S \), first determine the total time taken for a typical 10 MB transfer. This involves:
+To calculate $S$, first determine the total time taken for a typical 10 MB transfer. This involves:
 1. Seek time: 7 ms
 2. Rotational delay: 3 ms
-3. Transfer time: \(\frac{10MB}{50MB/s} = 0.2s = 200ms\)
+3. Transfer time: $\frac{10MB}{50MB/s} = 0.2s = 200ms $ Adding these times gives$7 + 3 + 200 = 210$ ms.
 
-Adding these times gives \( 7 + 3 + 200 = 210 \) ms.
-
-Now, we can calculate \( S \):
-\[ S = \frac{10MB}{210ms} \approx 47.62 MB/s \]
+Now, we can calculate $S$:
+$$S = \frac{10MB}{210ms} \approx 47.62 MB/s$$
 
 This value is close to the peak bandwidth of the disk because most of the time is spent in data transfer.
 ??x
@@ -403,7 +397,7 @@ x??
 
 #### Random Bandwidth (R) Calculation
 
-Background context: We are calculating the random bandwidth for a disk system. The formula used is \( R = \frac{\text{Amount of Data}}{\text{Time to access}} \).
+Background context: We are calculating the random bandwidth for a disk system. The formula used is $R = \frac{\text{Amount of Data}}{\text{Time to access}}$.
 
 Given characteristics:
 - Random transfer size: 10 KB
@@ -413,15 +407,13 @@ Given characteristics:
 
 :p How do we calculate the random bandwidth (R)?
 ??x
-To calculate \( R \), first determine the total time taken for a typical 10 KB transfer. This involves:
+To calculate $R$, first determine the total time taken for a typical 10 KB transfer. This involves:
 1. Seek time: 7 ms
 2. Rotational delay: 3 ms
-3. Transfer time: \(\frac{10KB}{50MB/s} = 0.195ms\)
+3. Transfer time: $\frac{10KB}{50MB/s} = 0.195ms $ Adding these times gives$7 + 3 + 0.195 = 10.195$ ms.
 
-Adding these times gives \( 7 + 3 + 0.195 = 10.195 \) ms.
-
-Now, we can calculate \( R \):
-\[ R = \frac{10KB}{10.195ms} \approx 0.981 MB/s \]
+Now, we can calculate $R$:
+$$R = \frac{10KB}{10.195ms} \approx 0.981 MB/s$$
 
 This value is much lower than the sequential bandwidth because most of the time is spent in seek and rotational delays.
 ??x
@@ -452,18 +444,16 @@ Background context: RAID-0 uses striping to increase sequential throughput. The 
 For a single-block request, the latency should be similar to that of a single disk because RAID-0 simply redirects the request to one of its disks.
 
 For steady-state throughput, we expect to achieve the full bandwidth of the system:
-\[ \text{Throughput} = N \times S \]
+$$\text{Throughput} = N \times S$$
 
-Where \( N \) is the number of disks and \( S \) is the sequential bandwidth of a single disk. For random I/Os with a large number of requests, the throughput can be:
-\[ \text{Throughput} = N \times R \]
-
-:p How does RAID-0 achieve performance in terms of latency and steady-state throughput?
+Where $N $ is the number of disks and$S$ is the sequential bandwidth of a single disk. For random I/Os with a large number of requests, the throughput can be:
+$$\text{Throughput} = N \times R$$:p How does RAID-0 achieve performance in terms of latency and steady-state throughput?
 ??x
 RAID-0 achieves its performance by striping data across multiple disks. For a single-block request, since each block is written to one disk, the latency should be similar to that of a single disk. This is because RAID-0 simply redirects the request to one of its disks.
 
 For steady-state throughput:
-1. **Sequential Reads/Writes**: All \( N \) disks can operate in parallel, resulting in \( N \times S \) MB/s.
-2. **Random I/Os**: With a large number of requests, all \( N \) disks can be utilized simultaneously, leading to \( N \times R \) MB/s.
+1. **Sequential Reads/Writes**: All $N $ disks can operate in parallel, resulting in$N \times S$ MB/s.
+2. **Random I/Os**: With a large number of requests, all $N $ disks can be utilized simultaneously, leading to$N \times R$ MB/s.
 
 This makes RAID-0 an effective solution for applications that require high sequential throughput but are less concerned about random access performance.
 ??x
@@ -520,18 +510,14 @@ x??
 #### RAID-1 Capacity Analysis
 Background context: RAID-1 uses mirroring to ensure data redundancy. In a mirrored setup, each block of data is written to two disks. This provides fault tolerance but comes at the cost of reduced capacity.
 
-Formula for capacity: 
-\[ \text{Useful Capacity} = \frac{\text{Number of Disks (N)} \times \text{Block Size (B)}}{2} \]
-
-:p What is the formula for calculating the useful capacity of a RAID-1 setup?
+Formula for capacity:
+$$\text{Useful Capacity} = \frac{\text{Number of Disks (N)} \times \text{Block Size (B)}}{2}$$:p What is the formula for calculating the useful capacity of a RAID-1 setup?
 ??x
 The useful capacity of a RAID-1 setup can be calculated by taking half of the total storage because each block is written to two disks, ensuring redundancy but halving the usable space.
 
 Example:
 If you have 4 disks (N=4) and each disk has a capacity of 2TB (B=2TB), then the useful capacity would be:
-\[ \text{Useful Capacity} = \frac{4 \times 2\,\text{TB}}{2} = 4\,\text{TB} \]
-
-??x
+$$\text{Useful Capacity} = \frac{4 \times 2\,\text{TB}}{2} = 4\,\text{TB}$$??x
 The answer with detailed explanations.
 ```java
 public class RAID1Capacity {
@@ -548,17 +534,13 @@ x??
 Background context: RAID-1 provides redundancy by mirroring data across multiple disks. This means that the failure of any one disk does not result in data loss, as the same data is stored on another disk.
 
 Formula for reliability:
-\[ \text{Maximum Tolerated Failures} = \frac{\text{Number of Disks (N)}}{2} \]
-
-:p How many disks can fail before RAID-1 stops functioning?
+$$\text{Maximum Tolerated Failures} = \frac{\text{Number of Disks (N)}}{2}$$:p How many disks can fail before RAID-1 stops functioning?
 ??x
-RAID-1 can tolerate the failure of up to half of its disks, i.e., \( \frac{\text{Number of Disks}}{2} \).
+RAID-1 can tolerate the failure of up to half of its disks, i.e.,$\frac{\text{Number of Disks}}{2}$.
 
 Example:
 If you have 8 disks (N=8), then the maximum number of failures that can occur without data loss is:
-\[ \text{Maximum Tolerated Failures} = \frac{8}{2} = 4 \]
-
-??x
+$$\text{Maximum Tolerated Failures} = \frac{8}{2} = 4$$??x
 The answer with detailed explanations.
 ```java
 public class RAID1Reliability {
@@ -654,9 +636,9 @@ Background context explaining how sequential writes and reads impact throughput 
 
 :p What is the maximum bandwidth for sequential writing in a RAID-1 configuration?
 ??x
-The maximum bandwidth for sequential writing in a RAID-1 configuration is \(\frac{N}{2} \times S\), where \(N\) is the number of mirrored disks and \(S\) is the peak bandwidth of each disk.
+The maximum bandwidth for sequential writing in a RAID-1 configuration is $\frac{N}{2} \times S $, where $ N $is the number of mirrored disks and$ S$ is the peak bandwidth of each disk.
 
-For example, if you have two mirrored disks (\(N = 2\)) with a peak write bandwidth of 100 MB/s per disk (\(S = 100 \text{ MB/s}\)), the maximum sequential write throughput would be:
+For example, if you have two mirrored disks ($N = 2 $) with a peak write bandwidth of 100 MB/s per disk ($ S = 100 \text{ MB/s}$), the maximum sequential write throughput would be:
 ```plaintext
 (2/2) * 100 MB/s = 100 MB/s / 2 = 50 MB/s
 ```
@@ -682,11 +664,11 @@ Background context explaining the benefits and performance implications of rando
 
 :p How does random reading perform on a mirrored RAID-1 configuration?
 ??x
-Random reading performs optimally on a mirrored RAID-1 configuration because each read request can be distributed to different disks, allowing for the full bandwidth potential of the array to be utilized. For \(N\) disks with a read bandwidth of \(R\) MB/s per disk, the throughput is:
+Random reading performs optimally on a mirrored RAID-1 configuration because each read request can be distributed to different disks, allowing for the full bandwidth potential of the array to be utilized. For $N $ disks with a read bandwidth of$R$ MB/s per disk, the throughput is:
 ```plaintext
 N * R MB/s
 ```
-For example, if you have two mirrored disks (\(N = 2\)) with a peak read bandwidth of 100 MB/s per disk (\(R = 100 \text{ MB/s}\)):
+For example, if you have two mirrored disks ($N = 2 $) with a peak read bandwidth of 100 MB/s per disk ($ R = 100 \text{ MB/s}$):
 ```plaintext
 2 * 100 MB/s = 200 MB/s
 ```
@@ -698,9 +680,9 @@ Background context explaining the performance impact of random writes in mirrore
 
 :p What is the throughput for random writes in a mirrored RAID-1 configuration?
 ??x
-The throughput for random writes in a mirrored RAID-1 configuration is \(\frac{N}{2} * R\) MB/s because each logical write requires two physical writes to both disks. This effectively halves the available bandwidth compared to sequential writes.
+The throughput for random writes in a mirrored RAID-1 configuration is $\frac{N}{2} * R$ MB/s because each logical write requires two physical writes to both disks. This effectively halves the available bandwidth compared to sequential writes.
 
-For example, if you have two mirrored disks (\(N = 2\)) with a peak read/write bandwidth of 100 MB/s per disk (\(R = 100 \text{ MB/s}\)):
+For example, if you have two mirrored disks ($N = 2 $) with a peak read/write bandwidth of 100 MB/s per disk ($ R = 100 \text{ MB/s}$):
 ```plaintext
 (2/2) * 100 MB/s = 100 MB/s / 2 = 50 MB/s
 ```
@@ -774,7 +756,7 @@ x??
 Background context explaining the capacity of RAID-4. RAID-4 uses one disk for parity information per group of disks, leading to a useful capacity formula: (N−1)·B.
 :p What is the capacity of a RAID-4 setup?
 ??x
-RAID-4's capacity can be calculated using the formula \((N-1)·B\), where \(N\) represents the total number of disks and \(B\) is the block size. This is because one disk out of every group of \(N\) is used for parity, thus reducing the usable storage by one disk.
+RAID-4's capacity can be calculated using the formula $(N-1)·B $, where $ N $represents the total number of disks and$ B $is the block size. This is because one disk out of every group of$ N$ is used for parity, thus reducing the usable storage by one disk.
 x??
 
 ---
@@ -789,10 +771,10 @@ x??
 ---
 
 #### RAID-4 Sequential Read Performance
-Explanation of how sequential reads in RAID-4 use all disks except the parity disk for optimal performance. The effective bandwidth is \((N-1)·SMB/s\).
+Explanation of how sequential reads in RAID-4 use all disks except the parity disk for optimal performance. The effective bandwidth is $(N-1)·SMB/s$.
 :p What is the throughput for sequential reads in a RAID-4 system?
 ??x
-Sequential reads in RAID-4 can utilize all disks except the parity disk, delivering an optimal effective bandwidth of \((N-1)·SMB/s\). This means that \(N-1\) out of \(N\) drives are used simultaneously to read data.
+Sequential reads in RAID-4 can utilize all disks except the parity disk, delivering an optimal effective bandwidth of $(N-1)·SMB/s $. This means that $ N-1 $out of$ N$ drives are used simultaneously to read data.
 x??
 
 ---
@@ -807,10 +789,10 @@ x??
 ---
 
 #### Random Reads Performance in RAID-4
-Explanation that random reads spread data evenly across data disks but not the parity disk. The effective performance is \((N-1)·RMB/s\).
+Explanation that random reads spread data evenly across data disks but not the parity disk. The effective performance is $(N-1)·RMB/s$.
 :p What is the performance for random reads on a RAID-4 system?
 ??x
-Random reads in RAID-4 will distribute data blocks across the data disks, not involving the parity disk. Therefore, the effective bandwidth for random reads is \((N-1)·RMB/s\), as \(N-1\) out of \(N\) drives are used to handle read requests.
+Random reads in RAID-4 will distribute data blocks across the data disks, not involving the parity disk. Therefore, the effective bandwidth for random reads is $(N-1)·RMB/s $, as $ N-1 $out of$ N$ drives are used to handle read requests.
 x??
 
 ---
@@ -831,7 +813,7 @@ Background context: The subtractive parity method is a technique used to update 
 ??x
 The subtractive parity method works by first reading the old data (C2old) and old parity (Pold). If the new data (C2new) is the same as the old data, then the new parity remains unchanged. However, if they are different, the old parity bit must be flipped to the opposite state.
 
-Formula: \( P_{\text{new}} = (\text{C}_{2\text{old}} \oplus \text{C}_{2\text{new}}) \oplus \text{P}_{\text{old}} \)
+Formula:$P_{\text{new}} = (\text{C}_{2\text{old}} \oplus \text{C}_{2\text{new}}) \oplus \text{P}_{\text{old}}$
 
 Explanation:
 - XOR operation between old data and new data.

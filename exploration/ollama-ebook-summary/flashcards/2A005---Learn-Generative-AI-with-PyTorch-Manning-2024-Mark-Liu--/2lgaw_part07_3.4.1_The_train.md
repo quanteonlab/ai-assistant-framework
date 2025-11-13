@@ -90,9 +90,9 @@ Background context explaining the concept. The sigmoid activation function is us
 
 :p Why is the sigmoid activation function used in the last layer of the discriminator?
 ??x
-The sigmoid activation function is used in the last layer of the discriminator because it ensures that the output value lies between 0 and 1. This range can be interpreted as the probability \( p \) that a sample is real.
+The sigmoid activation function is used in the last layer of the discriminator because it ensures that the output value lies between 0 and 1. This range can be interpreted as the probability $p$ that a sample is real.
 
-For example, if the output is `0.7`, it means there's a 70% chance that the input sample is real. Conversely, a probability of `0.3` would mean a 30% chance that the sample is fake (since \(1 - p = 0.3\)).
+For example, if the output is `0.7`, it means there's a 70% chance that the input sample is real. Conversely, a probability of `0.3` would mean a 30% chance that the sample is fake (since $1 - p = 0.3$).
 
 Here’s how it works in code:
 ```python
@@ -115,10 +115,10 @@ x??
 ---
 
 #### Generator Network
-The generator network's role is to create pairs of numbers \((x, y)\) to trick the discriminator. The neural network used for the generator has a sequential structure with multiple linear layers and ReLU activations. A dropout layer helps prevent overfitting by randomly dropping neurons during training.
+The generator network's role is to create pairs of numbers $(x, y)$ to trick the discriminator. The neural network used for the generator has a sequential structure with multiple linear layers and ReLU activations. A dropout layer helps prevent overfitting by randomly dropping neurons during training.
 :p What does the generator network aim to achieve?
 ??x
-The generator network aims to create pairs of numbers \((x, y)\) that can pass the discriminator's screening, effectively mimicking real data samples to maximize the probability that the discriminator thinks they are from the training dataset (i.e., conforming to \(y = 1.08x\)).
+The generator network aims to create pairs of numbers $(x, y)$ that can pass the discriminator's screening, effectively mimicking real data samples to maximize the probability that the discriminator thinks they are from the training dataset (i.e., conforming to $y = 1.08x$).
 x??
 
 ---
@@ -161,10 +161,10 @@ x??
 ---
 
 #### Latent Space Input for Generator
-The generator network takes random noise vectors from a 2D latent space as input \((z1, z2)\). These inputs are then transformed into pairs of values \((x, y)\) that the discriminator is supposed to recognize as real data samples.
+The generator network takes random noise vectors from a 2D latent space as input $(z1, z2)$. These inputs are then transformed into pairs of values $(x, y)$ that the discriminator is supposed to recognize as real data samples.
 :p How does the generator use input data?
 ??x
-The generator uses random noise vectors from a 2D latent space (e.g., \(z1, z2\)) as inputs. These vectors are then processed through multiple layers of the neural network to generate pairs of values \((x, y)\) that aim to mimic real data samples.
+The generator uses random noise vectors from a 2D latent space (e.g.,$z1, z2 $) as inputs. These vectors are then processed through multiple layers of the neural network to generate pairs of values $(x, y)$ that aim to mimic real data samples.
 x??
 
 ---
@@ -182,14 +182,13 @@ x??
 
 Background context: In a Generative Adversarial Network (GAN), both the discriminator and generator networks are trained simultaneously. The loss function for the discriminator aims to distinguish real from fake samples, while the generator tries to fool the discriminator by generating realistic samples.
 
-Relevant formulas: Binary Cross-Entropy (BCE) Loss is used for both networks.
-\[ \text{Loss}_{\text{discriminator}} = -\left[ y \log(D(x)) + (1 - y) \log(1 - D(G(z))) \right] \]
-\[ \text{Loss}_{\text{generator}} = -\log(D(G(z))) \]
+Relevant formulas: Binary Cross-Entropy (BCE) Loss is used for both networks.$$\text{Loss}_{\text{discriminator}} = -\left[ y \log(D(x)) + (1 - y) \log(1 - D(G(z))) \right]$$
+$$\text{Loss}_{\text{generator}} = -\log(D(G(z)))$$
 
 Where:
-- \(y\) is the true label (0 for fake, 1 for real),
-- \(D(x)\) is the discriminator's output probability that an input sample \(x\) is real,
-- \(G(z)\) is the generated sample from the generator.
+- $y$ is the true label (0 for fake, 1 for real),
+- $D(x)$ is the discriminator's output probability that an input sample $x$ is real,
+- $G(z)$ is the generated sample from the generator.
 
 :p How are the loss functions defined for the discriminator and generator in a GAN?
 ??x
@@ -211,13 +210,14 @@ x??
 
 Background context: The generator and discriminator networks in a GAN are trained using gradient descent. Adam optimizer is commonly used due to its efficiency and good performance in practice.
 
-Relevant formulas: 
-\[ \text{Adam Update Rule} = \frac{\partial L}{\partial w} = \alpha \cdot m_t + (1 - \beta_2) \left( g_t - \hat{g}_{t-1} \right) \]
+Relevant formulas:
+$$\text{Adam Update Rule} = \frac{\partial L}{\partial w} = \alpha \cdot m_t + (1 - \beta_2) \left( g_t - \hat{g}_{t-1} \right)$$
+
 Where:
-- \(L\) is the loss function,
-- \(w\) are the weights to be updated,
-- \(\alpha\) is the learning rate,
-- \(m_t\) and \(\hat{m}_{t-1}\) are running averages of the gradient and previous step's average, respectively.
+- $L$ is the loss function,
+- $w$ are the weights to be updated,
+- $\alpha$ is the learning rate,
+- $m_t $ and$\hat{m}_{t-1}$ are running averages of the gradient and previous step's average, respectively.
 
 :p What optimizers are used for training GANs in this context?
 ??x
@@ -237,12 +237,12 @@ x??
 
 Background context: Traditional machine learning models often use early stopping based on validation loss to prevent overfitting. However, in the case of GANs, the training process is more complex due to the adversarial nature and difficulty in quantifying the quality of generated samples.
 
-Relevant formulas: 
-\[ \text{MSE Loss} = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2 \]
+Relevant formulas:
+$$\text{MSE Loss} = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2$$
 
 Where:
-- \( y_i \) is the true value,
-- \( \hat{y}_i \) is the predicted value.
+- $y_i$ is the true value,
+- $\hat{y}_i$ is the predicted value.
 
 :p How do you determine when to stop training a GAN, given that validation loss isn't always reliable?
 ??x
@@ -273,12 +273,12 @@ x??
 
 Background context: To avoid overfitting, an early stopping mechanism is implemented to halt training based on a performance metric that reflects the generator's ability to generate realistic samples.
 
-Relevant formulas: 
-\[ \text{MSE Loss} = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2 \]
+Relevant formulas:
+$$\text{MSE Loss} = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2$$
 
 Where:
-- \( y_i \) is the true value,
-- \( \hat{y}_i \) is the predicted value.
+- $y_i$ is the true value,
+- $\hat{y}_i$ is the predicted value.
 
 :p What is the purpose of implementing an early stopping mechanism in GAN training?
 ??x

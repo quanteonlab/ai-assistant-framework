@@ -22,7 +22,7 @@ x??
 #### Updating Game Objects in Real Time
 Background context: Every game engine needs to update the internal state of every game object over time. The state of a game object can be thought of as its configuration at one specific instant in time.
 
-The text explains that this process involves determining the current state \( S_i(t) \) given the previous state \( S_i(t - \Delta t) \). This updating is typically done via a single master loop called the game loop, which runs continuously throughout the game's runtime.
+The text explains that this process involves determining the current state $S_i(t)$ given the previous state $S_i(t - \Delta t)$. This updating is typically done via a single master loop called the game loop, which runs continuously throughout the game's runtime.
 
 :p What does it mean when we say "game objects' states change discretely rather than continuously"?
 ??x
@@ -38,7 +38,7 @@ The text uses vector notation to represent this concept, indicating that each st
 
 :p How is a game object's state typically represented?
 ??x
-A game object’s state can be thought of as an \( n \)-dimensional vector where each dimension corresponds to one of the attributes (properties or data members) of the game object. For instance, in Pong, the state might include position coordinates and velocity components.
+A game object’s state can be thought of as an $n$-dimensional vector where each dimension corresponds to one of the attributes (properties or data members) of the game object. For instance, in Pong, the state might include position coordinates and velocity components.
 
 ```java
 class GameObj {
@@ -756,11 +756,11 @@ x??
 #### State Vector Update
 This concept describes how the state of a game object changes over time, with an emphasis on the differences between sequential and parallel updates. In practice, when a single-threaded update loop runs, only one game object is updated at a time.
 
-The current state vector \(S_i(t_2)\) of a game object i at time \(t_2\) can be derived from its previous state vector \(S_i(t_1)\).
+The current state vector $S_i(t_2)$ of a game object i at time $t_2$ can be derived from its previous state vector $S_i(t_1)$.
 
 :p What happens during the `UpdateBucket` function when using a single-threaded update loop?
 ??x
-During the `UpdateBucket` function in a single-threaded update loop, each game object is updated one by one. This means that if there are 100 objects and the loop has processed half of them (50 objects), only those 50 objects will have their states updated to \(S_i(t_2)\). The remaining 50 objects will still be in their previous state \(S_i(t_1)\).
+During the `UpdateBucket` function in a single-threaded update loop, each game object is updated one by one. This means that if there are 100 objects and the loop has processed half of them (50 objects), only those 50 objects will have their states updated to $S_i(t_2)$. The remaining 50 objects will still be in their previous state $ S_i(t_1)$.
 
 This sequential update can lead to inconsistencies if multiple game objects need to reference the current time or each other's states during updates. For instance, if a character object queries its position and an attached vehicle object simultaneously, they might receive different states because one of them has not yet been updated.
 
@@ -829,7 +829,7 @@ Background context: This section discusses how game objects may be in a partiall
 
 :p What is the main issue with partially updating game object states?
 ??x
-The main issue is that different objects in the game may be at different stages of their update process during a single frame. This can lead to inconsistencies where an object might think it's in state \( t2 \) while another thinks it’s still in state \( t1 \). For example, if object B needs information from object A, and object A has not yet updated its physics, this could cause problems.
+The main issue is that different objects in the game may be at different stages of their update process during a single frame. This can lead to inconsistencies where an object might think it's in state $t2 $ while another thinks it’s still in state$t1$. For example, if object B needs information from object A, and object A has not yet updated its physics, this could cause problems.
 x??
 
 ---
@@ -852,7 +852,7 @@ Background context: The text explains how querying object states during the upda
 
 :p What happens in an "update order problem"?
 ??x
-In an update order problem, a game object B might need information from another object A at time \( t \). If A has been updated to state \( SA(t2) \), but B is still using the old state \( SA(t1) \), it can lead to inconsistencies. This manifests as one-frame-off flags where an object's state lags behind its peers, causing synchronization issues.
+In an update order problem, a game object B might need information from another object A at time $t $. If A has been updated to state $ SA(t2)$, but B is still using the old state $ SA(t1)$, it can lead to inconsistencies. This manifests as one-frame-off flags where an object's state lags behind its peers, causing synchronization issues.
 
 Example:
 ```java
@@ -860,7 +860,7 @@ if (objectB.velocity == objectA.velocity) {
     // Code that depends on consistent states
 }
 ```
-If the update order is incorrect, `objectB` might use \( SA(t1) \)'s velocity when it should be using \( SA(t2) \), leading to bugs.
+If the update order is incorrect, `objectB` might use $SA(t1)$'s velocity when it should be using $ SA(t2)$, leading to bugs.
 x??
 
 ---
@@ -869,7 +869,7 @@ Background context: To mitigate the issues with partial updates and inconsistent
 
 :p What is object state caching?
 ??x
-Object state caching involves storing each object's previous state vector \( Si(t1) \) while it calculates its new state vector \( Si(t2) \). This allows any object to safely query another object’s previous state without worrying about the current update order. It ensures that a totally consistent state is always available, even during the calculation of the new state.
+Object state caching involves storing each object's previous state vector $Si(t1)$ while it calculates its new state vector $Si(t2)$. This allows any object to safely query another object’s previous state without worrying about the current update order. It ensures that a totally consistent state is always available, even during the calculation of the new state.
 
 Example:
 ```java

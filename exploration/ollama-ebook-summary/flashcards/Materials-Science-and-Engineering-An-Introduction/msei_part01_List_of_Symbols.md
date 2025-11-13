@@ -6,79 +6,79 @@
 
 ---
 #### Area (A)
-Background context: The symbol \( A \) represents the area of a surface or region. It is commonly used in various physical and engineering contexts, such as calculating stress, strain, or other quantities that depend on surface dimensions.
+Background context: The symbol $A$ represents the area of a surface or region. It is commonly used in various physical and engineering contexts, such as calculating stress, strain, or other quantities that depend on surface dimensions.
 
-:p What does the symbol \( A \) represent?
+:p What does the symbol $A$ represent?
 ??x
-The symbol \( A \) denotes the area of a surface or region. It is often used to describe surfaces where calculations involving area are necessary.
+The symbol $A$ denotes the area of a surface or region. It is often used to describe surfaces where calculations involving area are necessary.
 x??
 ---
 #### Angstrom Unit (Å)
-Background context: The angstrom unit, denoted by \( \text{Å} \), is a unit of length commonly used in physics and chemistry for expressing wavelengths, atomic distances, and other small lengths. It equals \( 10^{-10} \) meters.
+Background context: The angstrom unit, denoted by $\text{Å}$, is a unit of length commonly used in physics and chemistry for expressing wavelengths, atomic distances, and other small lengths. It equals $10^{-10}$ meters.
 
 :p What is the angstrom unit (Å)?
 ??x
-The angstrom unit (\(\text{Å}\)) is a unit of length used to measure very small distances, such as atomic dimensions. Specifically, it is defined as \(10^{-10}\) meters.
+The angstrom unit ($\text{Å}$) is a unit of length used to measure very small distances, such as atomic dimensions. Specifically, it is defined as $10^{-10}$ meters.
 x??
 ---
 #### Atomic Weight (Ai)
-Background context: The symbol \( A_i \) represents the atomic weight of element \( i \). It is an important parameter in determining the mass and composition of materials at the microscopic level.
+Background context: The symbol $A_i $ represents the atomic weight of element$i$. It is an important parameter in determining the mass and composition of materials at the microscopic level.
 
-:p What does \( A_i \) represent?
+:p What does $A_i$ represent?
 ??x
-\( A_i \) denotes the atomic weight of element \( i \), which is crucial for understanding the elemental composition and properties of materials.
+$A_i $ denotes the atomic weight of element$i$, which is crucial for understanding the elemental composition and properties of materials.
 x??
 ---
 #### Atomic Packing Factor (APF)
-Background context: The atomic packing factor (APF) or \( \text{APF} \) is a measure of how efficiently atoms pack together in a crystal structure. It relates to the volume occupied by atoms within the unit cell.
+Background context: The atomic packing factor (APF) or $\text{APF}$ is a measure of how efficiently atoms pack together in a crystal structure. It relates to the volume occupied by atoms within the unit cell.
 
 :p What is the atomic packing factor (APF)?
 ??x
-The atomic packing factor (\(\text{APF}\)) is a measure of how densely atoms can be packed in a crystal structure, representing the ratio of the total atomic volume to the unit cell volume.
+The atomic packing factor ($\text{APF}$) is a measure of how densely atoms can be packed in a crystal structure, representing the ratio of the total atomic volume to the unit cell volume.
 x??
 ---
 #### Lattice Parameter (a)
-Background context: The lattice parameter \( a \) represents the length of one side of the unit cell in a crystal structure. It is fundamental for understanding the geometry and properties of crystalline materials.
+Background context: The lattice parameter $a$ represents the length of one side of the unit cell in a crystal structure. It is fundamental for understanding the geometry and properties of crystalline materials.
 
-:p What does \( a \) represent?
+:p What does $a$ represent?
 ??x
-\( a \) denotes the lattice parameter, which is the length of one side of the unit cell in a crystal structure. This value is crucial for describing the geometric arrangement of atoms.
+$a$ denotes the lattice parameter, which is the length of one side of the unit cell in a crystal structure. This value is crucial for describing the geometric arrangement of atoms.
 x??
 ---
 #### Crack Length (a)
-Background context: The symbol \( a \) can also represent the crack length of a surface crack, which is important in fracture mechanics and material science.
+Background context: The symbol $a$ can also represent the crack length of a surface crack, which is important in fracture mechanics and material science.
 
-:p What does \( a \) represent when used with cracks?
+:p What does $a$ represent when used with cracks?
 ??x
-\( a \) represents the crack length of a surface crack. This parameter is significant in studying the propagation and behavior of cracks in materials.
+$a$ represents the crack length of a surface crack. This parameter is significant in studying the propagation and behavior of cracks in materials.
 x??
 ---
 #### At Percent (at percent)
-Background context: The term "atom percent" or at percent (\( \text{at \%} \)) refers to the percentage of atoms of a specific element in a compound.
+Background context: The term "atom percent" or at percent ($\text{at \%}$) refers to the percentage of atoms of a specific element in a compound.
 
 :p What does "at percent" mean?
 ??x
-"At percent" or \( \text{at \%} \) is the percentage of atoms of a specific element in a compound. It is used to express elemental composition on an atomic basis.
+"At percent" or $\text{at \%}$ is the percentage of atoms of a specific element in a compound. It is used to express elemental composition on an atomic basis.
 x??
 ---
 #### Magnetic Flux Density (B)
-Background context: The magnetic flux density, also known as induction and denoted by \( B \), is a measure of the strength of a magnetic field at a given point.
+Background context: The magnetic flux density, also known as induction and denoted by $B$, is a measure of the strength of a magnetic field at a given point.
 
-:p What does \( B \) represent in magnetism?
+:p What does $B$ represent in magnetism?
 ??x
-\( B \) represents the magnetic flux density or induction. It measures the strength of a magnetic field at a specific location.
+$B$ represents the magnetic flux density or induction. It measures the strength of a magnetic field at a specific location.
 x??
 ---
 #### Magnetic Remanence (Br)
-Background context: The symbol \( B_r \), or magnetic remanence, is the residual magnetic flux density in a ferromagnetic material after removal of an external magnetic field.
+Background context: The symbol $B_r$, or magnetic remanence, is the residual magnetic flux density in a ferromagnetic material after removal of an external magnetic field.
 
-:p What does \( B_r \) represent?
+:p What does $B_r$ represent?
 ??x
-\( B_r \) represents the magnetic remanence, which is the residual magnetic flux density remaining in a ferromagnetic material after an applied external magnetic field has been removed.
+$B_r$ represents the magnetic remanence, which is the residual magnetic flux density remaining in a ferromagnetic material after an applied external magnetic field has been removed.
 x??
 ---
 #### Body-Centered Cubic Crystal Structure (BCC)
-Background context: The body-centered cubic crystal structure, denoted by \( \text{BCC} \), is one of several common types of lattice structures found in metals and other materials.
+Background context: The body-centered cubic crystal structure, denoted by $\text{BCC}$, is one of several common types of lattice structures found in metals and other materials.
 
 :p What does BCC represent?
 ??x

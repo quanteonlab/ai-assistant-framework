@@ -312,7 +312,7 @@ x??
 ---
 
 #### Linear TD(0) Method
-Background context: The first semi-gradient method was linear TD(\(\lambda\)) (Sutton, 1988). This method is a foundational algorithm in reinforcement learning for approximating value functions. It combines temporal difference learning with gradient descent to update the function approximation.
+Background context: The first semi-gradient method was linear TD($\lambda$) (Sutton, 1988). This method is a foundational algorithm in reinforcement learning for approximating value functions. It combines temporal difference learning with gradient descent to update the function approximation.
 
 :p What is the significance of the linear TD(0) method?
 ??x
@@ -327,17 +327,13 @@ Background context: The potential for off-policy learning remains tantalizing, b
 :p What does semi-gradient off-policy TD(0) involve?
 ??x
 Semi-gradient off-policy TD(0) involves using importance sampling to update the action-value function with respect to a target policy, but using samples from a different (behavior) policy. The update rule can be expressed as:
-\[
-Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \delta_t
-\]
-where \(\delta_t = G_t - V_{\pi}(s_t)\), \(G_t\) is the return from time step \(t\), and \(V_{\pi}\) is the value function under policy \(\pi\).
+$$Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \delta_t$$where $\delta_t = G_t - V_{\pi}(s_t)$,$ G_t $is the return from time step$ t $, and$ V_{\pi}$is the value function under policy $\pi$.
 
 :p How does importance sampling work in this context?
 ??x
-Importance sampling adjusts for differences between the target policy \(\pi\) and the behavior policy \(\mu\) by weighting samples. The importance ratio is:
-\[
-w_t = \frac{\pi(a_t | s_t)}{\mu(a_t | s_t)}
-\]
+Importance sampling adjusts for differences between the target policy $\pi $ and the behavior policy$\mu$ by weighting samples. The importance ratio is:
+$$w_t = \frac{\pi(a_t | s_t)}{\mu(a_t | s_t)}$$
+
 The updated value function uses these weights to give more emphasis to actions taken under the target policy.
 x??
 
@@ -364,10 +360,7 @@ Background context: The BE was first proposed as an objective function for dynam
 :p What is the goal of minimizing the Bellman Equation?
 ??x
 The goal of minimizing the Bellman Equation (BE) or Bellman residual minimization is to reduce the difference between the estimated values under the current policy and the optimal values. This can be expressed as:
-\[
-\min_{V} \mathbb{E}[(V(s) - T_\pi V(s))^2]
-\]
-where \(T_\pi\) is the Bellman operator, representing the expected return from a state under policy \(\pi\).
+$$\min_{V} \mathbb{E}[(V(s) - T_\pi V(s))^2]$$where $ T_\pi $ is the Bellman operator, representing the expected return from a state under policy $\pi$.
 
 :p How does this relate to TD learning?
 ??x
@@ -410,10 +403,7 @@ The key feature of emphatic TD methods is their ability to stabilize off-policy 
 :p How do these methods work in practice?
 ??x
 Emphatic-TD methods use a form of importance weighting to give greater emphasis to certain events during learning. The update rule can be expressed as:
-\[
-Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha w_t \delta_t
-\]
-where \(w_t\) is the importance weight that reflects how important the transition from state \(s_{t-1}\) to state \(s_t\) was.
+$$Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha w_t \delta_t$$where $ w_t $ is the importance weight that reflects how important the transition from state $ s_{t-1}$to state $ s_t$ was.
 
 :p Can you provide an example of emphatic TD in code?
 ??x
@@ -438,7 +428,7 @@ x??
 Eligibility traces are a fundamental mechanism in reinforcement learning that enhance temporal-difference (TD) methods. They unify and generalize TD methods, such as Q-learning or Sarsa, with Monte Carlo (MC) methods. The parameter  controls the trade-off between these two extremes.
 :p What is an eligibility trace?
 ??x
-An eligibility trace \( z_t \in \mathbb{R}^d \) is a short-term memory vector that parallels the long-term weight vector \( w_t \in \mathbb{R}^d \). When a component of \( w_t \) participates in producing an estimated value, the corresponding component of \( z_t \) is bumped up and then begins to fade away. Learning occurs in that component of \( w_t \) if a nonzero TD error occurs before the trace falls back to zero.
+An eligibility trace $z_t \in \mathbb{R}^d $ is a short-term memory vector that parallels the long-term weight vector$w_t \in \mathbb{R}^d $. When a component of$ w_t $participates in producing an estimated value, the corresponding component of$ z_t $ is bumped up and then begins to fade away. Learning occurs in that component of $ w_t$ if a nonzero TD error occurs before the trace falls back to zero.
 ??x
 The trace-decay parameter  determines how quickly the trace decays over time, allowing for a smooth transition between Monte Carlo methods (when =1) and one-step TD methods (when =0).
 ??x
@@ -455,14 +445,13 @@ x??
 ---
 
 #### Eligibility Trace Decay Mechanism
-The decay mechanism of the eligibility trace \( z_t \) is crucial in determining how quickly the influence of past events diminishes over time. The parameter  controls this rate, influencing whether learning is more immediate or delayed.
+The decay mechanism of the eligibility trace $z_t$ is crucial in determining how quickly the influence of past events diminishes over time. The parameter  controls this rate, influencing whether learning is more immediate or delayed.
 :p How does the decay parameter  affect the eligibility trace?
 ??x
 The decay parameter  determines the rate at which the eligibility trace decays towards zero. A value closer to 1 means a faster decay and thus quicker forgetting of past events, aligning with MC methods that consider all future rewards. Conversely, a value closer to 0 allows for longer-term influence, similar to one-step TD methods.
 ??x
 The formula for updating the eligibility trace is:
-\[ z_t = \gamma * \lambda * z_{t-1} + \delta * (G_t - V(s)) \]
-where \( \gamma \) is the discount factor and \( \lambda \) is the trace decay parameter.
+$$z_t = \gamma * \lambda * z_{t-1} + \delta * (G_t - V(s))$$where $\gamma $ is the discount factor and$\lambda$ is the trace decay parameter.
 ??x
 ```java
 // Pseudocode for eligibility trace update with decay
@@ -476,7 +465,7 @@ x??
 Eligibility traces offer significant computational advantages over n-step methods. They enable online learning and continuous updates, allowing for immediate learning after encountering a state rather than waiting for the end of an episode.
 :p What are the computational advantages of eligibility traces?
 ??x
-The primary advantage is that only one trace vector \( z_t \) is required, unlike n-step methods which need to store multiple feature vectors. This reduces memory usage and simplifies implementation.
+The primary advantage is that only one trace vector $z_t$ is required, unlike n-step methods which need to store multiple feature vectors. This reduces memory usage and simplifies implementation.
 ??x
 Additionally, learning occurs continually in time rather than being delayed until the end of an episode. This allows for more efficient updates as soon as new information becomes available.
 ??x
@@ -495,7 +484,7 @@ x??
 Forward views in reinforcement learning refer to updating a state's value based on events that follow that state over multiple future time steps. This contrasts with the backward view that uses eligibility traces and TD errors.
 :p What is a forward view in reinforcement learning?
 ??x
-A forward view in reinforcement learning involves updating a state’s value by considering all future rewards or a sequence of rewards \( n \) steps ahead, as seen in Monte Carlo methods (Chapter 5) or n-step TD methods (Chapter 7).
+A forward view in reinforcement learning involves updating a state’s value by considering all future rewards or a sequence of rewards $n$ steps ahead, as seen in Monte Carlo methods (Chapter 5) or n-step TD methods (Chapter 7).
 ??x
 This approach is complex to implement because the update depends on future information that is not available at the time. However, eligibility traces allow for equivalent updates by looking backward using current TD errors and recent state transitions.
 ??x
@@ -516,7 +505,7 @@ Eligibility traces provide a way to implement Monte Carlo methods online and on 
 ??x
 Eligibility traces offer a unified approach by allowing for a spectrum of learning methods ranging from full MC methods to one-step TD methods. By setting =1, the method behaves like an MC method considering all future rewards. Setting =0 makes it behave like a one-step TD method.
 ??x
-This interpolation is achieved through the eligibility trace mechanism \( z_t \), which tracks when components of the weight vector participate in producing estimated values and decays over time based on the parameter .
+This interpolation is achieved through the eligibility trace mechanism $z_t$, which tracks when components of the weight vector participate in producing estimated values and decays over time based on the parameter .
 ??x
 ```java
 // Pseudocode for unifying TD and MC methods with eligibility traces
@@ -652,140 +641,137 @@ x??
 ---
 
 #### TD(λ) Algorithm Overview
-The TD(\(\lambda\)) algorithm is a method for averaging n-step updates to approximate value functions. It combines elements of both one-step temporal difference (TD) learning and Monte Carlo methods by considering returns over multiple time steps, weighted according to \(\lambda\) where \(0 \leq \lambda \leq 1\).
+The TD($\lambda $) algorithm is a method for averaging n-step updates to approximate value functions. It combines elements of both one-step temporal difference (TD) learning and Monte Carlo methods by considering returns over multiple time steps, weighted according to $\lambda $ where$0 \leq \lambda \leq 1$.
 
-The update rule for TD(\(\lambda\)) can be expressed as:
-\[ G_t = (1 - \lambda)\sum_{n=1}^{\infty} \lambda^{n-1}G_{t:t+n} + \lambda^T G_{t:T+1} \]
+The update rule for TD($\lambda$) can be expressed as:
+$$G_t = (1 - \lambda)\sum_{n=1}^{\infty} \lambda^{n-1}G_{t:t+n} + \lambda^T G_{t:T+1}$$
 
-Where \(G_{t:t+n}\) represents the return from time step \(t\) to \(t+n\).
+Where $G_{t:t+n}$ represents the return from time step $ t $ to $t+n$.
 
-:p What does the TD(\(\lambda\)) algorithm combine elements of?
+:p What does the TD($\lambda$) algorithm combine elements of?
 ??x
-The TD(\(\lambda\)) algorithm combines elements of one-step temporal difference (TD) learning and Monte Carlo methods. Specifically, it averages n-step updates with a weighting factor \(\lambda\), which allows for considering returns over multiple time steps.
+The TD($\lambda $) algorithm combines elements of one-step temporal difference (TD) learning and Monte Carlo methods. Specifically, it averages n-step updates with a weighting factor $\lambda$, which allows for considering returns over multiple time steps.
 x??
 
 ---
 
 #### One-Step and Monte Carlo Updates
-When \(\lambda = 0\), the TD(\(\lambda\)) algorithm reduces to one-step TD learning:
-\[ G_{t:t+1} = R_{t+1} + \gamma v(S_{t+1}, w) \]
+When $\lambda = 0 $, the TD($\lambda$) algorithm reduces to one-step TD learning:
+$$G_{t:t+1} = R_{t+1} + \gamma v(S_{t+1}, w)$$
 
-And when \(\lambda = 1\), it reduces to a Monte Carlo update, which considers the actual return from state \(S_t\) onwards.
+And when $\lambda = 1 $, it reduces to a Monte Carlo update, which considers the actual return from state $ S_t$ onwards.
 
-:p What happens to the TD(\(\lambda\)) algorithm if \(\lambda = 0\) or \(\lambda = 1\)?
+:p What happens to the TD($\lambda $) algorithm if $\lambda = 0 $ or$\lambda = 1$?
 ??x
-If \(\lambda = 0\), the TD(\(\lambda\)) algorithm reduces to a one-step TD update, which only considers the next immediate reward and value.
-\[ G_{t:t+1} = R_{t+1} + \gamma v(S_{t+1}, w) \]
+If $\lambda = 0 $, the TD($\lambda$) algorithm reduces to a one-step TD update, which only considers the next immediate reward and value.
+$$G_{t:t+1} = R_{t+1} + \gamma v(S_{t+1}, w)$$
 
-And if \(\lambda = 1\), it becomes equivalent to a Monte Carlo update, which looks at the actual return from state \(S_t\) onwards:
-\[ G_t = \sum_{n=0}^{T-t} \gamma^n R_{t+n+1} \]
+And if $\lambda = 1 $, it becomes equivalent to a Monte Carlo update, which looks at the actual return from state $ S_t$onwards:
+$$G_t = \sum_{n=0}^{T-t} \gamma^n R_{t+n+1}$$
 x??
 
 ---
 
-#### Weighting in TD(\(\lambda\)) Algorithm
-The weighting given to each n-step return in the \(\lambda\)-return is defined by:
-\[ (1 - \lambda)^{n-1} \]
+#### Weighting in TD($\lambda$) Algorithm
+The weighting given to each n-step return in the $\lambda$-return is defined by:
+$$(1 - \lambda)^{n-1}$$
 
-For example, if \( \lambda = 0.5 \), then:
-- The one-step return gets a weight of \(1\).
-- The two-step return gets a weight of \(0.5\).
-- The three-step return gets a weight of \(0.25\).
+For example, if $\lambda = 0.5$, then:
+- The one-step return gets a weight of $1$.
+- The two-step return gets a weight of $0.5$.
+- The three-step return gets a weight of $0.25$.
 
-These weights fade by \(\lambda\) with each additional step.
+These weights fade by $\lambda$ with each additional step.
 
-:p What is the formula for the weighting in the TD(\(\lambda\)) algorithm?
+:p What is the formula for the weighting in the TD($\lambda$) algorithm?
 ??x
-The weighting given to each n-step return in the \(\lambda\)-return is:
-\[ (1 - \lambda)^{n-1} \]
+The weighting given to each n-step return in the $\lambda$-return is:
+$$(1 - \lambda)^{n-1}$$
 
-For instance, if \(\lambda = 0.5\):
-- The one-step return gets a weight of \(1\) (\((1-0.5)^{1-1} = 1\)).
-- The two-step return gets a weight of \(0.5\) (\((1-0.5)^2 = 0.25 \times 2 = 0.5\)).
-- The three-step return gets a weight of \(0.25\) (\((1-0.5)^3 = 0.125 \times 4 = 0.25\)).
+For instance, if $\lambda = 0.5$:
+- The one-step return gets a weight of $1 $($(1-0.5)^{1-1} = 1$).
+- The two-step return gets a weight of $0.5 $($(1-0.5)^2 = 0.25 \times 2 = 0.5$).
+- The three-step return gets a weight of $0.25 $($(1-0.5)^3 = 0.125 \times 4 = 0.25$).
 
 These weights ensure that the update is a weighted average considering returns over multiple steps.
 x??
 
 ---
 
-#### Recursive Relationship of the \(\lambda\)-Return
-The \(\lambda\)-return can be derived recursively:
-\[ G_t = R_{t+1} + \gamma (1 - \lambda) v(S_{t+1}, w) + \lambda (G_{t:t+1}) \]
+#### Recursive Relationship of the $\lambda$-Return
+The $\lambda$-return can be derived recursively:
+$$G_t = R_{t+1} + \gamma (1 - \lambda) v(S_{t+1}, w) + \lambda (G_{t:t+1})$$
 
-Where \(G_{t:t+1}\) is the one-step return.
+Where $G_{t:t+1}$ is the one-step return.
 
-:p Derive the recursive relationship for the \(\lambda\)-return.
+:p Derive the recursive relationship for the $\lambda$-return.
 ??x
-The recursive relationship for the \(\lambda\)-return can be derived as follows:
-\[ G_t = R_{t+1} + \gamma (1 - \lambda) v(S_{t+1}, w) + \lambda (G_{t:t+1}) \]
+The recursive relationship for the $\lambda$-return can be derived as follows:
+$$G_t = R_{t+1} + \gamma (1 - \lambda) v(S_{t+1}, w) + \lambda (G_{t:t+1})$$
 
-Here, \(G_{t:t+1}\) represents the one-step return starting from state \(S_{t+1}\):
-\[ G_{t:t+1} = R_{t+1} + \gamma v(S_{t+2}, w) \]
+Here,$G_{t:t+1}$ represents the one-step return starting from state $S_{t+1}$:
+$$G_{t:t+1} = R_{t+1} + \gamma v(S_{t+2}, w)$$
 
 Thus:
-\[ G_t = R_{t+1} + \gamma (1 - \lambda) v(S_{t+1}, w) + \lambda (R_{t+1} + \gamma v(S_{t+2}, w)) \]
-x??
+$$
+
+G_t = R_{t+1} + \gamma (1 - \lambda) v(S_{t+1}, w) + \lambda (R_{t+1} + \gamma v(S_{t+2}, w))$$x??
 
 ---
 
 #### Half-Life of Exponential Weighting
-The parameter \(\lambda\) characterizes the speed of decay in the weighting sequence. The half-life, \(\tau_\lambda\), is the time by which the weighting sequence falls to half its initial value.
+The parameter $\lambda $ characterizes the speed of decay in the weighting sequence. The half-life,$\tau_\lambda$, is the time by which the weighting sequence falls to half its initial value.
 
-The relationship between \(\lambda\) and the half-life \(\tau_\lambda\) can be given by:
-\[ \tau_\lambda = -\frac{\ln 0.5}{\ln (1 - \lambda)} \]
-
-:p What is the equation relating \(\lambda\) and the half-life, \(\tau_\lambda\)?
+The relationship between $\lambda $ and the half-life$\tau_\lambda$ can be given by:
+$$\tau_\lambda = -\frac{\ln 0.5}{\ln (1 - \lambda)}$$:p What is the equation relating $\lambda $ and the half-life,$\tau_\lambda$?
 ??x
-The relationship between \(\lambda\) and the half-life \(\tau_\lambda\) can be expressed as:
-\[ \tau_\lambda = -\frac{\ln 0.5}{\ln (1 - \lambda)} \]
+The relationship between $\lambda $ and the half-life$\tau_\lambda$ can be expressed as:
+$$\tau_\lambda = -\frac{\ln 0.5}{\ln (1 - \lambda)}$$
 
-This equation shows how \(\lambda\) determines the rate of decay, with a higher \(\lambda\) leading to a longer half-life.
+This equation shows how $\lambda $ determines the rate of decay, with a higher$\lambda$ leading to a longer half-life.
 x??
 
 ---
 
-#### Offline TD(\(\lambda\)) Algorithm
-The offline TD(\(\lambda\)) algorithm makes no changes during the episode. At the end of the episode, it performs a series of offline updates using the \(\lambda\)-return as the target:
-\[ w_{t+1} = w_t + \alpha [G_t - v(S_t, w_t)] \cdot \nabla v(S_t, w_t) \]
-for \(t = 0, ..., T-1\).
+#### Offline TD($\lambda$) Algorithm
+The offline TD($\lambda $) algorithm makes no changes during the episode. At the end of the episode, it performs a series of offline updates using the $\lambda$-return as the target:
+$$w_{t+1} = w_t + \alpha [G_t - v(S_t, w_t)] \cdot \nabla v(S_t, w_t)$$for $ t = 0, ..., T-1$.
 
-:p What is the update rule for the offline TD(\(\lambda\)) algorithm?
+:p What is the update rule for the offline TD($\lambda$) algorithm?
 ??x
-The update rule for the offline TD(\(\lambda\)) algorithm at the end of an episode is:
-\[ w_{t+1} = w_t + \alpha [G_t - v(S_t, w_t)] \cdot \nabla v(S_t, w_t) \]
-for \(t = 0, ..., T-1\).
+The update rule for the offline TD($\lambda$) algorithm at the end of an episode is:
+$$w_{t+1} = w_t + \alpha [G_t - v(S_t, w_t)] \cdot \nabla v(S_t, w_t)$$for $ t = 0, ..., T-1$.
 
-This rule updates the weight vector based on the difference between the target value (the \(\lambda\)-return \(G_t\)) and the current prediction (\(v(S_t, w_t)\)), scaled by a learning rate \(\alpha\) and the gradient of the value function.
+This rule updates the weight vector based on the difference between the target value (the $\lambda $-return $ G_t $) and the current prediction ($ v(S_t, w_t)$), scaled by a learning rate $\alpha$ and the gradient of the value function.
 x??
 
 ---
 
 #### Offline λ-return Algorithm Performance
-Background context: The text discusses an alternative method called the offline \(\lambda\)-return algorithm, which provides a smooth transition between Monte Carlo and one-step TD methods. This is compared to n-step bootstrapping, as described in Chapter 7 of the book.
+Background context: The text discusses an alternative method called the offline $\lambda$-return algorithm, which provides a smooth transition between Monte Carlo and one-step TD methods. This is compared to n-step bootstrapping, as described in Chapter 7 of the book.
 Relevant formulas and explanations: For both algorithms, performance is measured using root-mean-squared error (RMSE) between the correct and estimated values of each state at the end of the episode, averaged over the first 10 episodes and 19 states.
 
-:p What does the offline \(\lambda\)-return algorithm measure its performance against?
+:p What does the offline $\lambda$-return algorithm measure its performance against?
 ??x
-The offline \(\lambda\)-return algorithm measures its performance using root-mean-squared error (RMSE) between the correct and estimated values of each state at the end of the episode, averaged over the first 10 episodes and 19 states.
+The offline $\lambda$-return algorithm measures its performance using root-mean-squared error (RMSE) between the correct and estimated values of each state at the end of the episode, averaged over the first 10 episodes and 19 states.
 x??
 
 ---
 #### Comparison with n-step Methods
-Background context: The text compares the offline \(\lambda\)-return algorithm to n-step Temporal Difference (TD) methods. Both methods vary a parameter for bootstrapping (n for n-step TD, \(\lambda\) for \(\lambda\)-return).
+Background context: The text compares the offline $\lambda $-return algorithm to n-step Temporal Difference (TD) methods. Both methods vary a parameter for bootstrapping (n for n-step TD, $\lambda $ for$\lambda$-return).
 
-:p How do both the offline \(\lambda\)-return and n-step methods evaluate their performance?
+:p How do both the offline $\lambda$-return and n-step methods evaluate their performance?
 ??x
-Both the offline \(\lambda\)-return algorithm and n-step methods evaluate their performance using root-mean-squared error (RMSE) between the correct and estimated values of each state at the end of the episode, averaged over the first 10 episodes and 19 states.
+Both the offline $\lambda$-return algorithm and n-step methods evaluate their performance using root-mean-squared error (RMSE) between the correct and estimated values of each state at the end of the episode, averaged over the first 10 episodes and 19 states.
 x??
 
 ---
 #### Bootstrapping Parameter Performance
-Background context: The text highlights that for both the n-step methods and offline \(\lambda\)-return algorithm, intermediate values of the bootstrapping parameter perform best.
+Background context: The text highlights that for both the n-step methods and offline $\lambda$-return algorithm, intermediate values of the bootstrapping parameter perform best.
 
 :p What did the experiments show about the performance of different bootstrapping parameters?
 ??x
-The experiments showed that for both the n-step methods and offline \(\lambda\)-return algorithm, intermediate values of the bootstrapping parameter performed best. The results with the offline \(\lambda\)-return algorithm were slightly better at the best values of \(\lambda\) and \(\alpha\), especially when \(\lambda\) was set to 1.
+The experiments showed that for both the n-step methods and offline $\lambda $-return algorithm, intermediate values of the bootstrapping parameter performed best. The results with the offline $\lambda $-return algorithm were slightly better at the best values of $\lambda $ and$\alpha $, especially when $\lambda$ was set to 1.
 x??
 
 ---
@@ -820,31 +806,31 @@ x??
 
 ---
 #### Varying Parameters in Experiments
-Background context: The experiments vary the bootstrapping parameter \(\lambda\) for the offline \(\lambda\)-return algorithm and \(n\) for n-step methods.
+Background context: The experiments vary the bootstrapping parameter $\lambda $ for the offline$\lambda $-return algorithm and $ n$ for n-step methods.
 
 :p How did the experiments vary the parameters for different methods?
 ??x
-The experiments varied the bootstrapping parameter \(\lambda\) for the offline \(\lambda\)-return algorithm and the number of steps \(n\) for n-step methods. The performance was measured by comparing intermediate values of these parameters, showing that both approaches performed best with intermediate settings.
+The experiments varied the bootstrapping parameter $\lambda $ for the offline$\lambda $-return algorithm and the number of steps $ n$ for n-step methods. The performance was measured by comparing intermediate values of these parameters, showing that both approaches performed best with intermediate settings.
 x??
 
 ---
 #### Results Comparison
-Background context: The text provides a comparison between the offline \(\lambda\)-return algorithms and n-step TD methods on the 19-state random walk task.
+Background context: The text provides a comparison between the offline $\lambda$-return algorithms and n-step TD methods on the 19-state random walk task.
 
-:p What were the key findings from comparing the offline \(\lambda\)-return algorithm with n-step TD methods?
+:p What were the key findings from comparing the offline $\lambda$-return algorithm with n-step TD methods?
 ??x
-The key findings from comparing the offline \(\lambda\)-return algorithm with n-step TD methods showed that both approaches performed comparably, with best performance at intermediate values of their respective bootstrapping parameters. The results with the offline \(\lambda\)-return algorithm were slightly better at the best parameter values.
+The key findings from comparing the offline $\lambda $-return algorithm with n-step TD methods showed that both approaches performed comparably, with best performance at intermediate values of their respective bootstrapping parameters. The results with the offline $\lambda$-return algorithm were slightly better at the best parameter values.
 x??
 
 ---
 
 #### TD(0) and Its Relation to Online Learning
 
-Background context: TD(0) is a specific case of the TD(\(\lambda\)) algorithm where \(\lambda = 0\). This version updates the weight vector on every step of an episode rather than only at the end, providing better estimates sooner. The update rule for the weight vector in this case simplifies to:
+Background context: TD(0) is a specific case of the TD($\lambda $) algorithm where $\lambda = 0$. This version updates the weight vector on every step of an episode rather than only at the end, providing better estimates sooner. The update rule for the weight vector in this case simplifies to:
 
-\[ w_{t+1} = w_t + \alpha (r_{t+1} + v(S_{t+1}, w_t) - v(S_t, w_t)) \cdot x_t \]
+$$w_{t+1} = w_t + \alpha (r_{t+1} + v(S_{t+1}, w_t) - v(S_t, w_t)) \cdot x_t$$
 
-Where \(x_t\) is the feature vector for state \(S_t\).
+Where $x_t $ is the feature vector for state$S_t$.
 
 :p What does TD(0) update at each step of an episode and how does it differ from other algorithms in terms of timing?
 
@@ -854,81 +840,80 @@ x??
 
 ---
 
-#### TD(\(\lambda\)) Algorithm Overview
+#### TD($\lambda$) Algorithm Overview
 
-Background context: The TD(\(\lambda\)) algorithm generalizes TD(0) by introducing a parameter \(\lambda\) that controls the weighting of past events based on their eligibility. This allows for better handling of continuing tasks and more efficient learning.
+Background context: The TD($\lambda $) algorithm generalizes TD(0) by introducing a parameter $\lambda$ that controls the weighting of past events based on their eligibility. This allows for better handling of continuing tasks and more efficient learning.
 
 The update equations are as follows:
 
 1. Eligibility trace initialization:
-\[ z_1 = 0, \quad z_t = \gamma \lambda z_{t-1} + \nabla v(S_t, w) \]
-2. Weight vector update:
-\[ w_{t+1} = w_t + \alpha (r_{t+1} + \gamma v(S_{t+1}, w_t) - v(S_t, w_t)) z_t \]
+$$z_1 = 0, \quad z_t = \gamma \lambda z_{t-1} + \nabla v(S_t, w)$$2. Weight vector update:
+$$w_{t+1} = w_t + \alpha (r_{t+1} + \gamma v(S_{t+1}, w_t) - v(S_t, w_t)) z_t$$
 
-Where \(\nabla v(S_t, w)\) is the gradient of the value function with respect to the weight vector \(w\), and \(\alpha\) is the step size.
+Where $\nabla v(S_t, w)$ is the gradient of the value function with respect to the weight vector $w$, and $\alpha$ is the step size.
 
-:p How does the TD(\(\lambda\)) algorithm generalize TD(0)?
+:p How does the TD($\lambda$) algorithm generalize TD(0)?
 
 ??x
-The TD(\(\lambda\)) algorithm generalizes TD(0) by introducing a parameter \(\lambda\) that controls how much past events are weighted in the update. When \(\lambda = 1\), it behaves like Monte Carlo methods, and when \(\lambda = 0\), it reduces to the simpler TD(0) rule.
+The TD($\lambda $) algorithm generalizes TD(0) by introducing a parameter $\lambda $ that controls how much past events are weighted in the update. When$\lambda = 1 $, it behaves like Monte Carlo methods, and when $\lambda = 0$, it reduces to the simpler TD(0) rule.
 x??
 
 ---
 
-#### Semi-Gradient TD(\(\lambda\)) with Function Approximation
+#### Semi-Gradient TD($\lambda$) with Function Approximation
 
-Background context: The semi-gradient version of TD(\(\lambda\)) uses function approximation for value functions. This means that the weight vector is a long-term memory, while the eligibility trace is a short-term memory.
+Background context: The semi-gradient version of TD($\lambda$) uses function approximation for value functions. This means that the weight vector is a long-term memory, while the eligibility trace is a short-term memory.
 
 1. Eligibility trace update:
-\[ z_0 = 0 \]
-\[ z_t = \gamma \lambda z_{t-1} + x_t \]
+$$z_0 = 0$$
+$$z_t = \gamma \lambda z_{t-1} + x_t$$
 
-Where \(x_t\) is the feature vector for state \(S_t\).
+Where $x_t $ is the feature vector for state$S_t$.
 
 2. Weight vector update:
-\[ w_{t+1} = w_t + \alpha (r_{t+1} + \gamma v(S_{t+1}, w_t) - v(S_t, w_t)) z_t \]
+$$w_{t+1} = w_t + \alpha (r_{t+1} + \gamma v(S_{t+1}, w_t) - v(S_t, w_t)) z_t$$
 
-:p How does the eligibility trace in semi-gradient TD(\(\lambda\)) function?
+:p How does the eligibility trace in semi-gradient TD($\lambda$) function?
 
 ??x
-The eligibility trace in semi-gradient TD(\(\lambda\)) functions by keeping track of which components of the weight vector have contributed to recent state valuations. It is a short-term memory that fades over time, while the long-term memory (weight vector) accumulates over many episodes.
+The eligibility trace in semi-gradient TD($\lambda$) functions by keeping track of which components of the weight vector have contributed to recent state valuations. It is a short-term memory that fades over time, while the long-term memory (weight vector) accumulates over many episodes.
 
 The update equation for the eligibility trace ensures that it reflects recent contributions:
-\[ z_t = \gamma \lambda z_{t-1} + x_t \]
+$$z_t = \gamma \lambda z_{t-1} + x_t$$
 
 This allows the algorithm to focus on recent updates and ignore older ones.
 x??
 
 ---
 
-#### TD(\(\lambda\)) and Monte Carlo Behavior
+#### TD($\lambda$) and Monte Carlo Behavior
 
-Background context: TD(\(\lambda\)) can approximate Monte Carlo behavior when \(\lambda = 1\). This is because the eligibility trace does not decay, allowing past events to influence the update as if they were part of a single episode.
+Background context: TD($\lambda $) can approximate Monte Carlo behavior when $\lambda = 1$. This is because the eligibility trace does not decay, allowing past events to influence the update as if they were part of a single episode.
 
-:p How does setting \(\lambda = 1\) in TD(\(\lambda\)) make it behave like a Monte Carlo method?
+:p How does setting $\lambda = 1 $ in TD($\lambda$) make it behave like a Monte Carlo method?
 
 ??x
-Setting \(\lambda = 1\) in TD(\(\lambda\)) ensures that the eligibility trace \(z_t\) remains constant over time, meaning past events have persistent influence on the updates. This mimics the behavior of Monte Carlo methods where the entire episode is treated as one long trajectory.
+Setting $\lambda = 1 $ in TD($\lambda $) ensures that the eligibility trace $ z_t$ remains constant over time, meaning past events have persistent influence on the updates. This mimics the behavior of Monte Carlo methods where the entire episode is treated as one long trajectory.
 
 For example:
-\[ z_t = \gamma^0 + \gamma^1 + \gamma^2 + ... \]
+$$z_t = \gamma^0 + \gamma^1 + \gamma^2 + ...$$
 
 Which effectively makes each previous state's contribution weighted by the discount factor raised to its time step.
 x??
 
 ---
 
-#### TD(\(\lambda\)) for Continuing Tasks
+#### TD($\lambda$) for Continuing Tasks
 
-Background context: TD(\(\lambda\)) can be applied to continuing tasks where episodes do not necessarily end. This is an improvement over traditional episodic TD methods, which are limited in their applicability.
+Background context: TD($\lambda$) can be applied to continuing tasks where episodes do not necessarily end. This is an improvement over traditional episodic TD methods, which are limited in their applicability.
 
-:p How does TD(\(\lambda\)) handle continuing tasks?
+:p How does TD($\lambda$) handle continuing tasks?
 
 ??x
-TD(\(\lambda\)) handles continuing tasks by using the eligibility trace to weight past events. The trace allows for a more flexible update rule that can adapt to ongoing episodes rather than being constrained to end-of-episode updates.
+TD($\lambda$) handles continuing tasks by using the eligibility trace to weight past events. The trace allows for a more flexible update rule that can adapt to ongoing episodes rather than being constrained to end-of-episode updates.
 
-For instance, with \(\lambda = 1\), it behaves like Monte Carlo methods, updating weights based on accumulated rewards over time:
-\[ w_{t+1} = w_t + \alpha (r_{t+1} + v(S_{t+1}, w_t) - v(S_t, w_t)) z_t \]
+For instance, with $\lambda = 1$, it behaves like Monte Carlo methods, updating weights based on accumulated rewards over time:
+$$w_{t+1} = w_t + \alpha (r_{t+1} + v(S_{t+1}, w_t) - v(S_t, w_t)) z_t$$
 
 This ensures that the algorithm can learn continuously without needing to wait for episodes to end.
 x??
@@ -937,16 +922,16 @@ x??
 
 #### Example: 19-State Random Walk
 
-Background context: The 19-state random walk example is used to compare TD(\(\lambda\)) with the o-\(\lambda\) return algorithm. Both algorithms are shown to perform similarly when \(\alpha\) is optimally chosen for each.
+Background context: The 19-state random walk example is used to compare TD($\lambda $) with the o-$\lambda $ return algorithm. Both algorithms are shown to perform similarly when$\alpha$ is optimally chosen for each.
 
-:p How does TD(\(\lambda\)) perform in approximating the o-\(\lambda\) return algorithm?
+:p How does TD($\lambda $) perform in approximating the o-$\lambda$ return algorithm?
 
 ??x
-TD(\(\lambda\)) performs well in approximating the o-\(\lambda\) return algorithm, especially when \(\alpha\) is selected optimally. However, if \(\alpha\) is chosen too large, TD(\(\lambda\)) can be much worse and potentially unstable.
+TD($\lambda $) performs well in approximating the o-$\lambda $ return algorithm, especially when$\alpha $ is selected optimally. However, if$\alpha $ is chosen too large, TD($\lambda$) can be much worse and potentially unstable.
 
 For example:
-- When \(\lambda = 0.5\) or \(1\), the performance of both algorithms is nearly identical.
-- If \(\alpha\) is larger than optimal, o-\(\lambda\) return may only suffer slightly, while TD(\(\lambda\)) can be significantly worse and potentially unstable.
+- When $\lambda = 0.5 $ or$1$, the performance of both algorithms is nearly identical.
+- If $\alpha $ is larger than optimal, o-$\lambda $ return may only suffer slightly, while TD($\lambda$) can be significantly worse and potentially unstable.
 
 This example highlights that choosing appropriate parameters is crucial for both methods.
 x??

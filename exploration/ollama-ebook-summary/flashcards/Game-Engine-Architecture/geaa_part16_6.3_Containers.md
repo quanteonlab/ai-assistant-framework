@@ -1048,7 +1048,7 @@ Background context explaining quadratic probing. It involves using a sequence of
 
 :p How does quadratic probing differ from linear probing?
 ??x
-Quadratic probing differs from linear probing by using a sequence of probes \(i_j = (i - j^2)\) for \(j=1, 2, 3, \ldots\). This helps in avoiding key-value pairs clumping up and provides more spread out slots.
+Quadratic probing differs from linear probing by using a sequence of probes $i_j = (i - j^2)$ for $j=1, 2, 3, \ldots$. This helps in avoiding key-value pairs clumping up and provides more spread out slots.
 x??
 
 ---
@@ -1068,7 +1068,7 @@ Background context on implementing quadratic probing.
 
 :p What is the sequence used in quadratic probing for resolving collisions?
 ??x
-In quadratic probing, the sequence used for resolving collisions is \(i_j = (i - j^2)\) for \(j=1, 2, 3, \ldots\). This involves trying slots like \((i+1), (i-1), (i+4), (i-4)\) and so on.
+In quadratic probing, the sequence used for resolving collisions is $i_j = (i - j^2)$ for $j=1, 2, 3, \ldots$. This involves trying slots like $(i+1), (i-1), (i+4), (i-4)$ and so on.
 x??
 
 ---
@@ -1078,7 +1078,7 @@ Background context explaining the slot calculation based on a hash function.
 
 :p How does one calculate the slot index for storing a key in a hash table?
 ??x
-To calculate the slot index for storing a key in a hash table, you typically use the modulo operator with the size of the table. For example, if the hash value is \(h\) and the table size is \(n\), the slot index would be calculated as `h % n`.
+To calculate the slot index for storing a key in a hash table, you typically use the modulo operator with the size of the table. For example, if the hash value is $h $ and the table size is$n$, the slot index would be calculated as `h % n`.
 x??
 
 ---

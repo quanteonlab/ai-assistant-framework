@@ -6,7 +6,7 @@
 
 #### Matrix Rank and Low-Rank Approximation
 
-Background context explaining that a matrix's rank is related to its ability to be represented by fewer dimensions. This concept is crucial for understanding how recommender systems work, especially when using techniques like singular value decomposition (SVD). The rank of an \(N \times M\) matrix is the minimum number of dimensions necessary to represent the vectors in the matrix.
+Background context explaining that a matrix's rank is related to its ability to be represented by fewer dimensions. This concept is crucial for understanding how recommender systems work, especially when using techniques like singular value decomposition (SVD). The rank of an $N \times M$ matrix is the minimum number of dimensions necessary to represent the vectors in the matrix.
 
 In the given example:
 
@@ -47,12 +47,11 @@ Background context explaining that the dot product provides a geometric interpre
 ??x
 Dot product similarity measures the projection of one vector onto another, scaled by their magnitudes. In the context of recommendation systems, it helps in identifying items that align well with a user's preferences.
 
-The formula for dot product similarity between vectors \(u\) and \(p\) is:
-\[ u \cdot p = \|u\| \cdot \|p\| \cdot \cos(\theta) \]
+The formula for dot product similarity between vectors $u $ and$p$ is:
+$$u \cdot p = \|u\| \cdot \|p\| \cdot \cos(\theta)$$
 
 Where:
-- \( \|u\|\) and \( \|p\|\) are the magnitudes of vectors \(u\) and \(p\)
-- \(\theta\) is the angle between them
+- $\|u\|$ and $\|p\|$ are the magnitudes of vectors $u$ and $p$-$\theta$ is the angle between them
 
 In Java, this can be implemented as:
 
@@ -79,8 +78,7 @@ Background context explaining that cosine similarity is a normalized measure of 
 :p What is cosine similarity and how does it differ from dot product similarity?
 ??x
 Cosine similarity is derived directly from the dot product and normalizes the measure of alignment between two vectors, making it invariant to their magnitudes. The formula for cosine similarity is:
-
-\[ \text{cosineSimilarity}(u, p) = \frac{u \cdot p}{\|u\| \cdot \|p\|} \]
+$$\text{cosineSimilarity}(u, p) = \frac{u \cdot p}{\|u\| \cdot \|p\|}$$
 
 This ensures that the similarity score ranges from -1 (completely dissimilar) to 1 (perfect alignment). In contrast, dot product can be influenced by the magnitudes of the vectors.
 
@@ -108,10 +106,10 @@ Background context explaining that the geometric interpretation of the dot produ
 
 :p How does the geometric interpretation of the dot product help in recommendation systems?
 ??x
-The geometric interpretation of the dot product captures the alignment between user preferences (vector \(u\)) and item characteristics (vector \(p\)). The angle \(\theta\) between these vectors affects the cosine similarity score:
+The geometric interpretation of the dot product captures the alignment between user preferences (vector $u $) and item characteristics (vector $ p $). The angle$\theta$ between these vectors affects the cosine similarity score:
 
-- Small angles (\(\theta < 45^\circ\)) indicate high alignment, leading to a higher similarity score.
-- Large angles (\(\theta > 90^\circ\)) indicate low alignment or dissimilarity.
+- Small angles ($\theta < 45^\circ$) indicate high alignment, leading to a higher similarity score.
+- Large angles ($\theta > 90^\circ$) indicate low alignment or dissimilarity.
 
 In recommendation systems, this helps in identifying items that are likely to be relevant and appealing to the user based on their preferences. For example:
 
@@ -143,8 +141,9 @@ x??
 
 #### PMI and Co-occurrence Models
 Background context: We discussed how PMI (Pointwise Mutual Information) can be used to generate similarity measures based on co-occurrences. PMI is defined as follows:
-\[ \text{PMI}(x_i, x_j) = \log\left(\frac{P(x_i, x_j)}{P(x_i)P(x_j)}\right) \]
-However, PMI itself does not provide a distance metric but can be used to determine high mutual information between items. Here, \( P(x_i) \) and \( P(x_j) \) are the probabilities of events \( x_i \) and \( x_j \), respectively.
+$$\text{PMI}(x_i, x_j) = \log\left(\frac{P(x_i, x_j)}{P(x_i)P(x_j)}\right)$$
+
+However, PMI itself does not provide a distance metric but can be used to determine high mutual information between items. Here,$P(x_i)$ and $P(x_j)$ are the probabilities of events $ x_i $ and $x_j$, respectively.
 
 We introduced co-occurrence models where the co-occurrence structure between two items is utilized to generate measures of similarity.
 
@@ -157,14 +156,12 @@ x??
 
 #### Hellinger Distance
 Background context: To quantify the difference between co-occurrence distributions, we can use the Hellinger distance as a proper distance metric. The Hellinger distance is defined as:
-\[ H(P, Q) = 1 - \frac{1}{\sqrt{2}} \sum_{i} \sqrt{p_i q_i} \]
-where \( P = p_i \) and \( Q = q_i \) are probability density vectors.
+$$H(P, Q) = 1 - \frac{1}{\sqrt{2}} \sum_{i} \sqrt{p_i q_i}$$where $ P = p_i $ and $ Q = q_i$ are probability density vectors.
 
 :p How is the Hellinger distance calculated?
 ??x
 The Hellinger distance is calculated using the formula:
-\[ H(P, Q) = 1 - \frac{1}{\sqrt{2}} \sum_{i} \sqrt{p_i q_i} \]
-where \( p_i \) and \( q_i \) are the probabilities of events in distributions P and Q, respectively. It measures the distributional distance between two probability density vectors.
+$$H(P, Q) = 1 - \frac{1}{\sqrt{2}} \sum_{i} \sqrt{p_i q_i}$$where $ p_i $ and $ q_i$ are the probabilities of events in distributions P and Q, respectively. It measures the distributional distance between two probability density vectors.
 x??
 
 ---
@@ -174,8 +171,9 @@ Background context: While Hellinger distance is a useful measure, another popula
 
 :p What is KL divergence?
 ??x
-Kullback–Leibler (KL) divergence measures the difference between two probability distributions. It quantifies the amount of information lost if one uses \( Q \) to approximate \( P \). The formula for KL divergence is:
-\[ D_{KL}(P \| Q) = \sum_i p_i \log\left(\frac{p_i}{q_i}\right) \]
+Kullback–Leibler (KL) divergence measures the difference between two probability distributions. It quantifies the amount of information lost if one uses $Q $ to approximate$P$. The formula for KL divergence is:
+$$D_{KL}(P \| Q) = \sum_i p_i \log\left(\frac{p_i}{q_i}\right)$$
+
 However, it is not a proper distance metric because it is asymmetric.
 x??
 
@@ -192,7 +190,7 @@ x??
 ---
 
 #### Matrix Factorization (MF) via SVD
-Background context: To reduce the dimensionality of our recommender problem, we can use matrix factorization techniques like Singular Value Decomposition (SVD). The key idea is to decompose an \( N \times M \) matrix into two smaller matrices \( U_{N \times d} \) and \( V_{d \times M} \).
+Background context: To reduce the dimensionality of our recommender problem, we can use matrix factorization techniques like Singular Value Decomposition (SVD). The key idea is to decompose an $N \times M $ matrix into two smaller matrices$U_{N \times d}$ and $V_{d \times M}$.
 
 :p What is SVD used for in recommendation systems?
 ??x
@@ -202,11 +200,11 @@ x??
 ---
 
 #### Factorization and Latent Space
-Background context: By factorizing a matrix \( A \) as \( U V^T \), where \( U \) is of size \( N \times d \) and \( V \) is of size \( d \times M \), we can represent the original data in a lower-dimensional latent space. This helps in reducing the complexity of the recommendation model.
+Background context: By factorizing a matrix $A $ as$U V^T $, where$ U $is of size$ N \times d $ and $ V $ is of size $ d \times M$, we can represent the original data in a lower-dimensional latent space. This helps in reducing the complexity of the recommendation model.
 
 :p How does factorization help in recommendation systems?
 ??x
-Factorization, such as using SVD, helps reduce the dimensionality of the recommender problem by approximating the original matrix with two smaller matrices \( U \) and \( V \). This allows for a more efficient representation of users and items in a lower-dimensional latent space.
+Factorization, such as using SVD, helps reduce the dimensionality of the recommender problem by approximating the original matrix with two smaller matrices $U $ and$V$. This allows for a more efficient representation of users and items in a lower-dimensional latent space.
 x??
 
 ---
@@ -272,15 +270,9 @@ Background context: The distance between two matrices can be calculated using va
 ??x
 The distance between two matrices can be measured using:
 1. Observed Mean Squared Error (MSE):
-   \[
-   MSE = \frac{1}{|\Omega|} \sum_{(i,j) \in \Omega} (A_{ij} - U_i V_j)^2
-   \]
-   where \( |\Omega| \) is the number of non-zero entries.
+   $$MSE = \frac{1}{|\Omega|} \sum_{(i,j) \in \Omega} (A_{ij} - U_i V_j)^2$$where $|\Omega|$ is the number of non-zero entries.
 2. Cross-Entropy Loss, useful when dealing with single nonzero entries per vector:
-   \[
-   CE = -(r_{ij} \log(U_i V_j) + (1 - r_{ij}) \log(1 - U_i V_j))
-   \]
-   where \( r_{ij} \) is the observed rating.
+$$CE = -(r_{ij} \log(U_i V_j) + (1 - r_{ij}) \log(1 - U_i V_j))$$where $ r_{ij}$ is the observed rating.
 ??x
 
 ---

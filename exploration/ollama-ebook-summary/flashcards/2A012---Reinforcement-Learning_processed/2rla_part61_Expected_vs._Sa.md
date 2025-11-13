@@ -5,7 +5,7 @@
 ---
 
 #### Expected vs. Sample Updates
-Expected updates consider all possible events that might happen, while sample updates consider a single sampled event. In this context, we are focusing on one-step updates for approximating value functions \(q^{\pi}\), \(v^{\pi}\), \(q^{*}\), and \(v^{*}\).
+Expected updates consider all possible events that might happen, while sample updates consider a single sampled event. In this context, we are focusing on one-step updates for approximating value functions $q^{\pi}$,$ v^{\pi}$,$ q^{*}$, and $ v^{*}$.
 
 :p What is the difference between expected and sample updates in the context of reinforcement learning?
 ??x
@@ -13,11 +13,10 @@ Expected updates compute an exact estimate by considering all possible events, w
 
 Example:
 - Expected update: 
-\[ Q(s, a) = \sum_{s', r} p(s', r | s, a) [r + \max_{a'} Q(s', a')] \]
+$$Q(s, a) = \sum_{s', r} p(s', r | s, a) [r + \max_{a'} Q(s', a')]$$- Sample update (Q-learning):
+$$
 
-- Sample update (Q-learning): 
-\[ Q(s, a) = Q(s, a) + \alpha [R + \max_{a'} Q(S', a') - Q(s, a)] \]
-where \(p(s', r | s, a)\) is the probability of transitioning to state \(s'\) with reward \(r\) from taking action \(a\) in state \(s\).
+Q(s, a) = Q(s, a) + \alpha [R + \max_{a'} Q(S', a') - Q(s, a)]$$where $ p(s', r | s, a)$is the probability of transitioning to state $ s'$with reward $ r$from taking action $ a $ in state $s$.
 
 x??
 
@@ -27,14 +26,12 @@ The computation required by update operations is often dominated by the number o
 
 :p How does computational efficiency compare between expected and sample updates?
 ??x
-Expected updates are more computationally intensive because they consider all possible transitions from a given state-action pair. Sample updates are cheaper as they only evaluate one transition per update step. The relative cost can be quantified by the branching factor \(b\), which represents the number of possible next states.
+Expected updates are more computationally intensive because they consider all possible transitions from a given state-action pair. Sample updates are cheaper as they only evaluate one transition per update step. The relative cost can be quantified by the branching factor $b$, which represents the number of possible next states.
 
 Example:
 - Expected Update Cost: 
-\[ \text{Cost} = b \times \text{evaluation time for } Q(s', a') \]
-
-- Sample Update Cost: 
-\[ \text{Cost} = 1 \times \text{evaluation time for } Q(s', a') \]
+$$\text{Cost} = b \times \text{evaluation time for } Q(s', a')$$- Sample Update Cost:
+$$\text{Cost} = 1 \times \text{evaluation time for } Q(s', a')$$
 
 Given the same computational budget, sample updates can be performed more frequently than expected updates.
 
@@ -42,15 +39,15 @@ x??
 
 ---
 #### Estimation Error Analysis
-The estimation error of expected and sample updates depends on the branching factor \(b\). For large problems with many state-action pairs, it is often better to perform multiple sample updates rather than a single expected update due to time constraints.
+The estimation error of expected and sample updates depends on the branching factor $b$. For large problems with many state-action pairs, it is often better to perform multiple sample updates rather than a single expected update due to time constraints.
 
 :p How does the estimation error differ between expected and sample updates?
 ??x
-Expected updates are free from sampling error but are computationally expensive. Sample updates introduce variance due to their reliance on random samples, making them cheaper but potentially less accurate. The trade-off is that for a large branching factor \(b\), many sample updates can achieve a similar accuracy to one expected update.
+Expected updates are free from sampling error but are computationally expensive. Sample updates introduce variance due to their reliance on random samples, making them cheaper but potentially less accurate. The trade-off is that for a large branching factor $b$, many sample updates can achieve a similar accuracy to one expected update.
 
 Example:
-- For a small branching factor (\(b = 1\)), both types of updates are identical.
-- For a large branching factor (\(b > 1\)), the difference becomes significant. Expected updates yield lower variance but higher computational cost, while sample updates have higher variance but lower computation time per update.
+- For a small branching factor ($b = 1$), both types of updates are identical.
+- For a large branching factor ($b > 1$), the difference becomes significant. Expected updates yield lower variance but higher computational cost, while sample updates have higher variance but lower computation time per update.
 
 x??
 
@@ -76,16 +73,15 @@ x??
 ---
 
 #### Comparison of Expected and Sample Updates
-Background context explaining the comparison between expected updates and sample updates. In this scenario, we consider a problem where there are \(b\) successor states that are equally likely to occur, with an initial error in the value estimate of 1.
+Background context explaining the comparison between expected updates and sample updates. In this scenario, we consider a problem where there are $b$ successor states that are equally likely to occur, with an initial error in the value estimate of 1.
 
 If the values at the next states are assumed correct, then an expected update can reduce the error to zero upon completion. For sample updates, the error is reduced according to:
-\[ q_b^t = \frac{b}{t} \]
-where \( t \) is the number of sample updates performed (assuming sample averages with \(\alpha = 1/t\)).
+$$q_b^t = \frac{b}{t}$$where $ t $ is the number of sample updates performed (assuming sample averages with $\alpha = 1/t$).
 
-The key observation is that for moderately large \( b \), the error falls dramatically even after a tiny fraction of \( b \) updates. This means that many state-action pairs can have their values improved significantly in the same time it would take to perform one expected update.
+The key observation is that for moderately large $b $, the error falls dramatically even after a tiny fraction of $ b$ updates. This means that many state-action pairs can have their values improved significantly in the same time it would take to perform one expected update.
 :p How do expected and sample updates differ in this scenario?
 ??x
-Expected updates reduce the error completely by considering all possible next states, while sample updates reduce the error based on a fraction of these states. For large branching factors \( b \), many state-action pairs can be updated effectively with sample updates in less time than it would take to perform one expected update.
+Expected updates reduce the error completely by considering all possible next states, while sample updates reduce the error based on a fraction of these states. For large branching factors $b$, many state-action pairs can be updated effectively with sample updates in less time than it would take to perform one expected update.
 x??
 
 ---
@@ -278,11 +274,11 @@ x??
 
 ---
 #### State Space and Convergence Criteria
-The state space consists of 9,115 reachable states, with only 599 relevant ones being optimal. Convergence in conventional DP is determined when the maximum change in a state value over a sweep is less than \(10^{-4}\). RTDP converges when the average time to cross the finish line stabilizes.
+The state space consists of 9,115 reachable states, with only 599 relevant ones being optimal. Convergence in conventional DP is determined when the maximum change in a state value over a sweep is less than $10^{-4}$. RTDP converges when the average time to cross the finish line stabilizes.
 
 :p How are the methods judged to have converged?
 ??x
-Conventional DP converges when the maximum change in a state value over a sweep is less than \(10^{-4}\). For RTDP, convergence occurs when the average time to cross the finish line appears to stabilize. This means that after 20 episodes, the average time does not significantly change.
+Conventional DP converges when the maximum change in a state value over a sweep is less than $10^{-4}$. For RTDP, convergence occurs when the average time to cross the finish line appears to stabilize. This means that after 20 episodes, the average time does not significantly change.
 x??
 
 ---

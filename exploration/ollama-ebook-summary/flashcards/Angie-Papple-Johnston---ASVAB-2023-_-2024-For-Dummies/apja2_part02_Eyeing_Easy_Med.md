@@ -140,7 +140,7 @@ x??
 #### Verbal Expression (VE) Score Calculation
 
 To understand how to calculate your VE score, it's important to know that this score is derived from your Word Knowledge and Paragraph Comprehension scores. First, you add these two scores together: 
-\[ \text{VE Score} = \text{Word Knowledge Score} + \text{Paragraph Comprehension Score} \]
+$$\text{VE Score} = \text{Word Knowledge Score} + \text{Paragraph Comprehension Score}$$
 
 Next, you convert the resulting sum into a scaled score ranging from 20 to 62.
 
@@ -154,7 +154,7 @@ x??
 #### Raw AFQT Score Calculation
 
 The raw AFQT score is calculated using the following equation:
-\[ \text{Raw AFQT Score} = 2 \times \text{VE Score} + \text{AR Score} + \text{MK Score} \]
+$$\text{Raw AFQT Score} = 2 \times \text{VE Score} + \text{AR Score} + \text{MK Score}$$
 
 Where VE, AR, and MK represent your scores in Verbal Expression, Arithmetic Reasoning, and Mathematics Knowledge respectively.
 

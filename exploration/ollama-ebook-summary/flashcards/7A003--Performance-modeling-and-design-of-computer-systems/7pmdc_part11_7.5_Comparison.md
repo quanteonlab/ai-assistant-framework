@@ -5,15 +5,15 @@
 ---
 
 #### Outside Arrival Rates - Open Networks
-Background context: The text discusses how the asymptotic bounds for closed networks do not directly apply to open networks. In an open network, jobs arrive from outside and can leave at any time after service completion. The main difference is that the utilization \(X\) (the fraction of time a device is busy) in an open network is constrained by both its processing capacity and the arrival rate.
+Background context: The text discusses how the asymptotic bounds for closed networks do not directly apply to open networks. In an open network, jobs arrive from outside and can leave at any time after service completion. The main difference is that the utilization $X$(the fraction of time a device is busy) in an open network is constrained by both its processing capacity and the arrival rate.
 
 :p What are the limitations when applying closed network asymptotic bounds to open networks?
 ??x
-In open networks, the asymptotic bounds derived for closed networks do not directly apply because the utilization \(X\) in an open systems is bounded by \(\frac{1}{D_{\text{max}}}\), where \(D_{\text{max}}\) is the maximum service time. This means that even if a device has high processing capacity, its actual utilization will be limited by the incoming job rate and not necessarily reach the asymptotic bound derived for closed networks.
+In open networks, the asymptotic bounds derived for closed networks do not directly apply because the utilization $X $ in an open systems is bounded by$\frac{1}{D_{\text{max}}}$, where $ D_{\text{max}}$ is the maximum service time. This means that even if a device has high processing capacity, its actual utilization will be limited by the incoming job rate and not necessarily reach the asymptotic bound derived for closed networks.
 
 For example, in an open network with average service times:
-- If jobs require 3 seconds on average to complete, \(D_{\text{max}} = 3\) seconds.
-- Thus, the maximum utilization \(X \leq \frac{1}{3}\), regardless of the arrival rate or processing speed.
+- If jobs require 3 seconds on average to complete,$D_{\text{max}} = 3$ seconds.
+- Thus, the maximum utilization $X \leq \frac{1}{3}$, regardless of the arrival rate or processing speed.
 
 This limitation means that bounds derived for closed networks may not accurately predict performance in open systems unless the outside arrival rate is high enough to bring the system close to its asymptotic regime.
 
@@ -98,32 +98,27 @@ x??
 #### Proportional Power - Machine Speed and Power
 Background context: In power distribution systems, the speed of a machine is proportional to the power allocated. The goal is to maximize system throughput by optimally dividing the total power budget between two machines based on their processing probabilities.
 
-:p What choice for dividing power \(W\) and picking \(p\) will maximize the throughput in a closed batch system with two servers?
+:p What choice for dividing power $W $ and picking$p$ will maximize the throughput in a closed batch system with two servers?
 ??x
 To maximize throughput, we need to balance the load across both servers. The optimal strategy is to allocate power such that the effective service rates of both machines are equalized.
 
 Given:
-- Total power budget: \(W\)
-- Number of jobs routed to server 1: \(pN\)
-- Number of jobs routed to server 2: \((1-p)N\)
+- Total power budget:$W $- Number of jobs routed to server 1:$ pN $- Number of jobs routed to server 2:$(1-p)N $ Let's denote the speed of machine 1 as$w_1 $ and machine 2 as$w_2$. The throughput is maximized when:
+$$w_1 \cdot p = w_2 \cdot (1 - p)$$
 
-Let's denote the speed of machine 1 as \(w_1\) and machine 2 as \(w_2\). The throughput is maximized when:
-\[ w_1 \cdot p = w_2 \cdot (1 - p) \]
+If $w_1 = w_2 $, then$ p = 0.5$.
 
-If \(w_1 = w_2\), then \(p = 0.5\).
-
-For general \(w_1\) and \(w_2\):
+For general $w_1 $ and$w_2$:
 - Allocate power such that the effective speeds are equal.
 - This can be achieved by solving:
-\[ \frac{W}{w_1} \cdot p = \frac{W}{w_2} \cdot (1 - p) \]
+$$\frac{W}{w_1} \cdot p = \frac{W}{w_2} \cdot (1 - p)$$
 
-Solving for \(p\):
-\[ p = \frac{w_2}{w_1 + w_2} \]
-\[ 1 - p = \frac{w_1}{w_1 + w_2} \]
+Solving for $p$:
+$$p = \frac{w_2}{w_1 + w_2}$$
+$$1 - p = \frac{w_1}{w_1 + w_2}$$
 
 Thus, the optimal strategy is to divide power and choose routing probabilities such that:
-- \(p = \frac{\text{speed of slower machine}}{\text{sum of speeds}}\)
-- This ensures balanced load distribution.
+- $p = \frac{\text{speed of slower machine}}{\text{sum of speeds}}$- This ensures balanced load distribution.
 
 x??
 
@@ -212,19 +207,19 @@ x??
 ---
 
 #### Closed Systems
-Background context: For closed systems, we can approximate and bound the values of throughput, \( X \), and the expected response time, \( E[R] \). The approximations developed are independent of the distribution of service times but require that the system is closed. When the multiprogramming level \( N \) is much higher than \( N^* \), we have a tight bound on \( X \) and \( E[R] \). Also, when \( N = 1 \), we have a tight bound. However, for intermediate values of \( N \), we can only approximate \( X \) and \( E[R] \).
+Background context: For closed systems, we can approximate and bound the values of throughput,$X $, and the expected response time, $ E[R]$. The approximations developed are independent of the distribution of service times but require that the system is closed. When the multiprogramming level $ N$is much higher than $ N^*$, we have a tight bound on $ X$and $ E[R]$. Also, when $ N = 1$, we have a tight bound. However, for intermediate values of $ N$, we can only approximate $ X$and $ E[R]$.
 
 :p What are the conditions under which closed systems allow tight bounds on throughput and expected response time?
 ??x
-When the multiprogramming level \( N \) is much higher than a critical value \( N^* \) or when \( N = 1 \), we can achieve tight bounds on the throughput \( X \) and the expected response time \( E[R] \). For intermediate values of \( N \), only approximations are possible.
+When the multiprogramming level $N $ is much higher than a critical value$N^*$ or when $ N = 1 $, we can achieve tight bounds on the throughput $ X$and the expected response time $ E[R]$. For intermediate values of $ N$, only approximations are possible.
 
 ---
 #### Open Systems
-Background context: In open systems, it is more challenging to derive performance metrics such as the mean number of jobs \( E[N_i] \) at a server in a queueing network. We cannot calculate \( E[T] \) (mean response time) without knowing \( E[N] \), which we do not yet know how to compute.
+Background context: In open systems, it is more challenging to derive performance metrics such as the mean number of jobs $E[N_i]$ at a server in a queueing network. We cannot calculate $E[T]$(mean response time) without knowing $ E[N]$, which we do not yet know how to compute.
 
 :p What are the limitations when analyzing open systems?
 ??x
-In open systems, it is difficult to derive performance metrics like mean number of jobs at a server or mean response time because we cannot calculate these metrics without knowing \( E[N] \) (mean number of jobs in the system), which is unknown. This makes analysis more complex compared to closed systems.
+In open systems, it is difficult to derive performance metrics like mean number of jobs at a server or mean response time because we cannot calculate these metrics without knowing $E[N]$ (mean number of jobs in the system), which is unknown. This makes analysis more complex compared to closed systems.
 
 ---
 #### Markov Chain Analysis

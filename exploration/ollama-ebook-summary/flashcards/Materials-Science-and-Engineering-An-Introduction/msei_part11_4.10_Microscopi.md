@@ -65,11 +65,11 @@ x??
 ---
 
 #### Micron Measurement
-A micron (μm) is an SI unit equivalent to \(10^{-6}\) meters, used for measuring very small dimensions.
+A micron (μm) is an SI unit equivalent to $10^{-6}$ meters, used for measuring very small dimensions.
 
 :p What is a micron?
 ??x
-A micron, also known as a micrometer, is a unit of length in the metric system, defined as \(10^{-6}\) meters. It is commonly used in materials science and microscopy to measure extremely small features.
+A micron, also known as a micrometer, is a unit of length in the metric system, defined as $10^{-6}$ meters. It is commonly used in materials science and microscopy to measure extremely small features.
 x??
 
 ---
@@ -422,48 +422,37 @@ x??
 #### Linear Intercept Method
 Background context: The linear intercept method is a technique for determining grain size by counting the number of grain boundary intersections with randomly drawn lines. This method provides a measure of mean grain diameter, which is useful for understanding the microstructure and properties of polycrystalline materials.
 Relevant formula:
-\[
-\ell = \frac{L_T}{P M}
-\]
-where \( \ell \) is the mean intercept length (in real space), \( L_T \) is the total line length, \( P \) is the number of grain boundary intersections, and \( M \) is the magnification.
+$$\ell = \frac{L_T}{P M}$$where $\ell $ is the mean intercept length (in real space),$L_T $ is the total line length,$P $ is the number of grain boundary intersections, and$M$ is the magnification.
 :p How do you calculate the mean intercept length using the linear intercept method?
 ??x
-To calculate the mean intercept length (\( \ell \)) using the linear intercept method, follow these steps:
-1. Determine the total line length (\( L_T \)) by summing up the lengths of all lines drawn through the photomicrograph.
-2. Count the number of grain boundary intersections (\( P \)).
-3. Measure or know the magnification (\( M \)).
+To calculate the mean intercept length ($\ell$) using the linear intercept method, follow these steps:
+1. Determine the total line length ($L_T$) by summing up the lengths of all lines drawn through the photomicrograph.
+2. Count the number of grain boundary intersections ($P$).
+3. Measure or know the magnification ($M$).
 4. Use the formula:
-\[
-\ell = \frac{L_T}{P M}
-\]
-For example, if \( L_T = 350 \) mm, \( P = 58 \), and \( M = 160 \times \):
-\[
-\ell = \frac{350 \text{ mm}}{(58)(160)} = 0.0377 \text{ mm}
-\]
-x??
+$$\ell = \frac{L_T}{P M}$$
+
+For example, if $L_T = 350 $ mm,$P = 58 $, and$ M = 160 \times$:
+$$\ell = \frac{350 \text{ mm}}{(58)(160)} = 0.0377 \text{ mm}$$x??
 
 ---
 #### Comparison Method
 Background context: The comparison method involves comparing the grain structure of a sample with standardized charts that have known average grain sizes to determine the grain size as a grain-size number. This method is useful for quickly assessing the grain size without extensive calculations.
 Relevant formula:
-\[
-G = 2^{1 - \frac{n}{2}}
-\]
-where \( G \) is the grain-size number and \( n \) is the average number of grains per square inch at a magnification of 100x. For photomicrographs taken at other magnifications, use:
-\[
-n_M = 2^{G - 1} (M / 100)^2
-\]
+$$
+
+G = 2^{1 - \frac{n}{2}}$$where $ G $ is the grain-size number and $ n$ is the average number of grains per square inch at a magnification of 100x. For photomicrographs taken at other magnifications, use:
+$$n_M = 2^{G - 1} (M / 100)^2$$
 :p How do you determine the grain-size number using the comparison method?
 ??x
-To determine the grain-size number (\( G \)) using the comparison method, follow these steps:
+To determine the grain-size number ($G$) using the comparison method, follow these steps:
 1. Prepare and photograph a specimen to reveal its grain structure.
 2. Compare the grain structure in the micrograph with standardized charts having known grain sizes.
 3. Find the chart that most closely matches the grains in the micrograph.
-4. The grain-size number (\( G \)) of that chart is your result.
+4. The grain-size number ($G$) of that chart is your result.
 For example, if a photomicrograph shows an average of 10 grains per square inch at 100x:
-\[
-G = 2^{1 - \frac{10}{2}} = 2^{-4} = 0.0625
-\]
+$$G = 2^{1 - \frac{10}{2}} = 2^{-4} = 0.0625$$
+
 However, grain-size numbers are typically integers between 1 and 10.
 x??
 
@@ -471,51 +460,39 @@ x??
 #### Magnification Representation
 Background context: Magnification in micrographs is a measure of how much the image has been enlarged relative to the real sample. This representation helps in understanding the scale of the structures observed under the microscope. The magnification can be derived from either the legend or scale bars provided on the micrograph.
 Relevant formula:
-\[
-M = \frac{\text{measured scale length (converted to microns)}}{\text{scale bar number (in microns)}}
-\]
-:p How do you calculate magnification using a scale bar?
+$$
+
+M = \frac{\text{measured scale length (converted to microns)}}{\text{scale bar number (in microns)}}$$:p How do you calculate magnification using a scale bar?
 ??x
 To calculate magnification using a scale bar, follow these steps:
 1. Measure the length of the scale bar in millimeters.
 2. Convert this length into microns by multiplying by 1000 (since there are 1000 microns in a millimeter).
 3. Use the formula:
-\[
-M = \frac{\text{measured scale length (converted to microns)}}{\text{scale bar number (in microns)}}
-\]
+$$
+
+M = \frac{\text{measured scale length (converted to microns)}}{\text{scale bar number (in microns)}}$$
+
 For example, if the measured scale length is 16 mm and the scale bar number is 100 μm:
-1. Convert 16 mm to microns: \( 16 \text{ mm} \times 1000 = 16,000 \) μm.
+1. Convert 16 mm to microns:$16 \text{ mm} \times 1000 = 16,000$μm.
 2. Use the formula:
-\[
-M = \frac{16,000 \text{ μm}}{100 \text{ μm}} = 160
-\]
+$$M = \frac{16,000 \text{ μm}}{100 \text{ μm}} = 160$$
 x??
 
 ---
 #### Relationship Between ASTM Grain Size Number and Grains per Square Inch
-Background context: The relationship between the ASTM grain-size number (\( G \)) and the average number of grains per square inch at a magnification of 100x is given by:
-\[
-G = 2^{1 - \frac{n}{2}}
-\]
-where \( n \) is the average number of grains per square inch. For other magnifications, use:
-\[
-n_M = 2^{G - 1} (M / 100)^2
-\]
+Background context: The relationship between the ASTM grain-size number ($G$) and the average number of grains per square inch at a magnification of 100x is given by:
+$$G = 2^{1 - \frac{n}{2}}$$where $ n$ is the average number of grains per square inch. For other magnifications, use:
+$$n_M = 2^{G - 1} (M / 100)^2$$
 :p How do you determine the relationship between ASTM grain-size number and grains per square inch?
 ??x
-To determine the relationship between the ASTM grain-size number (\( G \)) and the average number of grains per square inch (\( n \)), follow these steps:
-1. Use the formula for \( n \) at 100x magnification:
-\[
-G = 2^{1 - \frac{n}{2}}
-\]
-2. For other magnifications, use:
-\[
-n_M = 2^{G - 1} (M / 100)^2
-\]
-For example, if \( G = 6 \) and the magnification is 200x:
-\[
-n_M = 2^{6 - 1} \left(\frac{200}{100}\right)^2 = 32 \times (2)^2 = 32 \times 4 = 128
-\]
+To determine the relationship between the ASTM grain-size number ($G $) and the average number of grains per square inch ($ n$), follow these steps:
+1. Use the formula for $n$ at 100x magnification:
+$$G = 2^{1 - \frac{n}{2}}$$2. For other magnifications, use:
+$$n_M = 2^{G - 1} (M / 100)^2$$
+
+For example, if $G = 6$ and the magnification is 200x:
+$$n_M = 2^{6 - 1} \left(\frac{200}{100}\right)^2 = 32 \times (2)^2 = 32 \times 4 = 128$$
+
 This means there are approximately 128 grains per square inch at a magnification of 200x.
 x??
 
@@ -532,29 +509,27 @@ x??
 
 ---
 #### G Value Calculation for Vacancies
-Background context: The value of \(G\) for vacancies is determined by substituting the value of \(\ell\) into Equation 4.19a, leading to \(G = -6.6457 \log \ell - 3.298\). For a specific example with \(\ell = 0.0377\), calculate the corresponding \(G\) value.
+Background context: The value of $G $ for vacancies is determined by substituting the value of$\ell $ into Equation 4.19a, leading to$G = -6.6457 \log \ell - 3.298 $. For a specific example with $\ell = 0.0377 $, calculate the corresponding $ G$ value.
 
 :p How do you determine the G value for vacancies?
 ??x
-To determine the G value for vacancies, substitute the given \(\ell\) into the equation \(G = -6.6457 \log \ell - 3.298\). For \(\ell = 0.0377\):
+To determine the G value for vacancies, substitute the given $\ell $ into the equation$G = -6.6457 \log \ell - 3.298 $. For $\ell = 0.0377$:
 ```java
 double logL = Math.log10(0.0377);
 double GValue = (-6.6457 * logL) - 3.298;
 ```
-The calculated \(G\) value is approximately 6.16.
+The calculated $G$ value is approximately 6.16.
 x??
 
 ---
 #### Equilibrium Number of Vacancies
 Background context: The equilibrium number of vacancies in a material can be determined using Equation 4.1, which states:
-\[ N_\nu = N_A \rho A e^{-Q_\nu / (kT)} \]
-where \(N_A\) is Avogadro's number, \(\rho\) is the density of the material, and \(A\) is the atomic packing fraction.
+$$N_\nu = N_A \rho A e^{-Q_\nu / (kT)}$$where $ N_A $is Avogadro's number,$\rho $ is the density of the material, and$A$ is the atomic packing fraction.
 
 :p What is the formula for calculating the equilibrium number of vacancies?
 ??x
 The formula for calculating the equilibrium number of vacancies in a solid is:
-\[ N_\nu = N_A \rho A e^{-Q_\nu / (kT)} \]
-where \(N_A\) is Avogadro's number, \(\rho\) is the density of the material, and \(A\) is the atomic packing fraction.
+$$N_\nu = N_A \rho A e^{-Q_\nu / (kT)}$$where $ N_A $is Avogadro's number,$\rho $ is the density of the material, and$A$ is the atomic packing fraction.
 x??
 
 ---
@@ -564,10 +539,8 @@ Background context: An alloy is a metallic substance composed of two or more ele
 :p How do you express the composition of an alloy?
 ??x
 The composition of an alloy can be expressed in two ways:
-1. Weight Percent: \( C_1 = \frac{m_1}{m_1 + m_2} \times 100\% \)
-2. Atom Percent: 
-   - From weight percent to atom percent: \( C_1' = \frac{C_1 A_2}{C_1 A_2 + C_2 A_1} \times 100\% \)
-   - From atom percent to weight percent: \( C_1 = \frac{C_1' A_1}{C_1' A_1 + C_2' A_2} \times 100\% \)
+1. Weight Percent:$C_1 = \frac{m_1}{m_1 + m_2} \times 100\%$2. Atom Percent: 
+   - From weight percent to atom percent:$C_1' = \frac{C_1 A_2}{C_1 A_2 + C_2 A_1} \times 100\%$- From atom percent to weight percent:$ C_1 = \frac{C_1' A_1}{C_1' A_1 + C_2' A_2} \times 100\%$
 
 For example, if you have an alloy with components A and B:
 ```java
